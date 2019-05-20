@@ -1,16 +1,512 @@
 import abjad
+import baca
+import harmony
 
 
-class ScoreTemplate(abjad.ScoreTemplate):
-    """
+class ScoreTemplate(baca.ScoreTemplate):
+    r"""
     Score template.
+
+    >>> import harmony
+
+    ..  container:: example
+
+        Calls score template:
+
+        >>> template = harmony.ScoreTemplate()
+        >>> path = abjad.Path('harmony', 'stylesheets', 'contexts.ily')
+        >>> lilypond_file = template.__illustrate__(
+        ...     global_staff_size=14,
+        ...     includes=[path],
+        ...     )
+        >>> abjad.show(lilypond_file) # doctest: +SKIP
+
+        >>> abjad.f(lilypond_file[abjad.Score], strict=89)
+        \context Score = "Score"                                                                 %! harmony.ScoreTemplate.__call__
+        <<                                                                                       %! harmony.ScoreTemplate.__call__
+            \context GlobalContext = "Global_Context"                                            %! abjad.ScoreTemplate._make_global_context
+            <<                                                                                   %! abjad.ScoreTemplate._make_global_context
+                \context GlobalRests = "Global_Rests"                                            %! abjad.ScoreTemplate._make_global_context
+                {                                                                                %! abjad.ScoreTemplate._make_global_context
+                }                                                                                %! abjad.ScoreTemplate._make_global_context
+                \context GlobalSkips = "Global_Skips"                                            %! abjad.ScoreTemplate._make_global_context
+                {                                                                                %! abjad.ScoreTemplate._make_global_context
+                }                                                                                %! abjad.ScoreTemplate._make_global_context
+            >>                                                                                   %! abjad.ScoreTemplate._make_global_context
+            \context MusicContext = "Music_Context"                                              %! harmony.ScoreTemplate.__call__
+            <<                                                                                   %! harmony.ScoreTemplate.__call__
+                \context WindSectionStaffGroup = "Wind_Section_Staff_Group"                      %! harmony.ScoreTemplate.__call__
+                <<                                                                               %! harmony.ScoreTemplate.__call__
+                    \tag BassFlute                                                               %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Bass_Flute_Music_Staff"                                    %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Bass_Flute_Music_Voice"                                %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "treble"                                                       %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                >>                                                                               %! harmony.ScoreTemplate.__call__
+                \context PercussionSectionStaffGroup = "Percussion_Section_Staff_Group"          %! harmony.ScoreTemplate.__call__
+                <<                                                                               %! harmony.ScoreTemplate.__call__
+                    \tag PercussionI                                                             %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Percussion_I_Music_Staff"                                  %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Percussion_I_Music_Voice"                              %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "treble"                                                       %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag PercussionII                                                            %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Percussion_II_Music_Staff"                                 %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Percussion_II_Music_Voice"                             %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "treble"                                                       %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                >>                                                                               %! harmony.ScoreTemplate.__call__
+                \context StringSectionStaffGroup = "String_Section_Staff_Group"                  %! harmony.ScoreTemplate.__call__
+                <<                                                                               %! harmony.ScoreTemplate.__call__
+                    \tag Viola                                                                   %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Viola_Music_Staff"                                         %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Viola_Music_Voice"                                     %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "alto"                                                         %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag CelloI                                                                  %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Cello_I_Music_Staff"                                       %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Cello_I_Music_Voice"                                   %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "bass"                                                         %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag CelloII                                                                 %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Cello_II_Music_Staff"                                      %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Cello_II_Music_Voice"                                  %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "bass"                                                         %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag ContrabassI                                                             %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Contrabass_I_Music_Staff"                                  %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Contrabass_I_Music_Voice"                              %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "bass"                                                         %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag ContrabassII                                                            %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Contrabass_II_Music_Staff"                                 %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Contrabass_II_Music_Voice"                             %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "bass"                                                         %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
+                >>                                                                               %! harmony.ScoreTemplate.__call__
+            >>                                                                                   %! harmony.ScoreTemplate.__call__
+        >>                                                                                       %! harmony.ScoreTemplate.__call__
+
     """
+
+    ### CLASS VARIABLES ###
+
+    __documentation_section__ = None
+
+    _always_make_global_rests = True
+
+    _global_rests_in_topmost_staff = True
+
+    ### INITIALIZER ###
+
+    def __init__(self):
+        super(ScoreTemplate, self).__init__()
+        self.voice_abbreviations.update(
+            {
+                "vfl": "Bass_Flute_Music_Voice",
+                "vflr": "Bass_Flute_Rest_Voice",
+                "bflx": ["Bass_Flute_Music_Voice", "Bass_Flute_Rest_Voice"],
+                "p1": "Percussion_I_Music_Voice",
+                "p1r": "Percussion_I_Rest_Voice",
+                "p1x": ["Percussion_I_Music_Voice", "Percussion_I_Rest_Voice"],
+                "p2": "Percussion_II_Music_Voice",
+                "p2r": "Percussion_II_Rest_Voice",
+                "p2x": [
+                    "Percussion_II_Music_Voice",
+                    "Percussion_II_Rest_Voice",
+                ],
+                "hp": "Harp_Music_Voice",
+                "hpr": "Harp_Rest_Voice",
+                "hpx": ["Harp_Music_Voice", "Harp_Rest_Voice"],
+                "va": "Viola_Music_Voice",
+                "var": "Viola_Rest_Voice",
+                "vax": ["Viola_Music_Voice", "Viola_Rest_Voice"],
+                "vc1": "Cello_I_Music_Voice",
+                "vc1r": "Cello_I_Rest_Voice",
+                "vc1x": ["Cello_I_Music_Voice", "Cello_I_Rest_Voice"],
+                "vc2": "Cello_II_Music_Voice",
+                "vc2r": "Cello_II_Rest_Voice",
+                "vc2x": ["Cello_II_Music_Voice", "Cello_II_Rest_Voice"],
+                "cb1": "Contrabass_I_Music_Voice",
+                "cb1r": "Contrabass_I_Rest_Voice",
+                "cb1x": [
+                    "Contrabass_I_Music_Voice",
+                    "Contrabass_I_Rest_Voice",
+                ],
+                "cb2": "Contrabass_II_Music_Voice",
+                "cb2r": "Contrabass_II_Rest_Voice",
+                "cb2x": [
+                    "Contrabass_II_Music_Voice",
+                    "Contrabass_II_Rest_Voice",
+                ],
+                "tutti": [
+                    "Bass_Flute_Music_Voice",
+                    "Percussion_I_Music_Voice",
+                    "Percussion_II_Music_Voice",
+                    "Harp_Music_Voice",
+                    "Viola_Music_Voice",
+                    "Cello_I_Music_Voice",
+                    "Cello_II_Music_Voice",
+                    "Contrabass_I_Music_Voice",
+                    "Contrabass_II_Music_Voice",
+                ],
+            }
+        )
+
+    ### SPECIAL METHODS ###
 
     def __call__(self) -> abjad.Score:
         """
         Calls score template.
         """
-        voice = abjad.Voice(name="Example_Voice")
-        staff = abjad.Staff([voice], name="Example_Staff")
-        score = abjad.Score([staff], name="Example_Score")
+        tag = "harmony.ScoreTemplate.__call__"
+        # GLOBAL CONTEXT
+        global_context = self._make_global_context()
+
+        # BASS FLUTE
+        bass_flute_music_voice = abjad.Voice(
+            name="Bass_Flute_Music_Voice", tag=tag
+        )
+        bass_flute_music_staff = abjad.Staff(
+            [bass_flute_music_voice],
+            is_simultaneous=True,
+            name="Bass_Flute_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            bass_flute_music_staff,
+            "default_instrument",
+            harmony.instruments["BassFlute"],
+        )
+        abjad.annotate(
+            bass_flute_music_staff, "default_clef", abjad.Clef("treble")
+        )
+        self._attach_lilypond_tag("BassFlute", bass_flute_music_staff)
+
+        # PERCUSSION 1
+        percussion_1_music_voice = abjad.Voice(
+            name="Percussion_I_Music_Voice", tag=tag
+        )
+        percussion_1_music_staff = abjad.Staff(
+            [percussion_1_music_voice],
+            is_simultaneous=True,
+            name="Percussion_I_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            percussion_1_music_staff,
+            "default_instrument",
+            harmony.instruments["Percussion"],
+        )
+        abjad.annotate(
+            percussion_1_music_staff, "default_clef", abjad.Clef("treble")
+        )
+        self._attach_lilypond_tag("PercussionI", percussion_1_music_staff)
+
+        # PERCUSSION 2
+        percussion_2_music_voice = abjad.Voice(
+            name="Percussion_II_Music_Voice", tag=tag
+        )
+        percussion_2_music_staff = abjad.Staff(
+            [percussion_2_music_voice],
+            is_simultaneous=True,
+            name="Percussion_II_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            percussion_2_music_staff,
+            "default_instrument",
+            harmony.instruments["Percussion"],
+        )
+        abjad.annotate(
+            percussion_2_music_staff, "default_clef", abjad.Clef("treble")
+        )
+        self._attach_lilypond_tag("PercussionII", percussion_2_music_staff)
+
+        # HARP
+        harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=tag)
+        harp_music_staff = abjad.Staff(
+            [harp_music_voice],
+            is_simultaneous=True,
+            name="Harp_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            harp_music_staff, "default_instrument", harmony.instruments["Harp"]
+        )
+        abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("alto"))
+        self._attach_lilypond_tag("Harp", harp_music_staff)
+
+        # VIOLA
+        viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=tag)
+        viola_music_staff = abjad.Staff(
+            [viola_music_voice],
+            is_simultaneous=True,
+            name="Viola_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            viola_music_staff,
+            "default_instrument",
+            harmony.instruments["Viola"],
+        )
+        abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
+        self._attach_lilypond_tag("Viola", viola_music_staff)
+
+        # CELLO 1
+        cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=tag)
+        cello_1_music_staff = abjad.Staff(
+            [cello_1_music_voice],
+            is_simultaneous=True,
+            name="Cello_I_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            cello_1_music_staff,
+            "default_instrument",
+            harmony.instruments["Cello"],
+        )
+        abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
+        self._attach_lilypond_tag("CelloI", cello_1_music_staff)
+
+        # CELLO 2
+        cello_2_music_voice = abjad.Voice(name="Cello_II_Music_Voice", tag=tag)
+        cello_2_music_staff = abjad.Staff(
+            [cello_2_music_voice],
+            is_simultaneous=True,
+            name="Cello_II_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            cello_2_music_staff,
+            "default_instrument",
+            harmony.instruments["Cello"],
+        )
+        abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
+        self._attach_lilypond_tag("CelloII", cello_2_music_staff)
+
+        # CONTRABASS 1
+        contrabass_1_music_voice = abjad.Voice(
+            name="Contrabass_I_Music_Voice", tag=tag
+        )
+        contrabass_1_music_staff = abjad.Staff(
+            [contrabass_1_music_voice],
+            is_simultaneous=True,
+            name="Contrabass_I_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            contrabass_1_music_staff,
+            "default_instrument",
+            harmony.instruments["Contrabass"],
+        )
+        abjad.annotate(
+            contrabass_1_music_staff, "default_clef", abjad.Clef("bass")
+        )
+        self._attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
+
+        # CONTRABASS 2
+        contrabass_2_music_voice = abjad.Voice(
+            name="Contrabass_II_Music_Voice", tag=tag
+        )
+        contrabass_2_music_staff = abjad.Staff(
+            [contrabass_2_music_voice],
+            is_simultaneous=True,
+            name="Contrabass_II_Music_Staff",
+            tag=tag,
+        )
+        abjad.annotate(
+            contrabass_2_music_staff,
+            "default_instrument",
+            harmony.instruments["Contrabass"],
+        )
+        abjad.annotate(
+            contrabass_2_music_staff, "default_clef", abjad.Clef("bass")
+        )
+        self._attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
+
+        # WIND SECTION STAFF GROUP
+        wind_section_staff_group = abjad.StaffGroup(
+            [bass_flute_music_staff],
+            lilypond_type="WindSectionStaffGroup",
+            name="Wind_Section_Staff_Group",
+            tag=tag,
+        )
+
+        # PERCUSSION SECTION STAFF GROUP
+        percussion_section_staff_group = abjad.StaffGroup(
+            [percussion_1_music_staff, percussion_2_music_staff],
+            lilypond_type="PercussionSectionStaffGroup",
+            name="Percussion_Section_Staff_Group",
+            tag=tag,
+        )
+
+        # STRING SECTION STAFF GROUP
+        string_section_staff_group = abjad.StaffGroup(
+            [
+                viola_music_staff,
+                cello_1_music_staff,
+                cello_2_music_staff,
+                contrabass_1_music_staff,
+                contrabass_2_music_staff,
+            ],
+            lilypond_type="StringSectionStaffGroup",
+            name="String_Section_Staff_Group",
+            tag=tag,
+        )
+
+        # MUSIC CONTEXT
+        music_context = abjad.Context(
+            [
+                wind_section_staff_group,
+                percussion_section_staff_group,
+                string_section_staff_group,
+            ],
+            lilypond_type="MusicContext",
+            is_simultaneous=True,
+            name="Music_Context",
+            tag=tag,
+        )
+
+        # SCORE
+        score = abjad.Score(
+            [global_context, music_context], name="Score", tag=tag
+        )
+        self._assert_lilypond_identifiers(score)
+        self._assert_unique_context_names(score)
+        self._assert_matching_custom_context_names(score)
         return score
+
+    ### PUBLIC PROPERTIES ###
+
+    @property
+    def voice_abbreviations(self):
+        """
+        Gets voice abbreviations.
+
+        ..  container:: example
+
+            >>> score_template = harmony.ScoreTemplate()
+            >>> abjad.f(score_template.voice_abbreviations)
+            abjad.OrderedDict(
+                [
+                    ('vfl', 'Bass_Flute_Music_Voice'),
+                    ('vflr', 'Bass_Flute_Rest_Voice'),
+                    (
+                        'bflx',
+                        [
+                            'Bass_Flute_Music_Voice',
+                            'Bass_Flute_Rest_Voice',
+                            ],
+                        ),
+                    ('p1', 'Percussion_I_Music_Voice'),
+                    ('p1r', 'Percussion_I_Rest_Voice'),
+                    (
+                        'p1x',
+                        [
+                            'Percussion_I_Music_Voice',
+                            'Percussion_I_Rest_Voice',
+                            ],
+                        ),
+                    ('p2', 'Percussion_II_Music_Voice'),
+                    ('p2r', 'Percussion_II_Rest_Voice'),
+                    (
+                        'p2x',
+                        [
+                            'Percussion_II_Music_Voice',
+                            'Percussion_II_Rest_Voice',
+                            ],
+                        ),
+                    ('hp', 'Harp_Music_Voice'),
+                    ('hpr', 'Harp_Rest_Voice'),
+                    (
+                        'hpx',
+                        ['Harp_Music_Voice', 'Harp_Rest_Voice'],
+                        ),
+                    ('va', 'Viola_Music_Voice'),
+                    ('var', 'Viola_Rest_Voice'),
+                    (
+                        'vax',
+                        ['Viola_Music_Voice', 'Viola_Rest_Voice'],
+                        ),
+                    ('vc1', 'Cello_I_Music_Voice'),
+                    ('vc1r', 'Cello_I_Rest_Voice'),
+                    (
+                        'vc1x',
+                        ['Cello_I_Music_Voice', 'Cello_I_Rest_Voice'],
+                        ),
+                    ('vc2', 'Cello_II_Music_Voice'),
+                    ('vc2r', 'Cello_II_Rest_Voice'),
+                    (
+                        'vc2x',
+                        ['Cello_II_Music_Voice', 'Cello_II_Rest_Voice'],
+                        ),
+                    ('cb1', 'Contrabass_I_Music_Voice'),
+                    ('cb1r', 'Contrabass_I_Rest_Voice'),
+                    (
+                        'cb1x',
+                        [
+                            'Contrabass_I_Music_Voice',
+                            'Contrabass_I_Rest_Voice',
+                            ],
+                        ),
+                    ('cb2', 'Contrabass_II_Music_Voice'),
+                    ('cb2r', 'Contrabass_II_Rest_Voice'),
+                    (
+                        'cb2x',
+                        [
+                            'Contrabass_II_Music_Voice',
+                            'Contrabass_II_Rest_Voice',
+                            ],
+                        ),
+                    (
+                        'tutti',
+                        [
+                            'Bass_Flute_Music_Voice',
+                            'Percussion_I_Music_Voice',
+                            'Percussion_II_Music_Voice',
+                            'Harp_Music_Voice',
+                            'Viola_Music_Voice',
+                            'Cello_I_Music_Voice',
+                            'Cello_II_Music_Voice',
+                            'Contrabass_I_Music_Voice',
+                            'Contrabass_II_Music_Voice',
+                            ],
+                        ),
+                    ]
+                )
+
+        """
+        return super(ScoreTemplate, self).voice_abbreviations
