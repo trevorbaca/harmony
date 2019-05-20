@@ -9,7 +9,9 @@ metronome_marks = abjad.OrderedDict(
             abjad.MetronomeMark(
                 reference_duration=(1, 4),
                 units_per_minute=abjad.Fraction(288, 5),
-                custom_markup=abjad.Markup.abjad_metronome_mark(2, 0, 1, 57.6),
+                custom_markup=abjad.Markup(
+                    r"\harmony-fifty-seven-point-six", literal=True
+                ),
             ),
         ),
         ("72", abjad.MetronomeMark((1, 4), 72)),
@@ -35,6 +37,13 @@ metronome_marks = abjad.OrderedDict(
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
                 right_rhythm=abjad.Tuplet((4, 5), [abjad.Note("c8")]),
+            ),
+        ),
+        (
+            "4=3:5(4)",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c4"),
+                right_rhythm=abjad.Tuplet((3, 5), [abjad.Note("c4")]),
             ),
         ),
         (
@@ -84,6 +93,13 @@ metronome_marks = abjad.OrderedDict(
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
                 right_rhythm=abjad.Tuplet((5, 4), [abjad.Note("c8")]),
+            ),
+        ),
+        (
+            "4=5:3(4)",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c4"),
+                right_rhythm=abjad.Tuplet((5, 3), [abjad.Note("c4")]),
             ),
         ),
         (

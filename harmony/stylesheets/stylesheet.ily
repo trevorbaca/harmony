@@ -32,14 +32,14 @@
             " "
     }
     evenHeaderMarkup = \markup \fill-line { " " }
-    left-margin = 20\mm
+    left-margin = 25\mm
     oddFooterMarkup = \evenFooterMarkup
     oddHeaderMarkup = \markup \fill-line { " " }
     print-first-page-number = ##f
     print-page-number = ##t
     ragged-bottom = ##t
     ragged-last-bottom = ##t
-    right-margin = 5\mm
+    right-margin = 20\mm
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 60)
@@ -75,10 +75,11 @@
     }
     poet = \markup {
         \fontsize #5
-        \line { Paul Griffiths }
+        \line { Paul Griffiths (*1947) }
     }
     tagline = \markup { "" }
     title = \markup \column {
+            \center-align {
             \override #'(font-name . "Palatino Italic")
             \fontsize #3
             \line {
@@ -87,31 +88,32 @@
                 Jonathan \hspace #0.75
                 Hepfer \hspace #0.75
                 & \hspace #0.75
+                the \hspace #0.75
                 Monday \hspace #0.75
                 Evening \hspace #0.75
                 Concerts
             }
             " "
-        \center-align {
             \override #'(font-name . "Palatino")
             \fontsize #16
             \line {
                 \concat {
+                (
+                \hspace #3
                 H
-                \hspace #1
+                \hspace #3
                 A
-                \hspace #1
-                \hspace #1
+                \hspace #3
                 R
-                \hspace #1
+                \hspace #(+ 3 1)
                 M
-                \hspace #1
+                \hspace #3
                 O
-                \hspace #1
+                \hspace #3
                 N
-                \hspace #1
+                \hspace #3
                 Y
-                \hspace #1
+                \hspace #3
                 )
                 }
             }

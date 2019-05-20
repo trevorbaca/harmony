@@ -11,5 +11,6 @@ del platform
 from harmony.tools import *
 
 from harmony.materials.instruments.definition import instruments
+from harmony.materials.margin_markups.definition import margin_markups
 from harmony.materials.metronome_marks.definition import metronome_marks
 from harmony import segments
