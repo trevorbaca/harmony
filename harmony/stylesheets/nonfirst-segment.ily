@@ -4,5 +4,6 @@
 
 \header {
     composer = ##f
+    poet = ##f
     title = ##f
 }
