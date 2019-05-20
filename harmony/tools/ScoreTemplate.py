@@ -67,6 +67,15 @@ class ScoreTemplate(baca.ScoreTemplate):
                             s1                                                                   %! abjad.ScoreTemplate.__illustrate__
                         }                                                                        %! harmony.ScoreTemplate.__call__
                     >>                                                                           %! harmony.ScoreTemplate.__call__
+                    \tag Harp                                                                    %! baca.ScoreTemplate._attach_liypond_tag
+                    \context Staff = "Harp_Music_Staff"                                          %! harmony.ScoreTemplate.__call__
+                    <<                                                                           %! harmony.ScoreTemplate.__call__
+                        \context Voice = "Harp_Music_Voice"                                      %! harmony.ScoreTemplate.__call__
+                        {                                                                        %! harmony.ScoreTemplate.__call__
+                            \clef "treble"                                                       %! abjad.ScoreTemplate.attach_defaults
+                            s1                                                                   %! abjad.ScoreTemplate.__illustrate__
+                        }                                                                        %! harmony.ScoreTemplate.__call__
+                    >>                                                                           %! harmony.ScoreTemplate.__call__
                 >>                                                                               %! harmony.ScoreTemplate.__call__
                 \context StringSectionStaffGroup = "String_Section_Staff_Group"                  %! harmony.ScoreTemplate.__call__
                 <<                                                                               %! harmony.ScoreTemplate.__call__
@@ -135,15 +144,18 @@ class ScoreTemplate(baca.ScoreTemplate):
         super(ScoreTemplate, self).__init__()
         self.voice_abbreviations.update(
             {
-                "vfl": "Bass_Flute_Music_Voice",
-                "vflr": "Bass_Flute_Rest_Voice",
+                "bfl": "Bass_Flute_Music_Voice",
+                "bflr": "Bass_Flute_Rest_Voice",
                 "bflx": ["Bass_Flute_Music_Voice", "Bass_Flute_Rest_Voice"],
-                "p1": "Percussion_I_Music_Voice",
-                "p1r": "Percussion_I_Rest_Voice",
-                "p1x": ["Percussion_I_Music_Voice", "Percussion_I_Rest_Voice"],
-                "p2": "Percussion_II_Music_Voice",
-                "p2r": "Percussion_II_Rest_Voice",
-                "p2x": [
+                "perc1": "Percussion_I_Music_Voice",
+                "perc1r": "Percussion_I_Rest_Voice",
+                "perc1x": [
+                    "Percussion_I_Music_Voice",
+                    "Percussion_I_Rest_Voice",
+                ],
+                "perc2": "Percussion_II_Music_Voice",
+                "perc2r": "Percussion_II_Rest_Voice",
+                "perc2x": [
                     "Percussion_II_Music_Voice",
                     "Percussion_II_Rest_Voice",
                 ],
@@ -266,7 +278,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             harp_music_staff, "default_instrument", harmony.instruments["Harp"]
         )
-        abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("alto"))
+        abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
         self._attach_lilypond_tag("Harp", harp_music_staff)
 
         # VIOLA
@@ -367,7 +379,11 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # PERCUSSION SECTION STAFF GROUP
         percussion_section_staff_group = abjad.StaffGroup(
-            [percussion_1_music_staff, percussion_2_music_staff],
+            [
+                percussion_1_music_staff,
+                percussion_2_music_staff,
+                harp_music_staff,
+            ],
             lilypond_type="PercussionSectionStaffGroup",
             name="Percussion_Section_Staff_Group",
             tag=tag,
@@ -422,8 +438,8 @@ class ScoreTemplate(baca.ScoreTemplate):
             >>> abjad.f(score_template.voice_abbreviations)
             abjad.OrderedDict(
                 [
-                    ('vfl', 'Bass_Flute_Music_Voice'),
-                    ('vflr', 'Bass_Flute_Rest_Voice'),
+                    ('bfl', 'Bass_Flute_Music_Voice'),
+                    ('bflr', 'Bass_Flute_Rest_Voice'),
                     (
                         'bflx',
                         [
@@ -431,19 +447,19 @@ class ScoreTemplate(baca.ScoreTemplate):
                             'Bass_Flute_Rest_Voice',
                             ],
                         ),
-                    ('p1', 'Percussion_I_Music_Voice'),
-                    ('p1r', 'Percussion_I_Rest_Voice'),
+                    ('perc1', 'Percussion_I_Music_Voice'),
+                    ('perc1r', 'Percussion_I_Rest_Voice'),
                     (
-                        'p1x',
+                        'perc1x',
                         [
                             'Percussion_I_Music_Voice',
                             'Percussion_I_Rest_Voice',
                             ],
                         ),
-                    ('p2', 'Percussion_II_Music_Voice'),
-                    ('p2r', 'Percussion_II_Rest_Voice'),
+                    ('perc2', 'Percussion_II_Music_Voice'),
+                    ('perc2r', 'Percussion_II_Rest_Voice'),
                     (
-                        'p2x',
+                        'perc2x',
                         [
                             'Percussion_II_Music_Voice',
                             'Percussion_II_Rest_Voice',
