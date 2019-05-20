@@ -4,10 +4,10 @@ harmony-bass-flute-markup = \markup \hcenter-in #22 "Bass flute"
 harmony-bfl-markup = \markup \hcenter-in #12 "Bfl."
 
 harmony-percussion-i-markup = \markup \hcenter-in #22 "Percussion I"
-harmony-perc-i-markup = \markup \hcenter-in #12 "perc. I"
+harmony-perc-i-markup = \markup \hcenter-in #12 "Perc. I"
 
 harmony-percussion-ii-markup = \markup \hcenter-in #22 "Percussion II"
-harmony-perc-ii-markup = \markup \hcenter-in #12 "perc. II"
+harmony-perc-ii-markup = \markup \hcenter-in #12 "Perc. II"
 
 harmony-harp-markup = \markup \hcenter-in #22 "Harp"
 harmony-hp-markup = \markup \hcenter-in #12 "Hp."
