@@ -1,0 +1,1337 @@
+B_Global_Skips = {                                                             %! abjad.Path.extern
+
+    % [B Global_Skips measure 11 / measure 1]                                  %! _comment_measure_numbers
+    \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+%%% \bar ""                                                                    %! _make_global_skips(3):+SEGMENT:EMPTY_START_BAR
+%%% \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+    s1 * 1                                                                     %! _make_global_skips(1)
+    - \tweak extra-offset #'(0 . 9)                                            %! baca_rehearsal_mark:IndicatorCommand
+    - \baca-rehearsal-mark-markup "B"                                          %! baca_rehearsal_mark:IndicatorCommand
+%%% - \baca-start-lmn-left-only "1"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "11"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%%% - \baca-start-snm-left-only "[B.1]"                                        %! STAGE_NUMBER
+%%% \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
+    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2) %@%
+    - \baca-metronome-mark-spanner-left-text 2 0 1 "144"                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2) %@%
+    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2) %@%
+%%% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%%% - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "144" #'blue        %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%%% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+%@% - \baca-start-ct-left-only "[0'22'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 12 / measure 2]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "2"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "12"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'23'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 13 / measure 3]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "3"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "13"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'25'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 14 / measure 4]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "4"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "14"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'27'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 15 / measure 5]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "5"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "15"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'28'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 16 / measure 6]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "6"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "16"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'30'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 17 / measure 7]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "7"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "17"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'32'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 18 / measure 8]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "8"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "18"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'33'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 19 / measure 9]                                  %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "9"                                            %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "19"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'35'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 20 / measure 10]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "10"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "20"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'37'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 21 / measure 11]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "11"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "21"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'38'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 22 / measure 12]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "12"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "22"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'40'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 23 / measure 13]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "13"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "23"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'42'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 24 / measure 14]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "14"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "24"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'43'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 25 / measure 15]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "15"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "25"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'45'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 26 / measure 16]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "16"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "26"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'47'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 27 / measure 17]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "17"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "27"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'48'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 28 / measure 18]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "18"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "28"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'50'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 29 / measure 19]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "19"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "29"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-left-only "[0'52'']"                                      %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+
+    % [B Global_Skips measure 30 / measure 20]                                 %! _comment_measure_numbers
+    s1 * 1                                                                     %! _make_global_skips(1)
+%%% \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
+%%% - \baca-start-lmn-left-only "20"                                           %! LOCAL_MEASURE_NUMBER
+%%% \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
+%@% - \baca-start-mn-left-only "30"                                            %! MEASURE_NUMBER
+%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+%@% - \baca-start-ct-both "[0'53'']" "[0'55'']"                                %! CLOCK_TIME
+%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+    \baca-bar-line-visible                                                     %! _attach_final_bar_line
+    \bar "|"                                                                   %! _attach_final_bar_line
+
+    % [B Global_Skips measure 31 / measure 21]                                 %! PHANTOM:_style_phantom_measures(1):_comment_measure_numbers
+    \time 1/4                                                                  %! PHANTOM:_style_phantom_measures(1):EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(3)
+    \baca-time-signature-transparent                                           %! PHANTOM:_style_phantom_measures(2)
+    s1 * 1/4                                                                   %! PHANTOM:_make_global_skips(3)
+%%% \bacaStopTextSpanLMN                                                       %! PHANTOM:_style_phantom_measures(1):LOCAL_MEASURE_NUMBER
+%@% \bacaStopTextSpanMN                                                        %! PHANTOM:_style_phantom_measures(1):MEASURE_NUMBER
+%%% \bacaStopTextSpanSNM                                                       %! PHANTOM:_style_phantom_measures(1):STAGE_NUMBER
+    \bacaStopTextSpanMM                                                        %! PHANTOM:_style_phantom_measures(1):SEGMENT_FINAL_STOP_MM_SPANNER:_attach_metronome_marks(4)
+%@% \bacaStopTextSpanCT                                                        %! PHANTOM:_style_phantom_measures(1):CLOCK_TIME
+    \once \override Score.BarLine.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
+    \once \override Score.SpanBar.transparent = ##t                            %! PHANTOM:_style_phantom_measures(3)
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Global_Rests = {                                                             %! abjad.Path.extern
+
+    % [B Global_Rests measure 11 / measure 1]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 12 / measure 2]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 13 / measure 3]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 14 / measure 4]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 15 / measure 5]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 16 / measure 6]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 17 / measure 7]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 18 / measure 8]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 19 / measure 9]                                  %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 20 / measure 10]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 21 / measure 11]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 22 / measure 12]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 23 / measure 13]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 24 / measure 14]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 25 / measure 15]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 26 / measure 16]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 27 / measure 17]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 28 / measure 18]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 29 / measure 19]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 30 / measure 20]                                 %! _comment_measure_numbers
+    R1 * 1                                                                     %! _make_global_rests(1)
+
+    % [B Global_Rests measure 31 / measure 21]                                 %! PHANTOM:_style_phantom_measures(4):_comment_measure_numbers
+    R1 * 1/4                                                                   %! PHANTOM:_make_global_rests(2)
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Bass_Flute_Music_Voice = {                                                   %! abjad.Path.extern
+
+    % [B Bass_Flute_Music_Voice measure 11 / measure 1]                        %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-bfl-markup                            %! _clone_segment_initial_short_instrument_name
+%%% \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Bass_Flute_Music_Voice measure 12 / measure 2]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 13 / measure 3]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 14 / measure 4]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 15 / measure 5]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 16 / measure 6]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 17 / measure 7]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 18 / measure 8]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 19 / measure 9]                        %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 20 / measure 10]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 21 / measure 11]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 22 / measure 12]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 23 / measure 13]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 24 / measure 14]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 25 / measure 15]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 26 / measure 16]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 27 / measure 17]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 28 / measure 18]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 29 / measure 19]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Bass_Flute_Music_Voice measure 30 / measure 20]                       %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Bass_Flute_Music_Voice measure 31 / measure 21]               %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Bass_Flute_Rest_Voice measure 31 / measure 21]                %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Bass_Flute_Music_Staff = <<                                                  %! abjad.Path.extern
+
+    \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context
+    \B_Global_Rests                                                            %! abjad.Path.extern
+
+    \context Voice = "Bass_Flute_Music_Voice"                                  %! harmony.ScoreTemplate.__call__
+    \B_Bass_Flute_Music_Voice                                                  %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
+
+    % [B Percussion_I_Music_Voice measure 11 / measure 1]                      %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
+%%% \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Percussion_I_Music_Voice measure 12 / measure 2]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 13 / measure 3]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 14 / measure 4]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 15 / measure 5]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 16 / measure 6]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 17 / measure 7]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 18 / measure 8]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 19 / measure 9]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 20 / measure 10]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 21 / measure 11]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 22 / measure 12]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 23 / measure 13]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 24 / measure 14]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 25 / measure 15]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 26 / measure 16]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 27 / measure 17]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 28 / measure 18]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 29 / measure 19]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_I_Music_Voice measure 30 / measure 20]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Percussion_I_Music_Voice measure 31 / measure 21]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Percussion_I_Rest_Voice measure 31 / measure 21]              %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Staff = <<                                                %! abjad.Path.extern
+
+    \context Voice = "Percussion_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__
+    \B_Percussion_I_Music_Voice                                                %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Percussion_II_Music_Voice = {                                                %! abjad.Path.extern
+
+    % [B Percussion_II_Music_Voice measure 11 / measure 1]                     %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-perc-ii-markup                        %! _clone_segment_initial_short_instrument_name
+%%% \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"                          %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Percussion_II_Music_Voice measure 12 / measure 2]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 13 / measure 3]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 14 / measure 4]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 15 / measure 5]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 16 / measure 6]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 17 / measure 7]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 18 / measure 8]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 19 / measure 9]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 20 / measure 10]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 21 / measure 11]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 22 / measure 12]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 23 / measure 13]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 24 / measure 14]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 25 / measure 15]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 26 / measure 16]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 27 / measure 17]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 28 / measure 18]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 29 / measure 19]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Percussion_II_Music_Voice measure 30 / measure 20]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Percussion_II_Music_Voice measure 31 / measure 21]            %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Percussion_II_Rest_Voice measure 31 / measure 21]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_II_Music_Staff = <<                                               %! abjad.Path.extern
+
+    \context Voice = "Percussion_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__
+    \B_Percussion_II_Music_Voice                                               %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Harp_Music_Voice = {                                                         %! abjad.Path.extern
+
+    % [B Harp_Music_Voice measure 11 / measure 1]                              %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-hp-markup                             %! _clone_segment_initial_short_instrument_name
+%%% \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Hp.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Harp_Music_Voice measure 12 / measure 2]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 13 / measure 3]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 14 / measure 4]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 15 / measure 5]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 16 / measure 6]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 17 / measure 7]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 18 / measure 8]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 19 / measure 9]                              %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 20 / measure 10]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 21 / measure 11]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 22 / measure 12]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 23 / measure 13]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 24 / measure 14]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 25 / measure 15]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 26 / measure 16]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 27 / measure 17]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 28 / measure 18]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 29 / measure 19]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Harp_Music_Voice measure 30 / measure 20]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Harp_Music_Voice measure 31 / measure 21]                     %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Harp_Rest_Voice measure 31 / measure 21]                      %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Harp_Music_Staff = <<                                                        %! abjad.Path.extern
+
+    \context Voice = "Harp_Music_Voice"                                        %! harmony.ScoreTemplate.__call__
+    \B_Harp_Music_Voice                                                        %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Viola_Music_Voice = {                                                        %! abjad.Path.extern
+
+    % [B Viola_Music_Voice measure 11 / measure 1]                             %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
+%%% \clef "alto"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Viola”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Viola_Music_Voice measure 12 / measure 2]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 13 / measure 3]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 14 / measure 4]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 15 / measure 5]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 16 / measure 6]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 17 / measure 7]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 18 / measure 8]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 19 / measure 9]                             %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 20 / measure 10]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 21 / measure 11]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 22 / measure 12]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 23 / measure 13]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 24 / measure 14]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 25 / measure 15]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 26 / measure 16]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 27 / measure 17]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 28 / measure 18]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 29 / measure 19]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Viola_Music_Voice measure 30 / measure 20]                            %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Viola_Music_Voice measure 31 / measure 21]                    %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Viola_Rest_Voice measure 31 / measure 21]                     %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Viola_Music_Staff = <<                                                       %! abjad.Path.extern
+
+    \context Voice = "Viola_Music_Voice"                                       %! harmony.ScoreTemplate.__call__
+    \B_Viola_Music_Voice                                                       %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Cello_I_Music_Voice = {                                                      %! abjad.Path.extern
+
+    % [B Cello_I_Music_Voice measure 11 / measure 1]                           %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
+%%% \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Cello_I_Music_Voice measure 12 / measure 2]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 13 / measure 3]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 14 / measure 4]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 15 / measure 5]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 16 / measure 6]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 17 / measure 7]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 18 / measure 8]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 19 / measure 9]                           %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 20 / measure 10]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 21 / measure 11]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 22 / measure 12]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 23 / measure 13]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 24 / measure 14]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 25 / measure 15]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 26 / measure 16]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 27 / measure 17]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 28 / measure 18]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 29 / measure 19]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_I_Music_Voice measure 30 / measure 20]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Cello_I_Music_Voice measure 31 / measure 21]                  %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Cello_I_Rest_Voice measure 31 / measure 21]                   %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_I_Music_Staff = <<                                                     %! abjad.Path.extern
+
+    \context Voice = "Cello_I_Music_Voice"                                     %! harmony.ScoreTemplate.__call__
+    \B_Cello_I_Music_Voice                                                     %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Cello_II_Music_Voice = {                                                     %! abjad.Path.extern
+
+    % [B Cello_II_Music_Voice measure 11 / measure 1]                          %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-vc-ii-markup                          %! _clone_segment_initial_short_instrument_name
+%%% \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Cello_II_Music_Voice measure 12 / measure 2]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 13 / measure 3]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 14 / measure 4]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 15 / measure 5]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 16 / measure 6]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 17 / measure 7]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 18 / measure 8]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 19 / measure 9]                          %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 20 / measure 10]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 21 / measure 11]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 22 / measure 12]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 23 / measure 13]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 24 / measure 14]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 25 / measure 15]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 26 / measure 16]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 27 / measure 17]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 28 / measure 18]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 29 / measure 19]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Cello_II_Music_Voice measure 30 / measure 20]                         %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Cello_II_Music_Voice measure 31 / measure 21]                 %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Cello_II_Rest_Voice measure 31 / measure 21]                  %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_II_Music_Staff = <<                                                    %! abjad.Path.extern
+
+    \context Voice = "Cello_II_Music_Voice"                                    %! harmony.ScoreTemplate.__call__
+    \B_Cello_II_Music_Voice                                                    %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Contrabass_I_Music_Voice = {                                                 %! abjad.Path.extern
+
+    % [B Contrabass_I_Music_Voice measure 11 / measure 1]                      %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
+%%% \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Contrabass_I_Music_Voice measure 12 / measure 2]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 13 / measure 3]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 14 / measure 4]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 15 / measure 5]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 16 / measure 6]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 17 / measure 7]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 18 / measure 8]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 19 / measure 9]                      %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 20 / measure 10]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 21 / measure 11]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 22 / measure 12]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 23 / measure 13]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 24 / measure 14]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 25 / measure 15]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 26 / measure 16]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 27 / measure 17]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 28 / measure 18]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 29 / measure 19]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_I_Music_Voice measure 30 / measure 20]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Contrabass_I_Music_Voice measure 31 / measure 21]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Contrabass_I_Rest_Voice measure 31 / measure 21]              %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Contrabass_I_Music_Staff = <<                                                %! abjad.Path.extern
+
+    \context Voice = "Contrabass_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__
+    \B_Contrabass_I_Music_Voice                                                %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern
+
+
+B_Contrabass_II_Music_Voice = {                                                %! abjad.Path.extern
+
+    % [B Contrabass_II_Music_Voice measure 11 / measure 1]                     %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-cb-ii-markup                          %! _clone_segment_initial_short_instrument_name
+%%% \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+%%% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+%%% \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+%%% \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+%%% ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+%%% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+%%% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+%%% \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    % [B Contrabass_II_Music_Voice measure 12 / measure 2]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 13 / measure 3]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 14 / measure 4]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 15 / measure 5]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 16 / measure 6]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 17 / measure 7]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 18 / measure 8]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 19 / measure 9]                     %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 20 / measure 10]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 21 / measure 11]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 22 / measure 12]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 23 / measure 13]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 24 / measure 14]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 25 / measure 15]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 26 / measure 16]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 27 / measure 17]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 28 / measure 18]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 29 / measure 19]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    % [B Contrabass_II_Music_Voice measure 30 / measure 20]                    %! _comment_measure_numbers
+    R1 * 1/1                                                                   %! _call_rhythm_commands
+
+    <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Contrabass_II_Music_Voice measure 31 / measure 21]            %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! PHANTOM:_make_multimeasure_rest_container
+        {                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+            % [B Contrabass_II_Rest_Voice measure 31 / measure 21]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
+            \once \override Score.TimeSignature.X-extent = ##f                 %! PHANTOM:_style_phantom_measures(6)
+            \once \override MultiMeasureRest.transparent = ##t                 %! PHANTOM:_style_phantom_measures(7)
+            \stopStaff                                                         %! PHANTOM:_style_phantom_measures(8)
+            \once \override Staff.StaffSymbol.transparent = ##t                %! PHANTOM:_style_phantom_measures(8)
+            \startStaff                                                        %! PHANTOM:_style_phantom_measures(8)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+
+        }                                                                      %! PHANTOM:_make_multimeasure_rest_container
+
+    >>                                                                         %! PHANTOM:_make_multimeasure_rest_container
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Contrabass_II_Music_Staff = <<                                               %! abjad.Path.extern
+
+    \context Voice = "Contrabass_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__
+    \B_Contrabass_II_Music_Voice                                               %! abjad.Path.extern
+
+>>                                                                             %! abjad.Path.extern

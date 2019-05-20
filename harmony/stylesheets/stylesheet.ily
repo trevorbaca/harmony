@@ -17,7 +17,6 @@
             \fontsize #3
             \override #'(font-name . "Palatino")
             \concat {
-                \override #'(font-name . "Palatino Italic")
                 (HARMONY)
                 \hspace #3
                 —
