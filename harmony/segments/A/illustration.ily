@@ -434,44 +434,111 @@ A_Percussion_II_Music_Voice = {                                                %
     % [A Percussion_II_Music_Voice measure 1]                                  %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
     \set Staff.instrumentName = \harmony-percussion-ii-markup                  %! baca_start_markup:-PARTS:IndicatorCommand
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca_staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca_staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca_staff_lines:IndicatorCommand
     \clef "treble"                                                             %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
     \once \override Staff.Clef.color = #(x11-color 'DarkViolet)                %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
     \once \override Staff.InstrumentName.color = #(x11-color 'blue)            %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    r1                                                                         %! harmony_upbeat_attack
     ^ \baca-default-indicator-markup "(“Percussion”)"                          %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     ^ \baca-explicit-indicator-markup "[“Perc. II”]"                           %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     \override Staff.Clef.color = #(x11-color 'violet)                          %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
 
-    % [A Percussion_II_Music_Voice measure 2]                                  %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \override Stem.direction = #down                                           %! baca_stem_down:OverrideCommand(1)
+    a'4                                                                        %! harmony_upbeat_attack
+    - \tweak parent-alignment-X #0                                             %! baca_markup:IndicatorCommand
+    - \tweak self-alignment-X #0                                               %! baca_markup:IndicatorCommand
+    ^ \baca-bd-superball-markup                                                %! baca_markup:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_II_Music_Voice measure 2]                          %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_II_Rest_Voice measure 2]                           %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [A Percussion_II_Music_Voice measure 3]                                  %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    a'4                                                                        %! harmony_begin_end_rhythm
+
+    r4                                                                         %! harmony_begin_end_rhythm
+
+    a'4                                                                        %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 4]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    a'4                                                                        %! harmony_begin_end_rhythm
+
+    r2                                                                         %! harmony_begin_end_rhythm
+
+    a'4                                                                        %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 5]                                  %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    a'4                                                                        %! harmony_begin_end_rhythm
+
+    r4                                                                         %! harmony_begin_end_rhythm
+
+    a'4                                                                        %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 6]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    r1                                                                         %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 7]                                  %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    a'4                                                                        %! harmony_begin_end_rhythm
+
+    r4                                                                         %! harmony_begin_end_rhythm
+
+    a'4                                                                        %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 8]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    a'4                                                                        %! harmony_begin_end_rhythm
 
-    % [A Percussion_II_Music_Voice measure 9]                                  %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony_begin_end_rhythm
+
+    a'4                                                                        %! harmony_begin_end_rhythm
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_II_Music_Voice measure 9]                          %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/2                                                          %! _make_multimeasure_rest_container
+            \revert Stem.direction                                             %! baca_stem_down:OverrideCommand(2)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_II_Rest_Voice measure 9]                           %! _comment_measure_numbers
+            R1 * 1/2                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [A Percussion_II_Music_Voice measure 10]                                 %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

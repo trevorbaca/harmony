@@ -2,6 +2,7 @@ import abjad
 import baca
 import harmony
 import os
+from abjadext import rmakers
 
 
 ###############################################################################
@@ -97,12 +98,32 @@ maker(
 
 maker(
     "perc2",
+    baca.markup(
+        r'\baca-bd-superball-markup',
+        abjad.tweak(0).parent_alignment_X,
+        abjad.tweak(0).self_alignment_X,
+        literal=True,
+        ),
     baca.suite(
         harmony.margin_markup("Perc. II"),
         baca.start_markup(
             r"\harmony-percussion-ii-markup",
             literal=True,
             ),
+        ),
+    harmony.superball_style(),
+    )
+
+maker(
+    ("perc2", 1),
+    baca.staff_lines(1),
+    harmony.upbeat_attack()
+    )
+
+maker(
+    ("perc2", (3, 8)),
+    harmony.begin_end_rhythm(
+        dmask=rmakers.silence([3]),
         ),
     )
 
