@@ -1,3 +1,4 @@
+% (HARMONY) (2019)
 \include "/Users/trevorbaca/baca/lilypond/baca.ily"
 
 
@@ -165,7 +166,7 @@
         % DISCOVERY: overriding TextScript.X-extent = ##f
         %            makes LilyPond ignore self-alignment-X tweaks;
         %            probably should never be done at stylesheet level.
-        %%%\override TextScript.X-extent = ##f
+        % NOTE:      may be best to override NO text script properties.
 
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-to-extent = ##f
