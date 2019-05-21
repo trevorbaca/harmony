@@ -98,6 +98,7 @@ maker(
 
 maker(
     "perc2",
+    baca.dls_staff_padding(6),
     baca.markup(
         r'\baca-bd-superball-markup',
         abjad.tweak(0).parent_alignment_X,
@@ -118,6 +119,18 @@ maker(
     ("perc2", 1),
     baca.staff_lines(1),
     harmony.upbeat_attack()
+    )
+
+maker(
+    ("perc2", [3, 4, 5, 7, 8]),
+    baca.hairpin(
+        'o<| mf',
+        selector=baca.leaves()[:1].rleak(),
+        ),
+    baca.hairpin(
+        'o<| f',
+        selector=baca.leaves()[-1:].rleak(),
+        ),
     )
 
 maker(
