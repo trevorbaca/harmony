@@ -16,14 +16,15 @@ def begin_end_rhythm(*, dmask=None, ltmask=None):
 
     rhythm_specifier = baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
+            beam_specifier=rmakers.BeamSpecifier(beam_each_division=False),
             division_masks=dmask,
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
-                prefix_talea=[1],
-                prefix_counts=[1],
-                suffix_talea=[1],
-                suffix_counts=[1],
-                talea_denominator=4,
+                prefix_talea=[3, 1],
+                prefix_counts=[2],
+                suffix_talea=[3, 1],
+                suffix_counts=[2],
+                talea_denominator=16,
             ),
             logical_tie_masks=ltmask,
             tag="harmony_begin_end_rhythm",
