@@ -117,8 +117,24 @@ maker(
 
 maker(
     ("perc2", 1),
+    baca.hairpin(
+        'o<| f',
+        selector=baca.leaves()[-2:],
+        ),
     baca.staff_lines(1),
     harmony.upbeat_attack()
+    )
+
+maker(
+    ("perc2", (1, 8)),
+    baca.invisible_music(
+        selector=baca.pleaves(exclude=abjad.const.HIDDEN)[
+            abjad.index([1], period=2)],
+        ),
+    baca.set_duration_multiplier(
+        selector=baca.pleaves(exclude=abjad.const.HIDDEN),
+        written_duration=(1, 4),
+        ),
     )
 
 maker(
@@ -129,7 +145,7 @@ maker(
         ),
     baca.hairpin(
         'o<| f',
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-2:],
         ),
     )
 
