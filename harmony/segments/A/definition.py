@@ -126,6 +126,11 @@ maker(
     )
 
 maker(
+    ("perc2", [1, 3, 4, 5, 7, 8]),
+    baca.breathe(),
+    )
+
+maker(
     ("perc2", (1, 8)),
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN)[
@@ -147,6 +152,7 @@ maker(
         'o<| f',
         selector=baca.leaves()[-2:],
         ),
+    baca.laissez_vibrer(),
     )
 
 maker(

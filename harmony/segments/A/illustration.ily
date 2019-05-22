@@ -465,6 +465,7 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_upbeat_attack
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -489,6 +490,7 @@ A_Percussion_II_Music_Voice = {                                                %
 
     % [A Percussion_II_Music_Voice measure 3]                                  %! _comment_measure_numbers
     a'4 * 3/4                                                                  %! harmony_begin_end_rhythm
+    - \laissezVibrer                                                           %! baca_laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -511,9 +513,11 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_begin_end_rhythm
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     % [A Percussion_II_Music_Voice measure 4]                                  %! _comment_measure_numbers
     a'4 * 3/4                                                                  %! harmony_begin_end_rhythm
+    - \laissezVibrer                                                           %! baca_laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -536,9 +540,11 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_begin_end_rhythm
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     % [A Percussion_II_Music_Voice measure 5]                                  %! _comment_measure_numbers
     a'4 * 3/4                                                                  %! harmony_begin_end_rhythm
+    - \laissezVibrer                                                           %! baca_laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -561,12 +567,14 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_begin_end_rhythm
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     % [A Percussion_II_Music_Voice measure 6]                                  %! _comment_measure_numbers
     r1                                                                         %! harmony_begin_end_rhythm
 
     % [A Percussion_II_Music_Voice measure 7]                                  %! _comment_measure_numbers
     a'4 * 3/4                                                                  %! harmony_begin_end_rhythm
+    - \laissezVibrer                                                           %! baca_laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -589,9 +597,11 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_begin_end_rhythm
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     % [A Percussion_II_Music_Voice measure 8]                                  %! _comment_measure_numbers
     a'4 * 3/4                                                                  %! harmony_begin_end_rhythm
+    - \laissezVibrer                                                           %! baca_laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(1)
@@ -614,6 +624,7 @@ A_Percussion_II_Music_Voice = {                                                %
     a'4 * 1/4                                                                  %! harmony_begin_end_rhythm
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca_hairpin:PiecewiseCommand(2)
+    \breathe                                                                   %! baca_breathe:IndicatorCommand
 
     <<                                                                         %! _make_multimeasure_rest_container
 

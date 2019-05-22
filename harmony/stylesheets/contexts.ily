@@ -147,6 +147,8 @@
 
         \override Hairpin.to-barline = ##f
 
+        \shape #'((0 . 0) (0.5 . 0) (1 . 0) (2 . 0)) LaissezVibrerTie                 
+
         \override NoteCollision.merge-differently-dotted = ##t
 
         \override NoteColumn.ignore-collision = ##t
