@@ -6,11 +6,7 @@ metronome_marks = abjad.OrderedDict(
         ("48", abjad.MetronomeMark((1, 4), 48)),
         (
             "57.6",
-            abjad.MetronomeMark(
-                (1, 4),
-                abjad.Fraction(288, 5),
-                decimal="57.6",
-            ),
+            abjad.MetronomeMark((1, 4), abjad.Fraction(288, 5), decimal=True),
         ),
         ("72", abjad.MetronomeMark((1, 4), 72)),
         ("96", abjad.MetronomeMark((1, 4), 96)),
