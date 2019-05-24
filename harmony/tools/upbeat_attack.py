@@ -3,7 +3,7 @@ import baca
 from abjadext import rmakers
 
 
-def upbeat_attack(*, dmask=None, ltmask=None):
+def upbeat_attack(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
     """
     Makes upbeat attack rhythm.
     """
