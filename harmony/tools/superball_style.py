@@ -1,7 +1,7 @@
 import baca
 
 
-def superball_style():
+def superball_style() -> baca.Suite:
     """
     Makes superball style.
     """

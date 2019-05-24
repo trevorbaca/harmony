@@ -3,7 +3,7 @@ import baca
 from abjadext import rmakers
 
 
-def begin_end_rhythm(*, dmask=None, ltmask=None):
+def begin_end_rhythm(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
     """
     Makes begin-end rhythm.
     """
