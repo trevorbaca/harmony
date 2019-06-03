@@ -3,16 +3,12 @@ import baca
 from abjadext import rmakers
 
 
-def upbeat_attack(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
+def upbeat_attack(
+    *, dmask: rmakers.MasksTyping = None, ltmask: rmakers.MasksTyping = None
+) -> baca.RhythmCommand:
     """
     Makes upbeat attack rhythm.
     """
-
-    if dmask is not None:
-        dmask = [dmask]
-
-    if ltmask is not None:
-        ltmask = [ltmask]
 
     rhythm_specifier = baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
@@ -25,7 +21,7 @@ def upbeat_attack(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
                 talea_denominator=16,
             ),
             logical_tie_masks=ltmask,
-            tag="harmony_upbeat_attack",
+            tag="harmony.upbeat_attack",
         )
     )
     return rhythm_specifier

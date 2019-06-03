@@ -3,16 +3,12 @@ import baca
 from abjadext import rmakers
 
 
-def begin_end_rhythm(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
+def begin_end_rhythm(
+    *, dmask: rmakers.MasksTyping = None, ltmask: rmakers.MasksTyping = None
+) -> baca.RhythmCommand:
     """
     Makes begin-end rhythm.
     """
-
-    if dmask is not None:
-        dmask = [dmask]
-
-    if ltmask is not None:
-        ltmask = [ltmask]
 
     rhythm_specifier = baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
@@ -27,7 +23,7 @@ def begin_end_rhythm(*, dmask=None, ltmask=None) -> baca.RhythmCommand:
                 talea_denominator=16,
             ),
             logical_tie_masks=ltmask,
-            tag="harmony_begin_end_rhythm",
+            tag="harmony.begin_end_rhythm",
         )
     )
     return rhythm_specifier
