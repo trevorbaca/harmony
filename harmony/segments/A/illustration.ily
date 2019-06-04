@@ -220,47 +220,430 @@ A_Global_Rests = {                                                             %
 
 A_Bass_Flute_Music_Voice = {                                                   %! abjad.Path.extern
 
-    % [A Bass_Flute_Music_Voice measure 1]                                     %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
-    \set Staff.instrumentName = \harmony-bass-flute-markup                     %! baca_start_markup:-PARTS:IndicatorCommand
-    \clef "treble"                                                             %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
-    \once \override Staff.Clef.color = #(x11-color 'DarkViolet)                %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
-    \once \override Staff.InstrumentName.color = #(x11-color 'blue)            %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
-    ^ \baca-default-indicator-markup "(“BassFlute”)"                           %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    ^ \baca-explicit-indicator-markup "[“Bfl.”]"                               %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    \override Staff.Clef.color = #(x11-color 'violet)                          %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
-    \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 4/6 {                                                               %! harmony.bfl_transition_rhythm
 
-    % [A Bass_Flute_Music_Voice measure 2]                                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+        % [A Bass_Flute_Music_Voice measure 1]                                 %! _comment_measure_numbers
+        \set Staff.shortInstrumentName = \harmony-bfl-markup                   %! EXPLICIT_MARGIN_MARKUP:_set_status_tag:baca_margin_markup:-PARTS:IndicatorCommand
+        \set Staff.instrumentName = \harmony-bass-flute-markup                 %! baca_start_markup:-PARTS:IndicatorCommand
+        \clef "treble"                                                         %! DEFAULT_CLEF:_set_status_tag:abjad.ScoreTemplate.attach_defaults
+        \once \override Staff.Clef.color = #(x11-color 'DarkViolet)            %! DEFAULT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! DEFAULT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
+        \once \override Staff.InstrumentName.color = #(x11-color 'blue)        %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ^ \baca-default-indicator-markup "(“BassFlute”)"                       %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+        ^ \baca-explicit-indicator-markup "[“Bfl.”]"                           %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+        [                                                                      %! harmony.bfl_transition_rhythm
+        \override Staff.Clef.color = #(x11-color 'violet)                      %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+        \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)      %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \set Staff.shortInstrumentName = \harmony-bfl-markup                   %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca_margin_markup:-PARTS:IndicatorCommand
 
-    % [A Bass_Flute_Music_Voice measure 3]                                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
 
-    % [A Bass_Flute_Music_Voice measure 4]                                     %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 16/19 {                                                             %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Bass_Flute_Music_Voice measure 2]                             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Bass_Flute_Rest_Voice measure 2]                              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 16/18 {                                                             %! harmony.bfl_transition_rhythm
+
+        % [A Bass_Flute_Music_Voice measure 3]                                 %! _comment_measure_numbers
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 12/15 {                                                             %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
 
     % [A Bass_Flute_Music_Voice measure 5]                                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.bfl_transition_rhythm
 
-    % [A Bass_Flute_Music_Voice measure 6]                                     %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 4/7 {                                                               %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 16/18 {                                                             %! harmony.bfl_transition_rhythm
+
+        % [A Bass_Flute_Music_Voice measure 6]                                 %! _comment_measure_numbers
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
 
     % [A Bass_Flute_Music_Voice measure 7]                                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.bfl_transition_rhythm
 
-    % [A Bass_Flute_Music_Voice measure 8]                                     %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 8/10 {                                                              %! harmony.bfl_transition_rhythm
 
-    % [A Bass_Flute_Music_Voice measure 9]                                     %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+        % [A Bass_Flute_Music_Voice measure 8]                                 %! _comment_measure_numbers
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.bfl_transition_rhythm
+    \times 4/7 {                                                               %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        [                                                                      %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''16                                                                  %! harmony.bfl_transition_rhythm
+        ]                                                                      %! harmony.bfl_transition_rhythm
+
+    }                                                                          %! harmony.bfl_transition_rhythm
+
+    r4                                                                         %! harmony.bfl_transition_rhythm
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Bass_Flute_Music_Voice measure 9]                             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1/2                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Bass_Flute_Rest_Voice measure 9]                              %! _comment_measure_numbers
+            R1 * 1/2                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [A Bass_Flute_Music_Voice measure 10]                                    %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
