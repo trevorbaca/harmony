@@ -81,6 +81,19 @@ maker(
         ),
     )
 
+maker(
+    ("bfl", 1),
+    harmony.bfl_transition_rhythm(
+    ),
+)
+
+maker(
+    ("bfl", (3, 8)),
+    harmony.bfl_transition_rhythm(
+        rotation=-1,
+    ),
+)
+
 # perc1
 
 maker(
