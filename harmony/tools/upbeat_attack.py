@@ -9,8 +9,7 @@ def upbeat_attack(
     """
     Makes upbeat attack rhythm.
     """
-
-    rhythm_specifier = baca.rhythm(
+    return baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
             division_masks=dmask,
             beam_specifier=rmakers.BeamSpecifier(beam_each_division=False),
@@ -21,7 +20,6 @@ def upbeat_attack(
                 talea_denominator=16,
             ),
             logical_tie_masks=ltmask,
-            tag="harmony.upbeat_attack",
-        )
+        ),
+        tag="harmony.upbeat_attack",
     )
-    return rhythm_specifier
