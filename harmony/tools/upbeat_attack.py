@@ -12,7 +12,6 @@ def upbeat_attack(
     return baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
             division_masks=dmask,
-            beam_specifier=rmakers.BeamSpecifier(beam_each_division=False),
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
                 suffix_talea=[3, 1],

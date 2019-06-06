@@ -18,6 +18,9 @@ def bfl_transition_rhythm(
     return baca.rhythm(
         divisions=baca.divisions().fuse().split(divisions_, cyclic=True),
         rhythm_maker=rmakers.TaleaRhythmMaker(
+            beam_specifier=rmakers.BeamSpecifier(
+                beam_each_division=True,
+            ),
             division_masks=dmask,
             extra_counts_per_division=extra_counts,
             talea=rmakers.Talea(counts=[1], denominator=16),
