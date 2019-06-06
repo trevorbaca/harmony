@@ -11,7 +11,6 @@ def begin_end_rhythm(
     """
     return baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
-            beam_specifier=rmakers.BeamSpecifier(beam_each_division=False),
             division_masks=dmask,
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
