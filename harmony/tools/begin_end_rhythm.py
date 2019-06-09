@@ -4,7 +4,7 @@ from abjadext import rmakers
 
 
 def begin_end_rhythm(
-    *, dmask: rmakers.MasksTyping = None, ltmask: rmakers.MasksTyping = None
+    *, dmask: rmakers.MasksTyping = None
 ) -> baca.RhythmCommand:
     """
     Makes begin-end rhythm.
@@ -20,7 +20,6 @@ def begin_end_rhythm(
                 suffix_counts=[2],
                 talea_denominator=16,
             ),
-            logical_tie_masks=ltmask,
         ),
         tag="harmony.begin_end_rhythm",
     )
