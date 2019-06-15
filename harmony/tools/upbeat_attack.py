@@ -9,6 +9,7 @@ def upbeat_attack(*, dmask: rmakers.MasksTyping = None) -> baca.RhythmCommand:
     """
     return baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
+            rmakers.TupletSpecifier(extract_trivial=True),
             division_masks=dmask,
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
