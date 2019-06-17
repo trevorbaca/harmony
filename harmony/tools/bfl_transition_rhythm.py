@@ -18,13 +18,13 @@ def bfl_transition_rhythm(
     return baca.rhythm(
         divisions=baca.divisions().fuse().split(divisions_, cyclic=True),
         rhythm_maker=rmakers.TaleaRhythmMaker(
+            rmakers.TupletSpecifier(
+                denominator=(1, 16), extract_trivial=True, force_fraction=True
+            ),
             rmakers.BeamSpecifier(beam_each_division=True),
             division_masks=dmask,
             extra_counts_per_division=extra_counts,
             talea=rmakers.Talea(counts=[1], denominator=16),
-            tuplet_specifier=rmakers.TupletSpecifier(
-                denominator=(1, 16), extract_trivial=True, force_fraction=True
-            ),
         ),
         tag="harmony.bfl_transition_rhythm",
     )
