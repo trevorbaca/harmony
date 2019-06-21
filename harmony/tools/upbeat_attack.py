@@ -3,14 +3,13 @@ import baca
 from abjadext import rmakers
 
 
-def upbeat_attack(*, dmask: rmakers.MasksTyping = None) -> baca.RhythmCommand:
+def upbeat_attack() -> baca.RhythmCommand:
     """
     Makes upbeat attack rhythm.
     """
     return baca.rhythm(
         rhythm_maker=rmakers.IncisedRhythmMaker(
             rmakers.TupletSpecifier(extract_trivial=True),
-            division_masks=dmask,
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
                 suffix_talea=[3, 1],
