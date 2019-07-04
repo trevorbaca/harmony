@@ -709,22 +709,22 @@ A_Percussion_I_Music_Voice = {                                                 %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 4]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 5]                                   %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 6]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 7]                                   %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 8]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 9]                                   %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Percussion_I_Music_Voice measure 10]                                  %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1050,22 +1050,22 @@ A_Harp_Music_Voice = {                                                         %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 4]                                           %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 5]                                           %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 6]                                           %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 7]                                           %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 8]                                           %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 9]                                           %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Harp_Music_Voice measure 10]                                          %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1131,22 +1131,22 @@ A_Viola_Music_Voice = {                                                        %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 4]                                          %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 5]                                          %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 6]                                          %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 7]                                          %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 8]                                          %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 9]                                          %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Viola_Music_Voice measure 10]                                         %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1212,22 +1212,22 @@ A_Cello_I_Music_Voice = {                                                      %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 4]                                        %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 5]                                        %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 6]                                        %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 7]                                        %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 8]                                        %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 9]                                        %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_I_Music_Voice measure 10]                                       %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1293,22 +1293,22 @@ A_Cello_II_Music_Voice = {                                                     %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 4]                                       %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 5]                                       %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 6]                                       %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 7]                                       %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 8]                                       %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 9]                                       %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Cello_II_Music_Voice measure 10]                                      %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1374,22 +1374,22 @@ A_Contrabass_I_Music_Voice = {                                                 %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 4]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 5]                                   %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 6]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 7]                                   %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 8]                                   %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 9]                                   %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_I_Music_Voice measure 10]                                  %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
@@ -1455,22 +1455,22 @@ A_Contrabass_II_Music_Voice = {                                                %
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 4]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 5]                                  %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 6]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 7]                                  %! _comment_measure_numbers
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 8]                                  %! _comment_measure_numbers
-    R1 * 1/1                                                                   %! _call_rhythm_commands
+    R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 9]                                  %! _comment_measure_numbers
-    R1 * 1/2                                                                   %! _call_rhythm_commands
+    R1 * 2/4                                                                   %! _call_rhythm_commands
 
     % [A Contrabass_II_Music_Voice measure 10]                                 %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _call_rhythm_commands
