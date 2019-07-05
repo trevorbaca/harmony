@@ -24,5 +24,5 @@ def begin_end_rhythm(
                 talea_denominator=16,
             ),
             tag="harmony.begin_end_rhythm",
-        ),
+        )
     )
