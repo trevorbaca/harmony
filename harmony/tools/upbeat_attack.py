@@ -16,6 +16,6 @@ def upbeat_attack() -> baca.RhythmCommand:
                 suffix_counts=[2],
                 talea_denominator=16,
             ),
+            tag="harmony.upbeat_attack",
         ),
-        tag="harmony.upbeat_attack",
     )
