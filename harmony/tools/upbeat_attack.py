@@ -8,7 +8,7 @@ def upbeat_attack() -> baca.RhythmCommand:
     Makes upbeat attack rhythm.
     """
     return baca.rhythm(
-        rhythm_maker=rmakers.IncisedRhythmMaker(
+        rmakers.IncisedRhythmMaker(
             rmakers.TupletSpecifier(extract_trivial=True),
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
