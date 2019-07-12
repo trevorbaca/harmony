@@ -16,7 +16,7 @@ def bfl_transition_rhythm(
     divisions_ = divisions_.rotate(n=rotation)
 
     return baca.rhythm(
-        rhythm_maker=rmakers.TaleaRhythmMaker(
+        rmakers.TaleaRhythmMaker(
             *specifiers,
             rmakers.BeamSpecifier(selector=baca.tuplets()),
             rmakers.TupletSpecifier(

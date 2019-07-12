@@ -10,7 +10,7 @@ def begin_end_rhythm(
     Makes begin-end rhythm.
     """
     return baca.rhythm(
-        rhythm_maker=rmakers.IncisedRhythmMaker(
+        rmakers.IncisedRhythmMaker(
             *specifiers,
             rmakers.TupletSpecifier(
                 extract_trivial=True, rewrite_rest_filled=True
