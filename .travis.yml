@@ -54,11 +54,6 @@ before_install:
     - export MYPYPATH=$MYPYPATH:$IDE
     - export PATH=$PATH:$IDE/ide/scr
 
-    # install uqbar:
-    - UQBAR=/tmp/uqbar
-    - pip install --no-deps --target $UQBAR uqbar
-    - export MYPYPATH=$MYPYPATH:$UQBAR
-
     # log setup:
     - echo $MYPYPATH
     - echo $PATH
