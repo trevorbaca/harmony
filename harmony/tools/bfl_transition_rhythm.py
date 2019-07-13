@@ -27,7 +27,7 @@ def bfl_transition_rhythm(
             ),
             divisions=baca.divisions().fuse().split(divisions_, cyclic=True),
             extra_counts_per_division=extra_counts,
-            tag="harmony.bfl_transition_rhythm",
             talea=rmakers.Talea(counts=[1], denominator=16),
-        )
+        ),
+        tag="harmony.bfl_transition_rhythm",
     )
