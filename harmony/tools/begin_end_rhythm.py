@@ -23,6 +23,6 @@ def begin_end_rhythm(
                 suffix_counts=[2],
                 talea_denominator=16,
             ),
-            tag="harmony.begin_end_rhythm",
-        )
+        ),
+        tag="harmony.begin_end_rhythm",
     )
