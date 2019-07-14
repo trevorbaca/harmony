@@ -89,7 +89,7 @@ maker(
 maker(
     ("bfl", (3, 8)),
     harmony.bfl_transition_rhythm(
-        rmakers.SilenceMask(baca.tuplets().get([2], 3)),
+        rmakers.rest(baca.tuplets().get([2], 3)),
         rotation=-1,
     ),
 )
@@ -170,7 +170,7 @@ maker(
 maker(
     ("perc2", (3, 8)),
     harmony.begin_end_rhythm(
-        rmakers.SilenceMask(baca.tuplet(3)),
+        rmakers.rest(baca.tuplet(3)),
     ),
 )
 
