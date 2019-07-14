@@ -89,7 +89,7 @@ maker(
 maker(
     ("bfl", (3, 8)),
     harmony.bfl_transition_rhythm(
-        rmakers.SilenceMask(baca.tuplets()[abjad.index([2], 3)]),
+        rmakers.SilenceMask(baca.tuplets().get([2], 3)),
         rotation=-1,
     ),
 )
@@ -146,8 +146,7 @@ maker(
 maker(
     ("perc2", (1, 8)),
     baca.invisible_music(
-        selector=baca.pleaves(exclude=abjad.const.HIDDEN)[
-            abjad.index([1], period=2)],
+        selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
         ),
     baca.set_duration_multiplier(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN),
