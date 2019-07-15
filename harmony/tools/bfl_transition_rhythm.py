@@ -18,8 +18,8 @@ def bfl_transition_rhythm(
     return baca.rhythm(
         rmakers.TaleaRhythmMaker(
             *specifiers,
-            rmakers.BeamSpecifier(selector=baca.tuplets()),
-            rmakers.TupletSpecifier(
+            rmakers.BeamCommand(selector=baca.tuplets()),
+            rmakers.TupletCommand(
                 denominator=(1, 16),
                 extract_trivial=True,
                 force_fraction=True,
