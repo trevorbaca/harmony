@@ -12,9 +12,8 @@ def begin_end_rhythm(
     return baca.rhythm(
         rmakers.IncisedRhythmMaker(
             *specifiers,
-            rmakers.TupletCommand(
-                extract_trivial=True, rewrite_rest_filled=True
-            ),
+            rmakers.rewrite_rest_filled(),
+            rmakers.extract_trivial(),
             incise_specifier=rmakers.InciseSpecifier(
                 fill_with_rests=True,
                 prefix_talea=[3, 1],
