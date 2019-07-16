@@ -19,7 +19,7 @@ def bfl_transition_rhythm(
         rmakers.TaleaRhythmMaker(
             *specifiers,
             rmakers.beam(),
-            rmakers.TupletCommand(denominator=(1, 16)),
+            rmakers.denominator((1, 16)),
             rmakers.force_fraction(),
             rmakers.rewrite_rest_filled(),
             rmakers.extract_trivial(),
