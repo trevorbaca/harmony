@@ -18,7 +18,7 @@ def bfl_transition_rhythm(
     return baca.rhythm(
         rmakers.TaleaRhythmMaker(
             *specifiers,
-            rmakers.simple_beam(),
+            rmakers.beam(),
             rmakers.denominator((1, 16)),
             rmakers.force_fraction(),
             rmakers.rewrite_rest_filled(),
