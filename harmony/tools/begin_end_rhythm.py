@@ -12,7 +12,7 @@ def begin_end_rhythm(*specifiers: rmakers.Command,) -> baca.RhythmCommand:
             *specifiers,
             rmakers.rewrite_rest_filled(),
             rmakers.extract_trivial(),
-            incise_specifier=rmakers.Incise(
+            incise=rmakers.Incise(
                 fill_with_rests=True,
                 prefix_talea=[3, 1],
                 prefix_counts=[2],
