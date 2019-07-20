@@ -23,7 +23,9 @@ def bfl_transition_rhythm(
             rmakers.force_fraction(),
             rmakers.rewrite_rest_filled(),
             rmakers.extract_trivial(),
-            divisions=baca.divisions().fuse().split(divisions_, cyclic=True),
+            preprocessor=baca.divisions()
+            .fuse()
+            .split(divisions_, cyclic=True),
             extra_counts=extra_counts,
             talea=rmakers.Talea(counts=[1], denominator=16),
         ),
