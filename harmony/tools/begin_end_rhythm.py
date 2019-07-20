@@ -8,7 +8,7 @@ def begin_end_rhythm(*specifiers: rmakers.Command,) -> baca.RhythmCommand:
     Makes begin-end rhythm.
     """
     return baca.rhythm(
-        rmakers.IncisedRhythmMaker(
+        rmakers.incised(
             *specifiers,
             rmakers.rewrite_rest_filled(),
             rmakers.extract_trivial(),
