@@ -16,17 +16,13 @@ def bfl_transition_rhythm(
     divisions_ = divisions_.rotate(n=rotation)
 
     return baca.rhythm(
-        rmakers.rhythm(
-            rmakers.talea([1], 16, extra_counts=extra_counts),
-            *specifiers,
-            rmakers.beam(),
-            rmakers.denominator((1, 16)),
-            rmakers.force_fraction(),
-            rmakers.rewrite_rest_filled(),
-            rmakers.extract_trivial(),
-            preprocessor=baca.divisions()
-            .fuse()
-            .split(divisions_, cyclic=True),
-        ),
+        rmakers.talea([1], 16, extra_counts=extra_counts),
+        *specifiers,
+        rmakers.beam(),
+        rmakers.denominator((1, 16)),
+        rmakers.force_fraction(),
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        preprocessor=baca.divisions().fuse().split(divisions_, cyclic=True),
         tag="harmony.bfl_transition_rhythm",
     )
