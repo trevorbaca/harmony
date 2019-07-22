@@ -8,18 +8,16 @@ def begin_end_rhythm(*specifiers: rmakers.Command,) -> baca.RhythmCommand:
     Makes begin-end rhythm.
     """
     return baca.rhythm(
-        rmakers.rhythm(
-            rmakers.incised(
-                fill_with_rests=True,
-                prefix_talea=[3, 1],
-                prefix_counts=[2],
-                suffix_talea=[3, 1],
-                suffix_counts=[2],
-                talea_denominator=16,
-            ),
-            *specifiers,
-            rmakers.rewrite_rest_filled(),
-            rmakers.extract_trivial(),
+        rmakers.incised(
+            fill_with_rests=True,
+            prefix_talea=[3, 1],
+            prefix_counts=[2],
+            suffix_talea=[3, 1],
+            suffix_counts=[2],
+            talea_denominator=16,
         ),
+        *specifiers,
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
         tag="harmony.begin_end_rhythm",
     )
