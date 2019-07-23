@@ -3,7 +3,7 @@ import baca
 from abjadext import rmakers
 
 
-def begin_end_rhythm(*specifiers: rmakers.Command,) -> baca.RhythmCommand:
+def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
     """
     Makes begin-end rhythm.
     """
@@ -16,7 +16,7 @@ def begin_end_rhythm(*specifiers: rmakers.Command,) -> baca.RhythmCommand:
             suffix_counts=[2],
             talea_denominator=16,
         ),
-        *specifiers,
+        *commands,
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         tag="harmony.begin_end_rhythm",
