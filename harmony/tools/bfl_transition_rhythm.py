@@ -4,7 +4,7 @@ from abjadext import rmakers
 
 
 def bfl_transition_rhythm(
-    *specifiers,
+    *commands,
     divisions: abjad.IntegerSequence = (1, 4, 3, 2),
     extra_counts: abjad.IntegerSequence = (2, 3),
     rotation: int = 0,
@@ -17,7 +17,7 @@ def bfl_transition_rhythm(
 
     return baca.rhythm(
         rmakers.talea([1], 16, extra_counts=extra_counts),
-        *specifiers,
+        *commands,
         rmakers.beam(),
         rmakers.denominator((1, 16)),
         rmakers.force_fraction(),
