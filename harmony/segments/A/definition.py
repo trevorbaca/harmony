@@ -35,37 +35,22 @@ maker(
     "Global_Skips",
     baca.rehearsal_mark(
         "A",
+        baca.skip(3 - 1),
         abjad.tweak((0, 9)).extra_offset,
-        selector=baca.skip(3 - 1),
         ),
     )
 
 maker(
     "Global_Skips",
-    baca.metronome_mark(
-        "96",
-        selector=baca.skip(1 - 1),
-        ),
-    baca.metronome_mark(
-        "57.6",
-        selector=baca.skip(9 - 1),
-        ),
-    baca.metronome_mark(
-        "4=3:5(4)",
-        selector=baca.leaf(9 - 1),
-        ),
+    baca.metronome_mark("96", baca.skip(1 - 1)),
+    baca.metronome_mark("57.6", baca.skip(9 - 1)),
+    baca.metronome_mark("4=3:5(4)", baca.leaf(9 - 1)),
     )
 
 maker(
     "Global_Rests",
-    baca.global_fermata(
-        "fermata",
-        selector=baca.leaf(2 - 1),
-        ),
-    baca.global_fermata(
-        "short",
-        selector=baca.leaf(10 - 1),
-        ),
+    baca.global_fermata("fermata", baca.leaf(2 - 1)),
+    baca.global_fermata("short", baca.leaf(10 - 1)),
     )
 
 # bfl
