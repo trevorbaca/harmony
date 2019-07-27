@@ -49,17 +49,14 @@ maker(
     "Global_Skips",
     baca.rehearsal_mark(
         "B",
+        baca.skip(1 - 1),
         abjad.tweak((0, 9)).extra_offset,
-        selector=baca.skip(1 - 1),
         ),
     )
 
 maker(
     "Global_Skips",
-    baca.metronome_mark(
-        "144",
-        selector=baca.skip(1 - 1),
-        ),
+    baca.metronome_mark("144", baca.skip(1 - 1)),
     )
 
 maker(
