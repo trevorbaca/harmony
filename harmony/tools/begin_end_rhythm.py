@@ -19,5 +19,6 @@ def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
         *commands,
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
+        stack=True,
         tag="harmony.begin_end_rhythm",
     )

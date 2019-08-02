@@ -15,5 +15,6 @@ def upbeat_attack() -> baca.RhythmCommand:
             talea_denominator=16,
         ),
         rmakers.extract_trivial(),
+        stack=True,
         tag="harmony.upbeat_attack",
     )
