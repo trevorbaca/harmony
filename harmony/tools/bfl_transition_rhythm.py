@@ -23,6 +23,8 @@ def bfl_transition_rhythm(
         rmakers.force_fraction(),
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
-        preprocessor=baca.divisions().fuse().split(divisions_, cyclic=True),
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(divisions_, cyclic=True),
         tag="harmony.bfl_transition_rhythm",
     )
