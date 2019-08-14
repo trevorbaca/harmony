@@ -13,21 +13,21 @@ stage_markup = (
     ("[A.1]", 1),
     ("[A.2]", 2),
     ("[C.1]", 3, "darkgreen"),
-    )
+)
 
 maker = baca.SegmentMaker(
     activate=[
         abjad.const.LOCAL_MEASURE_NUMBER,
         abjad.const.STAGE_NUMBER,
-        ],
+    ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
         (6, 4), (5, 4), (3, 4),
-        ],
+    ],
     transpose_score=True,
     validate_measure_count=3,
-    )
+)
 
 maker(
     "Global_Skips",
@@ -35,8 +35,8 @@ maker(
         "A",
         baca.skip(2 - 1),
         abjad.tweak((0, 9)).extra_offset,
-        ),
-    )
+    ),
+)
 
 maker(
     "Global_Skips",
@@ -47,9 +47,9 @@ maker(
         ),
         baca.volta(),
         measures=(2, 3),
-        ),
+    ),
     baca.metronome_mark("96", baca.skip(1 - 1)),
-    )
+)
 
 # bfl
 
@@ -60,22 +60,14 @@ maker(
         baca.start_markup(
             r"\harmony-bass-flute-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
-#maker(
-#    ("bfl", 1),
-#    harmony.bfl_transition_rhythm(),
-#)
-#
-#maker(
-#    ("bfl", (3, 8)),
-#    harmony.bfl_transition_rhythm(
-#        rmakers.force_rest(baca.tuplets().get([2], 3)),
-#        rotation=-1,
-#    ),
-#)
+maker(
+    ("bfl", (1, 3)),
+    harmony.bfl_transition_rhythm(divisions=[4, 2, 3, 3, 2]),
+)
 
 # perc1
 
@@ -86,9 +78,9 @@ maker(
         baca.start_markup(
             r"\harmony-percussion-i-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # perc2
 
@@ -96,69 +88,63 @@ maker(
     "perc2",
     baca.dls_staff_padding(6),
     baca.markup(
-        r'\baca-bd-superball-markup',
+        r"\baca-bd-superball-markup",
         abjad.tweak(0).parent_alignment_X,
         abjad.tweak(0).self_alignment_X,
         literal=True,
-        ),
+    ),
     baca.suite(
         harmony.margin_markup("Perc. II"),
         baca.start_markup(
             r"\harmony-percussion-ii-markup",
             literal=True,
-            ),
         ),
+    ),
     harmony.superball_style(),
-    )
+)
 
 maker(
     ("perc2", 1),
     baca.hairpin(
-        'o<| f',
+        "o<| f",
         selector=baca.leaves()[-2:],
-        ),
+    ),
     baca.staff_lines(1),
     harmony.upbeat_attack()
-    )
+)
 
 maker(
-    ##("perc2", [1, 3, 4, 5, 7, 8]),
-    ("perc2", [1, 2]),
+    ("perc2", [1, 2, 3]),
     baca.breathe(),
-    )
+)
 
 maker(
-    ###("perc2", (1, 8)),
-    ("perc2", (1, 2)),
+    ("perc2", (1, 3)),
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
-        ),
+    ),
     baca.set_duration_multiplier(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN),
         written_duration=(1, 4),
-        ),
-    )
-
-maker(
-    ###("perc2", [3, 4, 5, 7, 8]),
-    ("perc2", [2]),
-    baca.hairpin(
-        'o<| mf',
-        selector=baca.leaves()[:1].rleak(),
-        ),
-    baca.hairpin(
-        'o<| f',
-        selector=baca.leaves()[-2:],
-        ),
-    baca.laissez_vibrer(),
-    )
-
-maker(
-    ###("perc2", (3, 8)),
-    ("perc2", 2),
-    harmony.begin_end_rhythm(
-        ###rmakers.force_rest(baca.tuplet(3)),
     ),
+)
+
+maker(
+    ("perc2", [2, 3]),
+    baca.hairpin(
+        "o<| mf",
+        selector=baca.leaves()[:1].rleak(),
+    ),
+    baca.hairpin(
+        "o<| f",
+        selector=baca.leaves()[-2:],
+    ),
+    baca.laissez_vibrer(),
+)
+
+maker(
+    ("perc2", (2, 3)),
+    harmony.begin_end_rhythm(),
 )
 
 # hp
@@ -170,9 +156,9 @@ maker(
         baca.start_markup(
             r"\harmony-harp-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # vc
 
@@ -183,9 +169,9 @@ maker(
         baca.start_markup(
             r"\harmony-viola-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # vc1
 
@@ -196,9 +182,9 @@ maker(
         baca.start_markup(
             r"\harmony-cello-i-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # vc2
 
@@ -209,9 +195,9 @@ maker(
         baca.start_markup(
             r"\harmony-cello-ii-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # cb1
 
@@ -222,9 +208,9 @@ maker(
         baca.start_markup(
             r"\harmony-contrabass-i-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)
 
 # cb2
 
@@ -235,6 +221,6 @@ maker(
         baca.start_markup(
             r"\harmony-contrabass-ii-markup",
             literal=True,
-            ),
         ),
-    )
+    ),
+)

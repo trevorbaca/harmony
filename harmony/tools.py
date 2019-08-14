@@ -11,12 +11,16 @@ def _tag(frame):
     return f"harmony.{frame_info.function}"
 
 
+_reference_meters = (abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),)
+
+
+### FUNCTIONS ###
+
+
 def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
     """
     Makes begin-end rhythm.
     """
-    frame = inspect.currentframe()
-
     return baca.rhythm(
         rmakers.incised(
             fill_with_rests=True,
@@ -34,7 +38,6 @@ def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
 
 
 def bfl_transition_rhythm(
-    *commands,
     divisions: abjad.IntegerSequence = (1, 4, 3, 2),
     extra_counts: abjad.IntegerSequence = (2, 3),
     rotation: int = 0,
@@ -44,15 +47,14 @@ def bfl_transition_rhythm(
     """
     divisions_ = baca.sequence([(_, 4) for _ in divisions])
     divisions_ = divisions_.rotate(n=rotation)
-
     return baca.rhythm(
-        rmakers.talea([1], 16, extra_counts=extra_counts),
-        *commands,
-        rmakers.beam(),
-        rmakers.denominator((1, 16)),
-        rmakers.force_fraction(),
-        rmakers.rewrite_rest_filled(),
+        rmakers.incised(
+            prefix_talea=[-1], prefix_counts=[1], talea_denominator=16
+        ),
         rmakers.extract_trivial(),
+        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.force_repeat_tie((1, 8)),
+        ###rmakers.on_beat_grace_container([7, 6], baca.pheads()[1:]),
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
@@ -98,6 +100,9 @@ def upbeat_attack() -> baca.RhythmCommand:
         rmakers.extract_trivial(),
         tag=_tag(inspect.currentframe()),
     )
+
+
+### CLASSES ###
 
 
 class ScoreTemplate(baca.ScoreTemplate):

@@ -16,49 +16,49 @@ metronome_marks = abjad.OrderedDict(
             "4=5:6(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((5, 6), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((5, 6), "c4"),
             ),
         ),
         (
             "4=4:5(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((4, 5), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((4, 5), "c4"),
             ),
         ),
         (
             "4=4:5(8)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((4, 5), [abjad.Note("c8")]),
+                right_rhythm=abjad.Tuplet((4, 5), "c8"),
             ),
         ),
         (
             "4=3:5(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((3, 5), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((3, 5), "c4"),
             ),
         ),
         (
             "4=3:4(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((3, 4), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((3, 4), "c4"),
             ),
         ),
         (
             "4=2:3(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((2, 3), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((2, 3), "c4"),
             ),
         ),
         (
             "4=2:3(8)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((2, 3), [abjad.Note("c8")]),
+                right_rhythm=abjad.Tuplet((2, 3), "c8"),
             ),
         ),
         (
@@ -72,49 +72,56 @@ metronome_marks = abjad.OrderedDict(
             "4=6:5(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((6, 5), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((6, 5), "c4"),
             ),
         ),
         (
             "4=5:4(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((5, 4), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((5, 4), "c4"),
             ),
         ),
         (
             "4=5:4(8)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((5, 4), [abjad.Note("c8")]),
+                right_rhythm=abjad.Tuplet((5, 4), "c8"),
             ),
         ),
         (
             "4=5:3(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((5, 3), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((5, 3), "c4"),
             ),
         ),
         (
             "4=4:3(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((4, 3), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((4, 3), "c4"),
             ),
         ),
         (
             "4=3:2(4)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((3, 2), [abjad.Note("c4")]),
+                right_rhythm=abjad.Tuplet((3, 2), "c4"),
+            ),
+        ),
+        (
+            "3:2(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet((3, 2), "c4"),
+                right_rhythm=abjad.Note("c4"),
             ),
         ),
         (
             "4=3:2(8)",
             abjad.MetricModulation(
                 left_rhythm=abjad.Note("c4"),
-                right_rhythm=abjad.Tuplet((3, 2), [abjad.Note("c8")]),
+                right_rhythm=abjad.Tuplet((3, 2), "c8"),
             ),
         ),
         (
