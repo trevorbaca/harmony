@@ -113,19 +113,115 @@ A_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''2...                                                                    %! harmony.bfl_transition_rhythm
+    <<
+        {
+            \set fontSize = #-2
+            \once \override NoteColumn.force-hshift = 0.2
+            \slash
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'' \tweak Accidental.stencil ##f c''>8 * 15/14
+            [                                                                  %! harmony.bfl_transition_rhythm
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 15/14
+            ]                                                                  %! harmony.bfl_transition_rhythm
+
+        }
+
+    \\
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''2...                                                                %! harmony.bfl_transition_rhythm
+    >>
 
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..                                                                     %! harmony.bfl_transition_rhythm
+    <<
+        {
+            \set fontSize = #-2
+            \once \override NoteColumn.force-hshift = 0.2
+            \slash
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'' \tweak Accidental.stencil ##f c''>8 * 7/12
+            [                                                                  %! harmony.bfl_transition_rhythm
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+            ]                                                                  %! harmony.bfl_transition_rhythm
+
+        }
+
+    \\
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''4..                                                                 %! harmony.bfl_transition_rhythm
+    >>
 
     % [A Bass_Flute_Music_Voice measure 2]                                     %! _comment_measure_numbers
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''8.
+    <<
+        {
+            \set fontSize = #-2
+            \once \override NoteColumn.force-hshift = 0.2
+            \slash
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'' \tweak Accidental.stencil ##f c''>8 * 3/14
+            [                                                                  %! harmony.bfl_transition_rhythm
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 3/14
+            ]                                                                  %! harmony.bfl_transition_rhythm
+
+        }
+
+    \\
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''8.
+    >>
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c''2
@@ -133,8 +229,38 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..
+    <<
+        {
+            \set fontSize = #-2
+            \once \override NoteColumn.force-hshift = 0.2
+            \slash
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'' \tweak Accidental.stencil ##f c''>8 * 7/12
+            [                                                                  %! harmony.bfl_transition_rhythm
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 7/12
+            ]                                                                  %! harmony.bfl_transition_rhythm
+
+        }
+
+    \\
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''4..
+    >>
 
     % [A Bass_Flute_Music_Voice measure 3]                                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -143,8 +269,41 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..                                                                     %! harmony.bfl_transition_rhythm
+    <<
+        {
+            \set fontSize = #-2
+            \once \override NoteColumn.force-hshift = 0.2
+            \slash
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'' \tweak Accidental.stencil ##f c''>8 * 1/2
+            [                                                                  %! harmony.bfl_transition_rhythm
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 1/2
+            ]                                                                  %! harmony.bfl_transition_rhythm
+
+        }
+
+    \\
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        c''4..                                                                 %! harmony.bfl_transition_rhythm
+    >>
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
