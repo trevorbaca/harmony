@@ -1,6 +1,103 @@
 import abjad
 import baca
-import harmony
+import inspect
+from abjadext import rmakers
+from .materials import instruments as harmony_instruments
+from .materials import margin_markups as harmony_margin_markups
+
+
+def _tag(frame):
+    frame_info = inspect.getframeinfo(frame)
+    return f"harmony.{frame_info.function}"
+
+
+def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
+    """
+    Makes begin-end rhythm.
+    """
+    frame = inspect.currentframe()
+
+    return baca.rhythm(
+        rmakers.incised(
+            fill_with_rests=True,
+            prefix_talea=[3, 1],
+            prefix_counts=[2],
+            suffix_talea=[3, 1],
+            suffix_counts=[2],
+            talea_denominator=16,
+        ),
+        *commands,
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        tag=_tag(inspect.currentframe()),
+    )
+
+
+def bfl_transition_rhythm(
+    *commands,
+    divisions: abjad.IntegerSequence = (1, 4, 3, 2),
+    extra_counts: abjad.IntegerSequence = (2, 3),
+    rotation: int = 0,
+) -> baca.RhythmCommand:
+    """
+    Makes bass flute transition rhythm.
+    """
+    divisions_ = baca.sequence([(_, 4) for _ in divisions])
+    divisions_ = divisions_.rotate(n=rotation)
+
+    return baca.rhythm(
+        rmakers.talea([1], 16, extra_counts=extra_counts),
+        *commands,
+        rmakers.beam(),
+        rmakers.denominator((1, 16)),
+        rmakers.force_fraction(),
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(divisions_, cyclic=True),
+        tag=_tag(inspect.currentframe()),
+    )
+
+
+def margin_markup(
+    key: str,
+    *,
+    alert: baca.IndicatorCommand = None,
+    context: str = "Staff",
+    selector: abjad.SelectorTyping = "baca.leaf(0)",
+) -> baca.CommandTyping:
+    """
+    Makes tagged margin markup indicator command.
+    """
+    margin_markup = harmony_margin_markups[key]
+    command = baca.margin_markup(
+        margin_markup, alert=alert, context=context, selector=selector
+    )
+    return baca.not_parts(command)
+
+
+def superball_style() -> baca.Suite:
+    """
+    Makes superball style.
+    """
+    return baca.chunk(baca.staff_position(-1), baca.stem_down())
+
+
+def upbeat_attack() -> baca.RhythmCommand:
+    """
+    Makes upbeat attack rhythm.
+    """
+    return baca.rhythm(
+        rmakers.incised(
+            fill_with_rests=True,
+            suffix_talea=[3, 1],
+            suffix_counts=[2],
+            talea_denominator=16,
+        ),
+        rmakers.extract_trivial(),
+        tag=_tag(inspect.currentframe()),
+    )
 
 
 class ScoreTemplate(baca.ScoreTemplate):
@@ -220,7 +317,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             bass_flute_music_staff,
             "default_instrument",
-            harmony.instruments["BassFlute"],
+            harmony_instruments["BassFlute"],
         )
         abjad.annotate(
             bass_flute_music_staff, "default_clef", abjad.Clef("treble")
@@ -240,7 +337,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             percussion_1_music_staff,
             "default_instrument",
-            harmony.instruments["Percussion"],
+            harmony_instruments["Percussion"],
         )
         abjad.annotate(
             percussion_1_music_staff, "default_clef", abjad.Clef("treble")
@@ -260,7 +357,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             percussion_2_music_staff,
             "default_instrument",
-            harmony.instruments["Percussion"],
+            harmony_instruments["Percussion"],
         )
         abjad.annotate(
             percussion_2_music_staff, "default_clef", abjad.Clef("treble")
@@ -276,7 +373,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             tag=tag,
         )
         abjad.annotate(
-            harp_music_staff, "default_instrument", harmony.instruments["Harp"]
+            harp_music_staff, "default_instrument", harmony_instruments["Harp"]
         )
         abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
         self._attach_lilypond_tag("Harp", harp_music_staff)
@@ -292,7 +389,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             viola_music_staff,
             "default_instrument",
-            harmony.instruments["Viola"],
+            harmony_instruments["Viola"],
         )
         abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
         self._attach_lilypond_tag("Viola", viola_music_staff)
@@ -308,7 +405,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             cello_1_music_staff,
             "default_instrument",
-            harmony.instruments["Cello"],
+            harmony_instruments["Cello"],
         )
         abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
         self._attach_lilypond_tag("CelloI", cello_1_music_staff)
@@ -324,7 +421,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             cello_2_music_staff,
             "default_instrument",
-            harmony.instruments["Cello"],
+            harmony_instruments["Cello"],
         )
         abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
         self._attach_lilypond_tag("CelloII", cello_2_music_staff)
@@ -342,7 +439,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             contrabass_1_music_staff,
             "default_instrument",
-            harmony.instruments["Contrabass"],
+            harmony_instruments["Contrabass"],
         )
         abjad.annotate(
             contrabass_1_music_staff, "default_clef", abjad.Clef("bass")
@@ -362,7 +459,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         abjad.annotate(
             contrabass_2_music_staff,
             "default_instrument",
-            harmony.instruments["Contrabass"],
+            harmony_instruments["Contrabass"],
         )
         abjad.annotate(
             contrabass_2_music_staff, "default_clef", abjad.Clef("bass")
