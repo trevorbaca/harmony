@@ -236,12 +236,12 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Global_Skips',
                                 manifest='metronome_marks',
-                                value='57.6',
+                                value='96',
                                 ),
                             abjad.Momento(
                                 context='Global_Skips',
                                 prototype='abjad.TimeSignature',
-                                value='1/4',
+                                value='3/4',
                                 ),
                             ],
                         ),

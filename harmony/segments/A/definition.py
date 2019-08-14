@@ -11,8 +11,8 @@ from abjadext import rmakers
 
 stage_markup = (
     ("[A.1]", 1),
-    ("[A.2]", 3),
-    ("[C.1]", 9, "darkgreen"),
+    ("[A.2]", 2),
+    ("[C.1]", 3, "darkgreen"),
     )
 
 maker = baca.SegmentMaker(
@@ -23,34 +23,32 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (1, 4),
-        (3, 4), (4, 4), (3, 4), (4, 4), (3, 4), (4, 4),
-        (2, 4), (1, 4),
+        (6, 4), (5, 4), (3, 4),
         ],
     transpose_score=True,
-    validate_measure_count=10,
+    validate_measure_count=3,
     )
 
 maker(
     "Global_Skips",
     baca.rehearsal_mark(
         "A",
-        baca.skip(3 - 1),
+        baca.skip(2 - 1),
         abjad.tweak((0, 9)).extra_offset,
         ),
     )
 
 maker(
     "Global_Skips",
+    baca.chunk(
+        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        baca.only_score(
+            baca.bar_line_x_extent((-2, 2), baca.skip(-1), after=True)
+        ),
+        baca.volta(),
+        measures=(2, 3),
+        ),
     baca.metronome_mark("96", baca.skip(1 - 1)),
-    baca.metronome_mark("57.6", baca.skip(9 - 1)),
-    baca.metronome_mark("4=3:5(4)", baca.leaf(9 - 1)),
-    )
-
-maker(
-    "Global_Rests",
-    baca.global_fermata("fermata", baca.leaf(2 - 1)),
-    baca.global_fermata("short", baca.leaf(10 - 1)),
     )
 
 # bfl
@@ -66,18 +64,18 @@ maker(
         ),
     )
 
-maker(
-    ("bfl", 1),
-    harmony.bfl_transition_rhythm(),
-)
-
-maker(
-    ("bfl", (3, 8)),
-    harmony.bfl_transition_rhythm(
-        rmakers.force_rest(baca.tuplets().get([2], 3)),
-        rotation=-1,
-    ),
-)
+#maker(
+#    ("bfl", 1),
+#    harmony.bfl_transition_rhythm(),
+#)
+#
+#maker(
+#    ("bfl", (3, 8)),
+#    harmony.bfl_transition_rhythm(
+#        rmakers.force_rest(baca.tuplets().get([2], 3)),
+#        rotation=-1,
+#    ),
+#)
 
 # perc1
 
@@ -124,12 +122,14 @@ maker(
     )
 
 maker(
-    ("perc2", [1, 3, 4, 5, 7, 8]),
+    ##("perc2", [1, 3, 4, 5, 7, 8]),
+    ("perc2", [1, 2]),
     baca.breathe(),
     )
 
 maker(
-    ("perc2", (1, 8)),
+    ###("perc2", (1, 8)),
+    ("perc2", (1, 2)),
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
         ),
@@ -140,7 +140,8 @@ maker(
     )
 
 maker(
-    ("perc2", [3, 4, 5, 7, 8]),
+    ###("perc2", [3, 4, 5, 7, 8]),
+    ("perc2", [2]),
     baca.hairpin(
         'o<| mf',
         selector=baca.leaves()[:1].rleak(),
@@ -153,9 +154,10 @@ maker(
     )
 
 maker(
-    ("perc2", (3, 8)),
+    ###("perc2", (3, 8)),
+    ("perc2", 2),
     harmony.begin_end_rhythm(
-        rmakers.force_rest(baca.tuplet(3)),
+        ###rmakers.force_rest(baca.tuplet(3)),
     ),
 )
 
