@@ -67,6 +67,9 @@ maker(
 maker(
     ("bfl", (1, 3)),
     harmony.bfl_transition_rhythm(divisions=[4, 2, 3, 3, 2]),
+    baca.slur(
+        map=baca.components(abjad.OnBeatGraceContainer).map(baca.leaves())
+    ),
 )
 
 # perc1

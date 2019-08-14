@@ -11,7 +11,10 @@ def _tag(frame):
     return f"harmony.{frame_info.function}"
 
 
-_reference_meters = (abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),)
+_reference_meters = (
+    abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
+    abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
+)
 
 
 ### FUNCTIONS ###
@@ -54,7 +57,8 @@ def bfl_transition_rhythm(
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
-        ###rmakers.on_beat_grace_container([7, 6], baca.pheads()[1:]),
+        rmakers.on_beat_grace_container([7, 6], baca.pheads()),
+        rmakers.beam(baca.components(abjad.OnBeatGraceContainer)),
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
