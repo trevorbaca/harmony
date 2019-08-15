@@ -96,6 +96,60 @@ A_Global_Rests = {                                                             %
 }                                                                              %! abjad.Path.extern
 
 
+A_Rhythm_Maker_Music_Voice = {                                                 %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2...                                                                    %! harmony.bfl_transition_rhythm
+
+}                                                                              %! abjad.Path.extern
+
+
+A_Rhythm_Maker_Music_Voice_A = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''4..                                                                     %! harmony.bfl_transition_rhythm
+
+}                                                                              %! abjad.Path.extern
+
+
+A_Rhythm_Maker_Music_Voice_B = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+A_Rhythm_Maker_Music_Voice_C = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''4..
+
+    % [A Rhythm_Maker_Music_Voice measure 3]                                   %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''4
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+A_Rhythm_Maker_Music_Voice_D = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''4..                                                                     %! harmony.bfl_transition_rhythm
+
+}                                                                              %! abjad.Path.extern
+
+
 A_Bass_Flute_Music_Voice = {                                                   %! abjad.Path.extern
 
     % [A Bass_Flute_Music_Voice measure 1]                                     %! _comment_measure_numbers
@@ -114,195 +168,192 @@ A_Bass_Flute_Music_Voice = {                                                   %
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
     <<
+
+        \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-2
-            \once \override NoteColumn.force-hshift = 0.2
+            \set fontSize = #-3
+
             \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c''>8 * 2/5
+            [
+            (
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c'' \tweak Accidental.stencil ##f c''>8 * 15/14
-            [                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 15/14
-            ]                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
+            )
+            ]
 
         }
 
-    \\
-        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        c''2...                                                                %! harmony.bfl_transition_rhythm
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice                                            %! abjad.Path.extern
+
     >>
 
+    \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
     <<
+
+        \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-2
-            \once \override NoteColumn.force-hshift = 0.2
+            \set fontSize = #-3
+
             \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c''>8 * 2/5
+            [
+            (
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c'' \tweak Accidental.stencil ##f c''>8 * 7/12
-            [                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-            ]                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
+            )
+            ]
 
         }
 
-    \\
-        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        c''4..                                                                 %! harmony.bfl_transition_rhythm
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice_A                                          %! abjad.Path.extern
+
     >>
 
     % [A Bass_Flute_Music_Voice measure 2]                                     %! _comment_measure_numbers
+    \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
     <<
+
+        \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-2
-            \once \override NoteColumn.force-hshift = 0.2
+            \set fontSize = #-3
+
             \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c''>8 * 2/5
+            [
+            (
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c'' \tweak Accidental.stencil ##f c''>8 * 3/14
-            [                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 3/14
-            ]                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
+            )
+            ]
 
         }
 
-    \\
-        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        c''8.
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice_B                                          %! abjad.Path.extern
+
     >>
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''2
-    \repeatTie
-
+    \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
     <<
+
+        \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-2
-            \once \override NoteColumn.force-hshift = 0.2
+            \set fontSize = #-3
+
             \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c''>8 * 2/5
+            [
+            (
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c'' \tweak Accidental.stencil ##f c''>8 * 7/12
-            [                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 7/12
-            ]                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
+            )
+            ]
 
         }
 
-    \\
-        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        c''4..
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice_C                                          %! abjad.Path.extern
+
     >>
 
-    % [A Bass_Flute_Music_Voice measure 3]                                     %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4
-    \repeatTie
-
+    \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
     <<
+
+        \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-2
-            \once \override NoteColumn.force-hshift = 0.2
+            \set fontSize = #-3
+
             \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c''>8 * 2/5
+            [
+            (
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c'' \tweak Accidental.stencil ##f c''>8 * 1/2
-            [                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
+            c''8 * 2/5
 
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 1/2
-            ]                                                                  %! harmony.bfl_transition_rhythm
+            c''8 * 2/5
+            )
+            ]
 
         }
 
-    \\
-        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        c''4..                                                                 %! harmony.bfl_transition_rhythm
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice_D                                          %! abjad.Path.extern
+
     >>
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container

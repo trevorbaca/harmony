@@ -57,7 +57,9 @@ def bfl_transition_rhythm(
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
-        rmakers.on_beat_grace_container([7, 6], baca.pheads()),
+        rmakers.on_beat_grace_container(
+            [7, 3], baca.plts(), leaf_duration=(1, 20)
+        ),
         rmakers.beam(baca.components(abjad.OnBeatGraceContainer)),
         preprocessor=baca.sequence()
         .fuse()
