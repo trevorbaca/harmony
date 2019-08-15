@@ -100,21 +100,12 @@ A_Rhythm_Maker_Music_Voice = {                                                 %
 
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''2...                                                                    %! harmony.bfl_transition_rhythm
-
-}                                                                              %! abjad.Path.extern
-
-
-A_Rhythm_Maker_Music_Voice_A = {                                               %! abjad.Path.extern
-
-    \voiceTwo
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c''4..                                                                     %! harmony.bfl_transition_rhythm
 
 }                                                                              %! abjad.Path.extern
 
 
-A_Rhythm_Maker_Music_Voice_B = {                                               %! abjad.Path.extern
+A_Rhythm_Maker_Music_Voice_A = {                                               %! abjad.Path.extern
 
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -127,7 +118,7 @@ A_Rhythm_Maker_Music_Voice_B = {                                               %
 }                                                                              %! abjad.Path.extern
 
 
-A_Rhythm_Maker_Music_Voice_C = {                                               %! abjad.Path.extern
+A_Rhythm_Maker_Music_Voice_B = {                                               %! abjad.Path.extern
 
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -137,15 +128,6 @@ A_Rhythm_Maker_Music_Voice_C = {                                               %
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c''4
     \repeatTie
-
-}                                                                              %! abjad.Path.extern
-
-
-A_Rhythm_Maker_Music_Voice_D = {                                               %! abjad.Path.extern
-
-    \voiceTwo
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..                                                                     %! harmony.bfl_transition_rhythm
 
 }                                                                              %! abjad.Path.extern
 
@@ -167,47 +149,8 @@ A_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-    <<
+    c''2...                                                                    %! harmony.bfl_transition_rhythm
 
-        \context Voice = "On_Beat_Grace_Container"
-        {
-            \set fontSize = #-3
-
-            \slash
-            \voiceOne
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c''>8 * 2/5
-            [
-            (
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-            )
-            ]
-
-        }
-
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice                                            %! abjad.Path.extern
-
-    >>
-
-    \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
     <<
@@ -218,23 +161,28 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c''>8 * 2/5
+            d''8
             [
             (
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c''8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d''8 * 2/5
+
             c''8 * 2/5
+
+            d''8 * 2/5
+
+            c''8 * 2/5
+
+            d''8 * 2/5
             )
             ]
 
         }
 
         \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice_A                                          %! abjad.Path.extern
+        \A_Rhythm_Maker_Music_Voice                                            %! abjad.Path.extern
 
     >>
 
@@ -250,28 +198,49 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c''>8 * 2/5
+            c''8
             [
             (
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d''8 * 2/5
+
+            c''8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Rhythm_Maker_Music_Voice"
+        \A_Rhythm_Maker_Music_Voice_A                                          %! abjad.Path.extern
+
+    >>
+
+    \oneVoice
+    r16                                                                        %! harmony.bfl_transition_rhythm
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            d''8
+            [
+            (
+
             c''8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d''8 * 2/5
+
             c''8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d''8 * 2/5
+
             c''8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
+            d''8 * 2/5
             )
             ]
 
@@ -285,76 +254,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
     \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-            \set fontSize = #-3
-
-            \slash
-            \voiceOne
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c''>8 * 2/5
-            [
-            (
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-            )
-            ]
-
-        }
-
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice_C                                          %! abjad.Path.extern
-
-    >>
-
-    \oneVoice
-    r16                                                                        %! harmony.bfl_transition_rhythm
-
-    <<
-
-        \context Voice = "On_Beat_Grace_Container"
-        {
-            \set fontSize = #-3
-
-            \slash
-            \voiceOne
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            <c''>8 * 2/5
-            [
-            (
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-
-            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
-            c''8 * 2/5
-            )
-            ]
-
-        }
-
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice_D                                          %! abjad.Path.extern
-
-    >>
+    c''4..                                                                     %! harmony.bfl_transition_rhythm
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
