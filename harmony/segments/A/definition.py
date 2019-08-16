@@ -67,7 +67,14 @@ maker(
 maker(
     ("bfl", (1, 3)),
     harmony.bfl_transition_rhythm(divisions=[4, 2, 3, 3, 2]),
-    baca.pitches("C4 D4"),
+    baca.pitches(
+        "D3 E3",
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False)
+    ),
+    baca.pitches(
+        "F3 G3 A3 G3",
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True)
+    ),
 )
 
 # perc1

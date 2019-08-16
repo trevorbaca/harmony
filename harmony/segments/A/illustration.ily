@@ -96,37 +96,32 @@ A_Global_Rests = {                                                             %
 }                                                                              %! abjad.Path.extern
 
 
-A_Rhythm_Maker_Music_Voice = {                                                 %! abjad.Path.extern
+A_Bass_Flute_Music_Voice_A = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..                                                                     %! harmony.bfl_transition_rhythm
+    e'4..                                                                      %! harmony.bfl_transition_rhythm
 
 }                                                                              %! abjad.Path.extern
 
 
-A_Rhythm_Maker_Music_Voice_A = {                                               %! abjad.Path.extern
+A_Bass_Flute_Music_Voice_B = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''8.
+    d'8.
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''2
+    d'2
     \repeatTie
 
 }                                                                              %! abjad.Path.extern
 
 
-A_Rhythm_Maker_Music_Voice_B = {                                               %! abjad.Path.extern
+A_Bass_Flute_Music_Voice_C = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4..
+    e'4..
 
-    % [A Rhythm_Maker_Music_Voice measure 3]                                   %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''4
+    % [A Bass_Flute_Music_Voice measure 3]                                     %! _comment_measure_numbers
+    e'4
     \repeatTie
 
 }                                                                              %! abjad.Path.extern
@@ -149,7 +144,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-    c''2...                                                                    %! harmony.bfl_transition_rhythm
+    d'2...                                                                     %! harmony.bfl_transition_rhythm
 
     r16                                                                        %! harmony.bfl_transition_rhythm
 
@@ -161,28 +156,33 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            d''8
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                e'
+                f'
+            >8 * 2/5
             [
             (
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            a'8 * 2/5
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            f'8 * 2/5
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            a'8 * 2/5
             )
             ]
 
         }
 
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice                                            %! abjad.Path.extern
+        \context Voice = "Bass_Flute_Music_Voice"
+        \A_Bass_Flute_Music_Voice_A                                            %! abjad.Path.extern
 
     >>
 
@@ -198,20 +198,25 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            c''8
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d'
+                g'
+            >8 * 2/5
             [
             (
 
-            d''8 * 2/5
+            f'8 * 2/5
 
-            c''8 * 2/5
+            g'8 * 2/5
             )
             ]
 
         }
 
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice_A                                          %! abjad.Path.extern
+        \context Voice = "Bass_Flute_Music_Voice"
+        \A_Bass_Flute_Music_Voice_B                                            %! abjad.Path.extern
 
     >>
 
@@ -226,35 +231,40 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            d''8
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                e'
+                a'
+            >8 * 2/5
             [
             (
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            f'8 * 2/5
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            a'8 * 2/5
 
-            c''8 * 2/5
+            g'8 * 2/5
 
-            d''8 * 2/5
+            f'8 * 2/5
             )
             ]
 
         }
 
-        \context Voice = "Rhythm_Maker_Music_Voice"
-        \A_Rhythm_Maker_Music_Voice_B                                          %! abjad.Path.extern
+        \context Voice = "Bass_Flute_Music_Voice"
+        \A_Bass_Flute_Music_Voice_C                                            %! abjad.Path.extern
 
     >>
 
     \oneVoice
     r16                                                                        %! harmony.bfl_transition_rhythm
 
-    c''4..                                                                     %! harmony.bfl_transition_rhythm
+    d'4..                                                                      %! harmony.bfl_transition_rhythm
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

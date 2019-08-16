@@ -14,7 +14,6 @@ persist = abjad.OrderedDict(
                 'Bass_Flute_Music_Staff',
                 'Global_Rests',
                 'Bass_Flute_Music_Voice',
-                'Rhythm_Maker_Music_Voice',
                 'Bass_Flute_Rest_Voice',
                 'Percussion_Section_Staff_Group',
                 'Percussion_I_Music_Staff',
