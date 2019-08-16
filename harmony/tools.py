@@ -60,7 +60,6 @@ def bfl_transition_rhythm(
         rmakers.on_beat_grace_container(
             [7, 3], baca.plts()[1:-1], leaf_duration=(1, 20)
         ),
-        rmakers.beam(baca.components(abjad.OnBeatGraceContainer)),
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
