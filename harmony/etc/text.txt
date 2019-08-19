@@ -4,41 +4,41 @@
 
 ##################################### ONE #####################################
 
-Here I am. On my own. And no-one —
+[[Here I am. On my own. And no-one —]] [1]
 
-Back.
+[[Back.
 
-Hear me. On my —
+Hear me. On my —]] [2]
 
-Back.
+[[Back.
 
-Here I am. On my own. On the dunes. Where I can hear the sea. ▢
+Here I am. On my own. On the dunes. Where I can hear the sea. ▢ ]] [3]
 
 ##################################### TWO #####################################
 
-Back.
+[[Back.
 
 Here I am.
 
 Not so far.
 
-On the dunes. Where I can see...
+On the dunes. Where I can see...]] [4]
 
-On.
+[[On.
 
 ...the wind in the marram grass. A bird – a gull – shearing the sky. Soundless.
 The wind: soundless. The gull: soundless. It is early morning. First light. I
-must have got up in the dark. Dressed myself. Come here. ▢
+must have got up in the dark. Dressed myself. Come here. ▢ ]] [5]
 
 #################################### THREE ####################################
 
-On.
+[[ On.
 
-No more. ▢
+No more. ▢ ]] [6]
 
 ##################################### FOUR ####################################
 
-Back.
+[[Back.
 
 Where I can —
 
@@ -48,33 +48,33 @@ Here I am. On my own. No. Not on my own. At that dance, where I can see the
 band on the narrow stage, see them and hear them. A saxophone player – a girl –
 shearing the air. A roar, but sweet and accurate. The band: silenced. The girl:
 on her own. It would be early morning by now. First light. We have been up all
-night. Dressed to the nines. Come here. ▢
+night. Dressed to the nines. Come here. ▢ ]] [7]
 
 ##################################### FIVE ####################################
 
-Come here. ▢
+[[Come here. ▢ ]] [8]
 
 ##################################### SIX #####################################
 
-On.
+[[On.
 
-Come here. As you will. When you’re young. ▢
+Come here. As you will. When you’re young. ▢ ]] [9]
 
 #################################### SEVEN ####################################
 
-On.
+[[On.
 
-No more. ▢
+No more. ▢ ]] [10]
 
 #################################### EIGHT ####################################
 
-Back.
+[[Back.
 
-The girl: on her own. ▢
+The girl: on her own. ▢ ]] [11]
 
 ##################################### NINE ####################################
 
-Yes.
+[[Yes.
 
 The girl on her own. I went up to the stage. As close as I could get. Of
 course, she saw me. Her eyes caught mine. First meeting. She stopped playing,
@@ -83,29 +83,29 @@ stage. How her dress sparkled. We have been up all night, she said. In these
 costumes. Then: Come up here, she said. Perhaps I shook my head, or made some
 other sign. No, come up here. If you will. And that smile. What could I do? One
 hand on the stage, I jumped up. I looked back down, to the world I had left
-behind. ▢
+behind. ▢ ]] [12]
 
 ##################################### TEN #####################################
 
-I come to a stop.
+[[I come to a stop.
 
 On.
 
-I come to a stop. ▢
+I come to a stop. ▢ ]] [13]
 
 #################################### ELEVEN ###################################
 
-On. ▢
+[[On. ▢ ]] [14]
 
 #################################### TWELVE ###################################
 
-On.
+[[On.
 
-The world I had left behind. ▢
+The world I had left behind. ▢ ]] [15]
 
 ################################### THIRTEEN ##################################
 
-On.
+[[On.
 
 I turned my eyes to her. That smile again. I took her in my arms. The band went
 wild. Or: I jumped back down. Or: Do you want to dance? she said. Or: —
@@ -153,25 +153,25 @@ No more.
 
 Back.
 
-Harmony.
+Harmony.]] [16]
 
-Not yet.
+[[Not yet.]] [17]
 
-On.
+[[On.
 
-Hear me.
-
-Back.
-
-Hear me.
+Hear me.]] [[19]]
 
 Back.
 
-Here I am. On my own. On the dunes. ▢
+Hear me.]] [19]
+
+[[Back.
+
+Here I am. On my own. On the dunes. ▢ ]] [20]
 
 ################################### FOURTEEN ##################################
 
-On.
+[[On.
 
 Where I can see the sea. How it sparkled. At that time in the afternoon. There
 was dance music.
@@ -194,9 +194,9 @@ No.
 
 That smile.
 
-No. Back.
+No. Back.]] [21]
 
-Here I am.
+[[Here I am.
 
 Yes.
 
@@ -214,38 +214,40 @@ Yes.
 
 On the dunes. Or: In that dense forest.
 
-Choose.
+Choose.]] [22]
 
-On the dunes. Where I can see the wind in the marram grass. It is early
-morning. Back.
+[[On the dunes. Where I can see the wind in the marram grass. It is early
+morning.]] [23]
+
+[[Back.
 
 A bird – a gull – shearing the sky. Soundless. The wind: soundless. The band:
-silenced.
+silenced.]] [24]
 
-Back.
-
-Here I am.
-
-Not so far.
+[[Back.
 
 Here I am.
 
 Not so far.
 
-Here I am. ▢ 
+Here I am.
+
+Not so far.
+
+Here I am. ▢  ]] [25]
 
 ################################### FIFTEEN ###################################
 
-On.
+[[On.]] 26]
 
-Here I am.
+[[Here I am.]] [27]
 
-On.
+[[On.]] [28]
 
-Harmony.
+[[Harmony.]] [29]
 
-Not yet.
+[[Not yet.]] [30]
 
-Harmony.
+[[Harmony.]] [31]
 
-Not yet.
+[[Not yet.]] [32]
