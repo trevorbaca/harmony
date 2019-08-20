@@ -66,7 +66,7 @@ maker(
 
 maker(
     ("bfl", (1, 3)),
-    harmony.bfl_transition_rhythm(divisions=[4, 2, 3, 3, 2]),
+    harmony.appoggiato([4, 2, 3, 3, 2], [9, 6, 8, 4, 6]),
     baca.pitches(
         "D3 E3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False)
@@ -77,23 +77,10 @@ maker(
     ),
 )
 
-# perc1
+# perc 1
 
 maker(
     "perc1",
-    baca.suite(
-        harmony.margin_markup("Perc. I"),
-        baca.start_markup(
-            r"\harmony-percussion-i-markup",
-            literal=True,
-        ),
-    ),
-)
-
-# perc2
-
-maker(
-    "perc2",
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -102,9 +89,9 @@ maker(
         literal=True,
     ),
     baca.suite(
-        harmony.margin_markup("Perc. II"),
+        harmony.margin_markup("Perc. I"),
         baca.start_markup(
-            r"\harmony-percussion-ii-markup",
+            r"\harmony-percussion-i-markup",
             literal=True,
         ),
     ),
@@ -112,7 +99,7 @@ maker(
 )
 
 maker(
-    ("perc2", 1),
+    ("perc1", 1),
     baca.hairpin(
         "o<| f",
         selector=baca.leaves()[-2:],
@@ -122,12 +109,12 @@ maker(
 )
 
 maker(
-    ("perc2", [1, 2, 3]),
+    ("perc1", [1, 2, 3]),
     baca.breathe(),
 )
 
 maker(
-    ("perc2", (1, 3)),
+    ("perc1", (1, 3)),
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
     ),
@@ -138,7 +125,7 @@ maker(
 )
 
 maker(
-    ("perc2", [2, 3]),
+    ("perc1", [2, 3]),
     baca.hairpin(
         "o<| mf",
         selector=baca.leaves()[:1].rleak(),
@@ -151,8 +138,21 @@ maker(
 )
 
 maker(
-    ("perc2", (2, 3)),
+    ("perc1", (2, 3)),
     harmony.begin_end_rhythm(),
+)
+
+# perc2
+
+maker(
+    "perc2",
+    baca.suite(
+        harmony.margin_markup("Perc. II"),
+        baca.start_markup(
+            r"\harmony-percussion-ii-markup",
+            literal=True,
+        ),
+    ),
 )
 
 # hp
@@ -168,7 +168,7 @@ maker(
     ),
 )
 
-# vc
+# va
 
 maker(
     "va",
@@ -178,6 +178,15 @@ maker(
             r"\harmony-viola-markup",
             literal=True,
         ),
+    ),
+)
+
+maker(
+    ("va", (1, 3)),
+    harmony.appoggiato([4, 2, 3, 3, 2]),
+    baca.damp_spanner(
+        abjad.tweak(8).staff_padding,
+        map=baca.plts(),
     ),
 )
 
@@ -207,6 +216,16 @@ maker(
     ),
 )
 
+maker(
+    ("vc2", (1, 3)),
+    harmony.appoggiato([4, 2, 3, 3, 2]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(8).staff_padding,
+        map=baca.plts(),
+    ),
+)
+
 # cb1
 
 maker(
@@ -230,5 +249,15 @@ maker(
             r"\harmony-contrabass-ii-markup",
             literal=True,
         ),
+    ),
+)
+
+maker(
+    ("cb2", (1, 3)),
+    harmony.appoggiato([4, 2, 3, 3, 2]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(8).staff_padding,
+        map=baca.plts(),
     ),
 )

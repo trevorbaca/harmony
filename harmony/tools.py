@@ -40,16 +40,24 @@ def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
     )
 
 
-def bfl_transition_rhythm(
-    divisions: abjad.IntegerSequence = (1, 4, 3, 2),
-    extra_counts: abjad.IntegerSequence = (2, 3),
+def appoggiato(
+    divisions: abjad.IntegerSequence,
+    counts: abjad.IntegerSequence = None,
+    *,
+    leaf_duration=(1, 20),
     rotation: int = 0,
 ) -> baca.RhythmCommand:
     """
-    Makes bass flute transition rhythm.
+    Makes appoggiato rhythm.
     """
     divisions_ = baca.sequence([(_, 4) for _ in divisions])
     divisions_ = divisions_.rotate(n=rotation)
+    commands = []
+    if counts:
+        command = rmakers.on_beat_grace_container(
+            counts, baca.plts(), leaf_duration=leaf_duration
+        )
+        commands.append(command)
     return baca.rhythm(
         rmakers.incised(
             prefix_talea=[-1], prefix_counts=[1], talea_denominator=16
@@ -57,9 +65,7 @@ def bfl_transition_rhythm(
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
-        rmakers.on_beat_grace_container(
-            [7, 3], baca.plts()[1:-1], leaf_duration=(1, 20)
-        ),
+        *commands,
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
