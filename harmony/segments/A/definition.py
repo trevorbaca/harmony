@@ -69,11 +69,13 @@ maker(
     harmony.appoggiato([4, 2, 3, 3, 2], [9, 6, 8, 4, 6]),
     baca.pitches(
         "D3 E3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False)
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
+        not_yet_pitched=True,
     ),
     baca.pitches(
         "F3 G3 A3 G3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True)
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
+        not_yet_pitched=True,
     ),
 )
 
@@ -86,6 +88,7 @@ maker(
         r"\baca-bd-superball-markup",
         abjad.tweak(0).parent_alignment_X,
         abjad.tweak(0).self_alignment_X,
+        abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
     baca.suite(
@@ -109,10 +112,8 @@ maker(
 
 maker(
     ("perc1", (1, 2)),
-    baca.invisible_music(
-        selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
-    ),
-    harmony.superball_staff_position(),
+    baca.invisible_music(baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2)),
+    harmony.bass_drum_staff_position(),
 )
 
 maker(
@@ -145,10 +146,23 @@ maker(
             literal=True,
         ),
     ),
+    baca.markup(
+        r"\baca-slate-scrape-markup",
+        abjad.tweak(9.5).staff_padding,
+        literal=True,
+    ),
 )
 
 maker(
     ("perc2", (1, 2)),
+    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
+    baca.staff_lines(1),
+    harmony.slate_staff_position(),
+    baca.circle_bow_spanner(
+        None,
+        abjad.tweak(5.5).staff_padding,
+        map=baca.plts(),
+    ),
 )
 
 # hp
@@ -161,6 +175,18 @@ maker(
             r"\harmony-harp-markup",
             literal=True,
         ),
+    ),
+)
+
+maker(
+    ("hp", (1, 2)),
+    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
+    baca.staff_lines(1),
+    harmony.whisk_staff_position(),
+    baca.markup(
+        r"\baca-whisk-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
 )
 
@@ -237,7 +263,8 @@ maker(
 
 maker(
     ("cb1", (1, 2)),
-    harmony.sixteenths([12, 6]),
+    ###harmony.sixteenths([12, 5]),
+    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
     baca.staff_position(0, not_yet_pitched=True),
 )
 
