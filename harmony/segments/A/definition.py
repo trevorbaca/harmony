@@ -147,6 +147,10 @@ maker(
     ),
 )
 
+maker(
+    ("perc2", (1, 2)),
+)
+
 # hp
 
 maker(
@@ -229,6 +233,12 @@ maker(
             literal=True,
         ),
     ),
+)
+
+maker(
+    ("cb1", (1, 2)),
+    harmony.sixteenths([12, 6]),
+    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb2
