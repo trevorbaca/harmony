@@ -65,7 +65,7 @@ maker(
 )
 
 maker(
-    ("bfl", (1, 3)),
+    ("bfl", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2], [9, 6, 8, 4, 6]),
     baca.pitches(
         "D3 E3",
@@ -77,7 +77,7 @@ maker(
     ),
 )
 
-# perc 1
+# perc1
 
 maker(
     "perc1",
@@ -95,7 +95,6 @@ maker(
             literal=True,
         ),
     ),
-    harmony.superball_style(),
 )
 
 maker(
@@ -109,12 +108,12 @@ maker(
 )
 
 maker(
-    ("perc1", [1, 2, 3]),
+    ("perc1", [1, 2]),
     baca.breathe(),
 )
 
 maker(
-    ("perc1", (1, 3)),
+    ("perc1", (1, 2)),
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
     ),
@@ -122,10 +121,12 @@ maker(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN),
         written_duration=(1, 4),
     ),
+    harmony.superball_style(),
 )
 
 maker(
-    ("perc1", [2, 3]),
+    ("perc1", 2),
+    harmony.begin_end_rhythm(),
     baca.hairpin(
         "o<| mf",
         selector=baca.leaves()[:1].rleak(),
@@ -135,11 +136,6 @@ maker(
         selector=baca.leaves()[-2:],
     ),
     baca.laissez_vibrer(),
-)
-
-maker(
-    ("perc1", (2, 3)),
-    harmony.begin_end_rhythm(),
 )
 
 # perc2
@@ -182,7 +178,7 @@ maker(
 )
 
 maker(
-    ("va", (1, 3)),
+    ("va", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2]),
     baca.damp_spanner(
         abjad.tweak(8).staff_padding,
@@ -217,7 +213,7 @@ maker(
 )
 
 maker(
-    ("vc2", (1, 3)),
+    ("vc2", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
@@ -253,7 +249,7 @@ maker(
 )
 
 maker(
-    ("cb2", (1, 3)),
+    ("cb2", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(

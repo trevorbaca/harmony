@@ -126,19 +126,7 @@ A_Bass_Flute_Music_Voice_C = {                                                 %
 A_Bass_Flute_Music_Voice_D = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    e'4..
-
-    % [A Bass_Flute_Music_Voice measure 3]                                     %! _comment_measure_numbers
-    e'4
-    \repeatTie
-
-}                                                                              %! abjad.Path.extern
-
-
-A_Bass_Flute_Music_Voice_E = {                                                 %! abjad.Path.extern
-
-    \voiceTwo
-    d'4..                                                                      %! harmony.appoggiato
+    e'4..                                                                      %! harmony.appoggiato
 
 }                                                                              %! abjad.Path.extern
 
@@ -320,44 +308,26 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
     >>
 
-    \oneVoice
-    r16                                                                        %! harmony.appoggiato
+    <<                                                                         %! _make_multimeasure_rest_container
 
-    <<
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
 
-        \context Voice = "On_Beat_Grace_Container"
-        {
-            \set fontSize = #-3
+            % [A Bass_Flute_Music_Voice measure 3]                             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 3/4                                                         %! _make_multimeasure_rest_container
 
-            \slash
-            \voiceOne
-            <
-                \tweak font-size #0
-                \tweak transparent ##t
-                d'
-                g'
-            >8 * 2/5
-            [
-            (
+        }                                                                      %! _make_multimeasure_rest_container
 
-            f'8 * 2/5
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
 
-            g'8 * 2/5
+            % [A Bass_Flute_Rest_Voice measure 3]                              %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
 
-            a'8 * 2/5
+        }                                                                      %! _make_multimeasure_rest_container
 
-            g'8 * 2/5
-
-            f'8 * 2/5
-            )
-            ]
-
-        }
-
-        \context Voice = "Bass_Flute_Music_Voice"
-        \A_Bass_Flute_Music_Voice_E                                            %! abjad.Path.extern
-
-    >>
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -366,7 +336,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             % [A Bass_Flute_Music_Voice measure 4]                             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -465,35 +435,29 @@ A_Percussion_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \breathe                                                                   %! baca.breathe:IndicatorCommand
-
-    % [A Percussion_I_Music_Voice measure 3]                                   %! _comment_measure_numbers
-    a'4 * 3/4                                                                  %! harmony.begin_end_rhythm
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-
-    \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    a'4 * 1/4                                                                  %! harmony.begin_end_rhythm
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-
-    r4                                                                         %! harmony.begin_end_rhythm
-
-    a'4 * 3/4                                                                  %! harmony.begin_end_rhythm
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-
-    \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    a'4 * 1/4                                                                  %! harmony.begin_end_rhythm
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
     \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
-    \breathe                                                                   %! baca.breathe:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_I_Music_Voice measure 3]                           %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding:OverrideCommand(2)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Percussion_I_Rest_Voice measure 3]                            %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -502,7 +466,7 @@ A_Percussion_I_Music_Voice = {                                                 %
 
             % [A Percussion_I_Music_Voice measure 4]                           %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -711,7 +675,7 @@ A_Viola_Music_Voice = {                                                        %
     \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4..
+    c'4..                                                                      %! harmony.appoggiato
     - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
@@ -719,22 +683,27 @@ A_Viola_Music_Voice = {                                                        %
     - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
-    % [A Viola_Music_Voice measure 3]                                          %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
-    \repeatTie
+    <<                                                                         %! _make_multimeasure_rest_container
 
-    r16                                                                        %! harmony.appoggiato
-    \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4..                                                                      %! harmony.appoggiato
-    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.right.padding #2.5                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
-    - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+            % [A Viola_Music_Voice measure 3]                                  %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Viola_Rest_Voice measure 3]                                   %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -743,8 +712,7 @@ A_Viola_Music_Voice = {                                                        %
 
             % [A Viola_Music_Voice measure 4]                                  %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
-            \bacaStopTextSpanDamp                                              %! PHANTOM:_style_phantom_measures(5):DAMP:baca.damp_spanner:PiecewiseCommand(3)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -893,7 +861,7 @@ A_Cello_II_Music_Voice = {                                                     %
     \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4..
+    d4..                                                                       %! harmony.appoggiato
     - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
@@ -901,22 +869,27 @@ A_Cello_II_Music_Voice = {                                                     %
     - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
-    % [A Cello_II_Music_Voice measure 3]                                       %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4
-    \repeatTie
+    <<                                                                         %! _make_multimeasure_rest_container
 
-    r16                                                                        %! harmony.appoggiato
-    \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4..                                                                       %! harmony.appoggiato
-    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.right.padding #2.5                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
-    - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+            % [A Cello_II_Music_Voice measure 3]                               %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Cello_II_Rest_Voice measure 3]                                %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -925,8 +898,7 @@ A_Cello_II_Music_Voice = {                                                     %
 
             % [A Cello_II_Music_Voice measure 4]                               %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
-            \bacaStopTextSpanDamp                                              %! PHANTOM:_style_phantom_measures(5):DAMP:baca.damp_spanner:PiecewiseCommand(3)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1075,7 +1047,7 @@ A_Contrabass_II_Music_Voice = {                                                %
     \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4..
+    d4..                                                                       %! harmony.appoggiato
     - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
@@ -1083,22 +1055,27 @@ A_Contrabass_II_Music_Voice = {                                                %
     - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
-    % [A Contrabass_II_Music_Voice measure 3]                                  %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4
-    \repeatTie
+    <<                                                                         %! _make_multimeasure_rest_container
 
-    r16                                                                        %! harmony.appoggiato
-    \bacaStopTextSpanDamp                                                      %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
 
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4..                                                                       %! harmony.appoggiato
-    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    - \tweak bound-details.right.padding #2.5                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
-    - \tweak staff-padding #8                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
-    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+            % [A Contrabass_II_Music_Voice measure 3]                          %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 3/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [A Contrabass_II_Rest_Voice measure 3]                           %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1107,8 +1084,7 @@ A_Contrabass_II_Music_Voice = {                                                %
 
             % [A Contrabass_II_Music_Voice measure 4]                          %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
-            \bacaStopTextSpanDamp                                              %! PHANTOM:_style_phantom_measures(5):DAMP:baca.damp_spanner:PiecewiseCommand(3)
+            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
