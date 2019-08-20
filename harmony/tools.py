@@ -20,26 +20,6 @@ _reference_meters = (
 ### FUNCTIONS ###
 
 
-def begin_end_rhythm(*commands: rmakers.Command,) -> baca.RhythmCommand:
-    """
-    Makes begin-end rhythm.
-    """
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=True,
-            prefix_talea=[3, 1],
-            prefix_counts=[2],
-            suffix_talea=[3, 1],
-            suffix_counts=[2],
-            talea_denominator=16,
-        ),
-        *commands,
-        rmakers.rewrite_rest_filled(),
-        rmakers.extract_trivial(),
-        tag=_tag(inspect.currentframe()),
-    )
-
-
 def appoggiato(
     divisions: abjad.IntegerSequence,
     counts: abjad.IntegerSequence = None,
@@ -73,6 +53,27 @@ def appoggiato(
     )
 
 
+def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
+    """
+    Makes begin / end quarter notes.
+    """
+    return baca.rhythm(
+        rmakers.incised(
+            fill_with_rests=True,
+            prefix_talea=[3, 1],
+            prefix_counts=[2],
+            suffix_talea=[3, 1],
+            suffix_counts=[2],
+            talea_denominator=16,
+        ),
+        *commands,
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        rmakers.written_duration((1, 4), baca.pleaves()),
+        tag=_tag(inspect.currentframe()),
+    )
+
+
 def margin_markup(
     key: str,
     *,
@@ -90,16 +91,16 @@ def margin_markup(
     return baca.not_parts(command)
 
 
-def superball_style() -> baca.Suite:
+def superball_staff_position() -> baca.Suite:
     """
     Makes superball style.
     """
     return baca.chunk(baca.staff_position(-1), baca.stem_down())
 
 
-def upbeat_attack() -> baca.RhythmCommand:
+def upbeat_quarter_note() -> baca.RhythmCommand:
     """
-    Makes upbeat attack rhythm.
+    Makes upbeat quarter-note rhythm.
     """
     return baca.rhythm(
         rmakers.incised(
@@ -109,6 +110,7 @@ def upbeat_attack() -> baca.RhythmCommand:
             talea_denominator=16,
         ),
         rmakers.extract_trivial(),
+        rmakers.written_duration((1, 4), baca.pleaves()),
         tag=_tag(inspect.currentframe()),
     )
 

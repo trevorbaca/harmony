@@ -384,17 +384,17 @@ A_Percussion_I_Music_Voice = {                                                 %
     \set Staff.forceClef = ##t                                                 %! DEFAULT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):abjad.ScoreTemplate.attach_defaults
     \once \override Staff.InstrumentName.color = #(x11-color 'blue)            %! EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    r1                                                                         %! harmony.upbeat_attack
+    r1                                                                         %! harmony.upbeat_quarter_note
     ^ \baca-default-indicator-markup "(“Percussion”)"                          %! DEFAULT_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     ^ \baca-explicit-indicator-markup "[“Perc. I”]"                            %! EXPLICIT_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     \override Staff.Clef.color = #(x11-color 'violet)                          %! DEFAULT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
-    r4                                                                         %! harmony.upbeat_attack
+    r4                                                                         %! harmony.upbeat_quarter_note
 
     \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
-    a'4 * 3/4                                                                  %! harmony.upbeat_attack
+    a'4 * 3/4                                                                  %! harmony.upbeat_quarter_note
     - \tweak parent-alignment-X #0                                             %! baca.markup:IndicatorCommand
     - \tweak self-alignment-X #0                                               %! baca.markup:IndicatorCommand
     ^ \baca-bd-superball-markup                                                %! baca.markup:IndicatorCommand
@@ -404,13 +404,13 @@ A_Percussion_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    a'4 * 1/4                                                                  %! harmony.upbeat_attack
+    a'4 * 1/4                                                                  %! harmony.upbeat_quarter_note
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \breathe                                                                   %! baca.breathe:IndicatorCommand
 
     % [A Percussion_I_Music_Voice measure 2]                                   %! _comment_measure_numbers
-    a'4 * 3/4                                                                  %! harmony.begin_end_rhythm
+    a'4 * 3/4                                                                  %! harmony.begin_end_quarter_notes
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -418,24 +418,24 @@ A_Percussion_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    a'4 * 1/4                                                                  %! harmony.begin_end_rhythm
+    a'4 * 1/4                                                                  %! harmony.begin_end_quarter_notes
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
 
-    r2.                                                                        %! harmony.begin_end_rhythm
+    r2.                                                                        %! harmony.begin_end_quarter_notes
 
-    a'4 * 3/4                                                                  %! harmony.begin_end_rhythm
+    a'4 * 3/4                                                                  %! harmony.begin_end_quarter_notes
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    a'4 * 1/4                                                                  %! harmony.begin_end_rhythm
+    a'4 * 1/4                                                                  %! harmony.begin_end_quarter_notes
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-    \breathe                                                                   %! baca.breathe:IndicatorCommand
     \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \breathe                                                                   %! baca.breathe:IndicatorCommand
 
     <<                                                                         %! _make_multimeasure_rest_container
 
