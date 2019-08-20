@@ -171,6 +171,11 @@ persist = abjad.OrderedDict(
                                 prototype='abjad.Clef',
                                 value='treble',
                                 ),
+                            abjad.Momento(
+                                context='Harp_Music_Voice',
+                                prototype='baca.StaffLines',
+                                value=1,
+                                ),
                             ],
                         ),
                     (
@@ -191,6 +196,11 @@ persist = abjad.OrderedDict(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='treble',
+                                ),
+                            abjad.Momento(
+                                context='Percussion_II_Music_Voice',
+                                prototype='baca.StaffLines',
+                                value=1,
                                 ),
                             ],
                         ),

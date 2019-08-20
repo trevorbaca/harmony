@@ -8,6 +8,8 @@ if not (
     raise ImportError("Requires Python 3.7.")
 del distutils
 del platform
+from harmony.ScoreTemplate import ScoreTemplate
+from harmony.ScoreTemplate import margin_markup
 from harmony.tools import *
 
 from harmony.materials.instruments.definition import instruments
