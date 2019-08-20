@@ -104,12 +104,7 @@ maker(
         selector=baca.leaves()[-2:],
     ),
     baca.staff_lines(1),
-    harmony.upbeat_attack()
-)
-
-maker(
-    ("perc1", [1, 2]),
-    baca.breathe(),
+    harmony.upbeat_quarter_note()
 )
 
 maker(
@@ -117,16 +112,12 @@ maker(
     baca.invisible_music(
         selector=baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2),
     ),
-    baca.set_duration_multiplier(
-        selector=baca.pleaves(exclude=abjad.const.HIDDEN),
-        written_duration=(1, 4),
-    ),
-    harmony.superball_style(),
+    harmony.superball_staff_position(),
 )
 
 maker(
     ("perc1", 2),
-    harmony.begin_end_rhythm(),
+    harmony.begin_end_quarter_notes(),
     baca.hairpin(
         "o<| mf",
         selector=baca.leaves()[:1].rleak(),
@@ -136,6 +127,11 @@ maker(
         selector=baca.leaves()[-2:],
     ),
     baca.laissez_vibrer(),
+)
+
+maker(
+    ("perc1", [1, 2]),
+    baca.breathe(),
 )
 
 # perc2
