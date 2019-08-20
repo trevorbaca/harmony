@@ -6,11 +6,6 @@ from .materials import instruments as harmony_instruments
 from .materials import margin_markups as harmony_margin_markups
 
 
-def _tag(frame):
-    frame_info = inspect.getframeinfo(frame)
-    return f"harmony.{frame_info.function}"
-
-
 _reference_meters = (
     abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
     abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
@@ -49,7 +44,7 @@ def appoggiato(
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
-        tag=_tag(inspect.currentframe()),
+        tag=baca.frame(inspect.currentframe()),
     )
 
 
@@ -70,7 +65,7 @@ def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
-        tag=_tag(inspect.currentframe()),
+        tag=baca.frame(inspect.currentframe()),
     )
 
 
@@ -111,7 +106,7 @@ def upbeat_quarter_note() -> baca.RhythmCommand:
         ),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
-        tag=_tag(inspect.currentframe()),
+        tag=baca.frame(inspect.currentframe()),
     )
 
 
