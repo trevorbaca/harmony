@@ -947,18 +947,38 @@ A_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_EXPLICIT_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):baca.margin_markup:-PARTS:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4.                                                                        %! harmony.sixteenths
+    d4
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4.                                                                        %! harmony.sixteenths
+    d8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d8
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    \repeatTie
 
     % [A Contrabass_I_Music_Voice measure 2]                                   %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4.                                                                        %! harmony.sixteenths
+    d4
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4.                                                                        %! harmony.sixteenths
+    d8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d8
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2                                                                         %! harmony.sixteenths
