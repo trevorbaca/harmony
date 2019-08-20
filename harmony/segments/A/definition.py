@@ -225,6 +225,24 @@ maker(
     ),
 )
 
+maker(
+    ("vc1", 1),
+    baca.skeleton(r"r4 \times 5/3 { c4 c2 }"),
+)
+
+maker(
+    ("vc1", 2),
+    baca.skeleton(r"\times 5/3 { c4 c4 c4 }"),
+)
+
+maker(
+    ("vc1", (1, 2)),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.dynamic("p"),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
+)
+
 # vc2
 
 maker(
@@ -263,9 +281,11 @@ maker(
 
 maker(
     ("cb1", (1, 2)),
-    ###harmony.sixteenths([12, 5]),
-    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
+    harmony.sixteenths([18, 6, 10, 4, 6]), 
     baca.staff_position(0, not_yet_pitched=True),
+    baca.dynamic("p"),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
 )
 
 # cb2
