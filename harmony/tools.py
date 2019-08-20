@@ -93,6 +93,22 @@ def superball_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(-1), baca.stem_down())
 
 
+def sixteenths(counts: abjad.IntegerSequence,) -> baca.RhythmCommand:
+    """
+    Makes sixteenths rhythm.
+    """
+    return baca.rhythm(
+        rmakers.talea(counts, 16),
+        rmakers.extract_trivial(),
+        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.force_repeat_tie((1, 8)),
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions([(1, 4)], cyclic=True),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def upbeat_quarter_note() -> baca.RhythmCommand:
     """
     Makes upbeat quarter-note rhythm.

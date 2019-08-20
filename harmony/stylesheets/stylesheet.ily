@@ -85,12 +85,7 @@
                 \hspace #2
                 to \hspace #0.75
                 Jonathan \hspace #0.75
-                Hepfer \hspace #0.75
-                & \hspace #0.75
-                the \hspace #0.75
-                Monday \hspace #0.75
-                Evening \hspace #0.75
-                Concerts
+                Hepfer
             }
             " "
             \override #'(font-name . "Palatino")
