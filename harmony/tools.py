@@ -100,11 +100,10 @@ def sixteenths(counts: abjad.IntegerSequence,) -> baca.RhythmCommand:
     return baca.rhythm(
         rmakers.talea(counts, 16),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        ),
         rmakers.force_repeat_tie((1, 8)),
-        preprocessor=baca.sequence()
-        .fuse()
-        .split_divisions([(1, 4)], cyclic=True),
         tag=baca.frame(inspect.currentframe()),
     )
 
