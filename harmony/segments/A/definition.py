@@ -49,6 +49,8 @@ maker(
         measures=(2, 3),
     ),
     baca.metronome_mark("96", baca.skip(1 - 1)),
+    baca.metronome_mark("57 3/5", baca.skip(3 - 1)),
+    baca.metronome_mark("3:5(4)=4", baca.skip(3 - 1)),
 )
 
 # bfl
