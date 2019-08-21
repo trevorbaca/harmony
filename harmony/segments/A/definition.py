@@ -34,7 +34,7 @@ maker(
     baca.rehearsal_mark(
         "A",
         baca.skip(2 - 1),
-        abjad.tweak((0, 9)).extra_offset,
+        abjad.tweak((0, 18)).extra_offset,
     ),
 )
 
