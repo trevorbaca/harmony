@@ -14,7 +14,7 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=11,
+            measure=7,
             y_offset=40,
             ),
         number=2,
@@ -25,5 +25,5 @@ breaks = baca.breaks(
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
-    fallback_duration=(1, 32),
+    fallback_duration=(1, 40),
     )

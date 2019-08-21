@@ -49,6 +49,7 @@ A_Global_Skips = {                                                             %
         \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
     %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
         \bacaStopTextSpanSNM                                                   %! STAGE_NUMBER
+        \bacaStopTextSpanMM                                                    %! _attach_metronome_marks(1)
     %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
         - \baca-start-lmn-left-only "3"                                        %! LOCAL_MEASURE_NUMBER
         \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
@@ -56,7 +57,13 @@ A_Global_Skips = {                                                             %
     %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
         - \baca-start-snm-colored-left-only "[C.1]" #darkgreen                 %! STAGE_NUMBER
         \bacaStartTextSpanSNM                                                  %! STAGE_NUMBER
-    %@% - \baca-start-ct-both "[0'06'']" "[0'08'']"                            %! CLOCK_TIME
+    %@% - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #3 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+        - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        - \baca-colored-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #3 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    %@% - \baca-start-ct-both "[0'06'']" "[0'10'']"                            %! CLOCK_TIME
     %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
     %%% \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! +SCORE:baca.bar_line_x_extent:OverrideCommand(1)
         \baca-bar-line-visible                                                 %! _attach_final_bar_line
