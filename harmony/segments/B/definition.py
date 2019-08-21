@@ -64,6 +64,20 @@ maker(
 
 # perc2
 
+maker(
+    ("perc2", (1, 5)),
+    baca.make_repeat_tied_notes(),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    # TODO: specify staff position instead of pitch:
+    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.dynamic("p"),
+)
+
 # hp
 
 # va

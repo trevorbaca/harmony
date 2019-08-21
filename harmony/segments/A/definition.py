@@ -100,6 +100,7 @@ maker(
             literal=True,
         ),
     ),
+    baca.clef("percussion"),
 )
 
 maker(
@@ -153,6 +154,7 @@ maker(
         abjad.tweak(9.5).staff_padding,
         literal=True,
     ),
+    baca.clef("percussion"),
 )
 
 maker(
