@@ -11,10 +11,10 @@ from abjadext import rmakers
 
 stage_markup = (
     ("[G.1]", 1),
-    ("[H.1]", 2, "darkgreen"),
+    ("[▶H.1]", 2, "darkgreen"),
     ("[G.2-3]", 4),
-    ("[F.3]", 6, "darkgreen"),
-    ("[I.1]", 7, "darkgreen"),
+    ("[◀F.3]", 6, "darkgreen"),
+    ("[▶I.1]", 7, "darkgreen"),
     ("[G.4]", 8),
 )
 
