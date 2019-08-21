@@ -483,8 +483,14 @@ A_Percussion_I_Music_Voice = {                                                 %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [A Percussion_I_Music_Voice measure 3]                           %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            - \tweak staff-padding #5.5                                        %! baca.markup:IndicatorCommand
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             \revert DynamicLineSpanner.staff-padding                           %! baca.dls_staff_padding:OverrideCommand(2)
 
         }                                                                      %! _make_multimeasure_rest_container
@@ -630,8 +636,14 @@ A_Percussion_II_Music_Voice = {                                                %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [A Percussion_II_Music_Voice measure 3]                          %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            - \tweak staff-padding #5.5                                        %! baca.markup:IndicatorCommand
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -741,7 +753,11 @@ A_Harp_Music_Voice = {                                                         %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [A Harp_Music_Voice measure 3]                                   %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
 
         }                                                                      %! _make_multimeasure_rest_container

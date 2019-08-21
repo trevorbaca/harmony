@@ -1,6 +1,7 @@
 import abjad
 import baca
 import inspect
+import typing
 from abjadext import rmakers
 
 
@@ -81,6 +82,30 @@ def brake_drum_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(0), baca.stem_up())
 
 
+def flutter_initiated_cells(
+    divisions: abjad.IntegerSequence,
+) -> baca.RhythmCommand:
+    """
+    Makes flutter-initiated cells.
+    """
+    divisions_ = baca.sequence([(_, 4) for _ in divisions])
+    return baca.rhythm(
+        rmakers.incised(
+            ###fill_with_rests=False,
+            prefix_talea=[1],
+            prefix_counts=[2],
+            talea_denominator=8,
+        ),
+        rmakers.extract_trivial(),
+        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.force_repeat_tie((1, 8)),
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(divisions_, cyclic=True),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def quarter_initiated_cells(
     divisions: abjad.IntegerSequence,
 ) -> baca.RhythmCommand:
@@ -101,6 +126,40 @@ def quarter_initiated_cells(
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
+def rest_appoggiato(
+    counts: abjad.IntegerSequence,
+    divisions: abjad.IntegerSequence = None,
+    *,
+    leaf_duration=(1, 20),
+) -> baca.RhythmCommand:
+    """
+    Makes string appoggiato rhythm.
+    """
+    if divisions:
+        divisions_ = baca.sequence([(_, 4) for _ in divisions])
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+        )
+    else:
+        preprocessor = None
+    commands = []
+    if counts:
+        command = rmakers.on_beat_grace_container(
+            counts, baca.plts(), leaf_duration=leaf_duration
+        )
+        commands.append(command)
+    return baca.rhythm(
+        rmakers.note(),
+        # omit reference meters to allow 5 = 3 + 2
+        rmakers.rewrite_meter(),
+        rmakers.force_repeat_tie((1, 8)),
+        *commands,
+        rmakers.force_rest(baca.plts(grace=False)),
+        preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
 
@@ -140,15 +199,15 @@ def string_appoggiato(
     """
     divisions_ = baca.sequence([(_, 4) for _ in divisions])
     divisions_ = divisions_.rotate(n=rotation)
-    commands = []
+    commands: typing.List[rmakers.Command] = []
     if rest:
-        command = rmakers.force_rest(baca.plts(grace=False)[:rest])
-        commands.append(command)
+        command_1 = rmakers.force_rest(baca.plts(grace=False)[:rest])
+        commands.append(command_1)
     if counts:
-        command = rmakers.on_beat_grace_container(
+        command_2 = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=leaf_duration
         )
-        commands.append(command)
+        commands.append(command_2)
     return baca.rhythm(
         rmakers.note(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),

@@ -138,6 +138,16 @@ maker(
     baca.breathe(),
 )
 
+maker(
+    ("perc1", 3),
+    baca.staff_lines(3),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
 # perc2
 
 maker(
@@ -169,6 +179,16 @@ maker(
     ),
 )
 
+maker(
+    ("perc2", 3),
+    baca.staff_lines(3),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
 # hp
 
 maker(
@@ -192,6 +212,11 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+)
+
+maker(
+    ("hp", 3),
+    baca.staff_lines(5),
 )
 
 # va

@@ -115,7 +115,7 @@ B_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "10"                                            %! MEASURE_NUMBER
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-colored-left-only "[C.1]" #blue                          %! STAGE_NUMBER
+    - \baca-start-snm-colored-left-only "[C.1]" #darkgreen                     %! STAGE_NUMBER
     \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
 %@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #3 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
@@ -267,50 +267,198 @@ B_Bass_Flute_Music_Voice = {                                                   %
     % [B Bass_Flute_Music_Voice measure 4 / measure 1]                         %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-bfl-markup                            %! _clone_segment_initial_short_instrument_name
+    \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding:OverrideCommand(1)
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2.                                                                      %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
     % [B Bass_Flute_Music_Voice measure 5 / measure 2]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''1                                                                       %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [B Bass_Flute_Music_Voice measure 6 / measure 3]                         %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2                                                                       %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [B Bass_Flute_Music_Voice measure 7 / measure 4]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2                                                                       %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2                                                                       %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [B Bass_Flute_Music_Voice measure 8 / measure 5]                         %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    % [B Bass_Flute_Music_Voice measure 9 / measure 6]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2.                                                                      %! harmony.flutter_initiated_cells
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Bass_Flute_Music_Voice measure 9 / measure 6]                 %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Bass_Flute_Rest_Voice measure 9 / measure 6]                  %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Bass_Flute_Music_Voice measure 10 / measure 7]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Bass_Flute_Music_Voice measure 11 / measure 8]                        %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Bass_Flute_Music_Voice measure 12 / measure 9]                        %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Bass_Flute_Music_Voice measure 13 / measure 10]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Bass_Flute_Music_Voice measure 14 / measure 11]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Bass_Flute_Music_Voice measure 15 / measure 12]                       %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -352,61 +500,263 @@ B_Bass_Flute_Music_Staff = <<                                                  %
 >>                                                                             %! abjad.Path.extern
 
 
+B_Percussion_I_Music_Voice_A = {                                               %! abjad.Path.extern
+
+    r1                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern
+
+    r2.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Voice_C = {                                               %! abjad.Path.extern
+
+    r1                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Voice_D = {                                               %! abjad.Path.extern
+
+    r2.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Percussion_I_Music_Voice_E = {                                               %! abjad.Path.extern
+
+    r1                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 B_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
-    % [B Percussion_I_Music_Voice measure 4 / measure 1]                       %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \f                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    <<
 
-    % [B Percussion_I_Music_Voice measure 5 / measure 2]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
 
-    % [B Percussion_I_Music_Voice measure 6 / measure 3]                       %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+            % [B Percussion_I_Music_Voice measure 4 / measure 1]               %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \stopStaff                                                         %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.line-count = 3                   %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \startStaff                                                        %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \set Staff.instrumentName = \harmony-perc-i-markup                 %! _clone_segment_initial_short_instrument_name
+            \clef "percussion"                                                 %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \slash
+            \voiceOne
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.color = #(x11-color 'green4)     %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \f                                                                 %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+            ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                   %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“Percussion”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            [
+            (
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [B Percussion_I_Music_Voice measure 7 / measure 4]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
 
-    % [B Percussion_I_Music_Voice measure 8 / measure 5]                       %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
 
-    % [B Percussion_I_Music_Voice measure 9 / measure 6]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \B_Percussion_I_Music_Voice_A                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Percussion_I_Music_Voice measure 5 / measure 2]               %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \B_Percussion_I_Music_Voice_B                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Percussion_I_Music_Voice measure 6 / measure 3]               %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \B_Percussion_I_Music_Voice_C                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Percussion_I_Music_Voice measure 7 / measure 4]               %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \B_Percussion_I_Music_Voice_D                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Percussion_I_Music_Voice measure 8 / measure 5]               %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \B_Percussion_I_Music_Voice_E                                          %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Percussion_I_Music_Voice measure 9 / measure 6]               %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Percussion_I_Rest_Voice measure 9 / measure 6]                %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Percussion_I_Music_Voice measure 10 / measure 7]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Percussion_I_Music_Voice measure 11 / measure 8]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Percussion_I_Music_Voice measure 12 / measure 9]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Percussion_I_Music_Voice measure 13 / measure 10]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Percussion_I_Music_Voice measure 14 / measure 11]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Percussion_I_Music_Voice measure 15 / measure 12]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -449,16 +799,16 @@ B_Percussion_II_Music_Voice = {                                                %
 
     % [B Percussion_II_Music_Voice measure 4 / measure 1]                      %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! _clone_segment_initial_short_instrument_name
     \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     c'1                                                                        %! baca.make_repeat_tied_notes
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -582,54 +932,210 @@ B_Harp_Music_Voice = {                                                         %
     % [B Harp_Music_Voice measure 4 / measure 1]                               %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-hp-markup                             %! _clone_segment_initial_short_instrument_name
+    \override DynamicLineSpanner.staff-padding = #4.5                          %! baca.dls_staff_padding:OverrideCommand(1)
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Hp.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    - \tweak staff-padding #5.5                                                %! baca.markup:IndicatorCommand
+    ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
     % [B Harp_Music_Voice measure 5 / measure 2]                               %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'1                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [B Harp_Music_Voice measure 6 / measure 3]                               %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [B Harp_Music_Voice measure 7 / measure 4]                               %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [B Harp_Music_Voice measure 8 / measure 5]                               %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    % [B Harp_Music_Voice measure 9 / measure 6]                               %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'8                                                                        %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.flutter_initiated_cells
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Harp_Music_Voice measure 9 / measure 6]                       %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Harp_Rest_Voice measure 9 / measure 6]                        %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Harp_Music_Voice measure 10 / measure 7]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Harp_Music_Voice measure 11 / measure 8]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Harp_Music_Voice measure 12 / measure 9]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Harp_Music_Voice measure 13 / measure 10]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Harp_Music_Voice measure 14 / measure 11]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Harp_Music_Voice measure 15 / measure 12]                             %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

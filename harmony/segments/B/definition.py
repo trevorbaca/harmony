@@ -11,7 +11,7 @@ import os
 stage_markup = (
     ("[B.1-5]", 1),
     ("[A.2]", 6, "darkgreen"),
-    ("[C.1]", 7, "blue"),
+    ("[C.1]", 7, "darkgreen"),
     ("[B.6]", 8),
 )
 
@@ -58,14 +58,34 @@ maker(
     baca.global_fermata("fermata", baca.rest(12 - 1)),
 )
 
+divisions = [4, 5, 3, 3, 3, 4]
+
 # bfl
 
+maker(
+    ("bfl", (1, 5)),
+    harmony.flutter_initiated_cells(divisions),
+    baca.stem_tremolo(baca.plts().get([0, 1], 3)),
+    baca.hairpin(
+        "p < f > p",
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(5.5),
+)
+
 # perc1
+
+maker(
+    ("perc1", (1, 5)),
+    harmony.rest_appoggiato([4]),
+)
 
 # perc2
 
 maker(
     ("perc2", (1, 5)),
+    baca.staff_lines(1),
     baca.make_repeat_tied_notes(),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -80,9 +100,24 @@ maker(
 
 # hp
 
-# va
+maker(
+    ("hp", (1, 5)),
+    harmony.flutter_initiated_cells(divisions),
+    baca.markup(
+        r"\baca-bisb-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "p < f > p",
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(4.5),
+)
 
-divisions = [4, 5, 3, 3, 3, 4]
+# va
 
 maker(
     ("va", (1, 5)),

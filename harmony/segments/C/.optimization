@@ -2204,7 +2204,27 @@
  Abjad format time: 0 seconds
  LilyPond runtime: 1 second
 
-2019-08-21 10:39:59
- Segment-maker runtime: 2 seconds
+2019-08-21 10:37:12
+ Segment-maker runtime: 1 second
+ Abjad format time: 0 seconds
+ LilyPond runtime: 1 second
+
+2019-08-21 10:37:51
+ Segment-maker runtime: 0 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 1 second
+
+2019-08-21 10:38:16
+ Segment-maker runtime: 0 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 1 second
+
+2019-08-21 10:38:36
+ Segment-maker runtime: 0 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 1 second
+
+2019-08-21 10:40:12
+ Segment-maker runtime: 0 seconds
  Abjad format time: 0 seconds
  LilyPond runtime: 1 second
