@@ -1,5 +1,28 @@
 TO-DO
 =====
 
-1.  Raise metronome mark with literal markup + metric modulation to correct
-    vertical position. 4 = 57.6 [4 = 4:3(4)] in [A].
+1.  Make whisk spanner.
+
+2.  Debug on-beat anchor transposition.
+
+###############################################################################
+##################################### ETC #####################################
+###############################################################################
+
+# bfl
+
+# perc1
+
+# perc2
+
+# hp
+
+# va
+
+# vc1
+
+# vc2
+
+# cb1
+
+# cb2

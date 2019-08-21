@@ -127,6 +127,40 @@ def slate_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(1), baca.stem_down())
 
 
+def string_appoggiato(
+    divisions: abjad.IntegerSequence,
+    counts: abjad.IntegerSequence = (2, 3, 4, 5, 6, 7, 8, 9),
+    *,
+    leaf_duration=(1, 20),
+    rest: int = None,
+    rotation: int = 0,
+) -> baca.RhythmCommand:
+    """
+    Makes string appoggiato rhythm.
+    """
+    divisions_ = baca.sequence([(_, 4) for _ in divisions])
+    divisions_ = divisions_.rotate(n=rotation)
+    commands = []
+    if rest:
+        command = rmakers.force_rest(baca.plts(grace=False)[:rest])
+        commands.append(command)
+    if counts:
+        command = rmakers.on_beat_grace_container(
+            counts, baca.plts(), leaf_duration=leaf_duration
+        )
+        commands.append(command)
+    return baca.rhythm(
+        rmakers.note(),
+        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.force_repeat_tie((1, 8)),
+        *commands,
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(divisions_, cyclic=True),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def tam_tam_staff_position() -> baca.Suite:
     """
     Sets tam-tam staff position and stem direction.

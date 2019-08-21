@@ -115,7 +115,7 @@ B_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "10"                                            %! MEASURE_NUMBER
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-colored-left-only "[C.1]" #red                           %! STAGE_NUMBER
+    - \baca-start-snm-colored-left-only "[C.1]" #blue                          %! STAGE_NUMBER
     \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
 %@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #3 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
@@ -627,55 +627,349 @@ B_Harp_Music_Staff = <<                                                        %
 >>                                                                             %! abjad.Path.extern
 
 
-B_Viola_Music_Voice = {                                                        %! abjad.Path.extern
+B_Viola_Music_Voice_A = {                                                      %! abjad.Path.extern
 
-    % [B Viola_Music_Voice measure 4 / measure 1]                              %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
-    \clef "alto"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
-    ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Viola”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'1                                                                        %! harmony.string_appoggiato
 
-    % [B Viola_Music_Voice measure 5 / measure 2]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+}                                                                              %! abjad.Path.extern
 
-    % [B Viola_Music_Voice measure 6 / measure 3]                              %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+
+B_Viola_Music_Voice_B = {                                                      %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'1                                                                        %! harmony.string_appoggiato
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'4                                                                        %! harmony.string_appoggiato
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Viola_Music_Voice_C = {                                                      %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Viola_Music_Voice_D = {                                                      %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'4
 
     % [B Viola_Music_Voice measure 7 / measure 4]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2
+    \repeatTie
 
-    % [B Viola_Music_Voice measure 8 / measure 5]                              %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+}                                                                              %! abjad.Path.extern
 
-    % [B Viola_Music_Voice measure 9 / measure 6]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+
+B_Viola_Music_Voice_E = {                                                      %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Viola_Music_Voice_F = {                                                      %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'1                                                                        %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Viola_Music_Voice = {                                                        %! abjad.Path.extern
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Viola_Music_Voice measure 4 / measure 1]                      %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-va-markup                %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \set Staff.instrumentName = \harmony-va-markup                     %! _clone_segment_initial_short_instrument_name
+            \clef "alto"                                                       %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \slash
+            \voiceOne
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            ^ \baca-reapplied-indicator-markup "[“Va.”]"                       %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“Viola”)"                     %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            [
+            (
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-va-markup                %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_A                                                 %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Viola_Music_Voice measure 5 / measure 2]                      %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_B                                                 %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Viola_Music_Voice measure 6 / measure 3]                      %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_C                                                 %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_D                                                 %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_E                                                 %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [B Viola_Music_Voice measure 8 / measure 5]                      %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \B_Viola_Music_Voice_F                                                 %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Viola_Music_Voice measure 9 / measure 6]                      %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Viola_Rest_Voice measure 9 / measure 6]                       %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Viola_Music_Voice measure 10 / measure 7]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Viola_Music_Voice measure 11 / measure 8]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Viola_Music_Voice measure 12 / measure 9]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Viola_Music_Voice measure 13 / measure 10]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Viola_Music_Voice measure 14 / measure 11]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Viola_Music_Voice measure 15 / measure 12]                            %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -714,6 +1008,65 @@ B_Viola_Music_Staff = <<                                                       %
 >>                                                                             %! abjad.Path.extern
 
 
+B_Cello_I_Music_Voice_A = {                                                    %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_I_Music_Voice_B = {                                                    %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+
+    % [B Cello_I_Music_Voice measure 6 / measure 3]                            %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_I_Music_Voice_C = {                                                    %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2
+
+    % [B Cello_I_Music_Voice measure 7 / measure 4]                            %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_I_Music_Voice_D = {                                                    %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1                                                                         %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_I_Music_Voice_E = {                                                    %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1                                                                         %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 B_Cello_I_Music_Voice = {                                                      %! abjad.Path.extern
 
     % [B Cello_I_Music_Voice measure 4 / measure 1]                            %! _comment_measure_numbers
@@ -724,7 +1077,7 @@ B_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r1                                                                         %! harmony.string_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -734,37 +1087,236 @@ B_Cello_I_Music_Voice = {                                                      %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [B Cello_I_Music_Voice measure 5 / measure 2]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.string_appoggiato
 
-    % [B Cello_I_Music_Voice measure 6 / measure 3]                            %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    <<
 
-    % [B Cello_I_Music_Voice measure 7 / measure 4]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
 
-    % [B Cello_I_Music_Voice measure 8 / measure 5]                            %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
 
-    % [B Cello_I_Music_Voice measure 9 / measure 6]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \B_Cello_I_Music_Voice_A                                               %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \B_Cello_I_Music_Voice_B                                               %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \B_Cello_I_Music_Voice_C                                               %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \B_Cello_I_Music_Voice_D                                               %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \B_Cello_I_Music_Voice_E                                               %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Cello_I_Music_Voice measure 9 / measure 6]                    %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Cello_I_Rest_Voice measure 9 / measure 6]                     %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Cello_I_Music_Voice measure 10 / measure 7]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Cello_I_Music_Voice measure 11 / measure 8]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_I_Music_Voice measure 12 / measure 9]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_I_Music_Voice measure 13 / measure 10]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_I_Music_Voice measure 14 / measure 11]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_I_Music_Voice measure 15 / measure 12]                          %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -803,6 +1355,51 @@ B_Cello_I_Music_Staff = <<                                                     %
 >>                                                                             %! abjad.Path.extern
 
 
+B_Cello_II_Music_Voice_A = {                                                   %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_II_Music_Voice_B = {                                                   %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1                                                                         %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_II_Music_Voice_C = {                                                   %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1                                                                         %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Cello_II_Music_Voice_D = {                                                   %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+
+    % [B Cello_II_Music_Voice measure 8 / measure 5]                           %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1
+    - \tweak direction #up
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
 B_Cello_II_Music_Voice = {                                                     %! abjad.Path.extern
 
     % [B Cello_II_Music_Voice measure 4 / measure 1]                           %! _comment_measure_numbers
@@ -813,45 +1410,214 @@ B_Cello_II_Music_Voice = {                                                     %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.string_appoggiato
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    r4                                                                         %! harmony.string_appoggiato
+
     % [B Cello_II_Music_Voice measure 5 / measure 2]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.string_appoggiato
 
-    % [B Cello_II_Music_Voice measure 6 / measure 3]                           %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    <<
 
-    % [B Cello_II_Music_Voice measure 7 / measure 4]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
 
-    % [B Cello_II_Music_Voice measure 8 / measure 5]                           %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
 
-    % [B Cello_II_Music_Voice measure 9 / measure 6]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_II_Music_Voice"
+        \B_Cello_II_Music_Voice_A                                              %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_II_Music_Voice"
+        \B_Cello_II_Music_Voice_B                                              %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_II_Music_Voice"
+        \B_Cello_II_Music_Voice_C                                              %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Cello_II_Music_Voice"
+        \B_Cello_II_Music_Voice_D                                              %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Cello_II_Music_Voice measure 9 / measure 6]                   %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Cello_II_Rest_Voice measure 9 / measure 6]                    %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Cello_II_Music_Voice measure 10 / measure 7]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Cello_II_Music_Voice measure 11 / measure 8]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_II_Music_Voice measure 12 / measure 9]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_II_Music_Voice measure 13 / measure 10]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_II_Music_Voice measure 14 / measure 11]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Cello_II_Music_Voice measure 15 / measure 12]                         %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -890,6 +1656,45 @@ B_Cello_II_Music_Staff = <<                                                    %
 >>                                                                             %! abjad.Path.extern
 
 
+B_Contrabass_I_Music_Voice_A = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.
+
+    % [B Contrabass_I_Music_Voice measure 7 / measure 4]                       %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Contrabass_I_Music_Voice_B = {                                               %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d1                                                                         %! harmony.string_appoggiato
+
+    % [B Contrabass_I_Music_Voice measure 8 / measure 5]                       %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4                                                                         %! harmony.string_appoggiato
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Contrabass_I_Music_Voice_C = {                                               %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 B_Contrabass_I_Music_Voice = {                                                 %! abjad.Path.extern
 
     % [B Contrabass_I_Music_Voice measure 4 / measure 1]                       %! _comment_measure_numbers
@@ -900,7 +1705,7 @@ B_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.string_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -909,38 +1714,180 @@ B_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    r4                                                                         %! harmony.string_appoggiato
+
     % [B Contrabass_I_Music_Voice measure 5 / measure 2]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.string_appoggiato
+
+    r2.                                                                        %! harmony.string_appoggiato
 
     % [B Contrabass_I_Music_Voice measure 6 / measure 3]                       %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.string_appoggiato
 
-    % [B Contrabass_I_Music_Voice measure 7 / measure 4]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    <<
 
-    % [B Contrabass_I_Music_Voice measure 8 / measure 5]                       %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
 
-    % [B Contrabass_I_Music_Voice measure 9 / measure 6]                       %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+                d'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Contrabass_I_Music_Voice"
+        \B_Contrabass_I_Music_Voice_A                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+                d'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Contrabass_I_Music_Voice"
+        \B_Contrabass_I_Music_Voice_B                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+                d'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Contrabass_I_Music_Voice"
+        \B_Contrabass_I_Music_Voice_C                                          %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Contrabass_I_Music_Voice measure 9 / measure 6]               %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Contrabass_I_Rest_Voice measure 9 / measure 6]                %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Contrabass_I_Music_Voice measure 10 / measure 7]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_I_Music_Voice measure 11 / measure 8]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_I_Music_Voice measure 12 / measure 9]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_I_Music_Voice measure 13 / measure 10]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_I_Music_Voice measure 14 / measure 11]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_I_Music_Voice measure 15 / measure 12]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -979,6 +1926,30 @@ B_Contrabass_I_Music_Staff = <<                                                %
 >>                                                                             %! abjad.Path.extern
 
 
+B_Contrabass_II_Music_Voice_A = {                                              %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2
+
+    % [B Contrabass_II_Music_Voice measure 8 / measure 5]                      %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    \repeatTie
+
+}                                                                              %! abjad.Path.extern
+
+
+B_Contrabass_II_Music_Voice_B = {                                              %! abjad.Path.extern
+
+    \oneVoice
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.string_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 B_Contrabass_II_Music_Voice = {                                                %! abjad.Path.extern
 
     % [B Contrabass_II_Music_Voice measure 4 / measure 1]                      %! _comment_measure_numbers
@@ -989,45 +1960,153 @@ B_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.string_appoggiato
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    r4                                                                         %! harmony.string_appoggiato
+
     % [B Contrabass_II_Music_Voice measure 5 / measure 2]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.string_appoggiato
+
+    r2                                                                         %! harmony.string_appoggiato
 
     % [B Contrabass_II_Music_Voice measure 6 / measure 3]                      %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.string_appoggiato
+
+    r2                                                                         %! harmony.string_appoggiato
 
     % [B Contrabass_II_Music_Voice measure 7 / measure 4]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2.                                                                        %! harmony.string_appoggiato
 
-    % [B Contrabass_II_Music_Voice measure 8 / measure 5]                      %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    <<
 
-    % [B Contrabass_II_Music_Voice measure 9 / measure 6]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+                d'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Contrabass_II_Music_Voice"
+        \B_Contrabass_II_Music_Voice_A                                         %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                d
+                d'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            d8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Contrabass_II_Music_Voice"
+        \B_Contrabass_II_Music_Voice_B                                         %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Contrabass_II_Music_Voice measure 9 / measure 6]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [B Contrabass_II_Rest_Voice measure 9 / measure 6]               %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [B Contrabass_II_Music_Voice measure 10 / measure 7]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_II_Music_Voice measure 11 / measure 8]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_II_Music_Voice measure 12 / measure 9]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_II_Music_Voice measure 13 / measure 10]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_II_Music_Voice measure 14 / measure 11]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    R1 * 5/4                                                                   %! _make_measure_silences
 
     % [B Contrabass_II_Music_Voice measure 15 / measure 12]                    %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

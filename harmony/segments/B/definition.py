@@ -11,7 +11,7 @@ import os
 stage_markup = (
     ("[B.1-5]", 1),
     ("[A.2]", 6, "darkgreen"),
-    ("[C.1]", 7, "red"),
+    ("[C.1]", 7, "blue"),
     ("[B.6]", 8),
 )
 
@@ -56,4 +56,53 @@ maker(
 maker(
     "Global_Rests",
     baca.global_fermata("fermata", baca.rest(12 - 1)),
+)
+
+# bfl
+
+# perc1
+
+# perc2
+
+# hp
+
+# va
+
+divisions = [4, 5, 3, 3, 3, 4]
+
+maker(
+    ("va", (1, 5)),
+    harmony.string_appoggiato(divisions, [2, 3, 4, 5, 6, 7]),
+)
+
+# vc1
+
+maker(
+    ("vc1", (1, 5)),
+    harmony.string_appoggiato(divisions, [3, 4, 5, 6, 7], rotation=-1, rest=1),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+# vc2
+
+maker(
+    ("vc2", (1, 5)),
+    harmony.string_appoggiato(divisions, [4, 5, 6, 7], rotation=-2, rest=2),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+# cb1
+
+maker(
+    ("cb1", (1, 5)),
+    harmony.string_appoggiato(divisions, [5, 6, 7], rotation=-3, rest=3),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+# cb2
+
+maker(
+    ("cb2", (1, 5)),
+    harmony.string_appoggiato(divisions, [6, 7], rotation=-4, rest=4),
+    baca.staff_position(0, not_yet_pitched=True),
 )
