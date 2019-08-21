@@ -12,7 +12,7 @@ from abjadext import rmakers
 stage_markup = (
     ("[A.1]", 1),
     ("[A.2]", 2),
-    ("[C.1]", 3, "darkgreen"),
+    ("[▶C.1]", 3, "darkgreen"),
 )
 
 maker = baca.SegmentMaker(
