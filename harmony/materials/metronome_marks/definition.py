@@ -114,5 +114,12 @@ metronome_marks = abjad.OrderedDict(
                 left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
             ),
         ),
+        (
+            "3:2(8)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("3:2", "c8"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
     ]
 )

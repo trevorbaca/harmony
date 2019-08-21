@@ -9,7 +9,17 @@
  Abjad format time: 0 seconds
  LilyPond runtime: 1 second
 
-2019-08-21 12:09:44
- Segment-maker runtime: 1 second
+2019-08-21 11:12:45
+ Segment-maker runtime: 0 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 0 seconds
+
+2019-08-21 11:13:30
+ Segment-maker runtime: 0 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 1 second
+
+2019-08-21 12:09:48
+ Segment-maker runtime: 0 seconds
  Abjad format time: 0 seconds
  LilyPond runtime: 1 second
