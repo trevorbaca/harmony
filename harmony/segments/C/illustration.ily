@@ -645,13 +645,45 @@ C_Harp_Music_Voice = {                                                         %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Harp_Music_Voice measure 21 / measure 6]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \override NoteHead.no-ledgers = ##t                                        %! baca.no_ledgers:OverrideCommand(1)
+    \ottava -1                                                                 %! baca.ottava_bassa:SpannerIndicatorCommand(1)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,1                                                                       %! harmony.durata
+    - \tenuto                                                                  %! baca.tenuto:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,8                                                                       %! harmony.durata
+    \repeatTie
+
+    r8                                                                         %! harmony.durata
+    - \baca-damp                                                               %! baca.articulation:IndicatorCommand
 
     % [C Harp_Music_Voice measure 22 / measure 7]                              %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r2                                                                         %! harmony.durata
+
+    r8                                                                         %! harmony.durata
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,8
+    - \tenuto                                                                  %! baca.tenuto:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,4
+    \repeatTie
 
     % [C Harp_Music_Voice measure 23 / measure 8]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,2                                                                       %! harmony.durata
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d,,8                                                                       %! harmony.durata
+    \repeatTie
+    \revert NoteHead.no-ledgers                                                %! baca.no_ledgers:OverrideCommand(2)
+    \ottava 0                                                                  %! baca.ottava_bassa:SpannerIndicatorCommand(2)
+
+    r8                                                                         %! harmony.durata
+    - \baca-damp                                                               %! baca.articulation:IndicatorCommand
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -660,7 +692,7 @@ C_Harp_Music_Voice = {                                                         %
 
             % [C Harp_Music_Voice measure 24 / measure 9]                      %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -936,7 +968,7 @@ C_Cello_II_Music_Voice = {                                                     %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d2                                                                         %! harmony.durata
+    c2                                                                         %! harmony.durata
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
@@ -998,13 +1030,65 @@ C_Cello_II_Music_Voice = {                                                     %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Cello_II_Music_Voice measure 21 / measure 6]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c1                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e8                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r8                                                                         %! harmony.durata
 
     % [C Cello_II_Music_Voice measure 22 / measure 7]                          %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r2                                                                         %! harmony.durata
+
+    r8                                                                         %! harmony.durata
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c8
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d4
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     % [C Cello_II_Music_Voice measure 23 / measure 8]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    \afterGrace
+    d8                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    {
+
+        \revert Accidental.stencil                                             %! baca.glissando
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando
+        \revert NoteHead.no-ledgers                                            %! baca.glissando
+        \undo \hide NoteHead                                                   %! baca.glissando
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        e8
+
+    }
+
+
+    r8                                                                         %! harmony.durata
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1013,7 +1097,7 @@ C_Cello_II_Music_Voice = {                                                     %
 
             % [C Cello_II_Music_Voice measure 24 / measure 9]                  %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1179,7 +1263,7 @@ C_Contrabass_II_Music_Voice = {                                                %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d2                                                                         %! harmony.durata
+    c2                                                                         %! harmony.durata
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
@@ -1194,7 +1278,7 @@ C_Contrabass_II_Music_Voice = {                                                %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \afterGrace
-    e8                                                                         %! harmony.durata
+    d8                                                                         %! harmony.durata
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     {
 
@@ -1241,13 +1325,65 @@ C_Contrabass_II_Music_Voice = {                                                %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Contrabass_II_Music_Voice measure 21 / measure 6]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c1                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e8                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r8                                                                         %! harmony.durata
 
     % [C Contrabass_II_Music_Voice measure 22 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r2                                                                         %! harmony.durata
+
+    r8                                                                         %! harmony.durata
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c8
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c4
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     % [C Contrabass_II_Music_Voice measure 23 / measure 8]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    \afterGrace
+    e8                                                                         %! harmony.durata
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    {
+
+        \revert Accidental.stencil                                             %! baca.glissando
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando
+        \revert NoteHead.no-ledgers                                            %! baca.glissando
+        \undo \hide NoteHead                                                   %! baca.glissando
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        e8
+
+    }
+
+
+    r8                                                                         %! harmony.durata
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1256,7 +1392,7 @@ C_Contrabass_II_Music_Voice = {                                                %
 
             % [C Contrabass_II_Music_Voice measure 24 / measure 9]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
