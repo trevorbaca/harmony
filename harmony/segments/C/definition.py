@@ -68,11 +68,30 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 1),
+    baca.clef("bass"),
+    harmony.durata([5, -2]),
+    baca.tenuto(),
+    baca.articulation(r"baca-damp", baca.rest(0)),
+)
+
 # va
 
 # vc1
 
 # vc2
+
+maker(
+    ("vc2", 1),
+    harmony.durata([5, -2], grace=True, untie=True),
+    baca.interpolate_staff_positions("D3", "E3"),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(baca.pleaves(grace=False)),
+)
 
 # cb1
 
