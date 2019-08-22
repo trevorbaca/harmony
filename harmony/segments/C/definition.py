@@ -114,8 +114,20 @@ maker(
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
-    baca.tenuto(),
-    baca.articulation(r"baca-damp", baca.rest(0)),
+    baca.tenuto(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+)
+
+maker(
+    ("hp", (6, 8)),
+    harmony.durata([9, -6, 8, -2]),
+    baca.chunk(
+        baca.staff_position(-14, not_yet_pitched=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
+    baca.tenuto(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
 )
 
 # va
@@ -147,10 +159,24 @@ maker(
 maker(
     ("vc2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions(0, 1, not_yet_pitched=True),
+    baca.interpolate_staff_positions(-1, 1, not_yet_pitched=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(baca.pleaves(grace=False)),
+)
+
+maker(
+    ("vc2", (6, 8)),
+    harmony.durata([9, -6, 8, -2], grace=True, untie=True),
+    baca.new(
+        baca.interpolate_staff_positions(-1, 1, not_yet_pitched=True),
+        baca.glissando(
+            allow_repeats=True,
+            hide_middle_note_heads=True,
+        ),
+        map=baca.runs(),
     ),
     baca.stem_tremolo(baca.pleaves(grace=False)),
 )
@@ -172,10 +198,24 @@ maker(
 maker(
     ("cb2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions(-7, -6, not_yet_pitched=True),
+    baca.interpolate_staff_positions(-8, -6, not_yet_pitched=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(baca.pleaves(grace=False)),
+)
+
+maker(
+    ("cb2", (6, 8)),
+    harmony.durata([9, -6, 8, -2], grace=True, untie=True),
+    baca.new(
+        baca.interpolate_staff_positions(-8, -6, not_yet_pitched=True),
+        baca.glissando(
+            allow_repeats=True,
+            hide_middle_note_heads=True,
+        ),
+        map=baca.runs(),
     ),
     baca.stem_tremolo(baca.pleaves(grace=False)),
 )
