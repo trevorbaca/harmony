@@ -90,7 +90,9 @@ def durata(
     """
     commands: typing.List[rmakers.Command] = []
     if grace:
-        command_1 = rmakers.after_grace_container([1], baca.ptail(-1))
+        command_1 = rmakers.after_grace_container(
+            [1], baca.runs().map(baca.leaf(-1))
+        )
         commands.append(command_1)
     if untie:
         command_2 = rmakers.untie(baca.leaves())
@@ -142,12 +144,14 @@ def phjc(
     return baca.rhythm(
         rmakers.talea(counts, 16, extra_counts=extra_counts),
         *commands,
-        rmakers.beam(),
         rmakers.rewrite_rest_filled(),
-        rmakers.extract_trivial(),
+        rmakers.denominator((1, 8)),
         rmakers.force_fraction(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
+        rmakers.force_rest(baca.plts().map(baca.leaves()[1:])),
+        rmakers.force_rest(baca.tuplets().map(baca.leaf(0))),
+        rmakers.beam(),
+        rmakers.extract_trivial(),
         preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
