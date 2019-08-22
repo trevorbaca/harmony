@@ -50,14 +50,11 @@ C_Global_Skips = {                                                             %
     s1 * 1/4                                                                   %! _make_global_skips(1)
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-    \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
     - \baca-start-lmn-left-only "3"                                            %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "18"                                            %! MEASURE_NUMBER
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-colored-left-only "[▶F.3]" #darkgreen                    %! STAGE_NUMBER
-    \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
 %@% - \baca-start-ct-left-only-fermata "2''"                                   %! CLOCK_TIME
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
 
@@ -74,7 +71,7 @@ C_Global_Skips = {                                                             %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "19"                                            %! MEASURE_NUMBER
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-left-only "[C.2-4]"                                      %! STAGE_NUMBER
+    - \baca-start-snm-colored-left-only "[▶F.3]" #darkgreen                    %! STAGE_NUMBER
     \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
 %@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% - \baca-bracketed-metric-modulation #2 #0 #1 #"48" #2 #1 #2 #0 #'(1 . 1)   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
@@ -105,12 +102,15 @@ C_Global_Skips = {                                                             %
     s1 * 5/4                                                                   %! _make_global_skips(1)
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
+    \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
     \bacaStopTextSpanMM                                                        %! _attach_metronome_marks(1)
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
     - \baca-start-lmn-left-only "6"                                            %! LOCAL_MEASURE_NUMBER
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
 %@% - \baca-start-mn-left-only "21"                                            %! MEASURE_NUMBER
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
+    - \baca-start-snm-left-only "[C.2-4]"                                      %! STAGE_NUMBER
+    \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
 %@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #6 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
 %@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
@@ -211,7 +211,7 @@ C_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    r4                                                                         %! harmony.sixteenths
+    r2                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -232,8 +232,6 @@ C_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths
-
-    r4                                                                         %! harmony.sixteenths
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -267,13 +265,64 @@ C_Bass_Flute_Music_Voice = {                                                   %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Bass_Flute_Music_Voice measure 21 / measure 6]                        %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+    - \abjad-dashed-line-with-hook                                             %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-covered-markup                      %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup   %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.5                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+
+    r16                                                                        %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8.                                                                        %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
 
     % [C Bass_Flute_Music_Voice measure 22 / measure 7]                        %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r4                                                                         %! harmony.sixteenths
+
+    r8.                                                                        %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+
+    r16                                                                        %! harmony.sixteenths
 
     % [C Bass_Flute_Music_Voice measure 23 / measure 8]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    r4                                                                         %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r16                                                                        %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'16                                                                       %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -282,7 +331,8 @@ C_Bass_Flute_Music_Voice = {                                                   %
 
             % [C Bass_Flute_Music_Voice measure 24 / measure 9]                %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
+            \bacaStopTextSpanCovered                                           %! PHANTOM:_style_phantom_measures(5):COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -745,14 +795,19 @@ C_Viola_Music_Voice = {                                                        %
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    r8                                                                         %! harmony.sixteenths
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
 
-    c'16                                                                       %! harmony.sixteenths
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \sfp                                                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        r4                                                                     %! harmony.sixteenths
 
-    r16                                                                        %! harmony.sixteenths
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \sfp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+
+        r16                                                                    %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
 
     r4                                                                         %! harmony.sixteenths
 
@@ -786,14 +841,111 @@ C_Viola_Music_Voice = {                                                        %
     % [C Viola_Music_Voice measure 20 / measure 5]                             %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _make_measure_silences
 
-    % [C Viola_Music_Voice measure 21 / measure 6]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
 
-    % [C Viola_Music_Voice measure 22 / measure 7]                             %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+        % [C Viola_Music_Voice measure 21 / measure 6]                         %! _comment_measure_numbers
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak self-alignment-X #-0.75                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        \baca-sfp-ancora                                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+
+        r4                                                                     %! harmony.sixteenths
+
+        r16                                                                    %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r4                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r16                                                                    %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r16                                                                    %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r4                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r8.                                                                    %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r8                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        % [C Viola_Music_Voice measure 22 / measure 7]                         %! _comment_measure_numbers
+        r4                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r16                                                                    %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r4                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r16                                                                    %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r8.                                                                    %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r8                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/6 {                                                               %! harmony.sixteenths
+
+        r16                                                                    %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r4                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
 
     % [C Viola_Music_Voice measure 23 / measure 8]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    r2.                                                                        %! harmony.sixteenths
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -802,7 +954,7 @@ C_Viola_Music_Voice = {                                                        %
 
             % [C Viola_Music_Voice measure 24 / measure 9]                     %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -834,50 +986,38 @@ C_Viola_Music_Staff = <<                                                       %
 
 C_Cello_I_Music_Voice = {                                                      %! abjad.Path.extern
 
-    \times 4/5 {                                                               %! harmony.sixteenths
+    % [C Cello_I_Music_Voice measure 16 / measure 1]                           %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    r2                                                                         %! harmony.sixteenths
+    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+    ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-        % [C Cello_I_Music_Voice measure 16 / measure 1]                       %! _comment_measure_numbers
-        \set Staff.shortInstrumentName = \harmony-vc-i-markup                  %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \set Staff.instrumentName = \harmony-vc-i-markup                       %! _clone_segment_initial_short_instrument_name
-    %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
-        \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
-    %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
-        \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-        r8.                                                                    %! harmony.sixteenths
-        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-        ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                         %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-        ^ \baca-reapplied-indicator-markup "(“Cello”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-        \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)         %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \set Staff.shortInstrumentName = \harmony-vc-i-markup                  %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
 
         c'16                                                                   %! harmony.sixteenths
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \sfp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
 
-        r16                                                                    %! harmony.sixteenths
-
-    }                                                                          %! harmony.sixteenths
-
-    r4                                                                         %! harmony.sixteenths
-
-    \times 4/5 {                                                               %! harmony.sixteenths
-
-        r16                                                                    %! harmony.sixteenths
-
-        r8.                                                                    %! harmony.sixteenths
-
-        c'16                                                                   %! harmony.sixteenths
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        r4                                                                     %! harmony.sixteenths
 
     }                                                                          %! harmony.sixteenths
 
@@ -911,14 +1051,94 @@ C_Cello_I_Music_Voice = {                                                      %
     % [C Cello_I_Music_Voice measure 20 / measure 5]                           %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _make_measure_silences
 
-    % [C Cello_I_Music_Voice measure 21 / measure 6]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
 
-    % [C Cello_I_Music_Voice measure 22 / measure 7]                           %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+        % [C Cello_I_Music_Voice measure 21 / measure 6]                       %! _comment_measure_numbers
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak self-alignment-X #-0.75                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        \baca-sfp-ancora                                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
 
-    % [C Cello_I_Music_Voice measure 23 / measure 8]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+        r4                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r4                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        r4                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+    }                                                                          %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        % [C Cello_I_Music_Voice measure 22 / measure 7]                       %! _comment_measure_numbers
+        r8                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r8                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        r4                                                                     %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+    }                                                                          %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r4                                                                     %! harmony.sixteenths
+
+    }                                                                          %! harmony.sixteenths
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths
+    \times 4/5 {                                                               %! harmony.sixteenths
+
+        % [C Cello_I_Music_Voice measure 23 / measure 8]                       %! _comment_measure_numbers
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+        r8.                                                                    %! harmony.sixteenths
+
+        c'16                                                                   %! harmony.sixteenths
+        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+
+    }                                                                          %! harmony.sixteenths
+
+    r2                                                                         %! harmony.sixteenths
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -927,7 +1147,7 @@ C_Cello_I_Music_Voice = {                                                      %
 
             % [C Cello_I_Music_Voice measure 24 / measure 9]                   %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1129,52 +1349,37 @@ C_Cello_II_Music_Staff = <<                                                    %
 
 C_Contrabass_I_Music_Voice = {                                                 %! abjad.Path.extern
 
-    \times 2/3 {                                                               %! harmony.sixteenths
+    % [C Contrabass_I_Music_Voice measure 16 / measure 1]                      %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    r2                                                                         %! harmony.sixteenths
+    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+    ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-        % [C Contrabass_I_Music_Voice measure 16 / measure 1]                  %! _comment_measure_numbers
-        \set Staff.shortInstrumentName = \harmony-cb-i-markup                  %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \set Staff.instrumentName = \harmony-cb-i-markup                       %! _clone_segment_initial_short_instrument_name
-    %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_16:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
-        \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
-    %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
-        \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-        r8.                                                                    %! harmony.sixteenths
-        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \p                                                                     %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-        ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                         %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-        ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                    %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-        \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)         %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \set Staff.shortInstrumentName = \harmony-cb-i-markup                  %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    r8                                                                         %! harmony.sixteenths
 
-        c'16                                                                   %! harmony.sixteenths
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \sfp                                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \sfp                                                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
 
-        r8                                                                     %! harmony.sixteenths
-
-    }                                                                          %! harmony.sixteenths
-
-    r4                                                                         %! harmony.sixteenths
-
-    \times 2/3 {                                                               %! harmony.sixteenths
-
-        r8                                                                     %! harmony.sixteenths
-
-        c'16                                                                   %! harmony.sixteenths
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-
-        r8.                                                                    %! harmony.sixteenths
-
-    }                                                                          %! harmony.sixteenths
+    r16                                                                        %! harmony.sixteenths
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -1207,13 +1412,61 @@ C_Contrabass_I_Music_Voice = {                                                 %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Contrabass_I_Music_Voice measure 21 / measure 6]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    \baca-sfp-ancora                                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r16                                                                        %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8.                                                                        %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     % [C Contrabass_I_Music_Voice measure 22 / measure 7]                      %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r4                                                                         %! harmony.sixteenths
+
+    r8.                                                                        %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r4                                                                         %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r16                                                                        %! harmony.sixteenths
 
     % [C Contrabass_I_Music_Voice measure 23 / measure 8]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    r4                                                                         %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r16                                                                        %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    r8                                                                         %! harmony.sixteenths
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1222,7 +1475,7 @@ C_Contrabass_I_Music_Voice = {                                                 %
 
             % [C Contrabass_I_Music_Voice measure 24 / measure 9]              %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
