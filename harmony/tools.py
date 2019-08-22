@@ -128,6 +128,31 @@ def flutter_initiated_cells(
     )
 
 
+def phjc(
+    parts: abjad.IntegerSequence,
+    counts: abjad.IntegerSequence,
+    *commands,
+    extra_counts: abjad.IntegerSequence = None,
+) -> baca.RhythmCommand:
+    """
+    Makes purpleheart jerky contintuity.
+    """
+    preprocessor = baca.sequence().fuse().quarters().partition(parts)
+    preprocessor = preprocessor.map(baca.sequence().flatten().fuse())
+    return baca.rhythm(
+        rmakers.talea(counts, 16, extra_counts=extra_counts),
+        *commands,
+        rmakers.beam(),
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        rmakers.force_fraction(),
+        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.force_repeat_tie((1, 8)),
+        preprocessor=preprocessor,
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def quarter_initiated_cells(
     divisions: abjad.IntegerSequence,
 ) -> baca.RhythmCommand:
@@ -186,17 +211,25 @@ def rest_appoggiato(
     )
 
 
-def sixteenths(counts: abjad.IntegerSequence,) -> baca.RhythmCommand:
+def sixteenths(
+    counts: abjad.IntegerSequence,
+    extra_counts: abjad.IntegerSequence = None,
+    *,
+    r: int = None,
+) -> baca.RhythmCommand:
     """
     Makes sixteenths rhythm.
     """
+    counts_ = baca.sequence(counts).rotate(n=r)
     return baca.rhythm(
-        rmakers.talea(counts, 16),
+        rmakers.talea(counts_, 16, extra_counts=extra_counts),
+        rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
         ),
         rmakers.force_repeat_tie((1, 8)),
+        preprocessor=baca.sequence().fuse().quarters(),
         tag=baca.frame(inspect.currentframe()),
     )
 
