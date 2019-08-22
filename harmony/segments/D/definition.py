@@ -66,6 +66,11 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 1),
+    baca.clef("treble"),
+)
+
 # va
 
 # vc1

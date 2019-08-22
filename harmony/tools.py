@@ -82,6 +82,31 @@ def brake_drum_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(0), baca.stem_up())
 
 
+def durata(
+    counts: abjad.IntegerSequence, *, grace: bool = None, untie: bool = None
+) -> baca.RhythmCommand:
+    """
+    Makes durata.
+    """
+    commands: typing.List[rmakers.Command] = []
+    if grace:
+        command_1 = rmakers.after_grace_container([1], baca.ptail(-1))
+        commands.append(command_1)
+    if untie:
+        command_2 = rmakers.untie(baca.leaves())
+        commands.append(command_2)
+    return baca.rhythm(
+        rmakers.talea(counts, 8),
+        rmakers.extract_trivial(),
+        rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        ),
+        *commands,
+        rmakers.force_repeat_tie((1, 8)),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def flutter_initiated_cells(
     divisions: abjad.IntegerSequence,
 ) -> baca.RhythmCommand:
@@ -91,10 +116,7 @@ def flutter_initiated_cells(
     divisions_ = baca.sequence([(_, 4) for _ in divisions])
     return baca.rhythm(
         rmakers.incised(
-            ###fill_with_rests=False,
-            prefix_talea=[1],
-            prefix_counts=[2],
-            talea_denominator=8,
+            prefix_talea=[1], prefix_counts=[2], talea_denominator=8
         ),
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
