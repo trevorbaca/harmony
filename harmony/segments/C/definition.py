@@ -72,6 +72,11 @@ maker(
     ("hp", 1),
     baca.clef("bass"),
     harmony.durata([5, -2]),
+    baca.chunk(
+        baca.staff_position(-14, not_yet_pitched=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
     baca.tenuto(),
     baca.articulation(r"baca-damp", baca.rest(0)),
 )
@@ -85,7 +90,7 @@ maker(
 maker(
     ("vc2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions("D3", "E3"),
+    baca.interpolate_staff_positions(0, 1, not_yet_pitched=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -96,3 +101,14 @@ maker(
 # cb1
 
 # cb2
+
+maker(
+    ("cb2", 1),
+    harmony.durata([5, -2], grace=True, untie=True),
+    baca.interpolate_staff_positions(-7, -6, not_yet_pitched=True),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(baca.pleaves(grace=False)),
+)
