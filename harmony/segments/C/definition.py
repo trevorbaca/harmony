@@ -12,8 +12,8 @@ from abjadext import rmakers
 stage_markup = (
     ("[C.1]", 1),
     ("[▶D.1]", 2, "darkgreen"),
-    ("[▶F.3]", 3, "darkgreen"),
-    ("[C.2-4]", 4),
+    ("[▶F.3]", 4, "darkgreen"),
+    ("[C.2-4]", 6),
 
 )
 
@@ -60,13 +60,24 @@ maker(
     baca.global_fermata("fermata", baca.rest(5 - 1)),
 )
 
-cerulean = [-3, -3, 1, -3, -1]
+cerulean = [
+    1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, -99
+]
 
 # bfl
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths(cerulean),
+    harmony.sixteenths(cerulean[1:]),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.covered_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
+    ("bfl", (6, 8)),
+    harmony.sixteenths(cerulean[2:]),
     baca.staff_position(-6, not_yet_pitched=True),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
@@ -136,10 +147,18 @@ maker(
     ("va", 1),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(cerulean),
+    harmony.sixteenths(cerulean[1:], [2]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp"),
+)
+
+maker(
+    ("va", (6, 8)),
+    harmony.sixteenths(cerulean[2:], [2]),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # vc1
@@ -148,10 +167,18 @@ maker(
     ("vc1", 1),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(cerulean, [1], r=-1),
+    harmony.sixteenths(cerulean[1:], [1]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp"),
+)
+
+maker(
+    ("vc1", (6, 8)),
+    harmony.sixteenths(cerulean[2:], [1]),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # vc2
@@ -187,10 +214,18 @@ maker(
     ("cb1", 1),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(cerulean, [2], r=-1),
+    harmony.sixteenths(cerulean[1:]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp"),
+)
+
+maker(
+    ("cb1", (6, 8)),
+    harmony.sixteenths(cerulean[2:]),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # cb2

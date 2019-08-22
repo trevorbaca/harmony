@@ -224,7 +224,10 @@ def sixteenths(
     return baca.rhythm(
         rmakers.talea(counts_, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
+        rmakers.rewrite_sustained(),
         rmakers.extract_trivial(),
+        rmakers.force_fraction(),
+        rmakers.denominator((1, 16)),
         rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
         ),
