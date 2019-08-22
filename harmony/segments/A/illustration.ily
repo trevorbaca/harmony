@@ -1203,13 +1203,13 @@ A_Contrabass_I_Music_Voice = {                                                 %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8
+    d8                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4
+    d4                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
@@ -1226,25 +1226,25 @@ A_Contrabass_I_Music_Voice = {                                                 %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8
+    d8                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8
+    d8                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8
+    d8                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d4
+    d4                                                                         %! harmony.sixteenths
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 

@@ -60,11 +60,48 @@ maker(
     baca.global_fermata("fermata", baca.rest(5 - 1)),
 )
 
+cerulean = [-3, -3, 1, -3, -1]
+
 # bfl
+
+maker(
+    ("bfl", 1),
+    harmony.sixteenths(cerulean),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.covered_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+)
 
 # perc1
 
+maker(
+    ("perc1", 1),
+    harmony.phjc([2, 1], [2, 2, 2, 2, 2, 2, 2, 1],
+        rmakers.force_rest(baca.tuplets()[:1].pleaves()[:-1]),
+        extra_counts=[2, 6],
+    ),
+    baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
+)
+
 # perc2
+
+maker(
+    ("perc2", 1),
+    baca.staff_lines(3),
+    harmony.phjc([1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
+        rmakers.force_rest(baca.tuplet(0)),
+        rmakers.force_rest(baca.pleaves()[:3]),
+        extra_counts=[2, 6],
+    ),
+    baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
+)
 
 # hp
 
@@ -83,7 +120,27 @@ maker(
 
 # va
 
+maker(
+    ("va", 1),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+    harmony.sixteenths(cerulean),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp"),
+)
+
 # vc1
+
+maker(
+    ("vc1", 1),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+    harmony.sixteenths(cerulean, [1], r=-1),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp"),
+)
 
 # vc2
 
@@ -99,6 +156,16 @@ maker(
 )
 
 # cb1
+
+maker(
+    ("cb1", 1),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+    harmony.sixteenths(cerulean, [2], r=-1),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp"),
+)
 
 # cb2
 
