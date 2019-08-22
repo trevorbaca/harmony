@@ -88,14 +88,32 @@ maker(
 
 maker(
     ("perc1", 1),
-    harmony.phjc([2, 1], [2, 2, 2, 2, 2, 2, 2, 1],
-        rmakers.force_rest(baca.tuplets()[:1].pleaves()[:-1]),
-        extra_counts=[2, 6],
+    harmony.phjc([2, 1, 1], [2, 2, 2, 2, 2, 2, 2, 1],
+        rmakers.force_rest(baca.tuplets()[:-1]),
+        extra_counts=[2],
     ),
     baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
+    baca.dynamic("f"),
+)
+
+maker(
+    ("perc1", (6, 8)),
+    harmony.phjc([1, 2, 1], [2, 2, 2, 2, 2, 2, 2, 1],
+        rmakers.force_rest(baca.tuplets().exclude([0, 1, -2, -1])),
+        extra_counts=[2],
+    ),
+    baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3.5),
+    baca.dynamic("p"),
+    baca.new(
+        baca.dynamic("f"),
+        measures=8,
+    ),
 )
 
 # perc2
@@ -104,14 +122,31 @@ maker(
     ("perc2", 1),
     baca.staff_lines(3),
     harmony.phjc([1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
-        rmakers.force_rest(baca.tuplet(0)),
-        rmakers.force_rest(baca.pleaves()[:3]),
-        extra_counts=[2, 6],
+        rmakers.force_rest(baca.tuplets()[:-1]),
+        extra_counts=[0, 6],
     ),
     baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
+    baca.dynamic("f"),
+)
+
+maker(
+    ("perc2", (6, 8)),
+    harmony.phjc([1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
+        rmakers.force_rest(baca.tuplets().exclude([0, 1, 4, -2, -1])),
+        extra_counts=[0, 6],
+    ),
+    baca.staff_positions([0, 0, -2, 0, -2], allow_repeats=True),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
+    baca.dynamic("p"),
+    baca.new(
+        baca.dynamic("f"),
+        measures=8,
+    ),
 )
 
 # hp

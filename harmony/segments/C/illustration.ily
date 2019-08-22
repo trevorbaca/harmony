@@ -367,55 +367,44 @@ C_Bass_Flute_Music_Staff = <<                                                  %
 
 C_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
+    % [C Percussion_I_Music_Voice measure 16 / measure 1]                      %! _comment_measure_numbers
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 3                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
+    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down:OverrideCommand(1)
+    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+    r2                                                                         %! harmony.phjc
+    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
-    \times 4/5 {                                                               %! harmony.phjc
-
-        % [C Percussion_I_Music_Voice measure 16 / measure 1]                  %! _comment_measure_numbers
-        \set Staff.shortInstrumentName = \harmony-perc-i-markup                %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-        \stopStaff                                                             %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-        \once \override Staff.StaffSymbol.line-count = 3                       %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-        \startStaff                                                            %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-        \set Staff.instrumentName = \harmony-perc-i-markup                     %! _clone_segment_initial_short_instrument_name
-        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
-        \override TupletBracket.staff-padding = #3                             %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
-        \clef "percussion"                                                     %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-        \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-    %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-        \once \override Staff.StaffSymbol.color = #(x11-color 'green4)         %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-        r8                                                                     %! harmony.phjc
-        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        \f                                                                     %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-        ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                       %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-        ^ \baca-reapplied-indicator-markup "(“Percussion”)"                    %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-        \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)         %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-        \set Staff.shortInstrumentName = \harmony-perc-i-markup                %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-        \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
-
-        r8                                                                     %! harmony.phjc
-
-        r8                                                                     %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
 
         r8                                                                     %! harmony.phjc
 
         \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
         c'8                                                                    %! harmony.phjc
-
-    }                                                                          %! harmony.phjc
-
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
-    \times 2/3 {                                                               %! harmony.phjc
-
-        c'8                                                                    %! harmony.phjc
-        [                                                                      %! rmakers.RewriteMeterCommand.__call__
-
-        a8                                                                     %! harmony.phjc
+        - \tweak color #(x11-color 'DeepPink1)                                 %! REDUNDANT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! REDUNDANT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
 
         c'16                                                                   %! harmony.phjc
 
         a16                                                                    %! harmony.phjc
-        ]                                                                      %! rmakers.RewriteMeterCommand.__call__
+        ]                                                                      %! harmony.phjc
         \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
         \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
         \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
@@ -452,14 +441,92 @@ C_Percussion_I_Music_Voice = {                                                 %
     % [C Percussion_I_Music_Voice measure 20 / measure 5]                      %! _comment_measure_numbers
     R1 * 1/4                                                                   %! _make_measure_silences
 
-    % [C Percussion_I_Music_Voice measure 21 / measure 6]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        % [C Percussion_I_Music_Voice measure 21 / measure 6]                  %! _comment_measure_numbers
+        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        r8                                                                     %! harmony.phjc
+
+        \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
+        c'8                                                                    %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/5 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
 
     % [C Percussion_I_Music_Voice measure 22 / measure 7]                      %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r2                                                                         %! harmony.phjc
 
-    % [C Percussion_I_Music_Voice measure 23 / measure 8]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    r4                                                                         %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/5 {                                                               %! harmony.phjc
+
+        % [C Percussion_I_Music_Voice measure 23 / measure 8]                  %! _comment_measure_numbers
+        r16                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -468,7 +535,7 @@ C_Percussion_I_Music_Voice = {                                                 %
 
             % [C Percussion_I_Music_Voice measure 24 / measure 9]              %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -528,21 +595,23 @@ C_Percussion_II_Music_Voice = {                                                %
 
         r8                                                                     %! harmony.phjc
 
-        r8                                                                     %! harmony.phjc
-
-        r8                                                                     %! harmony.phjc
-
         \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
         c'8                                                                    %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
         [                                                                      %! harmony.phjc
 
-        c'16                                                                   %! harmony.phjc
+        c'8                                                                    %! harmony.phjc
 
         a8                                                                     %! harmony.phjc
 
         c'8                                                                    %! harmony.phjc
 
         a16                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
         ]                                                                      %! harmony.phjc
         \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
         \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
@@ -581,13 +650,84 @@ C_Percussion_II_Music_Voice = {                                                %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [C Percussion_II_Music_Voice measure 21 / measure 6]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down:OverrideCommand(1)
+    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+    r8                                                                         %! harmony.phjc
 
-    % [C Percussion_II_Music_Voice measure 22 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    c'8                                                                        %! harmony.phjc
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/7 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a16                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+
+    r2                                                                         %! harmony.phjc
+
+    r8                                                                         %! harmony.phjc
+
+    c'8                                                                        %! harmony.phjc
+
+    r2                                                                         %! harmony.phjc
 
     % [C Percussion_II_Music_Voice measure 23 / measure 8]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.phjc
+
+    a8                                                                         %! harmony.phjc
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    [                                                                          %! harmony.phjc
+
+    c'16                                                                       %! harmony.phjc
+    ]                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/7 {                                                               %! harmony.phjc
+
+        r16                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -596,7 +736,7 @@ C_Percussion_II_Music_Voice = {                                                %
 
             % [C Percussion_II_Music_Voice measure 24 / measure 9]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1259,13 +1399,21 @@ C_Cello_II_Music_Voice = {                                                     %
     \override Accidental.stencil = ##f                                         %! baca.glissando
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
-    \revert Accidental.stencil                                                 %! baca.glissando
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando
-    \revert NoteHead.no-ledgers                                                %! baca.glissando
-    \undo \hide NoteHead                                                       %! baca.glissando
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e8                                                                         %! harmony.durata
+    \afterGrace
+    d8                                                                         %! harmony.durata
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    {
+
+        \revert Accidental.stencil                                             %! baca.glissando
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando
+        \revert NoteHead.no-ledgers                                            %! baca.glissando
+        \undo \hide NoteHead                                                   %! baca.glissando
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        e8
+
+    }
+
 
     r8                                                                         %! harmony.durata
 
@@ -1587,13 +1735,21 @@ C_Contrabass_II_Music_Voice = {                                                %
     \override Accidental.stencil = ##f                                         %! baca.glissando
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
-    \revert Accidental.stencil                                                 %! baca.glissando
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando
-    \revert NoteHead.no-ledgers                                                %! baca.glissando
-    \undo \hide NoteHead                                                       %! baca.glissando
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e8                                                                         %! harmony.durata
+    \afterGrace
+    d8                                                                         %! harmony.durata
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    {
+
+        \revert Accidental.stencil                                             %! baca.glissando
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando
+        \revert NoteHead.no-ledgers                                            %! baca.glissando
+        \undo \hide NoteHead                                                   %! baca.glissando
+        \baca-unpitched-music-warning                                          %! _color_unpitched_notes
+        e8
+
+    }
+
 
     r8                                                                         %! harmony.durata
 
