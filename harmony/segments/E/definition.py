@@ -54,9 +54,51 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 4),
+    harmony.train([1, 1, -99], rewrite_meter=True),
+    baca.markup(r"\baca-jet-whistle-markup", literal=True),
+    baca.dynamic("f"),
+)
+
+maker(
+    ("bfl", 5),
+    harmony.train([-3, 1, -99], rewrite_meter=True),
+    baca.markup(r"\baca-jet-whistle-markup", literal=True),
+    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
 # perc1
 
+maker(
+    ("perc1", 4),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", 5),
+    harmony.train([-3, 99], rewrite_meter=True),
+    baca.markup(r"\baca-triangle-small-beater-markup", literal=True),
+    harmony.triangle_staff_position(),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("p"),
+)
+
 # perc2
+
+maker(
+    ("perc2", 4),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc2", 5),
+    harmony.train([-3, 99], rewrite_meter=True),
+    baca.markup(r"\baca-tam-tam-markup", literal=True),
+    harmony.tam_tam_staff_position(),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("p"),
+)
 
 # hp
 

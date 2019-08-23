@@ -108,6 +108,11 @@ persist = abjad.OrderedDict(
                                 prototype='abjad.Clef',
                                 value='bass',
                                 ),
+                            abjad.Momento(
+                                context='Cello_I_Music_Voice',
+                                prototype='baca.StaffLines',
+                                value=1,
+                                ),
                             ],
                         ),
                     (
@@ -159,6 +164,11 @@ persist = abjad.OrderedDict(
                                 context='Contrabass_I_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='bass',
+                                ),
+                            abjad.Momento(
+                                context='Contrabass_I_Music_Voice',
+                                prototype='baca.StaffLines',
+                                value=1,
                                 ),
                             ],
                         ),
@@ -293,6 +303,11 @@ persist = abjad.OrderedDict(
                                 context='Viola_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='alto',
+                                ),
+                            abjad.Momento(
+                                context='Viola_Music_Voice',
+                                prototype='baca.StaffLines',
+                                value=1,
                                 ),
                             ],
                         ),

@@ -20,6 +20,7 @@ maker = baca.SegmentMaker(
         abjad.const.LOCAL_MEASURE_NUMBER,
         abjad.const.STAGE_NUMBER,
     ],
+    fermata_measure_empty_overrides=[12],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
@@ -81,6 +82,16 @@ maker(
     harmony.rest_appoggiato([4]),
 )
 
+maker(
+    ("perc1", 6),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", 7),
+    baca.staff_lines(3),
+)
+
 # perc2
 
 maker(
@@ -96,6 +107,16 @@ maker(
     baca.flat_glissando(0, hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("p"),
+)
+
+maker(
+    ("perc2", 7),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 8),
+    baca.staff_lines(1),
 )
 
 # hp
@@ -121,15 +142,37 @@ maker(
 
 maker(
     ("va", (1, 5)),
+    baca.staff_lines(5),
     harmony.string_appoggiato(divisions, [2, 3, 4, 5, 6, 7]),
+)
+
+maker(
+    ("va", 7),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("va", 8),
+    baca.staff_lines(5),
 )
 
 # vc1
 
 maker(
     ("vc1", (1, 5)),
+    baca.staff_lines(5),
     harmony.string_appoggiato(divisions, [3, 4, 5, 6, 7], rotation=-1, rest=1),
     baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("vc1", 7),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("vc1", 8),
+    baca.staff_lines(5),
 )
 
 # vc2
@@ -144,8 +187,19 @@ maker(
 
 maker(
     ("cb1", (1, 5)),
+    baca.staff_lines(5),
     harmony.string_appoggiato(divisions, [5, 6, 7], rotation=-3, rest=3),
     baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("cb1", 7),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("cb1", 8),
+    baca.staff_lines(5),
 )
 
 # cb2

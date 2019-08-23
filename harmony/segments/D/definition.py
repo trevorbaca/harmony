@@ -22,6 +22,7 @@ maker = baca.SegmentMaker(
         abjad.const.LOCAL_MEASURE_NUMBER,
         abjad.const.STAGE_NUMBER,
     ],
+    fermata_measure_empty_overrides=[7, 10],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
@@ -159,7 +160,13 @@ maker(
 )
 
 maker(
+    ("perc2", 9),
+    baca.staff_lines(1),
+)
+
+maker(
     ("perc2", 11),
+    baca.staff_lines(3),
     harmony.train([2], rmakers.force_rest(baca.leaves()[:1])),
     baca.staff_position(2),
     baca.accent(baca.pheads()),
@@ -202,7 +209,13 @@ maker(
 )
 
 maker(
+    ("va", 9),
+    baca.staff_lines(5),
+)
+
+maker(
     ("va", 11),
+    baca.staff_lines(1),
     harmony.tessera_1(4, advance=72 + 12, gap=True),
 )
 
