@@ -140,7 +140,8 @@
         \override Beam.breakable = ##t
         \override Beam.damping = 99
 
-        %\override BreathingSign.color = #red
+        \override BreathingSign.X-extent = ##f
+        \override BreathingSign.extra-offset = #'(-1.5 . 0)
 
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3

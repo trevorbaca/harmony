@@ -241,6 +241,11 @@ maker(
     ),
 )
 
+maker(
+    ("va", 3),
+    baca.staff_lines(1),
+)
+
 # vc1
 
 maker(
@@ -270,6 +275,11 @@ maker(
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
+)
+
+maker(
+    ("vc1", 3),
+    baca.staff_lines(1),
 )
 
 # vc2
@@ -315,6 +325,11 @@ maker(
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
+)
+
+maker(
+    ("cb1", 3),
+    baca.staff_lines(1),
 )
 
 # cb2

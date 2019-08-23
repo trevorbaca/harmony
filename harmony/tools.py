@@ -316,16 +316,26 @@ def tessera_1(
 
 
 def train(
-    counts: abjad.IntegerSequence, *commands: rmakers.Command
+    counts: abjad.IntegerSequence,
+    *commands: rmakers.Command,
+    rewrite_meter: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes pulse train.
     """
+    commands_ = []
+    if rewrite_meter is True:
+        command_ = rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        )
+        commands_.append(command_)
     return baca.rhythm(
         rmakers.talea(counts, 16),
         *commands,
         rmakers.extract_trivial(),
         rmakers.beam(baca.leaves().group()),
+        *commands_,
+        rmakers.force_repeat_tie((1, 8)),
         tag=baca.frame(inspect.currentframe()),
     )
 
