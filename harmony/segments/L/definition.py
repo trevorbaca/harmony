@@ -61,6 +61,24 @@ maker(
 )
 
 maker(
+    "Global_Skips",
+    baca.chunk(
+        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        baca.bar_line_x_extent((-2, 2), baca.skip(-1), after=True),
+        baca.volta(),
+        measures=(11, 12),
+    ),
+    baca.chunk(
+        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        baca.only_score(
+            baca.bar_line_x_extent((-2, 2), baca.skip(-1), after=True),
+        ),
+        baca.volta(),
+        measures=(13, 15),
+    ),
+)
+
+maker(
     "Global_Rests",
     baca.global_fermata("fermata", baca.rest(9 - 1)),
 )
@@ -69,7 +87,37 @@ maker(
 
 # perc1
 
+maker(
+    ("perc1", 1),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("perc1", 2),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc1", 3),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("perc1", 10),
+    baca.staff_lines(1),
+)
+
 # perc2
+
+maker(
+    ("perc2", 2),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 3),
+    baca.staff_lines(1),
+)
 
 # hp
 

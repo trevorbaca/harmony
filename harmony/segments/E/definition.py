@@ -71,6 +71,16 @@ maker(
 # perc1
 
 maker(
+    ("perc1", 1),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", 2),
+    baca.staff_lines(3),
+)
+
+maker(
     ("perc1", 4),
     baca.staff_lines(1),
 )
@@ -85,6 +95,16 @@ maker(
 )
 
 # perc2
+
+maker(
+    ("perc2", 1),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc2", 2),
+    baca.staff_lines(3),
+)
 
 maker(
     ("perc2", 4),
@@ -104,10 +124,45 @@ maker(
 
 # va
 
+maker(
+    ("va", 1),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("va", 2),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("va", 4),
+    baca.staff_lines(5),
+)
+
 # vc1
+
+maker(
+    ("vc1", 2),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("vc1", 3),
+    baca.staff_lines(5),
+)
 
 # vc2
 
 # cb1
+
+maker(
+    ("cb1", 2),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("cb1", 3),
+    baca.staff_lines(5),
+)
 
 # cb2

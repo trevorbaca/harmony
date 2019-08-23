@@ -101,7 +101,13 @@ maker(
 )
 
 maker(
+    ("perc1", 4),
+    baca.staff_lines(1),
+)
+
+maker(
     ("perc1", (6, 8)),
+    baca.staff_lines(3),
     harmony.phjc([1, 2, 1], [2, 2, 2, 2, 2, 2, 2, 1],
         rmakers.force_rest(baca.tuplets().exclude([0, 1, -2, -1])),
         extra_counts=[2],
@@ -134,7 +140,13 @@ maker(
 )
 
 maker(
+    ("perc2", 4),
+    baca.staff_lines(1),
+)
+
+maker(
     ("perc2", (6, 8)),
+    baca.staff_lines(3),
     harmony.phjc([1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
         rmakers.force_rest(baca.tuplets().exclude([0, 1, 4, -2, -1])),
         extra_counts=[0, 6],
@@ -190,7 +202,13 @@ maker(
 )
 
 maker(
+    ("va", 4),
+    baca.staff_lines(5),
+)
+
+maker(
     ("va", (6, 8)),
+    baca.staff_lines(1),
     harmony.sixteenths(cerulean[2:], [2]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
@@ -210,7 +228,13 @@ maker(
 )
 
 maker(
+    ("vc1", 2),
+    baca.staff_lines(5),
+)
+
+maker(
     ("vc1", (6, 8)),
+    baca.staff_lines(1),
     harmony.sixteenths(cerulean[2:], [1]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
@@ -257,7 +281,13 @@ maker(
 )
 
 maker(
+    ("cb1", 2),
+    baca.staff_lines(5),
+)
+
+maker(
     ("cb1", (6, 8)),
+    baca.staff_lines(1),
     harmony.sixteenths(cerulean[2:]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),

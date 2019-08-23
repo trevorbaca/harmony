@@ -61,7 +61,27 @@ maker(
 
 # perc1
 
+maker(
+    ("perc1", 1),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc1", 4),
+    baca.staff_lines(1),
+)
+
 # perc2
+
+maker(
+    ("perc2", 1),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 4),
+    baca.staff_lines(1),
+)
 
 # hp
 
