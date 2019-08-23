@@ -499,24 +499,44 @@ F_Percussion_I_Music_Voice = {                                                 %
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 42 / measure 3]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 3                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 43 / measure 4]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 44 / measure 5]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 45 / measure 6]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 5/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 46 / measure 7]                      %! _comment_measure_numbers
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 47 / measure 8]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 48 / measure 9]                      %! _comment_measure_numbers
@@ -526,6 +546,10 @@ F_Percussion_I_Music_Voice = {                                                 %
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_I_Music_Voice measure 49 / measure 10]                     %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
@@ -631,6 +655,10 @@ F_Percussion_II_Music_Voice = {                                                %
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_II_Music_Voice measure 47 / measure 8]                     %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_II_Music_Voice measure 48 / measure 9]                     %! _comment_measure_numbers
@@ -640,6 +668,10 @@ F_Percussion_II_Music_Voice = {                                                %
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Percussion_II_Music_Voice measure 49 / measure 10]                    %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
@@ -818,7 +850,7 @@ F_Viola_Music_Voice = {                                                        %
     % [F Viola_Music_Voice measure 40 / measure 1]                             %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
@@ -840,11 +872,12 @@ F_Viola_Music_Voice = {                                                        %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Viola_Music_Voice measure 42 / measure 3]                             %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
@@ -861,6 +894,10 @@ F_Viola_Music_Voice = {                                                        %
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Viola_Music_Voice measure 47 / measure 8]                             %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [F Viola_Music_Voice measure 48 / measure 9]                             %! _comment_measure_numbers
@@ -870,8 +907,12 @@ F_Viola_Music_Voice = {                                                        %
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Viola_Music_Voice measure 49 / measure 10]                            %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 5/4                                                                   %! _call_rhythm_commands
 
@@ -976,16 +1017,23 @@ F_Cello_I_Music_Voice = {                                                      %
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Cello_I_Music_Voice measure 47 / measure 8]                           %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [F Cello_I_Music_Voice measure 48 / measure 9]                           %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Cello_I_Music_Voice measure 49 / measure 10]                          %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
@@ -1206,16 +1254,23 @@ F_Contrabass_I_Music_Voice = {                                                 %
     R1 * 4/4                                                                   %! _call_rhythm_commands
 
     % [F Contrabass_I_Music_Voice measure 47 / measure 8]                      %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [F Contrabass_I_Music_Voice measure 48 / measure 9]                      %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [F Contrabass_I_Music_Voice measure 49 / measure 10]                     %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)

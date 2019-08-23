@@ -178,88 +178,102 @@ L_Global_Skips = {                                                             %
 %@% - \baca-start-ct-left-only "[6'13'']"                                      %! CLOCK_TIME
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
 
-    % [L Global_Skips measure 109 / measure 11]                                %! _comment_measure_numbers
-    \time 3/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 3/4                                                                   %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-    \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
-    \bacaStopTextSpanMM                                                        %! _attach_metronome_marks(1)
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "11"                                           %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "109"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-left-only "[L.4-5]"                                      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
-%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-%@% - \baca-bracketed-metric-modulation #2 #0 #1 #"96" #3 #0 #2 #0 #'(1 . 1)   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-    - \baca-colored-bracketed-metric-modulation #2 #0 #1 #"96" #3 #0 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-%@% - \baca-start-ct-left-only "[6'21'']"                                      %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+    \repeat volta 2
+    {
 
-    % [L Global_Skips measure 110 / measure 12]                                %! _comment_measure_numbers
-    \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 1                                                                     %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "12"                                           %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "110"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-%@% - \baca-start-ct-left-only "[6'23'']"                                      %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+        % [L Global_Skips measure 109 / measure 11]                            %! _comment_measure_numbers
+        \once \override Score.BarLine.X-extent = #'(-1 . 3)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+        \time 3/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+        \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+        s1 * 3/4                                                               %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+        \bacaStopTextSpanSNM                                                   %! STAGE_NUMBER
+        \bacaStopTextSpanMM                                                    %! _attach_metronome_marks(1)
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "11"                                       %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "109"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+        - \baca-start-snm-left-only "[L.4-5]"                                  %! STAGE_NUMBER
+        \bacaStartTextSpanSNM                                                  %! STAGE_NUMBER
+    %@% - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% - \baca-bracketed-metric-modulation #2 #0 #1 #"96" #3 #0 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+        - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        - \baca-colored-bracketed-metric-modulation #2 #0 #1 #"96" #3 #0 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    %@% - \baca-start-ct-left-only "[6'21'']"                                  %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
 
-    % [L Global_Skips measure 111 / measure 13]                                %! _comment_measure_numbers
-    \time 3/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 3/4                                                                   %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-    \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "13"                                           %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "111"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-left-only "[L.6-8]"                                      %! STAGE_NUMBER
-    \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
-%@% - \baca-start-ct-left-only "[6'25'']"                                      %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+        % [L Global_Skips measure 110 / measure 12]                            %! _comment_measure_numbers
+        \time 4/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+        \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+        s1 * 1                                                                 %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "12"                                       %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "110"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+    %@% - \baca-start-ct-left-only "[6'23'']"                                  %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+        \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! baca.bar_line_x_extent:OverrideCommand(1)
 
-    % [L Global_Skips measure 112 / measure 14]                                %! _comment_measure_numbers
-    s1 * 3/4                                                                   %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "14"                                           %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "112"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-%@% - \baca-start-ct-left-only "[6'27'']"                                      %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+    }
 
-    % [L Global_Skips measure 113 / measure 15]                                %! _comment_measure_numbers
-    \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 1                                                                     %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "15"                                           %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "113"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-%@% - \baca-start-ct-both "[6'29'']" "[6'32'']"                                %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
-    \baca-bar-line-visible                                                     %! _attach_final_bar_line
-    \bar "|"                                                                   %! _attach_final_bar_line
+    \repeat volta 2
+    {
+
+        % [L Global_Skips measure 111 / measure 13]                            %! _comment_measure_numbers
+        \once \override Score.BarLine.X-extent = #'(-1 . 3)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+        \time 3/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+        \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+        s1 * 3/4                                                               %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+        \bacaStopTextSpanSNM                                                   %! STAGE_NUMBER
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "13"                                       %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "111"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+        - \baca-start-snm-left-only "[L.6-8]"                                  %! STAGE_NUMBER
+        \bacaStartTextSpanSNM                                                  %! STAGE_NUMBER
+    %@% - \baca-start-ct-left-only "[6'25'']"                                  %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+
+        % [L Global_Skips measure 112 / measure 14]                            %! _comment_measure_numbers
+        s1 * 3/4                                                               %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "14"                                       %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "112"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+    %@% - \baca-start-ct-left-only "[6'27'']"                                  %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+
+        % [L Global_Skips measure 113 / measure 15]                            %! _comment_measure_numbers
+        \time 4/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+        \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+        s1 * 1                                                                 %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "15"                                       %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "113"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+    %@% - \baca-start-ct-both "[6'29'']" "[6'32'']"                            %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+    %%% \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! +SCORE:baca.bar_line_x_extent:OverrideCommand(1)
+        \baca-bar-line-visible                                                 %! _attach_final_bar_line
+        \bar "|"                                                               %! _attach_final_bar_line
+
+    }
 
     % [L Global_Skips measure 114 / measure 16]                                %! PHANTOM:_style_phantom_measures(1):_comment_measure_numbers
     \time 1/4                                                                  %! PHANTOM:_style_phantom_measures(1):EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(3)
@@ -446,16 +460,16 @@ L_Percussion_I_Music_Voice = {                                                 %
 
     % [L Percussion_I_Music_Voice measure 99 / measure 1]                      %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
     \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
@@ -466,9 +480,17 @@ L_Percussion_I_Music_Voice = {                                                 %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [L Percussion_I_Music_Voice measure 100 / measure 2]                     %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 5/4                                                                   %! _call_rhythm_commands
 
     % [L Percussion_I_Music_Voice measure 101 / measure 3]                     %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [L Percussion_I_Music_Voice measure 102 / measure 4]                     %! _comment_measure_numbers
@@ -490,9 +512,14 @@ L_Percussion_I_Music_Voice = {                                                 %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [L Percussion_I_Music_Voice measure 108 / measure 10]                    %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
@@ -574,9 +601,17 @@ L_Percussion_II_Music_Voice = {                                                %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [L Percussion_II_Music_Voice measure 100 / measure 2]                    %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 5/4                                                                   %! _call_rhythm_commands
 
     % [L Percussion_II_Music_Voice measure 101 / measure 3]                    %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _call_rhythm_commands
 
     % [L Percussion_II_Music_Voice measure 102 / measure 4]                    %! _comment_measure_numbers
@@ -772,7 +807,7 @@ L_Viola_Music_Voice = {                                                        %
     % [L Viola_Music_Voice measure 99 / measure 1]                             %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
@@ -815,11 +850,12 @@ L_Viola_Music_Voice = {                                                        %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [L Viola_Music_Voice measure 108 / measure 10]                           %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 6/4                                                                   %! _call_rhythm_commands
 

@@ -60,41 +60,48 @@ AA_Global_Skips = {                                                            %
 %@% - \baca-start-ct-left-only "[13'15'']"                                     %! CLOCK_TIME
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
 
-    % [AA Global_Skips measure 250 / measure 4]                                %! _comment_measure_numbers
-    s1 * 7/4                                                                   %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-    \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
-    \bacaStopTextSpanMM                                                        %! _attach_metronome_marks(1)
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "4"                                            %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "250"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-    - \baca-start-snm-left-only "[AA.2-3]"                                     %! STAGE_NUMBER
-    \bacaStartTextSpanSNM                                                      %! STAGE_NUMBER
-%@% - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-%@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #2 #0 #2 #3 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-%@% \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
-    - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-    - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #2 #0 #2 #3 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-    \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
-%@% - \baca-start-ct-left-only "[13'24'']"                                     %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+    \repeat volta 2
+    {
 
-    % [AA Global_Skips measure 251 / measure 5]                                %! _comment_measure_numbers
-    \time 6/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
-    \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
-    s1 * 3/2                                                                   %! _make_global_skips(1)
-    \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
-%@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
-%@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME
-    - \baca-start-lmn-left-only "5"                                            %! LOCAL_MEASURE_NUMBER
-    \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER
-%@% - \baca-start-mn-left-only "251"                                           %! MEASURE_NUMBER
-%@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER
-%@% - \baca-start-ct-left-only "[13'27'']"                                     %! CLOCK_TIME
-%@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME
+        % [AA Global_Skips measure 250 / measure 4]                            %! _comment_measure_numbers
+        \once \override Score.BarLine.X-extent = #'(-1 . 3)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+        s1 * 7/4                                                               %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+        \bacaStopTextSpanSNM                                                   %! STAGE_NUMBER
+        \bacaStopTextSpanMM                                                    %! _attach_metronome_marks(1)
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "4"                                        %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "250"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+        - \baca-start-snm-left-only "[AA.2-3]"                                 %! STAGE_NUMBER
+        \bacaStartTextSpanSNM                                                  %! STAGE_NUMBER
+    %@% - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #2 #0 #2 #3 #2 #0 #'(1 . 1) %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+    %@% \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK:_set_status_tag:_attach_metronome_marks(2)
+        - \abjad-invisible-line                                                %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #2 #0 #2 #3 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+        \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK_WITH_COLOR:_attach_metronome_marks(3)
+    %@% - \baca-start-ct-left-only "[13'24'']"                                 %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+
+        % [AA Global_Skips measure 251 / measure 5]                            %! _comment_measure_numbers
+        \time 6/4                                                              %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:_make_global_skips(2)
+        \baca-time-signature-color #'blue                                      %! EXPLICIT_TIME_SIGNATURE_COLOR:_attach_color_literal(2)
+        s1 * 3/2                                                               %! _make_global_skips(1)
+        \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
+    %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
+    %@% \bacaStopTextSpanCT                                                    %! CLOCK_TIME
+        - \baca-start-lmn-left-only "5"                                        %! LOCAL_MEASURE_NUMBER
+        \bacaStartTextSpanLMN                                                  %! LOCAL_MEASURE_NUMBER
+    %@% - \baca-start-mn-left-only "251"                                       %! MEASURE_NUMBER
+    %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
+    %@% - \baca-start-ct-left-only "[13'27'']"                                 %! CLOCK_TIME
+    %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
+        \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+
+    }
 
     % [AA Global_Skips measure 252 / measure 6]                                %! _comment_measure_numbers
     s1 * 3/2                                                                   %! _make_global_skips(1)
@@ -740,7 +747,7 @@ AA_Viola_Music_Voice = {                                                       %
     % [AA Viola_Music_Voice measure 247 / measure 1]                           %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
@@ -762,11 +769,12 @@ AA_Viola_Music_Voice = {                                                       %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [AA Viola_Music_Voice measure 249 / measure 3]                           %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 7/4                                                                   %! _call_rhythm_commands
 
@@ -798,11 +806,12 @@ AA_Viola_Music_Voice = {                                                       %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [AA Viola_Music_Voice measure 259 / measure 13]                          %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 7/4                                                                   %! _call_rhythm_commands
 

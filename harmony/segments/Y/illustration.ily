@@ -665,7 +665,7 @@ Y_Viola_Music_Voice = {                                                        %
     % [Y Viola_Music_Voice measure 226 / measure 1]                            %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
@@ -693,11 +693,12 @@ Y_Viola_Music_Voice = {                                                        %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
 
     % [Y Viola_Music_Voice measure 230 / measure 5]                            %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 6/4                                                                   %! _call_rhythm_commands
 
@@ -720,9 +721,10 @@ Y_Viola_Music_Voice = {                                                        %
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
+    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _call_rhythm_commands
     \stopStaff                                                                 %! _style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container

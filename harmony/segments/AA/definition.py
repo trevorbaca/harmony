@@ -62,6 +62,16 @@ maker(
 )
 
 maker(
+    "Global_Skips",
+    baca.chunk(
+        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        baca.bar_line_x_extent((-2, 2), baca.skip(-1), after=True),
+        baca.volta(),
+        measures=(4, 5),
+    ),
+)
+
+maker(
     "Global_Rests",
     baca.global_fermata("fermata", baca.rest(2 - 1)),
     baca.global_fermata("fermata", baca.rest(12 - 1)),
