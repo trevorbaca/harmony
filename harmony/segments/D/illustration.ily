@@ -247,44 +247,180 @@ D_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
     % [D Bass_Flute_Music_Voice measure 25 / measure 2]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Bass_Flute_Music_Voice measure 26 / measure 3]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Bass_Flute_Music_Voice measure 27 / measure 4]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Bass_Flute_Music_Voice measure 28 / measure 5]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
 
     % [D Bass_Flute_Music_Voice measure 29 / measure 6]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
 
-    % [D Bass_Flute_Music_Voice measure 30 / measure 7]                        %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Bass_Flute_Music_Voice measure 30 / measure 7]                %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Bass_Flute_Rest_Voice measure 30 / measure 7]                 %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Bass_Flute_Music_Voice measure 31 / measure 8]                        %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
-    % [D Bass_Flute_Music_Voice measure 32 / measure 9]                        %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Bass_Flute_Music_Voice measure 32 / measure 9]                %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Bass_Flute_Rest_Voice measure 32 / measure 9]                 %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Bass_Flute_Music_Voice measure 33 / measure 10]                       %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Bass_Flute_Music_Voice measure 34 / measure 11]                       %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    r16
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -293,7 +429,7 @@ D_Bass_Flute_Music_Voice = {                                                   %
 
             % [D Bass_Flute_Music_Voice measure 35 / measure 12]               %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -328,56 +464,291 @@ D_Bass_Flute_Music_Staff = <<                                                  %
 
 D_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
-    % [D Percussion_I_Music_Voice measure 24 / measure 1]                      %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 3                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \f                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
 
-    % [D Percussion_I_Music_Voice measure 25 / measure 2]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+        % [D Percussion_I_Music_Voice measure 24 / measure 1]                  %! _comment_measure_numbers
+        \set Staff.shortInstrumentName = \harmony-perc-i-markup                %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+        \stopStaff                                                             %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+        \once \override Staff.StaffSymbol.line-count = 3                       %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+        \startStaff                                                            %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+        \set Staff.instrumentName = \harmony-perc-i-markup                     %! _clone_segment_initial_short_instrument_name
+        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding:OverrideCommand(1)
+        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        \clef "percussion"                                                     %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+        \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \once \override Staff.Clef.color = #(x11-color 'green4)                %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+        \once \override Staff.StaffSymbol.color = #(x11-color 'green4)         %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+        r8                                                                     %! harmony.phjc
+        - \tweak color #(x11-color 'green4)                                    %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+        ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                       %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+        ^ \baca-reapplied-indicator-markup "(“Percussion”)"                    %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+        \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)         %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+        \set Staff.shortInstrumentName = \harmony-perc-i-markup                %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+        \override Staff.Clef.color = #(x11-color 'OliveDrab)                   %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [D Percussion_I_Music_Voice measure 26 / measure 3]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+        \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/5 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+
+        a16                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        % [D Percussion_I_Music_Voice measure 25 / measure 2]                  %! _comment_measure_numbers
+        r16                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+
+    r2                                                                         %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
 
     % [D Percussion_I_Music_Voice measure 27 / measure 4]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
 
     % [D Percussion_I_Music_Voice measure 28 / measure 5]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.phjc
 
-    % [D Percussion_I_Music_Voice measure 29 / measure 6]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/5 {                                                               %! harmony.phjc
 
-    % [D Percussion_I_Music_Voice measure 30 / measure 7]                      %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+        r8                                                                     %! harmony.phjc
 
-    % [D Percussion_I_Music_Voice measure 31 / measure 8]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+        c'16                                                                   %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak self-alignment-X #-0.75                                       %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        \baca-f-ancora                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
 
-    % [D Percussion_I_Music_Voice measure 32 / measure 9]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+        e'8                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        e'8                                                                    %! harmony.phjc
+
+        e'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        % [D Percussion_I_Music_Voice measure 29 / measure 6]                  %! _comment_measure_numbers
+        r16                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        e'8                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        r16                                                                    %! harmony.phjc
+
+        e'16                                                                   %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        e'8                                                                    %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
+
+    r4                                                                         %! harmony.phjc
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down:OverrideCommand(2)
+    \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_I_Music_Voice measure 30 / measure 7]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_I_Rest_Voice measure 30 / measure 7]               %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/5 {                                                               %! harmony.phjc
+
+        % [D Percussion_I_Music_Voice measure 31 / measure 8]                  %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding:OverrideCommand(1)
+        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        r8                                                                     %! harmony.phjc
+
+        \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
+        c'8                                                                    %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \p                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+
+        a16                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding:OverrideCommand(2)
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_I_Music_Voice measure 32 / measure 9]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_I_Rest_Voice measure 32 / measure 9]               %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Percussion_I_Music_Voice measure 33 / measure 10]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
-    % [D Percussion_I_Music_Voice measure 34 / measure 11]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        % [D Percussion_I_Music_Voice measure 34 / measure 11]                 %! _comment_measure_numbers
+        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding:OverrideCommand(1)
+        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
+        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        r8                                                                     %! harmony.phjc
+
+        \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
+        c'8                                                                    %! harmony.phjc
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+        [                                                                      %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+
+    }                                                                          %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 2/3 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        a16                                                                    %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a16                                                                    %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding:OverrideCommand(2)
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -386,7 +757,7 @@ D_Percussion_I_Music_Voice = {                                                 %
 
             % [D Percussion_I_Music_Voice measure 35 / measure 12]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -424,13 +795,15 @@ D_Percussion_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 3                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! _clone_segment_initial_short_instrument_name
+    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down:OverrideCommand(1)
+    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
     \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r8                                                                         %! harmony.phjc
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Perc. II”]"                          %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -439,35 +812,196 @@ D_Percussion_II_Music_Voice = {                                                %
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [D Percussion_II_Music_Voice measure 25 / measure 2]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    c'8                                                                        %! harmony.phjc
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc
+    \times 4/7 {                                                               %! harmony.phjc
+
+        r8                                                                     %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+        [                                                                      %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'8                                                                    %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+
+        a8                                                                     %! harmony.phjc
+
+        c'16                                                                   %! harmony.phjc
+        ]                                                                      %! harmony.phjc
+        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down:OverrideCommand(2)
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+
+    }                                                                          %! harmony.phjc
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Music_Voice measure 25 / measure 2]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Rest_Voice measure 25 / measure 2]              %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Percussion_II_Music_Voice measure 26 / measure 3]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [D Percussion_II_Music_Voice measure 27 / measure 4]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [D Percussion_II_Music_Voice measure 28 / measure 5]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding:OverrideCommand(1)
+    r8                                                                         %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    \baca-f-ancora                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Percussion_II_Music_Voice measure 29 / measure 6]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
-    % [D Percussion_II_Music_Voice measure 30 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! harmony.train
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Music_Voice measure 30 / measure 7]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Rest_Voice measure 30 / measure 7]              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Percussion_II_Music_Voice measure 31 / measure 8]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding:OverrideCommand(1)
+    r8                                                                         %! harmony.train
 
-    % [D Percussion_II_Music_Voice measure 32 / measure 9]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r8                                                                         %! harmony.train
+
+    r8                                                                         %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! harmony.train
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Music_Voice measure 32 / measure 9]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Percussion_II_Rest_Voice measure 32 / measure 9]              %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Percussion_II_Music_Voice measure 33 / measure 10]                    %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Percussion_II_Music_Voice measure 34 / measure 11]                    %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding:OverrideCommand(1)
+    r8                                                                         %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! harmony.train
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    e'8                                                                        %! harmony.train
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! harmony.train
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -476,7 +1010,7 @@ D_Percussion_II_Music_Voice = {                                                %
 
             % [D Percussion_II_Music_Voice measure 35 / measure 12]            %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -520,44 +1054,198 @@ D_Harp_Music_Voice = {                                                         %
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "[“Hp.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
     % [D Harp_Music_Voice measure 25 / measure 2]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Harp_Music_Voice measure 26 / measure 3]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Harp_Music_Voice measure 27 / measure 4]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
 
     % [D Harp_Music_Voice measure 28 / measure 5]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
 
     % [D Harp_Music_Voice measure 29 / measure 6]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
 
-    % [D Harp_Music_Voice measure 30 / measure 7]                              %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Harp_Music_Voice measure 30 / measure 7]                      %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Harp_Rest_Voice measure 30 / measure 7]                       %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Harp_Music_Voice measure 31 / measure 8]                              %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    % [D Harp_Music_Voice measure 32 / measure 9]                              %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Harp_Music_Voice measure 32 / measure 9]                      %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Harp_Rest_Voice measure 32 / measure 9]                       %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Harp_Music_Voice measure 33 / measure 10]                             %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Harp_Music_Voice measure 34 / measure 11]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -566,7 +1254,7 @@ D_Harp_Music_Voice = {                                                         %
 
             % [D Harp_Music_Voice measure 35 / measure 12]                     %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -604,50 +1292,164 @@ D_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    b'2.
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-sfp-ancora                                                           %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Viola”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [D Viola_Music_Voice measure 25 / measure 2]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'8.
+    \repeatTie
+
+    r16
+
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Viola_Music_Voice measure 26 / measure 3]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'4
+    \repeatTie
+
+    b'16
+    \repeatTie
+
+    r16
+
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    b'8.
+    \repeatTie
+
+    r16
 
     % [D Viola_Music_Voice measure 27 / measure 4]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    b'8.
+    \repeatTie
+
+    r16
+
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Viola_Music_Voice measure 28 / measure 5]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'4
+    \repeatTie
+
+    b'8.
+    \repeatTie
+
+    r16
+
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
+
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
 
     % [D Viola_Music_Voice measure 29 / measure 6]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'8
 
-    % [D Viola_Music_Voice measure 30 / measure 7]                             %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    r16
+
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    b'4
+
+    b'8.
+    \repeatTie
+
+    r16
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Viola_Music_Voice measure 30 / measure 7]                     %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Viola_Rest_Voice measure 30 / measure 7]                      %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Viola_Music_Voice measure 31 / measure 8]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'2.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
-    % [D Viola_Music_Voice measure 32 / measure 9]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Viola_Music_Voice measure 32 / measure 9]                     %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Viola_Rest_Voice measure 32 / measure 9]                      %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Viola_Music_Voice measure 33 / measure 10]                            %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Viola_Music_Voice measure 34 / measure 11]                            %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
+
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    b'4
+
+    b'16
+    \repeatTie
+
+    r16
+
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -656,7 +1458,7 @@ D_Viola_Music_Voice = {                                                        %
 
             % [D Viola_Music_Voice measure 35 / measure 12]                    %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -690,54 +1492,222 @@ D_Cello_I_Music_Voice = {                                                      %
 
     % [D Cello_I_Music_Voice measure 24 / measure 1]                           %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-sfp-ancora                                                           %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
 
     % [D Cello_I_Music_Voice measure 25 / measure 2]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
 
     % [D Cello_I_Music_Voice measure 26 / measure 3]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
 
     % [D Cello_I_Music_Voice measure 27 / measure 4]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
 
     % [D Cello_I_Music_Voice measure 28 / measure 5]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Cello_I_Music_Voice measure 29 / measure 6]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
 
-    % [D Cello_I_Music_Voice measure 30 / measure 7]                           %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_I_Music_Voice measure 30 / measure 7]                   %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_I_Rest_Voice measure 30 / measure 7]                    %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Cello_I_Music_Voice measure 31 / measure 8]                           %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r16
 
-    % [D Cello_I_Music_Voice measure 32 / measure 9]                           %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.75                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_I_Music_Voice measure 32 / measure 9]                   %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_I_Rest_Voice measure 32 / measure 9]                    %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Cello_I_Music_Voice measure 33 / measure 10]                          %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Cello_I_Music_Voice measure 34 / measure 11]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.5                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+
+    r16
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -746,7 +1716,8 @@ D_Cello_I_Music_Voice = {                                                      %
 
             % [D Cello_I_Music_Voice measure 35 / measure 12]                  %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! PHANTOM:_style_phantom_measures(5):DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -780,48 +1751,202 @@ D_Cello_II_Music_Voice = {                                                     %
 
     % [D Cello_II_Music_Voice measure 24 / measure 1]                          %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-ii-markup                          %! _clone_segment_initial_short_instrument_name
-    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [D Cello_II_Music_Voice measure 25 / measure 2]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
 
     % [D Cello_II_Music_Voice measure 26 / measure 3]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Cello_II_Music_Voice measure 27 / measure 4]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
 
     % [D Cello_II_Music_Voice measure 28 / measure 5]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [D Cello_II_Music_Voice measure 29 / measure 6]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
 
-    % [D Cello_II_Music_Voice measure 30 / measure 7]                          %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_II_Music_Voice measure 30 / measure 7]                  %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_II_Rest_Voice measure 30 / measure 7]                   %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Cello_II_Music_Voice measure 31 / measure 8]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    r16
 
-    % [D Cello_II_Music_Voice measure 32 / measure 9]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.75                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+
+    r16
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_II_Music_Voice measure 32 / measure 9]                  %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 5/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Cello_II_Rest_Voice measure 32 / measure 9]                   %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Cello_II_Music_Voice measure 33 / measure 10]                         %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Cello_II_Music_Voice measure 34 / measure 11]                         %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.5                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #5.5                                                %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+
+    r16
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -830,7 +1955,8 @@ D_Cello_II_Music_Voice = {                                                     %
 
             % [D Cello_II_Music_Voice measure 35 / measure 12]                 %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c'1 * 1/4                                                          %! PHANTOM:_make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! PHANTOM:_style_phantom_measures(5):DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -864,54 +1990,191 @@ D_Contrabass_I_Music_Voice = {                                                 %
 
     % [D Contrabass_I_Music_Voice measure 24 / measure 1]                      %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-sfp-ancora                                                           %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    ^ \baca-pizz-markup                                                        %! baca.markup:IndicatorCommand
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_I_Music_Voice measure 25 / measure 2]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    \repeatTie
 
     % [D Contrabass_I_Music_Voice measure 26 / measure 3]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_I_Music_Voice measure 27 / measure 4]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_I_Music_Voice measure 28 / measure 5]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
 
     % [D Contrabass_I_Music_Voice measure 29 / measure 6]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
 
-    % [D Contrabass_I_Music_Voice measure 30 / measure 7]                      %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_I_Music_Voice measure 30 / measure 7]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_I_Rest_Voice measure 30 / measure 7]               %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Contrabass_I_Music_Voice measure 31 / measure 8]                      %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
-    % [D Contrabass_I_Music_Voice measure 32 / measure 9]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_I_Music_Voice measure 32 / measure 9]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_I_Rest_Voice measure 32 / measure 9]               %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Contrabass_I_Music_Voice measure 33 / measure 10]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Contrabass_I_Music_Voice measure 34 / measure 11]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -920,7 +2183,7 @@ D_Contrabass_I_Music_Voice = {                                                 %
 
             % [D Contrabass_I_Music_Voice measure 35 / measure 12]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -955,47 +2218,189 @@ D_Contrabass_II_Music_Voice = {                                                %
     % [D Contrabass_II_Music_Voice measure 24 / measure 1]                     %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-cb-ii-markup                          %! _clone_segment_initial_short_instrument_name
-    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    ^ \baca-pizz-markup                                                        %! baca.markup:IndicatorCommand
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_II_Music_Voice measure 25 / measure 2]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ~
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_II_Music_Voice measure 26 / measure 3]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_II_Music_Voice measure 27 / measure 4]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [D Contrabass_II_Music_Voice measure 28 / measure 5]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    \repeatTie
 
     % [D Contrabass_II_Music_Voice measure 29 / measure 6]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    % [D Contrabass_II_Music_Voice measure 30 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_II_Music_Voice measure 30 / measure 7]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_II_Rest_Voice measure 30 / measure 7]              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Contrabass_II_Music_Voice measure 31 / measure 8]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    % [D Contrabass_II_Music_Voice measure 32 / measure 9]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'4
+    \repeatTie
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    \repeatTie
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'8.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_II_Music_Voice measure 32 / measure 9]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 5/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [D Contrabass_II_Rest_Voice measure 32 / measure 9]              %! _comment_measure_numbers
+            R1 * 5/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [D Contrabass_II_Music_Voice measure 33 / measure 10]                    %! _comment_measure_numbers
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [D Contrabass_II_Music_Voice measure 34 / measure 11]                    %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic:OverrideCommand(1)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'2.
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1004,7 +2409,7 @@ D_Contrabass_II_Music_Voice = {                                                %
 
             % [D Contrabass_II_Music_Voice measure 35 / measure 12]            %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 

@@ -289,6 +289,47 @@ def tam_tam_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(0), baca.stem_down())
 
 
+def tessera_1(
+    part: int, *, advance: int = None, gap: bool = None
+) -> baca.RhythmCommand:
+    """
+    Makes tessera 1.
+    """
+    counts = baca.sequence([9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15])
+    permutation = baca.sequence([2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7])
+    assert sum(counts) == 96
+    for i in range(part):
+        counts = counts.permute(permutation)
+    if gap is True:
+        new_counts = []
+        for count in counts:
+            new_counts.extend([count - 1, -1])
+        counts = baca.sequence(new_counts)
+    return baca.rhythm(
+        rmakers.talea(counts, 16, advance=advance),
+        rmakers.extract_trivial(),
+        rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        ),
+        rmakers.force_repeat_tie((1, 8)),
+    )
+
+
+def train(
+    counts: abjad.IntegerSequence, *commands: rmakers.Command
+) -> baca.RhythmCommand:
+    """
+    Makes pulse train.
+    """
+    return baca.rhythm(
+        rmakers.talea(counts, 16),
+        *commands,
+        rmakers.extract_trivial(),
+        rmakers.beam(baca.leaves().group()),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def triangle_staff_position() -> baca.Suite:
     """
     Sets triangle position and stem direction.
