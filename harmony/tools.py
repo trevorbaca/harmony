@@ -357,6 +357,17 @@ def triangle_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(1), baca.stem_up())
 
 
+def tuplet(ratio) -> baca.RhythmCommand:
+    """
+    Makes tuplet.
+    """
+    return baca.rhythm(
+        rmakers.tuplet([ratio]),
+        rmakers.rewrite_dots(),
+        rmakers.extract_trivial(),
+    )
+
+
 def upbeat_quarter_note() -> baca.RhythmCommand:
     """
     Makes upbeat quarter-note rhythm.

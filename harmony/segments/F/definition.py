@@ -140,6 +140,36 @@ maker(
     baca.staff_lines(1),
 )
 
+maker(
+    ("perc1", 10),
+    harmony.sixteenths([2, -18]),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o< mf",
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("perc1", 11),
+    harmony.sixteenths([-9, 3, -4]),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o< f",
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("perc1", 15),
+    harmony.sixteenths([-10, 6]),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o< ff",
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
 # perc2
 
 maker(
@@ -181,6 +211,38 @@ maker(
     baca.staff_lines(1),
 )
 
+maker(
+    ("perc2", 10),
+    harmony.sixteenths([1, -99]),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.brake_drum_staff_position(),
+)
+
+maker(
+    ("perc2", 11),
+    harmony.sixteenths([-14, 2]),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.brake_drum_staff_position(),
+)
+
+maker(
+    ("perc2", 14),
+    harmony.sixteenths([-17, 3]),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.brake_drum_staff_position(),
+)
+
+maker(
+    ("perc2", 15),
+    harmony.sixteenths([-10, 2, -4]),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+    harmony.brake_drum_staff_position(),
+)
+
 # hp
 
 maker(
@@ -208,6 +270,54 @@ maker(
     baca.laissez_vibrer(baca.ptails()),
     baca.markup(r"\baca-pdlt-markup", literal=True),
     baca.dynamic("mp"),
+)
+
+maker(
+    ("hp", 10),
+    harmony.tuplet([-1, 1, -8, 1]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
+maker(
+    ("hp", 11),
+    harmony.tuplet([-4, 1]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
+maker(
+    ("hp", 12),
+    harmony.tuplet([1, 1, -1, 1, -1, -6]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
+maker(
+    ("hp", 13),
+    harmony.tuplet([-4, 1, 1]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
+maker(
+    ("hp", 14),
+    harmony.tuplet([1, 1, 1, 1, 1, -7]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
+maker(
+    ("hp", 15),
+    harmony.tuplet([-5, 1, 1, 1, 1, 1, -2]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
 )
 
 # va
@@ -262,6 +372,21 @@ maker(
     baca.staff_lines(5),
 )
 
+maker(
+    ("va", (10, 15)),
+    harmony.sixteenths([
+        -5, 2, -5, 3, -10, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
+        ]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
+)
+
 # vc1
 
 maker(
@@ -314,6 +439,21 @@ maker(
     baca.staff_lines(5),
 )
 
+maker(
+    ("vc1", (10, 15)),
+    harmony.sixteenths([
+        -5, 2, -5, 3, -10 - 2, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
+        ]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
+)
+
 # vc2
 
 maker(
@@ -354,6 +494,21 @@ maker(
     ),
     baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
+)
+
+maker(
+    ("vc2", (10, 15)),
+    harmony.sixteenths([
+        -5, 2, -5, 3, -10 + 3, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
+        ]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
 )
 
 # cb1
