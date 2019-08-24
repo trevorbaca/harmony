@@ -1215,83 +1215,288 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [F Contrabass_I_Music_Voice measure 41 / measure 2]                      %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_I_Music_Voice measure 41 / measure 2]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! SCP:baca.scp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_I_Rest_Voice measure 41 / measure 2]               %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Contrabass_I_Music_Voice measure 42 / measure 3]                      %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    R1 * 1                                                                     %! _make_measure_silences
 
     % [F Contrabass_I_Music_Voice measure 43 / measure 4]                      %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.75                                 %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 44 / measure 5]                      %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 45 / measure 6]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 46 / measure 7]                      %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
-    % [F Contrabass_I_Music_Voice measure 47 / measure 8]                      %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_I_Music_Voice measure 47 / measure 8]              %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c''1 * 3/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! SCP:baca.scp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_I_Rest_Voice measure 47 / measure 8]               %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Contrabass_I_Music_Voice measure 48 / measure 9]                      %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [F Contrabass_I_Music_Voice measure 49 / measure 10]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    e,4                                                                        %! baca.make_repeated_duration_notes
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.5                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 50 / measure 11]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 51 / measure 12]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 52 / measure 13]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 53 / measure 14]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_I_Music_Voice measure 54 / measure 15]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1300,7 +1505,8 @@ F_Contrabass_I_Music_Voice = {                                                 %
 
             % [F Contrabass_I_Music_Voice measure 55 / measure 16]             %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! PHANTOM:_style_phantom_measures(5):SCP:baca.scp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1335,75 +1541,280 @@ F_Contrabass_II_Music_Voice = {                                                %
     % [F Contrabass_II_Music_Voice measure 40 / measure 1]                     %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-cb-ii-markup                          %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [F Contrabass_II_Music_Voice measure 41 / measure 2]                     %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_II_Music_Voice measure 41 / measure 2]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! SCP:baca.scp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_II_Rest_Voice measure 41 / measure 2]              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Contrabass_II_Music_Voice measure 42 / measure 3]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    R1 * 1                                                                     %! _make_measure_silences
 
     % [F Contrabass_II_Music_Voice measure 43 / measure 4]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.75                                 %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 44 / measure 5]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 45 / measure 6]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 46 / measure 7]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
-    % [F Contrabass_II_Music_Voice measure 47 / measure 8]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_II_Music_Voice measure 47 / measure 8]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 3/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! SCP:baca.scp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [F Contrabass_II_Rest_Voice measure 47 / measure 8]              %! _comment_measure_numbers
+            R1 * 3/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Contrabass_II_Music_Voice measure 48 / measure 9]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [F Contrabass_II_Music_Voice measure 49 / measure 10]                    %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    e,4                                                                        %! baca.make_repeated_duration_notes
+    \glissando                                                                 %! baca.glissando
+    - \abjad-dashed-line-with-hook                                             %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "SCP (to-do)"                               %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #2.5                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanSCP                                                      %! SCP:baca.scp_spanner:PiecewiseCommand(1)
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 50 / measure 11]                    %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 51 / measure 12]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 52 / measure 13]                    %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 53 / measure 14]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     % [F Contrabass_II_Music_Voice measure 54 / measure 15]                    %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
+
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    e,4                                                                        %! baca.make_repeated_duration_notes
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1412,7 +1823,8 @@ F_Contrabass_II_Music_Voice = {                                                %
 
             % [F Contrabass_II_Music_Voice measure 55 / measure 16]            %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
-            R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
+            c''1 * 1/4                                                         %! PHANTOM:_make_multimeasure_rest_container
+            \bacaStopTextSpanSCP                                               %! PHANTOM:_style_phantom_measures(5):SCP:baca.scp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container
 
