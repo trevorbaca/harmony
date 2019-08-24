@@ -72,7 +72,21 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 1),
+    baca.tacet(),
+)
+
 # perc1
+
+maker(
+    ("perc1", 1),
+    harmony.sixteenths([-19, 1]),
+    harmony.bass_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation("baca-damp"),
+    baca.dynamic("mp"),
+)
 
 maker(
     ("perc1", 3),
@@ -85,6 +99,15 @@ maker(
 )
 
 maker(
+    ("perc1", 4),
+    harmony.sixteenths([-3, 6, -99]),
+    harmony.bass_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
     ("perc1", 5),
     baca.staff_lines(3),
 )
@@ -92,6 +115,15 @@ maker(
 maker(
     ("perc1", 6),
     baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", (6, 7)),
+    harmony.sixteenths([-5, 4, -5, 4, -99]),
+    harmony.bass_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
 )
 
 maker(
@@ -107,6 +139,30 @@ maker(
 # perc2
 
 maker(
+    ("perc2", 1),
+    harmony.sixteenths([-10, 6, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.tam_tam_staff_position(),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("perc2", 4),
+    harmony.sixteenths([9, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.tam_tam_staff_position(),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("perc2", (6, 7)),
+    harmony.sixteenths([-19, 12, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.tam_tam_staff_position(),
+    baca.dynamic("mp"),
+)
+
+maker(
     ("perc2", 8),
     baca.staff_lines(3),
 )
@@ -118,7 +174,72 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 1),
+    baca.clef("bass"),
+    harmony.sixteenths([-10, 6, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("hp", 4),
+    harmony.sixteenths([9, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("hp", (6, 7)),
+    harmony.sixteenths([-19, 12, -99]),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("mp"),
+)
+
 # va
+
+maker(
+    ("va", 1),
+    harmony.sixteenths([3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("va", 4),
+    harmony.sixteenths([-11, 2, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("va", (6, 7)),
+    harmony.sixteenths([-10, 2, -19, 3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
 
 maker(
     ("va", 8),
@@ -133,6 +254,46 @@ maker(
 # vc1
 
 maker(
+    ("vc1", 1),
+    harmony.sixteenths([3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("vc1", 4),
+    harmony.sixteenths([-11, 2, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("vc1", (6, 7)),
+    harmony.sixteenths([-10, 2, -19, 3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
     ("vc1", 8),
     baca.staff_lines(1),
 )
@@ -143,6 +304,46 @@ maker(
 )
 
 # vc2
+
+maker(
+    ("vc2", 1),
+    harmony.sixteenths([3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("vc2", 4),
+    harmony.sixteenths([-11, 2, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("vc2", (6, 7)),
+    harmony.sixteenths([-10, 2, -19, 3, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "p.sc. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
 
 # cb1
 
