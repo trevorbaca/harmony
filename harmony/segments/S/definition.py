@@ -75,7 +75,67 @@ maker(
 
 # perc1
 
+maker(
+    ("perc1", 1),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc1", 2),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", 4),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc1", 11),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", 12),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc1", 13),
+    baca.staff_lines(1),
+)
+
 # perc2
+
+maker(
+    ("perc2", 1),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 2),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc2", 4),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 11),
+    baca.staff_lines(1),
+)
+
+maker(
+    ("perc2", 12),
+    baca.staff_lines(3),
+)
+
+maker(
+    ("perc2", 13),
+    baca.staff_lines(1),
+)
 
 # hp
 
@@ -88,3 +148,20 @@ maker(
 # cb1
 
 # cb2
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 11),
+    baca.staff_lines(1),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 12),
+    baca.staff_lines(5),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 13),
+    baca.staff_lines(1),
+)

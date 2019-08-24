@@ -68,6 +68,16 @@ maker(
 
 # perc2
 
+maker(
+    ("perc2", 6),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("perc2", 7),
+    baca.staff_lines(1),
+)
+
 # hp
 
 # va
@@ -79,3 +89,13 @@ maker(
 # cb1
 
 # cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    baca.staff_lines(5),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 8),
+    baca.staff_lines(1),
+)

@@ -77,3 +77,20 @@ maker(
 # cb1
 
 # cb2
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    baca.staff_lines(1),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 5),
+    baca.staff_lines(5),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 13),
+    baca.staff_lines(1),
+)
