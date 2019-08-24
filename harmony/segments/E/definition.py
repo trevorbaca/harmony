@@ -122,6 +122,25 @@ maker(
 
 # hp
 
+maker(
+    ("hp", (4, 5)),
+    harmony.sixteenths(
+        [4, 4, 8],
+        do_not_rewrite_meter=True,
+        preprocessor=baca.sequence().fuse(),
+    ),
+    baca.markup(
+        r"\baca-tuning-key-glissando-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.staff_positions([0, -4, 4, -5, 5, -6, 6, -7, 7], not_yet_pitched=True),
+    baca.glissando(),
+    baca.articulation("prall", baca.pheads().get([1, 2], 3)),
+    baca.hairpin('"f" >o p', selector=baca.leaves().rleak()),
+    baca.dls_staff_padding(6.5),
+)
+
 # va
 
 maker(
@@ -135,8 +154,15 @@ maker(
 )
 
 maker(
-    ("va", 4),
+    ("va", (4, 5)),
     baca.staff_lines(5),
+    harmony.sixteenths([12, 1, 1, 1, 8, 1, 1, 1, 4, 1, 1, 1, 99]),
+    baca.staff_positions(
+        [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
+        not_yet_pitched=True,
+        ),
+    baca.untie(baca.pleaves()),
+    baca.glissando(allow_repeats=True),
 )
 
 # vc1
@@ -151,7 +177,29 @@ maker(
     baca.staff_lines(5),
 )
 
+maker(
+    ("vc1", (4, 5)),
+    harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, 99]),
+    baca.staff_positions(
+        [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
+        not_yet_pitched=True,
+        ),
+    baca.untie(baca.pleaves()),
+    baca.glissando(allow_repeats=True),
+)
+
 # vc2
+
+maker(
+    ("vc2", (4, 5)),
+    harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, 99]),
+    baca.staff_positions(
+        [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
+        not_yet_pitched=True,
+        ),
+    baca.untie(baca.pleaves()),
+    baca.glissando(allow_repeats=True),
+)
 
 # cb1
 
@@ -165,4 +213,41 @@ maker(
     baca.staff_lines(5),
 )
 
+maker(
+    ("cb1", (4, 5)),
+    harmony.sixteenths([15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, 99]),
+    baca.staff_positions(
+        [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
+        not_yet_pitched=True,
+        ),
+    baca.untie(baca.pleaves()),
+    baca.glissando(allow_repeats=True),
+)
+
 # cb2
+
+maker(
+    ("cb2", (4, 5)),
+    harmony.sixteenths([11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, 99]),
+    baca.staff_positions(
+        [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
+        not_yet_pitched=True,
+        ),
+    baca.untie(baca.pleaves()),
+    baca.glissando(allow_repeats=True),
+)
+
+# va, vc1, vc2, cb2, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
+    ),
+    baca.hairpin(
+        '! o<| "f" |>o p',
+        pieces=baca.cmgroups(),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.dls_staff_padding(5.5),
+)

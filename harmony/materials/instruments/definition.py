@@ -11,8 +11,8 @@ instruments = abjad.OrderedDict(
             abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
         ),
         ("Harp", abjad.Harp()),
-        ("Viola", abjad.Viola()),
-        ("Cello", abjad.Cello()),
-        ("Contrabass", abjad.Contrabass()),
+        ("Viola", abjad.Viola(pitch_range="[C3, +inf]")),
+        ("Cello", abjad.Cello(pitch_range="[C2, +inf]")),
+        ("Contrabass", abjad.Contrabass(pitch_range="[E1, +inf]")),
     ]
 )
