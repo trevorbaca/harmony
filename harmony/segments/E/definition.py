@@ -204,17 +204,34 @@ maker(
 # cb1
 
 maker(
+    ("cb1", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("cb1", 2),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.not_parts(baca.clef_shift("percussion")),
+    ),
     baca.staff_lines(1),
 )
 
 maker(
     ("cb1", 3),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.not_parts(baca.clef_shift("treble")),
+    ),
     baca.staff_lines(5),
 )
 
 maker(
     ("cb1", (4, 5)),
+    baca.chunk(
+        baca.clef("bass"),
+        baca.not_parts(baca.clef_shift("bass")),
+    ),
     harmony.sixteenths([15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
@@ -227,7 +244,24 @@ maker(
 # cb2
 
 maker(
+    ("cb2", 1),
+    baca.clef("bass"),
+)
+
+maker(
+    ("cb2", 2),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.not_parts(baca.clef_shift("treble")),
+    ),
+)
+
+maker(
     ("cb2", (4, 5)),
+    baca.chunk(
+        baca.clef("bass"),
+        baca.not_parts(baca.clef_shift("bass")),
+    ),
     harmony.sixteenths([11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],

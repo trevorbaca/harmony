@@ -1225,13 +1225,13 @@ E_Contrabass_I_Music_Voice = {                                                 %
             \once \override Staff.StaffSymbol.line-count = 5                   %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
             \startStaff                                                        %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
             \set Staff.instrumentName = \harmony-cb-i-markup                   %! _clone_segment_initial_short_instrument_name
-            \clef "treble"                                                     %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \clef "bass"                                                       %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
             \once \override Staff.StaffSymbol.color = #(x11-color 'green4)     %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
             c''1 * 5/4                                                         %! _make_multimeasure_rest_container
             - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \baca-sfp-ancora                                                   %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
@@ -1239,7 +1239,7 @@ E_Contrabass_I_Music_Voice = {                                                 %
             ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
             \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
             \set Staff.shortInstrumentName = \harmony-cb-i-markup              %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -1257,20 +1257,40 @@ E_Contrabass_I_Music_Voice = {                                                 %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 3/4                                                                   %! _make_measure_silences
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [E Contrabass_I_Music_Voice measure 37 / measure 3]                      %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     R1 * 1                                                                     %! _make_measure_silences
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [E Contrabass_I_Music_Voice measure 38 / measure 4]                      %! _comment_measure_numbers
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding:OverrideCommand(1)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''2.                                                                      %! harmony.sixteenths
+    d'2.                                                                       %! harmony.sixteenths
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -1283,38 +1303,39 @@ E_Contrabass_I_Music_Voice = {                                                 %
     - \tweak bound-details.right.padding #2.5                                  %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #5.5                                                %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanHalfCLT                                                  %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''8.                                                                      %! harmony.sixteenths
+    d'8.                                                                       %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'''16                                                                     %! harmony.sixteenths
+    e'16                                                                       %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g''16                                                                      %! harmony.sixteenths
+    b16                                                                        %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e'''16                                                                     %! harmony.sixteenths
+    g'16                                                                       %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d'''8                                                                      %! harmony.sixteenths
+    f'8                                                                        %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d'''4                                                                      %! harmony.sixteenths
+    f'4                                                                        %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     % [E Contrabass_I_Music_Voice measure 39 / measure 5]                      %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e'''16                                                                     %! harmony.sixteenths
+    g'16                                                                       %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-effort-f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1326,48 +1347,48 @@ E_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''16                                                                      %! harmony.sixteenths
+    d'16                                                                       %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g'''16                                                                     %! harmony.sixteenths
+    b'16                                                                       %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    f'''16                                                                     %! harmony.sixteenths
+    a'16                                                                       %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    f'''2                                                                      %! harmony.sixteenths
+    a'2                                                                        %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    f'''8.                                                                     %! harmony.sixteenths
+    a'8.                                                                       %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g'''16                                                                     %! harmony.sixteenths
+    b'16                                                                       %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d'''16                                                                     %! harmony.sixteenths
+    f'16                                                                       %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'''16                                                                     %! harmony.sixteenths
+    d''16                                                                      %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    a'''8                                                                      %! harmony.sixteenths
+    c''8                                                                       %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    a'''4                                                                      %! harmony.sixteenths
+    c''4                                                                       %! harmony.sixteenths
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
@@ -1420,18 +1441,18 @@ E_Contrabass_II_Music_Voice = {                                                %
             % [E Contrabass_II_Music_Voice measure 35 / measure 1]             %! _comment_measure_numbers
             \set Staff.shortInstrumentName = \harmony-cb-ii-markup             %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
             \set Staff.instrumentName = \harmony-cb-ii-markup                  %! _clone_segment_initial_short_instrument_name
-            \clef "treble"                                                     %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \clef "bass"                                                       %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
             c''1 * 5/4                                                         %! _make_multimeasure_rest_container
             ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                    %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
             ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
             \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
             \set Staff.shortInstrumentName = \harmony-cb-ii-markup             %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -1446,15 +1467,28 @@ E_Contrabass_II_Music_Voice = {                                                %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [E Contrabass_II_Music_Voice measure 36 / measure 2]                     %! _comment_measure_numbers
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     R1 * 3/4                                                                   %! _make_measure_silences
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [E Contrabass_II_Music_Voice measure 37 / measure 3]                     %! _comment_measure_numbers
     R1 * 1                                                                     %! _make_measure_silences
 
     % [E Contrabass_II_Music_Voice measure 38 / measure 4]                     %! _comment_measure_numbers
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding:OverrideCommand(1)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''2                                                                       %! harmony.sixteenths
+    d'2                                                                        %! harmony.sixteenths
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
@@ -1467,38 +1501,39 @@ E_Contrabass_II_Music_Voice = {                                                %
     - \tweak bound-details.right.padding #2.5                                  %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #5.5                                                %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanHalfCLT                                                  %! HALF_CLT:baca.half_clt_spanner:PiecewiseCommand(1)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''8.                                                                      %! harmony.sixteenths
+    d'8.                                                                       %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    a''16                                                                      %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d'''16                                                                     %! harmony.sixteenths
+    f'16                                                                       %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    f''16                                                                      %! harmony.sixteenths
+    a16                                                                        %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g''8                                                                       %! harmony.sixteenths
+    b8                                                                         %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g''2                                                                       %! harmony.sixteenths
+    b2                                                                         %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     % [E Contrabass_II_Music_Voice measure 39 / measure 5]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g''16                                                                      %! harmony.sixteenths
+    b16                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-effort-f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1510,48 +1545,48 @@ E_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    f''16                                                                      %! harmony.sixteenths
+    a16                                                                        %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b''16                                                                      %! harmony.sixteenths
+    d'16                                                                       %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d''16                                                                      %! harmony.sixteenths
+    f16                                                                        %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e''4                                                                       %! harmony.sixteenths
+    g4                                                                         %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e''8.                                                                      %! harmony.sixteenths
+    g8.                                                                        %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d''16                                                                      %! harmony.sixteenths
+    f16                                                                        %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    g''16                                                                      %! harmony.sixteenths
+    b16                                                                        %! harmony.sixteenths
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''8                                                                       %! harmony.sixteenths
+    e8                                                                         %! harmony.sixteenths
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c''2                                                                       %! harmony.sixteenths
+    e2                                                                         %! harmony.sixteenths
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
