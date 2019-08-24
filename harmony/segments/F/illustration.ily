@@ -501,6 +501,7 @@ F_Percussion_I_Music_Voice = {                                                 %
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     - \baca-damp                                                               %! baca.articulation:IndicatorCommand
+    ^ \baca-bd-struck-markup                                                   %! baca.markup:IndicatorCommand
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -549,6 +550,7 @@ F_Percussion_I_Music_Voice = {                                                 %
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
+    ^ \baca-bd-struck-markup                                                   %! baca.markup:IndicatorCommand
     ~
 
     b4                                                                         %! harmony.sixteenths
@@ -592,36 +594,27 @@ F_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    r4                                                                         %! harmony.sixteenths
-
-    r16                                                                        %! harmony.sixteenths
-
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
-    b8.                                                                        %! harmony.sixteenths
-    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
-
-    b16                                                                        %! harmony.sixteenths
-    \repeatTie
+    r1                                                                         %! harmony.sixteenths
 
     r8.                                                                        %! harmony.sixteenths
-    - \baca-damp                                                               %! baca.articulation:IndicatorCommand
 
-    r8                                                                         %! harmony.sixteenths
-
-    b8                                                                         %! harmony.sixteenths
-    - \accent                                                                  %! baca.accent:IndicatorCommand
-
-    b8                                                                         %! harmony.sixteenths
-    \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
-
-    r8                                                                         %! harmony.sixteenths
-    - \baca-damp                                                               %! baca.articulation:IndicatorCommand
+    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    b16                                                                        %! harmony.sixteenths
+    ^ \baca-bd-superball-markup                                                %! baca.markup:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ~
 
     % [F Percussion_I_Music_Voice measure 46 / measure 7]                      %! _comment_measure_numbers
-    r1                                                                         %! harmony.sixteenths
+    b16                                                                        %! harmony.sixteenths
+    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+
+    r8.                                                                        %! harmony.sixteenths
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+
+    r2.                                                                        %! harmony.sixteenths
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -745,6 +738,7 @@ F_Percussion_II_Music_Voice = {                                                %
     c'8                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
 
     c'4                                                                        %! harmony.sixteenths
     \repeatTie
@@ -789,6 +783,8 @@ F_Percussion_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ^ \baca-tam-tam-markup                                                     %! baca.markup:IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths
     \repeatTie
@@ -825,23 +821,16 @@ F_Percussion_II_Music_Voice = {                                                %
 
     r8.                                                                        %! harmony.sixteenths
 
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    \once \override Stem.direction = #up                                       %! baca.stem_up:OverrideCommand(1)
     c'16                                                                       %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
-    ~
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    ^ \baca-brake-drum-markup                                                  %! baca.markup:IndicatorCommand
 
     % [F Percussion_II_Music_Voice measure 46 / measure 7]                     %! _comment_measure_numbers
-    c'2                                                                        %! harmony.sixteenths
-
-    c'8.                                                                       %! harmony.sixteenths
-    \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
-
-    r16                                                                        %! harmony.sixteenths
+    r1                                                                         %! harmony.sixteenths
     - \baca-damp                                                               %! baca.articulation:IndicatorCommand
-
-    r4                                                                         %! harmony.sixteenths
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -1042,28 +1031,27 @@ F_Harp_Music_Voice = {                                                         %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Harp_Music_Voice measure 45 / measure 6]                              %! _comment_measure_numbers
-    r1                                                                         %! harmony.sixteenths
-
-    r8.                                                                        %! harmony.sixteenths
+    r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e,16                                                                       %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
-    ~
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    ^ \baca-pdlt-markup                                                        %! baca.markup:IndicatorCommand
+
+    r2.                                                                        %! harmony.sixteenths
+
+    r8                                                                         %! harmony.sixteenths
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d8                                                                         %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     % [F Harp_Music_Voice measure 46 / measure 7]                              %! _comment_measure_numbers
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e,2                                                                        %! harmony.sixteenths
-
-    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    e,8.                                                                       %! harmony.sixteenths
-    \repeatTie
-
-    r16                                                                        %! harmony.sixteenths
-    - \baca-damp                                                               %! baca.articulation:IndicatorCommand
-
-    r4                                                                         %! harmony.sixteenths
+    r1                                                                         %! harmony.sixteenths
 
     <<                                                                         %! _make_multimeasure_rest_container
 
@@ -1263,23 +1251,29 @@ F_Viola_Music_Voice = {                                                        %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Viola_Music_Voice measure 45 / measure 6]                             %! _comment_measure_numbers
-    r2                                                                         %! harmony.sixteenths
-
-    r8                                                                         %! harmony.sixteenths
+    r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    b'16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    ~
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
-    r2                                                                         %! harmony.sixteenths
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    r16                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+
+    r1                                                                         %! harmony.sixteenths
 
     % [F Viola_Music_Voice measure 46 / measure 7]                             %! _comment_measure_numbers
     r2                                                                         %! harmony.sixteenths
@@ -1507,23 +1501,29 @@ F_Cello_I_Music_Voice = {                                                      %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Cello_I_Music_Voice measure 45 / measure 6]                           %! _comment_measure_numbers
-    r2                                                                         %! harmony.sixteenths
-
-    r8                                                                         %! harmony.sixteenths
+    r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    b'16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    ~
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
-    r2                                                                         %! harmony.sixteenths
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    r16                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+
+    r1                                                                         %! harmony.sixteenths
 
     % [F Cello_I_Music_Voice measure 46 / measure 7]                           %! _comment_measure_numbers
     r2                                                                         %! harmony.sixteenths
@@ -1751,23 +1751,29 @@ F_Cello_II_Music_Voice = {                                                     %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Cello_II_Music_Voice measure 45 / measure 6]                          %! _comment_measure_numbers
-    r2                                                                         %! harmony.sixteenths
-
-    r8                                                                         %! harmony.sixteenths
+    r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    b'16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    ~
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
-    r2                                                                         %! harmony.sixteenths
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    b'16
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    r16                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+
+    r1                                                                         %! harmony.sixteenths
 
     % [F Cello_II_Music_Voice measure 46 / measure 7]                          %! _comment_measure_numbers
     r2                                                                         %! harmony.sixteenths
