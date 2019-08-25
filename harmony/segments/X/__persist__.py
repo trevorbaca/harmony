@@ -249,7 +249,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Harp_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='niente',
+                                value='\\baca-effort-f',
                                 ),
                             ],
                         ),
@@ -285,7 +285,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='\\baca-p-ancora',
+                                value='p',
                                 ),
                             ],
                         ),
@@ -321,7 +321,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_I_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ff',
+                                value='f',
                                 ),
                             ],
                         ),
