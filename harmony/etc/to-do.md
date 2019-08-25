@@ -8,6 +8,9 @@ TO-DO
 3.  Debug \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs.
     Parallel \baca-colored-bracketed-mixed-number-metric-modulation-tuplet-lhs.
 
+4.  Add double flageolet symbol.
+    Extend baca.flageolet() with count=1 keyword.
+
 ###############################################################################
 ##################################### ETC #####################################
 ###############################################################################
