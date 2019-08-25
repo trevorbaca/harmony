@@ -145,16 +145,25 @@ maker(
 
 maker(
     ("va", 1),
+    baca.clef("alto"),
     baca.staff_lines(5),
 )
 
 maker(
     ("va", 2),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.not_parts(baca.clef_shift("percussion")),
+    ),
     baca.staff_lines(1),
 )
 
 maker(
     ("va", (4, 5)),
+    baca.chunk(
+        baca.clef("alto"),
+        baca.not_parts(baca.clef_shift("alto")),
+    ),
     baca.staff_lines(5),
     harmony.sixteenths([12, 1, 1, 1, 8, 1, 1, 1, 4, 1, 1, 1, 99]),
     baca.staff_positions(

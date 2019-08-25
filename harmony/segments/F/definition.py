@@ -308,7 +308,7 @@ maker(
 maker(
     ("hp", 10),
     baca.clef("treble"),
-    harmony.tuplet([-1, 1, -8, 1]),
+    harmony.tuplet([(-1, 1, -8, 1)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -316,7 +316,7 @@ maker(
 
 maker(
     ("hp", 11),
-    harmony.tuplet([-4, 1]),
+    harmony.tuplet([(-4, 1)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -324,7 +324,7 @@ maker(
 
 maker(
     ("hp", 12),
-    harmony.tuplet([1, 1, -1, 1, -1, -6]),
+    harmony.tuplet([(1, 1, -1, 1, -1, -6)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -332,7 +332,7 @@ maker(
 
 maker(
     ("hp", 13),
-    harmony.tuplet([-4, 1, 1]),
+    harmony.tuplet([(-4, 1, 1)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -340,7 +340,7 @@ maker(
 
 maker(
     ("hp", 14),
-    harmony.tuplet([1, 1, 1, 1, 1, -7]),
+    harmony.tuplet([(1, 1, 1, 1, 1, -7)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -348,7 +348,7 @@ maker(
 
 maker(
     ("hp", 15),
-    harmony.tuplet([-5, 1, 1, 1, 1, 1, -2]),
+    harmony.tuplet([(-5, 1, 1, 1, 1, 1, -2)]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
@@ -398,11 +398,16 @@ maker(
 
 maker(
     ("va", 8),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.not_parts(baca.clef_shift("percussion")),
+    ),
     baca.staff_lines(1),
 )
 
 maker(
     ("va", 10),
+    baca.clef("alto"),
     baca.staff_lines(5),
 )
 

@@ -1434,14 +1434,14 @@ F_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "alto"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    c'8.                                                                       %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -1498,7 +1498,7 @@ F_Viola_Music_Voice = {                                                        %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -1510,7 +1510,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
 
     r8.                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -1541,7 +1541,7 @@ F_Viola_Music_Voice = {                                                        %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    c'16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ~
@@ -1553,7 +1553,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    c'16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -1568,7 +1568,7 @@ F_Viola_Music_Voice = {                                                        %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -1577,7 +1577,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    c'8                                                                        %! harmony.sixteenths
 
     r8                                                                         %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -1592,9 +1592,16 @@ F_Viola_Music_Voice = {                                                        %
             \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \clef "percussion"                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -1618,16 +1625,23 @@ F_Viola_Music_Voice = {                                                        %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_49:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_49:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "alto"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     r4                                                                         %! harmony.sixteenths
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    c'16
     ~
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -1637,7 +1651,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    c'16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -1647,7 +1661,7 @@ F_Viola_Music_Voice = {                                                        %
     r4                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    c'8.                                                                       %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1666,7 +1680,7 @@ F_Viola_Music_Voice = {                                                        %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    c'8.                                                                       %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1674,7 +1688,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths
@@ -1684,7 +1698,7 @@ F_Viola_Music_Voice = {                                                        %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    c'8.                                                                       %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1693,7 +1707,7 @@ F_Viola_Music_Voice = {                                                        %
 
     % [F Viola_Music_Voice measure 51 / measure 12]                            %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    c'8                                                                        %! harmony.sixteenths
     \repeatTie
 
     r8                                                                         %! harmony.sixteenths
@@ -1705,7 +1719,7 @@ F_Viola_Music_Voice = {                                                        %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    c'8                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1717,7 +1731,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    c'16                                                                       %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -1726,11 +1740,11 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'4                                                                        %! harmony.sixteenths
+    c'4                                                                        %! harmony.sixteenths
 
     % [F Viola_Music_Voice measure 52 / measure 13]                            %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    c'8.                                                                       %! harmony.sixteenths
     \repeatTie
 
     r16                                                                        %! harmony.sixteenths
@@ -1740,7 +1754,7 @@ F_Viola_Music_Voice = {                                                        %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    c'8                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1748,12 +1762,12 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2                                                                        %! harmony.sixteenths
+    c'2                                                                        %! harmony.sixteenths
     \repeatTie
 
     % [F Viola_Music_Voice measure 53 / measure 14]                            %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'4                                                                        %! harmony.sixteenths
+    c'4                                                                        %! harmony.sixteenths
     \repeatTie
 
     r8                                                                         %! harmony.sixteenths
@@ -1761,7 +1775,7 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    c'8                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.5                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -1769,12 +1783,12 @@ F_Viola_Music_Voice = {                                                        %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2.                                                                       %! harmony.sixteenths
+    c'2.                                                                       %! harmony.sixteenths
     \repeatTie
 
     % [F Viola_Music_Voice measure 54 / measure 15]                            %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'1                                                                        %! harmony.sixteenths
+    c'1                                                                        %! harmony.sixteenths
     - \tweak direction #up
     \repeatTie
 
@@ -1824,14 +1838,14 @@ F_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -1888,7 +1902,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -1900,7 +1914,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
 
     r8.                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -1931,7 +1945,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ~
@@ -1943,7 +1957,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -1958,7 +1972,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -1967,7 +1981,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
 
     r8                                                                         %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -2017,7 +2031,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ~
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2027,7 +2041,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -2037,7 +2051,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r4                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2056,7 +2070,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2065,7 +2079,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
 
     r16                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -2074,7 +2088,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2084,14 +2098,14 @@ F_Cello_I_Music_Voice = {                                                      %
 
     % [F Cello_I_Music_Voice measure 51 / measure 12]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'4                                                                        %! harmony.sixteenths
+    d4                                                                         %! harmony.sixteenths
 
     r2                                                                         %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2105,7 +2119,7 @@ F_Cello_I_Music_Voice = {                                                      %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2114,11 +2128,11 @@ F_Cello_I_Music_Voice = {                                                      %
 
     % [F Cello_I_Music_Voice measure 52 / measure 13]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'4                                                                        %! harmony.sixteenths
+    d4                                                                         %! harmony.sixteenths
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths
@@ -2126,7 +2140,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2                                                                        %! harmony.sixteenths
+    d2                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2135,11 +2149,11 @@ F_Cello_I_Music_Voice = {                                                      %
 
     % [F Cello_I_Music_Voice measure 53 / measure 14]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'4                                                                        %! harmony.sixteenths
+    d4                                                                         %! harmony.sixteenths
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     \repeatTie
 
     r8                                                                         %! harmony.sixteenths
@@ -2147,7 +2161,7 @@ F_Cello_I_Music_Voice = {                                                      %
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2.                                                                       %! harmony.sixteenths
+    d2.                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.5                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2156,7 +2170,7 @@ F_Cello_I_Music_Voice = {                                                      %
 
     % [F Cello_I_Music_Voice measure 54 / measure 15]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'1                                                                        %! harmony.sixteenths
+    d1                                                                         %! harmony.sixteenths
     - \tweak direction #up
     \repeatTie
 
@@ -2206,14 +2220,14 @@ F_Cello_II_Music_Voice = {                                                     %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-vc-ii-markup                          %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -2270,7 +2284,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -2282,7 +2296,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
 
     r8.                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -2313,7 +2327,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ~
@@ -2325,7 +2339,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -2340,7 +2354,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2349,7 +2363,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
 
     r8                                                                         %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
@@ -2392,7 +2406,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r16                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ~
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2402,7 +2416,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16
+    d16
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     r16                                                                        %! harmony.sixteenths
@@ -2412,7 +2426,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r4                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2429,7 +2443,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2437,7 +2451,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     \repeatTie
 
     r8                                                                         %! harmony.sixteenths
@@ -2447,7 +2461,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2455,7 +2469,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'8.                                                                       %! harmony.sixteenths
+    d8.                                                                        %! harmony.sixteenths
     \repeatTie
 
     r16                                                                        %! harmony.sixteenths
@@ -2468,7 +2482,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r8.                                                                        %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2477,14 +2491,14 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
 
     r8.                                                                        %! harmony.sixteenths
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2                                                                        %! harmony.sixteenths
+    d2                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1):autodetect
@@ -2497,7 +2511,7 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2506,11 +2520,11 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'2.                                                                       %! harmony.sixteenths
+    d2.                                                                        %! harmony.sixteenths
 
     % [F Cello_II_Music_Voice measure 53 / measure 14]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     \repeatTie
 
     r16
@@ -2520,7 +2534,7 @@ F_Cello_II_Music_Voice = {                                                     %
     r16
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'16                                                                       %! harmony.sixteenths
+    d16                                                                        %! harmony.sixteenths
     ~
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "p.sc."                                     %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -2529,11 +2543,11 @@ F_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanBowSpeed                                                 %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'1                                                                        %! harmony.sixteenths
+    d1                                                                         %! harmony.sixteenths
 
     % [F Cello_II_Music_Voice measure 54 / measure 15]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    b'1                                                                        %! harmony.sixteenths
+    d1                                                                         %! harmony.sixteenths
     - \tweak direction #up
     \repeatTie
 
