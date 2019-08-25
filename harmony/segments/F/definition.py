@@ -255,7 +255,18 @@ maker(
 )
 
 maker(
+    ("hp", 3),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+)
+
+maker(
     ("hp", 4),
+    baca.chunk(
+        baca.clef("bass"),
+        baca.not_parts(baca.clef_shift("bass")),
+    ),
+    baca.staff_lines(5),
     harmony.sixteenths([9, -99]),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
     baca.staff_position(-6, not_yet_pitched=True),
@@ -263,7 +274,21 @@ maker(
 )
 
 maker(
+    ("hp", 5),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.not_parts(baca.clef_shift("percussion")),
+    ),
+    baca.staff_lines(1),
+)
+
+maker(
     ("hp", (6, 7)),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.not_parts(baca.clef_shift("treble")),
+    ),
+    baca.staff_lines(5),
     harmony.sixteenths([-2, 2, -14, 2, -99]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
@@ -273,7 +298,16 @@ maker(
 )
 
 maker(
+    ("hp", 8),
+    baca.chunk(
+        baca.clef("bass"),
+        baca.not_parts(baca.clef_shift("bass")),
+    ),
+)
+
+maker(
     ("hp", 10),
+    baca.clef("treble"),
     harmony.tuplet([-1, 1, -8, 1]),
     baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),

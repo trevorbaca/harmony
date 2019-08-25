@@ -1221,6 +1221,7 @@ B_Harp_Music_Staff = <<                                                        %
 
 B_Viola_Music_Voice_A = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'1                                                                        %! harmony.string_appoggiato
@@ -1230,11 +1231,13 @@ B_Viola_Music_Voice_A = {                                                      %
 
 B_Viola_Music_Voice_B = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'1                                                                        %! harmony.string_appoggiato
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'4                                                                        %! harmony.string_appoggiato
     \repeatTie
@@ -1244,6 +1247,7 @@ B_Viola_Music_Voice_B = {                                                      %
 
 B_Viola_Music_Voice_C = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -1254,12 +1258,14 @@ B_Viola_Music_Voice_C = {                                                      %
 
 B_Viola_Music_Voice_D = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'4
 
     % [B Viola_Music_Voice measure 7 / measure 4]                              %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'2
     \repeatTie
@@ -1269,6 +1275,7 @@ B_Viola_Music_Voice_D = {                                                      %
 
 B_Viola_Music_Voice_E = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -1279,6 +1286,7 @@ B_Viola_Music_Voice_E = {                                                      %
 
 B_Viola_Music_Voice_F = {                                                      %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -1301,6 +1309,7 @@ B_Viola_Music_Voice = {                                                        %
             \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \set Staff.instrumentName = \harmony-va-markup                     %! _clone_segment_initial_short_instrument_name
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \clef "alto"                                                       %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
             \slash
             \voiceOne
@@ -1323,6 +1332,7 @@ B_Viola_Music_Voice = {                                                        %
             \set Staff.shortInstrumentName = \harmony-va-markup                %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
             \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1342,6 +1352,7 @@ B_Viola_Music_Voice = {                                                        %
             \set fontSize = #-3
 
             % [B Viola_Music_Voice measure 5 / measure 2]                      %! _comment_measure_numbers
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
@@ -1353,9 +1364,11 @@ B_Viola_Music_Voice = {                                                        %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1375,6 +1388,7 @@ B_Viola_Music_Voice = {                                                        %
             \set fontSize = #-3
 
             % [B Viola_Music_Voice measure 6 / measure 3]                      %! _comment_measure_numbers
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
@@ -1386,12 +1400,15 @@ B_Viola_Music_Voice = {                                                        %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1410,6 +1427,7 @@ B_Viola_Music_Voice = {                                                        %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
@@ -1421,15 +1439,19 @@ B_Viola_Music_Voice = {                                                        %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1448,6 +1470,7 @@ B_Viola_Music_Voice = {                                                        %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
@@ -1459,18 +1482,23 @@ B_Viola_Music_Voice = {                                                        %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1490,6 +1518,7 @@ B_Viola_Music_Voice = {                                                        %
             \set fontSize = #-3
 
             % [B Viola_Music_Voice measure 8 / measure 5]                      %! _comment_measure_numbers
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
@@ -1501,21 +1530,27 @@ B_Viola_Music_Voice = {                                                        %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             c'8 * 2/5
             )
@@ -1621,6 +1656,7 @@ B_Viola_Music_Staff = <<                                                       %
 
 B_Cello_I_Music_Voice_A = {                                                    %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2.                                                                        %! harmony.string_appoggiato
@@ -1630,12 +1666,14 @@ B_Cello_I_Music_Voice_A = {                                                    %
 
 B_Cello_I_Music_Voice_B = {                                                    %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4
 
     % [B Cello_I_Music_Voice measure 6 / measure 3]                            %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2
     \repeatTie
@@ -1645,12 +1683,14 @@ B_Cello_I_Music_Voice_B = {                                                    %
 
 B_Cello_I_Music_Voice_C = {                                                    %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2
 
     % [B Cello_I_Music_Voice measure 7 / measure 4]                            %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4
     \repeatTie
@@ -1660,6 +1700,7 @@ B_Cello_I_Music_Voice_C = {                                                    %
 
 B_Cello_I_Music_Voice_D = {                                                    %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -1670,6 +1711,7 @@ B_Cello_I_Music_Voice_D = {                                                    %
 
 B_Cello_I_Music_Voice_E = {                                                    %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -1721,9 +1763,11 @@ B_Cello_I_Music_Voice = {                                                      %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -1753,12 +1797,15 @@ B_Cello_I_Music_Voice = {                                                      %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -1788,15 +1835,19 @@ B_Cello_I_Music_Voice = {                                                      %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -1826,18 +1877,23 @@ B_Cello_I_Music_Voice = {                                                      %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -1867,21 +1923,27 @@ B_Cello_I_Music_Voice = {                                                      %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -1987,6 +2049,7 @@ B_Cello_I_Music_Staff = <<                                                     %
 
 B_Cello_II_Music_Voice_A = {                                                   %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2.                                                                        %! harmony.string_appoggiato
@@ -1996,6 +2059,7 @@ B_Cello_II_Music_Voice_A = {                                                   %
 
 B_Cello_II_Music_Voice_B = {                                                   %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -2006,6 +2070,7 @@ B_Cello_II_Music_Voice_B = {                                                   %
 
 B_Cello_II_Music_Voice_C = {                                                   %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -2016,12 +2081,14 @@ B_Cello_II_Music_Voice_C = {                                                   %
 
 B_Cello_II_Music_Voice_D = {                                                   %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4
 
     % [B Cello_II_Music_Voice measure 8 / measure 5]                           %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d1
     - \tweak direction #up
@@ -2069,12 +2136,15 @@ B_Cello_II_Music_Voice = {                                                     %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2104,15 +2174,19 @@ B_Cello_II_Music_Voice = {                                                     %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2142,18 +2216,23 @@ B_Cello_II_Music_Voice = {                                                     %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2183,21 +2262,27 @@ B_Cello_II_Music_Voice = {                                                     %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2295,11 +2380,13 @@ B_Cello_II_Music_Staff = <<                                                    %
 
 B_Contrabass_I_Music_Voice_A = {                                               %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2.
 
     % [B Contrabass_I_Music_Voice measure 7 / measure 4]                       %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4
     \repeatTie
@@ -2309,12 +2396,14 @@ B_Contrabass_I_Music_Voice_A = {                                               %
 
 B_Contrabass_I_Music_Voice_B = {                                               %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d1                                                                         %! harmony.string_appoggiato
 
     % [B Contrabass_I_Music_Voice measure 8 / measure 5]                       %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4                                                                         %! harmony.string_appoggiato
     \repeatTie
@@ -2324,6 +2413,7 @@ B_Contrabass_I_Music_Voice_B = {                                               %
 
 B_Contrabass_I_Music_Voice_C = {                                               %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -2383,15 +2473,19 @@ B_Contrabass_I_Music_Voice = {                                                 %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2422,18 +2516,23 @@ B_Contrabass_I_Music_Voice = {                                                 %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2464,21 +2563,27 @@ B_Contrabass_I_Music_Voice = {                                                 %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2584,11 +2689,13 @@ B_Contrabass_I_Music_Staff = <<                                                %
 
 B_Contrabass_II_Music_Voice_A = {                                              %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d2
 
     % [B Contrabass_II_Music_Voice measure 8 / measure 5]                      %! _comment_measure_numbers
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d4
     \repeatTie
@@ -2598,6 +2705,7 @@ B_Contrabass_II_Music_Voice_A = {                                              %
 
 B_Contrabass_II_Music_Voice_B = {                                              %! abjad.Path.extern
 
+    \once \override NoteHead.style = #'harmonic                                %! baca.literal:IndicatorCommand
     \oneVoice
     \voiceTwo
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
@@ -2656,18 +2764,23 @@ B_Contrabass_II_Music_Voice = {                                                %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )
@@ -2698,21 +2811,27 @@ B_Contrabass_II_Music_Voice = {                                                %
             [
             (
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \baca-unpitched-music-warning                                      %! _color_unpitched_notes
             d8 * 2/5
             )

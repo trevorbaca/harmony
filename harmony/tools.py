@@ -110,22 +110,33 @@ def durata(
 
 
 def flutter_initiated_cells(
-    divisions: abjad.IntegerSequence,
+    divisions: abjad.IntegerSequence = None,
+    *commands: rmakers.Command,
+    fill_with_rests: bool = None,
+    tied: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes flutter-initiated cells.
     """
-    divisions_ = baca.sequence([(_, 4) for _ in divisions])
+    if divisions is not None:
+        divisions_ = baca.sequence([(_, 4) for _ in divisions])
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+        )
+    else:
+        preprocessor = None
     return baca.rhythm(
         rmakers.incised(
-            prefix_talea=[1], prefix_counts=[2], talea_denominator=8
+            fill_with_rests=fill_with_rests,
+            prefix_talea=[1],
+            prefix_counts=[2],
+            talea_denominator=8,
         ),
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
+        *commands,
         rmakers.force_repeat_tie((1, 8)),
-        preprocessor=baca.sequence()
-        .fuse()
-        .split_divisions(divisions_, cyclic=True),
+        preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
 
@@ -158,12 +169,18 @@ def phjc(
 
 
 def quarter_initiated_cells(
-    divisions: abjad.IntegerSequence,
+    divisions: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes quarter-initiated cells.
     """
-    divisions_ = baca.sequence([(_, 16) for _ in divisions])
+    if divisions is None:
+        preprocess = None
+    else:
+        divisions_ = baca.sequence([(_, 16) for _ in divisions])
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+        )
     return baca.rhythm(
         rmakers.incised(
             fill_with_rests=True,
@@ -174,9 +191,7 @@ def quarter_initiated_cells(
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
-        preprocessor=baca.sequence()
-        .fuse()
-        .split_divisions(divisions_, cyclic=True),
+        preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
 
@@ -259,7 +274,7 @@ def slate_staff_position() -> baca.Suite:
 
 
 def string_appoggiato(
-    divisions: abjad.IntegerSequence,
+    divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = (2, 3, 4, 5, 6, 7, 8, 9),
     *,
     leaf_duration=(1, 20),
@@ -269,8 +284,14 @@ def string_appoggiato(
     """
     Makes string appoggiato rhythm.
     """
-    divisions_ = baca.sequence([(_, 4) for _ in divisions])
-    divisions_ = divisions_.rotate(n=rotation)
+    if divisions is None:
+        preprocessor = None
+    else:
+        divisions_ = baca.sequence([(_, 4) for _ in divisions])
+        divisions_ = divisions_.rotate(n=rotation)
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+        )
     commands: typing.List[rmakers.Command] = []
     if rest:
         command_1 = rmakers.force_rest(baca.plts(grace=False)[:rest])
@@ -285,9 +306,7 @@ def string_appoggiato(
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         *commands,
-        preprocessor=baca.sequence()
-        .fuse()
-        .split_divisions(divisions_, cyclic=True),
+        preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
 

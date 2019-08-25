@@ -1043,7 +1043,7 @@ F_Harp_Music_Voice = {                                                         %
     \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     r2                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "[“Hp.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
@@ -1090,17 +1090,39 @@ F_Harp_Music_Voice = {                                                         %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Harp_Music_Voice measure 42 / measure 3]                              %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_42:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_42:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
+    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 1                                                                     %! _make_measure_silences
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     % [F Harp_Music_Voice measure 43 / measure 4]                              %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     e,2                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     \baca-mp-ancora                                                            %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     e,16                                                                       %! harmony.sixteenths
@@ -1117,8 +1139,19 @@ F_Harp_Music_Voice = {                                                         %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [F Harp_Music_Voice measure 44 / measure 5]                      %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \clef "percussion"                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
             c'1 * 1                                                            %! _make_multimeasure_rest_container
+            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -1133,10 +1166,21 @@ F_Harp_Music_Voice = {                                                         %
     >>                                                                         %! _make_multimeasure_rest_container
 
     % [F Harp_Music_Voice measure 45 / measure 6]                              %! _comment_measure_numbers
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     r8                                                                         %! harmony.sixteenths
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8                                                                         %! harmony.sixteenths
+    b'8                                                                        %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
@@ -1148,7 +1192,7 @@ F_Harp_Music_Voice = {                                                         %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    d8                                                                         %! harmony.sixteenths
+    b'8                                                                        %! harmony.sixteenths
     - \accent                                                                  %! baca.accent:IndicatorCommand
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1161,8 +1205,15 @@ F_Harp_Music_Voice = {                                                         %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [F Harp_Music_Voice measure 47 / measure 8]                      %! _comment_measure_numbers
+            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)            %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \clef "bass"                                                       %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
             c'1 * 3/4                                                          %! _make_multimeasure_rest_container
+            \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -1187,20 +1238,27 @@ F_Harp_Music_Voice = {                                                         %
     \times 10/11 {
 
         % [F Harp_Music_Voice measure 49 / measure 10]                         %! _comment_measure_numbers
+    %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_49:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_49:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+        \clef "treble"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+    %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
         \stopStaff                                                             %! _style_fermata_measures(2)
         \once \override Staff.StaffSymbol.line-count = 5                       %! _style_fermata_measures(2)
         \startStaff                                                            %! _style_fermata_measures(2)
         r8
+        \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         r1
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1212,7 +1270,7 @@ F_Harp_Music_Voice = {                                                         %
         r1
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d4
+        b'4
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1223,19 +1281,19 @@ F_Harp_Music_Voice = {                                                         %
 
         % [F Harp_Music_Voice measure 51 / measure 12]                         %! _comment_measure_numbers
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         r8
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1251,12 +1309,12 @@ F_Harp_Music_Voice = {                                                         %
         r1
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d4
+        b'4
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d4
+        b'4
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1267,27 +1325,27 @@ F_Harp_Music_Voice = {                                                         %
 
         % [F Harp_Music_Voice measure 53 / measure 14]                         %! _comment_measure_numbers
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -1303,27 +1361,27 @@ F_Harp_Music_Voice = {                                                         %
         r8
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
         \baca-unpitched-music-warning                                          %! _color_unpitched_notes
-        d8
+        b'8
         - \accent                                                              %! baca.accent:IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
 
@@ -2534,7 +2592,7 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     e,4                                                                        %! baca.make_repeated_duration_notes
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \glissando                                                                 %! baca.glissando
@@ -2859,7 +2917,7 @@ F_Contrabass_II_Music_Voice = {                                                %
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     e,4                                                                        %! baca.make_repeated_duration_notes
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \glissando                                                                 %! baca.glissando

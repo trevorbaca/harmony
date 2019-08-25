@@ -209,3 +209,13 @@ maker(
     harmony.string_appoggiato(divisions, [6, 7], rotation=-4, rest=4),
     baca.staff_position(0, not_yet_pitched=True),
 )
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 5)),
+    baca.literal(
+        r"\once \override NoteHead.style = #'harmonic",
+        baca.pleaves(),
+    ),
+)
