@@ -277,6 +277,7 @@ def string_appoggiato(
     divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = (2, 3, 4, 5, 6, 7, 8, 9),
     *,
+    after_grace: int = None,
     leaf_duration=(1, 20),
     rest: int = None,
     rotation: int = 0,
@@ -301,11 +302,18 @@ def string_appoggiato(
             counts, baca.plts(), leaf_duration=leaf_duration
         )
         commands.append(command_2)
+    after_grace_commands = []
+    if after_grace is not None:
+        command_3 = rmakers.after_grace_container(
+            [after_grace], baca.pleaf(-1), beam_and_slash=True
+        )
+        after_grace_commands.append(command_3)
     return baca.rhythm(
         rmakers.note(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         *commands,
+        *after_grace_commands,
         preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
     )
