@@ -59,16 +59,139 @@ maker(
     baca.staff_lines(1),
 )
 
+maker(
+    ("perc1", (1, 6)),
+    harmony.sixteenths([1, -11, -1, 1, -14]),
+    baca.accent(baca.pheads()),
+    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
+    baca.markup(r"\baca-brake-drum-markup", literal=True),
+)
+
 # perc2
+
+maker(
+    ("perc2", (1, 6)),
+    baca.make_notes(),
+    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+)
+
+maker(
+    ("perc2", (8, 9)),
+    baca.make_notes(),
+    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+)
 
 # hp
 
+maker(
+    ("hp", (1, 6)),
+    baca.clef("treble"),
+    baca.staff_lines(5),
+    harmony.tuplet([(1, 1), (1,)]),
+    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.hairpin(
+        "p < mf > p",
+        measures=1,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < f > p",
+        measures=3,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < ff > p",
+        measures=5,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+)
+
+maker(
+    ("hp", (8, 9)),
+    baca.make_notes(),
+    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("pp"),
+)
+
 # va
+
+maker(
+    ("va", (1, 9)),
+    baca.pitch("<B3 C4 D4>", baca.plts(exclude=abjad.const.HIDDEN)),
+    baca.not_yet_pitched(),
+)
 
 # vc1
 
+maker(
+    ("vc1", (1, 9)),
+    baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
+    baca.not_yet_pitched(),
+)
+
 # vc2
+
+maker(
+    ("vc2", (1, 9)),
+    baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
+    baca.not_yet_pitched(),
+)
 
 # cb1
 
+maker(
+    ("cb1", (1, 9)),
+    baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
+    baca.not_yet_pitched(),
+)
+
 # cb2
+
+maker(
+    ("cb2", (1, 9)),
+    baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
+    baca.not_yet_pitched(),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 6)),
+    harmony.tuplet([(1,), (1, 1)]),
+    baca.stem_tremolo(baca.pleaves(exclude=abjad.const.HIDDEN)),
+    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.hairpin(
+        "p < mf > p",
+        measures=2,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < f > p",
+        measures=4,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < ff >o niente",
+        measures=6,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
+    baca.make_notes(),
+    baca.stem_tremolo(baca.pleaves(exclude=abjad.const.HIDDEN)),
+    baca.markup(r"\baca-quasi-bisb-ancora-markup", literal=True),
+    baca.dynamic("pp"),
+)

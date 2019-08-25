@@ -199,7 +199,6 @@ maker(
 
 maker(
     ("va", (1, 6)),
-    baca.clef("treble"),
     harmony.tessera_1(4, gap=True),
 )
 
@@ -210,11 +209,16 @@ maker(
 
 maker(
     ("va", 9),
+    baca.chunk(
+        baca.clef("alto"),
+        baca.not_parts(baca.clef_shift("alto")),
+    ),
     baca.staff_lines(5),
 )
 
 maker(
     ("va", 11),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.tessera_1(4, advance=72 + 12, gap=True),
 )
@@ -229,7 +233,7 @@ maker(
 maker(
     ("vc1", (1, 6)),
     baca.staff_lines(5),
-    baca.clef("treble"),
+    baca.clef("bass"),
     harmony.tessera_1(3, gap=True),
     baca.staff_position(0, not_yet_pitched=True),
 )
@@ -251,7 +255,6 @@ maker(
 maker(
     ("vc2", (1, 6)),
     baca.staff_lines(5),
-    baca.clef("treble"),
     harmony.tessera_1(2, gap=True),
     baca.staff_position(0, not_yet_pitched=True),
 )
