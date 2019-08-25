@@ -137,7 +137,7 @@ maker(
     baca.staff_positions([0, -4, 4, -5, 5, -6, 6, -7, 7], not_yet_pitched=True),
     baca.glissando(),
     baca.articulation("prall", baca.pheads().get([1, 2], 3)),
-    baca.hairpin('"f" >o p', selector=baca.leaves().rleak()),
+    baca.hairpin('"f" >o niente', selector=baca.leaves().rleak()),
     baca.dls_staff_padding(6.5),
 )
 
@@ -279,7 +279,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
     ),
     baca.hairpin(
-        '! o<| "f" |>o p',
+        '! o<| "f" |>o niente',
         pieces=baca.cmgroups(),
         selector=baca.leaves().rleak(),
     ),

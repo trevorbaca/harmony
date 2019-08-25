@@ -66,6 +66,18 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 1),
+    harmony.flutter_initiated_cells(fill_with_rests=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< f >o niente",
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(5.5),
+)
+
 # perc1
 
 maker(
@@ -95,7 +107,92 @@ maker(
 
 # perc2
 
+maker(
+    ("perc2", (1, 2)),
+    harmony.sixteenths([-4, 99]),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.dynamic("p"),
+)
+
+maker(
+    ("perc2", (4, 5)),
+    baca.make_repeat_tied_notes(),
+    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.dynamic("p-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
 # hp
+
+maker(
+    ("hp", 1),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+    harmony.flutter_initiated_cells(
+        None, rmakers.tie(baca.pleaf(0)), fill_with_rests=True
+    ),
+    baca.hairpin(
+        'o< "f" >o niente',
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(5.5),
+    harmony.whisk_staff_position(),
+    baca.markup(
+        r"\baca-whisk-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
+    ("hp", 2),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.not_parts(baca.clef_shift("treble")),
+    ),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("hp", (4, 5)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
+#    baca.markup(
+#        r"\baca-whisk-markup",
+#        abjad.tweak(5.5).staff_padding,
+#        literal=True,
+#    ),
+)
+
+maker(
+    ("hp", (5, 6)),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.not_parts(baca.clef_shift("treble")),
+    ),
+    baca.staff_lines(5),
+)
+
+maker(
+    ("hp", 8),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.not_parts(baca.clef_shift("percussion")),
+    ),
+    baca.staff_lines(1),
+#    baca.markup(
+#        r"\baca-whisk-markup",
+#        abjad.tweak(5.5).staff_padding,
+#        literal=True,
+#    ),
+)
 
 # va
 
