@@ -77,11 +77,117 @@ maker(
 maker(
     ("perc1", 2),
     baca.staff_lines(1),
+    harmony.durata([-4, 1, 1, -99]),
+    baca.repeat_tie(baca.pleaf(-1)),
+    harmony.triangle_staff_position(),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< p >o niente",
+        abjad.tweak(4.5).staff_padding,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(r"\baca-triangle-markup", literal=True),
+)
+
+maker(
+    ("perc1", (4, 5)),
+    harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
+    harmony.triangle_staff_position(),
+    baca.flat_glissando("D4"),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< p > pp -- (pp) < mp > pp -- !",
+        abjad.tweak(4.5).staff_padding,
+        bookend=False,
+        pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("perc1", 10),
+    harmony.durata([1, 1, 2, 1, 1, 1, 1]),
+    harmony.triangle_staff_position(),
+    baca.stem_tremolo(baca.pheads()),
+    baca.flat_glissando("D4"),
+    baca.hairpin(
+        "o< p > pp -- ! < p > pp < p >o niente",
+        abjad.tweak(4.5).staff_padding,
+        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
 )
 
 # perc2
 
+maker(
+    ("perc2", 2),
+    harmony.durata([-1, 5, -99]),
+    harmony.tam_tam_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("perc2", (4, 5)),
+    harmony.durata([7, -2, 6, -1]),
+    harmony.tam_tam_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("perc2", 10),
+    harmony.durata([3, -2, 2, -1]),
+    harmony.tam_tam_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
 # hp
+
+maker(
+    ("hp", 2),
+    harmony.durata([-1, 5, -99]),
+    baca.chunk(
+        baca.staff_position(-14, not_yet_pitched=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("hp", (4, 5)),
+    harmony.durata([7, -2, 6, -1]),
+    baca.chunk(
+        baca.staff_position(-14, not_yet_pitched=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("hp", 10),
+    harmony.durata([3, -2, 2, -1]),
+    baca.chunk(
+        baca.staff_position(-14, not_yet_pitched=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
+    baca.accent(baca.pheads()),
+    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.dynamic("mp"),
+)
 
 # va
 
@@ -92,3 +198,53 @@ maker(
 # cb1
 
 # cb2
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 2),
+    harmony.durata([-4, 1, 1, -99]),
+    baca.repeat_tie(baca.pleaf(-1)),
+    baca.hairpin(
+        "o< mp >o niente",
+        abjad.tweak(4.5).staff_padding,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.note_head_style_harmonic(),
+    baca.trill_spanner("M2", harmonic=True),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
+    harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
+    baca.hairpin(
+        "o< mp > pp -- (pp) < mp > pp -- !",
+        abjad.tweak(4.5).staff_padding,
+        bookend=False,
+        pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.flat_glissando("C4"),
+    baca.not_yet_pitched(),
+    baca.note_head_style_harmonic(),
+    baca.trill_spanner("M2", harmonic=True),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 10),
+    harmony.durata([1, 1, 2, 1, 1, 1, 1]),
+    baca.hairpin(
+        "o< mp > pp -- ! < mp > pp < mp >o niente",
+        abjad.tweak(4.5).staff_padding,
+        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.flat_glissando("C4"),
+    baca.not_yet_pitched(),
+    baca.note_head_style_harmonic(),
+    baca.trill_spanner("M2", harmonic=True),
+)
