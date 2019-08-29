@@ -1264,6 +1264,7 @@ F_Harp_Music_Voice = {                                                         %
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 4/5 {
 
         % [F Harp_Music_Voice measure 50 / measure 11]                         %! _comment_measure_numbers
@@ -1303,6 +1304,7 @@ F_Harp_Music_Voice = {                                                         %
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3 {
 
         % [F Harp_Music_Voice measure 52 / measure 13]                         %! _comment_measure_numbers
@@ -1353,6 +1355,7 @@ F_Harp_Music_Voice = {                                                         %
 
     }
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 2/3 {
 
         % [F Harp_Music_Voice measure 54 / measure 15]                         %! _comment_measure_numbers
