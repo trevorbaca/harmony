@@ -384,14 +384,17 @@ def triangle_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(1), baca.stem_up())
 
 
-def tuplet(ratios) -> baca.RhythmCommand:
+def tuplet(ratios, *commands) -> baca.RhythmCommand:
     """
     Makes tuplet.
     """
     return baca.rhythm(
         rmakers.tuplet(ratios),
-        rmakers.rewrite_dots(),
         rmakers.trivialize(),
+        rmakers.rewrite_dots(),
+        rmakers.force_diminution(),
+        *commands,
+        rmakers.force_fraction(),
         rmakers.extract_trivial(),
     )
 
