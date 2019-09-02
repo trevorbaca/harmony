@@ -196,6 +196,24 @@ def quarter_initiated_cells(
     )
 
 
+def rimbalzandi(extra_counts=None, *commands) -> baca.RhythmCommand:
+    """
+    Makes rimbalzandi rhythm.
+    """
+    preprocessor = baca.sequence().fuse([2], cyclic=True)
+    return baca.rhythm(
+        rmakers.even_division([4], extra_counts=extra_counts),
+        rmakers.trivialize(),
+        rmakers.rewrite_dots(),
+        *commands,
+        rmakers.force_diminution(),
+        rmakers.force_fraction(),
+        rmakers.extract_trivial(),
+        preprocessor=preprocessor,
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def rest_appoggiato(
     counts: abjad.IntegerSequence,
     divisions: abjad.IntegerSequence = None,

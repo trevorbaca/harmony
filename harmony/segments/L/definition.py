@@ -85,11 +85,40 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 1),
+    harmony.durata([4, -99]),
+    baca.text_spanner(
+        "multiphonic =|",
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+    ),
+)
+
+maker(
+    ("bfl", (3, 8)),
+    harmony.durata([6, -10]),
+    baca.text_spanner(
+        "multiphonic =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
 # perc1
 
 maker(
     ("perc1", 1),
     baca.staff_lines(5),
+    harmony.durata([4, -99]),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -98,8 +127,10 @@ maker(
 )
 
 maker(
-    ("perc1", 3),
+    ("perc1", (3, 8)),
     baca.staff_lines(5),
+    harmony.durata([6, 8, -2]),
+    baca.laissez_vibrer(baca.ptails()),
 )
 
 maker(
@@ -110,23 +141,121 @@ maker(
 # perc2
 
 maker(
+    ("perc2", 1),
+    harmony.durata([4, -99]),
+    harmony.tam_tam_staff_position(),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
     ("perc2", 2),
     baca.staff_lines(3),
 )
 
 maker(
-    ("perc2", 3),
+    ("perc2", (3, 8)),
     baca.staff_lines(1),
+    harmony.tam_tam_staff_position(),
+    harmony.durata([-6, 8, -2]),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.laissez_vibrer(baca.ptails()),
+    baca.laissez_vibrer_tie_up(baca.pleaves()),
 )
 
 # hp
 
+maker(
+    ("hp", 1),
+    harmony.durata([4, -99]),
+    baca.markup(
+        r"\baca-sons-xylophoniques-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
+    ("hp", (3, 8)),
+    harmony.durata([6, 8, -2]),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
 # va
+
+maker(
+    ("va", (3, 8)),
+    harmony.rimbalzandi(
+        None,
+        rmakers.force_rest(
+            baca.leaves().exclude([6, 9, 11, 14, 16, 19, 21, 22, 23])
+        ),
+    ),
+)
 
 # vc1
 
+maker(
+    ("vc1", (3, 8)),
+    harmony.rimbalzandi(
+        [1],
+        rmakers.force_rest(
+            baca.leaves().exclude(
+                [6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26])
+        ),
+    ),
+)
+
 # vc2
+
+maker(
+    ("vc2", (3, 8)),
+    harmony.rimbalzandi(
+        [2],
+        rmakers.force_rest(
+            baca.leaves().exclude(
+                [0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29])
+        ),
+    ),
+)
 
 # cb1
 
+maker(
+    ("cb1", (3, 8)),
+    harmony.rimbalzandi(
+        [3],
+        rmakers.force_rest(
+            baca.leaves().exclude(
+                [1, 6, 9, 11, 14, 16, 19,21, 22, 24, 25, 26, 28, 30, 31, 32])
+        ),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # cb2
+
+maker(
+    ("cb2", (3, 8)),
+    harmony.rimbalzandi(
+        [4],
+        rmakers.force_rest(
+            baca.leaves().exclude([1, 9, 16, 22, 27, 29, 31, 33, 34, 35])
+        ),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (3, 8)),
+    baca.triple_staccato(baca.pheads()),
+)
