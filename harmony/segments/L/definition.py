@@ -108,6 +108,36 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", (11, 12)),
+    harmony.durata([2, 4, 2, 6]),
+    baca.text_spanner(
+        "T -> A =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.clparts([2]),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.breathe(baca.pleaves().get([1, 3])),
+)
+
+maker(
+    ("bfl", (13, 15)),
+    harmony.durata([3, 3, 3, 3, 3, 5]),
+    baca.text_spanner(
+        "T -> A =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.clparts([4]),
+        pieces=baca.lparts([2, 2 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.breathe(baca.cmgroups([1]).map(baca.pleaf(-1))),
+)
+
 # perc1
 
 maker(
@@ -136,6 +166,33 @@ maker(
 maker(
     ("perc1", 10),
     baca.staff_lines(1),
+)
+
+maker(
+    ("perc1", (11, 12)),
+    harmony.begin_quarter_notes(),
+    baca.invisible_music(baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2)),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
+    ("perc1", [13, 15]),
+    harmony.begin_quarter_notes(),
+    baca.invisible_music(baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2)),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+    ),
 )
 
 # perc2
@@ -170,6 +227,23 @@ maker(
     baca.laissez_vibrer_tie_up(baca.pleaves()),
 )
 
+maker(
+    ("perc2", (11, 12)),
+    harmony.durata([1, -1]),
+    harmony.brake_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.dynamic("f"),
+    baca.markup(r"\baca-brake-drum-markup", literal=True),
+)
+
+maker(
+    ("perc2", (13, 15)),
+    harmony.durata([3, -3, 3, -3, 3, -5]),
+    harmony.slate_staff_position(),
+    baca.dynamic("mf"),
+    baca.markup(r"\baca-slate-scrape-markup", literal=True),
+)
+
 # hp
 
 maker(
@@ -188,6 +262,21 @@ maker(
     baca.laissez_vibrer(baca.ptails()),
 )
 
+maker(
+    ("hp", (11, 12)),
+    harmony.durata([1, -1]),
+    baca.accent(baca.pheads()),
+    baca.dynamic("f"),
+    baca.markup(r"\baca-soundboard-pizz-markup", literal=True),
+)
+
+maker(
+    ("hp", (13, 15)),
+    harmony.durata([3, -3, 3, -3, 3, -5]),
+    baca.dynamic("mf"),
+    baca.markup(r"\baca-whisk-markup", literal=True),
+)
+
 # va
 
 maker(
@@ -198,6 +287,11 @@ maker(
             baca.leaves().exclude([6, 9, 11, 14, 16, 19, 21, 22, 23])
         ),
     ),
+)
+
+maker(
+    ("va", (13, 15)),
+    harmony.sixteenths([8, 3, 6]),
 )
 
 # vc1
@@ -213,6 +307,11 @@ maker(
     ),
 )
 
+maker(
+    ("vc1", (13, 15)),
+    harmony.sixteenths([14, 8, 8], [2]),
+)
+
 # vc2
 
 maker(
@@ -224,6 +323,11 @@ maker(
                 [0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29])
         ),
     ),
+)
+
+maker(
+    ("vc2", (13, 15)),
+    harmony.sixteenths([8, 8, 14], [2]),
 )
 
 # cb1
@@ -240,6 +344,16 @@ maker(
     baca.staff_position(0, not_yet_pitched=True),
 )
 
+maker(
+    ("cb1", (13, 15)),
+    harmony.sixteenths([12, 7, 8], [1]),
+)
+
+maker(
+    ("cb1", (11, 15)),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # cb2
 
 maker(
@@ -253,9 +367,33 @@ maker(
     baca.staff_position(0, not_yet_pitched=True),
 )
 
+maker(
+    ("cb2", (13, 15)),
+    harmony.sixteenths([8, 7, 12], [1]),
+)
+
+maker(
+    ("cb2", (11, 15)),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # va, vc1, vc2, cb1, cb2
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (3, 8)),
     baca.triple_staccato(baca.pheads()),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (11, 12)),
+    harmony.durata([2]),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
+    baca.dynamic("p"),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (13, 15)),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
 )

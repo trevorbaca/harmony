@@ -75,6 +75,25 @@ def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
     )
 
 
+def begin_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
+    """
+    Makes begin quarter notes.
+    """
+    return baca.rhythm(
+        rmakers.incised(
+            fill_with_rests=True,
+            prefix_talea=[3, 1],
+            prefix_counts=[2],
+            talea_denominator=16,
+        ),
+        *commands,
+        rmakers.rewrite_rest_filled(),
+        rmakers.extract_trivial(),
+        rmakers.written_duration((1, 4), baca.pleaves()),
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def brake_drum_staff_position() -> baca.Suite:
     """
     Sets brake drum staff position and stem direction.

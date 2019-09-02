@@ -105,11 +105,11 @@ maker(
 
 maker(
     ("perc1", 1),
+    baca.staff_lines(1),
     baca.hairpin(
         "o<| f",
         selector=baca.leaves()[-2:],
     ),
-    baca.staff_lines(1),
     harmony.upbeat_quarter_note()
 )
 
