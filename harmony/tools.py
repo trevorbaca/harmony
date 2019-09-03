@@ -243,7 +243,7 @@ def rest_appoggiato(
     Makes string appoggiato rhythm.
     """
     if divisions:
-        divisions_ = baca.sequence([(_, 4) for _ in divisions])
+        divisions_ = baca.sequence([(_, 8) for _ in divisions])
         preprocessor = (
             baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
         )
@@ -313,7 +313,7 @@ def slate_staff_position() -> baca.Suite:
 def string_appoggiato(
     divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = (2, 3, 4, 5, 6, 7, 8, 9),
-    *,
+    *commands,
     after_grace: int = None,
     leaf_duration=(1, 20),
     rest: int = None,
@@ -330,15 +330,15 @@ def string_appoggiato(
         preprocessor = (
             baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
         )
-    commands: typing.List[rmakers.Command] = []
+    commands_: typing.List[rmakers.Command] = list(commands)
     if rest:
         command_1 = rmakers.force_rest(baca.plts(grace=False)[:rest])
-        commands.append(command_1)
+        commands_.append(command_1)
     if counts:
         command_2 = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=leaf_duration
         )
-        commands.append(command_2)
+        commands_.append(command_2)
     after_grace_commands = []
     if after_grace is not None:
         command_3 = rmakers.after_grace_container(
@@ -349,7 +349,7 @@ def string_appoggiato(
         rmakers.note(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
-        *commands,
+        *commands_,
         *after_grace_commands,
         preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),

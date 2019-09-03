@@ -59,11 +59,25 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 1),
+    harmony.sixteenths([2, 2, 4, -99]),
+    baca.repeat_tie(baca.pleaves()[1:]),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< f >o niente",
+        pieces=baca.lparts([1, 2 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
 # perc1
 
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
+    harmony.rest_appoggiato([5, 4], [3, 7]),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
@@ -76,6 +90,8 @@ maker(
 maker(
     ("perc2", 1),
     baca.staff_lines(3),
+    harmony.rest_appoggiato([4, 5], [3, 7]),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
@@ -85,12 +101,85 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 1),
+    baca.clef("treble"),
+    harmony.durata([-2, 2, 4, -2]),
+    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< mf >o niente",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+)
+
 # va
+
+maker(
+    ("va", 1),
+    harmony.string_appoggiato(
+        [1, 3, 1], [7], rmakers.force_rest(baca.leaf(-1)), rest=1,
+    ),
+    baca.note_head_style_harmonic(baca.leaves()),
+    baca.note_head_style_harmonic(baca.leaves(grace=True)),
+    baca.hairpin(
+        "mf >o niente",
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
+)
 
 # vc1
 
+maker(
+    ("vc1", 1),
+    harmony.string_appoggiato(
+        [1, 3, 1], [6], rmakers.force_rest(baca.leaf(-1)), rest=1,
+    ),
+    baca.note_head_style_harmonic(baca.leaves()),
+    baca.note_head_style_harmonic(baca.leaves(grace=True)),
+    baca.hairpin(
+        "mf >o niente",
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
+)
+
 # vc2
+
+maker(
+    ("vc2", 1),
+    harmony.durata([-4, 6]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.dynamic("mp"),
+)
 
 # cb1
 
+maker(
+    ("cb1", 1),
+    harmony.string_appoggiato(
+        [1, 3, 1], [6], rmakers.force_rest(baca.leaf(-1)), rest=1,
+    ),
+    baca.note_head_style_harmonic(baca.leaves()),
+    baca.note_head_style_harmonic(baca.leaves(grace=True)),
+    baca.hairpin(
+        "mf >o niente",
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
+)
+
 # cb2
+
+maker(
+    ("cb2", 1),
+    harmony.durata([-4, 6]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.dynamic("mp"),
+)
