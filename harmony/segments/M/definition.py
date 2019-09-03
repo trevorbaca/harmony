@@ -71,6 +71,18 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", 3),
+    harmony.sixteenths([-20, 2, 2]),
+    baca.repeat_tie(baca.pleaf(-1)),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< f >o niente",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
 # perc1
 
 maker(
@@ -78,6 +90,11 @@ maker(
     baca.staff_lines(3),
     harmony.rest_appoggiato([5, 4], [3, 7]),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
+)
+
+maker(
+    ("perc1", 3),
+    harmony.rest_appoggiato([0, 3], [10, 4]),
 )
 
 maker(
@@ -92,6 +109,11 @@ maker(
     baca.staff_lines(3),
     harmony.rest_appoggiato([4, 5], [3, 7]),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
+)
+
+maker(
+    ("perc2", 3),
+    harmony.rest_appoggiato([0, 4], [10, 4]),
 )
 
 maker(
@@ -115,6 +137,13 @@ maker(
     baca.markup(r"\baca-bisb-markup", literal=True),
 )
 
+maker(
+    ("hp", 3),
+    baca.make_notes(),
+    baca.laissez_vibrer(),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # va
 
 maker(
@@ -128,6 +157,13 @@ maker(
         "mf >o niente",
         selector=baca.tleaves(grace=False).rleak(),
     ),
+)
+
+maker(
+    ("va", 3),
+    baca.make_notes(),
+    baca.note_head_style_harmonic(),
+    baca.dynamic("mp"),
 )
 
 # vc1
@@ -145,6 +181,13 @@ maker(
     ),
 )
 
+maker(
+    ("vc1", 3),
+    baca.make_notes(),
+    baca.note_head_style_harmonic(),
+    baca.dynamic("mp"),
+)
+
 # vc2
 
 maker(
@@ -155,6 +198,16 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
     baca.dynamic("mp"),
+)
+
+maker(
+    ("vc2", 3),
+    baca.make_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # cb1
@@ -172,6 +225,13 @@ maker(
     ),
 )
 
+maker(
+    ("cb1", 3),
+    baca.make_notes(),
+    baca.note_head_style_harmonic(),
+    baca.dynamic("mp"),
+)
+
 # cb2
 
 maker(
@@ -182,4 +242,14 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
     baca.dynamic("mp"),
+)
+
+maker(
+    ("cb2", 3),
+    baca.make_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
