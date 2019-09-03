@@ -171,42 +171,85 @@ M_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \baca-mp-ancora                                                            %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Bass_Flute_Music_Voice measure 115 / measure 2]                       %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
-%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
-%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''8                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \repeatTie                                                                 %! baca.repeat_tie:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''4                                                                       %! harmony.sixteenths
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    \repeatTie                                                                 %! baca.repeat_tie:IndicatorCommand
+
+    r2.                                                                        %! harmony.sixteenths
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Bass_Flute_Music_Voice measure 115 / measure 2]               %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+        %%% \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
+        %%% \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Bass_Flute_Rest_Voice measure 115 / measure 2]                %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Bass_Flute_Music_Voice measure 116 / measure 3]                       %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Bass_Flute_Music_Voice measure 117 / measure 4]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Bass_Flute_Music_Voice measure 118 / measure 5]                       %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Bass_Flute_Music_Voice measure 119 / measure 6]                       %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -253,56 +296,152 @@ M_Bass_Flute_Music_Staff = <<                                                  %
 >>                                                                             %! abjad.Path.extern
 
 
+M_Percussion_I_Music_Voice_A = {                                               %! abjad.Path.extern
+
+    r4.                                                                        %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+M_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern
+
+    r2..                                                                       %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 M_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
-    % [M Percussion_I_Music_Voice measure 114 / measure 1]                     %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \f                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    <<
 
-    % [M Percussion_I_Music_Voice measure 115 / measure 2]                     %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [M Percussion_I_Music_Voice measure 114 / measure 1]             %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \set Staff.instrumentName = \harmony-perc-i-markup                 %! _clone_segment_initial_short_instrument_name
+            \clef "percussion"                                                 %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \slash
+            \voiceOne
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \f                                                                 %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+            ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                   %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“Percussion”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \M_Percussion_I_Music_Voice_A                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \M_Percussion_I_Music_Voice_B                                          %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Percussion_I_Music_Voice measure 115 / measure 2]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Percussion_I_Rest_Voice measure 115 / measure 2]              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Percussion_I_Music_Voice measure 116 / measure 3]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 3                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Percussion_I_Music_Voice measure 117 / measure 4]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Percussion_I_Music_Voice measure 118 / measure 5]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Percussion_I_Music_Voice measure 119 / measure 6]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -344,56 +483,152 @@ M_Percussion_I_Music_Staff = <<                                                %
 >>                                                                             %! abjad.Path.extern
 
 
+M_Percussion_II_Music_Voice_A = {                                              %! abjad.Path.extern
+
+    r4.                                                                        %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+M_Percussion_II_Music_Voice_B = {                                              %! abjad.Path.extern
+
+    r2..                                                                       %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 M_Percussion_II_Music_Voice = {                                                %! abjad.Path.extern
 
-    % [M Percussion_II_Music_Voice measure 114 / measure 1]                    %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \set Staff.instrumentName = \harmony-perc-ii-markup                        %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \mf                                                                        %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Perc. II”]"                          %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    <<
 
-    % [M Percussion_II_Music_Voice measure 115 / measure 2]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [M Percussion_II_Music_Voice measure 114 / measure 1]            %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-perc-ii-markup           %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \set Staff.instrumentName = \harmony-perc-ii-markup                %! _clone_segment_initial_short_instrument_name
+            \clef "percussion"                                                 %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \slash
+            \voiceOne
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \mf                                                                %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+            ^ \baca-reapplied-indicator-markup "[“Perc. II”]"                  %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“Percussion”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-perc-ii-markup           %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \M_Percussion_II_Music_Voice_A                                         %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \M_Percussion_II_Music_Voice_B                                         %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Percussion_II_Music_Voice measure 115 / measure 2]            %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Percussion_II_Rest_Voice measure 115 / measure 2]             %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Percussion_II_Music_Voice measure 116 / measure 3]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 3                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Percussion_II_Music_Voice measure 117 / measure 4]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Percussion_II_Music_Voice measure 118 / measure 5]                    %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Percussion_II_Music_Voice measure 119 / measure 6]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -443,46 +678,86 @@ M_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-hp-markup                             %! _clone_segment_initial_short_instrument_name
-    \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    r4                                                                         %! harmony.durata
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     ^ \baca-reapplied-indicator-markup "[“Hp.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Harp_Music_Voice measure 115 / measure 2]                             %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+    r4                                                                         %! harmony.durata
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Harp_Music_Voice measure 115 / measure 2]                     %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Harp_Rest_Voice measure 115 / measure 2]                      %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Harp_Music_Voice measure 116 / measure 3]                             %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Harp_Music_Voice measure 117 / measure 4]                             %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Harp_Music_Voice measure 118 / measure 5]                             %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Harp_Music_Voice measure 119 / measure 6]                             %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -524,6 +799,21 @@ M_Harp_Music_Staff = <<                                                        %
 >>                                                                             %! abjad.Path.extern
 
 
+M_Viola_Music_Voice_A = {                                                      %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+}                                                                              %! abjad.Path.extern
+
+
 M_Viola_Music_Voice = {                                                        %! abjad.Path.extern
 
     % [M Viola_Music_Voice measure 114 / measure 1]                            %! _comment_measure_numbers
@@ -532,13 +822,14 @@ M_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
     \clef "alto"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.string_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -547,31 +838,101 @@ M_Viola_Music_Voice = {                                                        %
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Viola_Music_Voice measure 115 / measure 2]                            %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic:OverrideCommand(1)
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+        }
+
+        \context Voice = "Viola_Music_Voice"
+        \M_Viola_Music_Voice_A                                                 %! abjad.Path.extern
+
+    >>
+
+    \oneVoice
+    r4                                                                         %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Viola_Music_Voice measure 115 / measure 2]                    %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Viola_Rest_Voice measure 115 / measure 2]                     %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Viola_Music_Voice measure 116 / measure 3]                            %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Viola_Music_Voice measure 117 / measure 4]                            %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Viola_Music_Voice measure 118 / measure 5]                            %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Viola_Music_Voice measure 119 / measure 6]                            %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -613,6 +974,21 @@ M_Viola_Music_Staff = <<                                                       %
 >>                                                                             %! abjad.Path.extern
 
 
+M_Cello_I_Music_Voice_A = {                                                    %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c'2.                                                                       %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+}                                                                              %! abjad.Path.extern
+
+
 M_Cello_I_Music_Voice = {                                                      %! abjad.Path.extern
 
     % [M Cello_I_Music_Voice measure 114 / measure 1]                          %! _comment_measure_numbers
@@ -621,13 +997,14 @@ M_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
     \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.string_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -636,31 +1013,98 @@ M_Cello_I_Music_Voice = {                                                      %
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Cello_I_Music_Voice measure 115 / measure 2]                          %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic:OverrideCommand(1)
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c'
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+        }
+
+        \context Voice = "Cello_I_Music_Voice"
+        \M_Cello_I_Music_Voice_A                                               %! abjad.Path.extern
+
+    >>
+
+    \oneVoice
+    r4                                                                         %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Cello_I_Music_Voice measure 115 / measure 2]                  %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Cello_I_Rest_Voice measure 115 / measure 2]                   %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Cello_I_Music_Voice measure 116 / measure 3]                          %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Cello_I_Music_Voice measure 117 / measure 4]                          %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Cello_I_Music_Voice measure 118 / measure 5]                          %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Cello_I_Music_Voice measure 119 / measure 6]                          %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -716,7 +1160,7 @@ M_Cello_II_Music_Voice = {                                                     %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.durata
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -725,31 +1169,61 @@ M_Cello_II_Music_Voice = {                                                     %
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Cello_II_Music_Voice measure 115 / measure 2]                         %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.durata
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Cello_II_Music_Voice measure 115 / measure 2]                 %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Cello_II_Rest_Voice measure 115 / measure 2]                  %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Cello_II_Music_Voice measure 116 / measure 3]                         %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Cello_II_Music_Voice measure 117 / measure 4]                         %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Cello_II_Music_Voice measure 118 / measure 5]                         %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Cello_II_Music_Voice measure 119 / measure 6]                         %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -791,6 +1265,21 @@ M_Cello_II_Music_Staff = <<                                                    %
 >>                                                                             %! abjad.Path.extern
 
 
+M_Contrabass_I_Music_Voice_A = {                                               %! abjad.Path.extern
+
+    \voiceTwo
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    c''2.                                                                      %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+    \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+}                                                                              %! abjad.Path.extern
+
+
 M_Contrabass_I_Music_Voice = {                                                 %! abjad.Path.extern
 
     % [M Contrabass_I_Music_Voice measure 114 / measure 1]                     %! _comment_measure_numbers
@@ -799,13 +1288,14 @@ M_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
+    \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
     \clef "bass"                                                               %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r4                                                                         %! harmony.string_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -814,31 +1304,98 @@ M_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Contrabass_I_Music_Voice measure 115 / measure 2]                     %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic:OverrideCommand(1)
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <
+                \tweak font-size #0
+                \tweak transparent ##t
+                c''
+            >8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c''8 * 2/5
+            )
+            ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+        }
+
+        \context Voice = "Contrabass_I_Music_Voice"
+        \M_Contrabass_I_Music_Voice_A                                          %! abjad.Path.extern
+
+    >>
+
+    \oneVoice
+    r4                                                                         %! harmony.string_appoggiato
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \revert NoteHead.style                                                     %! baca.note_head_style_harmonic:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Contrabass_I_Music_Voice measure 115 / measure 2]             %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Contrabass_I_Rest_Voice measure 115 / measure 2]              %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Contrabass_I_Music_Voice measure 116 / measure 3]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Contrabass_I_Music_Voice measure 117 / measure 4]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Contrabass_I_Music_Voice measure 118 / measure 5]                     %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Contrabass_I_Music_Voice measure 119 / measure 6]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
@@ -890,7 +1447,7 @@ M_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 5/4                                                                   %! _call_rhythm_commands
+    r2                                                                         %! harmony.durata
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -899,31 +1456,61 @@ M_Contrabass_II_Music_Voice = {                                                %
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
-    % [M Contrabass_II_Music_Voice measure 115 / measure 2]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    d2.                                                                        %! harmony.durata
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    - \tweak bound-details.right.padding #3.25                                 %! DAMP:baca.damp_spanner:PiecewiseCommand(1):autodetect
+    - \tweak staff-padding #3                                                  %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+    \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Contrabass_II_Music_Voice measure 115 / measure 2]            %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+            \bacaStopTextSpanDamp                                              %! DAMP:baca.damp_spanner:PiecewiseCommand(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [M Contrabass_II_Rest_Voice measure 115 / measure 2]             %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [M Contrabass_II_Music_Voice measure 116 / measure 3]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Contrabass_II_Music_Voice measure 117 / measure 4]                    %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [M Contrabass_II_Music_Voice measure 118 / measure 5]                    %! _comment_measure_numbers
-    R1 * 3/4                                                                   %! _call_rhythm_commands
+    R1 * 3/4                                                                   %! _make_measure_silences
 
     % [M Contrabass_II_Music_Voice measure 119 / measure 6]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
     \stopStaff                                                                 %! _style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
     \startStaff                                                                %! _style_fermata_measures(3)
