@@ -66,6 +66,22 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 2),
+    harmony.thirty_seconds(
+        [1], [2],
+        rmakers.force_rest(baca.tuplet(0)),
+        rmakers.force_rest(baca.pleaf(0)),
+        divisions=[2]
+    ),
+    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        selector=baca.tleaves(),
+    ),
+)
+
 # perc1
 
 maker(

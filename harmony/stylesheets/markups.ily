@@ -37,3 +37,13 @@ harmony-fifty-seven-point-six = \markup
             }
         \hspace #0.5
     }
+
+%%% PIECE-SPECIFIC MARKUP %%%
+
+harmony-d-d-sharp = \markup
+    \concat {
+        D/D
+        \raise #0.8
+        \scale #'(0.55 . 0.55)
+        \sharp
+    }

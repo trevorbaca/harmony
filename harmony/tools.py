@@ -389,6 +389,37 @@ def tessera_1(
     )
 
 
+def thirty_seconds(
+    counts: abjad.IntegerSequence,
+    extra_counts: abjad.IntegerSequence = None,
+    *commands,
+    divisions: abjad.Expression = None,
+) -> baca.RhythmCommand:
+    """
+    Makes thirty-second rhythm.
+    """
+    counts_ = baca.sequence(counts)
+    if divisions is not None:
+        divisions_ = baca.sequence([(_, 4) for _ in divisions])
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+        )
+    else:
+        preprocessor = None
+    return baca.rhythm(
+        rmakers.talea(counts_, 32, extra_counts=extra_counts),
+        *commands,
+        rmakers.rewrite_rest_filled(),
+        rmakers.rewrite_sustained(),
+        rmakers.beam(),
+        rmakers.extract_trivial(),
+        rmakers.force_fraction(),
+        rmakers.denominator((1, 16)),
+        preprocessor=preprocessor,
+        tag=baca.frame(inspect.currentframe()),
+    )
+
+
 def train(
     counts: abjad.IntegerSequence,
     *commands: rmakers.Command,
