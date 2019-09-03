@@ -393,7 +393,7 @@ def thirty_seconds(
     counts: abjad.IntegerSequence,
     extra_counts: abjad.IntegerSequence = None,
     *commands,
-    divisions: abjad.Expression = None,
+    divisions: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes thirty-second rhythm.
