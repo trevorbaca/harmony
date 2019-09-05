@@ -276,6 +276,12 @@ maker(
     baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
+maker(
+    ("vc1", 11),
+    baca.clef("bass"),
+    baca.staff_lines(5),
+)
+
 # vc2
 
 maker(
@@ -294,6 +300,12 @@ maker(
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
+
+maker(
+    ("vc2", 11),
+    baca.clef("bass"),
+    baca.staff_lines(5),
 )
 
 # cb1
