@@ -272,6 +272,7 @@ def sixteenths(
     extra_counts: abjad.IntegerSequence = None,
     *commands,
     do_not_rewrite_meter: bool = None,
+    grace_suffixes: abjad.IntegerSequence = None,
     preprocessor: abjad.Expression = None,
     r: int = None,
 ) -> baca.RhythmCommand:
@@ -289,6 +290,13 @@ def sixteenths(
         preprocessor_ = baca.sequence().fuse().quarters()
     else:
         preprocessor_ = preprocessor
+    grace = []
+    if grace_suffixes:
+        selector = baca.runs().map(baca.leaf(-1))
+        command_ = rmakers.after_grace_container(
+            grace_suffixes, selector, beam_and_slash=True
+        )
+        grace.append(command_)
     return baca.rhythm(
         rmakers.talea(counts_, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
@@ -298,6 +306,7 @@ def sixteenths(
         rmakers.denominator((1, 16)),
         *meter,
         rmakers.force_repeat_tie((1, 8)),
+        *grace,
         preprocessor=preprocessor_,
         tag=baca.frame(inspect.currentframe()),
     )
