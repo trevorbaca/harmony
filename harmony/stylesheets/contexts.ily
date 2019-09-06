@@ -171,6 +171,9 @@
         %            probably should never be done at stylesheet level.
         % NOTE:      may be best to override NO text script properties.
 
+        % NOTE: new, and may be useful as an override in all scores:
+        \override TrillSpanner.Y-extent = ##f
+
         \override TupletBracket.breakable = ##t
         \override TupletBracket.full-length-to-extent = ##f
         \override TupletBracket.padding = 2
