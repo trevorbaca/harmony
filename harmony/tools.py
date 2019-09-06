@@ -398,6 +398,33 @@ def tessera_1(
     )
 
 
+def tessera_2(
+    part: int, *commands, advance: int = None, gap: bool = None
+) -> baca.RhythmCommand:
+    """
+    Makes tessera 2.
+    """
+    counts = baca.sequence([3, 4, 14, 2, 6, 7, 8])
+    permutation = baca.sequence([2, 3, 4, 0, 5, 6, 1])
+    assert sum(counts) == 44
+    for i in range(part):
+        counts = counts.permute(permutation)
+    if gap is True:
+        new_counts = []
+        for count in counts:
+            new_counts.extend([count - 1, -1])
+        counts = baca.sequence(new_counts)
+    return baca.rhythm(
+        rmakers.talea(counts, 16, advance=advance),
+        *commands,
+        rmakers.extract_trivial(),
+        rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        ),
+        rmakers.force_repeat_tie((1, 8)),
+    )
+
+
 def thirty_seconds(
     counts: abjad.IntegerSequence,
     extra_counts: abjad.IntegerSequence = None,
