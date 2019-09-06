@@ -62,11 +62,20 @@ maker(
 
 maker(
     ("perc1", 1),
+    baca.make_notes(),
+    baca.clef("treble"),
     baca.staff_lines(5),
+    baca.markup(r"\baca-glockenspiel-markup", literal=True),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
 )
 
 maker(
     ("perc1", 2),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.clef_shift("percussion"),
+    ),
     baca.staff_lines(3),
 )
 
@@ -77,10 +86,29 @@ maker(
 
 maker(
     ("perc1", 5),
+    harmony.sixteenths([-16, 4]),
+    baca.chunk(
+        baca.clef("treble"),
+        baca.clef_shift("treble"),
+    ),
     baca.staff_lines(5),
+    baca.markup(r"\baca-glockenspiel-markup", literal=True),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # perc2
+
+maker(
+    ("perc2", 1),
+    baca.make_notes(),
+    baca.clef("percussion"),
+    baca.markup(r"\baca-tam-tam-markup", literal=True),
+    baca.laissez_vibrer(),
+    harmony.tam_tam_staff_position(),
+    baca.accent(),
+    baca.dynamic("mp"),
+)
 
 maker(
     ("perc2", 2),
@@ -89,17 +117,135 @@ maker(
 
 maker(
     ("perc2", 5),
+    harmony.sixteenths([-16, 4]),
     baca.staff_lines(1),
+    baca.markup(r"\baca-tam-tam-markup", literal=True),
+    baca.laissez_vibrer(),
+    harmony.tam_tam_staff_position(),
+    baca.accent(),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
 # hp
 
+maker(
+    ("hp", 1),
+    baca.make_notes(),
+    baca.laissez_vibrer(),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("mp"),
+    baca.accent(),
+)
+
+maker(
+    ("hp", 5),
+    harmony.sixteenths([-16, 4]),
+    baca.laissez_vibrer(),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
+    baca.accent(),
+)
+
 # va
+
+maker(
+    ("va", 1),
+    baca.make_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.dynamic("pp"),
+    baca.bow_speed_spanner(
+        "poco scr. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
+    ("va", 5),
+    baca.make_repeat_tied_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.dynamic(
+        "pp-ancora",
+        abjad.tweak(-1).self_alignment_X,
+    ),
+    baca.bow_speed_spanner(
+        "poco scr. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
 
 # vc1
 
+maker(
+    ("vc1", 1),
+    harmony.tessera_2(3, rmakers.force_rest(baca.plt(0))),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("vc1", 5),
+    harmony.tessera_2(3, advance=24),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # vc2
+
+maker(
+    ("vc2", 1),
+    harmony.tessera_2(2, rmakers.force_rest(baca.plt(0))),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("vc2", 5),
+    harmony.tessera_2(2, advance=24),
+    baca.staff_position(0, not_yet_pitched=True),
+)
 
 # cb1
 
+maker(
+    ("cb1", 1),
+    harmony.tessera_2(1, rmakers.force_rest(baca.plt(0))),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("cb1", 5),
+    harmony.tessera_2(1, advance=24),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # cb2
+
+maker(
+    ("cb2", 1),
+    harmony.tessera_2(0),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("cb2", 5),
+    harmony.tessera_2(0, advance=24),
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
+# vc1, vc2, cb1, cb2
+
+maker(
+    (["vc1", "vc2", "cb1", "cb2"], 1),
+    baca.hairpin(
+        "p < f",
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    (["vc1", "vc2", "cb1", "cb2"], 5),
+    baca.dynamic("p"),
+)
+
+maker(
+    (["vc1", "vc2", "cb1", "cb2"], [1, 5]),
+    baca.triple_staccato(baca.pheads()),
+    baca.label(abjad.label().with_durations(denominator=16)),
+)
