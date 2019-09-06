@@ -305,6 +305,7 @@ def sixteenths(
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
         *meter,
+        *commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
         preprocessor=preprocessor_,
