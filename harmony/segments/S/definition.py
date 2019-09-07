@@ -73,11 +73,33 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 1),
+    harmony.thirty_seconds(
+        [1], [2],
+        rmakers.force_rest(baca.tuplet(1)),
+        divisions=[2]
+    ),
+    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        selector=baca.tleaves(),
+    ),
+    baca.hairpin(
+        "o< mp >o niente",
+        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
 # perc1
 
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
+    harmony.rest_appoggiato([0, 5], [5, 11]),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
@@ -110,6 +132,8 @@ maker(
 maker(
     ("perc2", 1),
     baca.staff_lines(3),
+    harmony.rest_appoggiato([0, 4], [5, 11]),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
@@ -139,17 +163,88 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 1),
+    harmony.sixteenths(
+        [2, 2, 2, 2, 2, 2, -99],
+        None,
+        rmakers.written_duration((1, 4)),
+        rmakers.repeat_tie(baca.pleaves()[1:]),
+        rmakers.unbeam(),
+    ),
+    baca.invisible_music(baca.pleaves().get([1], 2)),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.hairpin(
+        "o< mp > pp -- ! < mp >o niente",
+        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+    # note that chord erases duration multipliers on notes;
+    # fix before pitch application
+    baca.pitch("B4"),
+)
+
 # va
+
+maker(
+    ("va", 1),
+    # chord pitches cause duration multipliers to go missing
+    baca.staff_position(0, not_yet_pitched=True),
+)
 
 # vc1
 
+maker(
+    ("vc1", 1),
+    # chord pitches cause duration multipliers to go missing
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # vc2
+
+maker(
+    ("vc2", 1),
+    # chord pitches cause duration multipliers to go missing
+    baca.staff_position(0, not_yet_pitched=True),
+)
 
 # cb1
 
+maker(
+    ("cb1", 1),
+    # chord pitches cause duration multipliers to go missing
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # cb2
 
+maker(
+    ("cb2", 1),
+    # chord pitches cause duration multipliers to go missing
+    baca.staff_position(0, not_yet_pitched=True),
+)
+
 # va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    harmony.sixteenths(
+        [2, 2, 2, 2, 2, 2, -99],
+        None,
+        rmakers.written_duration((1, 4)),
+        rmakers.repeat_tie(baca.pleaves()[1:]),
+        rmakers.unbeam(),
+    ),
+    baca.invisible_music(baca.pleaves().get([1], 2)),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.hairpin(
+        "o< mp > pp -- ! < mp >o niente",
+        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
+        selector=baca.tleaves().rleak(),
+    ),
+)
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 11),
