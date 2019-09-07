@@ -84,10 +84,31 @@ maker(
     baca.trill_spanner(
         None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
+        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("bfl", 12),
+    harmony.thirty_seconds(
+        [1], [2],
+        divisions=[5]
+    ),
+    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
+        selector=baca.tleaves(),
+    ),
+    baca.hairpin(
+        "o< mf >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
         selector=baca.tleaves().rleak(),
     ),
@@ -98,6 +119,7 @@ maker(
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
+    baca.clef("percussion"),
     harmony.rest_appoggiato([0, 5], [5, 11]),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
@@ -108,8 +130,15 @@ maker(
 )
 
 maker(
-    ("perc1", 4),
+    ("perc1", (4, 8)),
     baca.staff_lines(3),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.rest_appoggiato([0, 5, 0, 6, 0, 7, 0, 8, 0, 9], [1, 19, 1, 15]),
+)
+
+maker(
+    ("perc1", 9),
+    harmony.rest_appoggiato([19], [16]),
 )
 
 maker(
@@ -120,6 +149,8 @@ maker(
 maker(
     ("perc1", 12),
     baca.staff_lines(3),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.rest_appoggiato([25], [20]),
 )
 
 maker(
@@ -142,8 +173,15 @@ maker(
 )
 
 maker(
-    ("perc2", 4),
+    ("perc2", (4, 8)),
     baca.staff_lines(3),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.rest_appoggiato([0, 4, 0, 5, 0, 6, 0, 7, 0, 8], [1, 19, 1, 15]),
+)
+
+maker(
+    ("perc2", 9),
+    harmony.rest_appoggiato([18], [16]),
 )
 
 maker(
@@ -154,6 +192,8 @@ maker(
 maker(
     ("perc2", 12),
     baca.staff_lines(3),
+    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.rest_appoggiato([24], [20]),
 )
 
 maker(
@@ -185,12 +225,42 @@ maker(
     baca.pitch("B4"),
 )
 
+maker(
+    ("hp", (4, 9)),
+    baca.make_notes(),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("hp", 12),
+    baca.make_notes(),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
 # va
 
 maker(
     ("va", 1),
     # chord pitches cause duration multipliers to go missing
     baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("va", (4, 9)),
+    baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("va", 12),
+    baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
 )
 
 # vc1
@@ -201,12 +271,36 @@ maker(
     baca.staff_position(0, not_yet_pitched=True),
 )
 
+maker(
+    ("vc1", (4, 9)),
+    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("vc1", 12),
+    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
 # vc2
 
 maker(
     ("vc2", 1),
     # chord pitches cause duration multipliers to go missing
     baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("vc2", (4, 9)),
+    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("vc2", 12),
+    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
 )
 
 # cb1
@@ -217,12 +311,36 @@ maker(
     baca.staff_position(0, not_yet_pitched=True),
 )
 
+maker(
+    ("cb1", (4, 9)),
+    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("cb1", 12),
+    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
 # cb2
 
 maker(
     ("cb2", 1),
     # chord pitches cause duration multipliers to go missing
     baca.staff_position(0, not_yet_pitched=True),
+)
+
+maker(
+    ("cb2", (4, 9)),
+    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
+)
+
+maker(
+    ("cb2", 12),
+    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
+    baca.not_yet_pitched(),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -244,6 +362,20 @@ maker(
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
+    baca.make_notes(),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 12),
+    baca.make_notes(),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
 )
 
 maker(
