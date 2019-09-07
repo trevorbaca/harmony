@@ -335,6 +335,7 @@ S_Bass_Flute_Music_Voice = {                                                   %
         \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
         [                                                                      %! harmony.thirty_seconds
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        - \tweak staff-padding 8                                               %! baca.trill_spanner:SpannerIndicatorCommand(1)
         \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
         \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)         %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         \set Staff.shortInstrumentName = \harmony-bfl-markup                   %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
@@ -454,11 +455,133 @@ S_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 1                                                                     %! _make_measure_silences
 
-    % [S Bass_Flute_Music_Voice measure 179 / measure 12]                      %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 20/21 {                                                             %! harmony.thirty_seconds
 
-    % [S Bass_Flute_Music_Voice measure 180 / measure 13]                      %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+        % [S Bass_Flute_Music_Voice measure 179 / measure 12]                  %! _comment_measure_numbers
+        g'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        - \tweak staff-padding 8                                               %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mf                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+        \stopTrillSpan                                                         %! baca.trill_spanner:SpannerIndicatorCommand(2)
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Bass_Flute_Music_Voice measure 180 / measure 13]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c''1 * 1                                                           %! _make_multimeasure_rest_container
+            - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Bass_Flute_Rest_Voice measure 180 / measure 13]               %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -509,6 +632,69 @@ S_Percussion_I_Music_Voice_A = {                                               %
 }                                                                              %! abjad.Path.extern
 
 
+S_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_C = {                                               %! abjad.Path.extern
+
+    r2...                                                                      %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_D = {                                               %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_E = {                                               %! abjad.Path.extern
+
+    r2...                                                                      %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_F = {                                               %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_G = {                                               %! abjad.Path.extern
+
+    r1                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_I_Music_Voice_H = {                                               %! abjad.Path.extern
+
+    r2.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
 S_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
     % [S Percussion_I_Music_Voice measure 168 / measure 1]                     %! _comment_measure_numbers
@@ -517,12 +703,12 @@ S_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     r4                                                                         %! harmony.rest_appoggiato
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
@@ -530,7 +716,7 @@ S_Percussion_I_Music_Voice = {                                                 %
     ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     r16                                                                        %! harmony.rest_appoggiato
 
@@ -608,28 +794,321 @@ S_Percussion_I_Music_Voice = {                                                 %
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 3                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_B                                          %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_I_Music_Voice measure 172 / measure 5]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_C                                          %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_I_Music_Voice measure 173 / measure 6]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_D                                          %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_I_Music_Voice measure 174 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_E                                          %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_I_Music_Voice measure 175 / measure 8]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
 
-    % [S Percussion_I_Music_Voice measure 176 / measure 9]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    <<
 
-    % [S Percussion_I_Music_Voice measure 177 / measure 10]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_F                                          %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [S Percussion_I_Music_Voice measure 176 / measure 9]             %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_G                                          %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_I_Music_Voice measure 177 / measure 10]            %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_I_Rest_Voice measure 177 / measure 10]             %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Percussion_I_Music_Voice measure 178 / measure 11]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -641,19 +1120,130 @@ S_Percussion_I_Music_Voice = {                                                 %
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 1                                                                     %! _make_measure_silences
 
-    % [S Percussion_I_Music_Voice measure 179 / measure 12]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <<
 
-    % [S Percussion_I_Music_Voice measure 180 / measure 13]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [S Percussion_I_Music_Voice measure 179 / measure 12]            %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \slash
+            \voiceOne
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_I_Music_Voice"
+        \S_Percussion_I_Music_Voice_H                                          %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_I_Music_Voice measure 180 / measure 13]            %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_I_Rest_Voice measure 180 / measure 13]             %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -695,6 +1285,69 @@ S_Percussion_I_Music_Staff = <<                                                %
 S_Percussion_II_Music_Voice_A = {                                              %! abjad.Path.extern
 
     r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_B = {                                              %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_C = {                                              %! abjad.Path.extern
+
+    r2...                                                                      %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_D = {                                              %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_E = {                                              %! abjad.Path.extern
+
+    r2...                                                                      %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_F = {                                              %! abjad.Path.extern
+
+    r8.                                                                        %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+    r2                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_G = {                                              %! abjad.Path.extern
+
+    r1                                                                         %! harmony.rest_appoggiato
+
+}                                                                              %! abjad.Path.extern
+
+
+S_Percussion_II_Music_Voice_H = {                                              %! abjad.Path.extern
+
+    r2.                                                                        %! harmony.rest_appoggiato
 
     r2                                                                         %! harmony.rest_appoggiato
 
@@ -797,28 +1450,303 @@ S_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 3                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_B                                         %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_II_Music_Voice measure 172 / measure 5]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_C                                         %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_II_Music_Voice measure 173 / measure 6]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_D                                         %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_II_Music_Voice measure 174 / measure 7]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_E                                         %! abjad.Path.extern
+
+    >>
 
     % [S Percussion_II_Music_Voice measure 175 / measure 8]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    r16                                                                        %! harmony.rest_appoggiato
 
-    % [S Percussion_II_Music_Voice measure 176 / measure 9]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    <<
 
-    % [S Percussion_II_Music_Voice measure 177 / measure 10]                   %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_F                                         %! abjad.Path.extern
+
+    >>
+
+    <<
+
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [S Percussion_II_Music_Voice measure 176 / measure 9]            %! _comment_measure_numbers
+            \slash
+            \voiceOne
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_G                                         %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_II_Music_Voice measure 177 / measure 10]           %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_II_Rest_Voice measure 177 / measure 10]            %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Percussion_II_Music_Voice measure 178 / measure 11]                   %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -830,19 +1758,127 @@ S_Percussion_II_Music_Voice = {                                                %
     \startStaff                                                                %! _style_fermata_measures(2)
     R1 * 1                                                                     %! _make_measure_silences
 
-    % [S Percussion_II_Music_Voice measure 179 / measure 12]                   %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 3                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <<
 
-    % [S Percussion_II_Music_Voice measure 180 / measure 13]                   %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+        \context Voice = "On_Beat_Grace_Container"
+        {
+            \set fontSize = #-3
+
+            % [S Percussion_II_Music_Voice measure 179 / measure 12]           %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \slash
+            \voiceOne
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            <c'>8 * 2/5
+            ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
+            [
+            (
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+
+            \baca-unpitched-music-warning                                      %! _color_unpitched_notes
+            c'8 * 2/5
+            )
+            ]
+
+        }
+
+        \context Voice = "Percussion_II_Music_Voice"
+        \S_Percussion_II_Music_Voice_H                                         %! abjad.Path.extern
+
+    >>
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_II_Music_Voice measure 180 / measure 13]           %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Percussion_II_Rest_Voice measure 180 / measure 13]            %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -981,32 +2017,81 @@ S_Harp_Music_Voice = {                                                         %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Harp_Music_Voice measure 171 / measure 4]                             %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2
 
     % [S Harp_Music_Voice measure 172 / measure 5]                             %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>1
 
     % [S Harp_Music_Voice measure 173 / measure 6]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2
 
     % [S Harp_Music_Voice measure 174 / measure 7]                             %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>1
 
     % [S Harp_Music_Voice measure 175 / measure 8]                             %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2
 
     % [S Harp_Music_Voice measure 176 / measure 9]                             %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Harp_Music_Voice measure 177 / measure 10]                            %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Harp_Music_Voice measure 177 / measure 10]                    %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Harp_Rest_Voice measure 177 / measure 10]                     %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Harp_Music_Voice measure 178 / measure 11]                            %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
@@ -1015,10 +2100,48 @@ S_Harp_Music_Voice = {                                                         %
     R1 * 1                                                                     %! _make_measure_silences
 
     % [S Harp_Music_Voice measure 179 / measure 12]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Harp_Music_Voice measure 180 / measure 13]                            %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Music_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Harp_Music_Voice measure 180 / measure 13]                    %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Harp_Rest_Voice"                                     %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Harp_Rest_Voice measure 180 / measure 13]                     %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1163,32 +2286,81 @@ S_Viola_Music_Voice = {                                                        %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Viola_Music_Voice measure 171 / measure 4]                            %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <b c' d'>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2
 
     % [S Viola_Music_Voice measure 172 / measure 5]                            %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>1
 
     % [S Viola_Music_Voice measure 173 / measure 6]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2
 
     % [S Viola_Music_Voice measure 174 / measure 7]                            %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>1
 
     % [S Viola_Music_Voice measure 175 / measure 8]                            %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2
 
     % [S Viola_Music_Voice measure 176 / measure 9]                            %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Viola_Music_Voice measure 177 / measure 10]                           %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Viola_Music_Voice measure 177 / measure 10]                   %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Viola_Rest_Voice measure 177 / measure 10]                    %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Viola_Music_Voice measure 178 / measure 11]                           %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -1205,14 +2377,52 @@ S_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Viola_Music_Voice measure 180 / measure 13]                           %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b c' d'>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Music_Voice"                                   %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Viola_Music_Voice measure 180 / measure 13]                   %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Viola_Rest_Voice"                                    %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Viola_Rest_Voice measure 180 / measure 13]                    %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1357,32 +2567,81 @@ S_Cello_I_Music_Voice = {                                                      %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Cello_I_Music_Voice measure 171 / measure 4]                          %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_I_Music_Voice measure 172 / measure 5]                          %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Cello_I_Music_Voice measure 173 / measure 6]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_I_Music_Voice measure 174 / measure 7]                          %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Cello_I_Music_Voice measure 175 / measure 8]                          %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_I_Music_Voice measure 176 / measure 9]                          %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Cello_I_Music_Voice measure 177 / measure 10]                         %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_I_Music_Voice measure 177 / measure 10]                 %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_I_Rest_Voice measure 177 / measure 10]                  %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Cello_I_Music_Voice measure 178 / measure 11]                         %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -1399,14 +2658,52 @@ S_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Cello_I_Music_Voice measure 180 / measure 13]                         %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Music_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_I_Music_Voice measure 180 / measure 13]                 %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_I_Rest_Voice"                                  %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_I_Rest_Voice measure 180 / measure 13]                  %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1551,32 +2848,81 @@ S_Cello_II_Music_Voice = {                                                     %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Cello_II_Music_Voice measure 171 / measure 4]                         %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_II_Music_Voice measure 172 / measure 5]                         %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Cello_II_Music_Voice measure 173 / measure 6]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_II_Music_Voice measure 174 / measure 7]                         %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Cello_II_Music_Voice measure 175 / measure 8]                         %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Cello_II_Music_Voice measure 176 / measure 9]                         %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Cello_II_Music_Voice measure 177 / measure 10]                        %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_II_Music_Voice measure 177 / measure 10]                %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_II_Rest_Voice measure 177 / measure 10]                 %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Cello_II_Music_Voice measure 178 / measure 11]                        %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -1593,14 +2939,52 @@ S_Cello_II_Music_Voice = {                                                     %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Cello_II_Music_Voice measure 180 / measure 13]                        %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Music_Voice"                                %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_II_Music_Voice measure 180 / measure 13]                %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 1                                                            %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Cello_II_Rest_Voice"                                 %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Cello_II_Rest_Voice measure 180 / measure 13]                 %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1745,32 +3129,81 @@ S_Contrabass_I_Music_Voice = {                                                 %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Contrabass_I_Music_Voice measure 171 / measure 4]                     %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 172 / measure 5]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Contrabass_I_Music_Voice measure 173 / measure 6]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 174 / measure 7]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Contrabass_I_Music_Voice measure 175 / measure 8]                     %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 176 / measure 9]                     %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Contrabass_I_Music_Voice measure 177 / measure 10]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_I_Music_Voice measure 177 / measure 10]            %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_I_Rest_Voice measure 177 / measure 10]             %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Contrabass_I_Music_Voice measure 178 / measure 11]                    %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -1787,14 +3220,52 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Contrabass_I_Music_Voice measure 180 / measure 13]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_I_Music_Voice measure 180 / measure 13]            %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c''1 * 1                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_I_Rest_Voice measure 180 / measure 13]             %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1935,32 +3406,81 @@ S_Contrabass_II_Music_Voice = {                                                %
     R1 * 1/4                                                                   %! _make_measure_silences
 
     % [S Contrabass_II_Music_Voice measure 171 / measure 4]                    %! _comment_measure_numbers
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
+
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 172 / measure 5]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Contrabass_II_Music_Voice measure 173 / measure 6]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 174 / measure 7]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
 
     % [S Contrabass_II_Music_Voice measure 175 / measure 8]                    %! _comment_measure_numbers
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 176 / measure 9]                    %! _comment_measure_numbers
-    R1 * 1                                                                     %! _make_measure_silences
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>1
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
-    % [S Contrabass_II_Music_Voice measure 177 / measure 10]                   %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _make_measure_silences
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_II_Music_Voice measure 177 / measure 10]           %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_II_Rest_Voice measure 177 / measure 10]            %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [S Contrabass_II_Music_Voice measure 178 / measure 11]                   %! _comment_measure_numbers
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -1977,14 +3497,52 @@ S_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 5/4                                                                   %! _make_measure_silences
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2.
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
+    \glissando                                                                 %! baca.glissando
 
-    % [S Contrabass_II_Music_Voice measure 180 / measure 13]                   %! _comment_measure_numbers
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 1                                                                     %! _make_measure_silences
+    \hide NoteHead                                                             %! baca.glissando
+    \override Accidental.stencil = ##f                                         %! baca.glissando
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
+    \override Dots.transparent = ##t                                           %! baca.glissando
+    \override Stem.transparent = ##t                                           %! baca.glissando
+    \revert Accidental.stencil                                                 %! baca.glissando
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando
+    \revert NoteHead.no-ledgers                                                %! baca.glissando
+    \undo \hide NoteHead                                                       %! baca.glissando
+    \revert Dots.transparent                                                   %! baca.glissando
+    \revert Stem.transparent                                                   %! baca.glissando
+    \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+    <b, c d>2
+    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Music_Voice"                           %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_II_Music_Voice measure 180 / measure 13]           %! _comment_measure_numbers
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c''1 * 1                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Contrabass_II_Rest_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [S Contrabass_II_Rest_Voice measure 180 / measure 13]            %! _comment_measure_numbers
+            R1 * 1                                                             %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
