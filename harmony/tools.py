@@ -243,24 +243,24 @@ def rest_appoggiato(
     Makes string appoggiato rhythm.
     """
     if divisions:
-        divisions_ = baca.sequence([(_, 8) for _ in divisions])
+        divisions_ = baca.sequence([(_, 16) for _ in divisions])
         preprocessor = (
             baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
         )
     else:
         preprocessor = None
-    commands = []
+    commands_ = []
     if counts:
         command = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=leaf_duration
         )
-        commands.append(command)
+        commands_.append(command)
     return baca.rhythm(
         rmakers.note(),
         # omit reference meters to allow 5 = 3 + 2
         rmakers.rewrite_meter(),
         rmakers.force_repeat_tie((1, 8)),
-        *commands,
+        *commands_,
         rmakers.force_rest(baca.plts(grace=False)),
         preprocessor=preprocessor,
         tag=baca.frame(inspect.currentframe()),
