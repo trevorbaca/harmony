@@ -51,6 +51,15 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", (3, 10)),
+    harmony.sixteenths([-8, 8, -16, 4], [1]),
+    baca.covered_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
+)
+
 # perc1
 
 maker(
@@ -63,19 +72,67 @@ maker(
     baca.staff_lines(1),
 )
 
+maker(
+    ("perc1", (3, 10)),
+    harmony.sixteenths([8, -8, 8, -8, 8, -16], [2]),
+    baca.markup(r"\baca-slate-scrape-markup", literal=True),
+    harmony.slate_staff_position(),
+)
+
 # perc2
+
+maker(
+    ("perc2", (3, 10)),
+    harmony.sixteenths([2, -8, 2, -8, 2, -20], [1]),
+    baca.markup(r"\baca-slate-brush-markup", literal=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
+    harmony.slate_staff_position(),
+)
 
 # hp
 
+maker(
+    ("hp", (3, 10)),
+    harmony.sixteenths([2, -20, 2, -24]),
+    baca.markup(r"\baca-sons-xylophoniques-markup", literal=True),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
 # va
+
+maker(
+    ("va", (3, 10)),
+    harmony.sixteenths([2, -8, 2, -4, 2, -26], [2]),
+)
 
 # vc1
 
+maker(
+    ("vc1", (3, 10)),
+    harmony.sixteenths([3, -7, 3, -7, 3, -7, 3, -14], [1]),
+)
+
 # vc2
+
+maker(
+    ("vc2", (3, 10)),
+    harmony.sixteenths([3, -5, 3, -5, 3, -5, 3, -23], [1]),
+)
 
 # cb1
 
+maker(
+    ("cb1", (3, 10)),
+    harmony.sixteenths([3, -7, 3, -7, 3, -7, 3, -14]),
+)
+
 # cb2
+
+maker(
+    ("cb2", (3, 10)),
+    harmony.sixteenths([3, -5, 3, -5, 3, -5, 3, -23]),
+)
 
 # va, vc1, vc2, cb1, cb2
 
@@ -85,6 +142,13 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 3),
+    (["va", "vc1", "vc2", "cb1", "cb2"], (3, 10)),
     baca.staff_lines(1),
+    baca.chunk(
+        baca.clef("percussion"),
+        baca.clef_shift("percussion"),
+    ),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(baca.pheads()),
+    baca.staff_position(0),
 )
