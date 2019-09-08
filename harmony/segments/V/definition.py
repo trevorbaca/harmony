@@ -62,21 +62,367 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", 3),
+    harmony.sixteenths(
+        [-4, 2, 2, -4],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
+    baca.hairpin(
+        "o< mp >o niente",
+        map=baca.runs(),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.invisible_music(
+        map=baca.runs().map(baca.leaves()[1:]),
+    ),
+)
+
+maker(
+    ("bfl", (5, 10)),
+    harmony.sixteenths(
+        [2, 2],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.hairpin(
+        "niente o< mp >o",
+        pieces=baca.clparts([1]),
+        selector=baca.leaves(),
+    ),
+    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.invisible_music(
+        selector=baca.leaves().get([1], 2),
+    ),
+)
+
 # perc1
+
+maker(
+    ("perc1", 3),
+    harmony.sixteenths(
+        [-4, 2, 2, -4],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    harmony.triangle_staff_position(),
+    # TODO: make stem tremolo work with duration multipliers:
+    ###baca.stem_tremolo(baca.pleaves()),
+    baca.hairpin(
+        "o< pp >o niente",
+        map=baca.runs(),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.invisible_music(
+        map=baca.runs().map(baca.leaves()[1:]),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        abjad.tweak(9.25).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
+    ("perc1", (5, 10)),
+    baca.make_notes(),
+    harmony.triangle_staff_position(),
+    baca.flat_glissando(2, hide_middle_stems=True),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.dynamic("pp"),
+    baca.markup(
+        r"\baca-triangle-markup",
+        abjad.tweak(9.25).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
+    ("perc1", 12),
+    baca.make_notes(),
+    harmony.triangle_staff_position(),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("pp-ancora", abjad.tweak(-0.75).self_alignment_X),
+)
 
 # perc2
 
+maker(
+    ("perc2", 3),
+    harmony.sixteenths([-4, 4, -4]),
+    harmony.tam_tam_staff_position(),
+    baca.dynamic("p"),
+    baca.laissez_vibrer(baca.pheads()),
+    baca.accent(baca.pheads()),
+    baca.markup(r"\baca-tam-tam-markup", literal=True),
+)
+
+maker(
+    ("perc2", (5, 10)),
+    harmony.sixteenths([4, -8]),
+    harmony.tam_tam_staff_position(),
+    baca.dynamic("p-sempre", abjad.tweak(-0.75).self_alignment_X),
+    baca.laissez_vibrer(baca.pheads()),
+    baca.accent(baca.pheads()),
+    baca.markup(r"\baca-tam-tam-markup", literal=True),
+)
+
 # hp
+
+maker(
+    ("hp", 3),
+    harmony.sixteenths([-4, 4, -4]),
+    baca.clef("bass"),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("p"),
+    baca.laissez_vibrer(baca.pheads()),
+    baca.accent(baca.pheads()),
+)
+
+maker(
+    ("hp", (5, 10)),
+    harmony.sixteenths([4, -8]),
+    baca.staff_position(-6, not_yet_pitched=True),
+    baca.dynamic("p-sempre", abjad.tweak(-0.75).self_alignment_X),
+    baca.laissez_vibrer(baca.pheads()),
+    baca.accent(baca.pheads()),
+)
 
 # va
 
+maker(
+    ("va", (1, 3)),
+    harmony.sixteenths([32], [1], grace_suffixes=[1]),
+    baca.staff_positions([2, -2, 4], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+)
+
+maker(
+    ("va", (5, 10)),
+    harmony.sixteenths(
+        [18, 13, 9, 6, 3, 2, 2, 2, 2, 2, 3, 3, 6, 99],
+        [1],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "o< ff >o niente",
+        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("va", 12),
+    harmony.sixteenths(
+        [99],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
+)
+
 # vc1
+
+maker(
+    ("vc1", 3),
+    harmony.sixteenths(
+        [-4, 2, 2, -4],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.note_head_style_harmonic(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
+    baca.hairpin(
+        "o< mp >o niente",
+        map=baca.runs(),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.invisible_music(
+        map=baca.runs().map(baca.leaves()[1:]),
+    ),
+)
+
+maker(
+    ("vc1", (5, 10)),
+    harmony.sixteenths(
+        [2, 2],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.hairpin(
+        "niente o< mp >o",
+        pieces=baca.clparts([1]),
+        selector=baca.leaves(),
+    ),
+    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.invisible_music(
+        selector=baca.leaves().get([1], 2),
+    ),
+)
 
 # vc2
 
+maker(
+    ("vc2", (1, 3)),
+    harmony.eighths([23], [1], grace_suffixes=[1]),
+    baca.staff_positions([2, -2, 4], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+)
+
+maker(
+    ("vc2", (5, 10)),
+    harmony.eighths(
+        [9, 7, 6, 3, 2, 1, 1, 1, 1, 2, 3, 6, 99],
+        [1],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "o< ff >o niente",
+        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("vc2", 12),
+    harmony.sixteenths(
+        [99],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
+)
+
 # cb1
 
+maker(
+    ("cb1", 3),
+    harmony.sixteenths(
+        [-4, 2, 2, -4],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.note_head_style_harmonic(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
+    baca.hairpin(
+        "o< mp >o niente",
+        map=baca.runs(),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.invisible_music(
+        map=baca.runs().map(baca.leaves()[1:]),
+    ),
+)
+
+maker(
+    ("cb1", (5, 10)),
+    harmony.sixteenths(
+        [2, 2],
+        None,
+        rmakers.written_duration((1, 4)),
+    ),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(3).staff_padding,
+    ),
+    baca.hairpin(
+        "niente o< mp >o",
+        pieces=baca.clparts([1]),
+        selector=baca.leaves(),
+    ),
+    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.invisible_music(
+        selector=baca.leaves().get([1], 2),
+    ),
+)
+
 # cb2
+
+maker(
+    ("cb2", (1, 3)),
+    harmony.sixteenths([27], grace_suffixes=[1]),
+    baca.staff_positions([2, -2, 4], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+)
+
+maker(
+    ("cb2", (5, 10)),
+    harmony.sixteenths(
+        [9, 7, 6, 3, 2, 1, 1, 1, 1, 2, 3, 6, 99],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "o< ff >o niente",
+        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("cb2", 12),
+    harmony.sixteenths(
+        [99],
+        grace_suffixes=[1],
+    ),
+    baca.staff_positions([2, -2], not_yet_pitched=True),
+    # TODO: use multistage glissando
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
+)
 
 # va, vc1, vc2, cb1, cb2
 
