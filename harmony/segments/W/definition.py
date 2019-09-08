@@ -27,7 +27,7 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (3, 5), (1, 4),
+        (5, 4), (6, 4), (1, 4),
         (5, 4), (5, 4), (6, 4), (3, 4), (4, 4),
     ],
     transpose_score=True,
@@ -64,13 +64,53 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", (4, 6)),
+    harmony.sixteenths([4]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.cmgroups().map(baca.leaves().get([0, -1]))),
+    baca.dynamic("mp"),
+    baca.espressivo(baca.pheads()),
+    baca.text_spanner(
+        "mph =|",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        selector=baca.leaves().rleak(),
+    ),
+)
+
 # perc1
+
+maker(
+    ("perc1", 1),
+    harmony.sixteenths([-16, 4]),
+    harmony.bass_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+    baca.markup(r"\baca-bd-struck-markup", literal=True),
+    baca.dynamic("mp"),
+)
+
+maker(
+    ("perc1", (4, 6)),
+    harmony.sixteenths([4, -12, 4, 4, -12, 4, 4, -16, 4]),
+    harmony.bass_drum_staff_position(),
+    baca.accent(baca.pheads()),
+    baca.laissez_vibrer(baca.ptails()),
+    baca.markup(r"\baca-bd-struck-markup", literal=True),
+    baca.dynamic("mp"),
+)
 
 # perc2
 
 maker(
     ("perc2", 6),
     baca.staff_lines(5),
+    harmony.sixteenths([4, -99]),
+    baca.markup(r"\baca-glockenspiel-markup", literal=True),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.laissez_vibrer(baca.ptails()),
 )
 
 maker(
@@ -80,15 +120,93 @@ maker(
 
 # hp
 
+maker(
+    ("hp", 6),
+    harmony.sixteenths([4, -99]),
+    baca.markup(r"\baca-xyl-markup", literal=True),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.laissez_vibrer(baca.ptails()),
+)
+
 # va
+
+maker(
+    ("va", 1),
+    harmony.sixteenths([4, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("ff"),
+)
+
+maker(
+    ("va", (4, 6)),
+    harmony.sixteenths([4]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("p"),
+)
 
 # vc1
 
+maker(
+    ("vc1", 1),
+    harmony.sixteenths([4, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("ff"),
+)
+
+maker(
+    ("vc1", (4, 6)),
+    harmony.sixteenths([4]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("p"),
+)
+
 # vc2
+
+maker(
+    ("vc2", 6),
+    baca.make_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.bow_speed_spanner(
+        "slow bow =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
 
 # cb1
 
+maker(
+    ("cb1", 1),
+    harmony.sixteenths([4, -99]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("ff"),
+)
+
+maker(
+    ("cb1", 6),
+    harmony.sixteenths([4]),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.triple_staccato(baca.pheads()),
+    baca.dynamic("p"),
+)
+
 # cb2
+
+maker(
+    ("cb2", 6),
+    baca.make_notes(),
+    baca.staff_position(0, not_yet_pitched=True),
+    baca.scp_spanner(
+        "scp =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+# va, vc1, vc2, cb1, cb2
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
