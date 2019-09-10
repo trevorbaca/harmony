@@ -1690,11 +1690,11 @@ X_Viola_Music_Voice = {                                                        %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "alto"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'8                                                                        %! harmony.sixteenths
@@ -1710,7 +1710,7 @@ X_Viola_Music_Voice = {                                                        %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c'8                                                                        %! harmony.sixteenths
@@ -2079,14 +2079,14 @@ X_Cello_I_Music_Voice = {                                                      %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -2099,10 +2099,10 @@ X_Cello_I_Music_Voice = {                                                      %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2120,7 +2120,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2131,7 +2131,7 @@ X_Cello_I_Music_Voice = {                                                      %
 
     % [X Cello_I_Music_Voice measure 218 / measure 2]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2148,7 +2148,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r2                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2159,7 +2159,7 @@ X_Cello_I_Music_Voice = {                                                      %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2178,7 +2178,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2188,7 +2188,7 @@ X_Cello_I_Music_Voice = {                                                      %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2226,7 +2226,7 @@ X_Cello_I_Music_Voice = {                                                      %
 
     % [X Cello_I_Music_Voice measure 221 / measure 5]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2.
+    d2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -2238,7 +2238,7 @@ X_Cello_I_Music_Voice = {                                                      %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2249,18 +2249,18 @@ X_Cello_I_Music_Voice = {                                                      %
 
     % [X Cello_I_Music_Voice measure 222 / measure 6]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2272,17 +2272,17 @@ X_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2295,11 +2295,11 @@ X_Cello_I_Music_Voice = {                                                      %
 
     % [X Cello_I_Music_Voice measure 223 / measure 7]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2.
+    d2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2310,13 +2310,13 @@ X_Cello_I_Music_Voice = {                                                      %
 
     % [X Cello_I_Music_Voice measure 224 / measure 8]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2327,18 +2327,18 @@ X_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2349,18 +2349,18 @@ X_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Cello_I_Music_Voice measure 225 / measure 9]                          %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2371,7 +2371,7 @@ X_Cello_I_Music_Voice = {                                                      %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2383,17 +2383,17 @@ X_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2404,7 +2404,7 @@ X_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
@@ -2454,14 +2454,14 @@ X_Cello_II_Music_Voice = {                                                     %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-ii-markup                          %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -2474,10 +2474,10 @@ X_Cello_II_Music_Voice = {                                                     %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2495,7 +2495,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2506,7 +2506,7 @@ X_Cello_II_Music_Voice = {                                                     %
 
     % [X Cello_II_Music_Voice measure 218 / measure 2]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2523,7 +2523,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r2                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2534,7 +2534,7 @@ X_Cello_II_Music_Voice = {                                                     %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2553,7 +2553,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2563,7 +2563,7 @@ X_Cello_II_Music_Voice = {                                                     %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2601,7 +2601,7 @@ X_Cello_II_Music_Voice = {                                                     %
 
     % [X Cello_II_Music_Voice measure 221 / measure 5]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -2613,13 +2613,13 @@ X_Cello_II_Music_Voice = {                                                     %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2630,13 +2630,13 @@ X_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Cello_II_Music_Voice measure 222 / measure 6]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2646,7 +2646,7 @@ X_Cello_II_Music_Voice = {                                                     %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2657,18 +2657,18 @@ X_Cello_II_Music_Voice = {                                                     %
 
     % [X Cello_II_Music_Voice measure 223 / measure 7]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2679,13 +2679,13 @@ X_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2696,18 +2696,18 @@ X_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Cello_II_Music_Voice measure 224 / measure 8]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2718,7 +2718,7 @@ X_Cello_II_Music_Voice = {                                                     %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2730,17 +2730,17 @@ X_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2752,18 +2752,18 @@ X_Cello_II_Music_Voice = {                                                     %
 
     % [X Cello_II_Music_Voice measure 225 / measure 9]                         %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -2774,7 +2774,7 @@ X_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
@@ -2824,14 +2824,14 @@ X_Contrabass_I_Music_Voice = {                                                 %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -2844,10 +2844,10 @@ X_Contrabass_I_Music_Voice = {                                                 %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2865,7 +2865,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2876,7 +2876,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
     % [X Contrabass_I_Music_Voice measure 218 / measure 2]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2893,7 +2893,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r2                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2904,7 +2904,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2923,7 +2923,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2933,7 +2933,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -2971,7 +2971,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
     % [X Contrabass_I_Music_Voice measure 221 / measure 5]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -2983,13 +2983,13 @@ X_Contrabass_I_Music_Voice = {                                                 %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3000,24 +3000,24 @@ X_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Contrabass_I_Music_Voice measure 222 / measure 6]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3028,18 +3028,18 @@ X_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3051,18 +3051,18 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
     % [X Contrabass_I_Music_Voice measure 223 / measure 7]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3073,13 +3073,13 @@ X_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3092,12 +3092,12 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
     % [X Contrabass_I_Music_Voice measure 224 / measure 8]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3108,12 +3108,12 @@ X_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3124,12 +3124,12 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
     % [X Contrabass_I_Music_Voice measure 225 / measure 9]                     %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3139,13 +3139,13 @@ X_Contrabass_I_Music_Voice = {                                                 %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3156,7 +3156,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
@@ -3206,14 +3206,14 @@ X_Contrabass_II_Music_Voice = {                                                %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-cb-ii-markup                          %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+    \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+    \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
+%@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:_treat_persistent_wrapper(2):baca.clef:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:_attach_color_literal(2)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
@@ -3226,10 +3226,10 @@ X_Contrabass_II_Music_Voice = {                                                %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -3247,7 +3247,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3258,7 +3258,7 @@ X_Contrabass_II_Music_Voice = {                                                %
 
     % [X Contrabass_II_Music_Voice measure 218 / measure 2]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -3275,7 +3275,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r2                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3286,7 +3286,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -3305,7 +3305,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3315,7 +3315,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     \startTrillSpan                                                            %! baca.trill_spanner:SpannerIndicatorCommand(1)
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8                                                                        %! harmony.sixteenths
+    d8                                                                         %! harmony.sixteenths
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \repeatTie                                                                 %! harmony.sixteenths
@@ -3353,7 +3353,7 @@ X_Contrabass_II_Music_Voice = {                                                %
 
     % [X Contrabass_II_Music_Voice measure 221 / measure 5]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -3366,7 +3366,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3378,17 +3378,17 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3399,19 +3399,19 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Contrabass_II_Music_Voice measure 222 / measure 6]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3422,18 +3422,18 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3446,11 +3446,11 @@ X_Contrabass_II_Music_Voice = {                                                %
 
     % [X Contrabass_II_Music_Voice measure 223 / measure 7]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3460,13 +3460,13 @@ X_Contrabass_II_Music_Voice = {                                                %
         }
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3477,24 +3477,24 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     % [X Contrabass_II_Music_Voice measure 224 / measure 8]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8
+    d8
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3505,18 +3505,18 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'4
+    d4
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3529,17 +3529,17 @@ X_Contrabass_II_Music_Voice = {                                                %
 
     % [X Contrabass_II_Music_Voice measure 225 / measure 9]                    %! _comment_measure_numbers
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'16
+    d16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'8.
+    d8.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
     ^ \markup {
@@ -3550,7 +3550,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
-    c'2
+    d2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
