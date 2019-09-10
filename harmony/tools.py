@@ -500,15 +500,15 @@ def tessera_3(
 
 
 def thirty_seconds(
-    counts: abjad.IntegerSequence,
-    extra_counts: abjad.IntegerSequence = None,
     *commands,
     divisions: abjad.IntegerSequence = None,
+    extra_counts: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes thirty-second rhythm.
     """
-    counts_ = baca.sequence(counts)
+    for command in commands or ():
+        assert isinstance(command, rmakers.Command), repr(command)
     if isinstance(divisions, list):
         divisions_ = baca.sequence([(_, 4) for _ in divisions])
         preprocessor = (
@@ -517,7 +517,7 @@ def thirty_seconds(
     else:
         preprocessor = divisions
     return baca.rhythm(
-        rmakers.talea(counts_, 32, extra_counts=extra_counts),
+        rmakers.talea([1], 32, extra_counts=extra_counts),
         *commands,
         rmakers.rewrite_rest_filled(),
         rmakers.rewrite_sustained(),

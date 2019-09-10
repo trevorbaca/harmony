@@ -64,12 +64,12 @@ maker(
 maker(
     ("bfl", (5, 10)),
     harmony.thirty_seconds(
-        [1], [4, 0, 0, 2, 0],
         rmakers.force_rest(baca.tuplets().get([1, 2, 4], 5)),
         divisions=baca.sequence().fuse().split_divisions(
             [(12, 16), (12, 16), (1, 16), (11, 16), (12, 16)],
             cyclic=True,
         ),
+        extra_counts=[4, 0, 0, 2, 0],
     ),
     baca.literal([
         r"\override NoteHead.font-size = -3",
