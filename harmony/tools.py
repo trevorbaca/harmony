@@ -509,13 +509,13 @@ def thirty_seconds(
     Makes thirty-second rhythm.
     """
     counts_ = baca.sequence(counts)
-    if divisions is not None:
+    if isinstance(divisions, list):
         divisions_ = baca.sequence([(_, 4) for _ in divisions])
         preprocessor = (
             baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
         )
     else:
-        preprocessor = None
+        preprocessor = divisions
     return baca.rhythm(
         rmakers.talea(counts_, 32, extra_counts=extra_counts),
         *commands,
