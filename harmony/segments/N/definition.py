@@ -75,10 +75,10 @@ cerulean = [
 maker(
     ("bfl", 2),
     harmony.thirty_seconds(
-        [1], [2],
         rmakers.force_rest(baca.tuplet(0)),
         rmakers.force_rest(baca.pleaf(0)),
-        divisions=[2]
+        divisions=[2],
+        extra_counts=[2],
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
     baca.trill_spanner(
@@ -96,10 +96,10 @@ maker(
 maker(
     ("bfl", 6),
     harmony.thirty_seconds(
-        [1], [2],
         rmakers.force_rest(baca.pleaf(0)),
         rmakers.force_rest(baca.tuplet(1)),
-        divisions=[2]
+        divisions=[2],
+        extra_counts=[2],
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
     baca.trill_spanner(
@@ -117,10 +117,10 @@ maker(
 maker(
     ("bfl", 9),
     harmony.thirty_seconds(
-        [1], [2],
         rmakers.force_rest(baca.tuplet(0)),
         rmakers.force_rest(baca.pleaf(0)),
-        divisions=[2]
+        divisions=[2],
+        extra_counts=[2],
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
     baca.trill_spanner(
