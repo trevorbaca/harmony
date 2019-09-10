@@ -176,11 +176,21 @@ maker(
 # va
 
 maker(
+    ("va", 1),
+    baca.clef("alto"),
+)
+
+maker(
     ("va", (5, 9)),
     harmony.tessera_3(4),
 )
 
 # vc1
+
+maker(
+    ("vc1", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("vc1", (5, 9)),
@@ -190,6 +200,11 @@ maker(
 # vc2
 
 maker(
+    ("vc2", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("vc2", (5, 9)),
     harmony.tessera_3(2),
 )
@@ -197,11 +212,21 @@ maker(
 # cb1
 
 maker(
+    ("cb1", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("cb1", (5, 9)),
     harmony.tessera_3(1),
 )
 
 # cb2
+
+maker(
+    ("cb2", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("cb2", (5, 9)),
