@@ -5,7 +5,7 @@ metadata = abjad.OrderedDict(
     [
         (
             'bol_measure_numbers',
-            [226],
+            [226, 232],
             ),
         ('duration', "0'56''"),
         (

@@ -247,70 +247,556 @@ Y_Global_Rests = {                                                             %
 
 Y_Bass_Flute_Music_Voice = {                                                   %! abjad.Path.extern
 
-    % [Y Bass_Flute_Music_Voice measure 226 / measure 1]                       %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \set Staff.instrumentName = \harmony-bfl-markup                            %! _clone_segment_initial_short_instrument_name
-    \clef "treble"                                                             %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    R1 * 7/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                         %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Bass_Flute_Music_Voice measure 226 / measure 1]               %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-bfl-markup               %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \set Staff.instrumentName = \harmony-bfl-markup                    %! _clone_segment_initial_short_instrument_name
+            \clef "treble"                                                     %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            c''1 * 7/4                                                         %! _make_multimeasure_rest_container
+            - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+            ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                      %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“BassFlute”)"                 %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-bfl-markup               %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Bass_Flute_Rest_Voice measure 226 / measure 1]                %! _comment_measure_numbers
+            R1 * 7/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [Y Bass_Flute_Music_Voice measure 227 / measure 2]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [Y Bass_Flute_Music_Voice measure 228 / measure 3]                       %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    R1 * 1                                                                     %! _make_measure_silences
 
     % [Y Bass_Flute_Music_Voice measure 229 / measure 4]                       %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 %%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_229
 %%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_229
 
-    % [Y Bass_Flute_Music_Voice measure 230 / measure 5]                       %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(2)
-    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
-    \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 12/14 {                                                             %! harmony.thirty_seconds
+
+        % [Y Bass_Flute_Music_Voice measure 230 / measure 5]                   %! _comment_measure_numbers
+        \override NoteHead.font-size = -3                                      %! baca.literal:IndicatorCommand
+        \override Accidental.font-size = -3                                    %! baca.literal:IndicatorCommand
+        \override Accidental.X-offset = 0                                      %! baca.literal:IndicatorCommand
+        \override Accidental.Y-offset = -2                                     %! baca.literal:IndicatorCommand
+        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding:OverrideCommand(1)
+        \stopStaff                                                             %! _style_fermata_measures(2)
+        \once \override Staff.StaffSymbol.line-count = 5                       %! _style_fermata_measures(2)
+        \startStaff                                                            %! _style_fermata_measures(2)
+        g'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
 
     % [Y Bass_Flute_Music_Voice measure 231 / measure 6]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.thirty_seconds
 
-    % [Y Bass_Flute_Music_Voice measure 232 / measure 7]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 11/12 {                                                             %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 12/14 {                                                             %! harmony.thirty_seconds
+
+        % [Y Bass_Flute_Music_Voice measure 232 / measure 7]                   %! _comment_measure_numbers
+        b'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
 
     % [Y Bass_Flute_Music_Voice measure 233 / measure 8]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.thirty_seconds
 
-    % [Y Bass_Flute_Music_Voice measure 234 / measure 9]                       %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 11/12 {                                                             %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
+
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 12/14 {                                                             %! harmony.thirty_seconds
+
+        % [Y Bass_Flute_Music_Voice measure 234 / measure 9]                   %! _comment_measure_numbers
+        b'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
 
     % [Y Bass_Flute_Music_Voice measure 235 / measure 10]                      %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.thirty_seconds
 
-    % [Y Bass_Flute_Music_Voice measure 236 / measure 11]                      %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    \once \override Staff.BarLine.bar-extent = #'(-2 . 2)                      %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
-    \stopStaff                                                                 %! _style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(3)
-    \startStaff                                                                %! _style_fermata_measures(3)
-    \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_236
-    \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_236
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds
+    \times 11/12 {                                                             %! harmony.thirty_seconds
+
+        g'32                                                                   %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \<                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        [                                                                      %! harmony.thirty_seconds
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner:SpannerIndicatorCommand(1)
+        \startTrillSpan                                                        %! baca.trill_spanner:SpannerIndicatorCommand(1)
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        \mp                                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak to-barline ##t                                                %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        - \tweak circled-tip ##t                                               %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+        \>                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
+
+        g'32                                                                   %! harmony.thirty_seconds
+
+        gs'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        as'!32                                                                 %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        cs''!32                                                                %! harmony.thirty_seconds
+
+        c''32                                                                  %! harmony.thirty_seconds
+
+        b'32                                                                   %! harmony.thirty_seconds
+
+        bf'!32                                                                 %! harmony.thirty_seconds
+
+        a'32                                                                   %! harmony.thirty_seconds
+
+        af'!32                                                                 %! harmony.thirty_seconds
+        ]                                                                      %! harmony.thirty_seconds
+
+    }                                                                          %! harmony.thirty_seconds
+
+    r2.                                                                        %! harmony.thirty_seconds
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Music_Voice"                              %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Bass_Flute_Music_Voice measure 236 / measure 11]              %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            \once \override Staff.BarLine.bar-extent = #'(-2 . 2)              %! _style_fermata_measures(1)
+            c''1 * 1/4                                                         %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(3)
+            \once \override Staff.StaffSymbol.line-count = 5                   %! _style_fermata_measures(3)
+            \startStaff                                                        %! _style_fermata_measures(3)
+            \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_236
+            \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_236
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Bass_Flute_Rest_Voice"                               %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Bass_Flute_Rest_Voice measure 236 / measure 11]               %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -354,68 +840,158 @@ Y_Bass_Flute_Music_Staff = <<                                                  %
 
 Y_Percussion_I_Music_Voice = {                                                 %! abjad.Path.extern
 
-    % [Y Percussion_I_Music_Voice measure 226 / measure 1]                     %! _comment_measure_numbers
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
-    \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
-    \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
-    \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
-%@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
-    R1 * 7/4                                                                   %! _call_rhythm_commands
-    - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
-    ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                           %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
-    ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
-    \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Percussion_I_Music_Voice measure 226 / measure 1]             %! _comment_measure_numbers
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
+            \stopStaff                                                         %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.line-count = 1                   %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \startStaff                                                        %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
+            \set Staff.instrumentName = \harmony-perc-i-markup                 %! _clone_segment_initial_short_instrument_name
+            \clef "percussion"                                                 %! REAPPLIED_CLEF:_set_status_tag:_reapply_persistent_indicators(3)
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \once \override Staff.InstrumentName.color = #(x11-color 'green4)  %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \once \override Staff.Clef.color = #(x11-color 'green4)            %! REAPPLIED_CLEF_COLOR:_attach_color_literal(2)
+        %@% \override Staff.Clef.color = ##f                                   %! REAPPLIED_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
+            \set Staff.forceClef = ##t                                         %! REAPPLIED_CLEF:_set_status_tag:_treat_persistent_wrapper(2):_reapply_persistent_indicators(3)
+            \once \override Staff.StaffSymbol.color = #(x11-color 'green4)     %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
+            c'1 * 7/4                                                          %! _make_multimeasure_rest_container
+            - \tweak color #(x11-color 'green4)                                %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+            _ #(make-dynamic-script (markup #:whiteout #:normal-text #:italic "niente")) %! REAPPLIED_DYNAMIC:_set_status_tag:_reapply_persistent_indicators(3)
+            ^ \baca-reapplied-indicator-markup "[“Perc. I”]"                   %! REAPPLIED_MARGIN_MARKUP_ALERT:_attach_latent_indicator_alert
+            ^ \baca-reapplied-indicator-markup "(“Percussion”)"                %! REAPPLIED_INSTRUMENT_ALERT:_attach_latent_indicator_alert
+            \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
+            \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:_treat_persistent_wrapper(3):-PARTS:_reapply_persistent_indicators(3)
+            \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! REAPPLIED_CLEF_REDRAW_COLOR:_attach_color_literal(2)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Percussion_I_Rest_Voice measure 226 / measure 1]              %! _comment_measure_numbers
+            R1 * 7/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     % [Y Percussion_I_Music_Voice measure 227 / measure 2]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    R1 * 3/2                                                                   %! _make_measure_silences
 
     % [Y Percussion_I_Music_Voice measure 228 / measure 3]                     %! _comment_measure_numbers
-    R1 * 4/4                                                                   %! _call_rhythm_commands
+    R1 * 1                                                                     %! _make_measure_silences
 
     % [Y Percussion_I_Music_Voice measure 229 / measure 4]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(1)
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
+    R1 * 1/4                                                                   %! _make_measure_silences
 
     % [Y Percussion_I_Music_Voice measure 230 / measure 5]                     %! _comment_measure_numbers
+    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    c'16                                                                       %! harmony.sixteenths
+    - \tweak X-extent ##f                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+    - \tweak self-alignment-X #-0.75                                           %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    \baca-f-sempre                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
 
     % [Y Percussion_I_Music_Voice measure 231 / measure 6]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r8                                                                         %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
 
     % [Y Percussion_I_Music_Voice measure 232 / measure 7]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    c'16                                                                       %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
 
     % [Y Percussion_I_Music_Voice measure 233 / measure 8]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.sixteenths
+
+    c'16                                                                       %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r8                                                                         %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
 
     % [Y Percussion_I_Music_Voice measure 234 / measure 9]                     %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    c'16                                                                       %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+
+    r8.                                                                        %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
 
     % [Y Percussion_I_Music_Voice measure 235 / measure 10]                    %! _comment_measure_numbers
-    R1 * 6/4                                                                   %! _call_rhythm_commands
+    r16                                                                        %! harmony.sixteenths
 
-    % [Y Percussion_I_Music_Voice measure 236 / measure 11]                    %! _comment_measure_numbers
-    \stopStaff                                                                 %! _style_fermata_measures(1)
-    \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
-    \startStaff                                                                %! _style_fermata_measures(1)
-    R1 * 1/4                                                                   %! _call_rhythm_commands
-    \stopStaff                                                                 %! _style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 1                           %! _style_fermata_measures(3)
-    \startStaff                                                                %! _style_fermata_measures(3)
+    c'16                                                                       %! harmony.sixteenths
+    - \accent                                                                  %! baca.accent:IndicatorCommand
+    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+
+    r8                                                                         %! harmony.sixteenths
+
+    r1                                                                         %! harmony.sixteenths
+
+    r4                                                                         %! harmony.sixteenths
+
+    <<                                                                         %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Music_Voice"                            %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Percussion_I_Music_Voice measure 236 / measure 11]            %! _comment_measure_numbers
+            \baca-invisible-music                                              %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(1)
+            \once \override Staff.StaffSymbol.line-count = 0                   %! _style_fermata_measures(1)
+            \startStaff                                                        %! _style_fermata_measures(1)
+            c'1 * 1/4                                                          %! _make_multimeasure_rest_container
+            \stopStaff                                                         %! _style_fermata_measures(3)
+            \once \override Staff.StaffSymbol.line-count = 1                   %! _style_fermata_measures(3)
+            \startStaff                                                        %! _style_fermata_measures(3)
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+        \context Voice = "Percussion_I_Rest_Voice"                             %! _make_multimeasure_rest_container
+        {                                                                      %! _make_multimeasure_rest_container
+
+            % [Y Percussion_I_Rest_Voice measure 236 / measure 11]             %! _comment_measure_numbers
+            R1 * 1/4                                                           %! _make_multimeasure_rest_container
+
+        }                                                                      %! _make_multimeasure_rest_container
+
+    >>                                                                         %! _make_multimeasure_rest_container
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 

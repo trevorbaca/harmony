@@ -61,7 +61,51 @@ maker(
 
 # bfl
 
+maker(
+    ("bfl", (5, 10)),
+    harmony.thirty_seconds(
+        [1], [4, 0, 0, 2, 0],
+        rmakers.force_rest(baca.tuplets().get([1, 2, 4], 5)),
+        divisions=baca.sequence().fuse().split_divisions(
+            [(12, 16), (12, 16), (1, 16), (11, 16), (12, 16)],
+            cyclic=True,
+        ),
+    ),
+    baca.literal([
+        r"\override NoteHead.font-size = -3",
+        r"\override Accidental.font-size = -3",
+        r"\override Accidental.X-offset = 0",
+        r"\override Accidental.Y-offset = -2",
+    ]),
+    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.trill_spanner(
+        None,
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "o< mp >o niente",
+        pieces=baca.leaves().partition_by_ratio((4, 5)),
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.dls_staff_padding(5),
+)
+
 # perc1
+
+maker(
+    ("perc1", (5, 10)),
+    harmony.sixteenths([1, -23, -1, 1, -22]),
+    harmony.brake_drum_staff_position(),
+    baca.dynamic(
+        "f-sempre",
+        abjad.tweak(-0.75).self_alignment_X,
+        abjad.tweak(False).X_extent,
+    ),
+    baca.accent(baca.pheads()),
+)
 
 # perc2
 
