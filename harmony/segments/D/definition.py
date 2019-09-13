@@ -209,10 +209,7 @@ maker(
 
 maker(
     ("va", 9),
-    baca.chunk(
-        baca.clef("alto"),
-        baca.not_parts(baca.clef_shift("alto")),
-    ),
+    baca.clef("alto"),
     baca.staff_lines(5),
 )
 

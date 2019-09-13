@@ -72,10 +72,7 @@ maker(
 
 maker(
     ("perc1", 2),
-    baca.chunk(
-        baca.clef("percussion"),
-        baca.clef_shift("percussion"),
-    ),
+    baca.clef("percussion"),
     baca.staff_lines(3),
 )
 
@@ -87,10 +84,7 @@ maker(
 maker(
     ("perc1", 5),
     harmony.sixteenths([-16, 4]),
-    baca.chunk(
-        baca.clef("treble"),
-        baca.clef_shift("treble"),
-    ),
+    baca.clef("treble"),
     baca.staff_lines(5),
     baca.markup(r"\baca-glockenspiel-markup", literal=True),
     baca.laissez_vibrer(),
