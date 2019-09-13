@@ -1035,6 +1035,8 @@ F_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-hp-markup                             %! _clone_segment_initial_short_instrument_name
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_40:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_40:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
@@ -1110,8 +1112,8 @@ F_Harp_Music_Voice = {                                                         %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_43:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_43:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
@@ -1142,8 +1144,8 @@ F_Harp_Music_Voice = {                                                         %
             \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.X-extent = ##f                          %! MEASURE_44:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! MEASURE_44:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
             \clef "percussion"                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -1169,8 +1171,8 @@ F_Harp_Music_Voice = {                                                         %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.Clef.X-extent = ##f                                  %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_45:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_45:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)
@@ -1205,8 +1207,8 @@ F_Harp_Music_Voice = {                                                         %
         {                                                                      %! _make_multimeasure_rest_container
 
             % [F Harp_Music_Voice measure 47 / measure 8]                      %! _comment_measure_numbers
-            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-            \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)            %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.X-extent = ##f                          %! MEASURE_47:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)            %! MEASURE_47:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
             \clef "bass"                                                       %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -1595,8 +1597,8 @@ F_Viola_Music_Voice = {                                                        %
             \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \once \override Staff.StaffSymbol.line-count = 1                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
             \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.Clef.X-extent = ##f                          %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! -PARTS:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.X-extent = ##f                          %! MEASURE_47:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+            \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)             %! MEASURE_47:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
             \clef "percussion"                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             \once \override Staff.Clef.color = #(x11-color 'blue)              %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)

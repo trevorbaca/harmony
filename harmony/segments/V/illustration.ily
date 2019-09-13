@@ -1277,6 +1277,8 @@ V_Harp_Music_Voice = {                                                         %
     R1 * 3/4                                                                   %! _make_measure_silences
 
     % [V Harp_Music_Voice measure 198 / measure 3]                             %! _comment_measure_numbers
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_198:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_198:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:_attach_color_literal(1)

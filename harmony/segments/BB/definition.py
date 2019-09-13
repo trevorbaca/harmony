@@ -141,10 +141,7 @@ maker(
 maker(
     ("perc2", 7),
     baca.staff_lines(5),
-    baca.chunk(
-        baca.clef("treble"),
-        baca.clef_shift("treble"),
-    ),
+    baca.clef("treble"),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,

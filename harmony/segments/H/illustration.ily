@@ -583,6 +583,8 @@ H_Harp_Music_Voice = {                                                         %
         \once \override Staff.StaffSymbol.line-count = 5                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
         \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
         \set Staff.instrumentName = \harmony-hp-markup                         %! _clone_segment_initial_short_instrument_name
+    %%% \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_63:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_63:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
         \clef "treble"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
         \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)

@@ -218,10 +218,7 @@ maker(
 
 maker(
     ("hp", 2),
-    baca.chunk(
-        baca.clef("treble"),
-        baca.not_parts(baca.clef_shift("treble")),
-    ),
+    baca.clef("treble"),
     baca.staff_lines(5),
 )
 
@@ -242,19 +239,13 @@ maker(
 
 maker(
     ("hp", (6, 7)),
-    baca.chunk(
-        baca.clef("treble"),
-        baca.not_parts(baca.clef_shift("treble")),
-    ),
+    baca.clef("treble"),
     baca.staff_lines(5),
 )
 
 maker(
     ("hp", 8),
-    baca.chunk(
-        baca.clef("percussion"),
-        baca.not_parts(baca.clef_shift("percussion")),
-    ),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths([2, -99]),
     harmony.whisk_staff_position(),

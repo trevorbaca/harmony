@@ -144,10 +144,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (3, 10)),
     baca.staff_lines(1),
-    baca.chunk(
-        baca.clef("percussion"),
-        baca.clef_shift("percussion"),
-    ),
+    baca.clef("percussion"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
     baca.staff_position(0),

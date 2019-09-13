@@ -1690,6 +1690,8 @@ X_Viola_Music_Voice = {                                                        %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-va-markup                             %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "alto"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -2079,6 +2081,8 @@ X_Cello_I_Music_Voice = {                                                      %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-i-markup                           %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -2454,6 +2458,8 @@ X_Cello_II_Music_Voice = {                                                     %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-vc-ii-markup                          %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -2824,6 +2830,8 @@ X_Contrabass_I_Music_Voice = {                                                 %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-cb-i-markup                           %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -3206,6 +3214,8 @@ X_Contrabass_II_Music_Voice = {                                                %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-cb-ii-markup                          %! _clone_segment_initial_short_instrument_name
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_217:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)

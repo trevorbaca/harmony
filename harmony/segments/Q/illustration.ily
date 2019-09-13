@@ -263,6 +263,8 @@ Q_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-perc-i-markup                         %! _clone_segment_initial_short_instrument_name
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_151:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_151:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "treble"                                                             %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:_attach_color_literal(2)
@@ -425,6 +427,8 @@ Q_Percussion_II_Music_Voice = {                                                %
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! _clone_segment_initial_short_instrument_name
     \once \override Stem.direction = #down                                     %! baca.stem_down:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_151:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_151:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
     \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:_attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:_attach_color_literal(2)
