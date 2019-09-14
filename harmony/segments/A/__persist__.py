@@ -58,6 +58,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Bass_Flute_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
+                                ),
+                            abjad.Momento(
+                                context='Bass_Flute_Music_Voice',
                                 manifest='instruments',
                                 value='BassFlute',
                                 ),
@@ -79,6 +85,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
+                                ),
+                            abjad.Momento(
+                                context='Cello_II_Music_Voice',
                                 manifest='instruments',
                                 value='Cello',
                                 ),
@@ -97,6 +109,12 @@ persist = abjad.OrderedDict(
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Vc. I',
+                                ),
+                            abjad.Momento(
+                                context='Cello_I_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=1,
                                 ),
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
@@ -136,6 +154,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Contrabass_II_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
+                                ),
+                            abjad.Momento(
+                                context='Contrabass_II_Music_Voice',
                                 manifest='instruments',
                                 value='Contrabass',
                                 ),
@@ -154,6 +178,12 @@ persist = abjad.OrderedDict(
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Cb. I',
+                                ),
+                            abjad.Momento(
+                                context='Contrabass_I_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=1,
                                 ),
                             abjad.Momento(
                                 context='Contrabass_I_Music_Voice',
@@ -193,6 +223,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
+                                ),
+                            abjad.Momento(
+                                context='Harp_Music_Voice',
                                 manifest='instruments',
                                 value='Harp',
                                 ),
@@ -219,6 +255,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=3,
+                                ),
+                            abjad.Momento(
+                                context='Percussion_II_Music_Voice',
                                 manifest='instruments',
                                 value='Percussion',
                                 ),
@@ -242,6 +284,12 @@ persist = abjad.OrderedDict(
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Perc. I',
+                                ),
+                            abjad.Momento(
+                                context='Percussion_I_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=3,
                                 ),
                             abjad.Momento(
                                 context='Percussion_I_Music_Voice',
@@ -293,6 +341,12 @@ persist = abjad.OrderedDict(
                                 edition=abjad.Tag('-PARTS'),
                                 manifest='margin_markups',
                                 value='Va.',
+                                ),
+                            abjad.Momento(
+                                context='Viola_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=1,
                                 ),
                             abjad.Momento(
                                 context='Viola_Music_Voice',

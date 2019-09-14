@@ -57,6 +57,7 @@ maker(
 
 maker(
     "bfl",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Bfl."),
         baca.start_markup(
@@ -223,6 +224,7 @@ maker(
 
 maker(
     "va",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Va."),
         baca.start_markup(
@@ -250,6 +252,7 @@ maker(
 
 maker(
     "vc1",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Vc. I"),
         baca.start_markup(
@@ -286,6 +289,7 @@ maker(
 
 maker(
     "vc2",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Vc. II"),
         baca.start_markup(
@@ -309,6 +313,7 @@ maker(
 
 maker(
     "cb1",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Cb. I"),
         baca.start_markup(
@@ -336,6 +341,7 @@ maker(
 
 maker(
     "cb2",
+    baca.bar_extent_indicator(5, tag=baca.const.NOT_PARTS),
     baca.suite(
         harmony.margin_markup("Cb. II"),
         baca.start_markup(
