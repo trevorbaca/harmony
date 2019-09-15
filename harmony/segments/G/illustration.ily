@@ -224,7 +224,7 @@ G_Bass_Flute_Music_Voice = {                                                   %
 
     % [G Bass_Flute_Music_Voice measure 55 / measure 1]                        %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-bfl-markup                       %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:REAPPLIED_BAR_EXTENT:-PARTS:_reapply_persistent_indicators(3)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:REAPPLIED_BAR_EXTENT:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
@@ -291,6 +291,7 @@ G_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
 %%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_57
 %%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_57
 
@@ -298,6 +299,7 @@ G_Bass_Flute_Music_Voice = {                                                   %
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
     \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding:OverrideCommand(1)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     c''16                                                                      %! harmony.sixteenths
@@ -506,6 +508,7 @@ G_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! _style_fermata_measures(1.5)
 
     % [G Percussion_I_Music_Voice measure 58 / measure 4]                      %! _comment_measure_numbers
     \override Staff.BarLine.bar-extent = #'(-2 . 1)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
@@ -870,8 +873,10 @@ G_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! _style_fermata_measures(1.5)
 
     % [G Harp_Music_Voice measure 58 / measure 4]                              %! _comment_measure_numbers
+    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
@@ -888,7 +893,6 @@ G_Harp_Music_Voice = {                                                         %
     \baca-effort-f                                                             %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \tweak staff-padding #5.5                                                %! baca.markup:IndicatorCommand
     ^ \baca-whisk-markup                                                       %! baca.markup:IndicatorCommand
-    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:_attach_color_literal(2)
 
     r8                                                                         %! harmony.sixteenths
@@ -1160,6 +1164,7 @@ G_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! _style_fermata_measures(1.5)
 
     <<
 
@@ -1171,6 +1176,7 @@ G_Viola_Music_Voice = {                                                        %
             \stopStaff                                                         %! _style_fermata_measures(2)
             \once \override Staff.StaffSymbol.line-count = 5                   %! _style_fermata_measures(2)
             \startStaff                                                        %! _style_fermata_measures(2)
+            \override Staff.BarLine.bar-extent = #'(-2 . 2)                    %! _style_fermata_measures(2.5)
             \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
@@ -1938,7 +1944,7 @@ G_Contrabass_II_Music_Voice = {                                                %
 
     % [G Contrabass_II_Music_Voice measure 55 / measure 1]                     %! _comment_measure_numbers
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:_reapply_persistent_indicators(3)
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:REAPPLIED_BAR_EXTENT:-PARTS:_reapply_persistent_indicators(3)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:REAPPLIED_BAR_EXTENT:_reapply_persistent_indicators(3)
     \stopStaff                                                                 %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:_reapply_persistent_indicators(3)
@@ -1994,11 +2000,13 @@ G_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! _style_fermata_measures(1.5)
 
     % [G Contrabass_II_Music_Voice measure 58 / measure 4]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
     d1                                                                         %! harmony.sixteenths
     - \abjad-dashed-line-with-hook                                             %! DAMP:baca.damp_spanner:PiecewiseCommand(1)

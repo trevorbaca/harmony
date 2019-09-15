@@ -468,6 +468,7 @@ B_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
     \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_15
     \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_15
 
@@ -782,6 +783,7 @@ B_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! _style_fermata_measures(1.5)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1176,6 +1178,7 @@ B_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! _style_fermata_measures(1.5)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -1610,6 +1613,7 @@ B_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! _style_fermata_measures(1.5)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -2879,6 +2883,7 @@ B_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 0                           %! _style_fermata_measures(1)
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
+    \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! _style_fermata_measures(1.5)
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
