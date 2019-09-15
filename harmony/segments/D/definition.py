@@ -251,7 +251,6 @@ maker(
 
 maker(
     ("vc2", (1, 6)),
-    baca.staff_lines(5),
     harmony.tessera_1(2, gap=True),
     baca.staff_position(0, not_yet_pitched=True),
 )
