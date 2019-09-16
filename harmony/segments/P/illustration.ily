@@ -313,8 +313,6 @@ P_Bass_Flute_Music_Voice = {                                                   %
             c''1 * 1/4                                                         %! _make_multimeasure_rest_container
             \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
             \override Staff.BarLine.bar-extent = #'(0 . 0)                     %! _style_fermata_measures(1.5)
-        %%% \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_147
-        %%% \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_147
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -333,6 +331,8 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_147
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_147
     R1 * 1/2                                                                   %! _make_measure_silences
 
     % [P Bass_Flute_Music_Voice measure 149 / measure 9]                       %! _comment_measure_numbers

@@ -226,8 +226,6 @@ U_Bass_Flute_Music_Voice = {                                                   %
             c''1 * 1/4                                                         %! _make_multimeasure_rest_container
             \stopTrillSpan                                                     %! baca.trill_spanner:SpannerIndicatorCommand(2)
             \override Staff.BarLine.bar-extent = #'(0 . 0)                     %! _style_fermata_measures(1.5)
-        %%% \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_193
-        %%% \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_193
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -246,6 +244,8 @@ U_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_193
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_193
     R1 * 1                                                                     %! _make_measure_silences
 
     % [U Bass_Flute_Music_Voice measure 195 / measure 5]                       %! _comment_measure_numbers
