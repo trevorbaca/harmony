@@ -222,8 +222,6 @@ M_Bass_Flute_Music_Voice = {                                                   %
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             c''1 * 1/4                                                         %! _make_multimeasure_rest_container
             \override Staff.BarLine.bar-extent = #'(0 . 0)                     %! _style_fermata_measures(1.5)
-        %%% \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
-        %%% \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -242,6 +240,8 @@ M_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_115
     r1                                                                         %! harmony.sixteenths
 
     r4                                                                         %! harmony.sixteenths
@@ -298,8 +298,6 @@ M_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
     \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
-    \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_119
-    \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_119
 
     <<                                                                         %! PHANTOM:_make_multimeasure_rest_container
 
@@ -308,6 +306,8 @@ M_Bass_Flute_Music_Voice = {                                                   %
 
             % [M Bass_Flute_Music_Voice measure 120 / measure 7]               %! PHANTOM:_style_phantom_measures(5):_comment_measure_numbers
             \baca-invisible-music                                              %! PHANTOM:_style_phantom_measures(5):_make_multimeasure_rest_container
+            \once \override Score.BarLine.transparent = ##t                    %! PHANTOM:_style_phantom_measures(5):_style_fermata_measures(4):EOL_FERMATA:MEASURE_119
+            \once \override Score.SpanBar.transparent = ##t                    %! PHANTOM:_style_phantom_measures(5):_style_fermata_measures(4):EOL_FERMATA:MEASURE_119
             R1 * 1/4                                                           %! PHANTOM:_make_multimeasure_rest_container
 
         }                                                                      %! PHANTOM:_make_multimeasure_rest_container

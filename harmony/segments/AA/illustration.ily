@@ -385,14 +385,14 @@ AA_Bass_Flute_Music_Voice = {                                                  %
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
     \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
-%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_248
-%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_248
 
     % [AA Bass_Flute_Music_Voice measure 249 / measure 3]                      %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! _style_fermata_measures(2)
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_248
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_248
     R1 * 7/4                                                                   %! _make_measure_silences
 
     % [AA Bass_Flute_Music_Voice measure 250 / measure 4]                      %! _comment_measure_numbers
@@ -541,8 +541,6 @@ AA_Bass_Flute_Music_Voice = {                                                  %
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
     \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
-%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_258
-%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_258
 
     % [AA Bass_Flute_Music_Voice measure 259 / measure 13]                     %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
@@ -550,6 +548,8 @@ AA_Bass_Flute_Music_Voice = {                                                  %
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_258
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_258
     c''4                                                                       %! harmony.sixteenths
     ^ \baca-jet-whistle-markup                                                 %! baca.markup:IndicatorCommand
 

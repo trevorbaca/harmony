@@ -362,8 +362,6 @@ D_Bass_Flute_Music_Voice = {                                                   %
             \baca-invisible-music                                              %! _make_multimeasure_rest_container
             c''1 * 1/4                                                         %! _make_multimeasure_rest_container
             \override Staff.BarLine.bar-extent = #'(0 . 0)                     %! _style_fermata_measures(1.5)
-        %%% \once \override Score.BarLine.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_30
-        %%% \once \override Score.SpanBar.transparent = ##t                    %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_30
 
         }                                                                      %! _make_multimeasure_rest_container
 
@@ -383,6 +381,8 @@ D_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_30
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_30
     b'2.
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
@@ -413,8 +413,6 @@ D_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! _style_fermata_measures(1)
     R1 * 1/4                                                                   %! _make_measure_silences
     \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! _style_fermata_measures(1.5)
-%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_33
-%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_33
 
     % [D Bass_Flute_Music_Voice measure 34 / measure 11]                       %! _comment_measure_numbers
     \stopStaff                                                                 %! _style_fermata_measures(2)
@@ -422,6 +420,8 @@ D_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! _style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! _style_fermata_measures(2.5)
     \baca-unpitched-music-warning                                              %! _color_unpitched_notes
+%%% \once \override Score.BarLine.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_33
+%%% \once \override Score.SpanBar.transparent = ##t                            %! _style_fermata_measures(4):EOL_FERMATA:MEASURE_33
     b'16
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
