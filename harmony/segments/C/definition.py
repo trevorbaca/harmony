@@ -73,6 +73,7 @@ maker(
     baca.staff_position(-6, not_yet_pitched=True),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
+        argument=r"\baca-cov-markup =|",
     ),
 )
 
@@ -82,6 +83,12 @@ maker(
     baca.staff_position(-6, not_yet_pitched=True),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
+    ),
+    baca.text_spanner(
+        "FOO =|",
+        abjad.tweak(5.5).staff_padding,
+        bookend=False,
+        selector=baca.leaves().rleak(),
     ),
 )
 
