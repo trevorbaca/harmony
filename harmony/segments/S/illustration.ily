@@ -738,22 +738,22 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -814,22 +814,22 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -852,24 +852,24 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -892,27 +892,27 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -935,30 +935,30 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -981,33 +981,33 @@ S_Percussion_I_Music_Voice = {                                                 %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1028,63 +1028,63 @@ S_Percussion_I_Music_Voice = {                                                 %
             % [S Percussion_I_Music_Voice measure 176 / measure 9]             %! baca.SegmentMaker._comment_measure_numbers()
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1143,82 +1143,82 @@ S_Percussion_I_Music_Voice = {                                                 %
             \slash
             \voiceOne
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1398,19 +1398,19 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1468,19 +1468,19 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1503,21 +1503,21 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1540,24 +1540,24 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1580,27 +1580,27 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1623,30 +1623,30 @@ S_Percussion_II_Music_Voice = {                                                %
 
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1667,60 +1667,60 @@ S_Percussion_II_Music_Voice = {                                                %
             % [S Percussion_II_Music_Voice measure 176 / measure 9]            %! baca.SegmentMaker._comment_measure_numbers()
             \slash
             \voiceOne
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -1776,79 +1776,79 @@ S_Percussion_II_Music_Voice = {                                                %
             \slash
             \voiceOne
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)       %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             <c'>8 * 2/5
             ^ \baca-purpleheart-markup                                         %! baca.markup:IndicatorCommand
             [
             (
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
 
-            \baca-unpitched-music-warning                                      %! baca.SegmentMaker._color_unpitched_notes()
+            \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
             c'8 * 2/5
             )
             ]
@@ -2027,7 +2027,7 @@ S_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
@@ -2039,29 +2039,29 @@ S_Harp_Music_Voice = {                                                         %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2
 
     % [S Harp_Music_Voice measure 172 / measure 5]                             %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>1
 
     % [S Harp_Music_Voice measure 173 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2
 
     % [S Harp_Music_Voice measure 174 / measure 7]                             %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>1
 
     % [S Harp_Music_Voice measure 175 / measure 8]                             %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2
 
     % [S Harp_Music_Voice measure 176 / measure 9]                             %! baca.SegmentMaker._comment_measure_numbers()
@@ -2071,7 +2071,7 @@ S_Harp_Music_Voice = {                                                         %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2108,7 +2108,7 @@ S_Harp_Music_Voice = {                                                         %
     R1 * 1                                                                     %! baca.SegmentMaker._make_measure_silences()
 
     % [S Harp_Music_Voice measure 179 / measure 12]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-bisb-markup                                                        %! baca.markup:IndicatorCommand
@@ -2126,7 +2126,7 @@ S_Harp_Music_Voice = {                                                         %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <a' b' c''>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2203,7 +2203,7 @@ S_Viola_Music_Voice = {                                                        %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -2217,7 +2217,7 @@ S_Viola_Music_Voice = {                                                        %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2226,7 +2226,7 @@ S_Viola_Music_Voice = {                                                        %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2237,12 +2237,12 @@ S_Viola_Music_Voice = {                                                        %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
@@ -2251,7 +2251,7 @@ S_Viola_Music_Voice = {                                                        %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2299,7 +2299,7 @@ S_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2311,29 +2311,29 @@ S_Viola_Music_Voice = {                                                        %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2
 
     % [S Viola_Music_Voice measure 172 / measure 5]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>1
 
     % [S Viola_Music_Voice measure 173 / measure 6]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2
 
     % [S Viola_Music_Voice measure 174 / measure 7]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>1
 
     % [S Viola_Music_Voice measure 175 / measure 8]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2
 
     % [S Viola_Music_Voice measure 176 / measure 9]                            %! baca.SegmentMaker._comment_measure_numbers()
@@ -2343,7 +2343,7 @@ S_Viola_Music_Voice = {                                                        %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2386,7 +2386,7 @@ S_Viola_Music_Voice = {                                                        %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2404,7 +2404,7 @@ S_Viola_Music_Voice = {                                                        %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b c' d'>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2485,7 +2485,7 @@ S_Cello_I_Music_Voice = {                                                      %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -2499,7 +2499,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2508,7 +2508,7 @@ S_Cello_I_Music_Voice = {                                                      %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2519,12 +2519,12 @@ S_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
@@ -2533,7 +2533,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2579,7 +2579,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2591,29 +2591,29 @@ S_Cello_I_Music_Voice = {                                                      %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_I_Music_Voice measure 172 / measure 5]                          %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Cello_I_Music_Voice measure 173 / measure 6]                          %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_I_Music_Voice measure 174 / measure 7]                          %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Cello_I_Music_Voice measure 175 / measure 8]                          %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_I_Music_Voice measure 176 / measure 9]                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -2623,7 +2623,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2663,7 +2663,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2681,7 +2681,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2761,7 +2761,7 @@ S_Cello_II_Music_Voice = {                                                     %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -2775,7 +2775,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2784,7 +2784,7 @@ S_Cello_II_Music_Voice = {                                                     %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2795,12 +2795,12 @@ S_Cello_II_Music_Voice = {                                                     %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
@@ -2809,7 +2809,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2855,7 +2855,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2867,29 +2867,29 @@ S_Cello_II_Music_Voice = {                                                     %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_II_Music_Voice measure 172 / measure 5]                         %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Cello_II_Music_Voice measure 173 / measure 6]                         %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_II_Music_Voice measure 174 / measure 7]                         %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Cello_II_Music_Voice measure 175 / measure 8]                         %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Cello_II_Music_Voice measure 176 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
@@ -2899,7 +2899,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -2939,7 +2939,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -2957,7 +2957,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -3037,7 +3037,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -3051,7 +3051,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3060,7 +3060,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3071,12 +3071,12 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
@@ -3085,7 +3085,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3131,7 +3131,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -3143,29 +3143,29 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 172 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Contrabass_I_Music_Voice measure 173 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 174 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Contrabass_I_Music_Voice measure 175 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_I_Music_Voice measure 176 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -3175,7 +3175,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -3215,7 +3215,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -3233,7 +3233,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -3314,7 +3314,7 @@ S_Contrabass_II_Music_Voice = {                                                %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -3328,7 +3328,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3337,7 +3337,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3348,12 +3348,12 @@ S_Contrabass_II_Music_Voice = {                                                %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \!                                                                         %! baca.hairpin:PiecewiseCommand(1)
@@ -3362,7 +3362,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     \baca-invisible-music                                                      %! baca.invisible_music:IndicatorCommand
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3410,7 +3410,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -3422,29 +3422,29 @@ S_Contrabass_II_Music_Voice = {                                                %
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando
     \override Dots.transparent = ##t                                           %! baca.glissando
     \override Stem.transparent = ##t                                           %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 172 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Contrabass_II_Music_Voice measure 173 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 174 / measure 7]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
 
     % [S Contrabass_II_Music_Voice measure 175 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
 
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
 
     % [S Contrabass_II_Music_Voice measure 176 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -3454,7 +3454,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>1
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
@@ -3497,7 +3497,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 5                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2.
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup:IndicatorCommand
@@ -3515,7 +3515,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \undo \hide NoteHead                                                       %! baca.glissando
     \revert Dots.transparent                                                   %! baca.glissando
     \revert Stem.transparent                                                   %! baca.glissando
-    \baca-unpitched-music-warning                                              %! baca.SegmentMaker._color_unpitched_notes()
+    \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     <b, c d>2
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
