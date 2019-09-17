@@ -359,7 +359,7 @@ W_Bass_Flute_Music_Voice = {                                                   %
             % [W Bass_Flute_Music_Voice measure 215 / measure 7]               %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 3/4                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1312,7 +1312,7 @@ W_Cello_II_Music_Voice = {                                                     %
             % [W Cello_II_Music_Voice measure 215 / measure 7]                 %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c'1 * 3/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanBowSpeed                                          %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanBowSpeed                                          %! STOP_TEXT_SPAN:BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1604,7 +1604,7 @@ W_Contrabass_II_Music_Voice = {                                                %
             % [W Contrabass_II_Music_Voice measure 215 / measure 7]            %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 3/4                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanSCP                                               %! SCP:baca.scp_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanSCP                                               %! STOP_TEXT_SPAN:SCP:baca.scp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 

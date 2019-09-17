@@ -242,7 +242,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -260,7 +260,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -285,7 +285,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -303,7 +303,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     % [X Bass_Flute_Music_Voice measure 218 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -329,7 +329,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -347,7 +347,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -372,7 +372,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -390,7 +390,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     % [X Bass_Flute_Music_Voice measure 219 / measure 3]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -416,7 +416,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -434,7 +434,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -459,7 +459,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -477,7 +477,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -524,7 +524,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -538,7 +538,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -562,7 +562,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-right-text "A"                                        %! baca.text_spanner:PiecewiseCommand(1)
@@ -575,7 +575,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -600,7 +600,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -615,7 +615,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -639,7 +639,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-right-text "A"                                        %! baca.text_spanner:PiecewiseCommand(1)
@@ -652,7 +652,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -677,7 +677,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -691,7 +691,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -716,7 +716,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-right-text "A"                                        %! baca.text_spanner:PiecewiseCommand(1)
@@ -729,7 +729,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -754,7 +754,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -768,7 +768,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -792,7 +792,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-right-text "A"                                        %! baca.text_spanner:PiecewiseCommand(1)
@@ -805,7 +805,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     % [X Bass_Flute_Music_Voice measure 224 / measure 8]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -831,7 +831,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -845,7 +845,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -869,7 +869,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-right-text "A"                                        %! baca.text_spanner:PiecewiseCommand(1)
@@ -882,7 +882,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! baca.trill_spanner:SpannerIndicatorCommand(2)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(2)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8                                                                        %! harmony.sixteenths()
@@ -907,7 +907,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak to-barline ##t                                                    %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     - \tweak circled-tip ##t                                                   %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -928,7 +928,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
             \stopTrillSpan                                                     %! baca.trill_spanner:SpannerIndicatorCommand(2)
-            \stopTextSpan                                                      %! baca.text_spanner:PiecewiseCommand(2)
+            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(2)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 

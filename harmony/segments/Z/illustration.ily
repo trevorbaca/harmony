@@ -280,7 +280,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 238 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -293,7 +293,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -325,8 +325,8 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_239
-%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_239
+%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_239
+%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_239
     R1 * 3/2                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [Z Bass_Flute_Music_Voice measure 241 / measure 5]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -342,7 +342,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 242 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -355,7 +355,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 243 / measure 7]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -368,7 +368,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -407,7 +407,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 

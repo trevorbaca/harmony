@@ -84,12 +84,6 @@ maker(
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
     ),
-    baca.text_spanner(
-        "FOO =|",
-        abjad.tweak(5.5).staff_padding,
-        bookend=False,
-        selector=baca.leaves().rleak(),
-    ),
 )
 
 # perc1
