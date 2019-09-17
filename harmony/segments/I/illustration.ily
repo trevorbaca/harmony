@@ -104,7 +104,7 @@ I_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [I Bass_Flute_Music_Voice measure 73 / measure 2]                        %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -166,7 +166,7 @@ I_Bass_Flute_Music_Voice = {                                                   %
             % [I Bass_Flute_Music_Voice measure 74 / measure 3]                %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):COVERED:baca.covered_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -581,7 +581,7 @@ I_Viola_Music_Voice = {                                                        %
             c'1 * 3/2                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \!                                                                 %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
-            \bacaStopTextSpanBowSpeed                                          %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanBowSpeed                                          %! STOP_TEXT_SPAN:BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 

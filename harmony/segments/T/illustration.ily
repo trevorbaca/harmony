@@ -288,7 +288,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
     % [T Bass_Flute_Music_Voice measure 184 / measure 4]                       %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -322,7 +322,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
         % [T Bass_Flute_Music_Voice measure 185 / measure 5]                   %! baca.SegmentMaker._comment_measure_numbers()
         r4                                                                     %! harmony.sixteenths()
-        \bacaStopTextSpanCovered                                               %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+        \bacaStopTextSpanCovered                                               %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         \baca-unpitched-music-warning                                          %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
         c''16                                                                  %! harmony.sixteenths()
@@ -351,7 +351,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [T Bass_Flute_Music_Voice measure 186 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     r4                                                                         %! harmony.sixteenths()
@@ -384,7 +384,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [T Bass_Flute_Music_Voice measure 187 / measure 7]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -408,7 +408,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -439,7 +439,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -470,7 +470,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -490,7 +490,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -520,7 +520,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
             % [T Bass_Flute_Music_Voice measure 191 / measure 11]              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):COVERED:baca.covered_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 

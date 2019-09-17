@@ -71,8 +71,8 @@ maker(
     harmony.sixteenths([4, -12]),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
+        argument=r"\baca-cov-markup =|",
         map=baca.runs(),
-        markup=r"\baca-cov-markup =|",
     ),
     baca.dynamic("mp"),
 )

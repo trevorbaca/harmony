@@ -248,7 +248,7 @@ C_Bass_Flute_Music_Voice = {                                                   %
             % [C Bass_Flute_Music_Voice measure 17 / measure 2]                %! baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 3/4                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanCovered                                           %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanCovered                                           %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -300,10 +300,6 @@ C_Bass_Flute_Music_Voice = {                                                   %
     - \tweak bound-details.right.padding #2.5                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
-    - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
-    - \baca-text-spanner-left-text "FOO"                                       %! baca.text_spanner:PiecewiseCommand(1)
-    - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
-    \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     r8.                                                                        %! harmony.sixteenths()
 
@@ -363,8 +359,7 @@ C_Bass_Flute_Music_Voice = {                                                   %
             % [C Bass_Flute_Music_Voice measure 24 / measure 9]                %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):COVERED:baca.covered_spanner:PiecewiseCommand(3)
-            \stopTextSpan                                                      %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.text_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 

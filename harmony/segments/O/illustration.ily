@@ -254,7 +254,7 @@ O_Bass_Flute_Music_Voice = {                                                   %
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -296,7 +296,7 @@ O_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [O Bass_Flute_Music_Voice measure 136 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -1017,7 +1017,7 @@ O_Viola_Music_Voice = {                                                        %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanBowSpeed                                                  %! STOP_TEXT_SPAN:BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -1035,7 +1035,7 @@ O_Viola_Music_Voice = {                                                        %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanBowSpeed                                                  %! STOP_TEXT_SPAN:BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -1064,7 +1064,7 @@ O_Viola_Music_Voice = {                                                        %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanBowSpeed                                                  %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanBowSpeed                                                  %! STOP_TEXT_SPAN:BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.sixteenths()
 

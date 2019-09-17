@@ -376,7 +376,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r4                                                                         %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -410,7 +410,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 102 / measure 4]                       %! baca.SegmentMaker._comment_measure_numbers()
     r1                                                                         %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.durata()
 
@@ -425,7 +425,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 104 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     r1                                                                         %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.durata()
 
@@ -440,7 +440,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 106 / measure 8]                       %! baca.SegmentMaker._comment_measure_numbers()
     r1                                                                         %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
     r4                                                                         %! harmony.durata()
 
@@ -488,7 +488,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''2                                                                       %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner:PiecewiseCommand(1):autodetect
@@ -499,7 +499,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     % [L Bass_Flute_Music_Voice measure 110 / measure 12]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''4                                                                       %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
@@ -507,7 +507,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''2.                                                                      %! harmony.durata()
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner:PiecewiseCommand(1):autodetect
@@ -518,7 +518,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     % [L Bass_Flute_Music_Voice measure 111 / measure 13]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''4
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
@@ -531,7 +531,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''8
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -547,7 +547,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     % [L Bass_Flute_Music_Voice measure 112 / measure 14]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''4
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
@@ -560,7 +560,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''8
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -576,7 +576,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     % [L Bass_Flute_Music_Voice measure 113 / measure 15]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''4
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
@@ -589,7 +589,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c''8
-    \stopTextSpan                                                              %! baca.text_spanner:PiecewiseCommand(1)
+    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -610,7 +610,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
             % [L Bass_Flute_Music_Voice measure 114 / measure 16]              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._comment_measure_numbers()
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
-            \stopTextSpan                                                      %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
