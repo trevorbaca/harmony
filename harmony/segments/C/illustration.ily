@@ -232,7 +232,7 @@ C_Bass_Flute_Music_Voice = {                                                   %
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     c'16                                                                       %! harmony.sixteenths()
     - \abjad-dashed-line-with-hook                                             %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
-    - \baca-text-spanner-left-markup \baca-covered-markup                      %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-markup \baca-cov-markup                          %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
     - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup   %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! COVERED:baca.covered_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
@@ -274,8 +274,8 @@ C_Bass_Flute_Music_Voice = {                                                   %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_18
-%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_18
+%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_18
+%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_18
     R1 * 3/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [C Bass_Flute_Music_Voice measure 20 / measure 5]                        %! baca.SegmentMaker._comment_measure_numbers()
@@ -291,8 +291,8 @@ C_Bass_Flute_Music_Voice = {                                                   %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
-%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_20
-%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):EOL_FERMATA:MEASURE_20
+%%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_20
+%%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_20
     c'16                                                                       %! harmony.sixteenths()
     - \abjad-dashed-line-with-hook                                             %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-markup \baca-covered-markup                      %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
@@ -300,6 +300,10 @@ C_Bass_Flute_Music_Voice = {                                                   %
     - \tweak bound-details.right.padding #2.5                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1):autodetect
     - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
+    - \baca-text-spanner-left-text "FOO"                                       %! baca.text_spanner:PiecewiseCommand(1)
+    - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
+    \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     r8.                                                                        %! harmony.sixteenths()
 
@@ -360,6 +364,7 @@ C_Bass_Flute_Music_Voice = {                                                   %
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
             \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):COVERED:baca.covered_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.text_spanner:PiecewiseCommand(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
