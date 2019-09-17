@@ -14,6 +14,11 @@ _reference_meters = (
 ### FUNCTIONS ###
 
 
+def _site(frame):
+    prefix = "harmony"
+    return baca.site(frame, prefix)
+
+
 def appoggiato(
     divisions: abjad.IntegerSequence,
     counts: abjad.IntegerSequence = None,
@@ -43,7 +48,7 @@ def appoggiato(
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -71,7 +76,7 @@ def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -90,7 +95,7 @@ def begin_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -124,7 +129,7 @@ def durata(
         ),
         *commands,
         rmakers.force_repeat_tie((1, 8)),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -170,7 +175,7 @@ def eighths(
         rmakers.force_repeat_tie((1, 8)),
         *grace,
         preprocessor=preprocessor_,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -202,7 +207,7 @@ def flutter_initiated_cells(
         *commands,
         rmakers.force_repeat_tie((1, 8)),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -229,7 +234,7 @@ def phjc(
         rmakers.beam(),
         rmakers.extract_trivial(),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -257,7 +262,7 @@ def quarter_initiated_cells(
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -275,7 +280,7 @@ def rimbalzandi(extra_counts=None, *commands) -> baca.RhythmCommand:
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -309,7 +314,7 @@ def rest_appoggiato(
         *commands_,
         rmakers.force_rest(baca.plts(grace=False)),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -363,7 +368,7 @@ def sixteenths(
         rmakers.force_repeat_tie((1, 8)),
         *grace,
         preprocessor=preprocessor_,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -416,7 +421,7 @@ def string_appoggiato(
         *commands_,
         *after_grace_commands,
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -561,7 +566,7 @@ def thirty_seconds(
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
         preprocessor=preprocessor,
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -586,7 +591,7 @@ def train(
         rmakers.beam(baca.leaves().group()),
         *commands_,
         rmakers.force_repeat_tie((1, 8)),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
@@ -625,7 +630,7 @@ def upbeat_quarter_note() -> baca.RhythmCommand:
         ),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
-        tag=baca.frame(inspect.currentframe()),
+        tag=_site(inspect.currentframe()),
     )
 
 
