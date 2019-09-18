@@ -111,6 +111,7 @@ maker(
     baca.flat_glissando("D4"),
     baca.hairpin(
         "o< p > pp -- ! < p > pp < p >o niente",
+        abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),

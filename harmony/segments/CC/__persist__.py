@@ -69,11 +69,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Bass_Flute_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Bass_Flute_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -110,11 +112,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -151,11 +155,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -192,11 +198,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_II_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Contrabass_II_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -233,11 +241,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_I_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Contrabass_I_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -269,11 +279,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Harp_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
@@ -310,11 +322,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=1,
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=1,
                                 ),
                             ],
@@ -351,11 +365,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_I_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=1,
                                 ),
                             abjad.Momento(
                                 context='Percussion_I_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=1,
                                 ),
                             ],
@@ -417,11 +433,13 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Viola_Music_Voice',
                                 prototype='baca.BarExtent',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             abjad.Momento(
                                 context='Viola_Music_Voice',
                                 prototype='baca.StaffLines',
+                                synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
                                 ),
                             ],
