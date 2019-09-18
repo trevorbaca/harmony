@@ -42,8 +42,9 @@ maker(
     "Global_Skips",
     baca.chunk(
         baca.bar_line_x_extent((-1, 3), baca.skip(0)),
-        baca.only_score(
-            baca.bar_line_x_extent((-2, 2), baca.skip(-1), after=True)
+        # TODO: use baca.only_mol() instead
+        baca.not_segment(
+            baca.bar_line_x_extent((0, 2), baca.skip(-1), after=True),
         ),
         baca.volta(),
         measures=(2, 3),

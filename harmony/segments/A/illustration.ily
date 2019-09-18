@@ -65,7 +65,7 @@ A_Global_Skips = {                                                             %
         \bacaStartTextSpanMM                                                   %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     %@% - \baca-start-ct-both "[0'06'']" "[0'10'']"                            %! CLOCK_TIME
     %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
-    %%% \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! +SCORE:baca.bar_line_x_extent:OverrideCommand(1)
+    %%% \once \override Score.BarLine.X-extent = #'(0 . 2)                     %! -SEGMENT:baca.bar_line_x_extent:OverrideCommand(1)
         \baca-bar-line-visible                                                 %! baca.SegmentMaker._attach_final_bar_line()
         \bar "|"                                                               %! baca.SegmentMaker._attach_final_bar_line()
 
