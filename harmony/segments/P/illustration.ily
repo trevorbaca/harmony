@@ -231,7 +231,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r16                                                                        %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'2                                                                        %! harmony.sixteenths()
@@ -243,7 +243,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
 
     % [P Bass_Flute_Music_Voice measure 142 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'4                                                                        %! harmony.sixteenths()
@@ -259,7 +259,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \repeatTie
 
     r16                                                                        %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'4                                                                        %! harmony.sixteenths()
@@ -270,7 +270,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     r4                                                                         %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     % [P Bass_Flute_Music_Voice measure 144 / measure 4]                       %! baca.SegmentMaker._comment_measure_numbers()
     r2.                                                                        %! harmony.sixteenths()
@@ -290,7 +290,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \repeatTie
 
     r4                                                                         %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'4                                                                        %! harmony.sixteenths()
@@ -311,7 +311,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(1)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \stopTextSpan                                                      %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+            \stopTextSpan                                                      %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
             \override Staff.BarLine.bar-extent = #'(0 . 0)                     %! baca.SegmentMaker._style_fermata_measures(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -345,7 +345,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'2                                                                        %! harmony.sixteenths()
@@ -357,7 +357,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
 
     % [P Bass_Flute_Music_Voice measure 150 / measure 10]                      %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     b'8.                                                                       %! harmony.sixteenths()
@@ -368,7 +368,7 @@ P_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \stopTextSpan                                                              %! STOP_TEXT_SPAN:baca.text_spanner:PiecewiseCommand(3)
+    \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1257,7 +1257,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d2                                                                         %! harmony.sixteenths()
@@ -1270,7 +1270,7 @@ P_Cello_I_Music_Voice = {                                                      %
 
     % [P Cello_I_Music_Voice measure 142 / measure 2]                          %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1287,7 +1287,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \repeatTie
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1299,7 +1299,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     % [P Cello_I_Music_Voice measure 144 / measure 4]                          %! baca.SegmentMaker._comment_measure_numbers()
     r2.                                                                        %! harmony.sixteenths()
@@ -1320,7 +1320,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \repeatTie
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1342,7 +1342,7 @@ P_Cello_I_Music_Voice = {                                                      %
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(1)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c'1 * 1/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanDamp                                              %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanDamp                                              %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1373,7 +1373,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d2                                                                         %! harmony.sixteenths()
@@ -1386,7 +1386,7 @@ P_Cello_I_Music_Voice = {                                                      %
 
     % [P Cello_I_Music_Voice measure 150 / measure 10]                         %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d8.                                                                        %! harmony.sixteenths()
@@ -1398,7 +1398,7 @@ P_Cello_I_Music_Voice = {                                                      %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1468,7 +1468,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d2                                                                         %! harmony.sixteenths()
@@ -1481,7 +1481,7 @@ P_Cello_II_Music_Voice = {                                                     %
 
     % [P Cello_II_Music_Voice measure 142 / measure 2]                         %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1498,7 +1498,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \repeatTie
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1510,7 +1510,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     % [P Cello_II_Music_Voice measure 144 / measure 4]                         %! baca.SegmentMaker._comment_measure_numbers()
     r2.                                                                        %! harmony.sixteenths()
@@ -1531,7 +1531,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \repeatTie
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d4                                                                         %! harmony.sixteenths()
@@ -1553,7 +1553,7 @@ P_Cello_II_Music_Voice = {                                                     %
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(1)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
             c'1 * 1/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container()
-            \bacaStopTextSpanDamp                                              %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+            \bacaStopTextSpanDamp                                              %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1584,7 +1584,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d2                                                                         %! harmony.sixteenths()
@@ -1597,7 +1597,7 @@ P_Cello_II_Music_Voice = {                                                     %
 
     % [P Cello_II_Music_Voice measure 150 / measure 10]                        %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
     d8.                                                                        %! harmony.sixteenths()
@@ -1609,7 +1609,7 @@ P_Cello_II_Music_Voice = {                                                     %
     \bacaStartTextSpanDamp                                                     %! DAMP:baca.damp_spanner:PiecewiseCommand(1)
 
     r16                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanDamp                                                      %! STOP_TEXT_SPAN:DAMP:baca.damp_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanDamp                                                      %! SPANNER_STOP:DAMP:baca.damp_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 

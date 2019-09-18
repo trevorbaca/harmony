@@ -280,7 +280,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 238 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -293,7 +293,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -342,7 +342,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 242 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -355,7 +355,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     % [Z Bass_Flute_Music_Voice measure 243 / measure 7]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-unpitched-music-warning                                              %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -368,7 +368,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -407,7 +407,7 @@ Z_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner:PiecewiseCommand(1)
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! STOP_TEXT_SPAN:COVERED:baca.covered_spanner:PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner:PiecewiseCommand(3)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -1021,7 +1021,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_I_Music_Voice measure 238 / measure 2]                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -1034,7 +1034,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1077,7 +1077,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_I_Music_Voice measure 242 / measure 6]                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -1090,7 +1090,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_I_Music_Voice measure 243 / measure 7]                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -1103,7 +1103,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1140,7 +1140,7 @@ Z_Cello_I_Music_Voice = {                                                      %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1208,7 +1208,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_II_Music_Voice measure 238 / measure 2]                         %! baca.SegmentMaker._comment_measure_numbers()
@@ -1221,7 +1221,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1264,7 +1264,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_II_Music_Voice measure 242 / measure 6]                         %! baca.SegmentMaker._comment_measure_numbers()
@@ -1277,7 +1277,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Cello_II_Music_Voice measure 243 / measure 7]                         %! baca.SegmentMaker._comment_measure_numbers()
@@ -1290,7 +1290,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1327,7 +1327,7 @@ Z_Cello_II_Music_Voice = {                                                     %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1395,7 +1395,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_I_Music_Voice measure 238 / measure 2]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1408,7 +1408,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1451,7 +1451,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_I_Music_Voice measure 242 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1464,7 +1464,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_I_Music_Voice measure 243 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1477,7 +1477,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1514,7 +1514,7 @@ Z_Contrabass_I_Music_Voice = {                                                 %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1583,7 +1583,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_II_Music_Voice measure 238 / measure 2]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -1596,7 +1596,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1641,7 +1641,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_II_Music_Voice measure 242 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -1654,7 +1654,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     % [Z Contrabass_II_Music_Voice measure 243 / measure 7]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -1667,7 +1667,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1704,7 +1704,7 @@ Z_Contrabass_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(2)
+    \ff                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     - \baca-stop-on-string                                                     %! baca.stop_on_string:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()

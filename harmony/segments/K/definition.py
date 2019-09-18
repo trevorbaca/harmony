@@ -83,7 +83,6 @@ maker(
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< p >o niente",
-        abjad.tweak(4.5).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
@@ -98,7 +97,6 @@ maker(
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< p > pp -- (pp) < mp > pp -- !",
-        abjad.tweak(4.5).staff_padding,
         bookend=False,
         pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
         selector=baca.tleaves().rleak(),
@@ -113,7 +111,6 @@ maker(
     baca.flat_glissando("D4"),
     baca.hairpin(
         "o< p > pp -- ! < p > pp < p >o niente",
-        abjad.tweak(4.5).staff_padding,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
@@ -207,7 +204,6 @@ maker(
     baca.repeat_tie(baca.pleaf(-1)),
     baca.hairpin(
         "o< mp >o niente",
-        abjad.tweak(4.5).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
@@ -221,7 +217,6 @@ maker(
     harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
     baca.hairpin(
         "o< mp > pp -- (pp) < mp > pp -- !",
-        abjad.tweak(4.5).staff_padding,
         bookend=False,
         pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
         selector=baca.tleaves().rleak(),
@@ -238,7 +233,6 @@ maker(
     harmony.durata([1, 1, 2, 1, 1, 1, 1]),
     baca.hairpin(
         "o< mp > pp -- ! < mp > pp < mp >o niente",
-        abjad.tweak(4.5).staff_padding,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
