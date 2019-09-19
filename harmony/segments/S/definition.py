@@ -43,9 +43,18 @@ maker(
         abjad.tweak((0, 18)).extra_offset,
     ),
     baca.chunk(
-        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
-        baca.volta(),
-        measures=1,
+        # open-volta
+        baca.not_mol(
+            baca.bar_line_x_extent((0, 2), measures=1),
+        ),
+        baca.only_mol(
+            baca.bar_line_x_extent((0, 3), measures=1),
+        ),
+        # close-volta:
+        baca.only_mol(
+            baca.bar_line_x_extent((0, 1.5), measures=2),
+        ),
+        baca.volta(measures=1),
     ),
 )
 

@@ -41,14 +41,18 @@ maker(
 maker(
     "Global_Skips",
     baca.chunk(
-        baca.only_mol(
-            baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        # open-volta:
+        baca.not_mol(
+            baca.bar_line_x_extent((0, 2), measures=2),
         ),
         baca.only_mol(
-            baca.bar_line_x_extent((0, 2), baca.skip(-1), after=True),
+            baca.bar_line_x_extent((0, 3), measures=2),
         ),
-        baca.volta(),
-        measures=(2, 3),
+        # close-volta:
+        baca.only_mol(
+            baca.bar_line_x_extent((0, 1.5), after=True, measures=3),
+        ),
+        baca.volta(measures=(2, 3)),
     ),
     baca.metronome_mark("96", baca.skip(1 - 1)),
     baca.metronome_mark("57 3/5", baca.skip(3 - 1)),
