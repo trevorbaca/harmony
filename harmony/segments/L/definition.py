@@ -62,8 +62,9 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.volta(measures=(11, 12)),
-    baca.volta(measures=(13, 15)),
+    baca.bar_line(".|:", baca.skip(10 - 1)),
+    baca.bar_line(":.|.:", baca.skip(12 - 1)),
+    baca.bar_line(":|.", baca.skip(15 - 1)),
 
     # open-volta
     baca.not_mol(

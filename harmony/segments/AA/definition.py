@@ -75,7 +75,8 @@ maker(
         baca.only_mol(
             baca.bar_line_x_extent((0, 1.5), measures=6),
         ),
-        baca.volta(measures=(4, 5)),
+        baca.bar_line(".|:", baca.skip(3 - 1)),
+        baca.bar_line(":|.", baca.skip(5 - 1)),
     ),
 )
 
