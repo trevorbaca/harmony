@@ -52,7 +52,8 @@ maker(
         baca.only_mol(
             baca.bar_line_x_extent((0, 1.5), after=True, measures=3),
         ),
-        baca.volta(measures=(2, 3)),
+        baca.bar_line(".|:", baca.skip(1 - 1)),
+        baca.bar_line(":|.", baca.skip(3 - 1)),
     ),
     baca.metronome_mark("96", baca.skip(1 - 1)),
     baca.metronome_mark("57 3/5", baca.skip(3 - 1)),
