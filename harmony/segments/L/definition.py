@@ -65,14 +65,23 @@ maker(
     baca.volta(measures=(11, 12)),
     baca.volta(measures=(13, 15)),
 
+    # open-volta
+    baca.not_mol(
+        baca.bar_line_x_extent((0, 2), baca.skip(11 - 1)),
+    ),
     baca.only_mol(
         baca.bar_line_x_extent((0, 3), baca.skip(11 - 1)),
+    ),
+    # double-volta:
+    baca.not_mol(
+        baca.bar_line_x_extent((0, 3), baca.skip(13 - 1)),
     ),
     baca.only_mol(
         baca.bar_line_x_extent((0, 4), baca.skip(13 - 1)),
     ),
+    # close-volta:
     baca.only_mol(
-        baca.bar_line_x_extent((0, 2), baca.skip(15 - 1), after=True),
+        baca.bar_line_x_extent((0, 1.5), baca.skip(15 - 1), after=True),
     ),
 
 )

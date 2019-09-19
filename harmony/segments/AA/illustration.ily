@@ -64,7 +64,8 @@ AA_Global_Skips = {                                                            %
     {
 
         % [AA Global_Skips measure 250 / measure 4]                            %! baca.SegmentMaker._comment_measure_numbers()
-        \once \override Score.BarLine.X-extent = #'(-1 . 3)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+    %%% \once \override Score.BarLine.X-extent = #'(0 . 2)                     %! MEASURE_250:NOT_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+        \once \override Score.BarLine.X-extent = #'(0 . 3)                     %! MEASURE_250:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
         s1 * 7/4                                                               %! baca.SegmentMaker._make_global_skips(1)
         \bacaStopTextSpanLMN                                                   %! LOCAL_MEASURE_NUMBER
     %@% \bacaStopTextSpanMN                                                    %! MEASURE_NUMBER
@@ -99,11 +100,11 @@ AA_Global_Skips = {                                                            %
     %@% \bacaStartTextSpanMN                                                   %! MEASURE_NUMBER
     %@% - \baca-start-ct-left-only "[13'16'']"                                 %! CLOCK_TIME
     %@% \bacaStartTextSpanCT                                                   %! CLOCK_TIME
-        \once \override Score.BarLine.X-extent = #'(-2 . 2)                    %! baca.bar_line_x_extent:OverrideCommand(1)
 
     }
 
     % [AA Global_Skips measure 252 / measure 6]                                %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_252:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
     s1 * 3/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER

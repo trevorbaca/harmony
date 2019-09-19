@@ -4,7 +4,8 @@ U_Global_Skips = {                                                             %
     {
 
         % [U Global_Skips measure 191 / measure 1]                             %! baca.SegmentMaker._comment_measure_numbers()
-        \once \override Score.BarLine.X-extent = #'(-1 . 3)                    %! baca.bar_line_x_extent:OverrideCommand(1)
+        \once \override Score.BarLine.X-extent = #'(0 . 2)                     %! MEASURE_191:NOT_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+    %%% \once \override Score.BarLine.X-extent = #'(0 . 3)                     %! MEASURE_191:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
         \time 4/4                                                              %! REAPPLIED_TIME_SIGNATURE:_set_status_tag:_reapply_persistent_indicators(1):baca.SegmentMaker._make_global_skips(2)
         \bar ""                                                                %! baca.SegmentMaker._make_global_skips(4):+SEGMENT:EMPTY_START_BAR
         \baca-time-signature-color #'green4                                    %! REAPPLIED_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
@@ -65,6 +66,7 @@ U_Global_Skips = {                                                             %
     }
 
     % [U Global_Skips measure 194 / measure 4]                                 %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_194:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
     \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:baca.SegmentMaker._make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
     s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
