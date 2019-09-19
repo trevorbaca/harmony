@@ -41,9 +41,10 @@ maker(
 maker(
     "Global_Skips",
     baca.chunk(
-        baca.bar_line_x_extent((-1, 3), baca.skip(0)),
-        # TODO: use baca.only_mol() instead
-        baca.not_segment(
+        baca.only_mol(
+            baca.bar_line_x_extent((-1, 3), baca.skip(0)),
+        ),
+        baca.only_mol(
             baca.bar_line_x_extent((0, 2), baca.skip(-1), after=True),
         ),
         baca.volta(),
