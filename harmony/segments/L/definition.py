@@ -62,29 +62,9 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.bar_line(".|:", baca.skip(10 - 1)),
-    baca.bar_line(":.|.:", baca.skip(12 - 1)),
-    baca.bar_line(":|.", baca.skip(15 - 1)),
-
-    # open-volta
-    baca.not_mol(
-        baca.bar_line_x_extent((0, 2), baca.skip(11 - 1)),
-    ),
-    baca.only_mol(
-        baca.bar_line_x_extent((0, 3), baca.skip(11 - 1)),
-    ),
-    # double-volta:
-    baca.not_mol(
-        baca.bar_line_x_extent((0, 3), baca.skip(13 - 1)),
-    ),
-    baca.only_mol(
-        baca.bar_line_x_extent((0, 4), baca.skip(13 - 1)),
-    ),
-    # close-volta:
-    baca.only_mol(
-        baca.bar_line_x_extent((0, 1.5), baca.skip(15 - 1), after=True),
-    ),
-
+    baca.open_volta(baca.skip(11 - 1)),
+    baca.double_volta(baca.skip(13 - 1)),
+    baca.close_volta(baca.skip(15 - 1)),
 )
 
 maker(
