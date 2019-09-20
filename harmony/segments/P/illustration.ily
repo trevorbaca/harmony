@@ -419,7 +419,7 @@ P_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-perc-i-markup                         %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
+    \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
     \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
@@ -461,7 +461,7 @@ P_Percussion_I_Music_Voice = {                                                 %
     % [P Percussion_I_Music_Voice measure 146 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     c'2.                                                                       %! harmony.sixteenths()
     \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_up():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -496,7 +496,7 @@ P_Percussion_I_Music_Voice = {                                                 %
     R1 * 1/2                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [P Percussion_I_Music_Voice measure 149 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
+    \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
     c'2.                                                                       %! harmony.sixteenths()
     ^ \baca-brake-drum-paper-towel-markup                                      %! baca.markup:IndicatorCommand
 
@@ -506,7 +506,7 @@ P_Percussion_I_Music_Voice = {                                                 %
 
     c'16                                                                       %! harmony.sixteenths()
     \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_up():OverrideCommand(2)
 
     r8.                                                                        %! harmony.sixteenths()
 
@@ -555,9 +555,9 @@ P_Percussion_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
-%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_141:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
@@ -603,7 +603,7 @@ P_Percussion_II_Music_Voice = {                                                %
 
     d16                                                                        %! harmony.sixteenths()
     \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     r8.                                                                        %! harmony.sixteenths()
     - \baca-damp                                                               %! baca.articulation:IndicatorCommand
@@ -648,7 +648,7 @@ P_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     d2.                                                                        %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent:IndicatorCommand
@@ -660,7 +660,7 @@ P_Percussion_II_Music_Voice = {                                                %
 
     d16                                                                        %! harmony.sixteenths()
     \repeatTie
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     r8.                                                                        %! harmony.sixteenths()
     - \baca-damp                                                               %! baca.articulation:IndicatorCommand
@@ -711,8 +711,8 @@ P_Harp_Music_Voice = {                                                         %
     \once \override Staff.StaffSymbol.line-count = 5                           %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-hp-markup                             %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+%%% \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_141:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
+%%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! MEASURE_141:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
     \clef "bass"                                                               %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)

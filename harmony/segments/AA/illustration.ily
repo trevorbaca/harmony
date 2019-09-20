@@ -62,8 +62,8 @@ AA_Global_Skips = {                                                            %
     \bar ".|:"                                                                 %! baca.bar_line:IndicatorCommand
 
     % [AA Global_Skips measure 250 / measure 4]                                %! baca.SegmentMaker._comment_measure_numbers()
-%%% \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! MEASURE_250:NOT_MOL:baca.bar_line_x_extent:OverrideCommand(1)
-    \once \override Score.BarLine.X-extent = #'(0 . 3)                         %! MEASURE_250:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+%%% \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! MEASURE_250:NOT_MOL:baca.bar_line_x_extent():OverrideCommand(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 3)                         %! MEASURE_250:ONLY_MOL:baca.bar_line_x_extent():OverrideCommand(1)
     s1 * 7/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
@@ -101,7 +101,7 @@ AA_Global_Skips = {                                                            %
     \bar ":|."                                                                 %! baca.bar_line:IndicatorCommand
 
     % [AA Global_Skips measure 252 / measure 6]                                %! baca.SegmentMaker._comment_measure_numbers()
-    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_252:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_252:ONLY_MOL:baca.bar_line_x_extent():OverrideCommand(1)
     s1 * 3/2                                                                   %! baca.SegmentMaker._make_global_skips(1)
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
@@ -652,7 +652,7 @@ AA_Percussion_I_Music_Voice = {                                                %
     R1 * 7/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [AA Percussion_I_Music_Voice measure 250 / measure 4]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
+    \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
     c'1..                                                                      %! baca.make_repeat_tied_notes
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -662,7 +662,7 @@ AA_Percussion_I_Music_Voice = {                                                %
     c'1.                                                                       %! baca.make_repeat_tied_notes
     - \tweak direction #up                                                     %! baca.make_repeat_tied_notes
     \repeatTie                                                                 %! baca.make_repeat_tied_notes
-    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_up():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -712,7 +712,7 @@ AA_Percussion_I_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 1                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \once \override Stem.direction = #up                                       %! baca.stem_up:OverrideCommand(1)
+    \once \override Stem.direction = #up                                       %! baca.stem_up():OverrideCommand(1)
     c'1..                                                                      %! baca.make_repeat_tied_notes
     - \tweak color #(x11-color 'DeepPink1)                                     %! REDUNDANT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! REDUNDANT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -1512,8 +1512,8 @@ AA_Cello_I_Music_Voice = {                                                     %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_259:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
     \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
@@ -1912,8 +1912,8 @@ AA_Contrabass_I_Music_Voice = {                                                %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift:OverrideCommand(1)
+    \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_259:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_259:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
     \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)

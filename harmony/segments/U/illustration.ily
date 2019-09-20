@@ -2,8 +2,8 @@ U_Global_Skips = {                                                             %
 
     % [U Global_Skips measure 191 / measure 1]                                 %! baca.SegmentMaker._comment_measure_numbers()
     \bar ".|:"                                                                 %! baca.bar_line:IndicatorCommand
-    \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! MEASURE_191:NOT_MOL:baca.bar_line_x_extent:OverrideCommand(1)
-%%% \once \override Score.BarLine.X-extent = #'(0 . 3)                         %! MEASURE_191:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 2)                         %! MEASURE_191:NOT_MOL:baca.bar_line_x_extent():OverrideCommand(1)
+%%% \once \override Score.BarLine.X-extent = #'(0 . 3)                         %! MEASURE_191:ONLY_MOL:baca.bar_line_x_extent():OverrideCommand(1)
     \time 4/4                                                                  %! REAPPLIED_TIME_SIGNATURE:_set_status_tag:_reapply_persistent_indicators(1):baca.SegmentMaker._make_global_skips(2)
     \bar ""                                                                    %! baca.SegmentMaker._make_global_skips(4):+SEGMENT:EMPTY_START_BAR
     \baca-time-signature-color #'green4                                        %! REAPPLIED_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
@@ -63,7 +63,7 @@ U_Global_Skips = {                                                             %
     \bar ":|."                                                                 %! baca.bar_line:IndicatorCommand
 
     % [U Global_Skips measure 194 / measure 4]                                 %! baca.SegmentMaker._comment_measure_numbers()
-    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_194:ONLY_MOL:baca.bar_line_x_extent:OverrideCommand(1)
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! MEASURE_194:ONLY_MOL:baca.bar_line_x_extent():OverrideCommand(1)
     \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:baca.SegmentMaker._make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
     s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
@@ -371,13 +371,13 @@ U_Percussion_I_Music_Voice = {                                                 %
         \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
         \once \override Staff.StaffSymbol.line-count = 3                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
         \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding:OverrideCommand(1)
-        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down:OverrideCommand(1)
-        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding:OverrideCommand(1)
+        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding():OverrideCommand(1)
+        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down():OverrideCommand(1)
+        \override TupletBracket.staff-padding = #3.5                           %! baca.tuplet_bracket_staff_padding():OverrideCommand(1)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
         r16                                                                    %! harmony.phjc()
 
-        \override Stem.direction = #down                                       %! baca.stem_down:OverrideCommand(1)
+        \override Stem.direction = #down                                       %! baca.stem_down():OverrideCommand(1)
         e'8                                                                    %! harmony.phjc()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -407,14 +407,14 @@ U_Percussion_I_Music_Voice = {                                                 %
 
         c'16                                                                   %! harmony.phjc()
         ]                                                                      %! harmony.phjc()
-        \revert Stem.direction                                                 %! baca.stem_down:OverrideCommand(2)
+        \revert Stem.direction                                                 %! baca.stem_down():OverrideCommand(2)
 
     }                                                                          %! harmony.phjc()
 
     r4                                                                         %! harmony.phjc()
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down:OverrideCommand(2)
-    \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding:OverrideCommand(2)
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():OverrideCommand(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():OverrideCommand(2)
+    \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -450,7 +450,7 @@ U_Percussion_I_Music_Voice = {                                                 %
     R1 * 1                                                                     %! baca.SegmentMaker._make_measure_silences()
 
     % [U Percussion_I_Music_Voice measure 195 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
+    \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
     c'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -463,7 +463,7 @@ U_Percussion_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.sixteenths()
 
     c'4                                                                        %! harmony.sixteenths()
-    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_up():OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -550,7 +550,7 @@ U_Percussion_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     r4                                                                         %! harmony.sixteenths()
 
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     b4                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -563,7 +563,7 @@ U_Percussion_II_Music_Voice = {                                                %
     b4                                                                         %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent:IndicatorCommand
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -600,7 +600,7 @@ U_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
@@ -636,7 +636,7 @@ U_Percussion_II_Music_Voice = {                                                %
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \espressivo                                                              %! baca.espressivo:IndicatorCommand
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -911,7 +911,7 @@ U_Viola_Music_Voice = {                                                        %
 
         r16                                                                    %! harmony.sixteenths()
 
-        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic:OverrideCommand(1)
+        \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():OverrideCommand(1)
         \baca-unpitched-music-warning                                          %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
         c'16                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -935,7 +935,7 @@ U_Viola_Music_Voice = {                                                        %
         c'16                                                                   %! harmony.sixteenths()
         - \laissezVibrer                                                       %! baca.laissez_vibrer:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
-        \revert NoteHead.style                                                 %! baca.note_head_style_harmonic:OverrideCommand(2)
+        \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():OverrideCommand(2)
 
         r8                                                                     %! harmony.sixteenths()
 

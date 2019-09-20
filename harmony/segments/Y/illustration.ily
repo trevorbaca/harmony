@@ -292,7 +292,7 @@ Y_Bass_Flute_Music_Voice = {                                                   %
     \override Accidental.font-size = -3                                        %! baca.literal:IndicatorCommand
     \override Accidental.X-offset = 0                                          %! baca.literal:IndicatorCommand
     \override Accidental.Y-offset = -2                                         %! baca.literal:IndicatorCommand
-    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding:OverrideCommand(1)
+    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():OverrideCommand(1)
     r2                                                                         %! harmony.thirty_seconds()
 
     r2                                                                         %! harmony.thirty_seconds()
@@ -348,7 +348,7 @@ Y_Bass_Flute_Music_Voice = {                                                   %
 
         c''32                                                                  %! harmony.thirty_seconds()
         ]                                                                      %! harmony.thirty_seconds()
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding:OverrideCommand(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():OverrideCommand(2)
 
     }                                                                          %! harmony.thirty_seconds()
 
@@ -395,7 +395,7 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         \override Accidental.font-size = -3                                    %! baca.literal:IndicatorCommand
         \override Accidental.X-offset = 0                                      %! baca.literal:IndicatorCommand
         \override Accidental.Y-offset = -2                                     %! baca.literal:IndicatorCommand
-        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding:OverrideCommand(1)
+        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding():OverrideCommand(1)
     %%% \once \override Score.BarLine.transparent = ##t                        %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_229
     %%% \once \override Score.SpanBar.transparent = ##t                        %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_229
         g'32                                                                   %! harmony.thirty_seconds()
@@ -855,7 +855,7 @@ Y_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
     \stopTrillSpan                                                             %! SPANNER_STOP:baca.trill_spanner:SpannerIndicatorCommand(2)
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding:OverrideCommand(2)
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -984,7 +984,7 @@ Y_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 1                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \override Stem.direction = #up                                             %! baca.stem_up:OverrideCommand(1)
+    \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
     c'16                                                                       %! harmony.sixteenths()
     - \tweak X-extent ##f                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1048,7 +1048,7 @@ Y_Percussion_I_Music_Voice = {                                                 %
 
     c'16                                                                       %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent:IndicatorCommand
-    \revert Stem.direction                                                     %! baca.stem_up:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_up():OverrideCommand(2)
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1183,7 +1183,7 @@ Y_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
-    \override Stem.direction = #down                                           %! baca.stem_down:OverrideCommand(1)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     d'8                                                                        %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1313,7 +1313,7 @@ Y_Percussion_II_Music_Voice = {                                                %
     d'16
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \revert Stem.direction                                                     %! baca.stem_down:OverrideCommand(2)
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     r16                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
