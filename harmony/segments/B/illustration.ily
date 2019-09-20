@@ -1750,6 +1750,7 @@ B_Cello_I_Music_Voice = {                                                      %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -1784,6 +1785,7 @@ B_Cello_I_Music_Voice = {                                                      %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -1822,6 +1824,7 @@ B_Cello_I_Music_Voice = {                                                      %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -1864,6 +1867,7 @@ B_Cello_I_Music_Voice = {                                                      %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -1911,6 +1915,7 @@ B_Cello_I_Music_Voice = {                                                      %
             \set fontSize = #-3
 
             % [B Cello_I_Music_Voice measure 8 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2124,6 +2129,7 @@ B_Cello_II_Music_Voice = {                                                     %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2163,6 +2169,7 @@ B_Cello_II_Music_Voice = {                                                     %
             \set fontSize = #-3
 
             % [B Cello_II_Music_Voice measure 6 / measure 3]                   %! baca.SegmentMaker._comment_measure_numbers()
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2206,6 +2213,7 @@ B_Cello_II_Music_Voice = {                                                     %
             \set fontSize = #-3
 
             % [B Cello_II_Music_Voice measure 7 / measure 4]                   %! baca.SegmentMaker._comment_measure_numbers()
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2252,6 +2260,7 @@ B_Cello_II_Music_Voice = {                                                     %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2458,6 +2467,7 @@ B_Contrabass_I_Music_Voice = {                                                 %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2465,7 +2475,6 @@ B_Contrabass_I_Music_Voice = {                                                 %
                 \tweak font-size #0
                 \tweak transparent ##t
                 d
-                d'
             >8 * 2/5
             [
             (
@@ -2501,6 +2510,7 @@ B_Contrabass_I_Music_Voice = {                                                 %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2508,7 +2518,6 @@ B_Contrabass_I_Music_Voice = {                                                 %
                 \tweak font-size #0
                 \tweak transparent ##t
                 d
-                d'
             >8 * 2/5
             [
             (
@@ -2548,6 +2557,7 @@ B_Contrabass_I_Music_Voice = {                                                 %
         {
             \set fontSize = #-3
 
+            \once \override NoteHead.style = #'harmonic                        %! baca.literal:IndicatorCommand
             \slash
             \voiceOne
             \baca-unpitched-music-warning                                      %! NOT_YET_PITCHED:baca.SegmentMaker._color_unpitched_notes()
@@ -2555,7 +2565,6 @@ B_Contrabass_I_Music_Voice = {                                                 %
                 \tweak font-size #0
                 \tweak transparent ##t
                 d
-                d'
             >8 * 2/5
             [
             (
