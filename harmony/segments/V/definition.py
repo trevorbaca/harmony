@@ -141,7 +141,7 @@ maker(
     ("perc1", (5, 10)),
     baca.make_notes(),
     harmony.triangle_staff_position(),
-    baca.flat_glissando(2, hide_middle_stems=True),
+    baca.flat_glissando(2, allow_repitch=True, hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("pp"),
     baca.markup(

@@ -93,7 +93,7 @@ maker(
     ("perc1", (4, 5)),
     harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
     harmony.triangle_staff_position(),
-    baca.flat_glissando("D4"),
+    baca.flat_glissando("D4", allow_repitch=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< p > pp -- (pp) < mp > pp -- !",
@@ -108,7 +108,7 @@ maker(
     harmony.durata([1, 1, 2, 1, 1, 1, 1]),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pheads()),
-    baca.flat_glissando("D4"),
+    baca.flat_glissando("D4", allow_repitch=True),
     baca.hairpin(
         "o< p > pp -- ! < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
