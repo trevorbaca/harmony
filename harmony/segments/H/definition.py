@@ -90,7 +90,7 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.tuplet([(1, 1), (1,)]),
-    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.pitch("<A4 B4 C5>", approximate_pitch=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.hairpin(
@@ -116,7 +116,7 @@ maker(
 maker(
     ("hp", (8, 9)),
     baca.make_notes(),
-    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.pitch("<A4 B4 C5>", approximate_pitch=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("pp"),
 )
@@ -126,7 +126,7 @@ maker(
 maker(
     ("va", (1, 9)),
     baca.pitch("<B3 C4 D4>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc1
@@ -134,7 +134,7 @@ maker(
 maker(
     ("vc1", (1, 9)),
     baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc2
@@ -142,7 +142,7 @@ maker(
 maker(
     ("vc2", (1, 9)),
     baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb1
@@ -150,7 +150,7 @@ maker(
 maker(
     ("cb1", (1, 9)),
     baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb2
@@ -158,7 +158,7 @@ maker(
 maker(
     ("cb2", (1, 9)),
     baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # va, vc1, vc2, cb1, cb2

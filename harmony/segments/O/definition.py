@@ -143,7 +143,7 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     harmony.tuplet([(-4, 1)]),
-    baca.pitch("<A4 B4>", not_yet_pitched=True),
+    baca.pitch("<A4 B4>", approximate_pitch=True),
     baca.flageolet(),
     baca.laissez_vibrer(),
 )
@@ -151,7 +151,7 @@ maker(
 maker(
     ("hp", [5, 9]),
     harmony.tuplet([(-4, 1)]),
-    baca.pitch("<A4 B4>", not_yet_pitched=True),
+    baca.pitch("<A4 B4>", approximate_pitch=True),
     baca.flageolet(),
     baca.laissez_vibrer(),
 )
@@ -177,7 +177,6 @@ maker(
 maker(
     ("vc1", (1, 2)),
     harmony.sixteenths([3, -1, -4, 7, -1, -10, 3, -1, -2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.runs(),
@@ -193,7 +192,6 @@ maker(
 maker(
     ("vc1", (5, 9)),
     harmony.sixteenths([3, -1, -8, 47, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -216,7 +214,6 @@ maker(
 maker(
     ("vc2", (1, 2)),
     harmony.sixteenths([3, -1, -4, 7, -1, -10, 3, -1, -2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.runs(),
@@ -232,7 +229,6 @@ maker(
 maker(
     ("vc2", (5, 9)),
     harmony.sixteenths([3, -1, -8, 47, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -255,7 +251,6 @@ maker(
 maker(
     ("cb1", (1, 2)),
     harmony.sixteenths([3, -1, -4, 7, -1, -10, 3, -1, -2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.runs(),
@@ -271,7 +266,6 @@ maker(
 maker(
     ("cb1", (5, 9)),
     harmony.sixteenths([3, -1, -8, 47, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -294,7 +288,6 @@ maker(
 maker(
     ("cb2", (1, 2)),
     harmony.sixteenths([3, -1, -4, 7, -1, -10, 3, -1, -2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.runs(),
@@ -310,7 +303,6 @@ maker(
 maker(
     ("cb2", (5, 9)),
     harmony.sixteenths([3, -1, -8, 47, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),

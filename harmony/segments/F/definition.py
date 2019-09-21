@@ -249,7 +249,7 @@ maker(
     baca.clef("bass"),
     harmony.sixteenths([-10, 6, -99]),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.dynamic("mp"),
 )
 
@@ -265,7 +265,7 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths([9, -99]),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
@@ -280,7 +280,6 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths([-2, 2, -14, 2, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.markup(r"\baca-pdlt-markup", literal=True),
@@ -296,7 +295,6 @@ maker(
     ("hp", 10),
     baca.clef("treble"),
     harmony.tuplet([(-1, 1, -8, 1)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -304,7 +302,6 @@ maker(
 maker(
     ("hp", 11),
     harmony.tuplet([(-4, 1)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -312,7 +309,6 @@ maker(
 maker(
     ("hp", 12),
     harmony.tuplet([(1, 1, -1, 1, -1, -6)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -320,7 +316,6 @@ maker(
 maker(
     ("hp", 13),
     harmony.tuplet([(-4, 1, 1)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -328,7 +323,6 @@ maker(
 maker(
     ("hp", 14),
     harmony.tuplet([(1, 1, 1, 1, 1, -7)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -336,7 +330,6 @@ maker(
 maker(
     ("hp", 15),
     harmony.tuplet([(-5, 1, 1, 1, 1, 1, -2)]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -346,7 +339,6 @@ maker(
 maker(
     ("va", 1),
     harmony.sixteenths([3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -359,7 +351,6 @@ maker(
 maker(
     ("va", 4),
     harmony.sixteenths([-11, 2, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -372,7 +363,6 @@ maker(
 maker(
     ("va", (6, 7)),
     harmony.sixteenths([-1, 2, -28, 3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -400,7 +390,6 @@ maker(
     harmony.sixteenths([
         -5, 2, -5, 3, -10, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
         ]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -415,7 +404,6 @@ maker(
 maker(
     ("vc1", 1),
     harmony.sixteenths([3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -428,7 +416,6 @@ maker(
 maker(
     ("vc1", 4),
     harmony.sixteenths([-11, 2, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -441,7 +428,6 @@ maker(
 maker(
     ("vc1", (6, 7)),
     harmony.sixteenths([-1, 2, -28, 3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -467,7 +453,6 @@ maker(
     harmony.sixteenths([
         -5, 2, -5, 3, -10 - 2, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
         ]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -482,7 +467,6 @@ maker(
 maker(
     ("vc2", 1),
     harmony.sixteenths([3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -495,7 +479,6 @@ maker(
 maker(
     ("vc2", 4),
     harmony.sixteenths([-11, 2, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -508,7 +491,6 @@ maker(
 maker(
     ("vc2", (6, 7)),
     harmony.sixteenths([-1, 2, -28, 3, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -524,7 +506,6 @@ maker(
     harmony.sixteenths([
         -5, 2, -5, 3, -10 + 3, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, 99,
         ]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "p.sc. =|",
         abjad.tweak(3).staff_padding,
@@ -540,7 +521,7 @@ maker(
     ("cb1", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -551,7 +532,7 @@ maker(
     ("cb1", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -572,7 +553,7 @@ maker(
     ("cb1", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -585,7 +566,7 @@ maker(
     ("cb2", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -596,7 +577,7 @@ maker(
     ("cb2", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -607,7 +588,7 @@ maker(
     ("cb2", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,

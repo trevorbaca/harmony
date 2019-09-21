@@ -76,12 +76,12 @@ maker(
     baca.pitches(
         "D3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        not_yet_pitched=True,
+        approximate_pitch=True,
     ),
     baca.pitches(
         "G3 A3 B3 A3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        not_yet_pitched=True,
+        approximate_pitch=True,
     ),
 )
 
@@ -157,7 +157,7 @@ maker(
 
 maker(
     ("va", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], not_yet_pitched=True),
+    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -181,7 +181,7 @@ maker(
 
 maker(
     ("vc1", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], not_yet_pitched=True),
+    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -205,7 +205,7 @@ maker(
 
 maker(
     ("vc2", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], not_yet_pitched=True),
+    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -229,7 +229,7 @@ maker(
 
 maker(
     ("cb1", (10, 15)),
-    baca.staff_positions([-5, -2, -4, -1], not_yet_pitched=True),
+    baca.staff_positions([-5, -2, -4, -1], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -253,7 +253,7 @@ maker(
 
 maker(
     ("cb2", (10, 15)),
-    baca.staff_positions([-5, -2, -4, -1], not_yet_pitched=True),
+    baca.staff_positions([-5, -2, -4, -1], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )

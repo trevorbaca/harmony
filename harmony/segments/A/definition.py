@@ -67,12 +67,12 @@ maker(
     baca.pitches(
         "D3 E3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        not_yet_pitched=True,
+        approximate_pitch=True,
     ),
     baca.pitches(
         "F3 G3 A3 G3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        not_yet_pitched=True,
+        approximate_pitch=True,
     ),
 )
 
@@ -268,7 +268,6 @@ maker(
 
 maker(
     ("vc1", (1, 2)),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
@@ -296,7 +295,6 @@ maker(
 maker(
     ("vc2", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(8).staff_padding,
         map=baca.plts(),
@@ -320,7 +318,6 @@ maker(
 maker(
     ("cb1", (1, 2)),
     harmony.sixteenths([18, 6, 10, 4, 6]), 
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
@@ -348,7 +345,6 @@ maker(
 maker(
     ("cb2", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(8).staff_padding,
         map=baca.plts(),

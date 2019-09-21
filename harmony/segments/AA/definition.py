@@ -226,7 +226,6 @@ maker(
 maker(
     ("vc2", 13),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("p"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -269,7 +268,6 @@ maker(
 maker(
     ("cb2", 13),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("p"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -280,7 +278,6 @@ maker(
 
 maker(
     (["vc1", "vc2", "cb1", "cb2"], (4, 5)),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),

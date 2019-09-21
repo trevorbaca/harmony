@@ -152,7 +152,7 @@ maker(
     ("hp", 2),
     harmony.durata([-1, 5, -99]),
     baca.chunk(
-        baca.staff_position(-14, not_yet_pitched=True),
+        baca.staff_position(-14, approximate_pitch=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -165,7 +165,7 @@ maker(
     ("hp", (4, 5)),
     harmony.durata([7, -2, 6, -1]),
     baca.chunk(
-        baca.staff_position(-14, not_yet_pitched=True),
+        baca.staff_position(-14, approximate_pitch=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -178,7 +178,7 @@ maker(
     ("hp", 10),
     harmony.durata([3, -2, 2, -1]),
     baca.chunk(
-        baca.staff_position(-14, not_yet_pitched=True),
+        baca.staff_position(-14, approximate_pitch=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -208,7 +208,6 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )
@@ -222,9 +221,8 @@ maker(
         pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.flat_glissando("C4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )
@@ -237,9 +235,8 @@ maker(
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.flat_glissando("C4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )

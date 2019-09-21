@@ -126,7 +126,7 @@ maker(
     ("hp", 1),
     baca.make_notes(),
     baca.laissez_vibrer(),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.dynamic("mp"),
     baca.accent(),
 )
@@ -135,7 +135,7 @@ maker(
     ("hp", 5),
     harmony.sixteenths([-16, 4]),
     baca.laissez_vibrer(),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
     baca.accent(),
 )
@@ -145,7 +145,6 @@ maker(
 maker(
     ("va", 1),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -156,7 +155,6 @@ maker(
 maker(
     ("va", 5),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-1).self_alignment_X,
@@ -172,13 +170,11 @@ maker(
 maker(
     ("vc1", 1),
     harmony.tessera_2(3, rmakers.force_rest(baca.plt(0))),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc1", 5),
     harmony.tessera_2(3, advance=24),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc2
@@ -186,13 +182,11 @@ maker(
 maker(
     ("vc2", 1),
     harmony.tessera_2(2, rmakers.force_rest(baca.plt(0))),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc2", 5),
     harmony.tessera_2(2, advance=24),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb1
@@ -200,13 +194,11 @@ maker(
 maker(
     ("cb1", 1),
     harmony.tessera_2(1, rmakers.force_rest(baca.plt(0))),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb1", 5),
     harmony.tessera_2(1, advance=24),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb2
@@ -214,13 +206,11 @@ maker(
 maker(
     ("cb2", 1),
     harmony.tessera_2(0),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb2", 5),
     harmony.tessera_2(0, advance=24),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc1, vc2, cb1, cb2

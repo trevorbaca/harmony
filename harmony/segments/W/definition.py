@@ -67,7 +67,6 @@ maker(
 maker(
     ("bfl", (4, 6)),
     harmony.sixteenths([4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.cmgroups().map(baca.leaves().get([0, -1]))),
     baca.dynamic("mp"),
     baca.espressivo(baca.pheads()),
@@ -109,7 +108,6 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths([4, -99]),
     baca.markup(r"\baca-glockenspiel-markup", literal=True),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.laissez_vibrer(baca.ptails()),
 )
 
@@ -124,7 +122,6 @@ maker(
     ("hp", 6),
     harmony.sixteenths([4, -99]),
     baca.markup(r"\baca-xyl-markup", literal=True),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.laissez_vibrer(baca.ptails()),
 )
 
@@ -133,7 +130,6 @@ maker(
 maker(
     ("va", 1),
     harmony.sixteenths([4, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )
@@ -141,7 +137,6 @@ maker(
 maker(
     ("va", (4, 6)),
     harmony.sixteenths([4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("p"),
 )
@@ -151,7 +146,6 @@ maker(
 maker(
     ("vc1", 1),
     harmony.sixteenths([4, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )
@@ -159,7 +153,6 @@ maker(
 maker(
     ("vc1", (4, 6)),
     harmony.sixteenths([4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("p"),
 )
@@ -169,7 +162,6 @@ maker(
 maker(
     ("vc2", 6),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "slow bow =|",
         abjad.tweak(3).staff_padding,
@@ -181,7 +173,6 @@ maker(
 maker(
     ("cb1", 1),
     harmony.sixteenths([4, -99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )
@@ -189,7 +180,6 @@ maker(
 maker(
     ("cb1", 6),
     harmony.sixteenths([4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("p"),
 )
@@ -199,7 +189,6 @@ maker(
 maker(
     ("cb2", 6),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.scp_spanner(
         "scp =|",
         abjad.tweak(3).staff_padding,

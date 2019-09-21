@@ -156,5 +156,4 @@ maker(
         selector=baca.leaves().rleak(),
         measures=2,
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )

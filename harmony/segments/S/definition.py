@@ -230,7 +230,7 @@ maker(
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
@@ -239,7 +239,7 @@ maker(
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # va
@@ -247,19 +247,18 @@ maker(
 maker(
     ("va", 1),
     # chord pitches cause duration multipliers to go missing
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("va", (4, 9)),
     baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
     ("va", 12),
     baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc1
@@ -267,19 +266,18 @@ maker(
 maker(
     ("vc1", 1),
     # chord pitches cause duration multipliers to go missing
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc1", (4, 9)),
     baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
     ("vc1", 12),
     baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc2
@@ -287,19 +285,18 @@ maker(
 maker(
     ("vc2", 1),
     # chord pitches cause duration multipliers to go missing
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc2", (4, 9)),
     baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
     ("vc2", 12),
     baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb1
@@ -307,19 +304,18 @@ maker(
 maker(
     ("cb1", 1),
     # chord pitches cause duration multipliers to go missing
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb1", (4, 9)),
     baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
     ("cb1", 12),
     baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb2
@@ -327,19 +323,18 @@ maker(
 maker(
     ("cb2", 1),
     # chord pitches cause duration multipliers to go missing
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb2", (4, 9)),
     baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 maker(
     ("cb2", 12),
     baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # va, vc1, vc2, cb1, cb2
