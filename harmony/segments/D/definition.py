@@ -64,19 +64,16 @@ maker(
 maker(
     ("bfl", (1, 6)),
     harmony.tessera_1(6, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("bfl", 8),
     harmony.tessera_1(6, advance=72, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("bfl", 11),
     harmony.tessera_1(6, advance=72 + 12, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # perc1
@@ -180,19 +177,16 @@ maker(
     ("hp", (1, 6)),
     baca.clef("treble"),
     harmony.tessera_1(5),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("hp", 8),
     harmony.tessera_1(5, advance=72),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("hp", 11),
     harmony.tessera_1(5, advance=72 + 12),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # va
@@ -232,19 +226,16 @@ maker(
     baca.staff_lines(5),
     baca.clef("bass"),
     harmony.tessera_1(3, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc1", 8),
     harmony.tessera_1(3, advance=72, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc1", 11),
     harmony.tessera_1(3, advance=72 + 12, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc2
@@ -252,19 +243,16 @@ maker(
 maker(
     ("vc2", (1, 6)),
     harmony.tessera_1(2, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc2", 8),
     harmony.tessera_1(2, advance=72, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc2", 11),
     harmony.tessera_1(2, advance=72 + 12, gap=True),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc1, vc2
@@ -283,20 +271,17 @@ maker(
     baca.staff_lines(5),
     baca.clef("treble"),
     harmony.tessera_1(1),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.markup(r"\baca-pizz-markup", literal=True),
 )
 
 maker(
     ("cb1", 8),
     harmony.tessera_1(1, advance=72),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb1", 11),
     harmony.tessera_1(1, advance=72 + 12),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb2
@@ -305,20 +290,17 @@ maker(
     ("cb2", (1, 6)),
     baca.clef("treble"),
     harmony.tessera_1(0),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.markup(r"\baca-pizz-markup", literal=True),
 )
 
 maker(
     ("cb2", 8),
     harmony.tessera_1(0, advance=72),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb2", 11),
     harmony.tessera_1(0, advance=72 + 12),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb1, cb2

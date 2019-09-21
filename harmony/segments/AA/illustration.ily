@@ -305,14 +305,15 @@ AA_Bass_Flute_Music_Voice_A = {                                                %
 
     \voiceTwo
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8.
+    b'8.
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2
+    b'2
     \repeatTie
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''1
+    b'1
+    - \tweak direction #up
     \repeatTie
 
 }                                                                              %! abjad.Path.extern
@@ -322,14 +323,15 @@ AA_Bass_Flute_Music_Voice_B = {                                                %
 
     \voiceTwo
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8.
+    b'8.
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''1
+    b'1
+    - \tweak direction #up
     \repeatTie
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \repeatTie
 
 }                                                                              %! abjad.Path.extern
@@ -413,34 +415,34 @@ AA_Bass_Flute_Music_Voice = {                                                  %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                c''
+                b'
             >8 * 2/5
             [
             (
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
             )
             ]
 
@@ -467,25 +469,25 @@ AA_Bass_Flute_Music_Voice = {                                                  %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                c''
+                b'
             >8 * 2/5
             [
             (
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
 
             \baca-not-yet-pitched-coloring                                     %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-            c''8 * 2/5
+            b'8 * 2/5
             )
             ]
 
@@ -548,7 +550,7 @@ AA_Bass_Flute_Music_Voice = {                                                  %
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
 %%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_258
 %%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_258
-    c''4                                                                       %! harmony.sixteenths()
+    b'4                                                                        %! harmony.sixteenths()
     ^ \baca-jet-whistle-markup                                                 %! baca.markup:IndicatorCommand
 
     r2                                                                         %! harmony.sixteenths()
@@ -1049,7 +1051,7 @@ AA_Harp_Music_Voice = {                                                        %
     r4                                                                         %! harmony.sixteenths()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
@@ -1090,7 +1092,7 @@ AA_Harp_Music_Voice = {                                                        %
 
     % [AA Harp_Music_Voice measure 250 / measure 4]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'DeepPink1)                                     %! REDUNDANT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! REDUNDANT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand

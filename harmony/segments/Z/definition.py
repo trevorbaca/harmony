@@ -110,7 +110,7 @@ maker(
     ("hp", (1, 2)),
     harmony.sixteenths([-10, 2, -4, -14, 2]),
     baca.clef("treble"),
-    baca.pitch("<C5 D5>", not_yet_pitched=True),
+    baca.pitch("<C5 D5>", approximate_pitch=True),
     baca.flageolet(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.dynamic("f"),
@@ -125,7 +125,7 @@ maker(
 maker(
     ("hp", (5, 7)),
     harmony.sixteenths([-10, 2, -4, -14, 2, -8, 2, -6]),
-    baca.pitch("<C5 D5>", not_yet_pitched=True),
+    baca.pitch("<C5 D5>", approximate_pitch=True),
     baca.flageolet(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.dynamic("f"),
@@ -134,7 +134,7 @@ maker(
 maker(
     ("hp", 10),
     harmony.sixteenths([2, -14]),
-    baca.pitch("<C5 D5>", not_yet_pitched=True),
+    baca.pitch("<C5 D5>", approximate_pitch=True),
     baca.flageolet(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.dynamic("f"),
@@ -155,7 +155,6 @@ maker(
 maker(
     (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
     harmony.sixteenths([4, -12]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| ff",
         map=baca.runs().map(baca.leaves().rleak()),

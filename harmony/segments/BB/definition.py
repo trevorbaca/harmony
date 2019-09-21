@@ -61,8 +61,7 @@ maker(
     ("bfl", (1, 4)),
     harmony.sixteenths([8, 4, 4, 8, 4, 3, -1]),
     baca.flat_glissando("B3"),
-    baca.not_yet_pitched(),
-    baca.staff_position(0, not_yet_pitched=True),
+    baca.approximate_pitch(),
     baca.trill_spanner(),
     baca.hairpin(
         "p (p) < mp >",
@@ -74,7 +73,7 @@ maker(
     ("bfl", (7, 10)),
     harmony.sixteenths([4]),
     baca.flat_glissando("B3"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
@@ -94,7 +93,7 @@ maker(
     ),
     # TODO: semantic staff position (without string constant)
     baca.flat_glissando("D4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.markup(r"\baca-triangle-markup", literal=True),
     baca.stem_up(),
     baca.stem_tremolo(baca.plts().get([0, -1])),
@@ -110,7 +109,7 @@ maker(
     harmony.sixteenths([4]),
     # TODO: semantic staff position (without string constant)
     baca.flat_glissando("D4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.markup(r"\baca-triangle-markup", literal=True),
     baca.stem_up(),
     baca.stem_tremolo(baca.plts().get([0, -1])),
@@ -170,7 +169,7 @@ maker(
     ("va", (1, 4)),
     baca.make_notes(),
     baca.flat_glissando("C4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
@@ -182,7 +181,7 @@ maker(
     ("va", (7, 10)),
     baca.make_notes(),
     baca.flat_glissando("C4"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
@@ -196,18 +195,13 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(5),
     harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], not_yet_pitched=True),
+    baca.staff_positions([2, -2], approximate_pitch=True),
     baca.glissando(),
 )
 
 maker(
     ("vc1", (7, 10)),
     baca.note_head_style_harmonic(),
-    baca.staff_position(
-        0,
-        not_yet_pitched=True,
-        selector=baca.leaves().rleak(),
-    ),
     harmony.sixteenths([2]),
     baca.hairpin(
         "niente o< mp >o",
@@ -222,18 +216,13 @@ maker(
 maker(
     ("vc2", (1, 4)),
     harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], not_yet_pitched=True),
+    baca.staff_positions([2, -2], approximate_pitch=True),
     baca.glissando(),
 )
 
 maker(
     ("vc2", (7, 10)),
     baca.note_head_style_harmonic(),
-    baca.staff_position(
-        0,
-        not_yet_pitched=True,
-        selector=baca.leaves().rleak(),
-    ),
     harmony.sixteenths([2]),
     baca.hairpin(
         "niente o< mp >o",
@@ -250,7 +239,6 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.note_head_style_harmonic(),
-    baca.staff_position(0, not_yet_pitched=True),
     harmony.sixteenths([4, 4, -8]),
     baca.hairpin(
         "niente o< mf >o niente",
@@ -265,11 +253,6 @@ maker(
 maker(
     ("cb1", (7, 10)),
     baca.note_head_style_harmonic(),
-    baca.staff_position(
-        0,
-        not_yet_pitched=True,
-        selector=baca.leaves().rleak(),
-    ),
     harmony.sixteenths([2]),
     baca.hairpin(
         "niente o< mp >o",
@@ -285,7 +268,7 @@ maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
@@ -296,7 +279,7 @@ maker(
     ("cb2", (7, 10)),
     baca.make_notes(),
     baca.flat_glissando("E1"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,

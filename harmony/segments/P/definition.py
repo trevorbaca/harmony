@@ -54,7 +54,6 @@ maker(
 maker(
     ("bfl", (1, 6)),
     harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -68,7 +67,6 @@ maker(
 maker(
     ("bfl", (9, 10)),
     harmony.sixteenths([3, -1, 8, -8, 3, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -149,7 +147,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -162,7 +160,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -174,7 +172,6 @@ maker(
 maker(
     ("vc1", (1, 6)),
     harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -184,7 +181,6 @@ maker(
 maker(
     ("vc1", (9, 10)),
     harmony.sixteenths([3, -1, 8, -8, 3, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -196,7 +192,6 @@ maker(
 maker(
     ("vc2", (1, 6)),
     harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -206,7 +201,6 @@ maker(
 maker(
     ("vc2", (9, 10)),
     harmony.sixteenths([3, -1, 8, -8, 3, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -221,7 +215,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -234,7 +228,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -249,7 +243,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -262,7 +256,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], not_yet_pitched=True),
+    baca.staff_positions([-2, 2], approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),

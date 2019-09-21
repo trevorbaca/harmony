@@ -179,14 +179,14 @@ maker(
         literal=True,
         selector=baca.phead(-1),
     ),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
 )
 
 # va
 
 maker(
     ("va", 2),
-    baca.pitch("<C4 D4 E4>", not_yet_pitched=True),
+    baca.pitch("<C4 D4 E4>", approximate_pitch=True),
 )
 
 maker(
@@ -199,14 +199,14 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando("<C4 D4 E4>"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc1
 
 maker(
     ("vc1", 2),
-    baca.pitch("<C3 D3 E3>", not_yet_pitched=True),
+    baca.pitch("<C3 D3 E3>", approximate_pitch=True),
 )
 
 maker(
@@ -219,14 +219,14 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando("<C3 D3 E3>"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc2
 
 maker(
     ("vc2", 2),
-    baca.pitch("<C3 D3 E3>", not_yet_pitched=True),
+    baca.pitch("<C3 D3 E3>", approximate_pitch=True),
 )
 
 maker(
@@ -239,14 +239,14 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando("<C3 D3 E3>"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb1
 
 maker(
     ("cb1", 2),
-    baca.pitch("<C2 D2 E2>", not_yet_pitched=True),
+    baca.pitch("<C2 D2 E2>", approximate_pitch=True),
 )
 
 maker(
@@ -259,14 +259,14 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando("<C2 D2 E2>"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb2
 
 maker(
     ("cb2", 2),
-    baca.pitch("<C2 D2 E2>", not_yet_pitched=True),
+    baca.pitch("<C2 D2 E2>", approximate_pitch=True),
 )
 
 maker(
@@ -279,7 +279,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando("<C2 D2 E2>"),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # va, vc1, vc2, cb1, cb2

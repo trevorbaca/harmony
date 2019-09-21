@@ -55,7 +55,6 @@ maker(
 maker(
     ("bfl", (1, 3)),
     harmony.sixteenths([2, 3, -3]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "niente o< mf >o",
         pieces=baca.lparts([1, 2 + 1]),
@@ -77,7 +76,6 @@ maker(
 maker(
     ("bfl", (5, 8)),
     harmony.sixteenths([2, 2, -2]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "niente o< p >o",
         pieces=baca.lparts([1, 1 + 1]),
@@ -253,13 +251,11 @@ maker(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
     baca.dynamic("pp"),

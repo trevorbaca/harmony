@@ -266,7 +266,6 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -276,13 +275,11 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("va", 8),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
 )
 
@@ -295,7 +292,6 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -305,13 +301,11 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("vc1", 8),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
 )
 
@@ -320,7 +314,6 @@ maker(
 maker(
     ("vc2", 1),
     harmony.sixteenths([-4, 99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -329,7 +322,6 @@ maker(
 maker(
     ("vc2", (4, 5)),
     harmony.sixteenths([99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -338,7 +330,6 @@ maker(
 maker(
     ("vc2", 8),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -353,7 +344,6 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -363,13 +353,11 @@ maker(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
     ("cb1", 8),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
 )
 
@@ -378,7 +366,6 @@ maker(
 maker(
     ("cb2", 1),
     harmony.sixteenths([-4, 99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -387,7 +374,6 @@ maker(
 maker(
     ("cb2", (4, 5)),
     harmony.sixteenths([99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -396,7 +382,6 @@ maker(
 maker(
     ("cb2", 8),
     baca.make_repeat_tied_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),

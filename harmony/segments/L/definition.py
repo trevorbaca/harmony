@@ -330,7 +330,6 @@ maker(
                 [1, 6, 9, 11, 14, 16, 19,21, 22, 24, 25, 26, 28, 30, 31, 32])
         ),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -340,7 +339,6 @@ maker(
 
 maker(
     ("cb1", (11, 15)),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb2
@@ -353,7 +351,6 @@ maker(
             baca.leaves().exclude([1, 9, 16, 22, 27, 29, 31, 33, 34, 35])
         ),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -363,7 +360,6 @@ maker(
 
 maker(
     ("cb2", (11, 15)),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # va, vc1, vc2, cb1, cb2

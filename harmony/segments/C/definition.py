@@ -70,7 +70,7 @@ cerulean = [
 maker(
     ("bfl", 1),
     harmony.sixteenths(cerulean[1:]),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -80,7 +80,7 @@ maker(
 maker(
     ("bfl", (6, 8)),
     harmony.sixteenths(cerulean[2:]),
-    baca.staff_position(-6, not_yet_pitched=True),
+    baca.staff_position(-6, approximate_pitch=True),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -170,7 +170,7 @@ maker(
     baca.clef("bass"),
     harmony.durata([5, -2]),
     baca.chunk(
-        baca.staff_position(-14, not_yet_pitched=True),
+        baca.staff_position(-14, approximate_pitch=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -182,7 +182,7 @@ maker(
     ("hp", (6, 8)),
     harmony.durata([9, -6, 8, -2]),
     baca.chunk(
-        baca.staff_position(-14, not_yet_pitched=True),
+        baca.staff_position(-14, approximate_pitch=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -247,7 +247,7 @@ maker(
 maker(
     ("vc2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions(-1, 1, not_yet_pitched=True),
+    baca.interpolate_staff_positions(-1, 1, approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -259,7 +259,7 @@ maker(
     ("vc2", (6, 8)),
     harmony.durata([9, -6, 8, -2], grace=True, untie=True),
     baca.new(
-        baca.interpolate_staff_positions(-1, 1, not_yet_pitched=True),
+        baca.interpolate_staff_positions(-1, 1, approximate_pitch=True),
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -300,7 +300,7 @@ maker(
 maker(
     ("cb2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions(-8, -6, not_yet_pitched=True),
+    baca.interpolate_staff_positions(-8, -6, approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -312,7 +312,7 @@ maker(
     ("cb2", (6, 8)),
     harmony.durata([9, -6, 8, -2], grace=True, untie=True),
     baca.new(
-        baca.interpolate_staff_positions(-8, -6, not_yet_pitched=True),
+        baca.interpolate_staff_positions(-8, -6, approximate_pitch=True),
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,

@@ -354,7 +354,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2                                                                       %! harmony.durata()
+    b'2                                                                        %! harmony.durata()
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-mp-ancora                                                            %! REAPPLIED_DYNAMIC:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Bfl.”]"                              %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -393,7 +393,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 101 / measure 3]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2.                                                                      %! harmony.durata()
+    b'2.                                                                       %! harmony.durata()
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "multiphonic"                               %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner:PiecewiseCommand(1):autodetect
@@ -408,7 +408,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 103 / measure 5]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2.                                                                      %! harmony.durata()
+    b'2.                                                                       %! harmony.durata()
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "multiphonic"                               %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner:PiecewiseCommand(1):autodetect
@@ -423,7 +423,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 105 / measure 7]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2.                                                                      %! harmony.durata()
+    b'2.                                                                       %! harmony.durata()
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "multiphonic"                               %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner:PiecewiseCommand(1):autodetect
@@ -472,14 +472,14 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 109 / measure 11]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4                                                                       %! harmony.durata()
+    b'4                                                                        %! harmony.durata()
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner:PiecewiseCommand(1)
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2                                                                       %! harmony.durata()
+    b'2                                                                        %! harmony.durata()
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -490,7 +490,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 110 / measure 12]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4                                                                       %! harmony.durata()
+    b'4                                                                        %! harmony.durata()
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -498,7 +498,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2.                                                                      %! harmony.durata()
+    b'2.                                                                       %! harmony.durata()
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -509,7 +509,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
 
     % [L Bass_Flute_Music_Voice measure 111 / measure 13]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -517,12 +517,12 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -532,13 +532,13 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \repeatTie
     \breathe                                                                   %! baca.breathe:IndicatorCommand
 
     % [L Bass_Flute_Music_Voice measure 112 / measure 14]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -546,12 +546,12 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -561,13 +561,13 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \repeatTie
     \breathe                                                                   %! baca.breathe:IndicatorCommand
 
     % [L Bass_Flute_Music_Voice measure 113 / measure 15]                      %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''4
+    b'4
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(3)
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner:PiecewiseCommand(1)
     - \baca-text-spanner-left-text "T"                                         %! baca.text_spanner:PiecewiseCommand(1)
@@ -575,12 +575,12 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''8
+    b'8
     \stopTextSpan                                                              %! SPANNER_STOP:baca.text_spanner:PiecewiseCommand(1)
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.text_spanner:PiecewiseCommand(1)
@@ -590,7 +590,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \startTextSpan                                                             %! baca.text_spanner:PiecewiseCommand(1)
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c''2
+    b'2
     \repeatTie
     \breathe                                                                   %! baca.breathe:IndicatorCommand
 
@@ -1136,7 +1136,7 @@ L_Harp_Music_Voice = {                                                         %
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2                                                                        %! harmony.durata()
+    d2                                                                         %! harmony.durata()
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! REAPPLIED_DYNAMIC:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "(“Harp”)"                              %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -1172,36 +1172,36 @@ L_Harp_Music_Voice = {                                                         %
 
     % [L Harp_Music_Voice measure 101 / measure 3]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2.                                                                       %! harmony.durata()
+    d2.                                                                        %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     % [L Harp_Music_Voice measure 102 / measure 4]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'1                                                                        %! harmony.durata()
+    d1                                                                         %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     r4                                                                         %! harmony.durata()
 
     % [L Harp_Music_Voice measure 103 / measure 5]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2.                                                                       %! harmony.durata()
+    d2.                                                                        %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     % [L Harp_Music_Voice measure 104 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'1                                                                        %! harmony.durata()
+    d1                                                                         %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     r4                                                                         %! harmony.durata()
 
     % [L Harp_Music_Voice measure 105 / measure 7]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2.                                                                       %! harmony.durata()
+    d2.                                                                        %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     % [L Harp_Music_Voice measure 106 / measure 8]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'1                                                                        %! harmony.durata()
+    d1                                                                         %! harmony.durata()
     - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
 
     r4                                                                         %! harmony.durata()
@@ -1240,7 +1240,7 @@ L_Harp_Music_Voice = {                                                         %
 
     % [L Harp_Music_Voice measure 109 / measure 11]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
@@ -1249,51 +1249,51 @@ L_Harp_Music_Voice = {                                                         %
     r8                                                                         %! harmony.durata()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     % [L Harp_Music_Voice measure 110 / measure 12]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8                                                                        %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     r8                                                                         %! harmony.durata()
 
     % [L Harp_Music_Voice measure 111 / measure 13]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4
+    d4
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     ^ \baca-whisk-markup                                                       %! baca.markup:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8
+    d8
     \repeatTie
 
     r8
@@ -1302,10 +1302,10 @@ L_Harp_Music_Voice = {                                                         %
 
     % [L Harp_Music_Voice measure 112 / measure 14]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4
+    d4
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8
+    d8
     \repeatTie
 
     r8
@@ -1314,10 +1314,10 @@ L_Harp_Music_Voice = {                                                         %
 
     % [L Harp_Music_Voice measure 113 / measure 15]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4
+    d4
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'8
+    d8
     \repeatTie
 
     r8
@@ -1723,11 +1723,11 @@ L_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -1743,7 +1743,7 @@ L_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -1751,11 +1751,11 @@ L_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -1771,31 +1771,31 @@ L_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
     }                                                                          %! harmony.rimbalzandi()
@@ -1832,46 +1832,46 @@ L_Cello_I_Music_Voice = {                                                      %
 
     % [L Cello_I_Music_Voice measure 109 / measure 11]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [L Cello_I_Music_Voice measure 110 / measure 12]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [L Cello_I_Music_Voice measure 111 / measure 13]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2                                                                        %! harmony.sixteenths()
+    d2                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
@@ -1879,12 +1879,12 @@ L_Cello_I_Music_Voice = {                                                      %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
 
@@ -1895,12 +1895,12 @@ L_Cello_I_Music_Voice = {                                                      %
 
         % [L Cello_I_Music_Voice measure 112 / measure 14]                     %! baca.SegmentMaker._comment_measure_numbers()
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
         ~
@@ -1908,17 +1908,17 @@ L_Cello_I_Music_Voice = {                                                      %
     }                                                                          %! harmony.sixteenths()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [L Cello_I_Music_Voice measure 113 / measure 15]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     \repeatTie
 
@@ -1926,12 +1926,12 @@ L_Cello_I_Music_Voice = {                                                      %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
 
@@ -1941,12 +1941,12 @@ L_Cello_I_Music_Voice = {                                                      %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
         ~
@@ -1954,7 +1954,7 @@ L_Cello_I_Music_Voice = {                                                      %
     }                                                                          %! harmony.sixteenths()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2043,7 +2043,7 @@ L_Cello_II_Music_Voice = {                                                     %
 
         % [L Cello_II_Music_Voice measure 101 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -2057,7 +2057,7 @@ L_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -2073,25 +2073,11 @@ L_Cello_II_Music_Voice = {                                                     %
 
         % [L Cello_II_Music_Voice measure 103 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
-        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
-
-        r4                                                                     %! harmony.rimbalzandi()
-
-        r4                                                                     %! harmony.rimbalzandi()
-
-        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
-        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
-
-        r4                                                                     %! harmony.rimbalzandi()
-
-        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
@@ -2099,7 +2085,21 @@ L_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
+        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
+
+        r4                                                                     %! harmony.rimbalzandi()
+
+        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
+        d4                                                                     %! harmony.rimbalzandi()
+        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
+
+        r4                                                                     %! harmony.rimbalzandi()
+
+        r4                                                                     %! harmony.rimbalzandi()
+
+        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
     }                                                                          %! harmony.rimbalzandi()
@@ -2111,35 +2111,35 @@ L_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
-        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
-
-        r4                                                                     %! harmony.rimbalzandi()
-
-        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         r4                                                                     %! harmony.rimbalzandi()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
+        - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
+
+        r4                                                                     %! harmony.rimbalzandi()
+
+        \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.rimbalzandi()
+        d4                                                                     %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato:IndicatorCommand
 
     }                                                                          %! harmony.rimbalzandi()
@@ -2176,46 +2176,46 @@ L_Cello_II_Music_Voice = {                                                     %
 
     % [L Cello_II_Music_Voice measure 109 / measure 11]                        %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [L Cello_II_Music_Voice measure 110 / measure 12]                        %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.durata()
+    d4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
     % [L Cello_II_Music_Voice measure 111 / measure 13]                        %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
@@ -2223,12 +2223,12 @@ L_Cello_II_Music_Voice = {                                                     %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
 
@@ -2238,12 +2238,12 @@ L_Cello_II_Music_Voice = {                                                     %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
         ~
@@ -2252,11 +2252,11 @@ L_Cello_II_Music_Voice = {                                                     %
 
     % [L Cello_II_Music_Voice measure 112 / measure 14]                        %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2                                                                        %! harmony.sixteenths()
+    d2                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'4                                                                        %! harmony.sixteenths()
+    d4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
     - \accent                                                                  %! baca.accent:IndicatorCommand
 
@@ -2265,12 +2265,12 @@ L_Cello_II_Music_Voice = {                                                     %
 
         % [L Cello_II_Music_Voice measure 113 / measure 15]                    %! baca.SegmentMaker._comment_measure_numbers()
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
 
@@ -2280,12 +2280,12 @@ L_Cello_II_Music_Voice = {                                                     %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'4                                                                    %! harmony.sixteenths()
+        d4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         \repeatTie
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-        c'8                                                                    %! harmony.sixteenths()
+        d8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo:IndicatorCommand
         - \accent                                                              %! baca.accent:IndicatorCommand
         ~
@@ -2293,7 +2293,7 @@ L_Cello_II_Music_Voice = {                                                     %
     }                                                                          %! harmony.sixteenths()
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
-    c'2                                                                        %! harmony.sixteenths()
+    d2                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo:IndicatorCommand
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()

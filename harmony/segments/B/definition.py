@@ -162,7 +162,6 @@ maker(
     ("vc1", (1, 5)),
     baca.staff_lines(5),
     harmony.string_appoggiato(divisions, [3, 4, 5, 6, 7], rotation=-1, rest=1),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 maker(
@@ -180,7 +179,6 @@ maker(
 maker(
     ("vc2", (1, 5)),
     harmony.string_appoggiato(divisions, [4, 5, 6, 7], rotation=-2, rest=2),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb1
@@ -189,8 +187,6 @@ maker(
     ("cb1", (1, 5)),
     baca.staff_lines(5),
     harmony.string_appoggiato(divisions, [5, 6, 7], rotation=-3, rest=3),
-    #baca.staff_position(0, not_yet_pitched=True),
-    baca.pitch("D2", not_yet_pitched=True),
 )
 
 maker(
@@ -208,8 +204,6 @@ maker(
 maker(
     ("cb2", (1, 5)),
     harmony.string_appoggiato(divisions, [6, 7], rotation=-4, rest=4),
-    baca.staff_position(0, not_yet_pitched=True),
-    #baca.pitch("D2", not_yet_pitched=True),
 )
 
 # va, vc1, vc2, cb1, cb2

@@ -99,7 +99,7 @@ maker(
 maker(
     ("hp", 1),
     harmony.sixteenths([-4, 8, -99]),
-    baca.pitch("<B4 C5>", not_yet_pitched=True),
+    baca.pitch("<B4 C5>", approximate_pitch=True),
     baca.flageolet(),
     baca.dynamic("mf"),
     baca.laissez_vibrer(),
@@ -108,7 +108,6 @@ maker(
 maker(
     ("hp", 2),
     harmony.sixteenths([-9, 3, -9, 3]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.markup(r"\baca-pince-markup", literal=True),
@@ -120,7 +119,6 @@ maker(
 maker(
     ("va", 1),
     harmony.sixteenths([-4, 99]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
@@ -137,28 +135,24 @@ maker(
 
 maker(
     ("vc1", 1),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc2
 
 maker(
     ("vc2", 1),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb1
 
 maker(
     ("cb1", 1),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # cb2
 
 maker(
     ("cb2", 1),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # vc1, vc2, cb1, cb2

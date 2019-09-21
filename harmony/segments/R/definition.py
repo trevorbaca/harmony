@@ -252,7 +252,6 @@ maker(
     ("hp", [9, 10, 11]),
     harmony.sixteenths([3, 3, -99]),
     baca.markup(r"\baca-whisk-markup", literal=True, match=0),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         'o< "mf" >o niente',
         pieces=baca.lparts([1, 2 + 1]),
@@ -265,7 +264,7 @@ maker(
 maker(
     ("va", (9, 11)),
     baca.flat_glissando("C4", selector=baca.leaves()[:-1]),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # vc1
@@ -277,7 +276,6 @@ maker(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "mp -- niente",
         map=baca.runs().map(baca.leaves().rleak()),
@@ -289,7 +287,7 @@ maker(
 maker(
     ("vc2", (9, 11)),
     baca.flat_glissando("D3", selector=baca.leaves()[:-1]),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # cb1
@@ -344,7 +342,6 @@ maker(
 
 maker(
     ("cb1", (9, 11)),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
 )
@@ -354,7 +351,7 @@ maker(
 maker(
     ("cb2", (9, 11)),
     baca.flat_glissando("D2", selector=baca.leaves()[:-1]),
-    baca.not_yet_pitched(),
+    baca.approximate_pitch(),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -364,7 +361,6 @@ maker(
     harmony.sixteenths(
         [-4, 6, 2, -4], None, rmakers.repeat_tie(baca.phead(-1)),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([2, 1 + 1]),
@@ -378,7 +374,6 @@ maker(
     harmony.sixteenths(
         [-2, 9, -1], None,
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.lparts([2, 1 + 1]),
@@ -392,7 +387,6 @@ maker(
     harmony.sixteenths(
         [8, 4, -4], None, rmakers.repeat_tie(baca.phead(-1)),
     ),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([1, 1 + 1]),

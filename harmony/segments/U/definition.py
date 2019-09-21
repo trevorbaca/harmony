@@ -65,7 +65,6 @@ maker(
 maker(
     ("bfl", 2),
     harmony.sixteenths([-4, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.trill_spanner(
         map=baca.runs(),
     ),
@@ -75,7 +74,6 @@ maker(
 maker(
     ("bfl", 5),
     harmony.sixteenths([4, -4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.text_spanner(
         "air =|",
         abjad.tweak(3).staff_padding,
@@ -159,7 +157,6 @@ maker(
     ("hp", 5),
     harmony.eighths([-2, 1, -8, 1, -99], [1]),
     baca.laissez_vibrer(baca.ptails()),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.dynamic("mf"),
     baca.accent(baca.pheads()),
 )
@@ -169,7 +166,6 @@ maker(
 maker(
     ("va", 2),
     harmony.sixteenths([-4, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
@@ -183,7 +179,6 @@ maker(
     ("va", 5),
     harmony.sixteenths([-6, 1, -10, 1, -99], [1]),
     baca.laissez_vibrer(baca.ptails()),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.note_head_style_harmonic(),
     baca.markup(r"\baca-pizz-markup", literal=True),
     baca.dynamic("mf"),
@@ -195,7 +190,6 @@ maker(
 maker(
     ("vc1", 5),
     harmony.sixteenths([3, 7, 4, 6]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.espressivo(baca.pheads()),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -209,7 +203,6 @@ maker(
 maker(
     ("vc2", 5),
     harmony.sixteenths([7, 4, 6, 3]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.espressivo(baca.pheads()),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -223,7 +216,6 @@ maker(
 maker(
     ("cb1", 5),
     harmony.sixteenths([4, 6, 3, 7]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.espressivo(baca.pheads()),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -237,7 +229,6 @@ maker(
 maker(
     ("cb2", 5),
     harmony.sixteenths([6, 3, 7, 4]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.espressivo(baca.pheads()),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -258,7 +249,6 @@ maker(
 maker(
     (["vc1", "vc2", "cb1", "cb2"], 2),
     harmony.sixteenths([-4, 3, -1]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.hairpin(
         "o<| f",
         map=baca.runs(),

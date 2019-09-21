@@ -127,7 +127,7 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     harmony.durata([-2, 2, 4, -2]),
-    baca.pitch("<A4 B4 C5>", not_yet_pitched=True),
+    baca.pitch("<A4 B4 C5>", approximate_pitch=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< mf >o niente",
@@ -141,7 +141,6 @@ maker(
     ("hp", 3),
     baca.make_notes(),
     baca.laissez_vibrer(),
-    baca.staff_position(0, not_yet_pitched=True),
 )
 
 # va
@@ -193,7 +192,6 @@ maker(
 maker(
     ("vc2", 1),
     harmony.durata([-4, 6]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -203,7 +201,6 @@ maker(
 maker(
     ("vc2", 3),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -237,7 +234,6 @@ maker(
 maker(
     ("cb2", 1),
     harmony.durata([-4, 6]),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -247,7 +243,6 @@ maker(
 maker(
     ("cb2", 3),
     baca.make_notes(),
-    baca.staff_position(0, not_yet_pitched=True),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
