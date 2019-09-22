@@ -300,7 +300,7 @@ maker(
 maker(
     ("cb2", 1),
     harmony.durata([5, -2], grace=True, untie=True),
-    baca.interpolate_staff_positions(-8, -6, approximate_pitch=True),
+    baca.interpolate_staff_positions(-1, 1, approximate_pitch=True),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -312,7 +312,7 @@ maker(
     ("cb2", (6, 8)),
     harmony.durata([9, -6, 8, -2], grace=True, untie=True),
     baca.new(
-        baca.interpolate_staff_positions(-8, -6, approximate_pitch=True),
+        baca.interpolate_staff_positions(-1, 1, approximate_pitch=True),
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,

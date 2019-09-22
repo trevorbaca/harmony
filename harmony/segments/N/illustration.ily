@@ -2042,7 +2042,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2056,7 +2056,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2102,7 +2102,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
     % [N Contrabass_I_Music_Voice measure 125 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'1                                                                        %! harmony.durata()
+    c1                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2116,7 +2116,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2126,7 +2126,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2140,7 +2140,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2152,7 +2152,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2166,7 +2166,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2176,7 +2176,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2190,7 +2190,7 @@ N_Contrabass_I_Music_Voice = {                                                 %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2288,7 +2288,7 @@ N_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2302,7 +2302,7 @@ N_Contrabass_II_Music_Voice = {                                                %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2350,7 +2350,7 @@ N_Contrabass_II_Music_Voice = {                                                %
     % [N Contrabass_II_Music_Voice measure 125 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'1                                                                        %! harmony.durata()
+    c1                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2364,7 +2364,7 @@ N_Contrabass_II_Music_Voice = {                                                %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2374,7 +2374,7 @@ N_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2388,7 +2388,7 @@ N_Contrabass_II_Music_Voice = {                                                %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2398,7 +2398,7 @@ N_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2412,7 +2412,7 @@ N_Contrabass_II_Music_Voice = {                                                %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 
@@ -2424,7 +2424,7 @@ N_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    c'4                                                                        %! harmony.durata()
+    c4                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
     {
@@ -2438,7 +2438,7 @@ N_Contrabass_II_Music_Voice = {                                                %
         \revert NoteHead.no-ledgers                                            %! baca.glissando()
         \undo \hide NoteHead                                                   %! baca.glissando()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        e'8
+        e8
 
     }
 

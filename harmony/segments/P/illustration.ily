@@ -1663,7 +1663,7 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b8                                                                         %! harmony.sixteenths()
+    b,8                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \fff                                                                       %! REAPPLIED_DYNAMIC:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -1676,27 +1676,27 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'16                                                                       %! harmony.sixteenths()
+    f16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1706,30 +1706,30 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b2                                                                         %! harmony.sixteenths()
+    b,2                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1739,24 +1739,24 @@ P_Contrabass_I_Music_Voice = {                                                 %
     r2                                                                         %! harmony.sixteenths()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b4                                                                         %! harmony.sixteenths()
+    b,4                                                                        %! harmony.sixteenths()
 
     % [P Contrabass_I_Music_Voice measure 143 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b8.                                                                        %! harmony.sixteenths()
+    b,8.                                                                       %! harmony.sixteenths()
     \repeatTie
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -1766,26 +1766,26 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'4                                                                        %! harmony.sixteenths()
+    f4                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1798,36 +1798,36 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     % [P Contrabass_I_Music_Voice measure 145 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b2.                                                                        %! harmony.sixteenths()
+    b,2.                                                                       %! harmony.sixteenths()
 
     % [P Contrabass_I_Music_Voice measure 146 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b4                                                                         %! harmony.sixteenths()
+    b,4                                                                        %! harmony.sixteenths()
     \repeatTie
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1837,18 +1837,18 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b4                                                                         %! harmony.sixteenths()
+    b,4                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -1886,33 +1886,33 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     % [P Contrabass_I_Music_Voice measure 149 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b8                                                                         %! harmony.sixteenths()
+    b,8                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'16                                                                       %! harmony.sixteenths()
+    f16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1922,30 +1922,30 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b2                                                                         %! harmony.sixteenths()
+    b,2                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -1956,18 +1956,18 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b8.                                                                        %! harmony.sixteenths()
+    b,8.                                                                       %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2028,7 +2028,7 @@ P_Contrabass_II_Music_Voice = {                                                %
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b8                                                                         %! harmony.sixteenths()
+    b,8                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'green4)                                        %! REAPPLIED_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \fff                                                                       %! REAPPLIED_DYNAMIC:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
@@ -2041,31 +2041,31 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'16                                                                       %! harmony.sixteenths()
+    f16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2075,18 +2075,18 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'2                                                                        %! harmony.sixteenths()
+    f2                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -2096,32 +2096,32 @@ P_Contrabass_II_Music_Voice = {                                                %
     r2                                                                         %! harmony.sixteenths()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b4                                                                         %! harmony.sixteenths()
+    b,4                                                                        %! harmony.sixteenths()
 
     % [P Contrabass_II_Music_Voice measure 143 / measure 3]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b8.                                                                        %! harmony.sixteenths()
+    b,8.                                                                       %! harmony.sixteenths()
     \repeatTie
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2131,30 +2131,30 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'4                                                                        %! harmony.sixteenths()
+    f4                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2167,24 +2167,24 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     % [P Contrabass_II_Music_Voice measure 145 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    f'2.                                                                       %! harmony.sixteenths()
+    f2.                                                                        %! harmony.sixteenths()
 
     % [P Contrabass_II_Music_Voice measure 146 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'4                                                                        %! harmony.sixteenths()
+    f4                                                                         %! harmony.sixteenths()
     \repeatTie
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -2194,26 +2194,26 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b4                                                                         %! harmony.sixteenths()
+    b,4                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2253,37 +2253,37 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     % [P Contrabass_II_Music_Voice measure 149 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b8                                                                         %! harmony.sixteenths()
+    b,8                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'16                                                                       %! harmony.sixteenths()
+    f16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }
@@ -2293,18 +2293,18 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    f'2                                                                        %! harmony.sixteenths()
+    f2                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         ]
 
     }
@@ -2315,26 +2315,26 @@ P_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    b8.                                                                        %! harmony.sixteenths()
+    b,8.                                                                       %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
     {
 
         \slash
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         [
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f'8
+        f8
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b8
+        b,8
         ]
 
     }

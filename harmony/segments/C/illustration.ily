@@ -1935,7 +1935,7 @@ C_Contrabass_II_Music_Voice = {                                                %
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c4
+    d4
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     % [C Contrabass_II_Music_Voice measure 23 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1945,7 +1945,7 @@ C_Contrabass_II_Music_Voice = {                                                %
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \afterGrace
-    e8                                                                         %! harmony.durata()
+    d8                                                                         %! harmony.durata()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     {
 
