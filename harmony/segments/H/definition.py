@@ -72,14 +72,14 @@ maker(
 maker(
     ("perc2", (1, 6)),
     baca.make_notes(),
-    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.flat_glissando("C4", hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
 )
 
 maker(
     ("perc2", (8, 9)),
     baca.make_notes(),
-    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.flat_glissando("C4", hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
 )
 

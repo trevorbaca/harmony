@@ -101,7 +101,7 @@ maker(
 maker(
     ("perc2", (1, 2)),
     baca.make_notes(),
-    baca.flat_glissando(-1),
+    baca.flat_glissando("B3"),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pheads().get([0, -1])),
     baca.markup(r"\baca-bd-fingertips-markup", literal=True),
@@ -110,7 +110,7 @@ maker(
 maker(
     ("perc2", (4, 7)),
     baca.make_notes(),
-    baca.flat_glissando(-1),
+    baca.flat_glissando("B3"),
     baca.dynamic("p-ancora", abjad.tweak(-0.75).self_alignment_X),
     baca.stem_tremolo(baca.pheads().get([0, -1])),
 )
@@ -118,7 +118,7 @@ maker(
 maker(
     ("perc2", (10, 15)),
     baca.make_notes(),
-    baca.flat_glissando(-1),
+    baca.flat_glissando("B3"),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pheads().get([0, -1])),
 )
