@@ -46,8 +46,8 @@ T_Global_Skips = {                                                             %
     \time 4/4                                                                  %! EXPLICIT_TIME_SIGNATURE:_set_status_tag:baca.SegmentMaker._make_global_skips(2)
     \baca-time-signature-color #'blue                                          %! EXPLICIT_TIME_SIGNATURE_COLOR:baca.SegmentMaker._attach_color_literal(2)
     s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
-    - \tweak extra-offset #'(0 . 18)                                           %! baca.rehearsal_mark:IndicatorCommand
-    - \baca-rehearsal-mark-markup "T"                                          %! baca.rehearsal_mark:IndicatorCommand
+    - \tweak extra-offset #'(0 . 18)                                           %! baca.rehearsal_mark():IndicatorCommand
+    - \baca-rehearsal-mark-markup "T"                                          %! baca.rehearsal_mark():IndicatorCommand
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER
     \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER
@@ -563,9 +563,9 @@ T_Percussion_I_Music_Voice = {                                                 %
             % [T Percussion_I_Music_Voice measure 181 / measure 1]             %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-perc-i-markup            %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
             \override Staff.BarLine.bar-extent = #'(-2 . 1)                    %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 3                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-perc-i-markup                 %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "percussion"                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -596,9 +596,9 @@ T_Percussion_I_Music_Voice = {                                                 %
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
     % [T Percussion_I_Music_Voice measure 182 / measure 2]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     R1 * 3/4                                                                   %! baca.SegmentMaker._make_measure_silences()
     \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
@@ -606,7 +606,7 @@ T_Percussion_I_Music_Voice = {                                                 %
     % [T Percussion_I_Music_Voice measure 183 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
     \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     d'4                                                                        %! harmony.sixteenths()
-    ^ \baca-slate-scrape-markup                                                %! baca.markup:IndicatorCommand
+    ^ \baca-slate-scrape-markup                                                %! baca.markup():IndicatorCommand
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/6 {                                                               %! harmony.sixteenths()
@@ -870,9 +870,9 @@ T_Percussion_II_Music_Voice = {                                                %
         % [T Percussion_II_Music_Voice measure 183 / measure 3]                %! baca.SegmentMaker._comment_measure_numbers()
         \override Stem.direction = #down                                       %! baca.stem_down():OverrideCommand(1)
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
-        ^ \baca-slate-brush-markup                                             %! baca.markup:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
+        ^ \baca-slate-brush-markup                                             %! baca.markup():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -884,8 +884,8 @@ T_Percussion_II_Music_Voice = {                                                %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -898,8 +898,8 @@ T_Percussion_II_Music_Voice = {                                                %
 
         % [T Percussion_II_Music_Voice measure 184 / measure 4]                %! baca.SegmentMaker._comment_measure_numbers()
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -914,8 +914,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r8                                                                     %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -929,8 +929,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r8                                                                     %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -945,8 +945,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r8                                                                     %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -961,8 +961,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r4                                                                     %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -971,7 +971,7 @@ T_Percussion_II_Music_Voice = {                                                %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -983,8 +983,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r4                                                                     %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -993,7 +993,7 @@ T_Percussion_II_Music_Voice = {                                                %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1006,8 +1006,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r4                                                                     %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1016,7 +1016,7 @@ T_Percussion_II_Music_Voice = {                                                %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1033,8 +1033,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r16                                                                    %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1048,8 +1048,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r16                                                                    %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1064,8 +1064,8 @@ T_Percussion_II_Music_Voice = {                                                %
         r16                                                                    %! harmony.sixteenths()
 
         d'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         \revert Stem.direction                                                 %! baca.stem_down():OverrideCommand(2)
 
         r8                                                                     %! harmony.sixteenths()
@@ -1159,8 +1159,8 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 183 / measure 3]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
-    ^ \baca-sons-xylophoniques-markup                                          %! baca.markup:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
+    ^ \baca-sons-xylophoniques-markup                                          %! baca.markup():IndicatorCommand
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1173,7 +1173,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1183,7 +1183,7 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 186 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1196,7 +1196,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1206,7 +1206,7 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 189 / measure 9]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1219,7 +1219,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer:IndicatorCommand
+    - \laissezVibrer                                                           %! baca.laissez_vibrer():IndicatorCommand
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1270,9 +1270,9 @@ T_Viola_Music_Voice = {                                                        %
             % [T Viola_Music_Voice measure 181 / measure 1]                    %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-va-markup                %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
             \override Staff.BarLine.bar-extent = #'(-2 . 2)                    %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-va-markup                     %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "alto"                                                       %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1309,19 +1309,19 @@ T_Viola_Music_Voice = {                                                        %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         % [T Viola_Music_Voice measure 183 / measure 3]                        %! baca.SegmentMaker._comment_measure_numbers()
-        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
         \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_183:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
         \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_183:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         \override Staff.BarLine.bar-extent = #'(-2 . 0)                        %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
@@ -1335,8 +1335,8 @@ T_Viola_Music_Voice = {                                                        %
         r4                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1346,8 +1346,8 @@ T_Viola_Music_Voice = {                                                        %
         r4                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1362,8 +1362,8 @@ T_Viola_Music_Voice = {                                                        %
         r8                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1376,8 +1376,8 @@ T_Viola_Music_Voice = {                                                        %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1387,8 +1387,8 @@ T_Viola_Music_Voice = {                                                        %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1405,8 +1405,8 @@ T_Viola_Music_Voice = {                                                        %
         r4                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1419,8 +1419,8 @@ T_Viola_Music_Voice = {                                                        %
         r8                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1432,8 +1432,8 @@ T_Viola_Music_Voice = {                                                        %
         r8                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1448,8 +1448,8 @@ T_Viola_Music_Voice = {                                                        %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1461,8 +1461,8 @@ T_Viola_Music_Voice = {                                                        %
         r4                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1473,8 +1473,8 @@ T_Viola_Music_Voice = {                                                        %
         r4                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1489,8 +1489,8 @@ T_Viola_Music_Voice = {                                                        %
         r8                                                                     %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1502,8 +1502,8 @@ T_Viola_Music_Voice = {                                                        %
     \times 4/6 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1555,9 +1555,9 @@ T_Cello_I_Music_Voice = {                                                      %
 
             % [T Cello_I_Music_Voice measure 181 / measure 1]                  %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-vc-i-markup              %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-vc-i-markup                   %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1594,19 +1594,19 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         % [T Cello_I_Music_Voice measure 183 / measure 3]                      %! baca.SegmentMaker._comment_measure_numbers()
-        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
         \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_183:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
         \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_183:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
         r8                                                                     %! harmony.sixteenths()
@@ -1619,8 +1619,8 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1633,8 +1633,8 @@ T_Cello_I_Music_Voice = {                                                      %
 
         % [T Cello_I_Music_Voice measure 184 / measure 4]                      %! baca.SegmentMaker._comment_measure_numbers()
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1646,8 +1646,8 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1664,8 +1664,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r8                                                                     %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1677,8 +1677,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r8                                                                     %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1691,8 +1691,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r8                                                                     %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1704,8 +1704,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r8                                                                     %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1718,8 +1718,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1728,7 +1728,7 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -1741,8 +1741,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1751,7 +1751,7 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -1763,8 +1763,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1773,7 +1773,7 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -1786,8 +1786,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1796,7 +1796,7 @@ T_Cello_I_Music_Voice = {                                                      %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -1811,8 +1811,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r16                                                                    %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -1826,8 +1826,8 @@ T_Cello_I_Music_Voice = {                                                      %
         r16                                                                    %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -1881,9 +1881,9 @@ T_Cello_II_Music_Voice = {                                                     %
 
             % [T Cello_II_Music_Voice measure 181 / measure 1]                 %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-vc-ii-markup             %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-vc-ii-markup                  %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1920,19 +1920,19 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         % [T Cello_II_Music_Voice measure 183 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
-        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+        \stopStaff                                                             %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \once \override Staff.StaffSymbol.line-count = 1                       %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+        \startStaff                                                            %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
         \once \override Staff.Clef.X-extent = ##f                              %! MEASURE_183:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
         \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                 %! MEASURE_183:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+        \clef "percussion"                                                     %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)           %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
         \once \override Staff.Clef.color = #(x11-color 'blue)                  %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
     %@% \override Staff.Clef.color = ##f                                       %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+        \set Staff.forceClef = ##t                                             %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
         r8                                                                     %! harmony.sixteenths()
@@ -1945,8 +1945,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r8.                                                                    %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1955,7 +1955,7 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1967,8 +1967,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r16                                                                    %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -1981,8 +1981,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -1991,7 +1991,7 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2006,8 +2006,8 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2019,8 +2019,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r8.                                                                    %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -2030,7 +2030,7 @@ T_Cello_II_Music_Voice = {                                                     %
 
         % [T Cello_II_Music_Voice measure 186 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -2042,8 +2042,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r16                                                                    %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -2055,8 +2055,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -2065,7 +2065,7 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2079,8 +2079,8 @@ T_Cello_II_Music_Voice = {                                                     %
 
         % [T Cello_II_Music_Voice measure 188 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2092,8 +2092,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r8.                                                                    %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -2102,7 +2102,7 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -2114,8 +2114,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r16                                                                    %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -2128,8 +2128,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r4                                                                     %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
         ~
 
     }                                                                          %! harmony.sixteenths()
@@ -2138,7 +2138,7 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2153,8 +2153,8 @@ T_Cello_II_Music_Voice = {                                                     %
     \times 4/5 {                                                               %! harmony.sixteenths()
 
         c'8.                                                                   %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2166,8 +2166,8 @@ T_Cello_II_Music_Voice = {                                                     %
         r8.                                                                    %! harmony.sixteenths()
 
         c'8                                                                    %! harmony.sixteenths()
-        :32                                                                    %! baca.stem_tremolo:IndicatorCommand
-        - \accent                                                              %! baca.accent:IndicatorCommand
+        :32                                                                    %! baca.stem_tremolo():IndicatorCommand
+        - \accent                                                              %! baca.accent():IndicatorCommand
 
     }                                                                          %! harmony.sixteenths()
 
@@ -2217,9 +2217,9 @@ T_Contrabass_I_Music_Voice = {                                                 %
 
             % [T Contrabass_I_Music_Voice measure 181 / measure 1]             %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-cb-i-markup              %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-cb-i-markup                   %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2253,19 +2253,19 @@ T_Contrabass_I_Music_Voice = {                                                 %
     R1 * 3/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [T Contrabass_I_Music_Voice measure 183 / measure 3]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_183:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_183:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
     r16                                                                        %! harmony.sixteenths()
@@ -2275,11 +2275,11 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2288,8 +2288,8 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2298,12 +2298,12 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     % [T Contrabass_I_Music_Voice measure 185 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2313,13 +2313,13 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8.                                                                        %! harmony.sixteenths()
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
     ~
 
     % [T Contrabass_I_Music_Voice measure 186 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2328,8 +2328,8 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r16                                                                        %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -2337,12 +2337,12 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8.                                                                        %! harmony.sixteenths()
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
     ~
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2351,8 +2351,8 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r16                                                                        %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     % [T Contrabass_I_Music_Voice measure 188 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
     r2.                                                                        %! harmony.sixteenths()
@@ -2360,12 +2360,12 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     % [T Contrabass_I_Music_Voice measure 189 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2373,8 +2373,8 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2384,11 +2384,11 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2396,8 +2396,8 @@ T_Contrabass_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2448,9 +2448,9 @@ T_Contrabass_II_Music_Voice = {                                                %
             % [T Contrabass_II_Music_Voice measure 181 / measure 1]            %! baca.SegmentMaker._comment_measure_numbers()
             \set Staff.shortInstrumentName = \harmony-cb-ii-markup             %! REAPPLIED_MARGIN_MARKUP:_set_status_tag:-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
             \override Staff.BarLine.bar-extent = #'(-2 . 2)                    %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
-            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+            \stopStaff                                                         %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \once \override Staff.StaffSymbol.line-count = 5                   %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+            \startStaff                                                        %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
             \set Staff.instrumentName = \harmony-cb-ii-markup                  %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
             \clef "bass"                                                       %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
             \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2484,19 +2484,19 @@ T_Contrabass_II_Music_Voice = {                                                %
     R1 * 3/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 
     % [T Contrabass_II_Music_Voice measure 183 / measure 3]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
-    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines:IndicatorCommand
+    \stopStaff                                                                 %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \once \override Staff.StaffSymbol.line-count = 1                           %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
+    \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.Clef.X-extent = ##f                                  %! MEASURE_183:SHIFTED_CLEF:baca.clef_shift():baca.clef_x_extent_false():OverrideCommand(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)                     %! MEASURE_183:SHIFTED_CLEF:baca.clef_extra_offset():baca.clef_shift():OverrideCommand(1)
-    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef:IndicatorCommand
+    \clef "percussion"                                                         %! EXPLICIT_CLEF:_set_status_tag:baca.clef():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)                      %! EXPLICIT_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
 %@% \override Staff.Clef.color = ##f                                           %! EXPLICIT_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
-    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef:IndicatorCommand
+    \set Staff.forceClef = ##t                                                 %! EXPLICIT_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.clef():IndicatorCommand
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
     \override Staff.BarLine.bar-extent = #'(0 . 2)                             %! EXPLICIT_BAR_EXTENT:_set_status_tag:-PARTS:IndicatorCommand
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
@@ -2505,8 +2505,8 @@ T_Contrabass_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2514,16 +2514,16 @@ T_Contrabass_II_Music_Voice = {                                                %
 
     % [T Contrabass_II_Music_Voice measure 184 / measure 4]                    %! baca.SegmentMaker._comment_measure_numbers()
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2536,11 +2536,11 @@ T_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2548,11 +2548,11 @@ T_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2561,11 +2561,11 @@ T_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2573,11 +2573,11 @@ T_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     c'16                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
@@ -2589,16 +2589,16 @@ T_Contrabass_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
@@ -2606,16 +2606,16 @@ T_Contrabass_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
 
     c'8.                                                                       %! harmony.sixteenths()
-    :32                                                                        %! baca.stem_tremolo:IndicatorCommand
-    - \accent                                                                  %! baca.accent:IndicatorCommand
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    - \accent                                                                  %! baca.accent():IndicatorCommand
 
     r16                                                                        %! harmony.sixteenths()
 

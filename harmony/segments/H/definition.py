@@ -125,40 +125,55 @@ maker(
 
 maker(
     ("va", (1, 9)),
-    baca.pitch("<B3 C4 D4>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.approximate_pitch(),
+    baca.pitch(
+        "<B3 C4 D4>",
+        baca.plts(exclude=abjad.const.HIDDEN),
+        approximate_pitch=True,
+    ),
 )
 
 # vc1
 
 maker(
     ("vc1", (1, 9)),
-    baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.approximate_pitch(),
+    baca.pitch(
+        "<C3 D3 E3>",
+        baca.plts(exclude=abjad.const.HIDDEN),
+        approximate_pitch=True,
+    ),
 )
 
 # vc2
 
 maker(
     ("vc2", (1, 9)),
-    baca.pitch("<C3 D3 E3>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.approximate_pitch(),
+    baca.pitch(
+        "<C3 D3 E3>",
+        baca.plts(exclude=abjad.const.HIDDEN),
+        approximate_pitch=True,
+    ),
 )
 
 # cb1
 
 maker(
     ("cb1", (1, 9)),
-    baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.approximate_pitch(),
+    baca.pitch(
+        "<C2 D2 E2>",
+        baca.plts(exclude=abjad.const.HIDDEN),
+        approximate_pitch=True,
+        ),
 )
 
 # cb2
 
 maker(
     ("cb2", (1, 9)),
-    baca.pitch("<C2 D2 E2>", baca.plts(exclude=abjad.const.HIDDEN)),
-    baca.approximate_pitch(),
+    baca.pitch(
+        "<C2 D2 E2>",
+        baca.plts(exclude=abjad.const.HIDDEN),
+        approximate_pitch=True,
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2
