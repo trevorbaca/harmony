@@ -520,8 +520,7 @@ maker(
 maker(
     ("cb1", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -531,8 +530,7 @@ maker(
 maker(
     ("cb1", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -552,8 +550,7 @@ maker(
 maker(
     ("cb1", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -565,8 +562,7 @@ maker(
 maker(
     ("cb2", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -576,8 +572,7 @@ maker(
 maker(
     ("cb2", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -587,8 +582,7 @@ maker(
 maker(
     ("cb2", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando("E1"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("E1", approximate_pitch=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
