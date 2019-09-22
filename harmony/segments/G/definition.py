@@ -168,7 +168,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.flat_glissando("C4", hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("p"),
 )
@@ -176,7 +176,7 @@ maker(
 maker(
     ("perc2", (4, 5)),
     baca.make_repeat_tied_notes(),
-    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.flat_glissando("C4", hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("p-ancora", abjad.tweak(-0.75).self_alignment_X),
 )

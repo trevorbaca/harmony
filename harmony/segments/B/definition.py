@@ -104,7 +104,7 @@ maker(
         literal=True,
     ),
     # TODO: specify staff position instead of pitch:
-    baca.flat_glissando(0, hide_middle_stems=True),
+    baca.flat_glissando("C4", hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("p"),
 )
