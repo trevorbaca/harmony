@@ -198,8 +198,7 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando("<C4 D4 E4>"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("<C4 D4 E4>", approximate_pitch=True),
 )
 
 # vc1
@@ -218,8 +217,7 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando("<C3 D3 E3>"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("<C3 D3 E3>", approximate_pitch=True),
 )
 
 # vc2
@@ -238,8 +236,7 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando("<C3 D3 E3>"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("<C3 D3 E3>", approximate_pitch=True),
 )
 
 # cb1
@@ -258,8 +255,7 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando("<C2 D2 E2>"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("<C2 D2 E2>", approximate_pitch=True),
 )
 
 # cb2
@@ -278,8 +274,7 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando("<C2 D2 E2>"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("<C2 D2 E2>", approximate_pitch=True),
 )
 
 # va, vc1, vc2, cb1, cb2

@@ -263,8 +263,11 @@ maker(
 
 maker(
     ("va", (9, 11)),
-    baca.flat_glissando("C4", selector=baca.leaves()[:-1]),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "C4",
+        approximate_pitch=True,
+        selector=baca.leaves()[:-1],
+    ),
 )
 
 # vc1
@@ -286,8 +289,11 @@ maker(
 
 maker(
     ("vc2", (9, 11)),
-    baca.flat_glissando("D3", selector=baca.leaves()[:-1]),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "D3",
+        approximate_pitch=True,
+        selector=baca.leaves()[:-1],
+    ),
 )
 
 # cb1
@@ -350,8 +356,11 @@ maker(
 
 maker(
     ("cb2", (9, 11)),
-    baca.flat_glissando("D2", selector=baca.leaves()[:-1]),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "D2",
+        approximate_pitch=True,
+        selector=baca.leaves()[:-1],
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2

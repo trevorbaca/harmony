@@ -229,8 +229,11 @@ maker(
     baca.make_notes(),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
-    baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<A4 B4 C5>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
@@ -238,8 +241,11 @@ maker(
     baca.make_notes(),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
-    baca.flat_glissando("<A4 B4 C5>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<A4 B4 C5>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # va
@@ -251,14 +257,20 @@ maker(
 
 maker(
     ("va", (4, 9)),
-    baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B3 C4 D4>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
     ("va", 12),
-    baca.flat_glissando("<B3 C4 D4>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B3 C4 D4>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # vc1
@@ -270,14 +282,20 @@ maker(
 
 maker(
     ("vc1", (4, 9)),
-    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B2 C3 D3>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
     ("vc1", 12),
-    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B2 C3 D3>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # vc2
@@ -289,14 +307,20 @@ maker(
 
 maker(
     ("vc2", (4, 9)),
-    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B2 C3 D3>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
     ("vc2", 12),
-    baca.flat_glissando("<B2 C3 D3>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B2 C3 D3>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # cb1
@@ -308,14 +332,20 @@ maker(
 
 maker(
     ("cb1", (4, 9)),
-    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B1 C2 D2>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
     ("cb1", 12),
-    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B1 C2 D2>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # cb2
@@ -327,14 +357,20 @@ maker(
 
 maker(
     ("cb2", (4, 9)),
-    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B1 C2 D2>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 maker(
     ("cb2", 12),
-    baca.flat_glissando("<B1 C2 D2>", hide_middle_stems=True),
-    baca.approximate_pitch(),
+    baca.flat_glissando(
+        "<B1 C2 D2>",
+        approximate_pitch=True,
+        hide_middle_stems=True,
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2

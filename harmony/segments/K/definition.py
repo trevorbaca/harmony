@@ -221,8 +221,7 @@ maker(
         pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando("C4"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("C4", approximate_pitch=True),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )
@@ -235,8 +234,7 @@ maker(
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando("C4"),
-    baca.approximate_pitch(),
+    baca.flat_glissando("C4", approximate_pitch=True),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )
