@@ -2173,104 +2173,83 @@ J_Contrabass_I_Music_Voice = {                                                 %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2.                                                                        %! harmony.sixteenths()
+    e2.                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8.                                                                        %! harmony.sixteenths()
+    e8.                                                                        %! harmony.sixteenths()
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    a16                                                                        %! harmony.sixteenths()
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    f16                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     b16                                                                        %! harmony.sixteenths()
-    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
-    [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8                                                                         %! harmony.sixteenths()
+    e8                                                                         %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f4                                                                         %! harmony.sixteenths()
+    e4                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     % [J Contrabass_I_Music_Voice measure 84 / measure 11]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2                                                                         %! harmony.sixteenths()
+    e2                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f16                                                                        %! harmony.sixteenths()
+    e16                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    a16                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    f16                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     b16                                                                        %! harmony.sixteenths()
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2.                                                                        %! harmony.sixteenths()
+    e2.                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     % [J Contrabass_I_Music_Voice measure 85 / measure 12]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8.                                                                        %! harmony.sixteenths()
+    e8.                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b16                                                                        %! harmony.sixteenths()
+    a16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
-    [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8                                                                         %! harmony.sixteenths()
-    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2.                                                                        %! harmony.sixteenths()
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
     f16                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
@@ -2280,11 +2259,32 @@ J_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
+    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
+    e8                                                                         %! harmony.sixteenths()
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
+    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
+    e2.                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
+    e16                                                                        %! harmony.sixteenths()
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    a16                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    f16                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    b16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
@@ -2293,19 +2293,11 @@ J_Contrabass_I_Music_Voice = {                                                 %
 
         % [J Contrabass_I_Music_Voice measure 86 / measure 13]                 %! baca.SegmentMaker._comment_measure_numbers()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
@@ -2317,11 +2309,19 @@ J_Contrabass_I_Music_Voice = {                                                 %
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        f4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        b4
         \glissando                                                             %! baca.glissando()
 
     }
@@ -2331,19 +2331,11 @@ J_Contrabass_I_Music_Voice = {                                                 %
 
         % [J Contrabass_I_Music_Voice measure 87 / measure 14]                 %! baca.SegmentMaker._comment_measure_numbers()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
@@ -2355,18 +2347,26 @@ J_Contrabass_I_Music_Voice = {                                                 %
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        f4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        b4
         \glissando                                                             %! baca.glissando()
 
     }
 
     % [J Contrabass_I_Music_Voice measure 88 / measure 15]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    f1.                                                                        %! baca.make_notes()
+    e1.                                                                        %! baca.make_notes()
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -2481,105 +2481,105 @@ J_Contrabass_II_Music_Voice = {                                                %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    f1                                                                         %! harmony.sixteenths()
+    e1                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    b16                                                                        %! harmony.sixteenths()
+    a16                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
+    f16                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
+    b16                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f16                                                                        %! harmony.sixteenths()
+    e16                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f4                                                                         %! harmony.sixteenths()
+    e4                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     % [J Contrabass_II_Music_Voice measure 84 / measure 11]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2                                                                         %! harmony.sixteenths()
+    e2                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8.                                                                        %! harmony.sixteenths()
+    e8.                                                                        %! harmony.sixteenths()
+    [                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    a16                                                                        %! harmony.sixteenths()
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    f16                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     b16                                                                        %! harmony.sixteenths()
-    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
-    [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8                                                                         %! harmony.sixteenths()
+    e8                                                                         %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2                                                                         %! harmony.sixteenths()
+    e2                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     % [J Contrabass_II_Music_Voice measure 85 / measure 12]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f4                                                                         %! harmony.sixteenths()
+    e4                                                                         %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8                                                                         %! harmony.sixteenths()
+    e8                                                                         %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    a16                                                                        %! harmony.sixteenths()
+    \glissando                                                                 %! baca.glissando()
+
+    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    f16                                                                        %! harmony.sixteenths()
+    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     b16                                                                        %! harmony.sixteenths()
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    g16                                                                        %! harmony.sixteenths()
-    ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    \glissando                                                                 %! baca.glissando()
-
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'16                                                                       %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f8.                                                                        %! harmony.sixteenths()
+    e8.                                                                        %! harmony.sixteenths()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \glissando                                                                 %! baca.glissando()
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     \baca-repeat-pitch-class-coloring                                          %! REPEAT_PITCH_CLASS:baca.SegmentMaker._color_repeat_pitch_classes_()
-    f2.                                                                        %! harmony.sixteenths()
+    e2.                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
 
     \tweak text #tuplet-number::calc-fraction-text
@@ -2587,15 +2587,7 @@ J_Contrabass_II_Music_Voice = {                                                %
 
         % [J Contrabass_II_Music_Voice measure 86 / measure 13]                %! baca.SegmentMaker._comment_measure_numbers()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
@@ -2607,11 +2599,19 @@ J_Contrabass_II_Music_Voice = {                                                %
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        f4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        b4
         \glissando                                                             %! baca.glissando()
 
     }
@@ -2621,19 +2621,11 @@ J_Contrabass_II_Music_Voice = {                                                %
 
         % [J Contrabass_II_Music_Voice measure 87 / measure 14]                %! baca.SegmentMaker._comment_measure_numbers()
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        f4
+        e4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        b4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
-        \glissando                                                             %! baca.glissando()
-
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        c'4
+        a4
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
@@ -2645,14 +2637,22 @@ J_Contrabass_II_Music_Voice = {                                                %
         \glissando                                                             %! baca.glissando()
 
         \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-        g4
+        e4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        a4
+        \glissando                                                             %! baca.glissando()
+
+        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        f4
         \glissando                                                             %! baca.glissando()
 
     }
 
     % [J Contrabass_II_Music_Voice measure 88 / measure 15]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    c'1.                                                                       %! baca.make_notes()
+    b1.                                                                        %! baca.make_notes()
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 

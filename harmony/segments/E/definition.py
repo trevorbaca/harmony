@@ -252,7 +252,7 @@ maker(
     baca.clef("bass"),
     harmony.sixteenths([11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, 99]),
     baca.staff_positions(
-        [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
+        [1, 0, 1, -2, -1, -2, -1, -4, -3, -4, -1, -6, -5, -6],
         approximate_pitch=True,
         ),
     baca.untie(baca.pleaves()),

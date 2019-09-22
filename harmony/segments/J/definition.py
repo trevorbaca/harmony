@@ -229,7 +229,7 @@ maker(
 
 maker(
     ("cb1", (10, 15)),
-    baca.staff_positions([-5, -2, -4, -1], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -253,7 +253,7 @@ maker(
 
 maker(
     ("cb2", (10, 15)),
-    baca.staff_positions([-5, -2, -4, -1], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
