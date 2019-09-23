@@ -60,7 +60,7 @@ maker(
 maker(
     ("bfl", (1, 4)),
     harmony.sixteenths([8, 4, 4, 8, 4, 3, -1]),
-    baca.flat_glissando("B3", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.trill_spanner(),
     baca.hairpin(
         "p (p) < mp >",
@@ -71,7 +71,7 @@ maker(
 maker(
     ("bfl", (7, 10)),
     harmony.sixteenths([4]),
-    baca.flat_glissando("B3", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
@@ -89,11 +89,10 @@ maker(
         do_not_rewrite_meter=True,
         preprocessor=baca.sequence(),
     ),
-    # TODO: semantic staff position (without string constant)
-    baca.flat_glissando("D4", approximate_pitch=True),
+    baca.flat_glissando(),
+    harmony.triangle_staff_position(),
     baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_up(),
-    baca.stem_tremolo(baca.plts().get([0, -1])),
+    baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "p < mp > p (p) < mp > p",
         pieces=baca.clparts([1]),
@@ -104,11 +103,10 @@ maker(
 maker(
     ("perc1", (7, 10)),
     harmony.sixteenths([4]),
-    # TODO: semantic staff position (without string constant)
-    baca.flat_glissando("D4", approximate_pitch=True),
+    baca.flat_glissando(),
+    harmony.triangle_staff_position(),
     baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_up(),
-    baca.stem_tremolo(baca.plts().get([0, -1])),
+    baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
@@ -164,7 +162,7 @@ maker(
 maker(
     ("va", (1, 4)),
     baca.make_notes(),
-    baca.flat_glissando("C4", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
@@ -175,7 +173,7 @@ maker(
 maker(
     ("va", (7, 10)),
     baca.make_notes(),
-    baca.flat_glissando("C4", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
@@ -261,7 +259,7 @@ maker(
 maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
-    baca.flat_glissando("E1", approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
@@ -271,7 +269,7 @@ maker(
 maker(
     ("cb2", (7, 10)),
     baca.make_notes(),
-    baca.flat_glissando("E1", approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,

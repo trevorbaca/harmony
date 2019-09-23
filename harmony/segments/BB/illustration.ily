@@ -229,7 +229,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'2                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -246,14 +246,14 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-p-parenthesized                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -261,13 +261,13 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Bass_Flute_Music_Voice measure 262 / measure 3]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'2                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Bass_Flute_Music_Voice measure 263 / measure 4]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-p-parenthesized                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -278,7 +278,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'8.                                                                       %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -323,7 +323,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
 %%% \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_265
 %%% \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_fermata_measures(4):FERMATA_MEASURE:MEASURE_265
     b'4                                                                        %! harmony.sixteenths()
@@ -338,7 +338,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -346,14 +346,14 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Bass_Flute_Music_Voice measure 267 / measure 8]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -361,14 +361,14 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Bass_Flute_Music_Voice measure 268 / measure 9]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -376,7 +376,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Bass_Flute_Music_Voice measure 269 / measure 10]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -387,7 +387,7 @@ BB_Bass_Flute_Music_Voice = {                                                  %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -453,7 +453,6 @@ BB_Percussion_I_Music_Voice = {                                                %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -472,29 +471,29 @@ BB_Percussion_I_Music_Voice = {                                                %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Percussion_I_Music_Voice measure 261 / measure 2]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'2                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Percussion_I_Music_Voice measure 262 / measure 3]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-p-parenthesized                                                      %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -505,7 +504,6 @@ BB_Percussion_I_Music_Voice = {                                                %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4..                                                                      %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -548,7 +546,6 @@ BB_Percussion_I_Music_Voice = {                                                %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 0)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
     \override Stem.direction = #up                                             %! baca.stem_up():OverrideCommand(1)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -562,46 +559,46 @@ BB_Percussion_I_Music_Voice = {                                                %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Percussion_I_Music_Voice measure 267 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Percussion_I_Music_Voice measure 268 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
     % [BB Percussion_I_Music_Voice measure 269 / measure 10]                   %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
+    :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -611,7 +608,6 @@ BB_Percussion_I_Music_Voice = {                                                %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
     d'4                                                                        %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -962,7 +958,7 @@ BB_Viola_Music_Voice = {                                                       %
 %@% \override Staff.Clef.color = ##f                                           %! REAPPLIED_CLEF_COLOR_CANCELLATION:baca.SegmentMaker._attach_color_literal(1)
     \set Staff.forceClef = ##t                                                 %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)             %! REAPPLIED_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.dynamic:IndicatorCommand
@@ -983,11 +979,11 @@ BB_Viola_Music_Voice = {                                                       %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     % [BB Viola_Music_Voice measure 262 / measure 3]                           %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     % [BB Viola_Music_Voice measure 263 / measure 4]                           %! baca.SegmentMaker._comment_measure_numbers()
@@ -995,7 +991,7 @@ BB_Viola_Music_Voice = {                                                       %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -1032,7 +1028,7 @@ BB_Viola_Music_Voice = {                                                       %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
     \glissando                                                                 %! baca.glissando()
     - \abjad-dashed-line-with-hook                                             %! BOW_SPEED:baca.bow_speed_spanner:PiecewiseCommand(1)
@@ -1046,11 +1042,11 @@ BB_Viola_Music_Voice = {                                                       %
     \override Accidental.stencil = ##f                                         %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     % [BB Viola_Music_Voice measure 268 / measure 9]                           %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     % [BB Viola_Music_Voice measure 269 / measure 10]                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -1058,7 +1054,7 @@ BB_Viola_Music_Voice = {                                                       %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando()
     \revert NoteHead.no-ledgers                                                %! baca.glissando()
     \undo \hide NoteHead                                                       %! baca.glissando()
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'2                                                                        %! baca.make_notes()
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()

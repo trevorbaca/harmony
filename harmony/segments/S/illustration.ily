@@ -2579,7 +2579,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -2591,29 +2591,29 @@ S_Cello_I_Music_Voice = {                                                      %
     \override Dots.transparent = ##t                                           %! baca.glissando()
     \override Stem.transparent = ##t                                           %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_I_Music_Voice measure 172 / measure 5]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Cello_I_Music_Voice measure 173 / measure 6]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_I_Music_Voice measure 174 / measure 7]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Cello_I_Music_Voice measure 175 / measure 8]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_I_Music_Voice measure 176 / measure 9]                          %! baca.SegmentMaker._comment_measure_numbers()
     \revert Accidental.stencil                                                 %! baca.glissando()
@@ -2623,7 +2623,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2663,7 +2663,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -2681,7 +2681,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2855,7 +2855,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -2867,29 +2867,29 @@ S_Cello_II_Music_Voice = {                                                     %
     \override Dots.transparent = ##t                                           %! baca.glissando()
     \override Stem.transparent = ##t                                           %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_II_Music_Voice measure 172 / measure 5]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Cello_II_Music_Voice measure 173 / measure 6]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_II_Music_Voice measure 174 / measure 7]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Cello_II_Music_Voice measure 175 / measure 8]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Cello_II_Music_Voice measure 176 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
     \revert Accidental.stencil                                                 %! baca.glissando()
@@ -2899,7 +2899,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -2939,7 +2939,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -2957,7 +2957,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -3131,7 +3131,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 5                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -3143,29 +3143,29 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \override Dots.transparent = ##t                                           %! baca.glissando()
     \override Stem.transparent = ##t                                           %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_I_Music_Voice measure 172 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Contrabass_I_Music_Voice measure 173 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_I_Music_Voice measure 174 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Contrabass_I_Music_Voice measure 175 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_I_Music_Voice measure 176 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
     \revert Accidental.stencil                                                 %! baca.glissando()
@@ -3175,7 +3175,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -3215,7 +3215,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -3233,7 +3233,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -3410,7 +3410,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(2.5)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -3422,29 +3422,29 @@ S_Contrabass_II_Music_Voice = {                                                %
     \override Dots.transparent = ##t                                           %! baca.glissando()
     \override Stem.transparent = ##t                                           %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_II_Music_Voice measure 172 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Contrabass_II_Music_Voice measure 173 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_II_Music_Voice measure 174 / measure 7]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
 
     % [S Contrabass_II_Music_Voice measure 175 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
 
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
 
     % [S Contrabass_II_Music_Voice measure 176 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
     \revert Accidental.stencil                                                 %! baca.glissando()
@@ -3454,7 +3454,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>1
+    <c d e>1
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
@@ -3497,7 +3497,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \startStaff                                                                %! EXPLICIT_STAFF_LINES:_set_status_tag:baca.staff_lines():IndicatorCommand
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! EXPLICIT_STAFF_LINES_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2.
+    <c d e>2.
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -3515,7 +3515,7 @@ S_Contrabass_II_Music_Voice = {                                                %
     \revert Dots.transparent                                                   %! baca.glissando()
     \revert Stem.transparent                                                   %! baca.glissando()
     \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
-    <b, c d>2
+    <c d e>2
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()

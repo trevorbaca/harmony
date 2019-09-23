@@ -230,7 +230,11 @@ maker(
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.flat_glissando(
-        "<A4 B4 C5>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -242,7 +246,11 @@ maker(
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.flat_glissando(
-        "<A4 B4 C5>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -258,7 +266,11 @@ maker(
 maker(
     ("va", (4, 9)),
     baca.flat_glissando(
-        "<B3 C4 D4>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -267,7 +279,11 @@ maker(
 maker(
     ("va", 12),
     baca.flat_glissando(
-        "<B3 C4 D4>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -283,7 +299,11 @@ maker(
 maker(
     ("vc1", (4, 9)),
     baca.flat_glissando(
-        "<B2 C3 D3>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -292,7 +312,11 @@ maker(
 maker(
     ("vc1", 12),
     baca.flat_glissando(
-        "<B2 C3 D3>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -308,7 +332,11 @@ maker(
 maker(
     ("vc2", (4, 9)),
     baca.flat_glissando(
-        "<B2 C3 D3>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -317,7 +345,11 @@ maker(
 maker(
     ("vc2", 12),
     baca.flat_glissando(
-        "<B2 C3 D3>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -333,7 +365,11 @@ maker(
 maker(
     ("cb1", (4, 9)),
     baca.flat_glissando(
-        "<B1 C2 D2>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -342,7 +378,11 @@ maker(
 maker(
     ("cb1", 12),
     baca.flat_glissando(
-        "<B1 C2 D2>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -358,7 +398,11 @@ maker(
 maker(
     ("cb2", (4, 9)),
     baca.flat_glissando(
-        "<B1 C2 D2>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),
@@ -367,7 +411,11 @@ maker(
 maker(
     ("cb2", 12),
     baca.flat_glissando(
-        "<B1 C2 D2>",
+        [
+            abjad.StaffPosition(-1),
+            abjad.StaffPosition(0),
+            abjad.StaffPosition(1),
+        ],
         approximate_pitch=True,
         hide_middle_stems=True,
     ),

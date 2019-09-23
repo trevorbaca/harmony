@@ -642,6 +642,7 @@ G_Percussion_II_Music_Voice = {                                                %
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     c'2.                                                                       %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -665,6 +666,7 @@ G_Percussion_II_Music_Voice = {                                                %
     \revert Stem.transparent                                                   %! baca.glissando()
     c'2.                                                                       %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -694,6 +696,7 @@ G_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     c'1                                                                        %! baca.make_repeat_tied_notes()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -716,6 +719,7 @@ G_Percussion_II_Music_Voice = {                                                %
     \revert Stem.transparent                                                   %! baca.glissando()
     c'1                                                                        %! baca.make_repeat_tied_notes()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
