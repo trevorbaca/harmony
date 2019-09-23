@@ -76,12 +76,12 @@ maker(
     baca.pitches(
         "D3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        approximate_pitch=True,
+        mock=True,
     ),
     baca.pitches(
         "G3 A3 B3 A3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 
@@ -161,7 +161,7 @@ maker(
 
 maker(
     ("va", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], mock=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -185,7 +185,7 @@ maker(
 
 maker(
     ("vc1", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], mock=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -209,7 +209,7 @@ maker(
 
 maker(
     ("vc2", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], mock=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -233,7 +233,7 @@ maker(
 
 maker(
     ("cb1", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], mock=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )
@@ -257,7 +257,7 @@ maker(
 
 maker(
     ("cb2", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], approximate_pitch=True),
+    baca.staff_positions([1, 4, 2, 5], mock=True),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
 )

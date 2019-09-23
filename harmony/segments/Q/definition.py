@@ -126,7 +126,7 @@ maker(
     ("hp", 1),
     baca.make_notes(),
     baca.laissez_vibrer(),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("mp"),
     baca.accent(),
 )
@@ -135,7 +135,7 @@ maker(
     ("hp", 5),
     harmony.sixteenths([-16, 4]),
     baca.laissez_vibrer(),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
     baca.accent(),
 )

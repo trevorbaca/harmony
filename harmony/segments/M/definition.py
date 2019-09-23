@@ -127,7 +127,7 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     harmony.durata([-2, 2, 4, -2]),
-    baca.pitch("<A4 B4 C5>", approximate_pitch=True),
+    baca.pitch("<A4 B4 C5>", mock=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< mf >o niente",

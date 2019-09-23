@@ -147,7 +147,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -160,7 +160,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -215,7 +215,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -228,7 +228,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -243,7 +243,7 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         grace_suffixes=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -256,7 +256,7 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         grace_suffixes=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], approximate_pitch=True),
+    baca.staff_positions([-2, 2], mock=True),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),

@@ -152,7 +152,7 @@ maker(
     ("hp", 2),
     harmony.durata([-1, 5, -99]),
     baca.chunk(
-        baca.staff_position(-14, approximate_pitch=True),
+        baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -165,7 +165,7 @@ maker(
     ("hp", (4, 5)),
     harmony.durata([7, -2, 6, -1]),
     baca.chunk(
-        baca.staff_position(-14, approximate_pitch=True),
+        baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -178,7 +178,7 @@ maker(
     ("hp", 10),
     harmony.durata([3, -2, 2, -1]),
     baca.chunk(
-        baca.staff_position(-14, approximate_pitch=True),
+        baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
