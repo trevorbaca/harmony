@@ -1948,7 +1948,8 @@ S_Harp_Music_Voice = {                                                         %
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1966,7 +1967,8 @@ S_Harp_Music_Voice = {                                                         %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \repeatTie                                                                 %! harmony.sixteenths()
@@ -1978,7 +1980,8 @@ S_Harp_Music_Voice = {                                                         %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2215,7 +2218,8 @@ S_Viola_Music_Voice = {                                                        %
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2235,7 +2239,8 @@ S_Viola_Music_Voice = {                                                        %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2249,7 +2254,8 @@ S_Viola_Music_Voice = {                                                        %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2497,7 +2503,8 @@ S_Cello_I_Music_Voice = {                                                      %
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2517,7 +2524,8 @@ S_Cello_I_Music_Voice = {                                                      %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2531,7 +2539,8 @@ S_Cello_I_Music_Voice = {                                                      %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2773,7 +2782,8 @@ S_Cello_II_Music_Voice = {                                                     %
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2793,7 +2803,8 @@ S_Cello_II_Music_Voice = {                                                     %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -2807,7 +2818,8 @@ S_Cello_II_Music_Voice = {                                                     %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3049,7 +3061,8 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3069,7 +3082,8 @@ S_Contrabass_I_Music_Voice = {                                                 %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3083,7 +3097,8 @@ S_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3326,7 +3341,8 @@ S_Contrabass_II_Music_Voice = {                                                %
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! REAPPLIED_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3346,7 +3362,8 @@ S_Contrabass_II_Music_Voice = {                                                %
     - \tweak stencil #constante-hairpin                                        %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
@@ -3360,7 +3377,8 @@ S_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     d4 * 1/2                                                                   %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand

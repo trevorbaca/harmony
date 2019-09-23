@@ -447,7 +447,8 @@ A_Percussion_I_Music_Voice = {                                                 %
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b4 * 1/4                                                                   %! harmony.upbeat_quarter_note()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
@@ -461,7 +462,8 @@ A_Percussion_I_Music_Voice = {                                                 %
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b4 * 1/4                                                                   %! harmony.begin_end_quarter_notes()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
@@ -474,7 +476,8 @@ A_Percussion_I_Music_Voice = {                                                 %
     - \tweak stencil #abjad-flared-hairpin                                     %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     b4 * 1/4                                                                   %! harmony.begin_end_quarter_notes()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(2)
