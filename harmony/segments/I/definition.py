@@ -99,7 +99,7 @@ maker(
 maker(
     ("hp", 1),
     harmony.sixteenths([-4, 8, -99]),
-    baca.pitch("<B4 C5>", approximate_pitch=True),
+    baca.pitch("<B4 C5>", mock=True),
     baca.flageolet(),
     baca.dynamic("mf"),
     baca.laissez_vibrer(),

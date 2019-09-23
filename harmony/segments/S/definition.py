@@ -235,7 +235,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -251,7 +251,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -271,7 +271,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -284,7 +284,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -304,7 +304,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -317,7 +317,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -337,7 +337,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -350,7 +350,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -370,7 +370,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -383,7 +383,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -403,7 +403,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )
@@ -416,7 +416,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
         hide_middle_stems=True,
     ),
 )

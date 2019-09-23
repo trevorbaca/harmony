@@ -134,7 +134,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.staff_positions([0, -4, 4, -5, 5, -6, 6, -7, 7], approximate_pitch=True),
+    baca.staff_positions([0, -4, 4, -5, 5, -6, 6, -7, 7], mock=True),
     baca.glissando(),
     baca.articulation("prall", baca.pheads().get([1, 2], 3)),
     baca.hairpin('"f" >o niente', selector=baca.leaves().rleak()),
@@ -162,7 +162,7 @@ maker(
     harmony.sixteenths([12, 1, 1, 1, 8, 1, 1, 1, 4, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
-        approximate_pitch=True,
+        mock=True,
         ),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
@@ -185,7 +185,7 @@ maker(
     harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
-        approximate_pitch=True,
+        mock=True,
         ),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
@@ -198,7 +198,7 @@ maker(
     harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
-        approximate_pitch=True,
+        mock=True,
         ),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
@@ -229,7 +229,7 @@ maker(
     harmony.sixteenths([15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, 99]),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
-        approximate_pitch=True,
+        mock=True,
         ),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),
@@ -253,7 +253,7 @@ maker(
     harmony.sixteenths([11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, 99]),
     baca.staff_positions(
         [1, 0, 1, -2, -1, -2, -1, -4, -3, -4, -1, -6, -5, -6],
-        approximate_pitch=True,
+        mock=True,
         ),
     baca.untie(baca.pleaves()),
     baca.glissando(allow_repeats=True),

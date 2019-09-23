@@ -249,7 +249,7 @@ maker(
     baca.clef("bass"),
     harmony.sixteenths([-10, 6, -99]),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("mp"),
 )
 
@@ -265,7 +265,7 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths([9, -99]),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
@@ -520,7 +520,7 @@ maker(
 maker(
     ("cb1", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -530,7 +530,7 @@ maker(
 maker(
     ("cb1", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -550,7 +550,7 @@ maker(
 maker(
     ("cb1", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -562,7 +562,7 @@ maker(
 maker(
     ("cb2", 1),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -572,7 +572,7 @@ maker(
 maker(
     ("cb2", (4, 7)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,
@@ -582,7 +582,7 @@ maker(
 maker(
     ("cb2", (10, 15)),
     baca.make_repeated_duration_notes([(1, 4)]),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "SCP (to-do) =|",
         abjad.tweak(3).staff_padding,

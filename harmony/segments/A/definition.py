@@ -67,12 +67,12 @@ maker(
     baca.pitches(
         "D3 E3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        approximate_pitch=True,
+        mock=True,
     ),
     baca.pitches(
         "F3 G3 A3 G3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 

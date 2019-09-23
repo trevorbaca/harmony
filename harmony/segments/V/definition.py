@@ -185,7 +185,7 @@ maker(
     ("hp", 3),
     harmony.sixteenths([-4, 4, -4]),
     baca.clef("bass"),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("p"),
     baca.laissez_vibrer(baca.pheads()),
     baca.accent(baca.pheads()),
@@ -194,7 +194,7 @@ maker(
 maker(
     ("hp", (5, 10)),
     harmony.sixteenths([4, -8]),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
     baca.dynamic("p-sempre", abjad.tweak(-0.75).self_alignment_X),
     baca.laissez_vibrer(baca.pheads()),
     baca.accent(baca.pheads()),
@@ -205,7 +205,7 @@ maker(
 maker(
     ("va", (1, 3)),
     harmony.sixteenths([32], [1], grace_suffixes=[1]),
-    baca.staff_positions([2, -2, 4], approximate_pitch=True),
+    baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
 )
@@ -217,7 +217,7 @@ maker(
         [1],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
@@ -233,7 +233,7 @@ maker(
         [99],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
@@ -294,7 +294,7 @@ maker(
 maker(
     ("vc2", (1, 3)),
     harmony.eighths([23], [1], grace_suffixes=[1]),
-    baca.staff_positions([2, -2, 4], approximate_pitch=True),
+    baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
 )
@@ -306,7 +306,7 @@ maker(
         [1],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
@@ -322,7 +322,7 @@ maker(
         [99],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
@@ -383,7 +383,7 @@ maker(
 maker(
     ("cb2", (1, 3)),
     harmony.sixteenths([27], grace_suffixes=[1]),
-    baca.staff_positions([2, -2, 4], approximate_pitch=True),
+    baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
 )
@@ -394,7 +394,7 @@ maker(
         [9, 7, 6, 3, 2, 1, 1, 1, 1, 2, 3, 6, 99],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
@@ -410,7 +410,7 @@ maker(
         [99],
         grace_suffixes=[1],
     ),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(

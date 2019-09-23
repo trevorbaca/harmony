@@ -102,7 +102,7 @@ A_Global_Rests = {                                                             %
 A_Bass_Flute_Music_Voice_A = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-mock-pitch-coloring                                                  %! MOCK:baca.SegmentMaker._color_mock_pitch()
     d'2...                                                                     %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern
@@ -111,7 +111,7 @@ A_Bass_Flute_Music_Voice_A = {                                                 %
 A_Bass_Flute_Music_Voice_B = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-mock-pitch-coloring                                                  %! MOCK:baca.SegmentMaker._color_mock_pitch()
     e'4..                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern
@@ -120,10 +120,10 @@ A_Bass_Flute_Music_Voice_B = {                                                 %
 A_Bass_Flute_Music_Voice_C = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-mock-pitch-coloring                                                  %! MOCK:baca.SegmentMaker._color_mock_pitch()
     d'8.
 
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-mock-pitch-coloring                                                  %! MOCK:baca.SegmentMaker._color_mock_pitch()
     d'2
     \repeatTie
 
@@ -133,7 +133,7 @@ A_Bass_Flute_Music_Voice_C = {                                                 %
 A_Bass_Flute_Music_Voice_D = {                                                 %! abjad.Path.extern
 
     \voiceTwo
-    \baca-approximate-pitch-coloring                                           %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+    \baca-mock-pitch-coloring                                                  %! MOCK:baca.SegmentMaker._color_mock_pitch()
     e'4..                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern
@@ -169,7 +169,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             <
                 \tweak font-size #0
                 \tweak transparent ##t
@@ -179,28 +179,28 @@ A_Bass_Flute_Music_Voice = {                                                   %
             [
             (
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
             )
             ]
@@ -223,7 +223,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             <
                 \tweak font-size #0
                 \tweak transparent ##t
@@ -233,19 +233,19 @@ A_Bass_Flute_Music_Voice = {                                                   %
             [
             (
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
             )
             ]
@@ -269,7 +269,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             <
                 \tweak font-size #0
                 \tweak transparent ##t
@@ -279,25 +279,25 @@ A_Bass_Flute_Music_Voice = {                                                   %
             [
             (
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
             )
             ]
@@ -320,7 +320,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
             \slash
             \voiceOne
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             <
                 \tweak font-size #0
                 \tweak transparent ##t
@@ -330,13 +330,13 @@ A_Bass_Flute_Music_Voice = {                                                   %
             [
             (
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             f'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             g'8 * 2/5
 
-            \baca-approximate-pitch-coloring                                   %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+            \baca-mock-pitch-coloring                                          %! MOCK:baca.SegmentMaker._color_mock_pitch()
             a'8 * 2/5
             )
             ]

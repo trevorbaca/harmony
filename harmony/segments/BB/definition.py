@@ -187,7 +187,7 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(5),
     harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     baca.glissando(),
 )
 
@@ -208,7 +208,7 @@ maker(
 maker(
     ("vc2", (1, 4)),
     harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], approximate_pitch=True),
+    baca.staff_positions([2, -2], mock=True),
     baca.glissando(),
 )
 
@@ -259,7 +259,7 @@ maker(
 maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
@@ -269,7 +269,7 @@ maker(
 maker(
     ("cb2", (7, 10)),
     baca.make_notes(),
-    baca.flat_glissando(abjad.StaffPosition(-6), approximate_pitch=True),
+    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,

@@ -179,14 +179,14 @@ maker(
         literal=True,
         selector=baca.phead(-1),
     ),
-    baca.staff_position(-6, approximate_pitch=True),
+    baca.staff_position(-6, mock=True),
 )
 
 # va
 
 maker(
     ("va", 2),
-    baca.pitch("<C4 D4 E4>", approximate_pitch=True),
+    baca.pitch("<C4 D4 E4>", mock=True),
 )
 
 maker(
@@ -204,7 +204,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 
@@ -212,7 +212,7 @@ maker(
 
 maker(
     ("vc1", 2),
-    baca.pitch("<C3 D3 E3>", approximate_pitch=True),
+    baca.pitch("<C3 D3 E3>", mock=True),
 )
 
 maker(
@@ -230,7 +230,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 
@@ -238,7 +238,7 @@ maker(
 
 maker(
     ("vc2", 2),
-    baca.pitch("<C3 D3 E3>", approximate_pitch=True),
+    baca.pitch("<C3 D3 E3>", mock=True),
 )
 
 maker(
@@ -256,7 +256,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 
@@ -264,7 +264,7 @@ maker(
 
 maker(
     ("cb1", 2),
-    baca.pitch("<C2 D2 E2>", approximate_pitch=True),
+    baca.pitch("<C2 D2 E2>", mock=True),
 )
 
 maker(
@@ -282,7 +282,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 
@@ -290,7 +290,7 @@ maker(
 
 maker(
     ("cb2", 2),
-    baca.pitch("<C2 D2 E2>", approximate_pitch=True),
+    baca.pitch("<C2 D2 E2>", mock=True),
 )
 
 maker(
@@ -308,7 +308,7 @@ maker(
             abjad.StaffPosition(0),
             abjad.StaffPosition(1),
         ],
-        approximate_pitch=True,
+        mock=True,
     ),
 )
 

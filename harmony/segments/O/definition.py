@@ -143,7 +143,7 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     harmony.tuplet([(-4, 1)]),
-    baca.pitch("<A4 B4>", approximate_pitch=True),
+    baca.pitch("<A4 B4>", mock=True),
     baca.flageolet(),
     baca.laissez_vibrer(),
 )
@@ -151,7 +151,7 @@ maker(
 maker(
     ("hp", [5, 9]),
     harmony.tuplet([(-4, 1)]),
-    baca.pitch("<A4 B4>", approximate_pitch=True),
+    baca.pitch("<A4 B4>", mock=True),
     baca.flageolet(),
     baca.laissez_vibrer(),
 )

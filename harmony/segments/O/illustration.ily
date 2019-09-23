@@ -804,7 +804,7 @@ O_Harp_Music_Voice = {                                                         %
         \set Staff.shortInstrumentName = \harmony-hp-markup                    %! REDRAWN_REAPPLIED_MARGIN_MARKUP:_set_status_tag:baca.SegmentMaker._treat_persistent_wrapper(3):-PARTS:baca.SegmentMaker._reapply_persistent_indicators(3)
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                %! EXPLICIT_CLEF_REDRAW_COLOR:baca.SegmentMaker._attach_color_literal(2)
 
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        \baca-mock-pitch-coloring                                              %! MOCK:baca.SegmentMaker._color_mock_pitch()
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer():IndicatorCommand
@@ -844,7 +844,7 @@ O_Harp_Music_Voice = {                                                         %
         % [O Harp_Music_Voice measure 135 / measure 5]                         %! baca.SegmentMaker._comment_measure_numbers()
         r1
 
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        \baca-mock-pitch-coloring                                              %! MOCK:baca.SegmentMaker._color_mock_pitch()
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer():IndicatorCommand
@@ -884,7 +884,7 @@ O_Harp_Music_Voice = {                                                         %
         % [O Harp_Music_Voice measure 139 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
         r1
 
-        \baca-approximate-pitch-coloring                                       %! APPROXIMATE_PITCH:baca.SegmentMaker._color_approximate_pitch()
+        \baca-mock-pitch-coloring                                              %! MOCK:baca.SegmentMaker._color_mock_pitch()
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():IndicatorCommand
         - \laissezVibrer                                                       %! baca.laissez_vibrer():IndicatorCommand
