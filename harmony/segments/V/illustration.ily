@@ -333,7 +333,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -382,7 +383,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -402,7 +404,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -422,7 +425,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -443,7 +447,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -463,7 +468,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -483,7 +489,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -504,7 +511,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -524,7 +532,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -544,7 +553,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -565,7 +575,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -585,7 +596,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -605,7 +617,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -626,7 +639,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -646,7 +660,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -666,7 +681,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -687,7 +703,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -707,7 +724,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -727,7 +745,8 @@ V_Bass_Flute_Music_Voice = {                                                   %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -875,7 +894,8 @@ V_Percussion_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     d'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! EXPLICIT_DYNAMIC:_set_status_tag:SPANNER_STOP:baca.hairpin:PiecewiseCommand(1)
@@ -1874,7 +1894,8 @@ V_Cello_I_Music_Voice = {                                                      %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1932,7 +1953,8 @@ V_Cello_I_Music_Voice = {                                                      %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1952,7 +1974,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1972,7 +1995,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1993,7 +2017,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2013,7 +2038,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2033,7 +2059,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2054,7 +2081,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2074,7 +2102,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2094,7 +2123,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2115,7 +2145,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2135,7 +2166,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2155,7 +2187,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2176,7 +2209,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2196,7 +2230,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2216,7 +2251,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2237,7 +2273,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2257,7 +2294,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2277,7 +2315,8 @@ V_Cello_I_Music_Voice = {                                                      %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2748,7 +2787,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2806,7 +2846,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():SpannerIndicatorCommand(1)
     \startTrillSpan                                                            %! baca.trill_spanner():SpannerIndicatorCommand(1)
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2826,7 +2867,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2846,7 +2888,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2867,7 +2910,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2887,7 +2931,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2907,7 +2952,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2928,7 +2974,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2948,7 +2995,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2968,7 +3016,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2989,7 +3038,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3009,7 +3059,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3029,7 +3080,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3050,7 +3102,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3070,7 +3123,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3090,7 +3144,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3111,7 +3166,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3131,7 +3187,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3151,7 +3208,8 @@ V_Contrabass_I_Music_Voice = {                                                 %
     \<                                                                         %! EXPLICIT_DYNAMIC:_set_status_tag:baca.hairpin:PiecewiseCommand(1)
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \baca-invisible-music                                                      %! baca.invisible_music():IndicatorCommand
+%@% \baca-invisible-music-coloring                                             %! INVISIBLE_COLORING:baca.invisible_music():IndicatorCommand
+    \baca-invisible-music                                                      %! INVISIBLE:baca.invisible_music():IndicatorCommand
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
