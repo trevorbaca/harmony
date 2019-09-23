@@ -92,8 +92,8 @@ maker(
 maker(
     ("perc1", (4, 5)),
     harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
+    baca.flat_glissando(),
     harmony.triangle_staff_position(),
-    baca.flat_glissando("D4", allow_repitch=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< p > pp -- (pp) < mp > pp -- !",
@@ -106,9 +106,9 @@ maker(
 maker(
     ("perc1", 10),
     harmony.durata([1, 1, 2, 1, 1, 1, 1]),
-    harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pheads()),
-    baca.flat_glissando("D4", allow_repitch=True),
+    baca.flat_glissando(),
+    harmony.triangle_staff_position(),
     baca.hairpin(
         "o< p > pp -- ! < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
@@ -221,7 +221,7 @@ maker(
         pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando("C4", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )
@@ -234,7 +234,7 @@ maker(
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando("C4", approximate_pitch=True),
+    baca.flat_glissando(),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
 )

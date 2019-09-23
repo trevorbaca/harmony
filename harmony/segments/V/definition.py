@@ -138,8 +138,8 @@ maker(
 maker(
     ("perc1", (5, 10)),
     baca.make_notes(),
+    baca.flat_glissando(hide_middle_stems=True),
     harmony.triangle_staff_position(),
-    baca.flat_glissando("D4", allow_repitch=True, hide_middle_stems=True),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.dynamic("pp"),
     baca.markup(

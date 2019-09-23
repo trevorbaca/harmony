@@ -451,6 +451,7 @@ H_Percussion_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 1                           %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \startStaff                                                                %! REAPPLIED_STAFF_LINES:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     \clef "percussion"                                                         %! REAPPLIED_CLEF:_set_status_tag:baca.SegmentMaker._reapply_persistent_indicators(3)
     \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! REAPPLIED_MARGIN_MARKUP_COLOR:baca.SegmentMaker._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! REAPPLIED_CLEF_COLOR:baca.SegmentMaker._attach_color_literal(2)
@@ -495,6 +496,7 @@ H_Percussion_II_Music_Voice = {                                                %
     \revert Stem.transparent                                                   %! baca.glissando()
     c'1                                                                        %! baca.make_notes()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container()
 
@@ -524,6 +526,7 @@ H_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(2)
     \once \override Staff.StaffSymbol.line-count = 1                           %! baca.SegmentMaker._style_fermata_measures(2)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(2)
+    \override Stem.direction = #down                                           %! baca.stem_down():OverrideCommand(1)
     c'2.                                                                       %! baca.make_notes()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
     \glissando                                                                 %! baca.glissando()
@@ -543,6 +546,7 @@ H_Percussion_II_Music_Voice = {                                                %
     \revert Stem.transparent                                                   %! baca.glissando()
     c'2.                                                                       %! baca.make_notes()
     :32                                                                        %! baca.stem_tremolo():IndicatorCommand
+    \revert Stem.direction                                                     %! baca.stem_down():OverrideCommand(2)
 
     <<                                                                         %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
