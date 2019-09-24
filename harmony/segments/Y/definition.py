@@ -18,8 +18,8 @@ stage_markup = (
 
 maker = baca.SegmentMaker(
     activate=[
-        abjad.const.LOCAL_MEASURE_NUMBER,
-        abjad.const.STAGE_NUMBER,
+        abjad.tags.LOCAL_MEASURE_NUMBER,
+        abjad.tags.STAGE_NUMBER,
     ],
     fermata_measure_empty_overrides=[4, 11],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,

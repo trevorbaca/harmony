@@ -205,18 +205,19 @@ class ScoreTemplate(baca.ScoreTemplate):
         Calls score template.
         """
         site = "harmony.ScoreTemplate.__call__()"
+        tag = abjad.Tag(site)
         # GLOBAL CONTEXT
         global_context = self._make_global_context()
 
         # BASS FLUTE
         bass_flute_music_voice = abjad.Voice(
-            name="Bass_Flute_Music_Voice", tag=site
+            name="Bass_Flute_Music_Voice", tag=tag
         )
         bass_flute_music_staff = abjad.Staff(
             [bass_flute_music_voice],
             simultaneous=True,
             name="Bass_Flute_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             bass_flute_music_staff,
@@ -230,13 +231,13 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # PERCUSSION 1
         percussion_1_music_voice = abjad.Voice(
-            name="Percussion_I_Music_Voice", tag=site
+            name="Percussion_I_Music_Voice", tag=tag
         )
         percussion_1_music_staff = abjad.Staff(
             [percussion_1_music_voice],
             simultaneous=True,
             name="Percussion_I_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             percussion_1_music_staff,
@@ -250,13 +251,13 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # PERCUSSION 2
         percussion_2_music_voice = abjad.Voice(
-            name="Percussion_II_Music_Voice", tag=site
+            name="Percussion_II_Music_Voice", tag=tag
         )
         percussion_2_music_staff = abjad.Staff(
             [percussion_2_music_voice],
             simultaneous=True,
             name="Percussion_II_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             percussion_2_music_staff,
@@ -269,12 +270,12 @@ class ScoreTemplate(baca.ScoreTemplate):
         self._attach_lilypond_tag("PercussionII", percussion_2_music_staff)
 
         # HARP
-        harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=site)
+        harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=tag)
         harp_music_staff = abjad.Staff(
             [harp_music_voice],
             simultaneous=True,
             name="Harp_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             harp_music_staff, "default_instrument", harmony_instruments["Harp"]
@@ -283,12 +284,12 @@ class ScoreTemplate(baca.ScoreTemplate):
         self._attach_lilypond_tag("Harp", harp_music_staff)
 
         # VIOLA
-        viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=site)
+        viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=tag)
         viola_music_staff = abjad.Staff(
             [viola_music_voice],
             simultaneous=True,
             name="Viola_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             viola_music_staff,
@@ -299,12 +300,12 @@ class ScoreTemplate(baca.ScoreTemplate):
         self._attach_lilypond_tag("Viola", viola_music_staff)
 
         # CELLO 1
-        cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=site)
+        cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=tag)
         cello_1_music_staff = abjad.Staff(
             [cello_1_music_voice],
             simultaneous=True,
             name="Cello_I_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             cello_1_music_staff,
@@ -315,14 +316,12 @@ class ScoreTemplate(baca.ScoreTemplate):
         self._attach_lilypond_tag("CelloI", cello_1_music_staff)
 
         # CELLO 2
-        cello_2_music_voice = abjad.Voice(
-            name="Cello_II_Music_Voice", tag=site
-        )
+        cello_2_music_voice = abjad.Voice(name="Cello_II_Music_Voice", tag=tag)
         cello_2_music_staff = abjad.Staff(
             [cello_2_music_voice],
             simultaneous=True,
             name="Cello_II_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             cello_2_music_staff,
@@ -334,13 +333,13 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # CONTRABASS 1
         contrabass_1_music_voice = abjad.Voice(
-            name="Contrabass_I_Music_Voice", tag=site
+            name="Contrabass_I_Music_Voice", tag=tag
         )
         contrabass_1_music_staff = abjad.Staff(
             [contrabass_1_music_voice],
             simultaneous=True,
             name="Contrabass_I_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             contrabass_1_music_staff,
@@ -354,13 +353,13 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         # CONTRABASS 2
         contrabass_2_music_voice = abjad.Voice(
-            name="Contrabass_II_Music_Voice", tag=site
+            name="Contrabass_II_Music_Voice", tag=tag
         )
         contrabass_2_music_staff = abjad.Staff(
             [contrabass_2_music_voice],
             simultaneous=True,
             name="Contrabass_II_Music_Staff",
-            tag=site,
+            tag=tag,
         )
         abjad.annotate(
             contrabass_2_music_staff,
@@ -377,7 +376,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             [bass_flute_music_staff],
             lilypond_type="WindSectionStaffGroup",
             name="Wind_Section_Staff_Group",
-            tag=site,
+            tag=tag,
         )
 
         # PERCUSSION SECTION STAFF GROUP
@@ -389,7 +388,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             ],
             lilypond_type="PercussionSectionStaffGroup",
             name="Percussion_Section_Staff_Group",
-            tag=site,
+            tag=tag,
         )
 
         # STRING SECTION STAFF GROUP
@@ -403,7 +402,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             ],
             lilypond_type="StringSectionStaffGroup",
             name="String_Section_Staff_Group",
-            tag=site,
+            tag=tag,
         )
 
         # MUSIC CONTEXT
@@ -416,12 +415,12 @@ class ScoreTemplate(baca.ScoreTemplate):
             lilypond_type="MusicContext",
             simultaneous=True,
             name="Music_Context",
-            tag=site,
+            tag=tag,
         )
 
         # SCORE
         score = abjad.Score(
-            [global_context, music_context], name="Score", tag=site
+            [global_context, music_context], name="Score", tag=tag
         )
         self._assert_lilypond_identifiers(score)
         self._assert_unique_context_names(score)
