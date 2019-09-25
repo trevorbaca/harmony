@@ -266,12 +266,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'8                                                                    %! harmony.sixteenths()
         ~
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -291,7 +291,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
     % [T Bass_Flute_Music_Voice measure 184 / measure 4]                       %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -300,12 +300,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'8.                                                                   %! harmony.sixteenths()
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -325,17 +325,17 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
         % [T Bass_Flute_Music_Voice measure 185 / measure 5]                   %! baca.SegmentMaker._comment_measure_numbers()
         r4                                                                     %! harmony.sixteenths()
-        \bacaStopTextSpanCovered                                               %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+        \bacaStopTextSpanCovered                                               %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'16                                                                   %! harmony.sixteenths()
         ~
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -354,7 +354,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     % [T Bass_Flute_Music_Voice measure 186 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
     r4                                                                         %! harmony.sixteenths()
@@ -367,12 +367,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'8                                                                    %! harmony.sixteenths()
         ~
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -387,17 +387,17 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     % [T Bass_Flute_Music_Voice measure 187 / measure 7]                       %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
     b'4                                                                        %! harmony.sixteenths()
-    - \abjad-dashed-line-with-hook                                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-    - \baca-text-spanner-left-markup \baca-covered-markup                      %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup   %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-    - \tweak bound-details.right.padding #2.75                                 %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-    - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-    \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+    - \abjad-dashed-line-with-hook                                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-covered-markup                      %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup   %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #3                                                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCovered                                                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -411,7 +411,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r2                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -422,12 +422,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'16                                                                   %! harmony.sixteenths()
         ~
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -442,7 +442,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -451,12 +451,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'4                                                                    %! harmony.sixteenths()
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -473,7 +473,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     r2.                                                                        %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -481,19 +481,19 @@ T_Bass_Flute_Music_Voice = {                                                   %
         % [T Bass_Flute_Music_Voice measure 190 / measure 10]                  %! baca.SegmentMaker._comment_measure_numbers()
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'4                                                                    %! harmony.sixteenths()
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.75                             %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
         r16                                                                    %! harmony.sixteenths()
 
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
-    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+    \bacaStopTextSpanCovered                                                   %! SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
@@ -502,12 +502,12 @@ T_Bass_Flute_Music_Voice = {                                                   %
 
         \baca-not-yet-pitched-coloring                                         %! NOT_YET_PITCHED:baca.SegmentMaker._color_not_yet_pitched()
         b'8.                                                                   %! harmony.sixteenths()
-        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        - \tweak bound-details.right.padding #2.5                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1):autodetect
-        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
-        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():PiecewiseCommand(1)
+        - \abjad-dashed-line-with-hook                                         %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-markup \baca-covered-markup                  %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        - \tweak bound-details.right.padding #2.5                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1):autodetect
+        - \tweak staff-padding #3                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
+        \bacaStartTextSpanCovered                                              %! COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(1)
 
     }                                                                          %! harmony.sixteenths()
 
@@ -524,7 +524,7 @@ T_Bass_Flute_Music_Voice = {                                                   %
             \baca-invisible-music                                              %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):baca.SegmentMaker._make_multimeasure_rest_container()
             c''1 * 1/4                                                         %! PHANTOM_NOTE:PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):DURATION_MULTIPLIER:baca.SegmentMaker._label_duration_multipliers()
-            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):SPANNER_STOP:COVERED:baca.covered_spanner():PiecewiseCommand(3)
+            \bacaStopTextSpanCovered                                           %! PHANTOM:baca.SegmentMaker._style_phantom_measures(5):SPANNER_STOP:COVERED:baca.covered_spanner():baca.PiecewiseCommand._call(3)
 
         }                                                                      %! PHANTOM:baca.SegmentMaker._make_multimeasure_rest_container()
 
