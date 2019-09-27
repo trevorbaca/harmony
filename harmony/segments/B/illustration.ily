@@ -208,7 +208,7 @@ B_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER:baca.SegmentMaker._label_stage_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
-    \bacaStopTextSpanMM                                                        %! SEGMENT_FINAL_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    \bacaStopTextSpanMM                                                        %! EOS_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
@@ -1297,6 +1297,7 @@ B_Viola_Music_Voice_A = {                                                      %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1304,7 +1305,6 @@ B_Viola_Music_Voice_A = {                                                      %
 B_Viola_Music_Voice_B = {                                                      %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.string_appoggiato()
@@ -1313,6 +1313,7 @@ B_Viola_Music_Voice_B = {                                                      %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'4                                                                        %! harmony.string_appoggiato()
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1320,10 +1321,10 @@ B_Viola_Music_Voice_B = {                                                      %
 B_Viola_Music_Voice_C = {                                                      %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2.                                                                       %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1331,7 +1332,6 @@ B_Viola_Music_Voice_C = {                                                      %
 B_Viola_Music_Voice_D = {                                                      %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'4
@@ -1341,6 +1341,7 @@ B_Viola_Music_Voice_D = {                                                      %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1348,10 +1349,10 @@ B_Viola_Music_Voice_D = {                                                      %
 B_Viola_Music_Voice_E = {                                                      %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2.                                                                       %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1359,10 +1360,10 @@ B_Viola_Music_Voice_E = {                                                      %
 B_Viola_Music_Voice_F = {                                                      %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1772,6 +1773,7 @@ B_Cello_I_Music_Voice_A = {                                                    %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1779,7 +1781,6 @@ B_Cello_I_Music_Voice_A = {                                                    %
 B_Cello_I_Music_Voice_B = {                                                    %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4
@@ -1789,6 +1790,7 @@ B_Cello_I_Music_Voice_B = {                                                    %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1796,7 +1798,6 @@ B_Cello_I_Music_Voice_B = {                                                    %
 B_Cello_I_Music_Voice_C = {                                                    %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2
@@ -1806,6 +1807,7 @@ B_Cello_I_Music_Voice_C = {                                                    %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1813,10 +1815,10 @@ B_Cello_I_Music_Voice_C = {                                                    %
 B_Cello_I_Music_Voice_D = {                                                    %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1824,10 +1826,10 @@ B_Cello_I_Music_Voice_D = {                                                    %
 B_Cello_I_Music_Voice_E = {                                                    %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2205,6 +2207,7 @@ B_Cello_II_Music_Voice_A = {                                                   %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2212,10 +2215,10 @@ B_Cello_II_Music_Voice_A = {                                                   %
 B_Cello_II_Music_Voice_B = {                                                   %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2223,10 +2226,10 @@ B_Cello_II_Music_Voice_B = {                                                   %
 B_Cello_II_Music_Voice_C = {                                                   %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2234,7 +2237,6 @@ B_Cello_II_Music_Voice_C = {                                                   %
 B_Cello_II_Music_Voice_D = {                                                   %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4
@@ -2245,6 +2247,7 @@ B_Cello_II_Music_Voice_D = {                                                   %
     d1
     - \tweak direction #up
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2583,6 +2586,7 @@ B_Contrabass_I_Music_Voice_A = {                                               %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2590,7 +2594,6 @@ B_Contrabass_I_Music_Voice_A = {                                               %
 B_Contrabass_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
@@ -2600,6 +2603,7 @@ B_Contrabass_I_Music_Voice_B = {                                               %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4                                                                         %! harmony.string_appoggiato()
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2607,10 +2611,10 @@ B_Contrabass_I_Music_Voice_B = {                                               %
 B_Contrabass_I_Music_Voice_C = {                                               %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2919,6 +2923,7 @@ B_Contrabass_II_Music_Voice_A = {                                              %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -2926,10 +2931,10 @@ B_Contrabass_II_Music_Voice_A = {                                              %
 B_Contrabass_II_Music_Voice_B = {                                              %! abjad.Path.extern()
 
     \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 

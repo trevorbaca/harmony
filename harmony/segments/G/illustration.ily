@@ -177,7 +177,7 @@ G_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER:baca.SegmentMaker._label_stage_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
-    \bacaStopTextSpanMM                                                        %! SEGMENT_FINAL_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    \bacaStopTextSpanMM                                                        %! EOS_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
@@ -1071,6 +1071,7 @@ G_Viola_Music_Voice_A = {                                                      %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1089,6 +1090,7 @@ G_Viola_Music_Voice_B = {                                                      %
     c'1
     - \tweak direction #up
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     {
 
         \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
@@ -1368,6 +1370,7 @@ G_Cello_I_Music_Voice_A = {                                                    %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1386,6 +1389,7 @@ G_Cello_I_Music_Voice_B = {                                                    %
     d1
     - \tweak direction #up
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     {
 
         \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
@@ -1818,6 +1822,7 @@ G_Contrabass_I_Music_Voice_A = {                                               %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.string_appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -1836,6 +1841,7 @@ G_Contrabass_I_Music_Voice_B = {                                               %
     d1
     - \tweak direction #up
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     {
 
         \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()

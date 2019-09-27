@@ -74,7 +74,7 @@ A_Global_Skips = {                                                             %
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER:baca.SegmentMaker._label_stage_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
-    \bacaStopTextSpanMM                                                        %! SEGMENT_FINAL_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
+    \bacaStopTextSpanMM                                                        %! EOS_STOP_MM_SPANNER:baca.SegmentMaker._attach_metronome_marks(4):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
 %@% \bacaStopTextSpanCT                                                        %! CLOCK_TIME:baca.SegmentMaker._label_clock_time():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
@@ -104,6 +104,7 @@ A_Bass_Flute_Music_Voice_A = {                                                 %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     d'2...                                                                     %! harmony.appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -113,6 +114,7 @@ A_Bass_Flute_Music_Voice_B = {                                                 %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e'4..                                                                      %! harmony.appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -126,6 +128,7 @@ A_Bass_Flute_Music_Voice_C = {                                                 %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     d'2
     \repeatTie
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -135,6 +138,7 @@ A_Bass_Flute_Music_Voice_D = {                                                 %
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e'4..                                                                      %! harmony.appoggiato()
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
 }                                                                              %! abjad.Path.extern()
 
@@ -220,7 +224,6 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
     >>
 
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     r16                                                                        %! harmony.appoggiato()
 
     <<
@@ -271,7 +274,6 @@ A_Bass_Flute_Music_Voice = {                                                   %
     >>
 
     % [A Bass_Flute_Music_Voice measure 2]                                     %! baca.SegmentMaker._comment_measure_numbers()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     r16                                                                        %! harmony.appoggiato()
 
     <<
@@ -329,7 +331,6 @@ A_Bass_Flute_Music_Voice = {                                                   %
 
     >>
 
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     r16                                                                        %! harmony.appoggiato()
 
     <<
