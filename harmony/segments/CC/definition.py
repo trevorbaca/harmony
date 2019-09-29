@@ -158,3 +158,14 @@ maker(
         measures=2,
     ),
 )
+
+maker(
+    ("cb2", -1),
+    baca.chunk(
+        baca.mark(r"\harmony-colophon-markup"),
+        baca.rehearsal_mark_down(),
+        baca.rehearsal_mark_padding(12),
+        baca.rehearsal_mark_self_alignment_x(abjad.Right),
+        selector=baca.leaves().rleak()[-1],
+    ),
+)

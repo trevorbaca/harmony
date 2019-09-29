@@ -1,3 +1,19 @@
+\include "/Users/trevorbaca/baca/lilypond/baca.ily"
+
+%%% COLOPHON %%%
+
+harmony-colophon-markup = \markup {
+    \override #'(font-name . "Palatino")
+    \with-color #black
+    \override #'(baseline-skip . 4)
+    \right-column {
+        \line {
+            Madison, Wisc. \hspace #0.75 – \hspace #0.75 New Haven, Conn.
+        }
+        \line { Mar. \hspace #0.75 – \hspace #0.75 Oct. 2019. }
+        }
+    }
+
 %%% MARGIN MARKUP %%%
 
 harmony-bass-flute-markup = \markup \hcenter-in #22 "Bass flute"

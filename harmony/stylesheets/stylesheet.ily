@@ -2,7 +2,6 @@
 #(set-global-staff-size 10)
 
 \include "/Users/trevorbaca/baca/lilypond/baca.ily"
-%%%\include "annotation-spanners.ily"
 \include "contexts.ily"
 \include "markups.ily"
 
