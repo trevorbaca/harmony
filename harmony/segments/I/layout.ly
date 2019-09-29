@@ -36,8 +36,6 @@
         %@% \bacaStopTextSpanSPM                                               %! SPACING
         %@% - \baca-start-spm-left-only "[1/40]"                               %! SPACING
         %@% \bacaStartTextSpanSPM                                              %! SPACING
-            \baca-bar-line-visible                                             %! baca.SegmentMaker._attach_final_bar_line()
-            \bar "|"                                                           %! baca.SegmentMaker._attach_final_bar_line()
 
             % [Page_Layout measure 74]                                         %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
             \baca-new-spacing-section #1 #4                                    %! SPACING_COMMAND:HorizontalSpacingSpecifier(1):baca.SegmentMaker._style_phantom_measures(1):PHANTOM
