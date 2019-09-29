@@ -48,7 +48,7 @@ CC_Global_Skips = {                                                            %
 %@% - \baca-start-ct-both-left-fermata "8''" "[14'42'']"                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     \baca-bar-line-visible                                                     %! baca.SegmentMaker._attach_final_bar_line()
-    \bar "|"                                                                   %! baca.SegmentMaker._attach_final_bar_line()
+    \bar "|."                                                                  %! baca.SegmentMaker._attach_final_bar_line()
 
     % [CC Global_Skips measure 273 / measure 4]                                %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(1):PHANTOM
     \baca-time-signature-transparent                                           %! baca.SegmentMaker._style_phantom_measures(2):PHANTOM
@@ -217,8 +217,6 @@ CC_Bass_Flute_Music_Voice = {                                                  %
             % [CC Bass_Flute_Music_Voice measure 273 / measure 4]              %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             \baca-invisible-music-coloring                                     %! baca.SegmentMaker._make_multimeasure_rest_container(2):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COLORING:baca.SegmentMaker._style_phantom_measures(5)
         %@% \baca-invisible-music                                              %! baca.SegmentMaker._make_multimeasure_rest_container(3):PHANTOM:MULTIMEASURE_REST:INVISIBLE_MUSIC_COMMAND:baca.SegmentMaker._style_phantom_measures(5)
-            \once \override Score.BarLine.transparent = ##t                    %! FERMATA_MEASURE:MEASURE_272:baca.SegmentMaker._style_fermata_measures(4):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \once \override Score.SpanBar.transparent = ##t                    %! FERMATA_MEASURE:MEASURE_272:baca.SegmentMaker._style_fermata_measures(4):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             R1 * 1/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):PHANTOM:HIDDEN:MULTIMEASURE_REST
         %@% ^ \baca-duration-multiplier-markup #"1" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:MULTIMEASURE_REST:PHANTOM:baca.SegmentMaker._style_phantom_measures(5)
 
