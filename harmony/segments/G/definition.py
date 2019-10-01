@@ -68,7 +68,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.flutter_initiated_cells(fill_with_rests=True),
+    harmony.sixteenths([2, 2, -99]),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< f >o niente",
@@ -201,9 +201,8 @@ maker(
     ("hp", 1),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.flutter_initiated_cells(
-        None, rmakers.tie(baca.pleaf(0)), fill_with_rests=True
-    ),
+    harmony.sixteenths([2, 2, -99], written_quarters=True),
+    baca.invisible_music(baca.pleaf(1)),
     baca.hairpin(
         'o< "f" >o niente',
         map=baca.clparts([3]),

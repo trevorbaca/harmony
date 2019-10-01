@@ -61,28 +61,6 @@ def bass_drum_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(-1), baca.stem_down())
 
 
-def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
-    """
-    Makes begin / end quarter notes.
-    """
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=True,
-            prefix_talea=[3, 1],
-            prefix_counts=[2],
-            suffix_talea=[3, 1],
-            suffix_counts=[2],
-            talea_denominator=16,
-        ),
-        *commands,
-        rmakers.rewrite_rest_filled(),
-        rmakers.extract_trivial(),
-        rmakers.written_duration((1, 4), baca.pleaves()),
-        frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
-    )
-
-
 def begin_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
     """
     Makes begin quarter notes.
@@ -185,39 +163,6 @@ def eighths(
     )
 
 
-def flutter_initiated_cells(
-    divisions: abjad.IntegerSequence = None,
-    *commands: rmakers.Command,
-    fill_with_rests: bool = None,
-    tied: bool = None,
-) -> baca.RhythmCommand:
-    """
-    Makes flutter-initiated cells.
-    """
-    if divisions is not None:
-        divisions_ = baca.sequence([(_, 4) for _ in divisions])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
-        )
-    else:
-        preprocessor = None
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=fill_with_rests,
-            prefix_talea=[1],
-            prefix_counts=[2],
-            talea_denominator=8,
-        ),
-        rmakers.extract_trivial(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
-        *commands,
-        rmakers.force_repeat_tie((1, 8)),
-        frame=inspect.currentframe(),
-        preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
-    )
-
-
 def phjc(
     parts: abjad.IntegerSequence,
     counts: abjad.IntegerSequence,
@@ -240,35 +185,6 @@ def phjc(
         rmakers.force_rest(baca.tuplets().map(baca.leaf(0))),
         rmakers.beam(),
         rmakers.extract_trivial(),
-        frame=inspect.currentframe(),
-        preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
-    )
-
-
-def quarter_initiated_cells(
-    divisions: abjad.IntegerSequence = None,
-) -> baca.RhythmCommand:
-    """
-    Makes quarter-initiated cells.
-    """
-    if divisions is None:
-        preprocess = None
-    else:
-        divisions_ = baca.sequence([(_, 16) for _ in divisions])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
-        )
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=True,
-            prefix_talea=[1],
-            prefix_counts=[1],
-            talea_denominator=4,
-        ),
-        rmakers.extract_trivial(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
-        rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
@@ -339,6 +255,7 @@ def sixteenths(
     preprocessor: abjad.Expression = None,
     r: int = None,
     stop: int = None,
+    written_quarters: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes sixteenths rhythm.
@@ -366,6 +283,12 @@ def sixteenths(
     beam_commands = []
     if beam:
         beam_commands.append(rmakers.beam())
+    written_quarter_commands = []
+    if written_quarters:
+        command_3 = rmakers.written_duration((1, 4), baca.pleaves())
+        written_quarter_commands.append(command_3)
+        command_4 = rmakers.unbeam()
+        written_quarter_commands.append(command_4)
     return baca.rhythm(
         rmakers.talea(counts_, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
@@ -376,6 +299,7 @@ def sixteenths(
         rmakers.denominator((1, 16)),
         *meter,
         *commands,
+        *written_quarter_commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
         frame=inspect.currentframe(),
@@ -634,24 +558,6 @@ def tuplet(ratios, *commands) -> baca.RhythmCommand:
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
-    )
-
-
-def upbeat_quarter_note() -> baca.RhythmCommand:
-    """
-    Makes upbeat quarter-note rhythm.
-    """
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=True,
-            suffix_talea=[3, 1],
-            suffix_counts=[2],
-            talea_denominator=16,
-        ),
-        rmakers.extract_trivial(),
-        rmakers.written_duration((1, 4), baca.pleaves()),
-        frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
     )
 
 

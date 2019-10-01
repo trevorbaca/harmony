@@ -60,12 +60,14 @@ maker(
 )
 
 divisions = [4, 5, 3, 3, 3, 4]
+sixteenths = [(2, 2, 4 * _ - 4) for _ in divisions]
+sixteenths = list(baca.sequence(sixteenths).flatten())
 
 # bfl
 
 maker(
     ("bfl", (1, 5)),
-    harmony.flutter_initiated_cells(divisions),
+    harmony.sixteenths(sixteenths),
     baca.stem_tremolo(baca.plts().get([0, 1], 3)),
     baca.hairpin(
         "p < f > p",
@@ -123,7 +125,7 @@ maker(
 
 maker(
     ("hp", (1, 5)),
-    harmony.flutter_initiated_cells(divisions),
+    harmony.sixteenths(sixteenths),
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(5.5).staff_padding,
