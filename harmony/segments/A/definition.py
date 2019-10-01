@@ -81,6 +81,17 @@ maker(
 maker(
     "perc1",
     baca.dls_staff_padding(6),
+)
+
+maker(
+    ("perc1", 1),
+    harmony.margin_markup("Perc. I"),
+    baca.start_markup(
+        r"\harmony-percussion-i-markup",
+        literal=True,
+    ),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(0).parent_alignment_X,
@@ -88,19 +99,6 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.suite(
-        harmony.margin_markup("Perc. I"),
-        baca.start_markup(
-            r"\harmony-percussion-i-markup",
-            literal=True,
-        ),
-    ),
-    baca.clef("percussion"),
-)
-
-maker(
-    ("perc1", 1),
-    baca.staff_lines(1),
     baca.hairpin(
         "o<| f",
         selector=baca.leaves()[-2:],
@@ -110,11 +108,6 @@ maker(
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
     ),
-)
-
-maker(
-    ("perc1", (1, 2)),
-    harmony.bass_drum_staff_position(),
 )
 
 maker(
@@ -138,6 +131,11 @@ maker(
 maker(
     ("perc1", [1, 2]),
     baca.breathe(),
+)
+
+maker(
+    ("perc1", (1, 2)),
+    harmony.bass_drum_staff_position(),
 )
 
 maker(
