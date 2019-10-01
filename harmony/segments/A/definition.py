@@ -107,7 +107,6 @@ maker(
     ),
     harmony.sixteenths(
         [-20, 3, 1],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
     ),
@@ -122,7 +121,6 @@ maker(
     ("perc1", 2),
     harmony.sixteenths(
         [3, 1, -12, 3, 1],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
     ),

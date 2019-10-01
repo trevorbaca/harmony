@@ -203,7 +203,6 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [2, 2, -99],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
         ),

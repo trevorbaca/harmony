@@ -177,7 +177,7 @@ maker(
 
 maker(
     ("va", 5),
-    harmony.sixteenths([-6, 1, -10, 1, -99], [1]),
+    harmony.sixteenths([-6, 1, -10, 1, -99], extra_counts=[1]),
     baca.laissez_vibrer(baca.ptails()),
     baca.note_head_style_harmonic(),
     baca.markup(r"\baca-pizz-markup", literal=True),

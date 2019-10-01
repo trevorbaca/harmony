@@ -238,7 +238,6 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths(
         [2, 2, -10],
-        None,
         rmakers.repeat_tie(baca.pleaves().get([1], 2)),
     ),
     baca.hairpin(

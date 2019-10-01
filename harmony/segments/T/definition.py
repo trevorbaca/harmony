@@ -53,7 +53,7 @@ maker(
 
 maker(
     ("bfl", (3, 10)),
-    harmony.sixteenths([-8, 8, -16, 4], [1]),
+    harmony.sixteenths([-8, 8, -16, 4], extra_counts=[1]),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
@@ -74,7 +74,7 @@ maker(
 
 maker(
     ("perc1", (3, 10)),
-    harmony.sixteenths([8, -8, 8, -8, 8, -16], [2]),
+    harmony.sixteenths([8, -8, 8, -8, 8, -16], extra_counts=[2]),
     baca.markup(r"\baca-slate-scrape-markup", literal=True),
     harmony.slate_staff_position(),
 )
@@ -83,7 +83,7 @@ maker(
 
 maker(
     ("perc2", (3, 10)),
-    harmony.sixteenths([2, -8, 2, -8, 2, -20], [1]),
+    harmony.sixteenths([2, -8, 2, -8, 2, -20], extra_counts=[1]),
     baca.markup(r"\baca-slate-brush-markup", literal=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
@@ -103,21 +103,21 @@ maker(
 
 maker(
     ("va", (3, 10)),
-    harmony.sixteenths([2, -8, 2, -4, 2, -26], [2]),
+    harmony.sixteenths([2, -8, 2, -4, 2, -26], extra_counts=[2]),
 )
 
 # vc1
 
 maker(
     ("vc1", (3, 10)),
-    harmony.sixteenths([3, -7, 3, -7, 3, -7, 3, -14], [1]),
+    harmony.sixteenths([3, -7, 3, -7, 3, -7, 3, -14], extra_counts=[1]),
 )
 
 # vc2
 
 maker(
     ("vc2", (3, 10)),
-    harmony.sixteenths([3, -5, 3, -5, 3, -5, 3, -23], [1]),
+    harmony.sixteenths([3, -5, 3, -5, 3, -5, 3, -23], extra_counts=[1]),
 )
 
 # cb1

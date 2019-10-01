@@ -66,7 +66,6 @@ maker(
     ("bfl", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -87,7 +86,6 @@ maker(
     ("bfl", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -109,7 +107,6 @@ maker(
     ("perc1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -198,7 +195,7 @@ maker(
 
 maker(
     ("va", (1, 3)),
-    harmony.sixteenths([32], [1], grace_suffixes=[1]),
+    harmony.sixteenths([32], extra_counts=[1], grace_suffixes=[1]),
     baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
@@ -208,7 +205,7 @@ maker(
     ("va", (5, 10)),
     harmony.sixteenths(
         [18, 13, 9, 6, 3, 2, 2, 2, 2, 2, 3, 3, 6, 99],
-        [1],
+        extra_counts=[1],
         grace_suffixes=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
@@ -241,7 +238,6 @@ maker(
     ("vc1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -263,7 +259,6 @@ maker(
     ("vc1", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -326,7 +321,6 @@ maker(
     ("cb1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
@@ -348,7 +342,6 @@ maker(
     ("cb1", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),

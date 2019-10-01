@@ -247,10 +247,10 @@ def rest_appoggiato(
 
 def sixteenths(
     counts: abjad.IntegerSequence,
-    extra_counts: abjad.IntegerSequence = None,
     *commands,
     beam: bool = None,
     do_not_rewrite_meter: bool = None,
+    extra_counts: abjad.IntegerSequence = None,
     grace_suffixes: abjad.IntegerSequence = None,
     preprocessor: abjad.Expression = None,
     r: int = None,
