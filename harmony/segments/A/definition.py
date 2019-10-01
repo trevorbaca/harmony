@@ -105,7 +105,7 @@ maker(
         "o<| f",
         selector=baca.leaves()[-2:],
     ),
-    harmony.upbeat_quarter_note()
+    harmony.sixteenths([-20, 3, 1], written_quarters=True),
 )
 
 maker(
@@ -116,7 +116,7 @@ maker(
 
 maker(
     ("perc1", 2),
-    harmony.begin_end_quarter_notes(),
+    harmony.sixteenths([3, 1, -12, 3, 1], written_quarters=True),
     baca.hairpin(
         "o<| mf",
         selector=baca.leaves()[:1].rleak(),
@@ -146,7 +146,7 @@ maker(
 # perc2
 
 maker(
-    "perc2",
+    ("perc2", (1, 2)),
     baca.suite(
         harmony.margin_markup("Perc. II"),
         baca.start_markup(
@@ -160,11 +160,7 @@ maker(
         literal=True,
     ),
     baca.clef("percussion"),
-)
-
-maker(
-    ("perc2", (1, 2)),
-    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
+    harmony.sixteenths([4, -14, 4, -2, 4, -6, 4, 4, -2]),
     baca.staff_lines(1),
     harmony.slate_staff_position(),
     baca.circle_bow_spanner(
@@ -187,7 +183,7 @@ maker(
 # hp
 
 maker(
-    "hp",
+    ("hp", (1, 2)),
     baca.suite(
         harmony.margin_markup("Hp."),
         baca.start_markup(
@@ -195,11 +191,7 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("hp", (1, 2)),
-    harmony.quarter_initiated_cells([18, 6, 10, 4, 6]),
+    harmony.sixteenths([4, -14, 4, -2, 4, -6, 4, 4, -2]),
     baca.staff_lines(1),
     harmony.whisk_staff_position(),
     baca.markup(
@@ -245,7 +237,7 @@ maker(
 # vc1
 
 maker(
-    "vc1",
+    ("vc1", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Vc. I"),
@@ -254,20 +246,12 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("vc1", 1),
-    baca.skeleton(r"r4 \times 5/3 { c4 c2 }"),
-)
-
-maker(
-    ("vc1", 2),
-    baca.skeleton(r"\times 5/3 { c4 c4 c4 }"),
-)
-
-maker(
-    ("vc1", (1, 2)),
+    baca.skeleton(r"r4 \times 5/3 { c4 c2 } \times 5/3 { c4 c4 c4 }"),
+    baca.rhythm_annotation_spanner(
+        "skeleton() =|",
+        abjad.tweak("darkyellow").color,
+        abjad.tweak(5.5).staff_padding,
+    ),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
