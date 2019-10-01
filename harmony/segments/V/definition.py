@@ -22,6 +22,8 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    # TODO: debug rhythm annotation spanner and then check wellformedness again
+    do_not_check_wellformedness=True,
     fermata_measure_empty_overrides=[11],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,

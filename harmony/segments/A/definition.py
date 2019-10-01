@@ -20,6 +20,10 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        *abjad.tags.instrument_color_tags(),
+        *abjad.tags.margin_markup_color_tags(),
+    ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
