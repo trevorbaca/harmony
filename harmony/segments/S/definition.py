@@ -208,10 +208,10 @@ maker(
         [2, 2, 2, 2, 2, 2, -99],
         None,
         rmakers.written_duration((1, 4)),
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.repeat_tie(baca.pleaves()[1:]),
         rmakers.unbeam(),
     ),
-    baca.invisible_music(baca.pleaves().get([1], 2)),
     baca.stem_tremolo(baca.pleaves()),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.hairpin(

@@ -22,8 +22,6 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
-    # TODO: debug rhythm annotation spanner and then check wellformedness again
-    #do_not_check_wellformedness=True,
     fermata_measure_empty_overrides=[11],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -69,6 +67,7 @@ maker(
     harmony.sixteenths(
         [-4, 2, 2, -4],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.trill_spanner(
@@ -82,9 +81,6 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.invisible_music(
-        map=baca.runs().map(baca.leaves()[1:]),
-    ),
 )
 
 maker(
@@ -92,6 +88,7 @@ maker(
     harmony.sixteenths(
         [2, 2],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.trill_spanner(
@@ -104,9 +101,6 @@ maker(
         selector=baca.leaves(),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.invisible_music(
-        selector=baca.leaves().get([1], 2),
-    ),
 )
 
 # perc1
@@ -116,6 +110,7 @@ maker(
     harmony.sixteenths(
         [-4, 2, 2, -4],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     harmony.triangle_staff_position(),
@@ -126,9 +121,6 @@ maker(
         map=baca.runs(),
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
-    ),
-    baca.invisible_music(
-        map=baca.runs().map(baca.leaves()[1:]),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -250,6 +242,7 @@ maker(
     harmony.sixteenths(
         [-4, 2, 2, -4],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.note_head_style_harmonic(),
@@ -264,9 +257,6 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.invisible_music(
-        map=baca.runs().map(baca.leaves()[1:]),
-    ),
 )
 
 maker(
@@ -274,6 +264,7 @@ maker(
     harmony.sixteenths(
         [2, 2],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.trill_spanner(
@@ -286,9 +277,6 @@ maker(
         selector=baca.leaves(),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.invisible_music(
-        selector=baca.leaves().get([1], 2),
-    ),
 )
 
 # vc2
@@ -339,6 +327,7 @@ maker(
     harmony.sixteenths(
         [-4, 2, 2, -4],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.note_head_style_harmonic(),
@@ -353,9 +342,6 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.invisible_music(
-        map=baca.runs().map(baca.leaves()[1:]),
-    ),
 )
 
 maker(
@@ -363,6 +349,7 @@ maker(
     harmony.sixteenths(
         [2, 2],
         None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
     ),
     baca.trill_spanner(
@@ -375,9 +362,6 @@ maker(
         selector=baca.leaves(),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.invisible_music(
-        selector=baca.leaves().get([1], 2),
-    ),
 )
 
 # cb2
