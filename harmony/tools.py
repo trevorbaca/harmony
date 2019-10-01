@@ -77,6 +77,7 @@ def begin_end_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
+        frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),
     )
 
@@ -96,6 +97,7 @@ def begin_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
         rmakers.rewrite_rest_filled(),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
+        frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),
     )
 
@@ -130,6 +132,7 @@ def durata(
         ),
         *commands,
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),
     )
 
@@ -175,6 +178,7 @@ def eighths(
         *commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
+        frame=inspect.currentframe(),
         preprocessor=preprocessor_,
         tag=_site(inspect.currentframe()),
     )
@@ -207,6 +211,7 @@ def flutter_initiated_cells(
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         *commands,
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -234,6 +239,7 @@ def phjc(
         rmakers.force_rest(baca.tuplets().map(baca.leaf(0))),
         rmakers.beam(),
         rmakers.extract_trivial(),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -262,6 +268,7 @@ def quarter_initiated_cells(
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -280,6 +287,7 @@ def rimbalzandi(extra_counts=None, *commands) -> baca.RhythmCommand:
         rmakers.force_diminution(),
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -314,6 +322,7 @@ def rest_appoggiato(
         rmakers.force_repeat_tie((1, 8)),
         *commands_,
         rmakers.force_rest(baca.plts(grace=False)),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -368,6 +377,7 @@ def sixteenths(
         *commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
+        frame=inspect.currentframe(),
         preprocessor=preprocessor_,
         tag=_site(inspect.currentframe()),
     )
@@ -421,6 +431,7 @@ def string_appoggiato(
         rmakers.force_repeat_tie((1, 8)),
         *commands_,
         *after_grace_commands,
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -456,6 +467,7 @@ def tessera_1(
             boundary_depth=1, reference_meters=_reference_meters
         ),
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
     )
 
 
@@ -483,6 +495,7 @@ def tessera_2(
             boundary_depth=1, reference_meters=_reference_meters
         ),
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
     )
 
 
@@ -510,6 +523,7 @@ def tessera_3(
             boundary_depth=1, reference_meters=_reference_meters
         ),
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
     )
 
 
@@ -537,6 +551,7 @@ def tessera_4(
             boundary_depth=1, reference_meters=_reference_meters
         ),
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
     )
 
 
@@ -566,6 +581,7 @@ def thirty_seconds(
         rmakers.extract_trivial(),
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
+        frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
@@ -592,6 +608,7 @@ def train(
         rmakers.beam(baca.leaves().group()),
         *commands_,
         rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),
     )
 
@@ -615,6 +632,7 @@ def tuplet(ratios, *commands) -> baca.RhythmCommand:
         *commands,
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
+        frame=inspect.currentframe(),
     )
 
 
@@ -631,6 +649,7 @@ def upbeat_quarter_note() -> baca.RhythmCommand:
         ),
         rmakers.extract_trivial(),
         rmakers.written_duration((1, 4), baca.pleaves()),
+        frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),
     )
 
