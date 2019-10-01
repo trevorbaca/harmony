@@ -20,21 +20,24 @@ def _site(frame):
 
 
 def appoggiato(
-    divisions: abjad.IntegerSequence,
-    counts: abjad.IntegerSequence = None,
     *,
-    leaf_duration=(1, 20),
-    rotation: int = 0,
+    quarters: abjad.IntegerSequence = None,
+    counts: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes appoggiato rhythm.
     """
-    divisions_ = baca.sequence([(_, 4) for _ in divisions])
-    divisions_ = divisions_.rotate(n=rotation)
+    if quarters is not None:
+        quarters_ = baca.sequence([(_, 4) for _ in quarters])
+        preprocessor = (
+            baca.sequence().fuse().split_divisions(quarters_, cyclic=True)
+        )
+    else:
+        preprocessor = None
     commands = []
     if counts:
         command = rmakers.on_beat_grace_container(
-            counts, baca.plts(), leaf_duration=leaf_duration
+            counts, baca.plts(), leaf_duration=(1, 20)
         )
         commands.append(command)
     return baca.rhythm(
@@ -46,9 +49,7 @@ def appoggiato(
         rmakers.force_repeat_tie((1, 8)),
         *commands,
         frame=inspect.currentframe(),
-        preprocessor=baca.sequence()
-        .fuse()
-        .split_divisions(divisions_, cyclic=True),
+        preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
 
