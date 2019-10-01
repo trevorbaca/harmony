@@ -45,6 +45,7 @@ def appoggiato(
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         *commands,
+        frame=inspect.currentframe(),
         preprocessor=baca.sequence()
         .fuse()
         .split_divisions(divisions_, cyclic=True),

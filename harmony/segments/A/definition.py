@@ -50,7 +50,7 @@ maker(
 # bfl
 
 maker(
-    "bfl",
+    ("bfl", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Bfl."),
@@ -59,10 +59,6 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("bfl", (1, 2)),
     harmony.appoggiato([4, 2, 3, 3, 2], [9, 6, 8, 4, 6]),
     baca.pitches(
         "D3 E3",

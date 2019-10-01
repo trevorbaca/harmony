@@ -616,73 +616,73 @@ A_Percussion_II_Music_Voice = {                                                %
     - \tweak staff-padding #9.5                                                %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-slate-scrape-markup                                                %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-explicit-indicator-markup "[“Perc. II”]"                           %! EXPLICIT_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
     \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)          %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! baca.margin_markup():-PARTS:baca.IndicatorCommand._call():baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_EXPLICIT_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     r2..                                                                       %! harmony.quarter_initiated_cells()
-    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     d'8
-    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
 
     d'8
     \repeatTie
 
     r8                                                                         %! harmony.quarter_initiated_cells()
-    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     % [A Percussion_II_Music_Voice measure 2]                                  %! baca.SegmentMaker._comment_measure_numbers()
     d'4                                                                        %! harmony.quarter_initiated_cells()
-    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
 
     r4.                                                                        %! harmony.quarter_initiated_cells()
-    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     d'8
-    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
 
     d'8
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     d'8
-    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-circle-markup                       %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-circle-bowing-markup %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #5.5                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanCircleBow                                                %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(1)
 
     d'8
     \repeatTie
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
 
     r8                                                                         %! harmony.quarter_initiated_cells()
-    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanCircleBow                                                 %! baca.circle_bow_spanner():CIRCLE_BOW_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -903,53 +903,53 @@ A_Viola_Music_Voice = {                                                        %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2...                                                                     %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'4..                                                                      %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     % [A Viola_Music_Voice measure 2]                                          %! baca.SegmentMaker._comment_measure_numbers()
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'8.
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2
     \repeatTie
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'4..                                                                      %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -966,7 +966,7 @@ A_Viola_Music_Voice = {                                                        %
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             c'1 * 3/4                                                          %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
         %@% ^ \baca-duration-multiplier-markup #"3" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
-            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
             \override Staff.BarLine.bar-extent = #'(-2 . 0)                    %! -PARTS:baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_BAR_EXTENT
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
@@ -1173,53 +1173,53 @@ A_Cello_II_Music_Voice = {                                                     %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2...                                                                      %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4..                                                                       %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     % [A Cello_II_Music_Voice measure 2]                                       %! baca.SegmentMaker._comment_measure_numbers()
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8.
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2
     \repeatTie
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4..                                                                       %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -1232,7 +1232,7 @@ A_Cello_II_Music_Voice = {                                                     %
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             d1 * 3/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
         %@% ^ \baca-duration-multiplier-markup #"3" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
-            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
@@ -1458,53 +1458,53 @@ A_Contrabass_II_Music_Voice = {                                                %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2...                                                                      %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4..                                                                       %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     % [A Contrabass_II_Music_Voice measure 2]                                  %! baca.SegmentMaker._comment_measure_numbers()
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8.
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2
     \repeatTie
 
     r16                                                                        %! harmony.appoggiato()
-    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+    \bacaStopTextSpanDamp                                                      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4..                                                                       %! harmony.appoggiato()
-    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1):autodetect
-    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
-    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(1)
+    - \abjad-dashed-line-with-hook                                             %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-markup \baca-damp-markup                         %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup      %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    - \tweak bound-details.right.padding #2.75                                 %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1):autodetect
+    - \tweak staff-padding #8                                                  %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
+    \bacaStartTextSpanDamp                                                     %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(1)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -1517,7 +1517,7 @@ A_Contrabass_II_Music_Voice = {                                                %
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING:HIDDEN:NOTE
             d1 * 3/4                                                           %! baca.SegmentMaker._make_multimeasure_rest_container(1):HIDDEN:NOTE
         %@% ^ \baca-duration-multiplier-markup #"3" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
-            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP:baca.PiecewiseCommand._call(3):SPANNER_STOP
+            \bacaStopTextSpanDamp                                              %! baca.damp_spanner():DAMP_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
 
