@@ -321,8 +321,8 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.thirty_seconds()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():SpannerIndicatorCommand(1)
-        \startTrillSpan                                                        %! baca.trill_spanner():SpannerIndicatorCommand(1)
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
         gs'!32                                                                 %! harmony.thirty_seconds()
 
@@ -361,7 +361,7 @@ N_Bass_Flute_Music_Voice = {                                                   %
         as'!32                                                                 %! harmony.thirty_seconds()
 
         b'32                                                                   %! harmony.thirty_seconds()
-        \stopTrillSpan                                                         %! baca.trill_spanner():SpannerIndicatorCommand(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
         ]                                                                      %! harmony.thirty_seconds()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
@@ -429,8 +429,8 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.thirty_seconds()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():SpannerIndicatorCommand(1)
-        \startTrillSpan                                                        %! baca.trill_spanner():SpannerIndicatorCommand(1)
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
         gs'!32                                                                 %! harmony.thirty_seconds()
 
@@ -469,7 +469,7 @@ N_Bass_Flute_Music_Voice = {                                                   %
         as'!32                                                                 %! harmony.thirty_seconds()
 
         b'32                                                                   %! harmony.thirty_seconds()
-        \stopTrillSpan                                                         %! baca.trill_spanner():SpannerIndicatorCommand(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
         ]                                                                      %! harmony.thirty_seconds()
 
     }                                                                          %! harmony.thirty_seconds()
@@ -527,8 +527,8 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.thirty_seconds()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():SpannerIndicatorCommand(1)
-        \startTrillSpan                                                        %! baca.trill_spanner():SpannerIndicatorCommand(1)
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
         gs'!32                                                                 %! harmony.thirty_seconds()
 
@@ -567,7 +567,7 @@ N_Bass_Flute_Music_Voice = {                                                   %
         as'!32                                                                 %! harmony.thirty_seconds()
 
         b'32                                                                   %! harmony.thirty_seconds()
-        \stopTrillSpan                                                         %! baca.trill_spanner():SpannerIndicatorCommand(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
         ]                                                                      %! harmony.thirty_seconds()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
@@ -1219,7 +1219,7 @@ N_Harp_Music_Voice = {                                                         %
     \startStaff                                                                %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES:baca.SegmentMaker._reanalyze_reapplied_synthetic_wrappers()
     \set Staff.instrumentName = \harmony-hp-markup                             %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
     \override NoteHead.no-ledgers = ##t                                        %! baca.no_ledgers():baca.OverrideCommand._call(1)
-    \ottava -1                                                                 %! baca.ottava_bassa():SpannerIndicatorCommand(1)
+    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(1)
 %%% \once \override Staff.Clef.X-extent = ##f                                  %! baca.clef_x_extent_false():baca.clef_shift():SHIFTED_CLEF:MEASURE_120:baca.OverrideCommand._call(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! baca.clef_extra_offset():baca.clef_shift():SHIFTED_CLEF:MEASURE_120:baca.OverrideCommand._call(1)
     \clef "bass"                                                               %! baca.clef():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_CLEF
@@ -1254,7 +1254,7 @@ N_Harp_Music_Voice = {                                                         %
     d,,8
     \repeatTie
     \revert NoteHead.no-ledgers                                                %! baca.no_ledgers():baca.OverrideCommand._call(2)
-    \ottava 0                                                                  %! baca.ottava_bassa():SpannerIndicatorCommand(2)
+    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2)
 
     r8
     - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
@@ -1305,7 +1305,7 @@ N_Harp_Music_Voice = {                                                         %
 
     % [N Harp_Music_Voice measure 125 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
     \override NoteHead.no-ledgers = ##t                                        %! baca.no_ledgers():baca.OverrideCommand._call(1)
-    \ottava -1                                                                 %! baca.ottava_bassa():SpannerIndicatorCommand(1)
+    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     d,,1                                                                       %! harmony.durata()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1337,7 +1337,7 @@ N_Harp_Music_Voice = {                                                         %
     d,,8
     \repeatTie
     \revert NoteHead.no-ledgers                                                %! baca.no_ledgers():baca.OverrideCommand._call(2)
-    \ottava 0                                                                  %! baca.ottava_bassa():SpannerIndicatorCommand(2)
+    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2)
 
     r8
     - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
