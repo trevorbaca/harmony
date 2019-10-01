@@ -128,11 +128,6 @@ persist = abjad.OrderedDict(
                                 prototype='abjad.Dynamic',
                                 value='niente',
                                 ),
-                            abjad.Momento(
-                                context='Cello_II_Music_Voice',
-                                prototype='abjad.StartTextSpan',
-                                value='StartTextSpan(command=\'\\\\bacaStartTextSpanRhythmAnnotation\', concat_hspace_left=0.5, left_text=\'- \\\\baca-text-spanner-left-text "sixteenths([99], grace_suffixes=[1])"\', style=\'dashed-line-with-hook\', tweaks=LilyPondTweakManager((\'_literal\', None), (\'bound_details__right__padding\', (\'TAGGED\', 2.75, Tag(\'baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):autodetect\'))), (\'color\', \'darkyellow\'), (\'staff_padding\', 5.5)))',
-                                ),
                             ],
                         ),
                     (
@@ -216,11 +211,6 @@ persist = abjad.OrderedDict(
                                 context='Contrabass_II_Music_Voice',
                                 prototype='abjad.Dynamic',
                                 value='niente',
-                                ),
-                            abjad.Momento(
-                                context='Contrabass_II_Music_Voice',
-                                prototype='abjad.StartTextSpan',
-                                value='StartTextSpan(command=\'\\\\bacaStartTextSpanRhythmAnnotation\', concat_hspace_left=0.5, left_text=\'- \\\\baca-text-spanner-left-text "sixteenths([99], grace_suffixes=[1])"\', style=\'dashed-line-with-hook\', tweaks=LilyPondTweakManager((\'_literal\', None), (\'bound_details__right__padding\', (\'TAGGED\', 2.75, Tag(\'baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):autodetect\'))), (\'color\', \'darkyellow\'), (\'staff_padding\', 5.5)))',
                                 ),
                             ],
                         ),
@@ -448,11 +438,6 @@ persist = abjad.OrderedDict(
                                 context='Viola_Music_Voice',
                                 prototype='abjad.Dynamic',
                                 value='niente',
-                                ),
-                            abjad.Momento(
-                                context='Viola_Music_Voice',
-                                prototype='abjad.StartTextSpan',
-                                value='StartTextSpan(command=\'\\\\bacaStartTextSpanRhythmAnnotation\', concat_hspace_left=0.5, left_text=\'- \\\\baca-text-spanner-left-text "sixteenths([99], grace_suffixes=[1])"\', style=\'dashed-line-with-hook\', tweaks=LilyPondTweakManager((\'_literal\', None), (\'bound_details__right__padding\', (\'TAGGED\', 2.75, Tag(\'baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):autodetect\'))), (\'color\', \'darkyellow\'), (\'staff_padding\', 5.5)))',
                                 ),
                             ],
                         ),
