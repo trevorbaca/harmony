@@ -362,7 +362,8 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
-        [-4, 6, 2, -4], None, rmakers.repeat_tie(baca.phead(-1)),
+        [-4, 6, 2, -4], 
+        rmakers.repeat_tie(baca.phead(-1)),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -374,9 +375,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-    harmony.sixteenths(
-        [-2, 9, -1], None,
-    ),
+    harmony.sixteenths([-2, 9, -1]),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.lparts([2, 1 + 1]),
@@ -388,7 +387,8 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     harmony.sixteenths(
-        [8, 4, -4], None, rmakers.repeat_tie(baca.phead(-1)),
+        [8, 4, -4],
+        rmakers.repeat_tie(baca.phead(-1)),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -402,7 +402,10 @@ maker(
 
 maker(
     (["va", "vc2", "cb2"], [9, 11]),
-    harmony.sixteenths([2], None, rmakers.written_duration((1, 4))),
+    harmony.sixteenths(
+        [2],
+        rmakers.written_duration((1, 4)),
+    ),
 )
 
 maker(

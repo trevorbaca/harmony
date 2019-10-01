@@ -170,7 +170,7 @@ maker(
 
 maker(
     ("perc2", (1, 2)),
-    harmony.sixteenths([-22, 1, -3, 1, -99], [2]),
+    harmony.sixteenths([-22, 1, -3, 1, -99], extra_counts=[2]),
     harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -189,7 +189,7 @@ maker(
 maker(
     ("perc2", (6, 9)),
     baca.staff_lines(1),
-    harmony.sixteenths(cerulean, [2]),
+    harmony.sixteenths(cerulean, extra_counts=[2]),
     harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -262,7 +262,7 @@ maker(
     ("vc1", (1, 2)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths([-16, 1, -16, 1, -6], [1]),
+    harmony.sixteenths([-16, 1, -16, 1, -6], extra_counts=[1]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp"),
@@ -270,7 +270,7 @@ maker(
 
 maker(
     ("vc1", (6, 9)),
-    harmony.sixteenths(cerulean, [1]),
+    harmony.sixteenths(cerulean, extra_counts=[1]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp-ancora", abjad.tweak(-0.75).self_alignment_X),

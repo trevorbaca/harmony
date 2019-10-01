@@ -161,7 +161,6 @@ maker(
     ("perc1", (11, 12)),
     harmony.sixteenths(
         [3, 1, -99],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
     ),
@@ -181,7 +180,6 @@ maker(
     ("perc1", [13, 15]),
     harmony.sixteenths(
         [3, 1, -99],
-        None,
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
     ),
@@ -306,7 +304,7 @@ maker(
 
 maker(
     ("vc1", (13, 15)),
-    harmony.sixteenths([14, 8, 8], [2]),
+    harmony.sixteenths([14, 8, 8], extra_counts=[2]),
 )
 
 # vc2
@@ -324,7 +322,7 @@ maker(
 
 maker(
     ("vc2", (13, 15)),
-    harmony.sixteenths([8, 8, 14], [2]),
+    harmony.sixteenths([8, 8, 14], extra_counts=[2]),
 )
 
 # cb1
@@ -342,7 +340,7 @@ maker(
 
 maker(
     ("cb1", (13, 15)),
-    harmony.sixteenths([12, 7, 8], [1]),
+    harmony.sixteenths([12, 7, 8], extra_counts=[1]),
 )
 
 maker(
@@ -363,7 +361,7 @@ maker(
 
 maker(
     ("cb2", (13, 15)),
-    harmony.sixteenths([8, 7, 12], [1]),
+    harmony.sixteenths([8, 7, 12], extra_counts=[1]),
 )
 
 maker(
