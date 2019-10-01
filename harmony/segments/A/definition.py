@@ -105,18 +105,27 @@ maker(
         "o<| f",
         selector=baca.leaves()[-2:],
     ),
-    harmony.sixteenths([-20, 3, 1], written_quarters=True),
+    harmony.sixteenths(
+        [-20, 3, 1],
+        None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
+        written_quarters=True,
+    ),
 )
 
 maker(
     ("perc1", (1, 2)),
-    baca.invisible_music(baca.pleaves(exclude=abjad.const.HIDDEN).get([1], 2)),
     harmony.bass_drum_staff_position(),
 )
 
 maker(
     ("perc1", 2),
-    harmony.sixteenths([3, 1, -12, 3, 1], written_quarters=True),
+    harmony.sixteenths(
+        [3, 1, -12, 3, 1],
+        None,
+        rmakers.invisible_music(baca.pleaves().get([1], 2)),
+        written_quarters=True,
+    ),
     baca.hairpin(
         "o<| mf",
         selector=baca.leaves()[:1].rleak(),
