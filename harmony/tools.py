@@ -246,7 +246,7 @@ def rest_appoggiato(
 
 
 def sixteenths(
-    counts: abjad.IntegerSequence,
+    counts: typing.Sequence,
     *commands,
     beam: bool = None,
     do_not_rewrite_meter: bool = None,
