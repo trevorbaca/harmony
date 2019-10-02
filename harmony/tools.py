@@ -283,7 +283,7 @@ def sixteenths(
     beam_commands = []
     if beam:
         beam_commands.append(rmakers.beam())
-    written_quarter_commands = []
+    written_quarter_commands: typing.List[rmakers.Command] = []
     if written_quarters:
         command_3 = rmakers.written_duration((1, 4), baca.pleaves())
         written_quarter_commands.append(command_3)

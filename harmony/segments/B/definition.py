@@ -60,8 +60,8 @@ maker(
 )
 
 divisions = [4, 5, 3, 3, 3, 4]
-sixteenths = [(2, 2, 4 * _ - 4) for _ in divisions]
-sixteenths = list(baca.sequence(sixteenths).flatten())
+sixteenths_ = [(2, 2, 4 * _ - 4) for _ in divisions]
+sixteenths = list(baca.sequence(sixteenths_).flatten())
 
 # bfl
 
