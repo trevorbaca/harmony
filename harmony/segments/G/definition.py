@@ -317,7 +317,7 @@ maker(
 
 maker(
     ("vc2", 1),
-    harmony.sixteenths([-4, 99]),
+    harmony.sixteenths([-4, "+"]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -325,7 +325,7 @@ maker(
 
 maker(
     ("vc2", (4, 5)),
-    harmony.sixteenths([99]),
+    harmony.sixteenths(["+"]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -369,7 +369,7 @@ maker(
 
 maker(
     ("cb2", 1),
-    harmony.sixteenths([-4, 99]),
+    harmony.sixteenths([-4, "+"]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -377,7 +377,7 @@ maker(
 
 maker(
     ("cb2", (4, 5)),
-    harmony.sixteenths([99]),
+    harmony.sixteenths(["+"]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
