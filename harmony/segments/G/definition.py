@@ -68,7 +68,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths([2, 2, -99]),
+    harmony.sixteenths([2, 2, "-"]),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< f >o niente",
@@ -97,7 +97,7 @@ maker(
 
 maker(
     ("bfl", 8),
-    harmony.sixteenths([1, 1, -99]),
+    harmony.sixteenths([1, 1, "-"]),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< f >o niente",
@@ -130,7 +130,7 @@ maker(
 maker(
     ("perc1", (4, 5)),
     baca.staff_lines(3),
-    harmony.sixteenths([1, -16, 1, -99]),
+    harmony.sixteenths([1, -16, 1, "-"]),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
@@ -148,7 +148,7 @@ maker(
 maker(
     ("perc1", 8),
     baca.staff_lines(3),
-    harmony.sixteenths([1, -99]),
+    harmony.sixteenths([1, "-"]),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
@@ -162,7 +162,7 @@ maker(
 
 maker(
     ("perc2", (1, 2)),
-    harmony.sixteenths([-4, 99]),
+    harmony.sixteenths([-4, "+"]),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -185,7 +185,7 @@ maker(
 
 maker(
     ("perc2", 8),
-    harmony.sixteenths([99]),
+    harmony.sixteenths(["+"]),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -202,7 +202,7 @@ maker(
     baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
-        [2, 2, -99],
+        [2, 2, "-"],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
         ),
@@ -251,7 +251,7 @@ maker(
     ("hp", 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths([2, -99]),
+    harmony.sixteenths([2, "-"]),
     harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
