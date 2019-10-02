@@ -513,7 +513,7 @@ def thirty_seconds(
 
 
 def train(
-    counts: abjad.IntegerSequence,
+    counts,
     *commands: rmakers.Command,
     rewrite_meter: bool = None,
 ) -> baca.RhythmCommand:
