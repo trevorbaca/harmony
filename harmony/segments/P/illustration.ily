@@ -1135,7 +1135,6 @@ P_Viola_Music_Voice = {                                                        %
     \afterGrace
     e'4                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
-    <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
     {
 
         \slash
@@ -1159,6 +1158,7 @@ P_Viola_Music_Voice = {                                                        %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
         ]
+        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
 
@@ -2004,7 +2004,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \afterGrace
     b,4                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
-    <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
     {
 
         \slash
@@ -2016,6 +2015,7 @@ P_Contrabass_I_Music_Voice = {                                                 %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
         ]
+        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
 
@@ -2384,7 +2384,6 @@ P_Contrabass_II_Music_Voice = {                                                %
     \afterGrace
     b,4                                                                        %! harmony.sixteenths()
     \glissando                                                                 %! baca.glissando()
-    <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
     {
 
         \slash
@@ -2404,6 +2403,7 @@ P_Contrabass_II_Music_Voice = {                                                %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
         ]
+        <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
 
