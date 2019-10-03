@@ -76,7 +76,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.durata([4, -99]),
+    harmony.sixteenths([8, "-"]),
     baca.text_spanner(
         "multiphonic =|",
         abjad.tweak(5.5).staff_padding,
@@ -86,7 +86,7 @@ maker(
 
 maker(
     ("bfl", (3, 8)),
-    harmony.durata([6, -10]),
+    harmony.sixteenths([12, -20]),
     baca.text_spanner(
         "multiphonic =|",
         abjad.tweak(5.5).staff_padding,
@@ -99,7 +99,7 @@ maker(
 
 maker(
     ("bfl", (11, 12)),
-    harmony.durata([2, 4, 2, 6]),
+    harmony.sixteenths([4, 8, 4, 12]),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -114,7 +114,7 @@ maker(
 
 maker(
     ("bfl", (13, 15)),
-    harmony.durata([3, 3, 3, 3, 3, 5]),
+    harmony.sixteenths([6, 6, 6, 6, 6, 10]),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -132,7 +132,7 @@ maker(
 maker(
     ("perc1", 1),
     baca.staff_lines(5),
-    harmony.durata([4, -99]),
+    harmony.sixteenths([8, "-"]),
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(5.5).staff_padding,
@@ -148,7 +148,7 @@ maker(
 maker(
     ("perc1", (3, 8)),
     baca.staff_lines(5),
-    harmony.durata([6, 8, -2]),
+    harmony.sixteenths([12, 16, -4]),
     baca.laissez_vibrer(baca.ptails()),
 )
 
@@ -194,7 +194,7 @@ maker(
 
 maker(
     ("perc2", 1),
-    harmony.durata([4, -99]),
+    harmony.sixteenths([8, "-"]),
     harmony.tam_tam_staff_position(),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -212,7 +212,7 @@ maker(
     ("perc2", (3, 8)),
     baca.staff_lines(1),
     harmony.tam_tam_staff_position(),
-    harmony.durata([-6, 8, -2]),
+    harmony.sixteenths([-12, 16, -4]),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -224,7 +224,7 @@ maker(
 
 maker(
     ("perc2", (11, 12)),
-    harmony.durata([1, -1]),
+    harmony.sixteenths([2, -2]),
     harmony.brake_drum_staff_position(),
     baca.accent(baca.pheads()),
     baca.dynamic("f"),
@@ -233,7 +233,7 @@ maker(
 
 maker(
     ("perc2", (13, 15)),
-    harmony.durata([3, -3, 3, -3, 3, -5]),
+    harmony.sixteenths([6, -6, 6, -6, 6, -10]),
     harmony.slate_staff_position(),
     baca.dynamic("mf"),
     baca.markup(r"\baca-slate-scrape-markup", literal=True),
@@ -243,7 +243,7 @@ maker(
 
 maker(
     ("hp", 1),
-    harmony.durata([4, -99]),
+    harmony.sixteenths([8, "-"]),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(5.5).staff_padding,
@@ -253,13 +253,13 @@ maker(
 
 maker(
     ("hp", (3, 8)),
-    harmony.durata([6, 8, -2]),
+    harmony.sixteenths([12, 16, -4]),
     baca.laissez_vibrer(baca.ptails()),
 )
 
 maker(
     ("hp", (11, 12)),
-    harmony.durata([1, -1]),
+    harmony.sixteenths([2, -2]),
     baca.accent(baca.pheads()),
     baca.dynamic("f"),
     baca.markup(r"\baca-soundboard-pizz-markup", literal=True),
@@ -267,7 +267,7 @@ maker(
 
 maker(
     ("hp", (13, 15)),
-    harmony.durata([3, -3, 3, -3, 3, -5]),
+    harmony.sixteenths([6, -6, 6, -6, 6, -10]),
     baca.dynamic("mf"),
     baca.markup(r"\baca-whisk-markup", literal=True),
 )
@@ -377,7 +377,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (11, 12)),
-    harmony.durata([2]),
+    harmony.sixteenths([4]),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
     baca.dynamic("p"),

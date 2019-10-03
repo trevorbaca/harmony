@@ -139,7 +139,7 @@ maker(
 
 maker(
     ("perc1", (1, 2)),
-    harmony.durata([1, -14, 1]),
+    harmony.sixteenths([2, "-", 2]),
     harmony.brake_drum_staff_position(),
     baca.accent(baca.pheads()),
     baca.markup(r"\baca-brake-drum-markup", literal=True),
@@ -153,7 +153,7 @@ maker(
 maker(
     ("perc1", 6),
     baca.staff_lines(1),
-    harmony.durata([1, -99]),
+    harmony.sixteenths([2, "-"]),
     harmony.brake_drum_staff_position(),
     baca.accent(baca.pheads()),
     baca.markup(r"\baca-brake-drum-markup", literal=True),
@@ -161,7 +161,7 @@ maker(
 
 maker(
     ("perc1", 9),
-    harmony.durata([-7, 1]),
+    harmony.sixteenths(["-", 2]),
     harmony.brake_drum_staff_position(),
     baca.accent(baca.pheads()),
 )
@@ -204,7 +204,7 @@ maker(
 maker(
     ("hp", (1, 2)),
     baca.clef("bass"),
-    harmony.durata([11, -99]),
+    harmony.sixteenths([22, "-"]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -217,7 +217,7 @@ maker(
 
 maker(
     ("hp", (6, 9)),
-    harmony.durata([27, -99]),
+    harmony.sixteenths([54, "-"]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -232,7 +232,7 @@ maker(
 
 maker(
     ("va", (1, 2)),
-    harmony.durata([-4, 2, -99], grace=True, untie=True),
+    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -243,7 +243,11 @@ maker(
 
 maker(
     ("va", (6, 9)),
-    harmony.durata([8, -6, 2, -8, 2, -4, 2], grace=True, untie=True),
+    harmony.sixteenths(
+        [16, -12, 4, -16, 4, -8, 4],
+        untie=True,
+        grace_suffixes=[1],
+    ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
         map=baca.runs(),
@@ -312,7 +316,7 @@ maker(
 
 maker(
     ("cb1", (1, 2)),
-    harmony.durata([-4, 2, -99], grace=True, untie=True),
+    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -323,7 +327,11 @@ maker(
 
 maker(
     ("cb1", (6, 9)),
-    harmony.durata([8, -4, 2, -8, 2, -6, 2], grace=True, untie=True),
+    harmony.sixteenths(
+        [16, -8, 4, -16, 4, -12, 4],
+        untie=True,
+        grace_suffixes=[1],
+    ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
         map=baca.runs(),
@@ -340,7 +348,7 @@ maker(
 
 maker(
     ("cb2", (1, 2)),
-    harmony.durata([-4, 2, -99], grace=True, untie=True),
+    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -351,7 +359,11 @@ maker(
 
 maker(
     ("cb2", (6, 9)),
-    harmony.durata([8, -6, 2, -4, 2, -8, 2], grace=True, untie=True),
+    harmony.sixteenths(
+        [16, -12, 4, -8, 4, -16, 4],
+        untie=True,
+        grace_suffixes=[1],
+    ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
         map=baca.runs(),

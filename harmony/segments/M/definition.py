@@ -126,7 +126,7 @@ maker(
 maker(
     ("hp", 1),
     baca.clef("treble"),
-    harmony.durata([-2, 2, 4, -2]),
+    harmony.sixteenths([-4, 4, 8, -4]),
     baca.pitch("<A4 B4 C5>", mock=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
@@ -197,7 +197,7 @@ maker(
 
 maker(
     ("vc2", 1),
-    harmony.durata([-4, 6]),
+    harmony.sixteenths([-8, 12]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -242,7 +242,7 @@ maker(
 
 maker(
     ("cb2", 1),
-    harmony.durata([-4, 6]),
+    harmony.sixteenths([-8, 12]),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),

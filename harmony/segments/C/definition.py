@@ -168,7 +168,7 @@ maker(
 maker(
     ("hp", 1),
     baca.clef("bass"),
-    harmony.durata([5, -2]),
+    harmony.sixteenths([10, "-"]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -180,7 +180,7 @@ maker(
 
 maker(
     ("hp", (6, 8)),
-    harmony.durata([9, -6, 8, -2]),
+    harmony.sixteenths([18, -12, 16, -4]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -246,7 +246,7 @@ maker(
 
 maker(
     ("vc2", 1),
-    harmony.durata([5, -2], grace=True, untie=True),
+    harmony.sixteenths([10, "-"], untie=True, grace_suffixes=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -257,7 +257,7 @@ maker(
 
 maker(
     ("vc2", (6, 8)),
-    harmony.durata([9, -6, 8, -2], grace=True, untie=True),
+    harmony.sixteenths([18, -12, 16, -4], untie=True, grace_suffixes=[1]),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
         baca.glissando(
@@ -299,7 +299,7 @@ maker(
 
 maker(
     ("cb2", 1),
-    harmony.durata([5, -2], grace=True, untie=True),
+    harmony.sixteenths([10, "-"], untie=True, grace_suffixes=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -310,7 +310,7 @@ maker(
 
 maker(
     ("cb2", (6, 8)),
-    harmony.durata([9, -6, 8, -2], grace=True, untie=True),
+    harmony.sixteenths([18, -12, 16, -4], untie=True, grace_suffixes=[1]),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
         baca.glissando(
