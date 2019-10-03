@@ -155,7 +155,7 @@ maker(
 
 maker(
     ("hp", 5),
-    harmony.eighths([-2, 1, -8, 1, -99], [1]),
+    harmony.sixteenths([-4, 2, -16, 2, "-"], extra_counts=[2]),
     baca.laissez_vibrer(baca.ptails()),
     baca.dynamic("mf"),
     baca.accent(baca.pheads()),
@@ -177,7 +177,7 @@ maker(
 
 maker(
     ("va", 5),
-    harmony.sixteenths([-6, 1, -10, 1, -99], extra_counts=[1]),
+    harmony.sixteenths([-6, 1, -10, 1, "-"], extra_counts=[1]),
     baca.laissez_vibrer(baca.ptails()),
     baca.note_head_style_harmonic(),
     baca.markup(r"\baca-pizz-markup", literal=True),

@@ -61,7 +61,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths([2, 2, 4, -99]),
+    harmony.sixteenths([2, 2, 4, "-"]),
     baca.repeat_tie(baca.pleaves()[1:]),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(

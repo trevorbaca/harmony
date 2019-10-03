@@ -139,7 +139,7 @@ maker(
 maker(
     ("perc2", 5),
     baca.staff_lines(3),
-    harmony.sixteenths([1, -99]),
+    harmony.sixteenths([1, "-"]),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
     baca.accent(),
     baca.dynamic("f"),
@@ -147,7 +147,7 @@ maker(
 
 maker(
     ("perc2", 9),
-    harmony.sixteenths([1, -99]),
+    harmony.sixteenths([1, "-"]),
     baca.accent(),
     baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
 )

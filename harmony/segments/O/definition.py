@@ -48,7 +48,7 @@ maker(
 
 maker(
     ("bfl", (1, 2)),
-    harmony.sixteenths([-1, 3, 4, -4, 4, -1, 3, 4, -99]),
+    harmony.sixteenths([-1, 3, 4, -4, 4, -1, 3, 4, "-"]),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         selector=baca.tleaves().rleak(),
@@ -58,7 +58,7 @@ maker(
 
 maker(
     ("bfl", (5, 9)),
-    harmony.sixteenths([-1, 3, -8, 4, -8, -1, 99]),
+    harmony.sixteenths([-1, 3, -8, 4, -8, -1, "+"]),
     baca.accent(),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
@@ -85,7 +85,7 @@ maker(
 
 maker(
     ("perc1", (1, 2)),
-    harmony.sixteenths([-1, 3, 4, -4, 4, -1, 3, 4, -99]),
+    harmony.sixteenths([-1, 3, 4, -4, 4, -1, 3, 4, "-"]),
     baca.markup(r"\baca-slate-scrape-markup", literal=True),
 )
 
@@ -101,7 +101,7 @@ maker(
 
 maker(
     ("perc1", (5, 9)),
-    harmony.sixteenths([-1, 3, -8, 4, -8, -1, 99]),
+    harmony.sixteenths([-1, 3, -8, 4, -8, -1, "+"]),
     baca.markup(r"\baca-slate-scrape-markup", literal=True),
 )
 
@@ -160,7 +160,7 @@ maker(
 
 maker(
     ("va", (5, 10)),
-    harmony.sixteenths([5, -7, 5, -7, 37, -99]),
+    harmony.sixteenths([5, -7, 5, -7, 37, "-"]),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,

@@ -205,7 +205,7 @@ maker(
 maker(
     ("hp", 1),
     harmony.sixteenths(
-        [2, 2, 2, 2, 2, 2, -99],
+        [2, 2, 2, 2, 2, 2, "-"],
         rmakers.written_duration((1, 4)),
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.repeat_tie(baca.pleaves()[1:]),
@@ -425,7 +425,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
-        [2, 2, 2, 2, 2, 2, -99],
+        [2, 2, 2, 2, 2, 2, "-"],
         rmakers.written_duration((1, 4)),
         rmakers.repeat_tie(baca.pleaves()[1:]),
         rmakers.unbeam(),
