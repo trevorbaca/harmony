@@ -405,6 +405,7 @@ maker(
     harmony.sixteenths(
         [2],
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
 )
 
