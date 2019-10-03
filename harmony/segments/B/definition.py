@@ -59,8 +59,8 @@ maker(
     baca.global_fermata("fermata", baca.rest(12 - 1)),
 )
 
-divisions = [4, 5, 3, 3, 3, 4]
-sixteenths_ = [(2, 2, 4 * _ - 4) for _ in divisions]
+quarters = baca.sequence([4, 5, 3, 3, 3, 4])
+sixteenths_ = [(2, 2, 4 * _ - 4) for _ in quarters]
 sixteenths = list(baca.sequence(sixteenths_).flatten())
 
 # bfl
@@ -145,7 +145,7 @@ maker(
 maker(
     ("va", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato(divisions, [2, 3, 4, 5, 6, 7]),
+    harmony.string_appoggiato([2, 3, 4, 5, 6, 7], quarters=quarters),
 )
 
 maker(
@@ -163,7 +163,11 @@ maker(
 maker(
     ("vc1", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato(divisions, [3, 4, 5, 6, 7], rotation=-1, rest=1),
+    harmony.string_appoggiato(
+        [3, 4, 5, 6, 7],
+        quarters=quarters.rotate(-1),
+        rest_first=1,
+    ),
 )
 
 maker(
@@ -180,7 +184,11 @@ maker(
 
 maker(
     ("vc2", (1, 5)),
-    harmony.string_appoggiato(divisions, [4, 5, 6, 7], rotation=-2, rest=2),
+    harmony.string_appoggiato(
+        [4, 5, 6, 7],
+        quarters=quarters.rotate(-2),
+        rest_first=2,
+    ),
 )
 
 # cb1
@@ -188,7 +196,11 @@ maker(
 maker(
     ("cb1", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato(divisions, [5, 6, 7], rotation=-3, rest=3),
+    harmony.string_appoggiato(
+        [5, 6, 7],
+        quarters=quarters.rotate(-3),
+        rest_first=3,
+    ),
 )
 
 maker(
@@ -205,7 +217,11 @@ maker(
 
 maker(
     ("cb2", (1, 5)),
-    harmony.string_appoggiato(divisions, [6, 7], rotation=-4, rest=4),
+    harmony.string_appoggiato(
+        [6, 7],
+        quarters=quarters.rotate(-4),
+        rest_first=4,
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2
