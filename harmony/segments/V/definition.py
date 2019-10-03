@@ -68,6 +68,7 @@ maker(
         [-4, 2, 2, -4],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.trill_spanner(
         None,
@@ -88,6 +89,7 @@ maker(
         [2, 2],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.trill_spanner(
         None,
@@ -109,6 +111,7 @@ maker(
         [-4, 2, 2, -4],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     harmony.triangle_staff_position(),
     # TODO: make stem tremolo work with duration multipliers:
@@ -240,6 +243,7 @@ maker(
         [-4, 2, 2, -4],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
@@ -261,6 +265,7 @@ maker(
         [2, 2],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.trill_spanner(
         None,
@@ -323,6 +328,7 @@ maker(
         [-4, 2, 2, -4],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
@@ -344,6 +350,7 @@ maker(
         [2, 2],
         rmakers.invisible_music(baca.pleaves().get([1], 2)),
         rmakers.written_duration((1, 4)),
+        rmakers.unbeam(),
     ),
     baca.trill_spanner(
         None,
