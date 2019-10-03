@@ -211,10 +211,7 @@ def rimbalzandi(extra_counts=None, *commands) -> baca.RhythmCommand:
 
 
 def rest_appoggiato(
-    counts: abjad.IntegerSequence,
-    divisions: abjad.IntegerSequence = None,
-    *,
-    leaf_duration=(1, 20),
+    counts: abjad.IntegerSequence, divisions: abjad.IntegerSequence = None
 ) -> baca.RhythmCommand:
     """
     Makes string appoggiato rhythm.
@@ -229,7 +226,7 @@ def rest_appoggiato(
     commands_ = []
     if counts:
         command = rmakers.on_beat_grace_container(
-            counts, baca.plts(), leaf_duration=leaf_duration
+            counts, baca.plts(), leaf_duration=(1, 20)
         )
         commands_.append(command)
     return baca.rhythm(
@@ -316,46 +313,47 @@ def slate_staff_position() -> baca.Suite:
 
 
 def string_appoggiato(
-    divisions: abjad.IntegerSequence = None,
-    counts: abjad.IntegerSequence = (2, 3, 4, 5, 6, 7, 8, 9),
-    *commands,
+    counts: abjad.IntegerSequence,
+    *,
+    fuse: bool = None,
+    quarters: abjad.IntegerSequence = None,
+    rest_first: int = None,
+    rest_last: int = None,
     after_grace: int = None,
-    leaf_duration=(1, 20),
-    rest: int = None,
-    rotation: int = 0,
 ) -> baca.RhythmCommand:
     """
     Makes string appoggiato rhythm.
     """
-    if divisions is None:
-        preprocessor = None
-    else:
-        divisions_ = baca.sequence([(_, 4) for _ in divisions])
-        divisions_ = divisions_.rotate(n=rotation)
+    assert counts is not None, repr(counts)
+    preprocessor = None
+    if fuse is True:
+        preprocessor = baca.sequence().fuse()
+    elif quarters:
+        divisions = baca.sequence([(_, 4) for _ in quarters])
         preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
+            baca.sequence().fuse().split_divisions(divisions, cyclic=True)
         )
-    commands_: typing.List[rmakers.Command] = list(commands)
-    if rest:
-        command_1 = rmakers.force_rest(baca.plts(grace=False)[:rest])
-        commands_.append(command_1)
-    if counts:
-        command_2 = rmakers.on_beat_grace_container(
-            counts, baca.plts(), leaf_duration=leaf_duration
-        )
-        commands_.append(command_2)
-    after_grace_commands = []
+    commands_: typing.List[rmakers.Command] = []
+    if rest_first:
+        force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_first])
+        commands_.append(force_rest_)
+    if rest_last is not None:
+        force_rest_ = rmakers.force_rest(baca.plts()[-rest_last:])
+        commands_.append(force_rest_)
+    on_beat_ = rmakers.on_beat_grace_container(
+        counts, baca.plts(), leaf_duration=(1, 20)
+    )
+    commands_.append(on_beat_)
     if after_grace is not None:
-        command_3 = rmakers.after_grace_container(
+        after_grace_ = rmakers.after_grace_container(
             [after_grace], baca.pleaf(-1), beam_and_slash=True
         )
-        after_grace_commands.append(command_3)
+        commands_.append(after_grace_)
     return baca.rhythm(
         rmakers.note(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         *commands_,
-        *after_grace_commands,
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),

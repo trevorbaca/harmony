@@ -148,7 +148,10 @@ maker(
 maker(
     ("va", 1),
     harmony.string_appoggiato(
-        [1, 3, 1], [7], rmakers.force_rest(baca.leaf(-1)), rest=1,
+        [7],
+        quarters=[1, 3, 1],
+        rest_first=1,
+        rest_last=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
@@ -170,7 +173,10 @@ maker(
 maker(
     ("vc1", 1),
     harmony.string_appoggiato(
-        [1, 3, 1], [6], rmakers.force_rest(baca.leaf(-1)), rest=1,
+        [6],
+        quarters=[1, 3, 1],
+        rest_first=1,
+        rest_last=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
@@ -212,7 +218,10 @@ maker(
 maker(
     ("cb1", 1),
     harmony.string_appoggiato(
-        [1, 3, 1], [6], rmakers.force_rest(baca.leaf(-1)), rest=1,
+        [6],
+        quarters=[1, 3, 1],
+        rest_first=1,
+        rest_last=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
