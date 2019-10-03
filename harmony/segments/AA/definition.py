@@ -89,7 +89,7 @@ maker(
 
 maker(
     ("bfl", 13),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.markup(r"\baca-jet-whistle-markup", literal=True),
 )
 
@@ -151,7 +151,7 @@ maker(
 
 maker(
     ("hp", (4, 5)),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.accent(baca.pheads()),
     baca.laissez_vibrer(baca.ptails()),
     baca.markup(r"\baca-pince-markup", literal=True),

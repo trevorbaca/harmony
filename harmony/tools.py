@@ -88,53 +88,6 @@ def brake_drum_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(0), baca.stem_up())
 
 
-def eighths(
-    counts: abjad.IntegerSequence,
-    extra_counts: abjad.IntegerSequence = None,
-    *commands,
-    do_not_rewrite_meter: bool = None,
-    grace_suffixes: abjad.IntegerSequence = None,
-    preprocessor: abjad.Expression = None,
-    r: int = None,
-) -> baca.RhythmCommand:
-    """
-    Makes eighths rhythm.
-    """
-    counts_ = baca.sequence(counts).rotate(n=r)
-    meter = []
-    if not do_not_rewrite_meter:
-        command = rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        )
-        meter.append(command)
-    if preprocessor is None:
-        preprocessor_ = baca.sequence().fuse().quarters()
-    else:
-        preprocessor_ = preprocessor
-    grace = []
-    if grace_suffixes:
-        selector = baca.runs().map(baca.leaf(-1))
-        command_ = rmakers.after_grace_container(
-            grace_suffixes, selector, beam_and_slash=True
-        )
-        grace.append(command_)
-    return baca.rhythm(
-        rmakers.talea(counts_, 8, extra_counts=extra_counts),
-        rmakers.rewrite_rest_filled(),
-        rmakers.rewrite_sustained(),
-        rmakers.extract_trivial(),
-        rmakers.force_fraction(),
-        rmakers.denominator((1, 8)),
-        *meter,
-        *commands,
-        rmakers.force_repeat_tie((1, 8)),
-        *grace,
-        frame=inspect.currentframe(),
-        preprocessor=preprocessor_,
-        tag=_site(inspect.currentframe()),
-    )
-
-
 def phjc(
     parts: abjad.IntegerSequence,
     counts: abjad.IntegerSequence,

@@ -65,8 +65,7 @@ maker(
 )
 
 cerulean = [
-    #1, -3, 1, -4, 1, -5, 1, -6, 1, -7, 1, -8, 1, -9, 1, -10, 1, -11, 1, -12, 1, -99
-    1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, -99
+    1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"
 ]
 
 
@@ -170,7 +169,7 @@ maker(
 
 maker(
     ("perc2", (1, 2)),
-    harmony.sixteenths([-22, 1, -3, 1, -99], extra_counts=[2]),
+    harmony.sixteenths([-22, 1, -3, 1, "-"], extra_counts=[2]),
     harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -292,7 +291,7 @@ maker(
     ("vc2", (1, 2)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths([-9, 1, -11, 1, -3, 1, -99]),
+    harmony.sixteenths([-9, 1, -11, 1, -3, 1, "-"]),
     baca.staff_position(0),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("sfp"),

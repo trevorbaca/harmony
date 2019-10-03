@@ -106,7 +106,7 @@ maker(
 maker(
     ("perc2", 6),
     baca.staff_lines(5),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.markup(r"\baca-glockenspiel-markup", literal=True),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -120,7 +120,7 @@ maker(
 
 maker(
     ("hp", 6),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.markup(r"\baca-xyl-markup", literal=True),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -129,7 +129,7 @@ maker(
 
 maker(
     ("va", 1),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )
@@ -145,7 +145,7 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )
@@ -172,7 +172,7 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.sixteenths([4, -99]),
+    harmony.sixteenths([4, "-"]),
     baca.triple_staccato(baca.pheads()),
     baca.dynamic("ff"),
 )

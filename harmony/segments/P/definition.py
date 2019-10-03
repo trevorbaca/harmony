@@ -81,7 +81,7 @@ maker(
 
 maker(
     ("perc1", (1, 6)),
-    harmony.sixteenths([41, -7, 99]),
+    harmony.sixteenths([41, -7, "+"]),
     harmony.brake_drum_staff_position(),
     baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
     baca.dynamic("p"),
@@ -89,7 +89,7 @@ maker(
 
 maker(
     ("perc1", (9, 10)),
-    harmony.sixteenths([21, -99]),
+    harmony.sixteenths([21, "-"]),
     harmony.brake_drum_staff_position(),
     baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
 )
@@ -100,7 +100,7 @@ maker(
     ("perc2", (1, 6)),
     baca.clef("bass"),
     baca.staff_lines(1),
-    harmony.sixteenths([21, -14, 18, -99]),
+    harmony.sixteenths([21, -14, 18, "-"]),
     harmony.tam_tam_staff_position(),
     baca.accent(baca.pheads()),
     baca.markup(r"\baca-tam-tam-markup", literal=True),
@@ -115,7 +115,7 @@ maker(
 maker(
     ("perc2", (9, 10)),
     baca.staff_lines(1),
-    harmony.sixteenths([21, -99]),
+    harmony.sixteenths([21, "-"]),
     harmony.tam_tam_staff_position(),
     baca.markup(r"\baca-tam-tam-markup", literal=True),
     baca.accent(baca.pheads()),
@@ -127,14 +127,14 @@ maker(
 maker(
     ("hp", (1, 6)),
     baca.clef("bass"),
-    harmony.sixteenths([21, -14, 18, -99]),
+    harmony.sixteenths([21, -14, 18, "-"]),
     baca.accent(baca.pheads()),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
 )
 
 maker(
     ("hp", (9, 10)),
-    harmony.sixteenths([21, -99]),
+    harmony.sixteenths([21, "-"]),
     baca.accent(baca.pheads()),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
 )
