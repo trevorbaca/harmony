@@ -229,7 +229,7 @@ maker(
     ("va", (1, 2)),
     harmony.appoggiato(quarters=[4, 2, 3, 3]),
     baca.damp_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
     ),
 )
@@ -285,7 +285,7 @@ maker(
     ("vc2", (1, 2)),
     harmony.appoggiato(quarters=[4, 2, 3, 3]),
     baca.damp_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
     ),
 )
@@ -335,7 +335,7 @@ maker(
     ("cb2", (1, 2)),
     harmony.appoggiato(quarters=[4, 2, 3, 3]),
     baca.damp_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
     ),
 )
