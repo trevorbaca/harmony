@@ -77,7 +77,7 @@ maker(
 maker(
     ("perc1", 2),
     baca.staff_lines(1),
-    harmony.durata([-4, 1, 1, -99]),
+    harmony.sixteenths([-8, 2, 2, "-"]),
     baca.repeat_tie(baca.pleaf(-1)),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
@@ -91,7 +91,7 @@ maker(
 
 maker(
     ("perc1", (4, 5)),
-    harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
+    harmony.sixteenths([2, 2, 8, 2, 2, 2, 2, 8, 2, -2]),
     baca.flat_glissando(),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
@@ -105,7 +105,7 @@ maker(
 
 maker(
     ("perc1", 10),
-    harmony.durata([1, 1, 2, 1, 1, 1, 1]),
+    harmony.sixteenths([2, 2, 4, 2, 2, 2, 2]),
     baca.stem_tremolo(baca.pheads()),
     baca.flat_glissando(),
     harmony.triangle_staff_position(),
@@ -121,7 +121,7 @@ maker(
 
 maker(
     ("perc2", 2),
-    harmony.durata([-1, 5, -99]),
+    harmony.sixteenths([-2, 10, "-"]),
     harmony.tam_tam_staff_position(),
     baca.accent(baca.pheads()),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
@@ -130,7 +130,7 @@ maker(
 
 maker(
     ("perc2", (4, 5)),
-    harmony.durata([7, -2, 6, -1]),
+    harmony.sixteenths([14, -4, 12, -2]),
     harmony.tam_tam_staff_position(),
     baca.accent(baca.pheads()),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
@@ -139,7 +139,7 @@ maker(
 
 maker(
     ("perc2", 10),
-    harmony.durata([3, -2, 2, -1]),
+    harmony.sixteenths([6, -4, 4, -2]),
     harmony.tam_tam_staff_position(),
     baca.accent(baca.pheads()),
     baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
@@ -150,7 +150,7 @@ maker(
 
 maker(
     ("hp", 2),
-    harmony.durata([-1, 5, -99]),
+    harmony.sixteenths([-2, 10, "-"]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -163,7 +163,7 @@ maker(
 
 maker(
     ("hp", (4, 5)),
-    harmony.durata([7, -2, 6, -1]),
+    harmony.sixteenths([14, -4, 12, -2]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -176,7 +176,7 @@ maker(
 
 maker(
     ("hp", 10),
-    harmony.durata([3, -2, 2, -1]),
+    harmony.sixteenths([6, -4, 4, -2]),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -201,7 +201,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-    harmony.durata([-4, 1, 1, -99]),
+    harmony.sixteenths([-8, 2, 2, "-"]),
     baca.repeat_tie(baca.pleaf(-1)),
     baca.hairpin(
         "o< mp >o niente",
@@ -214,7 +214,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
-    harmony.durata([1, 1, 4, 1, 1, 1, 1, 4, 1, -1]),
+    harmony.sixteenths([2, 2, 8, 2, 2, 2, 2, 8, 2, -2]),
     baca.hairpin(
         "o< mp > pp -- (pp) < mp > pp -- !",
         bookend=False,
@@ -228,7 +228,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 10),
-    harmony.durata([1, 1, 2, 1, 1, 1, 1]),
+    harmony.sixteenths([2, 2, 4, 2, 2, 2, 2]),
     baca.hairpin(
         "o< mp > pp -- ! < mp > pp < mp >o niente",
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),

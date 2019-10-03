@@ -47,7 +47,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths([-4, 8, -99]),
+    harmony.sixteenths([-4, 8, "-"]),
     baca.dynamic("mp"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
@@ -98,7 +98,7 @@ maker(
 
 maker(
     ("hp", 1),
-    harmony.sixteenths([-4, 8, -99]),
+    harmony.sixteenths([-4, 8, "-"]),
     baca.pitch("<B4 C5>", mock=True),
     baca.flageolet(),
     baca.dynamic("mf"),
@@ -118,7 +118,7 @@ maker(
 
 maker(
     ("va", 1),
-    harmony.sixteenths([-4, 99]),
+    harmony.sixteenths([-4, "+"]),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
@@ -159,7 +159,7 @@ maker(
 
 maker(
     (["vc1", "vc2", "cb1", "cb2"], 1),
-    harmony.sixteenths([-4, 8, -99]),
+    harmony.sixteenths([-4, 8, "-"]),
     baca.hairpin(
         "o<| ff",
         selector=baca.tleaves().rleak(),

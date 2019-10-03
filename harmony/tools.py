@@ -88,34 +88,6 @@ def brake_drum_staff_position() -> baca.Suite:
     return baca.chunk(baca.staff_position(0), baca.stem_up())
 
 
-def durata(
-    counts: abjad.IntegerSequence, *, grace: bool = None, untie: bool = None
-) -> baca.RhythmCommand:
-    """
-    Makes durata.
-    """
-    commands: typing.List[rmakers.Command] = []
-    if grace:
-        command_1 = rmakers.after_grace_container(
-            [1], baca.runs().map(baca.leaf(-1))
-        )
-        commands.append(command_1)
-    if untie:
-        command_2 = rmakers.untie(baca.leaves())
-        commands.append(command_2)
-    return baca.rhythm(
-        rmakers.talea(counts, 8),
-        rmakers.extract_trivial(),
-        rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        ),
-        *commands,
-        rmakers.force_repeat_tie((1, 8)),
-        frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
-    )
-
-
 def eighths(
     counts: abjad.IntegerSequence,
     extra_counts: abjad.IntegerSequence = None,
@@ -252,6 +224,7 @@ def sixteenths(
     preprocessor: abjad.Expression = None,
     r: int = None,
     stop: int = None,
+    untie: bool = None,
     written_quarters: bool = None,
 ) -> baca.RhythmCommand:
     """
@@ -286,6 +259,10 @@ def sixteenths(
         written_quarter_commands.append(command_3)
         command_4 = rmakers.unbeam()
         written_quarter_commands.append(command_4)
+    untie_commands = []
+    if untie is True:
+        untie_ = rmakers.untie(baca.leaves())
+        untie_commands.append(untie_)
     return baca.rhythm(
         rmakers.talea(counts_, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
@@ -297,6 +274,7 @@ def sixteenths(
         *meter,
         *commands,
         *written_quarter_commands,
+        *untie_commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
         frame=inspect.currentframe(),
