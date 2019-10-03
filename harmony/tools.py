@@ -513,9 +513,7 @@ def thirty_seconds(
 
 
 def train(
-    counts,
-    *commands: rmakers.Command,
-    rewrite_meter: bool = None,
+    counts, *commands: rmakers.Command, rewrite_meter: bool = None
 ) -> baca.RhythmCommand:
     """
     Makes pulse train.
