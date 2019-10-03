@@ -252,11 +252,6 @@ maker(
         ),
     ),
     baca.skeleton(r"r4 \times 5/3 { c4 c2 } \times 5/3 { c4 c4 c4 }"),
-    baca.rhythm_annotation_spanner(
-        "skeleton() =|",
-        abjad.tweak("darkyellow").color,
-        abjad.tweak(5.5).staff_padding,
-    ),
     baca.dynamic("p"),
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
