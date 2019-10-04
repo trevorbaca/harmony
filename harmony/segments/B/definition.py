@@ -59,9 +59,9 @@ maker(
     baca.global_fermata("fermata", baca.rest(12 - 1)),
 )
 
-quarters = baca.sequence([4, 5, 3, 3, 3, 4])
-sixteenths_ = [(2, 2, 4 * _ - 4) for _ in quarters]
-sixteenths = list(baca.sequence(sixteenths_).flatten())
+divisions = baca.sequence([16, 20, 12, 12, 12, 16])
+sixteenths = baca.sequence([(2, 2, _ - 4) for _ in divisions])
+sixteenths = sixteenths.flatten()
 
 # bfl
 
@@ -93,7 +93,10 @@ maker(
 
 maker(
     ("perc1", (1, 5)),
-    harmony.appoggiato(counts=[4], rest_all=True, rest_first=False),
+    harmony.appoggiato(
+        counts=[4],
+        rest_all=True,
+    ),
 )
 
 maker(
@@ -108,7 +111,10 @@ maker(
 
 maker(
     ("perc1", (8, 11)),
-    harmony.appoggiato(counts=[7], rest_all=True, rest_first=False),
+    harmony.appoggiato(
+        counts=[7],
+        rest_all=True,
+    ),
 )
 
 # perc2
@@ -189,7 +195,10 @@ maker(
 maker(
     ("va", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato([2, 3, 4, 5, 6, 7], quarters=quarters),
+    harmony.appoggiato(
+        divisions=divisions,
+        counts=[2, 3, 4, 5, 6, 7],
+    ),
 )
 
 maker(
@@ -207,10 +216,10 @@ maker(
 maker(
     ("vc1", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato(
-        [3, 4, 5, 6, 7],
-        quarters=quarters.rotate(-1),
-        rest_first=1,
+    harmony.appoggiato(
+        divisions=divisions.rotate(-1),
+        counts=[3, 4, 5, 6, 7],
+        rest_to=1,
     ),
 )
 
@@ -228,10 +237,10 @@ maker(
 
 maker(
     ("vc2", (1, 5)),
-    harmony.string_appoggiato(
-        [4, 5, 6, 7],
-        quarters=quarters.rotate(-2),
-        rest_first=2,
+    harmony.appoggiato(
+        divisions=divisions.rotate(-2),
+        counts=[4, 5, 6, 7],
+        rest_to=2,
     ),
 )
 
@@ -240,10 +249,10 @@ maker(
 maker(
     ("cb1", (1, 5)),
     baca.staff_lines(5),
-    harmony.string_appoggiato(
-        [5, 6, 7],
-        quarters=quarters.rotate(-3),
-        rest_first=3,
+    harmony.appoggiato(
+        divisions=divisions.rotate(-3),
+        counts=[5, 6, 7],
+        rest_to=3,
     ),
 )
 
@@ -261,10 +270,10 @@ maker(
 
 maker(
     ("cb2", (1, 5)),
-    harmony.string_appoggiato(
-        [6, 7],
-        quarters=quarters.rotate(-4),
-        rest_first=4,
+    harmony.appoggiato(
+        divisions=divisions.rotate(-4),
+        counts=[6, 7],
+        rest_to=4,
     ),
 )
 
@@ -280,7 +289,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (8, 11)),
-    harmony.string_appoggiato([7]),
+    harmony.appoggiato(counts=[7]),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
