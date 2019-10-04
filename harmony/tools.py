@@ -27,19 +27,17 @@ def appoggiato(
     """
     Makes appoggiato rhythm.
     """
+    preprocessor = None
     if quarters is not None:
-        quarters_ = baca.sequence([(_, 4) for _ in quarters])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(quarters_, cyclic=True)
-        )
-    else:
-        preprocessor = None
+        divisions = baca.sequence([(_, 4) for _ in quarters])
+        preprocessor = baca.sequence().fuse()
+        preprocessor = preprocessor.split_divisions(divisions, cyclic=True)
     commands = []
     if counts:
-        command = rmakers.on_beat_grace_container(
+        on_beat_ = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=(1, 20)
         )
-        commands.append(command)
+        commands.append(on_beat_)
     return baca.rhythm(
         rmakers.incised(
             prefix_talea=[-1], prefix_counts=[1], talea_denominator=16
@@ -108,11 +106,20 @@ def phjc(
     )
 
 
-def rimbalzandi(extra_counts=None, *commands) -> baca.RhythmCommand:
+def rimbalzandi(
+    *,
+    extra_counts: abjad.IntegerSequence = None,
+    rest_except: abjad.IntegerSequence = None,
+) -> baca.RhythmCommand:
     """
     Makes rimbalzandi rhythm.
     """
     preprocessor = baca.sequence().fuse([2], cyclic=True)
+    commands: typing.List[rmakers.Command] = []
+    if rest_except is not None:
+        selector = baca.leaves().exclude(rest_except)
+        force_ = rmakers.force_rest(selector)
+        commands.append(force_)
     return baca.rhythm(
         rmakers.even_division([4], extra_counts=extra_counts),
         rmakers.trivialize(),
@@ -322,7 +329,11 @@ def tessera_1(
 
 
 def tessera_2(
-    part: int, *commands, advance: int = None, gap: bool = None
+    part: int,
+    *,
+    advance: int = None,
+    gap: bool = None,
+    rest_plts: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes tessera 2.
@@ -337,6 +348,11 @@ def tessera_2(
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = baca.sequence(new_counts)
+    commands: typing.List[rmakers.Command] = []
+    if rest_plts is not None:
+        selector = baca.plts().get(rest_plts)
+        force_ = rmakers.force_rest(selector)
+        commands.append(force_)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         *commands,
@@ -350,7 +366,7 @@ def tessera_2(
 
 
 def tessera_3(
-    part: int, *commands, advance: int = None, gap: bool = None
+    part: int, *, advance: int = None, gap: bool = None
 ) -> baca.RhythmCommand:
     """
     Makes tessera 3.
@@ -367,7 +383,6 @@ def tessera_3(
         counts = baca.sequence(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
-        *commands,
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
@@ -378,7 +393,7 @@ def tessera_3(
 
 
 def tessera_4(
-    part: int, *commands, advance: int = None, gap: bool = None
+    part: int, *, advance: int = None, gap: bool = None
 ) -> baca.RhythmCommand:
     """
     Makes tessera 4.
@@ -395,7 +410,6 @@ def tessera_4(
         counts = baca.sequence(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
-        *commands,
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
@@ -488,6 +502,7 @@ def warble(
 
 
 ### PERCUSSION POSITIONS ###
+
 
 def bass_drum_staff_position() -> baca.Suite:
     """

@@ -277,10 +277,7 @@ maker(
 maker(
     ("va", (3, 8)),
     harmony.rimbalzandi(
-        None,
-        rmakers.force_rest(
-            baca.leaves().exclude([6, 9, 11, 14, 16, 19, 21, 22, 23])
-        ),
+        rest_except=[6, 9, 11, 14, 16, 19, 21, 22, 23],
     ),
 )
 
@@ -294,11 +291,8 @@ maker(
 maker(
     ("vc1", (3, 8)),
     harmony.rimbalzandi(
-        [1],
-        rmakers.force_rest(
-            baca.leaves().exclude(
-                [6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26])
-        ),
+        extra_counts=[1],
+        rest_except=[6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26],
     ),
 )
 
@@ -312,11 +306,8 @@ maker(
 maker(
     ("vc2", (3, 8)),
     harmony.rimbalzandi(
-        [2],
-        rmakers.force_rest(
-            baca.leaves().exclude(
-                [0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29])
-        ),
+        extra_counts=[2],
+        rest_except=[0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29],
     ),
 )
 
@@ -330,11 +321,9 @@ maker(
 maker(
     ("cb1", (3, 8)),
     harmony.rimbalzandi(
-        [3],
-        rmakers.force_rest(
-            baca.leaves().exclude(
-                [1, 6, 9, 11, 14, 16, 19,21, 22, 24, 25, 26, 28, 30, 31, 32])
-        ),
+        rest_except=[
+            1, 6, 9, 11, 14, 16, 19,21, 22, 24, 25, 26, 28, 30, 31, 32],
+        extra_counts=[3],
     ),
 )
 
@@ -352,10 +341,8 @@ maker(
 maker(
     ("cb2", (3, 8)),
     harmony.rimbalzandi(
-        [4],
-        rmakers.force_rest(
-            baca.leaves().exclude([1, 9, 16, 22, 27, 29, 31, 33, 34, 35])
-        ),
+        rest_except=[1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
+        extra_counts=[4],
     ),
 )
 
