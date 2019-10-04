@@ -303,42 +303,47 @@ N_Bass_Flute_Music_Voice = {                                                   %
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
     % [N Bass_Flute_Music_Voice measure 121 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
-    r2                                                                         %! harmony.thirty_seconds()
+    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+    r2                                                                         %! harmony.warble()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "thirty_seconds(divisions=[2], extra_counts=[2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "warble(sixteenths=[8], extra_counts=[2], rest_tuplets=[0])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 8/9 {                                                               %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 8/9 {                                                               %! harmony.warble()
 
-        r32                                                                    %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        \override NoteHead.font-size = #-3                                     %! baca.note_head_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.font-size = #-3                                   %! baca.accidental_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.X-offset = #0                                     %! baca.accidental_x_offset():baca.OverrideCommand._call(1)
+        \override Accidental.Y-offset = #-2                                    %! baca.accidental_y_offset():baca.OverrideCommand._call(1)
+        g'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -346,26 +351,31 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
-        ]                                                                      %! harmony.thirty_seconds()
+        ]                                                                      %! harmony.warble()
+        \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.X-offset                                            %! baca.accidental_x_offset():baca.OverrideCommand._call(2)
+        \revert Accidental.Y-offset                                            %! baca.accidental_y_offset():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -412,41 +422,46 @@ N_Bass_Flute_Music_Voice = {                                                   %
     R1 * 5/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 %@% ^ \baca-duration-multiplier-markup #"5" #"4"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 8/9 {                                                               %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 8/9 {                                                               %! harmony.warble()
 
         % [N Bass_Flute_Music_Voice measure 125 / measure 6]                   %! baca.SegmentMaker._comment_measure_numbers()
-        r32                                                                    %! harmony.thirty_seconds()
+        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        r32                                                                    %! harmony.warble()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-        - \baca-text-spanner-left-text "thirty_seconds(divisions=[2], extra_counts=[2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-text "warble(sixteenths=[8], extra_counts=[2], rest_tuplets=[1])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
         - \tweak color #darkyellow                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        \override NoteHead.font-size = #-3                                     %! baca.note_head_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.font-size = #-3                                   %! baca.accidental_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.X-offset = #0                                     %! baca.accidental_x_offset():baca.OverrideCommand._call(1)
+        \override Accidental.Y-offset = #-2                                    %! baca.accidental_y_offset():baca.OverrideCommand._call(1)
+        g'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -454,27 +469,27 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
-        ]                                                                      %! harmony.thirty_seconds()
+        ]                                                                      %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    r2                                                                         %! harmony.thirty_seconds()
+    r2                                                                         %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -509,42 +524,42 @@ N_Bass_Flute_Music_Voice = {                                                   %
 %@% ^ \baca-duration-multiplier-markup #"1" #"1"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
     % [N Bass_Flute_Music_Voice measure 128 / measure 9]                       %! baca.SegmentMaker._comment_measure_numbers()
-    r2                                                                         %! harmony.thirty_seconds()
+    r2                                                                         %! harmony.warble()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "thirty_seconds(divisions=[2], extra_counts=[2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "warble(sixteenths=[8], extra_counts=[2], rest_tuplets=[0])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 8/9 {                                                               %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 8/9 {                                                               %! harmony.warble()
 
-        r32                                                                    %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -552,26 +567,31 @@ N_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
-        ]                                                                      %! harmony.thirty_seconds()
+        ]                                                                      %! harmony.warble()
+        \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.X-offset                                            %! baca.accidental_x_offset():baca.OverrideCommand._call(2)
+        \revert Accidental.Y-offset                                            %! baca.accidental_y_offset():baca.OverrideCommand._call(2)
+        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
