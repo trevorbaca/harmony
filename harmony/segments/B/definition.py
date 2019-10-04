@@ -93,7 +93,7 @@ maker(
 
 maker(
     ("perc1", (1, 5)),
-    harmony.rest_appoggiato([4]),
+    harmony.appoggiato(counts=[4], rest_all=True, rest_first=False),
 )
 
 maker(
@@ -108,7 +108,7 @@ maker(
 
 maker(
     ("perc1", (8, 11)),
-    harmony.rest_appoggiato([7]),
+    harmony.appoggiato(counts=[7], rest_all=True, rest_first=False),
 )
 
 # perc2

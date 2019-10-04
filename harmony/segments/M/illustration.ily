@@ -368,9 +368,9 @@ M_Bass_Flute_Music_Staff = <<                                                  %
 
 M_Percussion_I_Music_Voice_A = {                                               %! abjad.Path.extern()
 
-    r4.                                                                        %! harmony.rest_appoggiato()
+    r4.                                                                        %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([5, 4], divisions=[6, 14])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(divisions=[6, 14], counts=[5, 4], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -381,7 +381,7 @@ M_Percussion_I_Music_Voice_A = {                                               %
 
 M_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
-    r2..                                                                       %! harmony.rest_appoggiato()
+    r2..                                                                       %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -389,7 +389,7 @@ M_Percussion_I_Music_Voice_B = {                                               %
 
 M_Percussion_I_Music_Voice_C = {                                               %! abjad.Path.extern()
 
-    r4                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -528,15 +528,15 @@ M_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._style_fermata_measures(3)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(3)
     \override Staff.BarLine.bar-extent = #'(-2 . 1)                            %! baca.SegmentMaker._style_fermata_measures(4)
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([0, 3], divisions=[20, 8])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(divisions=[20, 8], counts=[0, 3], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
     <<
 
@@ -654,9 +654,9 @@ M_Percussion_I_Music_Staff = <<                                                %
 
 M_Percussion_II_Music_Voice_A = {                                              %! abjad.Path.extern()
 
-    r4.                                                                        %! harmony.rest_appoggiato()
+    r4.                                                                        %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([4, 5], divisions=[6, 14])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(divisions=[6, 14], counts=[4, 5], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -667,7 +667,7 @@ M_Percussion_II_Music_Voice_A = {                                              %
 
 M_Percussion_II_Music_Voice_B = {                                              %! abjad.Path.extern()
 
-    r2..                                                                       %! harmony.rest_appoggiato()
+    r2..                                                                       %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -675,7 +675,7 @@ M_Percussion_II_Music_Voice_B = {                                              %
 
 M_Percussion_II_Music_Voice_C = {                                              %! abjad.Path.extern()
 
-    r4                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -811,15 +811,15 @@ M_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._style_fermata_measures(3)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(3)
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([0, 4], divisions=[20, 8])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(divisions=[20, 8], counts=[0, 4], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
     <<
 

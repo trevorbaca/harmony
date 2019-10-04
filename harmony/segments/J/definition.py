@@ -175,7 +175,10 @@ maker(
 
 maker(
     ("vc1", (12, 14)),
-    harmony.tuplet([10 * (1,)], rmakers.denominator((1, 4))),
+    harmony.tuplet(
+        [10 * (1,)],
+        denominator=(1, 4),
+    ),
 )
 
 maker(
@@ -199,7 +202,10 @@ maker(
 
 maker(
     ("vc2", (13, 14)),
-    harmony.tuplet([9 * (1,)], rmakers.denominator((1, 4))),
+    harmony.tuplet(
+        [9 * (1,)],
+        denominator=(1, 4),
+    ),
 )
 
 maker(
@@ -223,7 +229,10 @@ maker(
 
 maker(
     ("cb1", (13, 14)),
-    harmony.tuplet([8 * (1,)], rmakers.denominator((1, 4))),
+    harmony.tuplet(
+        [8 * (1,)],
+        denominator=(1, 4),
+    ),
 )
 
 maker(
@@ -247,7 +256,10 @@ maker(
 
 maker(
     ("cb2", (13, 14)),
-    harmony.tuplet([7 * (1,)], rmakers.denominator((1, 4))),
+    harmony.tuplet(
+        [7 * (1,)],
+        denominator=(1, 4),
+    ),
 )
 
 maker(
