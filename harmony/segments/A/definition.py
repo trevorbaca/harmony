@@ -63,7 +63,11 @@ maker(
             literal=True,
         ),
     ),
-    harmony.appoggiato(divisions=[16, 8, 12, 12], counts=[9, 6, 8, 4]),
+    harmony.appoggiato(
+        divisions=[16, 8, 12, 12],
+        counts=[9, 6, 8, 4],
+        incise=True,
+    ),
     baca.pitches(
         "D3 E3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
@@ -227,7 +231,10 @@ maker(
 
 maker(
     ("va", (1, 2)),
-    harmony.appoggiato(divisions=[16, 8, 12, 12]),
+    harmony.appoggiato(
+        divisions=[16, 8, 12, 12],
+        incise=True,
+        ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -278,7 +285,10 @@ maker(
 
 maker(
     ("vc2", (1, 2)),
-    harmony.appoggiato(divisions=[16, 8, 12, 12]),
+    harmony.appoggiato(
+        divisions=[16, 8, 12, 12],
+        incise=True,
+    ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -328,7 +338,10 @@ maker(
 
 maker(
     ("cb2", (1, 2)),
-    harmony.appoggiato(divisions=[16, 8, 12, 12]),
+    harmony.appoggiato(
+        divisions=[16, 8, 12, 12],
+        incise=True,
+    ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),

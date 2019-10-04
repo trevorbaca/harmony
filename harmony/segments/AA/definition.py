@@ -77,7 +77,11 @@ maker(
 
 maker(
     ("bfl", (4, 5)),
-    harmony.appoggiato(divisions=[28, 24], counts=[9, 6]),
+    harmony.appoggiato(
+        divisions=[28, 24],
+        counts=[9, 6],
+        incise=True,
+    ),
     baca.text_spanner(
         "air =|",
         abjad.tweak(5.5).staff_padding,

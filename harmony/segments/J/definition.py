@@ -72,7 +72,10 @@ maker(
 
 maker(
     ("bfl", [10, 15]),
-    harmony.appoggiato(counts=[9]),
+    harmony.appoggiato(
+        counts=[9],
+        incise=True,
+    ),
     baca.pitches(
         "D3",
         selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),

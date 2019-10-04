@@ -23,18 +23,40 @@ def appoggiato(
     *,
     divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = None,
-    rest_first: bool = True,
+    fuse: bool = None,
+    incise: bool = None,
     rest_all: bool = None,
+    rest_to: int = None,
+    rest_from: int = None,
+    after_grace: int = None,
 ) -> baca.RhythmCommand:
     """
     Makes appoggiato rhythm.
     """
     preprocessor = None
-    if divisions is not None:
+    if fuse is True:
+        preprocessor = baca.sequence().fuse()
+    elif divisions is not None:
         divisions_ = baca.sequence([(_, 16) for _ in divisions])
         preprocessor = baca.sequence().fuse()
         preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
+    prefix_talea = None
+    prefix_counts = None
+    if incise is True:
+        prefix_talea = [-1]
+        prefix_counts = [1]
     commands = []
+    #    if counts:
+    #        on_beat_ = rmakers.on_beat_grace_container(
+    #            counts, baca.plts(), leaf_duration=(1, 20)
+    #        )
+    #        commands.append(on_beat_)
+    if rest_to:
+        force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_to])
+        commands.append(force_rest_)
+    if rest_from is not None:
+        force_rest_ = rmakers.force_rest(baca.plts()[-rest_from:])
+        commands.append(force_rest_)
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=(1, 20)
@@ -44,11 +66,11 @@ def appoggiato(
         selector = baca.plts(grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
-    prefix_talea = None
-    prefix_counts = None
-    if rest_first is True:
-        prefix_talea = [-1]
-        prefix_counts = [1]
+    if after_grace is not None:
+        after_grace_ = rmakers.after_grace_container(
+            [after_grace], baca.pleaf(-1), beam_and_slash=True
+        )
+        commands.append(after_grace_)
     return baca.rhythm(
         rmakers.incised(
             prefix_talea=prefix_talea,
@@ -81,30 +103,30 @@ def phjc(
     """
     preprocessor = baca.sequence().fuse().quarters().partition(parts)
     preprocessor = preprocessor.map(baca.sequence().flatten().fuse())
-    commands_: typing.List[rmakers.Command] = []
+    commands: typing.List[rmakers.Command] = []
     if rest is not None:
         selector = baca.tuplets().get(rest)
         force_ = rmakers.force_rest(selector)
-        commands_.append(force_)
+        commands.append(force_)
     if rest_cyclic is not None:
         selector = baca.tuplets().get(*rest_cyclic)
         force_ = rmakers.force_rest(selector)
-        commands_.append(force_)
+        commands.append(force_)
     if rest_except is not None:
         selector = baca.tuplets().exclude(rest_except)
         force_ = rmakers.force_rest(selector)
-        commands_.append(force_)
+        commands.append(force_)
     if rest_most is True:
         selector = baca.tuplets()[:-1]
         force_ = rmakers.force_rest(selector)
-        commands_.append(force_)
+        commands.append(force_)
     if rest_nonfirst is True:
         selector = baca.tuplets()[1:]
         force_ = rmakers.force_rest(selector)
-        commands_.append(force_)
+        commands.append(force_)
     return baca.rhythm(
         rmakers.talea(counts, 16, extra_counts=extra_counts),
-        *commands_,
+        *commands,
         rmakers.rewrite_rest_filled(),
         rmakers.denominator((1, 8)),
         rmakers.force_fraction(),
@@ -230,54 +252,6 @@ def sixteenths(
         *grace,
         frame=inspect.currentframe(),
         preprocessor=preprocessor_,
-        tag=_site(inspect.currentframe()),
-    )
-
-
-def string_appoggiato(
-    counts: abjad.IntegerSequence,
-    *,
-    fuse: bool = None,
-    quarters: abjad.IntegerSequence = None,
-    rest_first: int = None,
-    rest_last: int = None,
-    after_grace: int = None,
-) -> baca.RhythmCommand:
-    """
-    Makes string appoggiato rhythm.
-    """
-    assert counts is not None, repr(counts)
-    preprocessor = None
-    if fuse is True:
-        preprocessor = baca.sequence().fuse()
-    elif quarters:
-        divisions = baca.sequence([(_, 4) for _ in quarters])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions, cyclic=True)
-        )
-    commands_: typing.List[rmakers.Command] = []
-    if rest_first:
-        force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_first])
-        commands_.append(force_rest_)
-    if rest_last is not None:
-        force_rest_ = rmakers.force_rest(baca.plts()[-rest_last:])
-        commands_.append(force_rest_)
-    on_beat_ = rmakers.on_beat_grace_container(
-        counts, baca.plts(), leaf_duration=(1, 20)
-    )
-    commands_.append(on_beat_)
-    if after_grace is not None:
-        after_grace_ = rmakers.after_grace_container(
-            [after_grace], baca.pleaf(-1), beam_and_slash=True
-        )
-        commands_.append(after_grace_)
-    return baca.rhythm(
-        rmakers.note(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
-        rmakers.force_repeat_tie((1, 8)),
-        *commands_,
-        frame=inspect.currentframe(),
-        preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
 

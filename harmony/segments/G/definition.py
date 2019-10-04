@@ -266,7 +266,7 @@ maker(
 
 maker(
     ("va", 1),
-    harmony.string_appoggiato([9]),
+    harmony.appoggiato(counts=[9]),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -275,7 +275,7 @@ maker(
 
 maker(
     ("va", (4, 5)),
-    harmony.string_appoggiato([4], fuse=True, after_grace=4),
+    harmony.appoggiato(counts=[4], fuse=True, after_grace=4),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -292,7 +292,7 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.string_appoggiato([7]),
+    harmony.appoggiato(counts=[7]),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -301,7 +301,7 @@ maker(
 
 maker(
     ("vc1", (4, 5)),
-    harmony.string_appoggiato([4], fuse=True, after_grace=4),
+    harmony.appoggiato(counts=[4], fuse=True, after_grace=4),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -344,7 +344,7 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.string_appoggiato([5]),
+    harmony.appoggiato(counts=[5]),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -353,7 +353,7 @@ maker(
 
 maker(
     ("cb1", (4, 5)),
-    harmony.string_appoggiato([4], fuse=True, after_grace=4),
+    harmony.appoggiato(counts=[4], fuse=True, after_grace=4),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),

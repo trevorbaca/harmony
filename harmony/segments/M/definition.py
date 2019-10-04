@@ -92,7 +92,6 @@ maker(
         divisions=[6, 14],
         counts=[5, 4],
         rest_all=True,
-        rest_first=False,
     ),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
@@ -103,7 +102,6 @@ maker(
         divisions=[20, 8],
         counts=[0, 3],
         rest_all=True,
-        rest_first=False,
     ),
 )
 
@@ -121,7 +119,6 @@ maker(
         divisions=[6, 14],
         counts=[4, 5],
         rest_all=True,
-        rest_first=False,
     ),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
@@ -132,7 +129,6 @@ maker(
         divisions=[20, 8],
         counts=[0, 4],
         rest_all=True,
-        rest_first=False,
     ),
 )
 
@@ -167,11 +163,11 @@ maker(
 
 maker(
     ("va", 1),
-    harmony.string_appoggiato(
-        [7],
-        quarters=[1, 3, 1],
-        rest_first=1,
-        rest_last=1,
+    harmony.appoggiato(
+        divisions=[4, 12, 4],
+        counts=[7],
+        rest_to=1,
+        rest_from=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
@@ -192,11 +188,11 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.string_appoggiato(
-        [6],
-        quarters=[1, 3, 1],
-        rest_first=1,
-        rest_last=1,
+    harmony.appoggiato(
+        divisions=[4, 12, 4],
+        counts=[6],
+        rest_to=1,
+        rest_from=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
@@ -237,11 +233,11 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.string_appoggiato(
-        [6],
-        quarters=[1, 3, 1],
-        rest_first=1,
-        rest_last=1,
+    harmony.appoggiato(
+        divisions=[4, 12, 4],
+        counts=[6],
+        rest_to=1,
+        rest_from=1,
     ),
     baca.note_head_style_harmonic(baca.leaves()),
     baca.note_head_style_harmonic(baca.leaves(grace=True)),
