@@ -290,47 +290,49 @@ Y_Bass_Flute_Music_Voice = {                                                   %
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
     % [Y Bass_Flute_Music_Voice measure 227 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
-    \override NoteHead.font-size = -3                                          %! baca.literal():baca.IndicatorCommand._call()
-    \override Accidental.font-size = -3                                        %! baca.literal():baca.IndicatorCommand._call()
-    \override Accidental.X-offset = 0                                          %! baca.literal():baca.IndicatorCommand._call()
-    \override Accidental.Y-offset = -2                                         %! baca.literal():baca.IndicatorCommand._call()
     \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
-    r2                                                                         %! harmony.thirty_seconds()
+    r2                                                                         %! harmony.warble()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "thirty_seconds(divisions=[2], extra_counts=[2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "warble(sixteenths=[8], extra_counts=[2], rest_tuplets=[0, 1])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    r2                                                                         %! harmony.thirty_seconds()
+    r2                                                                         %! harmony.warble()
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 8/9 {                                                               %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 8/9 {                                                               %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        \override NoteHead.font-size = #-3                                     %! baca.note_head_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.font-size = #-3                                   %! baca.accidental_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.X-offset = #0                                     %! baca.accidental_x_offset():baca.OverrideCommand._call(1)
+        \override Accidental.Y-offset = #-2                                    %! baca.accidental_y_offset():baca.OverrideCommand._call(1)
+        g'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -338,28 +340,30 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
-
-        c''32                                                                  %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
+        ]                                                                      %! harmony.warble()
+        \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.X-offset                                            %! baca.accidental_x_offset():baca.OverrideCommand._call(2)
+        \revert Accidental.Y-offset                                            %! baca.accidental_y_offset():baca.OverrideCommand._call(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -397,60 +401,60 @@ Y_Bass_Flute_Music_Voice = {                                                   %
 %@% ^ \baca-duration-multiplier-markup #"1" #"4"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     \override Staff.BarLine.bar-extent = #'(0 . 0)                             %! baca.SegmentMaker._style_fermata_measures(2)
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 12/14 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 12/14 {                                                             %! harmony.warble()
 
         % [Y Bass_Flute_Music_Voice measure 230 / measure 5]                   %! baca.SegmentMaker._comment_measure_numbers()
         \stopStaff                                                             %! baca.SegmentMaker._style_fermata_measures(3)
         \once \override Staff.StaffSymbol.line-count = 5                       %! baca.SegmentMaker._style_fermata_measures(3)
         \startStaff                                                            %! baca.SegmentMaker._style_fermata_measures(3)
         \override Staff.BarLine.bar-extent = #'(-2 . 2)                        %! baca.SegmentMaker._style_fermata_measures(4)
-        \override NoteHead.font-size = -3                                      %! baca.literal():baca.IndicatorCommand._call()
-        \override Accidental.font-size = -3                                    %! baca.literal():baca.IndicatorCommand._call()
-        \override Accidental.X-offset = 0                                      %! baca.literal():baca.IndicatorCommand._call()
-        \override Accidental.Y-offset = -2                                     %! baca.literal():baca.IndicatorCommand._call()
         \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
     %%% \once \override Score.BarLine.transparent = ##t                        %! FERMATA_MEASURE:MEASURE_229:baca.SegmentMaker._style_fermata_measures(7)
     %%% \once \override Score.SpanBar.transparent = ##t                        %! FERMATA_MEASURE:MEASURE_229:baca.SegmentMaker._style_fermata_measures(7)
-        g'32                                                                   %! harmony.thirty_seconds()
-        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-        - \baca-text-spanner-left-text "thirty_seconds(divisions=baca.Expression( callbacks=[ baca.Expression( evaluation_template='baca.classes.Sequence', is_initializer=True, module_names=['baca'], string_template='{}', ), baca.Expression( argument_values={ 'counts': None, 'cyclic': None, 'indices': None, }, evaluation_template='{}.fuse()', qualified_method_name='baca.classes.Sequence.fuse', string_template='fuse({})', ), baca.Expression( argument_values={ '_map_index': None, 'compound': None, 'cyclic': True, 'durations': [ (12, 16), (12, 16), (1, 16), (11, 16), (12, 16), ], 'remainder': None, 'remainder_fuse_threshold': None, 'rotate_indexed': None, }, evaluation_template='{}.split_divisions([(12, 16), (12, 16), (1, 16), (11, 16), (12, 16)], cyclic=True, _map_index=None)', qualified_method_name='baca.classes.Sequence.split_divisions', string_template='split_divisions({}, [(12, 16), (12, 16), (1, 16), (11, 16), (12, 16)], cyclic=True, _map_index=None)', ), ], proxy_class=baca.Sequence, ), extra_counts=[4, 0, 0, 2, 0])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+        - \baca-text-spanner-left-text "warble(sixteenths=[12, 12, 1, 11, 12], extra_counts=[4, 0, 0, 2, 0], rest_tuplets_cyclic=([1, 2, 4], 5))" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
         - \tweak color #darkyellow                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         - \tweak staff-padding #8                                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
         \bacaStartTextSpanRhythmAnnotation                                     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+
+        \override NoteHead.font-size = #-3                                     %! baca.note_head_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.font-size = #-3                                   %! baca.accidental_font_size():baca.OverrideCommand._call(1)
+        \override Accidental.X-offset = #0                                     %! baca.accidental_x_offset():baca.OverrideCommand._call(1)
+        \override Accidental.Y-offset = #-2                                    %! baca.accidental_y_offset():baca.OverrideCommand._call(1)
+        g'32                                                                   %! harmony.warble()
+        - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
+        - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
-
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -458,77 +462,79 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
+        ]                                                                      %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
 
     % [Y Bass_Flute_Music_Voice measure 231 / measure 6]                       %! baca.SegmentMaker._comment_measure_numbers()
-    r16                                                                        %! harmony.thirty_seconds()
+    r16                                                                        %! harmony.warble()
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 11/12 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 11/12 {                                                             %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        as'!32                                                                 %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -536,75 +542,73 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
+        ]                                                                      %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
-
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 12/14 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 12/14 {                                                             %! harmony.warble()
 
         % [Y Bass_Flute_Music_Voice measure 232 / measure 7]                   %! baca.SegmentMaker._comment_measure_numbers()
-        b'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        a'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
-
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -612,77 +616,79 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
+        ]                                                                      %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
 
     % [Y Bass_Flute_Music_Voice measure 233 / measure 8]                       %! baca.SegmentMaker._comment_measure_numbers()
-    r16                                                                        %! harmony.thirty_seconds()
+    r16                                                                        %! harmony.warble()
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 11/12 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 11/12 {                                                             %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        c''32                                                                  %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -690,75 +696,73 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
+        ]                                                                      %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
-
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 12/14 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 12/14 {                                                             %! harmony.warble()
 
         % [Y Bass_Flute_Music_Voice measure 234 / measure 9]                   %! baca.SegmentMaker._comment_measure_numbers()
-        b'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
-
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -766,77 +770,79 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
+        ]                                                                      %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
 
     % [Y Bass_Flute_Music_Voice measure 235 / measure 10]                      %! baca.SegmentMaker._comment_measure_numbers()
-    r16                                                                        %! harmony.thirty_seconds()
+    r16                                                                        %! harmony.warble()
 
-    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.thirty_seconds()
-    \times 11/12 {                                                             %! harmony.thirty_seconds()
+    \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
+    \times 11/12 {                                                             %! harmony.warble()
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        r32                                                                    %! harmony.warble()
+
+        c''32                                                                  %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        [                                                                      %! harmony.thirty_seconds()
+        [                                                                      %! harmony.warble()
         - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        af'!32                                                                 %! harmony.thirty_seconds()
+        cs''!32                                                                %! harmony.warble()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mp                                                                    %! baca.hairpin():baca.PiecewiseCommand._call(1):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -844,34 +850,36 @@ Y_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \>                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-        g'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
 
-        gs'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        bf'!32                                                                 %! harmony.warble()
 
-        as'!32                                                                 %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        af'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        g'32                                                                   %! harmony.warble()
 
-        cs''!32                                                                %! harmony.thirty_seconds()
+        gs'!32                                                                 %! harmony.warble()
 
-        c''32                                                                  %! harmony.thirty_seconds()
+        a'32                                                                   %! harmony.warble()
 
-        b'32                                                                   %! harmony.thirty_seconds()
+        as'!32                                                                 %! harmony.warble()
 
-        bf'!32                                                                 %! harmony.thirty_seconds()
+        b'32                                                                   %! harmony.warble()
 
-        a'32                                                                   %! harmony.thirty_seconds()
+        c''32                                                                  %! harmony.warble()
+        ]                                                                      %! harmony.warble()
+        \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)
+        \revert Accidental.X-offset                                            %! baca.accidental_x_offset():baca.OverrideCommand._call(2)
+        \revert Accidental.Y-offset                                            %! baca.accidental_y_offset():baca.OverrideCommand._call(2)
 
-        af'!32                                                                 %! harmony.thirty_seconds()
-        ]                                                                      %! harmony.thirty_seconds()
+    }                                                                          %! harmony.warble()
 
-    }                                                                          %! harmony.thirty_seconds()
-
-    r2.                                                                        %! harmony.thirty_seconds()
+    r2.                                                                        %! harmony.warble()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP

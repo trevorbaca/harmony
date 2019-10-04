@@ -74,12 +74,19 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.thirty_seconds(
-        rmakers.force_rest(baca.tuplet(1)),
-        divisions=[2],
+    harmony.warble(
+        sixteenths=[2 * 4],
         extra_counts=[2],
+        rest_tuplets=[1],
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.new(
+        baca.note_head_font_size(-3),
+        baca.accidental_font_size(-3),
+        baca.accidental_x_offset(0),
+        baca.accidental_y_offset(-2),
+        selector=baca.tleaves(),
+    ),
     baca.trill_spanner(
         None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
@@ -95,11 +102,17 @@ maker(
 
 maker(
     ("bfl", 12),
-    harmony.thirty_seconds(
-        divisions=[5],
+    harmony.warble(
         extra_counts=[2],
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.new(
+        baca.note_head_font_size(-3),
+        baca.accidental_font_size(-3),
+        baca.accidental_x_offset(0),
+        baca.accidental_y_offset(-2),
+        selector=baca.tleaves(),
+    ),
     baca.trill_spanner(
         None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
@@ -111,6 +124,7 @@ maker(
         pieces=baca.leaves().partition_by_ratio((3, 4)),
         selector=baca.tleaves().rleak(),
     ),
+    baca.dls_staff_padding(5),
 )
 
 # perc1

@@ -427,26 +427,36 @@ def tessera_4(
     )
 
 
-def thirty_seconds(
-    *commands,
-    divisions: abjad.IntegerSequence = None,
+def warble(
+    *,
+    sixteenths: abjad.IntegerSequence = None,
     extra_counts: abjad.IntegerSequence = None,
+    rest_tuplets: abjad.IntegerSequence = None,
+    rest_tuplets_cyclic: typing.Tuple[abjad.IntegerSequence, int] = None,
 ) -> baca.RhythmCommand:
     """
-    Makes thirty-second rhythm.
+    Makes warble rhythm.
     """
-    for command in commands or ():
-        assert isinstance(command, rmakers.Command), repr(command)
-    if isinstance(divisions, list):
-        divisions_ = baca.sequence([(_, 4) for _ in divisions])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
-        )
-    else:
-        preprocessor = divisions
+    preprocessor = None
+    if sixteenths is not None:
+        divisions_ = baca.sequence([(_, 16) for _ in sixteenths])
+        preprocessor = baca.sequence().fuse()
+        preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
+    rests: typing.List[rmakers.Command] = []
+    if rest_tuplets is not None:
+        selector = baca.tuplets().get(rest_tuplets)
+        force_rest_ = rmakers.force_rest(selector)
+        rests.append(force_rest_)
+    if rest_tuplets_cyclic is not None:
+        selector = baca.tuplets().get(*rest_tuplets_cyclic)
+        force_rest_ = rmakers.force_rest(selector)
+        rests.append(force_rest_)
+    selector = baca.tuplets().map(baca.leaves()[:1])
+    force_rest = rmakers.force_rest(selector)
+    rests.append(force_rest)
     return baca.rhythm(
         rmakers.talea([1], 32, extra_counts=extra_counts),
-        *commands,
+        *rests,
         rmakers.rewrite_rest_filled(),
         rmakers.rewrite_sustained(),
         rmakers.beam(),
