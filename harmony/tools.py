@@ -54,54 +54,46 @@ def appoggiato(
     )
 
 
-def bass_drum_staff_position() -> baca.Suite:
-    """
-    Sets bass drum staff position and stem direction.
-    """
-    return baca.chunk(baca.staff_position(-1), baca.stem_down())
-
-
-def begin_quarter_notes(*commands: rmakers.Command,) -> baca.RhythmCommand:
-    """
-    Makes begin quarter notes.
-    """
-    return baca.rhythm(
-        rmakers.incised(
-            fill_with_rests=True,
-            prefix_talea=[3, 1],
-            prefix_counts=[2],
-            talea_denominator=16,
-        ),
-        *commands,
-        rmakers.rewrite_rest_filled(),
-        rmakers.extract_trivial(),
-        rmakers.written_duration((1, 4), baca.pleaves()),
-        frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
-    )
-
-
-def brake_drum_staff_position() -> baca.Suite:
-    """
-    Sets brake drum staff position and stem direction.
-    """
-    return baca.chunk(baca.staff_position(0), baca.stem_up())
-
-
 def phjc(
     parts: abjad.IntegerSequence,
     counts: abjad.IntegerSequence,
-    *commands,
+    *,
     extra_counts: abjad.IntegerSequence = None,
+    rest: abjad.IntegerSequence = None,
+    rest_cyclic: typing.Tuple[abjad.IntegerSequence, int] = None,
+    rest_except: abjad.IntegerSequence = None,
+    rest_most: bool = None,
+    rest_nonfirst: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes purpleheart jerky contintuity.
     """
     preprocessor = baca.sequence().fuse().quarters().partition(parts)
     preprocessor = preprocessor.map(baca.sequence().flatten().fuse())
+    commands_: typing.List[rmakers.Command] = []
+    if rest is not None:
+        selector = baca.tuplets().get(rest)
+        force_ = rmakers.force_rest(selector)
+        commands_.append(force_)
+    if rest_cyclic is not None:
+        selector = baca.tuplets().get(*rest_cyclic)
+        force_ = rmakers.force_rest(selector)
+        commands_.append(force_)
+    if rest_except is not None:
+        selector = baca.tuplets().exclude(rest_except)
+        force_ = rmakers.force_rest(selector)
+        commands_.append(force_)
+    if rest_most is True:
+        selector = baca.tuplets()[:-1]
+        force_ = rmakers.force_rest(selector)
+        commands_.append(force_)
+    if rest_nonfirst is True:
+        selector = baca.tuplets()[1:]
+        force_ = rmakers.force_rest(selector)
+        commands_.append(force_)
     return baca.rhythm(
         rmakers.talea(counts, 16, extra_counts=extra_counts),
-        *commands,
+        *commands_,
         rmakers.rewrite_rest_filled(),
         rmakers.denominator((1, 8)),
         rmakers.force_fraction(),
@@ -254,13 +246,6 @@ def sixteenths(
     )
 
 
-def slate_staff_position() -> baca.Suite:
-    """
-    Sets slate staff position and stem direction.
-    """
-    return baca.chunk(baca.staff_position(1), baca.stem_down())
-
-
 def string_appoggiato(
     counts: abjad.IntegerSequence,
     *,
@@ -307,13 +292,6 @@ def string_appoggiato(
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
     )
-
-
-def tam_tam_staff_position() -> baca.Suite:
-    """
-    Sets tam-tam staff position and stem direction.
-    """
-    return baca.chunk(baca.staff_position(0), baca.stem_down())
 
 
 def tessera_1(
@@ -427,6 +405,46 @@ def tessera_4(
     )
 
 
+def train(
+    counts, *commands: rmakers.Command, rewrite_meter: bool = None
+) -> baca.RhythmCommand:
+    """
+    Makes pulse train.
+    """
+    commands_ = []
+    if rewrite_meter is True:
+        command_ = rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        )
+        commands_.append(command_)
+    return baca.rhythm(
+        rmakers.talea(counts, 16),
+        *commands,
+        rmakers.extract_trivial(),
+        rmakers.beam(baca.leaves().group()),
+        *commands_,
+        rmakers.force_repeat_tie((1, 8)),
+        frame=inspect.currentframe(),
+        tag=_site(inspect.currentframe()),
+    )
+
+
+def tuplet(ratios, *commands) -> baca.RhythmCommand:
+    """
+    Makes tuplet.
+    """
+    return baca.rhythm(
+        rmakers.tuplet(ratios),
+        rmakers.trivialize(),
+        rmakers.rewrite_dots(),
+        rmakers.force_diminution(),
+        *commands,
+        rmakers.force_fraction(),
+        rmakers.extract_trivial(),
+        frame=inspect.currentframe(),
+    )
+
+
 def warble(
     *,
     sixteenths: abjad.IntegerSequence = None,
@@ -469,28 +487,34 @@ def warble(
     )
 
 
-def train(
-    counts, *commands: rmakers.Command, rewrite_meter: bool = None
-) -> baca.RhythmCommand:
+### PERCUSSION POSITIONS ###
+
+def bass_drum_staff_position() -> baca.Suite:
     """
-    Makes pulse train.
+    Sets bass drum staff position and stem direction.
     """
-    commands_ = []
-    if rewrite_meter is True:
-        command_ = rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        )
-        commands_.append(command_)
-    return baca.rhythm(
-        rmakers.talea(counts, 16),
-        *commands,
-        rmakers.extract_trivial(),
-        rmakers.beam(baca.leaves().group()),
-        *commands_,
-        rmakers.force_repeat_tie((1, 8)),
-        frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
-    )
+    return baca.chunk(baca.staff_position(-1), baca.stem_down())
+
+
+def brake_drum_staff_position() -> baca.Suite:
+    """
+    Sets brake drum staff position and stem direction.
+    """
+    return baca.chunk(baca.staff_position(0), baca.stem_up())
+
+
+def slate_staff_position() -> baca.Suite:
+    """
+    Sets slate staff position and stem direction.
+    """
+    return baca.chunk(baca.staff_position(1), baca.stem_down())
+
+
+def tam_tam_staff_position() -> baca.Suite:
+    """
+    Sets tam-tam staff position and stem direction.
+    """
+    return baca.chunk(baca.staff_position(0), baca.stem_down())
 
 
 def triangle_staff_position() -> baca.Suite:
@@ -498,22 +522,6 @@ def triangle_staff_position() -> baca.Suite:
     Sets triangle position and stem direction.
     """
     return baca.chunk(baca.staff_position(1), baca.stem_up())
-
-
-def tuplet(ratios, *commands) -> baca.RhythmCommand:
-    """
-    Makes tuplet.
-    """
-    return baca.rhythm(
-        rmakers.tuplet(ratios),
-        rmakers.trivialize(),
-        rmakers.rewrite_dots(),
-        rmakers.force_diminution(),
-        *commands,
-        rmakers.force_fraction(),
-        rmakers.extract_trivial(),
-        frame=inspect.currentframe(),
-    )
 
 
 def whisk_staff_position() -> baca.Suite:

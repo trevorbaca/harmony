@@ -111,9 +111,11 @@ maker(
     ("perc2", 5),
     baca.staff_lines(3),
     harmony.phjc(
-        [1], [1, 2, 1, 1, -1],
-        rmakers.force_rest(baca.tuplets()[1:]),
+        [1],
+        [1, 2, 1, 1, -1],
+        #rmakers.force_rest(baca.tuplets()[1:]),
         extra_counts=[1],
+        rest_nonfirst=True,
     ),
     baca.staff_positions([2, -2, 0], allow_repeats=True),
     baca.dynamic("f"),
@@ -126,9 +128,10 @@ maker(
 maker(
     ("perc2", (6, 7)),
     harmony.phjc(
-        [1], [1, 2, 1, 1, 1],
-        rmakers.force_rest(baca.tuplets().get([0, 1, -1])),
+        [1],
+        [1, 2, 1, 1, 1],
         extra_counts=[1, 0],
+        rest=[0, 1, -1],
     ),
     baca.staff_positions([-2, 0, 2, 0, 2, -2], allow_repeats=True),
     baca.dls_staff_padding(9),

@@ -91,9 +91,11 @@ maker(
     ("perc1", 2),
     baca.staff_lines(3),
     harmony.phjc(
-        [1], [1, 2, 1, 1, -1],
-        rmakers.force_rest(baca.tuplets().get([1], 2)),
+        [1],
+        [1, 2, 1, 1, -1],
+        #rmakers.force_rest(baca.tuplets().get([1], 2)),
         extra_counts=[1, 1, 2, 2],
+        rest_cyclic=([1], 2),
     ),
     baca.staff_positions([2, -2, 0], allow_repeats=True),
     baca.dynamic("f"),
