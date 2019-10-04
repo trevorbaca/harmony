@@ -88,13 +88,23 @@ maker(
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
-    harmony.rest_appoggiato([5, 4], [6, 14]),
+    harmony.appoggiato(
+        divisions=[6, 14],
+        counts=[5, 4],
+        rest_all=True,
+        rest_first=False,
+    ),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
     ("perc1", 3),
-    harmony.rest_appoggiato([0, 3], [20, 8]),
+    harmony.appoggiato(
+        divisions=[20, 8],
+        counts=[0, 3],
+        rest_all=True,
+        rest_first=False,
+    ),
 )
 
 maker(
@@ -107,13 +117,23 @@ maker(
 maker(
     ("perc2", 1),
     baca.staff_lines(3),
-    harmony.rest_appoggiato([4, 5], [6, 14]),
+    harmony.appoggiato(
+        divisions=[6, 14],
+        counts=[4, 5],
+        rest_all=True,
+        rest_first=False,
+    ),
     baca.markup(r"\baca-purpleheart-markup", literal=True),
 )
 
 maker(
     ("perc2", 3),
-    harmony.rest_appoggiato([0, 4], [20, 8]),
+    harmony.appoggiato(
+        divisions=[20, 8],
+        counts=[0, 4],
+        rest_all=True,
+        rest_first=False,
+    ),
 )
 
 maker(

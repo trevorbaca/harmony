@@ -642,9 +642,9 @@ B_Bass_Flute_Music_Staff = <<                                                  %
 
 B_Percussion_I_Music_Voice_A = {                                               %! abjad.Path.extern()
 
-    r1                                                                         %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([4])"                      %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(counts=[4], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -655,32 +655,32 @@ B_Percussion_I_Music_Voice_A = {                                               %
 
 B_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_C = {                                               %! abjad.Path.extern()
 
-    r1                                                                         %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_D = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_E = {                                               %! abjad.Path.extern()
 
-    r1                                                                         %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -688,42 +688,42 @@ B_Percussion_I_Music_Voice_E = {                                               %
 
 B_Percussion_I_Music_Voice_F = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "rest_appoggiato([7])"                      %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "appoggiato(counts=[7], rest_first=False, rest_all=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_G = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_H = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
 
 B_Percussion_I_Music_Voice_I = {                                               %! abjad.Path.extern()
 
-    r2.                                                                        %! harmony.rest_appoggiato()
+    r1                                                                         %! harmony.appoggiato()
 
-    r2                                                                         %! harmony.rest_appoggiato()
+    r4                                                                         %! harmony.appoggiato()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()

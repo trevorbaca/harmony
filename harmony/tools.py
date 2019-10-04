@@ -21,26 +21,39 @@ def _site(frame):
 
 def appoggiato(
     *,
-    quarters: abjad.IntegerSequence = None,
+    divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = None,
+    rest_first: bool = True,
+    rest_all: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes appoggiato rhythm.
     """
     preprocessor = None
-    if quarters is not None:
-        divisions = baca.sequence([(_, 4) for _ in quarters])
+    if divisions is not None:
+        divisions_ = baca.sequence([(_, 16) for _ in divisions])
         preprocessor = baca.sequence().fuse()
-        preprocessor = preprocessor.split_divisions(divisions, cyclic=True)
+        preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
     commands = []
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
             counts, baca.plts(), leaf_duration=(1, 20)
         )
         commands.append(on_beat_)
+    if rest_all is True:
+        selector = baca.plts(grace=False)
+        force_ = rmakers.force_rest(selector)
+        commands.append(force_)
+    prefix_talea = None
+    prefix_counts = None
+    if rest_first is True:
+        prefix_talea = [-1]
+        prefix_counts = [1]
     return baca.rhythm(
         rmakers.incised(
-            prefix_talea=[-1], prefix_counts=[1], talea_denominator=16
+            prefix_talea=prefix_talea,
+            prefix_counts=prefix_counts,
+            talea_denominator=16,
         ),
         rmakers.extract_trivial(),
         rmakers.rewrite_meter(reference_meters=_reference_meters),
@@ -128,38 +141,6 @@ def rimbalzandi(
         rmakers.force_diminution(),
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
-        frame=inspect.currentframe(),
-        preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
-    )
-
-
-def rest_appoggiato(
-    counts: abjad.IntegerSequence, divisions: abjad.IntegerSequence = None
-) -> baca.RhythmCommand:
-    """
-    Makes string appoggiato rhythm.
-    """
-    if divisions:
-        divisions_ = baca.sequence([(_, 16) for _ in divisions])
-        preprocessor = (
-            baca.sequence().fuse().split_divisions(divisions_, cyclic=True)
-        )
-    else:
-        preprocessor = None
-    commands_ = []
-    if counts:
-        command = rmakers.on_beat_grace_container(
-            counts, baca.plts(), leaf_duration=(1, 20)
-        )
-        commands_.append(command)
-    return baca.rhythm(
-        rmakers.note(),
-        # omit reference meters to allow 5 = 3 + 2
-        rmakers.rewrite_meter(),
-        rmakers.force_repeat_tie((1, 8)),
-        *commands_,
-        rmakers.force_rest(baca.plts(grace=False)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
         tag=_site(inspect.currentframe()),
@@ -441,10 +422,19 @@ def train(
     )
 
 
-def tuplet(ratios, *commands) -> baca.RhythmCommand:
+def tuplet(
+    ratios, *, denominator=None, written_quarters: bool = None
+) -> baca.RhythmCommand:
     """
     Makes tuplet.
     """
+    commands: typing.List[rmakers.Command] = []
+    if denominator is not None:
+        denominator_ = rmakers.denominator(denominator)
+        commands.append(denominator_)
+    if written_quarters is True:
+        written_ = rmakers.written_duration((1, 4))
+        commands.append(written_)
     return baca.rhythm(
         rmakers.tuplet(ratios),
         rmakers.trivialize(),

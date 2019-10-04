@@ -410,7 +410,10 @@ maker(
 
 maker(
     (["va", "vc2", "cb2"], 10),
-    harmony.tuplet([10 * (1,)], rmakers.written_duration((1, 4))),
+    harmony.tuplet(
+        [10 * (1,)],
+        written_quarters=True,
+    ),
 )
 
 maker(
