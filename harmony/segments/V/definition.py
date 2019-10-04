@@ -66,9 +66,8 @@ maker(
     ("bfl", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.trill_spanner(
         None,
@@ -87,9 +86,8 @@ maker(
     ("bfl", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.trill_spanner(
         None,
@@ -109,9 +107,8 @@ maker(
     ("perc1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     harmony.triangle_staff_position(),
     # TODO: make stem tremolo work with duration multipliers:
@@ -241,9 +238,8 @@ maker(
     ("vc1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
@@ -263,9 +259,8 @@ maker(
     ("vc1", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.trill_spanner(
         None,
@@ -326,9 +321,8 @@ maker(
     ("cb1", 3),
     harmony.sixteenths(
         [-4, 2, 2, -4],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
@@ -348,9 +342,8 @@ maker(
     ("cb1", (5, 10)),
     harmony.sixteenths(
         [2, 2],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.trill_spanner(
         None,

@@ -127,8 +127,8 @@ maker(
     harmony.sixteenths(
        [2],
        beam=True,
+       fuse=True,
        do_not_rewrite_meter=True,
-       preprocessor=baca.sequence(),
     ),
     baca.accent(baca.pheads()),
 )

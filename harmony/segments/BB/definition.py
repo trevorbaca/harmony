@@ -87,7 +87,7 @@ maker(
     harmony.sixteenths(
         [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
-        preprocessor=baca.sequence(),
+        fuse=True,
     ),
     baca.flat_glissando(),
     harmony.triangle_staff_position(),

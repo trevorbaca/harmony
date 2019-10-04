@@ -126,8 +126,8 @@ maker(
     ("hp", (4, 5)),
     harmony.sixteenths(
         [4, 4, 8],
+        fuse=True,
         do_not_rewrite_meter=True,
-        preprocessor=baca.sequence().fuse(),
     ),
     baca.markup(
         r"\baca-tuning-key-glissando-markup",

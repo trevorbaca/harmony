@@ -363,7 +363,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
         [-4, 6, 2, -4], 
-        rmakers.repeat_tie(baca.phead(-1)),
+        tie_runs=True,
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -388,7 +388,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     harmony.sixteenths(
         [8, 4, -4],
-        rmakers.repeat_tie(baca.phead(-1)),
+        tie_all=True,
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -404,8 +404,7 @@ maker(
     (["va", "vc2", "cb2"], [9, 11]),
     harmony.sixteenths(
         [2],
-        rmakers.written_duration((1, 4)),
-        rmakers.unbeam(),
+        written_quarters=True,
     ),
 )
 

@@ -56,7 +56,7 @@ maker(
     ("bfl", (1, 2)),
     harmony.sixteenths(
         [4, 4, 16],
-        rmakers.repeat_tie(baca.pleaves()[1:]),
+        tie_all=True,
     ),
     baca.trill_spanner(),
     baca.text_spanner(
@@ -142,7 +142,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
     harmony.sixteenths(
         [4, 4, 16],
-        rmakers.repeat_tie(baca.pleaves()[1:]),
+        tie_all=True,
     ),
     baca.trill_spanner(),
     baca.hairpin(

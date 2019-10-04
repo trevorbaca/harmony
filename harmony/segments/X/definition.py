@@ -238,7 +238,7 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths(
         [2, 2, -10],
-        rmakers.repeat_tie(baca.pleaves().get([1], 2)),
+        tie_runs=True,
     ),
     baca.hairpin(
         "niente o< mp >o",

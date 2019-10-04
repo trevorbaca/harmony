@@ -169,16 +169,20 @@ def rest_appoggiato(
 
 def sixteenths(
     counts: typing.Sequence,
-    *commands,
+    *,
     beam: bool = None,
+    fuse: bool = None,
+    preprocessor: abjad.Expression = None,
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
-    grace_suffixes: abjad.IntegerSequence = None,
-    preprocessor: abjad.Expression = None,
+    written_quarters: bool = None,
+    invisible_pairs: bool = None,
     r: int = None,
     stop: int = None,
+    tie_runs: bool = None,
+    tie_all: bool = None,
     untie: bool = None,
-    written_quarters: bool = None,
+    grace_suffixes: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes sixteenths rhythm.
@@ -192,7 +196,9 @@ def sixteenths(
             boundary_depth=1, reference_meters=_reference_meters
         )
         meter.append(command)
-    if preprocessor is None:
+    if fuse is True:
+        preprocessor_ = baca.sequence()
+    elif preprocessor is None:
         preprocessor_ = baca.sequence().fuse().quarters()
     else:
         preprocessor_ = preprocessor
@@ -212,6 +218,17 @@ def sixteenths(
         written_quarter_commands.append(command_3)
         command_4 = rmakers.unbeam()
         written_quarter_commands.append(command_4)
+    invisible_commands = []
+    if invisible_pairs is True:
+        invisible_ = rmakers.invisible_music(baca.pleaves().get([1], 2))
+        invisible_commands.append(invisible_)
+    tie_commands = []
+    if tie_all is True:
+        tie_all_ = rmakers.repeat_tie(baca.pleaves()[1:])
+        tie_commands.append(tie_all_)
+    if tie_runs is True:
+        tie_runs_ = rmakers.repeat_tie(baca.runs().map(baca.leaves()[1:]))
+        tie_commands.append(tie_runs_)
     untie_commands = []
     if untie is True:
         untie_ = rmakers.untie(baca.leaves())
@@ -225,8 +242,9 @@ def sixteenths(
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
         *meter,
-        *commands,
         *written_quarter_commands,
+        *invisible_commands,
+        *tie_commands,
         *untie_commands,
         rmakers.force_repeat_tie((1, 8)),
         *grace,
