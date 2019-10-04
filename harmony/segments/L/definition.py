@@ -161,8 +161,8 @@ maker(
     ("perc1", (11, 12)),
     harmony.sixteenths(
         [3, 1, "-"],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
+        invisible_pairs=True,
     ),
     harmony.bass_drum_staff_position(),
     baca.hairpin(
@@ -180,8 +180,8 @@ maker(
     ("perc1", [13, 15]),
     harmony.sixteenths(
         [3, 1, "-"],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
+        invisible_pairs=True,
     ),
     harmony.bass_drum_staff_position(),
     baca.hairpin(

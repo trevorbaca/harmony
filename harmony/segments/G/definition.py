@@ -203,8 +203,9 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [2, 2, "-"],
-        rmakers.invisible_music(baca.pleaves().get([1], 2)),
+        #rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
+        invisible_pairs=True,
         ),
     baca.hairpin(
         'o< "f" >o niente',
