@@ -80,9 +80,12 @@ maker(
 
 maker(
     ("perc1", (1, 6)),
-    harmony.phjc([1, 2, 1], [2, 2, 2, 2, 2, 2, 2, 1],
-        rmakers.force_rest(baca.tuplets().exclude([0, 1, 2, -4, -3, -2])),
+    harmony.phjc(
+        [1, 2, 1],
+        [2, 2, 2, 2, 2, 2, 2, 1],
+        #rmakers.force_rest(baca.tuplets().exclude([0, 1, 2, -4, -3, -2])),
         extra_counts=[2],
+        rest_except=[0, 1, 2, -4, -3, -2],
     ),
     baca.new(
         baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
@@ -101,7 +104,9 @@ maker(
 
 maker(
     ("perc1", 8),
-    harmony.phjc([2, 1, 1], [2, 2, 2, 2, 2, 2, 2, 1],
+    harmony.phjc(
+        [2, 1, 1],
+        [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
     ),
     baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
@@ -114,7 +119,9 @@ maker(
 
 maker(
     ("perc1", 11),
-    harmony.phjc([1, 1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
+    harmony.phjc(
+        [1, 1, 2],
+        [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
     ),
     baca.staff_positions([0, -2, 0, 0, -2], allow_repeats=True),
@@ -129,7 +136,9 @@ maker(
 
 maker(
     ("perc2", 1),
-    harmony.phjc([1, 2], [2, 2, 2, 2, 2, 2, 2, 1],
+    harmony.phjc(
+        [1, 2],
+        [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
     baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
