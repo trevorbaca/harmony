@@ -169,7 +169,7 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.tessera_2(3, rmakers.force_rest(baca.plt(0))),
+    harmony.tessera_2(3, rest_plts=[0]),
 )
 
 maker(
@@ -181,7 +181,7 @@ maker(
 
 maker(
     ("vc2", 1),
-    harmony.tessera_2(2, rmakers.force_rest(baca.plt(0))),
+    harmony.tessera_2(2, rest_plts=[0]),
 )
 
 maker(
@@ -193,7 +193,7 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.tessera_2(1, rmakers.force_rest(baca.plt(0))),
+    harmony.tessera_2(1, rest_plts=[0]),
 )
 
 maker(
