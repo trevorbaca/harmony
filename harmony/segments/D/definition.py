@@ -149,7 +149,7 @@ maker(
 
 maker(
     ("perc2", (5, 6)),
-    harmony.train([2], rmakers.force_rest(baca.leaf(0))),
+    harmony.train([2], rest_leaves=[0]),
     baca.staff_position(2),
     baca.accent(baca.pheads()),
     baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
@@ -158,7 +158,7 @@ maker(
 
 maker(
     ("perc2", 8),
-    harmony.train([2], rmakers.force_rest(baca.leaves()[:3])),
+    harmony.train([2], rest_leaves=[0, 1, 2]),
     baca.staff_position(2),
     baca.accent(baca.pheads()),
     baca.dynamic("p"),
@@ -173,7 +173,7 @@ maker(
 maker(
     ("perc2", 11),
     baca.staff_lines(3),
-    harmony.train([2], rmakers.force_rest(baca.leaves()[:1])),
+    harmony.train([2], rest_leaves=[0]),
     baca.staff_position(2),
     baca.accent(baca.pheads()),
     baca.dynamic("f"),
