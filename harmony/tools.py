@@ -177,10 +177,10 @@ def sixteenths(
     preprocessor: abjad.Expression = None,
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
-    written_quarters: bool = None,
+    written_quarters=None,
+    invisible: typing.Tuple[abjad.IntegerSequence, int] = None,
     invisible_pairs: bool = None,
-    r: int = None,
-    stop: int = None,
+    tie: abjad.PatternTyping = None,
     tie_runs: bool = None,
     tie_all: bool = None,
     untie: bool = None,
@@ -189,67 +189,85 @@ def sixteenths(
     """
     Makes sixteenths rhythm.
     """
-    counts_ = baca.sequence(counts).rotate(n=r)
-    if stop is not None:
-        counts_ = counts_[:stop] + [-99]
-    meter = []
-    if not do_not_rewrite_meter:
-        command = rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        )
-        meter.append(command)
     if fuse is True:
         preprocessor_ = baca.sequence()
     elif preprocessor is None:
         preprocessor_ = baca.sequence().fuse().quarters()
     else:
         preprocessor_ = preprocessor
-    grace = []
-    if grace_suffixes:
-        selector = baca.runs().map(baca.leaf(-1))
-        command_ = rmakers.after_grace_container(
-            grace_suffixes, selector, beam_and_slash=True
-        )
-        grace.append(command_)
     beam_commands = []
     if beam:
-        beam_commands.append(rmakers.beam())
+        beam_ = rmakers.beam()
+        beam_commands.append(beam_)
+    rewrite_meter_commands = []
+    if not do_not_rewrite_meter:
+        rewrite_ = rmakers.rewrite_meter(
+            boundary_depth=1, reference_meters=_reference_meters
+        )
+        rewrite_meter_commands.append(rewrite_)
     written_quarter_commands: typing.List[rmakers.Command] = []
-    if written_quarters:
-        command_3 = rmakers.written_duration((1, 4), baca.pleaves())
-        written_quarter_commands.append(command_3)
-        command_4 = rmakers.unbeam()
-        written_quarter_commands.append(command_4)
+    if written_quarters is True:
+        selector = baca.pleaves()
+        written_ = rmakers.written_duration((1, 4), selector)
+        written_quarter_commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        written_quarter_commands.append(unbeam_)
+    elif written_quarters is not None:
+        selector = baca.pleaves().get(*written_quarters)
+        written_ = rmakers.written_duration((1, 4), selector)
+        written_quarter_commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        written_quarter_commands.append(unbeam_)
     invisible_commands = []
     if invisible_pairs is True:
-        invisible_ = rmakers.invisible_music(baca.pleaves().get([1], 2))
+        selector = baca.pleaves().get([1], 2)
+        invisible_ = rmakers.invisible_music(selector)
+        invisible_commands.append(invisible_)
+    if invisible is not None:
+        selector = baca.pleaves().get(*invisible)
+        invisible_ = rmakers.invisible_music(selector)
         invisible_commands.append(invisible_)
     tie_commands = []
+    if tie is not None:
+        selector = baca.pleaves().get(*tie)
+        repeat_tie_ = rmakers.repeat_tie(selector)
+        tie_commands.append(repeat_tie_)
     if tie_all is True:
-        tie_all_ = rmakers.repeat_tie(baca.pleaves()[1:])
-        tie_commands.append(tie_all_)
+        selector = baca.pleaves()[1:]
+        repeat_tie_ = rmakers.repeat_tie(selector)
+        tie_commands.append(repeat_tie_)
     if tie_runs is True:
-        tie_runs_ = rmakers.repeat_tie(baca.runs().map(baca.leaves()[1:]))
-        tie_commands.append(tie_runs_)
+        selector = baca.runs().map(baca.leaves()[1:])
+        repeat_tie_ = rmakers.repeat_tie(selector)
+        tie_commands.append(repeat_tie_)
     untie_commands = []
     if untie is True:
-        untie_ = rmakers.untie(baca.leaves())
+        selector = baca.leaves()
+        untie_ = rmakers.untie(selector)
         untie_commands.append(untie_)
+    grace_commands = []
+    if grace_suffixes:
+        selector = baca.runs().map(baca.leaf(-1))
+        after_grace_ = rmakers.after_grace_container(
+            grace_suffixes, selector, beam_and_slash=True
+        )
+        grace_commands.append(after_grace_)
     return baca.rhythm(
-        rmakers.talea(counts_, 16, extra_counts=extra_counts),
+        # rmakers.talea(counts_, 16, extra_counts=extra_counts),
+        rmakers.talea(counts, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
         rmakers.rewrite_sustained(),
         *beam_commands,
         rmakers.extract_trivial(),
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
-        *meter,
+        *rewrite_meter_commands,
         *written_quarter_commands,
         *invisible_commands,
         *tie_commands,
         *untie_commands,
         rmakers.force_repeat_tie((1, 8)),
-        *grace,
+        *grace_commands,
         frame=inspect.currentframe(),
         preprocessor=preprocessor_,
         tag=_site(inspect.currentframe()),

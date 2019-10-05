@@ -196,14 +196,16 @@ maker(
 
 # vc1
 
+sixteenths = baca.sequence([6, -2, 4, -2, 4, -2, 2, -2])
+
 maker(
     ("vc1", 4),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], stop=4),
+    harmony.sixteenths(sixteenths[:4] + ["-"])
 )
 
 maker(
     ("vc1", 5),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2]),
+    harmony.sixteenths(sixteenths),
 )
 
 maker(
@@ -219,12 +221,12 @@ maker(
 
 maker(
     ("vc2", 4),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-2, stop=4),
+    harmony.sixteenths(sixteenths.rotate(-2)[:4] + ["-"]),
 )
 
 maker(
     ("vc2", 5),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-2),
+    harmony.sixteenths(sixteenths.rotate(-2)),
 )
 
 maker(
@@ -240,12 +242,12 @@ maker(
 
 maker(
     ("cb1", 4),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-4, stop=4),
+    harmony.sixteenths(sixteenths.rotate(-4)[:4] + ["-"]),
 )
 
 maker(
     ("cb1", 5),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-4),
+    harmony.sixteenths(sixteenths.rotate(-4)),
 )
 
 maker(
@@ -261,12 +263,12 @@ maker(
 
 maker(
     ("cb2", 4),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-6, stop=4),
+    harmony.sixteenths(sixteenths.rotate(-6)[:4] + ["-"]),
 )
 
 maker(
     ("cb2", 5),
-    harmony.sixteenths([6, -2, 4, -2, 4, -2, 2, -2], r=-6),
+    harmony.sixteenths(sixteenths.rotate(-6)),
 )
 
 maker(
