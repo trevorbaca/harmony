@@ -67,10 +67,15 @@ sixteenths = sixteenths.flatten()
 
 maker(
     ("bfl", (1, 5)),
-    harmony.sixteenths(sixteenths),
-    baca.stem_tremolo(baca.plts().get([0, 1], 3)),
+    harmony.sixteenths(
+        sixteenths,
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
+    baca.stem_tremolo(baca.pleaves().get([0, 1], 3)),
     baca.hairpin(
-        "p < f > p",
+        "p <| f |> p",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
@@ -79,7 +84,12 @@ maker(
 
 maker(
     ("bfl", (8, 11)),
-    harmony.sixteenths([2, 2, 16]),
+    harmony.sixteenths(
+        [2, 2, 16],
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
     baca.stem_tremolo(baca.plts().get([0, 1], 3)),
     baca.hairpin(
         "p < f > p",
@@ -158,7 +168,12 @@ maker(
 
 maker(
     ("hp", (1, 5)),
-    harmony.sixteenths(sixteenths),
+    harmony.sixteenths(
+        sixteenths,
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(5.5).staff_padding,
@@ -175,7 +190,12 @@ maker(
 
 maker(
     ("hp", (8, 11)),
-    harmony.sixteenths([2, 2, 16]),
+    harmony.sixteenths(
+        [2, 2, 16],
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(5.5).staff_padding,
