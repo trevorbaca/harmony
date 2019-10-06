@@ -206,6 +206,11 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        right_broken=True,
+        selector=baca.pleaves().rleak(),
+    ),
     harmony.tam_tam_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic("p"),
@@ -218,7 +223,6 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [2, 2, "-"],
-        #rmakers.invisible_music(baca.pleaves().get([1], 2)),
         written_quarters=True,
         invisible_pairs=True,
         ),

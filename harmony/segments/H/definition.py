@@ -72,9 +72,12 @@ maker(
 maker(
     ("perc2", (1, 6)),
     baca.make_notes(),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        left_broken=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.stem_tremolo(baca.pleaf(-1)),
 )
 
 maker(
