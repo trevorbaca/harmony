@@ -45,7 +45,7 @@ def appoggiato(
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
-    commands = []
+    commands: typing.List[rmakers.Command] = []
     if rest_to:
         force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_to])
         commands.append(force_rest_)
@@ -195,63 +195,58 @@ def sixteenths(
         preprocessor_ = baca.sequence().fuse().quarters()
     else:
         preprocessor_ = preprocessor
-    beam_commands = []
+    beam_commands: typing.List[rmakers.Command] = []
     if beam:
         beam_ = rmakers.beam()
         beam_commands.append(beam_)
-    rewrite_meter_commands = []
+    commands: typing.List[rmakers.Command] = []
     if not do_not_rewrite_meter:
         rewrite_ = rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
         )
-        rewrite_meter_commands.append(rewrite_)
-    written_quarter_commands: typing.List[rmakers.Command] = []
+        commands.append(rewrite_)
     if written_quarters is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 4), selector)
-        written_quarter_commands.append(written_)
+        commands.append(written_)
         unbeam_ = rmakers.unbeam()
-        written_quarter_commands.append(unbeam_)
+        commands.append(unbeam_)
     elif written_quarters is not None:
         selector = baca.pleaves().get(*written_quarters)
         written_ = rmakers.written_duration((1, 4), selector)
-        written_quarter_commands.append(written_)
+        commands.append(written_)
         unbeam_ = rmakers.unbeam()
-        written_quarter_commands.append(unbeam_)
+        commands.append(unbeam_)
     elif written_eighths is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 8), selector)
-        written_quarter_commands.append(written_)
+        commands.append(written_)
         unbeam_ = rmakers.unbeam()
-        written_quarter_commands.append(unbeam_)
-    invisible_commands = []
+        commands.append(unbeam_)
     if invisible_pairs is True:
         selector = baca.pleaves().get([1], 2)
         invisible_ = rmakers.invisible_music(selector)
-        invisible_commands.append(invisible_)
+        commands.append(invisible_)
     if invisible is not None:
         selector = baca.pleaves().get(*invisible)
         invisible_ = rmakers.invisible_music(selector)
-        invisible_commands.append(invisible_)
-    tie_commands = []
+        commands.append(invisible_)
     if tie is not None:
         selector = baca.pleaves().get(*tie)
         repeat_tie_ = rmakers.repeat_tie(selector)
-        tie_commands.append(repeat_tie_)
+        commands.append(repeat_tie_)
     if tie_all is True:
         selector = baca.pleaves()[1:]
         repeat_tie_ = rmakers.repeat_tie(selector)
-        tie_commands.append(repeat_tie_)
+        commands.append(repeat_tie_)
     if tie_runs is True:
         selector = baca.runs().map(baca.leaves()[1:])
         repeat_tie_ = rmakers.repeat_tie(selector)
-        tie_commands.append(repeat_tie_)
-    untie_commands = []
+        commands.append(repeat_tie_)
     if untie is True:
         selector = baca.leaves()
         untie_ = rmakers.untie(selector)
-        untie_commands.append(untie_)
-    grace_commands = []
+        commands.append(untie_)
     if after_graces:
         selector = baca.runs().map(baca.leaf(-1))
         beam_and_slash = None
@@ -260,7 +255,7 @@ def sixteenths(
         after_grace_ = rmakers.after_grace_container(
             after_graces, selector, beam_and_slash=beam_and_slash
         )
-        grace_commands.append(after_grace_)
+        commands.append(after_grace_)
     return baca.rhythm(
         rmakers.talea(counts, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
@@ -269,13 +264,8 @@ def sixteenths(
         rmakers.extract_trivial(),
         rmakers.force_fraction(),
         rmakers.denominator((1, 16)),
-        *rewrite_meter_commands,
-        *written_quarter_commands,
-        *invisible_commands,
-        *tie_commands,
-        *untie_commands,
+        *commands,
         rmakers.force_repeat_tie((1, 8)),
-        *grace_commands,
         frame=inspect.currentframe(),
         preprocessor=preprocessor_,
         tag=_site(inspect.currentframe()),
