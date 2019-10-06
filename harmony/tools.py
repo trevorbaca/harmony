@@ -63,7 +63,12 @@ def appoggiato(
         commands.append(force_)
     if after_graces is not None:
         selector = baca.pleaf(-1)
-        after_grace_ = rmakers.after_grace_container(after_graces, selector)
+        beam_and_slash = None
+        if after_graces != [1]:
+            beam_and_slash = True
+        after_grace_ = rmakers.after_grace_container(
+            after_graces, selector, beam_and_slash=beam_and_slash
+        )
         commands.append(after_grace_)
     return baca.rhythm(
         rmakers.incised(
@@ -171,7 +176,8 @@ def sixteenths(
     preprocessor: abjad.Expression = None,
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
-    written_quarters=None,
+    written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
+    written_eighths: typing.Union[abjad.PatternTyping, bool] = None,
     invisible: typing.Tuple[abjad.IntegerSequence, int] = None,
     invisible_pairs: bool = None,
     tie: abjad.PatternTyping = None,
@@ -212,6 +218,12 @@ def sixteenths(
         written_quarter_commands.append(written_)
         unbeam_ = rmakers.unbeam()
         written_quarter_commands.append(unbeam_)
+    elif written_eighths is True:
+        selector = baca.pleaves()
+        written_ = rmakers.written_duration((1, 8), selector)
+        written_quarter_commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        written_quarter_commands.append(unbeam_)
     invisible_commands = []
     if invisible_pairs is True:
         selector = baca.pleaves().get([1], 2)
@@ -242,7 +254,12 @@ def sixteenths(
     grace_commands = []
     if after_graces:
         selector = baca.runs().map(baca.leaf(-1))
-        after_grace_ = rmakers.after_grace_container(after_graces, selector)
+        beam_and_slash = None
+        if after_graces != [1]:
+            beam_and_slash = True
+        after_grace_ = rmakers.after_grace_container(
+            after_graces, selector, beam_and_slash=beam_and_slash
+        )
         grace_commands.append(after_grace_)
     return baca.rhythm(
         rmakers.talea(counts, 16, extra_counts=extra_counts),
