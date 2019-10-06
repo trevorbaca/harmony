@@ -333,11 +333,11 @@ maker(
     ("va", 1),
     harmony.sixteenths([3, "-"]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -345,11 +345,11 @@ maker(
     ("va", 4),
     harmony.sixteenths(["-", 2, -3]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
@@ -357,12 +357,12 @@ maker(
     ("va", (6, 7)),
     harmony.sixteenths([-1, 2, "-", 3, -2]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -384,12 +384,18 @@ maker(
         -5, 2, -5, 3, -10, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+",
         ]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        autodetect_right_padding=False,
+        map=baca.runs()[:-1],
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
+    baca.bow_speed_spanner(
+        "scr. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs()[-1:],
+        selector=baca.tleaves().rleak(),
+    ),
 )
 
 # vc1
@@ -398,11 +404,11 @@ maker(
     ("vc1", 1),
     harmony.sixteenths([3, "-"]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -410,11 +416,11 @@ maker(
     ("vc1", 4),
     harmony.sixteenths(["-", 2, -3]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
@@ -422,12 +428,12 @@ maker(
     ("vc1", (6, 7)),
     harmony.sixteenths([-1, 2, "-", 3, -2]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -447,12 +453,18 @@ maker(
         -5, 2, -5, 3, -10 - 2, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+",
         ]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        autodetect_right_padding=False,
+        map=baca.runs()[:-1],
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
+    baca.bow_speed_spanner(
+        "scr. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs()[-1:],
+        selector=baca.tleaves().rleak(),
+    ),
 )
 
 # vc2
@@ -461,11 +473,11 @@ maker(
     ("vc2", 1),
     harmony.sixteenths([3, "-"]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -473,11 +485,11 @@ maker(
     ("vc2", 4),
     harmony.sixteenths(["-", 2, -3]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp-ancora", abjad.tweak(-0.75).self_alignment_X),
 )
 
@@ -485,12 +497,12 @@ maker(
     ("vc2", (6, 7)),
     harmony.sixteenths([-1, 2, "-", 3, -2]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails().map(baca.rleak()[-1])),
     baca.dynamic("mp"),
 )
 
@@ -500,12 +512,18 @@ maker(
         -5, 2, -5, 3, -10 + 3, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+",
         ]),
     baca.bow_speed_spanner(
-        "p.sc. =|",
+        "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        autodetect_right_padding=False,
+        map=baca.runs()[:-1],
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(baca.ptails()[:-1].map(baca.rleak()[-1])),
+    baca.bow_speed_spanner(
+        "scr. =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs()[-1:],
+        selector=baca.tleaves().rleak(),
+    ),
 )
 
 # cb1
@@ -515,7 +533,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -525,7 +543,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -545,7 +563,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -557,7 +575,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -567,7 +585,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -577,7 +595,7 @@ maker(
     baca.make_repeated_duration_notes([(1, 4)]),
     baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
     baca.scp_spanner(
-        "SCP (to-do) =|",
+        "SCP =|",
         abjad.tweak(3).staff_padding,
     ),
 )

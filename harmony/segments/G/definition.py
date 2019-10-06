@@ -68,10 +68,14 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths([2, 2, "-"]),
+    harmony.sixteenths(
+        [2, 2, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
-        "o< f >o niente",
+        "o<| f |>o niente",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
@@ -80,30 +84,41 @@ maker(
 
 maker(
     ("bfl", (4, 5)),
-    harmony.sixteenths([1, 1, -28, 1, 1]),
+    harmony.sixteenths(
+        [1, 1, -28, 1, 1],
+        written_eighths=True,
+        invisible_pairs=True,
+    ),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
-        "o< f >o niente",
+        "o<| f |>o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[:3],
     ),
+    baca.dynamic_text_x_offset(-0.75, baca.pleaf(1)),
     baca.hairpin(
-        "o< mf >o niente",
+        "o<| mf |>o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[-2:].rleak(),
     ),
+    baca.dynamic_text_x_offset(-2, baca.pleaf(3)),
     baca.dls_staff_padding(5.5),
 )
 
 maker(
     ("bfl", 8),
-    harmony.sixteenths([1, 1, "-"]),
+    harmony.sixteenths(
+        [1, 1, "-"],
+        written_eighths=True,
+        invisible_pairs=True,
+    ),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[:3],
     ),
+    baca.dynamic_text_x_offset(-0.75, baca.pleaf(1)),
     baca.dls_staff_padding(5.5),
 )
 
