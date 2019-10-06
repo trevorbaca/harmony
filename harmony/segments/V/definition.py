@@ -195,7 +195,7 @@ maker(
 
 maker(
     ("va", (1, 3)),
-    harmony.sixteenths([32], extra_counts=[1], grace_suffixes=[1]),
+    harmony.sixteenths([32], extra_counts=[1], after_graces=[1]),
     baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
@@ -206,7 +206,7 @@ maker(
     harmony.sixteenths(
         [18, 13, 9, 6, 3, 2, 2, 2, 2, 2, 3, 3, 6, "+"],
         extra_counts=[1],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
@@ -222,7 +222,7 @@ maker(
     ("va", 12),
     harmony.sixteenths(
         ["+"],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
@@ -278,7 +278,7 @@ maker(
 
 maker(
     ("vc2", (1, 3)),
-    harmony.sixteenths([46], extra_counts=[2], grace_suffixes=[1]),
+    harmony.sixteenths([46], extra_counts=[2], after_graces=[1]),
     baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
@@ -289,7 +289,7 @@ maker(
     harmony.sixteenths(
         [18, 14, 12, 6, 4, 2, 2, 2, 2, 4, 6, 12, "+"],
         extra_counts=[2],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
@@ -305,7 +305,7 @@ maker(
     ("vc2", 12),
     harmony.sixteenths(
         ["+"],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
@@ -361,7 +361,7 @@ maker(
 
 maker(
     ("cb2", (1, 3)),
-    harmony.sixteenths([27], grace_suffixes=[1]),
+    harmony.sixteenths([27], after_graces=[1]),
     baca.staff_positions([2, -2, 4], mock=True),
     # TODO: use multistage glissando
     baca.glissando(),
@@ -371,7 +371,7 @@ maker(
     ("cb2", (5, 10)),
     harmony.sixteenths(
         [9, 7, 6, 3, 2, 1, 1, 1, 1, 2, 3, 6, "+"],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando
@@ -387,7 +387,7 @@ maker(
     ("cb2", 12),
     harmony.sixteenths(
         ["+"],
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.staff_positions([2, -2], mock=True),
     # TODO: use multistage glissando

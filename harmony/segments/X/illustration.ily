@@ -1975,11 +1975,6 @@ X_Viola_Music_Voice = {                                                        %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            6
-            16
-        }
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "tessera_3(4)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -1997,11 +1992,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            7
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2019,11 +2009,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            8
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [X Viola_Music_Voice measure 222 / measure 6]                            %! baca.SegmentMaker._comment_measure_numbers()
@@ -2042,11 +2027,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            13
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2065,11 +2045,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            5
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2082,11 +2057,6 @@ X_Viola_Music_Voice = {                                                        %
     c'16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            12
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2105,11 +2075,6 @@ X_Viola_Music_Voice = {                                                        %
     c'16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            9
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2121,11 +2086,6 @@ X_Viola_Music_Voice = {                                                        %
     c'4
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            10
-            16
-        }
 
     % [X Viola_Music_Voice measure 225 / measure 9]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2143,11 +2103,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            3
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2160,11 +2115,6 @@ X_Viola_Music_Voice = {                                                        %
     c'8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            11
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2388,11 +2338,6 @@ X_Cello_I_Music_Voice = {                                                      %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            12
-            16
-        }
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "tessera_3(3)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -2404,11 +2349,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d4
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            11
-            16
-        }
 
     % [X Cello_I_Music_Voice measure 222 / measure 6]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2426,11 +2366,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            8
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2448,11 +2383,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            13
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2465,11 +2395,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d4
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            5
-            16
-        }
 
     % [X Cello_I_Music_Voice measure 224 / measure 8]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2482,11 +2407,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            9
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2504,11 +2424,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            10
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2526,22 +2441,12 @@ X_Cello_I_Music_Voice = {                                                      %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            3
-            16
-        }
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            6
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2559,11 +2464,6 @@ X_Cello_I_Music_Voice = {                                                      %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            7
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2787,11 +2687,6 @@ X_Cello_II_Music_Voice = {                                                     %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            9
-            16
-        }
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "tessera_3(2)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -2809,11 +2704,6 @@ X_Cello_II_Music_Voice = {                                                     %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            7
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2826,21 +2716,11 @@ X_Cello_II_Music_Voice = {                                                     %
     d2
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            8
-            16
-        }
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            13
-            16
-        }
 
     % [X Cello_II_Music_Voice measure 223 / measure 7]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2858,11 +2738,6 @@ X_Cello_II_Music_Voice = {                                                     %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            5
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2875,11 +2750,6 @@ X_Cello_II_Music_Voice = {                                                     %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            10
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2897,22 +2767,12 @@ X_Cello_II_Music_Voice = {                                                     %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            3
-            16
-        }
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            6
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -2930,11 +2790,6 @@ X_Cello_II_Music_Voice = {                                                     %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            12
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [X Cello_II_Music_Voice measure 225 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
@@ -2953,11 +2808,6 @@ X_Cello_II_Music_Voice = {                                                     %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            11
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3181,11 +3031,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            10
-            16
-        }
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "tessera_3(1)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -3203,11 +3048,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            11
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3231,11 +3071,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            8
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3253,11 +3088,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            13
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [X Contrabass_I_Music_Voice measure 223 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -3276,11 +3106,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            5
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3293,11 +3118,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            3
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -3311,11 +3131,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            6
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3327,11 +3142,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d2
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            12
-            16
-        }
 
     % [X Contrabass_I_Music_Voice measure 225 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3343,11 +3153,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d2
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            9
-            16
-        }
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d16
@@ -3359,11 +3164,6 @@ X_Contrabass_I_Music_Voice = {                                                 %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            7
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3588,11 +3388,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \pp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            3
-            16
-        }
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "tessera_3(0)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -3605,11 +3400,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            7
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -3627,11 +3417,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            8
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3650,11 +3435,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            13
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3672,11 +3452,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            5
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -3689,11 +3464,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d4
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            6
-            16
-        }
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8
@@ -3705,11 +3475,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            12
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3733,11 +3498,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d8
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            9
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3755,11 +3515,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d16
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            10
-            16
-        }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -3778,11 +3533,6 @@ X_Contrabass_II_Music_Voice = {                                                %
     d8.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \markup {
-        \fraction
-            11
-            16
-        }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
