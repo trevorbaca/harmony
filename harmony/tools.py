@@ -28,7 +28,7 @@ def appoggiato(
     rest_all: bool = None,
     rest_to: int = None,
     rest_from: int = None,
-    after_grace: int = None,
+    after_graces: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes appoggiato rhythm.
@@ -46,11 +46,6 @@ def appoggiato(
         prefix_talea = [-1]
         prefix_counts = [1]
     commands = []
-    #    if counts:
-    #        on_beat_ = rmakers.on_beat_grace_container(
-    #            counts, baca.plts(), leaf_duration=(1, 20)
-    #        )
-    #        commands.append(on_beat_)
     if rest_to:
         force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_to])
         commands.append(force_rest_)
@@ -66,10 +61,9 @@ def appoggiato(
         selector = baca.plts(grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
-    if after_grace is not None:
-        after_grace_ = rmakers.after_grace_container(
-            [after_grace], baca.pleaf(-1), beam_and_slash=True
-        )
+    if after_graces is not None:
+        selector = baca.pleaf(-1)
+        after_grace_ = rmakers.after_grace_container(after_graces, selector)
         commands.append(after_grace_)
     return baca.rhythm(
         rmakers.incised(
@@ -184,7 +178,7 @@ def sixteenths(
     tie_runs: bool = None,
     tie_all: bool = None,
     untie: bool = None,
-    grace_suffixes: abjad.IntegerSequence = None,
+    after_graces: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
     Makes sixteenths rhythm.
@@ -246,14 +240,11 @@ def sixteenths(
         untie_ = rmakers.untie(selector)
         untie_commands.append(untie_)
     grace_commands = []
-    if grace_suffixes:
+    if after_graces:
         selector = baca.runs().map(baca.leaf(-1))
-        after_grace_ = rmakers.after_grace_container(
-            grace_suffixes, selector, beam_and_slash=True
-        )
+        after_grace_ = rmakers.after_grace_container(after_graces, selector)
         grace_commands.append(after_grace_)
     return baca.rhythm(
-        # rmakers.talea(counts_, 16, extra_counts=extra_counts),
         rmakers.talea(counts, 16, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
         rmakers.rewrite_sustained(),
@@ -415,7 +406,11 @@ def train(
 
 
 def tuplet(
-    ratios, *, denominator=None, written_quarters: bool = None
+    ratios,
+    *,
+    denominator: abjad.IntegerPair = None,
+    force_augmentation: bool = None,
+    written_quarters: bool = None,
 ) -> baca.RhythmCommand:
     """
     Makes tuplet.
@@ -427,6 +422,9 @@ def tuplet(
     if written_quarters is True:
         written_ = rmakers.written_duration((1, 4))
         commands.append(written_)
+    if force_augmentation is True:
+        force_ = rmakers.force_augmentation()
+        commands.append(force_)
     return baca.rhythm(
         rmakers.tuplet(ratios),
         rmakers.trivialize(),

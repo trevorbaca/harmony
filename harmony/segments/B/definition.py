@@ -92,7 +92,7 @@ maker(
     ),
     baca.stem_tremolo(baca.plts().get([0, 1], 3)),
     baca.hairpin(
-        "p < f > p",
+        "p <| f |> p",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
@@ -150,9 +150,18 @@ maker(
 )
 
 maker(
+    ("perc2", [8, 11]),
+    harmony.tuplet([(1,)], force_augmentation=True),
+)
+
+maker(
+    ("perc2", (9, 10)),
+    baca.make_notes(),
+)
+
+maker(
     ("perc2", (8, 11)),
     baca.staff_lines(1),
-    baca.make_repeat_tied_notes(),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -161,6 +170,7 @@ maker(
     baca.flat_glissando(hide_middle_stems=True),
     harmony.tam_tam_staff_position(),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.tuplet_bracket_up(),
     baca.dynamic("p"),
 )
 

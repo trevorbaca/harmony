@@ -972,7 +972,7 @@ P_Viola_Music_Voice = {                                                        %
     ^ \baca-reapplied-indicator-markup "(“Viola”)"                             %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], grace_suffixes=[2, 4, 5])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], after_graces=[2, 4, 5])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -989,15 +989,12 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        ]
 
     }
 
@@ -1010,10 +1007,8 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -1026,7 +1021,6 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
 
     }
 
@@ -1045,16 +1039,6 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        a8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        e'8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
         \glissando                                                             %! baca.glissando()
@@ -1065,7 +1049,14 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        e'8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        a8
 
     }
 
@@ -1078,15 +1069,12 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        ]
 
     }
 
@@ -1108,10 +1096,8 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -1124,7 +1110,6 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
 
     }
 
@@ -1137,16 +1122,6 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        a8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        e'8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
         \glissando                                                             %! baca.glissando()
@@ -1157,7 +1132,14 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        e'8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        a8
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
@@ -1205,7 +1187,7 @@ P_Viola_Music_Voice = {                                                        %
     a8                                                                         %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], grace_suffixes=[2, 4, 5])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], after_graces=[2, 4, 5])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -1219,15 +1201,12 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        ]
 
     }
 
@@ -1240,10 +1219,8 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e'8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -1256,7 +1233,6 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
 
     }
 
@@ -1270,16 +1246,6 @@ P_Viola_Music_Voice = {                                                        %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        a8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        e'8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
         \glissando                                                             %! baca.glissando()
@@ -1290,7 +1256,14 @@ P_Viola_Music_Voice = {                                                        %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         a8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        e'8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        a8
 
     }
 
@@ -1829,7 +1802,7 @@ P_Contrabass_I_Music_Voice = {                                                 %
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], grace_suffixes=[4, 5, 2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], after_graces=[4, 5, 2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -1846,10 +1819,8 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -1862,7 +1833,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -1875,16 +1845,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
         \glissando                                                             %! baca.glissando()
@@ -1895,7 +1855,14 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
 
     }
 
@@ -1914,15 +1881,12 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
 
     }
 
@@ -1935,10 +1899,8 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -1951,7 +1913,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -1973,16 +1934,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
         \glissando                                                             %! baca.glissando()
@@ -1993,7 +1944,14 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
 
     }
 
@@ -2006,15 +1964,12 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
@@ -2060,7 +2015,7 @@ P_Contrabass_I_Music_Voice = {                                                 %
     b,8                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], grace_suffixes=[4, 5, 2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], after_graces=[4, 5, 2])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -2074,10 +2029,8 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -2090,7 +2043,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -2103,16 +2055,6 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
         \glissando                                                             %! baca.glissando()
@@ -2123,7 +2065,14 @@ P_Contrabass_I_Music_Voice = {                                                 %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
 
     }
 
@@ -2137,15 +2086,12 @@ P_Contrabass_I_Music_Voice = {                                                 %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
 
     }
 
@@ -2217,7 +2163,7 @@ P_Contrabass_II_Music_Voice = {                                                %
     ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], grace_suffixes=[5, 2, 4])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4], after_graces=[5, 2, 4])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -2234,16 +2180,6 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
         \glissando                                                             %! baca.glissando()
@@ -2254,7 +2190,14 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
 
     }
 
@@ -2267,15 +2210,12 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -2294,10 +2234,8 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -2310,7 +2248,6 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
 
     }
 
@@ -2323,16 +2260,6 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
         \glissando                                                             %! baca.glissando()
@@ -2343,7 +2270,14 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
 
     }
 
@@ -2365,15 +2299,12 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -2386,10 +2317,8 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -2402,7 +2331,6 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     }
@@ -2450,7 +2378,7 @@ P_Contrabass_II_Music_Voice = {                                                %
     b,8                                                                        %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], grace_suffixes=[5, 2, 4])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
+    - \baca-text-spanner-left-text "sixteenths([2, 1, -1, 8, -8, 3, -1], after_graces=[5, 2, 4])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
@@ -2464,16 +2392,6 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        b,8
-        [
-        \glissando                                                             %! baca.glissando()
-
-        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
-        f8
-        \glissando                                                             %! baca.glissando()
-
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
         \glissando                                                             %! baca.glissando()
@@ -2484,7 +2402,14 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        f8
+        \glissando                                                             %! baca.glissando()
+
+        \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
+        b,8
 
     }
 
@@ -2497,15 +2422,12 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        ]
 
     }
 
@@ -2519,10 +2441,8 @@ P_Contrabass_II_Music_Voice = {                                                %
     \glissando                                                                 %! baca.glissando()
     {
 
-        \slash
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         f8
-        [
         \glissando                                                             %! baca.glissando()
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
@@ -2535,7 +2455,6 @@ P_Contrabass_II_Music_Voice = {                                                %
 
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         b,8
-        ]
 
     }
 

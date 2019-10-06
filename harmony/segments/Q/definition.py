@@ -231,5 +231,5 @@ maker(
 maker(
     (["vc1", "vc2", "cb1", "cb2"], [1, 5]),
     baca.triple_staccato(baca.pheads()),
-    baca.label(abjad.label().with_durations(denominator=16)),
+    #baca.label(abjad.label().with_durations(denominator=16)),
 )

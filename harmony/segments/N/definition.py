@@ -248,7 +248,7 @@ maker(
 
 maker(
     ("va", (1, 2)),
-    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
+    harmony.sixteenths([-8, 4, "-"], untie=True, after_graces=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -262,7 +262,7 @@ maker(
     harmony.sixteenths(
         [16, -12, 4, -16, 4, -8, 4],
         untie=True,
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
@@ -332,7 +332,7 @@ maker(
 
 maker(
     ("cb1", (1, 2)),
-    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
+    harmony.sixteenths([-8, 4, "-"], untie=True, after_graces=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -346,7 +346,7 @@ maker(
     harmony.sixteenths(
         [16, -8, 4, -16, 4, -12, 4],
         untie=True,
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),
@@ -364,7 +364,7 @@ maker(
 
 maker(
     ("cb2", (1, 2)),
-    harmony.sixteenths([-8, 4, "-"], untie=True, grace_suffixes=[1]),
+    harmony.sixteenths([-8, 4, "-"], untie=True, after_graces=[1]),
     baca.interpolate_staff_positions(-1, 1, mock=True),
     baca.glissando(
         allow_repeats=True,
@@ -378,7 +378,7 @@ maker(
     harmony.sixteenths(
         [16, -12, 4, -8, 4, -16, 4],
         untie=True,
-        grace_suffixes=[1],
+        after_graces=[1],
     ),
     baca.new(
         baca.interpolate_staff_positions(-1, 1, mock=True),

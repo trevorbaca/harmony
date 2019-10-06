@@ -258,5 +258,5 @@ maker(
     baca.stem_tremolo(baca.pleaves()),
     baca.accent(baca.pheads()),
     baca.dynamic("pp"),
-    baca.label(abjad.label().with_durations(denominator=16)),
+    #baca.label(abjad.label().with_durations(denominator=16)),
 )
