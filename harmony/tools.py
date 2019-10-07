@@ -176,8 +176,9 @@ def sixteenths(
     preprocessor: abjad.Expression = None,
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
-    written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
+    written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_eighths: typing.Union[abjad.PatternTyping, bool] = None,
+    written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
     invisible: typing.Tuple[abjad.IntegerSequence, int] = None,
     invisible_pairs: bool = None,
     tie: abjad.PatternTyping = None,
@@ -220,6 +221,12 @@ def sixteenths(
     elif written_eighths is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 8), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
+    elif written_dotted_halves is not None:
+        selector = baca.pleaves().get(*written_dotted_halves)
+        written_ = rmakers.written_duration((3, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
