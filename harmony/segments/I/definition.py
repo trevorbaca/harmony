@@ -41,6 +41,9 @@ maker(
     "Global_Skips",
     baca.metronome_mark("144", baca.skip(1 - 1)),
     baca.metronome_mark("3:2(4)=4", baca.skip(1 - 1)),
+    baca.open_volta(baca.skip(1 - 1)),
+    baca.double_volta(baca.skip(2 - 1)),
+    baca.close_volta(baca.skip(2 - 1), format_slot="after"),
 )
 
 # bfl
@@ -164,6 +167,8 @@ maker(
         "o<| ff",
         selector=baca.tleaves().rleak(),
     ),
-    baca.stop_on_string(),
+    baca.stop_on_string(
+        baca.runs().map(baca.leaves().rleak()[-1]),
+    ),
     baca.dls_staff_padding(4.5),
 )

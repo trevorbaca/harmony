@@ -42,10 +42,8 @@ maker(
         baca.skip(1 - 1),
         abjad.tweak((0, 18)).extra_offset,
     ),
-    baca.chunk(
-        baca.open_volta(baca.skip(1 - 1)),
-        baca.close_volta(baca.skip(2 - 1)),
-    ),
+    baca.open_volta(baca.skip(1 - 1)),
+    baca.close_volta(baca.skip(2 - 1)),
 )
 
 maker(

@@ -183,6 +183,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
                 d'
                 f'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
@@ -245,6 +246,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
                 e'
                 g'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
@@ -296,6 +298,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
                 d'
                 g'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
@@ -354,6 +357,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
                 e'
                 g'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 

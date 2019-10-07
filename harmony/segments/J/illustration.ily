@@ -23,6 +23,8 @@ J_Global_Skips = {                                                             %
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     % [J Global_Skips measure 75 / measure 2]                                  %! baca.SegmentMaker._comment_measure_numbers()
+    \bar ":|."                                                                 %! baca.bar_line():baca.IndicatorCommand._call()
+    \once \override Score.BarLine.X-extent = #'(0 . 1.5)                       %! baca.bar_line_x_extent():ONLY_MOL:MEASURE_75:baca.OverrideCommand._call(1)
     \time 4/4                                                                  %! baca.SegmentMaker._make_global_skips(2):baca.SegmentMaker._set_status_tag():EXPLICIT_TIME_SIGNATURE
     \baca-time-signature-color #'blue                                          %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_TIME_SIGNATURE_COLOR
     s1 * 1                                                                     %! baca.SegmentMaker._make_global_skips(1)
@@ -474,6 +476,7 @@ J_Bass_Flute_Music_Voice = {                                                   %
                 d'
                 g'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
@@ -580,6 +583,7 @@ J_Bass_Flute_Music_Voice = {                                                   %
                 d'
                 g'
             >8 * 2/5
+        %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
@@ -1131,6 +1135,8 @@ J_Harp_Music_Voice = {                                                         %
     \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
+    \override Dots.transparent = ##t                                           %! baca.glissando():abjad.glissando(1)
+    \override Stem.transparent = ##t                                           %! baca.glissando():abjad.glissando(1)
     fs!1.                                                                      %! baca.make_notes()
 
     % [J Harp_Music_Voice measure 77 / measure 4]                              %! baca.SegmentMaker._comment_measure_numbers()
@@ -1207,6 +1213,8 @@ J_Harp_Music_Voice = {                                                         %
     \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
     \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
     \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
+    \revert Dots.transparent                                                   %! baca.glissando():abjad.glissando(6)
+    \revert Stem.transparent                                                   %! baca.glissando():abjad.glissando(6)
     fs!1.                                                                      %! baca.make_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 

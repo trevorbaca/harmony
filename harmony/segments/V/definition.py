@@ -111,8 +111,7 @@ maker(
         invisible_pairs=True,
     ),
     harmony.triangle_staff_position(),
-    # TODO: make stem tremolo work with duration multipliers:
-    ###baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< pp >o niente",
         map=baca.runs(),
