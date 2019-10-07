@@ -228,8 +228,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -263,7 +263,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -274,8 +274,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -306,7 +306,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     % [X Bass_Flute_Music_Voice measure 218 / measure 2]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -318,8 +318,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -350,7 +350,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -361,8 +361,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -393,7 +393,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     % [X Bass_Flute_Music_Voice measure 219 / measure 3]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -405,8 +405,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -437,7 +437,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -448,8 +448,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -480,7 +480,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8.                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -524,8 +524,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -552,7 +552,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -562,8 +562,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -589,7 +589,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -600,8 +600,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -629,7 +629,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -639,8 +639,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -666,7 +666,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -677,8 +677,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -705,7 +705,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -715,8 +715,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -743,7 +743,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -754,8 +754,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -782,7 +782,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -792,8 +792,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -819,7 +819,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     % [X Bass_Flute_Music_Voice measure 224 / measure 8]                       %! baca.SegmentMaker._comment_measure_numbers()
@@ -831,8 +831,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -859,7 +859,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -869,8 +869,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -896,7 +896,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -907,8 +907,8 @@ X_Bass_Flute_Music_Voice = {                                                   %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     - \abjad-solid-line-with-arrow                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "A"                                         %! baca.text_spanner():baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2)
@@ -946,7 +946,7 @@ X_Bass_Flute_Music_Voice = {                                                   %
             - \tweak color #(x11-color 'blue)                                  %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
             \!                                                                 %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         %@% ^ \baca-duration-multiplier-markup #"5" #"4"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER:HIDDEN:NOTE
-            \stopTrillSpan                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+            \stopTrillSpan                                                     %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
             \stopTextSpan                                                      %! baca.text_spanner():baca.PiecewiseCommand._call(3):SPANNER_STOP
 
         }                                                                      %! baca.SegmentMaker._make_multimeasure_rest_container(4)
@@ -1834,8 +1834,8 @@ X_Viola_Music_Voice = {                                                        %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
@@ -1854,7 +1854,7 @@ X_Viola_Music_Voice = {                                                        %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1865,8 +1865,8 @@ X_Viola_Music_Voice = {                                                        %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     % [X Viola_Music_Voice measure 218 / measure 2]                            %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -1882,7 +1882,7 @@ X_Viola_Music_Voice = {                                                        %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1894,8 +1894,8 @@ X_Viola_Music_Voice = {                                                        %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'8                                                                        %! harmony.sixteenths()
@@ -1912,7 +1912,7 @@ X_Viola_Music_Voice = {                                                        %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1923,8 +1923,8 @@ X_Viola_Music_Voice = {                                                        %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'8                                                                        %! harmony.sixteenths()
@@ -1940,7 +1940,7 @@ X_Viola_Music_Voice = {                                                        %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -2197,8 +2197,8 @@ X_Cello_I_Music_Voice = {                                                      %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-vc-i-markup                      %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
@@ -2217,7 +2217,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2228,8 +2228,8 @@ X_Cello_I_Music_Voice = {                                                      %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     % [X Cello_I_Music_Voice measure 218 / measure 2]                          %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2245,7 +2245,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -2257,8 +2257,8 @@ X_Cello_I_Music_Voice = {                                                      %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2275,7 +2275,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2286,8 +2286,8 @@ X_Cello_I_Music_Voice = {                                                      %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2303,7 +2303,7 @@ X_Cello_I_Music_Voice = {                                                      %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -2546,8 +2546,8 @@ X_Cello_II_Music_Voice = {                                                     %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup                     %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
@@ -2566,7 +2566,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2577,8 +2577,8 @@ X_Cello_II_Music_Voice = {                                                     %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     % [X Cello_II_Music_Voice measure 218 / measure 2]                         %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2594,7 +2594,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -2606,8 +2606,8 @@ X_Cello_II_Music_Voice = {                                                     %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2624,7 +2624,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2635,8 +2635,8 @@ X_Cello_II_Music_Voice = {                                                     %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2652,7 +2652,7 @@ X_Cello_II_Music_Voice = {                                                     %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -2890,8 +2890,8 @@ X_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
@@ -2910,7 +2910,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2921,8 +2921,8 @@ X_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     % [X Contrabass_I_Music_Voice measure 218 / measure 2]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2938,7 +2938,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -2950,8 +2950,8 @@ X_Contrabass_I_Music_Voice = {                                                 %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2968,7 +2968,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -2979,8 +2979,8 @@ X_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -2996,7 +2996,7 @@ X_Contrabass_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -3247,8 +3247,8 @@ X_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)             %! baca.SegmentMaker._attach_color_literal(2):REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
@@ -3267,7 +3267,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -3278,8 +3278,8 @@ X_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     % [X Contrabass_II_Music_Voice measure 218 / measure 2]                    %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3295,7 +3295,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -3307,8 +3307,8 @@ X_Contrabass_II_Music_Voice = {                                                %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -3325,7 +3325,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r2                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -3336,8 +3336,8 @@ X_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+    - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+    \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d8                                                                         %! harmony.sixteenths()
@@ -3353,7 +3353,7 @@ X_Contrabass_II_Music_Voice = {                                                %
     r8                                                                         %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+    \stopTrillSpan                                                             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)

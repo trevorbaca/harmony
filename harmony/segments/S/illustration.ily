@@ -353,9 +353,9 @@ S_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.warble()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        - \tweak staff-padding 8                                               %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8                                               %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         gs'!32                                                                 %! harmony.warble()
 
@@ -394,7 +394,7 @@ S_Bass_Flute_Music_Voice = {                                                   %
         as'!32                                                                 %! harmony.warble()
 
         b'32                                                                   %! harmony.warble()
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         ]                                                                      %! harmony.warble()
         \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
         \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)
@@ -511,9 +511,9 @@ S_Bass_Flute_Music_Voice = {                                                   %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.warble()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        - \tweak staff-padding 8                                               %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
-        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
+        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        - \tweak staff-padding 8                                               %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         gs'!32                                                                 %! harmony.warble()
 
@@ -600,7 +600,7 @@ S_Bass_Flute_Music_Voice = {                                                   %
         as'!32                                                                 %! harmony.warble()
 
         b'32                                                                   %! harmony.warble()
-        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_STOP
+        \stopTrillSpan                                                         %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
         ]                                                                      %! harmony.warble()
         \revert NoteHead.font-size                                             %! baca.note_head_font_size():baca.OverrideCommand._call(2)
         \revert Accidental.font-size                                           %! baca.accidental_font_size():baca.OverrideCommand._call(2)

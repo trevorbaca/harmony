@@ -909,7 +909,7 @@ C_Harp_Music_Voice = {                                                         %
     \startStaff                                                                %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES:baca.SegmentMaker._reanalyze_reapplied_synthetic_wrappers()
     \set Staff.instrumentName = \harmony-hp-markup                             %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
     \override NoteHead.no-ledgers = ##t                                        %! baca.no_ledgers():baca.OverrideCommand._call(1)
-    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(1)
+    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 %%% \once \override Staff.Clef.X-extent = ##f                                  %! baca.clef_x_extent_false():baca.clef_shift():SHIFTED_CLEF:MEASURE_16:baca.OverrideCommand._call(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)                    %! baca.clef_extra_offset():baca.clef_shift():SHIFTED_CLEF:MEASURE_16:baca.OverrideCommand._call(1)
     \clef "bass"                                                               %! baca.clef():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_CLEF
@@ -939,7 +939,7 @@ C_Harp_Music_Voice = {                                                         %
     d,,8                                                                       %! harmony.sixteenths()
     \repeatTie
     \revert NoteHead.no-ledgers                                                %! baca.no_ledgers():baca.OverrideCommand._call(2)
-    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2)
+    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
     - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
@@ -1000,7 +1000,7 @@ C_Harp_Music_Voice = {                                                         %
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(3)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(4)
     \override NoteHead.no-ledgers = ##t                                        %! baca.no_ledgers():baca.OverrideCommand._call(1)
-    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(1)
+    \ottava -1                                                                 %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2):SPANNER_START
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     d,,1                                                                       %! harmony.sixteenths()
     - \tenuto                                                                  %! baca.tenuto():baca.IndicatorCommand._call()
@@ -1040,7 +1040,7 @@ C_Harp_Music_Voice = {                                                         %
     d,,8                                                                       %! harmony.sixteenths()
     \repeatTie
     \revert NoteHead.no-ledgers                                                %! baca.no_ledgers():baca.OverrideCommand._call(2)
-    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(2)
+    \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
     - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
