@@ -2933,7 +2933,7 @@ F_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #3.25                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -2943,10 +2943,10 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.shortInstrumentName = \harmony-cb-i-markup                      %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -2956,10 +2956,10 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -3009,17 +3009,17 @@ F_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak staff-padding #3                                                  %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanSCP                                                      %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -3068,10 +3068,10 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -3126,17 +3126,17 @@ F_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #3.25                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak staff-padding #3                                                  %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanSCP                                                      %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -3217,10 +3217,10 @@ F_Contrabass_I_Music_Voice = {                                                 %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -3294,7 +3294,7 @@ F_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #3.25                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
@@ -3304,10 +3304,10 @@ F_Contrabass_II_Music_Voice = {                                                %
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup                     %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -3317,10 +3317,10 @@ F_Contrabass_II_Music_Voice = {                                                %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -3372,17 +3372,17 @@ F_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #2.75                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak staff-padding #3                                                  %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanSCP                                                      %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -3431,10 +3431,10 @@ F_Contrabass_II_Music_Voice = {                                                %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -3486,17 +3486,17 @@ F_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkcyan                                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \abjad-dashed-line-with-hook                                             %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \baca-text-spanner-left-text "SCP"                                       %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak bound-details.right.padding #3.25                                 %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1):AUTODETECT
     - \tweak staff-padding #3                                                  %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanSCP                                                      %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
@@ -3577,10 +3577,10 @@ F_Contrabass_II_Music_Voice = {                                                %
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP

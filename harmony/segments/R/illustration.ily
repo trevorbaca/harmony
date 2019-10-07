@@ -1333,14 +1333,14 @@ R_Viola_Music_Voice = {                                                        %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
     \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
 %@% \abjad-invisible-music                                                     %! baca.invisible_music(1):INVISIBLE_MUSIC_COMMAND:baca.IndicatorCommand._call()
     \abjad-invisible-music-coloring                                            %! baca.invisible_music(2):INVISIBLE_MUSIC_COLORING:baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -1563,10 +1563,10 @@ R_Viola_Music_Voice = {                                                        %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'4 * 1/2                                                                  %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2139,14 +2139,14 @@ R_Cello_II_Music_Voice = {                                                     %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
     \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
 %@% \abjad-invisible-music                                                     %! baca.invisible_music(1):INVISIBLE_MUSIC_COMMAND:baca.IndicatorCommand._call()
     \abjad-invisible-music-coloring                                            %! baca.invisible_music(2):INVISIBLE_MUSIC_COLORING:baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2369,10 +2369,10 @@ R_Cello_II_Music_Voice = {                                                     %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4 * 1/2                                                                   %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3015,14 +3015,14 @@ R_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     - \tweak staff-padding #3                                                  %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
     \startTrillSpan                                                            %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(1)
 
-    \hide NoteHead                                                             %! baca.glissando()
-    \override Accidental.stencil = ##f                                         %! baca.glissando()
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando()
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando()
+    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
+    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
+    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
+    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
 %@% \abjad-invisible-music                                                     %! baca.invisible_music(1):INVISIBLE_MUSIC_COMMAND:baca.IndicatorCommand._call()
     \abjad-invisible-music-coloring                                            %! baca.invisible_music(2):INVISIBLE_MUSIC_COLORING:baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -3245,10 +3245,10 @@ R_Contrabass_II_Music_Voice = {                                                %
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(1):baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
-    \revert Accidental.stencil                                                 %! baca.glissando()
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando()
-    \revert NoteHead.no-ledgers                                                %! baca.glissando()
-    \undo \hide NoteHead                                                       %! baca.glissando()
+    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
+    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
+    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
+    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d4 * 1/2                                                                   %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)

@@ -1476,17 +1476,17 @@ N_Viola_Music_Voice = {                                                        %
     \afterGrace
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         d'8
 
@@ -1551,17 +1551,17 @@ N_Viola_Music_Voice = {                                                        %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         d'8
 
@@ -1575,17 +1575,17 @@ N_Viola_Music_Voice = {                                                        %
     \afterGrace
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         d'8
 
@@ -1600,17 +1600,17 @@ N_Viola_Music_Voice = {                                                        %
     \afterGrace
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         d'8
 
@@ -1623,17 +1623,17 @@ N_Viola_Music_Voice = {                                                        %
     \afterGrace
     b4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         d'8
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -2292,17 +2292,17 @@ N_Contrabass_I_Music_Voice = {                                                 %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2365,17 +2365,17 @@ N_Contrabass_I_Music_Voice = {                                                 %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2389,17 +2389,17 @@ N_Contrabass_I_Music_Voice = {                                                 %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2415,17 +2415,17 @@ N_Contrabass_I_Music_Voice = {                                                 %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2439,17 +2439,17 @@ N_Contrabass_I_Music_Voice = {                                                 %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
@@ -2566,17 +2566,17 @@ N_Contrabass_II_Music_Voice = {                                                %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2641,17 +2641,17 @@ N_Contrabass_II_Music_Voice = {                                                %
     - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(1)
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2665,17 +2665,17 @@ N_Contrabass_II_Music_Voice = {                                                %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2689,17 +2689,17 @@ N_Contrabass_II_Music_Voice = {                                                %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
 
@@ -2715,17 +2715,17 @@ N_Contrabass_II_Music_Voice = {                                                %
     \afterGrace
     c4                                                                         %! harmony.sixteenths()
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
-    \glissando                                                                 %! baca.glissando()
+    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
     {
 
-        \hide NoteHead                                                         %! baca.glissando()
-        \override Accidental.stencil = ##f                                     %! baca.glissando()
-        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando()
-        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando()
-        \revert Accidental.stencil                                             %! baca.glissando()
-        \revert NoteColumn.glissando-skip                                      %! baca.glissando()
-        \revert NoteHead.no-ledgers                                            %! baca.glissando()
-        \undo \hide NoteHead                                                   %! baca.glissando()
+        \hide NoteHead                                                         %! baca.glissando():abjad.glissando(1)
+        \override Accidental.stencil = ##f                                     %! baca.glissando():abjad.glissando(1)
+        \override NoteColumn.glissando-skip = ##t                              %! baca.glissando():abjad.glissando(1)
+        \override NoteHead.no-ledgers = ##t                                    %! baca.glissando():abjad.glissando(1)
+        \revert Accidental.stencil                                             %! baca.glissando():abjad.glissando(6)
+        \revert NoteColumn.glissando-skip                                      %! baca.glissando():abjad.glissando(6)
+        \revert NoteHead.no-ledgers                                            %! baca.glissando():abjad.glissando(6)
+        \undo \hide NoteHead                                                   %! baca.glissando():abjad.glissando(6)
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         e8
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(3):SPANNER_STOP
