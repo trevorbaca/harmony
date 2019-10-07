@@ -98,29 +98,29 @@ maker(
         [6, 6, 16],
         do_not_rewrite_meter=True,
         fuse=True,
-        #written_dotted_halves=([0, 1], 3),
+        written_dotted_halves=([0, 1], 3),
     ),
-    baca.pitch("<A4 B4 C5>", mock=True),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-bisb-markup", literal=True),
-    baca.hairpin(
-        "p < mf > p",
-        measures=1,
-        pieces=baca.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.hairpin(
-        "p < f > p",
-        measures=3,
-        pieces=baca.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.hairpin(
-        "p < ff > p",
-        measures=5,
-        pieces=baca.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
-    ),
+#    baca.pitch("<A4 B4 C5>", mock=True),
+#    baca.stem_tremolo(baca.pleaves()),
+#    baca.markup(r"\baca-bisb-markup", literal=True),
+#    baca.hairpin(
+#        "p < mf > p",
+#        measures=1,
+#        pieces=baca.lparts([1, 1 + 1]),
+#        selector=baca.leaves().rleak(),
+#    ),
+#    baca.hairpin(
+#        "p < f > p",
+#        measures=3,
+#        pieces=baca.lparts([1, 1 + 1]),
+#        selector=baca.leaves().rleak(),
+#    ),
+#    baca.hairpin(
+#        "p < ff > p",
+#        measures=5,
+#        pieces=baca.lparts([1, 1 + 1]),
+#        selector=baca.leaves().rleak(),
+#    ),
 )
 
 maker(
