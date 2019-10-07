@@ -77,7 +77,9 @@ maker(
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("pp", selector=baca.leaves().rleak()[-1]),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        right_broken=True,
+    ),
 )
 
 # perc1
@@ -200,7 +202,9 @@ maker(
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        right_broken=True,
+    ),
 )
 
 # vc2
@@ -221,7 +225,9 @@ maker(
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        right_broken=True,
+    ),
 )
 
 # cb1
@@ -251,7 +257,9 @@ maker(
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        right_broken=True,
+    ),
 )
 
 # cb2

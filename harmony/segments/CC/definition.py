@@ -58,7 +58,9 @@ maker(
         [4, 4, 16],
         tie_all=True,
     ),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        left_broken=True,
+    ),
     baca.text_spanner(
         "(T) -> A -> (T)",
         abjad.tweak(5.5).staff_padding,
@@ -144,7 +146,6 @@ maker(
         [4, 4, 16],
         tie_all=True,
     ),
-    baca.trill_spanner(),
     baca.hairpin(
         "pp < p > pp",
         pieces=baca.lparts([1, 1 + 1]),
@@ -156,6 +157,18 @@ maker(
         selector=baca.leaves().rleak(),
         measures=2,
     ),
+)
+
+maker(
+    (["vc1", "vc2", "cb1"], (1, 2)),
+    baca.trill_spanner(
+        left_broken=True,
+    ),
+)
+
+maker(
+    (["va", "cb2"], (1, 2)),
+    baca.trill_spanner(),
 )
 
 maker(
