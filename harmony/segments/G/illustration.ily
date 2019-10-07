@@ -878,12 +878,12 @@ G_Percussion_II_Music_Voice = {                                                %
             % [G Percussion_II_Music_Voice measure 63 / measure 9]             %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             \abjad-invisible-music-coloring                                    %! baca.SegmentMaker._make_multimeasure_rest_container(2):PHANTOM:NOTE:INVISIBLE_MUSIC_COLORING:baca.SegmentMaker._style_phantom_measures(5)
         %@% \abjad-invisible-music                                             %! baca.SegmentMaker._make_multimeasure_rest_container(3):PHANTOM:NOTE:INVISIBLE_MUSIC_COMMAND:baca.SegmentMaker._style_phantom_measures(5)
-            \hide NoteHead                                                     %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \override Accidental.stencil = ##f                                 %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \override NoteColumn.glissando-skip = ##t                          %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \override NoteHead.no-ledgers = ##t                                %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \override Dots.transparent = ##t                                   %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
-            \override Stem.transparent = ##t                                   %! baca.glissando():abjad.glissando(1):baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \hide NoteHead                                                     %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \override Accidental.stencil = ##f                                 %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \override NoteColumn.glissando-skip = ##t                          %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \override NoteHead.no-ledgers = ##t                                %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \override Dots.transparent = ##t                                   %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
+            \override Stem.transparent = ##t                                   %! baca.glissando():abjad.glissando(0):SHOW_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             \revert Accidental.stencil                                         %! baca.glissando():abjad.glissando(4):HIDE_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             \revert NoteColumn.glissando-skip                                  %! baca.glissando():abjad.glissando(4):HIDE_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
             \revert NoteHead.no-ledgers                                        %! baca.glissando():abjad.glissando(4):HIDE_TO_JOIN_BROKEN_SPANNERS:RIGHT_BROKEN:baca.SegmentMaker._style_phantom_measures(5):PHANTOM
