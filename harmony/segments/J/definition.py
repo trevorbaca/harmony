@@ -42,6 +42,7 @@ maker(
         baca.skip(1 - 1),
         abjad.tweak((0, 18)).extra_offset,
     ),
+    baca.close_volta(baca.skip(2 - 1)),
 )
 
 maker(
@@ -140,7 +141,7 @@ maker(
 maker(
     ("hp", (2, 15)),
     baca.clef("bass"),
-    baca.flat_glissando("F#3"),
+    baca.flat_glissando("F#3", hide_middle_stems=True),
     baca.markup(r"\baca-bow-markup", literal=True),
     baca.dynamic("mf")
 )

@@ -37,6 +37,7 @@ maker(
         baca.skip(1 - 1),
         abjad.tweak((0, 18)).extra_offset,
     ),
+    baca.open_volta(baca.skip(8 - 1)),
 )
 
 maker(
@@ -99,28 +100,29 @@ maker(
         do_not_rewrite_meter=True,
         fuse=True,
         written_dotted_halves=([0, 1], 3),
+        invisible=([1], 3),
     ),
-#    baca.pitch("<A4 B4 C5>", mock=True),
-#    baca.stem_tremolo(baca.pleaves()),
-#    baca.markup(r"\baca-bisb-markup", literal=True),
-#    baca.hairpin(
-#        "p < mf > p",
-#        measures=1,
-#        pieces=baca.lparts([1, 1 + 1]),
-#        selector=baca.leaves().rleak(),
-#    ),
-#    baca.hairpin(
-#        "p < f > p",
-#        measures=3,
-#        pieces=baca.lparts([1, 1 + 1]),
-#        selector=baca.leaves().rleak(),
-#    ),
-#    baca.hairpin(
-#        "p < ff > p",
-#        measures=5,
-#        pieces=baca.lparts([1, 1 + 1]),
-#        selector=baca.leaves().rleak(),
-#    ),
+    baca.pitch("<A4 B4 C5>", mock=True),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.hairpin(
+        "p < mf > p",
+        measures=1,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < f > p",
+        measures=3,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "p < ff > p",
+        measures=5,
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
 )
 
 maker(
@@ -190,7 +192,13 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 6)),
-    harmony.tuplet([(1,), (1, 1)]),
+    harmony.sixteenths(
+        [12, 8, 8],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([1, 2], 3),
+        invisible=([2], 3),
+    ),
     baca.stem_tremolo(baca.pleaves(exclude=abjad.const.HIDDEN)),
     baca.markup(r"\baca-quasi-bisb-markup", literal=True),
     baca.hairpin(
