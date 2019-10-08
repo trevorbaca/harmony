@@ -195,14 +195,8 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-    ),
+    baca.flat_glissando(),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # vc1
@@ -221,14 +215,8 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-    ),
+    baca.flat_glissando(),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # vc2
@@ -247,14 +235,8 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-    ),
+    baca.flat_glissando(),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # cb1
@@ -273,14 +255,8 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-    ),
+    baca.flat_glissando(),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # cb2
@@ -299,14 +275,8 @@ maker(
         pieces=baca.plts(),
         selector=baca.leaves().rleak(),
     ),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-    ),
+    baca.flat_glissando(),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # va, vc1, vc2, cb1, cb2

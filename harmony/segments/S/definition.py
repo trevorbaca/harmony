@@ -242,6 +242,18 @@ maker(
     baca.staff_lines(1),
 )
 
+# perc1, perc2
+
+maker(
+    (["perc1", "perc2"], [1, (4, 9), 12]),
+    baca.new(
+        baca.dots_extra_offset((2, 0)),
+        baca.dots_x_extent_false(),
+        baca.rest_x_extent_false(),
+        map=baca.rests().filter_duration(">=", (1, 2)),
+    ),
+)
+
 # hp
 
 maker(
@@ -250,215 +262,101 @@ maker(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
-        tie_all=True,
     ),
     baca.stem_tremolo(baca.pleaves()),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.hairpin(
-        "o< mp > pp -- ! < mp >o niente",
+        "o< mp > pp pp < mp >o niente",
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    # note that chord erases duration multipliers on notes;
-    # fix before pitch application
-    baca.pitch("B4"),
+    baca.dynamic_text_x_offset(-3, baca.pleaf(1)),
+    baca.dynamic_text_x_offset(-0.25, baca.pleaf(-1)),
+    baca.staff_position([-1, 0, 1], mock=True),
+)
+
+maker(
+    ("hp", 4),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+maker(
+    ("hp", (5, 9)),
+    baca.make_notes(),
 )
 
 maker(
     ("hp", (4, 9)),
-    baca.make_notes(),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-bisb-markup", literal=True),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 maker(
     ("hp", 12),
-    baca.make_notes(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
-    baca.markup(r"\baca-bisb-markup", literal=True),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
     ),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # va
 
 maker(
-    ("va", 1),
-    # chord pitches cause duration multipliers to go missing
-)
-
-maker(
     ("va", (4, 9)),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
-)
-
-maker(
-    ("va", 12),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
-    ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # vc1
 
 maker(
-    ("vc1", 1),
-    # chord pitches cause duration multipliers to go missing
-)
-
-maker(
     ("vc1", (4, 9)),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
-)
-
-maker(
-    ("vc1", 12),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
-    ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # vc2
 
 maker(
-    ("vc2", 1),
-    # chord pitches cause duration multipliers to go missing
-)
-
-maker(
     ("vc2", (4, 9)),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
-)
-
-maker(
-    ("vc2", 12),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
-    ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # cb1
 
 maker(
-    ("cb1", 1),
-    # chord pitches cause duration multipliers to go missing
-)
-
-maker(
     ("cb1", (4, 9)),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
-)
-
-maker(
-    ("cb1", 12),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
-    ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # cb2
 
 maker(
-    ("cb2", 1),
-    # chord pitches cause duration multipliers to go missing
-)
-
-maker(
     ("cb2", (4, 9)),
     baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
         hide_middle_stems=True,
     ),
-)
-
-maker(
-    ("cb2", 12),
-    baca.flat_glissando(
-        [
-            abjad.StaffPosition(-1),
-            abjad.StaffPosition(0),
-            abjad.StaffPosition(1),
-        ],
-        mock=True,
-        hide_middle_stems=True,
-    ),
+    baca.staff_position([-1, 0, 1], mock=True),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -468,29 +366,47 @@ maker(
     harmony.sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
-        tie_all=True,
     ),
     baca.invisible_music(baca.pleaves().get([1], 2)),
+    baca.staff_position([-1, 0, 1], mock=True),
     baca.stem_tremolo(baca.pleaves()),
     baca.markup(r"\baca-quasi-bisb-markup", literal=True),
     baca.hairpin(
-        "o< mp > pp -- ! < mp >o niente",
+        "o<| mp |> pp pp <| mp |>o niente",
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
+    ),
+    baca.dynamic_text_x_offset(-3, baca.pleaf(1)),
+    baca.dynamic_text_x_offset(-0.25, baca.pleaf(-1)),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
     ),
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
+    (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
     baca.make_notes(),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
     baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.markup(r"\baca-quasi-bisb-markup", literal=True),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 12),
-    baca.make_notes(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.staff_position([-1, 0, 1], mock=True),
     baca.markup(r"\baca-quasi-bisb-markup", literal=True),
 )
 
