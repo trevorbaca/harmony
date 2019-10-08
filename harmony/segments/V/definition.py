@@ -70,7 +70,6 @@ maker(
         invisible_pairs=True,
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
@@ -90,7 +89,6 @@ maker(
         invisible_pairs=True,
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
     ),
     baca.hairpin(
@@ -242,7 +240,6 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
@@ -262,7 +259,6 @@ maker(
         invisible_pairs=True,
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
     ),
     baca.hairpin(
@@ -325,7 +321,6 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
@@ -345,7 +340,6 @@ maker(
         invisible_pairs=True,
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
     ),
     baca.hairpin(

@@ -227,7 +227,7 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner("M2", harmonic=True),
+    baca.trill_spanner(alteration="M2", harmonic=True),
 )
 
 maker(
@@ -239,7 +239,7 @@ maker(
     ),
     baca.flat_glissando(),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner("M2", harmonic=True),
+    baca.trill_spanner(alteration="M2", harmonic=True),
     baca.hairpin(
         "o<| p |> pp",
         pieces=baca.lparts([1, 1 + 1]),
@@ -267,8 +267,8 @@ maker(
     baca.flat_glissando(selector=baca.leaves()[:-1]),
     baca.note_head_style_harmonic(),
     baca.trill_spanner(
-        "M2",
         abjad.tweak(2.75).bound_details__right__padding,
+        alteration="M2",
         harmonic=True,
     ),
 )

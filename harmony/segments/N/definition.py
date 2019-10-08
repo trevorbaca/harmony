@@ -87,7 +87,6 @@ maker(
         selector=baca.tleaves(),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
         selector=baca.tleaves(),
     ),
@@ -108,7 +107,6 @@ maker(
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
     baca.trill_spanner(
-        None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
         selector=baca.tleaves(),
     ),
@@ -128,7 +126,6 @@ maker(
     ),
     baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
     baca.trill_spanner(
-        None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
         selector=baca.tleaves(),
     ),
