@@ -56,9 +56,16 @@ maker(
     ("bfl", (1, 2)),
     harmony.sixteenths(
         [4, 4, 16],
-        tie_all=True,
+    ),
+    baca.flat_glissando(
+        left_broken=True,
+        selector=baca.leaves()[:3],
+    ),
+    baca.flat_glissando(
+        selector=baca.leaves()[3:6],
     ),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         left_broken=True,
     ),
     baca.text_spanner(
@@ -144,6 +151,8 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
     harmony.sixteenths(
         [4, 4, 16],
+        written_halves=([0, 1, 3, 4],),
+        invisible=([1, 4],),
         tie_all=True,
     ),
     baca.hairpin(
@@ -162,13 +171,16 @@ maker(
 maker(
     (["vc1", "vc2", "cb1"], (1, 2)),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         left_broken=True,
     ),
 )
 
 maker(
     (["va", "cb2"], (1, 2)),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
+    ),
 )
 
 maker(

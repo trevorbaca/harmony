@@ -841,7 +841,7 @@ Z_Harp_Music_Voice = {                                                         %
     - \flageolet                                                               %! baca.flageolet():baca.IndicatorCommand._call()
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \tweak self-alignment-X #0.75                                            %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-lv-into-following-silence-markup                                   %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-lv-into-fermata-markup                                             %! baca.markup():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)

@@ -1578,7 +1578,7 @@ Y_Harp_Music_Voice = {                                                         %
     e,8.                                                                       %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
-    ^ \baca-lv-into-following-silence-markup                                   %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-lv-into-fermata-markup                                             %! baca.markup():baca.IndicatorCommand._call()
 
     r1                                                                         %! harmony.sixteenths()
 

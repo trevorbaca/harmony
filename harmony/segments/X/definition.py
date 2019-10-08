@@ -77,6 +77,7 @@ maker(
     harmony.sixteenths([2, 2, -2]),
     baca.hairpin(
         "niente o< p >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
@@ -236,10 +237,12 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths(
         [2, 2, -10],
+        written_quarters=([0, 1, 4, 5],),
+        invisible=([1, 5],),
         tie_runs=True,
     ),
     baca.hairpin(
-        "niente o< mp >o",
+        "niente o<| mp |>o",
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs().map(baca.leaves().rleak()),
     ),

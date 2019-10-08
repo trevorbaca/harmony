@@ -172,7 +172,7 @@ maker(
     ),
     baca.laissez_vibrer(baca.ptails()),
     baca.markup(
-        r"\baca-lv-into-following-silence-markup",
+        r"\baca-lv-into-fermata-markup",
         literal=True,
         selector=baca.phead(-1),
     ),

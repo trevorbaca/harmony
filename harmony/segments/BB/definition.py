@@ -60,24 +60,38 @@ maker(
 maker(
     ("bfl", (1, 4)),
     harmony.sixteenths([8, 4, 4, 8, 4, 3, -1]),
-    baca.flat_glissando(),
+    baca.flat_glissando(
+        hide_stem_selector=baca.pleaves()[1:-2],
+    ),
     baca.trill_spanner(),
     baca.hairpin(
-        "p (p) < mp >",
+        "p p < mp >",
         pieces=baca.clparts([1]),
     ),
 )
 
 maker(
     ("bfl", (7, 10)),
-    harmony.sixteenths([4]),
-    baca.flat_glissando(),
+    harmony.sixteenths(
+        [4],
+        written_halves=True,
+        invisible_pairs=True,
+    ),
+    baca.flat_glissando(
+        hide_stem_selector=baca.pleaves()[1:-1],
+        selector=baca.leaves().rleak(),
+        right_broken=True,
+    ),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
     ),
-    baca.dynamic("pp", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "pp",
+        selector=baca.leaves().rleak()[-1],
+    ),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
 )
@@ -90,13 +104,16 @@ maker(
         [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
         fuse=True,
+        written_halves=([0],),
     ),
-    baca.flat_glissando(),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.triangle_staff_position(),
     baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.hairpin(
-        "p < mp > p (p) < mp > p",
+        "p < mp > p p < mp > p",
         pieces=baca.clparts([1]),
         selector=baca.tleaves(),
     ),
@@ -104,16 +121,27 @@ maker(
 
 maker(
     ("perc1", (7, 10)),
-    harmony.sixteenths([4]),
-    baca.flat_glissando(),
+    harmony.sixteenths(
+        [4, 4, 4, 4, 4, 4, 7, -1],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_halves=([0],),
+    ),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.triangle_staff_position(),
     baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(baca.pleaves().get([0, -1])),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
+        selector=baca.leaves()[:6],
     ),
-    baca.dynamic("pp", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "pp",
+        selector=baca.pleaf(-1),
+    ),
 )
 
 # perc2
@@ -196,13 +224,19 @@ maker(
 maker(
     ("vc1", (7, 10)),
     baca.note_head_style_harmonic(),
-    harmony.sixteenths([2]),
+    harmony.sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
 )
@@ -219,13 +253,19 @@ maker(
 maker(
     ("vc2", (7, 10)),
     baca.note_head_style_harmonic(),
-    harmony.sixteenths([2]),
+    harmony.sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
 )
@@ -244,6 +284,7 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
     ),
     baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
         map=baca.runs(),
     ),
 )
@@ -251,13 +292,19 @@ maker(
 maker(
     ("cb1", (7, 10)),
     baca.note_head_style_harmonic(),
-    harmony.sixteenths([2]),
+    harmony.sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
 )
