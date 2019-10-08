@@ -429,12 +429,15 @@ maker(
     (["va", "vc2", "cb2"], (9, 11)),
     baca.hairpin(
         "niente o< p >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
         selector=baca.tleaves(),
     ),
     baca.invisible_music(baca.leaves().get([1], 2)),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
     baca.trill_spanner(
+        # large right padding because open-volta follows in next segment
+        abjad.tweak(6).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
     ),
 )

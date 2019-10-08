@@ -267,7 +267,8 @@ maker(
 maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
-    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
+    baca.flat_glissando(),
+    baca.staff_position(-6, mock=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
@@ -277,7 +278,8 @@ maker(
 maker(
     ("cb2", (7, 10)),
     baca.make_notes(),
-    baca.flat_glissando(abjad.StaffPosition(-6), mock=True),
+    baca.flat_glissando(),
+    baca.staff_position(-6, mock=True),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
