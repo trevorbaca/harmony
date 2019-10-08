@@ -425,5 +425,7 @@ maker(
     ),
     baca.invisible_music(baca.leaves().get([1], 2)),
     baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
-    baca.trill_spanner(None, abjad.tweak(3).staff_padding),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
 )

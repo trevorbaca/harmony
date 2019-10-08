@@ -61,7 +61,6 @@ maker(
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
@@ -82,7 +81,6 @@ maker(
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
     ),
@@ -246,7 +244,6 @@ maker(
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),

@@ -77,7 +77,6 @@ maker(
         selector=baca.tleaves(),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
         map=baca.runs(),
         selector=baca.leaves().rleak(),
@@ -107,7 +106,6 @@ maker(
         selector=baca.tleaves(),
     ),
     baca.trill_spanner(
-        None,
         abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
         map=baca.runs(),
         selector=baca.leaves().rleak(),
