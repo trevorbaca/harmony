@@ -77,8 +77,11 @@ maker(
 maker(
     ("perc1", 2),
     baca.staff_lines(1),
-    harmony.sixteenths([-8, 2, 2, "-"]),
-    baca.repeat_tie(baca.pleaf(-1)),
+    harmony.sixteenths(
+        [-8, 2, 2, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
@@ -91,26 +94,38 @@ maker(
 
 maker(
     ("perc1", (4, 5)),
-    harmony.sixteenths([2, 2, 8, 2, 2, 2, 2, 8, 2, -2]),
+    harmony.sixteenths(
+        [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
+        written_quarters=([0, 1],),
+        invisible=([1],),
+    ),
     baca.flat_glissando(),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
-        "o< p > pp -- (pp) < mp > pp -- !",
-        bookend=False,
-        pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
-        selector=baca.tleaves().rleak(),
+        "o< p > pp",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves()[:3],
+    ),
+    baca.hairpin(
+        "pp < mp > pp",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves()[5:8],
     ),
 )
 
 maker(
     ("perc1", 10),
-    harmony.sixteenths([2, 2, 4, 2, 2, 2, 2]),
+    harmony.sixteenths(
+        [2, 2, 4, 2, 2, 2, 2],
+        written_quarters=([0, 1, 3, 4, 5, 6],),
+        invisible=([1, 4, 6],),
+    ),
     baca.stem_tremolo(baca.pheads()),
-    baca.flat_glissando(),
+    baca.flat_glissando(selector=baca.leaves()[:-1]),
     harmony.triangle_staff_position(),
     baca.hairpin(
-        "o< p > pp -- ! < p > pp < p >o niente",
+        "o< p > pp pp < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
@@ -201,10 +216,13 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-    harmony.sixteenths([-8, 2, 2, "-"]),
-    baca.repeat_tie(baca.pleaf(-1)),
+    harmony.sixteenths(
+        [-8, 2, 2, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.hairpin(
-        "o< mp >o niente",
+        "o<| mp |>o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
@@ -214,27 +232,43 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
-    harmony.sixteenths([2, 2, 8, 2, 2, 2, 2, 8, 2, -2]),
-    baca.hairpin(
-        "o< mp > pp -- (pp) < mp > pp -- !",
-        bookend=False,
-        pieces=baca.lparts([1, 1, 2, 1, 1, 3, 1]),
-        selector=baca.tleaves().rleak(),
+    harmony.sixteenths(
+        [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
+        written_quarters=([0, 1],),
+        invisible=([1],),
     ),
     baca.flat_glissando(),
     baca.note_head_style_harmonic(),
     baca.trill_spanner("M2", harmonic=True),
+    baca.hairpin(
+        "o<| p |> pp",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves()[:3],
+    ),
+    baca.hairpin(
+        "pp <| mp |> pp",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves()[5:8],
+    ),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 10),
-    harmony.sixteenths([2, 2, 4, 2, 2, 2, 2]),
+    harmony.sixteenths(
+        [2, 2, 4, 2, 2, 2, 2],
+        written_quarters=([0, 1, 3, 4, 5, 6],),
+        invisible=([1, 4, 6],),
+    ),
     baca.hairpin(
-        "o< mp > pp -- ! < mp > pp < mp >o niente",
+        "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando(),
+    baca.flat_glissando(selector=baca.leaves()[:-1]),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner("M2", harmonic=True),
+    baca.trill_spanner(
+        "M2",
+        abjad.tweak(2.75).bound_details__right__padding,
+        harmonic=True,
+    ),
 )
