@@ -40,10 +40,6 @@ maker(
     ),
 )
 
-maker(
-    "Global_Skips",
-)
-
 # bfl
 
 maker(
@@ -62,11 +58,16 @@ maker(
     baca.accent(),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
+        argument=r"\baca-cov-markup =|",
         map=baca.run(0),
         selector=baca.tleaves().rleak(),
     ),
     baca.trill_spanner(
-        map=baca.runs()[1:],
+        map=baca.run(1),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
+        map=baca.run(2),
     ),
     baca.dynamic("p"),
     baca.dynamic(
