@@ -73,7 +73,9 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "o<| f |>o niente",
         map=baca.clparts([3]),
@@ -89,19 +91,27 @@ maker(
         written_eighths=True,
         invisible_pairs=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[:3],
     ),
-    baca.dynamic_text_x_offset(-0.75, baca.pleaf(1)),
+    baca.dynamic_text_x_offset(
+        -0.75,
+        baca.pleaf(1),
+    ),
     baca.hairpin(
         "o<| mf |>o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[-2:].rleak(),
     ),
-    baca.dynamic_text_x_offset(-2, baca.pleaf(3)),
+    baca.dynamic_text_x_offset(
+        -2,
+        baca.pleaf(3),
+    ),
     baca.dls_staff_padding(5.5),
 )
 
@@ -112,13 +122,18 @@ maker(
         written_eighths=True,
         invisible_pairs=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.clparts([1]),
         selector=baca.leaves()[:3],
     ),
-    baca.dynamic_text_x_offset(-0.75, baca.pleaf(1)),
+    baca.dynamic_text_x_offset(
+        -0.75,
+        baca.pleaf(1),
+    ),
     baca.dls_staff_padding(5.5),
 )
 
@@ -127,7 +142,9 @@ maker(
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
-    harmony.sixteenths([-15, 1]),
+    harmony.sixteenths(
+        [-15, 1],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.75).self_alignment_X,
@@ -145,14 +162,19 @@ maker(
 maker(
     ("perc1", (4, 5)),
     baca.staff_lines(3),
-    harmony.sixteenths([1, -16, 1, "-"]),
+    harmony.sixteenths(
+        [1, -16, 1, "-"],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
         literal=True,
     ),
     baca.staff_position(2),
-    baca.hairpin("f mp", selector=baca.pleaves()),
+    baca.hairpin(
+        "f mp",
+        selector=baca.pleaves(),
+    ),
 )
 
 maker(
@@ -163,7 +185,9 @@ maker(
 maker(
     ("perc1", 8),
     baca.staff_lines(3),
-    harmony.sixteenths([1, "-"]),
+    harmony.sixteenths(
+        [1, "-"],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
@@ -177,30 +201,45 @@ maker(
 
 maker(
     ("perc2", (1, 2)),
-    harmony.sixteenths([-4, "+"]),
+    harmony.sixteenths(
+        [-4, "+"],
+    ),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.dynamic("p"),
 )
 
 maker(
     ("perc2", (4, 5)),
     baca.make_repeat_tied_notes(),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
-    baca.dynamic("p-ancora", abjad.tweak(-0.75).self_alignment_X),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
+    baca.dynamic(
+        "p-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
 )
 
 maker(
     ("perc2", 8),
-    harmony.sixteenths(["+"]),
+    harmony.sixteenths(
+        ["+"],
+    ),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -212,7 +251,9 @@ maker(
         selector=baca.pleaves().rleak(),
     ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic("p"),
 )
 # hp
@@ -250,7 +291,9 @@ maker(
     ("hp", (4, 5)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths([2, -28, 2]),
+    harmony.sixteenths(
+        [2, -28, 2],
+    ),
     harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
@@ -258,7 +301,10 @@ maker(
         literal=True,
     ),
     baca.dynamic('"f"'),
-    baca.dynamic("mf", selector=baca.phead(-1)),
+    baca.dynamic(
+        "mf",
+        selector=baca.phead(-1),
+    ),
 )
 
 maker(
@@ -285,7 +331,9 @@ maker(
 
 maker(
     ("va", 1),
-    harmony.appoggiato(counts=[9]),
+    harmony.appoggiato(
+        counts=[9],
+    ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -294,7 +342,11 @@ maker(
 
 maker(
     ("va", (4, 5)),
-    harmony.appoggiato(counts=[4], fuse=True, after_graces=[4]),
+    harmony.appoggiato(
+        counts=[4],
+        fuse=True,
+        after_graces=[4],
+    ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -311,7 +363,9 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.appoggiato(counts=[7]),
+    harmony.appoggiato(
+        counts=[7],
+    ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -320,7 +374,11 @@ maker(
 
 maker(
     ("vc1", (4, 5)),
-    harmony.appoggiato(counts=[4], fuse=True, after_graces=[4]),
+    harmony.appoggiato(
+        counts=[4],
+        fuse=True,
+        after_graces=[4],
+        ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -337,7 +395,9 @@ maker(
 
 maker(
     ("vc2", 1),
-    harmony.sixteenths([-4, "+"]),
+    harmony.sixteenths(
+        [-4, "+"],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -345,7 +405,9 @@ maker(
 
 maker(
     ("vc2", (4, 5)),
-    harmony.sixteenths(["+"]),
+    harmony.sixteenths(
+        ["+"],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -363,7 +425,9 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.appoggiato(counts=[5]),
+    harmony.appoggiato(
+        counts=[5],
+    ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -372,7 +436,11 @@ maker(
 
 maker(
     ("cb1", (4, 5)),
-    harmony.appoggiato(counts=[4], fuse=True, after_graces=[4]),
+    harmony.appoggiato(
+        counts=[4],
+        fuse=True,
+        after_graces=[4],
+    ),
     baca.literal(
         r"\once \override NoteHead.style = #'harmonic",
         baca.pleaves(),
@@ -389,7 +457,9 @@ maker(
 
 maker(
     ("cb2", 1),
-    harmony.sixteenths([-4, "+"]),
+    harmony.sixteenths(
+        [-4, "+"],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -397,7 +467,9 @@ maker(
 
 maker(
     ("cb2", (4, 5)),
-    harmony.sixteenths(["+"]),
+    harmony.sixteenths(
+        ["+"],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -410,4 +482,3 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
 )
-

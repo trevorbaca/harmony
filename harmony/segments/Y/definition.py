@@ -68,7 +68,9 @@ maker(
         extra_counts=[2],
         rest_tuplets=[0, 1],
     ),
-    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.pitches(
+        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+    ),
     baca.new(
         baca.note_head_font_size(-3),
         baca.accidental_font_size(-3),
@@ -97,7 +99,9 @@ maker(
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
-    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.pitches(
+        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+    ),
     baca.new(
         baca.note_head_font_size(-3),
         baca.accidental_font_size(-3),
@@ -123,15 +127,22 @@ maker(
 
 maker(
     ("perc1", (5, 10)),
-    harmony.sixteenths([1, -23, -1, 1, -22]),
+    harmony.sixteenths(
+        [1, -23, -1, 1, -22],
+    ),
     harmony.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
     ),
-    baca.accent(baca.pheads()),
-    baca.markup(r"\baca-brake-drum-markup", literal=True),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
 )
 
 # perc2
@@ -148,11 +159,20 @@ maker(
 
 maker(
     ("perc2", (5, 10)),
-    harmony.sixteenths([2, -22, -1, 2, -21]),
+    harmony.sixteenths(
+        [2, -22, -1, 2, -21],
+    ),
     harmony.slate_staff_position(),
-    baca.accent(baca.pheads()),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-slate-brush-markup", literal=True),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "f >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
@@ -163,27 +183,39 @@ maker(
 
 maker(
     ("hp", (5, 10)),
-    harmony.sixteenths([-24, -1, 3, -20]),
-    baca.accent(baca.pheads()),
+    harmony.sixteenths(
+        [-24, -1, 3, -20],
+    ),
+    baca.accent(
+        baca.pheads(),
+        ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
     ),
-    baca.laissez_vibrer(baca.ptails()),
+    baca.laissez_vibrer(
+        baca.ptails(),
+        ),
     baca.markup(
         r"\baca-lv-into-fermata-markup",
         literal=True,
         selector=baca.phead(-1),
     ),
-    baca.staff_position(-6, mock=True),
+    baca.staff_position(
+        -6,
+        mock=True,
+    ),
 )
 
 # va
 
 maker(
     ("va", 2),
-    baca.pitch("<C4 D4 E4>", mock=True),
+    baca.pitch(
+        "<C4 D4 E4>",
+        mock=True,
+    ),
 )
 
 maker(
@@ -196,14 +228,20 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando(),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # vc1
 
 maker(
     ("vc1", 2),
-    baca.pitch("<C3 D3 E3>", mock=True),
+    baca.pitch(
+        "<C3 D3 E3>",
+        mock=True,
+    ),
 )
 
 maker(
@@ -216,14 +254,20 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando(),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # vc2
 
 maker(
     ("vc2", 2),
-    baca.pitch("<C3 D3 E3>", mock=True),
+    baca.pitch(
+        "<C3 D3 E3>",
+        mock=True,
+    ),
 )
 
 maker(
@@ -236,14 +280,20 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando(),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # cb1
 
 maker(
     ("cb1", 2),
-    baca.pitch("<C2 D2 E2>", mock=True),
+    baca.pitch(
+        "<C2 D2 E2>",
+        mock=True,
+    ),
 )
 
 maker(
@@ -256,14 +306,20 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando(),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # cb2
 
 maker(
     ("cb2", 2),
-    baca.pitch("<C2 D2 E2>", mock=True),
+    baca.pitch(
+        "<C2 D2 E2>",
+        mock=True,
+    ),
 )
 
 maker(
@@ -276,7 +332,10 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.flat_glissando(),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -284,12 +343,22 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
     baca.make_notes(),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
 )

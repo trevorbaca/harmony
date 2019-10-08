@@ -53,7 +53,9 @@ maker(
 
 maker(
     ("bfl", (1, 6)),
-    harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+    ),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -66,7 +68,9 @@ maker(
 
 maker(
     ("bfl", (9, 10)),
-    harmony.sixteenths([3, -1, 8, -8, 3, -1]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 3, -1],
+    ),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -81,7 +85,9 @@ maker(
 
 maker(
     ("perc1", (1, 6)),
-    harmony.sixteenths([41, -7, "+"]),
+    harmony.sixteenths(
+        [41, -7, "+"],
+    ),
     baca.flat_glissando(
         hide_stem_selector=baca.pleaves()[1:-2],
         selector=baca.run(0),
@@ -91,16 +97,26 @@ maker(
         selector=baca.run(1),
     ),
     harmony.brake_drum_staff_position(),
-    baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
+    baca.markup(
+        r"\baca-brake-drum-paper-towel-markup",
+        literal=True,
+    ),
     baca.dynamic("p"),
 )
 
 maker(
     ("perc1", (9, 10)),
-    harmony.sixteenths([21, "-"]),
-    baca.flat_glissando(do_not_hide_middle_note_heads=True),
+    harmony.sixteenths(
+        [21, "-"],
+    ),
+    baca.flat_glissando(
+        do_not_hide_middle_note_heads=True,
+    ),
     harmony.brake_drum_staff_position(),
-    baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
+    baca.markup(
+        r"\baca-brake-drum-paper-towel-markup",
+        literal=True,
+    ),
 )
 
 # perc2
@@ -109,11 +125,19 @@ maker(
     ("perc2", (1, 6)),
     baca.clef("bass"),
     baca.staff_lines(1),
-    harmony.sixteenths([21, -14, 18, "-"]),
+    harmony.sixteenths(
+        [21, -14, 18, "-"],
+    ),
     harmony.tam_tam_staff_position(),
     baca.accent(baca.pheads()),
-    baca.markup(r"\baca-tam-tam-markup", literal=True),
-    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
+    ),
+    baca.articulation(
+        r"baca-damp",
+        baca.ptails().map(baca.rleak()[-1]),
+    ),
 )
 
 maker(
@@ -124,11 +148,21 @@ maker(
 maker(
     ("perc2", (9, 10)),
     baca.staff_lines(1),
-    harmony.sixteenths([21, "-"]),
+    harmony.sixteenths(
+        [21, "-"],
+    ),
     harmony.tam_tam_staff_position(),
-    baca.markup(r"\baca-tam-tam-markup", literal=True),
-    baca.accent(baca.pheads()),
-    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.articulation(
+        r"baca-damp",
+        baca.ptails().map(baca.rleak()[-1]),
+    ),
 )
 
 # hp
@@ -136,16 +170,30 @@ maker(
 maker(
     ("hp", (1, 6)),
     baca.clef("bass"),
-    harmony.sixteenths([21, -14, 18, "-"]),
-    baca.accent(baca.pheads()),
-    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.sixteenths(
+        [21, -14, 18, "-"],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.articulation(
+        r"baca-damp",
+        baca.ptails().map(baca.rleak()[-1]),
+    ),
 )
 
 maker(
     ("hp", (9, 10)),
-    harmony.sixteenths([21, "-"]),
-    baca.accent(baca.pheads()),
-    baca.articulation(r"baca-damp", baca.ptails().map(baca.rleak()[-1])),
+    harmony.sixteenths(
+        [21, "-"],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.articulation(
+        r"baca-damp",
+        baca.ptails().map(baca.rleak()[-1]),
+    ),
 )
 
 # va
@@ -156,7 +204,10 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         after_graces=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -169,7 +220,10 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         after_graces=[2, 4, 5],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -189,7 +243,9 @@ maker(
 
 maker(
     ("vc1", (9, 10)),
-    harmony.sixteenths([3, -1, 8, -8, 3, -1]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 3, -1],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -200,7 +256,9 @@ maker(
 
 maker(
     ("vc2", (1, 6)),
-    harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -209,7 +267,9 @@ maker(
 
 maker(
     ("vc2", (9, 10)),
-    harmony.sixteenths([3, -1, 8, -8, 3, -1]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 3, -1],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -224,7 +284,10 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         after_graces=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -237,7 +300,10 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         after_graces=[4, 5, 2],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -252,7 +318,10 @@ maker(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
         after_graces=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
@@ -265,7 +334,10 @@ maker(
         [2, 1, -1, 8, -8, 3, -1],
         after_graces=[5, 2, 4],
     ),
-    baca.staff_positions([-2, 2], mock=True),
+    baca.staff_positions(
+        [-2, 2],
+        mock=True,
+    ),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),

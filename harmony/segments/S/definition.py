@@ -77,7 +77,9 @@ maker(
         extra_counts=[2],
         rest_tuplets=[1],
     ),
-    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.pitches(
+        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+    ),
     baca.new(
         baca.note_head_font_size(-3),
         baca.accidental_font_size(-3),
@@ -102,7 +104,9 @@ maker(
     harmony.warble(
         extra_counts=[2],
     ),
-    baca.pitches("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3"),
+    baca.pitches(
+        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+    ),
     baca.new(
         baca.note_head_font_size(-3),
         baca.accidental_font_size(-3),
@@ -134,7 +138,10 @@ maker(
         counts=[0, 5],
         rest_all=True,
     ),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -145,7 +152,10 @@ maker(
 maker(
     ("perc1", (4, 8)),
     baca.staff_lines(3),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
@@ -170,7 +180,10 @@ maker(
 maker(
     ("perc1", 12),
     baca.staff_lines(3),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     harmony.appoggiato(
         divisions=[20],
         counts=[25],
@@ -193,7 +206,10 @@ maker(
         counts=[0, 4],
         rest_all=True,
     ),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -204,7 +220,10 @@ maker(
 maker(
     ("perc2", (4, 8)),
     baca.staff_lines(3),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
@@ -229,7 +248,10 @@ maker(
 maker(
     ("perc2", 12),
     baca.staff_lines(3),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     harmony.appoggiato(
         divisions=[20],
         counts=[24],
@@ -263,16 +285,30 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "o< mp > pp pp < mp >o niente",
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic_text_x_offset(-3, baca.pleaf(1)),
-    baca.dynamic_text_x_offset(-0.25, baca.pleaf(-1)),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.dynamic_text_x_offset(
+        -3,
+        baca.pleaf(1),
+    ),
+    baca.dynamic_text_x_offset(
+        -0.25,
+        baca.pleaf(-1),
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 maker(
@@ -290,12 +326,20 @@ maker(
 
 maker(
     ("hp", (4, 9)),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
-    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
+    ),
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 maker(
@@ -304,9 +348,17 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-bisb-markup", literal=True),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # va
@@ -316,7 +368,10 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # vc1
@@ -326,7 +381,10 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # vc2
@@ -336,7 +394,10 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # cb1
@@ -346,7 +407,10 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # cb2
@@ -356,7 +420,10 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    baca.staff_position([-1, 0, 1], mock=True),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -367,17 +434,33 @@ maker(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
     ),
-    baca.invisible_music(baca.pleaves().get([1], 2)),
-    baca.staff_position([-1, 0, 1], mock=True),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.invisible_music(
+        baca.pleaves().get([1], 2),
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic_text_x_offset(-3, baca.pleaf(1)),
-    baca.dynamic_text_x_offset(-0.25, baca.pleaf(-1)),
+    baca.dynamic_text_x_offset(
+        -3,
+        baca.pleaf(1),
+    ),
+    baca.dynamic_text_x_offset(
+        -0.25,
+        baca.pleaf(-1),
+    ),
 )
 
 maker(
@@ -395,8 +478,13 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -405,9 +493,17 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.staff_position([-1, 0, 1], mock=True),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
 )
 
 maker(

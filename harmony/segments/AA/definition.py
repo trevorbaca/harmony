@@ -93,8 +93,13 @@ maker(
 
 maker(
     ("bfl", 13),
-    harmony.sixteenths([4, "-"]),
-    baca.markup(r"\baca-jet-whistle-markup", literal=True),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.markup(
+        r"\baca-jet-whistle-markup",
+        literal=True,
+    ),
 )
 
 # perc1
@@ -103,7 +108,10 @@ maker(
     ("perc1", (4, 5)),
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
-    baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
+    baca.markup(
+        r"\baca-brake-drum-paper-towel-markup",
+        literal=True,
+    ),
     baca.dynamic("p"),
 )
 
@@ -111,7 +119,10 @@ maker(
     ("perc1", 13),
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
-    baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
+    baca.markup(
+        r"\baca-brake-drum-paper-towel-markup",
+        literal=True,
+    ),
     baca.dynamic("p"),
 )
 
@@ -120,9 +131,16 @@ maker(
 maker(
     ("perc2", 1),
     baca.staff_lines(3),
-    harmony.sixteenths([4, -20, 4]),
-    baca.accent(baca.pheads()),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.sixteenths(
+        [4, -20, 4],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     baca.dynamic("f"),
 )
 
@@ -134,7 +152,9 @@ maker(
        fuse=True,
        do_not_rewrite_meter=True,
     ),
-    baca.accent(baca.pheads()),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 maker(
@@ -146,19 +166,37 @@ maker(
 
 maker(
     ("hp", 1),
-    harmony.sixteenths([-24, 4]),
-    baca.accent(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
-    baca.markup(r"\baca-pince-markup", literal=True),
+    harmony.sixteenths(
+        [-24, 4],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-pince-markup",
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
 maker(
     ("hp", (4, 5)),
-    harmony.sixteenths([4, "-"]),
-    baca.accent(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
-    baca.markup(r"\baca-pince-markup", literal=True),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-pince-markup",
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
@@ -200,12 +238,16 @@ sixteenths = baca.sequence([6, -2, 4, -2, 4, -2, 2, -2])
 
 maker(
     ("vc1", 4),
-    harmony.sixteenths(sixteenths[:4] + ["-"])
+    harmony.sixteenths(
+        sixteenths[:4] + ["-"],
+    )
 )
 
 maker(
     ("vc1", 5),
-    harmony.sixteenths(sixteenths),
+    harmony.sixteenths(
+        sixteenths,
+    ),
 )
 
 maker(
@@ -221,12 +263,16 @@ maker(
 
 maker(
     ("vc2", 4),
-    harmony.sixteenths(sixteenths.rotate(-2)[:4] + ["-"]),
+    harmony.sixteenths(
+        sixteenths.rotate(-2)[:4] + ["-"],
+    ),
 )
 
 maker(
     ("vc2", 5),
-    harmony.sixteenths(sixteenths.rotate(-2)),
+    harmony.sixteenths(
+        sixteenths.rotate(-2),
+    ),
 )
 
 maker(
@@ -242,12 +288,16 @@ maker(
 
 maker(
     ("cb1", 4),
-    harmony.sixteenths(sixteenths.rotate(-4)[:4] + ["-"]),
+    harmony.sixteenths(
+        sixteenths.rotate(-4)[:4] + ["-"],
+    ),
 )
 
 maker(
     ("cb1", 5),
-    harmony.sixteenths(sixteenths.rotate(-4)),
+    harmony.sixteenths(
+        sixteenths.rotate(-4),
+    ),
 )
 
 maker(
@@ -263,12 +313,16 @@ maker(
 
 maker(
     ("cb2", 4),
-    harmony.sixteenths(sixteenths.rotate(-6)[:4] + ["-"]),
+    harmony.sixteenths(
+        sixteenths.rotate(-6)[:4] + ["-"],
+        ),
 )
 
 maker(
     ("cb2", 5),
-    harmony.sixteenths(sixteenths.rotate(-6)),
+    harmony.sixteenths(
+        sixteenths.rotate(-6),
+    ),
 )
 
 maker(

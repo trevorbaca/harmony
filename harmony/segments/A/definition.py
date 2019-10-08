@@ -80,6 +80,17 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", 3),
+    harmony.sixteenths(
+        harmony.cerulean[1:],
+    ),
+    baca.covered_spanner(
+        abjad.tweak(3).staff_padding,
+        argument=r"\baca-cov-markup =|",
+    ),
+)
+
 # perc1
 
 maker(
@@ -150,6 +161,20 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+    harmony.phjc(
+        [2, 1, 1],
+        [2, 2, 2, 2, 2, 2, 2, 1],
+        extra_counts=[2],
+        rest_most=True,
+    ),
+    baca.staff_positions(
+        [0, 0, -2, 0, -2],
+        allow_repeats=True,
+    ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
+    baca.dynamic("f"),
 )
 
 # perc2
@@ -187,6 +212,20 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+    harmony.phjc(
+        [1, 2],
+        [2, 2, 2, 2, 2, 2, 2, 1],
+        extra_counts=[0, 6],
+        rest_most=True,
+    ),
+    baca.staff_positions(
+        [0, 0, -2, 0, -2],
+        allow_repeats=True,
+    ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
+    baca.dynamic("f"),
 )
 
 # hp
@@ -200,7 +239,9 @@ maker(
             literal=True,
         ),
     ),
-    harmony.sixteenths([4, -14, 4, -2, 4, -6, 4, 4, -2]),
+    harmony.sixteenths(
+        [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    ),
     baca.staff_lines(1),
     harmony.whisk_staff_position(),
     baca.markup(
@@ -213,6 +254,22 @@ maker(
 maker(
     ("hp", 3),
     baca.staff_lines(5),
+    baca.clef("bass"),
+    harmony.sixteenths(
+        [10, "-"],
+    ),
+    baca.chunk(
+        baca.staff_position(-14, mock=True),
+        baca.no_ledgers(),
+        baca.ottava_bassa(),
+    ),
+    baca.tenuto(
+        baca.pheads(),
+    ),
+    baca.articulation(
+        r"baca-damp",
+        baca.ptails().map(baca.rleak()[-1]),
+    ),
 )
 
 # va
@@ -243,7 +300,15 @@ maker(
 
 maker(
     ("va", 3),
+    baca.clef("percussion"),
     baca.staff_lines(1),
+    harmony.sixteenths(
+        harmony.cerulean[1:],
+        extra_counts=[2],
+    ),
+    baca.staff_position(0),
+    baca.stem_tremolo(baca.pleaves()),
+    baca.dynamic("sfp"),
 )
 
 # vc1
@@ -258,15 +323,31 @@ maker(
             literal=True,
         ),
     ),
-    baca.skeleton(r"r4 \times 5/3 { c4 c2 } \times 5/3 { c4 c4 c4 }"),
+    baca.skeleton(
+        r"r4 \times 5/3 { c4 c2 } \times 5/3 { c4 c4 c4 }",
+    ),
     baca.dynamic("p"),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.accent(baca.pheads()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 maker(
     ("vc1", 3),
+    baca.clef("percussion"),
     baca.staff_lines(1),
+    harmony.sixteenths(
+        harmony.cerulean[1:],
+        extra_counts=[1],
+    ),
+    baca.staff_position(0),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.dynamic("sfp"),
 )
 
 # vc2
@@ -295,6 +376,23 @@ maker(
     ),
 )
 
+maker(
+    ("vc2", 3),
+    harmony.sixteenths(
+        [10, "-"],
+        untie=True,
+        after_graces=[1],
+    ),
+    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(grace=False),
+    ),
+)
+
 # cb1
 
 maker(
@@ -311,15 +409,30 @@ maker(
 
 maker(
     ("cb1", (1, 2)),
-    harmony.sixteenths([18, 6, 10, 4, 6]), 
+    harmony.sixteenths(
+        [18, 6, 10, 4, 6],
+    ), 
     baca.dynamic("p"),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.accent(baca.pheads()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 maker(
     ("cb1", 3),
     baca.staff_lines(1),
+    baca.clef("percussion"),
+    harmony.sixteenths(
+        harmony.cerulean[1:],
+    ),
+    baca.staff_position(0),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.dynamic("sfp"),
 )
 
 # cb2
@@ -345,5 +458,22 @@ maker(
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
+    ),
+)
+
+maker(
+    ("cb2", 3),
+    harmony.sixteenths(
+        [10, "-"],
+        untie=True,
+        after_graces=[1],
+    ),
+    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(grace=False),
     ),
 )

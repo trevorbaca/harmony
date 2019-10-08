@@ -66,10 +66,16 @@ maker(
 
 maker(
     ("bfl", (4, 6)),
-    harmony.sixteenths([4]),
-    baca.triple_staccato(baca.cmgroups().map(baca.leaves().get([0, -1]))),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.triple_staccato(
+        baca.cmgroups().map(baca.leaves().get([0, -1])),
+    ),
     baca.dynamic("mp"),
-    baca.espressivo(baca.pheads()),
+    baca.espressivo(
+        baca.pheads(),
+    ),
     baca.text_spanner(
         "mph =|",
         abjad.tweak(3).staff_padding,
@@ -83,21 +89,39 @@ maker(
 
 maker(
     ("perc1", 1),
-    harmony.sixteenths([-16, 4]),
+    harmony.sixteenths(
+        [-16, 4],
+    ),
     harmony.bass_drum_staff_position(),
-    baca.accent(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
-    baca.markup(r"\baca-bd-struck-markup", literal=True),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
 maker(
     ("perc1", (4, 6)),
-    harmony.sixteenths([4, -12, 4, 4, -12, 4, 4, -16, 4]),
+    harmony.sixteenths(
+        [4, -12, 4, 4, -12, 4, 4, -16, 4],
+    ),
     harmony.bass_drum_staff_position(),
-    baca.accent(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
-    baca.markup(r"\baca-bd-struck-markup", literal=True),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
@@ -106,9 +130,16 @@ maker(
 maker(
     ("perc2", 6),
     baca.staff_lines(5),
-    harmony.sixteenths([4, "-"]),
-    baca.markup(r"\baca-glockenspiel-markup", literal=True),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        literal=True,
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 maker(
@@ -120,24 +151,39 @@ maker(
 
 maker(
     ("hp", 6),
-    harmony.sixteenths([4, "-"]),
-    baca.markup(r"\baca-xyl-markup", literal=True),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.markup(
+        r"\baca-xyl-markup",
+        literal=True,
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 # va
 
 maker(
     ("va", 1),
-    harmony.sixteenths([4, "-"]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("ff"),
 )
 
 maker(
     ("va", (4, 6)),
-    harmony.sixteenths([4]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("p"),
 )
 
@@ -145,15 +191,23 @@ maker(
 
 maker(
     ("vc1", 1),
-    harmony.sixteenths([4, "-"]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("ff"),
 )
 
 maker(
     ("vc1", (4, 6)),
-    harmony.sixteenths([4]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("p"),
 )
 
@@ -172,15 +226,23 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.sixteenths([4, "-"]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("ff"),
 )
 
 maker(
     ("cb1", 6),
-    harmony.sixteenths([4]),
-    baca.triple_staccato(baca.pheads()),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
     baca.dynamic("p"),
 )
 

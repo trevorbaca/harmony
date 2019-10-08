@@ -68,7 +68,9 @@ maker(
 
 maker(
     ("bfl", [(1, 2), (5, 7), 10]),
-    harmony.sixteenths([4, -12]),
+    harmony.sixteenths(
+        [4, -12],
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -81,9 +83,14 @@ maker(
 
 maker(
     ("perc1", [(1, 2), (5, 7), 10]),
-    harmony.sixteenths([4, -12]),
+    harmony.sixteenths(
+        [4, -12],
+    ),
     harmony.slate_staff_position(),
-    baca.markup(r"\baca-slate-scrape-markup", literal=True),
+    baca.markup(
+        r"\baca-slate-scrape-markup",
+        literal=True,
+    ),
     baca.dynamic("mf"),
 )
 
@@ -108,11 +115,20 @@ maker(
 
 maker(
     ("hp", (1, 2)),
-    harmony.sixteenths([-10, 2, -4, -14, 2]),
+    harmony.sixteenths(
+        [-10, 2, -4, -14, 2],
+    ),
     baca.clef("treble"),
-    baca.pitch("<C5 D5>", mock=True),
-    baca.flageolet(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
+    baca.pitch(
+        "<C5 D5>",
+        mock=True,
+    ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-lv-into-fermata-markup",
@@ -124,19 +140,37 @@ maker(
 
 maker(
     ("hp", (5, 7)),
-    harmony.sixteenths([-10, 2, -4, -14, 2, -8, 2, -6]),
-    baca.pitch("<C5 D5>", mock=True),
-    baca.flageolet(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [-10, 2, -4, -14, 2, -8, 2, -6],
+    ),
+    baca.pitch(
+        "<C5 D5>",
+        mock=True,
+    ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.dynamic("f"),
 )
 
 maker(
     ("hp", 10),
-    harmony.sixteenths([2, -14]),
-    baca.pitch("<C5 D5>", mock=True),
-    baca.flageolet(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [2, -14],
+    ),
+    baca.pitch(
+        "<C5 D5>",
+        mock=True,
+    ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.dynamic("f"),
 )
 
@@ -154,7 +188,9 @@ maker(
 
 maker(
     (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
-    harmony.sixteenths([4, -12]),
+    harmony.sixteenths(
+        [4, -12],
+    ),
     baca.hairpin(
         "o<| ff",
         map=baca.runs().map(baca.leaves().rleak()),

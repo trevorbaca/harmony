@@ -54,7 +54,9 @@ maker(
 
 maker(
     ("bfl", (1, 3)),
-    harmony.sixteenths([2, 3, -3]),
+    harmony.sixteenths(
+        [2, 3, -3],
+    ),
     baca.hairpin(
         "niente o< mf >o",
         pieces=baca.lparts([1, 2 + 1]),
@@ -74,7 +76,9 @@ maker(
 
 maker(
     ("bfl", (5, 8)),
-    harmony.sixteenths([2, 2, -2]),
+    harmony.sixteenths(
+        [2, 2, -2],
+    ),
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
@@ -97,38 +101,60 @@ maker(
 
 maker(
     ("perc1", (1, 3)),
-    harmony.sixteenths([5, -3]),
+    harmony.sixteenths(
+        [5, -3],
+    ),
     harmony.slate_staff_position(),
-    baca.markup(r"\baca-slate-scrape-markup", literal=True),
+    baca.markup(
+        r"\baca-slate-scrape-markup",
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
 maker(
     ("perc1", (5, 8)),
-    harmony.sixteenths([3, -3]),
+    harmony.sixteenths(
+        [3, -3],
+    ),
     harmony.slate_staff_position(),
-    baca.markup(r"\baca-slate-scrape-markup", literal=True),
+    baca.markup(
+        r"\baca-slate-scrape-markup",
+        literal=True,
+    ),
     baca.dynamic("p"),
 )
 
 maker(
     ("perc1", 9),
-    harmony.sixteenths([19, -1]),
-    baca.stem_tremolo(baca.pleaves()),
+    harmony.sixteenths(
+        [19, -1],
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "p >o niente",
     ),
     harmony.tam_tam_staff_position(),
-    baca.markup(r"\baca-tam-tam-markup", literal=True),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
+    ),
 )
 
 # perc2
 
 maker(
     ("perc2", (1, 3)),
-    harmony.sixteenths([2, -8, 2, -3, 2, -8]),
+    harmony.sixteenths(
+        [2, -8, 2, -3, 2, -8],
+    ),
     harmony.bass_drum_staff_position(),
-    baca.markup(r"\baca-bd-superball-markup", literal=True),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "o<| mf",
         map=baca.runs().map(baca.leaves().rleak()),
@@ -138,35 +164,65 @@ maker(
 maker(
     ("perc2", 5),
     baca.staff_lines(3),
-    harmony.sixteenths([1, "-"]),
-    baca.markup(r"\baca-purpleheart-markup", literal=True),
+    harmony.sixteenths(
+        [1, "-"],
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     baca.accent(),
     baca.dynamic("f"),
 )
 
 maker(
     ("perc2", 9),
-    harmony.sixteenths([1, "-"]),
+    harmony.sixteenths(
+        [1, "-"],
+    ),
     baca.accent(),
-    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
+    baca.dynamic(
+        "f-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
 )
 
 # hp
 
 maker(
     ("hp", (1, 3)),
-    harmony.sixteenths([1, -9, 1, -4, 1, -9]),
-    baca.markup(r"\baca-pdlt-markup", literal=True),
-    baca.dynamic("mf", selector=baca.pheads().get([0], 3)),
-    baca.dynamic("mp", selector=baca.pheads().get([1], 3)),
-    baca.accent(baca.pheads()),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [1, -9, 1, -4, 1, -9],
+    ),
+    baca.markup(
+        r"\baca-pdlt-markup",
+        literal=True,
+    ),
+    baca.dynamic(
+        "mf",
+        selector=baca.pheads().get([0], 3),
+    ),
+    baca.dynamic(
+        "mp",
+        selector=baca.pheads().get([1], 3),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 maker(
     ("hp", (5, 8)),
-    harmony.sixteenths([3, -3]),
-    baca.markup(r"\baca-whisk-markup", literal=True),
+    harmony.sixteenths(
+        [3, -3],
+    ),
+    baca.markup(
+        r"\baca-whisk-markup",
+        literal=True,
+    ),
     baca.dynamic("p"),
 )
 
@@ -255,8 +311,14 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.accent(baca.pheads()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+        ),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.dynamic("pp"),
-    #baca.label(abjad.label().with_durations(denominator=16)),
+#    baca.label(
+#        abjad.label().with_durations(denominator=16),
+#    ),
 )
