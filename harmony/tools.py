@@ -180,7 +180,7 @@ def sixteenths(
     written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     written_eighths: typing.Union[abjad.PatternTyping, bool] = None,
     written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
-    invisible: typing.Tuple[abjad.IntegerSequence, int] = None,
+    invisible: typing.Union[abjad.PatternTyping, bool] = None,
     invisible_pairs: bool = None,
     tie: abjad.PatternTyping = None,
     tie_runs: bool = None,
