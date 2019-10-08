@@ -750,7 +750,7 @@ L_Percussion_I_Music_Voice = {                                                 %
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)               %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_STAFF_LINES_COLOR
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2.                                                                       %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "sixteenths([12, 16, -4])"                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT
@@ -759,33 +759,36 @@ L_Percussion_I_Music_Voice = {                                                 %
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
 
     % [L Percussion_I_Music_Voice measure 102 / measure 4]                     %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
     % [L Percussion_I_Music_Voice measure 103 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2.                                                                       %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     % [L Percussion_I_Music_Voice measure 104 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
     % [L Percussion_I_Music_Voice measure 105 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'2.                                                                       %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     % [L Percussion_I_Music_Voice measure 106 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -1057,8 +1060,9 @@ L_Percussion_II_Music_Voice = {                                                %
     % [L Percussion_II_Music_Voice measure 102 / measure 4]                    %! baca.SegmentMaker._comment_measure_numbers()
     \override Stem.direction = #down                                           %! baca.stem_down():baca.OverrideCommand._call(1)
     \override LaissezVibrerTie.direction = #up                                 %! baca.laissez_vibrer_tie_up():baca.OverrideCommand._call(1)
+    \once \override LaissezVibrerTie.direction = #up
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-tam-tam-markup                                                     %! baca.markup():baca.IndicatorCommand._call()
 
@@ -1068,8 +1072,9 @@ L_Percussion_II_Music_Voice = {                                                %
     r2.                                                                        %! harmony.sixteenths()
 
     % [L Percussion_II_Music_Voice measure 104 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -1077,8 +1082,9 @@ L_Percussion_II_Music_Voice = {                                                %
     r2.                                                                        %! harmony.sixteenths()
 
     % [L Percussion_II_Music_Voice measure 106 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     c'1                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
     \revert LaissezVibrerTie.direction                                         %! baca.laissez_vibrer_tie_up():baca.OverrideCommand._call(2)
 
@@ -1316,7 +1322,7 @@ L_Harp_Music_Voice = {                                                         %
     % [L Harp_Music_Voice measure 101 / measure 3]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "sixteenths([12, 16, -4])"                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT
@@ -1325,33 +1331,36 @@ L_Harp_Music_Voice = {                                                         %
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
 
     % [L Harp_Music_Voice measure 102 / measure 4]                             %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
     % [L Harp_Music_Voice measure 103 / measure 5]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     % [L Harp_Music_Voice measure 104 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
     % [L Harp_Music_Voice measure 105 / measure 7]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d2.                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     % [L Harp_Music_Voice measure 106 / measure 8]                             %! baca.SegmentMaker._comment_measure_numbers()
+    \once \override LaissezVibrerTie.direction = #up
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

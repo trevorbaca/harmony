@@ -1210,7 +1210,7 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 183 / measure 3]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     ^ \baca-sons-xylophoniques-markup                                          %! baca.markup():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
     - \baca-text-spanner-left-text "sixteenths([2, -20, 2, -24])"              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
@@ -1230,7 +1230,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1240,7 +1240,7 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 186 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1253,7 +1253,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r2                                                                         %! harmony.sixteenths()
 
@@ -1263,7 +1263,7 @@ T_Harp_Music_Voice = {                                                         %
     % [T Harp_Music_Voice measure 189 / measure 9]                             %! baca.SegmentMaker._comment_measure_numbers()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
@@ -1276,7 +1276,7 @@ T_Harp_Music_Voice = {                                                         %
 
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r2                                                                         %! harmony.sixteenths()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

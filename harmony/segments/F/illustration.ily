@@ -1141,7 +1141,7 @@ F_Percussion_II_Music_Voice = {                                                %
     \once \override Stem.direction = #up                                       %! baca.stem_up():baca.OverrideCommand._call(1)
     c'8                                                                        %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -1377,7 +1377,7 @@ F_Harp_Music_Voice = {                                                         %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     ^ \baca-pdlt-markup                                                        %! baca.markup():baca.IndicatorCommand._call()
 
     r2.                                                                        %! harmony.sixteenths()
@@ -1387,7 +1387,7 @@ F_Harp_Music_Voice = {                                                         %
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     b'8                                                                        %! harmony.sixteenths()
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    - \laissezVibrer                                                           %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -1460,14 +1460,14 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         r1
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
@@ -1487,7 +1487,7 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'4
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
@@ -1499,7 +1499,7 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \baca-text-spanner-left-text "tuplet([(1, 1, -1, 1, -1, -6)])"       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT
@@ -1510,14 +1510,14 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         r8
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         r8
 
@@ -1541,12 +1541,12 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'4
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'4
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
@@ -1558,7 +1558,7 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \baca-text-spanner-left-text "tuplet([(1, 1, 1, 1, 1, -7)])"         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
         - \tweak bound-details.right.padding #2.75                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT
@@ -1569,22 +1569,22 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         r2..
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -1608,27 +1608,27 @@ F_Harp_Music_Voice = {                                                         %
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         b'8
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         r4
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

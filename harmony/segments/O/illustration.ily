@@ -893,7 +893,7 @@ O_Harp_Music_Voice = {                                                         %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
@@ -946,7 +946,7 @@ O_Harp_Music_Voice = {                                                         %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
@@ -999,7 +999,7 @@ O_Harp_Music_Voice = {                                                         %
         \baca-mock-coloring                                                    %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
         <a' b'>4
         - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
-        - \laissezVibrer                                                       %! baca.laissez_vibrer():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }
