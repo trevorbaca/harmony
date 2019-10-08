@@ -82,6 +82,14 @@ maker(
 maker(
     ("perc1", (1, 6)),
     harmony.sixteenths([41, -7, "+"]),
+    baca.flat_glissando(
+        hide_stem_selector=baca.pleaves()[1:-2],
+        selector=baca.run(0),
+    ),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        selector=baca.run(1),
+    ),
     harmony.brake_drum_staff_position(),
     baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
     baca.dynamic("p"),
@@ -90,6 +98,7 @@ maker(
 maker(
     ("perc1", (9, 10)),
     harmony.sixteenths([21, "-"]),
+    baca.flat_glissando(do_not_hide_middle_note_heads=True),
     harmony.brake_drum_staff_position(),
     baca.markup(r"\baca-brake-drum-paper-towel-markup", literal=True),
 )

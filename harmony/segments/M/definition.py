@@ -61,11 +61,15 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths([2, 2, 4, "-"]),
-    baca.repeat_tie(baca.pleaves()[1:]),
+    harmony.sixteenths(
+        [2, 2, 4, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+    baca.repeat_tie(baca.pleaf(-1)),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
-        "o< f >o niente",
+        "o<| f |>o niente",
         pieces=baca.lparts([1, 2 + 1]),
         selector=baca.tleaves().rleak(),
     ),
@@ -73,11 +77,14 @@ maker(
 
 maker(
     ("bfl", 3),
-    harmony.sixteenths([-20, 2, 2]),
-    baca.repeat_tie(baca.pleaf(-1)),
+    harmony.sixteenths(
+        ["-", 2, 2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
-        "o< f >o niente",
+        "o<| f |>o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
