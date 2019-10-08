@@ -110,8 +110,13 @@ maker(
         hide_middle_stems=True,
     ),
     harmony.triangle_staff_position(),
-    baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.hairpin(
         "p < mp > p p < mp > p",
         pieces=baca.clparts([1]),
@@ -131,8 +136,13 @@ maker(
         hide_middle_stems=True,
     ),
     harmony.triangle_staff_position(),
-    baca.markup(r"\baca-triangle-markup", literal=True),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
@@ -150,7 +160,10 @@ maker(
     ("perc2", (1, 4)),
     baca.clef("treble"),
     baca.staff_lines(5),
-    baca.markup(r"\baca-glockenspiel-markup", literal=True),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        literal=True,
+    ),
     harmony.sixteenths([2, -6, -2, 2, -4]),
     baca.laissez_vibrer(baca.ptails()),
 )
@@ -174,8 +187,12 @@ maker(
 
 maker(
     ("perc2", 10),
-    harmony.sixteenths([-2, 2, -8]),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [-2, 2, -8],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 # hp
@@ -183,8 +200,12 @@ maker(
 maker(
     ("hp", (1, 4)),
     baca.clef("bass"),
-    harmony.sixteenths([4, -12]),
-    baca.laissez_vibrer(baca.ptails()),
+    harmony.sixteenths(
+        [4, -12],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 # va
@@ -216,8 +237,13 @@ maker(
     ("vc1", (1, 4)),
     baca.clef("bass"),
     baca.staff_lines(5),
-    harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], mock=True),
+    harmony.sixteenths(
+        [10, 6],
+    ),
+    baca.staff_positions(
+        [2, -2],
+        mock=True,
+    ),
     baca.glissando(),
 )
 
@@ -234,7 +260,10 @@ maker(
         forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
-    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "niente",
+        selector=baca.leaves().rleak()[-1],
+    ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
@@ -245,8 +274,13 @@ maker(
 
 maker(
     ("vc2", (1, 4)),
-    harmony.sixteenths([10, 6]),
-    baca.staff_positions([2, -2], mock=True),
+    harmony.sixteenths(
+        [10, 6],
+    ),
+    baca.staff_positions(
+        [2, -2],
+        mock=True,
+    ),
     baca.glissando(),
 )
 
@@ -263,7 +297,10 @@ maker(
         forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
-    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "niente",
+        selector=baca.leaves().rleak()[-1],
+    ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
@@ -277,7 +314,9 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.note_head_style_harmonic(),
-    harmony.sixteenths([4, 4, -8]),
+    harmony.sixteenths(
+        [4, 4, -8],
+    ),
     baca.hairpin(
         "niente o< mf >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
@@ -302,7 +341,10 @@ maker(
         forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
     ),
-    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "niente",
+        selector=baca.leaves().rleak()[-1],
+    ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
@@ -315,7 +357,10 @@ maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
     baca.flat_glissando(),
-    baca.staff_position(-6, mock=True),
+    baca.staff_position(
+        -6,
+        mock=True,
+    ),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
@@ -326,7 +371,10 @@ maker(
     ("cb2", (7, 10)),
     baca.make_notes(),
     baca.flat_glissando(),
-    baca.staff_position(-6, mock=True),
+    baca.staff_position(
+        -6,
+        mock=True,
+    ),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,

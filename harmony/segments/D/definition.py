@@ -63,17 +63,28 @@ maker(
 
 maker(
     ("bfl", (1, 6)),
-    harmony.tessera_1(6, gap=True),
+    harmony.tessera_1(
+        6,
+        gap=True,
+    ),
 )
 
 maker(
     ("bfl", 8),
-    harmony.tessera_1(6, advance=72, gap=True),
+    harmony.tessera_1(
+        6,
+        advance=72,
+        gap=True,
+    ),
 )
 
 maker(
     ("bfl", 11),
-    harmony.tessera_1(6, advance=72 + 12, gap=True),
+    harmony.tessera_1(
+        6,
+        advance=72 + 12,
+        gap=True,
+    ),
 )
 
 # perc1
@@ -83,19 +94,28 @@ maker(
     harmony.phjc(
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
-        #rmakers.force_rest(baca.tuplets().exclude([0, 1, 2, -4, -3, -2])),
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     ),
     baca.new(
-        baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
+        baca.staff_positions(
+            [0, -2, 0, -2, 0],
+            allow_repeats=True,
+        ),
         measures=(1, 2),
     ),
     baca.new(
-        baca.staff_positions([0, 2, 0, 2, 2], allow_repeats=True),
+        baca.staff_positions(
+            [0, 2, 0, 2, 2],
+            allow_repeats=True,
+        ),
         measures=(5, 6),
     ),
-    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X, measures=5),
+    baca.dynamic(
+        "f-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+        measures=5,
+    ),
     baca.dls_staff_padding(9),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
@@ -109,7 +129,10 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
     ),
-    baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
+    baca.staff_positions(
+        [0, -2, 0, -2, 0],
+        allow_repeats=True,
+    ),
     baca.dynamic("p"),
     baca.dls_staff_padding(9),
     baca.stem_down(),
@@ -124,7 +147,10 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
     ),
-    baca.staff_positions([0, -2, 0, 0, -2], allow_repeats=True),
+    baca.staff_positions(
+        [0, -2, 0, 0, -2],
+        allow_repeats=True,
+    ),
     baca.dynamic("f"),
     baca.dls_staff_padding(9),
     baca.stem_down(),
@@ -141,7 +167,10 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
-    baca.staff_positions([0, -2, 0, -2, 0], allow_repeats=True),
+    baca.staff_positions(
+        [0, -2, 0, -2, 0],
+        allow_repeats=True,
+    ),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
@@ -149,18 +178,31 @@ maker(
 
 maker(
     ("perc2", (5, 6)),
-    harmony.train([2], rest_leaves=[0]),
+    harmony.train(
+        [2],
+        rest_leaves=[0],
+    ),
     baca.staff_position(2),
-    baca.accent(baca.pheads()),
-    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic(
+        "f-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
     baca.dls_staff_padding(5),
 )
 
 maker(
     ("perc2", 8),
-    harmony.train([2], rest_leaves=[0, 1, 2]),
+    harmony.train(
+        [2],
+        rest_leaves=[0, 1, 2],
+    ),
     baca.staff_position(2),
-    baca.accent(baca.pheads()),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.dynamic("p"),
     baca.dls_staff_padding(5),
 )
@@ -173,7 +215,10 @@ maker(
 maker(
     ("perc2", 11),
     baca.staff_lines(3),
-    harmony.train([2], rest_leaves=[0]),
+    harmony.train(
+        [2],
+        rest_leaves=[0],
+    ),
     baca.staff_position(2),
     baca.accent(baca.pheads()),
     baca.dynamic("f"),
@@ -190,24 +235,37 @@ maker(
 
 maker(
     ("hp", 8),
-    harmony.tessera_1(5, advance=72),
+    harmony.tessera_1(
+        5,
+        advance=72,
+    ),
 )
 
 maker(
     ("hp", 11),
-    harmony.tessera_1(5, advance=72 + 12),
+    harmony.tessera_1(
+        5,
+        advance=72 + 12,
+    ),
 )
 
 # va
 
 maker(
     ("va", (1, 6)),
-    harmony.tessera_1(4, gap=True),
+    harmony.tessera_1(
+        4,
+        gap=True,
+    ),
 )
 
 maker(
     ("va", 8),
-    harmony.tessera_1(4, advance=72, gap=True),
+    harmony.tessera_1(
+        4,
+        advance=72,
+        gap=True,
+    ),
 )
 
 maker(
@@ -220,7 +278,11 @@ maker(
     ("va", 11),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.tessera_1(4, advance=72 + 12, gap=True),
+    harmony.tessera_1(
+        4,
+        advance=72 + 12,
+        gap=True,
+    ),
 )
 
 maker(
@@ -234,34 +296,56 @@ maker(
     ("vc1", (1, 6)),
     baca.staff_lines(5),
     baca.clef("bass"),
-    harmony.tessera_1(3, gap=True),
+    harmony.tessera_1(
+        3,
+        gap=True,
+    ),
 )
 
 maker(
     ("vc1", 8),
-    harmony.tessera_1(3, advance=72, gap=True),
+    harmony.tessera_1(
+        3,
+        advance=72,
+        gap=True,
+    ),
 )
 
 maker(
     ("vc1", 11),
-    harmony.tessera_1(3, advance=72 + 12, gap=True),
+    harmony.tessera_1(
+        3,
+        advance=72 + 12,
+        gap=True,
+    ),
 )
 
 # vc2
 
 maker(
     ("vc2", (1, 6)),
-    harmony.tessera_1(2, gap=True),
+    harmony.tessera_1(
+        2,
+        gap=True,
+    ),
 )
 
 maker(
     ("vc2", 8),
-    harmony.tessera_1(2, advance=72, gap=True),
+    harmony.tessera_1(
+        2,
+        advance=72,
+        gap=True,
+    ),
 )
 
 maker(
     ("vc2", 11),
-    harmony.tessera_1(2, advance=72 + 12, gap=True),
+    harmony.tessera_1(
+        2,
+        advance=72 + 12,
+        gap=True,
+    ),
 )
 
 # vc1, vc2
@@ -280,17 +364,26 @@ maker(
     baca.staff_lines(5),
     baca.clef("treble"),
     harmony.tessera_1(1),
-    baca.markup(r"\baca-pizz-markup", literal=True),
+    baca.markup(
+        r"\baca-pizz-markup",
+        literal=True,
+    ),
 )
 
 maker(
     ("cb1", 8),
-    harmony.tessera_1(1, advance=72),
+    harmony.tessera_1(
+        1,
+        advance=72,
+    ),
 )
 
 maker(
     ("cb1", 11),
-    harmony.tessera_1(1, advance=72 + 12),
+    harmony.tessera_1(
+        1,
+        advance=72 + 12,
+    ),
 )
 
 # cb2
@@ -299,17 +392,26 @@ maker(
     ("cb2", (1, 6)),
     baca.clef("treble"),
     harmony.tessera_1(0),
-    baca.markup(r"\baca-pizz-markup", literal=True),
+    baca.markup(
+        r"\baca-pizz-markup",
+        literal=True,
+    ),
 )
 
 maker(
     ("cb2", 8),
-    harmony.tessera_1(0, advance=72),
+    harmony.tessera_1(
+        0,
+        advance=72,
+    ),
 )
 
 maker(
     ("cb2", 11),
-    harmony.tessera_1(0, advance=72 + 12),
+    harmony.tessera_1(
+        0,
+        advance=72 + 12,
+    ),
 )
 
 # cb1, cb2
@@ -323,6 +425,10 @@ maker(
 
 maker(
     (["bfl", "hp", "va", "vc1", "vc2", "cb1", "cb2"], [(1, 6), 8, 11]),
-    baca.accent(baca.pheads()),
-    ###baca.label(abjad.label().with_durations(denominator=16)),
+    baca.accent(
+        baca.pheads(),
+    ),
+#    baca.label(
+#        abjad.label().with_durations(denominator=16),
+#    ),
 )

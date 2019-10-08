@@ -62,10 +62,20 @@ maker(
 
 maker(
     ("perc1", (1, 6)),
-    harmony.sixteenths([1, -11, -1, 1, -14]),
-    baca.accent(baca.pheads()),
-    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
-    baca.markup(r"\baca-brake-drum-markup", literal=True),
+    harmony.sixteenths(
+        [1, -11, -1, 1, -14],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic(
+        "f-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
 )
 
 # perc2
@@ -78,15 +88,21 @@ maker(
         left_broken=True,
     ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaf(-1)),
+    baca.stem_tremolo(
+        baca.pleaf(-1),
+    ),
 )
 
 maker(
     ("perc2", (8, 9)),
     baca.make_notes(),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
 )
 
 # hp
@@ -102,9 +118,17 @@ maker(
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     ),
-    baca.pitch("<A4 B4 C5>", mock=True),
-    baca.stem_tremolo(baca.pleaves()),
-    baca.markup(r"\baca-bisb-markup", literal=True),
+    baca.pitch(
+        "<A4 B4 C5>",
+        mock=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "p < mf > p",
         measures=1,
@@ -128,8 +152,13 @@ maker(
 maker(
     ("hp", (8, 9)),
     baca.make_notes(),
-    baca.pitch("<A4 B4 C5>", mock=True),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.pitch(
+        "<A4 B4 C5>",
+        mock=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic("pp"),
 )
 
@@ -199,8 +228,13 @@ maker(
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     ),
-    baca.stem_tremolo(baca.pleaves(exclude=abjad.const.HIDDEN)),
-    baca.markup(r"\baca-quasi-bisb-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves(exclude=abjad.const.HIDDEN),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "p < mf > p",
         measures=2,
@@ -224,7 +258,12 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
     baca.make_notes(),
-    baca.stem_tremolo(baca.pleaves(exclude=abjad.const.HIDDEN)),
-    baca.markup(r"\baca-quasi-bisb-ancora-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pleaves(exclude=abjad.const.HIDDEN),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-ancora-markup",
+        literal=True,
+    ),
     baca.dynamic("pp"),
 )

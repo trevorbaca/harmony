@@ -97,8 +97,13 @@ maker(
     baca.flat_glissando(),
     harmony.triangle_staff_position(),
     baca.dynamic("p"),
-    baca.stem_tremolo(baca.pheads().get([0, -1])),
-    baca.markup(r"\baca-triangle-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pheads().get([0, -1]),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
 )
 
 # perc2
@@ -109,8 +114,13 @@ maker(
     baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
     baca.dynamic("p"),
-    baca.stem_tremolo(baca.pheads().get([0, -1])),
-    baca.markup(r"\baca-bd-fingertips-markup", literal=True),
+    baca.stem_tremolo(
+        baca.pheads().get([0, -1]),
+    ),
+    baca.markup(
+        r"\baca-bd-fingertips-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -118,8 +128,13 @@ maker(
     baca.make_notes(),
     baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("p-ancora", abjad.tweak(-0.75).self_alignment_X),
-    baca.stem_tremolo(baca.pheads().get([0, -1])),
+    baca.dynamic(
+        "p-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.stem_tremolo(
+        baca.pheads().get([0, -1]),
+    ),
 )
 
 maker(
@@ -128,7 +143,9 @@ maker(
     baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
     baca.dynamic("p"),
-    baca.stem_tremolo(baca.pheads().get([0, -1])),
+    baca.stem_tremolo(
+        baca.pheads().get([0, -1]),
+    ),
 )
 
 # hp
@@ -141,8 +158,14 @@ maker(
 maker(
     ("hp", (2, 15)),
     baca.clef("bass"),
-    baca.flat_glissando("F#3", hide_middle_stems=True),
-    baca.markup(r"\baca-bow-markup", literal=True),
+    baca.flat_glissando(
+        "F#3",
+        hide_middle_stems=True,
+    ),
+    baca.markup(
+        r"\baca-bow-markup",
+        literal=True,
+    ),
     baca.dynamic("mf")
 )
 
@@ -165,16 +188,25 @@ maker(
 
 maker(
     ("va", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], mock=True),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.staff_positions(
+        [1, 4, 2, 5],
+        mock=True,
+    ),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # vc1
 
 maker(
     ("vc1", (10, 11)),
-    harmony.sixteenths([13, 1, 1, 1]),
+    harmony.sixteenths(
+        [13, 1, 1, 1],
+    ),
 )
 
 maker(
@@ -192,16 +224,25 @@ maker(
 
 maker(
     ("vc1", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], mock=True),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.staff_positions(
+        [1, 4, 2, 5],
+        mock=True,
+    ),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # vc2
 
 maker(
     ("vc2", (10, 12)),
-    harmony.sixteenths([14, 1, 1, 1]),
+    harmony.sixteenths(
+        [14, 1, 1, 1],
+    ),
 )
 
 maker(
@@ -219,16 +260,25 @@ maker(
 
 maker(
     ("vc2", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], mock=True),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.staff_positions(
+        [1, 4, 2, 5],
+        mock=True,
+    ),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # cb1
 
 maker(
     ("cb1", (10, 12)),
-    harmony.sixteenths([15, 1, 1, 1]),
+    harmony.sixteenths(
+        [15, 1, 1, 1],
+    ),
 )
 
 maker(
@@ -246,16 +296,25 @@ maker(
 
 maker(
     ("cb1", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], mock=True),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.staff_positions(
+        [1, 4, 2, 5],
+        mock=True,
+    ),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # cb2
 
 maker(
     ("cb2", (10, 12)),
-    harmony.sixteenths([16, 1, 1, 1]),
+    harmony.sixteenths(
+        [16, 1, 1, 1],
+    ),
 )
 
 maker(
@@ -273,7 +332,14 @@ maker(
 
 maker(
     ("cb2", (10, 15)),
-    baca.staff_positions([1, 4, 2, 5], mock=True),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.staff_positions(
+        [1, 4, 2, 5],
+        mock=True,
+    ),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )

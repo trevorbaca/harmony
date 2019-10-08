@@ -97,12 +97,22 @@ maker(
 
 maker(
     ("perc1", 1),
-    harmony.sixteenths([1, -22, 1]),
+    harmony.sixteenths(
+        [1, -22, 1],
+    ),
     harmony.brake_drum_staff_position(),
-    baca.markup(r"\baca-brake-drum-markup", literal=True),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
     baca.dynamic("f"),
-    baca.dynamic("mp", selector=baca.phead(-1)),
-    baca.accent(baca.pheads()),
+    baca.dynamic(
+        "mp",
+        selector=baca.phead(-1),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 # perc2
@@ -110,13 +120,26 @@ maker(
 maker(
     ("perc2", 1),
     baca.staff_lines(1),
-    harmony.sixteenths([1, -22, 1]),
+    harmony.sixteenths(
+        [1, -22, 1],
+    ),
     harmony.bass_drum_staff_position(),
-    baca.markup(r"\baca-bd-struck-markup", literal=True),
-    baca.dynamic("mp", selector=baca.pheads()),
-    baca.accent(baca.pheads()),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+    ),
+    baca.dynamic(
+        "mp",
+        selector=baca.pheads(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.laissez_vibrer(),
-    baca.articulation(r"baca-damp", baca.leaves().rleak()[-1]),
+    baca.articulation(
+        r"baca-damp",
+        baca.leaves().rleak()[-1],
+    ),
 )
 
 maker(
@@ -128,11 +151,21 @@ maker(
 
 maker(
     ("hp", 1),
-    harmony.sixteenths([1, -22, 1]),
-    baca.markup(r"\baca-soundboard-pizz-markup", literal=True),
+    harmony.sixteenths(
+        [1, -22, 1],
+    ),
+    baca.markup(
+        r"\baca-soundboard-pizz-markup",
+        literal=True,
+    ),
     baca.dynamic("f"),
-    baca.dynamic("mp", selector=baca.phead(-1)),
-    baca.accent(baca.pheads()),
+    baca.dynamic(
+        "mp",
+        selector=baca.phead(-1),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 # va

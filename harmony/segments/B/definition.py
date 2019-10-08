@@ -73,7 +73,9 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
-    baca.stem_tremolo(baca.pleaves().get([0, 1], 3)),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, 1], 3),
+    ),
     baca.hairpin(
         "p <| f |> p",
         map=baca.clparts([3]),
@@ -90,7 +92,9 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
-    baca.stem_tremolo(baca.plts().get([0, 1], 3)),
+    baca.stem_tremolo(
+        baca.plts().get([0, 1], 3),
+    ),
     baca.hairpin(
         "p <| f |> p",
         map=baca.clparts([3]),
@@ -138,9 +142,13 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.dynamic("p"),
 )
 
@@ -151,7 +159,10 @@ maker(
 
 maker(
     ("perc2", [8, 11]),
-    harmony.tuplet([(1,)], force_augmentation=True),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
 )
 
 maker(
@@ -167,9 +178,13 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.flat_glissando(hide_middle_stems=True),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves().get([0, -1])),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.tuplet_bracket_up(),
     baca.dynamic("p"),
 )
@@ -189,7 +204,9 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "p < f > p",
         map=baca.clparts([3]),
@@ -211,7 +228,9 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "p < f > p",
         map=baca.clparts([3]),

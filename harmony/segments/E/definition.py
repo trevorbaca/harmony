@@ -56,16 +56,29 @@ maker(
 
 maker(
     ("bfl", 4),
-    harmony.sixteenths([1, 1, "-"]),
-    baca.markup(r"\baca-jet-whistle-markup", literal=True),
+    harmony.sixteenths(
+        [1, 1, "-"],
+    ),
+    baca.markup(
+        r"\baca-jet-whistle-markup",
+        literal=True,
+    ),
     baca.dynamic("f"),
 )
 
 maker(
     ("bfl", 5),
-    harmony.sixteenths([-3, 1, "-"]),
-    baca.markup(r"\baca-jet-whistle-markup", literal=True),
-    baca.dynamic("f-ancora", abjad.tweak(-0.75).self_alignment_X),
+    harmony.sixteenths(
+        [-3, 1, "-"],
+    ),
+    baca.markup(
+        r"\baca-jet-whistle-markup",
+        literal=True,
+    ),
+    baca.dynamic(
+        "f-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
 )
 
 # perc1
@@ -87,10 +100,17 @@ maker(
 
 maker(
     ("perc1", 5),
-    harmony.sixteenths([-3, "+"]),
-    baca.markup(r"\baca-triangle-small-beater-markup", literal=True),
+    harmony.sixteenths(
+        [-3, "+"],
+    ),
+    baca.markup(
+        r"\baca-triangle-small-beater-markup",
+        literal=True,
+    ),
     harmony.triangle_staff_position(),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic("p"),
 )
 
@@ -113,10 +133,17 @@ maker(
 
 maker(
     ("perc2", 5),
-    harmony.sixteenths([-3, "+"]),
-    baca.markup(r"\baca-tam-tam-markup", literal=True),
+    harmony.sixteenths(
+        [-3, "+"],
+    ),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
+        ),
     harmony.tam_tam_staff_position(),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic("p"),
 )
 
@@ -134,10 +161,19 @@ maker(
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.staff_positions([0, -4, 4, -5, 5, -6, 6, -7, 7], mock=True),
+    baca.staff_positions(
+        [0, -4, 4, -5, 5, -6, 6, -7, 7],
+        mock=True,
+    ),
     baca.glissando(),
-    baca.articulation("prall", baca.pheads().get([1, 2], 3)),
-    baca.hairpin('"f" >o niente', selector=baca.leaves().rleak()),
+    baca.articulation(
+        "prall",
+        baca.pheads().get([1, 2], 3),
+    ),
+    baca.hairpin(
+        '"f" >o niente',
+        selector=baca.leaves().rleak(),
+    ),
     baca.dls_staff_padding(6.5),
 )
 
@@ -159,13 +195,19 @@ maker(
     ("va", (4, 5)),
     baca.clef("alto"),
     baca.staff_lines(5),
-    harmony.sixteenths([12, 1, 1, 1, 8, 1, 1, 1, 4, 1, 1, 1, "+"]),
+    harmony.sixteenths(
+        [12, 1, 1, 1, 8, 1, 1, 1, 4, 1, 1, 1, "+"],
+    ),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
         mock=True,
         ),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # vc1
@@ -182,26 +224,38 @@ maker(
 
 maker(
     ("vc1", (4, 5)),
-    harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"]),
+    harmony.sixteenths(
+        [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
+    ),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
         mock=True,
         ),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # vc2
 
 maker(
     ("vc2", (4, 5)),
-    harmony.sixteenths([14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"]),
+    harmony.sixteenths(
+        [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
+    ),
     baca.staff_positions(
         [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
         mock=True,
         ),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # cb1
@@ -226,13 +280,19 @@ maker(
 maker(
     ("cb1", (4, 5)),
     baca.clef("bass"),
-    harmony.sixteenths([15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, "+"]),
+    harmony.sixteenths(
+        [15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, "+"],
+    ),
     baca.staff_positions(
         [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
         mock=True,
         ),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # cb2
@@ -250,13 +310,19 @@ maker(
 maker(
     ("cb2", (4, 5)),
     baca.clef("bass"),
-    harmony.sixteenths([11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, "+"]),
+    harmony.sixteenths(
+        [11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, "+"],
+    ),
     baca.staff_positions(
         [1, 0, 1, -2, -1, -2, -1, -4, -3, -4, -1, -6, -5, -6],
         mock=True,
         ),
-    baca.untie(baca.pleaves()),
-    baca.glissando(allow_repeats=True),
+    baca.untie(
+        baca.pleaves(),
+    ),
+    baca.glissando(
+        allow_repeats=True,
+    ),
 )
 
 # va, vc1, vc2, cb2, cb2
