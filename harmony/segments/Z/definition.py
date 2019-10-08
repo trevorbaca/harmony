@@ -115,7 +115,7 @@ maker(
     baca.laissez_vibrer(baca.ptails()),
     baca.dynamic("f"),
     baca.markup(
-        r"\baca-lv-into-following-silence-markup",
+        r"\baca-lv-into-fermata-markup",
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
         selector=baca.phead(-1),

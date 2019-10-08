@@ -89,14 +89,19 @@ maker(
         invisible_pairs=True,
     ),
     baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
     ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
         selector=baca.leaves(),
     ),
-    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "niente",
+        selector=baca.leaves().rleak()[-1],
+    ),
 )
 
 # perc1
@@ -263,6 +268,7 @@ maker(
     ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
         selector=baca.leaves(),
     ),
@@ -344,10 +350,14 @@ maker(
     ),
     baca.hairpin(
         "niente o< mp >o",
+        forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
         selector=baca.leaves(),
     ),
-    baca.dynamic("niente", selector=baca.leaves().rleak()[-1]),
+    baca.dynamic(
+        "niente",
+        selector=baca.leaves().rleak()[-1],
+    ),
 )
 
 # cb2

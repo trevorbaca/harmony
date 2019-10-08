@@ -66,7 +66,11 @@ maker(
     ("bfl", 2),
     harmony.sixteenths([-4, 4]),
     baca.trill_spanner(
-        map=baca.runs(),
+        map=baca.run(0),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
+        map=baca.run(1),
     ),
     baca.dynamic("mp"),
 )
