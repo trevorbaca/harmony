@@ -250,7 +250,11 @@ maker(
 
 maker(
     ("hp", [9, 10, 11]),
-    harmony.sixteenths([3, 3, "-"]),
+    harmony.sixteenths(
+        [3, 3, "-"],
+        untie=True,
+    ),
+    baca.flat_glissando(),
     baca.markup(r"\baca-whisk-markup", literal=True, match=0),
     baca.hairpin(
         'o< "mf" >o niente',
@@ -363,39 +367,44 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
         [-4, 6, 2, -4], 
-        tie_runs=True,
+        untie=True,
     ),
+    baca.flat_glissando(),
+    baca.trill_spanner(),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-    harmony.sixteenths([-2, 9, -1]),
+    harmony.sixteenths(
+        [-2, "+", -1],
+        untie=True,
+    ),
+    baca.flat_glissando(),
+    baca.trill_spanner(),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
 )
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     harmony.sixteenths(
         [8, 4, -4],
-        tie_all=True,
     ),
+    baca.flat_glissando(),
+    baca.trill_spanner(),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
 )
 
 # v1, vc2, cb2
