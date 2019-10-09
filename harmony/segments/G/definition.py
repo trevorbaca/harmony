@@ -334,9 +334,14 @@ maker(
     harmony.appoggiato(
         counts=[9],
     ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
     ),
 )
 
@@ -347,10 +352,15 @@ maker(
         fuse=True,
         after_graces=[4],
     ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
-    ),
+#    baca.note_head_style_harmonic(
+#        baca.pleaves(grace=False),
+#    ),
+#    baca.new(
+#        baca.note_head_style_harmonic(
+#            baca.pleaves(grace=True),
+#        ),
+#        map=baca.pleaves(grace=True).run(0),
+#    ),
 )
 
 maker(
@@ -366,9 +376,14 @@ maker(
     harmony.appoggiato(
         counts=[7],
     ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
     ),
 )
 
@@ -379,10 +394,15 @@ maker(
         fuse=True,
         after_graces=[4],
         ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
-    ),
+#    baca.note_head_style_harmonic(
+#        baca.pleaves(grace=False),
+#    ),
+#    baca.new(
+#        baca.note_head_style_harmonic(
+#            baca.pleaves(grace=True),
+#        ),
+#        map=baca.pleaves(grace=True).run(0),
+#    ),
 )
 
 maker(
@@ -428,9 +448,14 @@ maker(
     harmony.appoggiato(
         counts=[5],
     ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
     ),
 )
 
@@ -441,10 +466,15 @@ maker(
         fuse=True,
         after_graces=[4],
     ),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
-    ),
+#    baca.note_head_style_harmonic(
+#        baca.pleaves(grace=False),
+#    ),
+#    baca.new(
+#        baca.note_head_style_harmonic(
+#            baca.pleaves(grace=True),
+#        ),
+#        map=baca.pleaves(grace=True).run(0),
+#    ),
 )
 
 maker(

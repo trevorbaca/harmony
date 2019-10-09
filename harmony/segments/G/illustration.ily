@@ -1180,7 +1180,7 @@ G_Harp_Music_Staff = <<                                                        %
 
 G_Viola_Music_Voice_A = {                                                      %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
+    \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1                                                                        %! harmony.appoggiato()
@@ -1197,7 +1197,6 @@ G_Viola_Music_Voice_A = {                                                      %
 
 G_Viola_Music_Voice_B = {                                                      %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     c'1
@@ -1209,7 +1208,6 @@ G_Viola_Music_Voice_B = {                                                      %
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
 
     % [G Viola_Music_Voice measure 59 / measure 5]                             %! baca.SegmentMaker._comment_measure_numbers()
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     \afterGrace
     c'1
@@ -1217,21 +1215,17 @@ G_Viola_Music_Voice_B = {                                                      %
     \repeatTie
     {
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \slash
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         c'8
         [
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         c'8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         c'8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         c'8
         ]
@@ -1258,7 +1252,7 @@ G_Viola_Music_Voice = {                                                        %
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \startStaff                                                        %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \set Staff.instrumentName = \harmony-va-markup                     %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
             \clef "alto"                                                       %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
@@ -1284,47 +1278,40 @@ G_Viola_Music_Voice = {                                                        %
             \set Staff.shortInstrumentName = \harmony-va-markup                %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
             \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         }
 
@@ -1378,7 +1365,6 @@ G_Viola_Music_Voice = {                                                        %
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._style_fermata_measures(3)
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(3)
             \override Staff.BarLine.bar-extent = #'(-2 . 2)                    %! baca.SegmentMaker._style_fermata_measures(4)
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -1391,17 +1377,14 @@ G_Viola_Music_Voice = {                                                        %
             [
             (
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             c'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -1500,7 +1483,7 @@ G_Viola_Music_Staff = <<                                                       %
 
 G_Cello_I_Music_Voice_A = {                                                    %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
+    \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.appoggiato()
@@ -1517,7 +1500,6 @@ G_Cello_I_Music_Voice_A = {                                                    %
 
 G_Cello_I_Music_Voice_B = {                                                    %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1
@@ -1529,7 +1511,6 @@ G_Cello_I_Music_Voice_B = {                                                    %
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
 
     % [G Cello_I_Music_Voice measure 59 / measure 5]                           %! baca.SegmentMaker._comment_measure_numbers()
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     \afterGrace
     d1
@@ -1537,21 +1518,17 @@ G_Cello_I_Music_Voice_B = {                                                    %
     \repeatTie
     {
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \slash
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
         [
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
         ]
@@ -1577,7 +1554,7 @@ G_Cello_I_Music_Voice = {                                                      %
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \startStaff                                                        %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \set Staff.instrumentName = \harmony-vc-i-markup                   %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
             \clef "bass"                                                       %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
@@ -1603,37 +1580,32 @@ G_Cello_I_Music_Voice = {                                                      %
             \set Staff.shortInstrumentName = \harmony-vc-i-markup              %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
             \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         }
 
@@ -1685,7 +1657,6 @@ G_Cello_I_Music_Voice = {                                                      %
             \stopStaff                                                         %! baca.SegmentMaker._style_fermata_measures(3)
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._style_fermata_measures(3)
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(3)
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -1698,17 +1669,14 @@ G_Cello_I_Music_Voice = {                                                      %
             [
             (
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -1994,7 +1962,7 @@ G_Cello_II_Music_Staff = <<                                                    %
 
 G_Contrabass_I_Music_Voice_A = {                                               %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
+    \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1                                                                         %! harmony.appoggiato()
@@ -2011,7 +1979,6 @@ G_Contrabass_I_Music_Voice_A = {                                               %
 
 G_Contrabass_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     d1
@@ -2023,7 +1990,6 @@ G_Contrabass_I_Music_Voice_B = {                                               %
     \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2)
 
     % [G Contrabass_I_Music_Voice measure 59 / measure 5]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \once \override NoteHead.style = #'harmonic                                %! baca.literal():baca.IndicatorCommand._call()
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
     \afterGrace
     d1
@@ -2031,21 +1997,17 @@ G_Contrabass_I_Music_Voice_B = {                                               %
     \repeatTie
     {
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \slash
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
         [
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
 
-        \once \override NoteHead.style = #'harmonic                            %! baca.literal():baca.IndicatorCommand._call()
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         d8
         ]
@@ -2071,7 +2033,7 @@ G_Contrabass_I_Music_Voice = {                                                 %
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \startStaff                                                        %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
             \set Staff.instrumentName = \harmony-cb-i-markup                   %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
+            \override NoteHead.style = #'harmonic                              %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
             \clef "bass"                                                       %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
@@ -2097,27 +2059,24 @@ G_Contrabass_I_Music_Voice = {                                                 %
             \set Staff.shortInstrumentName = \harmony-cb-i-markup              %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._treat_persistent_wrapper(3):baca.SegmentMaker._set_status_tag():REDRAWN_REAPPLIED_MARGIN_MARKUP
             \override Staff.Clef.color = #(x11-color 'OliveDrab)               %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
+            \revert NoteHead.style                                             %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         }
 
@@ -2169,7 +2128,6 @@ G_Contrabass_I_Music_Voice = {                                                 %
             \stopStaff                                                         %! baca.SegmentMaker._style_fermata_measures(3)
             \once \override Staff.StaffSymbol.line-count = 5                   %! baca.SegmentMaker._style_fermata_measures(3)
             \startStaff                                                        %! baca.SegmentMaker._style_fermata_measures(3)
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
@@ -2182,17 +2140,14 @@ G_Contrabass_I_Music_Voice = {                                                 %
             [
             (
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            \once \override NoteHead.style = #'harmonic                        %! baca.literal():baca.IndicatorCommand._call()
             \baca-not-yet-pitched-coloring                                     %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
             d8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
