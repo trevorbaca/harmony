@@ -25,7 +25,7 @@ maker = baca.SegmentMaker(
     stage_markup=stage_markup,
     time_signatures=[
         (3, 4), (3, 4), (3, 4), (3, 4), (3, 4), (3, 4), (1, 4),
-        (2, 4), (3, 4), (3, 4),
+        (3, 4), (3, 4), (3, 4),
     ],
     transpose_score=True,
     validate_measure_count=10,
@@ -67,6 +67,17 @@ maker(
 )
 
 maker(
+    ("bfl", 8),
+    harmony.sixteenths(
+        ["+"],
+    ),
+    baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
+    ),
+    baca.dynamic("p"),
+)
+
+maker(
     ("bfl", (9, 10)),
     harmony.sixteenths(
         [3, -1, 8, -8, 3, -1],
@@ -102,6 +113,17 @@ maker(
         literal=True,
     ),
     baca.dynamic("p"),
+)
+
+maker(
+    ("perc1", 8),
+    harmony.sixteenths(
+        ["+"],
+    ),
+    baca.markup(
+        r"\baca-slate-scrape-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -183,6 +205,19 @@ maker(
 )
 
 maker(
+    ("hp", 8),
+    harmony.tuplet(
+        [(-4, 1)],
+    ),
+    baca.staff_position(
+        [-1, 0],
+        mock=True,
+    ),
+    baca.flageolet(),
+    baca.laissez_vibrer(),
+)
+
+maker(
     ("hp", (9, 10)),
     harmony.sixteenths(
         [21, "-"],
@@ -215,6 +250,22 @@ maker(
 )
 
 maker(
+    ("va", 8),
+    harmony.sixteenths(
+        ["+"],
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.95).self_alignment_X,
+    ),
+)
+
+maker(
     ("va", (9, 10)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 3, -1],
@@ -242,6 +293,21 @@ maker(
 )
 
 maker(
+    ("vc1", 8),
+    harmony.sixteenths(
+        ["+", -1],
+    ),
+    baca.hairpin(
+        "f <| fff",
+    ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
+)
+
+maker(
     ("vc1", (9, 10)),
     harmony.sixteenths(
         [3, -1, 8, -8, 3, -1],
@@ -262,6 +328,21 @@ maker(
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
+    ),
+)
+
+maker(
+    ("vc2", 8),
+    harmony.sixteenths(
+        ["+", -1],
+    ),
+    baca.hairpin(
+        "f <| fff",
+    ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
 
@@ -291,6 +372,21 @@ maker(
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+)
+
+maker(
+    ("cb1", 8),
+    harmony.sixteenths(
+        ["+", -1],
+    ),
+    baca.hairpin(
+        "f <| fff",
+    ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
 
@@ -325,6 +421,21 @@ maker(
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+)
+
+maker(
+    ("cb2", 8),
+    harmony.sixteenths(
+        ["+", -1],
+    ),
+    baca.hairpin(
+        "f <| fff",
+    ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
 
