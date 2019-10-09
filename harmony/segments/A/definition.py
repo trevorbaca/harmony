@@ -64,18 +64,18 @@ maker(
         ),
     ),
     harmony.appoggiato(
-        divisions=[16, 8, 12, 12],
+        divisions=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
     ),
     baca.pitches(
         "D3 E3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
+        selector=baca.plts(grace=False),
         mock=True,
     ),
     baca.pitches(
         "F3 G3 A3 G3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
+        selector=baca.plts(grace=True),
         mock=True,
     ),
 )
@@ -194,7 +194,9 @@ maker(
         literal=True,
     ),
     baca.clef("percussion"),
-    harmony.sixteenths([4, -14, 4, -2, 4, -6, 4, 4, -2]),
+    harmony.sixteenths(
+        [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    ),
     baca.staff_lines(1),
     harmony.slate_staff_position(),
     baca.circle_bow_spanner(
@@ -242,6 +244,7 @@ maker(
     harmony.sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.whisk_staff_position(),
     baca.markup(
@@ -253,11 +256,11 @@ maker(
 
 maker(
     ("hp", 3),
-    baca.staff_lines(5),
-    baca.clef("bass"),
     harmony.sixteenths(
         [10, "-"],
     ),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -289,7 +292,7 @@ maker(
 maker(
     ("va", (1, 2)),
     harmony.appoggiato(
-        divisions=[16, 8, 12, 12],
+        divisions=[16, 8, 12, 8],
         incise=True,
         ),
     baca.damp_spanner(
@@ -367,7 +370,7 @@ maker(
 maker(
     ("vc2", (1, 2)),
     harmony.appoggiato(
-        divisions=[16, 8, 12, 12],
+        divisions=[16, 8, 12, 8],
         incise=True,
     ),
     baca.damp_spanner(
@@ -452,7 +455,7 @@ maker(
 maker(
     ("cb2", (1, 2)),
     harmony.appoggiato(
-        divisions=[16, 8, 12, 12],
+        divisions=[16, 8, 12, 8],
         incise=True,
     ),
     baca.damp_spanner(
