@@ -79,6 +79,25 @@ maker(
 )
 
 maker(
+    ("bfl", 9),
+    harmony.sixteenths(
+        [2, 2, 16],
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
+    baca.stem_tremolo(
+        baca.plts().get([0, 1], 3),
+    ),
+    baca.hairpin(
+        "p <| f |> p",
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(5.5),
+)
+
+maker(
     ("bfl", 11),
     harmony.tessera_1(
         6,
@@ -138,6 +157,14 @@ maker(
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3.5),
+)
+
+maker(
+    ("perc1", 9),
+    harmony.appoggiato(
+        counts=[7],
+        rest_all=True,
+    ),
 )
 
 maker(
@@ -210,6 +237,10 @@ maker(
 maker(
     ("perc2", 9),
     baca.staff_lines(1),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
 )
 
 maker(
@@ -239,6 +270,30 @@ maker(
         5,
         advance=72,
     ),
+)
+
+maker(
+    ("hp", 9),
+    harmony.sixteenths(
+        [2, 2, 16],
+        invisible=([1], 3),
+        written_quarters=([0, 1], 3),
+        tie=([2], 3),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.hairpin(
+        "p < f > p",
+        map=baca.clparts([3]),
+        pieces=baca.clparts([1]),
+    ),
+    baca.dls_staff_padding(4.5),
 )
 
 maker(
@@ -431,4 +486,26 @@ maker(
 #    baca.label(
 #        abjad.label().with_durations(denominator=16),
 #    ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 9),
+    harmony.appoggiato(
+        counts=[7],
+    ),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 9),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
 )

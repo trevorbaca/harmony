@@ -103,10 +103,6 @@ maker(
 maker(
     ("perc1", 4),
     baca.staff_lines(1),
-)
-
-maker(
-    ("perc1", 4),
     harmony.sixteenths(
         [-3, 6, "-"],
     ),
@@ -134,12 +130,8 @@ maker(
 )
 
 maker(
-    ("perc1", 6),
-    baca.staff_lines(1),
-)
-
-maker(
     ("perc1", (6, 7)),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [-19, 2, "-"],
     ),
