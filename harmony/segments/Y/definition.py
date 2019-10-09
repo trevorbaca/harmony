@@ -212,8 +212,8 @@ maker(
 
 maker(
     ("va", 2),
-    baca.pitch(
-        "<C4 D4 E4>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
 )
@@ -238,8 +238,8 @@ maker(
 
 maker(
     ("vc1", 2),
-    baca.pitch(
-        "<C3 D3 E3>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
 )
@@ -264,8 +264,8 @@ maker(
 
 maker(
     ("vc2", 2),
-    baca.pitch(
-        "<C3 D3 E3>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
 )
@@ -290,8 +290,8 @@ maker(
 
 maker(
     ("cb1", 2),
-    baca.pitch(
-        "<C2 D2 E2>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
 )
@@ -316,8 +316,8 @@ maker(
 
 maker(
     ("cb2", 2),
-    baca.pitch(
-        "<C2 D2 E2>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
 )

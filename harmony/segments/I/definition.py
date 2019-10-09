@@ -135,8 +135,8 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
-    baca.pitch(
-        "<B4 C5>",
+    baca.staff_position(
+        [0, 1],
         mock=True,
     ),
     baca.flageolet(),

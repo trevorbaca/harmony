@@ -56,12 +56,8 @@ maker(
 # perc1
 
 maker(
-    ("perc1", 1),
-    baca.staff_lines(1),
-)
-
-maker(
     ("perc1", (1, 6)),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [1, -11, -1, 1, -14],
     ),
@@ -118,8 +114,8 @@ maker(
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     ),
-    baca.pitch(
-        "<A4 B4 C5>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
     baca.stem_tremolo(
@@ -152,8 +148,8 @@ maker(
 maker(
     ("hp", (8, 9)),
     baca.make_notes(),
-    baca.pitch(
-        "<A4 B4 C5>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
     baca.stem_tremolo(
@@ -166,8 +162,8 @@ maker(
 
 maker(
     ("va", (1, 9)),
-    baca.pitch(
-        "<B3 C4 D4>",
+    baca.staff_position(
+        [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
     ),
@@ -177,8 +173,8 @@ maker(
 
 maker(
     ("vc1", (1, 9)),
-    baca.pitch(
-        "<C3 D3 E3>",
+    baca.staff_position(
+        [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
     ),
@@ -188,8 +184,8 @@ maker(
 
 maker(
     ("vc2", (1, 9)),
-    baca.pitch(
-        "<C3 D3 E3>",
+    baca.staff_position(
+        [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
     ),
@@ -199,8 +195,8 @@ maker(
 
 maker(
     ("cb1", (1, 9)),
-    baca.pitch(
-        "<C2 D2 E2>",
+    baca.staff_position(
+        [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
         ),
@@ -210,8 +206,8 @@ maker(
 
 maker(
     ("cb2", (1, 9)),
-    baca.pitch(
-        "<C2 D2 E2>",
+    baca.staff_position(
+        [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
     ),

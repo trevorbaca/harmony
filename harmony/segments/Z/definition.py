@@ -119,8 +119,8 @@ maker(
         [-10, 2, -4, -14, 2],
     ),
     baca.clef("treble"),
-    baca.pitch(
-        "<C5 D5>",
+    baca.staff_position(
+        [0, 1],
         mock=True,
     ),
     baca.flageolet(
@@ -143,8 +143,8 @@ maker(
     harmony.sixteenths(
         [-10, 2, -4, -14, 2, -8, 2, -6],
     ),
-    baca.pitch(
-        "<C5 D5>",
+    baca.staff_position(
+        [0, 1],
         mock=True,
     ),
     baca.flageolet(
@@ -161,8 +161,8 @@ maker(
     harmony.sixteenths(
         [2, -14],
     ),
-    baca.pitch(
-        "<C5 D5>",
+    baca.staff_position(
+        [0, 1],
         mock=True,
     ),
     baca.flageolet(
