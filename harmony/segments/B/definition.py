@@ -596,18 +596,21 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 5)),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
+    (["va", "vc1", "vc2", "cb1", "cb2"], (8, 11)),
+    harmony.appoggiato(
+        counts=[7],
     ),
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (8, 11)),
-    harmony.appoggiato(counts=[7]),
-    baca.literal(
-        r"\once \override NoteHead.style = #'harmonic",
-        baca.pleaves(),
+    (["va", "vc1", "vc2", "cb1", "cb2"], [(1, 5), (8, 11)]),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
     ),
 )
