@@ -92,7 +92,7 @@ def appoggiato(
 
 
 def phjc(
-    parts: abjad.IntegerSequence,
+    divisions: abjad.IntegerSequence,
     counts: abjad.IntegerSequence,
     *,
     extra_counts: abjad.IntegerSequence = None,
@@ -105,7 +105,7 @@ def phjc(
     """
     Makes purpleheart jerky contintuity.
     """
-    preprocessor = baca.sequence().fuse().quarters().partition(parts)
+    preprocessor = baca.sequence().fuse().quarters().partition(divisions)
     preprocessor = preprocessor.map(baca.sequence().flatten().fuse())
     commands: typing.List[rmakers.Command] = []
     if rest is not None:
