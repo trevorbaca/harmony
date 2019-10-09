@@ -164,8 +164,8 @@ maker(
     harmony.sixteenths(
         [-4, 4, 8, -4],
     ),
-    baca.pitch(
-        "<A4 B4 C5>",
+    baca.staff_position(
+        [-1, 0, 1],
         mock=True,
     ),
     baca.stem_tremolo(

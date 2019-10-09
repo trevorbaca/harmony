@@ -170,8 +170,8 @@ maker(
     harmony.tuplet(
         [(-4, 1)],
     ),
-    baca.pitch(
-        "<A4 B4>",
+    baca.staff_position(
+        [-1, 0],
         mock=True,
     ),
     baca.flageolet(),
@@ -183,8 +183,8 @@ maker(
     harmony.tuplet(
         [(-4, 1)],
     ),
-    baca.pitch(
-        "<A4 B4>",
+    baca.staff_position(
+        [-1, 0],
         mock=True,
     ),
     baca.flageolet(),
