@@ -120,6 +120,16 @@ persist = abjad.OrderedDict(
                             ],
                         ),
                     (
+                        'Cello_II_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Cello_II_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='mp',
+                                ),
+                            ],
+                        ),
+                    (
                         'Cello_I_Music_Staff',
                         [
                             abjad.Momento(
