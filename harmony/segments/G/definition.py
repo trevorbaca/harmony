@@ -352,15 +352,16 @@ maker(
         fuse=True,
         after_graces=[4],
     ),
-#    baca.note_head_style_harmonic(
-#        baca.pleaves(grace=False),
-#    ),
-#    baca.new(
-#        baca.note_head_style_harmonic(
-#            baca.pleaves(grace=True),
-#        ),
-#        map=baca.pleaves(grace=True).run(0),
-#    ),
+    baca.new(
+        baca.note_head_style_harmonic(),
+        map=baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
 )
 
 maker(
@@ -394,15 +395,16 @@ maker(
         fuse=True,
         after_graces=[4],
         ),
-#    baca.note_head_style_harmonic(
-#        baca.pleaves(grace=False),
-#    ),
-#    baca.new(
-#        baca.note_head_style_harmonic(
-#            baca.pleaves(grace=True),
-#        ),
-#        map=baca.pleaves(grace=True).run(0),
-#    ),
+    baca.new(
+        baca.note_head_style_harmonic(),
+        map=baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
 )
 
 maker(
@@ -466,15 +468,16 @@ maker(
         fuse=True,
         after_graces=[4],
     ),
-#    baca.note_head_style_harmonic(
-#        baca.pleaves(grace=False),
-#    ),
-#    baca.new(
-#        baca.note_head_style_harmonic(
-#            baca.pleaves(grace=True),
-#        ),
-#        map=baca.pleaves(grace=True).run(0),
-#    ),
+    baca.new(
+        baca.note_head_style_harmonic(),
+        map=baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
 )
 
 maker(
