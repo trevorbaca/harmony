@@ -221,7 +221,6 @@ maker(
     ("perc1", 10),
     baca.staff_lines(1),
     baca.make_notes(),
-    #baca.flat_glissando(),
     harmony.triangle_staff_position(),
     baca.dynamic("p"),
     baca.stem_tremolo(

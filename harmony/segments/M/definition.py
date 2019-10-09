@@ -96,6 +96,43 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", 4),
+    harmony.appoggiato(
+        counts=[9],
+        incise=True,
+    ),
+    baca.pitches(
+        "D3",
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
+        mock=True,
+    ),
+    baca.pitches(
+        "G3 A3 B3 A3",
+        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
+        mock=True,
+    ),
+)
+
+maker(
+    ("bfl", 5),
+    harmony.sixteenths(
+        [4, 8],
+    ),
+    baca.text_spanner(
+        "T -> A =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.clparts([2]),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.breathe(
+        baca.pleaf(1),
+    ),
+)
+
 # perc1
 
 maker(
@@ -124,6 +161,35 @@ maker(
 maker(
     ("perc1", 4),
     baca.staff_lines(1),
+    baca.make_notes(),
+    harmony.triangle_staff_position(),
+    baca.dynamic("p"),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
+)
+
+maker(
+    ("perc1", 5),
+    harmony.sixteenths(
+        [3, 1, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
 )
 
 # perc2
@@ -154,6 +220,28 @@ maker(
 maker(
     ("perc2", 4),
     baca.staff_lines(1),
+    baca.make_notes(),
+    harmony.bass_drum_staff_position(),
+    baca.dynamic("p"),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+)
+
+maker(
+    ("perc2", 5),
+    harmony.sixteenths(
+        [2, -2],
+    ),
+    harmony.brake_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
 )
 
 # hp
@@ -186,6 +274,21 @@ maker(
     ("hp", 3),
     baca.make_notes(),
     baca.laissez_vibrer(),
+)
+
+maker(
+    ("hp", 5),
+    harmony.sixteenths(
+        [2, -2],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.markup(
+        r"\baca-soundboard-pizz-markup",
+        literal=True,
+    ),
 )
 
 # va
@@ -323,4 +426,27 @@ maker(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
     ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    baca.make_notes(),
+)
+
+# vc1, vc2, cb1, cb2
+
+maker(
+    (["vc1", "vc2", "cb1", "cb2"], 5),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("p"),
 )
