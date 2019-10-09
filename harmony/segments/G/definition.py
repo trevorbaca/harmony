@@ -374,6 +374,7 @@ maker(
 
 maker(
     ("vc1", 1),
+    baca.clef("bass"),
     harmony.appoggiato(
         counts=[7],
     ),
@@ -447,6 +448,7 @@ maker(
 
 maker(
     ("cb1", 1),
+    baca.clef("bass"),
     harmony.appoggiato(
         counts=[5],
     ),
