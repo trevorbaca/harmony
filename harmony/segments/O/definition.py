@@ -57,6 +57,40 @@ maker(
 )
 
 maker(
+    ("bfl", 3),
+    harmony.sixteenths(
+        [12, -20],
+    ),
+    baca.text_spanner(
+        "multiphonic =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.runs(),
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("bfl", 4),
+    harmony.sixteenths(
+        [4, 8],
+    ),
+    baca.text_spanner(
+        "T -> A =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.clparts([2]),
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.breathe(
+        baca.pleaf(1),
+    ),
+)
+
+maker(
     ("bfl", (5, 9)),
     harmony.sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
@@ -104,11 +138,32 @@ maker(
 maker(
     ("perc1", 3),
     baca.staff_lines(5),
+    harmony.sixteenths(
+        [12, 16, -4],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
 )
 
 maker(
     ("perc1", 4),
     baca.staff_lines(1),
+    harmony.sixteenths(
+        [3, 1, "-"],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+    harmony.bass_drum_staff_position(),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -123,6 +178,22 @@ maker(
 )
 
 # perc2
+
+maker(
+    ("perc2", 4),
+    harmony.sixteenths(
+        [2, -2],
+    ),
+    harmony.brake_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
+)
 
 maker(
     ("perc2", 5),
@@ -176,6 +247,31 @@ maker(
     ),
     baca.flageolet(),
     baca.laissez_vibrer(),
+)
+
+maker(
+    ("hp", 3),
+    harmony.sixteenths(
+        [12, 16, -4],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+)
+
+maker(
+    ("hp", 4),
+    harmony.sixteenths(
+        [2, -2],
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.markup(
+        r"\baca-soundboard-pizz-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -270,6 +366,20 @@ maker(
 )
 
 maker(
+    ("vc2", 3),
+    baca.literal([
+        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+        r'\once \override TupletNumber.text = #"10:8"',
+    ]),
+    baca.skeleton(
+        r"\times 8/10 { c4 r4 r4 r8. }",
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
+)
+
+maker(
     ("vc2", (5, 9)),
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
@@ -307,6 +417,20 @@ maker(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+)
+
+maker(
+    ("cb1", 3),
+    baca.literal([
+        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+        r'\once \override TupletNumber.text = #"11:8"',
+    ]),
+    baca.skeleton(
+        r"\times 8/11 { r4 c4 r4 r4 r32 }",
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
     ),
 )
 
@@ -352,6 +476,20 @@ maker(
 )
 
 maker(
+    ("cb2", 3),
+    baca.literal([
+        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+        r'\once \override TupletNumber.text = #"12:8"',
+    ]),
+    baca.skeleton(
+        r"\times 8/12 { r4 c4 r4 r4 r8 }",
+    ),
+    baca.triple_staccato(
+        baca.pheads(),
+    ),
+)
+
+maker(
     ("cb2", (5, 9)),
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
@@ -371,4 +509,20 @@ maker(
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.dynamic("p"),
 )

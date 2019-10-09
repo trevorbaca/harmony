@@ -309,9 +309,6 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
-    baca.laissez_vibrer_tie_up(
-        baca.pleaves(),
-    ),
 )
 
 maker(

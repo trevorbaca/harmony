@@ -1317,7 +1317,6 @@ L_Percussion_II_Music_Voice = {                                                %
 
     % [L Percussion_II_Music_Voice measure 102 / measure 4]                    %! baca.SegmentMaker._comment_measure_numbers()
     \override Stem.direction = #down                                           %! baca.stem_down():baca.OverrideCommand._call(1)
-    \override LaissezVibrerTie.direction = #up                                 %! baca.laissez_vibrer_tie_up():baca.OverrideCommand._call(1)
     \once \override LaissezVibrerTie.direction = #up
     c'1                                                                        %! harmony.sixteenths()
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
@@ -1344,7 +1343,6 @@ L_Percussion_II_Music_Voice = {                                                %
     c'1                                                                        %! harmony.sixteenths()
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
-    \revert LaissezVibrerTie.direction                                         %! baca.laissez_vibrer_tie_up():baca.OverrideCommand._call(2)
 
     r4                                                                         %! harmony.sixteenths()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
