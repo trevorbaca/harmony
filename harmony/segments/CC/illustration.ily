@@ -19,7 +19,7 @@ CC_Global_Skips = {                                                            %
     - \abjad-invisible-line                                                    %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"72" #2 #0 #2 #3 #2 #0 #'(1 . 1) #'blue %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
     \bacaStartTextSpanMM                                                       %! EXPLICIT_METRONOME_MARK_WITH_COLOR:baca.SegmentMaker._attach_metronome_marks(3)
-%@% - \baca-start-ct-left-only "[14'30'']"                                     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[14'32'']"                                     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     % [CC Global_Skips measure 271 / measure 2]                                %! baca.SegmentMaker._comment_measure_numbers()
@@ -31,7 +31,7 @@ CC_Global_Skips = {                                                            %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
 %@% - \baca-start-mn-left-only "271"                                           %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-ct-left-only "[14'35'']"                                     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-left-only "[14'37'']"                                     %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 
     % [CC Global_Skips measure 272 / measure 3]                                %! baca.SegmentMaker._comment_measure_numbers()
@@ -45,7 +45,7 @@ CC_Global_Skips = {                                                            %
     \bacaStartTextSpanLMN                                                      %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
 %@% - \baca-start-mn-left-only "272"                                           %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
 %@% \bacaStartTextSpanMN                                                       %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
-%@% - \baca-start-ct-both-left-fermata "8''" "[14'48'']"                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
+%@% - \baca-start-ct-both-left-fermata "8''" "[14'50'']"                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
 %@% \bacaStartTextSpanCT                                                       %! CLOCK_TIME:baca.SegmentMaker._label_clock_time()
     \bar "|."                                                                  %! baca.bar_line():baca.IndicatorCommand._call()
 
