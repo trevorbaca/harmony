@@ -146,6 +146,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -205,6 +206,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -222,10 +224,14 @@ maker(
     baca.staff_lines(1),
     baca.make_notes(),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("p"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
+    baca.markup(
+        r"\baca-bd-fingertips-markup",
+        literal=True,
+    ),
+    baca.dynamic("p"),
 )
 
 maker(
@@ -249,6 +255,7 @@ maker(
 maker(
     ("hp", 1),
     baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [-4, 4, 8, -4],
     ),

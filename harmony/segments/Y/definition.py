@@ -212,11 +212,6 @@ maker(
 )
 
 maker(
-    ("perc2", 3),
-    baca.staff_lines(3),
-)
-
-maker(
     ("perc2", (5, 10)),
     harmony.sixteenths(
         [2, -22, -1, 2, -21],
@@ -242,6 +237,8 @@ maker(
 
 maker(
     ("hp", 1),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [-24, 4],
     ),
@@ -260,6 +257,8 @@ maker(
 
 maker(
     ("hp", 3),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
@@ -272,6 +271,8 @@ maker(
 
 maker(
     ("hp", (5, 10)),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [-24, -1, 3, -20],
     ),

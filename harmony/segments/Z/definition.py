@@ -192,10 +192,6 @@ maker(
         [1, -3, 3, -3, 3, -3],
     ),
     harmony.slate_staff_position(),
-    baca.markup(
-        r"\baca-slate-scrape-markup",
-        literal=True,
-    ),
     baca.dynamic("p"),
 )
 
@@ -236,7 +232,6 @@ maker(
 
 maker(
     ("perc2", 4),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [1, -22, 1],
     ),
@@ -260,13 +255,7 @@ maker(
 )
 
 maker(
-    ("perc2", 8),
-    baca.staff_lines(3),
-)
-
-maker(
     ("perc2", 9),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [2, -22, -1, 2, -21],
     ),
@@ -353,6 +342,8 @@ maker(
 
 maker(
     ("hp", 8),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
@@ -361,6 +352,12 @@ maker(
         literal=True,
     ),
     baca.dynamic("p"),
+)
+
+maker(
+    ("hp", 9),
+    baca.clef("treble"),
+    baca.staff_lines(5),
 )
 
 maker(

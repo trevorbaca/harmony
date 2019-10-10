@@ -113,6 +113,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
+        abjad.tweak(-2.75).self_alignment_X,
         literal=True,
     ),
     harmony.bass_drum_staff_position(),
@@ -133,6 +134,10 @@ maker(
     baca.staff_positions(
         [-2, 0, -2, 0, 0],
         allow_repeats=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
     ),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
@@ -189,6 +194,7 @@ maker(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
+        abjad.tweak(-2.75).self_alignment_X,
         literal=True,
     ),
     baca.accent(
@@ -213,6 +219,10 @@ maker(
     baca.staff_positions(
         [-2, 0, 0, -2, 0],
         allow_repeats=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
     ),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
@@ -279,6 +289,7 @@ maker(
 
 maker(
     ("hp", 2),
+    baca.clef("bass"),
     harmony.sixteenths(
         [10, -2],
     ),
@@ -298,6 +309,7 @@ maker(
 
 maker(
     ("hp", 3),
+    baca.clef("treble"),
     harmony.tessera_1(5),
 )
 
@@ -609,6 +621,7 @@ maker(
 
 maker(
     ("cb2", 3),
+    baca.clef("treble"),
     harmony.tessera_1(0),
     baca.markup(
         r"\baca-pizz-markup",

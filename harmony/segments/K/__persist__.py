@@ -263,13 +263,14 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='abjad.Clef',
-                                value='bass',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='baca.BarExtent',
-                                value=5,
+                                prototype='abjad.Clef',
+                                value='bass',
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',

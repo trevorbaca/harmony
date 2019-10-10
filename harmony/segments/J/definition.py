@@ -166,11 +166,6 @@ maker(
     baca.stem_tremolo(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
-    baca.dynamic('"f"'),
 )
 
 maker(

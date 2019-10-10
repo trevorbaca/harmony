@@ -240,6 +240,7 @@ maker(
 
 maker(
     ("hp", (3, 10)),
+    baca.clef("treble"),
     harmony.sixteenths(
         [2, -20, 2, -24],
     ),

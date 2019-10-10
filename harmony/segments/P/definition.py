@@ -120,6 +120,7 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
@@ -163,21 +164,11 @@ maker(
 )
 
 maker(
-    ("perc2", 8),
-    baca.staff_lines(3),
-)
-
-maker(
     ("perc2", (9, 10)),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [21, "-"],
     ),
     harmony.tam_tam_staff_position(),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        literal=True,
-    ),
     baca.accent(
         baca.pheads(),
     ),
@@ -206,6 +197,7 @@ maker(
 
 maker(
     ("hp", 8),
+    baca.clef("treble"),
     harmony.tuplet(
         [(-4, 1)],
     ),
@@ -219,6 +211,7 @@ maker(
 
 maker(
     ("hp", (9, 10)),
+    baca.clef("bass"),
     harmony.sixteenths(
         [21, "-"],
     ),

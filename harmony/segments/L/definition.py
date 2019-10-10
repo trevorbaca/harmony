@@ -181,6 +181,7 @@ maker(
 
 maker(
     ("perc1", 1),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [8, "-"],
@@ -194,6 +195,7 @@ maker(
 
 maker(
     ("perc1", 2),
+    baca.clef("percussion"),
     baca.staff_lines(3),
     harmony.appoggiato(
         divisions=[6, 14],
@@ -203,11 +205,13 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
 maker(
     ("perc1", (3, 8)),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [12, 16, -4],
@@ -215,10 +219,16 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
 )
 
 maker(
     ("perc1", 10),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     baca.make_notes(),
     harmony.triangle_staff_position(),
@@ -291,6 +301,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -315,9 +326,13 @@ maker(
     ("perc2", 10),
     baca.make_notes(),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("p"),
     baca.stem_tremolo(
         baca.pleaves(),
+    ),
+    baca.dynamic("p"),
+    baca.markup(
+        r"\baca-bd-fingertips-markup",
+        literal=True,
     ),
 )
 
@@ -415,14 +430,16 @@ maker(
 
 maker(
     ("hp", (13, 15)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [6, -6, 6, -6, 6, -10],
     ),
-    baca.dynamic("mf"),
     baca.markup(
         r"\baca-whisk-markup",
         literal=True,
     ),
+    baca.dynamic("mf"),
 )
 
 # va

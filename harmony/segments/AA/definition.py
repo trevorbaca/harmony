@@ -207,6 +207,7 @@ maker(
     ("perc1", (4, 5)),
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
+    baca.flat_glissando(),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
@@ -370,6 +371,8 @@ maker(
 
 maker(
     ("hp", 3),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
@@ -382,6 +385,8 @@ maker(
 
 maker(
     ("hp", (4, 5)),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [4, "-"],
     ),

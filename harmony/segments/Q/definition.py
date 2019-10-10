@@ -126,6 +126,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
 )
 
@@ -186,7 +187,13 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
+)
+
+maker(
+    ("perc2", 4),
+    baca.staff_lines(1),
 )
 
 maker(
@@ -194,17 +201,28 @@ maker(
     harmony.sixteenths(
         [-16, 4],
     ),
-    baca.staff_lines(1),
+    harmony.tam_tam_staff_position(),
+    baca.accent(),
+    baca.laissez_vibrer(),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
     ),
-    baca.laissez_vibrer(),
-    harmony.tam_tam_staff_position(),
-    baca.accent(),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+)
+
+# perc1, perc2
+
+maker(
+    (["perc1", "perc2"], 2),
+    baca.new(
+        baca.dots_extra_offset((2, 0)),
+        baca.dots_x_extent_false(),
+        baca.rest_x_extent_false(),
+        map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
 
@@ -224,10 +242,15 @@ maker(
 
 maker(
     ("hp", 2),
+    baca.clef("treble"),
     harmony.sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
     ),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -249,10 +272,6 @@ maker(
         -0.25,
         baca.pleaf(-1),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
 )
 
 maker(
@@ -270,19 +289,20 @@ maker(
 
 maker(
     ("hp", 5),
+    baca.clef(
+        "bass",
+        baca.pleaf(0),
+    ),
     harmony.sixteenths(
         [-16, 4],
     ),
-    baca.laissez_vibrer(),
     baca.staff_position(
         -6,
         mock=True,
     ),
-    baca.dynamic(
-        "mp-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
-    ),
     baca.accent(),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
 )
 
 # va

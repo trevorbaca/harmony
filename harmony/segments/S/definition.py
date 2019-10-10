@@ -141,7 +141,6 @@ maker(
 maker(
     ("perc1", 1),
     baca.staff_lines(3),
-    baca.clef("percussion"),
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
@@ -150,6 +149,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
 )
 
@@ -181,6 +181,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(1, grace=False),
     ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
@@ -204,6 +205,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
     harmony.appoggiato(
         divisions=[20],
@@ -239,6 +241,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
 )
 
@@ -270,6 +273,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(1, grace=False),
     ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
@@ -293,6 +297,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
     harmony.appoggiato(
         divisions=[20],
@@ -337,6 +342,8 @@ maker(
 
 maker(
     ("hp", 1),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
@@ -466,6 +473,11 @@ maker(
 )
 
 maker(
+    ("va", 12),
+    baca.clef("alto"),
+)
+
+maker(
     ("va", [11, 13]),
     harmony.sixteenths(
         [2, -8, 2, -4, 2, -26],
@@ -484,6 +496,11 @@ maker(
         [-1, 0, 1],
         mock=True,
     ),
+)
+
+maker(
+    ("vc1", 12),
+    baca.clef("bass"),
 )
 
 maker(
@@ -508,6 +525,11 @@ maker(
 )
 
 maker(
+    ("vc2", 12),
+    baca.clef("bass"),
+)
+
+maker(
     ("vc2", [11, 13]),
     harmony.sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
@@ -529,6 +551,11 @@ maker(
 )
 
 maker(
+    ("cb1", 12),
+    baca.clef("bass"),
+)
+
+maker(
     ("cb1", [11, 13]),
     harmony.sixteenths(
         [3, -7, 3, -7, 3, -7, 3, -14],
@@ -546,6 +573,11 @@ maker(
         [-1, 0, 1],
         mock=True,
     ),
+)
+
+maker(
+    ("cb2", 12),
+    baca.clef("bass"),
 )
 
 maker(
