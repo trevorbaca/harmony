@@ -137,6 +137,7 @@ maker(
 
 maker(
     ("perc1", 3),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [12, 16, -4],
@@ -144,10 +145,15 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        literal=True,
+    ),
 )
 
 maker(
     ("perc1", 4),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         [3, 1, "-"],
@@ -207,6 +213,10 @@ maker(
     baca.staff_positions(
         [2, -2, 0],
         allow_repeats=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(9),

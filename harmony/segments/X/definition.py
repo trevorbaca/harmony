@@ -119,6 +119,10 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
@@ -229,6 +233,8 @@ maker(
 
 maker(
     ("hp", (5, 8)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [3, -3],
     ),

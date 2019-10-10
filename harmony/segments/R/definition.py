@@ -161,6 +161,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
 )
 
@@ -195,6 +196,7 @@ maker(
 
 maker(
     ("perc1", 8),
+    baca.clef("percussion"),
     harmony.sixteenths(
         [2, "-"],
     ),
@@ -301,6 +303,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(2, grace=False),
     ),
 )
 
@@ -327,7 +330,6 @@ maker(
 maker(
     ("perc2", 6),
     baca.make_notes(),
-    baca.clef("percussion"),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
@@ -440,6 +442,7 @@ maker(
 
 maker(
     ("hp", (4, 5)),
+    baca.clef("bass"),
     harmony.sixteenths(
         [21, "-"],
     ),
@@ -475,6 +478,12 @@ maker(
     ),
     baca.dynamic("mf"),
     baca.laissez_vibrer(),
+)
+
+maker(
+    ("hp", 9),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
 )
 
 maker(

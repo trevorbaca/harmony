@@ -132,6 +132,7 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.markup(
         r"\baca-bd-struck-markup",
+        abjad.tweak(-2.75).self_alignment_X,
         literal=True,
     ),
     baca.accent(
@@ -224,6 +225,10 @@ maker(
         [-2, 0, -2, 0, 0],
         allow_repeats=True,
     ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3.5),
@@ -237,6 +242,10 @@ maker(
         [2, "-"],
     ),
     harmony.bass_drum_staff_position(),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "o< mf",
         selector=baca.tleaves().rleak(),
@@ -290,11 +299,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
     harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -306,10 +310,6 @@ maker(
     ("perc2", 4),
     harmony.sixteenths(
         [9, "-"],
-    ),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        literal=True,
     ),
     baca.accent(
         baca.pheads(),
@@ -330,11 +330,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
     harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -349,6 +344,7 @@ maker(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
+        abjad.tweak(-2.75).self_alignment_X,
         literal=True,
     ),
     baca.accent(
@@ -356,7 +352,7 @@ maker(
     ),
     baca.articulation(
         r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.ptail(-1),
     ),
     harmony.brake_drum_staff_position(),
     baca.dynamic("mf"),
@@ -374,6 +370,10 @@ maker(
         [-2, 0, 0, -2, 0],
         allow_repeats=True,
     ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
@@ -386,58 +386,48 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
     ),
-    harmony.brake_drum_staff_position(),
+    baca.dynamic("f"),
 )
 
 maker(
     ("perc2", 11),
     harmony.sixteenths(
-        ["-", 2],
+        ["-", 1, -1],
     ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
-    ),
-    harmony.brake_drum_staff_position(),
 )
 
 maker(
     ("perc2", 14),
     harmony.sixteenths(
-        ["-", 3],
+        ["-", 1, -2],
     ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
-    ),
-    harmony.brake_drum_staff_position(),
 )
 
 maker(
     ("perc2", 15),
     harmony.sixteenths(
-        ["-", 2, -4],
+        ["-", 1, -5],
     ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
-    baca.laissez_vibrer(
-        baca.ptails(),
-    ),
-    harmony.brake_drum_staff_position(),
 )
 
 # hp
@@ -853,6 +843,7 @@ maker(
 
 maker(
     ("vc1", 10),
+    baca.clef("bass"),
     baca.staff_lines(5),
 )
 
@@ -1051,6 +1042,7 @@ maker(
 
 maker(
     ("cb1", 10),
+    baca.clef("bass"),
     baca.staff_lines(5),
 )
 

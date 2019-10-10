@@ -242,6 +242,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -316,6 +317,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -350,6 +352,18 @@ maker(
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
+    ),
+)
+
+# perc1, perc2
+
+maker(
+    (["perc1", "perc2"], 5),
+    baca.new(
+        baca.dots_extra_offset((2, 0)),
+        baca.dots_x_extent_false(),
+        baca.rest_x_extent_false(),
+        map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
 
@@ -415,6 +429,7 @@ maker(
 
 maker(
     ("hp", (6, 9)),
+    baca.clef("bass"),
     harmony.sixteenths(
         [54, "-"],
     ),
@@ -430,12 +445,11 @@ maker(
         r"baca-damp",
         baca.ptails().map(baca.rleak()[-1]),
     ),
-    baca.dynamic("mf"),
+    baca.dynamic("f"),
 )
 
 maker(
     ("hp", 11),
-    baca.clef("bass"),
     harmony.sixteenths(
         [21, -14, 18, "-"],
     ),
@@ -539,6 +553,8 @@ maker(
 
 maker(
     ("vc1", 4),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [3, -1, -4, 7, -1],
     ),
@@ -576,6 +592,8 @@ maker(
 
 maker(
     ("vc1", (6, 9)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         cerulean,
         extra_counts=[1],
@@ -617,6 +635,8 @@ maker(
 
 maker(
     ("vc2", 4),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [3, -1, -4, 7, -1],
     ),
@@ -645,6 +665,8 @@ maker(
 
 maker(
     ("vc2", (6, 9)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         cerulean,
     ),

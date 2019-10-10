@@ -291,7 +291,7 @@ maker(
 )
 
 maker(
-    ("va", 6),
+    ("va", 5),
     harmony.tessera_4(4),
     baca.dynamic("pp"),
     baca.staff_position(

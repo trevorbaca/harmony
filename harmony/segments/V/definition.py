@@ -309,20 +309,22 @@ maker(
 
 maker(
     ("hp", 4),
+    baca.clef("treble"),
     harmony.sixteenths(
         [2, -20, 2, -24],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         literal=True,
     ),
-    baca.laissez_vibrer(
-        baca.ptails(),
-    ),
 )
 
 maker(
     ("hp", (5, 10)),
+    baca.clef("bass"),
     harmony.sixteenths(
         [4, -8],
     ),
@@ -330,15 +332,15 @@ maker(
         -6,
         mock=True,
     ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+    baca.accent(
+        baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
-    baca.accent(
-        baca.pheads(),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.75).self_alignment_X,
     ),
 )
 

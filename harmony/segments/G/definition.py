@@ -211,6 +211,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
+        abjad.tweak(-2.75).self_alignment_X,
         literal=True,
     ),
     harmony.bass_drum_staff_position(),
@@ -293,18 +294,19 @@ maker(
     harmony.sixteenths(
         [-19, 1],
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
     baca.articulation(
         r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.ptail(-1),
     ),
-    harmony.brake_drum_staff_position(),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        abjad.tweak(-2.75).self_alignment_X,
+        literal=True,
+    ),
     baca.dynamic("mf"),
 )
 
@@ -534,7 +536,6 @@ maker(
 
 maker(
     ("vc1", 1),
-    baca.clef("bass"),
     harmony.appoggiato(
         counts=[7],
     ),
@@ -638,7 +639,6 @@ maker(
 
 maker(
     ("cb1", 1),
-    baca.clef("bass"),
     harmony.appoggiato(
         counts=[5],
     ),

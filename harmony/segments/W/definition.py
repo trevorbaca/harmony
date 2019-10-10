@@ -158,10 +158,6 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-    ),
     baca.dynamic("mp"),
 )
 
@@ -171,6 +167,10 @@ maker(
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
     ),
     baca.dynamic(
         "pp-ancora",
@@ -195,6 +195,7 @@ maker(
 
 maker(
     ("perc2", 6),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [4, "-"],
@@ -210,6 +211,7 @@ maker(
 
 maker(
     ("perc2", 7),
+    baca.clef("percussion"),
     baca.staff_lines(1),
 )
 
@@ -236,6 +238,7 @@ maker(
 
 maker(
     ("hp", 6),
+    baca.clef("treble"),
     harmony.sixteenths(
         [4, "-"],
     ),

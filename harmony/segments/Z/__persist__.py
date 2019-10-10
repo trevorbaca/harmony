@@ -263,13 +263,14 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='abjad.Clef',
-                                value='treble',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=5,
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='baca.BarExtent',
-                                value=5,
+                                prototype='abjad.Clef',
+                                value='treble',
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
@@ -299,12 +300,6 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
-                                edition=abjad.Tag('-PARTS'),
-                                prototype='baca.BarExtent',
-                                value=1,
-                                ),
-                            abjad.Momento(
-                                context='Percussion_II_Music_Voice',
                                 manifest='instruments',
                                 value='Percussion',
                                 ),
@@ -312,6 +307,11 @@ persist = abjad.OrderedDict(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='percussion',
+                                ),
+                            abjad.Momento(
+                                context='Percussion_II_Music_Voice',
+                                prototype='baca.BarExtent',
+                                value=1,
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',

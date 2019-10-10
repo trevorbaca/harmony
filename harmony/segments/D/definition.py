@@ -241,6 +241,14 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
+    baca.stem_tremolo(
+        baca.pleaf(0),
+    ),
+    baca.dynamic("p"),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -253,6 +261,10 @@ maker(
     baca.staff_position(2),
     baca.accent(baca.pheads()),
     baca.dynamic("f"),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
     baca.dls_staff_padding(5),
 )
 

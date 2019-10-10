@@ -225,12 +225,9 @@ maker(
         r"\baca-brake-drum-markup",
         literal=True,
     ),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.articulation(
         r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.ptail(-1),
     ),
     harmony.brake_drum_staff_position(),
     baca.dynamic("mf"),
@@ -263,7 +260,6 @@ maker(
 
 maker(
     ("hp", 1),
-    baca.clef("bass"),
     harmony.sixteenths(
         [10, "-"],
     ),
@@ -307,6 +303,7 @@ maker(
 
 maker(
     ("hp", (6, 8)),
+    baca.clef("bass"),
     harmony.sixteenths(
         [18, -12, 16, -4],
     ),
@@ -352,6 +349,7 @@ maker(
 
 maker(
     ("va", 4),
+    baca.clef("alto"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [-1, 2, "-"],
@@ -368,6 +366,7 @@ maker(
 
 maker(
     ("va", (6, 8)),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         harmony.cerulean[2:],
@@ -427,6 +426,7 @@ maker(
 
 maker(
     ("vc1", (6, 8)),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         harmony.cerulean[2:],
@@ -542,6 +542,7 @@ maker(
 
 maker(
     ("cb1", 4),
+    baca.clef("bass"),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
@@ -558,6 +559,7 @@ maker(
 
 maker(
     ("cb1", (6, 8)),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         harmony.cerulean[2:],
@@ -601,6 +603,7 @@ maker(
 
 maker(
     ("cb2", 4),
+    baca.clef("bass"),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),

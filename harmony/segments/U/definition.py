@@ -181,6 +181,7 @@ maker(
 
 maker(
     ("perc2", 2),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     baca.markup(
         r"\baca-bd-struck-markup",
@@ -201,6 +202,7 @@ maker(
 
 maker(
     ("perc2", [1, 4]),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [4, "-"],
@@ -216,6 +218,7 @@ maker(
 
 maker(
     ("perc2", 5),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         [6, 3, 7, 4],
@@ -241,12 +244,12 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-xyl-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -256,16 +259,24 @@ maker(
         [-4, 2, -16, 2, "-"],
         extra_counts=[2],
     ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
     baca.dynamic("mf"),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 # va
+
+maker(
+    ("va", 1),
+    baca.clef("alto"),
+)
 
 maker(
     ("va", 2),
@@ -317,6 +328,11 @@ maker(
 # vc1
 
 maker(
+    ("vc1", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("vc1", [1, 4]),
     harmony.sixteenths(
         [4],
@@ -345,6 +361,11 @@ maker(
 # vc2
 
 maker(
+    ("vc2", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("vc2", [1, 4]),
     baca.make_notes(),
     baca.bow_speed_spanner(
@@ -369,6 +390,11 @@ maker(
 )
 
 # cb1
+
+maker(
+    ("cb1", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("cb1", [1, 4]),
@@ -397,6 +423,11 @@ maker(
 )
 
 # cb2
+
+maker(
+    ("cb2", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("cb2", [1, 4]),

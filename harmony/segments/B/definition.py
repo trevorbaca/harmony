@@ -296,19 +296,22 @@ maker(
 
 maker(
     ("hp", (1, 5)),
+    baca.clef("treble"),
     harmony.sixteenths(
         sixteenths,
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
-        tie=([2], 3),
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
     ),
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves(),
     ),
     baca.hairpin(
         "p < f > p",
@@ -360,15 +363,18 @@ maker(
         [2, 2, 16],
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
-        tie=([2], 3),
+    ),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
     ),
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves(),
     ),
     baca.hairpin(
         "p < f > p",
@@ -417,6 +423,7 @@ maker(
 
 maker(
     ("va", 8),
+    baca.clef("alto"),
     baca.staff_lines(5),
 )
 
@@ -464,6 +471,7 @@ maker(
 
 maker(
     ("vc1", 8),
+    baca.clef("bass"),
     baca.staff_lines(5),
 )
 
@@ -550,6 +558,7 @@ maker(
 
 maker(
     ("cb1", 8),
+    baca.clef("bass"),
     baca.staff_lines(5),
 )
 

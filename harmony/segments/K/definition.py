@@ -133,6 +133,7 @@ maker(
 
 maker(
     ("perc1", 1),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [8, "-"],
@@ -146,6 +147,7 @@ maker(
 
 maker(
     ("perc1", 2),
+    baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         [-8, 2, 2, "-"],
@@ -247,13 +249,17 @@ maker(
         written_quarters=([0, 1, 3, 4, 5, 6],),
         invisible=([1, 4, 6],),
     ),
-    baca.stem_tremolo(
-        baca.pheads(),
-    ),
+    harmony.triangle_staff_position(),
     baca.flat_glissando(
         selector=baca.leaves()[:-1],
     ),
-    harmony.triangle_staff_position(),
+    baca.stem_tremolo(
+        baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
@@ -354,6 +360,11 @@ maker(
         r"baca-damp",
         baca.ptails().map(baca.rleak()[-1]),
     ),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
     baca.dynamic("mp"),
 )
 
@@ -361,6 +372,7 @@ maker(
 
 maker(
     ("hp", 1),
+    baca.clef("treble"),
     harmony.sixteenths(
         [8, "-"],
     ),
@@ -373,6 +385,7 @@ maker(
 
 maker(
     ("hp", 2),
+    baca.clef("bass"),
     harmony.sixteenths(
         [-2, 10, "-"],
     ),
@@ -416,6 +429,7 @@ maker(
 
 maker(
     ("hp", 6),
+    baca.clef("treble"),
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
@@ -445,6 +459,8 @@ maker(
 
 maker(
     ("hp", 8),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [6, -6],
     ),
@@ -457,6 +473,8 @@ maker(
 
 maker(
     ("hp", 10),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [6, -4, 4, -2],
     ),
