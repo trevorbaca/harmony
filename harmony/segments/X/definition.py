@@ -113,6 +113,19 @@ maker(
 )
 
 maker(
+    ("perc1", 4),
+    baca.make_notes(),
+    harmony.triangle_staff_position(),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.dynamic(
+        "pp-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+    ),
+)
+
+maker(
     ("perc1", (5, 8)),
     harmony.sixteenths(
         [3, -3],
@@ -234,6 +247,22 @@ maker(
 )
 
 maker(
+    ("va", 4),
+    harmony.sixteenths(
+        ["+"],
+        after_graces=[1],
+    ),
+    baca.staff_positions(
+        [2, -2],
+        mock=True,
+    ),
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
+)
+
+maker(
     ("va", (5, 9)),
     harmony.tessera_3(4),
 )
@@ -258,6 +287,22 @@ maker(
 )
 
 maker(
+    ("vc2", 4),
+    harmony.sixteenths(
+        ["+"],
+        after_graces=[1],
+    ),
+    baca.staff_positions(
+        [2, -2],
+        mock=True,
+    ),
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
+)
+
+maker(
     ("vc2", (5, 9)),
     harmony.tessera_3(2),
 )
@@ -279,6 +324,22 @@ maker(
 maker(
     ("cb2", 1),
     baca.clef("bass"),
+)
+
+maker(
+    ("cb2", 4),
+    harmony.sixteenths(
+        ["+"],
+        after_graces=[1],
+    ),
+    baca.staff_positions(
+        [2, -2],
+        mock=True,
+    ),
+    baca.glissando(),
+    baca.hairpin(
+        "pp >o niente",
+    ),
 )
 
 maker(
