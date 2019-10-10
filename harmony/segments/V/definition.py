@@ -412,7 +412,6 @@ maker(
         [2, -2],
         mock=True,
     ),
-    # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -544,7 +543,6 @@ maker(
         [2, -2],
         mock=True,
     ),
-    # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -671,7 +669,6 @@ maker(
         [2, -2],
         mock=True,
     ),
-    # TODO: use multistage glissando
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
