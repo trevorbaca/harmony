@@ -87,7 +87,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves().rleak(),
+        selector=baca.tleaves(),
     ),
 )
 
