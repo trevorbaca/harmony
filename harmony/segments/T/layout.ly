@@ -2,7 +2,7 @@
 % page_count = 1
 % measure_count = 10 + 1
 % time_signatures = [
-% '3/4', '3/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4'
+% '4/4', '3/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4', '4/4'
 %  ]
 
 
@@ -25,7 +25,7 @@
             \noBreak                                                           %! BREAK:baca.BreakMeasureMap.__call__(2)
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)                   %! BREAK:baca.IndicatorCommand._call()
             \pageBreak                                                         %! BREAK:baca.IndicatorCommand._call()
-            s1 * 3/4                                                           %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 1                                                             %! baca.SegmentMaker._make_global_skips(1)
         %@% - \baca-start-spm-left-only "[1/40]"                               %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
         %@% \bacaStartTextSpanSPM                                              %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
 
