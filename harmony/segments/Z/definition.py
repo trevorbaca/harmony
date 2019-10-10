@@ -72,12 +72,10 @@ maker(
         [4, 4, 16],
     ),
     baca.flat_glissando(
-        left_broken=True,
         selector=baca.leaves()[:3],
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
-        left_broken=True,
     ),
     baca.text_spanner(
         "(T) -> A -> (T)",
