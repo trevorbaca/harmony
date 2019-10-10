@@ -90,7 +90,7 @@ maker(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.leaves(),
     ),
     baca.dls_staff_padding(5),
 )

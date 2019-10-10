@@ -95,7 +95,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves().rleak(),
+        selector=baca.tleaves(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -151,7 +151,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves().rleak(),
+        selector=baca.tleaves(),
     ),
 )
 
@@ -172,7 +172,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves().rleak(),
+        selector=baca.tleaves(),
     ),
 )
 
