@@ -16,7 +16,7 @@ metadata = abjad.OrderedDict(
         ('stop_clock_time', "1'51''"),
         (
             'time_signatures',
-            ['5/4', '3/4', '4/4', '6/4', '6/4'],
+            ['5/4', '3/4', '3/4', '6/4', '6/4'],
             ),
         ]
     )
