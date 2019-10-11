@@ -24,7 +24,7 @@ maker = baca.SegmentMaker(
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (3, 4), (4, 4),
+        (5, 4), (3, 4), (3, 4),
         (6, 4), (6, 4),
     ],
     transpose_score=True,
