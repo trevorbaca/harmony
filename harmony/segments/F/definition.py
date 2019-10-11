@@ -197,20 +197,21 @@ maker(
 )
 
 maker(
-    ("perc1", (6, 7)),
+    ("perc1", 6),
     baca.staff_lines(1),
     harmony.sixteenths(
-        [-19, 2, "-"],
+        ["-", 1],
+    ),
+    harmony.bass_drum_staff_position(),
+    baca.accent(
+        baca.phead(-1),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
+        abjad.tweak(0.75).self_alignment_X,
         literal=True,
     ),
-    harmony.bass_drum_staff_position(),
-    baca.hairpin(
-        "o< mf",
-        selector=baca.tleaves().rleak(),
-    ),
+    baca.dynamic("mf"),
 )
 
 maker(
@@ -344,7 +345,7 @@ maker(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(0.75).self_alignment_X,
         literal=True,
     ),
     baca.accent(
