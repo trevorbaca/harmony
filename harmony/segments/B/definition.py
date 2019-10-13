@@ -524,6 +524,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
+        left_broken=True,
         selector=baca.leaves()[:4],
     ),
     baca.staff_position(0),
