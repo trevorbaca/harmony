@@ -222,7 +222,7 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_most=True,
-        rest_pleaves=([0, 1, 2, 3],),
+        rest_pleaves=[0, 1, 2, 3],
     ),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
@@ -451,7 +451,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak("red").color,
         abjad.tweak(5.5).staff_padding,
-        ###right_broken=True,
+        right_broken=True,
         selector=baca.leaves()[-4:].rleak(),
     ),
     baca.staff_position(0),

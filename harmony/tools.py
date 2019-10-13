@@ -130,7 +130,7 @@ def phjc(
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_pleaves is not None:
-        selector = baca.pleaves().get(*rest_pleaves)
+        selector = baca.pleaves().get(rest_pleaves)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
