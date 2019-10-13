@@ -99,6 +99,7 @@ def phjc(
     rest: abjad.IntegerSequence = None,
     rest_cyclic: typing.Tuple[abjad.IntegerSequence, int] = None,
     rest_except: abjad.IntegerSequence = None,
+    rest_pleaves: abjad.IntegerSequence = None,
     rest_most: bool = None,
     rest_nonfirst: bool = None,
 ) -> baca.RhythmCommand:
@@ -126,6 +127,10 @@ def phjc(
         commands.append(force_)
     if rest_nonfirst is True:
         selector = baca.tuplets()[1:]
+        force_ = rmakers.force_rest(selector)
+        commands.append(force_)
+    if rest_pleaves is not None:
+        selector = baca.pleaves().get(*rest_pleaves)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(

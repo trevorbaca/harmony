@@ -78,6 +78,9 @@ maker(
         selector=baca.plts(grace=True),
         mock=True,
     ),
+    baca.dots_x_extent_false(
+        baca.leaves(grace=False),
+    ),
 )
 
 maker(
@@ -171,10 +174,10 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
-    baca.dynamic("f"),
 )
 
 # perc2
@@ -219,6 +222,7 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_most=True,
+        rest_pleaves=([0, 1, 2, 3],),
     ),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
@@ -327,30 +331,42 @@ maker(
         ),
     ),
     baca.skeleton(
-        r"r4 \times 5/3 { c4 c2 } \times 5/3 { c4 c4 c4 }",
+        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
+    ),
+    baca.repeat_tie(
+        baca.leaves().get([1, 4]),
     ),
     baca.dynamic("p"),
-    baca.stem_tremolo(
-        baca.pleaves(),
-    ),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 maker(
     ("vc1", 3),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
+    baca.clef("percussion", baca.leaf(1)),
+    baca.staff_lines(1, baca.leaf(1)),
     harmony.sixteenths(
-        harmony.cerulean[1:],
+        [5, -5, 1, -4],
         extra_counts=[1],
     ),
-    baca.staff_position(0),
-    baca.stem_tremolo(
-        baca.pleaves(),
+    baca.new(
+        baca.staff_position(0),
+        baca.stem_tremolo(),
+        baca.dynamic("sfp"),
+        selector=baca.pleaf(-1),
     ),
-    baca.dynamic("sfp"),
+)
+
+maker(
+    ("vc1", (1, 3)),
+    baca.metric_modulation_spanner(
+        abjad.tweak("red").color,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[2:-2],
+    ),
+    baca.new(
+        baca.accent(),
+        baca.stem_tremolo(),
+        selector=baca.leaves().pheads()[:-1],
+    ),
 )
 
 # vc2
@@ -428,10 +444,20 @@ maker(
     ("cb1", 3),
     baca.staff_lines(1),
     baca.clef("percussion"),
-    harmony.sixteenths(
-        harmony.cerulean[1:],
+    baca.skeleton(
+        r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
+    ),
+    baca.tuplet_number_text(abjad.Markup("5:4")),
+    baca.metric_modulation_spanner(
+        abjad.tweak("red").color,
+        abjad.tweak(5.5).staff_padding,
+        ###right_broken=True,
+        selector=baca.leaves()[-4:].rleak(),
     ),
     baca.staff_position(0),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),

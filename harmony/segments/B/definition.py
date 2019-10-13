@@ -518,13 +518,32 @@ maker(
 # cb1
 
 maker(
-    ("cb1", (1, 5)),
+    ("cb1", 1),
+    harmony.sixteenths(
+        [2, -2, 2, -2, "-"],
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[:4],
+    ),
+    baca.staff_position(0),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+)
+
+maker(
+    ("cb1", (2, 5)),
     baca.clef("bass"),
     baca.staff_lines(5),
     harmony.appoggiato(
-        divisions=divisions.rotate(-3),
+        #divisions=divisions.rotate(-3),
+        divisions=[8, 16, 16, 20, 12],
         counts=[5, 6, 7],
-        rest_to=3,
+        rest_to=2,
     ),
 )
 
