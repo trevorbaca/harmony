@@ -358,7 +358,6 @@ maker(
 maker(
     ("vc1", (1, 3)),
     baca.metric_modulation_spanner(
-        abjad.tweak("red").color,
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[2:-2],
     ),
@@ -449,7 +448,6 @@ maker(
     ),
     baca.tuplet_number_text(abjad.Markup("5:4")),
     baca.metric_modulation_spanner(
-        abjad.tweak("red").color,
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-4:].rleak(),
