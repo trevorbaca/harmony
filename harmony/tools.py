@@ -32,7 +32,7 @@ def appoggiato(
     incise: bool = None,
     prefix_talea=None,
     prefix_counts=None,
-    rest_all: typing.Union[abjad.IntegerSequence, bool] = None,
+    rest_after: typing.Union[abjad.IntegerSequence, bool] = None,
     rest_to: int = None,
     rest_from: int = None,
     tie: abjad.IntegerSequence = None,
@@ -67,12 +67,12 @@ def appoggiato(
             counts, baca.plts(), leaf_duration=(1, 20)
         )
         commands.append(on_beat_)
-    if rest_all is True:
+    if rest_after is True:
         selector = baca.plts(grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
-    elif rest_all is not None:
-        selector = baca.plts(grace=False).get(rest_all)
+    elif rest_after is not None:
+        selector = baca.plts(grace=False).get(rest_after)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if tie is not None:

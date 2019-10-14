@@ -144,7 +144,7 @@ maker(
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
-        rest_all=True,
+        rest_after=True,
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -186,7 +186,7 @@ maker(
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -195,7 +195,7 @@ maker(
     harmony.appoggiato(
         divisions=[16],
         counts=[19],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -210,7 +210,7 @@ maker(
     harmony.appoggiato(
         divisions=[20],
         counts=[25],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -236,7 +236,7 @@ maker(
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 4],
-        rest_all=True,
+        rest_after=True,
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -278,7 +278,7 @@ maker(
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -287,7 +287,7 @@ maker(
     harmony.appoggiato(
         divisions=[16],
         counts=[18],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -302,7 +302,7 @@ maker(
     harmony.appoggiato(
         divisions=[20],
         counts=[24],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 

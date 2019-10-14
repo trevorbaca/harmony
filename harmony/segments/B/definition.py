@@ -142,7 +142,7 @@ maker(
         divisions=[16, 20, 16, 20, 10, 6],
         prefix_talea=[2, 3],
         prefix_counts=[0, 0, 0, 0, 0, 2],
-        rest_all=[0, 1, 2, 3, 4],
+        rest_after=[0, 1, 2, 3, 4],
         tie=[-2],
         written_quarters=[-2],
         invisible=[-1],
@@ -219,7 +219,7 @@ maker(
     ("perc1", (8, 11)),
     harmony.appoggiato(
         counts=[7],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
