@@ -156,7 +156,7 @@ maker(
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
-        rest_all=True,
+        rest_after=True,
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -298,7 +298,7 @@ maker(
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 4],
-        rest_all=True,
+        rest_after=True,
     ),
     baca.markup(
         r"\baca-purpleheart-markup",

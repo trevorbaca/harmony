@@ -188,6 +188,7 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_most=True,
+        rest_pleaves=[0, 1, 2, 3],
     ),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
@@ -332,6 +333,9 @@ maker(
         extra_counts=[2],
     ),
     baca.staff_position(0),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -373,6 +377,9 @@ maker(
         extra_counts=[2],
     ),
     baca.staff_position(0),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -386,26 +393,34 @@ maker(
 
 maker(
     ("vc1", 1),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
-    harmony.sixteenths(
-        harmony.cerulean[1:],
-        extra_counts=[1],
+    baca.skeleton(
+        r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
-    baca.staff_position(0),
-    baca.stem_tremolo(
-        baca.pleaves(),
+    baca.tuplet_number_text(
+        abjad.Markup("5:4"),
+        baca.leaf(1),
     ),
-    baca.dynamic("sfp"),
+    baca.accent(
+        baca.pheads(),
+    )
 )
 
 maker(
     ("vc1", 2),
-    baca.staff_lines(5),
-    baca.clef("bass"),
     harmony.tessera_1(
         3,
         gap=True,
+    ),
+)
+
+maker(
+    ("vc1", (1, 2)),
+    baca.damp_spanner(
+        abjad.tweak(5.5).staff_padding,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[2:9],
     ),
 )
 
@@ -425,20 +440,80 @@ maker(
 )
 
 maker(
-    ("vc1", (6, 8)),
+    ("vc1", (6, 7)),
     baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
         harmony.cerulean[2:],
         extra_counts=[1],
     ),
-    baca.staff_position(0),
+    baca.staff_position(
+        0,
+        baca.leaves().rleak().rleak().rleak().pleaves(),
+    ),
+    baca.accent(
+        baca.leaves().rleak().rleak().rleak().pheads(),
+    ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.leaves().rleak().rleak().rleak().pleaves(),
     ),
     baca.dynamic(
         "sfp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+)
+
+maker(
+    ("vc1", 8),
+    baca.skeleton(
+        r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
+    ),
+    baca.tuplet_number_text(
+        abjad.Markup("5:4"),
+        baca.leaves(),
+    ),
+    baca.new(
+        baca.clef("bass"),
+        baca.clef_extra_offset((-2, 0)),
+        baca.clef_x_extent_false(),
+        selector=baca.leaf(3),
+    ),
+    baca.staff_lines(
+        5,
+        baca.leaf(3),
+    ),
+    baca.new(
+        baca.flag_extra_offset((-2, 0)),
+        baca.note_head_extra_offset((-2, 0)),
+        baca.script_extra_offset((-2, 0)),
+        baca.stem_extra_offset((-2, 0)),
+        baca.stem_tremolo_extra_offset((-2, 0)),
+        selector=baca.leaf(2),
+    ),
+    baca.accent(
+        baca.leaves()[4:].pheads(),
+    ),
+    baca.damp_spanner(
+        abjad.tweak(5.5).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[4:].rleak(),
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[4:].rleak(),
+    ),
+)
+
+maker(
+    ("vc1", (6, 8)),
+    baca.tuplet_bracket_staff_padding(
+        5,
+        baca.leaves()[:-5],
+    ),
+    baca.tuplet_bracket_staff_padding(
+        3,
+        baca.leaves()[-5:],
     ),
 )
 
@@ -467,6 +542,9 @@ maker(
         2,
         gap=True,
     ),
+    baca.damp_spanner(
+        abjad.tweak(5.5).staff_padding,
+    )
 )
 
 maker(
@@ -501,15 +579,6 @@ maker(
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
-    ),
-)
-
-# vc1, vc2
-
-maker(
-    (["vc1", "vc2"], 2),
-    baca.damp_spanner(
-        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -565,7 +634,12 @@ maker(
         harmony.cerulean[2:],
     ),
     baca.staff_position(0),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic(
         "sfp-ancora",
         abjad.tweak(-0.75).self_alignment_X,

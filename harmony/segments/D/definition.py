@@ -163,7 +163,7 @@ maker(
     ("perc1", 9),
     harmony.appoggiato(
         counts=[7],
-        rest_all=True,
+        rest_after=True,
     ),
 )
 
@@ -361,11 +361,14 @@ maker(
 
 maker(
     ("vc1", (1, 6)),
-    baca.staff_lines(5),
-    baca.clef("bass"),
     harmony.tessera_1(
         3,
         gap=True,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:3],
     ),
 )
 
