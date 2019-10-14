@@ -672,7 +672,7 @@ P_Percussion_II_Music_Voice = {                                                %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
 
     % [P Percussion_II_Music_Voice measure 143 / measure 3]                    %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
@@ -695,7 +695,7 @@ P_Percussion_II_Music_Voice = {                                                %
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -758,7 +758,7 @@ P_Percussion_II_Music_Voice = {                                                %
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
@@ -846,7 +846,7 @@ P_Harp_Music_Voice = {                                                         %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
 
     % [P Harp_Music_Voice measure 143 / measure 3]                             %! baca.SegmentMaker._comment_measure_numbers()
     r2                                                                         %! harmony.sixteenths()
@@ -872,7 +872,7 @@ P_Harp_Music_Voice = {                                                         %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
 
     r4                                                                         %! harmony.sixteenths()
 
@@ -968,7 +968,7 @@ P_Harp_Music_Voice = {                                                         %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM

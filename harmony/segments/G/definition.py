@@ -211,7 +211,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     harmony.bass_drum_staff_position(),
@@ -298,13 +298,12 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptail(-1),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     baca.dynamic("mf"),

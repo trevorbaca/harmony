@@ -258,7 +258,7 @@ maker(
     ),
     baca.chunk(
         baca.dynamic("p"),
-        baca.articulation(r"baca-damp"),
+        baca.damp(),
     ),
     baca.new(
         baca.dynamic("f"),

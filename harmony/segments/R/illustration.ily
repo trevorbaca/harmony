@@ -931,7 +931,7 @@ R_Percussion_II_Music_Voice = {                                                %
     c'4                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     ^ \baca-reapplied-indicator-markup "[“Perc. II”]"                          %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     ^ \baca-reapplied-indicator-markup "(“Percussion”)"                        %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     ^ \baca-brake-drum-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
@@ -961,7 +961,7 @@ R_Percussion_II_Music_Voice = {                                                %
     c'8                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
     - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \baca-text-spanner-left-text "sixteenths([2, 2, '-'])"                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1056,7 +1056,7 @@ R_Percussion_II_Music_Voice = {                                                %
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [R Percussion_II_Music_Voice measure 162 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -1368,7 +1368,7 @@ R_Harp_Music_Voice = {                                                         %
     \repeatTie
 
     r8.                                                                        %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [R Harp_Music_Voice measure 162 / measure 6]                             %! baca.SegmentMaker._comment_measure_numbers()

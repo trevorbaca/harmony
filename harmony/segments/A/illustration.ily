@@ -918,7 +918,7 @@ A_Harp_Music_Voice = {                                                         %
     \ottava 0                                                                  %! baca.ottava_bassa():baca.SpannerIndicatorCommand._call(4):SPANNER_STOP
 
     r8                                                                         %! harmony.sixteenths()
-    - \baca-damp                                                               %! baca.articulation():baca.IndicatorCommand._call()
+    - \baca-damp                                                               %! baca.damp():baca.IndicatorCommand._call()
     <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM

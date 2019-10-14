@@ -266,7 +266,7 @@ maker(
     ),
     baca.chunk(
         baca.dynamic("p"),
-        baca.articulation(r"baca-damp"),
+        baca.damp(),
     ),
     baca.new(
         baca.dynamic("f"),
@@ -283,7 +283,7 @@ maker(
     harmony.brake_drum_staff_position(),
     baca.chunk(
         baca.dynamic("p"),
-        baca.articulation(r"baca-damp"),
+        baca.damp(),
     ),
     baca.new(
         baca.dynamic("f"),
@@ -321,8 +321,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )
@@ -449,8 +448,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )

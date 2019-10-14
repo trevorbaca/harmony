@@ -113,14 +113,11 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     harmony.bass_drum_staff_position(),
-    baca.hairpin(
-        "o< mf",
-        selector=baca.tleaves().rleak(),
-    ),
+    baca.dynamic("mf"),
 )
 
 maker(
@@ -194,15 +191,14 @@ maker(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
-        baca.ptails().map(baca.rleak()[-1]),
+    baca.damp(
+        baca.pheads(),
     ),
     harmony.brake_drum_staff_position(),
     baca.dynamic("mf"),
@@ -301,8 +297,7 @@ maker(
     baca.tenuto(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )
