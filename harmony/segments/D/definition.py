@@ -236,35 +236,37 @@ maker(
 
 maker(
     ("perc2", 9),
-    baca.staff_lines(1),
-    harmony.tuplet(
-        [(1,)],
-        force_augmentation=True,
+    harmony.sixteenths(
+        [4, 4, "-"],
     ),
-    baca.stem_tremolo(
-        baca.pleaf(0),
+    baca.accent(
+        baca.pheads(),
     ),
-    baca.dynamic("p"),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        literal=True,
+)
+
+maker(
+    ("perc2", (8, 9)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.pleaves().rleak(),
     ),
 )
 
 maker(
     ("perc2", 11),
-    baca.staff_lines(3),
-    harmony.train(
-        [2],
-        rest_leaves=[0],
+    harmony.sixteenths(
+        [-6, 6],
     ),
     baca.staff_position(2),
-    baca.accent(baca.pheads()),
-    baca.dynamic("f"),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
     ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.pleaves().rleak(),
+    ),
+    baca.dynamic("f"),
     baca.dls_staff_padding(5),
 )
 
@@ -424,6 +426,7 @@ maker(
     (["vc1", "vc2"], [(1, 6), 8, 11]),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves().rleak(grace=False)
     ),
 )
 
