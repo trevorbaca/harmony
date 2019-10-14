@@ -292,8 +292,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic("mp"),
@@ -308,8 +307,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic(
@@ -356,8 +354,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.markup(
@@ -397,8 +394,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic("mp"),
@@ -417,8 +413,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic(
@@ -486,8 +481,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic("mp"),

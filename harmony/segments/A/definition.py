@@ -273,8 +273,7 @@ maker(
     baca.tenuto(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )

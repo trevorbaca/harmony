@@ -226,8 +226,7 @@ maker(
         r"\baca-brake-drum-markup",
         literal=True,
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptail(-1),
     ),
     harmony.brake_drum_staff_position(),
@@ -272,8 +271,7 @@ maker(
     baca.tenuto(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )
@@ -316,8 +314,7 @@ maker(
     baca.tenuto(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )

@@ -136,8 +136,7 @@ maker(
         baca.pheads(),
     ),
     baca.laissez_vibrer(),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.leaves().rleak()[-1],
     ),
 )

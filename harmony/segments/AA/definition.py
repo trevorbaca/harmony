@@ -343,8 +343,7 @@ maker(
     baca.laissez_vibrer(
         baca.ptails()[:-1],
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.pleaf(-1),
     ),
 )

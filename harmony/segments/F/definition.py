@@ -132,13 +132,13 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.markup(
         r"\baca-bd-struck-markup",
-        abjad.tweak(-2.75).self_alignment_X,
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation("baca-damp"),
+    baca.damp(),
     baca.dynamic("mp"),
 )
 
@@ -171,8 +171,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic(
@@ -287,8 +286,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     harmony.tam_tam_staff_position(),
@@ -315,8 +313,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     harmony.tam_tam_staff_position(),
@@ -351,8 +348,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptail(-1),
     ),
     harmony.brake_drum_staff_position(),
@@ -439,8 +435,7 @@ maker(
     harmony.sixteenths(
         [-10, 6, "-"],
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.staff_position(
@@ -480,8 +475,7 @@ maker(
     harmony.sixteenths(
         [9, "-"],
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.staff_position(
@@ -551,8 +545,7 @@ maker(
     baca.tenuto(
         baca.pheads(),
     ),
-    baca.articulation(
-        r"baca-damp",
+    baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
 )
