@@ -30,9 +30,14 @@ def appoggiato(
     counts: abjad.IntegerSequence = None,
     fuse: bool = None,
     incise: bool = None,
-    rest_all: bool = None,
+    prefix_talea=None,
+    prefix_counts=None,
+    rest_all: typing.Union[abjad.IntegerSequence, bool] = None,
     rest_to: int = None,
     rest_from: int = None,
+    tie: abjad.IntegerSequence = None,
+    written_quarters: abjad.IntegerSequence = None,
+    invisible: abjad.IntegerSequence = None,
     after_graces: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
@@ -45,17 +50,17 @@ def appoggiato(
         divisions_ = baca.sequence([(_, 16) for _ in divisions])
         preprocessor = baca.sequence().fuse()
         preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
-    prefix_talea = None
-    prefix_counts = None
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
     commands: typing.List[rmakers.Command] = []
     if rest_to:
-        force_rest_ = rmakers.force_rest(baca.plts(grace=False)[:rest_to])
+        selector = baca.plts(grace=False)[:rest_to]
+        force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if rest_from is not None:
-        force_rest_ = rmakers.force_rest(baca.plts()[-rest_from:])
+        selector = baca.plts(grace=False)[-rest_from:]
+        force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
@@ -66,6 +71,25 @@ def appoggiato(
         selector = baca.plts(grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
+    elif rest_all is not None:
+        selector = baca.plts(grace=False).get(rest_all)
+        force_ = rmakers.force_rest(selector)
+        commands.append(force_)
+    if tie is not None:
+        selector = baca.pleaves().get(tie)
+        repeat_tie_ = rmakers.repeat_tie(selector)
+        commands.append(repeat_tie_)
+    if written_quarters is not None:
+        selector = baca.pleaves().get(written_quarters)
+        written_ = rmakers.written_duration((1, 4), selector)
+        commands.append(written_)
+        selector = baca.leaves(grace=False)
+        unbeam_ = rmakers.unbeam(selector)
+        commands.append(unbeam_)
+    if invisible is not None:
+        selector = baca.pleaves().get(invisible)
+        written_ = rmakers.invisible_music(selector)
+        commands.append(written_)
     if after_graces is not None:
         selector = baca.pleaf(-1)
         beam_and_slash = None
@@ -184,6 +208,7 @@ def sixteenths(
     beam: bool = None,
     fuse: bool = None,
     preprocessor: abjad.Expression = None,
+    denominator=(1, 16),
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
     written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
@@ -213,6 +238,9 @@ def sixteenths(
         beam_ = rmakers.beam()
         beam_commands.append(beam_)
     commands: typing.List[rmakers.Command] = []
+    if denominator is not None:
+        denominator_ = rmakers.denominator(denominator)
+        commands.append(denominator_)
     if not do_not_rewrite_meter:
         rewrite_ = rmakers.rewrite_meter(
             boundary_depth=1, reference_meters=_reference_meters
@@ -300,7 +328,7 @@ def sixteenths(
         *beam_commands,
         rmakers.extract_trivial(),
         rmakers.force_fraction(),
-        rmakers.denominator((1, 16)),
+        ###rmakers.denominator((1, 16)),
         *commands,
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),

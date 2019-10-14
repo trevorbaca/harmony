@@ -138,14 +138,35 @@ maker(
 maker(
     ("perc1", (1, 5)),
     harmony.appoggiato(
-        counts=[4],
-        rest_all=True,
+        counts=[4, 4, 4, 4, 4, 0, 0, 0],
+        divisions=[16, 20, 16, 20, 10, 6],
+        prefix_talea=[2, 3],
+        prefix_counts=[0, 0, 0, 0, 0, 2],
+        rest_all=[0, 1, 2, 3, 4],
+        tie=[-2],
+        written_quarters=[-2],
+        invisible=[-1],
+    ),
+    baca.new(
+        baca.staff_lines(
+            1,
+            baca.leaf(1, grace=False),
+        ),
+        baca.markup(
+            r"\baca-bd-superball-markup",
+            literal=True,
+            selector=baca.pleaf(0, grace=False),
+        ),
+        baca.hairpin(
+            "o<| f",
+            selector=baca.leaves()[-3:],
+        ),
+        measures=5,
     ),
 )
 
 maker(
     ("perc1", 6),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [3, 1, "-", 3, 1],
         written_quarters=True,
@@ -160,9 +181,13 @@ maker(
         selector=baca.leaves()[-2:],
     ),
     baca.laissez_vibrer(),
-    baca.markup(
-        r"\baca-bd-superball-markup",
-        literal=True,
+)
+
+maker(
+    ("perc1", (5, 6)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves(grace=False)[2:8],
     ),
 )
 
@@ -201,7 +226,7 @@ maker(
 # perc2
 
 maker(
-    ("perc2", (1, 5)),
+    ("perc2", (1, 4)),
     baca.staff_lines(1),
     baca.make_repeat_tied_notes(),
     baca.markup(
@@ -220,18 +245,34 @@ maker(
 )
 
 maker(
-    ("perc2", 6),
+    ("perc2", 5),
     baca.markup(
         r"\baca-slate-scrape-markup",
+        abjad.tweak(5.5 + 1.25).staff_padding,
         literal=True,
     ),
     harmony.sixteenths(
+        ["-", 6],
+    ),
+)
+
+maker(
+    ("perc2", 6),
+    harmony.sixteenths(
         [4, -6, 4, 4, -2],
     ),
+)
+
+maker(
+    ("perc2", (5, 6)),
     harmony.slate_staff_position(),
+    baca.metric_modulation_spanner(
+        abjad.tweak(10.5).staff_padding,
+        selector=baca.runs()[:1].rleak(),
+    ),
     baca.circle_bow_spanner(
         None,
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         map=baca.plts(),
     ),
 )
@@ -249,6 +290,7 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_most=True,
+        rest_pleaves=[0, 1, 2, 3],
     ),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
@@ -391,7 +433,7 @@ maker(
     baca.clef("alto"),
     baca.staff_lines(5),
     harmony.appoggiato(
-        divisions=divisions,
+        divisions=[16, 12, 16, 12, 16, 16],
         counts=[2, 3, 4, 5, 6, 7],
     ),
 )
@@ -430,14 +472,19 @@ maker(
 # vc1
 
 maker(
-    ("vc1", (1, 5)),
+    ("vc1", (1, 4)),
     baca.clef("bass"),
     baca.staff_lines(5),
     harmony.appoggiato(
-        divisions=divisions.rotate(-1),
+        divisions=[12, 16, 12, 16, 16, 16],
         counts=[3, 4, 5, 6, 7],
         rest_to=1,
     ),
+)
+
+maker(
+    ("vc1", 5),
+    baca.make_notes(),
 )
 
 maker(
@@ -445,28 +492,48 @@ maker(
     baca.skeleton(
         r" \times 5/3 { c4 c4 c4 }",
     ),
+    baca.repeat_tie(
+        baca.pleaf(0),
+    ),
+)
+
+maker(
+    ("vc1", (5, 6)),
     baca.dynamic("p"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.leaves().rleak().pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.leaves().rleak().pheads(),
     ),
 )
 
 maker(
     ("vc1", 7),
     baca.clef("percussion"),
-    baca.staff_lines(1),
+    baca.staff_lines(
+        1,
+        baca.leaf(1),
+    ),
     harmony.sixteenths(
-        harmony.cerulean[1:],
+        #harmony.cerulean[1:],
+        [5, -5, 1, "-"],
         extra_counts=[1],
     ),
-    baca.staff_position(0),
-    baca.stem_tremolo(
-        baca.pleaves(),
+    baca.new(
+        baca.staff_position(0),
+        baca.stem_tremolo(),
+        baca.dynamic("sfp"),
+        selector=baca.pleaf(1),
     ),
-    baca.dynamic("sfp"),
+)
+
+maker(
+    ("vc1", (6, 7)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[1:5],
+    ),
 )
 
 maker(
@@ -478,11 +545,33 @@ maker(
 # vc2
 
 maker(
-    ("vc2", (1, 5)),
+    ("vc2", (1, 2)),
+    harmony.sixteenths(
+        [20, "-"],
+        preprocessor=baca.sequence().fuse().split_divisions([(15, 8), (3, 8)]),
+        denominator=None,
+        do_not_rewrite_meter=True,
+        extra_counts=[-6],
+        untie=True,
+        after_graces=[1],
+    ),
+    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.tuplet_bracket_staff_padding(3.5),
+)
+
+maker(
+    ("vc2", (3, 5)),
     harmony.appoggiato(
-        divisions=divisions.rotate(-2),
+        divisions=[8, 16, 12, 16],
         counts=[4, 5, 6, 7],
-        rest_to=2,
+        rest_to=1,
     ),
 )
 
@@ -541,10 +630,8 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(5),
     harmony.appoggiato(
-        #divisions=divisions.rotate(-3),
-        divisions=[8, 16, 16, 20, 12],
+        divisions=[16, 16, 12, 16, 12],
         counts=[5, 6, 7],
-        rest_to=2,
     ),
 )
 
@@ -585,11 +672,33 @@ maker(
 # cb2
 
 maker(
-    ("cb2", (1, 5)),
+    ("cb2", (1, 2)),
+    harmony.sixteenths(
+        [20, "-"],
+        preprocessor=baca.sequence().fuse().split_divisions([(15, 8), (3, 8)]),
+        denominator=None,
+        do_not_rewrite_meter=True,
+        extra_counts=[-6],
+        untie=True,
+        after_graces=[1],
+    ),
+    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.glissando(
+        allow_repeats=True,
+        hide_middle_note_heads=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.tuplet_bracket_staff_padding(3.5),
+)
+
+maker(
+    ("cb2", (3, 5)),
     harmony.appoggiato(
-        divisions=divisions.rotate(-4),
+        divisions=[8, 16, 12, 16],
         counts=[6, 7],
-        rest_to=4,
+        rest_to=1,
     ),
 )
 
@@ -632,7 +741,20 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], [(1, 5), (8, 11)]),
+    (["va", "vc1", "vc2", "cb1"], [(1, 5), (8, 11)]),
+    baca.note_head_style_harmonic(
+        baca.pleaves(grace=False),
+    ),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
+)
+
+maker(
+    (["cb2"], [(3, 5), (8, 11)]),
     baca.note_head_style_harmonic(
         baca.pleaves(grace=False),
     ),
