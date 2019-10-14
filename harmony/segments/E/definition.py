@@ -91,7 +91,7 @@ maker(
 maker(
     ("bfl", 5),
     harmony.sixteenths(
-        [-3, 1, "-"],
+        [-3, 1, 1, "-"],
     ),
     baca.markup(
         r"\baca-jet-whistle-markup",
@@ -286,6 +286,7 @@ maker(
 maker(
     ("hp", 2),
     baca.clef("bass"),
+    baca.clef_whiteout(2),
     harmony.sixteenths(
         [10, -2],
     ),
@@ -309,11 +310,12 @@ maker(
 )
 
 maker(
-    ("hp", (4, 5)),
+    ("hp", 4),
     harmony.sixteenths(
         [4, 4, 8],
         fuse=True,
         do_not_rewrite_meter=True,
+        after_graces=[1],
     ),
     baca.markup(
         r"\baca-tuning-key-glissando-markup",
@@ -325,15 +327,21 @@ maker(
         mock=True,
     ),
     baca.glissando(),
-    baca.articulation(
-        "prall",
-        baca.pheads().get([1, 2], 3),
-    ),
     baca.hairpin(
         '"f" >o niente',
         selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(6.5),
+)
+
+maker(
+    ("hp", 5),
+    harmony.sixteenths(
+        ["-", 12, -8],
+    ),
+    baca.damp(
+        baca.runs()[:1].rleak(),
+    ),
 )
 
 # va

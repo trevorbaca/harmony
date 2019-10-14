@@ -142,11 +142,15 @@
         \override BreathingSign.X-extent = ##f
         \override BreathingSign.extra-offset = #'(-1.5 . 0)
 
+        \override Clef.layer = -1
+        \override Clef.whiteout-style = #'outline
+
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
 
         \override Hairpin.to-barline = ##f
 
+        \override LaissezVibrerTie.layer = -2
         \shape #'((0 . 0) (0.5 . 0) (1 . 0) (2 . 0)) LaissezVibrerTie                 
 
         \override NoteCollision.merge-differently-dotted = ##t
