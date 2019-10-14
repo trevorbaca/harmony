@@ -88,8 +88,8 @@ def appoggiato(
         commands.append(unbeam_)
     if invisible is not None:
         selector = baca.pleaves().get(invisible)
-        written_ = rmakers.invisible_music(selector)
-        commands.append(written_)
+        invisible_ = rmakers.invisible_music(selector)
+        commands.append(invisible_)
     if after_graces is not None:
         selector = baca.pleaf(-1)
         beam_and_slash = None
