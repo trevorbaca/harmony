@@ -64,6 +64,17 @@ maker(
     baca.flat_glissando(
         selector=baca.leaves()[3:6],
     ),
+    baca.hairpin(
+        "pp < p > pp",
+        pieces=baca.lparts([1, 1 + 1]),
+        measures=1,
+    ),
+    baca.hairpin(
+        "ppp < pp >o niente",
+        pieces=baca.lparts([1, 2 + 1]),
+        selector=baca.leaves().rleak(),
+        measures=2,
+    ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         left_broken=True,
@@ -80,17 +91,6 @@ maker(
         measures=2,
         pieces=baca.lparts([1, 1 + 1]),
     ),
-    baca.hairpin(
-        "pp < p > pp",
-        pieces=baca.lparts([1, 1 + 1]),
-        measures=1,
-    ),
-    baca.hairpin(
-        "ppp < pp >o niente",
-        pieces=baca.lparts([1, 2 + 1]),
-        selector=baca.leaves().rleak(),
-        measures=2,
-    ),
 )
 
 # perc1
@@ -104,14 +104,14 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
     baca.dynamic("f"),
     baca.dynamic(
         "mp",
         selector=baca.phead(-1),
+    ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
     ),
 )
 
@@ -131,13 +131,13 @@ maker(
     baca.damp(
         baca.leaves().rleak()[-1],
     ),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "mp",
         selector=baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
     ),
 )
 
@@ -153,17 +153,17 @@ maker(
     harmony.sixteenths(
         [1, -22, 1],
     ),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
     ),
     baca.dynamic("f"),
     baca.dynamic(
         "mp",
         selector=baca.phead(-1),
     ),
-    baca.accent(
-        baca.pheads(),
+    baca.markup(
+        r"\baca-soundboard-pizz-markup",
+        literal=True,
     ),
 )
 

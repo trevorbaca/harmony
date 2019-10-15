@@ -71,10 +71,10 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.dynamic("p"),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -152,13 +152,15 @@ maker(
         [21, -14, 18, "-"],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(baca.pheads()),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
     ),
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
+    ),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
     ),
 )
 
@@ -243,14 +245,14 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.95).self_alignment_X,
+    ),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
-    ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.95).self_alignment_X,
     ),
 )
 
@@ -274,7 +276,9 @@ maker(
 
 maker(
     ("vc1", (1, 6)),
-    harmony.sixteenths([3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]),
+    harmony.sixteenths(
+        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -286,13 +290,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -325,13 +329,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -369,13 +373,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -418,13 +422,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 

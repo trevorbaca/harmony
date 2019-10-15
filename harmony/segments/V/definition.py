@@ -69,21 +69,24 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
 )
 
 maker(
     ("bfl", 4),
-    harmony.sixteenths([-8, 8, -16, 4], extra_counts=[1]),
+    harmony.sixteenths(
+        [-8, 8, -16, 4],
+        extra_counts=[1],
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
@@ -97,10 +100,6 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -111,11 +110,18 @@ maker(
         "niente",
         selector=baca.leaves().rleak()[-1],
     ),
+    baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
+        abjad.tweak(3).staff_padding,
+    ),
 )
 
 maker(
     ("bfl", 13),
-    harmony.sixteenths([-12, 4, "-"], extra_counts=[1]),
+    harmony.sixteenths(
+        [-12, 4, "-"],
+        extra_counts=[1],
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
@@ -349,12 +355,12 @@ maker(
     harmony.sixteenths(
         [-6, 2, "-"],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -438,15 +444,15 @@ maker(
         invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
     ),
 )
 
@@ -466,9 +472,6 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -478,6 +481,9 @@ maker(
     baca.dynamic(
         "niente",
         selector=baca.leaves().rleak()[-1],
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -569,15 +575,15 @@ maker(
         invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
     ),
 )
 
@@ -596,9 +602,6 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -608,6 +611,9 @@ maker(
     baca.dynamic(
         "niente",
         selector=baca.leaves().rleak()[-1],
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -688,8 +694,8 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
-    baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_lines(1),
     baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),

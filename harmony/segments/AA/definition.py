@@ -140,16 +140,16 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
         selector=baca.leaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -161,13 +161,13 @@ maker(
     ),
     baca.new(
         baca.flat_glissando(),
+        baca.hairpin(
+            "pp < p > pp",
+            pieces=baca.lparts([1, 1 + 1]),
+        ),
         baca.text_spanner(
             "(T) -> A -> (T)",
             abjad.tweak(5.5).staff_padding,
-            pieces=baca.lparts([1, 1 + 1]),
-        ),
-        baca.hairpin(
-            "pp < p > pp",
             pieces=baca.lparts([1, 1 + 1]),
         ),
         map=baca.clparts([3]),
@@ -196,11 +196,11 @@ maker(
         [1, -3, 3, -3, 3, -3],
     ),
     harmony.slate_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -208,11 +208,11 @@ maker(
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
     baca.flat_glissando(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -224,14 +224,14 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
+    ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
     ),
 )
 
@@ -244,10 +244,6 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "f",
         selector=baca.pheads()[:-1],
@@ -256,17 +252,21 @@ maker(
         "mp",
         selector=baca.phead(-1),
     ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
 )
 
 maker(
     ("perc1", 13),
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 # perc2
@@ -280,11 +280,11 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -313,13 +313,13 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "f >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
     ),
 )
 
@@ -329,10 +329,6 @@ maker(
         [1, -23, 1, -23, 1, -23, 1, -23, 1, -22, 1],
     ),
     harmony.bass_drum_staff_position(),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-    ),
     baca.accent(
         baca.pheads()[:-1],
     ),
@@ -345,6 +341,10 @@ maker(
     baca.dynamic(
         "mp",
         selector=baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
     ),
 )
 
@@ -361,11 +361,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-pince-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -375,11 +375,11 @@ maker(
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-whisk-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -395,11 +395,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-pince-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -407,9 +407,8 @@ maker(
     harmony.sixteenths(
         [1, -23, 1, -23, 1, -23, 1, -23, 1, -22, 1],
     ),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
     ),
     baca.dynamic(
         "f",
@@ -419,8 +418,9 @@ maker(
         "mp",
         selector=baca.phead(-1),
     ),
-    baca.accent(
-        baca.pheads(),
+    baca.markup(
+        r"\baca-soundboard-pizz-markup",
+        literal=True,
     ),
 )
 
@@ -429,11 +429,11 @@ maker(
 maker(
     ("va", 1),
     baca.make_notes(),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -446,11 +446,11 @@ maker(
 maker(
     ("va", (4, 5)),
     baca.make_notes(),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -466,11 +466,11 @@ maker(
 maker(
     ("va", 13),
     baca.make_notes(),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 # vc1
@@ -676,12 +676,12 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 6),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
     ),
 )
 
@@ -693,13 +693,13 @@ maker(
         invisible=([1], 3),
         tie_all=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
-    ),
     baca.hairpin(
         "pp < p > pp",
         map=baca.clparts([3]),
         pieces=baca.lparts([1, 1 + 1]),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).bound_details__right__padding,
     ),
 )
 

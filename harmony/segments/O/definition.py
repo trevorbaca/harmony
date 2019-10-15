@@ -47,12 +47,12 @@ maker(
     harmony.sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         selector=baca.tleaves().rleak(),
-    ),
-    baca.accent(
-        baca.pheads(),
     ),
 )
 
@@ -76,6 +76,9 @@ maker(
     harmony.sixteenths(
         [4, 8],
     ),
+    baca.breathe(
+        baca.pleaf(1),
+    ),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -85,9 +88,6 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.breathe(
-        baca.pleaf(1),
-    ),
 )
 
 maker(
@@ -96,6 +96,17 @@ maker(
         [-1, 3, -8, 4, -8, -1, "+"],
     ),
     baca.accent(),
+    baca.dynamic("p"),
+    baca.dynamic(
+        "p-ancora",
+        abjad.tweak(-0.75).self_alignment_X,
+        selector=baca.phead(1),
+    ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.75).self_alignment_X,
+        selector=baca.phead(2),
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -108,17 +119,6 @@ maker(
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
         map=baca.run(2),
-    ),
-    baca.dynamic("p"),
-    baca.dynamic(
-        "p-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
-        selector=baca.phead(1),
-    ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
-        selector=baca.phead(2),
     ),
 )
 
@@ -304,14 +304,14 @@ maker(
     harmony.sixteenths(
         [5, -7, 5, -7, 37, "-"],
     ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.95).self_alignment_X,
+    ),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
-    ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.95).self_alignment_X,
     ),
 )
 
@@ -322,15 +322,15 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
-    baca.hairpin(
-        "o<| f",
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -338,6 +338,11 @@ maker(
     ("vc1", (5, 9)),
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
+    ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
         "o<| f",
@@ -349,11 +354,6 @@ maker(
         map=baca.run(1),
         selector=baca.leaves().rleak(),
     ),
-    baca.new(
-        baca.stop_on_string(),
-        selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
-    ),
 )
 
 # vc2
@@ -363,15 +363,15 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
-    baca.hairpin(
-        "o<| f",
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -394,6 +394,11 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -404,11 +409,6 @@ maker(
         map=baca.run(1),
         selector=baca.leaves().rleak(),
     ),
-    baca.new(
-        baca.stop_on_string(),
-        selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
-    ),
 )
 
 # cb1
@@ -418,15 +418,15 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
-    baca.hairpin(
-        "o<| f",
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -449,6 +449,11 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -459,11 +464,6 @@ maker(
         map=baca.run(1),
         selector=baca.leaves().rleak(),
     ),
-    baca.new(
-        baca.stop_on_string(),
-        selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
-    ),
 )
 
 # cb2
@@ -473,15 +473,15 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
-    baca.hairpin(
-        "o<| f",
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -504,6 +504,11 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.new(
+        baca.stop_on_string(),
+        selector=baca.leaf(-1),
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
     baca.hairpin(
         "o<| f",
         map=baca.run(0),
@@ -513,11 +518,6 @@ maker(
         "o<| fff",
         map=baca.run(1),
         selector=baca.leaves().rleak(),
-    ),
-    baca.new(
-        baca.stop_on_string(),
-        selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
 

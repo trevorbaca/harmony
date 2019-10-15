@@ -67,6 +67,7 @@ maker(
     harmony.sixteenths(
         [-4, 4],
     ),
+    baca.dynamic("mp"),
     baca.trill_spanner(
         map=baca.run(0),
     ),
@@ -74,7 +75,6 @@ maker(
         abjad.tweak(3).bound_details__right__padding,
         map=baca.run(1),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -85,10 +85,10 @@ maker(
     baca.triple_staccato(
         baca.cmgroups().map(baca.leaves().get([0, -1])),
     ),
-    baca.dynamic("mp"),
     baca.espressivo(
         baca.pheads(),
     ),
+    baca.dynamic("mp"),
     baca.text_spanner(
         "mph =|",
         abjad.tweak(3).staff_padding,
@@ -103,6 +103,7 @@ maker(
     harmony.sixteenths(
         [4, -4],
     ),
+    baca.dynamic("p"),
     baca.text_spanner(
         "air =|",
         abjad.tweak(3).staff_padding,
@@ -111,7 +112,6 @@ maker(
         map=baca.runs(),
         selector=baca.leaves().rleak(),
     ),
-    baca.dynamic("p"),
 )
 
 # perc1
@@ -183,10 +183,6 @@ maker(
     ("perc2", 2),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-        ),
     harmony.sixteenths(
         [-4, 4],
     ),
@@ -198,6 +194,10 @@ maker(
         baca.ptails(),
     ),
     baca.dynamic("mp"),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+        ),
 )
 
 maker(
@@ -207,12 +207,12 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -283,14 +283,14 @@ maker(
     harmony.sixteenths(
         [-4, 4],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
-    ),
-    baca.dynamic("mp"),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -311,17 +311,17 @@ maker(
         [-6, 1, -10, 1, "-"],
         extra_counts=[1],
     ),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
     baca.note_head_style_harmonic(),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-pizz-markup",
         literal=True,
-    ),
-    baca.dynamic("mf"),
-    baca.accent(
-        baca.pheads(),
     ),
 )
 
@@ -467,14 +467,14 @@ maker(
     harmony.sixteenths(
         [-4, 3, -1],
     ),
-    baca.hairpin(
-        "o<| f",
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "o<| f",
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
 )

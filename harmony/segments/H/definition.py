@@ -227,10 +227,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(exclude=abjad.const.HIDDEN),
     ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "p < mf > p",
         measures=2,
@@ -249,6 +245,10 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -257,9 +257,9 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(exclude=abjad.const.HIDDEN),
     ),
+    baca.dynamic("pp"),
     baca.markup(
         r"\baca-quasi-bisb-ancora-markup",
         literal=True,
     ),
-    baca.dynamic("pp"),
 )

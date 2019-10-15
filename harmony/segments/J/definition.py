@@ -148,11 +148,11 @@ maker(
     baca.stem_tremolo(
         baca.pheads(),
     ),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-slate-brush-markup",
         literal=True,
     ),
-    baca.dynamic('"f"'),
 )
 
 maker(
@@ -239,11 +239,11 @@ maker(
         "F#3",
         hide_middle_stems=True,
     ),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-bow-markup",
         literal=True,
     ),
-    baca.dynamic("mf")
 )
 
 # va
@@ -253,10 +253,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -265,6 +261,10 @@ maker(
     baca.markup(
         "match harp decay",
         abjad.tweak(5.5).staff_padding,
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
     ),
     baca.dls_staff_padding(4.5),
 )
@@ -274,10 +274,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -287,12 +283,18 @@ maker(
         "match harp decay",
         abjad.tweak(5.5).staff_padding,
     ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
+    ),
     baca.dls_staff_padding(4.5),
 )
 
 maker(
     ("va", 10),
-    harmony.sixteenths([12, 1, 1, 1]),
+    harmony.sixteenths(
+        [12, 1, 1, 1],
+    ),
 )
 
 maker(
@@ -472,12 +474,12 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.note_head_style_harmonic(),
     baca.trill_spanner(
         alteration="M2",
         harmonic=True,
@@ -491,12 +493,12 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.stop_on_string(
+        baca.runs().map(baca.leaves().rleak()[-1]),
+    ),
     baca.hairpin(
         "o<| ff",
         selector=baca.tleaves().rleak(),
-    ),
-    baca.stop_on_string(
-        baca.runs().map(baca.leaves().rleak()[-1]),
     ),
     baca.dls_staff_padding(4.5),
 )

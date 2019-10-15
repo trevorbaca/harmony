@@ -119,6 +119,9 @@ maker(
     harmony.sixteenths(
         [4, 8],
     ),
+    baca.breathe(
+        baca.pleaf(1),
+    ),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -127,9 +130,6 @@ maker(
         map=baca.clparts([2]),
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
-    ),
-    baca.breathe(
-        baca.pleaf(1),
     ),
 )
 
@@ -363,21 +363,21 @@ maker(
     harmony.sixteenths(
         [-8, 12],
     ),
+    baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
     ("vc2", 3),
     baca.make_notes(),
-    baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-    ),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -417,21 +417,21 @@ maker(
     harmony.sixteenths(
         [-8, 12],
     ),
+    baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
     ("cb2", 3),
     baca.make_notes(),
-    baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-    ),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 

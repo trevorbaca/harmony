@@ -294,11 +294,6 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
-    baca.markup(
-        r"\baca-bisb-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -306,6 +301,11 @@ maker(
         "p < f > p",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
     baca.dls_staff_padding(4.5),
 )
@@ -434,8 +434,8 @@ maker(
 
 maker(
     ("cb1", (1, 6)),
-    baca.staff_lines(5),
     baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.tessera_1(1),
     baca.markup(
         r"\baca-pizz-markup",

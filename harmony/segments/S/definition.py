@@ -87,14 +87,14 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        abjad.tweak(8, literal=True).staff_padding,
-        selector=baca.tleaves(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
 )
@@ -114,14 +114,14 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        abjad.tweak(8, literal=True).staff_padding,
-        selector=baca.tleaves(),
-    ),
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
     baca.dls_staff_padding(5),
@@ -129,7 +129,10 @@ maker(
 
 maker(
     ("bfl", [11, 13]),
-    harmony.sixteenths([-8, 8, -16, 4], extra_counts=[1]),
+    harmony.sixteenths(
+        [-8, 8, -16, 4],
+        extra_counts=[1],
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
@@ -178,15 +181,15 @@ maker(
 maker(
     ("perc1", (4, 8)),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(1, grace=False),
-    ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
         rest_after=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+        selector=baca.leaf(1, grace=False),
     ),
 )
 
@@ -202,15 +205,15 @@ maker(
 maker(
     ("perc1", 12),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(0, grace=False),
-    ),
     harmony.appoggiato(
         divisions=[20],
         counts=[25],
         rest_after=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -253,12 +256,12 @@ maker(
     ),
     harmony.brake_drum_staff_position(),
     baca.chunk(
-        baca.dynamic("p"),
         baca.damp(),
+        baca.dynamic("p"),
     ),
     baca.new(
-        baca.dynamic("f"),
         baca.laissez_vibrer(),
+        baca.dynamic("f"),
         selector=baca.phead(1),
     ),
     baca.markup(
@@ -270,15 +273,15 @@ maker(
 maker(
     ("perc2", (4, 8)),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(1, grace=False),
-    ),
     harmony.appoggiato(
         divisions=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
         rest_after=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+        selector=baca.leaf(1, grace=False),
     ),
 )
 
@@ -294,15 +297,15 @@ maker(
 maker(
     ("perc2", 12),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(0, grace=False),
-    ),
     harmony.appoggiato(
         divisions=[20],
         counts=[24],
         rest_after=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+        selector=baca.leaf(0, grace=False),
     ),
 )
 
@@ -385,12 +388,12 @@ maker(
         baca.dynamic("f"),
     ),
     baca.new(
+        baca.laissez_vibrer(),
+        baca.dynamic("mf"),
         baca.markup(
             r"\baca-pdlt-markup",
             literal=True,
         ),
-        baca.dynamic("mf"),
-        baca.laissez_vibrer(),
         selector=baca.phead(1),
     ),
 )
@@ -450,12 +453,12 @@ maker(
     harmony.sixteenths(
         [2, -20, 2, -24],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -632,12 +635,12 @@ maker(
         untie=True,
     ),
     baca.flat_glissando(),
-    baca.trill_spanner(),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -690,8 +693,8 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], [11, 13]),
-    baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_lines(1),
     baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),

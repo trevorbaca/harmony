@@ -242,13 +242,13 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
+    baca.staff_position(2),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
         literal=True,
     ),
-    baca.staff_position(2),
-    baca.dynamic("f"),
 )
 
 # perc2
@@ -417,11 +417,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-pdlt-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -442,7 +442,9 @@ maker(
     ("hp", 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths([2, "-"]),
+    harmony.sixteenths(
+        [2, "-"],
+    ),
     harmony.whisk_staff_position(),
     baca.dynamic('"f"'),
     baca.markup(
@@ -494,6 +496,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -501,17 +504,12 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
     ("va", 7),
     harmony.sixteenths(
         [-4, "+"],
-    ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
     ),
     baca.hairpin(
         "mf >o niente",
@@ -521,6 +519,10 @@ maker(
     baca.markup(
         "match harp decay",
         abjad.tweak(5.5).staff_padding,
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
     ),
     baca.dls_staff_padding(4.5),
 )
@@ -573,6 +575,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -580,7 +583,6 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -616,6 +618,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -623,7 +626,6 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -766,12 +768,12 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.stop_on_string(
+        baca.runs().map(baca.leaves().rleak()[-1]),
+    ),
     baca.hairpin(
         "o<| ff",
         selector=baca.tleaves().rleak(),
-    ),
-    baca.stop_on_string(
-        baca.runs().map(baca.leaves().rleak()[-1]),
     ),
     baca.dls_staff_padding(4.5),
 )

@@ -76,14 +76,14 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        abjad.tweak(8, literal=True).staff_padding,
-        selector=baca.tleaves(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
 )
@@ -93,31 +93,31 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.dynamic("p"),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
     ),
-    baca.dynamic("p"),
 )
 
 # perc1
 
 maker(
     ("perc1", 1),
-    baca.make_notes(),
     baca.clef("treble"),
     baca.staff_lines(5),
+    baca.make_notes(),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
     ),
-    baca.laissez_vibrer(),
-    baca.dynamic("mp"),
 )
 
 maker(
     ("perc1", 2),
-    baca.staff_lines(3),
     baca.clef("percussion"),
+    baca.staff_lines(3),
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
@@ -144,19 +144,19 @@ maker(
 
 maker(
     ("perc1", 5),
-    harmony.sixteenths(
-        [-16, 4],
-    ),
     baca.clef("treble"),
     baca.staff_lines(5),
-    baca.markup(
-        r"\baca-glockenspiel-markup",
-        literal=True,
+    harmony.sixteenths(
+        [-16, 4],
     ),
     baca.laissez_vibrer(),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        literal=True,
     ),
 )
 
@@ -322,14 +322,14 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.95).self_alignment_X,
+    ),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
-    ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.95).self_alignment_X,
     ),
 )
 
@@ -361,13 +361,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -394,13 +394,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -427,13 +427,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
@@ -457,13 +457,13 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
-    baca.hairpin(
-        "f <| fff",
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.hairpin(
+        "f <| fff",
     ),
 )
 
