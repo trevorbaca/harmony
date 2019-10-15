@@ -96,6 +96,9 @@ maker(
     harmony.sixteenths(
         [4, 8],
     ),
+    baca.breathe(
+        baca.pleaf(1),
+    ),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -105,15 +108,15 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.breathe(
-        baca.pleaf(1),
-    ),
 )
 
 maker(
     ("bfl", 8),
     harmony.sixteenths(
         [6, 6],
+    ),
+    baca.breathe(
+        baca.cmgroups([1]).map(baca.pleaf(-1)),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -123,9 +126,6 @@ maker(
         map=baca.clparts([4]),
         pieces=baca.lparts([2, 2 + 1]),
         selector=baca.leaves().rleak(),
-    ),
-    baca.breathe(
-        baca.cmgroups([1]).map(baca.pleaf(-1)),
     ),
 )
 
@@ -178,7 +178,9 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.hairpin(
         "o< p > pp",
         pieces=baca.lparts([1, 1 + 1]),
@@ -202,11 +204,11 @@ maker(
     baca.stem_tremolo(
         baca.pheads(),
     ),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-slate-brush-markup",
         literal=True,
     ),
-    baca.dynamic('"f"'),
 )
 
 maker(
@@ -494,10 +496,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -506,6 +504,10 @@ maker(
     baca.markup(
         "match harp decay",
         abjad.tweak(5.5).staff_padding,
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
     ),
     baca.dls_staff_padding(4.5),
 )
@@ -566,12 +568,12 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.note_head_style_harmonic(),
     baca.trill_spanner(
         alteration="M2",
         harmonic=True,
@@ -587,10 +589,6 @@ maker(
     ),
     baca.flat_glissando(),
     baca.note_head_style_harmonic(),
-    baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
-    ),
     baca.hairpin(
         "o<| p |> pp",
         pieces=baca.lparts([1, 1 + 1]),
@@ -600,6 +598,10 @@ maker(
         "pp <| mp |> pp",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves()[5:8],
+    ),
+    baca.trill_spanner(
+        alteration="M2",
+        harmonic=True,
     ),
 )
 
@@ -620,15 +622,15 @@ maker(
         written_quarters=([0, 1, 3, 4, 5, 6],),
         invisible=([1, 4, 6],),
     ),
+    baca.note_head_style_harmonic(),
+    baca.flat_glissando(
+        selector=baca.leaves()[:-1],
+    ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.flat_glissando(
-        selector=baca.leaves()[:-1],
-    ),
-    baca.note_head_style_harmonic(),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
         alteration="M2",
@@ -643,12 +645,12 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.stop_on_string(
+        baca.runs().map(baca.leaves().rleak()[-1]),
+    ),
     baca.hairpin(
         "o<| ff",
         selector=baca.tleaves().rleak(),
-    ),
-    baca.stop_on_string(
-        baca.runs().map(baca.leaves().rleak()[-1]),
     ),
     baca.dls_staff_padding(4.5),
 )

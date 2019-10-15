@@ -145,13 +145,13 @@ maker(
         [-19, 1],
     ),
     harmony.bass_drum_staff_position(),
-    baca.markup(
-        r"\baca-bd-superball-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "o< mf",
         selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        literal=True,
     ),
 )
 
@@ -222,15 +222,15 @@ maker(
     harmony.sixteenths(
         [-19, 1],
     ),
+    harmony.brake_drum_staff_position(),
     baca.damp(
         baca.ptail(-1),
     ),
-    harmony.brake_drum_staff_position(),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-brake-drum-markup",
         literal=True,
     ),
-    baca.dynamic("mf"),
 )
 
 maker(
@@ -293,11 +293,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-pdlt-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -355,6 +355,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -362,7 +363,6 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -426,6 +426,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -433,7 +434,6 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -549,6 +549,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -556,7 +557,6 @@ maker(
         map=baca.runs(),
         selector=baca.tleaves().rleak(),
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -597,8 +597,8 @@ maker(
 
 maker(
     ("cb1", 2),
-    baca.staff_lines(5),
     baca.clef("treble"),
+    baca.staff_lines(5),
     harmony.tessera_1(1),
     baca.markup(
         r"\baca-pizz-markup",

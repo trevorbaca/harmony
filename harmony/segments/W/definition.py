@@ -81,16 +81,16 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
         selector=baca.leaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -103,10 +103,10 @@ maker(
     baca.triple_staccato(
         baca.cmgroups().map(baca.leaves().get([0, -1])),
     ),
-    baca.dynamic("mp"),
     baca.espressivo(
         baca.pheads(),
     ),
+    baca.dynamic("mp"),
     baca.text_spanner(
         "mph =|",
         abjad.tweak(3).staff_padding,
@@ -118,7 +118,10 @@ maker(
 
 maker(
     ("bfl", 8),
-    harmony.sixteenths([-4, 8, "-"], extra_counts=[1]),
+    harmony.sixteenths(
+        [-4, 8, "-"],
+        extra_counts=[1],
+    ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
@@ -200,12 +203,12 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -242,12 +245,12 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-xyl-markup",
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 
@@ -455,8 +458,8 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
-    baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_lines(1),
     baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),

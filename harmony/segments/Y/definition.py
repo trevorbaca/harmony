@@ -78,15 +78,15 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -140,16 +140,16 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
         selector=baca.leaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -248,11 +248,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-pince-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -262,11 +262,11 @@ maker(
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-whisk-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -303,11 +303,11 @@ maker(
 maker(
     ("va", 1),
     baca.make_notes(),
+    baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -488,12 +488,12 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
     baca.make_notes(),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves(),
     ),
 )
 
@@ -510,11 +510,11 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
     ),
 )

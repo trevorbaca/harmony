@@ -59,15 +59,17 @@ maker(
 
 maker(
     ("bfl", (1, 4)),
-    harmony.sixteenths([8, 4, 4, 8, 4, 3, -1]),
+    harmony.sixteenths(
+        [8, 4, 4, 8, 4, 3, -1],
+    ),
     baca.flat_glissando(
         hide_stem_selector=baca.pleaves()[1:-2],
     ),
-    baca.trill_spanner(),
     baca.hairpin(
         "p p < mp >",
         pieces=baca.clparts([1]),
     ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -87,16 +89,16 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.runs(),
         selector=baca.leaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(5),
 )
@@ -144,14 +146,14 @@ maker(
     baca.stem_tremolo(
         baca.pleaves().get([0, -1]),
     ),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "p < mp > p p < mp > p",
         pieces=baca.clparts([1]),
         selector=baca.tleaves(),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
     ),
 )
 
@@ -164,14 +166,14 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
+    ),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
     ),
 )
 
@@ -190,10 +192,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaves().get([0, -1]),
     ),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "pp < p >",
         pieces=baca.clparts([1]),
@@ -203,6 +201,10 @@ maker(
         "pp",
         selector=baca.pleaf(-1),
     ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
+    ),
 )
 
 # perc2
@@ -211,12 +213,14 @@ maker(
     ("perc2", (1, 4)),
     baca.clef("treble"),
     baca.staff_lines(5),
+    harmony.sixteenths(
+        [2, -6, -2, 2, -4],
+    ),
+    baca.laissez_vibrer(baca.ptails()),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
     ),
-    harmony.sixteenths([2, -6, -2, 2, -4]),
-    baca.laissez_vibrer(baca.ptails()),
 )
 
 maker(
@@ -233,20 +237,20 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "f >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
     ),
 )
 
 maker(
     ("perc2", 7),
-    baca.staff_lines(5),
     baca.clef("treble"),
+    baca.staff_lines(5),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
@@ -283,11 +287,11 @@ maker(
     ("va", (1, 4)),
     baca.make_notes(),
     baca.flat_glissando(),
+    baca.dynamic("p"),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -329,16 +333,16 @@ maker(
 maker(
     ("vc1", 5),
     harmony.tessera_4(3),
-    baca.hairpin(
-        "pp -- ! < mp >o niente",
-        pieces=baca.lparts([2, 3, 1 + 1]),
-        selector=baca.leaves().rleak(),
-    ),
     baca.staff_position(
         [-1, 0, 1],
         mock=True,
     ),
     baca.flat_glissando(),
+    baca.hairpin(
+        "pp -- ! < mp >o niente",
+        pieces=baca.lparts([2, 3, 1 + 1]),
+        selector=baca.leaves().rleak(),
+    ),
 )
 
 maker(
@@ -524,11 +528,11 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 5),
+    baca.stem_tremolo(
+        baca.pleaves().get([0, -1]),
+    ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
         literal=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
     ),
 )

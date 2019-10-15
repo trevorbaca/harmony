@@ -1209,8 +1209,8 @@ U_Viola_Music_Voice = {                                                        %
         c'16                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mf                                                                    %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         ^ \baca-pizz-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
 
         r8.                                                                    %! harmony.sixteenths()
@@ -1226,8 +1226,8 @@ U_Viola_Music_Voice = {                                                        %
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
         c'16                                                                   %! harmony.sixteenths()
-        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
+        \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
 
         r8                                                                     %! harmony.sixteenths()

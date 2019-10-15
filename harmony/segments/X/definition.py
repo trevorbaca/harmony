@@ -184,12 +184,12 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
+    baca.accent(),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.accent(),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -211,9 +211,11 @@ maker(
     harmony.sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
-    baca.markup(
-        r"\baca-pdlt-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
     ),
     baca.dynamic(
         "mf",
@@ -223,11 +225,9 @@ maker(
         "mp",
         selector=baca.pheads().get([1], 3),
     ),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
+    baca.markup(
+        r"\baca-pdlt-markup",
+        literal=True,
     ),
 )
 
@@ -238,11 +238,11 @@ maker(
     harmony.sixteenths(
         [3, -3],
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-whisk-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 # va
@@ -364,6 +364,7 @@ maker(
         invisible=([1, 5],),
         tie_runs=True,
     ),
+    baca.note_head_style_harmonic(),
     baca.hairpin(
         "niente o<| mp |>o",
         pieces=baca.lparts([1, 1 + 1]),
@@ -373,7 +374,6 @@ maker(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
-    baca.note_head_style_harmonic(),
 )
 
 maker(

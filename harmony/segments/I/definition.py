@@ -87,11 +87,11 @@ maker(
     baca.stem_tremolo(
         baca.pheads(),
     ),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-slate-brush-markup",
         literal=True,
     ),
-    baca.dynamic('"f"'),
 )
 
 maker(
@@ -155,11 +155,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-pince-markup",
         literal=True,
     ),
-    baca.dynamic("f"),
 )
 
 # va
@@ -169,10 +169,6 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
-    ),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -181,6 +177,10 @@ maker(
     baca.markup(
         "match harp decay",
         abjad.tweak(5.5).staff_padding,
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
     ),
     baca.dls_staff_padding(4.5),
 )
@@ -216,12 +216,12 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.stop_on_string(
+        baca.runs().map(baca.leaves().rleak()[-1]),
+    ),
     baca.hairpin(
         "o<| ff",
         selector=baca.tleaves().rleak(),
-    ),
-    baca.stop_on_string(
-        baca.runs().map(baca.leaves().rleak()[-1]),
     ),
     baca.dls_staff_padding(4.5),
 )

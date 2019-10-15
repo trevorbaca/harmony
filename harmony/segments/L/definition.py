@@ -144,6 +144,9 @@ maker(
     harmony.sixteenths(
         [4, 8, 4, 12],
     ),
+    baca.breathe(
+        baca.pleaves().get([1, 3]),
+    ),
     baca.text_spanner(
         "T -> A =|",
         abjad.tweak(5.5).staff_padding,
@@ -153,15 +156,15 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
-    baca.breathe(
-        baca.pleaves().get([1, 3]),
-    ),
 )
 
 maker(
     ("bfl", (13, 15)),
     harmony.sixteenths(
         [6, 6, 6, 6, 6, 10],
+    ),
+    baca.breathe(
+        baca.cmgroups([1]).map(baca.pleaf(-1)),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -171,9 +174,6 @@ maker(
         map=baca.clparts([4]),
         pieces=baca.lparts([2, 2 + 1]),
         selector=baca.leaves().rleak(),
-    ),
-    baca.breathe(
-        baca.cmgroups([1]).map(baca.pleaf(-1)),
     ),
 )
 
@@ -435,11 +435,11 @@ maker(
     harmony.sixteenths(
         [6, -6, 6, -6, 6, -10],
     ),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-whisk-markup",
         literal=True,
     ),
-    baca.dynamic("mf"),
 )
 
 # va
@@ -523,10 +523,10 @@ maker(
     harmony.sixteenths(
         [-8, 12],
     ),
+    baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -595,10 +595,10 @@ maker(
     harmony.sixteenths(
         [-8, 12],
     ),
+    baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(

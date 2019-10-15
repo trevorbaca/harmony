@@ -79,14 +79,14 @@ maker(
         baca.accidental_y_offset(-2),
         selector=baca.tleaves(),
     ),
-    baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
-        abjad.tweak(8, literal=True).staff_padding,
-        selector=baca.tleaves(),
-    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
+        selector=baca.tleaves(),
+    ),
+    baca.trill_spanner(
+        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
 )
@@ -140,19 +140,19 @@ maker(
         baca.accent(),
         baca.dynamic("mp"),
     ),
+    baca.laissez_vibrer(
+        baca.phead(1),
+    ),
     baca.hairpin(
         "o< mf",
         selector=baca.pleaves()[1:].rleak(),
-    ),
-    baca.laissez_vibrer(
-        baca.phead(1),
     ),
 )
 
 maker(
     ("perc1", 3),
-    baca.staff_lines(3),
     baca.clef("percussion"),
+    baca.staff_lines(3),
     harmony.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
@@ -183,15 +183,15 @@ maker(
 
 maker(
     ("perc1", 6),
-    baca.make_notes(),
     baca.clef("treble"),
     baca.staff_lines(5),
+    baca.make_notes(),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
     ),
-    baca.laissez_vibrer(),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -261,12 +261,12 @@ maker(
     ),
     harmony.brake_drum_staff_position(),
     baca.chunk(
-        baca.dynamic("p"),
         baca.damp(),
+        baca.dynamic("p"),
     ),
     baca.new(
-        baca.dynamic("f"),
         baca.laissez_vibrer(),
+        baca.dynamic("f"),
         selector=baca.phead(1),
     ),
     baca.markup(
@@ -286,8 +286,8 @@ maker(
         baca.damp(),
     ),
     baca.new(
-        baca.dynamic("f"),
         baca.laissez_vibrer(),
+        baca.dynamic("f"),
         selector=baca.phead(1),
     ),
 )
@@ -367,21 +367,21 @@ maker(
 
 maker(
     ("hp", 1),
+    baca.clef("treble"),
     harmony.sixteenths(
         [4, 2, "-"],
     ),
-    baca.clef("treble"),
     baca.chunk(
         baca.snap_pizzicato(),
         baca.dynamic("f"),
     ),
     baca.new(
+        baca.laissez_vibrer(),
+        baca.dynamic("mf"),
         baca.markup(
             r"\baca-pdlt-markup",
             literal=True,
         ),
-        baca.dynamic("mf"),
-        baca.laissez_vibrer(),
         selector=baca.phead(1),
     ),
 )
@@ -396,12 +396,12 @@ maker(
         baca.dynamic("f"),
     ),
     baca.new(
+        baca.laissez_vibrer(),
+        baca.dynamic("mf"),
         baca.markup(
             r"\baca-pdlt-markup",
             literal=True,
         ),
-        baca.dynamic("mf"),
-        baca.laissez_vibrer(),
         selector=baca.phead(1),
     ),
 )
@@ -470,12 +470,12 @@ maker(
     harmony.sixteenths(
         [2, "-"],
     ),
+    baca.laissez_vibrer(),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-pdlt-markup",
         literal=True,
     ),
-    baca.dynamic("mf"),
-    baca.laissez_vibrer(),
 )
 
 maker(
@@ -491,15 +491,15 @@ maker(
         untie=True,
     ),
     baca.flat_glissando(),
-    baca.markup(
-        r"\baca-whisk-markup",
-        literal=True,
-        match=0,
-    ),
     baca.hairpin(
         'o< "mf" >o niente',
         pieces=baca.lparts([1, 2 + 1]),
         selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(
+        r"\baca-whisk-markup",
+        literal=True,
+        match=0,
     ),
 )
 
@@ -564,13 +564,13 @@ maker(
     harmony.sixteenths(
         [3, -7],
     ),
-    baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs(),
-    ),
     baca.hairpin(
         "mp -- niente",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
     ),
 )
 
@@ -731,12 +731,12 @@ maker(
         untie=True,
     ),
     baca.flat_glissando(),
-    baca.trill_spanner(),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -746,12 +746,12 @@ maker(
         untie=True,
     ),
     baca.flat_glissando(),
-    baca.trill_spanner(),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -796,12 +796,12 @@ maker(
         [8, 4, -4],
     ),
     baca.flat_glissando(),
-    baca.trill_spanner(),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+    baca.trill_spanner(),
 )
 
 # vc1, vc2, cb1, cb2
@@ -835,15 +835,15 @@ maker(
 
 maker(
     (["va", "vc2", "cb2"], (9, 11)),
+    # TODO: move invisible command into rhythm-maker
+    baca.invisible_music(
+        baca.leaves().get([1], 2),
+    ),
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.clparts([1]),
         selector=baca.tleaves(),
-    ),
-    # TODO: move invisible command into rhythm-maker
-    baca.invisible_music(
-        baca.leaves().get([1], 2),
     ),
     baca.dynamic(
         "niente",
