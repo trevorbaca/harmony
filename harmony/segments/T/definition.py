@@ -110,14 +110,14 @@ maker(
         allow_repeats=True,
     ),
     baca.dynamic("f"),
-    baca.dls_staff_padding(9),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3.5),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
+    baca.dls_staff_padding(9),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3.5),
 )
 
 maker(
@@ -151,32 +151,32 @@ maker(
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    harmony.slate_staff_position(),
 )
 
 # perc2
 
 maker(
     ("perc2", 1),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-        ),
     harmony.sixteenths(
         [-4, 4],
     ),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("mp"),
     baca.accent(
         baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+        ),
 )
 
 maker(
@@ -185,13 +185,13 @@ maker(
         [-4, 4, -4],
     ),
     harmony.tam_tam_staff_position(),
-    baca.dynamic("p"),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
@@ -204,38 +204,38 @@ maker(
         [2, -8, 2, -8, 2, -20],
         extra_counts=[1],
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
+    harmony.slate_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    harmony.slate_staff_position(),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
+    ),
 )
 
 # hp
 
 maker(
     ("hp", 2),
+    baca.clef("bass"),
     harmony.sixteenths(
         [-4, 4, -4],
     ),
-    baca.clef("bass"),
     baca.staff_position(
         -6,
         mock=True,
     ),
-    baca.dynamic("p"),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("p"),
 )
 
 maker(
@@ -452,11 +452,11 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (3, 10)),
     baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.staff_position(0),
 )

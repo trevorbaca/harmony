@@ -172,17 +172,17 @@ maker(
         [1, -22, 1],
     ),
     harmony.brake_drum_staff_position(),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
+    baca.accent(
+        baca.pheads(),
     ),
     baca.dynamic("f"),
     baca.dynamic(
         "mp",
         selector=baca.phead(-1),
     ),
-    baca.accent(
-        baca.pheads(),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
     ),
 )
 
@@ -201,13 +201,13 @@ maker(
         [1, -23, -1, 1, -22],
     ),
     harmony.brake_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
-    ),
-    baca.accent(
-        baca.pheads(),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -221,11 +221,11 @@ maker(
         [4, -12],
     ),
     harmony.slate_staff_position(),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    baca.dynamic("mf"),
 )
 
 # perc2
@@ -236,20 +236,20 @@ maker(
         [1, -22, 1],
     ),
     harmony.bass_drum_staff_position(),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-    ),
-    baca.dynamic(
-        "mp",
-        selector=baca.pheads(),
-    ),
     baca.accent(
         baca.pheads(),
     ),
     baca.laissez_vibrer(),
     baca.damp(
         baca.leaves().rleak()[-1],
+    ),
+    baca.dynamic(
+        "mp",
+        selector=baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
     ),
 )
 
@@ -265,13 +265,13 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "f >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
     ),
 )
 
@@ -279,10 +279,10 @@ maker(
 
 maker(
     ("hp", (1, 2)),
+    baca.clef("treble"),
     harmony.sixteenths(
         [-10, 2, -4, -14, 2],
     ),
-    baca.clef("treble"),
     baca.staff_position(
         [0, 1],
         mock=True,
@@ -389,11 +389,11 @@ maker(
 maker(
     ("va", 9),
     harmony.tessera_4(4),
-    baca.dynamic("pp"),
     baca.staff_position(
         [-1, 0, 1],
         mock=True,
     ),
+    baca.dynamic("pp"),
 )
 
 # vc1
@@ -408,14 +408,14 @@ maker(
 maker(
     ("vc1", 9),
     harmony.tessera_4(3),
-    baca.hairpin(
-        "pp -- ! < mp >",
-        pieces=baca.plts(),
-    ),
-    baca.flat_glissando(),
     baca.staff_position(
         [-1, 0, 1],
         mock=True,
+    ),
+    baca.flat_glissando(),
+    baca.hairpin(
+        "pp -- ! < mp >",
+        pieces=baca.plts(),
     ),
 )
 
@@ -431,15 +431,15 @@ maker(
 maker(
     ("vc2", 9),
     harmony.tessera_4(2),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
+    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp -- ! >",
         bookend=False,
         pieces=baca.lparts([1, 2, 3, 2]),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
     ),
 )
 
@@ -455,15 +455,15 @@ maker(
 maker(
     ("cb1", 9),
     harmony.tessera_4(1),
+    baca.staff_position(
+        [-1, 0, 1],
+        mock=True,
+    ),
+    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
         bookend=False,
         pieces=baca.lparts([2, 3, 2]),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
     ),
 )
 
@@ -479,14 +479,14 @@ maker(
 maker(
     ("cb2", 9),
     harmony.tessera_4(0),
-    baca.hairpin(
-        "pp -- ! < mp >",
-        pieces=baca.lparts([2, 1, 1]),
-    ),
-    baca.flat_glissando(),
     baca.staff_position(
         [-1, 0, 1],
         mock=True,
+    ),
+    baca.flat_glissando(),
+    baca.hairpin(
+        "pp -- ! < mp >",
+        pieces=baca.lparts([2, 1, 1]),
     ),
 )
 

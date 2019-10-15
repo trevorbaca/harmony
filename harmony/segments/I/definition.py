@@ -121,11 +121,11 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-sponge-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 # hp
@@ -140,8 +140,8 @@ maker(
         mock=True,
     ),
     baca.flageolet(),
-    baca.dynamic("mf"),
     baca.laissez_vibrer(),
+    baca.dynamic("mf"),
 )
 
 maker(

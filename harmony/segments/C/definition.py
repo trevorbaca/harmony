@@ -114,10 +114,10 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -144,11 +144,11 @@ maker(
     harmony.sixteenths(
         [-19, 1],
     ),
+    harmony.bass_drum_staff_position(),
     baca.markup(
         r"\baca-bd-superball-markup",
         literal=True,
     ),
-    harmony.bass_drum_staff_position(),
     baca.hairpin(
         "o< mf",
         selector=baca.tleaves().rleak(),
@@ -168,14 +168,14 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3.5),
     baca.dynamic("p"),
     baca.new(
         baca.dynamic("f"),
         measures=8,
     ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3.5),
 )
 
 # perc2
@@ -194,10 +194,10 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -222,14 +222,14 @@ maker(
     harmony.sixteenths(
         [-19, 1],
     ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        literal=True,
-    ),
     baca.damp(
         baca.ptail(-1),
     ),
     harmony.brake_drum_staff_position(),
+    baca.markup(
+        r"\baca-brake-drum-markup",
+        literal=True,
+    ),
     baca.dynamic("mf"),
 )
 
@@ -246,14 +246,14 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
     baca.dynamic("p"),
     baca.new(
         baca.dynamic("f"),
         measures=8,
     ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
 )
 
 # hp
@@ -612,11 +612,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -678,11 +678,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,

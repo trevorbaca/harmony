@@ -108,11 +108,11 @@ maker(
         selector=baca.run(1),
     ),
     harmony.brake_drum_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -132,10 +132,10 @@ maker(
     harmony.sixteenths(
         [21, "-"],
     ),
+    harmony.brake_drum_staff_position(),
     baca.flat_glissando(
         do_not_hide_middle_note_heads=True,
     ),
-    harmony.brake_drum_staff_position(),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,

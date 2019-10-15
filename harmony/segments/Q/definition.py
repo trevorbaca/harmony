@@ -164,16 +164,16 @@ maker(
 
 maker(
     ("perc2", 1),
-    baca.make_notes(),
     baca.clef("percussion"),
+    baca.make_notes(),
+    harmony.tam_tam_staff_position(),
+    baca.accent(),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
     ),
-    baca.laissez_vibrer(),
-    harmony.tam_tam_staff_position(),
-    baca.accent(),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -204,13 +204,13 @@ maker(
     harmony.tam_tam_staff_position(),
     baca.accent(),
     baca.laissez_vibrer(),
-    baca.markup(
-        r"\baca-tam-tam-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-tam-tam-markup",
+        literal=True,
     ),
 )
 
@@ -231,13 +231,13 @@ maker(
 maker(
     ("hp", 1),
     baca.make_notes(),
-    baca.laissez_vibrer(),
     baca.staff_position(
         -6,
         mock=True,
     ),
-    baca.dynamic("mp"),
     baca.accent(),
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
 )
 
 maker(
@@ -255,10 +255,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-bisb-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "o< mp > pp pp < mp >o niente",
         pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
@@ -271,6 +267,10 @@ maker(
     baca.dynamic_text_x_offset(
         -0.25,
         baca.pleaf(-1),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
     ),
 )
 
@@ -481,6 +481,7 @@ maker(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
     ),
+    # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
         baca.pleaves().get([1], 2),
     ),
@@ -490,10 +491,6 @@ maker(
     ),
     baca.stem_tremolo(
         baca.pleaves(),
-    ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
@@ -507,6 +504,10 @@ maker(
     baca.dynamic_text_x_offset(
         -0.25,
         baca.pleaf(-1),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
     ),
 )
 

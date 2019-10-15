@@ -171,12 +171,12 @@ maker(
 maker(
     ("perc1", (10, 15)),
     baca.make_notes(),
-    baca.flat_glissando(),
     harmony.triangle_staff_position(),
-    baca.dynamic("p"),
+    baca.flat_glissando(),
     baca.stem_tremolo(
         baca.pheads().get([0, -1]),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-triangle-markup",
         literal=True,
@@ -190,10 +190,10 @@ maker(
     baca.make_notes(),
     baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("p"),
     baca.stem_tremolo(
         baca.pheads().get([0, -1]),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-bd-fingertips-markup",
         literal=True,
@@ -203,26 +203,26 @@ maker(
 maker(
     ("perc2", (4, 7)),
     baca.make_notes(),
-    baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
+    baca.flat_glissando(),
+    baca.stem_tremolo(
+        baca.pheads().get([0, -1]),
+    ),
     baca.dynamic(
         "p-ancora",
         abjad.tweak(-0.75).self_alignment_X,
-    ),
-    baca.stem_tremolo(
-        baca.pheads().get([0, -1]),
     ),
 )
 
 maker(
     ("perc2", (10, 15)),
     baca.make_notes(),
-    baca.flat_glissando(),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("p"),
+    baca.flat_glissando(),
     baca.stem_tremolo(
         baca.pheads().get([0, -1]),
     ),
+    baca.dynamic("p"),
 )
 
 # hp

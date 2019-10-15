@@ -214,11 +214,11 @@ maker(
         [2, -2, 0],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.dynamic("f"),
     baca.dls_staff_padding(9),
     baca.stem_down(),
     baca.tuplet_bracket_down(),

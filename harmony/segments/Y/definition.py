@@ -162,11 +162,11 @@ maker(
         [1, -3, 3, -3, 3, -3],
     ),
     harmony.slate_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -175,13 +175,13 @@ maker(
         [1, -23, -1, 1, -22],
     ),
     harmony.brake_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
-    ),
-    baca.accent(
-        baca.pheads(),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -199,11 +199,11 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -223,13 +223,13 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "f >o niente",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
     ),
 )
 
@@ -276,25 +276,25 @@ maker(
     harmony.sixteenths(
         [-24, -1, 3, -20],
     ),
+    baca.staff_position(
+        -6,
+        mock=True,
+    ),
     baca.accent(
         baca.pheads(),
+        ),
+    baca.laissez_vibrer(
+        baca.ptails(),
         ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(False).X_extent,
     ),
-    baca.laissez_vibrer(
-        baca.ptails(),
-        ),
     baca.markup(
         r"\baca-lv-into-fermata-markup",
         literal=True,
         selector=baca.phead(-1),
-    ),
-    baca.staff_position(
-        -6,
-        mock=True,
     ),
 )
 
@@ -328,16 +328,18 @@ maker(
 maker(
     ("va", (5, 10)),
     harmony.tessera_4(4),
-    baca.hairpin(
-        "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
-        " ! >o niente",
-        pieces=baca.plts(),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.chunk(
+        baca.staff_position(
+            [-1, 0, 1],
+            mock=True,
+        ),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            " ! >o niente",
+            pieces=baca.plts(),
+            selector=baca.leaves().rleak(),
+        ),
+        baca.flat_glissando(),
     ),
 )
 
@@ -361,16 +363,18 @@ maker(
 maker(
     ("vc1", (5, 10)),
     harmony.tessera_4(3),
-    baca.hairpin(
-        "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
-        " ! >o niente",
-        pieces=baca.plts(),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.chunk(
+        baca.staff_position(
+            [-1, 0, 1],
+            mock=True,
+        ),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            " ! >o niente",
+            pieces=baca.plts(),
+            selector=baca.leaves().rleak(),
+        ),
+        baca.flat_glissando(),
     ),
 )
 
@@ -394,16 +398,18 @@ maker(
 maker(
     ("vc2", (5, 10)),
     harmony.tessera_4(2),
-    baca.hairpin(
-        "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
-        " ! >o niente",
-        pieces=baca.plts(),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.chunk(
+        baca.staff_position(
+            [-1, 0, 1],
+            mock=True,
+        ),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            " ! >o niente",
+            pieces=baca.plts(),
+            selector=baca.leaves().rleak(),
+        ),
+        baca.flat_glissando(),
     ),
 )
 
@@ -427,16 +433,18 @@ maker(
 maker(
     ("cb1", (5, 10)),
     harmony.tessera_4(1),
-    baca.hairpin(
-        "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
-        " ! >o niente",
-        pieces=baca.plts(),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.chunk(
+        baca.staff_position(
+            [-1, 0, 1],
+            mock=True,
+        ),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            " ! >o niente",
+            pieces=baca.plts(),
+            selector=baca.leaves().rleak(),
+        ),
+        baca.flat_glissando(),
     ),
 )
 
@@ -460,16 +468,18 @@ maker(
 maker(
     ("cb2", (5, 10)),
     harmony.tessera_4(0),
-    baca.hairpin(
-        "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
-        " ! >o niente",
-        pieces=baca.plts(),
-        selector=baca.leaves().rleak(),
-    ),
-    baca.flat_glissando(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.chunk(
+        baca.staff_position(
+            [-1, 0, 1],
+            mock=True,
+        ),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            " ! >o niente",
+            pieces=baca.plts(),
+            selector=baca.leaves().rleak(),
+        ),
+        baca.flat_glissando(),
     ),
 )
 

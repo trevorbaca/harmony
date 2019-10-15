@@ -154,20 +154,20 @@ maker(
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    harmony.slate_staff_position(),
 )
 
 maker(
     ("perc1", (5, 10)),
     baca.make_notes(),
+    harmony.triangle_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    harmony.triangle_staff_position(),
     baca.stem_tremolo(
         baca.pleaves().get([0, -1]),
     ),
@@ -198,11 +198,11 @@ maker(
         [-8, 8, "-"],
         extra_counts=[2],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    harmony.slate_staff_position(),
 )
 
 # perc2
@@ -213,13 +213,13 @@ maker(
         [-4, 4, -4],
     ),
     harmony.tam_tam_staff_position(),
-    baca.dynamic("p"),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
@@ -232,17 +232,17 @@ maker(
         [2, -8, 2, -8, 2, -20],
         extra_counts=[1],
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
+    harmony.slate_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    harmony.slate_staff_position(),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -251,15 +251,15 @@ maker(
         [4, -8],
     ),
     harmony.tam_tam_staff_position(),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
-    ),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
     baca.accent(
         baca.pheads(),
+    ),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.75).self_alignment_X,
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -273,38 +273,38 @@ maker(
         [2, "-"],
         extra_counts=[1],
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
+    harmony.slate_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    harmony.slate_staff_position(),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
+    ),
 )
 
 # hp
 
 maker(
     ("hp", 3),
+    baca.clef("bass"),
     harmony.sixteenths(
         [-4, 4, -4],
     ),
-    baca.clef("bass"),
     baca.staff_position(
         -6,
         mock=True,
     ),
-    baca.dynamic("p"),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("p"),
 )
 
 maker(
@@ -690,13 +690,13 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.staff_position(0),
 )
 
 maker(
@@ -708,11 +708,11 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 13),
     baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.staff_position(0),
 )

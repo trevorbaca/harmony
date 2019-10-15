@@ -159,11 +159,6 @@ maker(
 maker(
     ("perc1", 3),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
     harmony.phjc(
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
@@ -173,6 +168,11 @@ maker(
     baca.staff_positions(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
     baca.dynamic("f"),
     baca.stem_down(),
@@ -197,13 +197,12 @@ maker(
         literal=True,
     ),
     baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
-    baca.staff_lines(1),
     harmony.slate_staff_position(),
     baca.circle_bow_spanner(
-        None,
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
     ),
@@ -212,11 +211,6 @@ maker(
 maker(
     ("perc2", 3),
     baca.staff_lines(3),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
     harmony.phjc(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
@@ -228,10 +222,15 @@ maker(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+    ),
+    baca.dynamic("f"),
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
-    baca.dynamic("f"),
 )
 
 # hp
@@ -245,11 +244,11 @@ maker(
             literal=True,
         ),
     ),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     harmony.sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
@@ -260,11 +259,11 @@ maker(
 
 maker(
     ("hp", 3),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     harmony.sixteenths(
         [10, "-"],
     ),
-    baca.clef("bass"),
-    baca.staff_lines(5),
     baca.chunk(
         baca.staff_position(-14, mock=True),
         baca.no_ledgers(),
@@ -446,11 +445,6 @@ maker(
         r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
     ),
     baca.tuplet_number_text(abjad.Markup("5:4")),
-    baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
-        right_broken=True,
-        selector=baca.leaves()[-4:].rleak(),
-    ),
     baca.staff_position(0),
     baca.accent(
         baca.pheads(),
@@ -459,6 +453,11 @@ maker(
         baca.pleaves(),
     ),
     baca.dynamic("sfp"),
+    baca.metric_modulation_spanner(
+        abjad.tweak(5.5).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-4:].rleak(),
+    ),
 )
 
 # cb2
