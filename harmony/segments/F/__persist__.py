@@ -265,18 +265,19 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='abjad.Clef',
-                                value='treble',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=1,
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='baca.BarExtent',
-                                value=5,
+                                prototype='abjad.Clef',
+                                value='percussion',
                                 ),
                             abjad.Momento(
                                 context='Harp_Music_Voice',
                                 prototype='baca.StaffLines',
-                                value=5,
+                                value=1,
                                 ),
                             ],
                         ),
@@ -285,8 +286,8 @@ persist = abjad.OrderedDict(
                         [
                             abjad.Momento(
                                 context='Harp_Music_Voice',
-                                prototype='abjad.Dynamic',
-                                value='mp',
+                                prototype='abjad.StartHairpin',
+                                value='>o',
                                 ),
                             ],
                         ),
@@ -328,7 +329,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='f',
+                                value='\\baca-f-sempre',
                                 ),
                             ],
                         ),
