@@ -334,8 +334,6 @@ maker(
 
 maker(
     ("hp", 1),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [2, 2, "-"],
         written_quarters=True,
@@ -344,13 +342,14 @@ maker(
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
+        left_broken=True,
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
-    baca.markup(
-        r"\baca-whisk-markup",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2].rleak(),
     ),
     baca.dls_staff_padding(5.5),
 )
