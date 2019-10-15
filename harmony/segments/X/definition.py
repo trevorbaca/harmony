@@ -105,11 +105,11 @@ maker(
         [5, -3],
     ),
     harmony.slate_staff_position(),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -119,13 +119,13 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
     ),
 )
 
@@ -135,11 +135,11 @@ maker(
         [3, -3],
     ),
     harmony.slate_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(
@@ -147,13 +147,13 @@ maker(
     harmony.sixteenths(
         [19, -1],
     ),
+    harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.hairpin(
         "p >o niente",
     ),
-    harmony.tam_tam_staff_position(),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
@@ -168,13 +168,13 @@ maker(
         [2, -8, 2, -3, 2, -8],
     ),
     harmony.bass_drum_staff_position(),
-    baca.markup(
-        r"\baca-bd-superball-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "o<| mf",
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        literal=True,
     ),
 )
 

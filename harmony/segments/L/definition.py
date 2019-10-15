@@ -232,10 +232,10 @@ maker(
     baca.staff_lines(1),
     baca.make_notes(),
     harmony.triangle_staff_position(),
-    baca.dynamic("p"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-triangle-markup",
         literal=True,
@@ -308,17 +308,17 @@ maker(
 maker(
     ("perc2", (3, 8)),
     baca.staff_lines(1),
-    harmony.tam_tam_staff_position(),
     harmony.sixteenths(
         [-12, 16, -4],
+    ),
+    harmony.tam_tam_staff_position(),
+    baca.laissez_vibrer(
+        baca.ptails(),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
 )
 

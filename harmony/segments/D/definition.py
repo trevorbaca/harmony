@@ -261,12 +261,12 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("f"),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
         selector=baca.pleaves().rleak(),
     ),
-    baca.dynamic("f"),
     baca.dls_staff_padding(5),
 )
 

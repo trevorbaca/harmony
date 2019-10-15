@@ -164,10 +164,10 @@ maker(
     baca.staff_lines(1),
     baca.make_notes(),
     harmony.triangle_staff_position(),
-    baca.dynamic("p"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-triangle-markup",
         literal=True,
@@ -227,11 +227,11 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-bd-fingertips-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 maker(

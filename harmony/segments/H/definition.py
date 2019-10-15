@@ -79,11 +79,11 @@ maker(
 maker(
     ("perc2", (1, 6)),
     baca.make_notes(),
+    harmony.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
         left_broken=True,
     ),
-    harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
         baca.pleaf(-1),
     ),
@@ -92,10 +92,10 @@ maker(
 maker(
     ("perc2", (8, 9)),
     baca.make_notes(),
+    harmony.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
-    harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
         baca.pleaves().get([0, -1]),
     ),
@@ -121,10 +121,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-bisb-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "p < mf > p",
         measures=1,
@@ -142,6 +138,10 @@ maker(
         measures=5,
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
+    ),
+    baca.markup(
+        r"\baca-bisb-markup",
+        literal=True,
     ),
 )
 
@@ -199,7 +199,7 @@ maker(
         [-1, 0, 1],
         baca.plts(exclude=abjad.const.HIDDEN),
         mock=True,
-        ),
+    ),
 )
 
 # cb2

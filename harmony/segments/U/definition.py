@@ -130,14 +130,14 @@ maker(
         allow_repeats=True,
     ),
     baca.dynamic("f"),
-    baca.dls_staff_padding(9),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3.5),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
+    baca.dls_staff_padding(9),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3.5),
 )
 
 maker(
@@ -152,11 +152,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-struck-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -191,13 +191,13 @@ maker(
         [-4, 4],
     ),
     harmony.bass_drum_staff_position(),
-    baca.dynamic("mp"),
     baca.accent(
         baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
 )
 
 maker(
@@ -223,18 +223,18 @@ maker(
     harmony.sixteenths(
         [6, 3, 7, 4],
     ),
+    harmony.bass_drum_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.espressivo(
         baca.pheads(),
     ),
-    harmony.bass_drum_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-bd-fingertips-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 # hp

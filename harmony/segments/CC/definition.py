@@ -101,6 +101,9 @@ maker(
         [1, -22, 1],
     ),
     harmony.brake_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.markup(
         r"\baca-brake-drum-markup",
         literal=True,
@@ -109,9 +112,6 @@ maker(
     baca.dynamic(
         "mp",
         selector=baca.phead(-1),
-    ),
-    baca.accent(
-        baca.pheads(),
     ),
 )
 
@@ -124,6 +124,13 @@ maker(
         [1, -22, 1],
     ),
     harmony.bass_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(),
+    baca.damp(
+        baca.leaves().rleak()[-1],
+    ),
     baca.markup(
         r"\baca-bd-struck-markup",
         literal=True,
@@ -131,13 +138,6 @@ maker(
     baca.dynamic(
         "mp",
         selector=baca.pheads(),
-    ),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.laissez_vibrer(),
-    baca.damp(
-        baca.leaves().rleak()[-1],
     ),
 )
 

@@ -279,11 +279,11 @@ maker(
         [41, -7, "+"],
     ),
     harmony.brake_drum_staff_position(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
     ),
-    baca.dynamic("p"),
 )
 
 # perc2
@@ -295,15 +295,15 @@ maker(
         extra_counts=[2],
     ),
     harmony.slate_staff_position(),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.dynamic("sfp"),
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
         ),
-    baca.stem_tremolo(
-        baca.pleaves(),
-    ),
-    baca.dynamic("sfp"),
 )
 
 maker(
@@ -329,16 +329,16 @@ maker(
         extra_counts=[2],
     ),
     harmony.slate_staff_position(),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-        ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.dynamic(
         "sfp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
     ),
 )
 
@@ -348,7 +348,9 @@ maker(
         [21, -14, 18, "-"],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(baca.pheads()),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.markup(
         r"\baca-tam-tam-markup",
         literal=True,
@@ -597,7 +599,9 @@ maker(
         extra_counts=[1],
     ),
     baca.staff_position(0),
-    baca.stem_tremolo(baca.pleaves()),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
     baca.dynamic(
         "sfp-ancora",
         abjad.tweak(-0.75).self_alignment_X,

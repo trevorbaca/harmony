@@ -139,11 +139,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-struck-markup",
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -168,13 +168,13 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
     ),
 )
 
@@ -184,11 +184,11 @@ maker(
         [-8, 8, "-"],
         extra_counts=[2],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
     ),
-    harmony.slate_staff_position(),
 )
 
 # perc2
@@ -221,17 +221,17 @@ maker(
         [-2, 2, -8, 2, "-"],
         extra_counts=[1],
     ),
-    baca.markup(
-        r"\baca-slate-brush-markup",
-        literal=True,
-    ),
+    harmony.slate_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    harmony.slate_staff_position(),
+    baca.markup(
+        r"\baca-slate-brush-markup",
+        literal=True,
+    ),
 )
 
 # hp
@@ -457,11 +457,11 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.staff_lines(1),
     baca.clef("percussion"),
+    baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.accent(
         baca.pheads(),
     ),
-    baca.staff_position(0),
 )

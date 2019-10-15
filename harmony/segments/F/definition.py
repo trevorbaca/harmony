@@ -251,13 +251,13 @@ maker(
     harmony.sixteenths(
         [-15, 1],
     ),
+    baca.staff_position(2),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
     ),
-    baca.staff_position(2),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -265,10 +265,6 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [-3, 6, "-"],
-    ),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
     ),
     harmony.bass_drum_staff_position(),
     baca.accent(
@@ -281,6 +277,10 @@ maker(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
     ),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+    ),
 )
 
 maker(
@@ -289,13 +289,13 @@ maker(
     harmony.sixteenths(
         [-15, 1],
     ),
+    baca.staff_position(2),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
     ),
-    baca.staff_position(2),
-    baca.dynamic("mp"),
 )
 
 maker(
@@ -308,12 +308,12 @@ maker(
     baca.accent(
         baca.phead(-1),
     ),
+    baca.dynamic("mf"),
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
     ),
-    baca.dynamic("mf"),
 )
 
 maker(
@@ -328,6 +328,7 @@ maker(
         [-2, 0, -2, 0, 0],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -335,7 +336,6 @@ maker(
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3.5),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -345,13 +345,13 @@ maker(
         [2, "-"],
     ),
     harmony.bass_drum_staff_position(),
-    baca.markup(
-        r"\baca-bd-superball-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "o< mf",
         selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(
+        r"\baca-bd-superball-markup",
+        literal=True,
     ),
 )
 
@@ -473,6 +473,7 @@ maker(
         [-2, 0, 0, -2, 0],
         allow_repeats=True,
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -480,7 +481,6 @@ maker(
     baca.stem_down(),
     baca.tuplet_bracket_down(),
     baca.tuplet_bracket_staff_padding(3),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -493,11 +493,11 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
         literal=True,
     ),
-    baca.dynamic("f"),
 )
 
 maker(
@@ -541,12 +541,12 @@ maker(
     harmony.sixteenths(
         [-10, 6, "-"],
     ),
-    baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
-    ),
     baca.staff_position(
         -6,
         mock=True,
+    ),
+    baca.damp(
+        baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic("mp"),
 )
@@ -560,18 +560,18 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
         ),
+    harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
-    baca.dls_staff_padding(5.5),
-    harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+    baca.dls_staff_padding(5.5),
 )
 
 maker(
@@ -581,12 +581,12 @@ maker(
     harmony.sixteenths(
         [9, "-"],
     ),
-    baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
-    ),
     baca.staff_position(
         -6,
         mock=True,
+    ),
+    baca.damp(
+        baca.ptails().map(baca.rleak()[-1]),
     ),
     baca.dynamic(
         "mp-ancora",
@@ -603,18 +603,18 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
         ),
+    harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
-    baca.dls_staff_padding(5.5),
-    harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
+    baca.dls_staff_padding(5.5),
 )
 
 maker(
@@ -1086,11 +1086,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -1118,11 +1118,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -1155,11 +1155,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -1173,11 +1173,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -1199,11 +1199,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
@@ -1235,11 +1235,11 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.flat_glissando(),
     baca.staff_position(
         -6,
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,

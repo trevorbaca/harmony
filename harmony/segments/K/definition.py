@@ -176,8 +176,8 @@ maker(
         written_quarters=([0, 1],),
         invisible=([1],),
     ),
-    baca.flat_glissando(),
     harmony.triangle_staff_position(),
+    baca.flat_glissando(),
     baca.stem_tremolo(baca.pleaves()),
     baca.hairpin(
         "o< p > pp",
@@ -256,15 +256,15 @@ maker(
     baca.stem_tremolo(
         baca.pheads(),
     ),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
+    ),
+    baca.markup(
+        r"\baca-triangle-markup",
+        literal=True,
     ),
 )
 
@@ -357,12 +357,12 @@ maker(
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
+    baca.dynamic("mp"),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
-    baca.dynamic("mp"),
 )
 
 # hp
@@ -433,8 +433,8 @@ maker(
         mock=True,
     ),
     baca.flageolet(),
-    baca.dynamic("mf"),
     baca.laissez_vibrer(),
+    baca.dynamic("mf"),
 )
 
 maker(
