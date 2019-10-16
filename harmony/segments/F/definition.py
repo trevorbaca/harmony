@@ -1237,12 +1237,18 @@ maker(
     ),
     baca.staff_position(
         -6,
+        baca.leaves().rleak(),
         mock=True,
     ),
-    baca.flat_glissando(),
+    baca.flat_glissando(
+        right_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,
+        right_broken=True,
+        selector=baca.leaves().rleak(),
     ),
 )
 

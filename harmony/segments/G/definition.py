@@ -716,8 +716,21 @@ maker(
 
 maker(
     ("vc1", 8),
-    baca.make_repeat_tied_notes(),
+    harmony.sixteenths(
+        [8, 4, 4, 4, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (3, 4)]),
+        extra_counts=[0, 8],
+        denominator=None,
+    ),
     baca.note_head_style_harmonic(),
+    baca.espressivo(
+        baca.pheads()[-4:],
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-4:].rleak(),
+    ),
 )
 
 # vc2
@@ -762,6 +775,7 @@ maker(
     baca.make_repeat_tied_notes(),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        right_broken=True,
     ),
 )
 
@@ -769,17 +783,22 @@ maker(
 
 maker(
     ("cb1", 1),
-    harmony.appoggiato(
-        counts=[5],
-    ),
-    baca.note_head_style_harmonic(
-        baca.pleaves(grace=False),
+    harmony.sixteenths(
+        [4, 4, 4, 4],
     ),
     baca.new(
-        baca.note_head_style_harmonic(
-            baca.pleaves(grace=True),
+        baca.staff_position(
+            -6,
+            mock=True,
         ),
-        map=baca.pleaves(grace=True).runs(),
+        baca.flat_glissando(
+            left_broken=True,
+        ),
+        baca.scp_spanner(
+            "SCP =|",
+            abjad.tweak(3).staff_padding,
+            left_broken=True,
+        ),
     ),
 )
 
@@ -820,14 +839,19 @@ maker(
 
 maker(
     ("cb1", 8),
-    baca.make_repeat_tied_notes(),
+    harmony.sixteenths(
+        [4, 4, 4, 4],
+    ),
     baca.note_head_style_harmonic(),
+    baca.espressivo(
+        baca.pheads(),
+    ),
 )
 
 # cb2
 
 maker(
-    ("cb2", 1),
+    ("cb2", (1, 2)),
     harmony.sixteenths(
         [-4, "+"],
     ),
@@ -867,13 +891,14 @@ maker(
     baca.make_repeat_tied_notes(),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        right_broken=True,
     ),
 )
 
 # vc1, vc2, cb1, cb2
 
 maker(
-    (["vc1", "vc2", "cb1", "cb2"], 2),
+    (["vc1", "vc2", "cb1"], 2),
     harmony.sixteenths(
         [12],
     ),
