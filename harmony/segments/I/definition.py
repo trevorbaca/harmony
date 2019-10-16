@@ -53,10 +53,16 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
-    baca.dynamic("mp"),
-    baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+    baca.new(
+        baca.covered_spanner(
+            abjad.tweak(3).staff_padding,
+            left_broken=True,
+        ),
+        baca.metric_modulation_spanner(
+            abjad.tweak(8).staff_padding,
+            left_broken=True,
+        ),
+        selector=baca.leaves()[:2].rleak(),
     ),
 )
 
@@ -117,14 +123,34 @@ maker(
     harmony.sixteenths(
         [3, -6, 3, 3, -6, 3],
     ),
-    harmony.bass_drum_staff_position(),
+    baca.new(
+        harmony.bass_drum_staff_position(),
+        selector=baca.leaves().rleak(),
+    ),
     baca.accent(
-        baca.pheads(),
+        baca.pheads()[:-1],
     ),
     baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-sponge-markup",
         literal=True,
+    ),
+    baca.flat_glissando(
+        right_broken=True,
+        selector=baca.pleaves()[-1:].rleak(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaf(-1),
+    ),
+    baca.dynamic(
+        "p",
+        selector=baca.pleaf(-1),
+    ),
+    baca.markup(
+        r"\baca-bd-fingertips-markup",
+        abjad.tweak(0).self_alignment_X,
+        literal=True,
+        selector=baca.pleaf(-1)
     ),
 )
 
@@ -133,7 +159,9 @@ maker(
 maker(
     ("hp", 1),
     harmony.sixteenths(
-        [-4, 8, "-"],
+        [-6, -2, 4, "-"],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [0, 1],
@@ -142,24 +170,6 @@ maker(
     baca.flageolet(),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
-)
-
-maker(
-    ("hp", 2),
-    harmony.sixteenths(
-        [-9, 3, -9, 3],
-    ),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
-    ),
-    baca.dynamic("f"),
-    baca.markup(
-        r"\baca-pince-markup",
-        literal=True,
-    ),
 )
 
 # va
@@ -203,10 +213,38 @@ maker(
     ("cb1", 1),
 )
 
+# va, vc1, vc2, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1"], 2),
+    harmony.sixteenths(
+        [-12, 12, -4],
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-2:].rleak(),
+    ),
+)
+
 # cb2
 
 maker(
-    ("cb2", 1),
+    ("cb2", 2),
+    harmony.sixteenths(
+        [-9, 3, -9, 3],
+    ),
+    baca.note_head_style_harmonic(),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-pizz-markup",
+        literal=True,
+    ),
 )
 
 # vc1, vc2, cb1, cb2
