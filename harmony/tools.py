@@ -28,6 +28,7 @@ def appoggiato(
     *,
     divisions: abjad.IntegerSequence = None,
     counts: abjad.IntegerSequence = None,
+    extra_counts: abjad.IntegerSequence = None,
     fuse: bool = None,
     incise: bool = None,
     prefix_talea=None,
@@ -101,6 +102,7 @@ def appoggiato(
         commands.append(after_grace_)
     return baca.rhythm(
         rmakers.incised(
+            extra_counts=extra_counts,
             prefix_talea=prefix_talea,
             prefix_counts=prefix_counts,
             talea_denominator=16,
@@ -328,7 +330,6 @@ def sixteenths(
         *beam_commands,
         rmakers.extract_trivial(),
         rmakers.force_fraction(),
-        ###rmakers.denominator((1, 16)),
         *commands,
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
