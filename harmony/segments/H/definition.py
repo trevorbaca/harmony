@@ -63,6 +63,7 @@ maker(
         extra_counts=[0, 4, 4],
         denominator=None,
     ),
+    baca.dynamic("mp"),
     baca.new(
         baca.covered_spanner(
             abjad.tweak(3).staff_padding,
