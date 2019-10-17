@@ -84,7 +84,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Bass_Flute_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='mp',
+                                value='f',
                                 ),
                             ],
                         ),
@@ -385,15 +385,13 @@ persist = abjad.OrderedDict(
                         [
                             abjad.Momento(
                                 context='Global_Skips',
-                                prototype='abjad.TimeSignature',
-                                value='6/4',
+                                manifest='metronome_marks',
+                                value='48',
                                 ),
                             abjad.Momento(
                                 context='Global_Skips',
-                                prototype='baca.Ritardando',
-                                value={
-                                    'hide': True,
-                                    },
+                                prototype='abjad.TimeSignature',
+                                value='6/4',
                                 ),
                             ],
                         ),
