@@ -263,31 +263,37 @@ def sixteenths(
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_eighths is True:
+    if written_eighths is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 8), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_dotted_halves is not None:
+    elif written_eighths is not None:
+        selector = baca.pleaves().get(*written_eighths)
+        written_ = rmakers.written_duration((1, 8), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
+    if written_dotted_halves is not None:
         selector = baca.pleaves().get(*written_dotted_halves)
         written_ = rmakers.written_duration((3, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_wholes is not None:
+    if written_wholes is not None:
         selector = baca.pleaves().get(*written_wholes)
         written_ = rmakers.written_duration((1, 1), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_dotted_wholes is not None:
+    if written_dotted_wholes is not None:
         selector = baca.pleaves().get(*written_dotted_wholes)
         written_ = rmakers.written_duration((3, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_halves is True:
+    if written_halves is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 2), selector)
         commands.append(written_)

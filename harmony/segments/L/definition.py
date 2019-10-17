@@ -624,6 +624,27 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    harmony.sixteenths(
+        ["+"],
+    ),
+    baca.flat_glissando(
+        left_broken=True,
+    ),
+    baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
+    baca.trill_spanner(
+        alteration="M2",
+        harmonic=True,
+        left_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
+)
+
+maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (3, 8)),
     baca.triple_staccato(
         baca.pheads(),
