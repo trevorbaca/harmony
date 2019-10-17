@@ -218,8 +218,10 @@ def sixteenths(
     written_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
     written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
+    written_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     invisible: typing.Union[abjad.PatternTyping, bool] = None,
     invisible_pairs: bool = None,
+    talea_denominator: int = None,
     tie: abjad.PatternTyping = None,
     tie_runs: bool = None,
     tie_all: bool = None,
@@ -229,6 +231,7 @@ def sixteenths(
     """
     Makes sixteenths rhythm.
     """
+    talea_denominator = talea_denominator or 16
     if fuse is True:
         preprocessor_ = baca.sequence()
     elif preprocessor is None:
@@ -278,6 +281,12 @@ def sixteenths(
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
+    elif written_dotted_wholes is not None:
+        selector = baca.pleaves().get(*written_dotted_wholes)
+        written_ = rmakers.written_duration((3, 2), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
     elif written_halves is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 2), selector)
@@ -324,7 +333,7 @@ def sixteenths(
         )
         commands.append(after_grace_)
     return baca.rhythm(
-        rmakers.talea(counts, 16, extra_counts=extra_counts),
+        rmakers.talea(counts, talea_denominator, extra_counts=extra_counts),
         rmakers.rewrite_rest_filled(),
         rmakers.rewrite_sustained(),
         *beam_commands,

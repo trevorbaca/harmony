@@ -16,8 +16,8 @@ metadata = abjad.OrderedDict(
         ('first_measure_number', 209),
         ('segment_name', 'W'),
         ('segment_number', 23),
-        ('start_clock_time', "10'29''"),
-        ('stop_clock_time', "10'54''"),
+        ('start_clock_time', "10'45''"),
+        ('stop_clock_time', "11'10''"),
         (
             'time_signatures',
             [

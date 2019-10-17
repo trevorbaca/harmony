@@ -63,3 +63,6 @@ harmony-d-d-sharp = \markup
         \scale #'(0.55 . 0.55)
         \sharp
     }
+
+harmony-match-harp-decay = \markup
+    "match harp decay"
