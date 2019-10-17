@@ -77,6 +77,11 @@ maker(
         pieces=baca.lparts([1, 2 + 1]),
         selector=baca.tleaves().rleak(),
     ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:3],
+    ),
 )
 
 maker(
@@ -304,19 +309,31 @@ maker(
     ("va", 1),
     harmony.appoggiato(
         divisions=[4, 12, 4],
-        counts=[7],
-        rest_to=1,
+        counts=[0, 7, 0],
         rest_from=1,
+        suffix_talea=[-1],
+        suffix_counts=[1, 0, 0],
+    ),
+    baca.repeat_tie(
+        baca.pleaf(0),
+    ),
+    baca.stem_tremolo(
+        baca.pleaf(0),
     ),
     baca.note_head_style_harmonic(
-        baca.leaves(),
+        baca.leaves()[2:],
     ),
     baca.note_head_style_harmonic(
         baca.leaves(grace=True),
     ),
     baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.leaves()[:2],
+    ),
+    baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.leaves(grace=False)[2:],
     ),
 )
 
@@ -333,19 +350,31 @@ maker(
     ("vc1", 1),
     harmony.appoggiato(
         divisions=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
+        counts=[0, 6, 0],
         rest_from=1,
+        suffix_talea=[-1],
+        suffix_counts=[1, 0, 0],
+    ),
+    baca.repeat_tie(
+        baca.pleaf(0),
+    ),
+    baca.stem_tremolo(
+        baca.pleaf(0),
     ),
     baca.note_head_style_harmonic(
-        baca.leaves(),
+        baca.leaves()[2:],
     ),
     baca.note_head_style_harmonic(
         baca.leaves(grace=True),
     ),
     baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.leaves()[:2],
+    ),
+    baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.leaves(grace=False)[2:],
     ),
 )
 
@@ -361,11 +390,26 @@ maker(
 maker(
     ("vc2", 1),
     harmony.sixteenths(
-        [-8, 12],
+        [7, -1, 12],
     ),
-    baca.dynamic("mp"),
+    baca.repeat_tie(
+        baca.phead(0),
+    ),
+    baca.stem_tremolo(
+        baca.plt(0),
+    ),
+    baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.plts()[:1].rleak(),
+    ),
+    baca.dynamic(
+        "mp",
+        selector=baca.pleaf(-1),
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        selector=baca.pleaves()[-1:].rleak(),
     ),
 )
 
@@ -387,19 +431,31 @@ maker(
     ("cb1", 1),
     harmony.appoggiato(
         divisions=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
+        counts=[0, 6, 0],
         rest_from=1,
+        suffix_talea=[-1],
+        suffix_counts=[1, 0, 0],
+    ),
+    baca.repeat_tie(
+        baca.pleaf(0),
+    ),
+    baca.stem_tremolo(
+        baca.pleaf(0),
     ),
     baca.note_head_style_harmonic(
-        baca.leaves(),
+        baca.leaves()[2:],
     ),
     baca.note_head_style_harmonic(
         baca.leaves(grace=True),
     ),
     baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.leaves()[:2],
+    ),
+    baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.leaves(grace=False)[2:],
     ),
 )
 
@@ -415,11 +471,26 @@ maker(
 maker(
     ("cb2", 1),
     harmony.sixteenths(
-        [-8, 12],
+        [7, -1, 12],
     ),
-    baca.dynamic("mp"),
+    baca.repeat_tie(
+        baca.phead(0),
+    ),
+    baca.stem_tremolo(
+        baca.plt(0),
+    ),
+    baca.hairpin(
+        "mp >o niente",
+        left_broken=True,
+        selector=baca.plts()[:1].rleak(),
+    ),
+    baca.dynamic(
+        "mp",
+        selector=baca.pleaf(-1),
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        selector=baca.pleaves()[-1:].rleak(),
     ),
 )
 

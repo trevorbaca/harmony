@@ -503,6 +503,11 @@ maker(
     baca.glissando(
         allow_repeats=True,
     ),
+    baca.hairpin(
+        "mp >o niente",
+        measures=15,
+        selector=baca.leaves().rleak(),
+    ),
 )
 
 # vc2
@@ -580,6 +585,11 @@ maker(
     ),
     baca.glissando(
         allow_repeats=True,
+    ),
+    baca.hairpin(
+        "mp >o niente",
+        measures=15,
+        selector=baca.leaves().rleak(),
     ),
 )
 
