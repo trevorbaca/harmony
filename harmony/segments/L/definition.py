@@ -82,7 +82,13 @@ maker(
     baca.text_spanner(
         "multiphonic =|",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
         bookend=False,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2],
     ),
 )
 
@@ -107,9 +113,9 @@ maker(
 )
 
 maker(
-    ("bfl", (3, 8)),
+    ("bfl", [3, 5, 7]),
     harmony.sixteenths(
-        [12, -20],
+        ["+"],
     ),
     baca.text_spanner(
         "multiphonic =|",
@@ -159,7 +165,7 @@ maker(
 )
 
 maker(
-    ("bfl", (13, 15)),
+    ("bfl", (13, 14)),
     harmony.sixteenths(
         [6, 6, 6, 6, 6, 10],
     ),
@@ -177,6 +183,44 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", 15),
+    harmony.sixteenths(
+        [6, 8, 2, 2],
+        extra_counts=[0, 0, 0, 2],
+        denominator=None,
+        written_quarters=([-2, -1],),
+        invisible=([-1],),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves()[-2:],
+    ),
+    baca.hairpin(
+        "o<| f |>o niente",
+        forbid_al_niente_to_bar_line=True,
+        pieces=baca.lparts([1, 1 + 1]),
+        right_broken=True,
+        selector=baca.leaves()[-2:].rleak(),
+    ),
+    baca.dynamic_text_x_offset(
+        -0.75,
+        baca.pleaf(-1),
+    ),
+    baca.text_spanner(
+        "T -> A =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        pieces=baca.lparts([2, 4]),
+        selector=baca.leaves()[:-1],
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-2:].rleak(),
+    ),
+)
+
 # perc1
 
 maker(
@@ -184,8 +228,10 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
-        [8, "-"],
+        ["+"],
     ),
+    baca.accent(),
+    baca.laissez_vibrer(),
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(5.5).staff_padding,
@@ -210,11 +256,26 @@ maker(
 )
 
 maker(
+    ("perc1", [3, 5, 7]),
+    harmony.sixteenths(
+        ["+"],
+    ),
+)
+
+maker(
+    ("perc1", [4, 6, 8]),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+maker(
     ("perc1", (3, 8)),
     baca.clef("treble"),
     baca.staff_lines(5),
-    harmony.sixteenths(
-        [12, 16, -4],
+    baca.accent(
+        baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -280,9 +341,11 @@ maker(
 maker(
     ("perc2", 1),
     harmony.sixteenths(
-        [8, "-"],
+        ["+"],
     ),
     harmony.tam_tam_staff_position(),
+    baca.accent(),
+    baca.laissez_vibrer(),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(5.5).staff_padding,
@@ -306,12 +369,27 @@ maker(
 )
 
 maker(
+    ("perc2", [3, 5, 7]),
+    harmony.sixteenths(
+        ["+"],
+    ),
+)
+
+maker(
+    ("perc2", [4, 6, 8]),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+maker(
     ("perc2", (3, 8)),
     baca.staff_lines(1),
-    harmony.sixteenths(
-        [-12, 16, -4],
-    ),
     harmony.tam_tam_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -370,8 +448,10 @@ maker(
 maker(
     ("hp", 1),
     harmony.sixteenths(
-        [8, "-"],
+        ["+"],
     ),
+    baca.accent(),
+    baca.laissez_vibrer(),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(5.5).staff_padding,
@@ -383,18 +463,38 @@ maker(
     ("hp", 2),
     baca.clef("treble"),
     harmony.sixteenths(
-        [-4, 4, 8, -4],
+        [-4, 4, "+"],
     ),
+)
+
+maker(
+    ("hp", [3, 5, 7]),
+    harmony.sixteenths(
+        ["+"],
+    ),
+)
+
+maker(
+    ("hp", [4, 6, 8]),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+maker(
+    ("hp", (2, 4)),
     baca.staff_position(
         [-1, 0, 1],
         mock=True,
     ),
+    baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.pleaves().get([0, -1]),
     ),
     baca.hairpin(
-        "o< mf >o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        "o< mf >o mp",
+        pieces=baca.lparts([1, 4]),
         selector=baca.tleaves().rleak(),
     ),
     baca.markup(
@@ -404,12 +504,17 @@ maker(
 )
 
 maker(
-    ("hp", (3, 8)),
-    harmony.sixteenths(
-        [12, 16, -4],
+    ("hp", (5, 8)),
+    baca.accent(
+        baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-sons-xylophoniques-markup",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
 )
 
@@ -445,12 +550,11 @@ maker(
 # va
 
 maker(
-    ("va", 2),
+    ("va", (2, 4)),
     harmony.appoggiato(
-        divisions=[4, 12, 4],
+        divisions=[4, 48],
         counts=[7],
         rest_to=1,
-        rest_from=1,
     ),
     baca.note_head_style_harmonic(
         baca.leaves(),
@@ -465,9 +569,9 @@ maker(
 )
 
 maker(
-    ("va", (3, 8)),
+    ("va", (5, 8)),
     harmony.rimbalzandi(
-        rest_except=[6, 9, 11, 14, 16, 19, 21, 22, 23],
+        rest_except=[1, 3, 6, 8, 11, 13, 14, 15],
     ),
 )
 
@@ -677,5 +781,10 @@ maker(
     ),
     baca.accent(
         baca.pheads(),
+    ),
+    baca.hairpin(
+        "mp >o niente",
+        right_broken=True,
+        selector=baca.plts()[-1:].rleak(),
     ),
 )
