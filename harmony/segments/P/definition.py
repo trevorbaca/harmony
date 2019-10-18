@@ -80,15 +80,32 @@ maker(
 maker(
     ("bfl", (9, 10)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 3, -1],
+        [3, -1, 8, -4, 8],
     ),
-    baca.text_spanner(
-        "A =|",
-        abjad.tweak(3).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
+    baca.new(
+        baca.text_spanner(
+            "A =|",
+            abjad.tweak(3).staff_padding,
+            autodetect_right_padding=True,
+            bookend=False,
+            map=baca.runs(),
+            selector=baca.leaves().rleak(),
+        ),
+        measures=9,
+    ),
+    baca.new(
+        baca.text_spanner(
+            "A =|",
+            abjad.tweak(3).staff_padding,
+            autodetect_right_padding=True,
+            bookend=False,
+        ),
+        baca.metric_modulation_spanner(
+            abjad.tweak(8).staff_padding,
+        ),
+        measures=10,
+        right_broken=True,
+        selector=baca.leaves()[1:].rleak(),
     ),
 )
 
@@ -130,12 +147,11 @@ maker(
 maker(
     ("perc1", (9, 10)),
     harmony.sixteenths(
-        [21, "-"],
+        [12, 4, 4, 1, "-"],
     ),
     harmony.brake_drum_staff_position(),
-    baca.flat_glissando(
-        do_not_hide_middle_note_heads=True,
-    ),
+    baca.flat_glissando(),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
@@ -197,8 +213,10 @@ maker(
 maker(
     ("hp", 8),
     baca.clef("treble"),
-    harmony.tuplet(
-        [(-4, 1)],
+    harmony.sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [-1, 0],
@@ -258,17 +276,18 @@ maker(
 
 maker(
     ("va", (9, 10)),
-    harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[2, 4, 5],
+    baca.make_repeat_tied_notes(),
+    baca.dynamic("pp"),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        right_broken=True,
+        selector=baca.leaves().rleak(),
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
-    baca.glissando(
-        allow_repeats=True,
-        map=baca.runs(),
+    baca.bow_speed_spanner(
+        "poco scr. =|",
+        abjad.tweak(3).staff_padding,
+        right_broken=True,
+        selector=baca.leaves().rleak(),
     ),
 )
 

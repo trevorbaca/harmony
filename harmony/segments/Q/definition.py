@@ -60,6 +60,26 @@ maker(
 # bfl
 
 maker(
+    ("bfl", 1),
+    harmony.sixteenths(
+        [4, 4, "-"],
+    ),
+    baca.new(
+        baca.text_spanner(
+            "A =|",
+            abjad.tweak(3).staff_padding,
+            autodetect_right_padding=True,
+            bookend=False,
+        ),
+        baca.metric_modulation_spanner(
+            abjad.tweak(8).staff_padding,
+        ),
+        left_broken=True,
+        selector=baca.leaves()[:3],
+    ),
+)
+
+maker(
     ("bfl", 2),
     harmony.warble(
         sixteenths=[2 * 4],
@@ -308,12 +328,16 @@ maker(
 # va
 
 maker(
-    ("va", 1),
+    ("va", (1, 2)),
     baca.make_notes(),
-    baca.dynamic("pp"),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        left_broken=True, 
+    ),
     baca.bow_speed_spanner(
         "poco scr. =|",
         abjad.tweak(3).staff_padding,
+        left_broken=True,
     ),
 )
 
@@ -475,8 +499,10 @@ maker(
     ),
 )
 
+# va, vc1, vc2, cb1, cb2
+
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 2),
+    (["vc1", "vc2", "cb1", "cb2"], 2),
     harmony.sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
