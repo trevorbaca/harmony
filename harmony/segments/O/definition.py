@@ -177,9 +177,16 @@ maker(
     harmony.sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
+    ),
+    baca.new(
+        baca.flat_glissando(
+            hide_stem_selector=baca.leaves()[2:-1],
+        ),
+        measures=(7, 9),
     ),
 )
 
@@ -248,8 +255,10 @@ maker(
 maker(
     ("hp", 1),
     baca.clef("treble"),
-    harmony.tuplet(
-        [(-4, 1)],
+    harmony.sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [-1, 0],
@@ -286,8 +295,10 @@ maker(
 
 maker(
     ("hp", [5, 9]),
-    harmony.tuplet(
-        [(-4, 1)],
+    harmony.sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [-1, 0],
