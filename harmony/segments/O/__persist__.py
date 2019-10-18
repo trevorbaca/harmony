@@ -141,12 +141,6 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
-                                edition=abjad.Tag('-PARTS'),
-                                prototype='baca.BarExtent',
-                                value=5,
-                                ),
-                            abjad.Momento(
-                                context='Cello_I_Music_Voice',
                                 manifest='instruments',
                                 value='Cello',
                                 ),
@@ -154,6 +148,11 @@ persist = abjad.OrderedDict(
                                 context='Cello_I_Music_Voice',
                                 prototype='abjad.Clef',
                                 value='bass',
+                                ),
+                            abjad.Momento(
+                                context='Cello_I_Music_Voice',
+                                prototype='baca.BarExtent',
+                                value=5,
                                 ),
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',

@@ -22,6 +22,9 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+    ],
     fermata_measure_empty_overrides=[3, 10],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -394,8 +397,10 @@ maker(
 maker(
     ("hp", 4),
     baca.clef("treble"),
-    harmony.tuplet(
-        [(-4, 1)],
+    harmony.sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [-1, 0],
@@ -478,11 +483,20 @@ maker(
 )
 
 maker(
+    ("va", 4),
+    harmony.sixteenths(
+        ["-", 4, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (2, 4)]),
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+maker(
     ("va", 5),
     harmony.appoggiato(
         divisions=[4, 12, 4],
-        counts=[7],
-        rest_to=1,
+        counts=[0, 7],
         rest_from=1,
     ),
     baca.note_head_style_harmonic(
@@ -494,6 +508,14 @@ maker(
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves(grace=False).rleak(),
+    ),
+)
+
+maker(
+    ("va", (4, 5)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.pleaves(grace=False)[:4],
     ),
 )
 
@@ -591,7 +613,7 @@ maker(
 )
 
 maker(
-    ("vc1", (6, 9)),
+    ("vc1", (6, 8)),
     baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
@@ -609,9 +631,21 @@ maker(
 )
 
 maker(
-    ("vc1", 11),
+    ("vc1", 9),
     baca.clef("bass"),
     baca.staff_lines(5),
+    harmony.sixteenths(
+        [-4, 3, -1, 3, -1, -8, 3, -1],
+        extra_counts=[0, 8],
+    ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+        map=baca.runs(),
+    ),
+)
+
+maker(
+    ("vc1", 11),
     harmony.sixteenths(
         [3, -1, 8],
     ),
@@ -659,18 +693,27 @@ maker(
 maker(
     ("vc2", 5),
     harmony.sixteenths(
-        [-8, 12],
+        [-8, 2, -6],
+        fuse=True,
+        extra_counts=[-4],
+        denominator=None,
     ),
-    baca.dynamic("mp"),
-    baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+    baca.new(
+        baca.clef("percussion"),
+        baca.staff_lines(1),
+        selector=baca.leaf(1),
     ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.dynamic("sfp"),
 )
 
 maker(
     ("vc2", (6, 9)),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     harmony.sixteenths(
         cerulean,
     ),
@@ -681,6 +724,14 @@ maker(
     baca.dynamic(
         "sfp-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+    ),
+)
+
+maker(
+    ("vc2", (5, 6)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[1:-3],
     ),
 )
 
