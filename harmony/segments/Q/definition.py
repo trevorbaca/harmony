@@ -111,11 +111,35 @@ maker(
 maker(
     ("bfl", 4),
     harmony.sixteenths(
-        ["+"],
+        [-4, 8],
     ),
     baca.dynamic("p"),
+)
+
+maker(
+    ("bfl", 5),
+    harmony.sixteenths(
+        [4, "-", 4, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (2, 4)]),
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+maker(
+    ("bfl", (4, 5)),
+    baca.new(
+        baca.trill_spanner(
+            abjad.tweak(2).bound_details__right__padding,
+        ),
+        baca.metric_modulation_spanner(
+            abjad.tweak(8).staff_padding,
+        ),
+        selector=baca.runs()[:1].rleak(),
+    ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
+        selector=baca.runs()[1:2].rleak(),
     ),
 )
 
@@ -296,8 +320,10 @@ maker(
 
 maker(
     ("hp", 4),
-    harmony.tuplet(
-        [(-4, 1)],
+    harmony.sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
     ),
     baca.staff_position(
         [-1, 0],
