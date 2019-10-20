@@ -92,9 +92,57 @@ maker(
 )
 
 maker(
-    ("bfl", (4, 5)),
+    ("bfl", 4),
     harmony.sixteenths(
         [3, -1, 8, -8, 3, -1],
+    ),
+    baca.text_spanner(
+        "A =|",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
+    ),
+)
+
+maker(
+    ("bfl", 5),
+    harmony.sixteenths(
+        [-4, 8], 
+    ),
+)
+
+maker(
+    ("bfl", 6),
+    harmony.sixteenths(
+        [4, 4, "-", 4, 4], 
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (2, 4)]),
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+maker(
+    ("bfl", (5, 6)),
+    baca.text_spanner(
+        "A =|",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        map=baca.runs(),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.runs()[:1].rleak(),
+    ),
+)
+
+maker(
+    ("bfl", 8),
+    harmony.sixteenths(
+        [4, "-"], 
     ),
     baca.text_spanner(
         "A =|",
@@ -352,6 +400,31 @@ maker(
         literal=True,
     ),
 )
+
+maker(
+    ("perc2", 11),
+    baca.staff_lines(3),
+    harmony.sixteenths(
+        ["-", 4, 4],
+        fuse=True,
+        extra_counts=[4],
+        denominator=None,
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.runs()[-1:].rleak(),
+    ),
+)
+
+# perc1, perc2
 
 maker(
     (["perc1", "perc2"], 3),
@@ -695,6 +768,39 @@ maker(
 # cb2
 
 maker(
+    ("cb2", 2),
+    harmony.sixteenths(
+        ["-", 2, 2, 2, 2],
+        fuse=True,
+        extra_counts=[4],
+        denominator=None,
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
+    baca.hairpin(
+        "o<| mp |>o niente o<| mp |>o",
+        forbid_al_niente_to_bar_line=True,
+        pieces=baca.clparts([1]),
+        selector=baca.tleaves(),
+    ),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
+)
+
+maker(
+    ("cb2", (2, 3)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
     ("cb2", (4, 5)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 3, -1],
@@ -740,7 +846,7 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 2),
+    (["va", "vc1", "vc2", "cb1"], 2),
     harmony.sixteenths(
         [-2, "+", -1],
         untie=True,
@@ -784,10 +890,6 @@ maker(
         -0.25,
         baca.pleaf(-1),
     ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
-    ),
 )
 
 maker(
@@ -802,6 +904,16 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.trill_spanner(),
+)
+
+# va, vc1, vc2, cb1
+
+maker(
+    (["va", "vc1", "vc2", "cb1"], 3),
+    baca.markup(
+        r"\baca-quasi-bisb-markup",
+        literal=True,
+    ),
 )
 
 # vc1, vc2, cb1, cb2
