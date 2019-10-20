@@ -275,7 +275,10 @@ maker(
 
 maker(
     ("va", 1),
-    baca.clef("alto"),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+    ),
 )
 
 maker(
@@ -453,10 +456,10 @@ maker(
     ),
 )
 
-# va, vc1, vc2, cb1, cb2
+# vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    (["vc1", "vc2", "cb1", "cb2"], 1),
     baca.staff_lines(5),
 )
 

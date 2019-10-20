@@ -252,7 +252,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_I_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='niente',
+                                value='f',
                                 ),
                             ],
                         ),
@@ -414,7 +414,7 @@ persist = abjad.OrderedDict(
                                 context='Viola_Music_Voice',
                                 edition=abjad.Tag('-PARTS'),
                                 prototype='baca.BarExtent',
-                                value=1,
+                                value=5,
                                 ),
                             abjad.Momento(
                                 context='Viola_Music_Voice',
@@ -424,12 +424,12 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Viola_Music_Voice',
                                 prototype='abjad.Clef',
-                                value='percussion',
+                                value='alto',
                                 ),
                             abjad.Momento(
                                 context='Viola_Music_Voice',
                                 prototype='baca.StaffLines',
-                                value=1,
+                                value=5,
                                 ),
                             ],
                         ),
