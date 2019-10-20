@@ -235,16 +235,16 @@ maker(
 
 maker(
     ("perc2", 1),
-    baca.staff_lines(3),
     harmony.appoggiato(
-        divisions=[5, 11],
-        counts=[0, 4],
-        rest_after=True,
+        divisions=[4, 1, 11],
+        counts=[0, 0, 4],
+        rest_after=[-2, -1],
     ),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(2, grace=False),
+    baca.accent(),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2],
     ),
 )
 
