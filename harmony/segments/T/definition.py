@@ -175,11 +175,11 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
-    baca.dynamic("mp"),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-        ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:3],
+    ),
 )
 
 maker(
