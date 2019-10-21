@@ -377,7 +377,9 @@ maker(
 maker(
     ("hp", 13),
     harmony.sixteenths(
-        [-6, 2, "-"],
+        ["-", 6],
+        fuse=True,
+        do_not_rewrite_meter=True,
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -385,6 +387,11 @@ maker(
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         literal=True,
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-1:].rleak(),
     ),
 )
 
@@ -512,6 +519,14 @@ maker(
 )
 
 maker(
+    ("vc1", (4, 5)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[:9],
+    ),
+)
+
+maker(
     ("vc1", 13),
     harmony.sixteenths(
         [3, -7, 3, "-"],
@@ -592,23 +607,17 @@ maker(
 # cb1
 
 maker(
-    ("cb1", 3),
+    ("cb1", (1, 3)),
     harmony.sixteenths(
-        [-4, 2, 2, -4],
-        written_quarters=True,
-        invisible_pairs=True,
+        [27],
+        after_graces=[1],
     ),
-    baca.note_head_style_harmonic(),
-    baca.hairpin(
-        "o< mp >o niente",
-        map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+    baca.staff_positions(
+        [2, -2, 4],
+        mock=True,
     ),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs(),
-    ),
+    # TODO: use multistage glissando
+    baca.glissando(),
 )
 
 maker(
@@ -651,23 +660,36 @@ maker(
 # cb2
 
 maker(
-    ("cb2", (1, 3)),
-    harmony.sixteenths(
-        [27],
-        after_graces=[1],
+    ("cb2", 3),
+    baca.skeleton(
+        "r4 c16. r32 r8 c16. r32 r8",
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
+    baca.new(
+        baca.clef("percussion"),
+        baca.staff_lines(1),
+        selector=baca.leaf(1),
     ),
-    # TODO: use multistage glissando
-    baca.glissando(),
+    baca.staff_position(0),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.stem_tremolo(
+        baca.pleaves(),
+    ),
 )
 
 maker(
     ("cb2", 4),
     harmony.sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
+    ),
+)
+
+maker(
+    ("cb2", (3, 4)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[1:].rleak(),
     ),
 )
 
@@ -717,9 +739,13 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    (["va", "vc1", "vc2", "cb1"], 4),
     baca.clef("percussion"),
     baca.staff_lines(1),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     baca.staff_position(0),
     baca.stem_tremolo(
         baca.pleaves(),
