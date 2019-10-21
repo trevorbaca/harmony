@@ -23,6 +23,9 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+    ],
     fermata_measure_empty_overrides=[3],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -240,8 +243,23 @@ maker(
 # hp
 
 maker(
-    ("hp", 6),
+    ("hp", 1),
     baca.clef("treble"),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2],
+    ),
+)
+
+maker(
+    ("hp", 6),
     harmony.sixteenths(
         [4, "-"],
     ),
@@ -339,8 +357,12 @@ maker(
 # vc2
 
 maker(
-    ("vc2", 6),
+    ("vc2", 1),
     baca.clef("bass"),
+)
+
+maker(
+    ("vc2", 6),
     baca.make_notes(),
     baca.bow_speed_spanner(
         "slow bow =|",
@@ -407,8 +429,12 @@ maker(
 # cb2
 
 maker(
-    ("cb2", 6),
+    ("cb2", 1),
     baca.clef("bass"),
+)
+
+maker(
+    ("cb2", 6),
     baca.make_notes(),
     baca.scp_spanner(
         "scp =|",
