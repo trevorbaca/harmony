@@ -21,6 +21,9 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+    ],
     fermata_measure_empty_overrides=[3],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -117,6 +120,25 @@ maker(
 # perc1
 
 maker(
+    ("perc1", 1),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    harmony.bass_drum_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.dynamic("mp"),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
+    ),
+)
+
+maker(
     ("perc1", 2),
     baca.staff_lines(3),
     harmony.phjc(
@@ -141,48 +163,87 @@ maker(
 )
 
 maker(
-    ("perc1", [1, 4]),
+    ("perc1", 4),
+    baca.staff_lines(1),
     harmony.sixteenths(
-        [4, -12, 4, 4, -12, 4, 4, -16, 4],
+        [4, -4, 4, -4],
+        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (5, 4)]),
+        extra_counts=[0, -8],
+        denominator=None,
     ),
-    harmony.bass_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
+    baca.new(
+        harmony.bass_drum_staff_position(),
+        selector=baca.pleaf(0),
     ),
-    baca.laissez_vibrer(
-        baca.ptails(),
-    ),
+    baca.accent(),
+    baca.laissez_vibrer(),
     baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-struck-markup",
         literal=True,
     ),
-)
-
-maker(
-    ("perc1", 4),
-    baca.staff_lines(1),
+    baca.new(
+        harmony.brake_drum_staff_position(),
+        baca.dynamic("p"),
+        baca.markup(
+            r"\baca-brake-drum-paper-towel-markup",
+            literal=True,
+        ),
+        selector=baca.pleaf(1),
+    ),
 )
 
 maker(
     ("perc1", 5),
     harmony.sixteenths(
         [4, -4],
-        ),
-    harmony.brake_drum_staff_position(),
-    baca.dynamic("p"),
-    baca.markup(
-        r"\baca-brake-drum-paper-towel-markup",
-        literal=True,
+    ),
+)
+
+maker(
+    ("perc1", (4, 5)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[2:],
     ),
 )
 
 # perc2
 
 maker(
+    ("perc2", 1),
+    baca.clef("treble"),
+    baca.staff_lines(5),
+    harmony.sixteenths(
+        [4, -8, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (5, 4)]),
+        extra_counts=[0, -8],
+        denominator=None,
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.markup(
+        r"\baca-glockenspiel-markup",
+        literal=True,
+    ),
+
+    baca.new(
+        baca.clef("percussion"),
+        baca.staff_lines(1),
+        harmony.bass_drum_staff_position(),
+        baca.accent(),
+        baca.dynamic("mp"),
+        baca.markup(
+            r"\baca-bd-struck-markup",
+            literal=True,
+        ),
+        selector=baca.pleaf(-1),
+    ),
+)
+
+maker(
     ("perc2", 2),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     harmony.sixteenths(
         [-4, 4],
     ),
@@ -193,15 +254,18 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
-    baca.dynamic("mp"),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        literal=True,
-        ),
 )
 
 maker(
-    ("perc2", [1, 4]),
+    ("perc2", (1, 2)),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        selector=baca.leaves()[2:],
+    ),
+)
+
+maker(
+    ("perc2", 4),
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
@@ -256,8 +320,10 @@ maker(
 maker(
     ("hp", 5),
     harmony.sixteenths(
-        [-4, 2, -16, 2, "-"],
-        extra_counts=[2],
+        [-4, 4, -12, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (4, 4)]),
+        extra_counts=[0, 4],
+        denominator=None,
     ),
     baca.flageolet(
         baca.pheads(),
@@ -269,6 +335,11 @@ maker(
         baca.ptails(),
     ),
     baca.dynamic("mf"),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        right_broken=True,
+        selector=baca.leaves()[-1:].rleak(),
+    ),
 )
 
 # va

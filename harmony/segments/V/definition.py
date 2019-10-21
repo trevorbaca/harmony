@@ -22,6 +22,9 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+    ],
     fermata_measure_empty_overrides=[11],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -293,6 +296,27 @@ maker(
 )
 
 # hp
+
+maker(
+    ("hp", 1),
+    harmony.sixteenths(
+        [4, "-"],
+    ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
+    baca.accent(
+        baca.pheads(),
+    ),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2],
+    ),
+)
 
 maker(
     ("hp", 3),
