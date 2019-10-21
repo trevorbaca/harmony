@@ -199,10 +199,10 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.dynamic("f"),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
+        selector=baca.leaves()[:2],
     ),
 )
 
