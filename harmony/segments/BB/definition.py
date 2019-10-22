@@ -51,6 +51,18 @@ maker(
 )
 
 maker(
+    "Global_Skips",
+    baca.open_volta(baca.skip(7 - 1)),
+    baca.close_volta(baca.skip(10 - 1), format_slot="after"),
+    baca.markup(
+        r"\harmony-repeat-three",
+        literal=True,
+        selector=baca.skip(7 - 1),
+    ),
+    baca.text_script_extra_offset((1.5, 12)),
+)
+
+maker(
     "Global_Rests",
     baca.global_fermata("fermata", baca.rest(6 - 1)),
 )
