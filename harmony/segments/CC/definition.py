@@ -53,7 +53,7 @@ maker(
 # bfl
 
 maker(
-    ("bfl", (1, 2)),
+    ("bfl", 1),
     harmony.sixteenths(
         [4, 4, 16],
     ),
@@ -67,13 +67,6 @@ maker(
     baca.hairpin(
         "pp < p > pp",
         pieces=baca.lparts([1, 1 + 1]),
-        measures=1,
-    ),
-    baca.hairpin(
-        "ppp < pp >o niente",
-        pieces=baca.lparts([1, 2 + 1]),
-        selector=baca.leaves().rleak(),
-        measures=2,
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -82,13 +75,6 @@ maker(
     baca.text_spanner(
         "(T) -> A -> (T)",
         abjad.tweak(5.5).staff_padding,
-        measures=1,
-        pieces=baca.lparts([1, 1 + 1]),
-    ),
-    baca.text_spanner(
-        "(T) -> A -> (T)",
-        abjad.tweak(5.5).staff_padding,
-        measures=2,
         pieces=baca.lparts([1, 1 + 1]),
     ),
 )
@@ -121,16 +107,13 @@ maker(
     ("perc2", 1),
     baca.staff_lines(1),
     harmony.sixteenths(
-        [1, -22, 1],
+        [1, "-"],
     ),
     harmony.bass_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
     baca.laissez_vibrer(),
-    baca.damp(
-        baca.leaves().rleak()[-1],
-    ),
     baca.dynamic(
         "mp",
         selector=baca.pheads(),
@@ -141,26 +124,17 @@ maker(
     ),
 )
 
-maker(
-    ("perc2", 2),
-    harmony.bass_drum_staff_position(),
-)
-
 # hp
 
 maker(
     ("hp", 1),
     harmony.sixteenths(
-        [1, -22, 1],
+        [1, "-"],
     ),
     baca.accent(
         baca.pheads(),
     ),
     baca.dynamic("f"),
-    baca.dynamic(
-        "mp",
-        selector=baca.phead(-1),
-    ),
     baca.markup(
         r"\baca-soundboard-pizz-markup",
         literal=True,
@@ -180,7 +154,7 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
         [4, 4, 16],
         written_halves=([0, 1, 3, 4],),
@@ -190,28 +164,21 @@ maker(
     baca.hairpin(
         "pp < p > pp",
         pieces=baca.lparts([1, 1 + 1]),
-        measures=1,
-    ),
-    baca.hairpin(
-        "ppp < pp >o niente",
-        pieces=baca.lparts([1, 2 + 1]),
-        selector=baca.leaves().rleak(),
-        measures=2,
     ),
 )
 
 maker(
-    (["vc1", "vc2", "cb1"], (1, 2)),
+    (["vc1", "vc2", "cb1"], 1),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.tweak(2).bound_details__right__padding,
         left_broken=True,
     ),
 )
 
 maker(
-    (["va", "cb2"], (1, 2)),
+    (["va", "cb2"], 1),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.tweak(2).bound_details__right__padding,
     ),
 )
 
