@@ -286,11 +286,13 @@ maker(
 maker(
     ("va", (1, 4)),
     baca.make_notes(),
-    baca.flat_glissando(),
-    baca.dynamic("p"),
+    baca.flat_glissando(
+        left_broken=True,
+    ),
     baca.bow_speed_spanner(
         "poc. scr. =|",
         abjad.tweak(3).staff_padding,
+        left_broken=True,
     ),
 )
 
