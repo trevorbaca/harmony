@@ -300,6 +300,12 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
+                                edition=abjad.Tag('-PARTS'),
+                                prototype='baca.BarExtent',
+                                value=3,
+                                ),
+                            abjad.Momento(
+                                context='Percussion_II_Music_Voice',
                                 manifest='instruments',
                                 value='Percussion',
                                 ),
@@ -310,13 +316,8 @@ persist = abjad.OrderedDict(
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
-                                prototype='baca.BarExtent',
-                                value=1,
-                                ),
-                            abjad.Momento(
-                                context='Percussion_II_Music_Voice',
                                 prototype='baca.StaffLines',
-                                value=1,
+                                value=3,
                                 ),
                             ],
                         ),
@@ -326,7 +327,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='niente',
+                                value='f',
                                 ),
                             ],
                         ),
