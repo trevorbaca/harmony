@@ -66,3 +66,12 @@ harmony-d-d-sharp = \markup
 
 harmony-match-harp-decay = \markup
     "match harp decay"
+
+harmony-repeat-three = \markup
+    \with-dimensions-from \null
+    \override #'(box-padding . 0.5)
+    \box
+    \fontsize #6
+    \bold
+    \sans
+    x3
