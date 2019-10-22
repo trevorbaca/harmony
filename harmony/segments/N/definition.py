@@ -71,6 +71,23 @@ cerulean = [
     1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"
 ]
 
+# text
+
+maker(
+    ("bfl", 3),
+    baca.literal(
+        "\\footnote \"(14)\" #'(0 . 0) \\harmony-text-fourteen",
+        format_slot="opening",
+    ),
+)
+
+maker(
+    ("bfl", 10),
+    baca.literal(
+        "\\footnote \"(15)\" #'(0 . 0) \\harmony-text-fifteen",
+        format_slot="opening",
+    ),
+)
 
 # bfl
 

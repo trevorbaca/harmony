@@ -63,7 +63,7 @@ divisions = baca.sequence([16, 20, 12, 12, 12, 16])
 sixteenths = baca.sequence([(2, 2, _ - 4) for _ in divisions])
 sixteenths = sixteenths.flatten()
 
-# bfl
+# text
 
 maker(
     ("bfl", 12),
@@ -72,6 +72,8 @@ maker(
         format_slot="opening",
     ),
 )
+
+# bfl
 
 maker(
     ("bfl", (1, 5)),
