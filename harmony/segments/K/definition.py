@@ -68,6 +68,24 @@ maker(
     baca.global_fermata("fermata", baca.rest(9 - 1)),
 )
 
+# text
+
+maker(
+    ("perc1", 3),
+    baca.literal(
+        "\\footnote \"(9)\" #'(0 . 0) \\harmony-text-nine",
+        format_slot="opening",
+    ),
+)
+
+maker(
+    ("bfl", 9),
+    baca.literal(
+        "\\footnote \"(10)\" #'(0 . 0) \\harmony-text-ten",
+        format_slot="opening",
+    ),
+)
+
 # bfl
 
 maker(

@@ -314,6 +314,7 @@ G_Bass_Flute_Music_Voice = {                                                   %
     \override Staff.BarLine.bar-extent = #'(-2 . 2)                            %! baca.SegmentMaker._style_fermata_measures(4)
     \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
+    \footnote "(6)" #'(0 . 0) \harmony-text-six                                %! baca.literal():baca.IndicatorCommand._call()
 %%% \once \override Score.BarLine.transparent = ##t                            %! FERMATA_MEASURE:MEASURE_57:baca.SegmentMaker._style_fermata_measures(7)
 %%% \once \override Score.SpanBar.transparent = ##t                            %! FERMATA_MEASURE:MEASURE_57:baca.SegmentMaker._style_fermata_measures(7)
     b'8 * 1/2                                                                  %! harmony.sixteenths()

@@ -106,8 +106,7 @@ harmony-text-fifteen = \markup \column {
     \justify { The world I had left behind. ▢  (15) }
 }
 
-
-harmony-text-sixteenth = \markup \column {
+harmony-text-sixteen = \markup \column {
     \justify { On. }
 
     \justify { I turned my eyes to her. That smile again. I took her in my
@@ -160,22 +159,17 @@ harmony-text-sixteenth = \markup \column {
     \justify { Harmony. (16) }
 }
 
-harmony-text-seventeen = \markup
+harmony-text-seventeen-twenty = \markup \column {
     \justify { Not yet. (17) }
 
-harmony-text-eighteen = \markup \column {
     \justify { On. }
 
     \justify { Hear me. (18) }
-}
 
-harmony-text-nineteen = \markup \column {
     \justify { Back. }
 
     \justify { Hear me. (19) }
-}
 
-harmony-text-twenty = \markup \column {
     \justify { Back. }
 
     \justify { Here I am. On my own. On the dunes. ▢  (20) }
@@ -261,11 +255,11 @@ harmony-text-twenty-six = \markup
 harmony-text-twenty-seven = \markup
     \justify { Here I am. (27) }
 
-harmony-text-twenty-eight = \markup
+harmony-text-twenty-eight-nine = \markup \column {
     \justify { On. (28) }
 
-harmony-text-twenty-nine = \markup
     \justify { Harmony. (29) }
+}
 
 harmony-text-thirty = \markup
     \justify { Not yet. (30) }
