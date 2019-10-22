@@ -4,6 +4,7 @@
 \include "/Users/trevorbaca/baca/lilypond/baca.ily"
 \include "contexts.ily"
 \include "markups.ily"
+\include "text-markups.ily"
 
 
 \paper {
