@@ -182,7 +182,10 @@ maker(
         written_quarters=[-2],
         invisible=[-1],
     ),
-    baca.staff_position(-2),
+    baca.staff_position(
+        -2,
+        selector=baca.leaves(grace=True),
+    ),
     baca.new(
         baca.staff_lines(
             1,
@@ -221,6 +224,10 @@ maker(
 
 maker(
     ("perc1", (5, 6)),
+#    baca.new(
+#        harmony.bass_drum_staff_position(),
+#        selector=baca.leaves(grace=False),
+#    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves(grace=False)[2:8],
@@ -257,6 +264,7 @@ maker(
         counts=[7],
         rest_after=True,
     ),
+    baca.staff_position(-2),
 )
 
 # perc2
@@ -445,6 +453,7 @@ maker(
 
 maker(
     ("hp", (8, 11)),
+    baca.clef("treble"),
     harmony.sixteenths(
         [2, 2, 16],
         invisible=([1], 3),
@@ -521,6 +530,11 @@ maker(
         divisions=[8, 12, 8],
         incise=True,
         ),
+    baca.pitch("Gqf4"),
+    baca.markup(
+        r"\harmony-seven-a",
+        literal=True,
+    ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -546,6 +560,27 @@ maker(
     ("va", 8),
     baca.clef("alto"),
     baca.staff_lines(5),
+)
+
+maker(
+    ("va", (8, 11)),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(-27),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
 )
 
 # vc1
@@ -580,6 +615,7 @@ maker(
 
 maker(
     ("vc1", 5),
+    baca.clef("bass"),
     baca.make_notes(),
 )
 
@@ -595,6 +631,10 @@ maker(
 
 maker(
     ("vc1", (5, 6)),
+    baca.pitch(
+        "A2",
+        baca.leaves().rleak(),
+    ),
     baca.stem_tremolo(
         baca.leaves().rleak().pleaves(),
     ),
@@ -634,8 +674,28 @@ maker(
 
 maker(
     ("vc1", 8),
-    baca.clef("bass"),
     baca.staff_lines(5),
+)
+
+maker(
+    ("vc1", (8, 11)),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(-19),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
 )
 
 # vc2
@@ -651,7 +711,7 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -691,10 +751,12 @@ maker(
 
 maker(
     ("vc2", 6),
+    baca.clef("bass"),
     harmony.appoggiato(
         divisions=[12, 8],
         incise=True,
     ),
+    baca.pitch("B3"),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -708,13 +770,34 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
+    ),
+)
+
+maker(
+    ("vc2", (8, 11)),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(-18),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -768,9 +851,11 @@ maker(
 
 maker(
     ("cb1", 6),
+    baca.clef("bass"),
     harmony.sixteenths(
         [10, 4, 6],
     ), 
+    baca.pitch("A1"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -796,8 +881,29 @@ maker(
 
 maker(
     ("cb1", 8),
-    baca.clef("bass"),
+    baca.clef("treble"),
     baca.staff_lines(5),
+)
+
+maker(
+    ("cb1", (8, 11)),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(-32),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
 )
 
 # cb2
@@ -813,7 +919,7 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -853,9 +959,15 @@ maker(
 
 maker(
     ("cb2", 6),
+    baca.clef("bass"),
     harmony.appoggiato(
         divisions=[12, 8],
         incise=True,
+    ),
+    baca.pitch("Dqs3"),
+    baca.markup(
+        r"\harmony-eleven-a",
+        literal=True,
     ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -870,13 +982,35 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
+    ),
+)
+
+maker(
+    ("cb2", (8, 11)),
+    baca.clef("treble"),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(-23),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
