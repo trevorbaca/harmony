@@ -266,7 +266,6 @@ maker(
     ),
     baca.chunk(
         baca.pitch("G1"),
-        baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
     baca.tenuto(
