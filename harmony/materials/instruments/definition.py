@@ -4,7 +4,7 @@ import baca
 
 instruments = abjad.OrderedDict(
     [
-        ("BassFlute", abjad.BassFlute()),
+        ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
         ("Glockenspiel", abjad.Glockenspiel()),
         (
             "Percussion",

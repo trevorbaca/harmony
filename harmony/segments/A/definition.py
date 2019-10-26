@@ -23,6 +23,7 @@ maker = baca.SegmentMaker(
     deactivate=[
         *abjad.tags.instrument_color_tags(),
         *abjad.tags.margin_markup_color_tags(),
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
@@ -69,14 +70,12 @@ maker(
         incise=True,
     ),
     baca.pitches(
-        "D3 E3",
+        "A4",
         selector=baca.plts(grace=False),
-        mock=True,
     ),
     baca.pitches(
-        "F3 G3 A3 G3",
+        harmony.flute_appoggiato_pitches,
         selector=baca.plts(grace=True),
-        mock=True,
     ),
     baca.dots_x_extent_false(
         baca.leaves(grace=False),
@@ -88,6 +87,7 @@ maker(
     harmony.sixteenths(
         harmony.cerulean[1:],
     ),
+    baca.pitch("F3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -265,7 +265,7 @@ maker(
         [10, "-"],
     ),
     baca.chunk(
-        baca.staff_position(-14, mock=True),
+        baca.pitch("G1"),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -280,7 +280,7 @@ maker(
 # va
 
 maker(
-    "va",
+    ("va", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Va."),
@@ -289,14 +289,15 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("va", (1, 2)),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
         ),
+    baca.pitch("Gqf4"),
+    baca.markup(
+        r"\harmony-seven-a",
+        literal=True,
+    ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -364,6 +365,7 @@ maker(
 maker(
     ("vc1", (1, 3)),
     baca.new(
+        baca.pitch("A2"),
         baca.accent(),
         baca.stem_tremolo(),
         selector=baca.leaves().pheads()[:-1],
@@ -377,7 +379,7 @@ maker(
 # vc2
 
 maker(
-    "vc2",
+    ("vc2", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Vc. II"),
@@ -386,14 +388,11 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("vc2", (1, 2)),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
+    baca.pitch("B3"),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -407,7 +406,7 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
@@ -420,7 +419,7 @@ maker(
 # cb1
 
 maker(
-    "cb1",
+    ("cb1", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Cb. I"),
@@ -429,13 +428,10 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("cb1", (1, 2)),
     harmony.sixteenths(
         [18, 6, 10, 4, 6],
     ), 
+    baca.pitch("A1"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -471,7 +467,7 @@ maker(
 # cb2
 
 maker(
-    "cb2",
+    ("cb2", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Cb. II"),
@@ -480,13 +476,14 @@ maker(
             literal=True,
         ),
     ),
-)
-
-maker(
-    ("cb2", (1, 2)),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
+    ),
+    baca.pitch("Dqs3"),
+    baca.markup(
+        r"\harmony-eleven-a",
+        literal=True,
     ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -501,7 +498,7 @@ maker(
         untie=True,
         after_graces=[1],
     ),
-    baca.interpolate_staff_positions(-1, 1, mock=True),
+    baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
