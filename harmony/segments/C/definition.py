@@ -22,6 +22,11 @@ maker = baca.SegmentMaker(
         abjad.tags.LOCAL_MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
+    deactivate=[
+        *abjad.tags.instrument_color_tags(),
+        *abjad.tags.margin_markup_color_tags(),
+        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+    ],
     fermata_measure_empty_overrides=[3, 5],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,

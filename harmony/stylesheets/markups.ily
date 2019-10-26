@@ -75,3 +75,15 @@ harmony-repeat-three = \markup
     \bold
     \sans
     x3
+
+%%% PARTIALS (A) %%%
+
+harmony-seven-a = \markup
+    \line {
+        "7°/A"
+    }
+
+harmony-eleven-a = \markup
+    \line {
+        "11°/A"
+    }
