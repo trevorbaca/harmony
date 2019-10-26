@@ -88,6 +88,18 @@ harmony-eleven-a = \markup
         "11°/A"
     }
 
+%%% PARTIALS (E) %%%
+
+harmony-seven-e = \markup
+    \line {
+        "7°/E"
+    }
+
+harmony-eleven-e = \markup
+    \line {
+        "11°/E"
+    }
+
 %%% ANNOTATION %%%
 
 harmony-a-flat-sounds-ottava-higher = \markup

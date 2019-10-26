@@ -440,7 +440,6 @@ maker(
     ),
     baca.chunk(
         baca.pitch("G1"),
-        baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
     baca.tenuto(
@@ -674,6 +673,7 @@ maker(
 
 maker(
     ("vc1", 8),
+    baca.clef("tenor"),
     baca.staff_lines(5),
 )
 
@@ -782,6 +782,7 @@ maker(
 
 maker(
     ("vc2", (8, 11)),
+    baca.clef("tenor"),
     baca.pitch(
         "Ab3",
         selector=baca.plts(grace=False),
