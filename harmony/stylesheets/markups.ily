@@ -87,3 +87,17 @@ harmony-eleven-a = \markup
     \line {
         "11°/A"
     }
+
+%%% ANNOTATION %%%
+
+harmony-a-flat-sounds-ottava-higher = \markup
+    \line {
+        A
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+        sounds
+        8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va
+        higher
+    }
