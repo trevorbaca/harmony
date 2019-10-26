@@ -19,6 +19,10 @@ flute_appoggiato_pitches = baca.sequence(
     "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
 )
 
+string_appoggiato_pitches = baca.sequence(
+    "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
+)
+
 ### FUNCTIONS ###
 
 

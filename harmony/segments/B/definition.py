@@ -88,6 +88,7 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+    baca.pitch("Ab4"),
     baca.stem_tremolo(
         baca.pleaves().get([0, 1], 3),
     ),
@@ -107,14 +108,12 @@ maker(
         incise=True,
     ),
     baca.pitches(
-        "D3 E3",
+        "A4",
         selector=baca.plts(grace=False),
-        mock=True,
     ),
     baca.pitches(
-        "F3 G3 A3 G3",
+        harmony.flute_appoggiato_pitches,
         selector=baca.plts(grace=True),
-        mock=True,
     ),
 )
 
@@ -123,6 +122,7 @@ maker(
     harmony.sixteenths(
         harmony.cerulean[1:],
     ),
+    baca.pitch("F3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -137,12 +137,32 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+    baca.pitch("Ab4"),
     baca.stem_tremolo(
         baca.plts().get([0, 1], 3),
     ),
     baca.hairpin(
+        "p <| mp |> p",
+        map=baca.clparts([3]),
+        measures=8,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
+        "p <| mf |> p",
+        map=baca.clparts([3]),
+        measures=9,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
         "p <| f |> p",
         map=baca.clparts([3]),
+        measures=10,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
+        "p <| ff |> p",
+        map=baca.clparts([3]),
+        measures=11,
         pieces=baca.clparts([1]),
     ),
     baca.dls_staff_padding(5.5),
@@ -370,9 +390,7 @@ maker(
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-    ),
+    baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -412,7 +430,7 @@ maker(
         [10, "-"],
     ),
     baca.chunk(
-        baca.staff_position(-14, mock=True),
+        baca.pitch("G1"),
         baca.no_ledgers(),
         baca.ottava_bassa(),
     ),
@@ -431,16 +449,32 @@ maker(
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.hairpin(
+        "p < mp > p",
+        map=baca.clparts([3]),
+        measures=8,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
+        "p < mf > p",
+        map=baca.clparts([3]),
+        measures=9,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
         "p < f > p",
         map=baca.clparts([3]),
+        measures=10,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
+        "p < ff > p",
+        map=baca.clparts([3]),
+        measures=11,
         pieces=baca.clparts([1]),
     ),
     baca.markup(
@@ -460,6 +494,14 @@ maker(
     harmony.appoggiato(
         divisions=[16, 12, 16, 12, 16, 16],
         counts=[2, 3, 4, 5, 6, 7],
+    ),
+    baca.pitch(
+        "Ab4",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches,
+        selector=baca.plts(grace=True),
     ),
 )
 
@@ -769,26 +811,24 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1"], [(1, 5), (8, 11)]),
-    baca.note_head_style_harmonic(
-        baca.pleaves(grace=False),
-    ),
     baca.new(
         baca.note_head_style_harmonic(
             baca.pleaves(grace=True),
         ),
+        # make this work:
+        #baca.stem_up(),
         map=baca.pleaves(grace=True).runs(),
     ),
 )
 
 maker(
     (["cb2"], [(3, 5), (8, 11)]),
-    baca.note_head_style_harmonic(
-        baca.pleaves(grace=False),
-    ),
     baca.new(
         baca.note_head_style_harmonic(
             baca.pleaves(grace=True),
         ),
+        # make this work:
+        #baca.stem_up(),
         map=baca.pleaves(grace=True).runs(),
     ),
 )
