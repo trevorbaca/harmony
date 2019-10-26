@@ -530,6 +530,7 @@ maker(
 
 maker(
     ("vc2", 1),
+    baca.clef("bass"),
     harmony.sixteenths(
         [-1, 2, "-"],
     ),

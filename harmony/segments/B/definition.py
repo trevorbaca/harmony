@@ -182,6 +182,7 @@ maker(
         written_quarters=[-2],
         invisible=[-1],
     ),
+    baca.staff_position(-2),
     baca.new(
         baca.staff_lines(
             1,
@@ -496,12 +497,21 @@ maker(
         counts=[2, 3, 4, 5, 6, 7],
     ),
     baca.pitch(
-        "Ab4",
+        "Ab3",
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.string_appoggiato_pitches,
         selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -542,12 +552,29 @@ maker(
 
 maker(
     ("vc1", (1, 4)),
-    baca.clef("bass"),
+    baca.clef("tenor"),
     baca.staff_lines(5),
     harmony.appoggiato(
         divisions=[12, 16, 12, 16, 16, 16],
         counts=[3, 4, 5, 6, 7],
         rest_to=1,
+    ),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(n=-1),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -637,10 +664,28 @@ maker(
 
 maker(
     ("vc2", (3, 5)),
+    baca.clef("tenor"),
     harmony.appoggiato(
         divisions=[8, 16, 12, 16],
         counts=[4, 5, 6, 7],
         rest_to=1,
+    ),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(n=-3),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -696,11 +741,28 @@ maker(
 
 maker(
     ("cb1", (2, 5)),
-    baca.clef("bass"),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.appoggiato(
         divisions=[16, 16, 12, 16, 12],
         counts=[5, 6, 7],
+    ),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(n=-2),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -764,10 +826,28 @@ maker(
 
 maker(
     ("cb2", (3, 5)),
+    baca.clef("treble"),
     harmony.appoggiato(
         divisions=[8, 16, 12, 16],
         counts=[6, 7],
         rest_to=1,
+    ),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.string_appoggiato_pitches.rotate(n=-4),
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -815,8 +895,6 @@ maker(
         baca.note_head_style_harmonic(
             baca.pleaves(grace=True),
         ),
-        # make this work:
-        #baca.stem_up(),
         map=baca.pleaves(grace=True).runs(),
     ),
 )
@@ -827,8 +905,6 @@ maker(
         baca.note_head_style_harmonic(
             baca.pleaves(grace=True),
         ),
-        # make this work:
-        #baca.stem_up(),
         map=baca.pleaves(grace=True).runs(),
     ),
 )
