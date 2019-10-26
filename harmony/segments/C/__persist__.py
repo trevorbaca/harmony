@@ -105,7 +105,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
                                 prototype='abjad.Clef',
-                                value='tenor',
+                                value='bass',
                                 ),
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
