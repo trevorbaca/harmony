@@ -251,6 +251,7 @@ maker(
     harmony.sixteenths(
         [-1, 3, 4, -4, 4],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
@@ -264,6 +265,14 @@ maker(
         divisions=[6, 14],
         counts=[5, 4],
         rest_after=True,
+    ),
+    baca.staff_position(
+        -2,
+        baca.runs()[:1],
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -339,6 +348,14 @@ maker(
         divisions=[6, 14],
         counts=[4, 5],
         rest_after=True,
+    ),
+    baca.staff_position(
+        -2,
+        baca.runs()[:1],
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
     ),
     baca.markup(
         r"\baca-purpleheart-markup",

@@ -182,6 +182,7 @@ maker(
         extra_counts=[0, -8],
         denominator=None,
     ),
+    baca.tuplet_bracket_down(),
     baca.new(
         harmony.bass_drum_staff_position(),
         selector=baca.pleaf(0),
@@ -209,6 +210,7 @@ maker(
     harmony.sixteenths(
         [4, -4],
     ),
+    harmony.brake_drum_staff_position(),
 )
 
 maker(
@@ -231,6 +233,10 @@ maker(
         extra_counts=[0, -8],
         denominator=None,
     ),
+    baca.pitch(
+        "E4",
+        baca.plt(0),
+    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -238,7 +244,6 @@ maker(
         r"\baca-glockenspiel-markup",
         literal=True,
     ),
-
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
@@ -282,6 +287,7 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

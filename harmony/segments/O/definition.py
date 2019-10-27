@@ -142,6 +142,7 @@ maker(
     harmony.sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
@@ -155,6 +156,7 @@ maker(
     harmony.sixteenths(
         [12, 16, -4],
     ),
+    baca.pitch("Eb4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

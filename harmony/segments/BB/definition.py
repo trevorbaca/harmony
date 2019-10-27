@@ -226,9 +226,12 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
-        [2, -6, -2, 2, -4],
+        [2, "-"],
     ),
-    baca.laissez_vibrer(baca.ptails()),
+    baca.pitch("C#5"),
+    baca.laissez_vibrer(
+        baca.ptails(),
+    ),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
@@ -275,6 +278,7 @@ maker(
     harmony.sixteenths(
         [-2, 2, -8],
     ),
+    baca.pitch("A4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

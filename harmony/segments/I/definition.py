@@ -124,6 +124,11 @@ maker(
     ),
 )
 
+maker(
+    ("perc1", (1, 2)),
+    harmony.slate_staff_position(),
+)
+
 # perc2
 
 maker(

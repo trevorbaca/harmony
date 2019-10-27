@@ -132,7 +132,7 @@ maker(
     ),
     baca.pitch("F3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.runs(),
         selector=baca.leaves().rleak(),
     ),
@@ -189,6 +189,7 @@ maker(
         counts=[0, 5],
         rest_after=True,
     ),
+    baca.staff_position(2),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -243,6 +244,11 @@ maker(
 )
 
 maker(
+    ("perc1", (4, 9)),
+    baca.staff_position(2),
+)
+
+maker(
     ("perc1", 12),
     baca.staff_lines(3),
     harmony.appoggiato(
@@ -250,6 +256,7 @@ maker(
         counts=[25],
         rest_after=True,
     ),
+    baca.staff_position(2),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -279,6 +286,14 @@ maker(
         divisions=[4, 1, 11],
         counts=[0, 0, 4],
         rest_after=[-2, -1],
+    ),
+    baca.staff_position(
+        0,
+        baca.pleaf(0),
+    ),
+    baca.staff_position(
+        2,
+        baca.pleaves()[1:],
     ),
     baca.accent(),
     baca.metric_modulation_spanner(
@@ -335,18 +350,8 @@ maker(
 )
 
 maker(
-    ("perc2", 12),
-    baca.staff_lines(3),
-    harmony.appoggiato(
-        divisions=[20],
-        counts=[24],
-        rest_after=True,
-    ),
-    baca.markup(
-        r"\baca-purpleheart-markup",
-        literal=True,
-        selector=baca.leaf(0, grace=False),
-    ),
+    ("perc2", (4, 9)),
+    baca.staff_position(2),
 )
 
 maker(
@@ -370,11 +375,28 @@ maker(
 )
 
 maker(
+    ("perc2", 12),
+    baca.staff_lines(3),
+    harmony.appoggiato(
+        divisions=[20],
+        counts=[24],
+        rest_after=True,
+    ),
+    baca.staff_position(2),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        literal=True,
+        selector=baca.leaf(0, grace=False),
+    ),
+)
+
+maker(
     ("perc2", 13),
     baca.staff_lines(1),
     baca.skeleton(
         r"r4. \times 5/4 { c2 }",
     ),
+    harmony.bass_drum_staff_position(),
     baca.accent(),
     baca.laissez_vibrer(),
     baca.dynamic("mp"),

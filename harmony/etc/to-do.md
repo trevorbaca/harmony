@@ -1,19 +1,27 @@
 TO-DO
 =====
 
-1.  Make whisk spanner.
+1.  Include preface note that XFB here is also always tasto.
 
-2.  Debug on-beat anchor transposition.
+2.  Fix [B, m2, percussion 1] staff position workaround.
+    Arises because clef change happens at start of on-beat grace container.
 
-3.  Debug \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs.
-    Parallel \baca-colored-bracketed-mixed-number-metric-modulation-tuplet-lhs.
+3.  Add semantic purpleheart staff position function.
+    harmony.purpleheart_positions([-1, 0, 1, 1]), etc.
 
-4.  Add double flageolet symbol.
+4.  Remove accidentals from tied-into notes.
+
+5.  Add double flageolet symbol.
     Extend baca.flageolet() with count=1 keyword.
 
-5.  Hide dots when stems are hidden.
+6.  Make whisk spanner.
+
+7.  Hide dots when stems are hidden.
     In baca.flat_glissando() 
 
-6.  Include preface not that XFB here is also always tasto.
+8.  Renotate 5-quarter durations as 4:5 monads throughout.
 
-7.  Rhythm annotation spanner segments D, G, V.
+9.  Rewrite nonpitched percussion on single staff.
+    Alterate between only 5-line glockenspiel staff and custom nonpitched
+    staff. Attach glockenspiel and unpitched percussion instruments at the
+    right places. Redo glockenspiel pitches as sounding (rather than written).

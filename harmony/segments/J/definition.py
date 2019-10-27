@@ -360,6 +360,11 @@ maker(
 )
 
 maker(
+    ("perc1", (3, 8)),
+    harmony.slate_staff_position(),
+)
+
+maker(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,

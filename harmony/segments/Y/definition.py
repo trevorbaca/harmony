@@ -253,6 +253,7 @@ maker(
     harmony.sixteenths(
         [4, -20, 4],
     ),
+    baca.staff_position(2),
     baca.accent(
         baca.pheads(),
     ),
@@ -336,6 +337,7 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
+        abjad.tweak(0).self_alignment_X,
         literal=True,
         selector=baca.pleaf(2),
     ),

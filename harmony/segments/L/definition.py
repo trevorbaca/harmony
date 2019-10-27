@@ -276,6 +276,16 @@ maker(
         counts=[5, 4],
         rest_after=True,
     ),
+    # TODO: should be baca.staff_position(-2):
+    baca.staff_positions(
+        [-2, -8, -8, -8, -8],
+        baca.runs()[:1],
+        allow_repeats=True,
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -302,6 +312,7 @@ maker(
     ("perc1", (3, 8)),
     baca.clef("treble"),
     baca.staff_lines(5),
+    baca.pitch("Eb4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -319,16 +330,6 @@ maker(
     ("perc1", 10),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.make_notes(),
-    harmony.triangle_staff_position(),
-    baca.stem_tremolo(
-        baca.pleaves(),
-    ),
-    baca.dynamic("p"),
-    baca.markup(
-        r"\baca-triangle-markup",
-        literal=True,
-    ),
 )
 
 maker(
@@ -388,6 +389,14 @@ maker(
         divisions=[6, 14],
         counts=[4, 5],
         rest_after=True,
+    ),
+    baca.staff_position(
+        -2,
+        baca.runs()[:1],
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
     ),
     baca.markup(
         r"\baca-purpleheart-markup",

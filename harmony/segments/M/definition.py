@@ -191,6 +191,14 @@ maker(
         counts=[5, 4],
         rest_after=True,
     ),
+    baca.staff_position(
+        -2,
+        baca.runs()[:1],
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -205,6 +213,7 @@ maker(
         counts=[0, 3],
         rest_after=True,
     ),
+    baca.staff_position(0),
 )
 
 maker(
@@ -251,6 +260,14 @@ maker(
         counts=[4, 5],
         rest_after=True,
     ),
+    baca.staff_position(
+        -2,
+        baca.runs()[:1],
+    ),
+    baca.staff_position(
+        0 ,
+        baca.runs()[1:],
+    ),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -265,6 +282,7 @@ maker(
         counts=[0, 4],
         rest_after=True,
     ),
+    baca.staff_position(0),
 )
 
 maker(
