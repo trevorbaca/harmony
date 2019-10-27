@@ -257,6 +257,7 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.pitch("Eb4"),
     baca.accent(),
     baca.laissez_vibrer(),
     baca.markup(

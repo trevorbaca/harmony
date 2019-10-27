@@ -221,8 +221,8 @@ A_Bass_Flute_Music_Voice = {                                                   %
         \A_Bass_Flute_Music_Voice_A                                            %! abjad.Path.extern()
 
     >>
-
     \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
+
     r16                                                                        %! harmony.appoggiato()
 
     <<
@@ -266,9 +266,9 @@ A_Bass_Flute_Music_Voice = {                                                   %
         \A_Bass_Flute_Music_Voice_B                                            %! abjad.Path.extern()
 
     >>
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
     % [A Bass_Flute_Music_Voice measure 2]                                     %! baca.SegmentMaker._comment_measure_numbers()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     r16                                                                        %! harmony.appoggiato()
 
     <<
@@ -318,8 +318,8 @@ A_Bass_Flute_Music_Voice = {                                                   %
         \A_Bass_Flute_Music_Voice_C                                            %! abjad.Path.extern()
 
     >>
-
     \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
+
     r16                                                                        %! harmony.appoggiato()
 
     <<

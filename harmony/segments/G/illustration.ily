@@ -1528,9 +1528,9 @@ G_Viola_Music_Voice = {                                                        %
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.appoggiato()
     \times 3/5 {                                                               %! harmony.appoggiato()
+        \oneVoice                                                              %! abjad.on_beat_grace_container(5)
 
         \baca-not-yet-pitched-coloring                                         %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
-        \oneVoice                                                              %! abjad.on_beat_grace_container(5)
         c'2                                                                    %! harmony.appoggiato()
         \repeatTie                                                             %! harmony.appoggiato()
         \revert NoteHead.style                                                 %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
@@ -1649,9 +1649,9 @@ G_Viola_Music_Voice = {                                                        %
     >>
 
     % [G Viola_Music_Voice measure 59 / measure 5]                             %! baca.SegmentMaker._comment_measure_numbers()
+    \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
-    \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
     c'4                                                                        %! harmony.sixteenths()
     \repeatTie                                                                 %! harmony.sixteenths()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1977,10 +1977,10 @@ G_Cello_I_Music_Voice = {                                                      %
         \G_Cello_I_Music_Voice_A                                               %! abjad.Path.extern()
 
     >>
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
     \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     \baca-not-yet-pitched-coloring                                             %! baca.SegmentMaker._color_not_yet_pitched():NOT_YET_PITCHED_COLORING
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     d4                                                                         %! harmony.appoggiato()
     - \espressivo                                                              %! baca.espressivo():baca.IndicatorCommand._call()
 
@@ -2587,8 +2587,8 @@ G_Contrabass_I_Music_Voice = {                                                 %
     >>
 
     % [G Contrabass_I_Music_Voice measure 60 / measure 6]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
+    \baca-mock-coloring                                                        %! baca.SegmentMaker._color_mock_pitch():MOCK_COLORING
     e,4                                                                        %! baca.make_repeated_duration_notes()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "make_repeated_duration_notes([(1, 4)])"    %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
