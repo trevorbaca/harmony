@@ -34,7 +34,7 @@ maker = baca.SegmentMaker(
     time_signatures=[
         (7, 4), (1, 4),
         (4, 4), (7, 4), (6, 4),
-        (6, 4), (6, 4), (1, 4),
+        (6, 4), (2, 4), (1, 4),
         (7, 4),
     ],
     transpose_score=True,
@@ -205,21 +205,15 @@ maker(
 maker(
     ("bfl", 7),
     harmony.sixteenths(
-        [4, 4, 16],
+        [4],
+        written_halves=True,
+        invisible_pairs=True,
     ),
     baca.pitch("Bb4"),
-    baca.new(
-        baca.flat_glissando(),
-        baca.hairpin(
-            "pp < p > pp",
-            pieces=baca.lparts([1, 1 + 1]),
-        ),
-        baca.text_spanner(
-            "(T) -> A -> (T)",
-            abjad.tweak(8).staff_padding,
-            pieces=baca.lparts([1, 1 + 1]),
-        ),
-        map=baca.clparts([3]),
+    baca.hairpin(
+        "pp < p >o niente",
+        pieces=baca.lparts([1, 1 + 1]),
+        selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -260,7 +254,7 @@ maker(
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
     baca.flat_glissando(),
-    baca.dynamic("p"),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         literal=True,
@@ -270,11 +264,12 @@ maker(
 maker(
     ("perc1", 6),
     harmony.sixteenths(
-        [1, -3, -4, 1, -3, -12, 1, -3],
-        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (4, 4)]),
-        extra_counts=[0, 4],
+        ["-", -2, 1, -3, 1, -3],
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        extra_counts=[0, -2],
         denominator=None,
     ),
+    baca.tuplet_bracket_down(),
     harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
@@ -309,7 +304,7 @@ maker(
     ("perc1", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[3:11],
+        selector=baca.tleaves().rleak().rleak(),
     ),
 )
 
@@ -331,6 +326,7 @@ maker(
     harmony.sixteenths(
         [4, -20, 4],
     ),
+    baca.staff_position(2),
     baca.accent(
         baca.pheads(),
     ),
@@ -361,11 +357,9 @@ maker(
     ("perc2", (4, 5)),
     baca.staff_lines(3),
     harmony.sixteenths(
-       [2],
-       beam=True,
-       fuse=True,
-       do_not_rewrite_meter=True,
+       [2, "-"],
     ),
+    baca.staff_position(2),
     baca.accent(
         baca.pheads(),
     ),
@@ -379,9 +373,9 @@ maker(
     ("perc2", 6),
     baca.staff_lines(1),
     harmony.sixteenths(
-        [2, -2, -4, 1, -3, -12, 1, -3],
-        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (4, 4)]),
-        extra_counts=[0, 4],
+        ["-", -2, 1, -3, 1, -3],
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        extra_counts=[0, -2],
         denominator=None,
     ),
     baca.new(
@@ -435,7 +429,7 @@ maker(
     ("perc2", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[3:11],
+        selector=baca.tleaves().rleak().rleak(),
     ),
 )
 
@@ -496,9 +490,9 @@ maker(
 maker(
     ("hp", 6),
     harmony.sixteenths(
-        [-8, 1, -3, -12, 1, -3],
-        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (4, 4)]),
-        extra_counts=[0, 4],
+        ["-", -2, 1, -3, 1, -3],
+        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        extra_counts=[0, -2],
         denominator=None,
     ),
     baca.accent(
@@ -531,7 +525,7 @@ maker(
     ("hp", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:9],
+        selector=baca.tleaves().rleak().rleak(),
     ),
 )
 
@@ -854,17 +848,16 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 7),
+    (["vc1", "vc2", "cb1", "cb2"], 7),
     harmony.sixteenths(
-        [4, 4, 16],
-        written_halves=([0, 1], 3),
-        invisible=([1], 3),
-        tie_all=True,
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
     ),
     baca.hairpin(
-        "pp < p > pp",
-        map=baca.clparts([3]),
-        pieces=baca.lparts([1, 1 + 1]),
+        "niente o< mp >o niente o< mp >o niente",
+        pieces=baca.lparts([1, 1, 1, 2]),
+        selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,

@@ -174,6 +174,7 @@ maker(
         counts=[7],
         rest_after=True,
     ),
+    baca.staff_position(-2),
 )
 
 maker(

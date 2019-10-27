@@ -386,6 +386,7 @@ maker(
         3,
         baca.leaf(-2),
     ),
+    baca.staff_position(2),
     baca.accent(
         baca.pheads(),
     ),

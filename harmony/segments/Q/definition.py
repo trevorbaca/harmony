@@ -164,6 +164,7 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.make_notes(),
+    baca.pitch("E4"),
     baca.laissez_vibrer(),
     baca.dynamic("mp"),
     baca.markup(
@@ -181,6 +182,7 @@ maker(
         counts=[0, 5],
         rest_after=True,
     ),
+    baca.staff_position(2),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
@@ -194,6 +196,7 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    harmony.slate_staff_position(),
     baca.markup(
         r"\baca-slate-scrape-markup",
         literal=True,
@@ -207,6 +210,7 @@ maker(
     harmony.sixteenths(
         [-16, 4],
     ),
+    baca.pitch("E4"),
     baca.laissez_vibrer(),
     baca.dynamic(
         "mp-ancora",
@@ -242,6 +246,7 @@ maker(
         counts=[0, 4],
         rest_after=True,
     ),
+    baca.staff_position(2),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,

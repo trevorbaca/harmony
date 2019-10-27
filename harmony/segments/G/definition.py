@@ -239,6 +239,7 @@ maker(
     harmony.sixteenths(
         [1, -11],
     ),
+    harmony.brake_drum_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
@@ -290,6 +291,7 @@ maker(
     harmony.sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
+    harmony.slate_staff_position(),
     baca.accent(
         baca.pheads(),
     ),

@@ -200,6 +200,10 @@ maker(
     harmony.sixteenths(
         [4, "-", 4],
     ),
+    baca.pitch(
+        "E4",
+        baca.plt(0),
+    ),
     baca.laissez_vibrer(),
     baca.markup(
         r"\baca-glockenspiel-markup",

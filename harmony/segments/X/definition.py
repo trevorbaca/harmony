@@ -173,6 +173,7 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
+    baca.staff_position(2),
     baca.accent(),
     baca.dynamic("f"),
     baca.markup(
@@ -196,6 +197,10 @@ maker(
         harmony.tam_tam_staff_position(),
         baca.flat_glissando(),
         selector=baca.run(0),
+    ),
+    baca.staff_position(
+        2,
+        baca.plts()[-1:],
     ),
     baca.stem_tremolo(
         baca.pheads().get([0, 2]),
