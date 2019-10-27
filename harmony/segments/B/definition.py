@@ -112,7 +112,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.flute_appoggiato_pitches,
+        harmony.appoggiato_pitches_a,
         selector=baca.plts(grace=True),
     ),
 )
@@ -509,7 +509,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches,
+        harmony.appoggiato_pitches_a_flat,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -568,7 +568,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(-27),
+        harmony.appoggiato_pitches_a_flat.rotate(-27),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -598,7 +598,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(n=-1),
+        harmony.appoggiato_pitches_a_flat.rotate(n=-1),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -684,7 +684,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(-19),
+        harmony.appoggiato_pitches_a_flat.rotate(-19),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -735,7 +735,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(n=-3),
+        harmony.appoggiato_pitches_a_flat.rotate(n=-3),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -788,7 +788,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(-18),
+        harmony.appoggiato_pitches_a_flat.rotate(-18),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -836,7 +836,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(n=-2),
+        harmony.appoggiato_pitches_a_flat.rotate(n=-2),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -893,7 +893,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(-32),
+        harmony.appoggiato_pitches_a_flat.rotate(-32),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -944,7 +944,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(n=-4),
+        harmony.appoggiato_pitches_a_flat.rotate(n=-4),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -1001,7 +1001,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.string_appoggiato_pitches.rotate(-23),
+        harmony.appoggiato_pitches_a_flat.rotate(-23),
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(

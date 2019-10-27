@@ -14,8 +14,8 @@ stage_markup = (
     ("[◀X.6]", 3, "darkgreen"),
     ("[AA.2-3]", 4),
     ("[◀Y.2]", 6, "darkgreen"),
-    ("[▶CC.1]", 7, "darkgreen"),
-    ("[AA.4]", 13),
+    ("[▶BB.5]", 7, "darkgreen"),
+    ("[AA.4]", 9),
 )
 
 maker = baca.SegmentMaker(
@@ -28,17 +28,17 @@ maker = baca.SegmentMaker(
         *abjad.tags.margin_markup_color_tags(),
         abjad.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
-    fermata_measure_empty_overrides=[2, 12],
+    fermata_measure_empty_overrides=[2, 8],
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
         (7, 4), (1, 4),
         (4, 4), (7, 4), (6, 4),
-        (6, 4), (6, 4), (6, 4), (6, 4), (6, 4), (6, 4), (1, 4),
+        (6, 4), (6, 4), (1, 4),
         (7, 4),
     ],
     transpose_score=True,
-    validate_measure_count=13,
+    validate_measure_count=9,
 )
 
 maker(
@@ -62,8 +62,8 @@ maker(
     baca.metronome_mark("4:5(2)=4", baca.skip(6 - 1)),
     baca.metronome_mark("72", baca.skip(7 - 1)),
     baca.metronome_mark("5:4(4)=4", baca.skip(7 - 1)),
-    baca.metronome_mark("144", baca.skip(13 - 1)),
-    baca.metronome_mark("8=4", baca.skip(13 - 1)),
+    baca.metronome_mark("144", baca.skip(9 - 1)),
+    baca.metronome_mark("8=4", baca.skip(9 - 1)),
 )
 
 maker(
@@ -81,7 +81,7 @@ maker(
 maker(
     "Global_Rests",
     baca.global_fermata("fermata", baca.rest(2 - 1)),
-    baca.global_fermata("fermata", baca.rest(12 - 1)),
+    baca.global_fermata("fermata", baca.rest(8 - 1)),
 )
 
 # text
@@ -95,7 +95,7 @@ maker(
 )
 
 maker(
-    ("bfl", 12),
+    ("bfl", 8),
     baca.literal(
         "\\footnote \"(30)\" #'(0 . 0) \\harmony-text-thirty",
         format_slot="opening",
@@ -109,6 +109,7 @@ maker(
     harmony.sixteenths(
         [2, -2, 2],
     ),
+    baca.pitch("F#5"),
     baca.hairpin(
         "p >o niente",
         selector=baca.leaves()[:2],
@@ -125,12 +126,12 @@ maker(
     ),
     baca.text_spanner(
         "T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         selector=baca.leaves()[:2],
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs()[1:].map(baca.leaves().rleak()),
     ),
@@ -143,9 +144,27 @@ maker(
         counts=[9, 6],
         incise=True,
     ),
+    baca.pitch(
+        "Ab3",
+        selector=baca.plts(grace=False),
+    ),
+    baca.pitches(
+        harmony.appoggiato_pitches_a_flat,
+        selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-flat-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        lilypond_id=2,
+        selector=baca.tleaves(grace=False).rleak(),
+    ),
     baca.text_spanner(
         "air =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
         selector=baca.leaves().rleak(),
@@ -184,10 +203,11 @@ maker(
 )
 
 maker(
-    ("bfl", (7, 11)),
+    ("bfl", 7),
     harmony.sixteenths(
         [4, 4, 16],
     ),
+    baca.pitch("Bb4"),
     baca.new(
         baca.flat_glissando(),
         baca.hairpin(
@@ -196,7 +216,7 @@ maker(
         ),
         baca.text_spanner(
             "(T) -> A -> (T)",
-            abjad.tweak(5.5).staff_padding,
+            abjad.tweak(8).staff_padding,
             pieces=baca.lparts([1, 1 + 1]),
         ),
         map=baca.clparts([3]),
@@ -207,10 +227,13 @@ maker(
 )
 
 maker(
-    ("bfl", 13),
+    ("bfl", 9),
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("G3"),
+    baca.note_head_style_harmonic(),
+    baca.dynamic("ff"),
     baca.markup(
         r"\baca-jet-whistle-markup",
         literal=True,
@@ -268,9 +291,9 @@ maker(
 )
 
 maker(
-    ("perc1", (7, 11)),
+    ("perc1", 7),
     harmony.sixteenths(
-        [1, -23, 1, -23, 1, -23, 1, -23, 1, -22, 1],
+        [1, -23],
     ),
     harmony.brake_drum_staff_position(),
     baca.accent(
@@ -279,10 +302,6 @@ maker(
     baca.dynamic(
         "f",
         selector=baca.pheads()[:-1],
-    ),
-    baca.dynamic(
-        "mp",
-        selector=baca.phead(-1),
     ),
 )
 
@@ -295,7 +314,7 @@ maker(
 )
 
 maker(
-    ("perc1", 13),
+    ("perc1", 9),
     baca.make_repeat_tied_notes(),
     harmony.brake_drum_staff_position(),
     baca.dynamic("p"),
@@ -399,9 +418,9 @@ maker(
 )
 
 maker(
-    ("perc2", (7, 11)),
+    ("perc2", 7),
     harmony.sixteenths(
-        [1, -23, 1, -23, 1, -23, 1, -23, 1, -22, 1],
+        [1, -23],
     ),
     harmony.bass_drum_staff_position(),
     baca.accent(
@@ -409,9 +428,6 @@ maker(
     ),
     baca.laissez_vibrer(
         baca.ptails()[:-1],
-    ),
-    baca.damp(
-        baca.pleaf(-1),
     ),
 )
 
@@ -498,9 +514,9 @@ maker(
 )
 
 maker(
-    ("hp", (7, 11)),
+    ("hp", 7),
     harmony.sixteenths(
-        [1, -23, 1, -23, 1, -23, 1, -23, 1, -22, 1],
+        [1, -23],
     ),
     baca.accent(
         baca.pheads(),
@@ -587,7 +603,7 @@ maker(
 )
 
 maker(
-    ("va", 13),
+    ("va", 9),
     baca.make_notes(),
     baca.flat_glissando(
         right_broken=True,
@@ -640,7 +656,7 @@ maker(
 )
 
 maker(
-    ("vc1", 13),
+    ("vc1", 9),
     baca.clef("percussion"),
     baca.staff_lines(1),
     baca.make_notes(),
@@ -687,7 +703,7 @@ maker(
 )
 
 maker(
-    ("vc2", 13),
+    ("vc2", 9),
     baca.make_notes(),
     baca.dynamic("p"),
     baca.damp_spanner(
@@ -734,7 +750,7 @@ maker(
 )
 
 maker(
-    ("cb1", 13),
+    ("cb1", 9),
     baca.clef("percussion"),
     baca.staff_lines(1),
     baca.make_notes(),
@@ -805,7 +821,7 @@ maker(
 )
 
 maker(
-    ("cb2", 13),
+    ("cb2", 9),
     baca.make_notes(),
     baca.dynamic("p"),
     baca.damp_spanner(
@@ -838,7 +854,7 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (7, 11)),
+    (["va", "vc1", "vc2", "cb1", "cb2"], 7),
     harmony.sixteenths(
         [4, 4, 16],
         written_halves=([0, 1], 3),

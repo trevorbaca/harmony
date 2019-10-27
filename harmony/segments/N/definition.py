@@ -127,6 +127,7 @@ maker(
     harmony.sixteenths(
         [-1, 3, 4, -4, 4],
     ),
+    baca.pitch("E3"),
     baca.accent(
         baca.pheads(),
     ),
@@ -143,9 +144,11 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    # TODO: promote to harmony.sixteenths():
     baca.repeat_tie(
         baca.pleaf(-1),
     ),
+    baca.pitch("B4"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -215,6 +218,7 @@ maker(
     harmony.sixteenths(
         [3, -1, 8],
     ),
+    baca.pitch("D5"),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,

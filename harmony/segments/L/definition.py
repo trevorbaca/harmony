@@ -90,20 +90,17 @@ maker(
 # bfl
 
 maker(
-    ("bfl", 1),
+    ("bfl", [1, 3, 5, 7]),
     harmony.sixteenths(
-        [8, "-"],
+        ["+"],
     ),
-    baca.text_spanner(
-        "multiphonic =|",
-        abjad.tweak(5.5).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-    ),
-    baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
-        left_broken=True,
-        selector=baca.leaves()[:2],
+    baca.pitch("<Eb3 Eb4 Bb4>"),
+    baca.new(
+        baca.metric_modulation_spanner(
+            abjad.tweak(8).staff_padding,
+            left_broken=True,
+        ),
+        match=[0],
     ),
 )
 
@@ -114,9 +111,11 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    # TOOD: promote into harmony.sixteenths():
     baca.repeat_tie(
         baca.pleaf(-1),
     ),
+    baca.pitch("B4"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -128,35 +127,31 @@ maker(
 )
 
 maker(
-    ("bfl", [3, 5, 7]),
-    harmony.sixteenths(
-        ["+"],
-    ),
-    baca.text_spanner(
-        "multiphonic =|",
-        abjad.tweak(5.5).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        map=baca.runs(),
-        selector=baca.tleaves().rleak(),
-    ),
-)
-
-maker(
     ("bfl", 10),
     harmony.appoggiato(
         counts=[9],
         incise=True,
     ),
     baca.pitches(
-        "D3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        mock=True,
+        "A3",
+        baca.leaves(grace=False),
     ),
     baca.pitches(
-        "G3 A3 B3 A3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        mock=True,
+        harmony.appoggiato_pitches_a.rotate(-9),
+        baca.leaves(grace=True),
+    ),
+    baca.dynamic(
+        "p",
+        selector=baca.pleaf(0, grace=False),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -233,6 +228,23 @@ maker(
         abjad.tweak(8).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-2:].rleak(),
+    ),
+)
+
+maker(
+    ("bfl", (11, 15)),
+    baca.pitch(
+        "Dtqf5",
+        baca.leaves()[:-2],
+    ),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(8).staff_padding,
+        literal=True,
+    ),
+    baca.pitch(
+        "B4",
+        baca.leaves()[-2:],
     ),
 )
 

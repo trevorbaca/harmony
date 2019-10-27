@@ -79,10 +79,11 @@ maker(
     harmony.sixteenths(
         [4, 4, "-"],
     ),
+    baca.pitch("D5"),
     baca.new(
         baca.text_spanner(
             "A =|",
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
             autodetect_right_padding=True,
             bookend=False,
         ),
@@ -128,16 +129,18 @@ maker(
     harmony.sixteenths(
         [-4, 8],
     ),
+    baca.pitch("F#5"),
     baca.dynamic("p"),
 )
 
 maker(
     ("bfl", 5),
     harmony.sixteenths(
-        [4, "-", 4, 4],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (2, 4)]),
-        extra_counts=[0, 4],
-        denominator=None,
+        [4, "-"],
+    ),
+    baca.pitch(
+        "F#5",
+        baca.run(0),
     ),
 )
 
@@ -151,10 +154,6 @@ maker(
             abjad.tweak(8).staff_padding,
         ),
         selector=baca.runs()[:1].rleak(),
-    ),
-    baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
-        selector=baca.runs()[1:2].rleak(),
     ),
 )
 

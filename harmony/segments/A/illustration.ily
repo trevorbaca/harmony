@@ -102,7 +102,13 @@ A_Global_Rests = {                                                             %
 A_Bass_Flute_Music_Voice_A = {                                                 %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    a''2...                                                                    %! harmony.appoggiato()
+    a'2...                                                                     %! harmony.appoggiato()
+    - \abjad-dashed-line-with-up-hook                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+    - \baca-text-spanner-left-markup \harmony-a-sounds-ottava-higher           %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+    - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
+    - \tweak direction #down                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+    - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+    \startTextSpan                                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
 }                                                                              %! abjad.Path.extern()
 
@@ -110,7 +116,7 @@ A_Bass_Flute_Music_Voice_A = {                                                 %
 A_Bass_Flute_Music_Voice_B = {                                                 %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    a''4..                                                                     %! harmony.appoggiato()
+    a'4..                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
@@ -118,9 +124,9 @@ A_Bass_Flute_Music_Voice_B = {                                                 %
 A_Bass_Flute_Music_Voice_C = {                                                 %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    a''8.
+    a'8.
 
-    a''2
+    a'2
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -129,7 +135,7 @@ A_Bass_Flute_Music_Voice_C = {                                                 %
 A_Bass_Flute_Music_Voice_D = {                                                 %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    a''4..                                                                     %! harmony.appoggiato()
+    a'4..                                                                      %! harmony.appoggiato()
     \revert Dots.X-extent                                                      %! baca.dots_x_extent_false():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -176,7 +182,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                a''
+                a'
                 cs'''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -230,7 +236,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                a''
+                a'
                 cs'''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -276,7 +282,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                a''
+                a'
                 as''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -327,7 +333,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                a''
+                a'
                 ctqs'''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
@@ -355,6 +361,7 @@ A_Bass_Flute_Music_Voice = {                                                   %
     % [A Bass_Flute_Music_Voice measure 3]                                     %! baca.SegmentMaker._comment_measure_numbers()
     \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
     r2                                                                         %! harmony.sixteenths()
+    \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([-10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, '-'], talea_denominator=16)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START

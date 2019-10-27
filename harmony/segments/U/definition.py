@@ -82,12 +82,15 @@ maker(
     harmony.sixteenths(
         [-4, 4],
     ),
+    baca.pitch("E5"),
     baca.dynamic("mp"),
     baca.trill_spanner(
+        alteration="m2",
         map=baca.run(0),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
+        alteration="m2",
         map=baca.run(1),
     ),
 )
@@ -97,20 +100,15 @@ maker(
     harmony.sixteenths(
         [4],
     ),
-    baca.triple_staccato(
-        baca.cmgroups().map(baca.leaves().get([0, -1])),
+    baca.pitch("<B3 Dqf4>"),
+    baca.markup(
+        baca.levine_multiphonic(42),
+        match=[0],
     ),
     baca.espressivo(
         baca.pheads(),
     ),
     baca.dynamic("mp"),
-    baca.text_spanner(
-        "mph =|",
-        abjad.tweak(3).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        selector=baca.leaves().rleak(),
-    ),
 )
 
 maker(
@@ -118,10 +116,11 @@ maker(
     harmony.sixteenths(
         [4, -4],
     ),
+    baca.pitch("E5"),
     baca.dynamic("p"),
     baca.text_spanner(
         "air =|",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
         map=baca.runs(),

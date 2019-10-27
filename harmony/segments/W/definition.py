@@ -105,20 +105,11 @@ maker(
     harmony.sixteenths(
         [4],
     ),
-    baca.triple_staccato(
-        baca.cmgroups().map(baca.leaves().get([0, -1])),
-    ),
+    baca.pitch("<B3 Dqf4>"),
     baca.espressivo(
         baca.pheads(),
     ),
     baca.dynamic("mp"),
-    baca.text_spanner(
-        "mph =|",
-        abjad.tweak(3).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        selector=baca.leaves().rleak(),
-    ),
 )
 
 maker(
@@ -127,8 +118,9 @@ maker(
         [-4, 8, "-"],
         extra_counts=[1],
     ),
+    baca.pitch("Eb3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
 )

@@ -62,6 +62,7 @@ maker(
     harmony.sixteenths(
         [2, 3, -3],
     ),
+    baca.pitch("F5"),
     baca.hairpin(
         "niente o< mf >o",
         pieces=baca.lparts([1, 2 + 1]),
@@ -73,7 +74,7 @@ maker(
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(9).staff_padding,
         pieces=baca.lparts([1, 2 + 1]),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
@@ -84,6 +85,7 @@ maker(
     harmony.sixteenths(
         [2, 2, -2],
     ),
+    baca.pitch("F#5"),
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
@@ -96,7 +98,7 @@ maker(
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs().map(baca.leaves().rleak()),
     ),

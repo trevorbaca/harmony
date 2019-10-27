@@ -119,6 +119,7 @@ maker(
     harmony.sixteenths(
         [2, -2, 2],
     ),
+    baca.pitch("F#5"),
     baca.hairpin(
         "p >o niente",
         selector=baca.leaves()[:2],
@@ -135,12 +136,12 @@ maker(
     ),
     baca.text_spanner(
         "T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         selector=baca.leaves()[:2],
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs()[1:].map(baca.leaves().rleak()),
     ),

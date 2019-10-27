@@ -93,12 +93,11 @@ maker(
 maker(
     ("bfl", 1),
     harmony.sixteenths(
-        [8, "-"],
+        ["+"],
     ),
-    baca.text_spanner(
-        "multiphonic =|",
-        abjad.tweak(5.5).staff_padding,
-        bookend=False,
+    baca.pitch("<Eb3 Eb4 Bb4>"),
+    baca.markup(
+        baca.levine_multiphonic(5),
     ),
 )
 
@@ -107,6 +106,7 @@ maker(
     harmony.sixteenths(
         ["-", 4, -2, 4],
     ),
+    baca.pitch("Ab3"),
     baca.dynamic("mp"),
 )
 
@@ -115,6 +115,7 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.pitch("G3"),
 )
 
 maker(
@@ -169,23 +170,30 @@ maker(
 )
 
 maker(
+    ("bfl", (7, 8)),
+    baca.pitch("Dtqf5"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(8).staff_padding,
+        literal=True,
+    ),
+)
+
+maker(
     ("bfl", 10),
     harmony.sixteenths(
-        ["-", 8, -4],
-        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (2, 4)]),
-        extra_counts=[0, 4],
-        denominator=None,
+        ["-", 8],
+    ),
+    baca.pitch("<Eb3 Eb4 Bb4>"),
+    baca.markup(
+        baca.levine_multiphonic(5),
     ),
     baca.new(
-        baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
-            right_broken=True,
-        ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
             right_broken=True,
         ),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.runs()[-1:].rleak(),
     ),
 )
 

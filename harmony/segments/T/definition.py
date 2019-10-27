@@ -61,12 +61,14 @@ maker(
     harmony.sixteenths(
         [-4, 4],
     ),
+    baca.pitch("E5"),
     baca.dynamic("mp"),
     baca.trill_spanner(
         map=baca.run(0),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
+        alteration="m1",
         map=baca.run(1),
     ),
 )
@@ -78,6 +80,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Gqs5"),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
@@ -86,6 +89,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
+        alteration="A6",
         map=baca.runs(),
     ),
 )
@@ -96,9 +100,9 @@ maker(
         [-8, 8, -16, 4],
         extra_counts=[1],
     ),
+    baca.pitch("Eb3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.runs().map(baca.leaves().rleak()),
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 

@@ -100,7 +100,53 @@ harmony-eleven-e = \markup
         "11°/E"
     }
 
+%%% PARTIALS (Eb) %%%
+
+harmony-five-e-flat = \markup
+    \line {
+        "5°/E"
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+    }
+
+harmony-seven-e-flat = \markup
+    \line {
+        "7°/E"
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+    }
+
+harmony-nine-e-flat = \markup
+    \line {
+        "9°/E"
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+    }
+
+harmony-eleven-e-flat = \markup
+    \line {
+        "11°/E"
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+    }
+
 %%% ANNOTATION %%%
+
+harmony-a-sounds-ottava-higher = \markup
+    \line {
+        A
+        sounds
+        8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va
+        higher
+    }
 
 harmony-a-flat-sounds-ottava-higher = \markup
     \line {
@@ -109,6 +155,14 @@ harmony-a-flat-sounds-ottava-higher = \markup
         \raise #0.5
         \scale #'(0.65 . 0.65)
         \flat
+        sounds
+        8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va
+        higher
+    }
+
+harmony-g-sounds-ottava-higher = \markup
+    \line {
+        G
         sounds
         8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va
         higher
