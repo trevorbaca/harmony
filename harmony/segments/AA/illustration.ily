@@ -504,9 +504,9 @@ AA_Bass_Flute_Music_Voice = {                                                  %
         \AA_Bass_Flute_Music_Voice_A                                           %! abjad.Path.extern()
 
     >>
+    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
 
     % [AA Bass_Flute_Music_Voice measure 251 / measure 5]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
     r16                                                                        %! harmony.appoggiato()
 
     <<
@@ -555,8 +555,8 @@ AA_Bass_Flute_Music_Voice = {                                                  %
     \times 12/14 {                                                             %! harmony.warble()
 
         % [AA Bass_Flute_Music_Voice measure 252 / measure 6]                  %! baca.SegmentMaker._comment_measure_numbers()
-        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         \oneVoice                                                              %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
+        \override DynamicLineSpanner.staff-padding = #5                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         r32                                                                    %! harmony.warble()
         \stopTextSpanTwo                                                       %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
         \stopTextSpan                                                          %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP

@@ -224,10 +224,10 @@ maker(
 
 maker(
     ("perc1", (5, 6)),
-#    baca.new(
-#        harmony.bass_drum_staff_position(),
-#        selector=baca.leaves(grace=False),
-#    ),
+    baca.new(
+        harmony.bass_drum_staff_position(),
+        selector=baca.plts(grace=False),
+    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves(grace=False)[2:8],
