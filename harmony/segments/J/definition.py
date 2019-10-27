@@ -90,6 +90,7 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.pitch("Eb3"),
     baca.dynamic("mp"),
 )
 
@@ -122,6 +123,7 @@ maker(
 
 maker(
     ("bfl", (2, 3)),
+    baca.pitch("E3"),
     baca.new(
         baca.covered_spanner(
             abjad.tweak(3).staff_padding,
@@ -140,11 +142,13 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.pitch("F3"),
     baca.dynamic("mp"),
 )
 
 maker(
     ("bfl", 8),
+    baca.pitch("E3"),
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
@@ -171,20 +175,27 @@ maker(
         prefix_talea=[-1],
         prefix_counts=[1, 0],
     ),
-    baca.pitches(
-        "D3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        mock=True,
+    baca.pitch(
+        "G3",
+        baca.leaves(grace=False),
     ),
     baca.pitches(
-        "G3 A3 B3 A3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        mock=True,
+        harmony.appoggiato_pitches_g,
+        baca.leaves(grace=True),
     ),
     baca.hairpin(
         "o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.pleaves(grace=False).partition_by_counts([2, 1]),
+    ),
+    baca.text_spanner(
+        r"\harmony-g-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -216,6 +227,14 @@ maker(
 )
 
 maker(
+    ("bfl", (11, 12)),
+    baca.pitch(
+        "G4",
+        baca.leaves(grace=False),
+    ),
+)
+
+maker(
     ("bfl", 14),
     harmony.sixteenths(
         [12, 8, 3, 1],
@@ -230,25 +249,39 @@ maker(
 )
 
 maker(
+    ("bfl", (13, 14)),
+    baca.pitch(
+        "G#4",
+        baca.leaves(grace=False),
+    ),
+)
+
+maker(
     ("bfl", 15),
     harmony.appoggiato(
         counts=[9],
         incise=True,
-        rest_after=True,
     ),
     baca.pitches(
-        "D3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        mock=True,
+        "A3",
+        baca.leaves(grace=False),
     ),
     baca.pitches(
-        "G3 A3 B3 A3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        mock=True,
+        harmony.appoggiato_pitches_a.rotate(-9),
+        baca.leaves(grace=True),
     ),
     baca.dynamic(
-        "f",
-        selector=baca.rest(1),
+        "p",
+        selector=baca.pleaf(0, grace=False),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 

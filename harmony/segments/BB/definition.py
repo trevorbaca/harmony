@@ -85,21 +85,6 @@ maker(
 # bfl
 
 maker(
-    ("bfl", (1, 4)),
-    harmony.sixteenths(
-        [8, 4, 4, 8, 4, 3, -1],
-    ),
-    baca.flat_glissando(
-        hide_stem_selector=baca.pleaves()[1:-2],
-    ),
-    baca.hairpin(
-        "p p < mp >",
-        pieces=baca.clparts([1]),
-    ),
-    baca.trill_spanner(),
-)
-
-maker(
     ("bfl", 5),
     harmony.warble(
         sixteenths=[12, 12, 1, 11, 12],
@@ -137,10 +122,10 @@ maker(
         written_halves=True,
         invisible_pairs=True,
     ),
+    baca.pitch("A4"),
     baca.flat_glissando(
         hide_stem_selector=baca.pleaves()[1:-1],
-        selector=baca.leaves().rleak(),
-        right_broken=True,
+        selector=baca.leaves()[:-1],
     ),
     baca.hairpin(
         "pp < p >",

@@ -52,6 +52,7 @@ maker(
     harmony.sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+    baca.pitch("E3"),
     baca.accent(
         baca.pheads(),
     ),
@@ -66,20 +67,19 @@ maker(
     harmony.sixteenths(
         [12, -20],
     ),
-    baca.text_spanner(
-        "multiphonic =|",
-        abjad.tweak(5.5).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        map=baca.runs(),
-        selector=baca.tleaves().rleak(),
-    ),
+    baca.pitch("<Eb3 Eb4 Bb4>"),
 )
 
 maker(
     ("bfl", 4),
     harmony.sixteenths(
         [4, 8],
+    ),
+    baca.pitch("Dtqf5"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(8).staff_padding,
+        literal=True,
     ),
     baca.breathe(
         baca.pleaf(1),
@@ -99,6 +99,14 @@ maker(
     ("bfl", (5, 9)),
     harmony.sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
+    ),
+    baca.pitch(
+        "E3",
+        baca.plt(0),
+    ),
+    baca.pitch(
+        "F#5",
+        baca.plts()[1:],
     ),
     baca.accent(),
     baca.dynamic("p"),

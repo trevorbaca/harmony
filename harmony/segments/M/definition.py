@@ -89,9 +89,11 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    # TODO: promote into harmony.sixteenths():
     baca.repeat_tie(
         baca.pleaf(-1),
     ),
+    baca.pitch("B4"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -114,6 +116,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("B4"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -131,14 +134,25 @@ maker(
         incise=True,
     ),
     baca.pitches(
-        "D3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=False),
-        mock=True,
+        "A3",
+        baca.leaves(grace=False),
     ),
     baca.pitches(
-        "G3 A3 B3 A3",
-        selector=baca.plts(exclude=abjad.const.HIDDEN, grace=True),
-        mock=True,
+        harmony.appoggiato_pitches_a.rotate(-9),
+        baca.leaves(grace=True),
+    ),
+    baca.dynamic(
+        "p",
+        selector=baca.pleaf(0, grace=False),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
 )
 
@@ -146,6 +160,12 @@ maker(
     ("bfl", 5),
     harmony.sixteenths(
         [4, 8],
+    ),
+    baca.pitch("Dtqf5"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(8).staff_padding,
+        literal=True,
     ),
     baca.breathe(
         baca.pleaf(1),

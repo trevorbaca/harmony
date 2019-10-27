@@ -69,13 +69,22 @@ maker(
         counts=[9, 6, 8, 4],
         incise=True,
     ),
-    baca.pitches(
-        "A4",
+    baca.pitch(
+        "A3",
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
-        harmony.flute_appoggiato_pitches,
+        harmony.appoggiato_pitches_a,
         selector=baca.plts(grace=True),
+    ),
+    baca.text_spanner(
+        r"\harmony-a-sounds-ottava-higher =|",
+        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        direction=abjad.Down,
+        selector=baca.tleaves(grace=False).rleak(),
     ),
     baca.dots_x_extent_false(
         baca.leaves(grace=False),

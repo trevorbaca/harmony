@@ -112,6 +112,7 @@ maker(
     harmony.sixteenths(
         [3, -1, 8, -8, 3, -1],
     ),
+    baca.pitch("D4"),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -132,15 +133,13 @@ maker(
 maker(
     ("bfl", 6),
     harmony.sixteenths(
-        [4, 4, "-", 4, 4], 
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (2, 4)]),
-        extra_counts=[0, 4],
-        denominator=None,
+        [4, 4, "-"], 
     ),
 )
 
 maker(
     ("bfl", (5, 6)),
+    baca.pitch("D4"),
     baca.text_spanner(
         "A =|",
         abjad.tweak(3).staff_padding,
@@ -152,21 +151,6 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.runs()[:1].rleak(),
-    ),
-)
-
-maker(
-    ("bfl", 8),
-    harmony.sixteenths(
-        [4, "-"], 
-    ),
-    baca.text_spanner(
-        "A =|",
-        abjad.tweak(3).staff_padding,
-        autodetect_right_padding=True,
-        bookend=False,
-        map=baca.runs(),
-        selector=baca.leaves().rleak(),
     ),
 )
 

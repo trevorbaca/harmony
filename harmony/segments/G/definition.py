@@ -88,6 +88,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Bb5"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -106,6 +107,7 @@ maker(
         written_eighths=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Bb5"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -137,6 +139,7 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.pitch("Ab3"),
     baca.dynamic("mp"),
 )
 
@@ -149,6 +152,14 @@ maker(
         denominator=None,
         written_quarters=([-2, -1],),
         invisible=([-1],),
+    ),
+    baca.pitch(
+        "G3",
+        baca.runs()[:1],
+    ),
+    baca.pitch(
+        "Bb5",
+        baca.runs()[1:],
     ),
     baca.stem_tremolo(
         baca.pleaves()[-2:],
@@ -181,6 +192,7 @@ maker(
         written_eighths=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Bb5"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),

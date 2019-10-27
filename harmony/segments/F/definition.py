@@ -105,6 +105,14 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch(
+        "Bb5",
+        baca.runs()[:1],
+    ),
+    baca.pitch(
+        "E5",
+        baca.runs()[1:],
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -129,6 +137,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("E5"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -158,6 +167,14 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch(
+        "Bb5",
+        baca.runs()[:1],
+    ),
+    baca.pitch(
+        "E5",
+        baca.runs()[1:],
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -182,6 +199,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("E5"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -220,17 +238,9 @@ maker(
 
 maker(
     ("bfl", (7, 8)),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("F3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
-    ),
-    baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
-        argument="MM (with accel.) =|",
-        selector=baca.leaves()[3:].rleak(),
     ),
 )
 

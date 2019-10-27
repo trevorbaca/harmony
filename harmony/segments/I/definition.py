@@ -58,6 +58,7 @@ maker(
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.pitch("G3"),
     baca.new(
         baca.covered_spanner(
             abjad.tweak(3).staff_padding,
@@ -76,6 +77,8 @@ maker(
     harmony.sixteenths(
         [3, 6, 3, 3, 6, 3],
     ),
+    baca.pitch("Gb3"),
+    baca.color_fingerings([0, 1, 2]),
     baca.dynamic(
         "mp-ancora",
         abjad.tweak(-0.75).self_alignment_X,

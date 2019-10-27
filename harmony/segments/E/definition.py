@@ -64,10 +64,7 @@ maker(
     harmony.sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("F3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
     ),
@@ -79,6 +76,7 @@ maker(
         6,
         gap=True,
     ),
+    baca.pitch("F#3"),
 )
 
 maker(
@@ -86,7 +84,9 @@ maker(
     harmony.sixteenths(
         [1, 1, "-"],
     ),
-    baca.dynamic("f"),
+    baca.pitch("F3"),
+    baca.note_head_style_harmonic(),
+    baca.dynamic("ff"),
     baca.markup(
         r"\baca-jet-whistle-markup",
         literal=True,
@@ -98,8 +98,10 @@ maker(
     harmony.sixteenths(
         [-3, 1, 1, "-"],
     ),
+    baca.pitch("E3"),
+    baca.note_head_style_harmonic(),
     baca.dynamic(
-        "f-ancora",
+        "ff-ancora",
         abjad.tweak(-0.75).self_alignment_X,
     ),
     baca.markup(

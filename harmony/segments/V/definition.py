@@ -84,6 +84,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Gqs5"),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
@@ -92,6 +93,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
+        alteration="A6",
         map=baca.runs(),
     ),
 )
@@ -102,8 +104,9 @@ maker(
         [-8, 8, -16, 4],
         extra_counts=[1],
     ),
+    baca.pitch("Eb3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
@@ -115,6 +118,7 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("Gqs5"),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -128,6 +132,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
+        alteration="A6",
     ),
 )
 
@@ -137,8 +142,9 @@ maker(
         [-12, 4, "-"],
         extra_counts=[1],
     ),
+    baca.pitch("Eb3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
 )

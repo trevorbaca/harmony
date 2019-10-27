@@ -15,12 +15,19 @@ _reference_meters = (
 
 cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
 
-flute_appoggiato_pitches = baca.sequence(
+# A:
+appoggiato_pitches_a = baca.sequence(
     "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
 )
 
-string_appoggiato_pitches = baca.sequence(
+# Ab/G#
+appoggiato_pitches_a_flat = baca.sequence(
     "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
+)
+
+# G:
+appoggiato_pitches_g = baca.sequence(
+    "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 )
 
 ### FUNCTIONS ###

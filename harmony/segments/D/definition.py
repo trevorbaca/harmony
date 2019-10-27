@@ -72,6 +72,7 @@ maker(
         6,
         gap=True,
     ),
+    baca.pitch("F#3"),
 )
 
 maker(
@@ -81,6 +82,7 @@ maker(
         advance=72,
         gap=True,
     ),
+    baca.pitch("F#3"),
 )
 
 maker(
@@ -91,11 +93,12 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+    baca.pitch("Ab4"),
     baca.stem_tremolo(
         baca.plts().get([0, 1], 3),
     ),
     baca.hairpin(
-        "p <| f |> p",
+        "p <| ff |> p",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
@@ -109,6 +112,7 @@ maker(
         advance=72 + 12,
         gap=True,
     ),
+    baca.pitch("F#3"),
 )
 
 # perc1

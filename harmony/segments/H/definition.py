@@ -77,7 +77,9 @@ maker(
         ),
         extra_counts=[0, 4, 4],
         denominator=None,
+        do_not_rewrite_meter=True,
     ),
+    baca.pitch("Ab3"),
     baca.dynamic("mp"),
     baca.new(
         baca.covered_spanner(

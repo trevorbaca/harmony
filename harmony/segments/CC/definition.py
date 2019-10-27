@@ -69,29 +69,7 @@ maker(
 
 maker(
     ("bfl", 1),
-    harmony.sixteenths(
-        [4, 4, 16],
-    ),
-    baca.flat_glissando(
-        left_broken=True,
-        selector=baca.leaves()[:3],
-    ),
-    baca.flat_glissando(
-        selector=baca.leaves()[3:6],
-    ),
-    baca.hairpin(
-        "pp < p > pp",
-        pieces=baca.lparts([1, 1 + 1]),
-    ),
-    baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
-        left_broken=True,
-    ),
-    baca.text_spanner(
-        "(T) -> A -> (T)",
-        abjad.tweak(5.5).staff_padding,
-        pieces=baca.lparts([1, 1 + 1]),
-    ),
+    baca.pitch("Bb4"),
 )
 
 # perc1
@@ -169,7 +147,7 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    (["bfl", "va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
         [4, 4, 16],
         written_halves=([0, 1, 3, 4],),
@@ -183,7 +161,7 @@ maker(
 )
 
 maker(
-    (["vc1", "vc2", "cb1"], 1),
+    (["bfl", "vc1", "vc2", "cb1"], 1),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
         left_broken=True,

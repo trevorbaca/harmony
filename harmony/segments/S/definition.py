@@ -130,6 +130,7 @@ maker(
         extra_counts=[4],
         denominator=None,
     ),
+    baca.pitch("F3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -171,6 +172,7 @@ maker(
         [-8, 8, -16, 4],
         extra_counts=[1],
     ),
+    baca.pitch("Eb3"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
