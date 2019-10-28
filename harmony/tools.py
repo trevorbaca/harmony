@@ -264,6 +264,7 @@ def sixteenths(
     tie_runs: bool = None,
     tie_all: bool = None,
     untie: bool = None,
+    unbeam: bool = None,
     after_graces: abjad.IntegerSequence = None,
 ) -> baca.RhythmCommand:
     """
@@ -367,6 +368,10 @@ def sixteenths(
         selector = baca.leaves()
         untie_ = rmakers.untie(selector)
         commands.append(untie_)
+    if unbeam is True:
+        selector = baca.leaves()
+        unbeam_ = rmakers.unbeam(selector)
+        commands.append(unbeam_)
     if after_graces:
         selector = baca.runs().map(baca.leaf(-1))
         beam_and_slash = None
