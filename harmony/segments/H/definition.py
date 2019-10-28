@@ -109,6 +109,7 @@ maker(
     baca.dynamic(
         "f-ancora",
         abjad.tweak(-0.75).self_alignment_X,
+        abjad.tweak((0, 0)).X_extent,
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -232,13 +233,11 @@ maker(
     ),
 )
 
-
 maker(
     ("va", (1, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
+    baca.pitch(
+        "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
-        mock=True,
     ),
 )
 
@@ -249,12 +248,17 @@ maker(
     harmony.sixteenths(
         [4, 4, 4],
     ),
+    # TODO: promote into rhythm:
     baca.repeat_tie(
         baca.leaf(0),
     ),
-    baca.note_head_style_harmonic(),
+    baca.pitch("Bb4"),
     baca.espressivo(
-        baca.pheads(),
+        baca.pheads()[1:],
+    ),
+    baca.metric_modulation_spanner(
+        abjad.tweak(8).staff_padding,
+        left_broken=True,
     ),
 )
 
@@ -296,10 +300,9 @@ maker(
 
 maker(
     ("vc1", (2, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
+    baca.pitch(
+        "<C5 Db5 Eb5>",
         baca.plts(exclude=abjad.const.HIDDEN),
-        mock=True,
     ),
 )
 
@@ -314,9 +317,11 @@ maker(
         written_wholes=([1],),
         invisible=([-1],),
     ),
+    # TODO: promote into rhythm:
     baca.repeat_tie(
         baca.leaf(0),
     ),
+    baca.pitch("B2"),
     baca.hairpin(
         "mp >o niente",
         selector=baca.leaves()[-2:],
@@ -360,10 +365,10 @@ maker(
 
 maker(
     ("vc2", (3, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
+    baca.clef("treble"),
+    baca.pitch(
+        "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
-        mock=True,
     ),
 )
 
@@ -374,12 +379,13 @@ maker(
     harmony.sixteenths(
         [4, 4, 8, 4, 4, 8, 4, 4],
     ),
+    # TODO: promote into rhythm:
     baca.repeat_tie(
         baca.leaf(0),
     ),
-    baca.note_head_style_harmonic(),
+    baca.pitch("Bb4"),
     baca.espressivo(
-        baca.pheads(),
+        baca.pheads()[1:],
     ),
 )
 
@@ -415,10 +421,9 @@ maker(
 
 maker(
     ("cb1", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
+    baca.pitch(
+        "<C5 Db5 Eb5>",
         baca.plts(exclude=abjad.const.HIDDEN),
-        mock=True,
     ),
 )
 
@@ -433,6 +438,7 @@ maker(
         written_wholes=([-2],),
         invisible=([-1],),
     ),
+    baca.pitch("Bb2"),
     baca.hairpin(
         "mp >o niente",
         selector=baca.leaves()[-2:],
@@ -470,10 +476,10 @@ maker(
 
 maker(
     ("cb2", (5, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
+    baca.clef("treble"),
+    baca.pitch(
+        "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
-        mock=True,
     ),
 )
 
@@ -482,8 +488,9 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
     baca.make_notes(),
+    baca.note_head_style_harmonic(),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(),
     ),
     baca.dynamic("pp"),
     baca.markup(
