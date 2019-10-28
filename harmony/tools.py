@@ -15,6 +15,11 @@ _reference_meters = (
 
 cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
 
+# Bb:
+appoggiato_pitches_b_flat = baca.sequence(
+    "D5 D#5  B4 C5 Cqs5 C#5 Ctqs5 D5  C5 D5 Dqs5 D#5 Dtqs5".split()
+)
+
 # A:
 appoggiato_pitches_a = baca.sequence(
     "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
@@ -585,7 +590,7 @@ def warble(
     )
 
 
-### PERCUSSION POSITIONS ###
+### STAFF POSITIONS ###
 
 
 def bass_drum_staff_position() -> baca.Suite:
@@ -593,6 +598,13 @@ def bass_drum_staff_position() -> baca.Suite:
     Sets bass drum staff position and stem direction.
     """
     return baca.chunk(baca.staff_position(-1), baca.stem_down())
+
+
+def bridge_staff_position() -> baca.Suite:
+    """
+    Sets bridge position and stem direction.
+    """
+    return baca.chunk(baca.staff_position(0), baca.stem_down())
 
 
 def brake_drum_staff_position() -> baca.Suite:
