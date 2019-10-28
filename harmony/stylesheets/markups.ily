@@ -98,6 +98,28 @@ harmony-fourteen-a = \markup
         "14°/A"
     }
 
+%%% PARTIALS (D) %%%
+
+harmony-seven-d = \markup
+    \line {
+        "7°/D"
+    }
+
+harmony-eleven-d = \markup
+    \line {
+        "11°/D"
+    }
+
+harmony-fourteen-d = \markup
+    \line {
+        "14°/D"
+    }
+
+harmony-fifteen-d = \markup
+    \line {
+        "15°/D"
+    }
+
 %%% PARTIALS (E) %%%
 
 harmony-seven-e = \markup

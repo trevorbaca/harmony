@@ -626,6 +626,7 @@ maker(
         ["+"],
         tie=([0],),
     ),
+    baca.pitch("D3"),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -638,6 +639,8 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
+    baca.pitch("C#4"),
+    baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -658,6 +661,26 @@ maker(
     ("va", 8),
     harmony.sixteenths(
         [8, 3, 6],
+    ),
+    baca.clef("alto"),
+    baca.pitch("Eb3"),
+)
+
+maker(
+    ("va", [2, (4, 5), 10]),
+    baca.new(
+        baca.clef("treble"),
+        match=[0, 2],
+    ),
+    baca.pitch(
+        "A5",
+        baca.leaves().rleak(),
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        match=[0, 2],
     ),
 )
 
@@ -685,8 +708,6 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        alteration="M2",
-        harmonic=True,
         selector=baca.leaves()[-2:].rleak(),
     ),
 )
@@ -697,7 +718,7 @@ maker(
         abjad.tweak(8).staff_padding,
         # TODO: pitched trill suppresses start of text spanner
         #selector=baca.leaves()[2:].rleak(),
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.tleaves().rleak(),
     ),
 )
 
@@ -709,6 +730,48 @@ maker(
     ),
 )
 
+maker(
+    ("vc1", (6, 8)),
+    baca.pitch(
+        "B4",
+        baca.run(0),
+    ),
+    baca.pitch(
+        "Aqf3",
+        baca.run(1),
+    ),
+    baca.markup(
+        r"\harmony-eleven-e-flat",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+        selector=baca.run(1).leaf(0),
+    ),
+)
+
+maker(
+    ("vc1", [(1, 2), (4, 5), 10]),
+    baca.new(
+        baca.clef("treble"),
+        match=[0],
+    ),
+    baca.pitch(
+        "Gqs6",
+        baca.leaves().rleak(),
+    ),
+    baca.markup(
+        r"\harmony-eleven-d",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+        match=[0, 2],
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        match=[0, 2],
+    ),
+)
+
 # vc2
 
 maker(
@@ -717,6 +780,7 @@ maker(
         ["+"],
         tie=([0],),
     ),
+    baca.pitch("D2"),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -729,6 +793,36 @@ maker(
     harmony.sixteenths(
         [8, 8, 14],
         extra_counts=[2],
+    ),
+)
+
+maker(
+    ("vc2", [2, (4, 5), 10]),
+    baca.new(
+        baca.clef("treble"),
+        match=[0],
+    ),
+    baca.pitch(
+        "F#5",
+        baca.leaves().rleak(),
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        match=[0, 2],
+    ),
+)
+
+maker(
+    ("vc2", (6, 8)),
+    baca.pitch(
+        "Dqs4",
+        baca.run(0),
+    ),
+    baca.pitch(
+        "F3",
+        baca.run(1),
     ),
 )
 
@@ -756,8 +850,6 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        alteration="M2",
-        harmonic=True,
         selector=baca.leaves()[-2:].rleak(),
     ),
 )
@@ -768,7 +860,7 @@ maker(
         abjad.tweak(8).staff_padding,
         # TODO: pitched trill suppresses start of text spanner
         #selector=baca.leaves()[2:].rleak(),
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.tleaves().rleak(),
     ),
 )
 
@@ -780,6 +872,51 @@ maker(
     ),
 )
 
+maker(
+    ("cb1", [(1, 2), (4, 5), 10]),
+    baca.new(
+        baca.clef("treble"),
+        match=[0],
+    ),
+    baca.pitch(
+        "C#6",
+        baca.leaves().rleak(),
+    ),
+    baca.markup(
+        r"\harmony-fifteen-d",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+        match=[0, 2],
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        match=[0, 2],
+    ),
+)
+
+maker(
+    ("cb1", (6, 8)),
+    baca.note_head_style_harmonic(
+        baca.run(0),
+    ),
+    baca.pitch(
+        "E3",
+        baca.run(0),
+    ),
+    baca.pitch(
+        "Dtqf3",
+        baca.run(1),
+    ),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+        selector=baca.run(1).leaf(0),
+    ),
+)
+
 # cb2
 
 maker(
@@ -788,6 +925,7 @@ maker(
         ["+"],
         tie=([0],),
     ),
+    baca.pitch("D2"),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -800,6 +938,43 @@ maker(
     harmony.sixteenths(
         [8, 7, 12],
         extra_counts=[1],
+    ),
+)
+
+maker(
+    ("cb2", [2, (4, 5), 10]),
+    baca.new(
+        baca.clef("treble"),
+        match=[0, 2],
+    ),
+    baca.pitch(
+        "Cqf6",
+        baca.leaves().rleak(),
+    ),
+    baca.markup(
+        r"\harmony-fourteen-d",
+        abjad.tweak(5.5).staff_padding,
+        literal=True,
+        match=[0, 2],
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        match=[0, 2],
+    ),
+)
+
+maker(
+    ("cb2", (6, 8)),
+    baca.clef("bass"),
+    baca.pitch(
+        "A1",
+        baca.run(0),
+    ),
+    baca.pitch(
+        "Eb2",
+        baca.run(1),
     ),
 )
 
@@ -818,10 +993,7 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
-    ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -843,10 +1015,7 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.leaves()[5:8],
     ),
-    baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
-    ),
+    baca.trill_spanner(),
 )
 
 maker(
@@ -878,8 +1047,6 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
         right_broken=True,
     ),
 )
