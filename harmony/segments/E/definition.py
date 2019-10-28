@@ -378,6 +378,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.pitch("Eb3"),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -404,6 +405,7 @@ maker(
         extra_counts=[4],
         denominator=None,
     ),
+    baca.tuplet_bracket_down(),
 )
 
 maker(
@@ -415,8 +417,14 @@ maker(
 
 maker(
     ("va", (3, 4)),
+    baca.pitch("F3"),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[1:12],
+    ),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
         selector=baca.leaves()[1:12],
     ),
 )
@@ -426,6 +434,7 @@ maker(
     harmony.sixteenths(
         [6, -2, -8, 6, -2],
     ),
+    baca.pitch("Eb3"),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
@@ -433,7 +442,7 @@ maker(
         map=baca.runs(),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -446,6 +455,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.pitch("E4"),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -467,7 +477,7 @@ maker(
         denominator=None,
     ),
     baca.new(
-        baca.staff_position(0),
+        harmony.bridge_staff_position(),
         baca.stem_tremolo(),
         selector=baca.pleaves()[:2],
     ),
@@ -502,13 +512,20 @@ maker(
 
 maker(
     ("vc1", (2, 3)),
-    baca.accent(
-        baca.pheads()[2:],
+    baca.new(
+        baca.pitch("F#3"),
+        baca.accent(),
+        selector=baca.pheads()[2:],
     ),
-    baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+    baca.new(
+        baca.metric_modulation_spanner(
+            abjad.tweak(5.5).staff_padding,
+        ),
+        baca.damp_spanner(
+            abjad.tweak(3).staff_padding,
+        ),
         selector=baca.leaves()[4:11],
-    ),
+    )
 )
 
 maker(
@@ -516,12 +533,16 @@ maker(
     harmony.sixteenths(
         [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
     ),
-    baca.staff_positions(
-        [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
-        mock=True,
-        ),
+    # TODO: promote into rhythm
     baca.untie(
         baca.pleaves(),
+    ),
+    baca.staff_positions(
+        [2, 3, -3, 0, -2, 
+            4, -2, 1, -1, 
+            5, -1, 2, 0, 
+            6, 0, 4, 2,
+        8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -536,6 +557,7 @@ maker(
     harmony.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.pitch("Eqf4"),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -554,7 +576,7 @@ maker(
         after_graces=[1],
     ),
     baca.new(
-        baca.interpolate_staff_positions(0, 1, mock=True),
+        baca.interpolate_pitches("G2", "F2"),
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -572,6 +594,10 @@ maker(
         2,
         gap=True,
     ),
+    baca.pitch("F3"),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+    ),
 )
 
 maker(
@@ -579,12 +605,16 @@ maker(
     harmony.sixteenths(
         [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
     ),
-    baca.staff_positions(
-        [0, -1, 2, -3, -2, -3, 0, -5, -4, -5, -2, -7, -6, -7],
-        mock=True,
-        ),
+    # TODO: promote into rhythm
     baca.untie(
         baca.pleaves(),
+    ),
+    baca.staff_positions(
+        [2, -3, 0, -2, 
+            4, -2, 1, -1, 
+            5, -1, 2, 0, 
+            6, 0, 4, 2,
+        3, 8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -599,10 +629,7 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("E1"),
     baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
@@ -632,9 +659,24 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.tessera_1(1),
+    baca.pitch("Aqs4"),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.markup(
         r"\baca-pizz-markup",
+        abjad.tweak(8).staff_padding,
         literal=True,
+    ),
+    baca.markup(
+        r"\harmony-eleven-e",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -644,12 +686,17 @@ maker(
     harmony.sixteenths(
         [15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, "+"],
     ),
-    baca.staff_positions(
-        [0, 1, -2, 3, 2, 3, 0, 5, 4, 5, 2, 7, 6, 7],
-        mock=True,
-        ),
+    # TODO: promote into rhythm
     baca.untie(
         baca.pleaves(),
+    ),
+    baca.staff_positions(
+        [9,
+            3, 6, 0, 2,
+            1, 4, -2, 0,
+            -1, 2, -4, -2,
+            -3, 0, -5, -4,
+        -6],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -664,10 +711,7 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("E1"),
     baca.flat_glissando(),
     baca.scp_spanner(
         "SCP =|",
@@ -683,7 +727,7 @@ maker(
         after_graces=[1],
     ),
     baca.new(
-        baca.interpolate_staff_positions(0, 1, mock=True),
+        baca.interpolate_pitches("G2", "F#2"),
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
@@ -699,9 +743,18 @@ maker(
     ("cb2", 3),
     baca.clef("treble"),
     harmony.tessera_1(0),
+    baca.pitch("F#4"),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.markup(
         r"\baca-pizz-markup",
         literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -711,12 +764,17 @@ maker(
     harmony.sixteenths(
         [11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, "+"],
     ),
-    baca.staff_positions(
-        [1, 0, 1, -2, -1, -2, -1, -4, -3, -4, -1, -6, -5, -6],
-        mock=True,
-        ),
+    # TODO: promote into rhythm
     baca.untie(
         baca.pleaves(),
+    ),
+    baca.staff_positions(
+        [9,
+            3, 6, 0, 2,
+            1, 4, -2, 0,
+            -1, 2, -4, -2,
+            -3, 0, -5, -4,
+        -6],
     ),
     baca.glissando(
         allow_repeats=True,

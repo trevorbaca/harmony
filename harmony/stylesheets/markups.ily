@@ -160,6 +160,18 @@ harmony-a-flat-sounds-ottava-higher = \markup
         higher
     }
 
+harmony-b-flat-sounds-ottava-higher = \markup
+    \line {
+        B
+        \hspace #-0.4
+        \raise #0.5
+        \scale #'(0.65 . 0.65)
+        \flat
+        sounds
+        8 \hspace #-0.75 \raise #0.75 \scale #'(0.75 . 0.75) va
+        higher
+    }
+
 harmony-g-sounds-ottava-higher = \markup
     \line {
         G
