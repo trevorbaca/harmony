@@ -275,12 +275,8 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [-1, 0],
-        mock=True,
-    ),
+    baca.pitch("<B4 C5>"),
     baca.flageolet(),
-    baca.laissez_vibrer(),
 )
 
 maker(
@@ -288,6 +284,8 @@ maker(
     harmony.sixteenths(
         [12, 16, -4],
     ),
+    baca.pitch("Eb4"),
+    baca.dynamic("p"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -298,6 +296,7 @@ maker(
     harmony.sixteenths(
         [2, -2],
     ),
+    baca.pitch("E4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -315,12 +314,8 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [-1, 0],
-        mock=True,
-    ),
+    baca.pitch("<B4 C5>"),
     baca.flageolet(),
-    baca.laissez_vibrer(),
 )
 
 # va

@@ -414,12 +414,13 @@ maker(
         invisible_pairs=True,
         ),
     harmony.whisk_staff_position(),
-    baca.hairpin(
-        'o< "f" >o niente',
-        left_broken=True,
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
-    ),
+#    baca.hairpin(
+#        'o< "f" >o niente',
+#        left_broken=True,
+#        map=baca.clparts([3]),
+#        pieces=baca.clparts([1]),
+#    ),
+    baca.dynamic('"f"'),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
@@ -439,11 +440,7 @@ maker(
         written_dotted_halves=([0],),
         invisible=([1, 2, 3],),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        baca.pleaf(0),
-        mock=True,
-    ),
+    baca.pitch("<B5 C6 D6>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -486,6 +483,7 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.pitches("F#4 G#4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -512,12 +510,8 @@ maker(
         invisible=([-1],),
     ),
     baca.new(
-        baca.staff_position(
-            [0, 1],
-            mock=True,
-        ),
+        baca.pitch("<B5 C#6>"),
         baca.flageolet(),
-        baca.laissez_vibrer(),
         baca.dynamic("mf"),
         selector=baca.pleaf(0),
     ),
@@ -531,11 +525,15 @@ maker(
         ),
         selector=baca.pleaf(-2),
     ),
-    baca.hairpin(
-        'o< "f" >o',
-        forbid_al_niente_to_bar_line=True,
-        pieces=baca.lparts([1, 1]),
-        selector=baca.leaves()[-2:],
+#    baca.hairpin(
+#        'o< "f" >o',
+#        forbid_al_niente_to_bar_line=True,
+#        pieces=baca.lparts([1, 1]),
+#        selector=baca.leaves()[-2:],
+#    ),
+    baca.dynamic(
+        '"f"',
+        selector=baca.pleaf(-2),
     ),
 )
 
@@ -548,11 +546,12 @@ maker(
         do_not_rewrite_meter=True,
     ),
     harmony.whisk_staff_position(),
-    baca.hairpin(
-        'o< "f" >o niente',
-        pieces=baca.lparts([1, 2]),
-        selector=baca.leaves()[:3],
-    ),
+#    baca.hairpin(
+#        'o< "f" >o niente',
+#        pieces=baca.lparts([1, 2]),
+#        selector=baca.leaves()[:3],
+#    ),
+    baca.dynamic('"f"'),
 )
 
 maker(

@@ -325,6 +325,7 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -337,11 +338,12 @@ maker(
 maker(
     ("hp", 5),
     harmony.sixteenths(
-        [-4, 4, -12, 4],
+        [-12, 4, 4, 4],
         preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (4, 4)]),
         extra_counts=[0, 4],
         denominator=None,
     ),
+    baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
         baca.pheads(),
     ),
@@ -355,7 +357,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.leaves()[-3:].rleak(),
     ),
 )
 

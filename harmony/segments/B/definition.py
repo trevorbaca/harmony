@@ -438,11 +438,8 @@ maker(
     harmony.sixteenths(
         [10, "-"],
     ),
-    baca.chunk(
-        baca.pitch("G1"),
-        baca.ottava_bassa(),
-    ),
-    baca.tenuto(
+    baca.pitch("G1"),
+    baca.accent(
         baca.pheads(),
     ),
     baca.damp(

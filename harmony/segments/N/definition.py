@@ -420,11 +420,7 @@ maker(
     harmony.sixteenths(
         [22, "-"],
     ),
-    baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("E1"),
     baca.tenuto(
         baca.pheads(),
     ),
@@ -442,12 +438,8 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [-1, 0],
-        mock=True,
-    ),
+    baca.pitch("<B4 C5>"),
     baca.flageolet(),
-    baca.laissez_vibrer(),
 )
 
 maker(
@@ -455,10 +447,8 @@ maker(
     harmony.sixteenths(
         [-4, 4, 8, -4],
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.clef("bass"),
+    baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -475,15 +465,10 @@ maker(
 
 maker(
     ("hp", (6, 9)),
-    baca.clef("bass"),
     harmony.sixteenths(
         [54, "-"],
     ),
-    baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("E1"),
     baca.tenuto(
         baca.pheads(),
     ),
@@ -498,6 +483,7 @@ maker(
     harmony.sixteenths(
         [21, -14, 18, "-"],
     ),
+    baca.pitch("F1"),
     baca.accent(
         baca.pheads(),
     ),

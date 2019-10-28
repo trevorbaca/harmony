@@ -341,15 +341,12 @@ maker(
 
 maker(
     ("hp", 1),
-    baca.clef("treble"),
+    baca.clef("bass"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [-4, 4, 8, -4],
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -369,10 +366,16 @@ maker(
     harmony.sixteenths(
         [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
     ),
+    baca.clef("treble"),
+    baca.pitches(
+        "Bb5 A5 G#5",
+        baca.plts()[:-1],
+    ),
     baca.laissez_vibrer(
         baca.ptails()[:-1],
     ),
     baca.new(
+        baca.pitch("E4"),
         baca.accent(),
         baca.dynamic("f"),
         baca.markup(
@@ -397,6 +400,7 @@ maker(
     harmony.sixteenths(
         [2, -2],
     ),
+        baca.pitch("E4"),
     baca.accent(
         baca.pheads(),
     ),

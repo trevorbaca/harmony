@@ -239,6 +239,7 @@ maker(
         extra_counts=[4],
         denominator=None,
     ),
+    baca.pitches("F5 E5 Eb5"),
     baca.laissez_vibrer(
         baca.pheads(),
     ),
@@ -254,9 +255,9 @@ maker(
     harmony.sixteenths(
         [-4, 4, -4],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
+    baca.chunk(
+        baca.pitch("D1"),
+        baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
         baca.pheads(),
@@ -281,6 +282,7 @@ maker(
     harmony.sixteenths(
         [2, -20, 2, -24],
     ),
+    baca.pitch("F#4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

@@ -440,6 +440,7 @@ maker(
     harmony.sixteenths(
         [-24, 4],
     ),
+    baca.pitch("Ab4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -460,6 +461,7 @@ maker(
     harmony.sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
+    harmony.whisk_staff_position(),
     baca.dynamic("p"),
     baca.markup(
         r"\baca-whisk-markup",
@@ -474,6 +476,7 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("Ab4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -523,6 +526,7 @@ maker(
 
 maker(
     ("hp", (6, 7)),
+    baca.pitch("Bb4"),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.tleaves().rleak().rleak(),

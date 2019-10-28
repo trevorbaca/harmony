@@ -473,7 +473,9 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.pitch("Eb4"),
     baca.laissez_vibrer(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(5.5).staff_padding,
@@ -488,8 +490,7 @@ maker(
         [-2, 10, "-"],
     ),
     baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
+        baca.pitch("C1"),
         baca.ottava_bassa(),
     ),
     baca.accent(
@@ -507,8 +508,7 @@ maker(
         [14, -4, 12, -2],
     ),
     baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
+        baca.pitch("C1"),
         baca.ottava_bassa(),
     ),
     baca.accent(
@@ -536,16 +536,13 @@ maker(
         denominator=None,
     ),
     baca.new(
-        baca.staff_position(
-            [0, 1],
-            mock=True,
-        ),
+        baca.pitch("<B5 C#6>"),
         baca.flageolet(),
-        baca.laissez_vibrer(),
         baca.dynamic("mf"),
         selector=baca.pleaf(0),
     ),
     baca.new(
+        baca.pitch("E4"),
         baca.dynamic("f"),
         baca.markup(
             r"\baca-soundboard-pizz-markup",
@@ -560,6 +557,7 @@ maker(
     harmony.sixteenths(
         [2, -2],
     ),
+    baca.pitch("E4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -584,6 +582,7 @@ maker(
         written_eighths=([2],),
         invisible=([1, 3],),
     ),
+    harmony.whisk_staff_position(),
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.lparts([1, 3]),
@@ -607,8 +606,7 @@ maker(
         [6, -4, 4, -2],
     ),
     baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
+        baca.pitch("C1"),
         baca.ottava_bassa(),
     ),
     baca.accent(

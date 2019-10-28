@@ -124,6 +124,8 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
+    baca.clef("treble"),
+    baca.pitch("Bb4"),
     baca.accent(
         baca.pheads(),
     ),

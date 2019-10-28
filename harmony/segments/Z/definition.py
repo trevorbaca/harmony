@@ -413,15 +413,9 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [0, 1],
-        mock=True,
-    ),
+    baca.pitch("<C#5 D5>"),
     baca.flageolet(
         baca.pheads(),
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
     baca.dynamic("f"),
     baca.markup(
@@ -435,16 +429,13 @@ maker(
 maker(
     ("hp", 4),
     harmony.sixteenths(
-        [1, -22, 1],
+        [1, "-"],
     ),
+    baca.pitch("Bb4"),
     baca.accent(
         baca.pheads(),
     ),
     baca.dynamic("f"),
-    baca.dynamic(
-        "mp",
-        selector=baca.phead(-1),
-    ),
     baca.markup(
         r"\baca-soundboard-pizz-markup",
         literal=True,
@@ -458,15 +449,9 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [0, 1],
-        mock=True,
-    ),
+    baca.pitch("<C#5 D5>"),
     baca.flageolet(
         baca.pheads(),
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
     baca.dynamic("f"),
 )
@@ -497,7 +482,7 @@ maker(
 
 maker(
     ("hp", (7, 8)),
-    baca.staff_position(0),
+    harmony.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves()[1:7],
@@ -517,15 +502,9 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [0, 1],
-        mock=True,
-    ),
+    baca.pitch("<C#5 D5>"),
     baca.flageolet(
         baca.pheads(),
-    ),
-    baca.laissez_vibrer(
-        baca.ptails(),
     ),
     baca.dynamic("f"),
 )

@@ -156,10 +156,7 @@ maker(
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.pitch("<B5 C6 D6>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -190,10 +187,7 @@ maker(
 maker(
     ("hp", (8, 9)),
     baca.make_notes(),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.pitch("<C6 Db6 Eb6>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),

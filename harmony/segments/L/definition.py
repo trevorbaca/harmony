@@ -484,11 +484,14 @@ maker(
 
 maker(
     ("hp", 1),
+    baca.clef("treble"),
     harmony.sixteenths(
         ["+"],
     ),
+    baca.pitch("Eb4"),
     baca.accent(),
     baca.laissez_vibrer(),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(5.5).staff_padding,
@@ -498,7 +501,6 @@ maker(
 
 maker(
     ("hp", 2),
-    baca.clef("treble"),
     harmony.sixteenths(
         [-4, 4, "+"],
     ),
@@ -521,16 +523,13 @@ maker(
 
 maker(
     ("hp", (2, 4)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-    baca.flat_glissando(),
+    baca.clef("bass"),
+    baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.pleaves(),
     ),
     baca.hairpin(
-        "o< mf >o mp",
+        "o< mf >o mf",
         pieces=baca.lparts([1, 4]),
         selector=baca.tleaves().rleak(),
     ),
@@ -542,11 +541,25 @@ maker(
 
 maker(
     ("hp", (5, 8)),
+    baca.clef("treble"),
+    baca.pitch("Eb4"),
     baca.accent(
         baca.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
+    ),
+    baca.new(
+        baca.dynamic("f"),
+        measures=6,
+    ),
+    baca.new(
+        baca.dynamic("mp"),
+        measures=7,
+    ),
+    baca.new(
+        baca.dynamic("p"),
+        measures=8,
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
@@ -560,6 +573,7 @@ maker(
     harmony.sixteenths(
         [2, -2],
     ),
+    baca.pitch("E4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -577,6 +591,7 @@ maker(
     harmony.sixteenths(
         [6, -6, 6, -6, 6, -10],
     ),
+    harmony.whisk_staff_position(),
     baca.dynamic("mf"),
     baca.markup(
         r"\baca-whisk-markup",
