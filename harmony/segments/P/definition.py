@@ -253,7 +253,6 @@ maker(
     ("va", (1, 6)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
-        after_graces=[2, 4, 5],
     ),
     baca.staff_positions(
         [-2, 2],
@@ -382,7 +381,6 @@ maker(
     ("cb1", (1, 6)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
-        after_graces=[4, 5, 2],
     ),
     baca.staff_positions(
         [-2, 2],
@@ -413,7 +411,6 @@ maker(
     ("cb1", (9, 10)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[4, 5, 2],
     ),
     baca.staff_positions(
         [-2, 2],
@@ -431,7 +428,6 @@ maker(
     ("cb2", (1, 6)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
-        after_graces=[5, 2, 4],
     ),
     baca.staff_positions(
         [-2, 2],
@@ -462,7 +458,6 @@ maker(
     ("cb2", (9, 10)),
     harmony.sixteenths(
         [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[5, 2, 4],
     ),
     baca.staff_positions(
         [-2, 2],
