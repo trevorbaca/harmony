@@ -290,8 +290,9 @@ maker(
     ("hp", (1, 4)),
     baca.clef("bass"),
     harmony.sixteenths(
-        [4, -12],
+        [4, "-"],
     ),
+    baca.pitch("A1"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

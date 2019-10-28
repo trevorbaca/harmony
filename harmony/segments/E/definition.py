@@ -295,6 +295,7 @@ maker(
     harmony.sixteenths(
         [-2, 2, "-", 2],
     ),
+    baca.pitches("F#4 G#4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -315,11 +316,7 @@ maker(
     harmony.sixteenths(
         [10, -2],
     ),
-    baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("G1"),
     baca.tenuto(
         baca.pheads(),
     ),
@@ -332,6 +329,10 @@ maker(
     ("hp", 3),
     baca.clef("treble"),
     harmony.tessera_1(5),
+    baca.pitch("C#4"),
+    baca.accent(
+        baca.pheads(),
+    ),
 )
 
 maker(
@@ -342,10 +343,7 @@ maker(
         do_not_rewrite_meter=True,
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [0, -4, 4, -5, 5, -6, 6, -7, 7],
-        mock=True,
-    ),
+    baca.pitches("F4 D4 A4 G3 B3 E3"),
     baca.glissando(),
     baca.hairpin(
         '"f" >o niente',
@@ -364,9 +362,11 @@ maker(
     harmony.sixteenths(
         ["-", 12, -8],
     ),
+    baca.pitch("Eb4"),
     baca.damp(
-        baca.runs()[:1].rleak(),
+        baca.rest(-1),
     ),
+    baca.dynamic("mp"),
 )
 
 # va

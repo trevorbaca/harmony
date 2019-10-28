@@ -239,6 +239,7 @@ maker(
     harmony.sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
+    baca.pitch("A4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -266,6 +267,7 @@ maker(
     harmony.sixteenths(
         [3, -3],
     ),
+    harmony.whisk_staff_position(),
     baca.dynamic("p"),
     baca.markup(
         r"\baca-whisk-markup",

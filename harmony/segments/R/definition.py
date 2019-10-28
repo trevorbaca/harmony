@@ -446,72 +446,25 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     harmony.sixteenths(
-        [4, 2, "-"],
+        [-4, 2, "-"],
     ),
-    baca.chunk(
-        baca.snap_pizzicato(),
-        baca.dynamic("f"),
-    ),
-    baca.new(
-        baca.laissez_vibrer(),
-        baca.dynamic("mf"),
-        baca.markup(
-            r"\baca-pdlt-markup",
-            literal=True,
-        ),
-        selector=baca.phead(1),
+    baca.laissez_vibrer(),
+    baca.dynamic("mf"),
+    baca.markup(
+        r"\baca-pdlt-markup",
+        literal=True,
     ),
 )
 
 maker(
     ("hp", 2),
     harmony.sixteenths(
-        [2, 2, "-"],
+        [-2, 2, "-"],
     ),
-    baca.chunk(
-        baca.snap_pizzicato(),
-        baca.dynamic("f"),
-    ),
-    baca.new(
-        baca.laissez_vibrer(),
-        baca.dynamic("mf"),
-        baca.markup(
-            r"\baca-pdlt-markup",
-            literal=True,
-        ),
-        selector=baca.phead(1),
-    ),
-)
-
-maker(
-    ("hp", 3),
-    harmony.sixteenths(
-        [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves(),
-    ),
-    baca.hairpin(
-        "o< mp > pp pp < mp >o niente",
-        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
-    ),
-    baca.dynamic_text_x_offset(
-        -3,
-        baca.pleaf(1),
-    ),
-    baca.dynamic_text_x_offset(
-        -0.25,
-        baca.pleaf(-1),
-    ),
+    baca.laissez_vibrer(),
+    baca.dynamic("mf"),
     baca.markup(
-        r"\baca-bisb-markup",
+        r"\baca-pdlt-markup",
         literal=True,
     ),
 )
@@ -522,6 +475,7 @@ maker(
     harmony.sixteenths(
         [21, "-"],
     ),
+    baca.pitch("F1"),
     baca.accent(
         baca.pheads(),
     ),
@@ -533,9 +487,9 @@ maker(
 maker(
     ("hp", 6),
     baca.make_notes(),
-    baca.staff_position(
-        -6,
-        mock=True,
+    baca.chunk(
+        baca.pitch("Db1"),
+        baca.ottava_bassa(),
     ),
     baca.accent(),
     baca.laissez_vibrer(),
@@ -547,12 +501,18 @@ maker(
     harmony.sixteenths(
         [2, "-"],
     ),
+    baca.clef("treble"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
     baca.markup(
         r"\baca-pdlt-markup",
         literal=True,
     ),
+)
+
+maker(
+    ("hp", [(1, 2), 8]),
+    baca.pitch("G4"),
 )
 
 maker(
@@ -567,6 +527,7 @@ maker(
         [3, 3, "-"],
         untie=True,
     ),
+    harmony.whisk_staff_position(),
     baca.flat_glissando(),
     baca.hairpin(
         'o< "mf" >o niente',

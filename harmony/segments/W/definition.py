@@ -254,10 +254,10 @@ maker(
 
 maker(
     ("hp", 1),
-    baca.clef("treble"),
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("F#4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -273,6 +273,7 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

@@ -249,6 +249,7 @@ maker(
     harmony.sixteenths(
         [4, 4, "-"],
     ),
+    baca.staff_position(2),
     baca.accent(
         baca.pheads(),
     ),
@@ -286,6 +287,7 @@ maker(
     ("hp", (1, 6)),
     baca.clef("treble"),
     harmony.tessera_1(5),
+    baca.pitch("C#4"),
 )
 
 maker(
@@ -294,6 +296,7 @@ maker(
         5,
         advance=72,
     ),
+    baca.pitch("C#4"),
 )
 
 maker(
@@ -304,11 +307,12 @@ maker(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+    baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
     baca.hairpin(
-        "p < f > p",
+        "p < ff > p",
         map=baca.clparts([3]),
         pieces=baca.clparts([1]),
     ),
@@ -326,6 +330,7 @@ maker(
         5,
         advance=72 + 12,
     ),
+    baca.pitch("C#4"),
 )
 
 # va

@@ -429,59 +429,24 @@ maker(
     ("hp", 1),
     baca.clef("treble"),
     baca.staff_lines(5),
-    harmony.sixteenths(
-        [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-    baca.stem_tremolo(
-        baca.pleaves(),
-    ),
-    baca.hairpin(
-        "o< mp > pp pp < mp >o niente",
-        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
-    ),
-    baca.dynamic_text_x_offset(
-        -3,
-        baca.pleaf(1),
-    ),
-    baca.dynamic_text_x_offset(
-        -0.25,
-        baca.pleaf(-1),
-    ),
-    baca.markup(
-        r"\baca-bisb-markup",
-        literal=True,
-    ),
 )
 
 maker(
     ("hp", 2),
     harmony.sixteenths(
-        [4, 2, "-"],
+        [-4, 2, "-"],
     ),
-    baca.chunk(
-        baca.snap_pizzicato(),
-        baca.dynamic("f"),
-    ),
-    baca.new(
-        baca.laissez_vibrer(),
-        baca.dynamic("mf"),
-        baca.markup(
-            r"\baca-pdlt-markup",
-            literal=True,
-        ),
-        selector=baca.phead(1),
+    baca.pitch("G4"),
+    baca.laissez_vibrer(),
+    baca.dynamic("mf"),
+    baca.markup(
+        r"\baca-pdlt-markup",
+        literal=True,
     ),
 )
 
 maker(
-    ("hp", 4),
+    ("hp", [4, 6, 8]),
     harmony.tuplet(
         [(1,)],
         force_augmentation=True,
@@ -489,22 +454,18 @@ maker(
 )
 
 maker(
-    ("hp", (5, 9)),
+    ("hp", [5, 7, 9]),
     baca.make_notes(),
 )
 
 maker(
     ("hp", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
-    ),
+    baca.pitch("<G6 A6 Bb6>"),
+    baca.ottava(),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.pleaves(),
     ),
+    baca.dynamic("pp-sempre"),
     baca.markup(
         r"\baca-bisb-markup",
         literal=True,
@@ -517,10 +478,8 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.pitch("<G6 A6 Bb6>"),
+    baca.ottava(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -535,6 +494,7 @@ maker(
     harmony.sixteenths(
         [2, -20, 2, -24],
     ),
+    baca.pitch("F#4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),

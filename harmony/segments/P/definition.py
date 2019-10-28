@@ -210,6 +210,7 @@ maker(
     harmony.sixteenths(
         [21, -14, 18, "-"],
     ),
+    baca.pitch("F1"),
     baca.accent(
         baca.pheads(),
     ),
@@ -226,10 +227,7 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [-1, 0],
-        mock=True,
-    ),
+    baca.pitch("<B4 C5>"),
     baca.flageolet(),
     baca.laissez_vibrer(),
 )
@@ -240,6 +238,7 @@ maker(
     harmony.sixteenths(
         [21, "-"],
     ),
+    baca.pitch("F1"),
     baca.accent(
         baca.pheads(),
     ),

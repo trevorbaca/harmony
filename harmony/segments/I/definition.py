@@ -176,12 +176,8 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.staff_position(
-        [0, 1],
-        mock=True,
-    ),
+    baca.pitch("<B5 C#6>"),
     baca.flageolet(),
-    baca.laissez_vibrer(),
     baca.dynamic("mf"),
 )
 

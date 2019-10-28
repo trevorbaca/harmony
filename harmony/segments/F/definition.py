@@ -574,10 +574,7 @@ maker(
     harmony.sixteenths(
         [-10, 6, "-"],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("E1"),
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
@@ -621,10 +618,9 @@ maker(
         invisible=([-1],),
         do_not_rewrite_meter=True,
     ),
-    baca.staff_position(
-        -6,
-        baca.run(0),
-        mock=True,
+    baca.pitch(
+        "E1",
+        baca.plt(0),
     ),
     baca.damp(
         baca.rest(0),
@@ -688,6 +684,7 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.pitches("F#4 G#4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -721,11 +718,7 @@ maker(
 
 maker(
     ("hp", (7, 8)),
-    baca.chunk(
-        baca.staff_position(-14, mock=True),
-        baca.no_ledgers(),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("G1"),
     baca.tenuto(
         baca.pheads(),
     ),
@@ -758,6 +751,11 @@ maker(
 )
 
 maker(
+    ("hp", (10, 11)),
+    baca.pitches("F#4 G#4"),
+)
+
+maker(
     ("hp", 13),
     harmony.sixteenths(
         [4, "-"],
@@ -786,6 +784,11 @@ maker(
 )
 
 maker(
+    ("hp", (13, 14)),
+    baca.pitches("F#4 G#4"),
+)
+
+maker(
     ("hp", 15),
     harmony.sixteenths(
         ["-", 2, 2],
@@ -806,13 +809,14 @@ maker(
         harmony.whisk_staff_position(),
         selector=baca.pleaves()[-2:],
     ),
-    baca.hairpin(
-        'o< "f" >o niente',
-        forbid_al_niente_to_bar_line=True,
-        pieces=baca.lparts([1, 1 + 1]),
-        right_broken=True,
-        selector=baca.pleaves()[-2:].rleak(),
-    ),
+#    baca.hairpin(
+#        'o< "f" >o niente',
+#        forbid_al_niente_to_bar_line=True,
+#        pieces=baca.lparts([1, 1 + 1]),
+#        right_broken=True,
+#        selector=baca.pleaves()[-2:].rleak(),
+#    ),
+    baca.dynamic('"f"'),
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(3).staff_padding,

@@ -25,3 +25,5 @@ TO-DO
     Alterate between only 5-line glockenspiel staff and custom nonpitched
     staff. Attach glockenspiel and unpitched percussion instruments at the
     right places. Redo glockenspiel pitches as sounding (rather than written).
+
+10. Add invisible-rewrite rhythms.

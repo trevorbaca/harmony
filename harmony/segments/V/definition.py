@@ -320,6 +320,7 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("D5"),
     baca.flageolet(
         baca.pheads(),
     ),
@@ -342,9 +343,9 @@ maker(
     harmony.sixteenths(
         [-4, 4, -4],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
+    baca.chunk(
+        baca.pitch("D1"),
+        baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
         baca.pheads(),
@@ -361,6 +362,7 @@ maker(
     harmony.sixteenths(
         [2, -20, 2, -24],
     ),
+    baca.pitch("F#4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -376,9 +378,9 @@ maker(
     harmony.sixteenths(
         [4, -8],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
+    baca.chunk(
+        baca.pitch("D1"),
+        baca.ottava_bassa(),
     ),
     baca.accent(
         baca.pheads(),
@@ -399,11 +401,14 @@ maker(
         fuse=True,
         do_not_rewrite_meter=True,
     ),
+    baca.clef("treble"),
+    baca.pitch("F#4"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
+        abjad.tweak(0).self_alignment_X,
         literal=True,
     ),
     baca.metric_modulation_spanner(

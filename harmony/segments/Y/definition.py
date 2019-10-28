@@ -352,6 +352,7 @@ maker(
     harmony.sixteenths(
         [-24, 4],
     ),
+    baca.pitch("Ab4"),
     baca.accent(
         baca.pheads(),
     ),
@@ -394,7 +395,7 @@ maker(
 
 maker(
     ("hp", (2, 3)),
-    baca.staff_position(0),
+    harmony.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves()[1:8],
@@ -408,10 +409,7 @@ maker(
     harmony.sixteenths(
         [-24, -1, 3, -20],
     ),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
+    baca.pitch("G1"),
     baca.accent(
         baca.pheads(),
         ),
