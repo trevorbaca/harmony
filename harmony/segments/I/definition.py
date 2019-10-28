@@ -65,7 +65,7 @@ maker(
             left_broken=True,
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(8).staff_padding,
+            abjad.tweak(5.5).staff_padding,
             left_broken=True,
         ),
         selector=baca.leaves()[:2].rleak(),
@@ -188,6 +188,8 @@ maker(
     harmony.sixteenths(
         [-4, "+"],
     ),
+    baca.pitch("C#4"),
+    baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -204,22 +206,46 @@ maker(
     baca.dls_staff_padding(4.5),
 )
 
+maker(
+    ("va", 2),
+    baca.pitch("C4"),
+)
+
 # vc1
 
 maker(
-    ("vc1", 1),
+    ("vc1", (1, 2)),
+    baca.pitch("B4"),
 )
 
 # vc2
 
 maker(
-    ("vc2", 1),
+    ("vc2", (1, 2)),
+    baca.pitch("Dqs4"),
+    baca.markup(
+        r"\harmony-eleven-a",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    )
 )
 
 # cb1
 
 maker(
     ("cb1", 1),
+    baca.pitch("E3"),
+    baca.note_head_style_harmonic(),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("cb1", 2),
+    baca.pitch("F3"),
 )
 
 # va, vc1, vc2, cb2
@@ -232,8 +258,14 @@ maker(
         extra_counts=[0, 4],
         denominator=None,
     ),
+    baca.tuplet_bracket_down(),
+    baca.bow_speed_spanner(
+        "XFB =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.leaves()[-2:].rleak(),
+    ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-2:].rleak(),
     ),
@@ -242,10 +274,23 @@ maker(
 # cb2
 
 maker(
+    ("cb2", 1),
+    baca.clef("bass"),
+    baca.pitch("A1"),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
     ("cb2", 2),
     harmony.sixteenths(
         [-9, 3, -9, 3],
     ),
+    baca.clef("treble"),
+    baca.pitches("Fqs5 Gqf5"),
     baca.note_head_style_harmonic(),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -253,6 +298,23 @@ maker(
     baca.markup(
         r"\baca-pizz-markup",
         literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+        selector=baca.pheads(),
+    ),
+    baca.markup(
+        r"\harmony-thirteen-a",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
+    baca.markup(
+        r"\harmony-fourteen-a",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+        selector=baca.phead(-1),
     ),
 )
 
