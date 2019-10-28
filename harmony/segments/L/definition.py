@@ -638,6 +638,7 @@ maker(
 
 maker(
     ("vc1", 2),
+    baca.clef("treble"),
     harmony.appoggiato(
         divisions=[4, 12, 4],
         counts=[6],

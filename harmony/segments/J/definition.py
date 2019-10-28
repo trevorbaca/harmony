@@ -446,31 +446,33 @@ maker(
 # va
 
 maker(
-    ("va", 3),
-    harmony.sixteenths(
-        [-4, "+"],
-    ),
-    baca.hairpin(
-        "mf >o niente",
-        selector=baca.tleaves().rleak(),
-    ),
-    baca.markup(
-        r"\harmony-match-harp-decay",
-        abjad.tweak(5.5).staff_padding,
-        literal=True,
-    ),
-    baca.bow_speed_spanner(
-        "XFB =|",
-        abjad.tweak(3).staff_padding,
-    ),
-    baca.dls_staff_padding(4.5),
+    ("va", 1),
+    baca.pitch("C4"),
 )
 
 maker(
-    ("va", 8),
+    ("va", 2),
+    baca.clef("treble"),
+    baca.pitch("A5"),
+    baca.trill_spanner(),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("va", [3, 8]),
     harmony.sixteenths(
         [-4, "+"],
     ),
+    baca.new(
+        baca.clef("alto"),
+        match=[0],
+    ),
+    baca.pitch("C#4"),
+    baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
@@ -501,16 +503,34 @@ maker(
 
 maker(
     ("va", (10, 15)),
-    baca.staff_positions(
-        [1, 4, 2, 5],
-        mock=True,
-    ),
     baca.untie(
         baca.pleaves(),
     ),
-    baca.glissando(
-        allow_repeats=True,
+    baca.repeat_tie(
+        baca.leaf(1),
     ),
+    baca.pitches(
+        "F#4 D3",
+        baca.plts().get([0, -1]),
+    ),
+    baca.staff_positions(
+        [
+                0, 2, -1, 1, -2, 1,
+                0, 2, -1, 1, -2, 1,
+
+                -1, 1, -2, 0, -3, 0,
+                -1, 1, -2, 0, -3, 0,
+
+                -2, 0, -3, -1, -4, -1,
+                -2, 0, -3, -1, -4, -1,
+
+                -3, -1, -4, -2, -5, -2,
+                -3, -1, -4, -2, -5, -2,
+
+        ],
+        baca.plts()[1:-1],
+    ),
+    baca.glissando(),
     baca.hairpin(
         "mp >o niente",
         measures=15,
@@ -520,6 +540,27 @@ maker(
 )
 
 # vc1
+
+maker(
+    ("vc1", 1),
+    baca.pitch("B4"),
+)
+
+maker(
+    ("vc1", 2),
+    baca.pitch("Gqs6"),
+    baca.trill_spanner(),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("vc1", [3, 8]),
+    baca.pitch("B4"),
+)
 
 maker(
     ("vc1", (10, 11)),
@@ -543,16 +584,35 @@ maker(
 
 maker(
     ("vc1", (10, 15)),
-    baca.staff_positions(
-        [1, 4, 2, 5],
-        mock=True,
-    ),
     baca.untie(
         baca.pleaves(),
     ),
-    baca.glissando(
-        allow_repeats=True,
+    baca.repeat_tie(
+        baca.leaf(1),
     ),
+    baca.clef("bass"),
+    baca.pitches(
+        "F#3 D2",
+        baca.plts().get([0, -1]),
+    ),
+    baca.staff_positions(
+        [
+                -1, 1, -2, 0, -3, 0,
+                -1, 1, -2, 0, -3, 0,
+
+                -2, 0, -3, -1, -4, -1,
+                -2, 0, -3, -1, -4, -1,
+
+                -3, -1, -4, -2, -5, -2,
+                -3, -1, -4, -2, -5, -2,
+
+                -4, -2, -5, -3, -6, -3,
+                -4, -2, -5, -3, -6, -3,
+
+        ],
+        baca.plts()[1:-1],
+    ),
+    baca.glissando(),
     baca.hairpin(
         "mp >o niente",
         measures=15,
@@ -561,6 +621,32 @@ maker(
 )
 
 # vc2
+
+maker(
+    ("vc2", 1),
+    baca.pitch("Dqs4"),
+)
+
+maker(
+    ("vc2", 2),
+    baca.pitch("F#5"),
+    baca.trill_spanner(),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("vc2", [3, 8]),
+    baca.pitch("Dqs4"),
+    baca.markup(
+        r"\harmony-eleven-a",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
+)
 
 maker(
     ("vc2", (10, 12)),
@@ -584,57 +670,65 @@ maker(
 
 maker(
     ("vc2", (10, 15)),
-    baca.staff_positions(
-        [1, 4, 2, 5],
-        mock=True,
-    ),
     baca.untie(
         baca.pleaves(),
     ),
-    baca.glissando(
-        allow_repeats=True,
+    baca.repeat_tie(
+        baca.leaf(1),
     ),
-    baca.hairpin(
-        "mp >o niente",
-        measures=15,
-        right_broken=True,
-        selector=baca.leaves().rleak(),
+    baca.clef("bass"),
+    baca.pitches(
+        "F#3 D2",
+        baca.plts().get([0, -1]),
     ),
+    baca.staff_positions(
+        [
+                -1, 1, -2, 0, -3, 0,
+
+                -2, 0, -3, -1, -4, -1,
+                -2, 0, -3, -1, -4, -1,
+
+                -3, -1, -4, -2, -5, -2,
+                -3, -1, -4, -2, -5, -2,
+
+                -4, -2, -5, -3, -6, -3,
+                -4, -2, -5, -3, -6, -3,
+
+        ],
+        baca.plts()[1:-1],
+    ),
+    baca.glissando(),
 )
 
 # cb1
 
 maker(
-    ("cb1", (10, 12)),
-    harmony.sixteenths(
-        [15, 1, 1, 1],
-    ),
+    ("cb1", 1),
+    baca.pitch("F3"),
 )
 
 maker(
-    ("cb1", (13, 14)),
-    harmony.tuplet(
-        [8 * (1,)],
-        denominator=(1, 4),
-    ),
-)
-
-maker(
-    ("cb1", 15),
+    ("cb1", [(2, 8), (10, 15)]),
     baca.make_notes(),
 )
 
 maker(
-    ("cb1", (10, 15)),
-    baca.staff_positions(
-        [1, 4, 2, 5],
-        mock=True,
+    ("cb1", (2, 12)),
+    baca.clef("bass"),
+    baca.pitch("F#1"),
+    baca.flat_glissando(),
+    baca.hairpin(
+        "mp >o mp",
+        measures=12,
+        selector=baca.leaves().rleak(),
     ),
-    baca.untie(
-        baca.pleaves(),
-    ),
+)
+
+maker(
+    ("cb1", (13, 15)),
+    baca.interpolate_pitches("F#2", "D2"),
     baca.glissando(
-        allow_repeats=True,
+        hide_middle_note_heads=True,
     ),
     baca.hairpin(
         "mp >o niente",
@@ -644,6 +738,31 @@ maker(
 )
 
 # cb2
+
+maker(
+    ("cb2", 2),
+    baca.pitch("Dqf6"),
+    baca.trill_spanner(),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("cb2", [3, 8]),
+    baca.new(
+        baca.clef("bass"),
+        match=[0],
+    ),
+    baca.pitch("A1"),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
 
 maker(
     ("cb2", (10, 12)),
@@ -667,22 +786,30 @@ maker(
 
 maker(
     ("cb2", (10, 15)),
+    baca.repeat_tie(
+        baca.leaf(1),
+    ),
+    baca.pitches(
+        "F#3 D2",
+        baca.plts().get([0, -1]),
+    ),
     baca.staff_positions(
-        [1, 4, 2, 5],
-        mock=True,
+        [
+                5, 6, 3, 5, 2, 5,
+
+                3, 5, 2, 4, 1, 4,
+                3, 5, 2, 4, 1, 4,
+
+                2, 4, 1, 3, 0, 3,
+                2, 4, 1, 3, 0, 3,
+
+                1, 3, 0, 2, -1, 2,
+                1, 3, 0, 2, -1, 2,
+
+        ],
+        baca.plts()[1:-1],
     ),
-    baca.untie(
-        baca.pleaves(),
-    ),
-    baca.glissando(
-        allow_repeats=True,
-    ),
-    baca.hairpin(
-        "mp >o niente",
-        measures=15,
-        right_broken=True,
-        selector=baca.leaves().rleak(),
-    ),
+    baca.glissando(),
 )
 
 # va, vc1, vc2, cb1
@@ -692,9 +819,15 @@ maker(
     harmony.sixteenths(
         [3, "-"],
     ),
-    baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
-        left_broken=True,
+    baca.new(
+        baca.metric_modulation_spanner(
+            abjad.tweak(5.5).staff_padding,
+            left_broken=True,
+        ),
+        baca.bow_speed_spanner(
+            "XFB =|",
+            abjad.tweak(3).staff_padding,
+        ),
         selector=baca.leaves()[:2].rleak(),
     ),
 )
@@ -703,7 +836,7 @@ maker(
 # va, vc1, vc2, cb1, cb2
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 2),
+    (["va", "vc1", "vc2", "cb2"], 2),
     harmony.sixteenths(
         [-8, 2, 2, "-"],
         written_quarters=True,
@@ -715,16 +848,12 @@ maker(
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
-    ),
 )
 
 # vc1, vc2, cb1, cb2
 
 maker(
-    (["vc1", "vc2", "cb1", "cb2"], [3, 8]),
+    (["vc1", "vc2", "cb2"], [3, 8]),
     harmony.sixteenths(
         [-4, 8, "-"],
     ),
