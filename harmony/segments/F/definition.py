@@ -1126,10 +1126,17 @@ maker(
         map=baca.runs()[:-1],
         selector=baca.tleaves().rleak(),
     ),
+    baca.hairpin(
+        "mp >o niente",
+        right_broken=True,
+        map=baca.runs()[-1:],
+        selector=baca.leaves().rleak(),
+    ),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         map=baca.runs()[-1:],
+        right_broken=True,
         selector=baca.tleaves().rleak(),
     ),
 )

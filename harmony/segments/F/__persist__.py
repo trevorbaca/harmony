@@ -166,8 +166,8 @@ persist = abjad.OrderedDict(
                         [
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
-                                prototype='abjad.Dynamic',
-                                value='\\baca-sfp-ancora',
+                                prototype='abjad.StartHairpin',
+                                value='>o',
                                 ),
                             ],
                         ),
