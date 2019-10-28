@@ -602,6 +602,11 @@ maker(
 # va
 
 maker(
+    ("va", 1),
+    baca.pitch("A5"),
+)
+
+maker(
     ("va", (2, 4)),
     baca.clef("alto"),
     harmony.appoggiato(
@@ -609,10 +614,18 @@ maker(
         counts=[7],
         rest_to=1,
     ),
-    baca.note_head_style_harmonic(
-        baca.leaves(),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=False),
     ),
-    baca.note_head_style_harmonic(
+    baca.pitch(
+        "Db3",
+        baca.leaves(grace=False),
+    ),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=True),
+    ),
+    baca.pitches(
+        harmony.appoggiato_pitches_d_flat_3,
         baca.leaves(grace=True),
     ),
     baca.hairpin(
@@ -635,21 +648,39 @@ maker(
     ),
 )
 
+maker(
+    ("va", [(5, 8), (11, 15)]),
+    baca.pitch("Bb3"),
+)
+
 # vc1
 
 maker(
+    ("vc1", 1),
+    baca.pitch("Gqs6"),
+)
+
+maker(
     ("vc1", 2),
-    baca.clef("treble"),
+    baca.clef("bass"),
     harmony.appoggiato(
         divisions=[4, 12, 4],
         counts=[6],
         rest_to=1,
         rest_from=1,
     ),
-    baca.note_head_style_harmonic(
-        baca.leaves(),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=False),
     ),
-    baca.note_head_style_harmonic(
+    baca.pitch(
+        "C3",
+        baca.leaves(grace=False),
+    ),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=True),
+    ),
+    baca.pitches(
+        harmony.appoggiato_pitches_c_3,
         baca.leaves(grace=True),
     ),
     baca.hairpin(
@@ -674,14 +705,30 @@ maker(
     ),
 )
 
+maker(
+    ("vc1", [(3, 8), (11, 15)]),
+    baca.pitch("Aqf3"),
+    baca.markup(
+        r"\harmony-eleven-e-flat",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
+)
+
 # vc2
+
+maker(
+    ("vc2", 1),
+    baca.pitch("F#5"),
+)
 
 maker(
     ("vc2", 2),
     harmony.sixteenths(
         [-8, 12],
     ),
-    baca.clef("treble"),
+    baca.pitch("C3"),
+    baca.clef("bass"),
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -704,7 +751,17 @@ maker(
     ),
 )
 
+maker(
+    ("vc2", [(3, 8), (11, 15)]),
+    baca.pitch("F3"),
+)
+
 # cb1
+
+maker(
+    ("cb1", 1),
+    baca.pitch("C#6"),
+)
 
 maker(
     ("cb1", 2),
@@ -715,10 +772,18 @@ maker(
         rest_from=1,
     ),
     baca.clef("bass"),
-    baca.note_head_style_harmonic(
-        baca.leaves(),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=False),
     ),
-    baca.note_head_style_harmonic(
+    baca.pitch(
+        "B2",
+        baca.leaves(grace=False),
+    ),
+    baca.note_head_style_harmonic_black(
+        baca.leaves(grace=True),
+    ),
+    baca.pitches(
+        harmony.appoggiato_pitches_b_2,
         baca.leaves(grace=True),
     ),
     baca.hairpin(
@@ -748,7 +813,22 @@ maker(
     ("cb1", (11, 15)),
 )
 
+maker(
+    ("cb1", [(3, 8), (11, 15)]),
+    baca.pitch("Dtqf3"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
+)
+
 # cb2
+
+maker(
+    ("cb2", 1),
+    baca.pitch("Cqf6"),
+)
 
 maker(
     ("cb2", 2),
@@ -756,6 +836,7 @@ maker(
         [-8, 12],
     ),
     baca.clef("bass"),
+    baca.pitch("B2"),
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -779,7 +860,8 @@ maker(
 )
 
 maker(
-    ("cb2", (11, 15)),
+    ("cb2", [(3, 8), (11, 15)]),
+    baca.pitch("Eb2"),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -789,6 +871,7 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
+    baca.note_head_style_harmonic(),
     baca.flat_glissando(
         left_broken=True,
     ),
@@ -798,8 +881,6 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
-        alteration="M2",
-        harmonic=True,
         left_broken=True,
         selector=baca.leaves().rleak(),
     ),
