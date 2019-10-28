@@ -431,12 +431,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaf(0),
     ),
-    baca.note_head_style_harmonic(
-        baca.leaves()[2:],
-    ),
-    baca.note_head_style_harmonic(
-        baca.leaves(grace=True),
-    ),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -451,15 +445,40 @@ maker(
 maker(
     ("va", 3),
     baca.make_notes(),
-    baca.note_head_style_harmonic(),
     baca.dynamic("mp"),
+)
+
+maker(
+    ("va", (1, 3)),
+    baca.new(
+        baca.pitch("Bb3"), 
+        selector=baca.plts()[:1],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitch("Db3"),
+        selector=baca.plts(grace=False)[1:],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitches(
+            harmony.appoggiato_pitches_d_flat_3,
+        ),
+        selector=baca.plts(grace=True),
+    ),
 )
 
 maker(
     ("va", (4, 5)),
     baca.make_repeat_tied_notes(),
+    baca.pitch("D3"),
     baca.hairpin(
-        "o< mf",
+        "(mp) >o niente",
+        selector=baca.leaves().rleak(),
+    ),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -480,12 +499,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaf(0),
     ),
-    baca.note_head_style_harmonic(
-        baca.leaves()[2:],
-    ),
-    baca.note_head_style_harmonic(
-        baca.leaves(grace=True),
-    ),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -500,15 +513,50 @@ maker(
 maker(
     ("vc1", 3),
     baca.make_notes(),
-    baca.note_head_style_harmonic(),
     baca.dynamic("mp"),
 )
 
 maker(
+    ("vc1", (1, 3)),
+    baca.new(
+        baca.pitch("Aqf3"), 
+        selector=baca.plts()[:1],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitch("C3"),
+        selector=baca.plts(grace=False)[1:],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitches(
+            harmony.appoggiato_pitches_c_3,
+        ),
+        selector=baca.plts(grace=True),
+    ),
+)
+
+maker(
     ("vc1", 4),
-    baca.hairpin(
-        "o< mf",
+    baca.new(
+        baca.pitch("D2"),
+        baca.hairpin(
+            "(mp) >o niente",
+        ),
         selector=baca.plt(0),
+    ),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("vc1", 5),
+    baca.pitch(
+        "Aqf3",
+        baca.leaves().lleak(),
     ),
 )
 
@@ -522,8 +570,14 @@ maker(
     baca.repeat_tie(
         baca.phead(0),
     ),
-    baca.stem_tremolo(
-        baca.plt(0),
+    baca.new(
+        baca.pitch("F3"),
+        baca.stem_tremolo(),
+        selector=baca.plts()[:1],
+    ),
+    baca.pitch(
+        "C3",
+        baca.plts()[1:],
     ),
     baca.hairpin(
         "mp >o niente",
@@ -534,6 +588,10 @@ maker(
         "mp",
         selector=baca.pleaf(-1),
     ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+        selector=baca.plts()[1:].rleak(),
+    )
 )
 
 maker(
@@ -551,16 +609,24 @@ maker(
         baca.leaf(0),
     ),
     baca.hairpin(
-        "(mp) >o",
-        bookend=False,
+        "(mp) >o niente",
+        selector=baca.leaves()[:-1],
     ),
 )
 
 maker(
-    ("vc2", (3, 4)),
+    ("vc2", (3, 5)),
+    baca.pitch(
+        "C3",
+        baca.plts()[:1],
+    ),
+    baca.pitch(
+        "F3",
+        baca.plts()[1:],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.leaves(),
+        selector=baca.plts()[:1].rleak(),
     ),
 )
 
@@ -581,12 +647,6 @@ maker(
     baca.stem_tremolo(
         baca.pleaf(0),
     ),
-    baca.note_head_style_harmonic(
-        baca.leaves()[2:],
-    ),
-    baca.note_head_style_harmonic(
-        baca.leaves(grace=True),
-    ),
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
@@ -601,15 +661,50 @@ maker(
 maker(
     ("cb1", 3),
     baca.make_notes(),
-    baca.note_head_style_harmonic(),
     baca.dynamic("mp"),
 )
 
 maker(
+    ("cb1", (1, 3)),
+    baca.new(
+        baca.pitch("Dtqf3"), 
+        selector=baca.plts()[:1],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitch("B2"),
+        selector=baca.plts(grace=False)[1:],
+    ),
+    baca.new(
+        baca.note_head_style_harmonic_black(),
+        baca.pitches(
+            harmony.appoggiato_pitches_b_2,
+        ),
+        selector=baca.plts(grace=True),
+    ),
+)
+
+maker(
     ("cb1", 4),
-    baca.hairpin(
-        "o< mf",
+    baca.new(
+        baca.pitch("D2"),
+        baca.hairpin(
+            "(mp) >o niente",
+        ),
         selector=baca.plt(0),
+    ),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("cb1", 5),
+    baca.pitch(
+        "Dtqf2",
+        baca.leaves().lleak(),
     ),
 )
 
@@ -623,8 +718,14 @@ maker(
     baca.repeat_tie(
         baca.phead(0),
     ),
-    baca.stem_tremolo(
-        baca.plt(0),
+    baca.new(
+        baca.pitch("Eb2"),
+        baca.stem_tremolo(),
+        selector=baca.plts()[:1],
+    ),
+    baca.pitch(
+        "B2",
+        baca.plts()[1:],
     ),
     baca.hairpin(
         "mp >o niente",
@@ -635,6 +736,10 @@ maker(
         "mp",
         selector=baca.pleaf(-1),
     ),
+    baca.damp_spanner(
+        abjad.tweak(3).staff_padding,
+        selector=baca.plts()[1:].rleak(),
+    )
 )
 
 maker(
@@ -652,16 +757,24 @@ maker(
         baca.leaf(0),
     ),
     baca.hairpin(
-        "(mp) >o",
-        bookend=False,
+        "(mp) >o niente",
+        selector=baca.leaves()[:-1],
     ),
 )
 
 maker(
-    ("cb2", (3, 4)),
+    ("cb2", (3, 5)),
+    baca.pitch(
+        "B2",
+        baca.plts()[:1],
+    ),
+    baca.pitch(
+        "Eb2",
+        baca.plts()[1:],
+    ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.leaves(),
+        selector=baca.plts()[:1].rleak(),
     ),
 )
 
@@ -671,6 +784,7 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], 4),
     harmony.sixteenths(
         ["+", 2],
+        unbeam=True,
     ),
     baca.new(
         baca.accent(),
