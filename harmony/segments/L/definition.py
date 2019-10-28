@@ -603,6 +603,7 @@ maker(
 
 maker(
     ("va", (2, 4)),
+    baca.clef("alto"),
     harmony.appoggiato(
         divisions=[4, 48],
         counts=[7],
