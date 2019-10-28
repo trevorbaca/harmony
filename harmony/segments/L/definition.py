@@ -753,6 +753,7 @@ maker(
     harmony.sixteenths(
         [-8, 12],
     ),
+    baca.clef("bass"),
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
