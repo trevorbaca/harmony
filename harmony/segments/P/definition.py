@@ -54,12 +54,33 @@ maker(
     baca.global_fermata("fermata", baca.rest(7 - 1)),
 )
 
+# shared
+
+damp_counts = [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
+
+damp_counts_curtailed = [3, -1, 8, -8, 3, -1]
+
+
+glissando_counts = [
+    2, 1, -1, 4, 2, 1, -1, -8,
+    4, 2, 1, -1, 2, 1, -1, -16,
+    2, 1, -1, 8, 2, 1, -1, -4,
+    2, 1, -1,
+    ]
+
+glissando_counts_curtailed = [
+    2, 1, -1, 4, 2, 1, -1, -8,
+    2, 1, -1,
+    ]
+
+duration_color = [21, -14, 18, "-"]
+
 # bfl
 
 maker(
     ("bfl", (1, 6)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        damp_counts,
     ),
     baca.pitch("D5"),
     baca.text_spanner(
@@ -87,7 +108,7 @@ maker(
 maker(
     ("bfl", (9, 10)),
     harmony.sixteenths(
-        [3, -1, 8, -4, 8],
+        damp_counts_curtailed,
     ),
     baca.pitch("D5"),
     baca.new(
@@ -173,7 +194,7 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(1),
     harmony.sixteenths(
-        [21, -14, 18, "-"],
+        duration_color,
     ),
     harmony.tam_tam_staff_position(),
     baca.accent(
@@ -191,7 +212,7 @@ maker(
 maker(
     ("perc2", (9, 10)),
     harmony.sixteenths(
-        [21, "-"],
+        duration_color,
     ),
     harmony.tam_tam_staff_position(),
     baca.accent(
@@ -208,7 +229,7 @@ maker(
     ("hp", (1, 6)),
     baca.clef("bass"),
     harmony.sixteenths(
-        [21, -14, 18, "-"],
+        duration_color,
     ),
     baca.pitch("F1"),
     baca.accent(
@@ -229,14 +250,13 @@ maker(
     ),
     baca.pitch("<B4 C5>"),
     baca.flageolet(),
-    baca.laissez_vibrer(),
 )
 
 maker(
     ("hp", (9, 10)),
     baca.clef("bass"),
     harmony.sixteenths(
-        [21, "-"],
+        duration_color,
     ),
     baca.pitch("F1"),
     baca.accent(
@@ -252,15 +272,16 @@ maker(
 maker(
     ("va", (1, 6)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        glissando_counts,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -269,10 +290,8 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.95).self_alignment_X,
-    ),
+    baca.pitch("F4"),
+    baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
@@ -283,12 +302,13 @@ maker(
 maker(
     ("va", (9, 10)),
     baca.make_repeat_tied_notes(),
-    baca.dynamic("pp"),
+    baca.pitch("D4"),
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
+    baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
         abjad.tweak(3).staff_padding,
@@ -302,8 +322,10 @@ maker(
 maker(
     ("vc1", (1, 6)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        damp_counts,
     ),
+    baca.pitch("D#3"),
+    baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -315,21 +337,25 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
 maker(
     ("vc1", (9, 10)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 3, -1],
+        damp_counts_curtailed,
     ),
+    baca.pitch("D#3"),
+    baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -341,8 +367,10 @@ maker(
 maker(
     ("vc2", (1, 6)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        damp_counts,
     ),
+    baca.pitch("C#3"),
+    baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -354,21 +382,25 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
 maker(
     ("vc2", (9, 10)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 3, -1],
+        damp_counts_curtailed,
     ),
+    baca.pitch("C#3"),
+    baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -380,15 +412,16 @@ maker(
 maker(
     ("cb1", (1, 6)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        glissando_counts,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -397,28 +430,31 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
 maker(
     ("cb1", (9, 10)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
+        glissando_counts_curtailed,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -427,15 +463,16 @@ maker(
 maker(
     ("cb2", (1, 6)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4],
+        glissando_counts,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -444,27 +481,30 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
 maker(
     ("cb2", (9, 10)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
+        glissando_counts_curtailed,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
