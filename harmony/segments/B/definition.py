@@ -197,6 +197,7 @@ maker(
         ),
         baca.markup(
             r"\baca-bd-superball-markup",
+            abjad.tweak(3).staff_padding,
             literal=True,
             selector=baca.pleaf(0, grace=False),
         ),
@@ -250,7 +251,8 @@ maker(
     baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(0.25).self_alignment_X,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.stem_down(),
@@ -276,7 +278,7 @@ maker(
     baca.dynamic("p"),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
 )
@@ -287,6 +289,7 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
+    baca.tuplet_bracket_up(),
 )
 
 maker(
@@ -307,7 +310,7 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(5.5 + 1.25).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
 )
@@ -322,10 +325,6 @@ maker(
 maker(
     ("perc2", (5, 6)),
     harmony.slate_staff_position(),
-    baca.circle_bow_spanner(
-        abjad.tweak(3).staff_padding,
-        map=baca.plts(),
-    ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         selector=baca.runs()[:1].rleak(),
@@ -349,7 +348,8 @@ maker(
     baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(0.25).self_alignment_X,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.stem_down(),
@@ -383,7 +383,7 @@ maker(
     baca.dynamic("p"),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.tuplet_bracket_up(),
@@ -410,7 +410,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.dls_staff_padding(4.5),
@@ -426,7 +426,7 @@ maker(
     harmony.whisk_staff_position(),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
 )
@@ -485,7 +485,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.dls_staff_padding(4.5),
