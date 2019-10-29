@@ -124,6 +124,16 @@ persist = abjad.OrderedDict(
                             ],
                         ),
                     (
+                        'Cello_II_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Cello_II_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='niente',
+                                ),
+                            ],
+                        ),
+                    (
                         'Cello_I_Music_Staff',
                         [
                             abjad.Momento(
@@ -196,6 +206,16 @@ persist = abjad.OrderedDict(
                                 prototype='baca.StaffLines',
                                 synthetic_offset=abjad.Offset((99, 1)),
                                 value=5,
+                                ),
+                            ],
+                        ),
+                    (
+                        'Contrabass_II_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Contrabass_II_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='niente',
                                 ),
                             ],
                         ),

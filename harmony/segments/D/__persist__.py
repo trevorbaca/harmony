@@ -202,6 +202,16 @@ persist = abjad.OrderedDict(
                             ],
                         ),
                     (
+                        'Contrabass_II_Music_Voice',
+                        [
+                            abjad.Momento(
+                                context='Contrabass_II_Music_Voice',
+                                prototype='abjad.Dynamic',
+                                value='niente',
+                                ),
+                            ],
+                        ),
+                    (
                         'Contrabass_I_Music_Staff',
                         [
                             abjad.Momento(
