@@ -427,11 +427,7 @@ maker(
         extra_counts=[1],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("D4 C#4"),
     baca.glissando(),
 )
 
@@ -451,11 +447,7 @@ maker(
         extra_counts=[1],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("D4 C#4"),
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
@@ -470,10 +462,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D4 C#4"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -498,6 +487,7 @@ maker(
         invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
+    baca.pitch("F#5"),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
@@ -507,6 +497,11 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -520,12 +515,13 @@ maker(
 
 maker(
     ("vc1", (5, 10)),
-    baca.clef("bass"),
+    baca.clef("treble"),
     harmony.sixteenths(
         [2, 2],
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.pitch("F#5"),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -538,6 +534,11 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -566,11 +567,7 @@ maker(
         extra_counts=[2],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("Gb4 F4"),
     baca.glissando(),
 )
 
@@ -584,17 +581,14 @@ maker(
 
 maker(
     ("vc2", (5, 10)),
-    baca.clef("bass"),
+    baca.clef("tenor"),
     harmony.sixteenths(
         [18, 14, 12, 6, 4, 2, 2, 2, 2, 4, 6, 12, "+"],
         extra_counts=[2],
         after_graces=[1],
+        denominator=None,
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("Gb4 F4"),
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
@@ -609,10 +603,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -636,11 +627,7 @@ maker(
         after_graces=[1],
     ),
     baca.clef("bass"),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("D2 C#2"),
     baca.glissando(),
 )
 
@@ -653,12 +640,14 @@ maker(
 
 maker(
     ("cb1", (5, 10)),
-    baca.clef("bass"),
     harmony.sixteenths(
         [2, 2],
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("Cqf5"),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -671,6 +660,15 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
+    ),
+    baca.markup(
+        r"\harmony-seven-d",
+        literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -724,11 +722,7 @@ maker(
         [9, 7, 6, 3, 2, 1, 1, 1, 1, 2, 3, 6, "+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("D2 C#2"),
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
@@ -743,10 +737,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D2 C#2"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
