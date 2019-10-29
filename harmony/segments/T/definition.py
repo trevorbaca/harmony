@@ -300,6 +300,7 @@ maker(
     harmony.sixteenths(
         [-4, 4],
     ),
+    baca.pitch("Bb3"),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -318,11 +319,7 @@ maker(
         extra_counts=[1],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("D4 C#4"),
     baca.glissando(),
 )
 
@@ -340,13 +337,24 @@ maker(
         [-4, 2, -4, 6, 6, 6, 6],
         extra_counts=[2, 0, 0, 0, 0, 0, 0, 0],
     ),
-    baca.staff_position(0),
+    baca.new(
+        harmony.bridge_staff_position(),
+        selector=baca.plts()[:1],
+    ),
     baca.accent(),
     baca.stem_tremolo(),
     baca.new(
         baca.clef("alto"),
         baca.staff_lines(5),
         selector=baca.leaf(3),
+    ),
+    baca.new(
+        baca.pitch("E3"),
+        baca.scp_spanner(
+            "pont. =|",
+            abjad.tweak(3).staff_padding,
+        ),
+        selector=baca.plts()[1:],
     ),
     baca.triple_staccato(
         baca.pheads()[1:],
@@ -362,7 +370,12 @@ maker(
 
 maker(
     ("vc1", 1),
-    baca.clef("bass"),
+    baca.clef("treble"),
+    baca.pitch("Aqf4"),
+    baca.markup(
+        r"\harmony-eleven-e-flat",
+        literal=True,
+    ),
 )
 
 maker(
@@ -373,6 +386,7 @@ maker(
         invisible_pairs=True,
     ),
     baca.note_head_style_harmonic(),
+    baca.pitch("F#5"),
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
@@ -382,6 +396,11 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
+    ),
+    baca.markup(
+        baca.markups.string_number(2),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -397,7 +416,8 @@ maker(
 
 maker(
     ("vc2", 1),
-    baca.clef("bass"),
+    baca.clef("treble"),
+    baca.pitch("F4"),
 )
 
 maker(
@@ -407,11 +427,7 @@ maker(
         extra_counts=[2],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.pitches("Gb4 F4"),
     baca.glissando(),
 )
 
@@ -427,7 +443,11 @@ maker(
 
 maker(
     ("cb1", 1),
-    baca.clef("bass"),
+    baca.clef("treble"),
+    baca.pitch(
+        "Dtqf4",
+        do_not_transpose=True,
+    ),
 )
 
 maker(
@@ -436,11 +456,8 @@ maker(
         [3, "+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2, 4],
-        mock=True,
-    ),
-    # TODO: use multistage glissando
+    baca.clef("bass"),
+    baca.pitches("D2 C#2"),
     baca.glissando(),
 )
 
@@ -456,6 +473,7 @@ maker(
 maker(
     ("cb2", 1),
     baca.clef("bass"),
+    baca.pitch("Eb2"),
 )
 
 maker(
@@ -468,7 +486,7 @@ maker(
         baca.staff_lines(1),
         selector=baca.leaf(1),
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
@@ -524,7 +542,7 @@ maker(
     ("va", (3, 8)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -540,7 +558,7 @@ maker(
         baca.staff_lines(1),
         match=[0, 1, 2],
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
