@@ -31,3 +31,5 @@ TO-DO
 11. Debug simultaneous clef / after-grace error.
 
 12. Debug simultaneous text spanner / pitched trill spanner error.
+
+13. Notated covered flute pitches as solid / rhombus chords at m7.
