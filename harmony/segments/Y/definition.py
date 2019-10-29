@@ -433,6 +433,7 @@ maker(
 maker(
     ("va", (1, 2)),
     baca.make_notes(),
+    baca.pitch("Ab4"),
     baca.flat_glissando(),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
@@ -446,18 +447,24 @@ maker(
     harmony.sixteenths(
         [2, 5, 9],
     ),
+    baca.pitch("F#3"),
+    baca.scp_spanner(
+        "P4 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 maker(
     ("va", (5, 10)),
     harmony.tessera_4(4),
     baca.chunk(
-        baca.staff_position(
-            [-1, 0, 1],
-            mock=True,
-        ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch("<G4 Ab4 Bb4>"),
         baca.hairpin(
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch --"
             " ! >o niente",
             pieces=baca.plts(),
             selector=baca.leaves().rleak(),
@@ -476,17 +483,18 @@ maker(
 )
 
 maker(
-    ("vc1", (1, 2)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-)
-
-maker(
     ("vc1", 3),
     harmony.sixteenths(
         [12, 4],
+    ),
+    baca.clef("bass"),
+    baca.pitch("F#2"),
+    baca.scp_spanner(
+        "P4 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
     ),
 )
 
@@ -494,18 +502,20 @@ maker(
     ("vc1", (5, 10)),
     harmony.tessera_4(3),
     baca.chunk(
-        baca.staff_position(
-            [-1, 0, 1],
-            mock=True,
-        ),
         baca.hairpin(
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch --"
             " ! >o niente",
             pieces=baca.plts(),
             selector=baca.leaves().rleak(),
         ),
         baca.flat_glissando(),
     ),
+)
+
+maker(
+    ("vc1", [(1, 2), (5, 10)]),
+    baca.clef("treble"),
+    baca.pitch("<A4 B4 C5>"),
 )
 
 # vc2
@@ -518,17 +528,18 @@ maker(
 )
 
 maker(
-    ("vc2", (1, 2)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-)
-
-maker(
     ("vc2", 3),
     harmony.sixteenths(
         [5, 5, 6],
+    ),
+    baca.clef("bass"),
+    baca.pitch("F#2"),
+    baca.scp_spanner(
+        "P4 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
     ),
 )
 
@@ -536,18 +547,20 @@ maker(
     ("vc2", (5, 10)),
     harmony.tessera_4(2),
     baca.chunk(
-        baca.staff_position(
-            [-1, 0, 1],
-            mock=True,
-        ),
         baca.hairpin(
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch --"
             " ! >o niente",
             pieces=baca.plts(),
             selector=baca.leaves().rleak(),
         ),
         baca.flat_glissando(),
     ),
+)
+
+maker(
+    ("vc2", [(1, 2), (5, 10)]),
+    baca.clef("treble"),
+    baca.pitch("<G4 Ab4 Bb4>"),
 )
 
 # cb1
@@ -560,17 +573,18 @@ maker(
 )
 
 maker(
-    ("cb1", (1, 2)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-)
-
-maker(
     ("cb1", 3),
     harmony.sixteenths(
         [10, 5, 1],
+    ),
+    baca.clef("bass"),
+    baca.pitch("F#1"),
+    baca.scp_spanner(
+        "P4 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
     ),
 )
 
@@ -578,17 +592,22 @@ maker(
     ("cb1", (5, 10)),
     harmony.tessera_4(1),
     baca.chunk(
-        baca.staff_position(
-            [-1, 0, 1],
-            mock=True,
-        ),
         baca.hairpin(
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch --"
             " ! >o niente",
             pieces=baca.plts(),
             selector=baca.leaves().rleak(),
         ),
         baca.flat_glissando(),
+    ),
+)
+
+maker(
+    ("cb1", [(1, 2), (5, 10)]),
+    baca.clef("treble"),
+    baca.pitch(
+        "<A4 B4 C5>",
+        do_not_transpose=True,
     ),
 )
 
@@ -602,17 +621,18 @@ maker(
 )
 
 maker(
-    ("cb2", (1, 2)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-)
-
-maker(
     ("cb2", 3),
     harmony.sixteenths(
         [4, 6, 6],
+    ),
+    baca.clef("bass"),
+    baca.pitch("F#1"),
+    baca.scp_spanner(
+        "P4 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
     ),
 )
 
@@ -620,17 +640,22 @@ maker(
     ("cb2", (5, 10)),
     harmony.tessera_4(0),
     baca.chunk(
-        baca.staff_position(
-            [-1, 0, 1],
-            mock=True,
-        ),
         baca.hairpin(
-            "pp -- ! < mp -- ! > p < mf -- ! > mp < f -- ! > mf < ff --"
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf < ff-scratch --"
             " ! >o niente",
             pieces=baca.plts(),
             selector=baca.leaves().rleak(),
         ),
         baca.flat_glissando(),
+    ),
+)
+
+maker(
+    ("cb2", [(1, 2), (5, 10)]),
+    baca.clef("treble"),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        do_not_transpose=True,
     ),
 )
 
@@ -666,6 +691,7 @@ maker(
     baca.accent(
         baca.pheads()[1:],
     ),
+    baca.flat_glissando(),
     baca.dynamic("pp"),
 )
 

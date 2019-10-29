@@ -543,6 +543,11 @@ maker(
 # vc1
 
 maker(
+    ("vc1", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("vc1", 8),
     harmony.sixteenths(
         [12, 4],
@@ -564,6 +569,11 @@ maker(
 )
 
 # vc2
+
+maker(
+    ("vc2", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("vc2", 8),
@@ -590,6 +600,11 @@ maker(
 # cb1
 
 maker(
+    ("cb1", 1),
+    baca.clef("bass"),
+)
+
+maker(
     ("cb1", 8),
     harmony.sixteenths(
         [10, 5, 1],
@@ -612,6 +627,11 @@ maker(
 )
 
 # cb2
+
+maker(
+    ("cb2", 1),
+    baca.clef("bass"),
+)
 
 maker(
     ("cb2", 8),
