@@ -392,10 +392,18 @@ maker(
     harmony.sixteenths(
         [4],
     ),
+    baca.pitch("E4"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "P -> T",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.leaves(),
+    ),
 )
 
 maker(
@@ -418,22 +426,35 @@ maker(
     ),
 )
 
-# vc1
-
 maker(
-    ("vc1", 1),
-    baca.clef("bass"),
+    ("va", [2, 5]),
+    baca.pitch("Bb3"),
 )
+
+# vc1
 
 maker(
     ("vc1", [1, 4]),
     harmony.sixteenths(
-        [4],
+        [-8, 4, 4, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (4, 4)]),
+        extra_counts=[0, -4],
+        denominator=None,
     ),
+    baca.tuplet_bracket_down(),
+    baca.clef("bass"),
+    baca.pitch("E2"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
 )
 
 maker(
@@ -447,22 +468,29 @@ maker(
     baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
+    ),
+)
+
+maker(
+    ("vc1", [2, 5]),
+    baca.clef("treble"),
+    baca.pitch("Aqf4"),
+    baca.markup(
+        r"\harmony-eleven-e-flat",
+        literal=True,
     ),
 )
 
 # vc2
 
 maker(
-    ("vc2", 1),
-    baca.clef("bass"),
-)
-
-maker(
     ("vc2", [1, 4]),
     baca.make_notes(),
+    baca.clef("bass"),
+    baca.pitch("Dqf3"),
     baca.bow_speed_spanner(
-        "slow bow =|",
+        "poco scr. =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -482,22 +510,36 @@ maker(
     ),
 )
 
-# cb1
-
 maker(
-    ("cb1", 1),
-    baca.clef("bass"),
+    ("vc2", [2, 5]),
+    baca.clef("treble"),
+    baca.pitch("F4"),
 )
+
+# cb1
 
 maker(
     ("cb1", [1, 4]),
     harmony.sixteenths(
-        [4],
+        [-8, 4, 4, 4],
+        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (4, 4)]),
+        extra_counts=[0, -4],
+        denominator=None,
     ),
+    baca.tuplet_bracket_down(),
+    baca.clef("bass"),
+    baca.pitch("E1"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
 )
 
 maker(
@@ -511,7 +553,17 @@ maker(
     baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
+    ),
+)
+
+maker(
+    ("cb1", [2, 5]),
+    baca.clef("treble"),
+    baca.pitch("Dtqf4"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        literal=True,
     ),
 )
 
@@ -524,10 +576,17 @@ maker(
 
 maker(
     ("cb2", [1, 4]),
-    baca.make_notes(),
+    harmony.sixteenths(
+        [4],
+    ),
+    baca.pitch("E1"),
+    baca.flat_glissando(),
     baca.scp_spanner(
-        "scp =|",
+        "O -> T",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.leaves(),
     ),
 )
 
@@ -544,6 +603,11 @@ maker(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
+)
+
+maker(
+    ("cb2", [2, 5]),
+    baca.pitch("Eb2"),
 )
 
 # vc1, vc2, cb1, cb2

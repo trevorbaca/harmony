@@ -635,6 +635,7 @@ maker(
         [27],
         after_graces=[1],
     ),
+    baca.clef("bass"),
     baca.staff_positions(
         [2, -2, 4],
         mock=True,
