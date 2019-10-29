@@ -86,7 +86,7 @@ maker(
         rest_tuplets=[1],
     ),
     baca.pitches(
-        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+        harmony.warble_pitches.rotate(-4),
     ),
     baca.new(
         baca.note_head_font_size(-3),

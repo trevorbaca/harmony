@@ -103,7 +103,7 @@ maker(
         rest_tuplets=[1],
     ),
     baca.pitches(
-        "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3",
+        harmony.warble_pitches.rotate(-3),
     ),
     baca.new(
         baca.note_head_font_size(-3),
@@ -335,6 +335,7 @@ maker(
 maker(
     ("va", (1, 2)),
     baca.make_notes(),
+    baca.pitch("D4"),
     baca.flat_glissando(
         hide_middle_stems=True,
         left_broken=True, 
@@ -351,10 +352,8 @@ maker(
     harmony.sixteenths(
         ["+"],
     ),
-    baca.dynamic(
-        "p-sempre",
-        abjad.tweak(-0.95).self_alignment_X,
-    ),
+    baca.pitch("F4"),
+    baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
@@ -365,10 +364,8 @@ maker(
 maker(
     ("va", 5),
     baca.make_repeat_tied_notes(),
-    baca.dynamic(
-        "pp-ancora",
-        abjad.tweak(-1).self_alignment_X,
-    ),
+    baca.pitch("D4"),
+    baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
         abjad.tweak(3).staff_padding,
@@ -383,6 +380,26 @@ maker(
         3,
         rest_plts=[0],
     ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("vc1", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<G#5 A5 Bb5>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -390,13 +407,16 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.clef("bass"),
+    baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
@@ -405,6 +425,11 @@ maker(
     harmony.tessera_2(
         3,
         advance=24,
+    ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -416,6 +441,26 @@ maker(
         2,
         rest_plts=[0],
     ),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("vc2", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<A5 Bb5 Cb6>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -423,13 +468,16 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.clef("bass"),
+    baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
@@ -438,6 +486,11 @@ maker(
     harmony.tessera_2(
         2,
         advance=24,
+    ),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -449,6 +502,26 @@ maker(
         1,
         rest_plts=[0],
     ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("cb1", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<B5 C6 Db6>"),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -456,13 +529,16 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.clef("bass"),
+    baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
@@ -472,6 +548,11 @@ maker(
         1,
         advance=24,
     ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(5.5).staff_padding,
+    ),
 )
 
 # cb2
@@ -479,6 +560,26 @@ maker(
 maker(
     ("cb2", 1),
     harmony.tessera_2(0),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("cb2", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<A#5 B5 C6>"),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -486,13 +587,16 @@ maker(
     harmony.sixteenths(
         ["+", -1],
     ),
+    baca.clef("bass"),
+    baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
         map=baca.runs().map(baca.leaves().rleak()),
     ),
     baca.hairpin(
-        "f <| fff",
+        "f <| fff-scratch",
+        selector=baca.tleaves(),
     ),
 )
 
@@ -501,6 +605,11 @@ maker(
     harmony.tessera_2(
         0,
         advance=24,
+    ),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -515,10 +624,6 @@ maker(
     # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
         baca.pleaves().get([1], 2),
-    ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
     ),
     baca.stem_tremolo(
         baca.pleaves(),
