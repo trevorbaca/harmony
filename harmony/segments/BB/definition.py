@@ -139,6 +139,10 @@ maker(
         abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
+    baca.markup(
+        "dynamics as indicated (non cresc.) for all 12 measures",
+        abjad.tweak(5.5).staff_padding,
+    ),
 )
 
 # perc1
@@ -192,30 +196,31 @@ maker(
 maker(
     ("perc1", (7, 10)),
     harmony.sixteenths(
-        [4, 4, 4, 4, 4, 4, 7, -1],
+        [4, 4, 4, 4, 4, 4, 4, 3, 1],
         do_not_rewrite_meter=True,
         fuse=True,
-        written_halves=([0],),
+        written_halves=([0, -3],),
+        invisible=([-2, -1],),
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
+        selector=baca.leaves()[:-2],
     ),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.pleaves().get([0, -3]),
     ),
     baca.hairpin(
-        "pp < p >",
-        pieces=baca.clparts([1]),
-        selector=baca.leaves()[:6],
-    ),
-    baca.dynamic(
-        "pp",
-        selector=baca.pleaf(-1),
+        "pp < p > pp < p > pp < p > pp < p > pp",
+        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1, 2]),
     ),
     baca.markup(
         r"\baca-triangle-markup",
         literal=True,
+    ),
+    baca.markup(
+        "dynamics as indicated (non cresc.) for all 12 measures",
+        abjad.tweak(8).staff_padding,
     ),
 )
 
@@ -282,6 +287,12 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("mp"),
+    baca.markup(
+        "cresc. from mezzo piano to forte over 12 measures",
+        abjad.tweak(1).self_alignment_X,
+        abjad.tweak(3).staff_padding,
+    ),
 )
 
 # hp
@@ -303,6 +314,7 @@ maker(
 maker(
     ("va", (1, 4)),
     baca.make_notes(),
+    baca.pitch("Gqf3"),
     baca.flat_glissando(
         left_broken=True,
     ),
@@ -316,20 +328,26 @@ maker(
 maker(
     ("va", 5),
     harmony.tessera_4(4),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<G4 Ab4 Bb4>"),
     baca.dynamic("pp"),
 )
 
 maker(
     ("va", (7, 10)),
     baca.make_notes(),
-    baca.flat_glissando(),
+    baca.pitch("E3"),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+    ),
+    baca.dynamic("p"),
     baca.bow_speed_spanner(
-        "poc. scr. =|",
+        "poco scr. =|",
         abjad.tweak(3).staff_padding,
+    ),
+    baca.markup(
+        "cresc. from piano to mezzo forte over 12 measures",
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -337,25 +355,25 @@ maker(
 
 maker(
     ("vc1", (1, 4)),
-    baca.clef("bass"),
-    baca.staff_lines(5),
     harmony.sixteenths(
         [10, 6],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.note_head_style_harmonic(),
+    baca.pitches("E6 C#6"),
     baca.glissando(),
+    baca.dynamic("p"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
     ("vc1", 5),
     harmony.tessera_4(3),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<A4 B4 C5>"),
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >o niente",
@@ -366,12 +384,13 @@ maker(
 
 maker(
     ("vc1", (7, 10)),
-    baca.note_head_style_harmonic(),
     harmony.sixteenths(
         [2],
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.note_head_style_harmonic(),
+    baca.pitch("C#6"),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -383,7 +402,17 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
+        alteration="E6",
         right_broken=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+    baca.markup(
+        "cresc. from mezzo piano to forte over 12 measures",
+        abjad.tweak(8).staff_padding,
     ),
 )
 
@@ -394,20 +423,22 @@ maker(
     harmony.sixteenths(
         [10, 6],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.note_head_style_harmonic(),
+    baca.pitches("A5 C#6"),
     baca.glissando(),
+    baca.dynamic("p"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
     ("vc2", 5),
     harmony.tessera_4(2),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<G4 Ab4 Bb4>"),
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp -- ! >o niente",
@@ -424,6 +455,8 @@ maker(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.note_head_style_harmonic(),
+    baca.pitch("A5"),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
@@ -435,7 +468,17 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
+        alteration="C#6",
         right_broken=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+    baca.markup(
+        "cresc. from mezzo piano to forte over 12 measures",
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -443,11 +486,14 @@ maker(
 
 maker(
     ("cb1", (1, 4)),
-    baca.clef("bass"),
-    baca.staff_lines(5),
-    baca.note_head_style_harmonic(),
+    baca.clef("treble"),
     harmony.sixteenths(
         [4, 4, -8],
+    ),
+    baca.note_head_style_harmonic(),
+    baca.pitch(
+        "C#4",
+        do_not_transpose=True,
     ),
     baca.hairpin(
         "niente o< mf >o niente",
@@ -458,14 +504,20 @@ maker(
         abjad.tweak(2).bound_details__right__padding,
         map=baca.runs(),
     ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
     ("cb1", 5),
     harmony.tessera_4(1),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<A4 B4 C5>",
+        do_not_transpose=True,
     ),
     baca.flat_glissando(),
     baca.hairpin(
@@ -477,11 +529,15 @@ maker(
 
 maker(
     ("cb1", (7, 10)),
-    baca.note_head_style_harmonic(),
     harmony.sixteenths(
         [2],
         written_quarters=True,
         invisible_pairs=True,
+    ),
+    baca.note_head_style_harmonic(),
+    baca.pitch(
+        "C#4",
+        do_not_transpose=True,
     ),
     baca.hairpin(
         "niente o< mp >o",
@@ -496,6 +552,15 @@ maker(
         abjad.tweak(3).bound_details__right__padding,
         right_broken=True,
     ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+    baca.markup(
+        "cresc. from mezzo piano to forte over 12 measures",
+        abjad.tweak(3).staff_padding,
+    ),
 )
 
 # cb2
@@ -503,23 +568,27 @@ maker(
 maker(
     ("cb2", (1, 4)),
     baca.make_notes(),
+    baca.pitch("A1"),
     baca.flat_glissando(),
-    baca.staff_position(
-        -6,
-        mock=True,
-    ),
     baca.scp_spanner(
         "scp var. =|",
         abjad.tweak(3).staff_padding,
+    ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 maker(
     ("cb2", 5),
     harmony.tessera_4(0),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.clef("treble"),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        do_not_transpose=True,
     ),
     baca.flat_glissando(),
     baca.hairpin(
@@ -531,15 +600,35 @@ maker(
 
 maker(
     ("cb2", (7, 10)),
-    baca.make_notes(),
-    baca.flat_glissando(),
-    baca.staff_position(
-        -6,
-        mock=True,
+    harmony.sixteenths(
+        [8, 8, 8, 7, 1],
+        fuse=True,
+        do_not_rewrite_meter=True,
+        written_halves=([-2],),
+        invisible=([-1],),
     ),
+    baca.clef("bass"),
+    baca.pitch("A1"),
+    baca.flat_glissando(
+        hide_middle_stems=True,
+        selector=baca.leaves()[:-1],
+    ),
+    baca.dynamic("mp"),
     baca.scp_spanner(
-        "scp var. =|",
+        "T -> O -> (T)",
         abjad.tweak(3).staff_padding,
+        bookend=-1,
+        pieces=baca.mgroups([2, 2]),
+        selector=baca.leaves(),
+    ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+    baca.markup(
+        "cresc. from mezzo piano to forte over 12 measures",
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
