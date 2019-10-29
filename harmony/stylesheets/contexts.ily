@@ -131,7 +131,8 @@
         \remove System_start_delimiter_engraver
 
         % necessary for uniform overlapping polyrhythms with accidentals
-        \override Accidental.X-extent = ##f
+        % should be managed region-by-region in score:
+        %%%\override Accidental.X-extent = ##f
 
         \override BarLine.hair-thickness = 0.5
         \override BarLine.X-extent = #'(0 . 0)

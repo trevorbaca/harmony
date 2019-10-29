@@ -1,5 +1,13 @@
-harmony-text-one = \markup
-    \justify { Here I am. On my own. And no-one — (1) }
+harmony-text-one = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    Here I am. On my own. And no-one —
+    } } }
 
 harmony-text-two = \markup \column {
     \justify { Back. }

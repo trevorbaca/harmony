@@ -107,7 +107,7 @@ maker(
     ),
     baca.pitch("F3"),
     baca.dynamic('"mf"'),
-    baca.dls_staff_padding(3),
+    baca.dls_staff_padding(2),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -467,8 +467,9 @@ maker(
     ),
     baca.dls_staff_padding(3),
     baca.scp_spanner(
-        "poco P =|",
+        "P1 =|",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -583,8 +584,9 @@ maker(
     ),
     baca.dls_staff_padding(3),
     baca.scp_spanner(
-        "poco P =|",
+        "P1 =|",
         abjad.tweak(3 + 1).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
 )

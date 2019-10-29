@@ -208,7 +208,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='niente',
+                                value='ff',
                                 ),
                             ],
                         ),
