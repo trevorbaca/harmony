@@ -321,10 +321,20 @@ maker(
 # va
 
 maker(
+    ("va", 4),
+    baca.pitch("Bb3"),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
     ("va", (5, 10)),
     harmony.sixteenths(
         [5, -7, 5, -7, 37, "-"],
     ),
+    baca.pitch("F4"),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.95).self_alignment_X,
@@ -343,6 +353,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -356,10 +367,20 @@ maker(
 )
 
 maker(
+    ("vc1", 4),
+    baca.pitch("Aqf3"),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
     ("vc1", (5, 9)),
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -371,9 +392,8 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
-        "o<| fff",
+        "o<| fff-scratch",
         map=baca.run(1),
-        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -384,6 +404,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -405,8 +426,23 @@ maker(
     baca.skeleton(
         r"\times 8/10 { c4 r4 r4 r8. }",
     ),
+    baca.pitch("F3"),
     baca.triple_staccato(
         baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
+    ("vc2", 4),
+    baca.pitch("F3"),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -415,6 +451,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -426,9 +463,8 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
-        "o<| fff",
+        "o<| fff-scratch",
         map=baca.run(1),
-        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -439,6 +475,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -460,8 +497,27 @@ maker(
     baca.skeleton(
         r"\times 8/11 { r4 c4 r4 r4 r32 }",
     ),
+    baca.pitch("Dtqf3"),
+    baca.markup(
+        r"\harmony-seven-e-flat",
+        literal=True,
+    ),
     baca.triple_staccato(
         baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(5.5).staff_padding,
+    ),
+)
+
+maker(
+    ("cb1", 4),
+    baca.pitch("Dtqf3"),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -470,6 +526,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -481,9 +538,8 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
-        "o<| fff",
+        "o<| fff-scratch",
         map=baca.run(1),
-        selector=baca.leaves().rleak(),
     ),
 )
 
@@ -494,6 +550,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -515,8 +572,23 @@ maker(
     baca.skeleton(
         r"\times 8/12 { r4 c4 r4 r4 r8 }",
     ),
+    baca.pitch("Eb2"),
     baca.triple_staccato(
         baca.pheads(),
+    ),
+    baca.dynamic("f"),
+    baca.scp_spanner(
+        "pont. =|",
+        abjad.tweak(3).staff_padding,
+    ),
+)
+
+maker(
+    ("cb2", 4),
+    baca.pitch("Dtqf3"),
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(3).staff_padding,
     ),
 )
 
@@ -525,6 +597,7 @@ maker(
     harmony.sixteenths(
         [3, -1, -8, 47, -1],
     ),
+    baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
@@ -536,9 +609,8 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
-        "o<| fff",
+        "o<| fff-scratch",
         map=baca.run(1),
-        selector=baca.leaves().rleak(),
     ),
 )
 
