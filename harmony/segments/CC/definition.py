@@ -70,6 +70,9 @@ maker(
 maker(
     ("bfl", 1),
     baca.pitch("Bb4"),
+    baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
+    ),
 )
 
 # perc1
@@ -84,8 +87,9 @@ maker(
         baca.pheads(),
     ),
     baca.dynamic("f"),
-    baca.dynamic(
-        "mp",
+    baca.new(
+        baca.dynamic("mp"),
+        baca.damp(),
         selector=baca.phead(-1),
     ),
     baca.markup(
@@ -146,6 +150,33 @@ maker(
 
 # cb2
 
+maker(
+    ("cb2", 1),
+    baca.clef("treble"),
+)
+
+maker(
+    ("cb2", -1),
+    baca.chunk(
+        baca.mark(r"\harmony-colophon-markup"),
+        baca.rehearsal_mark_down(),
+        baca.rehearsal_mark_padding(12),
+        baca.rehearsal_mark_self_alignment_x(abjad.Right),
+        selector=baca.leaves().rleak()[-1],
+    ),
+)
+
+# va, vc1, vc2
+
+maker(
+    (["va", "vc1", "vc2"], 1),
+    baca.pitch("Bb4"),
+    baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
+        alteration="Cb5",
+    ),
+)
+
 # va, vc1, vc2, cb1, cb2
 
 maker(
@@ -157,33 +188,21 @@ maker(
         tie_all=True,
     ),
     baca.hairpin(
-        "pp < p > pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        "pp < p >o niente",
+        pieces=baca.leaves().rleak().lparts([1, 3]),
     ),
 )
 
+# cb1, cb2
+
 maker(
-    (["bfl", "vc1", "vc2", "cb1"], 1),
+    (["cb1", "cb2"], 1),
+    baca.pitch(
+        "Bb4",
+        do_not_transpose=True,
+    ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
-        left_broken=True,
-    ),
-)
-
-maker(
-    (["va", "cb2"], 1),
-    baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
-    ),
-)
-
-maker(
-    ("cb2", -1),
-    baca.chunk(
-        baca.mark(r"\harmony-colophon-markup"),
-        baca.rehearsal_mark_down(),
-        baca.rehearsal_mark_padding(12),
-        baca.rehearsal_mark_self_alignment_x(abjad.Right),
-        selector=baca.leaves().rleak()[-1],
+        alteration="Cb5",
     ),
 )
