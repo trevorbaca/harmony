@@ -516,7 +516,10 @@ maker(
     ("cb1", 2),
     baca.clef("treble"),
     baca.note_head_style_harmonic(),
-    baca.pitch("<B5 C6 Db6>"),
+    baca.pitch(
+        "<B5 C6 Db6>",
+        do_not_transpose=True,
+    ),
     baca.markup(
         baca.markups.string_number(3),
         abjad.tweak(1.5).staff_padding,
@@ -574,7 +577,10 @@ maker(
     ("cb2", 2),
     baca.clef("treble"),
     baca.note_head_style_harmonic(),
-    baca.pitch("<A#5 B5 C6>"),
+    baca.pitch(
+        "<A#5 B5 C6>",
+        do_not_transpose=True,
+    ),
     baca.markup(
         baca.markups.string_number(3),
         abjad.tweak(1.5).staff_padding,

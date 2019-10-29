@@ -876,11 +876,12 @@ maker(
     ("cb1", [(1, 2), (4, 5), 10]),
     baca.new(
         baca.clef("treble"),
-        match=[0],
+        match=[0, 2],
     ),
     baca.pitch(
         "C#6",
         baca.leaves().rleak(),
+        do_not_transpose=True,
     ),
     baca.markup(
         r"\harmony-fifteen-d",
@@ -898,6 +899,7 @@ maker(
 
 maker(
     ("cb1", (6, 8)),
+    baca.clef("bass"),
     baca.note_head_style_harmonic(
         baca.run(0),
     ),
@@ -950,6 +952,7 @@ maker(
     baca.pitch(
         "Cqf6",
         baca.leaves().rleak(),
+        do_not_transpose=True,
     ),
     baca.markup(
         r"\harmony-fourteen-d",

@@ -234,6 +234,7 @@ maker(
 
 maker(
     ("cb1", 1),
+    baca.clef("bass"),
     baca.pitch("E3"),
     baca.note_head_style_harmonic(),
     baca.markup(
@@ -290,7 +291,10 @@ maker(
         [-9, 3, -9, 3],
     ),
     baca.clef("treble"),
-    baca.pitches("Fqs5 Gqf5"),
+    baca.pitches(
+        "Fqs5 Gqf5",
+        do_not_transpose=True,
+    ),
     baca.note_head_style_harmonic(),
     baca.laissez_vibrer(
         baca.ptails(),

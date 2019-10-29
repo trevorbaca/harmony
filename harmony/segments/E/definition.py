@@ -659,7 +659,10 @@ maker(
     baca.clef("treble"),
     baca.staff_lines(5),
     harmony.tessera_1(1),
-    baca.pitch("Aqs4"),
+    baca.pitch(
+        "Aqs4",
+        do_not_transpose=True,
+    ),
     baca.accent(
         baca.pheads(),
     ),
@@ -743,7 +746,10 @@ maker(
     ("cb2", 3),
     baca.clef("treble"),
     harmony.tessera_1(0),
-    baca.pitch("F#4"),
+    baca.pitch(
+        "F#4",
+        do_not_transpose=True,
+    ),
     baca.accent(
         baca.pheads(),
     ),

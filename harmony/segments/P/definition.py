@@ -54,33 +54,12 @@ maker(
     baca.global_fermata("fermata", baca.rest(7 - 1)),
 )
 
-# shared
-
-damp_counts = [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
-
-damp_counts_curtailed = [3, -1, 8, -8, 3, -1]
-
-
-glissando_counts = [
-    2, 1, -1, 4, 2, 1, -1, -8,
-    4, 2, 1, -1, 2, 1, -1, -16,
-    2, 1, -1, 8, 2, 1, -1, -4,
-    2, 1, -1,
-    ]
-
-glissando_counts_curtailed = [
-    2, 1, -1, 4, 2, 1, -1, -8,
-    2, 1, -1,
-    ]
-
-duration_color = [21, -14, 18, "-"]
-
 # bfl
 
 maker(
     ("bfl", (1, 6)),
     harmony.sixteenths(
-        damp_counts,
+        harmony.damp_counts,
     ),
     baca.pitch("D5"),
     baca.text_spanner(
@@ -108,7 +87,7 @@ maker(
 maker(
     ("bfl", (9, 10)),
     harmony.sixteenths(
-        damp_counts_curtailed,
+        harmony.damp_counts_curtailed,
     ),
     baca.pitch("D5"),
     baca.new(
@@ -194,7 +173,7 @@ maker(
     baca.clef("bass"),
     baca.staff_lines(1),
     harmony.sixteenths(
-        duration_color,
+        harmony.duration_color,
     ),
     harmony.tam_tam_staff_position(),
     baca.accent(
@@ -212,7 +191,7 @@ maker(
 maker(
     ("perc2", (9, 10)),
     harmony.sixteenths(
-        duration_color,
+        harmony.duration_color,
     ),
     harmony.tam_tam_staff_position(),
     baca.accent(
@@ -229,7 +208,7 @@ maker(
     ("hp", (1, 6)),
     baca.clef("bass"),
     harmony.sixteenths(
-        duration_color,
+        harmony.duration_color,
     ),
     baca.pitch("F1"),
     baca.accent(
@@ -256,7 +235,7 @@ maker(
     ("hp", (9, 10)),
     baca.clef("bass"),
     harmony.sixteenths(
-        duration_color,
+        harmony.duration_color,
     ),
     baca.pitch("F1"),
     baca.accent(
@@ -272,7 +251,7 @@ maker(
 maker(
     ("va", (1, 6)),
     harmony.sixteenths(
-        glissando_counts,
+        harmony.glissando_counts,
     ),
     baca.pitches("D4 Eb4"),
     baca.glissando(
@@ -322,7 +301,7 @@ maker(
 maker(
     ("vc1", (1, 6)),
     harmony.sixteenths(
-        damp_counts,
+        harmony.damp_counts,
     ),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
@@ -352,7 +331,7 @@ maker(
 maker(
     ("vc1", (9, 10)),
     harmony.sixteenths(
-        damp_counts_curtailed,
+        harmony.damp_counts_curtailed,
     ),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
@@ -367,7 +346,7 @@ maker(
 maker(
     ("vc2", (1, 6)),
     harmony.sixteenths(
-        damp_counts,
+        harmony.damp_counts,
     ),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
@@ -397,7 +376,7 @@ maker(
 maker(
     ("vc2", (9, 10)),
     harmony.sixteenths(
-        damp_counts_curtailed,
+        harmony.damp_counts_curtailed,
     ),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
@@ -412,7 +391,7 @@ maker(
 maker(
     ("cb1", (1, 6)),
     harmony.sixteenths(
-        glissando_counts,
+        harmony.glissando_counts,
     ),
     baca.pitches("E3 D#3"),
     baca.glissando(
@@ -445,7 +424,7 @@ maker(
 maker(
     ("cb1", (9, 10)),
     harmony.sixteenths(
-        glissando_counts_curtailed,
+        harmony.glissando_counts_curtailed,
     ),
     baca.pitches("E3 D#3"),
     baca.glissando(
@@ -463,7 +442,7 @@ maker(
 maker(
     ("cb2", (1, 6)),
     harmony.sixteenths(
-        glissando_counts,
+        harmony.glissando_counts,
     ),
     baca.pitches("C#3 D3"),
     baca.glissando(
@@ -496,7 +475,7 @@ maker(
 maker(
     ("cb2", (9, 10)),
     harmony.sixteenths(
-        glissando_counts_curtailed,
+        harmony.glissando_counts_curtailed,
     ),
     baca.pitches("C#3 D3"),
     baca.glissando(

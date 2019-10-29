@@ -760,7 +760,10 @@ maker(
 
 maker(
     ("cb1", 1),
-    baca.pitch("C#6"),
+    baca.pitch(
+        "C#6",
+        do_not_transpose=True,
+    ),
 )
 
 maker(
@@ -827,7 +830,10 @@ maker(
 
 maker(
     ("cb2", 1),
-    baca.pitch("Cqf6"),
+    baca.pitch(
+        "Cqf6",
+        do_not_transpose=True,
+    ),
 )
 
 maker(

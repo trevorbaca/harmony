@@ -714,7 +714,6 @@ maker(
 
 maker(
     ("cb1", (2, 12)),
-    baca.clef("bass"),
     baca.pitch("F#1"),
     baca.flat_glissando(),
     baca.hairpin(
@@ -741,7 +740,10 @@ maker(
 
 maker(
     ("cb2", 2),
-    baca.pitch("Dqf6"),
+    baca.pitch(
+        "Dqf6",
+        do_not_transpose=True,
+    ),
     baca.trill_spanner(),
     baca.markup(
         baca.markups.string_number(2),

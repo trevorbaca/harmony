@@ -4205,7 +4205,7 @@ B_Cello_II_Music_Staff = <<                                                    %
 B_Contrabass_I_Music_Voice_A = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "appoggiato(divisions=[16, 16, 12, 16, 12], counts=[5, 6, 7])" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -4225,10 +4225,10 @@ B_Contrabass_I_Music_Voice_A = {                                               %
 B_Contrabass_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!4
+    af!4
 
     % [B Contrabass_I_Music_Voice measure 6 / measure 3]                       %! baca.SegmentMaker._comment_measure_numbers()
-    af'!2.
+    af!2.
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4237,10 +4237,10 @@ B_Contrabass_I_Music_Voice_B = {                                               %
 B_Contrabass_I_Music_Voice_C = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!4
+    af!4
 
     % [B Contrabass_I_Music_Voice measure 7 / measure 4]                       %! baca.SegmentMaker._comment_measure_numbers()
-    af'!2
+    af!2
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4249,10 +4249,10 @@ B_Contrabass_I_Music_Voice_C = {                                               %
 B_Contrabass_I_Music_Voice_D = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!2.
+    af!2.
 
     % [B Contrabass_I_Music_Voice measure 8 / measure 5]                       %! baca.SegmentMaker._comment_measure_numbers()
-    af'!4
+    af!4
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4261,7 +4261,7 @@ B_Contrabass_I_Music_Voice_D = {                                               %
 B_Contrabass_I_Music_Voice_E = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!2.                                                                     %! harmony.appoggiato()
+    af!2.                                                                      %! harmony.appoggiato()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -4270,7 +4270,7 @@ B_Contrabass_I_Music_Voice_E = {                                               %
 B_Contrabass_I_Music_Voice_F = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "appoggiato(counts=[7])"                    %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -4284,7 +4284,7 @@ B_Contrabass_I_Music_Voice_F = {                                               %
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     \startTextSpan                                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4293,9 +4293,9 @@ B_Contrabass_I_Music_Voice_F = {                                               %
 B_Contrabass_I_Music_Voice_G = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4304,9 +4304,9 @@ B_Contrabass_I_Music_Voice_G = {                                               %
 B_Contrabass_I_Music_Voice_H = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4315,9 +4315,9 @@ B_Contrabass_I_Music_Voice_H = {                                               %
 B_Contrabass_I_Music_Voice_I = {                                               %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -4396,24 +4396,24 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                a''
+                af
+                a'
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
             \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4438,26 +4438,26 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                c'''
+                af
+                c''
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4482,29 +4482,29 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                c'''
+                af
+                c''
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4529,23 +4529,23 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                c'''
+                af
+                c''
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4570,26 +4570,26 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                ctqs'''!
+                af
+                ctqs''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4702,30 +4702,30 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                bqs''!
+                af
+                bqs'!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
             \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4751,29 +4751,29 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                c'''
+                af
+                c''
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4799,29 +4799,29 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                c'''
+                af
+                c''
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4847,29 +4847,29 @@ B_Contrabass_I_Music_Voice = {                                                 %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                cs'''!
+                af
+                cs''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -4955,7 +4955,7 @@ B_Contrabass_I_Music_Staff = <<                                                %
 B_Contrabass_II_Music_Voice_A = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!2
+    af!2
     - \abjad-dashed-line-with-up-hook                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -4964,7 +4964,7 @@ B_Contrabass_II_Music_Voice_A = {                                              %
     \startTextSpan                                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
     % [B Contrabass_II_Music_Voice measure 7 / measure 4]                      %! baca.SegmentMaker._comment_measure_numbers()
-    af'!2
+    af!2
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -4973,7 +4973,7 @@ B_Contrabass_II_Music_Voice_A = {                                              %
 B_Contrabass_II_Music_Voice_B = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!2.                                                                     %! harmony.appoggiato()
+    af!2.                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
 
@@ -4981,7 +4981,7 @@ B_Contrabass_II_Music_Voice_B = {                                              %
 B_Contrabass_II_Music_Voice_C = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -4990,7 +4990,7 @@ B_Contrabass_II_Music_Voice_C = {                                              %
 B_Contrabass_II_Music_Voice_D = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "appoggiato(counts=[7])"                    %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -5004,7 +5004,7 @@ B_Contrabass_II_Music_Voice_D = {                                              %
     - \tweak staff-padding #5.5                                                %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     \startTextSpan                                                             %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -5013,9 +5013,9 @@ B_Contrabass_II_Music_Voice_D = {                                              %
 B_Contrabass_II_Music_Voice_E = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -5024,9 +5024,9 @@ B_Contrabass_II_Music_Voice_E = {                                              %
 B_Contrabass_II_Music_Voice_F = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 
 }                                                                              %! abjad.Path.extern()
@@ -5035,9 +5035,9 @@ B_Contrabass_II_Music_Voice_F = {                                              %
 B_Contrabass_II_Music_Voice_G = {                                              %! abjad.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
-    af'!1                                                                      %! harmony.appoggiato()
+    af!1                                                                       %! harmony.appoggiato()
 
-    af'!4                                                                      %! harmony.appoggiato()
+    af!4                                                                       %! harmony.appoggiato()
     \repeatTie
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -5133,26 +5133,26 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                atqs''!
+                af
+                atqs'!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5177,29 +5177,29 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                cqs'''!
+                af
+                cqs''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5225,26 +5225,26 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                atqs''!
+                af
+                atqs'!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5351,30 +5351,30 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                cqs'''!
+                af
+                cqs''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
             \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)            %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5400,29 +5400,29 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                atqs''!
+                af
+                atqs'!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            b''8 * 2/5
+            b'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5448,29 +5448,29 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                cs'''!
+                af
+                cs''!
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            ctqs'''!8 * 2/5
+            ctqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            a''8 * 2/5
+            a'8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            atqs''!8 * 2/5
+            atqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
@@ -5496,29 +5496,29 @@ B_Contrabass_II_Music_Voice = {                                                %
             <
                 \tweak font-size #0
                 \tweak transparent ##t
-                af'
-                b''
+                af
+                b'
             >8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             [
             (
 
-            bqs''!8 * 2/5
+            bqs'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            as''!8 * 2/5
+            as'!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            c'''8 * 2/5
+            c''8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cqs'''!8 * 2/5
+            cqs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
-            cs'''!8 * 2/5
+            cs''!8 * 2/5
         %@% ^ \baca-duration-multiplier-markup #"2" #"5"                       %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
             )
             ]
