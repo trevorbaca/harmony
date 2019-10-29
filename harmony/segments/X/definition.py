@@ -278,8 +278,19 @@ maker(
 # va
 
 maker(
-    ("va", 1),
+    ("va", (1, 3)),
     baca.clef("alto"),
+    baca.pitch("F4"),
+    # NOTE: text spanner must currently lexically precede pitched trill
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        alteration="M2",
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
 )
 
 maker(
@@ -288,10 +299,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D4 C#4"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -301,13 +309,21 @@ maker(
 maker(
     ("va", (5, 9)),
     harmony.tessera_3(4),
+    baca.pitch("F#3"),
+    baca.scp_spanner(
+        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 # vc1
 
 maker(
     ("vc1", (1, 3)),
-    baca.clef("bass"),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
@@ -320,20 +336,34 @@ maker(
         invisible=([6],),
         tie=([6],),
     ),
-    baca.triple_staccato(
-        baca.pheads().get([0, 1, 2, -2, -1]),
+    baca.tuplet_bracket_down(),
+    baca.new(
+        baca.pitch("F4"),
+        baca.triple_staccato(),
+        selector=baca.pheads().get([0, 1, 2, -2, -1]),
     ),
-    baca.note_head_style_harmonic(
-        selector=baca.leaves()[4:-3],
+    # NOTE: text spanner must currently come before pitched trill spanner
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[5:12],
     ),
-    baca.hairpin(
-        "niente o<| mp |>o",
-        pieces=baca.lparts([1, 1 + 1]),
+    baca.new(
+        baca.pitch("F4"),
+        baca.hairpin(
+            "niente o<| mp |>o",
+            pieces=baca.lparts([1, 1 + 1]),
+        ),
+        baca.trill_spanner(
+            abjad.tweak(3).staff_padding,
+            alteration="M2",
+        ),
         map=baca.runs()[1:-1].map(baca.leaves().rleak()),
     ),
-    baca.trill_spanner(
+    baca.scp_spanner(
+        "P =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs()[1:-1].map(baca.leaves().rleak()),
+        map=baca.leaves().rleak().runs().get([0, -1]),
     ),
 )
 
@@ -342,13 +372,14 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("F4"),
     baca.triple_staccato(),
 )
 
 maker(
     ("vc1", (3, 4)),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[2:],
     ),
 )
@@ -356,13 +387,38 @@ maker(
 maker(
     ("vc1", (5, 9)),
     harmony.tessera_3(3),
+    baca.clef("bass"),
+    baca.pitch("F#2"),
+    baca.scp_spanner(
+        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 # vc2
 
 maker(
-    ("vc2", 1),
-    baca.clef("bass"),
+    ("vc2", (1, 3)),
+    baca.clef("treble"),
+    baca.pitch("F4"),
+    # NOTE: text spanner must currently lexically precede pitched trill
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        alteration="M2",
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    # NOTE: current clef / after-grace contention:
+    baca.clef(
+        "bass",
+        baca.leaf(-1),
+    ),
 )
 
 maker(
@@ -371,10 +427,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -384,13 +437,21 @@ maker(
 maker(
     ("vc2", (5, 9)),
     harmony.tessera_3(2),
+    baca.pitch("F#2"),
+    baca.scp_spanner(
+        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 # cb1
 
 maker(
     ("cb1", (1, 3)),
-    baca.clef("bass"),
+    baca.clef("treble"),
     baca.staff_lines(5),
     harmony.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
@@ -403,20 +464,40 @@ maker(
         invisible=([6],),
         tie=([6],),
     ),
-    baca.triple_staccato(
-        baca.pheads().get([0, 1, 2, -2, -1]),
+    baca.tuplet_bracket_down(),
+    baca.new(
+        baca.pitch(
+            "E4",
+            do_not_transpose=True,
+        ),
+        baca.triple_staccato(),
+        selector=baca.pheads().get([0, 1, 2, -2, -1]),
     ),
-    baca.note_head_style_harmonic(
-        selector=baca.leaves()[4:-3],
+    # NOTE: text spanner must currently come before pitched trill spanner
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
+        selector=baca.leaves()[5:12],
     ),
-    baca.hairpin(
-        "niente o<| mp |>o",
-        pieces=baca.lparts([1, 1 + 1]),
+    baca.new(
+        baca.pitch(
+            "E4",
+            do_not_transpose=True,
+        ),
+        baca.hairpin(
+            "niente o<| mp |>o",
+            pieces=baca.lparts([1, 1 + 1]),
+        ),
+        baca.trill_spanner(
+            abjad.tweak(3).staff_padding,
+            alteration="m2",
+        ),
         map=baca.runs()[1:-1].map(baca.leaves().rleak()),
     ),
-    baca.trill_spanner(
+    baca.scp_spanner(
+        "P =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs()[1:-1].map(baca.leaves().rleak()),
+        map=baca.leaves().rleak().runs().get([0, -1]),
     ),
 )
 
@@ -425,13 +506,17 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch(
+        "E4",
+        do_not_transpose=True,
+    ),
     baca.triple_staccato(),
 )
 
 maker(
     ("cb1", (3, 4)),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[2:],
     ),
 )
@@ -439,13 +524,41 @@ maker(
 maker(
     ("cb1", (5, 9)),
     harmony.tessera_3(1),
+    baca.clef("bass"),
+    baca.pitch("F#1"),
+    baca.scp_spanner(
+        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 # cb2
 
 maker(
-    ("cb2", 1),
-    baca.clef("bass"),
+    ("cb2", (1, 3)),
+    baca.clef("treble"),
+    baca.pitch(
+        "E4",
+        do_not_transpose=True,
+    ),
+    # NOTE: text spanner must currently lexically precede pitched trill
+    baca.scp_spanner(
+        "tasto poss. =|",
+        abjad.tweak(5.5).staff_padding,
+    ),
+    baca.trill_spanner(
+        abjad.tweak(3).staff_padding,
+        alteration="m2",
+        map=baca.runs().map(baca.leaves().rleak()),
+    ),
+    # NOTE: current clef / after-grace contention:
+    baca.clef(
+        "bass",
+        baca.leaf(-1),
+    ),
 )
 
 maker(
@@ -454,10 +567,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -467,6 +577,14 @@ maker(
 maker(
     ("cb2", (5, 9)),
     harmony.tessera_3(0),
+    baca.pitch("F#1"),
+    baca.scp_spanner(
+        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        abjad.tweak(5.5).staff_padding,
+        bookend=-1,
+        pieces=baca.plts(),
+        selector=baca.leaves(),
+    ),
 )
 
 # va, vc1, vc2, cb1, cb2
@@ -480,14 +598,9 @@ maker(
         invisible=([1, 5],),
         tie_runs=True,
     ),
-    baca.note_head_style_harmonic(),
     baca.hairpin(
         "niente o<| mp |>o",
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
-    ),
-    baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
@@ -497,11 +610,11 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
         ),
-    baca.accent(
-        baca.pheads(),
+    baca.chunk(
+        baca.accent(
+            baca.pheads(),
+        ),
+        baca.flat_glissando(),
     ),
     baca.dynamic("pp"),
-#    baca.label(
-#        abjad.label().with_durations(denominator=16),
-#    ),
 )
