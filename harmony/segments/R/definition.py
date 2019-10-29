@@ -544,24 +544,37 @@ maker(
 # va
 
 maker(
+    ("va", (1, 2)),
+    baca.pitch("C3"),
+)
+
+maker(
+    ("va", 3),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<G#5 A5 Bb5>"),
+)
+
+maker(
     ("va", (4, 5)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[2, 4, 5],
+        harmony.glissando_counts_curtailed,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(3).staff_padding,
     ),
 )
 
 maker(
     ("va", 6),
     baca.make_notes(),
+    baca.pitch("D4"),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -570,19 +583,58 @@ maker(
 )
 
 maker(
+    ("va", 8),
+    baca.clef("alto"),
+    baca.pitch("C3"),
+)
+
+maker(
     ("va", (9, 11)),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("G4"),
     baca.flat_glissando(
         selector=baca.leaves()[:-1],
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 # vc1
 
 maker(
-    ("vc1", (4, 5)),
-    harmony.sixteenths(
-        [3, -1, 8, -8, 3, -1],
+    ("vc1", (1, 2)),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("D5"),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
+)
+
+maker(
+    ("vc1", 3),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<G#5 A5 Bb5>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("vc1", (4, 5)),
+    baca.clef("bass"),
+    harmony.sixteenths(
+        harmony.damp_counts_curtailed,
+    ),
+    baca.pitch("D#3"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -595,6 +647,26 @@ maker(
         3,
         rest_plts=[0],
     ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("vc1", 8),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("D5"),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -602,6 +674,8 @@ maker(
     harmony.sixteenths(
         [3, -7],
     ),
+    baca.clef("bass"),
+    baca.pitch("D3"),
     baca.hairpin(
         "mp -- niente",
         map=baca.runs().map(baca.leaves().rleak()),
@@ -615,10 +689,39 @@ maker(
 # vc2
 
 maker(
+    ("vc2", (1, 2)),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("Btqf4"),
+    baca.markup(
+        r"\harmony-seven-c",
+        literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("vc2", 3),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<A5 Bb5 Cb6>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
     ("vc2", (4, 5)),
     harmony.sixteenths(
-        [3, -1, 8, -8, 3, -1],
+        harmony.damp_counts_curtailed,
     ),
+    baca.clef("bass"),
+    baca.pitch("C#3"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.runs(),
@@ -631,6 +734,24 @@ maker(
         2,
         rest_plts=[0],
     ),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("vc2", 8),
+    baca.clef("treble"),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
@@ -640,21 +761,72 @@ maker(
     ),
 )
 
+maker(
+    ("vc2", [8, (9, 11)]),
+    baca.note_head_style_harmonic(),
+    baca.pitch("Btqf4"),
+)
+
 # cb1
+
+maker(
+    ("cb1", 1),
+    baca.clef("treble"),
+    baca.pitch("E5", do_not_transpose=True),
+    # NOTE: currently glissando must lexically precede trill spanner
+    baca.new(
+        baca.flat_glissando(),
+        map=baca.runs(),
+    ),
+    baca.trill_spanner(
+        alteration="Fqs5",
+        map=baca.runs(),
+    ),
+    baca.markup(
+        r"\harmony-eleven-c",
+        literal=True,
+    ),
+)
+
+maker(
+    ("cb1", 2),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<B5 C6 Db6>", do_not_transpose=True),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("cb1", 3),
+    baca.note_head_style_harmonic(),
+    baca.pitch(
+        "<B5 C6 Db6>",
+        do_not_transpose=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
 
 maker(
     ("cb1", (4, 5)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[4, 5, 2],
+        harmony.glissando_counts_curtailed,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.clef("bass"),
+    baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
@@ -663,6 +835,33 @@ maker(
     harmony.tessera_2(
         1,
         rest_plts=[0],
+    ),
+    baca.pitch("E3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("cb1", 8),
+    baca.clef("treble"),
+    baca.pitch("E5", do_not_transpose=True),
+    # NOTE: currently glissando must lexically precede trill spanner
+    baca.new(
+        baca.flat_glissando(),
+        map=baca.runs(),
+    ),
+    baca.trill_spanner(
+        alteration="Fqs5",
+        map=baca.runs(),
+    ),
+    baca.markup(
+        r"\harmony-eleven-c",
+        literal=True,
     ),
 )
 
@@ -677,7 +876,7 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.scp_spanner(
-        "A -> B -> C",
+        "P2 -> P3 -> P1",
         abjad.tweak(3).staff_padding,
         pieces=baca.plts(),
         selector=baca.tleaves(),
@@ -695,7 +894,7 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.scp_spanner(
-        "C -> A -> B",
+        "P1 -> P2 -> P3",
         abjad.tweak(3).staff_padding,
         pieces=baca.plts(),
         selector=baca.tleaves(),
@@ -713,7 +912,7 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.scp_spanner(
-        "B -> C -> A",
+        "P3 -> P1 -> P2",
         abjad.tweak(3).staff_padding,
         pieces=baca.plts(),
         selector=baca.tleaves(),
@@ -722,6 +921,7 @@ maker(
 
 maker(
     ("cb1", (9, 11)),
+    baca.pitch("E5", do_not_transpose=True),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -731,6 +931,17 @@ maker(
 )
 
 # cb2
+
+maker(
+    ("cb2", 1),
+    baca.note_head_style_harmonic(),
+    baca.pitch("G3"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
 
 maker(
     ("cb2", 2),
@@ -759,6 +970,14 @@ maker(
 
 maker(
     ("cb2", (2, 3)),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<A#5 B5 C6>", do_not_transpose=True),
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.tleaves().rleak(),
@@ -768,28 +987,61 @@ maker(
 maker(
     ("cb2", (4, 5)),
     harmony.sixteenths(
-        [2, 1, -1, 8, -8, 3, -1],
-        after_graces=[5, 2, 4],
+        harmony.glissando_counts_curtailed,
     ),
-    baca.staff_positions(
-        [-2, 2],
-        mock=True,
-    ),
+    baca.clef("bass"),
+    baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
         map=baca.runs(),
+    ),
+    baca.dynamic("ppp"),
+    baca.half_clt_spanner(
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
 maker(
     ("cb2", 6),
     harmony.tessera_2(0),
+    baca.pitch("D3"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.tleaves(),
+    ),
+)
+
+maker(
+    ("cb2", 8),
+    baca.note_head_style_harmonic(),
+    baca.pitch("G3"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
 )
 
 maker(
     ("cb2", (9, 11)),
+    baca.clef("treble"),
+    baca.pitch("E5", do_not_transpose=True),
+    # NOTE: currently glissando must lexically precede trill spanner
     baca.flat_glissando(
         selector=baca.leaves()[:-1],
+    ),
+    baca.trill_spanner(
+        # large right padding because open-volta follows in next segment
+        abjad.tweak(6).bound_details__right__padding,
+        abjad.tweak(3).staff_padding,
+        alteration="Fqs5",
+    ),
+    baca.markup(
+        r"\harmony-eleven-c",
+        literal=True,
     ),
 )
 
@@ -801,13 +1053,20 @@ maker(
         [-4, 6, 2, -4], 
         untie=True,
     ),
-    baca.flat_glissando(),
+    baca.new(
+        # excluded cb1 because of current gliss / pitch trill order contention
+        baca.flat_glissando(),
+        match=[0, 1, 2, 4],
+    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
+    baca.new(
+        baca.trill_spanner(),
+        match=[1, 2],
+    ),
 )
 
 maker(
@@ -816,13 +1075,20 @@ maker(
         [-2, "+", -1],
         untie=True,
     ),
-    baca.flat_glissando(),
+    baca.new(
+        # excluded cb1 because of gliss / pitch trill order contention
+        baca.flat_glissando(),
+        match=[0, 1, 2],
+    ),
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
+    baca.new(
+        baca.trill_spanner(),
+        match=[1, 2],
+    ),
 )
 
 maker(
@@ -834,10 +1100,6 @@ maker(
     # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
         baca.pleaves().get([1], 2),
-    ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
     ),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -862,13 +1124,21 @@ maker(
     harmony.sixteenths(
         [8, 4, -4],
     ),
-    baca.flat_glissando(),
+    baca.new(
+        baca.flat_glissando(),
+        # excluded cb1 because of current gliss / trill order contention
+        match=[0, 1, 2, 4],
+    ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
+    baca.new(
+        baca.trill_spanner(),
+        # excluded cb1 because of current gliss / trill order contention
+        match=[1, 2],
+    ),
 )
 
 # va, vc1, vc2, cb1
@@ -926,9 +1196,13 @@ maker(
         "niente",
         selector=baca.leaves().rleak()[-1],
     ),
-    baca.trill_spanner(
-        # large right padding because open-volta follows in next segment
-        abjad.tweak(6).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
+    baca.new(
+        baca.trill_spanner(
+            # large right padding because open-volta follows in next segment
+            abjad.tweak(6).bound_details__right__padding,
+            abjad.tweak(3).staff_padding,
+        ),
+        # excluded cb2 because of gliss / trill order contention
+        match=[0, 1],
     ),
 )

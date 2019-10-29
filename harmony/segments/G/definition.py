@@ -900,7 +900,10 @@ maker(
 maker(
     ("cb1", 2),
     baca.clef("treble"),
-    baca.pitch("<C5 Db5 Eb5>"),
+    baca.pitch(
+        "<C5 Db5 Eb5>",
+        do_not_transpose=True,
+    ),
 )
 
 maker(
@@ -912,10 +915,12 @@ maker(
     ),
     baca.pitch(
         "Bb3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_b_flat.rotate(-5 - 2),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -966,7 +971,10 @@ maker(
         [4, 4, 4, 4],
     ),
     baca.clef("treble"),
-    baca.pitch("Bb4"),
+    baca.pitch(
+        "Bb4",
+        do_not_transpose=True,
+    ),
     baca.espressivo(
         baca.pheads(),
     ),

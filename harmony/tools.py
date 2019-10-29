@@ -19,6 +19,47 @@ warble_pitches = baca.sequence(
     "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
 )
 
+# shared counts
+
+damp_counts = [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
+
+damp_counts_curtailed = [3, -1, 8, -8, 3, -1]
+
+
+glissando_counts = [
+    2,
+    1,
+    -1,
+    4,
+    2,
+    1,
+    -1,
+    -8,
+    4,
+    2,
+    1,
+    -1,
+    2,
+    1,
+    -1,
+    -16,
+    2,
+    1,
+    -1,
+    8,
+    2,
+    1,
+    -1,
+    -4,
+    2,
+    1,
+    -1,
+]
+
+glissando_counts_curtailed = [2, 1, -1, 4, 2, 1, -1, -8, 2, 1, -1]
+
+duration_color = [21, -14, 18, "-"]
+
 # Db3:
 appoggiato_pitches_d_flat_3 = baca.sequence(
     "F3 F#3  D3 D#3 Dtqs3 E3 Eqs3 F3  D#3 F3 Fqs3 F#3 Ftqs3".split()

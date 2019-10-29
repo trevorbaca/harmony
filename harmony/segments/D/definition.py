@@ -538,10 +538,12 @@ maker(
     ("cb1", 9),
     baca.pitch(
         "Ab3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-32 - 21),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.markup(
@@ -570,7 +572,10 @@ maker(
 
 maker(
     ("cb1", [(1, 8), 11]),
-    baca.pitch("Aqs4"),
+    baca.pitch(
+        "Aqs4",
+        do_not_transpose=True,
+    ),
     baca.markup(
         r"\baca-pizz-markup",
         abjad.tweak(8).staff_padding,
@@ -629,7 +634,10 @@ maker(
 
 maker(
     ("cb2", [(1, 8), 11]),
-    baca.pitch("F#4"),
+    baca.pitch(
+        "F#4",
+        do_not_transpose=True,
+        ),
     baca.markup(
         r"\baca-pizz-markup",
         literal=True,

@@ -383,7 +383,10 @@ maker(
     baca.repeat_tie(
         baca.leaf(0),
     ),
-    baca.pitch("Bb4"),
+    baca.pitch(
+        "Bb4",
+        do_not_transpose=True,
+    ),
     baca.espressivo(
         baca.pheads()[1:],
     ),
@@ -424,6 +427,7 @@ maker(
     baca.pitch(
         "<C5 Db5 Eb5>",
         baca.plts(exclude=abjad.const.HIDDEN),
+        do_not_transpose=True,
     ),
 )
 
@@ -480,6 +484,7 @@ maker(
     baca.pitch(
         "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
+        do_not_transpose=True,
     ),
 )
 

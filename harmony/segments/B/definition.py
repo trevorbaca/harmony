@@ -830,10 +830,12 @@ maker(
     ),
     baca.pitch(
         "Ab3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-2),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -887,10 +889,12 @@ maker(
     ("cb1", (8, 11)),
     baca.pitch(
         "Ab3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-32),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -938,10 +942,12 @@ maker(
     ),
     baca.pitch(
         "Ab3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-4),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
@@ -995,10 +1001,12 @@ maker(
     baca.clef("treble"),
     baca.pitch(
         "Ab3",
+        do_not_transpose=True,
         selector=baca.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-23),
+        do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
     baca.text_spanner(
