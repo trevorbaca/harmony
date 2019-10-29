@@ -291,10 +291,23 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E3"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("ff"),
+    baca.scp_spanner(
+        "P =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("va", 2),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<G4 Ab4 Bb4>"),
+    baca.dynamic("pp"),
 )
 
 maker(
@@ -302,10 +315,19 @@ maker(
     harmony.sixteenths(
         [4],
     ),
+    baca.pitch("E3"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "T -> P -> T",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([2, 1]),
+        selector=baca.leaves(),
+    ),
 )
 
 maker(
@@ -314,10 +336,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D4 C#4"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -340,10 +359,24 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E2"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("ff"),
+    baca.scp_spanner(
+        "P =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("vc1", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<A4 B4 C5>"),
+    baca.dynamic("pp"),
 )
 
 maker(
@@ -351,10 +384,19 @@ maker(
     harmony.sixteenths(
         [4],
     ),
+    baca.clef("bass"),
+    baca.pitch("E2"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "T -> P",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.leaves(),
+    ),
 )
 
 maker(
@@ -365,14 +407,21 @@ maker(
             [(2, 4), (4, 4), (3, 4)],
         ),
         extra_counts=[0, -4, 0],
-        denominator=True,
+        denominator=None,
     ),
+    baca.tuplet_bracket_down(),
+    baca.pitch("E2"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[1:].rleak(),
+    ),
+    baca.scp_spanner(
+        "T -> P =|",
+        abjad.tweak(3).staff_padding,
+        pieces=baca.mgroups([1, 2]),
     ),
 )
 
@@ -393,10 +442,19 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
+    baca.pitch("Dqf3"),
     baca.bow_speed_spanner(
-        "slow bow =|",
+        "poco scr. =|",
         abjad.tweak(3).staff_padding,
     ),
+)
+
+maker(
+    ("vc2", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch("<G4 Ab4 Bb4>"),
+    baca.dynamic("pp"),
 )
 
 maker(
@@ -414,11 +472,13 @@ maker(
 
 maker(
     ("vc2", (4, 6)),
+    baca.clef("bass"),
+    baca.pitch("Dqf3"),
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
     baca.bow_speed_spanner(
-        "slow bow =|",
+        "poco scr. =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -429,10 +489,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -455,10 +512,32 @@ maker(
     harmony.sixteenths(
         [4, "-"],
     ),
+    baca.pitch("E1"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("ff"),
+    baca.scp_spanner(
+        "P =|",
+        abjad.tweak(3).staff_padding,
+        selector=baca.tleaves().rleak(),
+    ),
+)
+
+maker(
+    ("cb1", 2),
+    baca.clef("treble"),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<A4 B4 C5>",
+        do_not_transpose=True,
+    ),
+    baca.dynamic("pp"),
+)
+
+maker(
+    ("cb1", 4),
+    baca.clef("bass"),
 )
 
 maker(
@@ -471,13 +550,20 @@ maker(
         extra_counts=[0, -4, 0],
         denominator=True,
     ),
+    baca.tuplet_bracket_down(),
+    baca.pitch("E1"),
     baca.triple_staccato(
         baca.pheads(),
     ),
     baca.dynamic("p"),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[1:].rleak(),
+    ),
+    baca.scp_spanner(
+        "T -> P =|",
+        abjad.tweak(3).staff_padding,
+        pieces=baca.mgroups([1, 2]),
     ),
 )
 
@@ -492,7 +578,17 @@ maker(
 
 maker(
     ("cb2", 1),
-    baca.clef("bass"),
+    baca.clef("treble"),
+)
+
+maker(
+    ("cb2", 2),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        do_not_transpose=True,
+    ),
+    baca.dynamic("pp"),
 )
 
 maker(
@@ -500,9 +596,15 @@ maker(
     harmony.sixteenths(
         [4],
     ),
+    baca.clef("bass"),
+    baca.pitch("E1"),
+    baca.flat_glissando(),
     baca.scp_spanner(
-        "scp =|",
+        "P -> T",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.leaves(),
     ),
 )
 
@@ -512,10 +614,7 @@ maker(
         ["+"],
         after_graces=[1],
     ),
-    baca.staff_positions(
-        [2, -2],
-        mock=True,
-    ),
+    baca.pitches("D2 C#2"),
     baca.glissando(),
     baca.hairpin(
         "pp >o niente",
@@ -534,9 +633,6 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
     baca.make_notes(),
-    baca.staff_position(
-        [-1, 0, 1],
-    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -550,7 +646,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
