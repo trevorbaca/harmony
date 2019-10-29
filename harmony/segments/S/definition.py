@@ -531,19 +531,19 @@ maker(
 )
 
 maker(
-    ("va", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
+    ("va", [(1, 2), (4, 9), 12]),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<G#5 A5 Bb5>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 maker(
     ("va", 12),
-    baca.clef("alto"),
+    baca.clef("treble"),
 )
 
 maker(
@@ -557,19 +557,35 @@ maker(
 # vc1
 
 maker(
-    ("vc1", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    ("vc1", 1),
+    baca.clef("treble")
+)
+
+maker(
+    ("vc1", 2),
+    baca.note_head_style_harmonic(),
+    baca.pitch("D5"),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
+)
+
+maker(
+    ("vc1", [1, (4, 9), 12]),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<G#5 A5 Bb5>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 maker(
     ("vc1", 12),
-    baca.clef("bass"),
+    baca.clef("treble"),
 )
 
 maker(
@@ -583,19 +599,30 @@ maker(
 # vc2
 
 maker(
-    ("vc2", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    ("vc2", [1, (4, 9), 12]),
+    baca.note_head_style_harmonic(),
+    baca.pitch("<A5 Bb5 Cb6>"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
+)
+
+maker(
+    ("vc2", 2),
+    baca.note_head_style_harmonic(),
+    baca.pitch("Btqf4"),
+    baca.markup(
+        baca.markups.string_number(4),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 maker(
     ("vc2", 12),
-    baca.clef("bass"),
+    baca.clef("treble"),
 )
 
 maker(
@@ -609,19 +636,39 @@ maker(
 # cb1
 
 maker(
-    ("cb1", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    ("cb1", [1, (4, 9), 12]),
+    baca.note_head_style_harmonic(),
+    baca.pitch(
+        "<B5 C6 Db6>",
+        do_not_transpose=True,
     ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
 maker(
-    ("cb1", 12),
+    ("cb1", 2),
     baca.clef("bass"),
+    baca.note_head_style_harmonic(),
+    baca.pitch("G3"),
+    baca.markup(
+        baca.markups.string_number(1),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
+    ),
+)
+
+maker(
+    ("cb1", 4),
+    baca.clef("treble"),
+)
+
+maker(
+    ("cb1", 12),
+    baca.clef("treble"),
 )
 
 maker(
@@ -653,20 +700,23 @@ maker(
         written_quarters=([0],),
         invisible=([1],),
     ),
-    baca.flat_glissando(
-        selector=baca.tleaves()[2:],
-        ),
 )
 
 maker(
     ("cb2", (1, 2)),
+    baca.pitch(
+        "E5",
+        do_not_transpose=True,
+    ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
+    baca.trill_spanner(
+        alteration="Fqs5",
+    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves()[1:8],
@@ -675,12 +725,15 @@ maker(
 
 maker(
     ("cb2", (4, 9)),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
+    baca.note_head_style_harmonic(),
+    baca.pitch(
+        "<A#5 B5 C6>",
+        do_not_transpose=True,
     ),
-    baca.flat_glissando(
-        hide_middle_stems=True,
+    baca.markup(
+        baca.markups.string_number(3),
+        abjad.tweak(1.5).staff_padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -740,10 +793,6 @@ maker(
     baca.invisible_music(
         baca.pleaves().get([1], 2),
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -778,11 +827,14 @@ maker(
         pieces=baca.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(),
+    baca.new(
+        baca.trill_spanner(),
+        match=[0, 1],
+    ),
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    (["va", "vc1", "vc2", "cb1", "cb2"], [4, 6, 8]),
     harmony.tuplet(
         [(1,)],
         force_augmentation=True,
@@ -790,7 +842,7 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
+    (["va", "vc1", "vc2", "cb1", "cb2"], [5, 7, 9]),
     baca.make_notes(),
 )
 
@@ -811,12 +863,11 @@ maker(
         [(1,)],
         force_augmentation=True,
     ),
-    baca.staff_position(
-        [-1, 0, 1],
-        mock=True,
-    ),
     baca.stem_tremolo(
         baca.pleaves(),
+    ),
+    baca.dynamic(
+        "ff-scratch",
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
