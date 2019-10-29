@@ -27,3 +27,7 @@ TO-DO
     right places. Redo glockenspiel pitches as sounding (rather than written).
 
 10. Add invisible-rewrite rhythms.
+
+11. Debug simultaneous clef / after-grace error.
+
+12. Debug simultaneous text spanner / pitched trill spanner error.
