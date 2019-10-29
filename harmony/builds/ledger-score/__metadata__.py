@@ -32,7 +32,7 @@ metadata = abjad.OrderedDict(
                 231,
                 241,
                 251,
-                261,
+                262,
                 ],
             ),
         ('catalog_number_suffix', 'LED'),
