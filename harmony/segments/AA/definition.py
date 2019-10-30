@@ -407,6 +407,7 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
+        abjad.tweak(1).self_alignment_X,
         literal=True,
     ),
     baca.new(

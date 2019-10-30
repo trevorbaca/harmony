@@ -228,14 +228,20 @@ maker(
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
     ),
     baca.dynamic("f"),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(0.25).self_alignment_X,
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -281,6 +287,9 @@ maker(
         extra_counts=[0, 6],
         rest_except=[0, 1, 4, -2, -1],
     ),
+    baca.stem_down(),
+    baca.tuplet_bracket_down(),
+    baca.tuplet_bracket_staff_padding(3),
     baca.staff_positions(
         [0, 0, -2, 0, -2],
         allow_repeats=True,
@@ -290,9 +299,12 @@ maker(
         baca.dynamic("f"),
         measures=8,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
+    baca.markup(
+        r"\baca-purpleheart-markup",
+        abjad.tweak(0.25).self_alignment_X,
+        abjad.tweak(3).staff_padding,
+        literal=True,
+    ),
 )
 
 # hp

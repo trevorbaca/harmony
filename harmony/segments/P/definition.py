@@ -177,7 +177,6 @@ maker(
 
 maker(
     ("perc2", (1, 6)),
-    baca.clef("bass"),
     baca.staff_lines(1),
     harmony.sixteenths(
         harmony.duration_color,
