@@ -189,7 +189,7 @@ maker(
     ),
     baca.pitch("Eb3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         map=baca.runs().map(baca.leaves().rleak()),
     ),
 )
