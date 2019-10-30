@@ -42,7 +42,14 @@ maker(
     baca.rehearsal_mark(
         "Y",
         baca.skip(2 - 1),
-        abjad.tweak((0, 18)).extra_offset,
+        abjad.tweak(
+            (0, 18),
+            tag=abjad.tags.NOT_PARTS,
+        ).extra_offset,
+        abjad.tweak(
+            (0, 10),
+            tag=abjad.tags.ONLY_PARTS,
+        ).extra_offset,
     ),
 )
 
