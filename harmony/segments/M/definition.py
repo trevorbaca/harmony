@@ -65,18 +65,22 @@ maker(
 # text
 
 maker(
-    ("bfl", 2),
-    baca.literal(
-        "\\footnote \"(12)\" #'(0 . 0) \\harmony-text-twelve",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-twelve",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(2 - 1),
     ),
 )
 
 maker(
-    ("bfl", 6),
-    baca.literal(
-        "\\footnote \"(13)\" #'(0 . 0) \\harmony-text-thirteen",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-thirteen",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(6 - 1),
     ),
 )
 

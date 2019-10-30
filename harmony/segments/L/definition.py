@@ -80,10 +80,12 @@ maker(
 # text
 
 maker(
-    ("perc1", 9),
-    baca.literal(
-        "\\footnote \"(11)\" #'(0 . 0) \\harmony-text-eleven",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-eleven",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(9 - 1),
     ),
 )
 

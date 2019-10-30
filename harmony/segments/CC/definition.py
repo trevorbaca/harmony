@@ -58,10 +58,12 @@ maker(
 # text
 
 maker(
-    ("bfl", 2),
-    baca.literal(
-        "\\footnote \"(32)\" #'(0 . 0) \\harmony-text-thirty-two",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-twenty-eight",
+        abjad.tweak((4, -244)).extra_offset,
+        literal=True,
+        selector=baca.skip(3 - 1),
     ),
 )
 

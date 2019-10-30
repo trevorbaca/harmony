@@ -8,14 +8,15 @@ breaks = baca.breaks(
             *distances,
             measure=1,
             y_offset=40,
-            ),
-        number=1,
         ),
+        number=1,
+    ),
     local_measure_numbers=True,
-    )
+)
 
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
     fallback_duration=(1, 40),
 )
+spacing.override([3], (1, 288), fermata=True)

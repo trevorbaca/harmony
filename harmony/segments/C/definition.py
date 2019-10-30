@@ -69,18 +69,22 @@ maker(
 # text
 
 maker(
-    ("bfl", 3),
-    baca.literal(
-        "\\footnote \"(2)\" #'(0 . 0) \\harmony-text-two",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-two",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(3 - 1),
     ),
 )
 
 maker(
-    ("perc1", 5),
-    baca.literal(
-        "\\footnote \"(3)\" #'(0 . 0) \\harmony-text-three",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-three",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(5 - 1),
     ),
 )
 
@@ -92,6 +96,8 @@ maker(
         harmony.cerulean[1:],
     ),
     baca.pitch("F3"),
+    baca.dynamic('"mf"'),
+    baca.dls_staff_padding(3),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -113,6 +119,11 @@ maker(
         harmony.cerulean[2:],
     ),
     baca.pitch("F3"),
+    baca.hairpin(
+        'p < "f"',
+        selector=baca.tleaves(),
+    ),
+    baca.dls_staff_padding(3),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
     ),

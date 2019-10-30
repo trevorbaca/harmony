@@ -59,10 +59,12 @@ maker(
 # text
 
 maker(
-    ("bfl", 7 + 1),
-    baca.literal(
-        "\\footnote \"(7)\" #'(0 . 0) \\harmony-text-seven",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-seven",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(7 - 1),
     ),
 )
 

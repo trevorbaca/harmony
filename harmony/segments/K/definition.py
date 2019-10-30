@@ -73,18 +73,22 @@ maker(
 # text
 
 maker(
-    ("perc1", 3),
-    baca.literal(
-        "\\footnote \"(9)\" #'(0 . 0) \\harmony-text-nine",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-nine",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(3 - 1),
     ),
 )
 
 maker(
-    ("bfl", 9),
-    baca.literal(
-        "\\footnote \"(10)\" #'(0 . 0) \\harmony-text-ten",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-ten",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(9 - 1),
     ),
 )
 

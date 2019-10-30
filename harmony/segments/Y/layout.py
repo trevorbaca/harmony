@@ -8,7 +8,7 @@ breaks = baca.breaks(
             *distances,
             measure=1,
             y_offset=40,
-            ),
+        ),
         number=1,
     ),
     baca.page(
@@ -16,7 +16,7 @@ breaks = baca.breaks(
             *distances,
             measure=7,
             y_offset=40,
-            ),
+        ),
         number=2,
     ),
     local_measure_numbers=True,
@@ -25,7 +25,7 @@ breaks = baca.breaks(
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
-    fallback_duration=(1, 40),
+    fallback_duration=(1, 32),
 )
-spacing.override([1, 3], (1, 32))
-spacing.override(6, (1, 32))
+spacing.override((1, 2), (1, 20))
+spacing.override([4, 11], (1, 288), fermata=True)

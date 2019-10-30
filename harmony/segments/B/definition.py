@@ -80,14 +80,6 @@ maker(
     ),
 )
 
-#maker(
-#    ("bfl", 12),
-#    baca.literal(
-#        "\\footnote \"(1)\" #'(0 . 0) \\harmony-text-one",
-#        format_slot="opening",
-#    ),
-#)
-
 # bfl
 
 maker(
