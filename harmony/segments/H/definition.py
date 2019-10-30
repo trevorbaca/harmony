@@ -94,7 +94,7 @@ maker(
     baca.dynamic("mp"),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
             right_broken=True,
         ),
         baca.metric_modulation_spanner(

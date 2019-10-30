@@ -91,7 +91,7 @@ maker(
         abjad.tweak(-0.75).self_alignment_X,
     ),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 

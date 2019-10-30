@@ -116,7 +116,7 @@ maker(
     ("bfl", (1, 2)),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
@@ -137,7 +137,7 @@ maker(
     baca.pitch("E3"),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
@@ -169,7 +169,7 @@ maker(
     ("bfl", (7, 8)),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,

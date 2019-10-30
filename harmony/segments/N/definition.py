@@ -236,7 +236,7 @@ maker(
     baca.pitch("D5"),
     baca.text_spanner(
         "A =|",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
         map=baca.runs(),
