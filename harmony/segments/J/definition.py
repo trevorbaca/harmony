@@ -411,10 +411,6 @@ maker(
         baca.pheads().get([0, -1]),
     ),
     baca.dynamic("p"),
-    baca.markup(
-        r"\baca-bd-fingertips-markup",
-        literal=True,
-    ),
 )
 
 maker(
