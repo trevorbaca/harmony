@@ -70,21 +70,25 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-two",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(3 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-two",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(3 - 1),
+        ),
     ),
 )
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-three",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(5 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-three",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(5 - 1),
+        ),
     ),
 )
 

@@ -74,21 +74,25 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-nine",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(3 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-nine",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(3 - 1),
+        ),
     ),
 )
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-ten",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(9 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-ten",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(9 - 1),
+        ),
     ),
 )
 

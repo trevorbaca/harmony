@@ -75,11 +75,13 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-eight",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(9 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-eight",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(9 - 1),
+        ),
     ),
 )
 
