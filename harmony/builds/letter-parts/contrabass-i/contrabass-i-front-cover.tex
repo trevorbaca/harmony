@@ -1,6 +1,6 @@
 \documentclass[11pt]{report}
 \usepackage[T1]{fontenc}
-\usepackage[papersize={8.5in, 11in}, margin=0.5in]{geometry}
+\usepackage[papersize={8.5in, 11in}, margin=0.75in]{geometry}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{fontspec,nopageno,xltxtra,xunicode}
@@ -15,9 +15,9 @@
 
         \begin{tikzpicture}[remember picture, overlay]
             \draw[line width = 6pt]
-                ($(current page.north west) + (0.5in,-0.5in)$)
+                ($(current page.north west) + (0.75in,-0.75in)$)
                 rectangle
-                ($(current page.south east) + (-0.5in,0.5in)$);
+                ($(current page.south east) + (-0.75in,0.75in)$);
         \end{tikzpicture}
 
         \drop=0.1\textheight
