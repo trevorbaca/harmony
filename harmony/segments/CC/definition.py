@@ -59,11 +59,13 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-twenty-eight",
-        abjad.tweak((4, -244)).extra_offset,
-        literal=True,
-        selector=baca.skip(3 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-twenty-eight",
+            abjad.tweak((4, -244)).extra_offset,
+            literal=True,
+            selector=baca.skip(3 - 1),
+        ),
     ),
 )
 

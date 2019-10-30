@@ -88,21 +88,25 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-twenty-five",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(2 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-twenty-five",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(2 - 1),
+        ),
     ),
 )
 
 maker(
     "Global_Skips",
-    baca.markup(
-        r"\harmony-text-twenty-six",
-        abjad.tweak((4, -30)).extra_offset,
-        literal=True,
-        selector=baca.skip(8 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-text-twenty-six",
+            abjad.tweak((4, -30)).extra_offset,
+            literal=True,
+            selector=baca.skip(8 - 1),
+        ),
     ),
 )
 
