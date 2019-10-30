@@ -18,7 +18,8 @@ stage_markup = (
 
 maker = baca.SegmentMaker(
     activate=[
-        abjad.tags.LOCAL_MEASURE_NUMBER,
+        #abjad.tags.LOCAL_MEASURE_NUMBER,
+        abjad.tags.MEASURE_NUMBER,
         abjad.tags.STAGE_NUMBER,
     ],
     deactivate=[
@@ -420,6 +421,7 @@ maker(
     baca.pitch("F3"),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
+        left_broken=True,
         selector=baca.leaves()[1:12],
     ),
     baca.bow_speed_spanner(
