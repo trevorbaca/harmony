@@ -139,6 +139,18 @@ class ScoreTemplate(baca.ScoreTemplate):
 
     _global_rests_in_topmost_staff = True
 
+    _part_manifest = abjad.PartManifest(
+        abjad.Part(section="BassFlute", section_abbreviation="BFL"),
+        abjad.Part(section="PercussionI", section_abbreviation="PERC1"),
+        abjad.Part(section="PercussionII", section_abbreviation="PERC2"),
+        abjad.Part(section="Harp", section_abbreviation="HP"),
+        abjad.Part(section="Viola", section_abbreviation="VA"),
+        abjad.Part(section="CelloI", section_abbreviation="VC1"),
+        abjad.Part(section="CelloII", section_abbreviation="VC2"),
+        abjad.Part(section="ContrabassI", section_abbreviation="CB1"),
+        abjad.Part(section="ContrabassII", section_abbreviation="CB2"),
+    )
+
     ### INITIALIZER ###
 
     def __init__(self):
@@ -428,6 +440,29 @@ class ScoreTemplate(baca.ScoreTemplate):
         return score
 
     ### PUBLIC PROPERTIES ###
+
+    @property
+    def part_manifest(self):
+        """
+        Gets part manifest.
+
+        ..  container:: example
+
+            >>> score_template = harmony.ScoreTemplate()
+            >>> for part in score_template.part_manifest.parts:
+            ...     part
+            Part(instrument='BassFlute', number=1, section='BassFlute', section_abbreviation='BFL')
+            Part(instrument='PercussionI', number=2, section='PercussionI', section_abbreviation='PERC1')
+            Part(instrument='PercussionII', number=3, section='PercussionII', section_abbreviation='PERC2')
+            Part(instrument='Harp', number=4, section='Harp', section_abbreviation='HP')
+            Part(instrument='Viola', number=5, section='Viola', section_abbreviation='VA')
+            Part(instrument='CelloI', number=6, section='CelloI', section_abbreviation='VC1')
+            Part(instrument='CelloII', number=7, section='CelloII', section_abbreviation='VC2')
+            Part(instrument='ContrabassI', number=8, section='ContrabassI', section_abbreviation='CB1')
+            Part(instrument='ContrabassII', number=9, section='ContrabassII', section_abbreviation='CB2')
+
+        """
+        return self._part_manifest
 
     @property
     def voice_abbreviations(self):
