@@ -9,82 +9,218 @@ harmony-text-one = \markup {
     Here I am. On my own. And no-one —
     } } }
 
-harmony-text-two = \markup \column {
+harmony-text-two = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+        \justify { Back. }
+        \justify { \null }
+        \justify { Hear me. On my — }
+    }
+    } } }
+
+harmony-text-three = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
     \justify { Back. }
-
-    \justify { Hear me. On my — (2) }
-}
-
-harmony-text-three = \markup \column {
-    \justify { Back. }
-
+    \justify { \null }
     \justify { Here I am. On my own. On the dunes. Where I can hear the sea. ▢
-    (3) }
-}
+        }
+    }
+    } } }
 
-harmony-text-four = \markup \column {
+harmony-text-four = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify  { Back. }
-
+    \justify { \null }
     \justify { Here I am. }
-
+    \justify { \null }
     \justify { Not so far. }
+    \justify { \null }
+    \justify { On the dunes. Where I can see... }
 
-    \justify { On the dunes. Where I can see... (4) }
-}
+    }
+    } } }
 
-harmony-text-five = \markup \column {
+
+harmony-text-five = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
     \justify { ...the wind in the marram grass. A bird – a gull – shearing the
     sky. Soundless. The wind: soundless. The gull: soundless. It is early
     morning. First light. I must have got up in the dark. Dressed myself. Come
-    here. ▢ (5) }
-}
+    here. ▢  }
 
-harmony-text-six = \markup \column {
+    }
+    } } }
+
+
+harmony-text-six = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
-    \justify { No more. ▢  (6) }
-}
+    \justify { No more. ▢  }
 
-harmony-text-seven = \markup \column {
+    }
+    } } }
+
+
+
+harmony-text-seven = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Back. }
+    \justify { \null }
     
     \justify { Where I can — }
+    \justify { \null }
 
     \justify { Further. }
+    \justify { \null }
 
     \justify { Here I am. On my own. No. Not on my own. At that dance, where I
     can see the band on the narrow stage, see them and hear them. A saxophone
     player – a girl – shearing the air. A roar, but sweet and accurate. The
     band: silenced. The girl: on her own. It would be early morning by now.
     First light. We have been up all night. Dressed to the nines. Come here. ▢
-    (7) }
-}
+    }
 
-harmony-text-eight = \markup
-    \justify { Come here. ▢  (8) }
+    }
+    } } }
 
-harmony-text-nine = \markup \column {
+
+harmony-text-eight = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
+    \justify { Come here. ▢  }
+    \justify { \null }
+
+    }
+    } } }
+
+
+harmony-text-nine = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
-    \justify { Come here. As you will. When you’re young. ▢  (9) }
-}
+    \justify { Come here. As you will. When you’re young. ▢  }
 
-harmony-text-ten = \markup \column {
+    }
+    } } }
+
+
+harmony-text-ten = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
-    \justify { No more. ▢  (10) }
-}
+    \justify { No more. ▢  }
 
-harmony-text-eleven = \markup \column {
+    }
+    } } }
+
+
+
+harmony-text-eleven = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Back. }
+    \justify { \null }
 
-    \justify { The girl: on her own. ▢  (11) }
-}
+    \justify { The girl: on her own. ▢  }
 
-harmony-text-twelve = \markup \column {
+    }
+    } } }
+
+
+harmony-text-twelve = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Yes. }
+    \justify { \null }
 
     \justify { The girl on her own. I went up to the stage. As close as I could
     get. Of course, she saw me. Her eyes caught mine. First meeting. She
@@ -93,33 +229,89 @@ harmony-text-twelve = \markup \column {
     night, she said. In these costumes. Then: Come up here, she said. Perhaps I
     shook my head, or made some other sign. No, come up here. If you will. And
     that smile. What could I do? One hand on the stage, I jumped up. I looked
-    back down, to the world I had left behind. ▢  (12) }
-}
+    back down, to the world I had left behind. ▢  }
 
-harmony-text-thirteen = \markup \column {
+
+    }
+    } } }
+
+
+harmony-text-thirteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { I come to a stop. }
+    \justify { \null }
 
     \justify { On. }
+    \justify { \null }
 
-    \justify { I come to a stop. ▢  (13) }
+    \justify { I come to a stop. ▢  }
 
-}
 
-harmony-text-fourteen = \markup
-    \justify { On. ▢  (14) }
+    }
+    } } }
 
-harmony-text-fifteen = \markup \column {
+
+harmony-text-fourteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
+    \justify { On. ▢  }
+
+    }
+    } } }
+
+
+harmony-text-fifteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
-    \justify { The world I had left behind. ▢  (15) }
-}
+    \justify { The world I had left behind. ▢  }
 
-harmony-text-sixteen = \markup \column {
+    }
+    } } }
+
+
+harmony-text-sixteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    %%%\override #'(font-size . 6)
+    \override #'(font-size . 4)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
 
     \justify { I turned my eyes to her. That smile again. I took her in my
     arms. The band went wild. Or: I jumped back down. Or: Do you want to dance?
     she said. Or: — }
+    
+    \justify { \null }
 
     \justify { Back. }
 
@@ -150,6 +342,8 @@ harmony-text-sixteen = \markup \column {
     absorbing our voices. It got to that stage — On. It got to that stage where
     you start to panic. You feel you’ve left the normal world behind. You — }
 
+    \justify { \null }
+
     \justify { On. }
 
     \justify { Where was I? }
@@ -164,116 +358,295 @@ harmony-text-sixteen = \markup \column {
 
     \justify { Back. }
 
-    \justify { Harmony. (16) }
-}
+    \justify { Harmony. }
 
-harmony-text-seventeen-twenty = \markup \column {
-    \justify { Not yet. (17) }
+    }
+    } } }
+
+
+
+harmony-text-seventeen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
+    \justify { Not yet. }
+    \justify { \null }
 
     \justify { On. }
+    \justify { \null }
 
-    \justify { Hear me. (18) }
-
-    \justify { Back. }
-
-    \justify { Hear me. (19) }
+    \justify { Hear me. }
+    \justify { \null }
 
     \justify { Back. }
+    \justify { \null }
 
-    \justify { Here I am. On my own. On the dunes. ▢  (20) }
-}
+    \justify { Hear me. }
+    \justify { \null }
 
-harmony-text-twenty-one = \markup \column {
+    \justify { Back. }
+    \justify { \null }
+
+    \justify { Here I am. On my own. On the dunes. ▢  }
+
+    }
+    } } }
+
+
+harmony-text-eighteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On. }
+    \justify { \null }
 
     \justify { Where I can see the sea. How it sparkled. At that time in the
     afternoon. There was dance music. }
+    \justify { \null }
 
     \justify { No. }
+    \justify { \null }
 
     \justify { On someone’s radio. }
+    \justify { \null }
 
     \justify { No. }
+    \justify { \null }
 
     \justify { And I didn’t mind. }
+    \justify { \null }
 
     \justify { No. }
+    \justify { \null }
 
     \justify { I felt such joy, to be there, and the sea. It was so loud you
     couldn’t hear me when I shouted to you to join me. Come here! Come here! So
     I held up an arm, and waved, and you did see me. That smile. }
+    \justify { \null }
 
     \justify { No. }
+    \justify { \null }
 
     \justify { That smile. }
+    \justify { \null }
 
-    \justify { No. Back. (21) }
-}
+    \justify { No. Back. }
 
-harmony-text-twenty-two = \markup \column {
+    }
+    } } }
+
+
+harmony-text-nineteen = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Here I am. }
+    \justify { \null }
 
     \justify { Yes. }
+    \justify { \null }
 
     \justify { On my own. }
+    \justify { \null }
 
     \justify { Yes. }
+    \justify { \null }
 
     \justify { No. Not on my own. }
+    \justify { \null }
 
     \justify { Back. }
+    \justify { \null }
 
     \justify { On my own. }
+    \justify { \null }
 
     \justify { Yes. }
+    \justify { \null }
 
     \justify { On the dunes. Or: In that dense forest. }
+    \justify { \null }
 
-    \justify { Choose. (22) }
-}
+    \justify { Choose. }
 
-harmony-text-twenty-three = \markup
+    }
+    } } }
+
+
+harmony-text-twenty = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { On the dunes. Where I can see the wind in the marram grass. It
-    is early morning. (23) }
+    is early morning. }
 
-harmony-text-twenty-four = \markup \column {
+    }
+    } } }
+
+
+harmony-text-twenty-one = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Back. }
+    \justify { \null }
 
     \justify  { A bird – a gull – shearing the sky. Soundless. The wind:
-    soundless. The band: silenced. (24) }
-}
+    soundless. The band: silenced. }
 
-harmony-text-twenty-five = \markup \column {
+    }
+    } } }
+
+harmony-text-twenty-two = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
     \justify { Back. }
+    \justify { \null }
+
+    \justify { Here I am. }
+    \justify { \null }
+
+    \justify { Not so far. }
+    \justify { \null }
+
+    \justify { Here I am. }
+    \justify { \null }
+
+    \justify { Not so far. }
+    \justify { \null }
+
+    \justify { Here I am. ▢  }
+
+    }
+    } } }
+
+harmony-text-twenty-three = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
+    \justify { On. }
+
+    }
+    } } }
+
+harmony-text-twenty-four = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
 
     \justify { Here I am. }
 
-    \justify { Not so far. }
+    }
+    } } }
 
-    \justify { Here I am. }
 
-    \justify { Not so far. }
+harmony-text-twenty-five = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
 
-    \justify { Here I am. ▢  (25) }
-}
+    \justify { On. }
+    \justify { \null }
 
-harmony-text-twenty-six = \markup
-    \justify { On. (26) }
+    \justify { Harmony. }
 
-harmony-text-twenty-seven = \markup
-    \justify { Here I am. (27) }
+    }
+    } } }
 
-harmony-text-twenty-eight-nine = \markup \column {
-    \justify { On. (28) }
+harmony-text-twenty-six = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
 
-    \justify { Harmony. (29) }
-}
+    \justify { Not yet. }
 
-harmony-text-thirty = \markup
-    \justify { Not yet. (30) }
+    }
+    } } }
 
-harmony-text-thirty-one = \markup
-    \justify { Harmony. (31) }
+harmony-text-twenty-seven = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
 
-harmony-text-thirty-two = \markup
-    \justify { Not yet. (32) }
+    \justify { Harmony. }
+
+    }
+    } } }
+
+harmony-text-twenty-eight = \markup {
+    \with-dimensions-from \null
+    \override #'(baseline-skip . 6)
+    \override #'(font-size . 6)
+    \override #'(line-width . 80)
+    \override #'(word-space . 2)
+    \justify {
+    \with-color #red {
+    \column {
+
+    \justify { Not yet. }
+
+    }
+    } } }

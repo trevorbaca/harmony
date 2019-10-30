@@ -1,4 +1,4 @@
-% first_page_number = 15
+% first_page_number = 20
 % page_count = 2
 % measure_count = 15 + 1
 % time_signatures = [
@@ -87,11 +87,11 @@
         %@% \bacaStartTextSpanSPM                                              %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
 
             % [Page_Layout measure 107]                                        %! baca.SegmentMaker._comment_measure_numbers()
-            \baca-new-spacing-section #35 #96                                  %! SPACING_COMMAND:baca.HorizontalSpacingSpecifier.__call__(1)
+            \baca-new-spacing-section #35 #6912                                %! SPACING_COMMAND:baca.HorizontalSpacingSpecifier.__call__(1)
             \noBreak                                                           %! BREAK:baca.BreakMeasureMap.__call__(2)
             s1 * 1/4                                                           %! baca.SegmentMaker._make_global_skips(1)
         %@% \bacaStopTextSpanSPM                                               %! SPACING:baca.HorizontalSpacingSpecifier.__call__(3)
-        %@% - \baca-start-spm-left-only "[[1/4 * 35/24]]"                      %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
+        %@% - \baca-start-spm-left-only "[[1/288 * 35/24]]"                    %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
         %@% \bacaStartTextSpanSPM                                              %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
 
             % [Page_Layout measure 108]                                        %! baca.SegmentMaker._comment_measure_numbers()

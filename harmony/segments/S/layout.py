@@ -10,20 +10,22 @@ breaks = baca.breaks(
             y_offset=40,
             ),
         number=1,
-        ),
+    ),
     baca.page(
         baca.system(
             *distances,
-            measure=11,
+            measure=8,
             y_offset=40,
-            ),
-        number=2,
         ),
+        number=2,
+    ),
     local_measure_numbers=True,
-    )
+)
 
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
     fallback_duration=(1, 40),
-    )
+)
+spacing.override((4, 9), (1, 20))
+spacing.override([3, 10], (1, 288), fermata=True)

@@ -76,18 +76,22 @@ cerulean = [
 # text
 
 maker(
-    ("bfl", 3),
-    baca.literal(
-        "\\footnote \"(14)\" #'(0 . 0) \\harmony-text-fourteen",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-fourteen",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(3 - 1),
     ),
 )
 
 maker(
-    ("bfl", 10),
-    baca.literal(
-        "\\footnote \"(15)\" #'(0 . 0) \\harmony-text-fifteen",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-fifteen",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(10 - 1),
     ),
 )
 

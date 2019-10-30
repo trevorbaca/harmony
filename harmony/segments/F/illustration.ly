@@ -4,7 +4,7 @@
 \include "../../stylesheets/stylesheet.ily"                                    %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
 \include "../../stylesheets/nonfirst-segment.ily"                              %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
 \include "illustration.ily"                                                    %! abjad.Path.extern()
-\paper { first-page-number = #7 }                                              %! __make_segment_pdf__
+\paper { first-page-number = #8 }                                              %! __make_segment_pdf__
 
 
 \score {                                                                       %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_blocks()

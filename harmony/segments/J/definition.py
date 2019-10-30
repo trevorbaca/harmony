@@ -74,10 +74,12 @@ maker(
 # text
 
 maker(
-    ("bfl", 9),
-    baca.literal(
-        "\\footnote \"(8)\" #'(0 . 0) \\harmony-text-eight",
-        format_slot="opening",
+    "Global_Skips",
+    baca.markup(
+        r"\harmony-text-eight",
+        abjad.tweak((4, -30)).extra_offset,
+        literal=True,
+        selector=baca.skip(9 - 1),
     ),
 )
 
