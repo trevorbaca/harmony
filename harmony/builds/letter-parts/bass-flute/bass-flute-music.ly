@@ -1,4 +1,5 @@
 % (HARMONY) (2019) bass flute part
+% part_identifier = 'BFL'
 
 \version "2.19.83"
 \language "english"

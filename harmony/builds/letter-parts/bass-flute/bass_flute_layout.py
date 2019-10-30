@@ -1,17 +1,15 @@
 import baca
 
 
-#part_identifier = 'BFL'
-
 distances = (6,)
-y_offset_1 = 12
-y_offset_2 = 40
-y_offset_3 = 68
-y_offset_4 = 96
-y_offset_5 = 124
-y_offset_6 = 152
-y_offset_7 = 180
-y_offset_8 = 208
+y_offset_1 = 12 + 1 * 9
+y_offset_2 = 40 + 2 * 9
+y_offset_3 = 68 + 3 * 9
+y_offset_4 = 96 + 4 * 9
+y_offset_5 = 124 + 5 * 9
+y_offset_6 = 152 + 6 * 9
+y_offset_7 = 180 + 7 * 9
+y_offset_8 = 208 + 8 * 9
 
 breaks = baca.breaks(
 
