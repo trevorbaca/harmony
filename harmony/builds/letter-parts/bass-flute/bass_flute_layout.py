@@ -1,15 +1,15 @@
 import baca
 
 
-distances = (6,)
-y_offset_1 = 12 + 1 * 9
-y_offset_2 = 40 + 2 * 9
-y_offset_3 = 68 + 3 * 9
-y_offset_4 = 96 + 4 * 9
-y_offset_5 = 124 + 5 * 9
-y_offset_6 = 152 + 6 * 9
-y_offset_7 = 180 + 7 * 9
-y_offset_8 = 208 + 8 * 9
+distances = (10,)
+y_offset_1 = 12 + 1 * 5
+y_offset_2 = 40 + 2 * 5
+y_offset_3 = 68 + 3 * 5
+y_offset_4 = 96 + 4 * 5
+y_offset_5 = 124 + 5 * 5
+y_offset_6 = 152 + 6 * 5
+y_offset_7 = 180 + 7 * 5
+y_offset_8 = 208 + 8 * 5
 
 breaks = baca.breaks(
 
@@ -21,70 +21,72 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            measure=7,
+            measure=6,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=13,
+            measure=11,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=19,
+            measure=16,
             y_offset=y_offset_6,
         ),
         baca.system(
             distances,
-            measure=25,
+            measure=21,
             y_offset=y_offset_7,
         ),
         baca.system(
             distances,
-            measure=31,
+            measure=26,
             y_offset=y_offset_8,
         ),
         number=1,
     ),
+
     baca.page(
         baca.system(
             distances,
-            measure=37,
+            measure=31,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=43,
+            measure=36,
             y_offset=y_offset_2,
         ),
         baca.system(
             distances,
-            measure=49,
+            #measure=41, # fermata
+            measure=42,
             y_offset=y_offset_3,
         ),
         baca.system(
             distances,
-            measure=55,
+            measure=46,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=61,
+            measure=51,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=67,
+            measure=56,
             y_offset=y_offset_6,
         ),
         baca.system(
             distances,
-            measure=73,
+            measure=61,
             y_offset=y_offset_7,
         ),
         baca.system(
             distances,
-            measure=79,
+            measure=66,
             y_offset=y_offset_8,
         ),
         number=2,
@@ -93,75 +95,77 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             distances,
-            measure=85,
+            measure=71,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=89,
+            measure=76,
             y_offset=y_offset_2,
         ),
         baca.system(
             distances,
-            measure=93,
+            measure=81,
             y_offset=y_offset_3,
         ),
         baca.system(
             distances,
-            measure=97,
+            measure=86,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=101,
+            #measure=91, # fermata
+            measure=92,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=105,
+            measure=96,
             y_offset=y_offset_6,
         ),
         baca.system(
             distances,
-            measure=109,
+            measure=101,
             y_offset=y_offset_7,
         ),
         baca.system(
             distances,
-            measure=113,
+            measure=106,
             y_offset=y_offset_8,
         ),
         number=3,
     ),
+
     baca.page(
         baca.system(
             distances,
-            measure=117,
+            measure=111,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=121,
+            measure=116,
             y_offset=y_offset_2,
         ),
         baca.system(
             distances,
-            measure=125,
+            measure=121,
             y_offset=y_offset_3,
         ),
         baca.system(
             distances,
-            measure=129,
+            measure=126,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=133,
+            measure=131,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=137,
+            measure=136,
             y_offset=y_offset_6,
         ),
         baca.system(
@@ -171,172 +175,147 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            measure=145,
+            measure=146,
             y_offset=y_offset_8,
         ),
         number=4,
     ),
+
     baca.page(
         baca.system(
             distances,
-            measure=149,
+            measure=151,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=153,
-            y_offset=y_offset_2,
-        ),
-        baca.system(
-            distances,
+            #measure=156, # fermata
             measure=157,
-            y_offset=y_offset_3,
+            y_offset=y_offset_2,
         ),
         baca.system(
             distances,
             measure=161,
+            y_offset=y_offset_3,
+        ),
+        baca.system(
+            distances,
+            measure=166,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=165,
+            measure=171,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=169,
+            measure=176,
             y_offset=y_offset_6,
         ),
         baca.system(
             distances,
-            measure=173,
+            measure=181,
             y_offset=y_offset_7,
         ),
         baca.system(
             distances,
-            measure=177,
+            measure=186,
             y_offset=y_offset_8,
         ),
         number=5,
     ),
+
     baca.page(
         baca.system(
             distances,
-            measure=181,
+            measure=191,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=185,
+            measure=196,
             y_offset=y_offset_2,
-        ),
-        baca.system(
-            distances,
-            measure=189,
-            y_offset=y_offset_3,
-        ),
-        baca.system(
-            distances,
-            measure=193,
-            y_offset=y_offset_4,
-        ),
-        baca.system(
-            distances,
-            measure=197,
-            y_offset=y_offset_5,
         ),
         baca.system(
             distances,
             measure=201,
+            y_offset=y_offset_3,
+        ),
+        baca.system(
+            distances,
+            #measure=206, # fermata
+            measure=207,
+            y_offset=y_offset_4,
+        ),
+        baca.system(
+            distances,
+            #measure=211, # fermata
+            measure=212,
+            y_offset=y_offset_5,
+        ),
+        baca.system(
+            distances,
+            measure=216,
             y_offset=y_offset_6,
-        ),
-        baca.system(
-            distances,
-            measure=205,
-            y_offset=y_offset_7,
-        ),
-        baca.system(
-            distances,
-            measure=209,
-            y_offset=y_offset_8,
-        ),
-        number=6,
-    ),
-    baca.page(
-        baca.system(
-            distances,
-            measure=213,
-            y_offset=y_offset_1,
-        ),
-        baca.system(
-            distances,
-            measure=217,
-            y_offset=y_offset_2,
         ),
         baca.system(
             distances,
             measure=221,
-            y_offset=y_offset_3,
-        ),
-        baca.system(
-            distances,
-            measure=225,
-            y_offset=y_offset_4,
-        ),
-        baca.system(
-            distances,
-            measure=229,
-            y_offset=y_offset_5,
-        ),
-        baca.system(
-            distances,
-            measure=233,
-            y_offset=y_offset_6,
-        ),
-        baca.system(
-            distances,
-            measure=237,
             y_offset=y_offset_7,
         ),
         baca.system(
             distances,
-            measure=241,
+            measure=226,
             y_offset=y_offset_8,
         ),
-        number=7,
+        number=6,
     ),
+
     baca.page(
         baca.system(
             distances,
-            measure=245,
+            measure=231,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            measure=249,
+            #measure=236, # fermata
+            measure=237,
             y_offset=y_offset_2,
         ),
         baca.system(
             distances,
-            measure=253,
+            measure=241,
             y_offset=y_offset_3,
         ),
         baca.system(
             distances,
-            measure=257,
+            measure=246,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=261,
+            measure=251,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=265,
+            measure=256,
             y_offset=y_offset_6,
         ),
-        number=8,
+        baca.system(
+            distances,
+            #measure=261, # fermata
+            measure=262,
+            y_offset=y_offset_7,
+        ),
+        baca.system(
+            distances,
+            measure=266,
+            y_offset=y_offset_8,
+        ),
+        number=7,
     ),
 
 )
@@ -344,8 +323,5 @@ breaks = baca.breaks(
 spacing = baca.scorewide_spacing(
     __file__,
     breaks=breaks,
-    fallback_duration=(1, 16),
+    fallback_duration=(1, 32),
 )
-spacing.override(95, (1, 40))
-spacing.override(152, (1, 40))
-spacing.override(166, (1, 40))

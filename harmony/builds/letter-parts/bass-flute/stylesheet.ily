@@ -1,10 +1,7 @@
 \header {
     subtitle = \markup
         \column {
-            \fontsize #3
-            " "
-            \null
-            \override #'(font-name . "Palatino")
+            \override #'(font-name . "Adobe Garamond Pro")
             \fontsize #3
             "(bass flute part)"
             \fontsize #3

@@ -15,7 +15,7 @@
             " "
             \bold
             \fontsize #3
-            \override #'(font-name . "Palatino")
+            \override #'(font-name . "Adobe Garamond Pro")
             \concat {
                 (HARMONY)
                 \hspace #3
@@ -68,18 +68,19 @@
 
 \header {
     composer = \markup {
-        \override #'(font-name . "Palatino")
+        \override #'(font-name . "Adobe Garamond Pro")
         \fontsize #5
         \line { Trevor Bača (*1975) }
     }
     poet = \markup {
+        \override #'(font-name . "Adobe Garamond Pro")
         \fontsize #5
         \line { Paul Griffiths (*1947) }
     }
     tagline = \markup { "" }
     title = \markup \column {
             \center-align {
-            \override #'(font-name . "Palatino Italic")
+            \override #'(font-name . "Adobe Garamond Pro Italic")
             \fontsize #3
             \line {
                 \hspace #2
@@ -88,7 +89,7 @@
                 Hepfer
             }
             " "
-            \override #'(font-name . "Palatino")
+            \override #'(font-name . "Adobe Garamond Pro Bold")
             \fontsize #16
             \line {
                 \concat {
@@ -112,7 +113,7 @@
                 }
             }
             " "
-            \override #'(font-name . "Palatino Italic")
+            \override #'(font-name . "Adobe Garamond Pro Italic")
             \fontsize #3
             \line {
                 \hspace #2
