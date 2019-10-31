@@ -479,12 +479,14 @@ W_Bass_Flute_Music_Voice = {                                                   %
 
     }                                                                          %! harmony.sixteenths()
 
-    ef'!4                                                                      %! harmony.sixteenths()
+    ef'4                                                                       %! harmony.sixteenths()
+    - \tweak stencil ##f                                                       %! baca.SegmentMaker._attach_shadow_tie_indicators()
+    ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
     \times 4/5 {                                                               %! harmony.sixteenths()
 
-        ef'!8                                                                  %! harmony.sixteenths()
+        ef'8                                                                   %! harmony.sixteenths()
         \repeatTie
 
         r8.                                                                    %! harmony.sixteenths()
@@ -690,6 +692,8 @@ W_Percussion_I_Music_Voice = {                                                 %
         \override Stem.direction = #down                                       %! baca.stem_down():baca.OverrideCommand._call(1)
         d'4                                                                    %! harmony.sixteenths()
         ^ \baca-slate-scrape-markup                                            %! baca.markup():baca.IndicatorCommand._call()
+        - \tweak stencil ##f                                                   %! baca.SegmentMaker._attach_shadow_tie_indicators()
+        ~                                                                      %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     }                                                                          %! harmony.sixteenths()
 

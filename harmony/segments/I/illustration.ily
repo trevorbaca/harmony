@@ -153,9 +153,11 @@ I_Bass_Flute_Music_Voice = {                                                   %
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    gf'!4                                                                      %! harmony.sixteenths()
+    gf'4                                                                       %! harmony.sixteenths()
+    - \tweak stencil ##f                                                       %! baca.SegmentMaker._attach_shadow_tie_indicators()
+    ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
-    gf'!16                                                                     %! harmony.sixteenths()
+    gf'16                                                                      %! harmony.sixteenths()
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -183,9 +185,11 @@ I_Bass_Flute_Music_Voice = {                                                   %
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    gf'!4                                                                      %! harmony.sixteenths()
+    gf'4                                                                       %! harmony.sixteenths()
+    - \tweak stencil ##f                                                       %! baca.SegmentMaker._attach_shadow_tie_indicators()
+    ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
-    gf'!16                                                                     %! harmony.sixteenths()
+    gf'16                                                                      %! harmony.sixteenths()
     \repeatTie
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
