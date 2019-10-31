@@ -1161,6 +1161,8 @@ Y_Percussion_I_Music_Voice = {                                                 %
     r8                                                                         %! harmony.sixteenths()
 
     d'8                                                                        %! harmony.sixteenths()
+    - \tweak stencil ##f                                                       %! baca.SegmentMaker._attach_shadow_tie_indicators()
+    ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     d'16                                                                       %! harmony.sixteenths()
     \repeatTie
@@ -1838,6 +1840,8 @@ Y_Harp_Music_Voice = {                                                         %
     r8                                                                         %! harmony.sixteenths()
 
     c'8                                                                        %! harmony.sixteenths()
+    - \tweak stencil ##f                                                       %! baca.SegmentMaker._attach_shadow_tie_indicators()
+    ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     c'16                                                                       %! harmony.sixteenths()
     \repeatTie
