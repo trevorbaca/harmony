@@ -1905,8 +1905,7 @@ L_Harp_Music_Voice = {                                                         %
     e'8                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
-    ^ \baca-soundboard-pizz-markup                                             %! baca.markup():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([2, -2], talea_denominator=16)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -1917,33 +1916,33 @@ L_Harp_Music_Voice = {                                                         %
     r8                                                                         %! harmony.sixteenths()
 
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
     % [L Harp_Music_Voice measure 110 / measure 12]                            %! baca.SegmentMaker._comment_measure_numbers()
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 
     e'8                                                                        %! harmony.sixteenths()
-    - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
+    - \snappizzicato                                                           %! baca.snap_pizzicato():baca.IndicatorCommand._call()
 
     r8                                                                         %! harmony.sixteenths()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

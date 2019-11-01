@@ -306,14 +306,10 @@ maker(
         [2, -2],
     ),
     baca.pitch("E4"),
-    baca.accent(
+    baca.snap_pizzicato(
         baca.pheads(),
     ),
     baca.dynamic("f"),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
-    ),
 )
 
 maker(

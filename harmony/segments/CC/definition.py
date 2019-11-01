@@ -143,14 +143,8 @@ maker(
     ),
     baca.clef("treble"),
     baca.pitch("Bb4"),
-    baca.accent(
-        baca.pheads(),
-    ),
+    baca.snap_pizzicato(),
     baca.dynamic("f"),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
-    ),
 )
 
 # va
