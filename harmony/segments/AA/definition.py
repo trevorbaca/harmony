@@ -281,7 +281,7 @@ maker(
 maker(
     ("perc1", 6),
     harmony.sixteenths(
-        ["-", -2, 1, -3, 1, -3],
+        [-12, -2, 1, "-"],
         preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
@@ -291,13 +291,10 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.dynamic(
-        "f-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
-        abjad.tweak(False).X_extent,
-    ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
+        abjad.tweak(0).self_alignment_X,
         literal=True,
     ),
 )
@@ -308,13 +305,8 @@ maker(
         [1, -23],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.dynamic(
-        "f",
-        selector=baca.pheads()[:-1],
-    ),
+    baca.damp(),
+    baca.dynamic("mf"),
 )
 
 maker(
@@ -390,7 +382,7 @@ maker(
     ("perc2", 6),
     baca.staff_lines(1),
     harmony.sixteenths(
-        ["-", -2, 1, -3, 1, -3],
+        [-12, -2, 1, "-"],
         preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
@@ -409,23 +401,8 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
-        abjad.tweak(1).self_alignment_X,
+        abjad.tweak(0).self_alignment_X,
         literal=True,
-    ),
-    baca.new(
-        harmony.bass_drum_staff_position(),
-        selector=baca.pleaves()[1:],
-    ),
-    baca.laissez_vibrer(
-        baca.ptails()[1:],
-    ),
-    baca.new(
-        baca.dynamic("mp"),
-        baca.markup(
-            r"\baca-bd-struck-markup",
-            literal=True,
-        ),
-        selector=baca.pleaf(1),
     ),
 )
 
@@ -435,11 +412,11 @@ maker(
         [1, -23],
     ),
     harmony.bass_drum_staff_position(),
-    baca.accent(
-        baca.pheads()[:-1],
-    ),
-    baca.laissez_vibrer(
-        baca.ptails()[:-1],
+    baca.laissez_vibrer(),
+    baca.dynamic("mp"),
+    baca.markup(
+        r"\baca-bd-struck-markup",
+        literal=True,
     ),
 )
 
@@ -511,21 +488,12 @@ maker(
 maker(
     ("hp", 6),
     harmony.sixteenths(
-        ["-", -2, 1, -3, 1, -3],
+        [-12, -2, 1, "-"],
         preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
     ),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.dynamic(
-        "f-sempre",
-    ),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
-    ),
+    baca.dynamic("f"),
 )
 
 maker(
@@ -533,18 +501,15 @@ maker(
     harmony.sixteenths(
         [1, -23],
     ),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.dynamic(
-        "mp",
-        selector=baca.phead(-1),
-    ),
+    baca.dynamic("mf"),
 )
 
 maker(
     ("hp", (6, 7)),
     baca.pitch("Bb4"),
+    baca.snap_pizzicato(
+        baca.pheads(),
+    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.tleaves().rleak().rleak(),

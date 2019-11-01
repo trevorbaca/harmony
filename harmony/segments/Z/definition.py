@@ -445,14 +445,10 @@ maker(
         [1, "-"],
     ),
     baca.pitch("Bb4"),
-    baca.accent(
+    baca.snap_pizzicato(
         baca.pheads(),
     ),
     baca.dynamic("f"),
-    baca.markup(
-        r"\baca-soundboard-pizz-markup",
-        literal=True,
-    ),
 )
 
 maker(

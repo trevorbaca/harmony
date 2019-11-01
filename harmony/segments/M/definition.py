@@ -395,11 +395,7 @@ maker(
         baca.pitch("E4"),
         baca.accent(),
         baca.dynamic("f"),
-        baca.markup(
-            r"\baca-soundboard-pizz-markup",
-            abjad.tweak(0.5).self_alignment_X,
-            literal=True,
-        ),
+        baca.snap_pizzicato(),
         selector=baca.phead(-1),
     ),
 )
@@ -417,8 +413,8 @@ maker(
     harmony.sixteenths(
         [2, -2],
     ),
-        baca.pitch("E4"),
-    baca.accent(
+    baca.pitch("E4"),
+    baca.snap_pizzicato(
         baca.pheads(),
     ),
 )

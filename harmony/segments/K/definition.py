@@ -561,10 +561,7 @@ maker(
     baca.new(
         baca.pitch("E4"),
         baca.dynamic("f"),
-        baca.markup(
-            r"\baca-soundboard-pizz-markup",
-            literal=True,
-        ),
+        baca.snap_pizzicato(),
         selector=baca.phead(-1),
     ),
 )
@@ -575,7 +572,7 @@ maker(
         [2, -2],
     ),
     baca.pitch("E4"),
-    baca.accent(
+    baca.snap_pizzicato(
         baca.pheads(),
     ),
 )
