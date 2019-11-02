@@ -51,6 +51,7 @@ maker(
             "U",
             baca.skip(2 - 1),
             abjad.tweak((0, 10)).extra_offset,
+            font_size=4,
         ),
     ),
     baca.open_volta(baca.skip(1 - 1)),
