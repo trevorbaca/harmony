@@ -69,10 +69,23 @@ maker(
     "Global_Skips",
     baca.open_volta(baca.skip(7 - 1)),
     baca.close_volta(baca.skip(10 - 1), format_slot="after"),
-    baca.markup(
-        r"\harmony-repeat-three",
-        literal=True,
-        selector=baca.skip(7 - 1),
+    baca.not_parts(
+        baca.markup(
+            r"\harmony-repeat-three",
+            abjad.tweak(10).font_size,
+            abjad.tweak((0, 17)).extra_offset,
+            literal=True,
+            selector=baca.skip(7 - 1),
+        ),
+    ),
+    baca.only_parts(
+        baca.markup(
+            r"\harmony-repeat-three",
+            abjad.tweak(4).font_size,
+            abjad.tweak((0, 9)).extra_offset,
+            literal=True,
+            selector=baca.skip(7 - 1),
+        ),
     ),
     baca.text_script_extra_offset((1.5, 12)),
 )
