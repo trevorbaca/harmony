@@ -49,6 +49,7 @@ maker(
             "T",
             baca.skip(2 - 1),
             abjad.tweak((0, 10)).extra_offset,
+            font_size=4,
         ),
     ),
 )
