@@ -62,7 +62,6 @@
 
     \context {
         \GlobalSkips
-        \override TextSpanner.color = #red
         \override TextSpanner.font-size = 1
     }
 
