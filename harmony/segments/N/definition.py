@@ -28,6 +28,7 @@ maker = baca.SegmentMaker(
         abjad.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     fermata_measure_empty_overrides=[3, 10],
+    parts_metric_modulation_multiplier=(0.525, 0.525),
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[

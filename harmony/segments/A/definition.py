@@ -25,6 +25,7 @@ maker = baca.SegmentMaker(
         *abjad.tags.margin_markup_color_tags(),
         abjad.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
+    parts_metric_modulation_multiplier=(0.525, 0.525),
     segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
     stage_markup=stage_markup,
     time_signatures=[
