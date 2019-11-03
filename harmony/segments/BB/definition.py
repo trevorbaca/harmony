@@ -12,7 +12,7 @@ from abjadext import rmakers
 stage_markup = (
     ("[BB.1-4]", 1),
     ("[◀Y.2]", 5, "darkgreen"),
-    ("[BB.5-8]", 6),
+    ("[BB.5-8]", 7),
 )
 
 maker = baca.SegmentMaker(
@@ -42,14 +42,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -62,8 +62,8 @@ maker(
     baca.metronome_mark("2.=4", baca.skip(1 - 1)),
     baca.metronome_mark("57 3/5", baca.skip(5 - 1)),
     baca.metronome_mark("6:5(4)=4", baca.skip(5 - 1)),
-    baca.metronome_mark("48", baca.skip(6 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.skip(6 - 1)),
+    baca.metronome_mark("48", baca.skip(7 - 1)),
+    baca.metronome_mark("5:6(4)=4", baca.skip(7 - 1)),
 )
 
 maker(

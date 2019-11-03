@@ -11,5 +11,5 @@
 }
 
 \layout {
-    ragged-right = ##f
+    ragged-right = ##t
 }

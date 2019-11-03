@@ -48,14 +48,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "F",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "F",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -259,7 +259,7 @@ maker(
     ("bfl", (7, 8)),
     baca.pitch("F3"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5).staff_padding,
     ),
 )
 
