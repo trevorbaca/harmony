@@ -33,7 +33,7 @@
     )
     top-markup-spacing = #'(
         (basic-distance . 0)
-        (minimum-distance . 6)
+        (minimum-distance . 12)
         (padding . 0)
         (stretchability . 0)
     )

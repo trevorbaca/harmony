@@ -115,9 +115,6 @@ maker(
         ["+"],
     ),
     baca.pitch("<Eb3 Eb4 Bb4>"),
-    baca.markup(
-        baca.levine_multiphonic(5),
-    ),
 )
 
 maker(

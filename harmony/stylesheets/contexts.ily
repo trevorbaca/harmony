@@ -182,7 +182,6 @@
         \override TupletNumber.font-size = 1
 
         autoBeaming = ##f
-        barNumberFormatter = #baca-oval-bar-numbers
         tupletFullLength = ##t
     }
 }

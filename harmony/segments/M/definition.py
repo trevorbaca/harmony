@@ -43,14 +43,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "M",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "M",
-            baca.skip(2 - 1),
+            baca.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
