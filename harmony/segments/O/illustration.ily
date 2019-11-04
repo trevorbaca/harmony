@@ -955,7 +955,7 @@ O_Harp_Music_Voice = {                                                         %
         r8                                                                     %! harmony.sixteenths()
 
         <b' c''>4
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! harmony.sixteenths()
@@ -1038,7 +1038,7 @@ O_Harp_Music_Voice = {                                                         %
         r8                                                                     %! harmony.sixteenths()
 
         <b' c''>4
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! harmony.sixteenths()
@@ -1091,7 +1091,7 @@ O_Harp_Music_Voice = {                                                         %
         r8                                                                     %! harmony.sixteenths()
 
         <b' c''>4
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! harmony.sixteenths()

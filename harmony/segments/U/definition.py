@@ -359,7 +359,7 @@ maker(
         denominator=None,
     ),
     baca.pitches("F5 E5 Eb5"),
-    baca.flageolet(
+    baca.double_flageolet(
         baca.pheads(),
     ),
     baca.accent(

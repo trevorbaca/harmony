@@ -995,7 +995,7 @@ U_Harp_Music_Voice = {                                                         %
         f''4                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \mf                                                                    %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
         \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
         - \abjad-dashed-line-with-hook                                         %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):RIGHT_BROKEN:SPANNER_START
@@ -1005,12 +1005,12 @@ U_Harp_Music_Voice = {                                                         %
         \bacaStartTextSpanMetricModulation                                     %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):RIGHT_BROKEN:SPANNER_START
 
         e''4                                                                   %! harmony.sixteenths()
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
         \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
 
         ef''!4                                                                 %! harmony.sixteenths()
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
         \laissezVibrer                                                         %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
