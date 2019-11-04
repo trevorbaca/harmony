@@ -1118,7 +1118,7 @@ maker(
         [1, -3, 1, "-"],
         extra_counts=[1],
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -1376,7 +1376,7 @@ maker(
     harmony.sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(baca.pleaves()),
     baca.dynamic(
         "sfp-ancora",

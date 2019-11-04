@@ -408,7 +408,7 @@ M_Bass_Flute_Music_Voice = {                                                   %
     \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
     dtqf'''!4                                                                  %! harmony.sixteenths()
     - \tweak staff-padding #8                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-seven-e-flat                                                    %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-seven-e-flat                                                       %! baca.markup():baca.IndicatorCommand._call()
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([4, 8], talea_denominator=16)"  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START

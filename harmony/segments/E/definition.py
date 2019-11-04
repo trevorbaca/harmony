@@ -656,7 +656,7 @@ maker(
     harmony.sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -684,7 +684,7 @@ maker(
         literal=True,
     ),
     baca.markup(
-        r"\harmony-eleven-e",
+        r"\baca-eleven-e",
         abjad.tweak(3).staff_padding,
         literal=True,
     ),

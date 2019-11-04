@@ -88,7 +88,7 @@ maker(
     ),
     baca.pitch("Dtqf5"),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         abjad.tweak(8).staff_padding,
         literal=True,
     ),
@@ -506,7 +506,7 @@ maker(
     ),
     baca.pitch("Dtqf3"),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         literal=True,
     ),
     baca.triple_staccato(

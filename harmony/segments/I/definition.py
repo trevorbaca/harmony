@@ -235,7 +235,7 @@ maker(
     ("vc2", (1, 2)),
     baca.pitch("Dqs4"),
     baca.markup(
-        r"\harmony-eleven-a",
+        r"\baca-eleven-a",
         abjad.tweak(3).staff_padding,
         literal=True,
     )
@@ -321,12 +321,12 @@ maker(
         selector=baca.pheads(),
     ),
     baca.markup(
-        r"\harmony-thirteen-a",
+        r"\baca-thirteen-a",
         abjad.tweak(3).staff_padding,
         literal=True,
     ),
     baca.markup(
-        r"\harmony-fourteen-a",
+        r"\baca-fourteen-a",
         abjad.tweak(3).staff_padding,
         literal=True,
         selector=baca.phead(-1),

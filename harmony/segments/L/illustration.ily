@@ -658,7 +658,7 @@ L_Bass_Flute_Music_Voice = {                                                   %
     \oneVoice                                                                  %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
     dtqf'''!4                                                                  %! harmony.sixteenths()
     - \tweak staff-padding #8                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-seven-e-flat                                                    %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-seven-e-flat                                                       %! baca.markup():baca.IndicatorCommand._call()
     \stopTextSpan                                                              %! baca.text_spanner():baca.PiecewiseCommand._call(4):SPANNER_STOP
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([4, 8, 4, 12], talea_denominator=16)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -2652,7 +2652,7 @@ L_Cello_I_Music_Voice = {                                                      %
         aqf!4                                                                  %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
         - \tweak staff-padding #3                                              %! baca.markup():baca.IndicatorCommand._call()
-        ^ \harmony-eleven-e-flat                                               %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-eleven-e-flat                                                  %! baca.markup():baca.IndicatorCommand._call()
 
         aqf!4                                                                  %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
@@ -2768,7 +2768,7 @@ L_Cello_I_Music_Voice = {                                                      %
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-eleven-e-flat                                                   %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-eleven-e-flat                                                      %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([4], talea_denominator=16)"     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -3479,7 +3479,7 @@ L_Contrabass_I_Music_Voice = {                                                 %
         dtqf'!4                                                                %! harmony.rimbalzandi()
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
         - \tweak staff-padding #3                                              %! baca.markup():baca.IndicatorCommand._call()
-        ^ \harmony-seven-e-flat                                                %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-seven-e-flat                                                   %! baca.markup():baca.IndicatorCommand._call()
 
         r4                                                                     %! harmony.rimbalzandi()
 
@@ -3622,7 +3622,7 @@ L_Contrabass_I_Music_Voice = {                                                 %
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-seven-e-flat                                                    %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-seven-e-flat                                                       %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([4], talea_denominator=16)"     %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START

@@ -189,7 +189,7 @@ maker(
     ("bfl", (7, 8)),
     baca.pitch("Dtqf5"),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         abjad.tweak(8).staff_padding,
         literal=True,
     ),
@@ -754,7 +754,7 @@ maker(
         baca.run(1),
     ),
     baca.markup(
-        r"\harmony-eleven-e-flat",
+        r"\baca-eleven-e-flat",
         abjad.tweak(3).staff_padding,
         literal=True,
         selector=baca.run(1).leaf(0),
@@ -772,7 +772,7 @@ maker(
         baca.leaves().rleak(),
     ),
     baca.markup(
-        r"\harmony-eleven-d",
+        r"\baca-eleven-d",
         abjad.tweak(5.5).staff_padding,
         literal=True,
         match=[0, 2],
@@ -897,7 +897,7 @@ maker(
         do_not_transpose=True,
     ),
     baca.markup(
-        r"\harmony-fifteen-d",
+        r"\baca-fifteen-d",
         abjad.tweak(5.5).staff_padding,
         literal=True,
         match=[0, 2],
@@ -925,7 +925,7 @@ maker(
         baca.run(1),
     ),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         abjad.tweak(5.5).staff_padding,
         literal=True,
         selector=baca.run(1).leaf(0),
@@ -968,7 +968,7 @@ maker(
         do_not_transpose=True,
     ),
     baca.markup(
-        r"\harmony-fourteen-d",
+        r"\baca-fourteen-d",
         abjad.tweak(5.5).staff_padding,
         literal=True,
         match=[0, 2],
