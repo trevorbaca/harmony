@@ -211,7 +211,7 @@ X_Global_Rests = {                                                             %
     % [X Global_Rests measure 225 / measure 9]                                 %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 5/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
 
-    % [X Global_Rests measure 226 / measure 10]                                %! baca.SegmentMaker._comment_measure_numbers():baca.SegmentMaker._style_phantom_measures(4):PHANTOM
+    % [X Global_Rests measure 226 / measure 10]                                %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
 }                                                                              %! abjad.Path.extern()
@@ -1330,6 +1330,9 @@ X_Percussion_I_Music_Voice = {                                                 %
 
 X_Percussion_I_Music_Staff = <<                                                %! abjad.Path.extern()
 
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
+
     \context Voice = "Percussion_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__()
     \X_Percussion_I_Music_Voice                                                %! abjad.Path.extern()
 
@@ -1619,6 +1622,9 @@ X_Percussion_II_Music_Voice = {                                                %
 
 X_Percussion_II_Music_Staff = <<                                               %! abjad.Path.extern()
 
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
+
     \context Voice = "Percussion_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__()
     \X_Percussion_II_Music_Voice                                               %! abjad.Path.extern()
 
@@ -1906,6 +1912,9 @@ X_Harp_Music_Voice = {                                                         %
 
 
 X_Harp_Music_Staff = <<                                                        %! abjad.Path.extern()
+
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
 
     \context Voice = "Harp_Music_Voice"                                        %! harmony.ScoreTemplate.__call__()
     \X_Harp_Music_Voice                                                        %! abjad.Path.extern()
@@ -2314,6 +2323,9 @@ X_Viola_Music_Voice = {                                                        %
 
 X_Viola_Music_Staff = <<                                                       %! abjad.Path.extern()
 
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
+
     \context Voice = "Viola_Music_Voice"                                       %! harmony.ScoreTemplate.__call__()
     \X_Viola_Music_Voice                                                       %! abjad.Path.extern()
 
@@ -2688,6 +2700,9 @@ X_Cello_I_Music_Voice = {                                                      %
 
 
 X_Cello_I_Music_Staff = <<                                                     %! abjad.Path.extern()
+
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
 
     \context Voice = "Cello_I_Music_Voice"                                     %! harmony.ScoreTemplate.__call__()
     \X_Cello_I_Music_Voice                                                     %! abjad.Path.extern()
@@ -3087,6 +3102,9 @@ X_Cello_II_Music_Voice = {                                                     %
 
 X_Cello_II_Music_Staff = <<                                                    %! abjad.Path.extern()
 
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
+
     \context Voice = "Cello_II_Music_Voice"                                    %! harmony.ScoreTemplate.__call__()
     \X_Cello_II_Music_Voice                                                    %! abjad.Path.extern()
 
@@ -3466,6 +3484,9 @@ X_Contrabass_I_Music_Voice = {                                                 %
 
 
 X_Contrabass_I_Music_Staff = <<                                                %! abjad.Path.extern()
+
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
 
     \context Voice = "Contrabass_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__()
     \X_Contrabass_I_Music_Voice                                                %! abjad.Path.extern()
@@ -3881,6 +3902,9 @@ X_Contrabass_II_Music_Voice = {                                                %
 
 
 X_Contrabass_II_Music_Staff = <<                                               %! abjad.Path.extern()
+
+%%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
+%%% \X_Global_Rests                                                            %! abjad.Path.extern():NOT_TOPMOST
 
     \context Voice = "Contrabass_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__()
     \X_Contrabass_II_Music_Voice                                               %! abjad.Path.extern()
