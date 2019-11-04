@@ -526,7 +526,7 @@ maker(
     ),
     baca.new(
         baca.pitch("<B5 C#6>"),
-        baca.flageolet(),
+        baca.double_flageolet(),
         baca.dynamic("mf"),
         selector=baca.pleaf(0),
     ),

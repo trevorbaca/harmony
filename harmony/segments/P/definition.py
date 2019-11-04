@@ -238,7 +238,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("<B4 C5>"),
-    baca.flageolet(),
+    baca.double_flageolet(),
 )
 
 maker(

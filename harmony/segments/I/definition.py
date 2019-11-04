@@ -188,7 +188,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("<B5 C#6>"),
-    baca.flageolet(),
+    baca.double_flageolet(),
     baca.dynamic("mf"),
 )
 

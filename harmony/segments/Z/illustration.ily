@@ -1336,7 +1336,7 @@ Z_Harp_Music_Voice = {                                                         %
         <cs''! d''>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1351,7 +1351,7 @@ Z_Harp_Music_Voice = {                                                         %
         r8                                                                     %! harmony.sixteenths()
 
         <cs''! d''>4
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
         - \tweak self-alignment-X #0.75                                        %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-lv-into-fermata-markup                                         %! baca.markup():baca.IndicatorCommand._call()
 
@@ -1429,7 +1429,7 @@ Z_Harp_Music_Voice = {                                                         %
         <cs''! d''>4
         - \tweak color #(x11-color 'DeepPink1)                                 %! REDUNDANT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():REDUNDANT_DYNAMIC
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1444,7 +1444,7 @@ Z_Harp_Music_Voice = {                                                         %
         r8                                                                     %! harmony.sixteenths()
 
         <cs''! d''>4
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
 
     }                                                                          %! harmony.sixteenths()
 
@@ -1567,7 +1567,7 @@ Z_Harp_Music_Voice = {                                                         %
         <cs''! d''>4
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-        - \flageolet                                                           %! baca.flageolet():baca.IndicatorCommand._call()
+        - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
 
     }                                                                          %! harmony.sixteenths()
 

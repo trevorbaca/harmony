@@ -336,7 +336,7 @@ maker(
         [4, "-"],
     ),
     baca.pitch("D5"),
-    baca.flageolet(
+    baca.double_flageolet(
         baca.pheads(),
     ),
     baca.accent(

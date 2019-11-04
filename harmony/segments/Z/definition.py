@@ -429,7 +429,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("<C#5 D5>"),
-    baca.flageolet(
+    baca.double_flageolet(
         baca.pheads(),
     ),
     baca.dynamic("f"),
@@ -461,7 +461,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("<C#5 D5>"),
-    baca.flageolet(
+    baca.double_flageolet(
         baca.pheads(),
     ),
     baca.dynamic("f"),
@@ -514,7 +514,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("<C#5 D5>"),
-    baca.flageolet(
+    baca.double_flageolet(
         baca.pheads(),
     ),
     baca.dynamic("f"),
