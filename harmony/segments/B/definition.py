@@ -613,7 +613,7 @@ maker(
     baca.dynamic("mp"),
     baca.dls_staff_padding(3),
     baca.markup(
-        r"\harmony-seven-a",
+        r"\baca-seven-a",
         abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
@@ -770,7 +770,7 @@ maker(
         extra_counts=[1],
     ),
     baca.new(
-        baca.staff_position(0),
+        harmony.bridge_staff_position(),
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("sfp"),
@@ -971,7 +971,7 @@ maker(
     harmony.sixteenths(
         [2, -2, 2, -2, "-"],
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
@@ -1183,7 +1183,7 @@ maker(
     ),
     baca.pitch("Dqs3"),
     baca.markup(
-        r"\harmony-eleven-a",
+        r"\baca-eleven-a",
         abjad.tweak(5.5 + 1).staff_padding,
         literal=True,
     ),

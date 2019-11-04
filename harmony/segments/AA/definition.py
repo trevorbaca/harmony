@@ -629,7 +629,7 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
     baca.markup(
-        r"\harmony-seven-a",
+        r"\baca-seven-a",
         direction=abjad.Down,
         literal=True,
     ),

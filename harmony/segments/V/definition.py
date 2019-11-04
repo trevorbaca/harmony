@@ -677,7 +677,7 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
     baca.markup(
-        r"\harmony-seven-d",
+        r"\baca-seven-d",
         literal=True,
     ),
     baca.markup(
@@ -706,7 +706,7 @@ maker(
         baca.staff_lines(1),
         selector=baca.leaf(1),
     ),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
@@ -776,7 +776,7 @@ maker(
 
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -794,7 +794,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 13),
     baca.staff_lines(1),
     baca.clef("percussion"),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),

@@ -783,7 +783,7 @@ maker(
 
 maker(
     ("cb2", (11, 13)),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.accent(
         baca.pheads(),
     ),
@@ -903,7 +903,7 @@ maker(
     (["va", "vc1", "vc2", "cb1"], 11),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -916,7 +916,7 @@ maker(
     (["va", "vc1", "vc2", "cb1"], 13),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    baca.staff_position(0),
+    harmony.bridge_staff_position(),
     baca.stem_tremolo(
         baca.pleaves(),
     ),

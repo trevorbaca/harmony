@@ -414,7 +414,7 @@ K_Bass_Flute_Music_Voice = {                                                   %
     % [K Bass_Flute_Music_Voice measure 95 / measure 7]                        %! baca.SegmentMaker._comment_measure_numbers()
     dtqf'''!4                                                                  %! harmony.sixteenths()
     - \tweak staff-padding #8                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-seven-e-flat                                                    %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-seven-e-flat                                                       %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([4, 8], talea_denominator=16)"  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -2255,7 +2255,7 @@ K_Cello_I_Music_Voice = {                                                      %
         \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
         gqs'''!4 * 1/2                                                         %! harmony.sixteenths()
         - \tweak staff-padding #5.5                                            %! baca.markup():baca.IndicatorCommand._call()
-        ^ \harmony-eleven-d                                                    %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-eleven-d                                                       %! baca.markup():baca.IndicatorCommand._call()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"                           %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
         - \tweak staff-padding #1.5                                            %! baca.markup():baca.IndicatorCommand._call()
         _ \markup { II }                                                       %! baca.markup():baca.IndicatorCommand._call()
@@ -2461,7 +2461,7 @@ K_Cello_I_Music_Voice = {                                                      %
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-eleven-e-flat                                                   %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-eleven-e-flat                                                      %! baca.markup():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \baca-text-spanner-left-text "MM"                                        %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak bound-details.right.padding #2.75                                 %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -2559,7 +2559,7 @@ K_Cello_I_Music_Voice = {                                                      %
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     gqs'''!4 * 1/2                                                             %! harmony.sixteenths()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-eleven-d                                                        %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-eleven-d                                                           %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { II }                                                           %! baca.markup():baca.IndicatorCommand._call()
@@ -3168,7 +3168,7 @@ K_Contrabass_I_Music_Voice = {                                                 %
         \override NoteHead.style = #'harmonic                                  %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
         cs'''!4 * 1/2                                                          %! harmony.sixteenths()
         - \tweak staff-padding #5.5                                            %! baca.markup():baca.IndicatorCommand._call()
-        ^ \harmony-fifteen-d                                                   %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-fifteen-d                                                      %! baca.markup():baca.IndicatorCommand._call()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"                           %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
         - \tweak staff-padding #1.5                                            %! baca.markup():baca.IndicatorCommand._call()
         _ \markup { II }                                                       %! baca.markup():baca.IndicatorCommand._call()
@@ -3382,7 +3382,7 @@ K_Contrabass_I_Music_Voice = {                                                 %
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-seven-e-flat                                                    %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-seven-e-flat                                                       %! baca.markup():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \baca-text-spanner-left-text "MM"                                        %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak bound-details.right.padding #2.75                                 %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
@@ -3488,7 +3488,7 @@ K_Contrabass_I_Music_Voice = {                                                 %
     \set Staff.forceClef = ##t                                                 %! baca.clef():baca.IndicatorCommand._call():baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._set_status_tag():EXPLICIT_CLEF
     cs'''!4 * 1/2                                                              %! harmony.sixteenths()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-fifteen-d                                                       %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-fifteen-d                                                          %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { II }                                                           %! baca.markup():baca.IndicatorCommand._call()
@@ -3669,7 +3669,7 @@ K_Contrabass_II_Music_Voice = {                                                %
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     cqf'''!4 * 1/2                                                             %! harmony.sixteenths()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-fourteen-d                                                      %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-fourteen-d                                                         %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { II }                                                           %! baca.markup():baca.IndicatorCommand._call()
@@ -3949,7 +3949,7 @@ K_Contrabass_II_Music_Voice = {                                                %
     \set Staff.forceClef = ##t                                                 %! baca.clef():baca.IndicatorCommand._call():baca.SegmentMaker._treat_persistent_wrapper(2):baca.SegmentMaker._set_status_tag():EXPLICIT_CLEF
     cqf'''!4 * 1/2                                                             %! harmony.sixteenths()
     - \tweak staff-padding #5.5                                                %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-fourteen-d                                                      %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-fourteen-d                                                         %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { II }                                                           %! baca.markup():baca.IndicatorCommand._call()

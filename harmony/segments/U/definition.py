@@ -492,7 +492,7 @@ maker(
     baca.clef("treble"),
     baca.pitch("Aqf4"),
     baca.markup(
-        r"\harmony-eleven-e-flat",
+        r"\baca-eleven-e-flat",
         literal=True,
     ),
 )
@@ -577,7 +577,7 @@ maker(
     baca.clef("treble"),
     baca.pitch("Dtqf4"),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         literal=True,
     ),
 )

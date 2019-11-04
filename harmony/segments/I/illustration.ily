@@ -939,7 +939,7 @@ I_Cello_II_Music_Voice = {                                                     %
 
     dqs'!2                                                                     %! harmony.sixteenths()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-eleven-a                                                        %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-eleven-a                                                           %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak stencil #abjad-flared-hairpin                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1225,7 +1225,7 @@ I_Contrabass_II_Music_Voice = {                                                %
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     ^ \baca-pizz-markup                                                        %! baca.markup():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-thirteen-a                                                      %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-thirteen-a                                                         %! baca.markup():baca.IndicatorCommand._call()
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { III }                                                          %! baca.markup():baca.IndicatorCommand._call()
 
@@ -1236,7 +1236,7 @@ I_Contrabass_II_Music_Voice = {                                                %
     gqf''!8.                                                                   %! harmony.sixteenths()
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
-    ^ \harmony-fourteen-a                                                      %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-fourteen-a                                                         %! baca.markup():baca.IndicatorCommand._call()
     - \tweak staff-padding #1.5                                                %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { III }                                                          %! baca.markup():baca.IndicatorCommand._call()
     \revert NoteHead.style                                                     %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)

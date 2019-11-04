@@ -708,7 +708,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("Btqf4"),
     baca.markup(
-        r"\harmony-seven-c",
+        r"\baca-seven-c",
         literal=True,
     ),
     baca.markup(
@@ -797,7 +797,7 @@ maker(
         map=baca.runs(),
     ),
     baca.markup(
-        r"\harmony-eleven-c",
+        r"\baca-eleven-c",
         literal=True,
     ),
 )
@@ -874,7 +874,7 @@ maker(
         map=baca.runs(),
     ),
     baca.markup(
-        r"\harmony-eleven-c",
+        r"\baca-eleven-c",
         literal=True,
     ),
 )
@@ -1054,7 +1054,7 @@ maker(
         alteration="Fqs5",
     ),
     baca.markup(
-        r"\harmony-eleven-c",
+        r"\baca-eleven-c",
         literal=True,
     ),
 )

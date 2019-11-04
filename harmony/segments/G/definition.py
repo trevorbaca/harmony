@@ -875,7 +875,7 @@ maker(
     ("vc2", 7),
     baca.pitch("Dqs4"),
     baca.markup(
-        r"\harmony-eleven-a",
+        r"\baca-eleven-a",
         abjad.tweak(3).staff_padding,
         literal=True,
     ),

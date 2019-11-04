@@ -253,7 +253,7 @@ maker(
         baca.leaves()[:-2],
     ),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         abjad.tweak(8).staff_padding,
         literal=True,
     ),
@@ -720,7 +720,7 @@ maker(
     ("vc1", [(3, 8), (11, 15)]),
     baca.pitch("Aqf3"),
     baca.markup(
-        r"\harmony-eleven-e-flat",
+        r"\baca-eleven-e-flat",
         abjad.tweak(3).staff_padding,
         literal=True,
     ),
@@ -831,7 +831,7 @@ maker(
     ("cb1", [(3, 8), (11, 15)]),
     baca.pitch("Dtqf3"),
     baca.markup(
-        r"\harmony-seven-e-flat",
+        r"\baca-seven-e-flat",
         abjad.tweak(3).staff_padding,
         literal=True,
     ),
