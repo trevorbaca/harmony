@@ -740,6 +740,8 @@ def triangle_staff_position() -> baca.Suite:
 
 def whisk_staff_position() -> baca.Suite:
     """
-    Sets whisk staff position and stem direction.
+    Sets whisk staff position (0), stem down and tuplet bracket up.
     """
-    return baca.chunk(baca.staff_position(0), baca.stem_down())
+    return baca.chunk(
+        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+    )

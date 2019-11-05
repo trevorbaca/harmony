@@ -589,6 +589,11 @@ maker(
         prefix_talea=[8, 4, 4],
         tie=[6],
     ),
+    baca.dynamic(
+        "mp-pp",
+        abjad.tweak(-0.9).self_alignment_X,
+        selector=baca.leaf(0, grace=False),
+    ),
 )
 
 maker(
@@ -611,7 +616,7 @@ maker(
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher =|",
         abjad.tweak(abjad.Down).direction,
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
@@ -638,6 +643,11 @@ maker(
         counts=[4],
         fuse=True,
     ),
+    baca.dynamic(
+        "mp-pp",
+        abjad.tweak(-0.9).self_alignment_X,
+        selector=baca.leaf(0, grace=False),
+    ),
 )
 
 maker(
@@ -657,7 +667,7 @@ maker(
         [4, 12, -4],
     ),
     baca.hairpin(
-        "mp >o niente",
+        "pp >o niente",
         selector=baca.leaves()[1:3],
     ),
 )
@@ -675,8 +685,8 @@ maker(
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher =|",
         abjad.tweak(abjad.Down).direction,
-        abjad.tweak(5.5).staff_padding,
-        autodetect_right_padding=True,
+        abjad.tweak(8).staff_padding,
+        autodetect_right_padding=False,
         bookend=False,
         direction=abjad.Down,
         selector=baca.tleaves(grace=False).rleak(),
@@ -715,7 +725,14 @@ maker(
         "XFB =|",
         abjad.tweak(3).staff_padding,
     ),
-    baca.dls_staff_padding(4.5),
+)
+
+maker(
+    ("va", (1, 8)),
+    baca.dls_staff_padding(
+        4,
+        baca.leaves(grace=False),
+    ),
 )
 
 # vc1
@@ -732,7 +749,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.hairpin(
-        "mp >o niente",
+        "f >o niente",
         left_broken=True,
     ),
     baca.bow_speed_spanner(
