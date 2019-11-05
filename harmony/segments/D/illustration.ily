@@ -603,9 +603,8 @@ D_Percussion_I_Music_Voice_A = {                                               %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     r4                                                                         %! harmony.appoggiato()
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
 }                                                                              %! abjad.Path.extern()
@@ -623,9 +622,9 @@ D_Percussion_I_Music_Voice = {                                                 %
         \once \override Staff.StaffSymbol.line-count = 3                       %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
         \startStaff                                                            %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
         \set Staff.instrumentName = \harmony-perc-i-markup                     %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-        \override TupletBracket.direction = #down                              %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-        \override TupletBracket.staff-padding = #3                             %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
-        \override DynamicLineSpanner.staff-padding = #9                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+        \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+        \override TupletBracket.staff-padding = #0.5                           %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+        \override DynamicLineSpanner.staff-padding = #5.5                      %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
         \clef "percussion"                                                     %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)      %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_MARGIN_MARKUP_COLOR
         \once \override Staff.Clef.color = #(x11-color 'green4)                %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_COLOR
@@ -701,7 +700,7 @@ D_Percussion_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.phjc()
 
     r2                                                                         %! harmony.phjc()
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
 
     r4                                                                         %! harmony.phjc()
@@ -714,8 +713,8 @@ D_Percussion_I_Music_Voice = {                                                 %
     r4                                                                         %! harmony.phjc()
 
     % [D Percussion_I_Music_Voice measure 28 / measure 5]                      %! baca.SegmentMaker._comment_measure_numbers()
-    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+    \override TupletBracket.staff-padding = #0.5                               %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
     r4                                                                         %! harmony.phjc()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.phjc()
@@ -777,9 +776,8 @@ D_Percussion_I_Music_Voice = {                                                 %
     }                                                                          %! harmony.phjc()
 
     r4                                                                         %! harmony.phjc()
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -827,9 +825,8 @@ D_Percussion_I_Music_Voice = {                                                 %
 
             % [D Percussion_I_Music_Voice measure 32 / measure 9]              %! baca.SegmentMaker._comment_measure_numbers()
             \override Stem.direction = #down                                   %! baca.stem_down():baca.OverrideCommand._call(1)
-            \override TupletBracket.direction = #down                          %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-            \override TupletBracket.staff-padding = #3                         %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
-            \override DynamicLineSpanner.staff-padding = #6                    %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+            \override TupletBracket.direction = #up                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+            \override TupletBracket.staff-padding = #0.5                       %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
             \slash                                                             %! abjad.on_beat_grace_container(2)
             \voiceOne                                                          %! abjad.on_beat_grace_container(3)
             a8 * 2/5
@@ -902,6 +899,7 @@ D_Percussion_I_Music_Voice = {                                                 %
     \override Staff.BarLine.bar-extent = #'(-2 . 1)                            %! baca.SegmentMaker._style_fermata_measures(4)
     R1 * 3/4                                                                   %! baca.SegmentMaker._make_measure_silences()
 %@% ^ \baca-duration-multiplier-markup #"3" #"4"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
+    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
@@ -954,9 +952,9 @@ D_Percussion_II_Music_Voice = {                                                %
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
     \startStaff                                                                %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_STAFF_LINES
     \set Staff.instrumentName = \harmony-perc-ii-markup                        %! baca.SegmentMaker._clone_segment_initial_short_instrument_name()
-    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
-    \override DynamicLineSpanner.staff-padding = #9                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+    \override TupletBracket.staff-padding = #0.5                               %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+    \override DynamicLineSpanner.staff-padding = #5.5                          %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
     \clef "percussion"                                                         %! baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_CLEF
 %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)          %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_MARGIN_MARKUP_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)                    %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_COLOR
@@ -1008,9 +1006,8 @@ D_Percussion_II_Music_Voice = {                                                %
         \p                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         ]                                                                      %! harmony.phjc()
         \revert Stem.direction                                                 %! baca.stem_down():baca.OverrideCommand._call(2)
-        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+        \revert TupletBracket.direction                                        %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
         \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
-        \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     }                                                                          %! harmony.phjc()
@@ -1049,9 +1046,8 @@ D_Percussion_II_Music_Voice = {                                                %
 %@% ^ \baca-duration-multiplier-markup #"3" #"4"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
     % [D Percussion_II_Music_Voice measure 28 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
-    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
-    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+    \override TupletBracket.staff-padding = #0.5                               %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
     r8                                                                         %! harmony.train()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "train([2], rest_leaves=[0])"               %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1092,9 +1088,8 @@ D_Percussion_II_Music_Voice = {                                                %
     \f                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! harmony.train()
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
@@ -1129,9 +1124,8 @@ D_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._style_fermata_measures(3)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(3)
-    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
-    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+    \override TupletBracket.staff-padding = #0.5                               %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
     r8                                                                         %! harmony.train()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "train([2], rest_leaves=[0, 1, 2])"         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1159,7 +1153,6 @@ D_Percussion_II_Music_Voice = {                                                %
 
     e'8                                                                        %! harmony.train()
     ]                                                                          %! harmony.train()
-    \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [D Percussion_II_Music_Voice measure 32 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1176,7 +1169,7 @@ D_Percussion_II_Music_Voice = {                                                %
 
     r2.                                                                        %! harmony.sixteenths()
     \bacaStopTextSpanMetricModulation                                          %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -1212,9 +1205,8 @@ D_Percussion_II_Music_Voice = {                                                %
     \stopStaff                                                                 %! baca.SegmentMaker._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 3                           %! baca.SegmentMaker._style_fermata_measures(3)
     \startStaff                                                                %! baca.SegmentMaker._style_fermata_measures(3)
-    \override TupletBracket.direction = #down                                  %! baca.tuplet_bracket_down():baca.OverrideCommand._call(1)
-    \override TupletBracket.staff-padding = #3                                 %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
-    \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
+    \override TupletBracket.staff-padding = #0.5                               %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
     r4.                                                                        %! harmony.sixteenths()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([-6, 6], fuse=True, do_not_rewrite_meter=True, talea_denominator=16)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1232,7 +1224,7 @@ D_Percussion_II_Music_Voice = {                                                %
     - \tweak bound-details.right.padding #3.25                                 %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):RIGHT_BROKEN:AUTODETECT:SPANNER_START
     - \tweak staff-padding #5.5                                                %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):RIGHT_BROKEN:SPANNER_START
     \bacaStartTextSpanMetricModulation                                         %! baca.metric_modulation_spanner():METRIC_MODULATION_SPANNER:baca.PiecewiseCommand._call(2):RIGHT_BROKEN:SPANNER_START
-    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -3268,7 +3260,8 @@ D_Contrabass_II_Music_Voice = {                                                %
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
 %@% ^ \baca-reapplied-indicator-markup "[“Cb. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
 %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
-    - \tweak padding #1.5                                                      %! baca.markup():baca.IndicatorCommand._call()
+    - \tweak X-offset #2.5                                                     %! baca.markup():baca.IndicatorCommand._call()
+    - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
     _ \markup { IV }                                                           %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "tessera_1(0)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START

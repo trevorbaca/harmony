@@ -370,18 +370,12 @@ maker(
         [1, 2, 2, 2, 2, 1, 2, 2, 2],
         extra_counts=[2],
     ),
-    baca.staff_positions(
-        [-2, 0, -2, 0, 0],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([-2, 0, -2, 0, 0]),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3.5),
 )
 
 maker(
@@ -518,18 +512,12 @@ maker(
         [1, 2, 2, 1, 2, 2, 2, 2, 2, 2],
         extra_counts=[0, 6],
     ),
-    baca.staff_positions(
-        [-2, 0, 0, -2, 0],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([-2, 0, 0, -2, 0]),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
 )
 
 maker(

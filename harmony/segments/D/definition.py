@@ -156,7 +156,6 @@ maker(
         ),
         measures=(5, 6),
     ),
-    baca.dls_staff_padding(9),
 )
 
 maker(
@@ -173,7 +172,11 @@ maker(
         abjad.tweak((-1, 0)).extra_offset,
         selector=baca.leaf(0, grace=False),
     ),
-    baca.dls_staff_padding(6),
+)
+
+maker(
+    ("perc1", (1, 11)),
+    baca.dls_staff_padding(5.5),
 )
 
 # perc2
@@ -190,7 +193,6 @@ maker(
         "f > p",
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(9),
 )
 
 maker(
@@ -204,7 +206,6 @@ maker(
         "p < f",
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(5),
 )
 
 maker(
@@ -214,7 +215,6 @@ maker(
         rest_leaves=[0, 1, 2],
     ),
     baca.dynamic("p-sub"),
-    baca.dls_staff_padding(5),
 )
 
 maker(
@@ -247,7 +247,11 @@ maker(
         right_broken=True,
         selector=baca.pleaves().rleak(),
     ),
-    baca.dls_staff_padding(5),
+)
+
+maker(
+    ("perc2", (1, 11)),
+    baca.dls_staff_padding(5.5),
 )
 
 # hp
@@ -623,7 +627,8 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak(1.5).padding,
+        abjad.tweak(2.5).X_offset,
+        abjad.tweak(1).padding,
         direction=abjad.Down,
     ),
 )

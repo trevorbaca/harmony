@@ -711,8 +711,8 @@ def purpleheart_staff_positions(argument) -> baca.Suite:
     assert all(_ in (-2, 0, 2) for _ in argument), repr(argument)
     return baca.chunk(
         baca.stem_down(),
-        baca.tuplet_bracket_down(),
-        baca.tuplet_bracket_staff_padding(3),
+        baca.tuplet_bracket_up(),
+        baca.tuplet_bracket_staff_padding(0.5),
         baca.staff_positions(argument, allow_repeats=True,),
     )
 

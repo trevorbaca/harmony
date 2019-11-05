@@ -197,18 +197,12 @@ maker(
         extra_counts=[2],
         rest_most=True,
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
@@ -235,7 +229,7 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.dynamic('"mf"'),
-    baca.dls_staff_padding(5),
+    baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(3).staff_padding,
@@ -253,18 +247,12 @@ maker(
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
@@ -336,7 +324,7 @@ maker(
         literal=True,
     ),
     baca.dynamic("mp"),
-    baca.dls_staff_padding(2),
+    baca.dls_staff_padding(4),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         map=baca.plts(),
@@ -360,7 +348,7 @@ maker(
         baca.pleaves(),
     ),
     baca.dynamic("sfp"),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(6),
 )
 
 # vc1
@@ -427,7 +415,7 @@ maker(
         selector=baca.leaves().pheads()[:-1],
     ),
     baca.new(
-        baca.dls_staff_padding(9),
+        baca.dls_staff_padding(6),
         selector=baca.leaves().pheads()[-1:],
     ),
     baca.metric_modulation_spanner(
@@ -454,7 +442,6 @@ maker(
     ),
     baca.pitch("B3"),
     baca.dynamic("mp"),
-    baca.dls_staff_padding(2),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         map=baca.plts(),
@@ -479,13 +466,17 @@ maker(
     baca.hairpin(
         "mf >o niente",
     ),
-    baca.dls_staff_padding(3),
     baca.scp_spanner(
         "P1 =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
+)
+
+maker(
+    ("vc2", (1, 3)),
+    baca.dls_staff_padding(4),
 )
 
 # cb1
@@ -540,9 +531,9 @@ maker(
         baca.pleaves(),
     ),
     baca.dynamic("sfp"),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5.5 + 1).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-4:].rleak(),
     ),
@@ -571,7 +562,6 @@ maker(
         literal=True,
     ),
     baca.dynamic("mp"),
-    baca.dls_staff_padding(2),
     baca.damp_spanner(
         abjad.tweak(3 + 1).staff_padding,
         map=baca.plts(),
@@ -596,11 +586,15 @@ maker(
     baca.hairpin(
         "mf >o niente",
     ),
-    baca.dls_staff_padding(3),
     baca.scp_spanner(
         "P1 =|",
         abjad.tweak(3 + 1).staff_padding,
         autodetect_right_padding=False,
         selector=baca.tleaves().rleak(),
     ),
+)
+
+maker(
+    ("cb2", (1, 3)),
+    baca.dls_staff_padding(4),
 )

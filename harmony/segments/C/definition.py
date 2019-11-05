@@ -157,10 +157,7 @@ maker(
         extra_counts=[2],
         rest_most=True,
     ),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
@@ -175,10 +172,7 @@ maker(
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     ),
-    baca.staff_positions(
-        [0, -2, 0, -2, 0],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
@@ -187,10 +181,7 @@ maker(
 
 maker(
     ("perc1", (1, 2)),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
 )
 
 maker(
@@ -218,13 +209,7 @@ maker(
         extra_counts=[2],
         rest_except=[0, 1, -2, -1],
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         measures=6,
@@ -235,7 +220,7 @@ maker(
         measures=8,
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
 )
 
 # perc2
@@ -250,10 +235,7 @@ maker(
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
@@ -273,10 +255,7 @@ maker(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
-    baca.staff_positions(
-        [0, -2, 0, -2, 0],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
@@ -285,11 +264,9 @@ maker(
 
 maker(
     ("perc2", (1, 2)),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
 )
+
 
 maker(
     ("perc2", 4),
@@ -319,13 +296,7 @@ maker(
         extra_counts=[0, 6],
         rest_except=[0, 1, 4, -2, -1],
     ),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3),
-    baca.staff_positions(
-        [0, 0, -2, 0, -2],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         measures=6,
@@ -336,7 +307,7 @@ maker(
         measures=8,
         selector=baca.tleaves(),
     ),
-    baca.dls_staff_padding(9),
+    baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
