@@ -128,19 +128,13 @@ maker(
         extra_counts=[1, 1, 2, 2],
         rest_cyclic=([1], 2),
     ),
-    baca.staff_positions(
-        [2, -2, 0],
-        allow_repeats=True,
-    ),
+    harmony.purpleheart_staff_positions([2, -2, 0]),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
     baca.dls_staff_padding(9),
-    baca.stem_down(),
-    baca.tuplet_bracket_down(),
-    baca.tuplet_bracket_staff_padding(3.5),
 )
 
 maker(
