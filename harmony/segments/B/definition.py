@@ -846,6 +846,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
+        selector=baca.tleaves().rleak(),
     ),
     baca.dls_staff_padding(5),
     baca.scp_spanner(
