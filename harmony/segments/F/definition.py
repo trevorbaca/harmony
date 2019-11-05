@@ -1456,8 +1456,12 @@ maker(
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),
-    baca.scp_spanner(
-        "SCP =|",
+    baca.hairpin(
+        "o< p >o niente",
+        pieces=baca.lparts([2, 4]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.tasto_spanner(
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -1502,14 +1506,25 @@ maker(
 maker(
     ("cb1", (4, 7)),
     baca.new(
-        baca.pitch("E1"),
-        baca.flat_glissando(),
-        baca.scp_spanner(
-            "SCP =|",
-            abjad.tweak(3).staff_padding,
-        ),
-        selector=baca.run(1),
+        baca.flat_glissando("E1"),
+        selector=baca.run(-1),
     ),
+    baca.hairpin(
+        "o< mf > p < f -- niente",
+        pieces=baca.lparts([6, 5, 3, 2]),
+        selector=baca.runs()[-1:].rleak(),
+    ),
+    baca.scp_spanner(
+        "T -> P1 -> T -> P1 =|",
+        abjad.tweak(3).staff_padding,
+        pieces=baca.lparts([6, 5, 3, 2]),
+        selector=baca.runs()[-1:].rleak()
+    ),
+)
+
+maker(
+    ("cb1", (1, 7)),
+    baca.dls_staff_padding(4),
 )
 
 maker(
@@ -1545,20 +1560,25 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.pitch(
-        "E1",
-        baca.leaves().rleak(),
-    ),
     baca.flat_glissando(
+        "E1",
+        right_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "o< mf > p < f > p < ff >o niente",
+        pieces=baca.cmgroups([1]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "SCP =|",
+        "T -> O -> T -> P2 -> T -> P1 -> T",
         abjad.tweak(3).staff_padding,
+        pieces=baca.cmgroups([1]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
+    baca.dls_staff_padding(4),
 )
 
 # cb2
@@ -1570,8 +1590,12 @@ maker(
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),
-    baca.scp_spanner(
-        "SCP =|",
+    baca.hairpin(
+        "o< p >o niente",
+        pieces=baca.lparts([3, 3]),
+        selector=baca.leaves().rleak(),
+    ),
+    baca.tasto_spanner(
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -1592,14 +1616,18 @@ maker(
 
 maker(
     ("cb2", (3, 7)),
-    baca.new(
-        baca.pitch("E1"),
-        baca.flat_glissando(),
-        baca.scp_spanner(
-            "SCP =|",
-            abjad.tweak(3).staff_padding,
-        ),
-        selector=baca.run(0),
+    baca.flat_glissando("E1"),
+    baca.hairpin(
+        "o< mp > p < f --",
+        bookend=False,
+        pieces=baca.mgroups([2, 1, 1, 2]),
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.scp_spanner(
+        "T -> P1 -> O -> T -> P2 -> O =|",
+        abjad.tweak(3).staff_padding,
+        pieces=baca.lparts([3, 4, 4, 2, 3, 5]),
+        selector=baca.tleaves().rleak(),
     ),
 )
 
@@ -1621,6 +1649,16 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(grace=False),
     ),
+    baca.hairpin(
+        "mf >o niente",
+        selector=baca.tleaves().rleak(),
+    ),
+    baca.scp_spanner(
+        "P1 =|",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        selector=baca.tleaves().rleak(),
+    ),
 )
 
 maker(
@@ -1628,10 +1666,23 @@ maker(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.pitch("E1"),
-    baca.flat_glissando(),
-    baca.scp_spanner(
-        "SCP =|",
-        abjad.tweak(3).staff_padding,
+    baca.flat_glissando("E1"),
+    baca.hairpin(
+        "o< f > p < ff >o niente",
+        pieces=baca.mgroups([2, 1, 1, 3]),
+        selector=baca.leaves().rleak(),
     ),
+    baca.scp_spanner(
+        "T -> P2 -> T -> P1 -> T",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([2, 1, 1, 2]),
+        selector=baca.leaves(),
+    ),
+)
+
+maker(
+    ("cb2", (1, 15)),
+    baca.dls_staff_padding(4),
 )
