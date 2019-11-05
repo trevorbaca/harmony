@@ -688,9 +688,11 @@ def bass_drum_staff_position() -> baca.Suite:
 
 def bridge_staff_position() -> baca.Suite:
     """
-    Sets bridge position and stem direction.
+    Sets bridge position (0), stem down and tuplet bracket up.
     """
-    return baca.chunk(baca.staff_position(0), baca.stem_down())
+    return baca.chunk(
+        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+    )
 
 
 def brake_drum_staff_position() -> baca.Suite:

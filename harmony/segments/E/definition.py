@@ -722,12 +722,19 @@ maker(
 
 maker(
     ("cb2", 1),
-    baca.clef("bass"),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
-    baca.pitch("E1"),
-    baca.flat_glissando(),
+    baca.flat_glissando(
+        "E1",
+        left_broken=True,
+    ),
+    baca.hairpin(
+        "o< f >o p",
+        pieces=baca.lparts([1, 5]),
+        left_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
     baca.scp_spanner(
         "SCP =|",
         abjad.tweak(3).staff_padding,

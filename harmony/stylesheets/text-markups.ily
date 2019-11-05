@@ -35,7 +35,7 @@ harmony-text-three = \markup {
     \column {
     \justify { Back. }
     \justify { \null }
-    \justify { Here I am. On my own. On the dunes. Where I can hear the sea. ▢
+    \justify { Here I am. On my own. On the dunes. Where I can hear the sea. 
         }
     }
     } } }
@@ -78,7 +78,7 @@ harmony-text-five = \markup {
     \justify { ...the wind in the marram grass. A bird – a gull – shearing the
     sky. Soundless. The wind: soundless. The gull: soundless. It is early
     morning. First light. I must have got up in the dark. Dressed myself. Come
-    here. ▢  }
+    here. }
 
     }
     } } }
@@ -97,7 +97,7 @@ harmony-text-six = \markup {
     \justify { On. }
     \justify { \null }
 
-    \justify { No more. ▢  }
+    \justify { No more. }
 
     }
     } } }
@@ -127,7 +127,7 @@ harmony-text-seven = \markup {
     can see the band on the narrow stage, see them and hear them. A saxophone
     player – a girl – shearing the air. A roar, but sweet and accurate. The
     band: silenced. The girl: on her own. It would be early morning by now.
-    First light. We have been up all night. Dressed to the nines. Come here. ▢
+    First light. We have been up all night. Dressed to the nines. Come here. 
     }
 
     }
@@ -144,7 +144,7 @@ harmony-text-eight = \markup {
     \with-color #red {
     \column {
 
-    \justify { Come here. ▢  }
+    \justify { Come here. }
     \justify { \null }
 
     }
@@ -164,7 +164,7 @@ harmony-text-nine = \markup {
     \justify { On. }
     \justify { \null }
 
-    \justify { Come here. As you will. When you’re young. ▢  }
+    \justify { Come here. As you will. When you’re young. }
 
     }
     } } }
@@ -183,7 +183,7 @@ harmony-text-ten = \markup {
     \justify { On. }
     \justify { \null }
 
-    \justify { No more. ▢  }
+    \justify { No more. }
 
     }
     } } }
@@ -203,7 +203,7 @@ harmony-text-eleven = \markup {
     \justify { Back. }
     \justify { \null }
 
-    \justify { The girl: on her own. ▢  }
+    \justify { The girl: on her own. }
 
     }
     } } }
@@ -229,7 +229,7 @@ harmony-text-twelve = \markup {
     night, she said. In these costumes. Then: Come up here, she said. Perhaps I
     shook my head, or made some other sign. No, come up here. If you will. And
     that smile. What could I do? One hand on the stage, I jumped up. I looked
-    back down, to the world I had left behind. ▢  }
+    back down, to the world I had left behind. }
 
 
     }
@@ -252,7 +252,7 @@ harmony-text-thirteen = \markup {
     \justify { On. }
     \justify { \null }
 
-    \justify { I come to a stop. ▢  }
+    \justify { I come to a stop. }
 
 
     }
@@ -269,7 +269,7 @@ harmony-text-fourteen = \markup {
     \with-color #red {
     \column {
 
-    \justify { On. ▢  }
+    \justify { On. }
 
     }
     } } }
@@ -288,7 +288,7 @@ harmony-text-fifteen = \markup {
     \justify { On. }
     \justify { \null }
 
-    \justify { The world I had left behind. ▢  }
+    \justify { The world I had left behind. }
 
     }
     } } }
@@ -393,7 +393,7 @@ harmony-text-seventeen = \markup {
     \justify { Back. }
     \justify { \null }
 
-    \justify { Here I am. On my own. On the dunes. ▢  }
+    \justify { Here I am. On my own. On the dunes. }
 
     }
     } } }
@@ -552,7 +552,7 @@ harmony-text-twenty-two = \markup {
     \justify { Not so far. }
     \justify { \null }
 
-    \justify { Here I am. ▢  }
+    \justify { Here I am. }
 
     }
     } } }
