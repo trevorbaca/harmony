@@ -95,7 +95,8 @@ maker(
         do_not_rewrite_meter=True,
     ),
     baca.pitch("Ab3"),
-    baca.dynamic("mp"),
+    baca.dynamic('"mf"'),
+    baca.dls_staff_padding(4),
     baca.new(
         baca.covered_spanner(
             abjad.tweak(5.5).staff_padding,
@@ -126,8 +127,10 @@ maker(
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak((0, 0)).X_extent,
     ),
+    baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-brake-drum-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -157,6 +160,8 @@ maker(
     baca.stem_tremolo(
         baca.pleaves().get([0, -1]),
     ),
+    baca.dynamic("pp"),
+    baca.dls_staff_padding(6),
 )
 
 # hp
@@ -196,6 +201,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bisb-markup",
+        abjad.tweak(5).staff_padding,
         literal=True,
     ),
 )
@@ -208,6 +214,11 @@ maker(
         baca.pleaves(),
     ),
     baca.dynamic("pp"),
+)
+
+maker(
+    ("hp", (1, 9)),
+    baca.dls_staff_padding(4),
 )
 
 # va
@@ -244,6 +255,7 @@ maker(
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
@@ -254,6 +266,7 @@ maker(
         "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
     ),
+    baca.dls_staff_padding(4),
 )
 
 # vc1
@@ -272,7 +285,9 @@ maker(
         baca.pheads()[1:],
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(4.5).bound_details__right__padding,
+        autodetect_right_padding=False,
         left_broken=True,
     ),
 )
@@ -309,6 +324,7 @@ maker(
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
@@ -319,6 +335,11 @@ maker(
         "<C5 Db5 Eb5>",
         baca.plts(exclude=abjad.const.HIDDEN),
     ),
+)
+
+maker(
+    ("vc1", (1, 9)),
+    baca.dls_staff_padding(4),
 )
 
 # vc2
@@ -338,11 +359,14 @@ maker(
     ),
     baca.pitch("B2"),
     baca.hairpin(
-        "mp >o niente",
+        "(p) >o",
+        bookend=False,
         selector=baca.leaves()[-2:],
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        abjad.tweak(4.5).bound_details__right__padding,
+        autodetect_right_padding=False,
         left_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -360,6 +384,10 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(exclude=abjad.const.HIDDEN),
     ),
+    baca.dynamic(
+        "p",
+        measures=3,
+    ),
     baca.hairpin(
         "p < f > p",
         measures=4,
@@ -374,6 +402,7 @@ maker(
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
@@ -385,6 +414,11 @@ maker(
         "<B4 C5 D5>",
         baca.plts(exclude=abjad.const.HIDDEN),
     ),
+)
+
+maker(
+    ("vc2", (1, 9)),
+    baca.dls_staff_padding(4),
 )
 
 # cb1
@@ -433,6 +467,7 @@ maker(
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
@@ -444,6 +479,11 @@ maker(
         baca.plts(exclude=abjad.const.HIDDEN),
         do_not_transpose=True,
     ),
+)
+
+maker(
+    ("cb1", (1, 9)),
+    baca.dls_staff_padding(4),
 )
 
 # cb2
@@ -459,11 +499,14 @@ maker(
     ),
     baca.pitch("Bb2"),
     baca.hairpin(
-        "mp >o niente",
+        "(p) >o",
+        bookend=False,
         selector=baca.leaves()[-2:],
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        abjad.tweak(4.5).bound_details__right__padding,
+        autodetect_right_padding=False,
         left_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -481,6 +524,10 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(exclude=abjad.const.HIDDEN),
     ),
+    baca.dynamic(
+        "p",
+        measures=5,
+    ),
     baca.hairpin(
         "p < ff >o niente",
         measures=6,
@@ -489,6 +536,7 @@ maker(
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
@@ -503,6 +551,11 @@ maker(
     ),
 )
 
+maker(
+    ("cb2", (1, 9)),
+    baca.dls_staff_padding(4),
+)
+
 # va, vc1, vc2, cb1, cb2
 
 maker(
@@ -515,6 +568,7 @@ maker(
     baca.dynamic("pp"),
     baca.markup(
         r"\baca-quasi-bisb-ancora-markup",
+        abjad.tweak(1.5).padding,
         literal=True,
     ),
 )
