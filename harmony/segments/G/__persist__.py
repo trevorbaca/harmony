@@ -125,7 +125,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ff',
+                                value='p',
                                 ),
                             ],
                         ),
@@ -166,7 +166,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Cello_I_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ff',
+                                value='pp',
                                 ),
                             ],
                         ),
@@ -207,7 +207,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ff',
+                                value='p',
                                 ),
                             ],
                         ),
@@ -248,7 +248,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Contrabass_I_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='ff',
+                                value='pp',
                                 ),
                             ],
                         ),
