@@ -726,9 +726,11 @@ def purpleheart_staff_positions(argument) -> baca.Suite:
 
 def slate_staff_position() -> baca.Suite:
     """
-    Sets slate staff position and stem direction.
+    Sets slate staff position (1), stem down, tuplet bracket up.
     """
-    return baca.chunk(baca.staff_position(1), baca.stem_down())
+    return baca.chunk(
+        baca.staff_position(1), baca.stem_down(), baca.tuplet_bracket_up(),
+    )
 
 
 def tam_tam_staff_position() -> baca.Suite:
