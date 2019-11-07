@@ -414,7 +414,7 @@ harmony-text-eighteen = \markup {
 
     \justify { Where I can see the sea. How it sparkled. At that time in the
     afternoon. There was dance music. }
-    \justify { \null }
+    \justify { \transparent TEXT \null }
 
     \justify { No. }
     \justify { \null }
@@ -434,7 +434,7 @@ harmony-text-eighteen = \markup {
     \justify { I felt such joy, to be there, and the sea. It was so loud you
     couldn’t hear me when I shouted to you to join me. Come here! Come here! So
     I held up an arm, and waved, and you did see me. That smile. }
-    \justify { \null }
+    \justify { \transparent TEXT \null }
 
     \justify { No. }
     \justify { \null }
