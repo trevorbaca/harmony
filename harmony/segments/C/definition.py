@@ -111,7 +111,7 @@ maker(
         harmony.cerulean[1:],
     ),
     baca.pitch("F3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
@@ -134,7 +134,7 @@ maker(
     ),
     baca.pitch("F3"),
     baca.dynamic(
-        '"mf"-sempre',
+        "mf-sempre",
         abjad.tweak(-0.75).self_alignment_X,
     ),
     baca.covered_spanner(

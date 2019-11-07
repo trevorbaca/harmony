@@ -95,7 +95,7 @@ maker(
         do_not_rewrite_meter=True,
     ),
     baca.pitch("Ab3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.dls_staff_padding(4),
     baca.new(
         baca.covered_spanner(

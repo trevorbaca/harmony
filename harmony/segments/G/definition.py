@@ -153,7 +153,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("Ab3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
 )
 
 maker(

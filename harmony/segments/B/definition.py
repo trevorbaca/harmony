@@ -159,7 +159,7 @@ maker(
         harmony.cerulean[1:],
     ),
     baca.pitch("F3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.dls_staff_padding(3),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
@@ -373,7 +373,7 @@ maker(
     harmony.sixteenths(
         ["-", 6],
     ),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -492,7 +492,7 @@ maker(
         [4, -6, 4, 4, -2],
     ),
     harmony.whisk_staff_position(),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",

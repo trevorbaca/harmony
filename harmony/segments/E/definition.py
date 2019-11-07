@@ -76,7 +76,7 @@ maker(
         [-4, 1, -4, 1, "-"],
     ),
     baca.pitch("F3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
     ),

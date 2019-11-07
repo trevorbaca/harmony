@@ -106,7 +106,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("Eb3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
 )
 
 maker(
@@ -158,7 +158,7 @@ maker(
         denominator=None,
     ),
     baca.pitch("F3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
 )
 
 maker(
