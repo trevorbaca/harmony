@@ -476,7 +476,10 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
-    baca.dynamic("pp"),
+    baca.dynamic(
+        "pp-ancora",
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
