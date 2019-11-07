@@ -982,6 +982,7 @@ V_Percussion_I_Music_Voice = {                                                 %
 
     % [V Percussion_I_Music_Voice measure 199 / measure 4]                     %! baca.SegmentMaker._comment_measure_numbers()
     \override Stem.direction = #down                                           %! baca.stem_down():baca.OverrideCommand._call(1)
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
     d'4                                                                        %! harmony.sixteenths()
     ^ \baca-slate-scrape-markup                                                %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1015,6 +1016,7 @@ V_Percussion_I_Music_Voice = {                                                 %
 
     d'4                                                                        %! harmony.sixteenths()
     \revert Stem.direction                                                     %! baca.stem_down():baca.OverrideCommand._call(2)
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [V Percussion_I_Music_Voice measure 200 / measure 5]                     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1112,6 +1114,7 @@ V_Percussion_I_Music_Voice = {                                                 %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [V Percussion_I_Music_Voice measure 208 / measure 13]                    %! baca.SegmentMaker._comment_measure_numbers()
+    \override TupletBracket.direction = #up                                    %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
     r4                                                                         %! harmony.sixteenths()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "sixteenths([-8, 8, '-'], extra_counts=[2], talea_denominator=16)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1145,6 +1148,7 @@ V_Percussion_I_Music_Voice = {                                                 %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
@@ -1265,6 +1269,7 @@ V_Percussion_II_Music_Voice = {                                                %
 
         % [V Percussion_II_Music_Voice measure 199 / measure 4]                %! baca.SegmentMaker._comment_measure_numbers()
         \override Stem.direction = #down                                       %! baca.stem_down():baca.OverrideCommand._call(1)
+        \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
         d'8                                                                    %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
@@ -1295,6 +1300,7 @@ V_Percussion_II_Music_Voice = {                                                %
     }                                                                          %! harmony.sixteenths()
 
     r4                                                                         %! harmony.sixteenths()
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     % [V Percussion_II_Music_Voice measure 200 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
@@ -1392,6 +1398,7 @@ V_Percussion_II_Music_Voice = {                                                %
 
         % [V Percussion_II_Music_Voice measure 208 / measure 13]               %! baca.SegmentMaker._comment_measure_numbers()
         \once \override Stem.direction = #down                                 %! baca.stem_down():baca.OverrideCommand._call(1)
+        \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
         d'8                                                                    %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
@@ -1408,6 +1415,7 @@ V_Percussion_II_Music_Voice = {                                                %
     }                                                                          %! harmony.sixteenths()
 
     r2.                                                                        %! harmony.sixteenths()
+    \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
