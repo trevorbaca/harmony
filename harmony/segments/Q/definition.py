@@ -335,10 +335,8 @@ maker(
 maker(
     ("hp", 1),
     baca.make_notes(),
-    baca.chunk(
-        baca.pitch("Db1"),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("Db1"),
+    baca.ottava_bassa(),
     baca.laissez_vibrer(),
     baca.dynamic("f"),
     baca.dls_staff_padding(5),
@@ -365,10 +363,8 @@ maker(
     harmony.sixteenths(
         [-16, 4],
     ),
-    baca.chunk(
-        baca.pitch("Db1"),
-        baca.ottava_bassa(),
-    ),
+    baca.pitch("Db1"),
+    baca.ottava_bassa(),
     baca.laissez_vibrer(),
     baca.dynamic("f"),
     baca.dls_staff_padding(5),
