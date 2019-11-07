@@ -112,10 +112,18 @@ maker(
 maker(
     ("bfl", 1),
     harmony.sixteenths(
-        ["+"],
+        [6, 6],
+        fuse=True,
+        do_not_rewrite_meter=True,
+        written_dotted_quarters=([0], 1),
+        invisible_pairs=True,
     ),
     baca.pitch("<Eb3 Eb4 Bb4>"),
-    baca.dynamic("mf"),
+    baca.hairpin(
+        "o< mf >o niente",
+        pieces=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+    ),
     baca.markup(
         baca.levine_multiphonic(5),
     ),
@@ -207,10 +215,18 @@ maker(
 maker(
     ("bfl", 10),
     harmony.sixteenths(
-        ["-", 8],
+        ["-", 4, 4],
+        fuse=True,
+        do_not_rewrite_meter=True,
+        written_quarters=([0], 1),
+        invisible_pairs=True,
     ),
     baca.pitch("<Eb3 Eb4 Bb4>"),
-    baca.dynamic("mf"),
+    baca.hairpin(
+        "o< mf >o niente",
+        pieces=baca.lparts([1, 2]),
+        selector=baca.tleaves().rleak(),
+    ),
     baca.new(
         baca.metric_modulation_spanner(
             abjad.tweak(5.5).staff_padding,
