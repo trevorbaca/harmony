@@ -867,6 +867,7 @@ maker(
     baca.markup(
         r"\baca-eleven-e-flat",
         abjad.tweak(1).padding,
+        abjad.tweak(3).X_offset,
         literal=True,
         match=[1],
     ),
@@ -1026,6 +1027,7 @@ maker(
     ),
     baca.markup(
         r"\baca-seven-e-flat",
+        abjad.tweak(3).X_offset,
         abjad.tweak(1).padding,
         literal=True,
         match=[1],
@@ -1144,6 +1146,12 @@ maker(
         baca.pheads(),
     ),
     baca.dynamic("p"),
+    baca.scp_spanner(
+        "T4 -> O",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
+        bookend=True,
+    ),
 )
 
 maker(

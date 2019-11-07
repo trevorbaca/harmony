@@ -135,7 +135,7 @@ maker(
         ["-", 4, -2, 4],
     ),
     baca.pitch("Ab3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
 )
 
 maker(

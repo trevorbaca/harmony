@@ -264,7 +264,7 @@ maker(
 maker(
     ("bfl", (7, 8)),
     baca.pitch("F3"),
-    baca.dynamic('"mf"'),
+    baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(5.5).staff_padding,
     ),

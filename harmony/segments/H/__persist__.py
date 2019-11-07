@@ -84,7 +84,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Bass_Flute_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='\\baca-effort-mf',
+                                value='mf',
                                 ),
                             ],
                         ),
