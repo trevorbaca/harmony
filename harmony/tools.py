@@ -317,10 +317,11 @@ def sixteenths(
     denominator=(1, 16),
     do_not_rewrite_meter: bool = None,
     extra_counts: abjad.IntegerSequence = None,
-    written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_eighths: typing.Union[abjad.PatternTyping, bool] = None,
-    written_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
+    written_dotted_quarters: typing.Union[abjad.PatternTyping, bool] = None,
+    written_halves: typing.Union[abjad.PatternTyping, bool] = None,
+    written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     written_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     invisible: typing.Union[abjad.PatternTyping, bool] = None,
@@ -356,6 +357,18 @@ def sixteenths(
             boundary_depth=1, reference_meters=_reference_meters
         )
         commands.append(rewrite_)
+    if written_eighths is True:
+        selector = baca.pleaves()
+        written_ = rmakers.written_duration((1, 8), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
+    elif written_eighths is not None:
+        selector = baca.pleaves().get(*written_eighths)
+        written_ = rmakers.written_duration((1, 8), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
     if written_quarters is True:
         selector = baca.pleaves()
         written_ = rmakers.written_duration((1, 4), selector)
@@ -368,15 +381,21 @@ def sixteenths(
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    if written_eighths is True:
-        selector = baca.pleaves()
-        written_ = rmakers.written_duration((1, 8), selector)
+    if written_dotted_quarters is not None:
+        selector = baca.pleaves().get(*written_dotted_quarters)
+        written_ = rmakers.written_duration((3, 8), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
-    elif written_eighths is not None:
-        selector = baca.pleaves().get(*written_eighths)
-        written_ = rmakers.written_duration((1, 8), selector)
+    if written_halves is True:
+        selector = baca.pleaves()
+        written_ = rmakers.written_duration((1, 2), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
+    elif written_halves is not None:
+        selector = baca.pleaves().get(*written_halves)
+        written_ = rmakers.written_duration((1, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
@@ -395,18 +414,6 @@ def sixteenths(
     if written_dotted_wholes is not None:
         selector = baca.pleaves().get(*written_dotted_wholes)
         written_ = rmakers.written_duration((3, 2), selector)
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
-    if written_halves is True:
-        selector = baca.pleaves()
-        written_ = rmakers.written_duration((1, 2), selector)
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
-    elif written_halves is not None:
-        selector = baca.pleaves().get(*written_halves)
-        written_ = rmakers.written_duration((1, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
