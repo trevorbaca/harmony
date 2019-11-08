@@ -215,6 +215,7 @@ maker(
         baca.plt(0),
     ),
     baca.laissez_vibrer(),
+    baca.dynamic("pp"),
     baca.markup(
         r"\baca-glockenspiel-markup",
         literal=True,
@@ -287,6 +288,7 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("f"),
     baca.markup(
         r"\baca-xyl-markup",
         literal=True,

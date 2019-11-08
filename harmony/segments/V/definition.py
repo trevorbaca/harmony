@@ -336,10 +336,7 @@ maker(
         [4, "-"],
     ),
     baca.pitch("D5"),
-    baca.double_flageolet(
-        baca.pheads(),
-    ),
-    baca.accent(
+    baca.flageolet(
         baca.pheads(),
     ),
     baca.laissez_vibrer(
@@ -421,6 +418,7 @@ maker(
     baca.laissez_vibrer(
         baca.ptails(),
     ),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(0).self_alignment_X,
