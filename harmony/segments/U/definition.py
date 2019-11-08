@@ -95,10 +95,17 @@ maker(
 maker(
     ("bfl", 2),
     harmony.sixteenths(
-        [-4, 4],
+        [-4, 2, 2],
+        written_quarters=([0], 1),
+        invisible_pairs=True,
     ),
     baca.pitch("E5"),
-    baca.dynamic("mp"),
+    baca.hairpin(
+        "o< f >o niente",
+        map=baca.runs(),
+        pieces=baca.lparts([1, 2]),
+        selector=baca.leaves().rleak(),
+    ),
     baca.trill_spanner(
         alteration="m2",
         map=baca.run(0),
@@ -174,12 +181,11 @@ maker(
         rest_cyclic=([1], 2),
     ),
     harmony.purpleheart_staff_positions([2, -2, 0]),
-    baca.dynamic("f"),
+    baca.dynamic("p"),
     baca.markup(
         r"\baca-purpleheart-markup",
         literal=True,
     ),
-    baca.dls_staff_padding(9),
 )
 
 maker(
@@ -242,6 +248,7 @@ maker(
         extra_counts=[0, -8],
         denominator=None,
     ),
+    baca.tuplet_bracket_up(),
     baca.pitch(
         "E4",
         baca.plt(0),
@@ -407,10 +414,11 @@ maker(
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
-        "P -> T",
+        "P4 -> T1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
+        left_broken=True,
         selector=baca.leaves(),
     ),
 )
