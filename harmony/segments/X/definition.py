@@ -115,6 +115,11 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", (1, 9)),
+    baca.dls_staff_padding(4),
+)
+
 # perc1
 
 maker(
@@ -126,6 +131,7 @@ maker(
     baca.dynamic("mp"),
     baca.markup(
         r"\baca-slate-scrape-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -139,10 +145,11 @@ maker(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.markup(
         r"\baca-triangle-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -156,8 +163,14 @@ maker(
     baca.dynamic("p"),
     baca.markup(
         r"\baca-slate-scrape-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
+)
+
+maker(
+    ("perc1", (1, 9)),
+    baca.dls_staff_padding(6),
 )
 
 # perc2
@@ -172,8 +185,10 @@ maker(
         "o<| mf",
         map=baca.runs().map(baca.leaves().rleak()),
     ),
+    baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-bd-superball-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -184,11 +199,13 @@ maker(
     harmony.sixteenths(
         [1, "-"],
     ),
-    baca.staff_position(2),
+    harmony.purpleheart_staff_positions([2]),
     baca.accent(),
-    baca.dynamic("f"),
+    baca.dynamic("ff"),
+    baca.dls_staff_padding(5),
     baca.markup(
         r"\baca-purpleheart-markup",
+        abjad.tweak(5).staff_padding,
         literal=True,
     ),
 )
@@ -209,21 +226,27 @@ maker(
         baca.flat_glissando(),
         selector=baca.run(0),
     ),
-    baca.staff_position(
-        2,
-        baca.plts()[-1:],
+    baca.new(
+        harmony.purpleheart_staff_positions([2]),
+        selector=baca.leaves()[-2:],
     ),
     baca.stem_tremolo(
         baca.pheads().get([0, 2]),
     ),
     baca.dynamic("p"),
+    baca.dls_staff_padding(
+        6,
+        baca.leaves()[:-2],
+    ),
     baca.markup(
         r"\baca-tam-tam-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
     baca.new(
         baca.accent(),
-        baca.dynamic("f"),
+        baca.dynamic("ff"),
+        baca.dls_staff_padding(5),
         selector=baca.pleaf(-1),
     ),
     baca.staff_lines(
@@ -232,12 +255,13 @@ maker(
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
+        abjad.tweak(5).staff_padding,
         abjad.tweak(1).self_alignment_X,
         literal=True,
         selector=baca.leaf(-1),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(10.5).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-1:].rleak(),
     ),
@@ -251,9 +275,6 @@ maker(
         [1, -9, 1, -4, 1, -9],
     ),
     baca.pitch("A4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -265,8 +286,10 @@ maker(
         "mp",
         selector=baca.pheads().get([1], 3),
     ),
+    baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-pdlt-markup",
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -280,8 +303,10 @@ maker(
     ),
     harmony.whisk_staff_position(),
     baca.dynamic("p"),
+    baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -294,7 +319,7 @@ maker(
     baca.pitch("F4"),
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(5.5).staff_padding,
     ),
     baca.trill_spanner(
@@ -322,8 +347,9 @@ maker(
     harmony.tessera_3(4),
     baca.pitch("F#3"),
     baca.scp_spanner(
-        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
         selector=baca.leaves(),
@@ -355,7 +381,7 @@ maker(
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[5:12],
     ),
@@ -401,8 +427,9 @@ maker(
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
-        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
         selector=baca.leaves(),
@@ -417,7 +444,7 @@ maker(
     baca.pitch("F4"),
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(5.5).staff_padding,
     ),
     baca.trill_spanner(
@@ -450,8 +477,9 @@ maker(
     harmony.tessera_3(2),
     baca.pitch("F#2"),
     baca.scp_spanner(
-        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
         selector=baca.leaves(),
@@ -486,7 +514,7 @@ maker(
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[5:12],
     ),
@@ -538,8 +566,9 @@ maker(
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
-        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
         selector=baca.leaves(),
@@ -557,7 +586,7 @@ maker(
     ),
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(5.5).staff_padding,
     ),
     baca.trill_spanner(
@@ -590,8 +619,9 @@ maker(
     harmony.tessera_3(0),
     baca.pitch("F#1"),
     baca.scp_spanner(
-        "P1 -> P3 -> P2 -> P4 -> P3 -> P4 -> P2 -> P3 ->",
+        "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
         abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
         selector=baca.leaves(),
@@ -602,7 +632,10 @@ maker(
 
 maker(
     (["va", "vc2", "cb2"], (1, 3)),
-    baca.staff_lines(5),
+    baca.new(
+        baca.staff_lines(5),
+        match=[0, 1],
+    ),
     harmony.sixteenths(
         [2, 2, -10],
         written_quarters=([0, 1, 4, 5],),
@@ -613,6 +646,32 @@ maker(
         "niente o<| mp |>o",
         pieces=baca.lparts([1, 1 + 1]),
         map=baca.runs().map(baca.leaves().rleak()),
+    ),
+)
+
+# va, vc2, cb2
+
+maker(
+    (["va", "vc2", "cb2"], 4),
+    baca.new(
+        baca.scp_spanner(
+            "T2 -> T4",
+            abjad.tweak(3).staff_padding,
+            autodetect_right_padding=False,
+            bookend=True,
+            selector=baca.leaves(),
+        ),
+        match=[0, 1],
+    ),
+    baca.new(
+        baca.scp_spanner(
+            "T2 -> T4",
+            abjad.tweak(5.5).staff_padding,
+            autodetect_right_padding=False,
+            bookend=True,
+            selector=baca.leaves(),
+        ),
+        match=[2],
     ),
 )
 
@@ -628,4 +687,16 @@ maker(
         baca.flat_glissando(),
     ),
     baca.dynamic("pp"),
+    baca.hairpin(
+        "(pp) < f",
+        measures=(7, 8),
+        selector=baca.leaves().rleak(),
+    ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+maker(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 9)),
+    baca.dls_staff_padding(4),
 )
