@@ -2,7 +2,7 @@
 % page_count = 2
 % measure_count = 11 + 1
 % time_signatures = [
-% '7/4', '6/4', '4/4', '1/4', '6/4', '6/4', '6/4', '6/4', '6/4', '6/4', '1/4'
+% '7/4', '6/4', '5/4', '1/4', '6/4', '6/4', '6/4', '6/4', '6/4', '6/4', '1/4'
 %  ]
 
 
@@ -40,7 +40,7 @@
             % [Page_Layout measure 228]                                        %! baca.SegmentMaker._comment_measure_numbers()
             \baca-new-spacing-section #1 #32                                   %! SPACING_COMMAND:baca.HorizontalSpacingSpecifier.__call__(1)
             \noBreak                                                           %! BREAK:baca.BreakMeasureMap.__call__(2)
-            s1 * 1                                                             %! baca.SegmentMaker._make_global_skips(1)
+            s1 * 5/4                                                           %! baca.SegmentMaker._make_global_skips(1)
         %@% \bacaStopTextSpanSPM                                               %! SPACING:baca.HorizontalSpacingSpecifier.__call__(3)
         %@% - \baca-start-spm-left-only "[1/32]"                               %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)
         %@% \bacaStartTextSpanSPM                                              %! SPACING:baca.HorizontalSpacingSpecifier.__call__(2)

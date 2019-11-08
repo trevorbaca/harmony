@@ -735,9 +735,11 @@ def slate_staff_position() -> baca.Suite:
 
 def tam_tam_staff_position() -> baca.Suite:
     """
-    Sets tam-tam staff position and stem direction.
+    Sets tam-tam staff position (0), stem down, tuplet bracket up.
     """
-    return baca.chunk(baca.staff_position(0), baca.stem_down())
+    return baca.chunk(
+        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+    )
 
 
 def triangle_staff_position() -> baca.Suite:
