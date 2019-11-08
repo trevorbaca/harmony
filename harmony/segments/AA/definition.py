@@ -231,7 +231,6 @@ maker(
         map=baca.runs(),
         selector=baca.leaves().rleak(),
     ),
-    baca.dls_staff_padding(5),
 )
 
 maker(
