@@ -633,9 +633,19 @@ maker(
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),
-    baca.dynamic("p"),
+    baca.hairpin(
+        "mf >o niente",
+        match=[0],
+        selector=baca.leaves().rleak(),
+    ),
+    baca.hairpin(
+        "mf >o",
+        bookend=False,
+        match=[1],
+        selector=baca.leaves().rleak(),
+    ),
     baca.scp_spanner(
-        "O -> T",
+        "P1 -> T1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
