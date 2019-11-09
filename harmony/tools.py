@@ -688,9 +688,11 @@ def warble(
 
 def bass_drum_staff_position() -> baca.Suite:
     """
-    Sets bass drum staff position and stem direction.
+    Sets bass drum staff position (-1), stem down, tuplet bracket up.
     """
-    return baca.chunk(baca.staff_position(-1), baca.stem_down())
+    return baca.chunk(
+        baca.staff_position(-1), baca.stem_down(), baca.tuplet_bracket_up(),
+    )
 
 
 def bridge_staff_position() -> baca.Suite:
