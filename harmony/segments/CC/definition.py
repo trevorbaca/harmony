@@ -90,6 +90,11 @@ maker(
     ),
 )
 
+maker(
+    ("bfl", (1, 2)),
+    baca.dls_staff_padding(4),
+)
+
 # perc1
 
 maker(
@@ -109,8 +114,14 @@ maker(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
+)
+
+maker(
+    ("perc1", (1, 2)),
+    baca.dls_staff_padding(6),
 )
 
 # perc2
@@ -122,18 +133,21 @@ maker(
         [1, "-"],
     ),
     harmony.bass_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
-    baca.laissez_vibrer(),
     baca.dynamic(
         "mp",
         selector=baca.pheads(),
     ),
+    baca.laissez_vibrer(),
     baca.markup(
         r"\baca-bd-struck-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
+)
+
+maker(
+    ("perc2", (1, 2)),
+    baca.dls_staff_padding(6),
 )
 
 # hp
@@ -149,6 +163,11 @@ maker(
     baca.dynamic("f"),
 )
 
+maker(
+    ("hp", (1, 2)),
+    baca.dls_staff_padding(4),
+)
+
 # va
 
 # vc1
@@ -157,11 +176,45 @@ maker(
 
 # cb1
 
+maker(
+    ("cb1", 1),
+    baca.pitch(
+        "Bb4",
+        do_not_transpose=True,
+    ),
+    baca.trill_spanner(
+        abjad.tweak(2).bound_details__right__padding,
+        alteration="Cb5",
+    ),
+)
+
 # cb2
 
 maker(
     ("cb2", 1),
-    baca.clef("treble"),
+    harmony.sixteenths(
+        [16, 4, 2, 2],
+        written_dotted_wholes=([0],),
+        invisible=([1, 2, 3],),
+    ),
+    baca.pitch("A1"),
+    baca.flat_glissando(
+        left_broken=True,
+        selector=baca.leaves()[:1],
+    ),
+    baca.hairpin(
+        "ff >o niente",
+        left_broken=True,
+        selector=baca.leaves().rleak(),
+    ),
+    baca.scp_spanner(
+        "T1 -> T4+",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        left_broken=True,
+        selector=baca.leaves(),
+    ),
 )
 
 maker(
@@ -188,10 +241,10 @@ maker(
     ),
 )
 
-# va, vc1, vc2, cb1, cb2
+# va, vc1, vc2, cb1
 
 maker(
-    (["bfl", "va", "vc1", "vc2", "cb1", "cb2"], 1),
+    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
     harmony.sixteenths(
         [4, 4, 16],
         written_halves=([0, 1, 3, 4],),
@@ -204,16 +257,9 @@ maker(
     ),
 )
 
-# cb1, cb2
+# va, vc1, vc2, cb1, cb2
 
 maker(
-    (["cb1", "cb2"], 1),
-    baca.pitch(
-        "Bb4",
-        do_not_transpose=True,
-    ),
-    baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
-        alteration="Cb5",
-    ),
+    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
+    baca.dls_staff_padding(4),
 )

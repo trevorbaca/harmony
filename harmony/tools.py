@@ -324,6 +324,9 @@ def sixteenths(
     written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     written_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
+    written_double_dotted_wholes: typing.Union[
+        abjad.PatternTyping, bool
+    ] = None,
     invisible: typing.Union[abjad.PatternTyping, bool] = None,
     invisible_pairs: bool = None,
     talea_denominator: int = None,
@@ -414,6 +417,12 @@ def sixteenths(
     if written_dotted_wholes is not None:
         selector = baca.pleaves().get(*written_dotted_wholes)
         written_ = rmakers.written_duration((3, 2), selector)
+        commands.append(written_)
+        unbeam_ = rmakers.unbeam()
+        commands.append(unbeam_)
+    if written_double_dotted_wholes is not None:
+        selector = baca.pleaves().get(*written_double_dotted_wholes)
+        written_ = rmakers.written_duration((7, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
