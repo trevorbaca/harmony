@@ -10,7 +10,7 @@ harmony-colophon-markup = \markup {
         \line {
             Madison, Wisc. \hspace #0.75 – \hspace #0.75 New Haven, Conn.
         }
-        \line { Mar. \hspace #0.75 – \hspace #0.75 Oct. 2019. }
+        \line { Mar. \hspace #0.75 – \hspace #0.75 Nov. 2019. }
         }
     }
 
