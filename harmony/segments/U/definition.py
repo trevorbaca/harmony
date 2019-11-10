@@ -56,7 +56,7 @@ maker(
         ),
     ),
     baca.open_volta(baca.skip(1 - 1)),
-    baca.close_volta(baca.skip(4 - 1)),
+    baca.close_volta(baca.skip(3 - 1)),
 )
 
 maker(
@@ -294,9 +294,6 @@ maker(
         [-4, 4],
     ),
     harmony.bass_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -380,7 +377,9 @@ maker(
     ),
     baca.markup(
         r"\baca-xyl-markup",
+        abjad.tweak(4).staff_padding,
         literal=True,
+        match=[0],
     ),
 )
 
@@ -392,6 +391,7 @@ maker(
         extra_counts=[0, 4],
         denominator=None,
     ),
+    baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
         baca.pheads(),

@@ -261,9 +261,6 @@ maker(
         [2, -2],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -321,9 +318,17 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.damp(
+        baca.rest(0),
+    ),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
     baca.dynamic("f"),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -363,12 +368,16 @@ maker(
         baca.dynamic("f-ancora"),
         match=[0],
     ),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 maker(
     ("hp", (1, 10)),
-    baca.tuplet_bracket_up(),
-    baca.dls_staff_padding(4),
+    baca.dls_staff_padding(4 + 2),
 )
 
 # va

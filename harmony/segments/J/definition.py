@@ -433,7 +433,7 @@ maker(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.pheads().get([0, -1]),
+        baca.pheads()[-1],
     ),
 )
 
@@ -620,6 +620,14 @@ maker(
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
+    baca.scp_spanner(
+        "T1 -> P1 -> T1",
+        abjad.tweak(8).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([3, 3]),
+        selector=baca.leaves(),
+    ),
 )
 
 # vc1
@@ -700,6 +708,14 @@ maker(
         "o< ff >o niente",
         pieces=baca.mgroups([3, 4]),
         selector=baca.leaves().rleak(),
+    ),
+    baca.scp_spanner(
+        "T1 -> P1 -> T1",
+        abjad.tweak(8).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([3, 3]),
+        selector=baca.leaves(),
     ),
 )
 
@@ -787,6 +803,14 @@ maker(
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
+    baca.scp_spanner(
+        "T1 -> P1 -> T1",
+        abjad.tweak(8).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([3, 3]),
+        selector=baca.leaves(),
+    ),
 )
 
 # cb1
@@ -813,7 +837,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "T =| (T) -> T2 -> T1 -> T3 -> T =| (T) -> P2 -> T3 =|",
+        "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
         abjad.tweak(3).staff_padding,
         pieces=baca.mgroups([2, 1, 1, 1, 1, 2, 1, 1, 2]),
         selector=baca.leaves().rleak(),
@@ -825,6 +849,14 @@ maker(
     baca.interpolate_pitches("F#2", "D2"),
     baca.glissando(
         hide_middle_note_heads=True,
+    ),
+    baca.scp_spanner(
+        "T4 -> O -> T4",
+        abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([1, 2]),
+        selector=baca.leaves(),
     ),
 )
 
@@ -911,6 +943,14 @@ maker(
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
+    baca.scp_spanner(
+        "T4 -> P1 -> T4",
+        abjad.tweak(8).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.mgroups([3, 3]),
+        selector=baca.leaves(),
+    ),
 )
 
 # va, vc1, vc2, cb1
@@ -989,4 +1029,9 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 15)),
     baca.dls_staff_padding(4),
+)
+
+maker(
+    (["va", "vc1", "vc2", "cb2"], (10, 15)),
+    baca.tuplet_bracket_staff_padding(2),
 )

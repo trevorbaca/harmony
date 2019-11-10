@@ -325,7 +325,7 @@ maker(
     baca.new(
         baca.dots_extra_offset((2, 0)),
         baca.dots_x_extent_false(),
-        baca.rest_x_extent_false(),
+        baca.rest_x_extent_zero(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
@@ -337,6 +337,7 @@ maker(
     baca.make_notes(),
     baca.pitch("Db1"),
     baca.ottava_bassa(),
+    baca.ottava_bracket_staff_padding(8),
     baca.laissez_vibrer(),
     baca.dynamic("f"),
     baca.dls_staff_padding(5),
@@ -350,11 +351,15 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.tuplet_bracket_up(),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
-    baca.dynamic("f"),
-    baca.dls_staff_padding(4),
+    baca.dynamic("f-ancora"),
+    baca.dls_staff_padding(4 + 2),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -365,8 +370,9 @@ maker(
     ),
     baca.pitch("Db1"),
     baca.ottava_bassa(),
+    baca.ottava_bracket_staff_padding(8),
     baca.laissez_vibrer(),
-    baca.dynamic("f"),
+    baca.dynamic("f-ancora"),
     baca.dls_staff_padding(5),
 )
 

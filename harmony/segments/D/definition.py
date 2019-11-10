@@ -226,7 +226,7 @@ maker(
     ("perc2", (8, 9)),
     harmony.purpleheart_staff_positions([2]),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         selector=baca.pleaves().rleak(),
     ),
 )
@@ -241,7 +241,7 @@ maker(
     harmony.purpleheart_staff_positions([0]),
     baca.dynamic("f-sub"),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         right_broken=True,
         selector=baca.pleaves().rleak(),
     ),
@@ -288,7 +288,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -522,7 +522,7 @@ maker(
     (["vc1", "vc2"], [(1, 6), 8, 11]),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves().rleak(grace=False)
+        selector=baca.ltleaves().rleak(grace=False)
     ),
 )
 
@@ -656,7 +656,8 @@ maker(
         pieces=baca.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
-    baca.tasto_spanner(
+    baca.scp_spanner(
+        "T1 =|",
         abjad.tweak(5.5).staff_padding,
     ),
 )
@@ -674,7 +675,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "T -> P1",
+        "T1 -> P1",
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
     ),
@@ -688,7 +689,12 @@ maker(
 # cb1, cb2
 
 maker(
-    (["cb1", "cb2"], [(1, 6), 8, 11]),
+    ("cb1", [(1, 6), 8, 11]),
+    baca.note_head_style_harmonic(),
+)
+
+maker(
+    ("cb2", (1, 6)),
     baca.note_head_style_harmonic(),
 )
 

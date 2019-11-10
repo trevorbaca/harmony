@@ -196,6 +196,7 @@ maker(
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(1).self_alignment_X,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -243,7 +244,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5).staff_padding,
         literal=True,
     ),
 )
@@ -283,6 +284,7 @@ maker(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.tweak(1).self_alignment_X,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -311,7 +313,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -346,9 +348,6 @@ maker(
         [-2, 2, "-", 2],
     ),
     baca.pitches("F#4 G#4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -356,6 +355,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-pdlt-markup",
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -370,7 +370,10 @@ maker(
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
-    baca.dynamic("f"),
+    baca.dynamic(
+        "f",
+        selector=baca.pheads(),
+    ),
 )
 
 # va
@@ -391,7 +394,10 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.dynamic('"ff"'),
+    baca.dynamic(
+        '"ff"',
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
 )
 
 maker(
@@ -536,11 +542,16 @@ maker(
     baca.stem_tremolo(
         baca.leaves().rleak().rleak().rleak().pleaves(),
     ),
+    baca.dynamic(
+        '"ff"',
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.hairpin(
-        '"ff" "f" mf mp p pp ppp ppp',
+        #'"ff" "f" mf mp p pp ppp ppp',
+        '"f" mf mp p pp ppp ppp',
         bookend=False,
         pieces=baca.plts(),
-        selector=baca.leaves().rleak().rleak().rleak(),
+        selector=baca.leaves()[1:].rleak().rleak().rleak(),
     ),
 )
 
@@ -708,7 +719,10 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.dynamic('"ff"'),
+    baca.dynamic(
+        '"ff"',
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(
         (-0.75, 0),
@@ -725,11 +739,17 @@ maker(
         "Aqs4",
         do_not_transpose=True,
     ),
+    baca.note_head_style_harmonic(),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
     ),
     baca.markup(
         r"\baca-eleven-e",
+        literal=True,
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        direction=abjad.Down,
         literal=True,
     ),
 )
@@ -742,9 +762,15 @@ maker(
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),
+    baca.hairpin(
+        "mf > p",
+    ),
     baca.scp_spanner(
-        "SCP =|",
+        "P1 -> T1",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        selector=baca.leaves(),
     ),
 )
 
@@ -814,8 +840,14 @@ maker(
         "F#4",
         do_not_transpose=True,
     ),
+    baca.note_head_style_harmonic(),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
+    ),
+    baca.markup(
+        baca.markups.string_number(4),
+        direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -827,9 +859,16 @@ maker(
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),
+    baca.hairpin(
+        "p > f",
+    ),
     baca.scp_spanner(
-        "SCP =|",
+        "T1 -> P2 -> O",
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
+        bookend=-1,
+        pieces=baca.lparts([2, 3]),
+        selector=baca.leaves(),
     ),
 )
 

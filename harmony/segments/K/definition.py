@@ -256,7 +256,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-glockenspiel-markup",
-        abjad.tweak(5).staff_padding,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -424,9 +424,6 @@ maker(
         [-2, 10, "-"],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
@@ -444,9 +441,6 @@ maker(
         [14, -4, 12, -2],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
@@ -464,9 +458,6 @@ maker(
         do_not_rewrite_meter=True,
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -481,9 +472,6 @@ maker(
         [2, -2],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 maker(
@@ -514,9 +502,6 @@ maker(
         [6, -4, 4, -2],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
@@ -546,7 +531,7 @@ maker(
     baca.dynamic("mf"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -665,6 +650,7 @@ maker(
     ),
     baca.markup(
         r"\baca-whisk-markup",
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -827,6 +813,7 @@ maker(
     baca.markup(
         r"\baca-eleven-e-flat",
         abjad.tweak(1).padding,
+        direction=abjad.Down,
         literal=True,
         selector=baca.run(1).leaf(0),
     ),
@@ -844,7 +831,6 @@ maker(
     ),
     baca.markup(
         r"\baca-eleven-d",
-        ###abjad.tweak(1).padding,
         abjad.tweak(2.5).X_offset,
         direction=abjad.Down,
         literal=True,

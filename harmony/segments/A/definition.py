@@ -152,10 +152,8 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        #abjad.tweak(0).parent_alignment_X,
-        #abjad.tweak(0).self_alignment_X,
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -206,7 +204,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -232,7 +230,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -256,7 +254,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -282,7 +280,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -298,7 +296,10 @@ maker(
     baca.damp(
         baca.ptails().map(baca.rleak()[-1]),
     ),
-    baca.dynamic("mf"),
+    baca.dynamic(
+        "mf-ancora",
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.dls_staff_padding(6),
 )
 
@@ -321,12 +322,13 @@ maker(
     baca.pitch("Gqf4"),
     baca.markup(
         r"\baca-seven-a",
+        abjad.tweak(5.5).staff_padding,
         literal=True,
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
     baca.damp_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.tweak(3).staff_padding,
         map=baca.plts(),
     ),
 )

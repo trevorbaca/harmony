@@ -375,7 +375,6 @@ maker(
     ),
     baca.new(
         harmony.brake_drum_staff_position(),
-        baca.accent(),
         baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -393,9 +392,6 @@ maker(
         [2, -2],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 maker(
@@ -404,6 +400,18 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         selector=baca.leaves()[3:].rleak(),
+    ),
+)
+
+# perc1, perc2
+
+maker(
+    (["perc1", "perc2"], 1),
+    baca.new(
+        baca.dots_extra_offset((1, 0)),
+        baca.dots_x_extent_false(),
+        baca.rest_x_extent_zero(),
+        map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
 
@@ -442,13 +450,15 @@ maker(
         "Bb5 A5 G#5",
         baca.plts()[:-1],
     ),
+    baca.flageolet(
+        baca.pheads(),
+    ),
     baca.laissez_vibrer(
         baca.ptails()[:-1],
     ),
     baca.dynamic("f"),
     baca.new(
         baca.pitch("E4"),
-        baca.accent(),
         baca.dynamic("f-ancora"),
         baca.snap_pizzicato(),
         selector=baca.phead(-1),
@@ -519,6 +529,10 @@ maker(
     ("va", 3),
     baca.make_notes(),
     baca.dynamic("mp"),
+    baca.markup(
+        "(half harm. pressure)",
+        abjad.tweak(1.5).padding,
+    ),
 )
 
 maker(
@@ -550,7 +564,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T1 =|",
         abjad.tweak(3).staff_padding,
     ),
 )
@@ -587,6 +601,10 @@ maker(
     ("vc1", 3),
     baca.make_notes(),
     baca.dynamic("mp"),
+    baca.markup(
+        "(half harm. pressure)",
+        abjad.tweak(1.5).padding,
+    ),
 )
 
 maker(
@@ -619,7 +637,7 @@ maker(
         selector=baca.plt(0),
     ),
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T1 =|",
         abjad.tweak(3).staff_padding,
         selector=baca.leaves(),
     ),
@@ -735,6 +753,10 @@ maker(
     ("cb1", 3),
     baca.make_notes(),
     baca.dynamic("mp"),
+    baca.markup(
+        "(half harm. pressure)",
+        abjad.tweak(1.5).padding,
+    ),
 )
 
 maker(
@@ -767,7 +789,7 @@ maker(
         selector=baca.plt(0),
     ),
     baca.scp_spanner(
-        "tasto poss. =|",
+        "T4 =|",
         abjad.tweak(3).staff_padding,
         selector=baca.leaves(),
     ),

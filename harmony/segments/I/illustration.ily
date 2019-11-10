@@ -487,7 +487,7 @@ I_Percussion_II_Music_Voice = {                                                %
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    - \tweak self-alignment-X #0                                               %! baca.markup():baca.IndicatorCommand._call()
+    - \tweak self-alignment-X #0.25                                            %! baca.markup():baca.IndicatorCommand._call()
     - \tweak staff-padding #6                                                  %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-bd-fingertips-markup                                               %! baca.markup():baca.IndicatorCommand._call()
     \glissando                                                                 %! baca.glissando():abjad.glissando(7)
@@ -587,6 +587,8 @@ I_Harp_Music_Voice = {                                                         %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \f                                                                     %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \baca-double-flageolet                                               %! baca.double_flageolet():baca.IndicatorCommand._call()
+        - \tweak padding #1.5                                                  %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-lv-markup                                                      %! baca.markup():baca.IndicatorCommand._call()
 
     }                                                                          %! harmony.sixteenths()
 

@@ -260,7 +260,6 @@ maker(
     ),
     baca.new(
         harmony.brake_drum_staff_position(),
-        baca.accent(),
         baca.dynamic("f"),
         baca.markup(
             r"\baca-brake-drum-markup",
@@ -399,9 +398,6 @@ maker(
         baca.leaf(-2),
     ),
     harmony.purpleheart_staff_positions([2]),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("ff"),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -432,6 +428,12 @@ maker(
         baca.pheads(),
     ),
     baca.dynamic("f"),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+        selector=baca.pheads(),
+    ),
 )
 
 maker(
@@ -446,6 +448,12 @@ maker(
         baca.pheads(),
     ),
     baca.dynamic("f-ancora"),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+        selector=baca.pheads(),
+    ),
 )
 
 maker(
@@ -507,6 +515,12 @@ maker(
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+        selector=baca.pheads(),
+    ),
 )
 
 # va
@@ -576,6 +590,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         pieces=baca.plts(),
     ),
 )
@@ -612,6 +627,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp -- ! >",
+        abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([1, 2, 3, 2]),
     ),
@@ -649,6 +665,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([2, 3, 2]),
     ),
@@ -686,6 +703,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         pieces=baca.lparts([2, 1, 1]),
     ),
 )

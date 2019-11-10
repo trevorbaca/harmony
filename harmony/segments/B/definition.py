@@ -235,7 +235,7 @@ maker(
         ),
         baca.markup(
             r"\baca-bd-superball-markup",
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(6).staff_padding,
             literal=True,
             selector=baca.pleaf(0, grace=False),
         ),
@@ -269,7 +269,7 @@ maker(
         selector=baca.plts(grace=False),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(10.5).staff_padding,
         selector=baca.leaves(grace=False)[2:8],
     ),
 )
@@ -292,7 +292,7 @@ maker(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(5 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -343,7 +343,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -377,7 +377,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(3 + 1).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -452,7 +452,7 @@ maker(
     baca.dls_staff_padding(6.5),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(3 + 1).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -474,11 +474,18 @@ maker(
     baca.hairpin(
         "p < f > p",
         map=baca.clparts([3]),
+        measures=1,
+        pieces=baca.clparts([1]),
+    ),
+    baca.hairpin(
+        "(p) < f > p",
+        map=baca.clparts([3]),
+        measures=(2, 5),
         pieces=baca.clparts([1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
     baca.dls_staff_padding(3),
@@ -496,7 +503,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -535,26 +542,26 @@ maker(
         pieces=baca.clparts([1]),
     ),
     baca.hairpin(
-        "p < mf > p",
+        "(p) < mf > p",
         map=baca.clparts([3]),
         measures=9,
         pieces=baca.clparts([1]),
     ),
     baca.hairpin(
-        "p < f > p",
+        "(p) < f > p",
         map=baca.clparts([3]),
         measures=10,
         pieces=baca.clparts([1]),
     ),
     baca.hairpin(
-        "p < ff > p",
+        "(p) < ff > p",
         map=baca.clparts([3]),
         measures=11,
         pieces=baca.clparts([1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(3).staff_padding,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
     baca.dls_staff_padding(3),
@@ -633,7 +640,7 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.dynamic("sfp"),
+    baca.dynamic('"ff"'),
     baca.dls_staff_padding(6),
 )
 
@@ -754,10 +761,10 @@ maker(
 
 maker(
     ("vc1", 7),
-    baca.clef("percussion"),
-    baca.staff_lines(
-        1,
-        baca.leaf(1),
+    baca.new(
+        baca.clef("percussion"),
+        baca.staff_lines(1),
+        selector=baca.leaf(1),
     ),
     harmony.sixteenths(
         [5, -5, 1, "-"],
@@ -767,7 +774,7 @@ maker(
         harmony.bridge_staff_position(),
         baca.accent(),
         baca.stem_tremolo(),
-        baca.dynamic("sfp"),
+        baca.dynamic('"ff"'),
         baca.dls_staff_padding(6),
         selector=baca.pleaf(1),
     ),
@@ -1057,7 +1064,7 @@ maker(
     baca.stem_tremolo(
         baca.pleaves(),
     ),
-    baca.dynamic("sfp"),
+    baca.dynamic('"ff"'),
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(
         (-1, 0),
@@ -1259,7 +1266,17 @@ maker(
 )
 
 maker(
-    (["va", "vc1", "vc2", "cb1"], [(1, 5), (8, 11)]),
+    (["va", "vc1", "cb1"], [(1, 5), (8, 11)]),
+    baca.new(
+        baca.note_head_style_harmonic(
+            baca.pleaves(grace=True),
+        ),
+        map=baca.pleaves(grace=True).runs(),
+    ),
+)
+
+maker(
+    ("vc2", [(3, 5), (8, 11)]),
     baca.new(
         baca.note_head_style_harmonic(
             baca.pleaves(grace=True),

@@ -459,7 +459,7 @@ maker(
         literal=True,
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(10.5).staff_padding,
         right_broken=True,
         selector=baca.leaves()[-1:].rleak(),
     ),
@@ -614,6 +614,7 @@ maker(
         selector=baca.leaves().rleak()[-1],
     ),
     baca.trill_spanner(
+        abjad.tweak(2.5).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
     ),
     baca.markup(
@@ -650,7 +651,7 @@ maker(
         after_graces=[1],
     ),
     baca.tuplet_bracket_up(),
-    baca.tuplet_bracket_staff_padding(3),
+    baca.tuplet_bracket_staff_padding(1.5),
     baca.pitches("Gb4 F4"),
     baca.glissando(),
     baca.hairpin(
@@ -658,7 +659,7 @@ maker(
     ),
     baca.scp_spanner(
         "T4 -> O",
-        abjad.tweak(5.5 + 2).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
         selector=baca.leaves(),
@@ -732,6 +733,7 @@ maker(
         [-4, 3, "-"],
         extra_counts=[1],
     ),
+    baca.tuplet_bracket_staff_padding(3),
 )
 
 # cb1
@@ -785,6 +787,7 @@ maker(
         selector=baca.leaves().rleak()[-1],
     ),
     baca.trill_spanner(
+        abjad.tweak(2.5).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
     ),
     baca.markup(
@@ -862,7 +865,7 @@ maker(
         ),
         baca.scp_spanner(
             "T4 -> O -> T4",
-            abjad.tweak(5.5).staff_padding,
+            abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
             bookend=-1,
         ),

@@ -271,11 +271,15 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.tuplet_bracket_up(),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
     baca.dynamic("f"),
-    baca.dls_staff_padding(4),
+    baca.dls_staff_padding(4 + 2),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 maker(

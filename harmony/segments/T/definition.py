@@ -147,7 +147,7 @@ maker(
     baca.dls_staff_padding(5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5 + 2).staff_padding,
+        abjad.tweak(5 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -172,7 +172,7 @@ maker(
     ),
     baca.markup(
         r"\baca-triangle-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.tweak(6 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -196,7 +196,7 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.tweak(6 + 1).staff_padding,
         literal=True,
     ),
 )
@@ -523,6 +523,7 @@ maker(
         denominator=None,
         after_graces=[1],
     ),
+    baca.tuplet_bracket_staff_padding(2),
     baca.pitches("Gb4 F4"),
     baca.glissando(),
     baca.hairpin(
@@ -587,6 +588,14 @@ maker(
     baca.dls_staff_padding(6),
 )
 
+maker(
+    ("cb1", 10),
+    baca.rest_extra_offset(
+        (-1.5, 0),
+        baca.rest(-1),
+    ),
+)
+
 # cb2
 
 maker(
@@ -639,6 +648,14 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves()[1:].rleak(),
+    ),
+)
+
+maker(
+    ("cb2", 10),
+    baca.rest_extra_offset(
+        (-1.5, 0),
+        baca.rest(-1),
     ),
 )
 

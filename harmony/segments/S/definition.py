@@ -369,13 +369,10 @@ maker(
         [4, 2, "-"],
     ),
     harmony.brake_drum_staff_position(),
-    baca.chunk(
-        baca.damp(),
-        baca.dynamic("p"),
-    ),
-    baca.new(
-        baca.laissez_vibrer(),
-        baca.dynamic("f"),
+    baca.damp(),
+    baca.dynamic("p"),
+    baca.dynamic(
+        "f",
         selector=baca.phead(1),
     ),
     baca.dls_staff_padding(6),
@@ -501,6 +498,7 @@ maker(
     baca.new(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
+        baca.rest_x_extent_zero(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
@@ -583,6 +581,7 @@ maker(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(4).X_offset,
+        abjad.tweak(4).staff_padding,
         literal=True,
     ),
 )
@@ -728,6 +727,14 @@ maker(
     harmony.sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
         extra_counts=[1],
+    ),
+    baca.tuplet_bracket_staff_padding(3),
+    baca.new(
+        baca.rest_extra_offset(
+            (-1.5, 0),
+            baca.rest(-1),
+        ),
+        match=[0],
     ),
 )
 
