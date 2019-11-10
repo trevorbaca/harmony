@@ -491,7 +491,7 @@ maker(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_aligment_X,
+        abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.scp_spanner(
         "P4 ||",
@@ -571,7 +571,7 @@ maker(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_aligment_X,
+        abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.scp_spanner(
         "P4 ||",
@@ -646,7 +646,7 @@ maker(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_aligment_X,
+        abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.scp_spanner(
         "P4 ||",

@@ -814,9 +814,8 @@ N_Percussion_I_Music_Voice_A = {                                               %
 
 N_Percussion_I_Music_Voice_B = {                                               %! abjad.Path.extern()
 
-    \once \override Dots.extra-offset = #'(2 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
+    \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
-    \once \override Rest.X-extent = ##f                                        %! baca.rest_x_extent_false():baca.OverrideCommand._call(1)
     r2..                                                                       %! harmony.appoggiato()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1191,9 +1190,8 @@ N_Percussion_II_Music_Voice_A = {                                              %
 
 N_Percussion_II_Music_Voice_B = {                                              %! abjad.Path.extern()
 
-    \once \override Dots.extra-offset = #'(2 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
+    \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
-    \once \override Rest.X-extent = ##f                                        %! baca.rest_x_extent_false():baca.OverrideCommand._call(1)
     r2..                                                                       %! harmony.appoggiato()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC

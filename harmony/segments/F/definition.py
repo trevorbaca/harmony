@@ -1567,7 +1567,7 @@ maker(
     ),
     baca.hairpin(
         "o< mf > p < f > p < ff >o niente",
-        pieces=baca.cmgroups([1]),
+        pieces=baca.mgroups([1, 1, 1, 1, 1, 2]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),

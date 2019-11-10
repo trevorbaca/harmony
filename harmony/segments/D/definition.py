@@ -167,9 +167,7 @@ maker(
     harmony.purpleheart_staff_positions([-2]),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(False).X_extent,
-        abjad.tweak(-1).self_alignment_X,
-        abjad.tweak((-1, 0)).extra_offset,
+        abjad.tweak(-0.9).self_alignment_X,
         selector=baca.leaf(0, grace=False),
     ),
 )

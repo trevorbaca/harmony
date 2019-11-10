@@ -1775,7 +1775,7 @@ O_Cello_II_Music_Voice = {                                                     %
         \once \override TupletNumber.text = #"10:8"                            %! baca.literal():baca.IndicatorCommand._call()
         f4                                                                     %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak self-aligment-X #-0.9                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-f-ancora                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -2045,7 +2045,7 @@ O_Contrabass_I_Music_Voice = {                                                 %
 
         dtqf'!4                                                                %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak self-aligment-X #-0.9                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-f-ancora                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
         - \tweak X-offset #3                                                   %! baca.markup():baca.IndicatorCommand._call()
@@ -2312,7 +2312,7 @@ O_Contrabass_II_Music_Voice = {                                                %
 
         ef!4                                                                   %! baca.skeleton()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
-        - \tweak self-aligment-X #-0.9                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
+        - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-f-ancora                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \baca-staccati #3                                                    %! baca.triple_staccato():baca.IndicatorCommand._call()
         - \abjad-invisible-line                                                %! baca.scp_spanner():SCP_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
