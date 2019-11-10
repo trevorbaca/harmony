@@ -499,9 +499,8 @@ maker(
 maker(
     (["perc1", "perc2"], [1, (4, 9), 12]),
     baca.new(
-        baca.dots_extra_offset((2, 0)),
+        baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
-        baca.rest_x_extent_false(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
@@ -640,7 +639,6 @@ maker(
     baca.markup(
         baca.markups.string_number(1),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -672,7 +670,6 @@ maker(
     baca.markup(
         baca.markups.string_number(4),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -683,7 +680,6 @@ maker(
     baca.markup(
         baca.markups.string_number(1),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -709,7 +705,6 @@ maker(
     baca.markup(
         baca.markups.string_number(1),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -720,7 +715,6 @@ maker(
     baca.markup(
         baca.markups.string_number(4),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -749,7 +743,6 @@ maker(
     baca.markup(
         baca.markups.string_number(3),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -761,7 +754,6 @@ maker(
     baca.markup(
         baca.markups.string_number(1),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -819,12 +811,13 @@ maker(
         pieces=baca.lparts([1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
-    baca.trill_spanner(
-        alteration="Fqs5",
-    ),
+    # TODO: text spanner currently must precede pitched trill spanner; fix
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         selector=baca.leaves()[1:8],
+    ),
+    baca.trill_spanner(
+        alteration="Fqs5",
     ),
 )
 
@@ -838,7 +831,6 @@ maker(
     baca.markup(
         baca.markups.string_number(3),
         abjad.tweak(1).padding,
-        #direction=abjad.Down,
     ),
 )
 
@@ -1029,4 +1021,3 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (11, 13)),
     baca.dls_staff_padding(6),
 )
-

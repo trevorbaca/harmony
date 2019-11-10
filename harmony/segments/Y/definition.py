@@ -240,8 +240,7 @@ maker(
     ),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
-        abjad.tweak(False).X_extent,
+        abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.markup(
         r"\baca-brake-drum-markup",

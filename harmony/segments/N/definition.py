@@ -497,9 +497,8 @@ maker(
 maker(
     (["perc1", "perc2"], 5),
     baca.new(
-        baca.dots_extra_offset((2, 0)),
+        baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
-        baca.rest_x_extent_false(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
