@@ -186,7 +186,6 @@ maker(
         [4, 2, "-"],
     ),
     harmony.bass_drum_staff_position(),
-    baca.accent(),
     baca.laissez_vibrer(
         baca.phead(1),
     ),
@@ -208,10 +207,7 @@ maker(
         [2, 2, "-"],
     ),
     harmony.bass_drum_staff_position(),
-    baca.chunk(
-        baca.accent(),
-        baca.dynamic("mp"),
-    ),
+    baca.dynamic("mp"),
     baca.laissez_vibrer(
         baca.phead(1),
     ),
@@ -356,13 +352,10 @@ maker(
         [4, 2, "-"],
     ),
     harmony.brake_drum_staff_position(),
-    baca.chunk(
-        baca.damp(),
-        baca.dynamic("p"),
-    ),
-    baca.new(
-        baca.laissez_vibrer(),
-        baca.dynamic("f"),
+    baca.damp(),
+    baca.dynamic("p"),
+    baca.dynamic(
+        "f",
         selector=baca.phead(1),
     ),
     baca.markup(
@@ -494,7 +487,7 @@ maker(
     baca.new(
         baca.dots_extra_offset((2, 0)),
         baca.dots_x_extent_false(),
-        baca.rest_x_extent_false(),
+        baca.rest_x_extent_zero(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )

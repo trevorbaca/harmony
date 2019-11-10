@@ -182,9 +182,6 @@ maker(
         [1, -23, -1, 1, -22],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.9).self_alignment_X,

@@ -235,9 +235,6 @@ maker(
         [1, -23, -1, 1, -22],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.9).self_alignment_X,
@@ -258,9 +255,6 @@ maker(
         denominator=None,
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 maker(
@@ -276,9 +270,6 @@ maker(
         [4, -20, 4],
     ),
     baca.staff_position(2),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
@@ -299,7 +290,10 @@ maker(
 
 maker(
     ("perc2", 3),
-    baca.make_notes(),
+    harmony.tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
 )
 
 maker(
@@ -383,9 +377,6 @@ maker(
         [-24, 4],
     ),
     baca.pitch("Ab4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -393,7 +384,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-pince-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.tweak(4 + 2).staff_padding,
         literal=True,
     ),
 )
@@ -413,7 +404,7 @@ maker(
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-whisk-markup",
-            abjad.tweak(6).staff_padding,
+            abjad.tweak(6 + 2).staff_padding,
             literal=True,
         ),
         selector=baca.pleaf(0),
@@ -444,9 +435,6 @@ maker(
         [-24, -1, 3, -20],
     ),
     baca.pitch("G1"),
-    baca.accent(
-        baca.pheads(),
-        ),
     baca.laissez_vibrer(
         baca.ptails(),
         ),

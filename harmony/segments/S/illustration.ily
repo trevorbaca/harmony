@@ -847,6 +847,7 @@ S_Percussion_I_Music_Voice_A = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2                                                                         %! harmony.appoggiato()
     \revert TupletBracket.direction                                            %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     \revert TupletBracket.staff-padding                                        %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
@@ -867,6 +868,7 @@ S_Percussion_I_Music_Voice_B = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -876,6 +878,7 @@ S_Percussion_I_Music_Voice_C = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2...                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -887,6 +890,7 @@ S_Percussion_I_Music_Voice_D = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -896,6 +900,7 @@ S_Percussion_I_Music_Voice_E = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2...                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -907,6 +912,7 @@ S_Percussion_I_Music_Voice_F = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -918,6 +924,7 @@ S_Percussion_I_Music_Voice_G = {                                               %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "appoggiato(divisions=[16], counts=[19], rest_after=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -937,6 +944,7 @@ S_Percussion_I_Music_Voice_H = {                                               %
     \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \ff                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1694,6 +1702,7 @@ S_Percussion_II_Music_Voice_A = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2                                                                         %! harmony.appoggiato()
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
@@ -1712,6 +1721,7 @@ S_Percussion_II_Music_Voice_B = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -1721,6 +1731,7 @@ S_Percussion_II_Music_Voice_C = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2...                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -1732,6 +1743,7 @@ S_Percussion_II_Music_Voice_D = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -1741,6 +1753,7 @@ S_Percussion_II_Music_Voice_E = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r2...                                                                      %! harmony.appoggiato()
 
 }                                                                              %! abjad.Path.extern()
@@ -1752,6 +1765,7 @@ S_Percussion_II_Music_Voice_F = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -1762,6 +1776,7 @@ S_Percussion_II_Music_Voice_G = {                                              %
 
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "appoggiato(divisions=[16], counts=[18], rest_after=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1782,6 +1797,7 @@ S_Percussion_II_Music_Voice_H = {                                              %
     \override DynamicLineSpanner.staff-padding = #5                            %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
     \once \override Dots.extra-offset = #'(1 . 0)                              %! baca.dots_extra_offset():baca.OverrideCommand._call(1)
     \once \override Dots.X-extent = ##f                                        %! baca.dots_x_extent_false():baca.OverrideCommand._call(1)
+    \once \override Rest.X-extent = #'(0 . 0)                                  %! baca.rest_x_extent_zero():baca.OverrideCommand._call(1)
     r1                                                                         %! harmony.appoggiato()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \ff                                                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1905,7 +1921,6 @@ S_Percussion_II_Music_Voice = {                                                %
     c'8                                                                        %! harmony.sixteenths()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \f                                                                         %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
-    \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     \revert Stem.direction                                                     %! baca.stem_up():baca.OverrideCommand._call(2)
 
     r8                                                                         %! harmony.sixteenths()
@@ -2759,6 +2774,7 @@ S_Harp_Music_Voice = {                                                         %
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         \pp                                                                    %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak X-offset #4                                                   %! baca.markup():baca.IndicatorCommand._call()
+        - \tweak staff-padding #4                                              %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-bisb-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     %@% - \baca-text-spanner-left-text "tuplet([(1,)], force_augmentation=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -4134,6 +4150,7 @@ S_Cello_II_Music_Voice = {                                                     %
         \stopStaff                                                             %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1                       %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
         \startStaff                                                            %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
+        \override TupletBracket.staff-padding = #3                             %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
         \override Stem.direction = #down                                       %! baca.stem_down():baca.OverrideCommand._call(1)
         \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
         \override DynamicLineSpanner.staff-padding = #6                        %! baca.dls_staff_padding():baca.OverrideCommand._call(1)
@@ -4193,7 +4210,9 @@ S_Cello_II_Music_Voice = {                                                     %
         - \accent                                                              %! baca.accent():baca.IndicatorCommand._call()
         \revert Stem.direction                                                 %! baca.stem_down():baca.OverrideCommand._call(2)
 
+        \once \override Rest.extra-offset = #'(-1.5 . 0)                       %! baca.rest_extra_offset():baca.OverrideCommand._call(1)
         r16                                                                    %! harmony.sixteenths()
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
         \revert TupletBracket.direction                                        %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
@@ -4240,6 +4259,7 @@ S_Cello_II_Music_Voice = {                                                     %
         \stopStaff                                                             %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
         \once \override Staff.StaffSymbol.line-count = 1                       %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
         \startStaff                                                            %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
+        \override TupletBracket.staff-padding = #3                             %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(1)
         \override Stem.direction = #down                                       %! baca.stem_down():baca.OverrideCommand._call(1)
         \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)
         \once \override Staff.Clef.X-extent = ##f                              %! baca.clef_x_extent_false():baca.clef_shift():SHIFTED_CLEF:MEASURE_180:baca.OverrideCommand._call(1)
@@ -4299,6 +4319,7 @@ S_Cello_II_Music_Voice = {                                                     %
         \revert Stem.direction                                                 %! baca.stem_down():baca.OverrideCommand._call(2)
 
         r16                                                                    %! harmony.sixteenths()
+        \revert TupletBracket.staff-padding                                    %! baca.tuplet_bracket_staff_padding():baca.OverrideCommand._call(2)
         \revert TupletBracket.direction                                        %! baca.tuplet_bracket_up():baca.OverrideCommand._call(2)
         \revert DynamicLineSpanner.staff-padding                               %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
     %@% <> \bacaStopTextSpanRhythmAnnotation                                   %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

@@ -177,7 +177,7 @@ maker(
     ),
     baca.markup(
         r"\baca-bd-fingertips-markup",
-        abjad.tweak(0).self_alignment_X,
+        abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(6).staff_padding,
         literal=True,
         selector=baca.pleaf(-1)
@@ -202,6 +202,11 @@ maker(
     baca.double_flageolet(),
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 # va

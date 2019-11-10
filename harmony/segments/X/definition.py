@@ -160,7 +160,10 @@ maker(
         [3, -3],
     ),
     harmony.slate_staff_position(),
-    baca.dynamic("p"),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
@@ -200,7 +203,6 @@ maker(
         [1, "-"],
     ),
     harmony.purpleheart_staff_positions([2]),
-    baca.accent(),
     baca.dynamic("ff"),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -244,7 +246,6 @@ maker(
         literal=True,
     ),
     baca.new(
-        baca.accent(),
         baca.dynamic("ff"),
         baca.dls_staff_padding(5),
         selector=baca.pleaf(-1),
@@ -302,7 +303,10 @@ maker(
         [3, -3],
     ),
     harmony.whisk_staff_position(),
-    baca.dynamic("p"),
+    baca.dynamic(
+        "p-sempre",
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",

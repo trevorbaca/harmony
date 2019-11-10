@@ -223,8 +223,9 @@ maker(
 
 maker(
     ("bfl", (7, 8)),
+    baca.tuplet_bracket_staff_padding(6.5),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5).staff_padding,
+        abjad.tweak(10.5 + 1).staff_padding,
         selector=baca.leaves()[4:9],
     ),
 )
@@ -260,9 +261,6 @@ maker(
         [1, -11],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("f"),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -393,7 +391,6 @@ maker(
     baca.stem_tremolo(),
     baca.new(
         harmony.brake_drum_staff_position(),
-        baca.accent(),
         baca.damp(),
         baca.dynamic("mf"),
         baca.markup(
@@ -492,7 +489,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(1.5).padding,
+        abjad.tweak(2.5).padding,
         literal=True,
     ),
 )
@@ -528,14 +525,18 @@ maker(
         denominator=None,
     ),
     baca.pitches("F#4 G#4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
     baca.dynamic("mf"),
     baca.dls_staff_padding(4),
+    baca.text_spanner(
+        r"\baca-fingernail-markup =|",
+        abjad.tweak(5.5).staff_padding,
+        autodetect_right_padding=True,
+        bookend=False,
+        selector=baca.leaves().rleak(),
+    ),
 )
 
 maker(
@@ -554,6 +555,11 @@ maker(
         baca.pitch("<B5 C#6>"),
         baca.double_flageolet(),
         baca.dynamic("f"),
+        baca.markup(
+            r"\baca-lv-markup",
+            abjad.tweak(1.5).padding,
+            literal=True,
+        ),
         baca.dls_staff_padding(4 + 2),
         selector=baca.pleaf(0),
     ),
@@ -980,10 +986,11 @@ maker(
     baca.hairpin(
         "ff >o",
         bookend=False,
+        left_broken=True,
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "P1 -> T",
+        "P1 -> T1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
@@ -1051,7 +1058,7 @@ maker(
         "mf > p",
     ),
     baca.scp_spanner(
-        "P1 -> T",
+        "P1 -> T1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
@@ -1130,7 +1137,7 @@ maker(
         "p < f",
     ),
     baca.scp_spanner(
-        "T -> P2 -> O",
+        "T1 -> P2 -> O",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,

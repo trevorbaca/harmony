@@ -149,6 +149,7 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         selector=baca.tleaves().rleak(),
@@ -260,9 +261,6 @@ maker(
         [2, "-", 2],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic(
         "f-ancora",
         abjad.tweak(-0.9).self_alignment_X,
@@ -332,9 +330,6 @@ maker(
         [2, "-"],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic(
         "f-ancora",
         abjad.tweak(-0.9).self_alignment_X,
@@ -352,9 +347,6 @@ maker(
         ["-", 2],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
 )
 
 maker(
@@ -456,9 +448,14 @@ maker(
     baca.accent(
         baca.pheads(),
     ),
+    baca.dynamic(
+        '"ff"',
+        abjad.tweak(-0.9).self_alignment_X,
+    ),
     baca.hairpin(
-        '"ff" "ff" "ff" "f" "f" mf mp p pp',
-        pieces=baca.plts(),
+        #'"ff" "ff" "ff" "f" "f" mf mp p pp',
+        '"ff" "ff" "f" "f" mf mp p pp',
+        pieces=baca.plts()[1:],
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -473,9 +470,6 @@ maker(
         [21, -14, 18, "-"],
     ),
     harmony.tam_tam_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-0.9).self_alignment_X,
@@ -499,6 +493,7 @@ maker(
     baca.new(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
+        baca.rest_x_extent_zero(),
         map=baca.rests().filter_duration(">=", (1, 2)),
     ),
 )
@@ -527,10 +522,14 @@ maker(
         extra_counts=[2],
         denominator=None,
     ),
-    baca.tuplet_bracket_up(),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
     baca.dynamic("f-ancora"),
+    baca.markup(
+        r"\baca-lv-markup",
+        abjad.tweak(1.5).padding,
+        literal=True,
+    ),
 )
 
 maker(
@@ -606,9 +605,9 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        ###abjad.tweak((-3, 0)).extra_offset,
+        ###abjad.tweak(1).padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -680,9 +679,7 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        direction=abjad.Down,
     ),
 )
 
@@ -786,7 +783,11 @@ maker(
         cerulean,
         extra_counts=[1],
     ),
+    baca.tuplet_bracket_staff_padding(3),
     harmony.bridge_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -847,6 +848,9 @@ maker(
         [-9, 1, -11, 1, -3, 1, "-"],
     ),
     harmony.bridge_staff_position(),
+    baca.accent(
+        baca.pheads(),
+    ),
     baca.stem_tremolo(
         baca.pleaves(),
     ),
@@ -972,9 +976,9 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        ###abjad.tweak((-3, 0)).extra_offset,
+        ###abjad.tweak(1).padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -1044,9 +1048,7 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        direction=abjad.Down,
     ),
 )
 
@@ -1087,9 +1089,9 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        ###abjad.tweak((-3, 0)).extra_offset,
+        ###abjad.tweak(1).padding,
+        direction=abjad.Down,
     ),
 )
 
@@ -1145,9 +1147,7 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        abjad.tweak((-3, 0)).extra_offset,
-        abjad.tweak(1).padding,
-        #direction=abjad.Down,
+        direction=abjad.Down,
     ),
 )
 

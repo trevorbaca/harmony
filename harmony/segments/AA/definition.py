@@ -309,9 +309,6 @@ maker(
     ),
     baca.tuplet_bracket_up(),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -364,9 +361,6 @@ maker(
         [4, -20, 4],
     ),
     baca.staff_position(2),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
@@ -405,9 +399,6 @@ maker(
        [2, "-"],
     ),
     baca.staff_position(2),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("ff"),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -483,9 +474,6 @@ maker(
         [-24, 4],
     ),
     baca.pitch("Ab4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -523,9 +511,6 @@ maker(
         [4, "-"],
     ),
     baca.pitch("Ab4"),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.laissez_vibrer(
         baca.ptails(),
     ),
@@ -633,7 +618,9 @@ maker(
     baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
+        abjad.tweak(5).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
+        autodetect_right_padding=False,
         selector=baca.leaves(),
     ),
 )
@@ -665,6 +652,7 @@ maker(
         baca.leaves().rleak(),
     ),
     baca.flat_glissando(
+        hide_middle_stems=True,
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -723,6 +711,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         pieces=baca.plts(),
     ),
 )
@@ -798,6 +787,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp -- ! >",
+        abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([1, 2, 3, 2]),
     ),
@@ -824,6 +814,8 @@ maker(
     baca.dynamic("p"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        abjad.tweak(3).bound_details__right__padding,
+        autodetect_right_padding=False,
     ),
 )
 
@@ -876,6 +868,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([2, 3, 2]),
     ),
@@ -943,7 +936,7 @@ maker(
         baca.pheads()[1:3],
     ),
     baca.stem_tremolo(
-        baca.plts()[:3],
+        baca.plts()[:2],
     ),
     baca.dynamic("f"),
     baca.dynamic(
@@ -962,7 +955,7 @@ maker(
 maker(
     ("cb2", (3, 4)),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.tweak(5.5).staff_padding,
         selector=baca.leaves()[4:13],
     ),
 )
@@ -978,6 +971,8 @@ maker(
     ("cb2", (3, 5)),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        abjad.tweak(3).bound_details__right__padding,
+        autodetect_right_padding=False,
         selector=baca.leaves()[4:].rleak(),
     ),
 )
@@ -994,6 +989,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
+        abjad.tweak(True).to_barline,
         pieces=baca.lparts([2, 1, 1]),
     ),
 )
@@ -1078,6 +1074,8 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
+        abjad.tweak(3).bound_details__right__padding,
+        autodetect_right_padding=False,
     ),
 )
 

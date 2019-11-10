@@ -247,8 +247,6 @@ maker(
     (["bfl", "va", "vc1", "vc2", "cb1"], 1),
     harmony.sixteenths(
         [4, 4, 16],
-        written_halves=([0, 1, 3, 4],),
-        invisible=([1, 4],),
         tie_all=True,
     ),
     baca.hairpin(
