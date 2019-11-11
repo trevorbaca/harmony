@@ -323,13 +323,13 @@ persist = abjad.OrderedDict(
                                 context='Percussion_II_Music_Voice',
                                 prototype='baca.BarExtent',
                                 synthetic_offset=abjad.Offset((99, 1)),
-                                value=1,
+                                value=5,
                                 ),
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='baca.StaffLines',
                                 synthetic_offset=abjad.Offset((99, 1)),
-                                value=1,
+                                value=5,
                                 ),
                             ],
                         ),
@@ -339,7 +339,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_II_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='mp',
+                                value='\\baca-mp-sempre',
                                 ),
                             ],
                         ),
@@ -382,7 +382,7 @@ persist = abjad.OrderedDict(
                             abjad.Momento(
                                 context='Percussion_I_Music_Voice',
                                 prototype='abjad.Dynamic',
-                                value='mp',
+                                value='mf',
                                 ),
                             ],
                         ),

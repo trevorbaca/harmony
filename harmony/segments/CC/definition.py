@@ -103,12 +103,9 @@ maker(
         [1, -22, 1],
     ),
     harmony.brake_drum_staff_position(),
-    baca.accent(
-        baca.pheads(),
-    ),
     baca.dynamic("f"),
     baca.new(
-        baca.dynamic("mp"),
+        baca.dynamic("mf"),
         baca.damp(),
         selector=baca.phead(-1),
     ),
@@ -128,26 +125,13 @@ maker(
 
 maker(
     ("perc2", 1),
-    baca.staff_lines(1),
     harmony.sixteenths(
-        [1, "-"],
+        ["-", 1],
+        invisible=([-1],),
     ),
-    harmony.bass_drum_staff_position(),
-    baca.dynamic(
-        "mp",
-        selector=baca.pheads(),
+    baca.damp(
+        baca.leaf(-1),
     ),
-    baca.laissez_vibrer(),
-    baca.markup(
-        r"\baca-bd-struck-markup",
-        abjad.tweak(6).staff_padding,
-        literal=True,
-    ),
-)
-
-maker(
-    ("perc2", (1, 2)),
-    baca.dls_staff_padding(6),
 )
 
 # hp

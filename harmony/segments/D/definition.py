@@ -667,6 +667,7 @@ maker(
     baca.make_notes(),
     baca.flat_glissando(
         "E1",
+        right_broken=True,
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
@@ -675,9 +676,9 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
-        "T1 -> P1",
+        "T1 =|",
         abjad.tweak(5.5).staff_padding,
-        right_broken=True,
+        selector=baca.leaves().rleak(),
     ),
 )
 
