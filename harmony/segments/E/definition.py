@@ -831,11 +831,10 @@ maker(
         left_broken=True,
     ),
     baca.scp_spanner(
-        "T1 -> P2 -> O",
-        abjad.tweak(3).staff_padding,
+        "(T1) -> P2 -> O",
+        abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        left_broken=True,
         pieces=baca.lparts([2, 3]),
         selector=baca.leaves(),
     ),
@@ -865,7 +864,7 @@ maker(
         ),
         baca.scp_spanner(
             "P1 =|",
-            abjad.tweak(3).staff_padding,
+            abjad.tweak(5.5).staff_padding,
             autodetect_right_padding=False,
         ),
         selector=baca.tleaves().rleak(),
@@ -947,5 +946,4 @@ maker(
     baca.half_clt_spanner(
         abjad.tweak(8).staff_padding,
     ),
-    ###baca.dls_staff_padding(5.5),
 )
