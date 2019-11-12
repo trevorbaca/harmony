@@ -24,7 +24,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=9,
+            #measure=9,
+            measure=8,
             y_offset=32,
         ),
         number=3,
@@ -32,7 +33,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=13,
+            #measure=13,
+            measure=12,
             y_offset=32,
         ),
         number=4,
@@ -40,6 +42,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
+            #measure=17,
+            #measure=16,
             #measure=17,
             measure=16,
             y_offset=32,
@@ -148,7 +152,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=70,
+            #measure=70,
+            measure=68,
             y_offset=32,
         ),
         number=18,
@@ -196,7 +201,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=93,
+            #measure=93,
+            measure=94,
             y_offset=32,
         ),
         number=24,
@@ -471,7 +477,8 @@ breaks = baca.breaks(
         baca.system(
             *distances,
             #measure=229,
-            measure=230,
+            #measure=230,
+            measure=228,
             y_offset=32,
         ),
         number=58,
@@ -479,7 +486,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=233,
+            #measure=233,
+            measure=232,
             y_offset=32,
         ),
         number=59,
@@ -487,7 +495,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=237,
+            #measure=237,
+            measure=235,
             y_offset=32,
         ),
         number=60,
@@ -495,7 +504,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=241,
+            #measure=241,
+            measure=240,
             y_offset=32,
         ),
         number=61,
@@ -520,7 +530,9 @@ breaks = baca.breaks(
         baca.system(
             *distances,
             #measure=253,
-            measure=255,
+            #measure=255,
+            #measure=253,
+            measure=252,
             y_offset=32,
         ),
         number=64,
@@ -528,7 +540,9 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=259,
+            #measure=259,
+            #measure=260,
+            measure=256,
             y_offset=32,
         ),
         number=65,
@@ -536,10 +550,26 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=263,
+            measure=260,
             y_offset=32,
         ),
         number=66,
+    ),
+    baca.page(
+        baca.system(
+            *distances,
+            measure=263,
+            y_offset=32,
+        ),
+        number=67,
+    ),
+    baca.page(
+        baca.system(
+            *distances,
+            measure=266,
+            y_offset=32,
+        ),
+        number=68,
     ),
 )
     
@@ -554,12 +584,101 @@ text_measure_numbers = [
     122, 129, 156, 163, 170, 177, 193, 206, 229, 236, 239, 248, 254,
     261, 268,
     ]
-#spacing.override(text_measure_numbers, (1, 288), fermata=True)
-spacing.override(text_measure_numbers, (1, 144), fermata=True)
 
-#spacing.override((21, 26), (1, 32))
-#spacing.override((49, 56), (1, 20))
-#spacing.override((113, 114), (1, 20))
-#spacing.override((116, 118), (1, 20))
-#spacing.override((171, 176), (1, 20))
-#spacing.override([191, 192, 194, 195], (1, 32))
+eol_fermata_spacing = (1, 132)
+mol_fermata_spacing = (1, 172)
+
+#spacing.override(text_measure_numbers, (1, 288), fermata=True)
+#spacing.override(text_measure_numbers, (1, 144), fermata=True)
+spacing.override(text_measure_numbers, eol_fermata_spacing, fermata=True)
+
+spacing.override(11, (1, 20))
+
+#spacing.override([12, 13, 14], (1, 16))
+spacing.override([12, 13, 14], (1, 20))
+#spacing.override([16, 17, 19], (1, 20))
+#spacing.override([16, 17, 19], (1, 16))
+#spacing.override([16, 19], (1, 16))
+spacing.override(19, (1, 16))
+
+#spacing.override(18, (1, 144))
+#spacing.override(18, (1, 188))
+#spacing.override(18, (1, 166))
+spacing.override(18, mol_fermata_spacing)
+
+
+spacing.override(41, mol_fermata_spacing)
+#spacing.override([40, 42, 43, 44], (1, 32))
+#spacing.override([40, 42, 43, 44], (1, 20))
+spacing.override([40, 42, 43, 44], (1, 16))
+
+spacing.override((45, 47), (1, 36))
+#spacing.override((53, 56), (1, 36))
+#spacing.override((53, 56), (1, 32))
+spacing.override((53, 56), (1, 20))
+
+spacing.override(69, mol_fermata_spacing)
+spacing.override([68, 70, 71, 72], (1, 20))
+
+spacing.override(82, mol_fermata_spacing)
+spacing.override([81, 83, 84], (1, 20))
+
+spacing.override(91, mol_fermata_spacing)
+spacing.override([89, 90, 92, 93], (1, 20))
+spacing.override((94, 96), (1, 32))
+
+spacing.override(107, mol_fermata_spacing)
+spacing.override([105, 106, 108], (1, 20))
+
+spacing.override(115, mol_fermata_spacing)
+spacing.override([113, 114, 116], (1, 20))
+
+spacing.override(119, mol_fermata_spacing)
+spacing.override([117, 118, 120], (1, 32))
+
+spacing.override(122, mol_fermata_spacing)
+#spacing.override([121, 123, 124], (1, 32))
+spacing.override([121, 123, 124], (1, 24))
+#spacing.override((125, 128), (1, 32))
+spacing.override((125, 128), (1, 24))
+
+spacing.override(163, mol_fermata_spacing)
+#spacing.override([161, 162, 164], (1, 32))
+spacing.override([161, 162, 164], (1, 24))
+
+spacing.override(170, mol_fermata_spacing)
+#spacing.override([169, 171, 172], (1, 32))
+spacing.override([169, 171, 172], (1, 24))
+#spacing.override((173, 176), (1, 32))
+spacing.override((173, 176), (1, 20))
+spacing.override((189, 192), (1, 20))
+
+spacing.override(206, mol_fermata_spacing)
+spacing.override([205, 207, 208], (1, 32))
+#spacing.override((226, 227), (1, 20))
+###spacing.override((225, 228), (1, 20))
+#spacing.override((233, 235), (1, 32))
+spacing.override(229, mol_fermata_spacing)
+spacing.override([228, 230, 231], (1, 20))
+
+###spacing.override((233, 235), (1, 20))
+###spacing.override(239, mol_fermata_spacing)
+#spacing.override([237, 238, 240], (1, 32))
+###spacing.override([237, 238, 240], (1, 24))
+spacing.override(236, mol_fermata_spacing)
+spacing.override(235, (1, 20))
+spacing.override([237, 238], (1, 12))
+
+#spacing.override((246, 247), (1, 20))
+spacing.override((245, 247), (1, 20))
+
+spacing.override(254, mol_fermata_spacing)
+spacing.override(255, (1, 12))
+
+spacing.override((256, 259), (1, 56))
+
+spacing.override(261, mol_fermata_spacing)
+spacing.override(262, (1, 24))
+
+spacing.override((266, 267), (1, 24))
+spacing.override(268, mol_fermata_spacing)
