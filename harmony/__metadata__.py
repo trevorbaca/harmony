@@ -491,7 +491,7 @@ metadata = abjad.OrderedDict(
                     ]
                 ),
             ),
-        ('title', '(HARMONY)'),
+        ('title', '( HARMONY )'),
         ('year', 2019),
         ]
     )
