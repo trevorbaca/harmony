@@ -15,7 +15,8 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             *distances,
-            measure=5,
+            #measure=5,
+            measure=4,
             y_offset=32,
         ),
         number=2,
