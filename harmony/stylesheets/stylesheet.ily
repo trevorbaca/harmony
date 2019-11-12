@@ -17,7 +17,7 @@
             \fontsize #3
             \override #'(font-name . "Adobe Garamond Pro")
             \concat {
-                (HARMONY)
+                ( \hspace #2 HARMONY \hspace #2 )
                 \hspace #3
                 —
                 \hspace #3
@@ -94,7 +94,7 @@
             \line {
                 \concat {
                 (
-                \hspace #3
+                \hspace #9
                 H
                 \hspace #3
                 A
@@ -108,7 +108,7 @@
                 N
                 \hspace #3
                 Y
-                \hspace #3
+                \hspace #9
                 )
                 }
             }
@@ -123,6 +123,9 @@
                 nine \hspace #0.75
                 players
             }
+            " "
+            " "
+            " "
         }
     }
 }

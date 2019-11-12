@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[papersize={9in, 12in}, margin=0.5in]{geometry}
+\usepackage{fontspec,graphicx,nopageno,tikz,xltxtra,xunicode}
+\usetikzlibrary{calc}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newlength{\drop}
+\parindent=0pt
+\setmainfont{Adobe Garamond Pro Bold}
+
+\begin{document}
+    \begin{titlepage}
+
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width = 6pt]
+                ($(current page.north west) + (0.5in,-0.5in)$)
+                rectangle
+                ($(current page.south east) + (-0.5in,0.5in)$);
+        \end{tikzpicture}
+
+        \drop=0.1\textheight
+        \centering
+
+        \vspace*{2\baselineskip}
+        {
+            \scalebox{1}[2]
+            {\fontsize{2.15cm}{1em}\selectfont ( HARMONY )}
+        }
+
+        \vfill
+
+        {
+            \scalebox{1}[2]
+            {\fontsize{0.5cm}{1em} \selectfont
+                \itshape for narrator \& nine players
+            }
+        }
+
+        \vspace*{1\baselineskip}
+
+        {
+            \scalebox{1}[2]
+            {\fontsize{0.5cm}{1em}\selectfont \itshape (2019)}
+        }
+
+        \vspace*{1\baselineskip}
+
+        \vfill
+
+        {
+            \scalebox{1}[2]
+            {\fontsize{2.15cm}{1em}\selectfont TREVOR \hspace{1pt} BA\v{C}A}
+        }
+
+        \vspace*{3\baselineskip}
+
+    \end{titlepage}
+\end{document}
