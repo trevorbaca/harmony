@@ -6,8 +6,8 @@
     \markup
     \with-dimensions-from \null
     \override #'(baseline-skip . 6)
-    \override #'(font-size . 6)
-    \override #'(line-width . 80)
+    \override #'(font-size . 2)
+    \override #'(line-width . 45)
     \override #'(word-space . 2)
     \justify {
         \with-color #red {
@@ -16,45 +16,56 @@
     }
     #}))
 
+#(define-markup-command
+    (center-line layout props markup-list)
+    (markup-list?)
+    (interpret-markup layout props
+    #{
+    \markup
+    \hcenter-in #45
+    \line #markup-list
+    #}))
+
 
 harmony-text-one =
     \markup
     \harmony-text
-    "Here I am. On my own. And no-one —"
+    \center-column {
+        \justify { Here I am. On my own. And no-one — }
+    }
 
 
 harmony-text-two =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify { Hear me. On my — }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { Hear me. On my — }
     }
 
 
 harmony-text-three =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify {
-            Here I am. On my own. On the dunes. Where I can hear the sea. 
-        }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \justify { Here I am. On my own. On the dunes. Where I can hear the
+        sea. }
     }
 
 
 harmony-text-four =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify { Here I am. }
-        \justify { \null }
-        \justify { Not so far. }
-        \justify { \null }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { Here I am. }
+        \center-line { \null }
+        \center-line { Not so far. }
+        \center-line { \null }
         \justify { On the dunes. Where I can see... }
     }
 
@@ -62,9 +73,9 @@ harmony-text-four =
 harmony-text-five =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
         \justify { ...the wind in the marram grass. A bird – a gull – shearing
         the sky. Soundless. The wind: soundless. The gull: soundless. It is
         early morning. First light. I must have got up in the dark. Dressed
@@ -75,23 +86,23 @@ harmony-text-five =
 harmony-text-six =
     \markup
     \harmony-text
-    \column {
-    \justify { On. }
-    \justify { \null }
-    \justify { No more. }
+    \center-column {
+    \center-line { On. }
+    \center-line { \null }
+    \center-line { No more. }
     }
 
 
 harmony-text-seven =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify { Where I can — }
-        \justify { \null }
-        \justify { Further. }
-        \justify { \null }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { Where I can — }
+        \center-line { \null }
+        \center-line { Further. }
+        \center-line { \null }
         \justify { Here I am. On my own. No. Not on my own. At that dance,
         where I can see the band on the narrow stage, see them and hear them. A
         saxophone player – a girl – shearing the air. A roar, but sweet and
@@ -104,18 +115,18 @@ harmony-text-seven =
 harmony-text-eight =
     \markup
     \harmony-text
-    \column {
-        \justify { Come here. }
-        \justify { \null }
+    \center-column {
+        \center-line { Come here. }
+        \center-line { \null }
     }
 
 
 harmony-text-nine =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
         \justify { Come here. As you will. When you’re young. }
     }
 
@@ -123,10 +134,10 @@ harmony-text-nine =
 harmony-text-ten =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
-        \justify { No more. }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
+        \center-line { No more. }
     }
 
 
@@ -134,19 +145,19 @@ harmony-text-ten =
 harmony-text-eleven =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify { The girl: on her own. }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { The girl: on her own. }
     }
 
 
 harmony-text-twelve =
     \markup
     \harmony-text
-    \column {
-        \justify { Yes. }
-        \justify { \null }
+    \center-column {
+        \center-line { Yes. }
+        \center-line { \null }
         \justify { The girl on her own. I went up to the stage. As close as I
         could get. Of course, she saw me. Her eyes caught mine. First meeting.
         She stopped playing, mid-phrase. The band picked up. She crouched down,
@@ -162,29 +173,29 @@ harmony-text-twelve =
 harmony-text-thirteen =
     \markup
     \harmony-text
-    \column {
-        \justify { I come to a stop. }
-        \justify { \null }
-        \justify { On. }
-        \justify { \null }
-        \justify { I come to a stop. }
+    \center-column {
+        \center-line { I come to a stop. }
+        \center-line { \null }
+        \center-line { On. }
+        \center-line { \null }
+        \center-line { I come to a stop. }
     }
 
 
 harmony-text-fourteen =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
+    \center-column {
+        \center-line { On. }
     }
 
 
 harmony-text-fifteen =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
         \justify { The world I had left behind. }
     }
 
@@ -192,23 +203,23 @@ harmony-text-fifteen =
 harmony-text-sixteen =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
+    \center-column {
+        \center-line { On. }
         \justify { I turned my eyes to her. That smile again. I took her in my
         arms. The band went wild. Or: I jumped back down. Or: Do you want to
         dance? she said. Or: — }
-        \justify { \null }
-        \justify { Back. }
-        \justify { How her dress sparkled. }
-        \justify { Further. }
-        \justify { The girl on her own. }
-        \justify { Further. }
-        \justify { Here I am. }
-        \justify { Yes. }
+        \center-line { \null }
+        \center-line { Back. }
+        \center-line { How her dress sparkled. }
+        \center-line { Further. }
+        \center-line { The girl on her own. }
+        \center-line { Further. }
+        \center-line { Here I am. }
+        \center-line { Yes. }
         \justify { Here I am. On my own. In that dense... }
-        \justify { On. }
-        \justify { In that dense... }
-        \justify { On. }
+        \center-line { On. }
+        \center-line { In that dense... }
+        \center-line { On. }
         \justify { ...forest where we had never been before. Where was this?
         And I had got separated from you, and though each of us was shouting
         the other’s name, at the top of our lungs, the two of us, we couldn’t
@@ -216,15 +227,15 @@ harmony-text-sixteen =
         the trees were absorbing our voices. It got to that stage — On. It got
         to that stage where you start to panic. You feel you’ve left the normal
         world behind. You — }
-        \justify { \null }
-        \justify { On. }
-        \justify { Where was I? }
-        \justify { Forest. }
-        \justify { No more. }
-        \justify { Left the normal world behind. }
-        \justify { No more. }
-        \justify { Back. }
-        \justify { Harmony. }
+        \center-line { \null }
+        \center-line { On. }
+        \center-line { Where was I? }
+        \center-line { Forest. }
+        \center-line { No more. }
+        \center-line { Left the normal world behind. }
+        \center-line { No more. }
+        \center-line { Back. }
+        \center-line { Harmony. }
     }
 
 
@@ -232,19 +243,19 @@ harmony-text-sixteen =
 harmony-text-seventeen =
     \markup
     \harmony-text
-    \column {
-        \justify { Not yet. }
-        \justify { \null }
-        \justify { On. }
-        \justify { \null }
-        \justify { Hear me. }
-        \justify { \null }
-        \justify { Back. }
-        \justify { \null }
-        \justify { Hear me. }
-        \justify { \null }
-        \justify { Back. }
-        \justify { \null }
+    \center-column {
+        \center-line { Not yet. }
+        \center-line { \null }
+        \center-line { On. }
+        \center-line { \null }
+        \center-line { Hear me. }
+        \center-line { \null }
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { Hear me. }
+        \center-line { \null }
+        \center-line { Back. }
+        \center-line { \null }
         \justify { Here I am. On my own. On the dunes. }
     }
 
@@ -252,64 +263,64 @@ harmony-text-seventeen =
 harmony-text-eighteen =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
         \justify { Where I can see the sea. How it sparkled. At that time in the
         afternoon. There was dance music. }
-        \justify { \transparent TEXT \null }
-        \justify { No. }
-        \justify { \null }
-        \justify { On someone’s radio. }
-        \justify { \null }
-        \justify { No. }
-        \justify { \null }
-        \justify { And I didn’t mind. }
-        \justify { \null }
-        \justify { No. }
-        \justify { \null }
+        \center-line { \transparent TEXT \null }
+        \center-line { No. }
+        \center-line { \null }
+        \center-line { On someone’s radio. }
+        \center-line { \null }
+        \center-line { No. }
+        \center-line { \null }
+        \center-line { And I didn’t mind. }
+        \center-line { \null }
+        \center-line { No. }
+        \center-line { \null }
         \justify { I felt such joy, to be there, and the sea. It was so loud
         you couldn’t hear me when I shouted to you to join me. Come here! Come
         here! So I held up an arm, and waved, and you did see me. That smile. }
-        \justify { \transparent TEXT \null }
-        \justify { No. }
-        \justify { \null }
-        \justify { That smile. }
-        \justify { \null }
-        \justify { No. Back. }
+        \center-line { \transparent TEXT \null }
+        \center-line { No. }
+        \center-line { \null }
+        \center-line { That smile. }
+        \center-line { \null }
+        \center-line { No. Back. }
     }
 
 
 harmony-text-nineteen =
     \markup
     \harmony-text
-    \column {
-        \justify { Here I am. }
-        \justify { \null }
-        \justify { Yes. }
-        \justify { \null }
-        \justify { On my own. }
-        \justify { \null }
-        \justify { Yes. }
-        \justify { \null }
-        \justify { No. Not on my own. }
-        \justify { \null }
-        \justify { Back. }
-        \justify { \null }
-        \justify { On my own. }
-        \justify { \null }
-        \justify { Yes. }
-        \justify { \null }
+    \center-column {
+        \center-line { Here I am. }
+        \center-line { \null }
+        \center-line { Yes. }
+        \center-line { \null }
+        \center-line { On my own. }
+        \center-line { \null }
+        \center-line { Yes. }
+        \center-line { \null }
+        \center-line { No. Not on my own. }
+        \center-line { \null }
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { On my own. }
+        \center-line { \null }
+        \center-line { Yes. }
+        \center-line { \null }
         \justify { On the dunes. Or: In that dense forest. }
-        \justify { \null }
-        \justify { Choose. }
+        \center-line { \null }
+        \center-line { Choose. }
     }
 
 
 harmony-text-twenty =
     \markup
     \harmony-text
-    \column {
+    \center-column {
         \justify { On the dunes. Where I can see the wind in the marram grass.
         It is early morning. }
     }
@@ -318,9 +329,9 @@ harmony-text-twenty =
 harmony-text-twenty-one =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
         \justify  { A bird – a gull – shearing the sky. Soundless. The wind:
         soundless. The band: silenced. }
     }
@@ -328,61 +339,61 @@ harmony-text-twenty-one =
 harmony-text-twenty-two =
     \markup
     \harmony-text
-    \column {
-        \justify { Back. }
-        \justify { \null }
-        \justify { Here I am. }
-        \justify { \null }
-        \justify { Not so far. }
-        \justify { \null }
-        \justify { Here I am. }
-        \justify { \null }
-        \justify { Not so far. }
-        \justify { \null }
-        \justify { Here I am. }
+    \center-column {
+        \center-line { Back. }
+        \center-line { \null }
+        \center-line { Here I am. }
+        \center-line { \null }
+        \center-line { Not so far. }
+        \center-line { \null }
+        \center-line { Here I am. }
+        \center-line { \null }
+        \center-line { Not so far. }
+        \center-line { \null }
+        \center-line { Here I am. }
     }
 
 harmony-text-twenty-three =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
+    \center-column {
+        \center-line { On. }
     }
 
 harmony-text-twenty-four =
     \markup
     \harmony-text
-    \column {
-        \justify { Here I am. }
+    \center-column {
+        \center-line { Here I am. }
     }
 
 
 harmony-text-twenty-five =
     \markup
     \harmony-text
-    \column {
-        \justify { On. }
-        \justify { \null }
-        \justify { Harmony. }
+    \center-column {
+        \center-line { On. }
+        \center-line { \null }
+        \center-line { Harmony. }
     }
 
 harmony-text-twenty-six =
     \markup
     \harmony-text
-    \column {
-        \justify { Not yet. }
+    \center-column {
+        \center-line { Not yet. }
     }
 
 harmony-text-twenty-seven =
     \markup
     \harmony-text
-    \column {
-        \justify { Harmony. }
+    \center-column {
+        \center-line { Harmony. }
     }
 
 harmony-text-twenty-eight =
     \markup
     \harmony-text
-    \column {
-        \justify { Not yet. }
+    \center-column {
+        \center-line { Not yet. }
     }
