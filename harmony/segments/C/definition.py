@@ -860,7 +860,7 @@ maker(
     baca.pitch("E1"),
     baca.flat_glissando(),
     baca.hairpin(
-        "p > f",
+        "p < f",
     ),
     baca.scp_spanner(
         "T1 -> P2 -> O",

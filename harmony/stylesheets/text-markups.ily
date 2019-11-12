@@ -9,11 +9,8 @@
     \override #'(font-size . 2)
     \override #'(line-width . 45)
     \override #'(word-space . 2)
-    \justify {
-        \with-color #red {
-        #markup
-        }
-    }
+    %%%\with-color #red
+    \justify { #markup }
     #}))
 
 #(define-markup-command
