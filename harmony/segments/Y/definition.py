@@ -494,7 +494,13 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        baca.flat_glissando(),
+        #baca.flat_glissando(),
+        baca.untie(
+            baca.leaves(),
+        ),
+        baca.note_head_transparent(
+            baca.leaves()[1:1],
+        ),
     ),
 )
 
@@ -740,7 +746,8 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        #baca.pleaves().get([0, -1]),
+        baca.pleaves(),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
