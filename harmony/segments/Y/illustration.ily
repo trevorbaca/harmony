@@ -2258,20 +2258,17 @@ Y_Viola_Music_Voice = {                                                        %
 %@% - \tweak color #darkyellow                                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak staff-padding #8                                                  %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
-    \glissando                                                                 %! baca.glissando():abjad.glissando(7)
 
     % [Y Viola_Music_Voice measure 231 / measure 6]                            %! baca.SegmentMaker._comment_measure_numbers()
-    \hide NoteHead                                                             %! baca.glissando():abjad.glissando(1)
-    \override Accidental.stencil = ##f                                         %! baca.glissando():abjad.glissando(1)
-    \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
-    \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2280,22 +2277,28 @@ Y_Viola_Music_Voice = {                                                        %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2303,9 +2306,11 @@ Y_Viola_Music_Voice = {                                                        %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2315,23 +2320,29 @@ Y_Viola_Music_Voice = {                                                        %
 
     % [Y Viola_Music_Voice measure 232 / measure 7]                            %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Viola_Music_Voice measure 233 / measure 8]                            %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2339,11 +2350,14 @@ Y_Viola_Music_Voice = {                                                        %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-f-scratch                                                            %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2352,21 +2366,27 @@ Y_Viola_Music_Voice = {                                                        %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Viola_Music_Voice measure 234 / measure 9]                            %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2374,28 +2394,30 @@ Y_Viola_Music_Voice = {                                                        %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Viola_Music_Voice measure 235 / measure 10]                           %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-ff-scratch                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
-    \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
-    \revert NoteColumn.glissando-skip                                          %! baca.glissando():abjad.glissando(6)
-    \revert NoteHead.no-ledgers                                                %! baca.glissando():abjad.glissando(6)
-    \undo \hide NoteHead                                                       %! baca.glissando():abjad.glissando(6)
     <g' af'! bf'!>2.
     :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \revert NoteHead.style                                                     %! baca.note_head_style_harmonic_black():baca.OverrideCommand._call(2)
@@ -2676,20 +2698,25 @@ Y_Cello_I_Music_Voice = {                                                      %
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2699,14 +2726,17 @@ Y_Cello_I_Music_Voice = {                                                      %
 
     % [Y Cello_I_Music_Voice measure 231 / measure 6]                          %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2714,11 +2744,14 @@ Y_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2728,22 +2761,27 @@ Y_Cello_I_Music_Voice = {                                                      %
 
     % [Y Cello_I_Music_Voice measure 232 / measure 7]                          %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-f-scratch                                                            %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2753,22 +2791,28 @@ Y_Cello_I_Music_Voice = {                                                      %
 
     % [Y Cello_I_Music_Voice measure 233 / measure 8]                          %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -2776,24 +2820,32 @@ Y_Cello_I_Music_Voice = {                                                      %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Cello_I_Music_Voice measure 234 / measure 9]                          %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>1
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     % [Y Cello_I_Music_Voice measure 235 / measure 10]                         %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>1
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-ff-scratch                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
@@ -3059,15 +3111,18 @@ Y_Cello_II_Music_Voice = {                                                     %
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3076,25 +3131,32 @@ Y_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Cello_II_Music_Voice measure 231 / measure 6]                         %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>1
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3102,14 +3164,18 @@ Y_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Cello_II_Music_Voice measure 232 / measure 7]                         %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3118,25 +3184,32 @@ Y_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Cello_II_Music_Voice measure 233 / measure 8]                         %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>1
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3144,6 +3217,7 @@ Y_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-f-scratch                                                            %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3152,14 +3226,17 @@ Y_Cello_II_Music_Voice = {                                                     %
 
     % [Y Cello_II_Music_Voice measure 234 / measure 9]                         %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3167,15 +3244,19 @@ Y_Cello_II_Music_Voice = {                                                     %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Cello_II_Music_Voice measure 235 / measure 10]                        %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-ff-scratch                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
@@ -3447,20 +3528,25 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3469,25 +3555,32 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_I_Music_Voice measure 231 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3495,16 +3588,21 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_I_Music_Voice measure 232 / measure 7]                     %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>1
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3514,16 +3612,20 @@ Y_Contrabass_I_Music_Voice = {                                                 %
 
     % [Y Contrabass_I_Music_Voice measure 233 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3531,14 +3633,18 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_I_Music_Voice measure 234 / measure 9]                     %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-f-scratch                                                            %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3547,23 +3653,29 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_I_Music_Voice measure 235 / measure 10]                    %! baca.SegmentMaker._comment_measure_numbers()
     <a' b' c''>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3571,15 +3683,19 @@ Y_Contrabass_I_Music_Voice = {                                                 %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-ff-scratch                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <a' b' c''>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     \revert Accidental.stencil                                                 %! baca.glissando():abjad.glissando(6)
@@ -3844,23 +3960,29 @@ Y_Contrabass_II_Music_Voice = {                                                %
     \override NoteColumn.glissando-skip = ##t                                  %! baca.glissando():abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t                                        %! baca.glissando():abjad.glissando(1)
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_II_Music_Voice measure 231 / measure 6]                    %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3869,11 +3991,13 @@ Y_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \p                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3881,6 +4005,7 @@ Y_Contrabass_II_Music_Voice = {                                                %
 
     % [Y Contrabass_II_Music_Voice measure 232 / measure 7]                    %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>1.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3889,14 +4014,17 @@ Y_Contrabass_II_Music_Voice = {                                                %
 
     % [Y Contrabass_II_Music_Voice measure 233 / measure 8]                    %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3904,9 +4032,11 @@ Y_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-f-scratch                                                            %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3915,25 +4045,32 @@ Y_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     \!                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \>                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_II_Music_Voice measure 234 / measure 9]                    %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \mf                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3941,17 +4078,22 @@ Y_Contrabass_II_Music_Voice = {                                                %
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>2.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     % [Y Contrabass_II_Music_Voice measure 235 / measure 10]                   %! baca.SegmentMaker._comment_measure_numbers()
     <g' af'! bf'!>2
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
 
     <g' af'! bf'!>16
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>8.
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     <g' af'! bf'!>4
+    :32                                                                        %! baca.stem_tremolo():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-ff-scratch                                                           %! baca.hairpin():baca.PiecewiseCommand._call(3):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
 
