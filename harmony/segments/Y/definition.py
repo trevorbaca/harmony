@@ -484,8 +484,6 @@ maker(
     ("va", (5, 10)),
     harmony.tessera_4(4),
     baca.chunk(
-        baca.note_head_style_harmonic_black(),
-        baca.pitch("<G4 Ab4 Bb4>"),
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
@@ -494,12 +492,20 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        #baca.flat_glissando(),
         baca.untie(
             baca.leaves(),
         ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            baca.leaf(0),
+        ),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            baca.leaf(-1),
+        ),
         baca.note_head_transparent(
-            baca.leaves()[1:1],
+            baca.leaves()[1:-1],
         ),
     ),
 )
@@ -512,6 +518,12 @@ maker(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.tuplet_bracket_up(),
+)
+
+maker(
+    ("vc1", (1, 2)),
+    baca.clef("treble"),
+    baca.pitch("<A4 B4 C5>"),
 )
 
 maker(
@@ -534,6 +546,7 @@ maker(
 maker(
     ("vc1", (5, 10)),
     harmony.tessera_4(3),
+    baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
@@ -543,14 +556,18 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        baca.flat_glissando(),
+        baca.untie(
+            baca.leaves(),
+        ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch(
+            "<A4 B4 C5>",
+            baca.pleaves().get([0, -1]),
+        ),
+        baca.note_head_transparent(
+            baca.leaves()[1:-1],
+        ),
     ),
-)
-
-maker(
-    ("vc1", [(1, 2), (5, 10)]),
-    baca.clef("treble"),
-    baca.pitch("<A4 B4 C5>"),
 )
 
 # vc2
@@ -561,6 +578,12 @@ maker(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.tuplet_bracket_up(),
+)
+
+maker(
+    ("vc2", (1, 2)),
+    baca.clef("treble"),
+    baca.pitch("<G4 Ab4 Bb4>"),
 )
 
 maker(
@@ -583,6 +606,7 @@ maker(
 maker(
     ("vc2", (5, 10)),
     harmony.tessera_4(2),
+    baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -592,14 +616,22 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        baca.flat_glissando(),
+        baca.untie(
+            baca.leaves(),
+        ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            baca.pleaves().get([0, -1]),
+        ),
+        baca.pitch(
+            "C5",
+            baca.pleaves()[1:-1],
+        ),
+        baca.note_head_transparent(
+            baca.leaves()[1:-1],
+        ),
     ),
-)
-
-maker(
-    ("vc2", [(1, 2), (5, 10)]),
-    baca.clef("treble"),
-    baca.pitch("<G4 Ab4 Bb4>"),
 )
 
 # cb1
@@ -610,6 +642,15 @@ maker(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.tuplet_bracket_up(),
+)
+
+maker(
+    ("cb1", (1, 2)),
+    baca.clef("treble"),
+    baca.pitch(
+        "<A4 B4 C5>",
+        do_not_transpose=True,
+    ),
 )
 
 maker(
@@ -632,6 +673,7 @@ maker(
 maker(
     ("cb1", (5, 10)),
     harmony.tessera_4(1),
+    baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -641,16 +683,18 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        baca.flat_glissando(),
-    ),
-)
-
-maker(
-    ("cb1", [(1, 2), (5, 10)]),
-    baca.clef("treble"),
-    baca.pitch(
-        "<A4 B4 C5>",
-        do_not_transpose=True,
+        baca.untie(
+            baca.leaves(),
+        ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch(
+            "<A4 B4 C5>",
+            baca.pleaves().get([0, -1]),
+            do_not_transpose=True,
+        ),
+        baca.note_head_transparent(
+            baca.leaves()[1:-1],
+        ),
     ),
 )
 
@@ -662,6 +706,15 @@ maker(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.tuplet_bracket_up(),
+)
+
+maker(
+    ("cb2", (1, 2)),
+    baca.clef("treble"),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        do_not_transpose=True,
+    ),
 )
 
 maker(
@@ -684,6 +737,7 @@ maker(
 maker(
     ("cb2", (5, 10)),
     harmony.tessera_4(0),
+    baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -693,16 +747,23 @@ maker(
             ),
             selector=baca.leaves().rleak(),
         ),
-        baca.flat_glissando(),
-    ),
-)
-
-maker(
-    ("cb2", [(1, 2), (5, 10)]),
-    baca.clef("treble"),
-    baca.pitch(
-        "<G4 Ab4 Bb4>",
-        do_not_transpose=True,
+        baca.untie(
+            baca.leaves(),
+        ),
+        baca.note_head_style_harmonic_black(),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            baca.pleaves().get([0, -1]),
+            do_not_transpose=True,
+        ),
+        baca.pitch(
+            "C5",
+            baca.pleaves()[1:-1],
+            do_not_transpose=True,
+        ),
+        baca.note_head_transparent(
+            baca.leaves()[1:-1],
+        ),
     ),
 )
 
@@ -746,8 +807,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),
     baca.stem_tremolo(
-        #baca.pleaves().get([0, -1]),
-        baca.pleaves(),
+        baca.pleaves().get([0, -1]),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
