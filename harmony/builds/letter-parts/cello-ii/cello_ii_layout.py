@@ -330,3 +330,9 @@ spacing = baca.scorewide_spacing(
     breaks=breaks,
     fallback_duration=(1, 32),
 )
+
+empty_measures = [
+    77, 78, 79, 80, 144, 247, 267,
+]
+
+spacing.override(empty_measures, (1, 4))

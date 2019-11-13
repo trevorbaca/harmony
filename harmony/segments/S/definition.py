@@ -960,7 +960,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.pleaves(),
     ),
     baca.hairpin(
         "o< fff-scratch",

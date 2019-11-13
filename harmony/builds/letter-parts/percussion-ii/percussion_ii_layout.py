@@ -312,8 +312,13 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            measure=266,
+            measure=264,
             y_offset=y_offset_6,
+        ),
+        baca.system(
+            distances,
+            measure=266,
+            y_offset=y_offset_7,
         ),
         number=8,
     ),
@@ -325,3 +330,12 @@ spacing = baca.scorewide_spacing(
     breaks=breaks,
     fallback_duration=(1, 32),
 )
+
+empty_measures = [
+    25, 26, 27, 38, 46, 51, 52, 61, 72, 81, 123, 131, 132, 133,
+    138, 139, 140, 146, 148, 154, 165, 166, 196, 197,
+    207, 209, 210, 212, 213, 220, 222, 237, 240,
+    241, 242, 251, 255, 257, 258, 259, 267,
+]
+
+spacing.override(empty_measures, (1, 4))
