@@ -454,6 +454,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         alteration="E6",
+        harmonic=True,
     ),
     baca.markup(
         baca.markups.string_number(1),
@@ -530,6 +531,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         alteration="C#6",
+        harmonic=True,
     ),
     baca.markup(
         baca.markups.string_number(1),

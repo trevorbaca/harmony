@@ -624,7 +624,7 @@ spacing.override(82, mol_fermata_spacing)
 spacing.override([81, 83, 84], (1, 20))
 
 spacing.override(91, mol_fermata_spacing)
-spacing.override([89, 90, 92, 93], (1, 20))
+spacing.override([90, 92, 93], (1, 20))
 spacing.override((94, 96), (1, 32))
 
 spacing.override(107, mol_fermata_spacing)
