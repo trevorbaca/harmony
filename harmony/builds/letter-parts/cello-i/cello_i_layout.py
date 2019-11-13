@@ -312,8 +312,13 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            measure=266,
+            measure=264,
             y_offset=y_offset_6,
+        ),
+        baca.system(
+            distances,
+            measure=266,
+            y_offset=y_offset_7,
         ),
         number=8,
     ),

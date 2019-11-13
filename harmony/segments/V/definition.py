@@ -603,6 +603,7 @@ maker(
         invisible_pairs=True,
     ),
     baca.pitch("F#5"),
+    baca.note_head_style_harmonic(),
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
