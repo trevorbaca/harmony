@@ -706,13 +706,21 @@ maker(
     ("vc1", 6),
     harmony.tessera_4(3),
     baca.clef("treble"),
-    baca.note_head_style_harmonic_black(),
-    baca.pitch("<A4 B4 C5>"),
-    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
         pieces=baca.plts(),
+    ),
+    baca.untie(
+        baca.leaves(),
+    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<A4 B4 C5>",
+        baca.pleaves().get([0, -1]),
+    ),
+    baca.note_head_transparent(
+        baca.pleaves()[1:-1],
     ),
 )
 
@@ -782,14 +790,26 @@ maker(
     ("vc2", 6),
     harmony.tessera_4(2),
     baca.clef("treble"),
-    baca.note_head_style_harmonic_black(),
-    baca.pitch("<G4 Ab4 Bb4>"),
-    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp -- ! >",
         abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([1, 2, 3, 2]),
+    ),
+    baca.untie(
+        baca.leaves(),
+    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        baca.pleaves().get([0, -1]),
+    ),
+    baca.pitch(
+        "C5",
+        baca.pleaves()[1:-1],
+    ),
+    baca.note_head_transparent(
+        baca.pleaves()[1:-1],
     ),
 )
 
@@ -860,17 +880,23 @@ maker(
     ("cb1", 6),
     harmony.tessera_4(1),
     baca.clef("treble"),
-    baca.note_head_style_harmonic_black(),
-    baca.pitch(
-        "<A4 B4 C5>",
-        do_not_transpose=True,
-    ),
-    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
         bookend=False,
         pieces=baca.lparts([2, 3, 2]),
+    ),
+    baca.untie(
+        baca.leaves(),
+    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<A4 B4 C5>",
+        baca.pleaves().get([0, -1]),
+        do_not_transpose=True,
+    ),
+    baca.note_head_transparent(
+        baca.pleaves()[1:-1],
     ),
 )
 
@@ -981,16 +1007,27 @@ maker(
     ("cb2", 6),
     harmony.tessera_4(0),
     baca.clef("treble"),
-    baca.note_head_style_harmonic_black(),
-    baca.pitch(
-        "<G4 Ab4 Bb4>",
-        do_not_transpose=True,
-    ),
-    baca.flat_glissando(),
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
         pieces=baca.lparts([2, 1, 1]),
+    ),
+    baca.untie(
+        baca.leaves(),
+    ),
+    baca.note_head_style_harmonic_black(),
+    baca.pitch(
+        "<G4 Ab4 Bb4>",
+        baca.pleaves().get([0, -1]),
+        do_not_transpose=True,
+    ),
+    baca.pitch(
+        "C5",
+        baca.pleaves()[1:-1],
+        do_not_transpose=True,
+    ),
+    baca.note_head_transparent(
+        baca.pleaves()[1:-1],
     ),
 )
 
