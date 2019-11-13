@@ -60,7 +60,8 @@ breaks = baca.breaks(
         baca.system(
             distances,
             #measure=41, # fermata
-            measure=42,
+            #measure=42,
+            measure=40,
             y_offset=y_offset_4,
         ),
         baca.system(
@@ -140,22 +141,29 @@ breaks = baca.breaks(
         baca.system(
             distances,
             #measure=116, # spacing
-            measure=114,
+            #measure=114,
+            #measure=113,
+            measure=111,
             y_offset=y_offset_4,
         ),
         baca.system(
             distances,
-            measure=121,
+            #measure=121,
+            #measure=120,
+            measure=117,
             y_offset=y_offset_5,
         ),
         baca.system(
             distances,
-            measure=126,
+            #measure=126,
+            #measure=125,
+            measure=124,
             y_offset=y_offset_6,
         ),
         baca.system(
             distances,
-            measure=131,
+            #measure=131,
+            measure=130,
             y_offset=y_offset_7,
         ),
         number=4,
@@ -330,3 +338,9 @@ spacing = baca.scorewide_spacing(
     breaks=breaks,
     fallback_duration=(1, 32),
 )
+
+empty_measures = [
+    121, 144, 212, 213, 247, 257, 259, 267,
+]
+
+spacing.override(empty_measures, (1, 4))

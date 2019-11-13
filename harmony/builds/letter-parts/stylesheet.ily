@@ -74,6 +74,7 @@
 
     \context {
         \Score
+        \override BarLine.bar-extent = #'(-2 . 2)
         \override BarLine.hair-thickness = 2.5
         \override BarLine.space-alist = #'(
             (time-signature extra-space . 1.0)
