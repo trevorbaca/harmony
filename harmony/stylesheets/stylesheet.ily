@@ -9,7 +9,8 @@
 
 \paper {
     %bottom-margin = 10\mm
-    evenFooterMarkup = \markup
+    evenFooterMarkup =
+        \markup
         \on-the-fly #print-page-number-check-first
         \fill-line {
             " "
@@ -29,7 +30,7 @@
                 Bača
             }
             " "
-    }
+        }
     evenHeaderMarkup = \markup \fill-line { " " }
     left-margin = 25\mm
     oddFooterMarkup = \evenFooterMarkup
