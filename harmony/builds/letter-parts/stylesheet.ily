@@ -5,32 +5,66 @@
 #(set-global-staff-size 11)
 
 \header {
-    title = \markup
-        \column {
-            \center-align {
-                \override #'(font-name . "Adobe Garamond Pro Italic")
-                \fontsize #3
-                "to Jonathan Hepfer"
-                " "
-                \override #'(font-name . "Adobe Garamond Pro Bold")
-                \fontsize #6
-                \line { (HARMONY) }
-                " "
-                \override #'(font-name . "Adobe Garamond Pro Italic")
-                \fontsize #3
-                "for narrator & nine players"
-                " "
-            }
-        }
+    composer =
+    \markup {
+        \override #'(font-name . "Adobe Garamond Pro")
+        \abs-fontsize #12
+        \line { Trevor Bača (*1975) }
+    }
+    poet =
+    \markup {
+        \override #'(font-name . "Adobe Garamond Pro")
+        \abs-fontsize #12
+        \line { Paul Griffiths (*1947) }
+    }
+    title =
+    \markup
+    \center-column {
+        \override #'(font-name . "Adobe Garamond Pro Italic")
+        \abs-fontsize #13
+        "to Jonathan Hepfer"
+        \vspace #1
+        \override #'(font-name . "Adobe Garamond Pro Bold")
+        \abs-fontsize #20
+        \line { ( HARMONY ) }
+        \vspace #0.5
+        \override #'(font-name . "Adobe Garamond Pro Italic")
+        \abs-fontsize #13
+        "for narrator & nine players"
+        \vspace #1
+    }
 }
 
 \paper {
+    evenFooterMarkup =
+        \markup
+        \on-the-fly #print-page-number-check-first
+        \fill-line {
+            " "
+            \bold
+            \abs-fontsize #9
+            \override #'(font-name . "Adobe Garamond Pro")
+            \concat {
+                ( \hspace #2 HARMONY \hspace #2 )
+                \hspace #3
+                —
+                \hspace #3
+                \on-the-fly #print-page-number-check-first
+                \fromproperty #'page:page-number-string
+                \hspace #3
+                —
+                \hspace #3
+                Bača
+            }
+            " "
+        }
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
         (padding . 0)
         (stretchability . 0)
     )
+    oddFooterMarkup = \evenFooterMarkup
     top-markup-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 12)
