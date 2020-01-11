@@ -18,7 +18,15 @@
             \fontsize #3
             \override #'(font-name . "Adobe Garamond Pro")
             \concat {
-                ( \hspace #2 HARMONY \hspace #2 )
+                ( \hspace #1
+                H \hspace #1
+                A \hspace #1
+                R \hspace #1
+                M \hspace #1
+                O \hspace #1
+                N \hspace #1
+                Y \hspace #1
+                ) \hspace #1
                 \hspace #3
                 —
                 \hspace #3
@@ -95,21 +103,21 @@
             \line {
                 \concat {
                 (
-                \hspace #9
+                \hspace #12
                 H
-                \hspace #3
-                A
-                \hspace #3
-                R
-                \hspace #(+ 3 1)
-                M
-                \hspace #3
-                O
-                \hspace #3
-                N
-                \hspace #3
-                Y
                 \hspace #9
+                A
+                \hspace #9
+                R
+                \hspace #(+ 9 1)
+                M
+                \hspace #9
+                O
+                \hspace #9
+                N
+                \hspace #9
+                Y
+                \hspace #12
                 )
                 }
             }
