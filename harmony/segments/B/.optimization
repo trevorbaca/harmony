@@ -3258,3 +3258,13 @@
  Segment-maker runtime: 33 seconds
  Abjad format time: 0 seconds
  LilyPond runtime: 1 second
+
+2020-05-06 17:27:48
+ Segment-maker runtime: 32 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 3 seconds
+
+2020-05-07 09:58:07
+ Segment-maker runtime: 33 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 3 seconds
