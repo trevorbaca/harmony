@@ -45,6 +45,14 @@ before_install:
     - export MYPYPATH=$MYPYPATH:$BACA
     - export PATH=$PATH:$BACA/scr
 
+    # clone & install baca test:
+    - TEST=/tmp/test
+    - git clone https://github.com/trevorbaca/test.git $TEST
+    
+    # symlink to baca test
+    - unlink $PACKAGE/test.py
+    - ln -s $TEST/test_segments.py $PACKAGE/test.py
+
     # clone & install ide:
     - IDE=/tmp/ide
     - git clone https://github.com/Abjad/ide.git $IDE
@@ -53,6 +61,7 @@ before_install:
     - export PATH=$PATH:$IDE/ide/scr
 
     # log setup:
+    - echo $TRAVIS_BUILD_DIR
     - echo $MYPYPATH
     - echo $PATH
     - ls
@@ -73,7 +82,7 @@ script:
     - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
     - mypy --ignore-missing-imports $PACKAGE
     - coverage run -a `which baca-doctest` $PACKAGE
-    - coverage run -a `which py.test` -rf $PACKAGE
+    - coverage run -a `which py.test` -rf $PACKAGE/test.py
 
 after_success:
     - pip install --quiet coveralls
