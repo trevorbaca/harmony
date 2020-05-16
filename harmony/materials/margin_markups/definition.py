@@ -1,7 +1,6 @@
 import abjad
 import baca
 
-
 margin_markups = abjad.OrderedDict(
     [
         ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),

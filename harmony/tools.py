@@ -1,9 +1,9 @@
-import abjad
-import baca
 import inspect
 import typing
-from abjadext import rmakers
 
+import abjad
+import baca
+from abjadext import rmakers
 
 _reference_meters = (
     abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
