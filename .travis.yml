@@ -72,7 +72,6 @@ before_install:
     - which prime-parser-tables
 
 install:
-    - pip install coverage
     - pip install -e .
     - prime-parser-tables
     
@@ -81,12 +80,8 @@ script:
     - BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
     - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
     - mypy --ignore-missing-imports $PACKAGE
-    - coverage run -a `which baca-doctest` $PACKAGE
-    - coverage run -a `which py.test` -rf $PACKAGE/test.py
-
-after_success:
-    - pip install --quiet coveralls
-    - coveralls
+    - baca-doctest $PACKAGE
+    - py.test -rf $PACKAGE/test.py
 
 notifications:
     email: false
