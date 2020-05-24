@@ -7,7 +7,7 @@ breaks = baca.breaks(
             *distances,
             measure=1,
             y_offset=40,
-            ),
+        ),
         number=1,
     ),
     baca.page(
@@ -15,7 +15,7 @@ breaks = baca.breaks(
             *distances,
             measure=6,
             y_offset=40,
-            ),
+        ),
         number=2,
     ),
     baca.page(
@@ -23,7 +23,7 @@ breaks = baca.breaks(
             *distances,
             measure=12,
             y_offset=40,
-            ),
+        ),
         number=3,
     ),
     local_measure_numbers=True,

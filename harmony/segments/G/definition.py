@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [G] #####################################
@@ -449,14 +448,14 @@ maker(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
-        ),
+    ),
     harmony.whisk_staff_position(),
-#    baca.hairpin(
-#        'o< "f" >o niente',
-#        left_broken=True,
-#        map=baca.clparts([3]),
-#        pieces=baca.clparts([1]),
-#    ),
+    #    baca.hairpin(
+    #        'o< "f" >o niente',
+    #        left_broken=True,
+    #        map=baca.clparts([3]),
+    #        pieces=baca.clparts([1]),
+    #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
@@ -573,12 +572,12 @@ maker(
         ),
         selector=baca.pleaf(-2),
     ),
-#    baca.hairpin(
-#        'o< "f" >o',
-#        forbid_al_niente_to_bar_line=True,
-#        pieces=baca.lparts([1, 1]),
-#        selector=baca.leaves()[-2:],
-#    ),
+    #    baca.hairpin(
+    #        'o< "f" >o',
+    #        forbid_al_niente_to_bar_line=True,
+    #        pieces=baca.lparts([1, 1]),
+    #        selector=baca.leaves()[-2:],
+    #    ),
     baca.new(
         baca.dynamic('"f"'),
         baca.dls_staff_padding(6 + 2),
@@ -595,11 +594,11 @@ maker(
         do_not_rewrite_meter=True,
     ),
     harmony.whisk_staff_position(),
-#    baca.hairpin(
-#        'o< "f" >o niente',
-#        pieces=baca.lparts([1, 2]),
-#        selector=baca.leaves()[:3],
-#    ),
+    #    baca.hairpin(
+    #        'o< "f" >o niente',
+    #        pieces=baca.lparts([1, 2]),
+    #        selector=baca.leaves()[:3],
+    #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6 + 2),
 )
@@ -808,7 +807,7 @@ maker(
     harmony.appoggiato(
         divisions=[4, 4, 4, 4, 4, 4, 4, 4],
         counts=[4, 0, 0, 0, 0, 0, 0, 0],
-        ),
+    ),
     baca.pitch(
         "Bb3",
         selector=baca.plts(grace=False),

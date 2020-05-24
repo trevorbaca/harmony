@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [C] #####################################
@@ -547,7 +546,7 @@ maker(
         abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.hairpin(
-        #'"ff" "f" mf mp p pp ppp ppp',
+        # '"ff" "f" mf mp p pp ppp ppp',
         '"f" mf mp p pp ppp ppp',
         bookend=False,
         pieces=baca.plts(),
@@ -627,7 +626,7 @@ maker(
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
-        ),
+    ),
     baca.new(
         baca.hairpin(
             "mf >o niente",

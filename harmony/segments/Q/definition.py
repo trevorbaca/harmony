@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [Q] #####################################
@@ -389,7 +388,7 @@ maker(
     baca.pitch("D4"),
     baca.flat_glissando(
         hide_middle_stems=True,
-        left_broken=True, 
+        left_broken=True,
     ),
     baca.bow_speed_spanner(
         "poco scr. =|",

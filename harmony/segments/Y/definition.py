@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [Y] #####################################
@@ -208,7 +207,7 @@ maker(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6).staff_padding, 
+        abjad.tweak(6).staff_padding,
         literal=True,
     ),
 )
@@ -437,7 +436,7 @@ maker(
     baca.pitch("G1"),
     baca.laissez_vibrer(
         baca.ptails(),
-        ),
+    ),
     baca.dynamic(
         "f-sempre",
         abjad.tweak(-0.9).self_alignment_X,
@@ -796,7 +795,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 3),
     baca.stem_tremolo(
         baca.pleaves(),
-        ),
+    ),
     baca.accent(
         baca.pheads()[1:],
     ),

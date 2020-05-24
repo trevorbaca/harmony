@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [L] #####################################
@@ -825,7 +824,7 @@ maker(
 )
 
 maker(
-    ("vc1", (1, 2)),  
+    ("vc1", (1, 2)),
     baca.dls_staff_padding(4),
 )
 
@@ -1018,7 +1017,7 @@ maker(
     ("cb1", (3, 8)),
     harmony.rimbalzandi(
         rest_except=[
-            1, 6, 9, 11, 14, 16, 19,21, 22, 24, 25, 26, 28, 30, 31, 32],
+            1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
         extra_counts=[3],
     ),
     baca.hairpin(

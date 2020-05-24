@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [E] #####################################
@@ -319,7 +318,7 @@ maker(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
         literal=True,
-        ),
+    ),
 )
 
 # hp
@@ -602,11 +601,11 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [2, 3, -3, 0, -2, 
-            4, -2, 1, -1, 
-            5, -1, 2, 0, 
+        [2, 3, -3, 0, -2,
+            4, -2, 1, -1,
+            5, -1, 2, 0,
             6, 0, 4, 2,
-        8],
+         8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -695,11 +694,11 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [2, -3, 0, -2, 
-            4, -2, 1, -1, 
-            5, -1, 2, 0, 
+        [2, -3, 0, -2,
+            4, -2, 1, -1,
+            5, -1, 2, 0,
             6, 0, 4, 2,
-        3, 8],
+         3, 8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -804,7 +803,7 @@ maker(
             1, 4, -2, 0,
             -1, 2, -4, -2,
             -3, 0, -5, -4,
-        -6],
+         -6],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -913,7 +912,7 @@ maker(
             1, 4, -2, 0,
             -1, 2, -4, -2,
             -3, 0, -5, -4,
-        -6],
+         -6],
     ),
     baca.glissando(
         allow_repeats=True,

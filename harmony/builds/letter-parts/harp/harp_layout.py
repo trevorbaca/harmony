@@ -58,7 +58,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=41, # fermata
+            # measure=41, # fermata
             measure=42,
             y_offset=y_offset_4,
         ),
@@ -113,7 +113,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=91, # fermata
+            # measure=91, # fermata
             measure=92,
             y_offset=y_offset_7,
         ),
@@ -138,7 +138,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=116, # spacing
+            # measure=116, # spacing
             measure=114,
             y_offset=y_offset_4,
         ),
@@ -173,7 +173,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=156, # fermata
+            # measure=156, # fermata
             measure=146,
             y_offset=y_offset_3,
         ),
@@ -184,7 +184,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=156, # fermata
+            # measure=156, # fermata
             measure=157,
             y_offset=y_offset_5,
         ),
@@ -243,13 +243,13 @@ breaks = baca.breaks(
     baca.page(
         baca.system(
             distances,
-            #measure=206, # fermata
+            # measure=206, # fermata
             measure=207,
             y_offset=y_offset_1,
         ),
         baca.system(
             distances,
-            #measure=211, # fermata
+            # measure=211, # fermata
             measure=212,
             y_offset=y_offset_2,
         ),
@@ -275,7 +275,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=236, # fermata
+            # measure=236, # fermata
             measure=237,
             y_offset=y_offset_7,
         ),
@@ -295,7 +295,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=251,
+            # measure=251,
             measure=250,
             y_offset=y_offset_3,
         ),
@@ -306,7 +306,7 @@ breaks = baca.breaks(
         ),
         baca.system(
             distances,
-            #measure=261, # fermata
+            # measure=261, # fermata
             measure=262,
             y_offset=y_offset_5,
         ),

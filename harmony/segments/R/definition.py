@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [R] #####################################
@@ -144,14 +143,14 @@ maker(
 maker(
     ("bfl", 5),
     harmony.sixteenths(
-        [-4, 8], 
+        [-4, 8],
     ),
 )
 
 maker(
     ("bfl", 6),
     harmony.sixteenths(
-        [4, 4, "-"], 
+        [4, 4, "-"],
     ),
 )
 
@@ -1121,7 +1120,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
-        [-4, 6, 2, -4], 
+        [-4, 6, 2, -4],
         untie=True,
     ),
     baca.new(

@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [K] #####################################
@@ -410,7 +409,7 @@ maker(
         left_broken=True,
     ),
     baca.stem_tremolo(
-         baca.pleaf(-1),
+        baca.pleaf(-1),
     ),
     baca.hairpin(
         "(p) >o niente",
@@ -778,7 +777,7 @@ maker(
         abjad.tweak(10.5 + 1.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        #selector=baca.leaves()[2:].rleak(),
+        # selector=baca.leaves()[2:].rleak(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -942,7 +941,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        #selector=baca.leaves()[2:].rleak(),
+        # selector=baca.leaves()[2:].rleak(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -968,7 +967,7 @@ maker(
     ),
     baca.markup(
         r"\baca-fifteen-d",
-        ###abjad.tweak(1).padding,
+        # abjad.tweak(1).padding,
         abjad.tweak(2.5).X_offset,
         direction=abjad.Down,
         literal=True,
@@ -998,7 +997,7 @@ maker(
     ),
     baca.markup(
         r"\baca-seven-e-flat",
-        ###abjad.tweak(1).padding,
+        # abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
         selector=baca.run(1).leaf(0),

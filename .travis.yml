@@ -15,7 +15,9 @@ before_install:
     # upgrade pip:
     - pip install --upgrade pip
 
-    # install mypy:
+    # pip install isort, flake8, mypy
+    - pip install flake8
+    - pip install isort
     - pip install mypy
 
     # install lilypond:
@@ -60,26 +62,40 @@ before_install:
     - export MYPYPATH=$MYPYPATH:$IDE
     - export PATH=$PATH:$IDE/ide/scr
 
-    # log setup:
-    - echo $TRAVIS_BUILD_DIR
+    # log versions
+    - black --version
+    - flake8 --version
+    - isort --version
+    - mypy --version
+    - pip --version
+
+    # log environment variables
     - echo $MYPYPATH
+    - echo $PACKAGE
     - echo $PATH
-    - ls
-    - ls /tmp
-    - pwd
+    - echo $TRAVIS_BUILD_DIR
+
+    # log script paths
     - which baca-doctest
-    - which mypy
+    - which black-check
+    - which flake8-check
+    - which isort-check
+    - which mypy-check
     - which prime-parser-tables
+
+    # log present working directory
+    - pwd
+    - ls
 
 install:
     - pip install -e .
     - prime-parser-tables
     
 script:
-    - BLACK_OPTS="--target-version=py36 --line-length=79 --check --diff"
-    - BLACK_EXCLUDE="__metadata__.py|__persist__.py|segments|layout.py"
-    - black $BLACK_OPTS --exclude $BLACK_EXCLUDE $PACKAGE
-    - mypy --ignore-missing-imports $PACKAGE
+    - black-check $PACKAGE
+    - flake8-check $PACKAGE
+    - isort-check $PACKAGE
+    - mypy-check $PACKAGE
     - baca-doctest $PACKAGE
     - py.test -rf $PACKAGE/test.py
 
