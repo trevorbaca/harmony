@@ -16,7 +16,7 @@ class ScoreTemplate(baca.ScoreTemplate):
         Calls score template:
 
         >>> harmony.ScoreTemplate()
-        ScoreTemplate
+        ScoreTemplate()
 
     """
 
