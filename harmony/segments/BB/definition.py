@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [BB] ####################################
@@ -332,7 +331,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.text_spanner(
         "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
-            " -> 0 pul. / beat",
+        " -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
         pieces=baca.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),

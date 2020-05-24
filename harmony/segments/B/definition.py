@@ -609,7 +609,7 @@ maker(
     harmony.appoggiato(
         divisions=[8, 12, 8],
         incise=True,
-        ),
+    ),
     baca.pitch("Gqf4"),
     baca.dynamic("mp"),
     baca.dls_staff_padding(3),
@@ -1029,7 +1029,7 @@ maker(
     baca.clef("bass"),
     harmony.sixteenths(
         [10, 4, 6],
-    ), 
+    ),
     baca.pitch("A1"),
     baca.stem_tremolo(
         baca.pleaves(),

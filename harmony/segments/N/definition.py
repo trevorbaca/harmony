@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [N] #####################################
@@ -393,7 +392,7 @@ maker(
         abjad.tweak(6).staff_padding,
         abjad.tweak(0.75).self_alignment_X,
         literal=True,
-        ),
+    ),
 )
 
 maker(
@@ -453,7 +452,7 @@ maker(
         abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.hairpin(
-        #'"ff" "ff" "ff" "f" "f" mf mp p pp',
+        # '"ff" "ff" "ff" "f" "f" mf mp p pp',
         '"ff" "ff" "f" "f" mf mp p pp',
         pieces=baca.plts()[1:],
     ),
@@ -605,8 +604,8 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        ###abjad.tweak((-3, 0)).extra_offset,
-        ###abjad.tweak(1).padding,
+        # abjad.tweak((-3, 0)).extra_offset,
+        # abjad.tweak(1).padding,
         direction=abjad.Down,
     ),
 )
@@ -976,8 +975,8 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        ###abjad.tweak((-3, 0)).extra_offset,
-        ###abjad.tweak(1).padding,
+        # abjad.tweak((-3, 0)).extra_offset,
+        # abjad.tweak(1).padding,
         direction=abjad.Down,
     ),
 )
@@ -1089,8 +1088,8 @@ maker(
     ),
     baca.markup(
         baca.markups.string_number(4),
-        ###abjad.tweak((-3, 0)).extra_offset,
-        ###abjad.tweak(1).padding,
+        # abjad.tweak((-3, 0)).extra_offset,
+        # abjad.tweak(1).padding,
         direction=abjad.Down,
     ),
 )

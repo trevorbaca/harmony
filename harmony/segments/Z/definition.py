@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [Z] #####################################
@@ -795,7 +794,7 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.stem_tremolo(
         baca.pleaves(),
-        ),
+    ),
     baca.accent(
         baca.pheads()[1:],
     ),

@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [AA] ####################################
@@ -396,7 +395,7 @@ maker(
     ("perc2", (4, 5)),
     baca.staff_lines(3),
     harmony.sixteenths(
-       [2, "-"],
+        [2, "-"],
     ),
     baca.staff_position(2),
     baca.dynamic("ff"),
@@ -1072,7 +1071,7 @@ maker(
     (["va", "vc1", "vc2", "cb1"], 3),
     baca.stem_tremolo(
         baca.pleaves(),
-        ),
+    ),
     baca.accent(
         baca.pheads()[1:],
     ),

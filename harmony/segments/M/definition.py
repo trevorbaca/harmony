@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [M] #####################################
@@ -376,12 +375,12 @@ maker(
     baca.new(
         harmony.brake_drum_staff_position(),
         baca.dynamic("f"),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        abjad.tweak(6).staff_padding,
-        abjad.tweak(0.5).self_alignment_X,
-        literal=True,
-    ),
+        baca.markup(
+            r"\baca-brake-drum-markup",
+            abjad.tweak(6).staff_padding,
+            abjad.tweak(0.5).self_alignment_X,
+            literal=True,
+        ),
         selector=baca.pleaf(-1),
     ),
 )
@@ -538,7 +537,7 @@ maker(
 maker(
     ("va", (1, 3)),
     baca.new(
-        baca.pitch("Bb3"), 
+        baca.pitch("Bb3"),
         selector=baca.plts()[:1],
     ),
     baca.new(
@@ -610,7 +609,7 @@ maker(
 maker(
     ("vc1", (1, 3)),
     baca.new(
-        baca.pitch("Aqf3"), 
+        baca.pitch("Aqf3"),
         selector=baca.plts()[:1],
     ),
     baca.new(
@@ -762,7 +761,7 @@ maker(
 maker(
     ("cb1", (1, 3)),
     baca.new(
-        baca.pitch("Dtqf3"), 
+        baca.pitch("Dtqf3"),
         selector=baca.plts()[:1],
     ),
     baca.new(

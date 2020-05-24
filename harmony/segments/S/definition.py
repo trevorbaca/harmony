@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [S] #####################################
@@ -799,7 +798,7 @@ maker(
 maker(
     ("cb2", 2),
     harmony.sixteenths(
-        [2, 2, 6, 2, -4], 
+        [2, 2, 6, 2, -4],
         untie=True,
         written_quarters=([0],),
         invisible=([1],),
@@ -924,7 +923,7 @@ maker(
 maker(
     (["vc1", "vc2", "cb1"], 2),
     harmony.sixteenths(
-        [-4, 6, 2, -4], 
+        [-4, 6, 2, -4],
         untie=True,
     ),
     baca.flat_glissando(),

@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [A] #####################################
@@ -318,7 +317,7 @@ maker(
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
-        ),
+    ),
     baca.pitch("Gqf4"),
     baca.markup(
         r"\baca-seven-a",
@@ -495,7 +494,7 @@ maker(
     ),
     harmony.sixteenths(
         [18, 6, 10, 4, 6],
-    ), 
+    ),
     baca.pitch("A1"),
     baca.stem_tremolo(
         baca.pleaves(),

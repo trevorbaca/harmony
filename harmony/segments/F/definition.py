@@ -3,7 +3,6 @@ import os
 import abjad
 import baca
 import harmony
-from abjadext import rmakers
 
 ###############################################################################
 ##################################### [F] #####################################
@@ -611,7 +610,7 @@ maker(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
-        ),
+    ),
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
@@ -683,7 +682,7 @@ maker(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
-        ),
+    ),
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
@@ -864,13 +863,13 @@ maker(
         harmony.whisk_staff_position(),
         selector=baca.pleaves()[-2:],
     ),
-#    baca.hairpin(
-#        'o< "f" >o niente',
-#        forbid_al_niente_to_bar_line=True,
-#        pieces=baca.lparts([1, 1 + 1]),
-#        right_broken=True,
-#        selector=baca.pleaves()[-2:].rleak(),
-#    ),
+    #    baca.hairpin(
+    #        'o< "f" >o niente',
+    #        forbid_al_niente_to_bar_line=True,
+    #        pieces=baca.lparts([1, 1 + 1]),
+    #        right_broken=True,
+    #        selector=baca.pleaves()[-2:].rleak(),
+    #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(
         6,
@@ -1055,7 +1054,7 @@ maker(
 )
 
 maker(
-    ("va", [1, (6, 15)]), 
+    ("va", [1, (6, 15)]),
     baca.pitch(
         "Eb3",
         baca.plts(exclude=abjad.const.HIDDEN),
@@ -1253,7 +1252,7 @@ maker(
 )
 
 maker(
-    ("vc1", [1, (6, 7), (10, 15)]), 
+    ("vc1", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "E4",
         baca.plts(exclude=abjad.const.HIDDEN),
@@ -1413,7 +1412,7 @@ maker(
 )
 
 maker(
-    ("vc2", [1, (6, 7), (10, 15)]), 
+    ("vc2", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "Eqf4",
         baca.plts(exclude=abjad.const.HIDDEN),
