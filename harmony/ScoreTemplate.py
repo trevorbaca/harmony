@@ -1,12 +1,12 @@
 import abjad
 import baca
 
-from .materials import instruments as harmony_instruments
-from .materials import margin_markups as harmony_margin_markups
+from .tools import instruments as harmony_instruments
+from .tools import margin_markups as harmony_margin_markups
 
 
 class ScoreTemplate(baca.ScoreTemplate):
-    r"""
+    """
     Score template.
 
     >>> import harmony
