@@ -10,6 +10,174 @@ _reference_meters = (
     abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
 )
 
+# instruments
+
+instruments = abjad.OrderedDict(
+    [
+        ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
+        #        ("Glockenspiel", abjad.Glockenspiel()),
+        (
+            "Percussion",
+            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+        ),
+        (
+            "PercussionI",
+            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+        ),
+        (
+            "PercussionII",
+            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+        ),
+        ("Harp", abjad.Harp()),
+        ("Viola", abjad.Viola(pitch_range="[C3, +inf]")),
+        ("Cello", abjad.Cello(pitch_range="[C2, +inf]")),
+        ("CelloI", abjad.Cello(pitch_range="[C2, +inf]")),
+        ("CelloII", abjad.Cello(pitch_range="[C2, +inf]")),
+        ("Contrabass", abjad.Contrabass(pitch_range="[E1, +inf]")),
+        ("ContrabassI", abjad.Contrabass(pitch_range="[E1, +inf]")),
+        ("ContrabassII", abjad.Contrabass(pitch_range="[E1, +inf]")),
+    ]
+)
+
+# margin markups
+
+margin_markups = abjad.OrderedDict(
+    [
+        ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),
+        ("Perc. I", abjad.MarginMarkup(markup=r"\harmony-perc-i-markup")),
+        ("Perc. II", abjad.MarginMarkup(markup=r"\harmony-perc-ii-markup")),
+        ("Hp.", abjad.MarginMarkup(markup=r"\harmony-hp-markup")),
+        ("Va.", abjad.MarginMarkup(markup=r"\harmony-va-markup")),
+        ("Vc. I", abjad.MarginMarkup(markup=r"\harmony-vc-i-markup")),
+        ("Vc. II", abjad.MarginMarkup(markup=r"\harmony-vc-ii-markup")),
+        ("Cb. I", abjad.MarginMarkup(markup=r"\harmony-cb-i-markup")),
+        ("Cb. II", abjad.MarginMarkup(markup=r"\harmony-cb-ii-markup")),
+    ]
+)
+
+metronome_marks = abjad.OrderedDict(
+    [
+        ("48", abjad.MetronomeMark((1, 4), 48)),
+        (
+            "57 3/5",
+            abjad.MetronomeMark((1, 4), abjad.Fraction(288, 5), decimal=True),
+        ),
+        ("72", abjad.MetronomeMark((1, 4), 72)),
+        ("96", abjad.MetronomeMark((1, 4), 96)),
+        ("144", abjad.MetronomeMark((1, 4), 144)),
+        # slower
+        (
+            "2.=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
+            ),
+        ),
+        (
+            "4:5(2)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("4:5", "c2"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "2=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
+            ),
+        ),
+        (
+            "5:6(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("5:6", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "4:5(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("4:5", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "3:5(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("3:5", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "3:4(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("3:4", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "4.=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
+            ),
+        ),
+        # faster
+        (
+            "6:5(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("6:5", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "5:4(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("5:4", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "5:4(8)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("5:4", "c8"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "5:3(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("5:3", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "4:3(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("4:3", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "3:2(4)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("3:2", "c4"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+        (
+            "8=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
+            ),
+        ),
+        (
+            "3:2(8)=4",
+            abjad.MetricModulation(
+                left_rhythm=abjad.Tuplet("3:2", "c8"),
+                right_rhythm=abjad.Note("c4"),
+            ),
+        ),
+    ]
+)
+
 ### TAGS ###
 
 LETTER_PARTS_BFL = abjad.Tag("+LETTER_PARTS_BFL")

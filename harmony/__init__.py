@@ -3,7 +3,6 @@ import platform
 
 from harmony.ScoreTemplate import ScoreTemplate, margin_markup
 
-from .materials import instruments, margin_markups, metronome_marks
 from .tools import (
     appoggiato,
     appoggiato_pitches_a,
@@ -22,6 +21,9 @@ from .tools import (
     duration_color,
     glissando_counts,
     glissando_counts_curtailed,
+    instruments,
+    margin_markups,
+    metronome_marks,
     phjc,
     purpleheart_staff_positions,
     rimbalzandi,
