@@ -71,6 +71,7 @@ before_install:
     - isort --version
     - mypy --version
     - pip --version
+    - pytest --version
 
     # log environment variables
     - echo $MYPYPATH
