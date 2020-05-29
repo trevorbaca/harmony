@@ -47,6 +47,9 @@ before_install:
     - export MYPYPATH=$MYPYPATH:$BACA
     - export PATH=$PATH:$BACA/scr
 
+    # symlink to mypy configfile
+    - ln -s $BACA/dotfiles/mypy.ini ~/.mypy.ini
+
     # clone & install baca test:
     - TEST=/tmp/test
     - git clone https://github.com/trevorbaca/test.git $TEST
@@ -80,7 +83,6 @@ before_install:
     - which black-check
     - which flake8-check
     - which isort-check
-    - which mypy-check
     - which prime-parser-tables
 
     # log present working directory
@@ -95,7 +97,7 @@ script:
     - black-check $PACKAGE
     - flake8-check $PACKAGE
     - isort-check $PACKAGE
-    - mypy-check $PACKAGE
+    - mypy $PACKAGE
     - baca-doctest $PACKAGE
     - py.test -rf $PACKAGE/test.py
 
