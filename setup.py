@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 import setuptools
 
-install_requires = ["abjad", "mypy", "roman"]
+install_requires = [
+    "abjad",
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pytest",
+]
 
 keywords = [
     "abjad",
