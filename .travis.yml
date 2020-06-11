@@ -1,7 +1,3 @@
 version: ~> 1.0
 
-env:
-    global:
-        - name=harmony
-
 import: trevorbaca/baca:dotfiles/score.yml
