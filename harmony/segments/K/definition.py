@@ -1,5 +1,3 @@
-import os
-
 import abjad
 import baca
 import harmony
@@ -30,7 +28,7 @@ maker = baca.SegmentMaker(
     ],
     fermata_measure_empty_overrides=[3, 9],
     parts_metric_modulation_multiplier=(0.525, 0.525),
-    segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
+    segment_directory=abjad.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
         (3, 4), (4, 4), (1, 4),

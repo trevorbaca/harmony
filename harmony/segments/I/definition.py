@@ -1,5 +1,3 @@
-import os
-
 import abjad
 import baca
 import harmony
@@ -24,7 +22,7 @@ maker = baca.SegmentMaker(
         abjad.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     parts_metric_modulation_multiplier=(0.525, 0.525),
-    segment_directory=abjad.Path(os.path.realpath(__file__)).parent,
+    segment_directory=abjad.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
         (6, 4), (6, 4),
