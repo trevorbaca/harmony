@@ -1,1 +1,1 @@
-/Users/trevorbaca/test/test_segments.py
+/Users/trevorbaca/baca/dotfiles/test_segments.py
