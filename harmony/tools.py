@@ -1,6 +1,8 @@
 import inspect
 import typing
 
+import quicktions
+
 import abjad
 import baca
 from abjadext import rmakers
@@ -60,7 +62,7 @@ metronome_marks = abjad.OrderedDict(
         ("48", abjad.MetronomeMark((1, 4), 48)),
         (
             "57 3/5",
-            abjad.MetronomeMark((1, 4), abjad.Fraction(288, 5), decimal=True),
+            abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
         ),
         ("72", abjad.MetronomeMark((1, 4), 72)),
         ("96", abjad.MetronomeMark((1, 4), 96)),
