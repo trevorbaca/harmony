@@ -12,13 +12,13 @@ stage_markup = (
 
 maker = baca.SegmentMaker(
     activate=[
-        abjad.tags.LOCAL_MEASURE_NUMBER,
-        abjad.tags.STAGE_NUMBER,
+        baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.STAGE_NUMBER,
     ],
     deactivate=[
-        *abjad.tags.instrument_color_tags(),
-        *abjad.tags.margin_markup_color_tags(),
-        abjad.tags.RHYTHM_ANNOTATION_SPANNER,
+        *baca.tags.instrument_color_tags(),
+        *baca.tags.margin_markup_color_tags(),
+        baca.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     fermata_measure_empty_overrides=[3],
     final_segment=True,
