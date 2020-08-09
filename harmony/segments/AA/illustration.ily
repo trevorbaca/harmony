@@ -1,4 +1,4 @@
-AA_Global_Skips = {                                                            %! abjad.Path.extern()
+AA_Global_Skips = {                                                            %! ide.Path.extern()
 
     % [AA Global_Skips measure 247 / measure 1]                                %! baca.SegmentMaker._comment_measure_numbers()
     \override TextScript.extra-offset = #'(1.5 . 12)                           %! baca.text_script_extra_offset():baca.OverrideCommand._call(1)
@@ -249,10 +249,10 @@ AA_Global_Skips = {                                                            %
     \once \override Score.BarLine.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
     \once \override Score.SpanBar.transparent = ##t                            %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Global_Rests = {                                                            %! abjad.Path.extern()
+AA_Global_Rests = {                                                            %! ide.Path.extern()
 
     % [AA Global_Rests measure 247 / measure 1]                                %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 7/4                                                                   %! baca.SegmentMaker._make_global_rests(1)
@@ -290,10 +290,10 @@ AA_Global_Rests = {                                                            %
     % [AA Global_Rests measure 256 / measure 10]                               %! baca.SegmentMaker._comment_measure_numbers()
     R1 * 1/4                                                                   %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Bass_Flute_Music_Voice_A = {                                                %! abjad.Path.extern()
+AA_Bass_Flute_Music_Voice_A = {                                                %! ide.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     af'!8.
@@ -316,10 +316,10 @@ AA_Bass_Flute_Music_Voice_A = {                                                %
     af'1
     \repeatTie
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Bass_Flute_Music_Voice_B = {                                                %! abjad.Path.extern()
+AA_Bass_Flute_Music_Voice_B = {                                                %! ide.Path.extern()
 
     \voiceTwo                                                                  %! abjad.on_beat_grace_container(4)
     af'!8.
@@ -337,10 +337,10 @@ AA_Bass_Flute_Music_Voice_B = {                                                %
     \repeatTie
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Bass_Flute_Music_Voice = {                                                  %! abjad.Path.extern()
+AA_Bass_Flute_Music_Voice = {                                                  %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -576,7 +576,7 @@ AA_Bass_Flute_Music_Voice = {                                                  %
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        \AA_Bass_Flute_Music_Voice_A                                           %! abjad.Path.extern()
+        \AA_Bass_Flute_Music_Voice_A                                           %! ide.Path.extern()
 
     >>
     \oneVoice                                                                  %! abjad.on_beat_grace_container(5)
@@ -622,7 +622,7 @@ AA_Bass_Flute_Music_Voice = {                                                  %
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        \AA_Bass_Flute_Music_Voice_B                                           %! abjad.Path.extern()
+        \AA_Bass_Flute_Music_Voice_B                                           %! ide.Path.extern()
 
     >>
 
@@ -839,21 +839,21 @@ AA_Bass_Flute_Music_Voice = {                                                  %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Bass_Flute_Music_Staff = <<                                                 %! abjad.Path.extern()
+AA_Bass_Flute_Music_Staff = <<                                                 %! ide.Path.extern()
 
     \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context()
-    \AA_Global_Rests                                                           %! abjad.Path.extern()
+    \AA_Global_Rests                                                           %! ide.Path.extern()
 
     \context Voice = "Bass_Flute_Music_Voice"                                  %! harmony.ScoreTemplate.__call__()
-    \AA_Bass_Flute_Music_Voice                                                 %! abjad.Path.extern()
+    \AA_Bass_Flute_Music_Voice                                                 %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Percussion_I_Music_Voice = {                                                %! abjad.Path.extern()
+AA_Percussion_I_Music_Voice = {                                                %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -1114,21 +1114,21 @@ AA_Percussion_I_Music_Voice = {                                                %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Percussion_I_Music_Staff = <<                                               %! abjad.Path.extern()
+AA_Percussion_I_Music_Staff = <<                                               %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Percussion_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__()
-    \AA_Percussion_I_Music_Voice                                               %! abjad.Path.extern()
+    \AA_Percussion_I_Music_Voice                                               %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Percussion_II_Music_Voice = {                                               %! abjad.Path.extern()
+AA_Percussion_II_Music_Voice = {                                               %! ide.Path.extern()
 
     % [AA Percussion_II_Music_Voice measure 247 / measure 1]                   %! baca.SegmentMaker._comment_measure_numbers()
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup                   %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_MARGIN_MARKUP
@@ -1393,21 +1393,21 @@ AA_Percussion_II_Music_Voice = {                                               %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Percussion_II_Music_Staff = <<                                              %! abjad.Path.extern()
+AA_Percussion_II_Music_Staff = <<                                              %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Percussion_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__()
-    \AA_Percussion_II_Music_Voice                                              %! abjad.Path.extern()
+    \AA_Percussion_II_Music_Voice                                              %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Harp_Music_Voice = {                                                        %! abjad.Path.extern()
+AA_Harp_Music_Voice = {                                                        %! ide.Path.extern()
 
     % [AA Harp_Music_Voice measure 247 / measure 1]                            %! baca.SegmentMaker._comment_measure_numbers()
     \set Staff.shortInstrumentName = \harmony-hp-markup                        %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_MARGIN_MARKUP
@@ -1687,21 +1687,21 @@ AA_Harp_Music_Voice = {                                                        %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Harp_Music_Staff = <<                                                       %! abjad.Path.extern()
+AA_Harp_Music_Staff = <<                                                       %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Harp_Music_Voice"                                        %! harmony.ScoreTemplate.__call__()
-    \AA_Harp_Music_Voice                                                       %! abjad.Path.extern()
+    \AA_Harp_Music_Voice                                                       %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Viola_Music_Voice = {                                                       %! abjad.Path.extern()
+AA_Viola_Music_Voice = {                                                       %! ide.Path.extern()
 
     % [AA Viola_Music_Voice measure 247 / measure 1]                           %! baca.SegmentMaker._comment_measure_numbers()
     \set Staff.shortInstrumentName = \harmony-va-markup                        %! -PARTS:baca.SegmentMaker._reapply_persistent_indicators(3):baca.SegmentMaker._set_status_tag():REAPPLIED_MARGIN_MARKUP
@@ -1994,21 +1994,21 @@ AA_Viola_Music_Voice = {                                                       %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Viola_Music_Staff = <<                                                      %! abjad.Path.extern()
+AA_Viola_Music_Staff = <<                                                      %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Viola_Music_Voice"                                       %! harmony.ScoreTemplate.__call__()
-    \AA_Viola_Music_Voice                                                      %! abjad.Path.extern()
+    \AA_Viola_Music_Voice                                                      %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Cello_I_Music_Voice = {                                                     %! abjad.Path.extern()
+AA_Cello_I_Music_Voice = {                                                     %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -2388,21 +2388,21 @@ AA_Cello_I_Music_Voice = {                                                     %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Cello_I_Music_Staff = <<                                                    %! abjad.Path.extern()
+AA_Cello_I_Music_Staff = <<                                                    %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Cello_I_Music_Voice"                                     %! harmony.ScoreTemplate.__call__()
-    \AA_Cello_I_Music_Voice                                                    %! abjad.Path.extern()
+    \AA_Cello_I_Music_Voice                                                    %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Cello_II_Music_Voice = {                                                    %! abjad.Path.extern()
+AA_Cello_II_Music_Voice = {                                                    %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -2773,21 +2773,21 @@ AA_Cello_II_Music_Voice = {                                                    %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Cello_II_Music_Staff = <<                                                   %! abjad.Path.extern()
+AA_Cello_II_Music_Staff = <<                                                   %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Cello_II_Music_Voice"                                    %! harmony.ScoreTemplate.__call__()
-    \AA_Cello_II_Music_Voice                                                   %! abjad.Path.extern()
+    \AA_Cello_II_Music_Voice                                                   %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Contrabass_I_Music_Voice = {                                                %! abjad.Path.extern()
+AA_Contrabass_I_Music_Voice = {                                                %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -3161,21 +3161,21 @@ AA_Contrabass_I_Music_Voice = {                                                %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Contrabass_I_Music_Staff = <<                                               %! abjad.Path.extern()
+AA_Contrabass_I_Music_Staff = <<                                               %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Contrabass_I_Music_Voice"                                %! harmony.ScoreTemplate.__call__()
-    \AA_Contrabass_I_Music_Voice                                               %! abjad.Path.extern()
+    \AA_Contrabass_I_Music_Voice                                               %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
 
 
-AA_Contrabass_II_Music_Voice = {                                               %! abjad.Path.extern()
+AA_Contrabass_II_Music_Voice = {                                               %! ide.Path.extern()
 
     <<                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7)
 
@@ -3528,15 +3528,15 @@ AA_Contrabass_II_Music_Voice = {                                               %
 
     >>                                                                         %! baca.SegmentMaker._make_multimeasure_rest_container(7):PHANTOM
 
-}                                                                              %! abjad.Path.extern()
+}                                                                              %! ide.Path.extern()
 
 
-AA_Contrabass_II_Music_Staff = <<                                              %! abjad.Path.extern()
+AA_Contrabass_II_Music_Staff = <<                                              %! ide.Path.extern()
 
 %%% \context GlobalRests = "Global_Rests"                                      %! abjad.ScoreTemplate._make_global_context():NOT_TOPMOST
-%%% \AA_Global_Rests                                                           %! abjad.Path.extern():NOT_TOPMOST
+%%% \AA_Global_Rests                                                           %! ide.Path.extern():NOT_TOPMOST
 
     \context Voice = "Contrabass_II_Music_Voice"                               %! harmony.ScoreTemplate.__call__()
-    \AA_Contrabass_II_Music_Voice                                              %! abjad.Path.extern()
+    \AA_Contrabass_II_Music_Voice                                              %! ide.Path.extern()
 
->>                                                                             %! abjad.Path.extern()
+>>                                                                             %! ide.Path.extern()
