@@ -227,7 +227,7 @@ maker(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(exclude=baca.const.HIDDEN),
     ),
     baca.dynamic("p"),
     baca.hairpin(
@@ -259,7 +259,7 @@ maker(
     ("va", (1, 9)),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
     baca.dls_staff_padding(4),
 )
@@ -297,7 +297,7 @@ maker(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(exclude=baca.const.HIDDEN),
     ),
     baca.hairpin(
         "p < mf > p",
@@ -328,7 +328,7 @@ maker(
     ("vc1", (2, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -377,7 +377,7 @@ maker(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(exclude=baca.const.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -407,7 +407,7 @@ maker(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -446,7 +446,7 @@ maker(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(exclude=baca.const.HIDDEN),
     ),
     baca.hairpin(
         "p < f > p",
@@ -471,7 +471,7 @@ maker(
     ("cb1", (4, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
         do_not_transpose=True,
     ),
 )
@@ -517,7 +517,7 @@ maker(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.pleaves(exclude=abjad.const.HIDDEN),
+        baca.pleaves(exclude=baca.const.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -541,7 +541,7 @@ maker(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
         do_not_transpose=True,
     ),
 )

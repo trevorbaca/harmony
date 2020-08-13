@@ -813,7 +813,7 @@ maker(
 maker(
     ("hp", (10, 14)),
     baca.laissez_vibrer(
-        baca.ptails(exclude=abjad.const.HIDDEN),
+        baca.ptails(exclude=baca.const.HIDDEN),
     ),
     baca.text_spanner(
         r"\baca-fingernail-markup =|",
@@ -834,7 +834,7 @@ maker(
     baca.hairpin(
         "mf f ff fff",
         bookend=False,
-        pieces=baca.plts(exclude=abjad.const.HIDDEN),
+        pieces=baca.plts(exclude=baca.const.HIDDEN),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1055,7 +1055,7 @@ maker(
     ("va", [1, (6, 15)]),
     baca.pitch(
         "Eb3",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -1253,7 +1253,7 @@ maker(
     ("vc1", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "E4",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -1413,7 +1413,7 @@ maker(
     ("vc2", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "Eqf4",
-        baca.plts(exclude=abjad.const.HIDDEN),
+        baca.plts(exclude=baca.const.HIDDEN),
     ),
 )
 
