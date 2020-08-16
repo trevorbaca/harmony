@@ -401,9 +401,10 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -462,9 +463,10 @@ maker(
         harmonic=True,
     ),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -485,9 +487,10 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -551,9 +554,10 @@ maker(
         harmonic=True,
     ),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -580,9 +584,10 @@ maker(
         map=baca.runs(),
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -643,9 +648,10 @@ maker(
         abjad.tweak(3).bound_details__right__padding,
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -681,9 +687,10 @@ maker(
         selector=baca.leaves(),
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -741,9 +748,10 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 

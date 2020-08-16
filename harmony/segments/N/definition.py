@@ -601,10 +601,11 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -675,8 +676,9 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -972,10 +974,11 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -1044,8 +1047,9 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -1085,10 +1089,11 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -1143,8 +1148,9 @@ maker(
         baca.pleaves(grace=False),
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         direction=abjad.Down,
+        literal=True,
     ),
 )
 

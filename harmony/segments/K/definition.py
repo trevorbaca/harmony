@@ -733,9 +733,10 @@ maker(
         baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
         match=[0, 2],
     ),
 )
@@ -834,10 +835,11 @@ maker(
         match=[0, 2],
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         match=[0, 2],
+        literal=True,
     ),
 )
 
@@ -885,9 +887,10 @@ maker(
         baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
         match=[0, 2],
     ),
 )
@@ -972,9 +975,10 @@ maker(
         match=[0, 2],
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
         match=[0, 2],
     ),
 )
@@ -1044,9 +1048,10 @@ maker(
         match=[0, 2],
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
         match=[0, 2],
     ),
 )

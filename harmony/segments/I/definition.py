@@ -262,9 +262,10 @@ maker(
     baca.pitch("E3"),
     baca.note_head_style_harmonic(),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -323,9 +324,10 @@ maker(
     baca.clef("bass"),
     baca.pitch("A1"),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -349,9 +351,10 @@ maker(
         selector=baca.tleaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         direction=abjad.Down,
         selector=baca.pheads(),
+        literal=True,
     ),
     baca.markup(
         r"\baca-thirteen-a",

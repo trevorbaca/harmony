@@ -1068,9 +1068,10 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("E3"),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -1147,9 +1148,10 @@ maker(
     ("cb2", 7),
     baca.pitch("A1"),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
