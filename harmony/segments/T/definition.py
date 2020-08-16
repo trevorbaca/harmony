@@ -479,9 +479,10 @@ maker(
         map=baca.runs(),
     ),
     baca.markup(
-        baca.markups.string_number(2),
+        r"\baca-string-ii",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 

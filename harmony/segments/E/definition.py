@@ -778,10 +778,11 @@ maker(
         literal=True,
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         abjad.tweak(1).padding,
         abjad.tweak(2.5).X_offset,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -889,8 +890,9 @@ maker(
         abjad.tweak(5.5).staff_padding,
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         abjad.tweak(1).padding,
+        literal=True,
     ),
 )
 

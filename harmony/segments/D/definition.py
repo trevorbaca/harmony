@@ -595,9 +595,10 @@ maker(
         literal=True,
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         abjad.tweak(1.5).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
@@ -621,10 +622,11 @@ maker(
         selector=baca.leaves().rleak(grace=False)
     ),
     baca.markup(
-        baca.markups.string_number(4),
+        r"\baca-string-iv",
         abjad.tweak(2.5).X_offset,
         abjad.tweak(1).padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 

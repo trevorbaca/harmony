@@ -726,9 +726,10 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("C#6"),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
+        literal=True,
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -815,9 +816,10 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("A5"),
     baca.markup(
-        baca.markups.string_number(1),
+        r"\baca-string-i",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
+        literal=True,
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -905,9 +907,10 @@ maker(
         do_not_transpose=True,
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
+        literal=True,
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -1043,9 +1046,10 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        baca.markups.string_number(3),
+        r"\baca-string-iii",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
+        literal=True,
     ),
 )
 
