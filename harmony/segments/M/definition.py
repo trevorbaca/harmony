@@ -162,7 +162,7 @@ maker(
         selector=baca.pleaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-sounds-ottava-higher =|",
+        r"\harmony-a-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -527,8 +527,9 @@ maker(
     baca.make_notes(),
     baca.dynamic("mp"),
     baca.markup(
-        "(half harm. pressure)",
+        r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
+        literal=True,
     ),
 )
 
@@ -599,8 +600,9 @@ maker(
     baca.make_notes(),
     baca.dynamic("mp"),
     baca.markup(
-        "(half harm. pressure)",
+        r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
+        literal=True,
     ),
 )
 
@@ -751,8 +753,9 @@ maker(
     baca.make_notes(),
     baca.dynamic("mp"),
     baca.markup(
-        "(half harm. pressure)",
+        r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
+        literal=True,
     ),
 )
 

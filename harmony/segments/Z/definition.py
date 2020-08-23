@@ -166,7 +166,10 @@ maker(
         selector=baca.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(
+            r"\harmony-d-d-sharp-markup",
+            literal=True,
+        ).bound_details__left__text,
         map=baca.runs(),
         selector=baca.leaves().rleak(),
     ),

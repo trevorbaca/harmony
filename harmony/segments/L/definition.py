@@ -185,7 +185,7 @@ maker(
         selector=baca.pleaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-sounds-ottava-higher =|",
+        r"\harmony-a-sounds-ottava-higher-markup =|",
         abjad.tweak(5).bound_details__right__padding,
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
