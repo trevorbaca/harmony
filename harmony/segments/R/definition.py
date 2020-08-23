@@ -653,7 +653,7 @@ maker(
         selector=baca.leaves()[:-1],
     ),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -668,7 +668,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("D5"),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -680,7 +680,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("<G#5 A5 Bb5>"),
     baca.markup(
-        r"\baca-string-i",
+        r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -723,7 +723,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("D5"),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -759,7 +759,7 @@ maker(
         literal=True,
     ),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -771,7 +771,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("<A5 Bb5 Cb6>"),
     baca.markup(
-        r"\baca-string-i",
+        r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -812,7 +812,7 @@ maker(
     ("vc2", 8),
     baca.clef("treble"),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -858,7 +858,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("<B5 C6 Db6>", do_not_transpose=True),
     baca.markup(
-        r"\baca-string-iii",
+        r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -873,7 +873,7 @@ maker(
         do_not_transpose=True,
     ),
     baca.markup(
-        r"\baca-string-iii",
+        r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -1012,7 +1012,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("G3"),
     baca.markup(
-        r"\baca-string-i",
+        r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -1050,7 +1050,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("<A#5 B5 C6>", do_not_transpose=True),
     baca.markup(
-        r"\baca-string-iii",
+        r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -1101,7 +1101,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("G3"),
     baca.markup(
-        r"\baca-string-i",
+        r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,

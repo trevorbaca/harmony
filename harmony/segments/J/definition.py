@@ -539,7 +539,7 @@ maker(
     baca.pitch("A5"),
     baca.trill_spanner(),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
@@ -643,7 +643,7 @@ maker(
     baca.pitch("Gqs6"),
     baca.trill_spanner(),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
@@ -733,7 +733,7 @@ maker(
     baca.pitch("F#5"),
     baca.trill_spanner(),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
@@ -873,7 +873,7 @@ maker(
     ),
     baca.trill_spanner(),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
@@ -888,7 +888,7 @@ maker(
     ),
     baca.pitch("A1"),
     baca.markup(
-        r"\baca-string-iii",
+        r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
