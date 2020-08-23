@@ -745,7 +745,7 @@ maker(
         literal=True,
     ),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         direction=abjad.Down,
         literal=True,
     ),
@@ -842,7 +842,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
     ),
     baca.markup(
-        r"\baca-string-iv",
+        r"\baca-string-iv-markup",
         direction=abjad.Down,
         literal=True,
     ),

@@ -577,7 +577,7 @@ maker(
         map=baca.runs(),
     ),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -617,7 +617,7 @@ maker(
         abjad.tweak(3).staff_padding,
     ),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,
@@ -795,7 +795,7 @@ maker(
         literal=True,
     ),
     baca.markup(
-        r"\baca-string-ii",
+        r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
         literal=True,

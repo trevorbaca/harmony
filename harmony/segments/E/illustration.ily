@@ -2131,7 +2131,7 @@ E_Contrabass_I_Music_Voice = {                                                 %
     ^ \baca-eleven-e                                                           %! baca.markup():baca.IndicatorCommand._call()
     - \tweak X-offset #2.5                                                     %! baca.markup():baca.IndicatorCommand._call()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iv                                                          %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iv-markup                                                   %! baca.markup():baca.IndicatorCommand._call()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "tessera_1(1)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -2457,7 +2457,7 @@ E_Contrabass_II_Music_Voice = {                                                %
     \pp                                                                        %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_STOP:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \accent                                                                  %! baca.accent():baca.IndicatorCommand._call()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-iv                                                          %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-iv-markup                                                   %! baca.markup():baca.IndicatorCommand._call()
 %@% - \abjad-dashed-line-with-hook                                             %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \baca-text-spanner-left-text "tessera_1(0)"                              %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 %@% - \tweak bound-details.right.padding #2.75                                 %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START

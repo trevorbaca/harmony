@@ -1104,7 +1104,7 @@ I_Contrabass_I_Music_Voice = {                                                 %
     \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     e'2                                                                        %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak stencil #abjad-flared-hairpin                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1237,7 +1237,7 @@ I_Contrabass_II_Music_Voice = {                                                %
 
     a,2                                                                        %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak stencil #abjad-flared-hairpin                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -1274,7 +1274,7 @@ I_Contrabass_II_Music_Voice = {                                                %
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-thirteen-a                                                         %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     - \abjad-dashed-line-with-hook                                             %! baca.pizzicato_spanner():PIZZICATO_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \baca-text-spanner-left-markup \baca-pizz-markup                         %! baca.pizzicato_spanner():PIZZICATO_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak bound-details.left-broken.text \baca-pizz-markup                  %! baca.pizzicato_spanner():PIZZICATO_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -1290,7 +1290,7 @@ I_Contrabass_II_Music_Voice = {                                                %
     \laissezVibrer                                                             %! baca.laissez_vibrer():baca.IndicatorCommand._call()
     - \tweak staff-padding #3                                                  %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-fourteen-a                                                         %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     \revert NoteHead.style                                                     %! baca.note_head_style_harmonic():baca.OverrideCommand._call(2)
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP

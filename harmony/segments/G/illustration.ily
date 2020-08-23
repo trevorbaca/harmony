@@ -2663,7 +2663,7 @@ G_Contrabass_I_Music_Voice = {                                                 %
     \once \override NoteHead.style = #'harmonic                                %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     e'2                                                                        %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak stencil #abjad-flared-hairpin                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -2914,7 +2914,7 @@ G_Contrabass_II_Music_Voice = {                                                %
 
     a,2                                                                        %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    _ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \tweak stencil #abjad-flared-hairpin                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC

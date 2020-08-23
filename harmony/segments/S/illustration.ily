@@ -2874,7 +2874,7 @@ S_Viola_Music_Voice = {                                                        %
 %@% ^ \baca-reapplied-indicator-markup "[“Va.”]"                               %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
 %@% ^ \baca-reapplied-indicator-markup "(“Viola”)"                             %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-i                                                           %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3075,7 +3075,7 @@ S_Viola_Music_Voice = {                                                        %
         <gs''! a'' bf''!>1
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -3272,7 +3272,7 @@ S_Viola_Music_Voice = {                                                        %
         - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-fff-scratch                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     %@% - \baca-text-spanner-left-text "tuplet([(1,)], force_augmentation=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -3414,7 +3414,7 @@ S_Cello_I_Music_Voice = {                                                      %
 %@% ^ \baca-reapplied-indicator-markup "[“Vc. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
 %@% ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-i                                                           %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3496,7 +3496,7 @@ S_Cello_I_Music_Voice = {                                                      %
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     d''4                                                                       %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-iv                                                          %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-iv-markup                                                   %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -3571,7 +3571,7 @@ S_Cello_I_Music_Voice = {                                                      %
         <gs''! a'' bf''!>1
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -3756,7 +3756,7 @@ S_Cello_I_Music_Voice = {                                                      %
         - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-fff-scratch                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     %@% - \baca-text-spanner-left-text "tuplet([(1,)], force_augmentation=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -3886,7 +3886,7 @@ S_Cello_II_Music_Voice = {                                                     %
 %@% ^ \baca-reapplied-indicator-markup "[“Vc. II”]"                            %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
 %@% ^ \baca-reapplied-indicator-markup "(“Cello”)"                             %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-i                                                           %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -3968,7 +3968,7 @@ S_Cello_II_Music_Voice = {                                                     %
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     btqf'!4                                                                    %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-iv                                                          %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-iv-markup                                                   %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -4043,7 +4043,7 @@ S_Cello_II_Music_Voice = {                                                     %
         <a'' bf''! cf'''!>1
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -4251,7 +4251,7 @@ S_Cello_II_Music_Voice = {                                                     %
         - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-fff-scratch                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-i                                                       %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-i-markup                                                %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     %@% - \baca-text-spanner-left-text "tuplet([(1,)], force_augmentation=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -4403,7 +4403,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
 %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"                             %! REAPPLIED_MARGIN_MARKUP_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
 %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"                        %! REAPPLIED_INSTRUMENT_ALERT:baca.SegmentMaker._attach_latent_indicator_alert()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-iii                                                         %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-iii-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup                                                  %! baca.markup():baca.IndicatorCommand._call()
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -4492,7 +4492,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
     \override NoteHead.style = #'harmonic                                      %! baca.note_head_style_harmonic():baca.OverrideCommand._call(1)
     g'4                                                                        %! harmony.sixteenths()
     - \tweak padding #1                                                        %! baca.markup():baca.IndicatorCommand._call()
-    ^ \baca-string-i                                                           %! baca.markup():baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup                                                    %! baca.markup():baca.IndicatorCommand._call()
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     - \tweak circled-tip ##t                                                   %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     \<                                                                         %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -4571,7 +4571,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
         <b'' c''' df'''!>1
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-iii                                                     %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-iii-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
@@ -4753,7 +4753,7 @@ S_Contrabass_I_Music_Voice = {                                                 %
         - \tweak self-alignment-X #-0.9                                        %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \baca-fff-scratch                                                      %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-iii                                                     %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-iii-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
     %@% - \abjad-dashed-line-with-hook                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
     %@% - \baca-text-spanner-left-text "tuplet([(1,)], force_augmentation=True)" %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -5036,7 +5036,7 @@ S_Contrabass_II_Music_Voice = {                                                %
         <as''! b'' c'''>1
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
         - \tweak padding #1                                                    %! baca.markup():baca.IndicatorCommand._call()
-        ^ \baca-string-iii                                                     %! baca.markup():baca.IndicatorCommand._call()
+        ^ \baca-string-iii-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         ^ \baca-quasi-bisb-markup                                              %! baca.markup():baca.IndicatorCommand._call()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
