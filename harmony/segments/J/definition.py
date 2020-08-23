@@ -201,7 +201,7 @@ maker(
         pieces=baca.pleaves(grace=False).partition_by_counts([2, 1]),
     ),
     baca.text_spanner(
-        r"\harmony-g-sounds-ottava-higher =|",
+        r"\harmony-g-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -287,7 +287,7 @@ maker(
         selector=baca.pleaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-sounds-ottava-higher =|",
+        r"\harmony-a-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -503,17 +503,20 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
-        "RH bow ...",
+        r"\harmony-rh-bow-markup",
         abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
     baca.markup(
-        "RH bow + LH bow ...",
+        r"\harmony-rh-bow-plus-lh-bow-markup",
         abjad.tweak(5.5).staff_padding,
+        literal=True,
         measures=4,
     ),
     baca.markup(
-        "(RH bow only)",
+        r"\harmony-rh-bow-only-markup",
         abjad.tweak(5.5).staff_padding,
+        literal=True,
         measures=12,
     ),
 )

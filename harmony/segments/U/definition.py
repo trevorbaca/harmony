@@ -122,6 +122,7 @@ maker(
     baca.pitch("<B3 Dqf4>"),
     baca.markup(
         baca.levine_multiphonic(42),
+        literal=True,
         match=[0],
     ),
     baca.espressivo(

@@ -95,7 +95,7 @@ maker(
     ),
     baca.dls_staff_padding(5),
     baca.text_spanner(
-        r"\harmony-a-sounds-ottava-higher =|",
+        r"\harmony-a-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,

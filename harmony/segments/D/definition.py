@@ -345,7 +345,7 @@ maker(
         selector=baca.leaves(grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-flat-sounds-ottava-higher =|",
+        r"\harmony-a-flat-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -422,7 +422,7 @@ maker(
         selector=baca.leaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-flat-sounds-ottava-higher =|",
+        r"\harmony-a-flat-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -483,7 +483,7 @@ maker(
         selector=baca.leaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-flat-sounds-ottava-higher =|",
+        r"\harmony-a-flat-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -562,7 +562,7 @@ maker(
         selector=baca.leaves(grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-flat-sounds-ottava-higher =|",
+        r"\harmony-a-flat-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(10).staff_padding,
         autodetect_right_padding=True,

@@ -80,7 +80,7 @@ maker(
     baca.close_volta(baca.skip(6 - 1)),
     baca.not_parts(
         baca.markup(
-            r"\harmony-repeat-three",
+            r"\harmony-repeat-three-markup",
             abjad.tweak(10).font_size,
             abjad.tweak((0, 17)).extra_offset,
             literal=True,
@@ -89,7 +89,7 @@ maker(
     ),
     baca.only_parts(
         baca.markup(
-            r"\harmony-repeat-three",
+            r"\harmony-repeat-three-markup",
             abjad.tweak(4).font_size,
             abjad.tweak((0, 9)).extra_offset,
             literal=True,
@@ -182,7 +182,7 @@ maker(
         selector=baca.pleaf(0, grace=False),
     ),
     baca.text_spanner(
-        r"\harmony-a-flat-sounds-ottava-higher =|",
+        r"\harmony-a-flat-sounds-ottava-higher-markup =|",
         abjad.tweak(abjad.Down).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
@@ -224,7 +224,10 @@ maker(
         selector=baca.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(
+            r"\harmony-d-d-sharp-markup",
+            literal=True,
+        ).bound_details__left__text,
         map=baca.runs(),
         selector=baca.leaves().rleak(),
     ),

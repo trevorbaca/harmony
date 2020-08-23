@@ -86,10 +86,10 @@ AA_Global_Skips = {                                                            %
     s1 * 7/4                                                                   %! baca.SegmentMaker._make_global_skips(1)
     - \tweak extra-offset #'(0 . 17)                                           %! baca.markup():-PARTS:baca.IndicatorCommand._call()
     - \tweak font-size #10                                                     %! baca.markup():-PARTS:baca.IndicatorCommand._call()
-    ^ \harmony-repeat-three                                                    %! baca.markup():-PARTS:baca.IndicatorCommand._call()
+    ^ \harmony-repeat-three-markup                                             %! baca.markup():-PARTS:baca.IndicatorCommand._call()
 %%% - \tweak extra-offset #'(0 . 9)                                            %! baca.markup():+PARTS:baca.IndicatorCommand._call()
 %%% - \tweak font-size #4                                                      %! baca.markup():+PARTS:baca.IndicatorCommand._call()
-%%% ^ \harmony-repeat-three                                                    %! baca.markup():+PARTS:baca.IndicatorCommand._call()
+%%% ^ \harmony-repeat-three-markup                                             %! baca.markup():+PARTS:baca.IndicatorCommand._call()
     \bacaStopTextSpanLMN                                                       %! LOCAL_MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
 %@% \bacaStopTextSpanMN                                                        %! MEASURE_NUMBER:baca.SegmentMaker._label_measure_numbers()
     \bacaStopTextSpanSNM                                                       %! STAGE_NUMBER:baca.SegmentMaker._label_stage_numbers()
@@ -300,7 +300,7 @@ AA_Bass_Flute_Music_Voice_A = {                                                %
     - \tweak color #(x11-color 'blue)                                          %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
     \baca-pp-ppp                                                               %! baca.dynamic():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
     - \abjad-dashed-line-with-up-hook                                          %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
-    - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher      %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
+    - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak bound-details.right.padding #2.75                                 %! baca.text_spanner():baca.PiecewiseCommand._call(2):AUTODETECT:SPANNER_START
     - \tweak direction #down                                                   %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
     - \tweak staff-padding #8                                                  %! baca.text_spanner():baca.PiecewiseCommand._call(2):SPANNER_START
@@ -650,7 +650,7 @@ AA_Bass_Flute_Music_Voice = {                                                  %
         - \tweak circled-tip ##t                                               %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         \<                                                                     %! baca.hairpin():baca.PiecewiseCommand._call(2):SPANNER_START:baca.SegmentMaker._set_status_tag():EXPLICIT_DYNAMIC
         [                                                                      %! harmony.warble()
-        - \tweak bound-details.left.text \harmony-d-d-sharp                    %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
+        - \tweak bound-details.left.text \harmony-d-d-sharp-markup             %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
         \startTrillSpan                                                        %! baca.trill_spanner():baca.SpannerIndicatorCommand._call(2):SPANNER_START
 
         af'!32                                                                 %! harmony.warble()

@@ -219,10 +219,10 @@ maker(
         "mf >o niente",
         selector=baca.tleaves().rleak(),
     ),
-    # TODO: predefine markup
     baca.markup(
-        "match harp decay",
+        r"\harmony-match-harp-decay-markup",
         abjad.tweak(5.5).staff_padding,
+        literal=True,
     ),
     baca.bow_speed_spanner(
         "XFB =|",

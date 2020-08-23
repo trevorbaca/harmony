@@ -132,7 +132,10 @@ maker(
         selector=baca.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(
+            r"\harmony-d-d-sharp-markup",
+            literal=True,
+        ).bound_details__left__text,
         abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
@@ -175,7 +178,10 @@ maker(
         selector=baca.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp", literal=True).bound_details__left__text,
+        abjad.tweak(
+            r"\harmony-d-d-sharp-markup",
+            literal=True,
+        ).bound_details__left__text,
         abjad.tweak(8, literal=True).staff_padding,
         selector=baca.tleaves(),
     ),
