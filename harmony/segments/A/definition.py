@@ -26,7 +26,9 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (6, 4), (5, 4), (3, 4),
+        (6, 4),
+        (5, 4),
+        (3, 4),
     ],
     transpose_score=True,
     validate_measure_count=3,

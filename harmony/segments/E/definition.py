@@ -27,8 +27,11 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (3, 4), (3, 4),
-        (6, 4), (6, 4),
+        (5, 4),
+        (3, 4),
+        (3, 4),
+        (6, 4),
+        (6, 4),
     ],
     transpose_score=True,
     validate_measure_count=5,
@@ -284,7 +287,7 @@ maker(
     baca.hairpin(
         "f > p",
         selector=baca.tleaves(),
-    )
+    ),
 )
 
 maker(
@@ -599,11 +602,7 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [2, 3, -3, 0, -2,
-            4, -2, 1, -1,
-            5, -1, 2, 0,
-            6, 0, 4, 2,
-         8],
+        [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -692,11 +691,7 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [2, -3, 0, -2,
-            4, -2, 1, -1,
-            5, -1, 2, 0,
-            6, 0, 4, 2,
-         3, 8],
+        [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -797,12 +792,7 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [9,
-            3, 6, 0, 2,
-            1, 4, -2, 0,
-            -1, 2, -4, -2,
-            -3, 0, -5, -4,
-         -6],
+        [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
     ),
     baca.glissando(
         allow_repeats=True,
@@ -907,12 +897,7 @@ maker(
         baca.pleaves(),
     ),
     baca.staff_positions(
-        [9,
-            3, 6, 0, 2,
-            1, 4, -2, 0,
-            -1, 2, -4, -2,
-            -3, 0, -5, -4,
-         -6],
+        [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
     ),
     baca.glissando(
         allow_repeats=True,

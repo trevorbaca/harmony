@@ -11,7 +11,6 @@ stage_markup = (
     ("[D.7]", 8),
     ("[◀B.6]", 9, "darkgreen"),
     ("[D.8]", 10),
-
 )
 
 maker = baca.SegmentMaker(
@@ -29,8 +28,16 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (3, 4), (3, 4), (3, 4), (3, 4), (3, 4), (3, 4), (1, 4),
-        (3, 4), (5, 4), (1, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (1, 4),
+        (3, 4),
+        (5, 4),
+        (1, 4),
         (3, 4),
     ],
     transpose_score=True,
@@ -518,8 +525,7 @@ maker(
 maker(
     (["vc1", "vc2"], [(1, 6), 8, 11]),
     baca.damp_spanner(
-        abjad.tweak(5.5).staff_padding,
-        selector=baca.ltleaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding, selector=baca.ltleaves().rleak(grace=False)
     ),
 )
 
@@ -587,8 +593,7 @@ maker(
         do_not_transpose=True,
     ),
     baca.pizzicato_spanner(
-        abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding, selector=baca.leaves().rleak(grace=False)
     ),
     baca.markup(
         r"\baca-eleven-e",
@@ -618,8 +623,7 @@ maker(
         do_not_transpose=True,
     ),
     baca.pizzicato_spanner(
-        abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding, selector=baca.leaves().rleak(grace=False)
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -753,7 +757,7 @@ maker(
 maker(
     (["va", "vc1", "vc2"], (4, 6)),
     baca.hairpin(
-        'mf mp p pp pp pp',
+        "mf mp p pp pp pp",
         bookend=False,
         pieces=baca.plts(),
     ),

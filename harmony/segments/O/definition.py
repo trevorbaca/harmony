@@ -27,8 +27,16 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (4, 4), (4, 4), (3, 4), (3, 4),
-        (3, 4), (3, 4), (3, 4), (3, 4), (3, 4), (2, 4),
+        (4, 4),
+        (4, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (2, 4),
     ],
     transpose_score=True,
     validate_measure_count=10,
@@ -484,10 +492,12 @@ maker(
 
 maker(
     ("vc2", 3),
-    baca.literal([
-        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
-        r'\once \override TupletNumber.text = #"10:8"',
-    ]),
+    baca.literal(
+        [
+            r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+            r'\once \override TupletNumber.text = #"10:8"',
+        ]
+    ),
     baca.skeleton(
         r"\times 8/10 { c4 r4 r4 r8. }",
     ),
@@ -559,10 +569,12 @@ maker(
 
 maker(
     ("cb1", 3),
-    baca.literal([
-        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
-        r'\once \override TupletNumber.text = #"11:8"',
-    ]),
+    baca.literal(
+        [
+            r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+            r'\once \override TupletNumber.text = #"11:8"',
+        ]
+    ),
     baca.skeleton(
         r"\times 8/11 { r4 c4 r4 r4 r32 }",
     ),
@@ -639,10 +651,12 @@ maker(
 
 maker(
     ("cb2", 3),
-    baca.literal([
-        r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
-        r'\once \override TupletNumber.text = #"12:8"',
-    ]),
+    baca.literal(
+        [
+            r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
+            r'\once \override TupletNumber.text = #"12:8"',
+        ]
+    ),
     baca.skeleton(
         r"\times 8/12 { r4 c4 r4 r4 r8 }",
     ),

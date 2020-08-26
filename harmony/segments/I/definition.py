@@ -25,7 +25,8 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (6, 4), (6, 4),
+        (6, 4),
+        (6, 4),
     ],
     transpose_score=True,
     validate_measure_count=2,
@@ -177,7 +178,7 @@ maker(
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(6).staff_padding,
         literal=True,
-        selector=baca.pleaf(-1)
+        selector=baca.pleaf(-1),
     ),
 )
 
@@ -251,7 +252,7 @@ maker(
         r"\baca-eleven-a",
         abjad.tweak(1.5).staff_padding,
         literal=True,
-    )
+    ),
 )
 
 # cb1

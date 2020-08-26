@@ -28,8 +28,12 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (1, 4), (6, 4),
-        (6, 4), (3, 4), (1, 4),
+        (5, 4),
+        (1, 4),
+        (6, 4),
+        (6, 4),
+        (3, 4),
+        (1, 4),
     ],
     transpose_score=True,
     validate_measure_count=6,
@@ -222,7 +226,7 @@ maker(
         baca.runs()[:1],
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(
@@ -313,7 +317,7 @@ maker(
         baca.runs()[:1],
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(
@@ -681,7 +685,7 @@ maker(
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         selector=baca.plts()[1:].rleak(),
-    )
+    ),
 )
 
 maker(
@@ -834,7 +838,7 @@ maker(
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
         selector=baca.plts()[1:].rleak(),
-    )
+    ),
 )
 
 maker(
