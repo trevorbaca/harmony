@@ -29,9 +29,16 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (4, 4), (4, 4), (1, 4),
-        (4, 4), (5, 4),
-        (4, 4), (4, 4), (4, 4), (4, 4), (1, 4),
+        (4, 4),
+        (4, 4),
+        (1, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
+        (4, 4),
+        (4, 4),
+        (4, 4),
+        (1, 4),
         (3, 4),
     ],
     transpose_score=True,
@@ -77,9 +84,7 @@ maker(
     baca.global_fermata("short", baca.rest(10 - 1)),
 )
 
-cerulean = [
-    1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"
-]
+cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
 
 # text
 
@@ -310,7 +315,7 @@ maker(
         baca.runs()[:1],
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(
@@ -420,7 +425,7 @@ maker(
         baca.runs()[:1],
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(

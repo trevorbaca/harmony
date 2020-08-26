@@ -11,7 +11,6 @@ stage_markup = (
     ("[▶D.1]", 2, "darkgreen"),
     ("[▶F.3]", 4, "darkgreen"),
     ("[C.2-4]", 6),
-
 )
 
 maker = baca.SegmentMaker(
@@ -29,9 +28,14 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (3, 4), (3, 4), (1, 4),
-        (5, 4), (1, 4),
-        (5, 4), (4, 4), (3, 4),
+        (3, 4),
+        (3, 4),
+        (1, 4),
+        (5, 4),
+        (1, 4),
+        (5, 4),
+        (4, 4),
+        (3, 4),
     ],
     transpose_score=True,
     validate_measure_count=8,
@@ -647,7 +651,7 @@ maker(
     baca.pitch("F3"),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
-    )
+    ),
 )
 
 maker(

@@ -28,9 +28,17 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (4, 4), (5, 4), (4, 4), (5, 4), (4, 4),
-        (5, 4), (3, 4),
-        (5, 4), (5, 4), (5, 4), (5, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
+        (5, 4),
+        (3, 4),
+        (5, 4),
+        (5, 4),
+        (5, 4),
+        (5, 4),
         (1, 4),
     ],
     transpose_score=True,
@@ -1155,10 +1163,7 @@ maker(
         do_not_transpose=True,
         selector=baca.plts(grace=True),
     ),
-    baca.dynamic(
-        "f-mp",
-        selector=baca.pheads(grace=False)
-    ),
+    baca.dynamic("f-mp", selector=baca.pheads(grace=False)),
     baca.dls_staff_padding(
         6,
         baca.leaves(grace=False),

@@ -30,8 +30,14 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (4, 4), (3, 4), (1, 4),
-        (4, 4), (4, 4), (5, 4), (6, 4), (4, 4),
+        (4, 4),
+        (3, 4),
+        (1, 4),
+        (4, 4),
+        (4, 4),
+        (5, 4),
+        (6, 4),
+        (4, 4),
     ],
     transpose_score=True,
     validate_measure_count=8,
@@ -540,7 +546,9 @@ maker(
     ("hp", 7),
     harmony.sixteenths(
         [-4, -4, 8, -2, -4, 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions(
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(
             [(1, 4), (2, 4), (1, 8), (5, 8)],
         ),
         extra_counts=[0, 4, 0, -2],
@@ -580,7 +588,7 @@ maker(
         baca.dynamic('"f"'),
         baca.dls_staff_padding(6 + 2),
         selector=baca.pleaf(-2),
-    )
+    ),
 )
 
 maker(

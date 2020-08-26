@@ -27,8 +27,16 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (2, 4), (2, 4), (2, 4), (2, 4), (6, 4), (1, 4),
-        (7, 4), (7, 4), (7, 4), (7, 4),
+        (2, 4),
+        (2, 4),
+        (2, 4),
+        (2, 4),
+        (6, 4),
+        (1, 4),
+        (7, 4),
+        (7, 4),
+        (7, 4),
+        (7, 4),
     ],
     transpose_score=True,
     validate_measure_count=10,
@@ -445,13 +453,10 @@ maker(
     baca.hairpin(
         "niente o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
         " o< p >o ! o< pp >o ! o< p >o !"
-
         " o< p >o ! o< mp >o ! o< mf >o ! o< mp >o !"
         " o< mp >o ! o< mf >o ! o< mf >o !"
-
         " o< mf >o ! o< f >o ! o< f >o ! o< mf >o !"
         " o< f >o ! o< mf >o ! o< mf >o !"
-
         " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
         " o< p >o ! o< pp >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,
@@ -536,13 +541,10 @@ maker(
     baca.hairpin(
         "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
         " o< pp >o ! o< p >o ! o< pp >o !"
-
         " o< p >o ! o< mp >o ! o< mp >o ! o< mf >o !"
         " o< mf >o ! o< mp >o ! o< mf >o !"
-
         " o< mp >o ! o< mf >o ! o< f >o ! o< f >o !"
         " o< mf >o ! o< f >o ! o< mf >o !"
-
         " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
         " o< pp >o ! o< p >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,
@@ -632,13 +634,10 @@ maker(
     baca.hairpin(
         "niente o< pp >o ! o< pp >o ! o< p >o ! o< p >o !"
         " o< pp >o ! o< pp >o ! o< p >o !"
-
         " o< mp >o ! o< mp >o ! o< p >o ! o< mp >o !"
         " o< mf >o ! o< mf >o ! o< f >o !"
-
         " o< f >o ! o< f >o ! o< mf >o ! o< f >o !"
         " o< f >o ! o< mf >o ! o< mf >o !"
-
         " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
         " o< p >o ! o< p >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,

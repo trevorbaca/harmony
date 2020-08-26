@@ -31,10 +31,21 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (5, 4), (1, 4),
-        (4, 4), (4, 4), (4, 4),
-        (5, 4), (4, 4), (3, 4), (1, 4),
-        (5, 4), (4, 4), (5, 4), (4, 4), (5, 4), (4, 4),
+        (5, 4),
+        (1, 4),
+        (4, 4),
+        (4, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
+        (3, 4),
+        (1, 4),
+        (5, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
+        (5, 4),
+        (4, 4),
     ],
     transpose_score=True,
     validate_measure_count=15,
@@ -629,7 +640,9 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths(
         [9, "-", 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions(
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(
             [(11, 16), (5, 16)],
         ),
         extra_counts=[0, 1],
@@ -843,7 +856,9 @@ maker(
     ("hp", 15),
     harmony.sixteenths(
         ["-", 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions(
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(
             [(11, 16), (5, 16)],
         ),
         extra_counts=[0, 1],
@@ -892,7 +907,8 @@ maker(
     ("va", 1),
     harmony.sixteenths(
         [3, "-"],
-    ), baca.bow_speed_spanner(
+    ),
+    baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
@@ -1494,7 +1510,7 @@ maker(
         "T1 -> P1 -> T1 -> P1",
         abjad.tweak(3).staff_padding,
         pieces=baca.lparts([6, 5, 3, 2]),
-        selector=baca.runs()[-1:].rleak()
+        selector=baca.runs()[-1:].rleak(),
     ),
 )
 

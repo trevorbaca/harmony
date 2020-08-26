@@ -30,9 +30,14 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (7, 4), (1, 4),
-        (5, 4), (7, 4), (6, 4),
-        (6, 4), (2, 4), (1, 4),
+        (7, 4),
+        (1, 4),
+        (5, 4),
+        (7, 4),
+        (6, 4),
+        (6, 4),
+        (2, 4),
+        (1, 4),
         (7, 4),
     ],
     transpose_score=True,
@@ -692,7 +697,7 @@ maker(
     ("vc1", 4),
     harmony.sixteenths(
         sixteenths[:4] + ["-"],
-    )
+    ),
 )
 
 maker(

@@ -30,11 +30,21 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (3, 4), (5, 4),
-        (3, 4), (5, 4), (3, 4), (5, 4), (3, 4), (5, 4), (1, 4),
+        (3, 4),
+        (5, 4),
+        (3, 4),
+        (5, 4),
+        (3, 4),
+        (5, 4),
+        (3, 4),
+        (5, 4),
+        (1, 4),
         (6, 4),
-        (3, 4), (4, 4),
-        (3, 4), (3, 4), (4, 4),
+        (3, 4),
+        (4, 4),
+        (3, 4),
+        (3, 4),
+        (4, 4),
     ],
     transpose_score=True,
     validate_measure_count=15,
@@ -330,7 +340,7 @@ maker(
         allow_repeats=True,
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(
@@ -475,7 +485,7 @@ maker(
         baca.runs()[:1],
     ),
     baca.staff_position(
-        0 ,
+        0,
         baca.runs()[1:],
     ),
     baca.dynamic(
@@ -1014,8 +1024,7 @@ maker(
 maker(
     ("cb1", (3, 8)),
     harmony.rimbalzandi(
-        rest_except=[
-            1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
+        rest_except=[1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
         extra_counts=[3],
     ),
     baca.hairpin(

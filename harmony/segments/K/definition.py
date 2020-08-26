@@ -31,8 +31,15 @@ maker = baca.SegmentMaker(
     segment_directory=baca.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
-        (3, 4), (4, 4), (1, 4),
-        (4, 4), (4, 4), (6, 4), (3, 4), (3, 4), (1, 4),
+        (3, 4),
+        (4, 4),
+        (1, 4),
+        (4, 4),
+        (4, 4),
+        (6, 4),
+        (3, 4),
+        (3, 4),
+        (1, 4),
         (4, 4),
     ],
     transpose_score=True,
@@ -573,7 +580,9 @@ maker(
     baca.clef("treble"),
     harmony.sixteenths(
         [-4, -2, 4, -4, -6, 3, -3],
-        preprocessor=baca.sequence().fuse().split_divisions(
+        preprocessor=baca.sequence()
+        .fuse()
+        .split_divisions(
             [(1, 4), (1, 4), (1, 4), (3, 4)],
         ),
         extra_counts=[0, 2, 0, 0],
