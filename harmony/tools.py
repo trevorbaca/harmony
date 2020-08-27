@@ -206,9 +206,7 @@ NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
 
 cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
 
-warble_pitches = baca.sequence(
-    "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
-)
+warble_pitches = baca.sequence("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split())
 
 # shared counts
 
@@ -494,9 +492,7 @@ def sixteenths(
     written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
     written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     written_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
-    written_double_dotted_wholes: typing.Union[
-        abjad.PatternTyping, bool
-    ] = None,
+    written_double_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
     invisible: typing.Union[abjad.PatternTyping, bool] = None,
     invisible_pairs: bool = None,
     talea_denominator: int = None,
@@ -667,9 +663,7 @@ def tessera_1(
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        ),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -704,9 +698,7 @@ def tessera_2(
         rmakers.talea(counts, 16, advance=advance),
         *commands,
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        ),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -731,9 +723,7 @@ def tessera_3(
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        ),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -758,17 +748,13 @@ def tessera_4(
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
-        ),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
 
 
-def train(
-    counts, *, rest_leaves: abjad.IntegerSequence = None
-) -> baca.RhythmCommand:
+def train(counts, *, rest_leaves: abjad.IntegerSequence = None) -> baca.RhythmCommand:
     """
     Makes pulse train.
     """
@@ -870,7 +856,9 @@ def bass_drum_staff_position() -> baca.Suite:
     Sets bass drum staff position (-1), stem down, tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(-1), baca.stem_down(), baca.tuplet_bracket_up(),
+        baca.staff_position(-1),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
     )
 
 
@@ -879,7 +867,9 @@ def bridge_staff_position() -> baca.Suite:
     Sets bridge position (0), stem down and tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+        baca.staff_position(0),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
     )
 
 
@@ -901,7 +891,10 @@ def purpleheart_staff_positions(argument) -> baca.Suite:
         baca.stem_down(),
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(0.5),
-        baca.staff_positions(argument, allow_repeats=True,),
+        baca.staff_positions(
+            argument,
+            allow_repeats=True,
+        ),
     )
 
 
@@ -910,7 +903,9 @@ def slate_staff_position() -> baca.Suite:
     Sets slate staff position (1), stem down, tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(1), baca.stem_down(), baca.tuplet_bracket_up(),
+        baca.staff_position(1),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
     )
 
 
@@ -919,7 +914,9 @@ def tam_tam_staff_position() -> baca.Suite:
     Sets tam-tam staff position (0), stem down, tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+        baca.staff_position(0),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
     )
 
 
@@ -935,5 +932,7 @@ def whisk_staff_position() -> baca.Suite:
     Sets whisk staff position (0), stem down and tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(0), baca.stem_down(), baca.tuplet_bracket_up(),
+        baca.staff_position(0),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
     )

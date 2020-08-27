@@ -10,7 +10,6 @@ y_offset_6 = 152 + 6 * 9
 y_offset_7 = 180 + 7 * 9
 
 breaks = baca.breaks(
-
     baca.page(
         baca.system(
             distances,
@@ -39,7 +38,6 @@ breaks = baca.breaks(
         ),
         number=1,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -79,7 +77,6 @@ breaks = baca.breaks(
         ),
         number=2,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -119,7 +116,6 @@ breaks = baca.breaks(
         ),
         number=3,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -159,7 +155,6 @@ breaks = baca.breaks(
         ),
         number=4,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -200,7 +195,6 @@ breaks = baca.breaks(
         ),
         number=5,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -239,7 +233,6 @@ breaks = baca.breaks(
         ),
         number=6,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -281,7 +274,6 @@ breaks = baca.breaks(
         ),
         number=7,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -321,7 +313,6 @@ breaks = baca.breaks(
         ),
         number=8,
     ),
-
 )
 
 spacing = baca.scorewide_spacing(
@@ -331,8 +322,33 @@ spacing = baca.scorewide_spacing(
 )
 
 empty_measures = [
-    22, 26, 27, 31, 34, 38, 46, 51, 52, 53, 70, 71, 74, 77, 78, 79,
-    88, 108, 112, 126, 127, 140, 196, 197, 210, 226, 240,
+    22,
+    26,
+    27,
+    31,
+    34,
+    38,
+    46,
+    51,
+    52,
+    53,
+    70,
+    71,
+    74,
+    77,
+    78,
+    79,
+    88,
+    108,
+    112,
+    126,
+    127,
+    140,
+    196,
+    197,
+    210,
+    226,
+    240,
     247,
 ]
 

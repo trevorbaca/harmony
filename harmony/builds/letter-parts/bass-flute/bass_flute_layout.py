@@ -10,7 +10,6 @@ y_offset_6 = 152 + 6 * 9
 y_offset_7 = 180 + 7 * 9
 
 breaks = baca.breaks(
-
     baca.page(
         baca.system(
             distances,
@@ -39,7 +38,6 @@ breaks = baca.breaks(
         ),
         number=1,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -79,7 +77,6 @@ breaks = baca.breaks(
         ),
         number=2,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -119,7 +116,6 @@ breaks = baca.breaks(
         ),
         number=3,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -162,7 +158,6 @@ breaks = baca.breaks(
         ),
         number=4,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -203,7 +198,6 @@ breaks = baca.breaks(
         ),
         number=5,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -242,7 +236,6 @@ breaks = baca.breaks(
         ),
         number=6,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -286,7 +279,6 @@ breaks = baca.breaks(
         ),
         number=7,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -331,7 +323,6 @@ breaks = baca.breaks(
         ),
         number=8,
     ),
-
 )
 
 spacing = baca.scorewide_spacing(
@@ -341,12 +332,60 @@ spacing = baca.scorewide_spacing(
 )
 
 empty_measures = [
-    19, 35, 40, 49, 50, 51, 52, 53, 54, 56,
-    63, 64, 65, 66, 67, 68, 77, 78, 79,
-    90, 92, 102, 104, 106, 120,
-    126, 127, 140, 144, 157, 158, 164, 165, 166, 167,
-    169, 171, 172, 173, 174, 175, 196, 197,
-    207, 209, 215, 220, 226, 247, 256, 257, 258, 259, 267,
+    19,
+    35,
+    40,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    56,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    77,
+    78,
+    79,
+    90,
+    92,
+    102,
+    104,
+    106,
+    120,
+    126,
+    127,
+    140,
+    144,
+    157,
+    158,
+    164,
+    165,
+    166,
+    167,
+    169,
+    171,
+    172,
+    173,
+    174,
+    175,
+    196,
+    197,
+    207,
+    209,
+    215,
+    220,
+    226,
+    247,
+    256,
+    257,
+    258,
+    259,
+    267,
 ]
 
 spacing.override(empty_measures, (1, 4))
