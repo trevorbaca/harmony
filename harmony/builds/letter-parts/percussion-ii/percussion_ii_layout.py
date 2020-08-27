@@ -10,7 +10,6 @@ y_offset_6 = 152 + 6 * 9
 y_offset_7 = 180 + 7 * 9
 
 breaks = baca.breaks(
-
     baca.page(
         baca.system(
             distances,
@@ -39,7 +38,6 @@ breaks = baca.breaks(
         ),
         number=1,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -79,7 +77,6 @@ breaks = baca.breaks(
         ),
         number=2,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -119,7 +116,6 @@ breaks = baca.breaks(
         ),
         number=3,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -159,7 +155,6 @@ breaks = baca.breaks(
         ),
         number=4,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -200,7 +195,6 @@ breaks = baca.breaks(
         ),
         number=5,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -239,7 +233,6 @@ breaks = baca.breaks(
         ),
         number=6,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -281,7 +274,6 @@ breaks = baca.breaks(
         ),
         number=7,
     ),
-
     baca.page(
         baca.system(
             distances,
@@ -321,7 +313,6 @@ breaks = baca.breaks(
         ),
         number=8,
     ),
-
 )
 
 spacing = baca.scorewide_spacing(
@@ -331,10 +322,47 @@ spacing = baca.scorewide_spacing(
 )
 
 empty_measures = [
-    25, 26, 27, 38, 46, 51, 52, 61, 72, 81, 123, 131, 132, 133,
-    138, 139, 140, 146, 148, 154, 165, 166, 196, 197,
-    207, 209, 210, 212, 213, 220, 222, 237, 240,
-    241, 242, 251, 255, 257, 258, 259, 267,
+    25,
+    26,
+    27,
+    38,
+    46,
+    51,
+    52,
+    61,
+    72,
+    81,
+    123,
+    131,
+    132,
+    133,
+    138,
+    139,
+    140,
+    146,
+    148,
+    154,
+    165,
+    166,
+    196,
+    197,
+    207,
+    209,
+    210,
+    212,
+    213,
+    220,
+    222,
+    237,
+    240,
+    241,
+    242,
+    251,
+    255,
+    257,
+    258,
+    259,
+    267,
 ]
 
 spacing.override(empty_measures, (1, 4))
