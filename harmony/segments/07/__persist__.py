@@ -1,7 +1,6 @@
 import abjad
 import ide
 
-
 persist = abjad.OrderedDict(
     [
         (
