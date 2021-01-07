@@ -801,6 +801,7 @@ def tuplet(
         *commands,
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
+        rmakers.reduce_multiplier(),
         frame=inspect.currentframe(),
     )
 
