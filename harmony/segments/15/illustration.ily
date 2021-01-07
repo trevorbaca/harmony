@@ -1770,7 +1770,7 @@ o_Cello_II_Music_Voice = {                                                     %
     - \baca-stop-on-string                                                     %! baca.stop_on_string():baca.IndicatorCommand._call()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
-    \times 4/5 {                                                               %! baca.skeleton()
+    \times 8/10 {                                                              %! baca.skeleton()
 
         % [15 Cello_II_Music_Voice measure 133 / measure 3]                    %! baca.SegmentMaker._comment_measure_numbers()
         \once \override TupletBracket.edge-height = #'(0.7 . 0)                %! baca.literal():baca.IndicatorCommand._call()
@@ -2299,7 +2299,7 @@ o_Contrabass_II_Music_Voice = {                                                %
     - \baca-stop-on-string                                                     %! baca.stop_on_string():baca.IndicatorCommand._call()
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
-    \times 2/3 {                                                               %! baca.skeleton()
+    \times 8/12 {                                                              %! baca.skeleton()
 
         % [15 Contrabass_II_Music_Voice measure 133 / measure 3]               %! baca.SegmentMaker._comment_measure_numbers()
         \once \override TupletBracket.edge-height = #'(0.7 . 0)                %! baca.literal():baca.IndicatorCommand._call()
