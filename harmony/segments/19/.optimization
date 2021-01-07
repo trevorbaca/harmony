@@ -2208,3 +2208,13 @@
  Segment-maker runtime: 24 seconds
  Abjad format time: 0 seconds
  LilyPond runtime: 2 seconds
+
+2021-01-07 12:49:01
+ Segment-maker runtime: 24 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 3 seconds
+
+2021-01-07 14:32:14
+ Segment-maker runtime: 16 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 2 seconds
