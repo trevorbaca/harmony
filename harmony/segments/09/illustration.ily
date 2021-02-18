@@ -150,13 +150,7 @@ i_Bass_Flute_Music_Voice = {                                                   %
     \bacaStartTextSpanCovered                                                  %! baca.covered_spanner():COVERED_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     gf'!16                                                                     %! harmony.sixteenths()
-    ^ \markup {
-        \override
-            #'(circle-padding . 0.25)
-            \circle
-                \finger
-                    1
-        }
+    ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -169,26 +163,14 @@ i_Bass_Flute_Music_Voice = {                                                   %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     gf'!8.                                                                     %! harmony.sixteenths()
-    ^ \markup {
-        \override
-            #'(circle-padding . 0.25)
-            \circle
-                \finger
-                    2
-        }
+    ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     gf'!8.                                                                     %! harmony.sixteenths()
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     gf'!16                                                                     %! harmony.sixteenths()
-    ^ \markup {
-        \override
-            #'(circle-padding . 0.25)
-            \circle
-                \finger
-                    1
-        }
+    ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
     ~
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
 
@@ -201,13 +183,7 @@ i_Bass_Flute_Music_Voice = {                                                   %
     [                                                                          %! rmakers.RewriteMeterCommand.__call__
 
     gf'!8.                                                                     %! harmony.sixteenths()
-    ^ \markup {
-        \override
-            #'(circle-padding . 0.25)
-            \circle
-                \finger
-                    2
-        }
+    ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
     ]                                                                          %! rmakers.RewriteMeterCommand.__call__
     \revert DynamicLineSpanner.staff-padding                                   %! baca.dls_staff_padding():baca.OverrideCommand._call(2)
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
