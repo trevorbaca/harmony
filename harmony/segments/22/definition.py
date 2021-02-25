@@ -116,7 +116,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
-        alteration="A6",
+        alteration="A5",
         map=baca.runs(),
     ),
 )
@@ -156,7 +156,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
-        alteration="A6",
+        alteration="A5",
     ),
 )
 
