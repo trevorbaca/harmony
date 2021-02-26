@@ -345,7 +345,8 @@ class ScoreTemplate(baca.ScoreTemplate):
         ..  container:: example
 
             >>> score_template = harmony.ScoreTemplate()
-            >>> abjad.f(score_template.voice_abbreviations)
+            >>> string = abjad.storage(score_template.voice_abbreviations)
+            >>> print(string)
             abjad.OrderedDict(
                 [
                     ('bfl', 'Bass_Flute_Music_Voice'),
