@@ -9,7 +9,7 @@
 \context Score = "Score"                                                       %! baca.SingleStaffScoreTemplate.__call__()
 \with                                                                          %! baca.SingleStaffScoreTemplate.__call__()
 {                                                                              %! baca.SingleStaffScoreTemplate.__call__()
-    currentBarNumber = #1                                                      %! baca.SingleStaffScoreTemplate.__call__()
+    currentBarNumber = 1                                                       %! baca.SingleStaffScoreTemplate.__call__()
 }                                                                              %! baca.SingleStaffScoreTemplate.__call__()
 <<                                                                             %! baca.SingleStaffScoreTemplate.__call__()
 
