@@ -9,11 +9,11 @@ import harmony
 
 stage_markup = (
     ("[W.1]", 1),
-    ("[▶Y.1]", 2, "darkgreen"),
+    ("[▶Y.1]", 2, "#darkgreen"),
     ("[W.2-3]", 4),
     ("[W.4]", 6),
-    ("[◀V.6]", 7, "darkgreen"),
-    ("[◀T.3]", 8, "darkgreen"),
+    ("[◀V.6]", 7, "#darkgreen"),
+    ("[◀T.3]", 8, "#darkgreen"),
 )
 
 maker = baca.SegmentMaker(

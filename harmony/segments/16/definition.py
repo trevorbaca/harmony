@@ -9,7 +9,7 @@ import harmony
 
 stage_markup = (
     ("[P.1-6]", 1),
-    ("[◀O.4]", 8, "darkgreen"),
+    ("[◀O.4]", 8, "#darkgreen"),
     ("[P.7-8]", 9),
 )
 
