@@ -2,10 +2,12 @@
 \language "english"                                                            %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_format_pieces()
 
 \include "../../stylesheets/stylesheet.ily"                                    %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
-\include "../../stylesheets/nonfirst-segment.ily"                              %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
 \include "illustration.ily"                                                    %! ide.Path.extern()
-\paper { first-page-number = #13 }                                             %! __make_segment_pdf__
 
+\header { composer = ##f poet = ##f title = ##f }                              %! baca.SegmentMaker._make_lilypond_file()
+\layout { indent = 0 }                                                         %! baca.SegmentMaker._make_lilypond_file()
+\paper { print-first-page-number = ##t }                                       %! baca.SegmentMaker._make_lilypond_file()
+\paper { first-page-number = #13 }                                             %! __make_segment_pdf__
 
 \score {                                                                       %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_blocks()
 
