@@ -1,7 +1,7 @@
 import distutils.version
 import platform
 
-from .tools import (
+from .library import (
     ScoreTemplate,
     appoggiato,
     appoggiato_pitches_a,
