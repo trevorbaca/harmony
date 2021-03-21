@@ -942,6 +942,9 @@ def whisk_staff_position() -> baca.Suite:
 class ScoreTemplate(baca.ScoreTemplate):
     """
     Score template.
+
+    >>> import harmony
+
     """
 
     ### CLASS VARIABLES ###
@@ -1093,9 +1096,7 @@ class ScoreTemplate(baca.ScoreTemplate):
             name="Harp_Music_Staff",
             tag=tag,
         )
-        abjad.annotate(
-            harp_music_staff, "default_instrument", instruments["Harp"]
-        )
+        abjad.annotate(harp_music_staff, "default_instrument", instruments["Harp"])
         abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
         self._attach_lilypond_tag("Harp", harp_music_staff)
 
