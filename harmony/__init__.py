@@ -1,9 +1,8 @@
 import distutils.version
 import platform
 
-from harmony.ScoreTemplate import ScoreTemplate, margin_markup
-
 from .tools import (
+    ScoreTemplate,
     appoggiato,
     appoggiato_pitches_a,
     appoggiato_pitches_a_flat,
@@ -22,6 +21,7 @@ from .tools import (
     glissando_counts,
     glissando_counts_curtailed,
     instruments,
+    margin_markup,
     margin_markups,
     metronome_marks,
     phjc,
