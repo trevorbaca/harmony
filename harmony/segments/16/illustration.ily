@@ -983,7 +983,8 @@ p_Harp_Music_Voice = {                                                         %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 

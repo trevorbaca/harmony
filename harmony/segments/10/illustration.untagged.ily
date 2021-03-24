@@ -289,7 +289,8 @@ j_Bass_Flute_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
         - \abjad-dashed-line-with-hook
@@ -380,7 +381,8 @@ j_Bass_Flute_Music_Voice = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
         - \abjad-dashed-line-with-hook
@@ -402,7 +404,8 @@ j_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -797,7 +800,8 @@ j_Percussion_I_Music_Voice = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -813,7 +817,8 @@ j_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1641,7 +1646,8 @@ j_Viola_Music_Voice = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 84 / measure 11]
         a4
@@ -1680,7 +1686,8 @@ j_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 85 / measure 12]
         c'4
@@ -1719,7 +1726,8 @@ j_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 86 / measure 13]
         g4
@@ -1772,7 +1780,8 @@ j_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 87 / measure 14]
         b4
@@ -2091,7 +2100,8 @@ j_Cello_I_Music_Voice = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 85 / measure 12]
         a,4
@@ -2127,7 +2137,8 @@ j_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 86 / measure 13]
         a,4
@@ -2177,7 +2188,8 @@ j_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 87 / measure 14]
         f,4
@@ -2528,7 +2540,8 @@ j_Cello_II_Music_Voice = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/9 {
+    \times 6/9
+    {
 
         % [10 Cello_II_Music_Voice measure 86 / measure 13]
         f,4
@@ -2575,7 +2588,8 @@ j_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/9 {
+    \times 6/9
+    {
 
         % [10 Cello_II_Music_Voice measure 87 / measure 14]
         b,4
@@ -3169,7 +3183,8 @@ j_Contrabass_II_Music_Voice = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [10 Contrabass_II_Music_Voice measure 86 / measure 13]
         a4
@@ -3210,7 +3225,8 @@ j_Contrabass_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [10 Contrabass_II_Music_Voice measure 87 / measure 14]
         f4

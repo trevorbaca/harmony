@@ -466,7 +466,8 @@ d_Percussion_I_Music_Voice_A = {
 d_Percussion_I_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [04 Percussion_I_Music_Voice measure 24 / measure 1]
         \set Staff.shortInstrumentName = \harmony-perc-i-markup
@@ -502,7 +503,8 @@ d_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -521,7 +523,8 @@ d_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [04 Percussion_I_Music_Voice measure 25 / measure 2]
         r16
@@ -560,7 +563,8 @@ d_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -584,7 +588,8 @@ d_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [04 Percussion_I_Music_Voice measure 29 / measure 6]
         r16
@@ -600,7 +605,8 @@ d_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r16
 
@@ -796,7 +802,8 @@ d_Percussion_II_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7 {
+    \times 4/7
+    {
 
         r8
 
@@ -2947,7 +2954,8 @@ d_Contrabass_II_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [04 Contrabass_II_Music_Voice measure 32 / measure 9]
         af,1

@@ -216,7 +216,8 @@ y_Bass_Flute_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         r32
 
@@ -414,7 +415,8 @@ y_Bass_Flute_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [25 Bass_Flute_Music_Voice measure 230 / measure 5]
         \stopStaff
@@ -507,7 +509,8 @@ y_Bass_Flute_Music_Voice = {
     r16
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 11/12 {
+    \times 11/12
+    {
 
         r32
 
@@ -578,7 +581,8 @@ y_Bass_Flute_Music_Voice = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [25 Bass_Flute_Music_Voice measure 232 / measure 7]
         r32
@@ -661,7 +665,8 @@ y_Bass_Flute_Music_Voice = {
     r16
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 11/12 {
+    \times 11/12
+    {
 
         r32
 
@@ -732,7 +737,8 @@ y_Bass_Flute_Music_Voice = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [25 Bass_Flute_Music_Voice measure 234 / measure 9]
         r32
@@ -815,7 +821,8 @@ y_Bass_Flute_Music_Voice = {
     r16
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 11/12 {
+    \times 11/12
+    {
 
         r32
 
@@ -998,7 +1005,8 @@ y_Percussion_I_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         % [25 Percussion_I_Music_Voice measure 227 / measure 2]
         \override TupletBracket.direction = #up
@@ -1158,7 +1166,8 @@ y_Percussion_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5 {
+    \times 3/5
+    {
 
         r2.
 
@@ -1269,7 +1278,8 @@ y_Percussion_II_Music_Voice = {
     e'4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         % [25 Percussion_II_Music_Voice measure 227 / measure 2]
         \stopStaff
@@ -1301,7 +1311,8 @@ y_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [25 Percussion_II_Music_Voice measure 228 / measure 3]
         \revert Accidental.stencil
@@ -1488,7 +1499,8 @@ y_Percussion_II_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5 {
+    \times 3/5
+    {
 
         r2.
 
@@ -1604,7 +1616,8 @@ y_Harp_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         % [25 Harp_Music_Voice measure 227 / measure 2]
         \override TupletBracket.direction = #up
@@ -2210,7 +2223,8 @@ y_Cello_I_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         <a' b' c''>2
         :32
@@ -2596,7 +2610,8 @@ y_Cello_II_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         <g' af'! bf'!>2
         :32
@@ -2927,7 +2942,8 @@ y_Contrabass_I_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         <a' b' c''>2
         :32
@@ -3317,7 +3333,8 @@ y_Contrabass_II_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         <g' af'! bf'!>2
         :32

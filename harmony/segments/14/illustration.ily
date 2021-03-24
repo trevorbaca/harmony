@@ -349,7 +349,8 @@ n_Bass_Flute_Music_Voice = {                                                   %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
-    \times 8/9 {                                                               %! harmony.warble()
+    \times 8/9                                                                 %! harmony.warble()
+    {                                                                          %! harmony.warble()
 
         r32                                                                    %! harmony.warble()
 
@@ -519,7 +520,8 @@ n_Bass_Flute_Music_Voice = {                                                   %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
-    \times 8/9 {                                                               %! harmony.warble()
+    \times 8/9                                                                 %! harmony.warble()
+    {                                                                          %! harmony.warble()
 
         % [14 Bass_Flute_Music_Voice measure 125 / measure 6]                  %! baca.SegmentMaker._comment_measure_numbers()
         r32                                                                    %! harmony.warble()
@@ -628,7 +630,8 @@ n_Bass_Flute_Music_Voice = {                                                   %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
-    \times 8/9 {                                                               %! harmony.warble()
+    \times 8/9                                                                 %! harmony.warble()
+    {                                                                          %! harmony.warble()
 
         r32                                                                    %! harmony.warble()
 
@@ -1232,7 +1235,8 @@ n_Percussion_II_Music_Voice = {                                                %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1251,7 +1255,8 @@ n_Percussion_II_Music_Voice = {                                                %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Percussion_II_Music_Voice measure 121 / measure 2]               %! baca.SegmentMaker._comment_measure_numbers()
         r8                                                                     %! harmony.sixteenths()
@@ -1378,7 +1383,8 @@ n_Percussion_II_Music_Voice = {                                                %
     >>
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Percussion_II_Music_Voice measure 125 / measure 6]               %! baca.SegmentMaker._comment_measure_numbers()
         \oneVoice                                                              %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice():ONE_VOICE_COMMAND
@@ -1417,7 +1423,8 @@ n_Percussion_II_Music_Voice = {                                                %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1434,7 +1441,8 @@ n_Percussion_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -1449,7 +1457,8 @@ n_Percussion_II_Music_Voice = {                                                %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Percussion_II_Music_Voice measure 126 / measure 7]               %! baca.SegmentMaker._comment_measure_numbers()
         r4                                                                     %! harmony.sixteenths()
@@ -1467,7 +1476,8 @@ n_Percussion_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1487,7 +1497,8 @@ n_Percussion_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         d'16                                                                   %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -1504,7 +1515,8 @@ n_Percussion_II_Music_Voice = {                                                %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1522,7 +1534,8 @@ n_Percussion_II_Music_Voice = {                                                %
     r2                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1736,7 +1749,8 @@ n_Harp_Music_Voice = {                                                         %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2045,7 +2059,8 @@ n_Viola_Music_Voice = {                                                        %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -2452,7 +2467,8 @@ n_Cello_I_Music_Voice = {                                                      %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r16                                                                    %! harmony.sixteenths()
 
@@ -2471,7 +2487,8 @@ n_Cello_I_Music_Voice = {                                                      %
     r2                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2631,7 +2648,8 @@ n_Cello_I_Music_Voice = {                                                      %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Cello_I_Music_Voice measure 125 / measure 6]                     %! baca.SegmentMaker._comment_measure_numbers()
         \stopStaff                                                             %! baca.staff_lines():baca.IndicatorCommand._call():baca.SegmentMaker._set_status_tag():EXPLICIT_STAFF_LINES
@@ -2674,7 +2692,8 @@ n_Cello_I_Music_Voice = {                                                      %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         c'16                                                                   %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -2687,7 +2706,8 @@ n_Cello_I_Music_Voice = {                                                      %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2705,7 +2725,8 @@ n_Cello_I_Music_Voice = {                                                      %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8.                                                                    %! harmony.sixteenths()
 
@@ -2722,7 +2743,8 @@ n_Cello_I_Music_Voice = {                                                      %
     r2                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Cello_I_Music_Voice measure 127 / measure 8]                     %! baca.SegmentMaker._comment_measure_numbers()
         c'16                                                                   %! harmony.sixteenths()
@@ -2738,7 +2760,8 @@ n_Cello_I_Music_Voice = {                                                      %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -3073,7 +3096,8 @@ n_Cello_II_Music_Voice = {                                                     %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 5/4 {                                                               %! harmony.sixteenths()
+    \times 5/4                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         % [14 Cello_II_Music_Voice measure 124 / measure 5]                    %! baca.SegmentMaker._comment_measure_numbers()
         \override TupletBracket.direction = #up                                %! baca.tuplet_bracket_up():baca.OverrideCommand._call(1)

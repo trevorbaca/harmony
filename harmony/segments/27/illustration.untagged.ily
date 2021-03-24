@@ -481,7 +481,8 @@ aa_Bass_Flute_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [27 Bass_Flute_Music_Voice measure 252 / measure 6]
         \oneVoice
@@ -788,7 +789,8 @@ aa_Percussion_I_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         r8
 
@@ -961,7 +963,8 @@ aa_Percussion_II_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [27 Percussion_II_Music_Voice measure 249 / measure 3]
         \stopStaff
@@ -1012,7 +1015,8 @@ aa_Percussion_II_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         r8
 
@@ -1269,7 +1273,8 @@ aa_Harp_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         r8
 
@@ -1506,7 +1511,8 @@ aa_Viola_Music_Voice = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         \override NoteHead.style = #'harmonic-black
         <g' af'! bf'!>2
@@ -2681,7 +2687,8 @@ aa_Contrabass_II_Music_Voice = {
     \repeatTie
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         gf!16
         - \tweak color #(x11-color 'blue)

@@ -555,7 +555,8 @@ i_Harp_Music_Voice = {                                                         %
     \override Staff.Clef.color = #(x11-color 'OliveDrab)                       %! baca.SegmentMaker._attach_color_literal(2):REAPPLIED_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -712,7 +713,8 @@ i_Viola_Music_Voice = {                                                        %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 3/4 {                                                               %! harmony.sixteenths()
+    \times 3/4                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         c'2.                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -840,7 +842,8 @@ i_Cello_I_Music_Voice = {                                                      %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 3/4 {                                                               %! harmony.sixteenths()
+    \times 3/4                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         b'2.                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -970,7 +973,8 @@ i_Cello_II_Music_Voice = {                                                     %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 3/4 {                                                               %! harmony.sixteenths()
+    \times 3/4                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         dqs'!2.                                                                %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)
@@ -1103,7 +1107,8 @@ i_Contrabass_I_Music_Voice = {                                                 %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 3/4 {                                                               %! harmony.sixteenths()
+    \times 3/4                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         f'2.                                                                   %! harmony.sixteenths()
         - \tweak color #(x11-color 'blue)                                      %! EXPLICIT_DYNAMIC_COLOR:_treat_persistent_wrapper(1)

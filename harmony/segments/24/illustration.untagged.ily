@@ -1426,7 +1426,8 @@ x_Percussion_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         \stopStaff
         \once \override Staff.StaffSymbol.line-count = 3
@@ -2159,7 +2160,8 @@ x_Viola_Music_Staff = <<
 x_Cello_I_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [24 Cello_I_Music_Voice measure 217 / measure 1]
         \set Staff.shortInstrumentName = \harmony-vc-i-markup
@@ -2265,7 +2267,8 @@ x_Cello_I_Music_Voice = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -2894,7 +2897,8 @@ x_Cello_II_Music_Staff = <<
 x_Contrabass_I_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [24 Contrabass_I_Music_Voice measure 217 / measure 1]
         \set Staff.shortInstrumentName = \harmony-cb-i-markup
@@ -3000,7 +3004,8 @@ x_Contrabass_I_Music_Voice = {
     \stopTrillSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 

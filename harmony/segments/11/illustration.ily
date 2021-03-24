@@ -1601,7 +1601,8 @@ k_Harp_Music_Voice = {                                                         %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2334,7 +2335,8 @@ k_Cello_I_Music_Voice = {                                                      %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/3 {                                                               %! harmony.sixteenths()
+    \times 4/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2601,7 +2603,8 @@ k_Cello_I_Music_Voice = {                                                      %
     ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         aqf8                                                                   %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -3051,7 +3054,8 @@ k_Cello_II_Music_Voice = {                                                     %
     ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         f8                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -3068,7 +3072,8 @@ k_Cello_II_Music_Voice = {                                                     %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         f4                                                                     %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -3282,7 +3287,8 @@ k_Contrabass_I_Music_Voice = {                                                 %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/3 {                                                               %! harmony.sixteenths()
+    \times 4/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -3551,7 +3557,8 @@ k_Contrabass_I_Music_Voice = {                                                 %
     ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         dtqf'8                                                                 %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()
@@ -4010,7 +4017,8 @@ k_Contrabass_II_Music_Voice = {                                                %
     ~                                                                          %! baca.SegmentMaker._attach_shadow_tie_indicators()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 4/5 {                                                               %! harmony.sixteenths()
+    \times 4/5                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         ef8.                                                                   %! harmony.sixteenths()
         :32                                                                    %! baca.stem_tremolo():baca.IndicatorCommand._call()

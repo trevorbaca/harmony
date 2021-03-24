@@ -285,7 +285,8 @@ g_Bass_Flute_Music_Voice = {
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
         - \abjad-dashed-line-with-hook
@@ -307,7 +308,8 @@ g_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -327,7 +329,8 @@ g_Bass_Flute_Music_Voice = {
     \bacaStopTextSpanMetricModulation
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         r4
 
@@ -989,7 +992,8 @@ g_Harp_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [07 Harp_Music_Voice measure 60 / measure 6]
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -1021,7 +1025,8 @@ g_Harp_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1036,7 +1041,8 @@ g_Harp_Music_Voice = {
     \stopTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -1053,7 +1059,8 @@ g_Harp_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         r4
 
@@ -1241,7 +1248,8 @@ g_Viola_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5 {
+    \times 3/5
+    {
         \oneVoice
 
         bf2
@@ -1345,7 +1353,8 @@ g_Viola_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         bf8
         \repeatTie
@@ -1647,7 +1656,8 @@ g_Cello_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5 {
+    \times 3/5
+    {
 
         bf'4
         \repeatTie

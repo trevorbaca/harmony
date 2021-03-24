@@ -967,7 +967,8 @@ b_Percussion_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1240,7 +1241,8 @@ b_Percussion_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [02 Percussion_II_Music_Voice measure 7 / measure 4]
         \once \override TupletBracket.direction = #up
@@ -1321,7 +1323,8 @@ b_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7 {
+    \times 4/7
+    {
 
         r8
 
@@ -1358,7 +1361,8 @@ b_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [02 Percussion_II_Music_Voice measure 11 / measure 8]
         \stopStaff
@@ -1398,7 +1402,8 @@ b_Percussion_II_Music_Voice = {
     c'2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [02 Percussion_II_Music_Voice measure 14 / measure 11]
         \revert Accidental.stencil
@@ -2290,7 +2295,8 @@ b_Viola_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -2868,7 +2874,8 @@ b_Cello_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3 {
+    \times 5/3
+    {
 
         % [02 Cello_I_Music_Voice measure 9 / measure 6]
         \override TupletBracket.direction = #down
@@ -2932,7 +2939,8 @@ b_Cello_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         \once \override Stem.direction = #down
         \once \override TupletBracket.direction = #up
@@ -3300,7 +3308,8 @@ b_Cello_II_Music_Voice_G = {
 b_Cello_II_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [02 Cello_II_Music_Voice measure 4 / measure 1]
         \set Staff.shortInstrumentName = \harmony-vc-ii-markup
@@ -4625,7 +4634,8 @@ b_Contrabass_II_Music_Voice_G = {
 b_Contrabass_II_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [02 Contrabass_II_Music_Voice measure 4 / measure 1]
         \set Staff.shortInstrumentName = \harmony-cb-ii-markup

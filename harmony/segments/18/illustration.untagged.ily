@@ -224,7 +224,8 @@ r_Bass_Flute_Music_Voice = {
     R1 * 3/4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [18 Bass_Flute_Music_Voice measure 159 / measure 3]
         r32
@@ -670,7 +671,8 @@ r_Percussion_I_Music_Voice = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [18 Percussion_I_Music_Voice measure 166 / measure 10]
         \once \override Stem.direction = #down
@@ -967,7 +969,8 @@ r_Percussion_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         % [18 Percussion_II_Music_Voice measure 167 / measure 11]
         \stopStaff
@@ -1692,7 +1695,8 @@ r_Viola_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [18 Viola_Music_Voice measure 166 / measure 10]
         g'4 * 1/2
@@ -2657,7 +2661,8 @@ r_Cello_II_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [18 Cello_II_Music_Voice measure 166 / measure 10]
         btqf'!4 * 1/2
@@ -3354,7 +3359,8 @@ r_Contrabass_II_Music_Voice = {
     \!
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         % [18 Contrabass_II_Music_Voice measure 158 / measure 2]
         \once \override Staff.Clef.X-extent = ##f
@@ -3696,7 +3702,8 @@ r_Contrabass_II_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [18 Contrabass_II_Music_Voice measure 166 / measure 10]
         e''4 * 1/2

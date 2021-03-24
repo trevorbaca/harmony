@@ -230,7 +230,8 @@ t_Bass_Flute_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -252,7 +253,8 @@ t_Bass_Flute_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'16
         \repeatTie
@@ -265,7 +267,8 @@ t_Bass_Flute_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -276,7 +279,8 @@ t_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'16
         \repeatTie
@@ -286,7 +290,8 @@ t_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Bass_Flute_Music_Voice measure 185 / measure 5]
         r4
@@ -301,7 +306,8 @@ t_Bass_Flute_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'8
         \repeatTie
@@ -316,7 +322,8 @@ t_Bass_Flute_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -326,7 +333,8 @@ t_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'8
 
@@ -342,7 +350,8 @@ t_Bass_Flute_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'8.
         \repeatTie
@@ -354,7 +363,8 @@ t_Bass_Flute_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Bass_Flute_Music_Voice measure 188 / measure 8]
         r4
@@ -365,7 +375,8 @@ t_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'8.
 
@@ -376,7 +387,8 @@ t_Bass_Flute_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -387,7 +399,8 @@ t_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Bass_Flute_Music_Voice measure 189 / measure 9]
         ef'4
@@ -400,7 +413,8 @@ t_Bass_Flute_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Bass_Flute_Music_Voice measure 190 / measure 10]
         ef'!4
@@ -412,7 +426,8 @@ t_Bass_Flute_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -471,7 +486,8 @@ t_Bass_Flute_Music_Staff = <<
 t_Percussion_I_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_I_Music_Voice measure 181 / measure 1]
         \set Staff.shortInstrumentName = \harmony-perc-i-markup
@@ -511,7 +527,8 @@ t_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r16
 
@@ -579,7 +596,8 @@ t_Percussion_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'8
         \repeatTie
@@ -589,7 +607,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -604,7 +623,8 @@ t_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -615,7 +635,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'4
         \repeatTie
@@ -630,7 +651,8 @@ t_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -641,7 +663,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'4
         \repeatTie
@@ -658,7 +681,8 @@ t_Percussion_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'8
         \repeatTie
@@ -668,7 +692,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -683,7 +708,8 @@ t_Percussion_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -698,7 +724,8 @@ t_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -709,7 +736,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'4
         \repeatTie
@@ -726,7 +754,8 @@ t_Percussion_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'8
         \repeatTie
@@ -743,7 +772,8 @@ t_Percussion_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'8
         \repeatTie
@@ -753,7 +783,8 @@ t_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -864,7 +895,8 @@ t_Percussion_II_Music_Voice = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 183 / measure 3]
         \override TupletBracket.staff-padding = 3
@@ -886,7 +918,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         d'8
         :32
@@ -899,7 +932,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 184 / measure 4]
         d'8
@@ -913,7 +947,8 @@ t_Percussion_II_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 185 / measure 5]
         r8
@@ -929,7 +964,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -944,7 +980,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 186 / measure 6]
         r8
@@ -960,7 +997,8 @@ t_Percussion_II_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 187 / measure 7]
         r4
@@ -973,7 +1011,8 @@ t_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         d'16
         :32
@@ -983,7 +1022,8 @@ t_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r4
 
@@ -995,7 +1035,8 @@ t_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         d'16
         :32
@@ -1005,7 +1046,8 @@ t_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Percussion_II_Music_Voice measure 188 / measure 8]
         r4
@@ -1018,7 +1060,8 @@ t_Percussion_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         d'16
         :32
@@ -1033,7 +1076,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -1048,7 +1092,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -1064,7 +1109,8 @@ t_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -1126,7 +1172,8 @@ t_Percussion_II_Music_Staff = <<
 t_Harp_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Harp_Music_Voice measure 181 / measure 1]
         \set Staff.shortInstrumentName = \harmony-hp-markup
@@ -1347,7 +1394,8 @@ t_Viola_Music_Voice = {
     \bacaStartTextSpanBowSpeed
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Viola_Music_Voice measure 182 / measure 2]
         \override TupletBracket.direction = #up
@@ -1382,7 +1430,8 @@ t_Viola_Music_Voice = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [20 Viola_Music_Voice measure 183 / measure 3]
         \stopStaff
@@ -1412,7 +1461,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -1423,7 +1473,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -1439,7 +1490,8 @@ t_Viola_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1455,7 +1507,8 @@ t_Viola_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         c'8
         :32
@@ -1466,7 +1519,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         c'8
         :32
@@ -1482,7 +1536,8 @@ t_Viola_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -1495,7 +1550,8 @@ t_Viola_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [20 Viola_Music_Voice measure 187 / measure 7]
         r8
@@ -1509,7 +1565,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1527,7 +1584,8 @@ t_Viola_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         c'8
         :32
@@ -1538,7 +1596,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 
@@ -1550,7 +1609,8 @@ t_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [20 Viola_Music_Voice measure 189 / measure 9]
         r4
@@ -1747,7 +1807,8 @@ t_Cello_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_I_Music_Voice measure 183 / measure 3]
         \stopStaff
@@ -1778,7 +1839,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8.
         :32
@@ -1791,7 +1853,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_I_Music_Voice measure 184 / measure 4]
         c'8.
@@ -1805,7 +1868,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8.
         :32
@@ -1821,7 +1885,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1834,7 +1899,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1848,7 +1914,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1861,7 +1928,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1875,7 +1943,8 @@ t_Cello_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r4
 
@@ -1887,7 +1956,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -1897,7 +1967,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_I_Music_Voice measure 188 / measure 8]
         r4
@@ -1910,7 +1981,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -1920,7 +1992,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r4
 
@@ -1932,7 +2005,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -1942,7 +2016,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_I_Music_Voice measure 189 / measure 9]
         r4
@@ -1955,7 +2030,8 @@ t_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -1967,7 +2043,8 @@ t_Cello_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_I_Music_Voice measure 190 / measure 10]
         r16
@@ -1983,7 +2060,8 @@ t_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -2097,7 +2175,8 @@ t_Cello_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         gf'4
         \repeatTie
@@ -2123,7 +2202,8 @@ t_Cello_II_Music_Voice = {
 
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_II_Music_Voice measure 183 / measure 3]
         \stopStaff
@@ -2152,7 +2232,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -2164,7 +2245,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'16
         :32
@@ -2174,7 +2256,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -2187,7 +2270,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_II_Music_Voice measure 184 / measure 4]
         r4
@@ -2200,7 +2284,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -2215,7 +2300,8 @@ t_Cello_II_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8.
         :32
@@ -2226,7 +2312,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -2238,7 +2325,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_II_Music_Voice measure 186 / measure 6]
         c'16
@@ -2249,7 +2337,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -2262,7 +2351,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r4
 
@@ -2274,7 +2364,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -2287,7 +2378,8 @@ t_Cello_II_Music_Voice = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_II_Music_Voice measure 188 / measure 8]
         c'8.
@@ -2299,7 +2391,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -2311,7 +2404,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'16
         :32
@@ -2321,7 +2415,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -2334,7 +2429,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [20 Cello_II_Music_Voice measure 189 / measure 9]
         r4
@@ -2347,7 +2443,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8
         :32
@@ -2362,7 +2459,8 @@ t_Cello_II_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         c'8.
         :32
@@ -2373,7 +2471,8 @@ t_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 

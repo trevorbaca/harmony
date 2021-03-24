@@ -461,7 +461,8 @@ i_Harp_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -593,7 +594,8 @@ i_Viola_Music_Voice = {
     \bacaStopTextSpanBowSpeed
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         c'2.
         - \tweak color #(x11-color 'blue)
@@ -699,7 +701,8 @@ i_Cello_I_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         b'2.
         - \tweak color #(x11-color 'blue)
@@ -807,7 +810,8 @@ i_Cello_II_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         dqs'!2.
         - \tweak color #(x11-color 'blue)
@@ -918,7 +922,8 @@ i_Contrabass_I_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         f'2.
         - \tweak color #(x11-color 'blue)

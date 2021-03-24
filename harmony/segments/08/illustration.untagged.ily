@@ -209,7 +209,8 @@ h_Bass_Flute_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
         - \abjad-dashed-line-with-hook
@@ -231,7 +232,8 @@ h_Bass_Flute_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r4
 

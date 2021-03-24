@@ -195,7 +195,8 @@ w_Bass_Flute_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         r32
 
@@ -367,7 +368,8 @@ w_Bass_Flute_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [23 Bass_Flute_Music_Voice measure 216 / measure 8]
         r4
@@ -390,7 +392,8 @@ w_Bass_Flute_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef'8
         \repeatTie
@@ -548,7 +551,8 @@ w_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -565,7 +569,8 @@ w_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         d'4
         \repeatTie
@@ -725,7 +730,8 @@ w_Percussion_II_Music_Voice = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [23 Percussion_II_Music_Voice measure 216 / measure 8]
         \override TupletBracket.direction = #up
@@ -747,7 +753,8 @@ w_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1129,7 +1136,8 @@ w_Viola_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         \override Stem.direction = #down
         c'8
@@ -1143,7 +1151,8 @@ w_Viola_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         c'8
         :32
@@ -1324,7 +1333,8 @@ w_Cello_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \baca-staccati #3
@@ -1382,7 +1392,8 @@ w_Cello_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1398,7 +1409,8 @@ w_Cello_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1455,7 +1467,8 @@ w_Cello_I_Music_Staff = <<
 w_Cello_II_Music_Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [23 Cello_II_Music_Voice measure 209 / measure 1]
         \set Staff.shortInstrumentName = \harmony-vc-ii-markup
@@ -1524,7 +1537,8 @@ w_Cello_II_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [23 Cello_II_Music_Voice measure 212 / measure 4]
         \stopStaff
@@ -1613,7 +1627,8 @@ w_Cello_II_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         \override Stem.direction = #down
         c'8.
@@ -1627,7 +1642,8 @@ w_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8.
 
@@ -1770,7 +1786,8 @@ w_Contrabass_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \tweak color #(x11-color 'blue)
