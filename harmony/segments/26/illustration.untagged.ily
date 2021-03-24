@@ -433,7 +433,8 @@ z_Bass_Flute_Music_Voice = {
     \stopTextSpan
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [26 Bass_Flute_Music_Voice measure 245 / measure 9]
         r32
@@ -729,7 +730,8 @@ z_Percussion_I_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/5 {
+    \times 3/5
+    {
 
         \override Stem.direction = #down
         \override TupletBracket.direction = #up
@@ -842,7 +844,8 @@ z_Percussion_II_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         % [26 Percussion_II_Music_Voice measure 238 / measure 2]
         \override TupletBracket.direction = #up
@@ -912,7 +915,8 @@ z_Percussion_II_Music_Voice = {
     \glissando
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [26 Percussion_II_Music_Voice measure 244 / measure 8]
         \hide NoteHead
@@ -962,7 +966,8 @@ z_Percussion_II_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         \stopStaff
         \once \override Staff.StaffSymbol.line-count = 3
@@ -1053,7 +1058,8 @@ z_Harp_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1072,7 +1078,8 @@ z_Harp_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1122,7 +1129,8 @@ z_Harp_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1141,7 +1149,8 @@ z_Harp_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1249,7 +1258,8 @@ z_Harp_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [26 Harp_Music_Voice measure 246 / measure 10]
         \override DynamicLineSpanner.staff-padding = 6

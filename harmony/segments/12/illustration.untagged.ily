@@ -682,7 +682,8 @@ l_Bass_Flute_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         dtqf'''8
         \repeatTie
@@ -897,7 +898,8 @@ l_Percussion_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_I_Music_Voice measure 102 / measure 4]
         ef'!1
@@ -914,7 +916,8 @@ l_Percussion_I_Music_Voice = {
     \laissezVibrer
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_I_Music_Voice measure 104 / measure 6]
         ef'!1
@@ -931,7 +934,8 @@ l_Percussion_I_Music_Voice = {
     \laissezVibrer
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_I_Music_Voice measure 106 / measure 8]
         ef'!1
@@ -1248,7 +1252,8 @@ l_Percussion_II_Music_Voice = {
     ^ \baca-tam-tam-markup
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_II_Music_Voice measure 102 / measure 4]
         \once \override LaissezVibrerTie.direction = #up
@@ -1262,7 +1267,8 @@ l_Percussion_II_Music_Voice = {
     \laissezVibrer
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_II_Music_Voice measure 104 / measure 6]
         \once \override LaissezVibrerTie.direction = #up
@@ -1276,7 +1282,8 @@ l_Percussion_II_Music_Voice = {
     \laissezVibrer
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Percussion_II_Music_Voice measure 106 / measure 8]
         \once \override LaissezVibrerTie.direction = #up
@@ -1490,7 +1497,8 @@ l_Harp_Music_Voice = {
     :32
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Harp_Music_Voice measure 102 / measure 4]
         <b, c df!>1
@@ -1513,7 +1521,8 @@ l_Harp_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Harp_Music_Voice measure 104 / measure 6]
         ef'!1
@@ -1530,7 +1539,8 @@ l_Harp_Music_Voice = {
     \laissezVibrer
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/4 {
+    \times 5/4
+    {
 
         % [12 Harp_Music_Voice measure 106 / measure 8]
         ef'!1
@@ -2219,7 +2229,8 @@ l_Cello_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [12 Cello_I_Music_Voice measure 101 / measure 3]
         \override DynamicLineSpanner.staff-padding = 6
@@ -2262,7 +2273,8 @@ l_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [12 Cello_I_Music_Voice measure 103 / measure 5]
         r4
@@ -2289,7 +2301,8 @@ l_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [12 Cello_I_Music_Voice measure 105 / measure 7]
         r4
@@ -2418,7 +2431,8 @@ l_Cello_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         aqf8
         :32
@@ -2435,7 +2449,8 @@ l_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [12 Cello_I_Music_Voice measure 112 / measure 14]
         aqf4
@@ -2470,7 +2485,8 @@ l_Cello_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         aqf8
         :32
@@ -2487,7 +2503,8 @@ l_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         aqf4
         :32
@@ -2610,7 +2627,8 @@ l_Cello_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [12 Cello_II_Music_Voice measure 101 / measure 3]
         \override DynamicLineSpanner.staff-padding = 6
@@ -2653,7 +2671,8 @@ l_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [12 Cello_II_Music_Voice measure 103 / measure 5]
         f4
@@ -2684,7 +2703,8 @@ l_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [12 Cello_II_Music_Voice measure 105 / measure 7]
         r4
@@ -2813,7 +2833,8 @@ l_Cello_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         f8
         :32
@@ -2830,7 +2851,8 @@ l_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         f4
         :32
@@ -2858,7 +2880,8 @@ l_Cello_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [12 Cello_II_Music_Voice measure 113 / measure 15]
         f8
@@ -2876,7 +2899,8 @@ l_Cello_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         f4
         :32
@@ -3048,7 +3072,8 @@ l_Contrabass_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/11 {
+    \times 8/11
+    {
 
         % [12 Contrabass_I_Music_Voice measure 101 / measure 3]
         \override DynamicLineSpanner.staff-padding = 6
@@ -3096,7 +3121,8 @@ l_Contrabass_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/11 {
+    \times 8/11
+    {
 
         % [12 Contrabass_I_Music_Voice measure 103 / measure 5]
         dtqf'!4
@@ -3129,7 +3155,8 @@ l_Contrabass_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/11 {
+    \times 8/11
+    {
 
         % [12 Contrabass_I_Music_Voice measure 105 / measure 7]
         dtqf'!4
@@ -3264,7 +3291,8 @@ l_Contrabass_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         dtqf'8
         :32
@@ -3283,7 +3311,8 @@ l_Contrabass_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [12 Contrabass_I_Music_Voice measure 112 / measure 14]
         dtqf'4
@@ -3305,7 +3334,8 @@ l_Contrabass_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         dtqf'8
         :32
@@ -3331,7 +3361,8 @@ l_Contrabass_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         dtqf'4
         :32
@@ -3352,7 +3383,8 @@ l_Contrabass_I_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         dtqf'16
         :32
@@ -3472,7 +3504,8 @@ l_Contrabass_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/12 {
+    \times 8/12
+    {
 
         % [12 Contrabass_II_Music_Voice measure 101 / measure 3]
         \override DynamicLineSpanner.staff-padding = 6
@@ -3519,7 +3552,8 @@ l_Contrabass_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/12 {
+    \times 8/12
+    {
 
         % [12 Contrabass_II_Music_Voice measure 103 / measure 5]
         r4
@@ -3551,7 +3585,8 @@ l_Contrabass_II_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/12 {
+    \times 8/12
+    {
 
         % [12 Contrabass_II_Music_Voice measure 105 / measure 7]
         r4
@@ -3685,7 +3720,8 @@ l_Contrabass_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef8.
         :32
@@ -3715,7 +3751,8 @@ l_Contrabass_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef8
         :32
@@ -3747,7 +3784,8 @@ l_Contrabass_II_Music_Voice = {
     ~
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         ef8
         :32

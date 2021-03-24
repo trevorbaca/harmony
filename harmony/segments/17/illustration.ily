@@ -232,7 +232,8 @@ q_Bass_Flute_Music_Voice = {                                                   %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
-    \times 8/9 {                                                               %! harmony.warble()
+    \times 8/9                                                                 %! harmony.warble()
+    {                                                                          %! harmony.warble()
 
         % [17 Bass_Flute_Music_Voice measure 152 / measure 2]                  %! baca.SegmentMaker._comment_measure_numbers()
         r32                                                                    %! harmony.warble()
@@ -1057,7 +1058,8 @@ q_Harp_Music_Voice = {                                                         %
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)                    %! baca.SegmentMaker._attach_color_literal(2):EXPLICIT_CLEF_REDRAW_COLOR
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 

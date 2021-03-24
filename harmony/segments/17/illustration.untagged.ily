@@ -157,7 +157,8 @@ q_Bass_Flute_Music_Voice = {
     \bacaStopTextSpanMetricModulation
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 8/9 {
+    \times 8/9
+    {
 
         % [17 Bass_Flute_Music_Voice measure 152 / measure 2]
         r32
@@ -840,7 +841,8 @@ q_Harp_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 

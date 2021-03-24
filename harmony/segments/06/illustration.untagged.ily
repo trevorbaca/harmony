@@ -316,7 +316,8 @@ f_Bass_Flute_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         r4.
         - \tweak color #(x11-color 'blue)
@@ -392,7 +393,8 @@ f_Bass_Flute_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/5 {
+    \times 6/5
+    {
 
         r4.
         - \tweak color #(x11-color 'blue)
@@ -455,7 +457,8 @@ f_Bass_Flute_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6 {
+    \times 5/6
+    {
 
         r4
 
@@ -768,7 +771,8 @@ f_Percussion_I_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [06 Percussion_I_Music_Voice measure 47 / measure 8]
         \override Staff.BarLine.bar-extent = #'(-2 . 1)
@@ -801,7 +805,8 @@ f_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1118,7 +1123,8 @@ f_Percussion_II_Music_Voice = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7 {
+    \times 4/7
+    {
 
         r16
 
@@ -1414,7 +1420,8 @@ f_Harp_Music_Voice = {
     - \baca-damp
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6 {
+    \times 5/6
+    {
 
         \stopStaff
         \once \override Staff.StaffSymbol.line-count = 1
@@ -1481,7 +1488,8 @@ f_Harp_Music_Voice = {
     \revert TupletBracket.direction
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [06 Harp_Music_Voice measure 45 / measure 6]
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -1513,7 +1521,8 @@ f_Harp_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1537,7 +1546,8 @@ f_Harp_Music_Voice = {
     r8
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6 {
+    \times 5/6
+    {
 
         r16
 
@@ -1601,7 +1611,8 @@ f_Harp_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [06 Harp_Music_Voice measure 49 / measure 10]
         \stopStaff
@@ -1635,7 +1646,8 @@ f_Harp_Music_Voice = {
     r2.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1669,7 +1681,8 @@ f_Harp_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [06 Harp_Music_Voice measure 52 / measure 13]
         fs'!4
@@ -1687,7 +1700,8 @@ f_Harp_Music_Voice = {
     r1
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1707,7 +1721,8 @@ f_Harp_Music_Voice = {
     r8.
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/6 {
+    \times 5/6
+    {
 
         \stopStaff
         \once \override Staff.StaffSymbol.line-count = 1
@@ -2522,7 +2537,8 @@ f_Cello_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [06 Cello_I_Music_Voice measure 47 / measure 8]
         \stopStaff

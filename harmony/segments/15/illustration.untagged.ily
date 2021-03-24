@@ -622,7 +622,8 @@ o_Percussion_II_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [15 Percussion_II_Music_Voice measure 135 / measure 5]
         \stopStaff
@@ -664,7 +665,8 @@ o_Percussion_II_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -693,7 +695,8 @@ o_Percussion_II_Music_Voice = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -805,7 +808,8 @@ o_Harp_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -868,7 +872,8 @@ o_Harp_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -913,7 +918,8 @@ o_Harp_Music_Voice = {
     r2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -1454,7 +1460,8 @@ o_Cello_II_Music_Voice = {
     \f
     - \baca-stop-on-string
 
-    \times 8/10 {
+    \times 8/10
+    {
 
         % [15 Cello_II_Music_Voice measure 133 / measure 3]
         \once \override TupletBracket.edge-height = #'(0.7 . 0)
@@ -1677,7 +1684,8 @@ o_Contrabass_I_Music_Voice = {
     \f
     - \baca-stop-on-string
 
-    \times 8/11 {
+    \times 8/11
+    {
 
         % [15 Contrabass_I_Music_Voice measure 133 / measure 3]
         \once \override TupletBracket.edge-height = #'(0.7 . 0)
@@ -1905,7 +1913,8 @@ o_Contrabass_II_Music_Voice = {
     \f
     - \baca-stop-on-string
 
-    \times 8/12 {
+    \times 8/12
+    {
 
         % [15 Contrabass_II_Music_Voice measure 133 / measure 3]
         \once \override TupletBracket.edge-height = #'(0.7 . 0)

@@ -292,7 +292,8 @@ e_Percussion_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [05 Percussion_I_Music_Voice measure 36 / measure 2]
         \override Staff.BarLine.bar-extent = #'(-2 . 1)
@@ -327,7 +328,8 @@ e_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r8
 
@@ -345,7 +347,8 @@ e_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         % [05 Percussion_I_Music_Voice measure 37 / measure 3]
         \override TupletBracket.direction = #up
@@ -366,7 +369,8 @@ e_Percussion_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -563,7 +567,8 @@ e_Percussion_II_Music_Voice = {
     ]
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7 {
+    \times 4/7
+    {
 
         r16
 
@@ -603,7 +608,8 @@ e_Percussion_II_Music_Voice = {
     \>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/7 {
+    \times 4/7
+    {
 
         r8
 
@@ -980,7 +986,8 @@ e_Viola_Music_Voice = {
     >>
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 3/4 {
+    \times 3/4
+    {
 
         % [05 Viola_Music_Voice measure 37 / measure 3]
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -1157,7 +1164,8 @@ e_Cello_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [05 Cello_I_Music_Voice measure 36 / measure 2]
         \stopStaff
@@ -1196,7 +1204,8 @@ e_Cello_I_Music_Voice = {
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         \stopStaff
         \once \override Staff.StaffSymbol.line-count = 5

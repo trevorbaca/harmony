@@ -196,7 +196,8 @@ ab_Bass_Flute_Music_Voice = {
     R1 * 1/2
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 12/14 {
+    \times 12/14
+    {
 
         % [28 Bass_Flute_Music_Voice measure 260 / measure 5]
         r32

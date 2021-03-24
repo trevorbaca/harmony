@@ -294,7 +294,8 @@ ab_Bass_Flute_Music_Voice = {                                                  %
 %@% ^ \baca-duration-multiplier-markup #"1" #"2"                               %! baca.SegmentMaker._label_duration_multipliers():DURATION_MULTIPLIER
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.warble()
-    \times 12/14 {                                                             %! harmony.warble()
+    \times 12/14                                                               %! harmony.warble()
+    {                                                                          %! harmony.warble()
 
         % [28 Bass_Flute_Music_Voice measure 260 / measure 5]                  %! baca.SegmentMaker._comment_measure_numbers()
         r32                                                                    %! harmony.warble()

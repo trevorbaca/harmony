@@ -355,7 +355,8 @@ u_Percussion_I_Music_Voice = {
     \revert DynamicLineSpanner.staff-padding
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         % [21 Percussion_I_Music_Voice measure 192 / measure 2]
         \override Staff.BarLine.bar-extent = #'(-2 . 1)
@@ -386,7 +387,8 @@ u_Percussion_I_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 2/3 {
+    \times 2/3
+    {
 
         r16
 
@@ -452,7 +454,8 @@ u_Percussion_I_Music_Voice = {
     ^ \baca-bd-struck-markup
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3 {
+    \times 5/3
+    {
 
         r4
 
@@ -555,7 +558,8 @@ u_Percussion_II_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 5/3 {
+    \times 5/3
+    {
 
         r2
         \revert DynamicLineSpanner.staff-padding
@@ -828,7 +832,8 @@ u_Harp_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r2
 
@@ -1035,7 +1040,8 @@ u_Viola_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r16
 
@@ -1058,7 +1064,8 @@ u_Viola_Music_Voice = {
     r4
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/5 {
+    \times 4/5
+    {
 
         r8
 
@@ -1138,7 +1145,8 @@ u_Cello_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \tweak color #(x11-color 'blue)
@@ -1233,7 +1241,8 @@ u_Cello_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \tweak color #(x11-color 'blue)
@@ -1568,7 +1577,8 @@ u_Contrabass_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \tweak color #(x11-color 'blue)
@@ -1663,7 +1673,8 @@ u_Contrabass_I_Music_Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 4/3 {
+    \times 4/3
+    {
 
         e,4
         - \tweak color #(x11-color 'blue)

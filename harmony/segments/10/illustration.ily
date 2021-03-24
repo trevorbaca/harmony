@@ -445,7 +445,8 @@ j_Bass_Flute_Music_Voice = {                                                   %
     r4                                                                         %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
         - \abjad-dashed-line-with-hook                                         %! baca.covered_spanner():COVERED_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -562,7 +563,8 @@ j_Bass_Flute_Music_Voice = {                                                   %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
         - \abjad-dashed-line-with-hook                                         %! baca.covered_spanner():COVERED_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
@@ -584,7 +586,8 @@ j_Bass_Flute_Music_Voice = {                                                   %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -1085,7 +1088,8 @@ j_Percussion_I_Music_Voice = {                                                 %
 %@% \bacaStartTextSpanRhythmAnnotation                                         %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(2):SPANNER_START
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r4                                                                     %! harmony.sixteenths()
 
@@ -1101,7 +1105,8 @@ j_Percussion_I_Music_Voice = {                                                 %
     }                                                                          %! harmony.sixteenths()
 
     \tweak text #tuplet-number::calc-fraction-text                             %! harmony.sixteenths()
-    \times 2/3 {                                                               %! harmony.sixteenths()
+    \times 2/3                                                                 %! harmony.sixteenths()
+    {                                                                          %! harmony.sixteenths()
 
         r8                                                                     %! harmony.sixteenths()
 
@@ -2067,7 +2072,8 @@ j_Viola_Music_Voice = {                                                        %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 84 / measure 11]                       %! baca.SegmentMaker._comment_measure_numbers()
         a4
@@ -2112,7 +2118,8 @@ j_Viola_Music_Voice = {                                                        %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 85 / measure 12]                       %! baca.SegmentMaker._comment_measure_numbers()
         c'4
@@ -2151,7 +2158,8 @@ j_Viola_Music_Voice = {                                                        %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 86 / measure 13]                       %! baca.SegmentMaker._comment_measure_numbers()
         g4
@@ -2204,7 +2212,8 @@ j_Viola_Music_Voice = {                                                        %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/11 {
+    \times 6/11
+    {
 
         % [10 Viola_Music_Voice measure 87 / measure 14]                       %! baca.SegmentMaker._comment_measure_numbers()
         b4
@@ -2587,7 +2596,8 @@ j_Cello_I_Music_Voice = {                                                      %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 85 / measure 12]                     %! baca.SegmentMaker._comment_measure_numbers()
         a,4
@@ -2629,7 +2639,8 @@ j_Cello_I_Music_Voice = {                                                      %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 86 / measure 13]                     %! baca.SegmentMaker._comment_measure_numbers()
         a,4
@@ -2679,7 +2690,8 @@ j_Cello_I_Music_Voice = {                                                      %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/10 {
+    \times 6/10
+    {
 
         % [10 Cello_I_Music_Voice measure 87 / measure 14]                     %! baca.SegmentMaker._comment_measure_numbers()
         f,4
@@ -3094,7 +3106,8 @@ j_Cello_II_Music_Voice = {                                                     %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/9 {
+    \times 6/9
+    {
 
         % [10 Cello_II_Music_Voice measure 86 / measure 13]                    %! baca.SegmentMaker._comment_measure_numbers()
         f,4
@@ -3147,7 +3160,8 @@ j_Cello_II_Music_Voice = {                                                     %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/9 {
+    \times 6/9
+    {
 
         % [10 Cello_II_Music_Voice measure 87 / measure 14]                    %! baca.SegmentMaker._comment_measure_numbers()
         b,4
@@ -3833,7 +3847,8 @@ j_Contrabass_II_Music_Voice = {                                                %
 %@% <> \bacaStopTextSpanRhythmAnnotation                                       %! baca.rhythm_annotation_spanner():RHYTHM_ANNOTATION_SPANNER:baca.PiecewiseCommand._call(4):SPANNER_STOP
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [10 Contrabass_II_Music_Voice measure 86 / measure 13]               %! baca.SegmentMaker._comment_measure_numbers()
         a4
@@ -3880,7 +3895,8 @@ j_Contrabass_II_Music_Voice = {                                                %
     }
 
     \tweak text #tuplet-number::calc-fraction-text
-    \times 6/7 {
+    \times 6/7
+    {
 
         % [10 Contrabass_II_Music_Voice measure 87 / measure 14]               %! baca.SegmentMaker._comment_measure_numbers()
         f4
