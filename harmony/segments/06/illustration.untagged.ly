@@ -8,7 +8,8 @@
 \paper { print-first-page-number = ##t }
 \paper { first-page-number = #8 }
 
-\score {
+\score
+{
 
     <<
 
