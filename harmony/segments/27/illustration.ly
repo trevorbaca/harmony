@@ -11,81 +11,123 @@
 \score                                                                         %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_blocks()
 {                                                                              %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_blocks()
 
+    %! baca.SegmentMaker._make_lilypond_file()
     <<                                                                         %! baca.SegmentMaker._make_lilypond_file()
 
+        %! baca.SegmentMaker._make_lilypond_file()
         {                                                                      %! baca.SegmentMaker._make_lilypond_file()
             \include "layout.ly"                                               %! baca.SegmentMaker._make_lilypond_file()
+        %! baca.SegmentMaker._make_lilypond_file()
         }                                                                      %! baca.SegmentMaker._make_lilypond_file()
 
+        %! harmony.ScoreTemplate.__call__()
         \context Score = "Score"                                               %! harmony.ScoreTemplate.__call__()
+        %! harmony.ScoreTemplate.__call__()
         <<                                                                     %! harmony.ScoreTemplate.__call__()
 
+            %! abjad.ScoreTemplate._make_global_context()
             \context GlobalContext = "Global_Context"                          %! abjad.ScoreTemplate._make_global_context()
+            %! abjad.ScoreTemplate._make_global_context()
             <<                                                                 %! abjad.ScoreTemplate._make_global_context()
 
+                %! abjad.ScoreTemplate._make_global_context()
                 \context GlobalSkips = "Global_Skips"                          %! abjad.ScoreTemplate._make_global_context()
+                %! abjad.ScoreTemplate._make_global_context()
                 \aa_Global_Skips                                               %! ide.Path.extern()
 
+            %! abjad.ScoreTemplate._make_global_context()
             >>                                                                 %! abjad.ScoreTemplate._make_global_context()
 
+            %! harmony.ScoreTemplate.__call__()
             \context MusicContext = "Music_Context"                            %! harmony.ScoreTemplate.__call__()
+            %! harmony.ScoreTemplate.__call__()
             <<                                                                 %! harmony.ScoreTemplate.__call__()
 
+                %! harmony.ScoreTemplate.__call__()
                 \context WindSectionStaffGroup = "Wind_Section_Staff_Group"    %! harmony.ScoreTemplate.__call__()
+                %! harmony.ScoreTemplate.__call__()
                 <<                                                             %! harmony.ScoreTemplate.__call__()
 
                     \tag BassFlute                                             %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Bass_Flute_Music_Staff"                  %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Bass_Flute_Music_Staff                                 %! ide.Path.extern()
 
+                %! harmony.ScoreTemplate.__call__()
                 >>                                                             %! harmony.ScoreTemplate.__call__()
 
+                %! harmony.ScoreTemplate.__call__()
                 \context PercussionSectionStaffGroup = "Percussion_Section_Staff_Group" %! harmony.ScoreTemplate.__call__()
+                %! harmony.ScoreTemplate.__call__()
                 <<                                                             %! harmony.ScoreTemplate.__call__()
 
                     \tag PercussionI                                           %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Percussion_I_Music_Staff"                %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Percussion_I_Music_Staff                               %! ide.Path.extern()
 
                     \tag PercussionII                                          %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Percussion_II_Music_Staff"               %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Percussion_II_Music_Staff                              %! ide.Path.extern()
 
                     \tag Harp                                                  %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Harp_Music_Staff"                        %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Harp_Music_Staff                                       %! ide.Path.extern()
 
+                %! harmony.ScoreTemplate.__call__()
                 >>                                                             %! harmony.ScoreTemplate.__call__()
 
+                %! harmony.ScoreTemplate.__call__()
                 \context StringSectionStaffGroup = "String_Section_Staff_Group" %! harmony.ScoreTemplate.__call__()
+                %! harmony.ScoreTemplate.__call__()
                 <<                                                             %! harmony.ScoreTemplate.__call__()
 
                     \tag Viola                                                 %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Viola_Music_Staff"                       %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Viola_Music_Staff                                      %! ide.Path.extern()
 
                     \tag CelloI                                                %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Cello_I_Music_Staff"                     %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Cello_I_Music_Staff                                    %! ide.Path.extern()
 
                     \tag CelloII                                               %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Cello_II_Music_Staff"                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Cello_II_Music_Staff                                   %! ide.Path.extern()
 
                     \tag ContrabassI                                           %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Contrabass_I_Music_Staff"                %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Contrabass_I_Music_Staff                               %! ide.Path.extern()
 
                     \tag ContrabassII                                          %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Contrabass_II_Music_Staff"               %! harmony.ScoreTemplate.__call__()
+                    %! harmony.ScoreTemplate.__call__()
                     \aa_Contrabass_II_Music_Staff                              %! ide.Path.extern()
 
+                %! harmony.ScoreTemplate.__call__()
                 >>                                                             %! harmony.ScoreTemplate.__call__()
 
+            %! harmony.ScoreTemplate.__call__()
             >>                                                                 %! harmony.ScoreTemplate.__call__()
 
+        %! harmony.ScoreTemplate.__call__()
         >>                                                                     %! harmony.ScoreTemplate.__call__()
 
+    %! baca.SegmentMaker._make_lilypond_file()
     >>                                                                         %! baca.SegmentMaker._make_lilypond_file()
 
 }                                                                              %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_blocks()

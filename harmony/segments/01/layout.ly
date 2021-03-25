@@ -5,17 +5,27 @@
 %  ]
 
 
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 \context Score = "Score"                                                       %! baca.SingleStaffScoreTemplate.__call__()
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 \with                                                                          %! baca.SingleStaffScoreTemplate.__call__()
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 {                                                                              %! baca.SingleStaffScoreTemplate.__call__()
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
     currentBarNumber = 1                                                       %! baca.SingleStaffScoreTemplate.__call__()
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 }                                                                              %! baca.SingleStaffScoreTemplate.__call__()
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 <<                                                                             %! baca.SingleStaffScoreTemplate.__call__()
 
+    %! abjad.ScoreTemplate._make_global_context()
     \context GlobalContext = "Global_Context"                                  %! abjad.ScoreTemplate._make_global_context()
+    %! abjad.ScoreTemplate._make_global_context()
     <<                                                                         %! abjad.ScoreTemplate._make_global_context()
 
+        %! abjad.ScoreTemplate._make_global_context()
         \context PageLayout = "Page_Layout"                                    %! abjad.ScoreTemplate._make_global_context()
+        %! abjad.ScoreTemplate._make_global_context()
         {   %*% Page_Layout                                                    %! abjad.ScoreTemplate._make_global_context()
 
             % [Page_Layout measure 1]                                          %! baca.SegmentMaker._comment_measure_numbers()
@@ -58,8 +68,11 @@
             \once \override Score.BarLine.transparent = ##t                    %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
             \once \override Score.SpanBar.transparent = ##t                    %! baca.SegmentMaker._style_phantom_measures(3):PHANTOM
 
+        %! abjad.ScoreTemplate._make_global_context()
         }   %*% Page_Layout                                                    %! abjad.ScoreTemplate._make_global_context()
 
+    %! abjad.ScoreTemplate._make_global_context()
     >>                                                                         %! abjad.ScoreTemplate._make_global_context()
 
+                                                                               %! baca.SingleStaffScoreTemplate.__call__()
 >>                                                                             %! baca.SingleStaffScoreTemplate.__call__()
