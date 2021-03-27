@@ -7,11 +7,16 @@
 %! baca.SegmentMaker._make_lilypond_file()
 %! abjad.LilyPondFile._get_formatted_includes()
 \include "../../stylesheet.ily" %! baca.SegmentMaker._make_lilypond_file():abjad.LilyPondFile._get_formatted_includes()
+%! ide.Path.extern()
 \include "illustration.ily" %! ide.Path.extern()
 
+%! baca.SegmentMaker._make_lilypond_file()
 \header { composer = ##f poet = ##f title = ##f } %! baca.SegmentMaker._make_lilypond_file()
+%! baca.SegmentMaker._make_lilypond_file()
 \layout { indent = 0 } %! baca.SegmentMaker._make_lilypond_file()
+%! baca.SegmentMaker._make_lilypond_file()
 \paper { print-first-page-number = ##t } %! baca.SegmentMaker._make_lilypond_file()
+%! __make_segment_pdf__
 \paper { first-page-number = #38 } %! __make_segment_pdf__
 
 %! baca.SegmentMaker._make_lilypond_file()
@@ -45,6 +50,7 @@
                 %! abjad.ScoreTemplate._make_global_context()
                 \context GlobalSkips = "Global_Skips" %! abjad.ScoreTemplate._make_global_context()
                 %! abjad.ScoreTemplate._make_global_context()
+                %! ide.Path.extern()
                 \y_Global_Skips %! ide.Path.extern()
 
             %! abjad.ScoreTemplate._make_global_context()
@@ -65,6 +71,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Bass_Flute_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Bass_Flute_Music_Staff %! ide.Path.extern()
 
                 %! harmony.ScoreTemplate.__call__()
@@ -80,6 +87,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Percussion_I_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Percussion_I_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -87,6 +95,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Percussion_II_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Percussion_II_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -94,6 +103,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Harp_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Harp_Music_Staff %! ide.Path.extern()
 
                 %! harmony.ScoreTemplate.__call__()
@@ -109,6 +119,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Viola_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Viola_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -116,6 +127,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Cello_I_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Cello_I_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -123,6 +135,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Cello_II_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Cello_II_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -130,6 +143,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Contrabass_I_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Contrabass_I_Music_Staff %! ide.Path.extern()
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
@@ -137,6 +151,7 @@
                     %! harmony.ScoreTemplate.__call__()
                     \context Staff = "Contrabass_II_Music_Staff" %! harmony.ScoreTemplate.__call__()
                     %! harmony.ScoreTemplate.__call__()
+                    %! ide.Path.extern()
                     \y_Contrabass_II_Music_Staff %! ide.Path.extern()
 
                 %! harmony.ScoreTemplate.__call__()
