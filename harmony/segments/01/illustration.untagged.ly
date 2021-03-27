@@ -3,7 +3,6 @@
 \include "../../stylesheet.ily"
 \include "illustration.ily"
 
-
 \score
 {
 
