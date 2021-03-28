@@ -705,7 +705,6 @@ c_Global_Rests = { %! ide.Path.extern()
     R1 * 1/4 %! baca.SegmentMaker._make_global_rests(2):PHANTOM
 
 %! abjad.ScoreTemplate._make_global_context()
-%! NOT_TOPMOST
 %! ide.Path.extern()
 } %! ide.Path.extern()
 
