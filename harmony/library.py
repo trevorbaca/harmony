@@ -206,7 +206,7 @@ NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
 
 cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
 
-warble_pitches = baca.sequence("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split())
+warble_pitches = baca.Sequence("G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split())
 
 # shared counts
 
@@ -250,37 +250,37 @@ glissando_counts_curtailed = [2, 1, -1, 4, 2, 1, -1, -8, 2, 1, -1]
 duration_color = [21, -14, 18, "-"]
 
 # Db3:
-appoggiato_pitches_d_flat_3 = baca.sequence(
+appoggiato_pitches_d_flat_3 = baca.Sequence(
     "F3 F#3  D3 D#3 Dtqs3 E3 Eqs3 F3  D#3 F3 Fqs3 F#3 Ftqs3".split()
 )
 
 # C3
-appoggiato_pitches_c_3 = baca.sequence(
+appoggiato_pitches_c_3 = baca.Sequence(
     "E3 F3  C#3 D3 Dqs3 D#3 Dtqs3 E3  D3 E3 Eqs3 F3 Fqs3".split()
 )
 
 # B2
-appoggiato_pitches_b_2 = baca.sequence(
+appoggiato_pitches_b_2 = baca.Sequence(
     "D#3 E3  C3 C#3 Ctqs3 D3 Dqs3 D#3  C#3 D#3 Dtqs3 E3 Eqs3".split()
 )
 
 # Bb:
-appoggiato_pitches_b_flat = baca.sequence(
+appoggiato_pitches_b_flat = baca.Sequence(
     "D5 D#5  B4 C5 Cqs5 C#5 Ctqs5 D5  C5 D5 Dqs5 D#5 Dtqs5".split()
 )
 
 # A:
-appoggiato_pitches_a = baca.sequence(
+appoggiato_pitches_a = baca.Sequence(
     "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
 )
 
 # Ab/G#
-appoggiato_pitches_a_flat = baca.sequence(
+appoggiato_pitches_a_flat = baca.Sequence(
     "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
 )
 
 # G:
-appoggiato_pitches_g = baca.sequence(
+appoggiato_pitches_g = baca.Sequence(
     "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 )
 
@@ -318,7 +318,7 @@ def appoggiato(
     if fuse is True:
         preprocessor = baca.sequence().fuse()
     elif divisions is not None:
-        divisions_ = baca.sequence([(_, 16) for _ in divisions])
+        divisions_ = baca.Sequence([(_, 16) for _ in divisions])
         preprocessor = baca.sequence().fuse()
         preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
     if incise is True:
@@ -650,8 +650,8 @@ def tessera_1(
     """
     Makes tessera 1.
     """
-    counts = baca.sequence([9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15])
-    permutation = baca.sequence([2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7])
+    counts = baca.Sequence([9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15])
+    permutation = baca.Sequence([2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7])
     assert sum(counts) == 96
     for i in range(part):
         counts = counts.permute(permutation)
@@ -659,7 +659,7 @@ def tessera_1(
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        counts = baca.sequence(new_counts)
+        counts = baca.Sequence(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
@@ -679,8 +679,8 @@ def tessera_2(
     """
     Makes tessera 2.
     """
-    counts = baca.sequence([3, 4, 14, 2, 6, 7, 8])
-    permutation = baca.sequence([2, 3, 4, 0, 5, 6, 1])
+    counts = baca.Sequence([3, 4, 14, 2, 6, 7, 8])
+    permutation = baca.Sequence([2, 3, 4, 0, 5, 6, 1])
     assert sum(counts) == 44
     for i in range(part):
         counts = counts.permute(permutation)
@@ -688,7 +688,7 @@ def tessera_2(
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        counts = baca.sequence(new_counts)
+        counts = baca.Sequence(new_counts)
     commands: typing.List[rmakers.Command] = []
     if rest_plts is not None:
         selector = baca.plts().get(rest_plts)
@@ -710,8 +710,8 @@ def tessera_3(
     """
     Makes tessera 3.
     """
-    counts = baca.sequence([3, 7, 8, 13, 5, 6, 12, 9, 10, 11])
-    permutation = baca.sequence([8, 9, 2, 3, 4, 0, 5, 6, 7, 1])
+    counts = baca.Sequence([3, 7, 8, 13, 5, 6, 12, 9, 10, 11])
+    permutation = baca.Sequence([8, 9, 2, 3, 4, 0, 5, 6, 7, 1])
     assert sum(counts) == 84
     for i in range(part):
         counts = counts.permute(permutation)
@@ -719,7 +719,7 @@ def tessera_3(
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        counts = baca.sequence(new_counts)
+        counts = baca.Sequence(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
@@ -735,8 +735,8 @@ def tessera_4(
     """
     Makes tessera 4.
     """
-    counts = baca.sequence([14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8])
-    permutation = baca.sequence([11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7])
+    counts = baca.Sequence([14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8])
+    permutation = baca.Sequence([11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7])
     assert sum(counts) == 144
     for i in range(part):
         counts = counts.permute(permutation)
@@ -744,7 +744,7 @@ def tessera_4(
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        counts = baca.sequence(new_counts)
+        counts = baca.Sequence(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
@@ -819,7 +819,7 @@ def warble(
     """
     preprocessor = None
     if sixteenths is not None:
-        divisions_ = baca.sequence([(_, 16) for _ in sixteenths])
+        divisions_ = baca.Sequence([(_, 16) for _ in sixteenths])
         preprocessor = baca.sequence().fuse()
         preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
     rests: typing.List[rmakers.Command] = []
