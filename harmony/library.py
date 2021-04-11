@@ -316,11 +316,14 @@ def appoggiato(
     """
     preprocessor = None
     if fuse is True:
-        preprocessor = baca.sequence().fuse()
+        def preprocessor(divisions):
+            return baca.Sequence(divisions).fuse()
     elif divisions is not None:
         divisions_ = baca.Sequence([(_, 16) for _ in divisions])
-        preprocessor = baca.sequence().fuse()
-        preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
+        def preprocessor(divisions):
+            divisions = baca.Sequence(divisions).fuse()
+            divisions = divisions.split_divisions(divisions_, cyclic=True)
+            return divisions
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
@@ -404,8 +407,12 @@ def phjc(
     """
     Makes purpleheart jerky contintuity.
     """
-    preprocessor = baca.sequence().fuse().quarters().partition(divisions)
-    preprocessor = preprocessor.map(baca.sequence().flatten().fuse())
+
+    def preprocessor(argument):
+        argument = baca.Sequence(argument).fuse().quarters().partition(divisions)
+        argument = argument.map(lambda _: baca.Sequence(_).flatten().fuse())
+        return argument
+
     commands: typing.List[rmakers.Command] = []
     if rest is not None:
         selector = baca.tuplets().get(rest)
