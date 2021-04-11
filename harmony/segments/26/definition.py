@@ -263,7 +263,9 @@ maker(
     ("perc1", 9),
     harmony.sixteenths(
         [1, -11, 4, -12, 4],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, 8],
         denominator=None,
     ),

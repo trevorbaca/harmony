@@ -5772,7 +5772,7 @@ x_Percussion_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([16, 16, 16, -4, 2], preprocessor=baca.Expression( callbacks=[ baca.Expression( evaluation_template='baca.classes.Sequence', is_initializer=True, module_names=['baca'], string_template='{}', ), baca.Expression( argument_values={ 'counts': None, 'cyclic': None, 'indices': None, }, evaluation_template='{}.fuse()', qualified_method_name='baca.classes.Sequence.fuse', string_template='fuse({})', ), baca.Expression( argument_values={ '_map_index': None, 'compound': None, 'cyclic': None, 'durations': [ (4, 4), (4, 4), (4, 4), (1, 4), ], 'remainder': None, 'remainder_fuse_threshold': None, 'rotate_indexed': None, }, evaluation_template='{}.split_divisions([(4, 4), (4, 4), (4, 4), (1, 4)], _map_index=None)', qualified_method_name='baca.classes.Sequence.split_divisions', string_template='split_divisions({}, [(4, 4), (4, 4), (4, 4), (1, 4)], _map_index=None)', ), ], proxy_class=baca.Sequence, ), denominator=None, extra_counts=[0, 0, 0, 2], talea_denominator=16)"
+    %@% - \baca-text-spanner-left-text "sixteenths([16, 16, 16, -4, 2], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[0, 0, 0, 2], talea_denominator=16)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -8645,7 +8645,7 @@ x_Cello_I_Music_Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=baca.Expression( callbacks=[ baca.Expression( evaluation_template='baca.classes.Sequence', is_initializer=True, module_names=['baca'], string_template='{}', ), baca.Expression( argument_values={ 'counts': None, 'cyclic': None, 'indices': None, }, evaluation_template='{}.fuse()', qualified_method_name='baca.classes.Sequence.fuse', string_template='fuse({})', ), baca.Expression( argument_values={ '_map_index': None, 'compound': None, 'cyclic': None, 'durations': [ (2, 4), (8, 4), (2, 4), ], 'remainder': None, 'remainder_fuse_threshold': None, 'rotate_indexed': None, }, evaluation_template='{}.split_divisions([(2, 4), (8, 4), (2, 4)], _map_index=None)', qualified_method_name='baca.classes.Sequence.split_divisions', string_template='split_divisions({}, [(2, 4), (8, 4), (2, 4)], _map_index=None)', ), ], proxy_class=baca.Sequence, ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
+        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -11727,7 +11727,7 @@ x_Contrabass_I_Music_Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=baca.Expression( callbacks=[ baca.Expression( evaluation_template='baca.classes.Sequence', is_initializer=True, module_names=['baca'], string_template='{}', ), baca.Expression( argument_values={ 'counts': None, 'cyclic': None, 'indices': None, }, evaluation_template='{}.fuse()', qualified_method_name='baca.classes.Sequence.fuse', string_template='fuse({})', ), baca.Expression( argument_values={ '_map_index': None, 'compound': None, 'cyclic': None, 'durations': [ (2, 4), (8, 4), (2, 4), ], 'remainder': None, 'remainder_fuse_threshold': None, 'rotate_indexed': None, }, evaluation_template='{}.split_divisions([(2, 4), (8, 4), (2, 4)], _map_index=None)', qualified_method_name='baca.classes.Sequence.split_divisions', string_template='split_divisions({}, [(2, 4), (8, 4), (2, 4)], _map_index=None)', ), ], proxy_class=baca.Sequence, ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
+        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)

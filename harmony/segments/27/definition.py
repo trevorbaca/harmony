@@ -309,7 +309,9 @@ maker(
     ("perc1", 6),
     harmony.sixteenths(
         [-12, -2, 1, "-"],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
     ),
@@ -419,7 +421,9 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [-12, -2, 1, "-"],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
     ),
@@ -532,7 +536,9 @@ maker(
     ("hp", 6),
     harmony.sixteenths(
         [-12, -2, 1, "-"],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
     ),

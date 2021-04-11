@@ -520,7 +520,9 @@ maker(
     baca.staff_lines(1),
     harmony.sixteenths(
         [1, -3, 1, -2, 3, -1, 3, -1],
-        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (2, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(1, 4), (2, 4)]),
         extra_counts=[1, 2],
         denominator=None,
     ),
