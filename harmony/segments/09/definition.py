@@ -282,7 +282,9 @@ maker(
     (["va", "vc1", "vc2", "cb1"], 2),
     harmony.sixteenths(
         [-12, 12, -4],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 4), (3, 4)]),
         extra_counts=[0, 4],
         denominator=None,
     ),

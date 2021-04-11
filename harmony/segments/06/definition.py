@@ -127,7 +127,9 @@ maker(
     ("bfl", 3),
     harmony.sixteenths(
         [2, 2, -6, 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(1, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
         written_quarters=True,
@@ -187,7 +189,9 @@ maker(
     ("bfl", 5),
     harmony.sixteenths(
         [2, 2, -6, 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(1, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
         written_quarters=True,
@@ -252,7 +256,9 @@ maker(
     ("bfl", 7),
     harmony.sixteenths(
         [-6, -4, 1, -5, 1, -1],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 8), (5, 8)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 8), (5, 8)]),
         extra_counts=[0, 2],
         denominator=None,
     ),
@@ -641,11 +647,9 @@ maker(
     baca.staff_lines(5),
     harmony.sixteenths(
         [9, "-", 2, 2],
-        preprocessor=baca.sequence()
+        preprocessor=lambda _: baca.Sequence(_)
         .fuse()
-        .split_divisions(
-            [(11, 16), (5, 16)],
-        ),
+        .split_divisions([(11, 16), (5, 16)]),
         extra_counts=[0, 1],
         written_quarters=([-2, -1],),
         invisible=([-1],),
@@ -745,7 +749,9 @@ maker(
     baca.clef("bass"),
     harmony.sixteenths(
         ["-", 9, -2],
-        preprocessor=baca.sequence().fuse().split_divisions([(3, 8), (5, 8)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(3, 8), (5, 8)]),
         extra_counts=[0, 2],
         denominator=None,
     ),
@@ -857,11 +863,9 @@ maker(
     ("hp", 15),
     harmony.sixteenths(
         ["-", 2, 2],
-        preprocessor=baca.sequence()
+        preprocessor=lambda _: baca.Sequence(_)
         .fuse()
-        .split_divisions(
-            [(11, 16), (5, 16)],
-        ),
+        .split_divisions([(11, 16), (5, 16)]),
         extra_counts=[0, 1],
         written_quarters=([-2, -1],),
         invisible=([-1],),

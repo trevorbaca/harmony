@@ -628,7 +628,9 @@ maker(
     ("va", 4),
     harmony.sixteenths(
         ["-", 4, 4],
-        preprocessor=baca.sequence().fuse().split_divisions([(2, 4), (2, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(2, 4), (2, 4)]),
         extra_counts=[0, 4],
         denominator=None,
     ),

@@ -467,7 +467,6 @@ def rimbalzandi(
     """
     Makes rimbalzandi rhythm.
     """
-    preprocessor = baca.sequence().fuse([2], cyclic=True)
     commands: typing.List[rmakers.Command] = []
     if rest_except is not None:
         selector = baca.leaves().exclude(rest_except)
@@ -482,7 +481,7 @@ def rimbalzandi(
         rmakers.force_fraction(),
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
-        preprocessor=preprocessor,
+        preprocessor=lambda _: baca.Sequence(_).fuse([2], cyclic=True),
         tag=_site(inspect.currentframe()),
     )
 
@@ -519,9 +518,15 @@ def sixteenths(
     """
     talea_denominator = talea_denominator or 16
     if fuse is True:
-        preprocessor_ = baca.sequence()
+
+        def preprocessor_(argument):
+            return baca.Sequence(argument)
+
     elif preprocessor is None:
-        preprocessor_ = baca.sequence().fuse().quarters()
+
+        def preprocessor_(argument):
+            return baca.Sequence(argument).fuse().quarters()
+
     else:
         preprocessor_ = preprocessor
     beam_commands: typing.List[rmakers.Command] = []
@@ -831,8 +836,13 @@ def warble(
     preprocessor = None
     if sixteenths is not None:
         divisions_ = baca.Sequence([(_, 16) for _ in sixteenths])
-        preprocessor = baca.sequence().fuse()
-        preprocessor = preprocessor.split_divisions(divisions_, cyclic=True)
+
+        def preprocessor(argument):
+            argument = baca.Sequence(argument)
+            argument = argument.fuse()
+            argument = argument.split_divisions(divisions_, cyclic=True)
+            return argument
+
     rests: typing.List[rmakers.Command] = []
     if rest_tuplets is not None:
         selector = baca.tuplets().get(rest_tuplets)

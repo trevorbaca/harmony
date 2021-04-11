@@ -836,7 +836,9 @@ maker(
     ("vc2", (1, 2)),
     harmony.sixteenths(
         [20, "-"],
-        preprocessor=baca.sequence().fuse().split_divisions([(15, 8), (3, 8)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(15, 8), (3, 8)]),
         denominator=None,
         do_not_rewrite_meter=True,
         extra_counts=[-6],
@@ -1118,7 +1120,9 @@ maker(
     ("cb2", (1, 2)),
     harmony.sixteenths(
         [20, "-"],
-        preprocessor=baca.sequence().fuse().split_divisions([(15, 8), (3, 8)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(15, 8), (3, 8)]),
         denominator=None,
         do_not_rewrite_meter=True,
         extra_counts=[-6],

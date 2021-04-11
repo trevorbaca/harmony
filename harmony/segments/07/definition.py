@@ -164,7 +164,9 @@ maker(
     ("bfl", 7),
     harmony.sixteenths(
         [-4, 8, "-", 2, 2],
-        preprocessor=baca.sequence().fuse().split_divisions([(7, 8), (5, 8)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(7, 8), (5, 8)]),
         extra_counts=[0, -2],
         denominator=None,
         written_quarters=([-2, -1],),
@@ -547,11 +549,9 @@ maker(
     ("hp", 7),
     harmony.sixteenths(
         [-4, -4, 8, -2, -4, 2, 2],
-        preprocessor=baca.sequence()
+        preprocessor=lambda _: baca.Sequence(_)
         .fuse()
-        .split_divisions(
-            [(1, 4), (2, 4), (1, 8), (5, 8)],
-        ),
+        .split_divisions([(1, 4), (2, 4), (1, 8), (5, 8)]),
         extra_counts=[0, 4, 0, -2],
         denominator=None,
         written_quarters=([-2, -1],),
@@ -695,7 +695,9 @@ maker(
     ("va", 5),
     harmony.sixteenths(
         [6, 4, 4],
-        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(1, 4), (3, 4)]),
         extra_counts=[0, -2],
         denominator=None,
         tie=([0],),
@@ -873,7 +875,9 @@ maker(
     ("vc1", 8),
     harmony.sixteenths(
         [8, 4, 4, 4, 4],
-        preprocessor=baca.sequence().fuse().split_divisions([(1, 4), (3, 4)]),
+        preprocessor=lambda _: baca.Sequence(_)
+        .fuse()
+        .split_divisions([(1, 4), (3, 4)]),
         extra_counts=[0, 8],
         denominator=None,
     ),
