@@ -676,7 +676,7 @@ maker(
 
 # vc1
 
-sixteenths = baca.sequence([6, -2, 4, -2, 4, -2, 2, -2])
+sixteenths = baca.Sequence([6, -2, 4, -2, 4, -2, 2, -2])
 
 maker(
     ("vc1", 3),
