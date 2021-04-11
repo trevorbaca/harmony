@@ -316,14 +316,18 @@ def appoggiato(
     """
     preprocessor = None
     if fuse is True:
+
         def preprocessor(divisions):
             return baca.Sequence(divisions).fuse()
+
     elif divisions is not None:
         divisions_ = baca.Sequence([(_, 16) for _ in divisions])
+
         def preprocessor(divisions):
             divisions = baca.Sequence(divisions).fuse()
             divisions = divisions.split_divisions(divisions_, cyclic=True)
             return divisions
+
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
