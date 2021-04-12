@@ -2413,3 +2413,13 @@
  Segment-maker runtime: 18 seconds
  Abjad format time: 0 seconds
  LilyPond runtime: 2 seconds
+
+2021-04-11 19:03:20
+ Segment-maker runtime: 23 seconds
+ Abjad format time: 1 second
+ LilyPond runtime: 3 seconds
+
+2021-04-11 19:56:33
+ Segment-maker runtime: 18 seconds
+ Abjad format time: 0 seconds
+ LilyPond runtime: 2 seconds
