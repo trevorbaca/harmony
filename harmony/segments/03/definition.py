@@ -330,7 +330,7 @@ maker(
     ),
     baca.pitch("G1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(6),
@@ -370,7 +370,7 @@ maker(
     ),
     baca.pitch("G1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "f",

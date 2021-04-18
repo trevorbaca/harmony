@@ -427,7 +427,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -526,7 +526,7 @@ maker(
     ),
     baca.pitch("F1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(7),
@@ -749,7 +749,7 @@ maker(
     baca.pitch("D3"),
     baca.hairpin(
         "mp -- niente",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,

@@ -294,7 +294,7 @@ maker(
     ),
     baca.pitch("G1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "mf-ancora",

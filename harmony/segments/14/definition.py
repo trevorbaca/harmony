@@ -520,7 +520,7 @@ maker(
     ),
     baca.pitch("E1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(7),
@@ -578,7 +578,7 @@ maker(
     ),
     baca.pitch("E1"),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
 )
@@ -751,7 +751,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -888,7 +888,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -1008,7 +1008,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -1123,7 +1123,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",

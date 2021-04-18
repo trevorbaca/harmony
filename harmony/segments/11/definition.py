@@ -184,13 +184,19 @@ maker(
     ),
 )
 
+
+def selector(argument):
+    selection = baca.Selection(argument).cmgroups([1])
+    return baca.Selection(baca.Selection(_).pleaf(-1) for _ in selection)
+
+
 maker(
     ("bfl", 8),
     harmony.sixteenths(
         [6, 6],
     ),
     baca.breathe(
-        baca.cmgroups([1]).map(baca.pleaf(-1)),
+        selector,
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -431,7 +437,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -448,7 +454,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "mp-ancora",
@@ -509,7 +515,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -553,7 +559,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
 )
@@ -568,7 +574,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "f-ancora",
@@ -673,7 +679,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.ptails().map(baca.rleak()[-1]),
+        baca.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4),

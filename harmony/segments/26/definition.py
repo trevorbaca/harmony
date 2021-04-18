@@ -137,7 +137,7 @@ maker(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -147,7 +147,7 @@ maker(
         "A -> T -> A",
         abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
 )
 
@@ -383,7 +383,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -841,11 +841,11 @@ maker(
     baca.clef("bass"),
     baca.hairpin(
         "o<| ff",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.stop_on_string(
         baca.leaf(0),
-        map=baca.runs().map(baca.leaves().rleak()[-1]),
+        map=baca.leaf_in_each_rleak_run(-1),
     ),
     baca.scp_spanner(
         "P1 =|",

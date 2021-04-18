@@ -82,7 +82,7 @@ maker(
     baca.hairpin(
         "niente o< mf >o",
         pieces=baca.lparts([1, 2 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -92,7 +92,7 @@ maker(
         "A -> T -> A",
         abjad.tweak(9).staff_padding,
         pieces=baca.lparts([1, 2 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
 )
 
@@ -106,7 +106,7 @@ maker(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -116,7 +116,7 @@ maker(
         "A -> T -> A",
         abjad.tweak(10).staff_padding,
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
 )
 
@@ -191,7 +191,7 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.hairpin(
         "o<| mf",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -334,7 +334,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         alteration="M2",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
 )
 
@@ -404,7 +404,7 @@ maker(
             abjad.tweak(3).staff_padding,
             alteration="M2",
         ),
-        map=baca.runs()[1:-1].map(baca.leaves().rleak()),
+        map=baca.rleak_runs(1, -1),
     ),
     baca.scp_spanner(
         "P =|",
@@ -459,7 +459,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         alteration="M2",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     # NOTE: current clef / after-grace contention:
     baca.clef(
@@ -540,7 +540,7 @@ maker(
             abjad.tweak(3).staff_padding,
             alteration="m2",
         ),
-        map=baca.runs()[1:-1].map(baca.leaves().rleak()),
+        map=baca.rleak_runs(1, -1),
     ),
     baca.scp_spanner(
         "P =|",
@@ -601,7 +601,7 @@ maker(
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         alteration="m2",
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     # NOTE: current clef / after-grace contention:
     baca.clef(
@@ -654,7 +654,7 @@ maker(
     baca.hairpin(
         "niente o<| mp |>o",
         pieces=baca.lparts([1, 1 + 1]),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
 )
 
