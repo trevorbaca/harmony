@@ -1166,7 +1166,7 @@ maker(
         [-4, 8, "-"],
     ),
     baca.stop_on_string(
-        baca.runs().map(baca.leaves().rleak()[-1]),
+        baca.leaf_in_each_rleak_run(-1),
     ),
     baca.hairpin(
         "o<| ff",

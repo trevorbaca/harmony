@@ -702,7 +702,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.runs().map(baca.leaves().rleak()),
+        map=baca.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",

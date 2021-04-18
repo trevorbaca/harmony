@@ -226,13 +226,19 @@ maker(
     ),
 )
 
+
+def selector(argument):
+    selection = baca.Selection(argument).cmgroups([1])
+    return baca.Selection(baca.Selection(_).pleaf(-1) for _ in selection)
+
+
 maker(
     ("bfl", (13, 14)),
     harmony.sixteenths(
         [6, 6, 6, 6, 6, 10],
     ),
     baca.breathe(
-        baca.cmgroups([1]).map(baca.pleaf(-1)),
+        selector,
     ),
     baca.text_spanner(
         "T -> A =|",
