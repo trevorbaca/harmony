@@ -104,7 +104,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(

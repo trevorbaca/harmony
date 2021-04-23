@@ -869,7 +869,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.lparts([2, 3]),
+        pieces=baca.selectors.lparts([2, 3]),
         selector=baca.leaves(),
     ),
 )

@@ -111,7 +111,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -146,7 +146,7 @@ maker(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves(),
     ),
     baca.dynamic(
@@ -195,7 +195,7 @@ maker(
     baca.hairpin(
         "o< pp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -580,7 +580,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -616,7 +616,7 @@ maker(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves(),
     ),
     baca.dynamic(
@@ -790,7 +790,7 @@ maker(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves(),
     ),
     baca.dynamic(

@@ -640,7 +640,7 @@ maker(
     ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.tleaves(),
     ),
     baca.dynamic(
@@ -837,7 +837,7 @@ maker(
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 2, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     # TODO: text spanner currently must precede pitched trill spanner; fix
@@ -927,7 +927,7 @@ maker(
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
-        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.dynamic_text_x_offset(
@@ -953,7 +953,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.lparts([2, 1 + 1]),
+        pieces=baca.selectors.lparts([2, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.new(

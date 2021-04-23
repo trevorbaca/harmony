@@ -374,7 +374,7 @@ maker(
     baca.tuplet_bracket_down(),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.lparts([4, 5]),
+        pieces=baca.selectors.lparts([4, 5]),
         selector=baca.leaves().rleak().rleak(),
     ),
     baca.scp_spanner(
@@ -505,7 +505,7 @@ maker(
     ),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.lparts([4, 7]),
+        pieces=baca.selectors.lparts([4, 7]),
         selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(4),

@@ -140,7 +140,7 @@ maker(
     ),
     baca.hairpin(
         "p < mp >",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dynamic(
         "p",
@@ -175,7 +175,7 @@ maker(
     ),
     baca.hairpin(
         "p < mp > p p < mp > p",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.tleaves(),
     ),
     baca.markup(
@@ -219,7 +219,7 @@ maker(
     ),
     baca.hairpin(
         "p < mp >",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dynamic(
         "p",
@@ -343,7 +343,7 @@ maker(
         "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
         " -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -410,7 +410,7 @@ maker(
     baca.hairpin(
         "o< mp >o",
         bookend=False,
-        pieces=baca.cmgroups([2, 3]),
+        pieces=baca.selectors.cmgroups([2, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -426,7 +426,7 @@ maker(
     harmony.tessera_4(3),
     baca.hairpin(
         "pp -- ! < mp >o niente",
-        pieces=baca.lparts([2, 3, 1 + 1]),
+        pieces=baca.selectors.lparts([2, 3, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.untie(
@@ -461,7 +461,7 @@ maker(
         " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
         " o< p >o ! o< pp >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dynamic(
         "niente",
@@ -493,7 +493,7 @@ maker(
     baca.hairpin(
         "o< mp >o",
         bookend=False,
-        pieces=baca.cmgroups([2, 3]),
+        pieces=baca.selectors.cmgroups([2, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -509,7 +509,7 @@ maker(
     harmony.tessera_4(2),
     baca.hairpin(
         "pp -- ! < mp -- ! >o niente",
-        pieces=baca.lparts([1, 2, 3, 2 + 1]),
+        pieces=baca.selectors.lparts([1, 2, 3, 2 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.untie(
@@ -549,7 +549,7 @@ maker(
         " o< mp >o ! o< p >o ! o< mp >o ! o< p >o !"
         " o< pp >o ! o< p >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dynamic(
         "niente",
@@ -584,7 +584,7 @@ maker(
     baca.hairpin(
         "niente o< mp >o niente",
         map=baca.rleak_runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
@@ -603,7 +603,7 @@ maker(
     harmony.tessera_4(1),
     baca.hairpin(
         "pp -- ! < mp >o niente",
-        pieces=baca.lparts([2, 3, 2 + 1]),
+        pieces=baca.selectors.lparts([2, 3, 2 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.untie(
@@ -642,7 +642,7 @@ maker(
         " o< mp >o ! o< mp >o ! o< p >o ! o< pp >o !"
         " o< p >o ! o< p >o ! o< pp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dynamic(
         "niente",
@@ -687,7 +687,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.lparts([2, 3]),
+        pieces=baca.selectors.lparts([2, 3]),
         selector=baca.leaves(),
     ),
     baca.markup(
@@ -704,7 +704,7 @@ maker(
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >o niente",
-        pieces=baca.lparts([2, 1, 1 + 1]),
+        pieces=baca.selectors.lparts([2, 1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.untie(
@@ -747,7 +747,7 @@ maker(
         "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
         abjad.tweak(3).staff_padding,
         bookend=-1,
-        pieces=baca.lparts([3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
+        pieces=baca.selectors.lparts([3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),

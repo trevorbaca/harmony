@@ -186,19 +186,19 @@ maker(
     baca.hairpin(
         "p < mf > p",
         measures=1,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=3,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < ff > p",
         measures=5,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -241,19 +241,19 @@ maker(
     baca.hairpin(
         "(p) < mf > p",
         measures=2,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -310,19 +310,19 @@ maker(
     baca.hairpin(
         "p < mf > p",
         measures=2,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -396,13 +396,13 @@ maker(
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -461,13 +461,13 @@ maker(
     baca.hairpin(
         "p < f > p",
         measures=4,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -536,7 +536,7 @@ maker(
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
