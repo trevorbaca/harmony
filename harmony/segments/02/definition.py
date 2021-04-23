@@ -755,7 +755,7 @@ maker(
     ),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.mgroups([1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
         selector=baca.leaves().rleak().rleak(),
     ),
     baca.dls_staff_padding(6),

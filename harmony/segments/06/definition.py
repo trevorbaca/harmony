@@ -1564,7 +1564,7 @@ maker(
     ),
     baca.hairpin(
         "o< mf > p < f > p < ff >o niente",
-        pieces=baca.mgroups([1, 1, 1, 1, 1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([1, 1, 1, 1, 1, 2]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -1618,7 +1618,7 @@ maker(
     baca.hairpin(
         "o< mp > p < f",
         bookend=False,
-        pieces=baca.mgroups([2, 1, 1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 2]),
         selector=baca.tleaves().rleak(),
     ),
     baca.scp_spanner(
@@ -1667,7 +1667,7 @@ maker(
     baca.flat_glissando("E1"),
     baca.hairpin(
         "o< f > p < ff >o niente",
-        pieces=baca.mgroups([2, 1, 1, 3]),
+        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
@@ -1675,7 +1675,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.mgroups([2, 1, 1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 2]),
         selector=baca.leaves(),
     ),
 )
