@@ -718,7 +718,7 @@ maker(
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
-        pieces=baca.lparts([1, 1, 2, 1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.dynamic_text_x_offset(

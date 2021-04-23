@@ -84,7 +84,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -109,7 +109,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -173,7 +173,7 @@ maker(
     baca.hairpin(
         "o< pp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -480,7 +480,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         map=baca.runs(),
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(

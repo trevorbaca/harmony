@@ -148,13 +148,13 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
     baca.hairpin(
         "o<| f |>o niente",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[-2:].rleak(),
     ),
 )
@@ -172,7 +172,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
 )
@@ -210,13 +210,13 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
     baca.hairpin(
         "o<| f |>o niente",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[-2:].rleak(),
     ),
 )
@@ -234,7 +234,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
 )
@@ -630,8 +630,8 @@ maker(
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
+        map=baca.selectors.clparts([3]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.markup(
         r"\baca-whisk-markup",
@@ -680,7 +680,7 @@ maker(
         baca.hairpin(
             'o< "f" >o',
             forbid_al_niente_to_bar_line=True,
-            pieces=baca.clparts([1]),
+            pieces=baca.selectors.clparts([1]),
             selector=baca.pleaves()[-2:],
         ),
         baca.markup(
@@ -702,8 +702,8 @@ maker(
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
+        map=baca.selectors.clparts([3]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.dls_staff_padding(
         6,
@@ -884,7 +884,7 @@ maker(
     #    baca.hairpin(
     #        'o< "f" >o niente',
     #        forbid_al_niente_to_bar_line=True,
-    #        pieces=baca.lparts([1, 1 + 1]),
+    #        pieces=baca.selectors.lparts([1, 1 + 1]),
     #        right_broken=True,
     #        selector=baca.pleaves()[-2:].rleak(),
     #    ),
@@ -1454,7 +1454,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.lparts([2, 4]),
+        pieces=baca.selectors.lparts([2, 4]),
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
@@ -1508,13 +1508,13 @@ maker(
     ),
     baca.hairpin(
         "o< mf > p < f",
-        pieces=baca.lparts([6, 5, 3, 2]),
+        pieces=baca.selectors.lparts([6, 5, 3, 2]),
         selector=baca.runs()[-1:].rleak(),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1 -> P1",
         abjad.tweak(3).staff_padding,
-        pieces=baca.lparts([6, 5, 3, 2]),
+        pieces=baca.selectors.lparts([6, 5, 3, 2]),
         selector=baca.runs()[-1:].rleak(),
     ),
 )
@@ -1571,7 +1571,7 @@ maker(
     baca.scp_spanner(
         "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
         abjad.tweak(3).staff_padding,
-        pieces=baca.cmgroups([1]),
+        pieces=baca.selectors.cmgroups([1]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),
@@ -1589,7 +1589,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.lparts([3, 3]),
+        pieces=baca.selectors.lparts([3, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
@@ -1624,7 +1624,7 @@ maker(
     baca.scp_spanner(
         "T1 -> P1 -> O -> T1 -> P2 -> O",
         abjad.tweak(3).staff_padding,
-        pieces=baca.lparts([3, 4, 4, 2, 3, 5]),
+        pieces=baca.selectors.lparts([3, 4, 4, 2, 3, 5]),
         selector=baca.tleaves().rleak(),
     ),
 )

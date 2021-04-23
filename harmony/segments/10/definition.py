@@ -235,19 +235,19 @@ maker(
         "o< mf >o",
         forbid_al_niente_to_bar_line=True,
         measures=11,
-        pieces=baca.lparts([1, 1]),
+        pieces=baca.selectors.lparts([1, 1]),
     ),
     baca.hairpin(
         "o< f >o",
         forbid_al_niente_to_bar_line=True,
         measures=12,
-        pieces=baca.lparts([1, 1]),
+        pieces=baca.selectors.lparts([1, 1]),
     ),
     baca.hairpin(
         "o< mf >o",
         forbid_al_niente_to_bar_line=True,
         measures=13,
-        pieces=baca.lparts([1, 1]),
+        pieces=baca.selectors.lparts([1, 1]),
     ),
 )
 
@@ -267,7 +267,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         measures=14,
-        pieces=baca.lparts([1, 3]),
+        pieces=baca.selectors.lparts([1, 3]),
     ),
 )
 
@@ -328,7 +328,7 @@ maker(
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.dynamic_text_x_offset(
@@ -498,14 +498,14 @@ maker(
         " -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
         measures=(4, 7),
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
         "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
         measures=(10, 11),
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
@@ -1153,7 +1153,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
 )

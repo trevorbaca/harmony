@@ -113,8 +113,8 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
+        map=baca.selectors.clparts([3]),
+        pieces=baca.selectors.clparts([1]),
     ),
 )
 
@@ -131,7 +131,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
     baca.dynamic_text_x_offset(
@@ -140,7 +140,7 @@ maker(
     ),
     baca.hairpin(
         "o<| mf |>o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
@@ -187,7 +187,7 @@ maker(
     baca.hairpin(
         "o< f >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[-2:],
     ),
 )
@@ -218,7 +218,7 @@ maker(
     ),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.clparts([1]),
+        pieces=baca.selectors.clparts([1]),
         selector=baca.leaves()[:3],
     ),
     baca.dynamic_text_x_offset(
@@ -460,8 +460,8 @@ maker(
     #    baca.hairpin(
     #        'o< "f" >o niente',
     #        left_broken=True,
-    #        map=baca.clparts([3]),
-    #        pieces=baca.clparts([1]),
+    #        map=baca.selectors.clparts([3]),
+    #        pieces=baca.selectors.clparts([1]),
     #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6),
@@ -489,7 +489,7 @@ maker(
     ),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(4),
@@ -582,7 +582,7 @@ maker(
     #    baca.hairpin(
     #        'o< "f" >o',
     #        forbid_al_niente_to_bar_line=True,
-    #        pieces=baca.lparts([1, 1]),
+    #        pieces=baca.selectors.lparts([1, 1]),
     #        selector=baca.leaves()[-2:],
     #    ),
     baca.new(
@@ -603,7 +603,7 @@ maker(
     harmony.whisk_staff_position(),
     #    baca.hairpin(
     #        'o< "f" >o niente',
-    #        pieces=baca.lparts([1, 2]),
+    #        pieces=baca.selectors.lparts([1, 2]),
     #        selector=baca.leaves()[:3],
     #    ),
     baca.dynamic('"f"'),
@@ -1152,7 +1152,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.lparts([2, 3]),
+        pieces=baca.selectors.lparts([2, 3]),
         selector=baca.leaves(),
     ),
 )

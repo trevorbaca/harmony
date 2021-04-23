@@ -114,7 +114,7 @@ maker(
     baca.hairpin(
         "pp < p >o",
         bookend=False,
-        pieces=baca.lparts([1, 3]),
+        pieces=baca.selectors.lparts([1, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -123,7 +123,7 @@ maker(
     baca.text_spanner(
         "(T) -> A -> (T)",
         abjad.tweak(8).staff_padding,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
 )
 
@@ -136,7 +136,7 @@ maker(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         map=baca.rleak_runs(),
     ),
     baca.trill_spanner(
@@ -146,7 +146,7 @@ maker(
     baca.text_spanner(
         "A -> T -> A",
         abjad.tweak(10).staff_padding,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         map=baca.rleak_runs(),
     ),
 )
@@ -645,7 +645,7 @@ maker(
         "pp -- ! < mp -- ! >",
         abjad.tweak(True).to_barline,
         bookend=False,
-        pieces=baca.lparts([1, 2, 3, 2]),
+        pieces=baca.selectors.lparts([1, 2, 3, 2]),
     ),
     baca.untie(
         baca.leaves(),
@@ -695,7 +695,7 @@ maker(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
         bookend=False,
-        pieces=baca.lparts([2, 3, 2]),
+        pieces=baca.selectors.lparts([2, 3, 2]),
     ),
     baca.untie(
         baca.leaves(),
@@ -741,7 +741,7 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
-        pieces=baca.lparts([2, 1, 1]),
+        pieces=baca.selectors.lparts([2, 1, 1]),
     ),
     baca.untie(
         baca.leaves(),
@@ -779,7 +779,7 @@ maker(
     ),
     baca.hairpin(
         "pp < p > pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
     baca.new(
         baca.clef("treble"),

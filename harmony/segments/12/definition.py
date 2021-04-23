@@ -125,25 +125,25 @@ maker(
     baca.hairpin(
         "o< mf >o niente",
         match=[0],
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o< mp >o niente",
         match=[1],
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o< p >o niente",
         match=[2],
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o< pp >o niente",
         match=[3],
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.new(
@@ -172,7 +172,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.lparts([1, 2 + 1]),
+        pieces=baca.selectors.lparts([1, 2 + 1]),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -220,8 +220,8 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.clparts([2]),
-        pieces=baca.lparts([1, 1 + 1]),
+        map=baca.selectors.clparts([2]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -245,8 +245,8 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.clparts([4]),
-        pieces=baca.lparts([2, 2 + 1]),
+        map=baca.selectors.clparts([4]),
+        pieces=baca.selectors.lparts([2, 2 + 1]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -272,7 +272,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        pieces=baca.lparts([2, 4]),
+        pieces=baca.selectors.lparts([2, 4]),
         selector=baca.leaves()[:-1],
     ),
     baca.metric_modulation_spanner(
@@ -301,7 +301,7 @@ maker(
         'o< "f" >o niente o< p >o niente'
         ' o< "f" >o niente o< p >o niente'
         ' o< "f" >o niente o< f >o niente',
-        pieces=baca.lparts([1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -644,7 +644,7 @@ maker(
     baca.hairpin(
         "o< mf >o",
         bookend=False,
-        pieces=baca.lparts([1, 4]),
+        pieces=baca.selectors.lparts([1, 4]),
         selector=baca.tleaves().rleak(),
     ),
     baca.markup(

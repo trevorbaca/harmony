@@ -126,7 +126,7 @@ maker(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -178,8 +178,8 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.clparts([2]),
-        pieces=baca.lparts([1, 1 + 1]),
+        map=baca.selectors.clparts([2]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -203,8 +203,8 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.clparts([4]),
-        pieces=baca.lparts([2, 2 + 1]),
+        map=baca.selectors.clparts([4]),
+        pieces=baca.selectors.lparts([2, 2 + 1]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -214,7 +214,7 @@ maker(
     baca.pitch("Dtqf5"),
     baca.hairpin(
         'o< "f" >o niente o< "f" >o niente',
-        pieces=baca.lparts([1, 1, 2, 3]),
+        pieces=baca.selectors.lparts([1, 1, 2, 3]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -236,7 +236,7 @@ maker(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.tleaves().rleak(),
     ),
     baca.new(
@@ -288,7 +288,7 @@ maker(
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.markup(
@@ -312,12 +312,12 @@ maker(
     ),
     baca.hairpin(
         "o< p > pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves()[:3],
     ),
     baca.hairpin(
         "pp < mp > pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves()[5:8],
     ),
 )
@@ -395,7 +395,7 @@ maker(
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
-        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.markup(
@@ -652,7 +652,7 @@ maker(
     harmony.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
-        pieces=baca.lparts([1, 3]),
+        pieces=baca.selectors.lparts([1, 3]),
         selector=baca.run(0),
     ),
     baca.dls_staff_padding(6),
@@ -774,7 +774,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
@@ -942,7 +942,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
@@ -1100,7 +1100,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.tleaves().rleak(),
     ),
     baca.trill_spanner(),
@@ -1117,12 +1117,12 @@ maker(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| p |> pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves()[:3],
     ),
     baca.hairpin(
         "pp <| mp |> pp",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves()[5:8],
     ),
     baca.trill_spanner(),
@@ -1157,7 +1157,7 @@ maker(
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
-        pieces=baca.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         right_broken=True,
         selector=baca.tleaves().rleak(),
     ),

@@ -115,8 +115,8 @@ maker(
     ),
     baca.hairpin(
         "o<| ff |> p",
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
+        map=baca.selectors.clparts([3]),
+        pieces=baca.selectors.clparts([1]),
     ),
 )
 
@@ -288,8 +288,8 @@ maker(
     ),
     baca.hairpin(
         "p < ff > p",
-        map=baca.clparts([3]),
-        pieces=baca.clparts([1]),
+        map=baca.selectors.clparts([3]),
+        pieces=baca.selectors.clparts([1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -657,7 +657,7 @@ maker(
     baca.pitch("Ab1"),
     baca.hairpin(
         'o< "mf" >o niente',
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(

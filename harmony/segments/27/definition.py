@@ -148,7 +148,7 @@ maker(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         map=baca.rleak_runs(),
     ),
     baca.trill_spanner(
@@ -158,7 +158,7 @@ maker(
     baca.text_spanner(
         "A -> T -> A",
         abjad.tweak(10).staff_padding,
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         map=baca.rleak_runs(),
     ),
 )
@@ -249,7 +249,7 @@ maker(
     baca.pitch("Bb4"),
     baca.hairpin(
         "pp < p >o niente",
-        pieces=baca.lparts([1, 1 + 1]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
@@ -807,7 +807,7 @@ maker(
         "pp -- ! < mp -- ! >",
         abjad.tweak(True).to_barline,
         bookend=False,
-        pieces=baca.lparts([1, 2, 3, 2]),
+        pieces=baca.selectors.lparts([1, 2, 3, 2]),
     ),
     baca.untie(
         baca.leaves(),
@@ -898,7 +898,7 @@ maker(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
         bookend=False,
-        pieces=baca.lparts([2, 3, 2]),
+        pieces=baca.selectors.lparts([2, 3, 2]),
     ),
     baca.untie(
         baca.leaves(),
@@ -1025,7 +1025,7 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
-        pieces=baca.lparts([2, 1, 1]),
+        pieces=baca.selectors.lparts([2, 1, 1]),
     ),
     baca.untie(
         baca.leaves(),
@@ -1057,7 +1057,7 @@ maker(
     baca.pitch("A1"),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.markup(
@@ -1115,7 +1115,7 @@ maker(
     ),
     baca.hairpin(
         "niente o< mp >o niente o< mp >o niente",
-        pieces=baca.lparts([1, 1, 1, 2]),
+        pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )

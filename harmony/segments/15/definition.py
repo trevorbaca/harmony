@@ -92,7 +92,7 @@ maker(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mp >o !",
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -110,7 +110,7 @@ maker(
     ),
     baca.hairpin(
         'o< "f" >o niente',
-        pieces=baca.lparts([1, 2]),
+        pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.text_spanner(
@@ -118,8 +118,8 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.clparts([2]),
-        pieces=baca.lparts([1, 1 + 1]),
+        map=baca.selectors.clparts([2]),
+        pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.breathe(
