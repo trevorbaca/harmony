@@ -679,7 +679,7 @@ maker(
     baca.hairpin(
         "o< ff >o",
         bookend=False,
-        pieces=baca.mgroups([3, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([3, 2]),
         selector=baca.leaves().rleak(),
     ),
     baca.scp_spanner(
@@ -739,7 +739,7 @@ maker(
     ),
     baca.hairpin(
         "o< ff (ff) >o niente",
-        pieces=baca.mgroups([2, 1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 2]),
         right_broken=True,
         selector=baca.leaves().rleak(),
     ),

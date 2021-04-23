@@ -367,7 +367,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.mgroups([2, 1]),
+        pieces=lambda _: baca.Selection(_).mgroups([2, 1]),
         selector=baca.leaves(),
     ),
 )
@@ -471,7 +471,7 @@ maker(
     baca.scp_spanner(
         "T -> P =|",
         abjad.tweak(3).staff_padding,
-        pieces=baca.mgroups([1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
     ),
 )
 
@@ -624,7 +624,7 @@ maker(
     baca.scp_spanner(
         "T -> P =|",
         abjad.tweak(3).staff_padding,
-        pieces=baca.mgroups([1, 2]),
+        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
     ),
 )
 
