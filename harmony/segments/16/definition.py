@@ -220,7 +220,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "pp",
@@ -240,7 +240,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("pp"),
 )
@@ -260,7 +260,7 @@ maker(
     ),
     baca.pitch("F1"),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "p",
@@ -296,7 +296,7 @@ maker(
     ),
     baca.pitch("F1"),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(4 + 3),
@@ -381,7 +381,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -426,7 +426,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -479,7 +479,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -540,7 +540,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",

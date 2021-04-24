@@ -152,7 +152,7 @@ maker(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -162,7 +162,7 @@ maker(
         "A -> T -> A",
         abjad.tweak(10).staff_padding,
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
 )
 
@@ -340,7 +340,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -368,7 +368,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.rleak_runs(None, 1),
+        map=baca.selectors.rleak_runs(None, 1),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",

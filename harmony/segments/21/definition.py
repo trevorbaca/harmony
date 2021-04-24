@@ -109,12 +109,12 @@ maker(
     ),
     baca.trill_spanner(
         alteration="m2",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
         alteration="m2",
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
     ),
 )
 
@@ -702,7 +702,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",

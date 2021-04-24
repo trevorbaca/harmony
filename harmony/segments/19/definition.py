@@ -210,7 +210,7 @@ maker(
     baca.dynamic("pp"),
     baca.covered_spanner(
         abjad.tweak(5.5).staff_padding,
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
 )
 

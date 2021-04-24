@@ -275,7 +275,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -583,7 +583,7 @@ maker(
     ),
     baca.hairpin(
         "niente o< mp >o niente",
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
     baca.trill_spanner(

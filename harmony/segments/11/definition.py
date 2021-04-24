@@ -437,7 +437,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -454,7 +454,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "mp-ancora",
@@ -515,7 +515,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -559,7 +559,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
 )
@@ -574,7 +574,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic(
         "f-ancora",
@@ -679,7 +679,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4),

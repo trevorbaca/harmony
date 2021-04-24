@@ -472,7 +472,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -537,7 +537,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -605,7 +605,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -670,7 +670,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "f <| fff-scratch",

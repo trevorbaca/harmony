@@ -154,15 +154,15 @@ maker(
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
         selector=baca.tleaves().rleak(),
     ),
     baca.trill_spanner(
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
     ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
-        map=baca.run(2),
+        map=baca.selectors.runs((2, 3)),
     ),
 )
 
@@ -430,7 +430,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -457,16 +457,16 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
         selector=baca.leaves()[:-1],
     ),
 )
@@ -482,7 +482,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -534,16 +534,16 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
         selector=baca.leaves()[:-1],
     ),
 )
@@ -559,7 +559,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -616,16 +616,16 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
         selector=baca.leaves()[:-1],
     ),
 )
@@ -641,7 +641,7 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
@@ -693,16 +693,16 @@ maker(
     baca.new(
         baca.stop_on_string(),
         selector=baca.leaf(-1),
-        map=baca.rleak_runs(),
+        map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.run(0),
+        map=baca.selectors.runs((None, 1)),
         selector=baca.leaves().rleak(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.run(1),
+        map=baca.selectors.runs((1, 2)),
         selector=baca.leaves()[:-1],
     ),
 )

@@ -343,7 +343,7 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(6),
@@ -494,7 +494,7 @@ maker(
         [9, "-"],
     ),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
     harmony.tam_tam_staff_position(),
     baca.dynamic("mp"),
@@ -614,7 +614,7 @@ maker(
         abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.damp(
-        baca.leaf_after_each_ptail(),
+        baca.selectors.leaf_after_each_ptail(),
     ),
 )
 
