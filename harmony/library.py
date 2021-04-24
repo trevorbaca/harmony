@@ -448,8 +448,8 @@ def phjc(
         rmakers.denominator((1, 8)),
         rmakers.force_fraction(),
         rmakers.force_repeat_tie((1, 8)),
-        rmakers.force_rest(baca.leaves_in_each_plt(1, None)),
-        rmakers.force_rest(baca.leaf_in_each_tuplet(0)),
+        rmakers.force_rest(baca.selectors.leaves_in_each_plt(1, None)),
+        rmakers.force_rest(baca.selectors.leaf_in_each_tuplet(0)),
         rmakers.beam(),
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
@@ -624,7 +624,7 @@ def sixteenths(
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if tie_runs is True:
-        selector = baca.leaves_in_each_run(1, None)
+        selector = baca.selectors.leaves_in_each_run(1, None)
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if untie is True:
@@ -636,7 +636,7 @@ def sixteenths(
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if after_graces:
-        selector = baca.leaf_in_each_run(-1)
+        selector = baca.selectors.leaf_in_each_run(-1)
         beam_and_slash = None
         if after_graces != [1]:
             beam_and_slash = True
@@ -851,7 +851,7 @@ def warble(
         selector = baca.tuplets().get(*rest_tuplets_cyclic)
         force_rest_ = rmakers.force_rest(selector)
         rests.append(force_rest_)
-    selector = baca.leaf_in_each_tuplet(0)
+    selector = baca.selectors.leaf_in_each_tuplet(0)
     force_rest = rmakers.force_rest(selector)
     rests.append(force_rest)
     return baca.rhythm(
