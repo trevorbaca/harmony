@@ -401,7 +401,7 @@ maker(
     harmony.slate_staff_position(),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.runs()[:1].rleak(),
+        selector=baca.selectors.runs((None, 1), rleak=True),
     ),
 )
 

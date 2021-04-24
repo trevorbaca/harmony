@@ -244,7 +244,7 @@ maker(
             abjad.tweak(5.5).staff_padding,
             right_broken=True,
         ),
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
 )
 
@@ -355,7 +355,7 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -374,7 +374,7 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 

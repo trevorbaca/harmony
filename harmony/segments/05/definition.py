@@ -253,7 +253,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         left_broken=True,
-        selector=baca.runs()[:1].rleak(),
+        selector=baca.selectors.runs((None, 1), rleak=True),
     ),
 )
 
@@ -424,7 +424,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -480,7 +480,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -509,7 +509,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -630,7 +630,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -649,7 +649,7 @@ maker(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
@@ -844,7 +844,7 @@ maker(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),

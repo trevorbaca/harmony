@@ -137,11 +137,11 @@ maker(
     ),
     baca.pitch(
         "Bb5",
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.pitch(
         "E5",
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -199,11 +199,11 @@ maker(
     ),
     baca.pitch(
         "Bb5",
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.pitch(
         "E5",
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.stem_tremolo(
         baca.pleaves(),
@@ -974,7 +974,7 @@ maker(
             abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
         ),
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
     baca.dynamic(
         "f",
@@ -1027,7 +1027,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -1061,13 +1061,13 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs()[:-1],
+        map=baca.selectors.runs((None, -1)),
         selector=baca.tleaves().rleak(),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs()[-1:],
+        map=baca.selectors.runs((-1, None)),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -1155,7 +1155,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
 )
 
@@ -1204,7 +1204,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -1248,7 +1248,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs()[:-1],
+        map=baca.selectors.runs((None, -1)),
         selector=baca.tleaves().rleak(),
     ),
     baca.dynamic(
@@ -1258,7 +1258,7 @@ maker(
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs()[-1:],
+        map=baca.selectors.runs((-1, None)),
         right_broken=True,
         selector=baca.tleaves().rleak(),
     ),
@@ -1326,7 +1326,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
 )
 
@@ -1337,7 +1337,7 @@ maker(
         baca.damp_spanner(
             abjad.tweak(3).staff_padding,
         ),
-        selector=baca.runs()[:1].rleak(),
+        selector=baca.selectors.runs((None, 1), rleak=True),
     ),
 )
 
@@ -1365,7 +1365,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -1384,7 +1384,7 @@ maker(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
@@ -1411,7 +1411,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs()[:-1],
+        map=baca.selectors.runs((None, -1)),
         selector=baca.tleaves().rleak(),
     ),
     baca.dynamic(
@@ -1421,7 +1421,7 @@ maker(
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs()[-1:],
+        map=baca.selectors.runs((-1, None)),
         selector=baca.tleaves().rleak(),
     ),
     baca.hairpin(
@@ -1489,7 +1489,7 @@ maker(
         baca.damp_spanner(
             abjad.tweak(3).staff_padding,
         ),
-        selector=baca.runs()[:1].rleak(),
+        selector=baca.selectors.runs((None, 1), rleak=True),
     ),
 )
 
@@ -1509,13 +1509,13 @@ maker(
     baca.hairpin(
         "o< mf > p < f",
         pieces=baca.selectors.lparts([6, 5, 3, 2]),
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1 -> P1",
         abjad.tweak(3).staff_padding,
         pieces=baca.selectors.lparts([6, 5, 3, 2]),
-        selector=baca.runs()[-1:].rleak(),
+        selector=baca.selectors.runs((-1, None), rleak=True),
     ),
 )
 
@@ -1642,7 +1642,7 @@ maker(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),

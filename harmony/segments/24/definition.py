@@ -86,7 +86,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.text_spanner(
         "A -> T -> A",
@@ -110,7 +110,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.text_spanner(
         "A -> T -> A",

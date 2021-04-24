@@ -83,7 +83,7 @@ maker(
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
@@ -108,14 +108,14 @@ maker(
     baca.pitch("Gqs5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
         alteration="A5",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -172,7 +172,7 @@ maker(
     ),
     baca.hairpin(
         "o< pp >o niente",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
@@ -364,7 +364,7 @@ maker(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -479,13 +479,13 @@ maker(
     baca.pitch("F#5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.leaves().rleak(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -687,7 +687,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
