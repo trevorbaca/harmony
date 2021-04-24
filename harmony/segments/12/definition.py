@@ -343,12 +343,12 @@ maker(
     # TODO: should be baca.staff_position(-2):
     baca.staff_positions(
         [-2, -8, -8, -8, -8],
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
         allow_repeats=True,
     ),
     baca.staff_position(
         0,
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.dynamic(
         "p",
@@ -446,7 +446,7 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -489,11 +489,11 @@ maker(
     ),
     baca.staff_position(
         -2,
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.staff_position(
         0,
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.dynamic(
         "p",

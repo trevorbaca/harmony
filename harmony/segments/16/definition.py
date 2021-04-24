@@ -88,7 +88,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -120,7 +120,7 @@ maker(
             abjad.tweak(5.5).staff_padding,
             autodetect_right_padding=True,
             bookend=False,
-            map=baca.runs(),
+            map=baca.selectors.runs(),
             selector=baca.leaves().rleak(),
         ),
         measures=9,
@@ -312,7 +312,7 @@ maker(
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -335,7 +335,7 @@ maker(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -368,7 +368,7 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -398,7 +398,7 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -413,7 +413,7 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -443,7 +443,7 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -457,7 +457,7 @@ maker(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -495,7 +495,7 @@ maker(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -518,7 +518,7 @@ maker(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -556,7 +556,7 @@ maker(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(

@@ -173,7 +173,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(8 + 1).staff_padding,
         ),
-        selector=baca.runs()[:1].rleak(),
+        selector=baca.selectors.runs((None, 1), rleak=True),
     ),
 )
 
@@ -413,7 +413,7 @@ maker(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 

@@ -175,11 +175,11 @@ maker(
     baca.tuplet_bracket_up(),
     baca.pitch(
         "G3",
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.pitch(
         "Bb5",
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.stem_tremolo(
         baca.pleaves()[-2:],
@@ -861,7 +861,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )
@@ -950,7 +950,7 @@ maker(
         "scr. =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.tleaves().rleak(),
     ),
 )

@@ -255,7 +255,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -313,11 +313,11 @@ maker(
     ),
     baca.staff_position(
         -2,
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.staff_position(
         0,
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.dynamic(
         "p",
@@ -423,11 +423,11 @@ maker(
     ),
     baca.staff_position(
         -2,
-        baca.runs()[:1],
+        baca.selectors.runs((None, 1)),
     ),
     baca.staff_position(
         0,
-        baca.runs()[1:],
+        baca.selectors.runs((1, None)),
     ),
     baca.dynamic(
         "p",
@@ -682,12 +682,12 @@ maker(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("D#3", "E3"),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
@@ -707,7 +707,7 @@ maker(
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -755,7 +755,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -825,7 +825,7 @@ maker(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -836,7 +836,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -892,7 +892,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
     baca.dls_staff_padding(4),
@@ -968,7 +968,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -1012,7 +1012,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -1053,12 +1053,12 @@ maker(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("F2", "E2"),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
@@ -1078,7 +1078,7 @@ maker(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -1127,7 +1127,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -1154,12 +1154,12 @@ maker(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("D#2", "E2"),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
         baca.pleaves(grace=False),
@@ -1179,7 +1179,7 @@ maker(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -1229,7 +1229,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves(),
     ),
 )

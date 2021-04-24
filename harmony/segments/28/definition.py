@@ -113,7 +113,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves(),
     ),
     baca.trill_spanner(
@@ -121,7 +121,7 @@ maker(
             r"\harmony-d-d-sharp-markup",
             literal=True,
         ).bound_details__left__text,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -588,7 +588,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
     baca.markup(
         r"\baca-string-iii-markup",

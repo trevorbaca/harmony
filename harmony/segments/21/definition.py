@@ -103,7 +103,7 @@ maker(
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 2]),
         selector=baca.leaves().rleak(),
     ),
@@ -147,7 +147,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )
@@ -442,7 +442,7 @@ maker(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(3).staff_padding,
-        map=baca.runs(),
+        map=baca.selectors.runs(),
     ),
 )
 
@@ -706,7 +706,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.runs(),
+        map=baca.selectors.runs(),
         selector=baca.leaves().rleak(),
     ),
 )

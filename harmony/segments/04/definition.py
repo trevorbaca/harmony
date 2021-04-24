@@ -526,7 +526,8 @@ maker(
 maker(
     (["vc1", "vc2"], [(1, 6), 8, 11]),
     baca.damp_spanner(
-        abjad.tweak(5.5).staff_padding, selector=baca.ltleaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding,
+        selector=lambda _: baca.Selection(_).ltleaves().rleak(grace=False),
     ),
 )
 
