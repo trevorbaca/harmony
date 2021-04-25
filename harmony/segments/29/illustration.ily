@@ -1165,7 +1165,7 @@ ac_Percussion_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths(['-', 1], invisible=([-1],), talea_denominator=16)"
+    %@% - \baca-text-spanner-left-text "sixteenths(['-', 1], invisible=[-1], talea_denominator=16)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -3720,7 +3720,7 @@ ac_Contrabass_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([16, 4, 2, 2], written_dotted_wholes=([0],), invisible=([1, 2, 3],), talea_denominator=16)"
+    %@% - \baca-text-spanner-left-text "sixteenths([16, 4, 2, 2], written_dotted_wholes=[0], invisible=[1, 2, 3], talea_denominator=16)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)

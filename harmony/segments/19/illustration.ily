@@ -16274,7 +16274,7 @@ s_Contrabass_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, 6, 2, -4], written_quarters=([0],), invisible=([1],), talea_denominator=16, untie=True)"
+    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, 6, 2, -4], written_quarters=[0], invisible=[1], talea_denominator=16, untie=True)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)

@@ -354,22 +354,22 @@ def appoggiato(
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if tie is not None:
-        selector = baca.pleaves().get(tie)
+        selector = baca.selectors.pleaves(tie)
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if written_quarters is not None:
-        selector = baca.pleaves().get(written_quarters)
+        selector = baca.selectors.pleaves(written_quarters)
         written_ = rmakers.written_duration((1, 4), selector)
         commands.append(written_)
         selector = baca.leaves(grace=False)
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if invisible is not None:
-        selector = baca.pleaves().get(invisible)
+        selector = baca.selectors.pleaves(invisible)
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if after_graces is not None:
-        selector = baca.pleaf(-1)
+        selector = baca.selectors.pleaf(-1)
         beam_and_slash = None
         if after_graces != [1]:
             beam_and_slash = True
@@ -438,7 +438,7 @@ def phjc(
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_pleaves is not None:
-        selector = baca.pleaves().get(rest_pleaves)
+        selector = baca.selectors.pleaves(rest_pleaves)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
@@ -542,85 +542,85 @@ def sixteenths(
         )
         commands.append(rewrite_)
     if written_eighths is True:
-        selector = baca.pleaves()
+        selector = baca.selectors.pleaves()
         written_ = rmakers.written_duration((1, 8), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_eighths is not None:
-        selector = baca.pleaves().get(*written_eighths)
+        selector = baca.selectors.pleaves(written_eighths)
         written_ = rmakers.written_duration((1, 8), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_quarters is True:
-        selector = baca.pleaves()
+        selector = baca.selectors.pleaves()
         written_ = rmakers.written_duration((1, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_quarters is not None:
-        selector = baca.pleaves().get(*written_quarters)
+        selector = baca.selectors.pleaves(written_quarters)
         written_ = rmakers.written_duration((1, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_quarters is not None:
-        selector = baca.pleaves().get(*written_dotted_quarters)
+        selector = baca.selectors.pleaves(written_dotted_quarters)
         written_ = rmakers.written_duration((3, 8), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_halves is True:
-        selector = baca.pleaves()
+        selector = baca.selectors.pleaves()
         written_ = rmakers.written_duration((1, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_halves is not None:
-        selector = baca.pleaves().get(*written_halves)
+        selector = baca.selectors.pleaves(written_halves)
         written_ = rmakers.written_duration((1, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_halves is not None:
-        selector = baca.pleaves().get(*written_dotted_halves)
+        selector = baca.selectors.pleaves(written_dotted_halves)
         written_ = rmakers.written_duration((3, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_wholes is not None:
-        selector = baca.pleaves().get(*written_wholes)
+        selector = baca.selectors.pleaves(written_wholes)
         written_ = rmakers.written_duration((1, 1), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_wholes is not None:
-        selector = baca.pleaves().get(*written_dotted_wholes)
+        selector = baca.selectors.pleaves(written_dotted_wholes)
         written_ = rmakers.written_duration((3, 2), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_double_dotted_wholes is not None:
-        selector = baca.pleaves().get(*written_double_dotted_wholes)
+        selector = baca.selectors.pleaves(written_double_dotted_wholes)
         written_ = rmakers.written_duration((7, 4), selector)
         commands.append(written_)
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if invisible_pairs is True:
-        selector = baca.pleaves().get([1], 2)
+        selector = baca.selectors.pleaves(([1], 2))
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if invisible is not None:
-        selector = baca.pleaves().get(*invisible)
+        selector = baca.selectors.pleaves(invisible)
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if tie is not None:
-        selector = baca.pleaves().get(*tie)
+        selector = baca.selectors.pleaves(tie)
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if tie_all is True:
-        selector = baca.pleaves()[1:]
+        selector = baca.selectors.pleaves((1, None))
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if tie_runs is True:

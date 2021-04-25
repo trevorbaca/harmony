@@ -153,7 +153,7 @@ maker(
     ),
     baca.pitch("E3"),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -171,11 +171,11 @@ maker(
     ),
     # TODO: promote to harmony.sixteenths():
     baca.repeat_tie(
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -391,14 +391,14 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         '"ff"',
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -455,10 +455,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         '"ff"',
@@ -552,7 +552,7 @@ maker(
     baca.clef("bass"),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< mf >o niente",
@@ -613,7 +613,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -653,7 +653,7 @@ maker(
         selector=baca.leaves(grace=False),
     ),
     baca.accent(
-        baca.pheads()[:3],
+        baca.selectors.pheads((None, 3)),
     ),
     baca.new(
         baca.note_head_style_harmonic_black(),
@@ -668,7 +668,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.pleaves(grace=False)[:4],
+        selector=baca.selectors.pleaves((None, 4), grace=False),
     ),
 )
 
@@ -690,7 +690,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -728,10 +728,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         '"ff" "ff"',
@@ -802,10 +802,10 @@ maker(
     baca.tuplet_bracket_staff_padding(3),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         '"ff" "ff" "f" "f" mf mp p',
@@ -865,10 +865,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         '"ff" "ff"',
@@ -914,10 +914,10 @@ maker(
         selector=baca.leaf(1),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic('"ff"'),
 )
@@ -929,10 +929,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         '"ff" "ff" "f" mf mp p pp',
@@ -988,7 +988,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1061,7 +1061,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1103,7 +1103,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1162,7 +1162,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1237,7 +1237,7 @@ maker(
 maker(
     (["va", "cb1", "cb2"], 11),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),

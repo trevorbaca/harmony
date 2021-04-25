@@ -130,7 +130,7 @@ maker(
         match=[0],
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
 )
@@ -210,7 +210,7 @@ maker(
     baca.tuplet_bracket_down(),
     baca.new(
         harmony.bass_drum_staff_position(),
-        selector=baca.pleaf(0),
+        selector=baca.selectors.pleaf(0),
     ),
     baca.laissez_vibrer(),
     baca.dynamic("mp"),
@@ -227,7 +227,7 @@ maker(
             abjad.tweak(6).staff_padding,
             literal=True,
         ),
-        selector=baca.pleaf(1),
+        selector=baca.selectors.pleaf(1),
     ),
 )
 
@@ -290,7 +290,7 @@ maker(
             abjad.tweak(6).staff_padding,
             literal=True,
         ),
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
 )
 
@@ -345,10 +345,10 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(6),
@@ -402,7 +402,7 @@ maker(
     baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -453,7 +453,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -473,7 +473,7 @@ maker(
         extra_counts=[1],
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -507,7 +507,7 @@ maker(
     baca.clef("bass"),
     baca.pitch("E2"),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -525,7 +525,7 @@ maker(
         [3, 7, 4, 6],
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -564,7 +564,7 @@ maker(
         [7, 4, 6, 3],
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -594,7 +594,7 @@ maker(
     baca.clef("bass"),
     baca.pitch("E1"),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -612,7 +612,7 @@ maker(
         [4, 6, 3, 7],
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -671,7 +671,7 @@ maker(
         [6, 3, 7, 4],
     ),
     baca.espressivo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(

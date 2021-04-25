@@ -154,7 +154,7 @@ maker(
         [41, -7, "+"],
     ),
     baca.flat_glissando(
-        hide_stem_selector=baca.pleaves()[1:-2],
+        hide_stem_selector=baca.selectors.pleaves((1, -2)),
         selector=baca.run(0),
     ),
     baca.flat_glissando(
@@ -224,7 +224,7 @@ maker(
     ),
     baca.dynamic(
         "pp",
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -264,7 +264,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
     baca.dls_staff_padding(4 + 3),
 )
@@ -316,7 +316,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(1.5).staff_padding,
         full=True,
     ),
@@ -461,7 +461,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -499,7 +499,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -522,7 +522,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -560,7 +560,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),

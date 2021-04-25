@@ -711,10 +711,10 @@ maker(
     ),
     # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
-        baca.pleaves().get([1], 2),
+        baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
@@ -723,11 +723,11 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
@@ -755,5 +755,5 @@ maker(
 
 maker(
     (["vc1", "vc2", "cb1", "cb2"], [1, 5]),
-    baca.triple_staccato(baca.pheads()),
+    baca.triple_staccato(baca.selectors.pheads()),
 )

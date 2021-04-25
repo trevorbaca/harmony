@@ -211,7 +211,9 @@ maker(
     baca.hairpin(
         "o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.pleaves(grace=False).partition_by_counts([2, 1]),
+        pieces=lambda _: baca.Selection(_)
+        .pleaves(grace=False)
+        .partition_by_counts([2, 1]),
     ),
     baca.text_spanner(
         r"\harmony-g-sounds-ottava-higher-markup =|",
@@ -262,7 +264,9 @@ maker(
 maker(
     ("bfl", 14),
     harmony.sixteenths(
-        [12, 8, 3, 1], written_dotted_wholes=([0], 2), invisible=([1, 2, 3],)
+        [12, 8, 3, 1],
+        written_dotted_wholes=([0], 2),
+        invisible=[1, 2, 3],
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -295,7 +299,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.pleaf(0, grace=False),
+        selector=baca.selectors.pleaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -324,7 +328,7 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< p >o niente",
@@ -333,7 +337,7 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -0.75,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -348,10 +352,10 @@ maker(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         '"f"',
@@ -372,10 +376,10 @@ maker(
         denominator=None,
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
 )
 
@@ -385,10 +389,10 @@ maker(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -411,7 +415,7 @@ maker(
     harmony.triangle_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.pheads().get([0, -1]),
+        baca.selectors.pheads([0, -1]),
     ),
     baca.dynamic("p"),
     baca.hairpin(
@@ -441,7 +445,7 @@ maker(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.pheads()[-1],
+        baca.selectors.phead(-1),
     ),
 )
 
@@ -456,7 +460,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.stem_tremolo(
-        baca.phead(0),
+        baca.selectors.phead(0),
     ),
     baca.dynamic(
         "p-ancora",
@@ -598,7 +602,7 @@ maker(
 maker(
     ("va", (10, 15)),
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.tuplet_bracket_up(),
     baca.repeat_tie(
@@ -725,7 +729,7 @@ maker(
 maker(
     ("vc1", (10, 15)),
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.repeat_tie(
         baca.leaf(1),
@@ -856,7 +860,7 @@ maker(
 maker(
     ("vc2", (10, 15)),
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.repeat_tie(
         baca.leaf(1),

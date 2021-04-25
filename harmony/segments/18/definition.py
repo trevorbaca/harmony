@@ -197,12 +197,12 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.laissez_vibrer(
-        baca.phead(1),
+        baca.selectors.phead(1),
     ),
     baca.dynamic("mp"),
     baca.hairpin(
         "o< mf",
-        selector=baca.pleaves()[1:].rleak(),
+        selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.markup(
         r"\baca-bd-struck-then-superball-markup",
@@ -219,11 +219,11 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.dynamic("mp"),
     baca.laissez_vibrer(
-        baca.phead(1),
+        baca.selectors.phead(1),
     ),
     baca.hairpin(
         "o< mf",
-        selector=baca.pleaves()[1:].rleak(),
+        selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
 )
 
@@ -300,7 +300,7 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mf",
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -318,7 +318,7 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
 )
 
@@ -331,7 +331,7 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
 )
 
@@ -344,7 +344,7 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
 )
 
@@ -366,7 +366,7 @@ maker(
     baca.dynamic("p"),
     baca.dynamic(
         "f",
-        selector=baca.phead(1),
+        selector=baca.selectors.phead(1),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -388,7 +388,7 @@ maker(
     baca.new(
         baca.laissez_vibrer(),
         baca.dynamic("f"),
-        selector=baca.phead(1),
+        selector=baca.selectors.phead(1),
     ),
 )
 
@@ -628,7 +628,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(1.5).staff_padding,
         full=True,
     ),
@@ -903,7 +903,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -1008,10 +1008,10 @@ maker(
     ("cb1", (9, 11)),
     baca.pitch("E5", do_not_transpose=True),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -1040,7 +1040,7 @@ maker(
         invisible_pairs=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o",
@@ -1084,7 +1084,7 @@ maker(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -1192,10 +1192,10 @@ maker(
     ),
     # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
-        baca.pleaves().get([1], 2),
+        baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
@@ -1204,11 +1204,11 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
 )
 
@@ -1248,7 +1248,7 @@ maker(
 
 maker(
     (["vc1", "vc2", "cb1", "cb2"], 6),
-    baca.triple_staccato(baca.pheads()),
+    baca.triple_staccato(baca.selectors.pheads()),
     baca.hairpin(
         "p < f",
         selector=baca.selectors.tleaves(),

@@ -190,7 +190,7 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< pp >o niente",
@@ -229,7 +229,7 @@ maker(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -247,7 +247,7 @@ maker(
     baca.make_notes(),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -288,7 +288,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p-ancora"),
     baca.markup(
@@ -306,10 +306,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -326,7 +326,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "p-sempre",
@@ -347,10 +347,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -374,7 +374,7 @@ maker(
     ),
     baca.pitch("D5"),
     baca.flageolet(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -397,7 +397,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
 )
@@ -439,7 +439,7 @@ maker(
         baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "p-sempre",
@@ -834,15 +834,15 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "pp-ancora",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.phead(0),
+        selector=baca.selectors.phead(0),
     ),
 )
 
@@ -934,10 +934,10 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.new(
         baca.dynamic("pp"),
@@ -957,10 +957,10 @@ maker(
     baca.clef("percussion"),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),

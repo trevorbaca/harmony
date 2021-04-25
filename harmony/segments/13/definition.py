@@ -112,11 +112,11 @@ maker(
     ),
     # TODO: promote into harmony.sixteenths():
     baca.repeat_tie(
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -139,7 +139,7 @@ maker(
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -164,7 +164,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.pleaf(0, grace=False),
+        selector=baca.selectors.pleaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -189,7 +189,7 @@ maker(
         literal=True,
     ),
     baca.breathe(
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.hairpin(
         'o< "f" >o niente',
@@ -266,7 +266,7 @@ maker(
     baca.make_notes(),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "p-ancora",
@@ -367,7 +367,7 @@ maker(
             abjad.tweak(6).staff_padding,
             literal=True,
         ),
-        selector=baca.pleaf(0),
+        selector=baca.selectors.pleaf(0),
     ),
     baca.new(
         harmony.bass_drum_staff_position(),
@@ -384,7 +384,7 @@ maker(
             abjad.tweak(0.5).self_alignment_X,
             literal=True,
         ),
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
 )
 
@@ -428,7 +428,7 @@ maker(
     ),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< mf >o niente",
@@ -453,7 +453,7 @@ maker(
         baca.plts()[:-1],
     ),
     baca.flageolet(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails()[:-1],
@@ -463,7 +463,7 @@ maker(
         baca.pitch("E4"),
         baca.dynamic("f-ancora"),
         baca.snap_pizzicato(),
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -482,7 +482,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -511,10 +511,10 @@ maker(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.stem_tremolo(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -584,10 +584,10 @@ maker(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.stem_tremolo(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -663,7 +663,7 @@ maker(
         [7, -1, 12],
     ),
     baca.repeat_tie(
-        baca.phead(0),
+        baca.selectors.phead(0),
     ),
     baca.new(
         baca.pitch("F3"),
@@ -681,7 +681,7 @@ maker(
     ),
     baca.dynamic(
         "mp",
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -737,10 +737,10 @@ maker(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.stem_tremolo(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -816,7 +816,7 @@ maker(
         [7, -1, 12],
     ),
     baca.repeat_tie(
-        baca.phead(0),
+        baca.selectors.phead(0),
     ),
     baca.new(
         baca.pitch("Eb2"),
@@ -834,7 +834,7 @@ maker(
     ),
     baca.dynamic(
         "mp",
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -890,7 +890,7 @@ maker(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("p"),
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -900,10 +900,10 @@ maker(
         [4],
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 

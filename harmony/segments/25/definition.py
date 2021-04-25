@@ -316,7 +316,7 @@ maker(
     harmony.tam_tam_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -333,10 +333,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "f >o niente",
@@ -361,10 +361,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.accent(
-        baca.pheads()[:2],
+        baca.selectors.pheads((None, 2)),
     ),
     baca.stem_tremolo(
-        baca.pleaves()[:2],
+        baca.selectors.pleaves((None, 2)),
     ),
     baca.hairpin(
         "f >o niente",
@@ -375,7 +375,7 @@ maker(
         abjad.tweak(6).staff_padding,
         abjad.tweak(0).self_alignment_X,
         literal=True,
-        selector=baca.pleaf(2),
+        selector=baca.selectors.pleaf(2),
     ),
 )
 
@@ -424,7 +424,7 @@ maker(
             abjad.tweak(6 + 2).staff_padding,
             literal=True,
         ),
-        selector=baca.pleaf(0),
+        selector=baca.selectors.pleaf(0),
     ),
 )
 
@@ -463,7 +463,7 @@ maker(
     baca.markup(
         r"\baca-lv-into-fermata-markup",
         literal=True,
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -579,7 +579,7 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            baca.pleaves().get([0, -1]),
+            baca.selectors.pleaves([0, -1]),
         ),
         baca.note_head_transparent(
             baca.leaves()[1:-1],
@@ -639,11 +639,11 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.pleaves().get([0, -1]),
+            baca.selectors.pleaves([0, -1]),
         ),
         baca.pitch(
             "C5",
-            baca.pleaves()[1:-1],
+            baca.selectors.pleaves((1, -1)),
         ),
         baca.note_head_transparent(
             baca.leaves()[1:-1],
@@ -706,7 +706,7 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            baca.pleaves().get([0, -1]),
+            baca.selectors.pleaves([0, -1]),
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
@@ -770,12 +770,12 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.pleaves().get([0, -1]),
+            baca.selectors.pleaves([0, -1]),
             do_not_transpose=True,
         ),
         baca.pitch(
             "C5",
-            baca.pleaves()[1:-1],
+            baca.selectors.pleaves((1, -1)),
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
@@ -794,7 +794,7 @@ maker(
 maker(
     (["vc1", "vc2", "cb1", "cb2"], (1, 2)),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -812,10 +812,10 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 3),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads()[1:],
+        baca.selectors.pheads((1, None)),
     ),
     baca.flat_glissando(),
     baca.dynamic("f"),
@@ -824,7 +824,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",

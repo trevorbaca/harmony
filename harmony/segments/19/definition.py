@@ -255,12 +255,12 @@ maker(
     harmony.bass_drum_staff_position(),
     baca.accent(),
     baca.laissez_vibrer(
-        baca.phead(1),
+        baca.selectors.phead(1),
     ),
     baca.dynamic("mp"),
     baca.hairpin(
         "o< mf",
-        selector=baca.pleaves()[1:].rleak(),
+        selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -360,11 +360,11 @@ maker(
     ),
     baca.new(
         harmony.purpleheart_staff_positions([0]),
-        selector=baca.pleaves()[:1],
+        selector=baca.selectors.pleaves((None, 1)),
     ),
     baca.new(
         harmony.purpleheart_staff_positions([2]),
-        selector=baca.pleaves()[1:],
+        selector=baca.selectors.pleaves((1, None)),
     ),
     baca.dynamic(
         "ff-ancora",
@@ -389,7 +389,7 @@ maker(
     baca.dynamic("p"),
     baca.dynamic(
         "f",
-        selector=baca.phead(1),
+        selector=baca.selectors.phead(1),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -444,10 +444,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -566,7 +566,7 @@ maker(
     baca.ottava(),
     baca.ottava_bracket_staff_padding(5.5),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -590,7 +590,7 @@ maker(
     baca.ottava(),
     baca.ottava_bracket_staff_padding(5.5),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(4 + 2),
@@ -636,7 +636,7 @@ maker(
     ),
     baca.tuplet_bracket_up(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
@@ -823,8 +823,8 @@ maker(
     harmony.sixteenths(
         [2, 2, 6, 2, -4],
         untie=True,
-        written_quarters=([0],),
-        invisible=([1],),
+        written_quarters=[0],
+        invisible=[1],
     ),
 )
 
@@ -893,10 +893,10 @@ maker(
     ("cb2", (11, 13)),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -920,10 +920,10 @@ maker(
     ),
     # TODO: promote to harmony.sixteenths()
     baca.invisible_music(
-        baca.pleaves().get([1], 2),
+        baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
@@ -932,11 +932,11 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
@@ -983,7 +983,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< fff-scratch",
@@ -1002,7 +1002,7 @@ maker(
         force_augmentation=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "fff-scratch",
@@ -1025,10 +1025,10 @@ maker(
     baca.staff_lines(1),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
 )
@@ -1039,10 +1039,10 @@ maker(
     baca.staff_lines(1),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("pp"),
 )

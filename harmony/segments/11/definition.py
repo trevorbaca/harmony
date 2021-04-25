@@ -171,7 +171,7 @@ maker(
         [4, 8],
     ),
     baca.breathe(
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -284,7 +284,7 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< p >o niente",
@@ -302,13 +302,13 @@ maker(
     ("perc1", (4, 5)),
     harmony.sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=([0, 1],),
-        invisible=([1],),
+        written_quarters=[0, 1],
+        invisible=[1],
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< p > pp",
@@ -329,10 +329,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         '"f"',
@@ -382,15 +382,15 @@ maker(
     ("perc1", 10),
     harmony.sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=([0, 1, 3, 4, 5, 6],),
-        invisible=([1, 4, 6],),
+        written_quarters=[0, 1, 3, 4, 5, 6],
+        invisible=[1, 4, 6],
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(
         selector=baca.leaves()[:-1],
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
@@ -422,7 +422,7 @@ maker(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.hairpin(
         "(p) >o niente",
@@ -601,7 +601,7 @@ maker(
             "f-ancora",
             abjad.tweak(-0.9).self_alignment_X,
         ),
-        selector=baca.pleaf(0),
+        selector=baca.selectors.pleaf(0),
     ),
     baca.new(
         baca.pitch("E4"),
@@ -610,7 +610,7 @@ maker(
             abjad.tweak(-0.9).self_alignment_X,
         ),
         baca.snap_pizzicato(),
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -621,7 +621,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -645,9 +645,9 @@ maker(
     harmony.sixteenths(
         [3, 1, 1, 1, -6],
         tie_all=True,
-        written_quarters=([0],),
-        written_eighths=([2],),
-        invisible=([1, 3],),
+        written_quarters=[0],
+        written_eighths=[2],
+        invisible=[1, 3],
     ),
     harmony.whisk_staff_position(),
     baca.hairpin(
@@ -658,7 +658,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.markup(
         r"\baca-whisk-markup",
@@ -696,7 +696,7 @@ maker(
     ("va", 1),
     harmony.sixteenths(
         ["+"],
-        tie=([0],),
+        tie=[0],
     ),
     baca.pitch("D3"),
     baca.hairpin(
@@ -779,7 +779,7 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
@@ -802,7 +802,7 @@ maker(
     ("vc1", 6),
     baca.clef(
         "bass",
-        baca.phead(-1),
+        baca.selectors.phead(-1),
     ),
 )
 
@@ -866,7 +866,7 @@ maker(
     ("vc2", 1),
     harmony.sixteenths(
         ["+"],
-        tie=([0],),
+        tie=[0],
     ),
     baca.pitch("D2"),
     baca.hairpin(
@@ -880,7 +880,7 @@ maker(
     ("vc2", 6),
     baca.clef(
         "bass",
-        baca.phead(-1),
+        baca.selectors.phead(-1),
     ),
 )
 
@@ -947,7 +947,7 @@ maker(
     ),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
@@ -1031,7 +1031,7 @@ maker(
     ("cb2", 1),
     harmony.sixteenths(
         ["+"],
-        tie=([0],),
+        tie=[0],
     ),
     baca.pitch("D2"),
     baca.hairpin(
@@ -1110,8 +1110,8 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
     harmony.sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=([0, 1],),
-        invisible=([1],),
+        written_quarters=[0, 1],
+        invisible=[1],
     ),
     baca.flat_glissando(),
     baca.note_head_style_harmonic(),
@@ -1132,14 +1132,14 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.tuplet_bracket_up(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "sfp",
-        selector=baca.pheads()[1:],
+        selector=baca.selectors.pheads((1, None)),
     ),
 )
 
@@ -1147,8 +1147,8 @@ maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 10),
     harmony.sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=([0, 1, 3, 4, 5, 6],),
-        invisible=([1, 4, 6],),
+        written_quarters=[0, 1, 3, 4, 5, 6],
+        invisible=[1, 4, 6],
     ),
     baca.note_head_style_harmonic(),
     baca.flat_glissando(
@@ -1186,14 +1186,14 @@ maker(
         selector=baca.leaves()[1:3],
     ),
     baca.accent(
-        baca.phead(-1),
+        baca.selectors.phead(-1),
     ),
     baca.stem_tremolo(
         baca.plt(-1),
     ),
     baca.dynamic(
         "p",
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -1203,10 +1203,10 @@ maker(
         [4],
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 

@@ -146,7 +146,7 @@ maker(
     baca.make_notes(),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -238,7 +238,7 @@ maker(
         selector=baca.leaves()[-2:],
     ),
     baca.stem_tremolo(
-        baca.pheads().get([0, 2]),
+        baca.selectors.pheads([0, 2]),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(
@@ -253,7 +253,7 @@ maker(
     baca.new(
         baca.dynamic("ff"),
         baca.dls_staff_padding(5),
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
     baca.staff_lines(
         3,
@@ -286,11 +286,11 @@ maker(
     ),
     baca.dynamic(
         "mf",
-        selector=baca.pheads().get([0], 3),
+        selector=baca.selectors.pheads(([0], 3)),
     ),
     baca.dynamic(
         "mp",
-        selector=baca.pheads().get([1], 3),
+        selector=baca.selectors.pheads(([1], 3)),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -378,15 +378,15 @@ maker(
         .split_divisions([(2, 4), (8, 4), (2, 4)]),
         extra_counts=[4, 0, 4],
         denominator=None,
-        written_quarters=([5],),
-        invisible=([6],),
-        tie=([6],),
+        written_quarters=[5],
+        invisible=[6],
+        tie=[6],
     ),
     baca.tuplet_bracket_down(),
     baca.new(
         baca.pitch("F4"),
         baca.triple_staccato(),
-        selector=baca.pheads().get([0, 1, 2, -2, -1]),
+        selector=baca.selectors.pheads([0, 1, 2, -2, -1]),
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
@@ -508,9 +508,9 @@ maker(
         .split_divisions([(2, 4), (8, 4), (2, 4)]),
         extra_counts=[4, 0, 4],
         denominator=None,
-        written_quarters=([5],),
-        invisible=([6],),
-        tie=([6],),
+        written_quarters=[5],
+        invisible=[6],
+        tie=[6],
     ),
     baca.tuplet_bracket_down(),
     baca.new(
@@ -519,7 +519,7 @@ maker(
             do_not_transpose=True,
         ),
         baca.triple_staccato(),
-        selector=baca.pheads().get([0, 1, 2, -2, -1]),
+        selector=baca.selectors.pheads([0, 1, 2, -2, -1]),
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
@@ -647,8 +647,8 @@ maker(
     ),
     harmony.sixteenths(
         [2, 2, -10],
-        written_quarters=([0, 1, 4, 5],),
-        invisible=([1, 5],),
+        written_quarters=[0, 1, 4, 5],
+        invisible=[1, 5],
         tie_runs=True,
     ),
     baca.hairpin(
@@ -687,11 +687,11 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.chunk(
         baca.accent(
-            baca.pheads(),
+            baca.selectors.pheads(),
         ),
         baca.flat_glissando(),
     ),
