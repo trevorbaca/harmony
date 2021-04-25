@@ -242,7 +242,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -333,7 +333,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -701,7 +701,7 @@ maker(
 maker(
     ("vc2", 4),
     baca.repeat_tie(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
     ),
     baca.hairpin(
         "(mp) >o niente",
@@ -854,7 +854,7 @@ maker(
 maker(
     ("cb2", 4),
     baca.repeat_tie(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
     ),
     baca.hairpin(
         "(mp) >o niente",

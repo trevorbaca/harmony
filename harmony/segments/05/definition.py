@@ -230,7 +230,7 @@ maker(
     ),
     baca.staff_lines(
         1,
-        baca.leaf(2),
+        baca.selectors.leaf(2),
     ),
     baca.new(
         harmony.purpleheart_staff_positions([0]),
@@ -543,14 +543,14 @@ maker(
         baca.script_extra_offset((-2, 0)),
         baca.stem_extra_offset((-2, 0)),
         baca.stem_tremolo_extra_offset((-2, 0)),
-        selector=baca.leaf(2),
+        selector=baca.selectors.leaf(2),
     ),
     baca.new(
         baca.clef("bass"),
         baca.clef_extra_offset((-2, 0)),
         baca.clef_x_extent_false(),
         baca.staff_lines(5),
-        selector=baca.leaf(3),
+        selector=baca.selectors.leaf(3),
     ),
 )
 

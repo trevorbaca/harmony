@@ -515,11 +515,11 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.leaf(0),
+            baca.selectors.leaf(0),
         ),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.leaf(-1),
+            baca.selectors.leaf(-1),
         ),
         baca.note_head_transparent(
             baca.leaves()[1:-1],

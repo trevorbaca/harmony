@@ -1391,7 +1391,7 @@ def margin_markup(
     *,
     alert: baca.IndicatorCommand = None,
     context: str = "Staff",
-    selector: abjad.Expression = baca.leaf(0),
+    selector: abjad.Expression = baca.selectors.leaf(0),
 ) -> baca.CommandTyping:
     """
     Makes tagged margin markup indicator command.

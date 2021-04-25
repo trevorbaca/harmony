@@ -406,7 +406,7 @@ maker(
     ),
     baca.staff_lines(
         3,
-        baca.leaf(-2),
+        baca.selectors.leaf(-2),
     ),
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic("ff"),
@@ -844,7 +844,7 @@ maker(
         map=baca.selectors.rleak_runs(),
     ),
     baca.stop_on_string(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
         map=baca.selectors.leaf_in_each_rleak_run(-1),
     ),
     baca.scp_spanner(

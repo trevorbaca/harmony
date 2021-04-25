@@ -469,7 +469,7 @@ maker(
     ),
     baca.tuplet_number_text(
         abjad.Markup("5:4"),
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_up(),
     baca.accent(
@@ -570,11 +570,11 @@ maker(
         baca.clef("bass"),
         baca.clef_extra_offset((-2, 0)),
         baca.clef_x_extent_false(),
-        selector=baca.leaf(3),
+        selector=baca.selectors.leaf(3),
     ),
     baca.staff_lines(
         5,
-        baca.leaf(3),
+        baca.selectors.leaf(3),
     ),
     baca.new(
         baca.flag_extra_offset((-2, 0)),
@@ -582,7 +582,7 @@ maker(
         baca.script_extra_offset((-2, 0)),
         baca.stem_extra_offset((-2, 0)),
         baca.stem_tremolo_extra_offset((-2, 0)),
-        selector=baca.leaf(2),
+        selector=baca.selectors.leaf(2),
     ),
     baca.new(
         baca.tuplet_bracket_up(),
