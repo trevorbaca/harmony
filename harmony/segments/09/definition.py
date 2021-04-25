@@ -219,7 +219,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\harmony-match-harp-decay-markup",
@@ -291,7 +291,7 @@ maker(
     baca.tuplet_bracket_up(),
     baca.hairpin(
         "mp >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.new(
         baca.bow_speed_spanner(
@@ -352,7 +352,7 @@ maker(
     baca.dynamic("ff"),
     baca.pizzicato_spanner(
         abjad.tweak(5.5 + 1).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -385,7 +385,7 @@ maker(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 

@@ -162,7 +162,7 @@ maker(
     harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -177,7 +177,7 @@ maker(
     harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -216,12 +216,12 @@ maker(
     baca.hairpin(
         "f > p",
         measures=6,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "p < f",
         measures=8,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(5.5),
 )
@@ -241,7 +241,7 @@ maker(
     harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -261,7 +261,7 @@ maker(
     harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -304,12 +304,12 @@ maker(
     baca.hairpin(
         "f > p",
         measures=6,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "p < f",
         measures=8,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(5.5),
     baca.markup(
@@ -431,7 +431,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -516,7 +516,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -639,7 +639,7 @@ maker(
             abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
         ),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -668,7 +668,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -830,7 +830,7 @@ maker(
             abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
         ),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 

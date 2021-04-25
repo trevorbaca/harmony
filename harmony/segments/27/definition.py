@@ -195,7 +195,7 @@ maker(
         bookend=False,
         direction=abjad.Down,
         lilypond_id=2,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.text_spanner(
         "A =|",
@@ -221,7 +221,7 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -340,7 +340,7 @@ maker(
     ("perc1", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.tleaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
     ),
 )
 
@@ -467,7 +467,7 @@ maker(
     ("perc2", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.tleaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
     ),
 )
 
@@ -562,7 +562,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.tleaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
     ),
 )
 

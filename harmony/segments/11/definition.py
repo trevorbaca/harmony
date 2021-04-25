@@ -237,7 +237,7 @@ maker(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.new(
         baca.metric_modulation_spanner(
@@ -289,7 +289,7 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -396,7 +396,7 @@ maker(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.tweak(10).staff_padding,
         pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -715,7 +715,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\harmony-match-harp-decay-markup",
@@ -794,7 +794,7 @@ maker(
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
         # selector=baca.leaves()[2:].rleak(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -962,7 +962,7 @@ maker(
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
         # selector=baca.leaves()[2:].rleak(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1101,7 +1101,7 @@ maker(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.trill_spanner(),
 )
@@ -1159,7 +1159,7 @@ maker(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         right_broken=True,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.trill_spanner(
         right_broken=True,

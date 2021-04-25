@@ -99,7 +99,7 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -341,7 +341,7 @@ maker(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -417,7 +417,7 @@ maker(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -581,7 +581,7 @@ maker(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 

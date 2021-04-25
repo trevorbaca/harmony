@@ -385,7 +385,7 @@ maker(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -430,7 +430,7 @@ maker(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -483,7 +483,7 @@ maker(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -544,7 +544,7 @@ maker(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 

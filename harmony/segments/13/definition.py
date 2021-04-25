@@ -121,8 +121,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        selector=baca.tleaves().rleak(),
-    ),
+        selector=baca.selectors.tleaves(rleak=True),),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
@@ -144,7 +143,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -173,7 +172,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -433,7 +432,7 @@ maker(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-bisb-markup",

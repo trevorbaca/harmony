@@ -165,7 +165,7 @@ maker(
     harmony.purpleheart_staff_positions([-2, 0, -2, 0, 0]),
     baca.hairpin(
         "p < f",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -185,7 +185,7 @@ maker(
     harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -268,7 +268,7 @@ maker(
     harmony.purpleheart_staff_positions([-2, 0, 0, -2, 0]),
     baca.hairpin(
         "p < f",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -287,7 +287,7 @@ maker(
     harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -425,7 +425,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -510,7 +510,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -631,7 +631,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -661,7 +661,7 @@ maker(
             abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
         ),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -858,7 +858,7 @@ maker(
             abjad.tweak(5.5).staff_padding,
             autodetect_right_padding=False,
         ),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 

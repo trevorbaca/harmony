@@ -156,7 +156,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -293,7 +293,7 @@ maker(
     harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(5.5),
     baca.markup(
@@ -418,7 +418,7 @@ maker(
     harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(5.5),
     baca.markup(
@@ -607,7 +607,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -682,7 +682,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -720,7 +720,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -826,7 +826,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -856,14 +856,14 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.dls_staff_padding(5),
     baca.scp_spanner(
         "P1 =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -898,7 +898,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -941,7 +941,7 @@ maker(
         "P1 =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -971,7 +971,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1029,7 +1029,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1110,7 +1110,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1139,14 +1139,14 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.dls_staff_padding(5),
     baca.scp_spanner(
         "P1 =|",
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1180,7 +1180,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1228,7 +1228,7 @@ maker(
         "P1 =|",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1260,7 +1260,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 

@@ -173,7 +173,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -203,7 +203,7 @@ maker(
         autodetect_right_padding=False,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -645,7 +645,7 @@ maker(
         "o< mf >o",
         bookend=False,
         pieces=baca.selectors.lparts([1, 4]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -750,7 +750,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.dls_staff_padding(6),
 )
@@ -762,14 +762,14 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "P4 -> T4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -834,7 +834,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -851,7 +851,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.dls_staff_padding(4 + 2),
     baca.scp_spanner(
@@ -859,7 +859,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -941,14 +941,14 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "P4 -> T4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -1019,7 +1019,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1036,14 +1036,14 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "P4 -> T4",
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -1128,14 +1128,14 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "P4 -> T4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dls_staff_padding(6),
 )

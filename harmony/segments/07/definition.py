@@ -661,7 +661,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.new(
         baca.note_head_style_harmonic(
@@ -732,7 +732,7 @@ maker(
         autodetect_right_padding=False,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.new(
         baca.note_head_style_harmonic(
@@ -762,7 +762,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -837,7 +837,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.new(
         baca.note_head_style_harmonic(
@@ -862,7 +862,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -951,7 +951,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1047,7 +1047,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.new(
         baca.note_head_style_harmonic(
@@ -1213,6 +1213,6 @@ maker(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
