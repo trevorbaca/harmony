@@ -90,11 +90,11 @@ maker(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.pheads(grace=False).get([0, 2]),
+        selector=baca.selectors.pheads([0, 2], grace=False),
     ),
     baca.dynamic(
         "mf-mp",
-        selector=baca.pheads(grace=False).get([1, 3]),
+        selector=baca.selectors.pheads([1, 3], grace=False),
     ),
     baca.dls_staff_padding(5),
     baca.text_spanner(
@@ -344,10 +344,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("sfp"),
     baca.dls_staff_padding(6),
@@ -403,7 +403,7 @@ maker(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("sfp"),
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
 )
 
@@ -463,7 +463,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -498,10 +498,10 @@ maker(
     ),
     baca.pitch("A1"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "o< f >o niente",
@@ -527,10 +527,10 @@ maker(
     baca.tuplet_number_text(abjad.Markup("5:4")),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("sfp"),
     baca.dls_staff_padding(6),
@@ -583,7 +583,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.hairpin(
         "mf >o niente",

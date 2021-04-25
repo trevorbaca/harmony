@@ -374,7 +374,7 @@ maker(
     ),
     baca.dynamic(
         "f",
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
 )
 
@@ -391,10 +391,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         '"ff"',
@@ -446,10 +446,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
@@ -473,7 +473,7 @@ maker(
     ),
     baca.tuplet_bracket_up(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("mf"),
 )
@@ -598,7 +598,7 @@ maker(
     ),
     baca.dynamic(
         "mf",
-        selector=baca.phead(-2),
+        selector=baca.selectors.phead(-2),
     ),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -628,7 +628,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.new(
         baca.hairpin(
@@ -699,7 +699,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
 )
 
@@ -719,7 +719,7 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         '"ff"',
@@ -790,10 +790,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
@@ -819,7 +819,7 @@ maker(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.new(
         baca.hairpin(
@@ -900,7 +900,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
 )
 
@@ -914,7 +914,7 @@ maker(
 maker(
     (["bfl", "hp", "va", "vc2", "cb1", "cb2"], 2),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "pp p mp mf f",

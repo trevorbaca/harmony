@@ -7030,7 +7030,7 @@ x_Viola_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=([0, 1, 4, 5],), invisible=([1, 5],), talea_denominator=16, tie_runs=True)"
+    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=[0, 1, 4, 5], invisible=[1, 5], talea_denominator=16, tie_runs=True)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -8645,7 +8645,7 @@ x_Cello_I_Music_Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
+        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=[5], invisible=[6], talea_denominator=16, tie=[6])"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -10115,7 +10115,7 @@ x_Cello_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=([0, 1, 4, 5],), invisible=([1, 5],), talea_denominator=16, tie_runs=True)"
+    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=[0, 1, 4, 5], invisible=[1, 5], talea_denominator=16, tie_runs=True)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -11727,7 +11727,7 @@ x_Contrabass_I_Music_Voice = {
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
-        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=([5],), invisible=([6],), talea_denominator=16, tie=([6],))"
+        %@% - \baca-text-spanner-left-text "sixteenths([4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4], preprocessor=builtins.builtins.function( None, None ), denominator=None, extra_counts=[4, 0, 4], written_quarters=[5], invisible=[6], talea_denominator=16, tie=[6])"
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -13208,7 +13208,7 @@ x_Contrabass_II_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=([0, 1, 4, 5],), invisible=([1, 5],), talea_denominator=16, tie_runs=True)"
+    %@% - \baca-text-spanner-left-text "sixteenths([2, 2, -10], written_quarters=[0, 1, 4, 5], invisible=[1, 5], talea_denominator=16, tie_runs=True)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)

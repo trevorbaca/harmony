@@ -71,7 +71,7 @@ maker(
     ),
     baca.pitch("E3"),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -123,7 +123,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.breathe(
-        baca.pleaf(1),
+        baca.selectors.pleaf(1),
     ),
 )
 
@@ -144,12 +144,12 @@ maker(
     baca.dynamic("mf"),
     baca.dynamic(
         "p",
-        selector=baca.phead(1),
+        selector=baca.selectors.phead(1),
     ),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.75).self_alignment_X,
-        selector=baca.phead(2),
+        selector=baca.selectors.phead(2),
     ),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
@@ -245,7 +245,7 @@ maker(
     baca.dynamic(
         '"f"-sempre',
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.phead(2),
+        selector=baca.selectors.phead(2),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -356,7 +356,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("f"),
 )
@@ -405,12 +405,12 @@ maker(
     baca.pitch("F4"),
     baca.dynamic(
         "p",
-        selector=baca.pheads()[:2],
+        selector=baca.selectors.pheads((None, 2)),
     ),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.phead(2),
+        selector=baca.selectors.phead(2),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -504,7 +504,7 @@ maker(
     ),
     baca.pitch("F3"),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "f-ancora",
@@ -586,7 +586,7 @@ maker(
         literal=True,
     ),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "f-ancora",
@@ -663,7 +663,7 @@ maker(
     ),
     baca.pitch("Eb2"),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "f-ancora",
@@ -715,10 +715,10 @@ maker(
         [4],
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
 )

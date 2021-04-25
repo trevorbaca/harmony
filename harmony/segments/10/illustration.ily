@@ -2603,7 +2603,7 @@ j_Bass_Flute_Music_Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "sixteenths([12, 8, 3, 1], written_dotted_wholes=([0], 2), invisible=([1, 2, 3],), talea_denominator=16)"
+    %@% - \baca-text-spanner-left-text "sixteenths([12, 8, 3, 1], written_dotted_wholes=([0], 2), invisible=[1, 2, 3], talea_denominator=16)"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)

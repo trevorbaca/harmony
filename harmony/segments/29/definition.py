@@ -105,7 +105,7 @@ maker(
     baca.new(
         baca.dynamic("mf"),
         baca.damp(),
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -125,7 +125,7 @@ maker(
     ("perc2", 1),
     harmony.sixteenths(
         ["-", 1],
-        invisible=([-1],),
+        invisible=[-1],
     ),
     baca.damp(
         baca.leaf(-1),
@@ -176,8 +176,8 @@ maker(
     ("cb2", 1),
     harmony.sixteenths(
         [16, 4, 2, 2],
-        written_dotted_wholes=([0],),
-        invisible=([1, 2, 3],),
+        written_dotted_wholes=[0],
+        invisible=[1, 2, 3],
     ),
     baca.pitch("A1"),
     baca.flat_glissando(

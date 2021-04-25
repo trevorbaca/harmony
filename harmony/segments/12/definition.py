@@ -164,11 +164,11 @@ maker(
     ),
     # TOOD: promote into harmony.sixteenths():
     baca.repeat_tie(
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -193,7 +193,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.pleaf(0, grace=False),
+        selector=baca.selectors.pleaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -213,7 +213,7 @@ maker(
         [4, 8, 4, 12],
     ),
     baca.breathe(
-        baca.pleaves().get([1, 3]),
+        baca.selectors.pleaves([1, 3]),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -257,15 +257,15 @@ maker(
         [6, 8, 2, 2],
         extra_counts=[0, 0, 0, 2],
         denominator=None,
-        written_quarters=([-2, -1],),
-        invisible=([-1],),
+        written_quarters=[-2, -1],
+        invisible=[-1],
     ),
     baca.stem_tremolo(
-        baca.pleaves()[-2:],
+        baca.selectors.pleaves((-2, None)),
     ),
     baca.dynamic_text_x_offset(
         -0.75,
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -386,17 +386,17 @@ maker(
     baca.new(
         baca.dynamic("mp"),
         match=[0],
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
     baca.new(
         baca.dynamic("p"),
         match=[1],
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
     baca.new(
         baca.dynamic("pp"),
         match=[2],
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
     ),
 )
 
@@ -553,7 +553,7 @@ maker(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.pheads().get([0, -1]),
+        baca.selectors.pheads([0, -1]),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -639,7 +639,7 @@ maker(
     baca.clef("bass"),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< mf >o",
@@ -691,7 +691,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("f"),
 )
@@ -1196,7 +1196,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (3, 8)),
     baca.triple_staccato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -1211,10 +1211,10 @@ maker(
         [4],
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -1236,14 +1236,14 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], (13, 15)),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "sffp",
-        selector=baca.pheads()[1:-1],
+        selector=baca.selectors.pheads((1, -1)),
     ),
     baca.hairpin(
         "sffp >o niente",

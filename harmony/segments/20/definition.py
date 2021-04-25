@@ -168,7 +168,7 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "o< pp >o niente",
@@ -216,7 +216,7 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
         baca.ptails(),
@@ -235,10 +235,10 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -257,10 +257,10 @@ maker(
     baca.tuplet_bracket_staff_padding(3),
     harmony.slate_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -291,10 +291,10 @@ maker(
     baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("f"),
 )
@@ -309,7 +309,7 @@ maker(
     baca.ottava_bassa(),
     baca.ottava_bracket_staff_padding(8),
     baca.laissez_vibrer(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic("p"),
 )
@@ -403,10 +403,10 @@ maker(
         selector=baca.leaves().rleak().rleak(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -435,11 +435,11 @@ maker(
         selector=baca.plts()[1:],
     ),
     baca.triple_staccato(
-        baca.pheads()[1:],
+        baca.selectors.pheads((1, None)),
     ),
     baca.dynamic(
         "p",
-        selector=baca.phead(1),
+        selector=baca.selectors.phead(1),
     ),
     baca.scp_spanner(
         "P4 -> T1",
@@ -624,10 +624,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -703,9 +703,9 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )

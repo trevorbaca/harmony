@@ -135,7 +135,7 @@ maker(
     ),
     baca.pitch("A4"),
     baca.flat_glissando(
-        hide_stem_selector=baca.pleaves()[1:-1],
+        hide_stem_selector=baca.selectors.pleaves((1, -1)),
         selector=baca.leaves()[:-6],
     ),
     baca.hairpin(
@@ -164,14 +164,14 @@ maker(
         [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
         fuse=True,
-        written_halves=([0],),
+        written_halves=[0],
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.hairpin(
         "p < mp > p p < mp > p",
@@ -211,11 +211,11 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(
-        hide_stem_selector=baca.pleaves()[1:-1],
+        hide_stem_selector=baca.selectors.pleaves((1, -1)),
         selector=baca.leaves()[:-6],
     ),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -7]),
+        baca.selectors.pleaves([0, -7]),
     ),
     baca.hairpin(
         "p < mp >",
@@ -268,10 +268,10 @@ maker(
     ),
     harmony.slate_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "f >o niente",
@@ -435,10 +435,10 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -518,14 +518,14 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.pitch(
         "C5",
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -612,11 +612,11 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -667,13 +667,13 @@ maker(
         [8, 8, 8, 6, 2],
         fuse=True,
         do_not_rewrite_meter=True,
-        written_halves=([-2],),
-        invisible=([-1],),
+        written_halves=[-2],
+        invisible=[-1],
     ),
     baca.pitch("A1"),
     baca.flat_glissando(
         hide_middle_stems=True,
-        hide_stem_selector=baca.pleaves()[1:-2],
+        hide_stem_selector=baca.selectors.pleaves((1, -2)),
         selector=baca.leaves()[:-1],
     ),
     baca.hairpin(
@@ -713,16 +713,16 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
         do_not_transpose=True,
     ),
     baca.pitch(
         "C5",
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -764,7 +764,7 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1", "cb2"], 5),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",

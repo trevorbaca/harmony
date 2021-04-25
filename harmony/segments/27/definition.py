@@ -180,12 +180,12 @@ maker(
     ),
     baca.dynamic(
         "pp-ppp",
-        selector=baca.pleaf(0, grace=False),
+        selector=baca.selectors.pleaf(0, grace=False),
     ),
     baca.dynamic(
         "pp-ppp",
         measures=5,
-        selector=baca.pleaf(0, grace=False),
+        selector=baca.selectors.pleaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -385,7 +385,7 @@ maker(
     ),
     harmony.tam_tam_staff_position(),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -430,10 +430,10 @@ maker(
     baca.tuplet_bracket_up(),
     baca.new(
         harmony.slate_staff_position(),
-        selector=baca.pleaf(0),
+        selector=baca.selectors.pleaf(0),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(),
     baca.hairpin(
@@ -558,7 +558,7 @@ maker(
     ("hp", (6, 7)),
     baca.pitch("Bb4"),
     baca.snap_pizzicato(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -611,13 +611,13 @@ maker(
         r"c2. c8 \times 5/4 { c2 }",
     ),
     baca.repeat_tie(
-        baca.pleaves()[:2],
+        baca.selectors.pleaves((None, 2)),
     ),
     baca.tuplet_bracket_up(),
     baca.markup(
         r"\baca-quasi-bisb-markup",
         literal=True,
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
@@ -652,7 +652,7 @@ maker(
     ),
     baca.dynamic(
         "pp",
-        selector=baca.phead(0),
+        selector=baca.selectors.phead(0),
     ),
 )
 
@@ -729,10 +729,10 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -815,14 +815,14 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.pitch(
         "C5",
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -906,11 +906,11 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -974,7 +974,7 @@ maker(
         selector=baca.leaves()[:3],
     ),
     baca.accent(
-        baca.pheads()[1:3],
+        baca.selectors.pheads((1, 3)),
     ),
     baca.stem_tremolo(
         baca.plts()[:2],
@@ -982,7 +982,7 @@ maker(
     baca.dynamic("f"),
     baca.dynamic(
         "pp",
-        selector=baca.phead(2),
+        selector=baca.selectors.phead(2),
     ),
 )
 
@@ -1033,16 +1033,16 @@ maker(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
         do_not_transpose=True,
     ),
     baca.pitch(
         "C5",
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.pleaves()[1:-1],
+        baca.selectors.pleaves((1, -1)),
     ),
 )
 
@@ -1087,10 +1087,10 @@ maker(
 maker(
     (["va", "vc1", "vc2", "cb1"], 3),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.accent(
-        baca.pheads()[1:],
+        baca.selectors.pheads((1, None)),
     ),
     baca.dynamic("f"),
 )
@@ -1098,7 +1098,7 @@ maker(
 maker(
     (["vc1", "vc2", "cb1", "cb2"], 6),
     baca.stem_tremolo(
-        baca.pleaves().get([0, -1]),
+        baca.selectors.pleaves([0, -1]),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",

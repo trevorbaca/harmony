@@ -207,10 +207,10 @@ maker(
     harmony.triangle_staff_position(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.pleaves()[1:].rleak(),
+        selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
@@ -248,7 +248,7 @@ maker(
             abjad.tweak(6 + 1).staff_padding,
             literal=True,
         ),
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -309,10 +309,10 @@ maker(
     harmony.tam_tam_staff_position(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.pleaves()[1:].rleak(),
+        selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(6),
@@ -364,7 +364,7 @@ maker(
     harmony.tessera_1(5),
     baca.pitch("C#4"),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "pp p",
@@ -530,7 +530,7 @@ maker(
         harmony.bridge_staff_position(),
         baca.accent(),
         baca.stem_tremolo(),
-        selector=baca.pleaves()[:2],
+        selector=baca.selectors.pleaves((None, 2)),
     ),
     baca.dynamic("ppp"),
     baca.dls_staff_padding(
@@ -572,11 +572,11 @@ maker(
     baca.new(
         baca.pitch("F#3"),
         baca.accent(),
-        selector=baca.pheads()[2:],
+        selector=baca.selectors.pheads((2, None)),
     ),
     baca.dynamic(
         "mf",
-        selector=baca.pleaf(2),
+        selector=baca.selectors.pleaf(2),
     ),
     baca.tuplet_bracket_up(
         baca.leaves()[3:],
@@ -602,7 +602,7 @@ maker(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.staff_positions(
         [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
@@ -652,7 +652,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.new(
         baca.hairpin("mf >o niente"),
@@ -691,7 +691,7 @@ maker(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.staff_positions(
         [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
@@ -733,10 +733,10 @@ maker(
     ),
     harmony.bridge_staff_position(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "pp ppp",
@@ -757,7 +757,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "pp p mp",
@@ -792,7 +792,7 @@ maker(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.staff_positions(
         [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
@@ -847,7 +847,7 @@ maker(
         map=baca.selectors.runs(),
     ),
     baca.stem_tremolo(
-        baca.pleaves(grace=False),
+        baca.selectors.pleaves(grace=False),
     ),
     baca.new(
         baca.hairpin(
@@ -872,7 +872,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.hairpin(
         "pp p",
@@ -897,7 +897,7 @@ maker(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.staff_positions(
         [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
@@ -926,7 +926,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.alternate_bow_strokes(
-        baca.pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
         abjad.tweak(4).staff_padding,
         full=True,
     ),

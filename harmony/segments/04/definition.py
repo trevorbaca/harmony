@@ -232,7 +232,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.metric_modulation_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
 )
 
@@ -248,7 +248,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(3).staff_padding,
         right_broken=True,
-        selector=baca.pleaves().rleak(),
+        selector=baca.selectors.pleaves(rleak=True),
     ),
 )
 
@@ -284,7 +284,7 @@ maker(
     ),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
-        baca.pleaves(),
+        baca.selectors.pleaves(),
     ),
     baca.hairpin(
         "p < ff > p",
@@ -648,7 +648,7 @@ maker(
         force_augmentation=True,
     ),
     baca.repeat_tie(
-        baca.pleaf(0),
+        baca.selectors.pleaf(0),
     ),
 )
 
@@ -709,14 +709,14 @@ maker(
 maker(
     (["bfl", "hp", "va", "vc1", "vc2", "cb1"], [(1, 6), 8, 11]),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
 maker(
     ("cb2", (1, 6)),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -783,8 +783,8 @@ maker(
     (["va", "vc1", "vc2", "cb1"], 9),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.pleaves(grace=True),
+            baca.selectors.pleaves(grace=True),
         ),
-        map=baca.pleaves(grace=True).runs(),
+        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
     ),
 )

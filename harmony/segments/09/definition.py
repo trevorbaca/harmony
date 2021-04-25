@@ -108,10 +108,10 @@ maker(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.dynamic('"f"'),
     baca.markup(
@@ -127,13 +127,13 @@ maker(
         [2, -2, -4, -4, 2, -2, 2, -2, -4],
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.accent(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
     baca.stem_tremolo(
-        baca.pheads(),
+        baca.selectors.pheads(),
     ),
 )
 
@@ -155,7 +155,7 @@ maker(
         selector=baca.leaves().rleak(),
     ),
     baca.accent(
-        baca.pheads()[:-1],
+        baca.selectors.pheads((None, -1)),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -165,21 +165,21 @@ maker(
     ),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.pleaves()[-1:].rleak(),
+        selector=baca.selectors.pleaves((-1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.pleaf(-1),
+        baca.selectors.pleaf(-1),
     ),
     baca.dynamic(
         "p",
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
     baca.markup(
         r"\baca-bd-fingertips-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(6).staff_padding,
         literal=True,
-        selector=baca.pleaf(-1),
+        selector=baca.selectors.pleaf(-1),
     ),
 )
 
@@ -357,7 +357,7 @@ maker(
     baca.markup(
         r"\baca-string-iii-markup",
         direction=abjad.Down,
-        selector=baca.pheads(),
+        selector=baca.selectors.pheads(),
         literal=True,
     ),
     baca.markup(
@@ -369,7 +369,7 @@ maker(
         r"\baca-fourteen-a",
         abjad.tweak(3).staff_padding,
         literal=True,
-        selector=baca.phead(-1),
+        selector=baca.selectors.phead(-1),
     ),
 )
 
