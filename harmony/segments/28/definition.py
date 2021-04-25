@@ -108,7 +108,7 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -176,7 +176,7 @@ maker(
     baca.hairpin(
         "p < mp > p p < mp > p",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.markup(
         r"\baca-triangle-markup",

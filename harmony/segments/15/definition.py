@@ -76,7 +76,7 @@ maker(
     baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -155,7 +155,7 @@ maker(
         abjad.tweak(3).staff_padding,
         argument=r"\baca-cov-markup =|",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.trill_spanner(
         map=baca.selectors.runs((1, 2)),

@@ -130,19 +130,19 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
             r"\harmony-d-d-sharp-markup",
             literal=True,
         ).bound_details__left__text,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -158,7 +158,7 @@ maker(
     baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -180,7 +180,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -197,14 +197,14 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
             r"\harmony-d-d-sharp-markup",
             literal=True,
         ).bound_details__left__text,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -221,14 +221,14 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
             r"\harmony-d-d-sharp-markup",
             literal=True,
         ).bound_details__left__text,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -239,7 +239,7 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -557,7 +557,7 @@ maker(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -664,7 +664,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -782,7 +782,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1039,7 +1039,7 @@ maker(
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -1195,14 +1195,14 @@ maker(
     (["va", "cb1", "cb2"], 1),
     baca.hairpin(
         "o< mp",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.scp_spanner(
         "T1 -> P1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 

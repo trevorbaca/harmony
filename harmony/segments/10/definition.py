@@ -220,7 +220,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -304,7 +304,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -329,7 +329,7 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -570,7 +570,7 @@ maker(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -1154,7 +1154,7 @@ maker(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1170,7 +1170,7 @@ maker(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 

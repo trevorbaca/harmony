@@ -114,12 +114,12 @@ maker(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((3, 4)),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
@@ -127,7 +127,7 @@ maker(
             literal=True,
         ).bound_details__left__text,
         abjad.tweak(8, literal=True).staff_padding,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -583,7 +583,7 @@ maker(
     baca.hairpin(
         'o< "mf" >o niente',
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(
         r"\baca-whisk-markup",
@@ -723,7 +723,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -814,7 +814,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -924,7 +924,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -955,14 +955,14 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "O -> P4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -974,14 +974,14 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "O -> P4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -993,14 +993,14 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([2, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
         "O -> P4",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -1046,7 +1046,7 @@ maker(
         "o<| mp |>o niente o<| mp |>o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.markup(
         r"\baca-quasi-bisb-markup",
@@ -1067,7 +1067,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
 )
 
@@ -1102,7 +1102,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -1154,7 +1154,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.selectors.lparts([2, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.new(
         baca.trill_spanner(),
@@ -1176,7 +1176,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.lparts([2, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.new(
         baca.trill_spanner(),
@@ -1200,7 +1200,7 @@ maker(
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -3,
@@ -1225,7 +1225,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.tleaves().rleak(),
+        selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.new(
         baca.trill_spanner(),
@@ -1251,7 +1251,7 @@ maker(
     baca.triple_staccato(baca.pheads()),
     baca.hairpin(
         "p < f",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -1283,7 +1283,7 @@ maker(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
     baca.dynamic(
         "niente",

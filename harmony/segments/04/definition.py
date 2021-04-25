@@ -149,7 +149,7 @@ maker(
         harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
         baca.hairpin(
             "f > p",
-            selector=baca.tleaves(),
+            selector=baca.selectors.tleaves(),
         ),
         measures=(1, 2),
     ),
@@ -157,7 +157,7 @@ maker(
         harmony.purpleheart_staff_positions([0, 2, 0, 2, 2]),
         baca.hairpin(
             "p < f",
-            selector=baca.tleaves(),
+            selector=baca.selectors.tleaves(),
         ),
         measures=(5, 6),
     ),
@@ -194,7 +194,7 @@ maker(
     harmony.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -207,7 +207,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.hairpin(
         "p < f",
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -359,7 +359,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -436,7 +436,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -497,7 +497,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 
@@ -576,7 +576,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=baca.tleaves(grace=False).rleak(),
+        selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
 

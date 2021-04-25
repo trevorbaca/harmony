@@ -483,7 +483,7 @@ maker(
     baca.pizzicato_spanner(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.tleaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
     ),
 )
 
@@ -515,7 +515,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
@@ -602,7 +602,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.tleaves(),
+        selector=baca.selectors.tleaves(),
     ),
 )
 
