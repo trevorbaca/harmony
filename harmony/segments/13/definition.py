@@ -121,7 +121,8 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        selector=baca.selectors.tleaves(rleak=True),),
+        selector=baca.selectors.tleaves(rleak=True),
+    ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
