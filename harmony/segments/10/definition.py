@@ -606,7 +606,7 @@ maker(
     ),
     baca.tuplet_bracket_up(),
     baca.repeat_tie(
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.pitches(
         "F#4 D3",
@@ -732,7 +732,7 @@ maker(
         baca.selectors.pleaves(),
     ),
     baca.repeat_tie(
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.clef("bass"),
     baca.pitches(
@@ -863,7 +863,7 @@ maker(
         baca.selectors.pleaves(),
     ),
     baca.repeat_tie(
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.clef("bass"),
     baca.pitches(
@@ -1036,7 +1036,7 @@ maker(
 maker(
     ("cb2", (10, 15)),
     baca.repeat_tie(
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_up(),
     baca.pitches(

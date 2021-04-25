@@ -331,7 +331,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -441,7 +441,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -750,7 +750,7 @@ maker(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -887,7 +887,7 @@ maker(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -911,7 +911,7 @@ maker(
         baca.clef("percussion"),
         baca.staff_lines(1),
         harmony.bridge_staff_position(),
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     baca.accent(
         baca.selectors.pheads(),
@@ -1007,7 +1007,7 @@ maker(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -1122,7 +1122,7 @@ maker(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(

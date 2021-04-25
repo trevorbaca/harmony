@@ -242,7 +242,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(2, grace=False),
+        selector=baca.selectors.leaf(2, grace=False),
     ),
 )
 
@@ -288,7 +288,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(1, grace=False),
+        selector=baca.selectors.leaf(1, grace=False),
     ),
 )
 
@@ -327,7 +327,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -411,7 +411,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(1, grace=False),
+        selector=baca.selectors.leaf(1, grace=False),
     ),
 )
 
@@ -479,7 +479,7 @@ maker(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         literal=True,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 

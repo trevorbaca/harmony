@@ -281,7 +281,7 @@ maker(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
     ),
     baca.pitch("Bb4"),
     baca.espressivo(
@@ -360,7 +360,7 @@ maker(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
     ),
     baca.pitch("B2"),
     baca.hairpin(
@@ -435,7 +435,7 @@ maker(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.leaf(0),
+        baca.selectors.leaf(0),
     ),
     baca.pitch(
         "Bb4",

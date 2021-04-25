@@ -257,14 +257,14 @@ maker(
     ),
     baca.staff_lines(
         3,
-        selector=baca.leaf(-2),
+        selector=baca.selectors.leaf(-2),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         abjad.tweak(1).self_alignment_X,
         literal=True,
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -464,7 +464,7 @@ maker(
     # NOTE: current clef / after-grace contention:
     baca.clef(
         "bass",
-        baca.leaf(-1),
+        baca.selectors.leaf(-1),
     ),
 )
 
@@ -606,7 +606,7 @@ maker(
     # NOTE: current clef / after-grace contention:
     baca.clef(
         "bass",
-        baca.leaf(-1),
+        baca.selectors.leaf(-1),
     ),
 )
 

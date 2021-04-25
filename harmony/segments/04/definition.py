@@ -173,7 +173,7 @@ maker(
     baca.dynamic(
         "f-ancora",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
 )
 
@@ -346,7 +346,7 @@ maker(
     baca.dynamic(
         "ff-p",
         abjad.tweak(-0.5).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -427,7 +427,7 @@ maker(
     baca.dynamic(
         "ff-p",
         abjad.tweak(-0.5).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -488,7 +488,7 @@ maker(
     baca.dynamic(
         "ff-p",
         abjad.tweak(-0.5).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -563,7 +563,7 @@ maker(
     baca.dynamic(
         "ff-p",
         abjad.tweak(-0.5).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.dls_staff_padding(
         6,

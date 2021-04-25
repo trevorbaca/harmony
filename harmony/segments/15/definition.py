@@ -429,7 +429,7 @@ maker(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -456,7 +456,7 @@ maker(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -481,7 +481,7 @@ maker(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -533,7 +533,7 @@ maker(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -558,7 +558,7 @@ maker(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -615,7 +615,7 @@ maker(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -640,7 +640,7 @@ maker(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(
@@ -692,7 +692,7 @@ maker(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(

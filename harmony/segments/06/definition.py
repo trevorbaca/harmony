@@ -948,7 +948,7 @@ maker(
     baca.dynamic(
         "mp-pp",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -998,7 +998,7 @@ maker(
     baca.dynamic(
         "mp-pp",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1124,7 +1124,7 @@ maker(
     baca.dynamic(
         "mp-pp",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1181,7 +1181,7 @@ maker(
     baca.dynamic(
         "mp-pp",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.leaf(0, grace=False),
+        selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",

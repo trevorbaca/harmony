@@ -701,7 +701,7 @@ maker(
     ),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(

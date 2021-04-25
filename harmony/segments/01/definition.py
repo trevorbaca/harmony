@@ -388,11 +388,11 @@ maker(
     ("vc1", 3),
     baca.clef(
         "percussion",
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     baca.staff_lines(
         1,
-        baca.leaf(1),
+        baca.selectors.leaf(1),
     ),
     harmony.sixteenths(
         [5, -5, 1, -4],

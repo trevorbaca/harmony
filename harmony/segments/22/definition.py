@@ -830,7 +830,7 @@ maker(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     harmony.bridge_staff_position(),
     baca.accent(

@@ -427,7 +427,7 @@ maker(
     baca.new(
         baca.clef("alto"),
         baca.staff_lines(5),
-        selector=baca.leaf(3),
+        selector=baca.selectors.leaf(3),
     ),
     baca.new(
         baca.pitch("E3"),
@@ -620,7 +620,7 @@ maker(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     harmony.bridge_staff_position(),
     baca.accent(
@@ -682,7 +682,7 @@ maker(
     ),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.leaf(-1),
+        selector=baca.selectors.leaf(-1),
         map=baca.selectors.rleak_runs(),
     ),
     baca.hairpin(

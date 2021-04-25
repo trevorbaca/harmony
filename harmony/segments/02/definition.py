@@ -234,7 +234,7 @@ maker(
     baca.new(
         baca.staff_lines(
             1,
-            baca.leaf(1, grace=False),
+            baca.selectors.leaf(1, grace=False),
         ),
         baca.hairpin(
             "o<| f",
@@ -771,7 +771,7 @@ maker(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.leaf(1),
+        selector=baca.selectors.leaf(1),
     ),
     harmony.sixteenths(
         [5, -5, 1, "-"],
