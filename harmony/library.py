@@ -418,23 +418,23 @@ def phjc(
 
     commands: typing.List[rmakers.Command] = []
     if rest is not None:
-        selector = baca.tuplets().get(rest)
+        selector = baca.selectors.tuplets(rest)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_cyclic is not None:
-        selector = baca.tuplets().get(*rest_cyclic)
+        selector = baca.selectors.tuplets(rest_cyclic)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_except is not None:
-        selector = baca.tuplets().exclude(rest_except)
+        selector = baca.selectors.tuplets(~abjad.Pattern(rest_except))
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_most is True:
-        selector = baca.tuplets()[:-1]
+        selector = baca.selectors.tuplets((None, 1))
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_nonfirst is True:
-        selector = baca.tuplets()[1:]
+        selector = baca.selectors.tuplets((1, None))
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_pleaves is not None:
@@ -844,11 +844,11 @@ def warble(
 
     rests: typing.List[rmakers.Command] = []
     if rest_tuplets is not None:
-        selector = baca.tuplets().get(rest_tuplets)
+        selector = baca.selectors.tuplets(rest_tuplets)
         force_rest_ = rmakers.force_rest(selector)
         rests.append(force_rest_)
     if rest_tuplets_cyclic is not None:
-        selector = baca.tuplets().get(*rest_tuplets_cyclic)
+        selector = baca.selectors.tuplets(rest_tuplets_cyclic)
         force_rest_ = rmakers.force_rest(selector)
         rests.append(force_rest_)
     selector = baca.selectors.leaf_in_each_tuplet(0)
