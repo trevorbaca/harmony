@@ -93,7 +93,7 @@ maker(
     baca.hairpin(
         "o< mp >o !",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -111,7 +111,7 @@ maker(
     baca.hairpin(
         'o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -120,7 +120,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.breathe(
         baca.selectors.pleaf(1),
@@ -435,7 +435,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -462,7 +462,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
@@ -487,7 +487,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -539,7 +539,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
@@ -564,7 +564,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -621,7 +621,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
@@ -646,7 +646,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -698,7 +698,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",

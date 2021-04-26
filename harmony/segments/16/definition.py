@@ -89,7 +89,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -121,7 +121,7 @@ maker(
             autodetect_right_padding=True,
             bookend=False,
             map=baca.selectors.runs(),
-            selector=baca.leaves().rleak(),
+            selector=baca.selectors.rleaves(),
         ),
         measures=9,
     ),
@@ -137,7 +137,7 @@ maker(
         ),
         measures=10,
         right_broken=True,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.rleaves((1, None)),
     ),
 )
 
@@ -346,14 +346,14 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
         abjad.tweak(3).staff_padding,
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

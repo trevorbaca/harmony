@@ -147,7 +147,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -174,7 +174,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -660,7 +660,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.pitch("G4"),
     baca.flat_glissando(
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -832,7 +832,7 @@ maker(
 maker(
     ("vc2", (9, 11)),
     baca.flat_glissando(
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
@@ -1124,7 +1124,7 @@ maker(
     baca.pitch("E5", do_not_transpose=True),
     # NOTE: currently glissando must lexically precede trill spanner
     baca.flat_glissando(
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.trill_spanner(
         # large right padding because open-volta follows in next segment

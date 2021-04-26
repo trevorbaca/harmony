@@ -234,7 +234,7 @@ maker(
     ),
     baca.new(
         harmony.purpleheart_staff_positions([0]),
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.new(
         harmony.brake_drum_staff_position(),
@@ -386,7 +386,7 @@ maker(
     baca.glissando(),
     baca.hairpin(
         '"f" >o niente',
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-tuning-key-glissando-markup",
@@ -460,12 +460,12 @@ maker(
     baca.pitch("F3"),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:12],
+        selector=baca.selectors.leaves((1, 12)),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:12],
+        selector=baca.selectors.leaves((1, 12)),
     ),
 )
 
@@ -485,7 +485,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -535,7 +535,7 @@ maker(
     baca.dynamic("ppp"),
     baca.dls_staff_padding(
         6,
-        baca.leaves()[:3],
+        baca.selectors.leaves((None, 3)),
     ),
     baca.new(
         baca.flag_extra_offset((-2, 0)),
@@ -579,19 +579,19 @@ maker(
         selector=baca.selectors.pleaf(2),
     ),
     baca.tuplet_bracket_up(
-        baca.leaves()[3:],
+        baca.selectors.leaves((3, None)),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[4:11],
+        selector=baca.selectors.leaves((4, 11)),
     ),
     baca.damp_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[4:].rleak(),
+        selector=baca.selectors.rleaves((4, None)),
     ),
     baca.dls_staff_padding(
         4,
-        baca.leaves()[4:-1],
+        baca.selectors.leaves((4, -1)),
     ),
 )
 
@@ -720,7 +720,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -827,7 +827,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.lparts([2, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -923,7 +923,7 @@ maker(
     baca.hairpin(
         '"f" >o niente',
         measures=5,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.alternate_bow_strokes(
         lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),

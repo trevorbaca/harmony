@@ -395,7 +395,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -659,7 +659,7 @@ maker(
     baca.hairpin(
         'o< "mf" >o niente',
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -673,17 +673,17 @@ maker(
     baca.flat_glissando(
         "E1",
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< f",
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =|",
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

@@ -166,7 +166,7 @@ maker(
     baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

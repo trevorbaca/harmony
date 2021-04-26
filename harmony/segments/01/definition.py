@@ -506,7 +506,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.lparts([4, 7]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
     baca.scp_spanner(

@@ -194,7 +194,7 @@ maker(
     baca.hairpin(
         'o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -203,7 +203,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -564,7 +564,7 @@ maker(
     baca.pitch("D3"),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -643,7 +643,7 @@ maker(
     baca.scp_spanner(
         "T1 =|",
         abjad.tweak(3).staff_padding,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -796,7 +796,7 @@ maker(
     baca.scp_spanner(
         "T4 =|",
         abjad.tweak(3).staff_padding,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

@@ -135,7 +135,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
         ),
-        selector=baca.leaves()[2:8],
+        selector=baca.selectors.leaves((2, 8)),
     ),
 )
 
@@ -156,7 +156,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
         ),
-        selector=baca.leaves()[4:9],
+        selector=baca.selectors.leaves((4, 9)),
     ),
 )
 
@@ -188,7 +188,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
         ),
-        selector=baca.leaves()[1:8],
+        selector=baca.selectors.leaves((1, 8)),
     ),
 )
 
@@ -405,7 +405,7 @@ maker(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[2:].rleak(),
+        selector=baca.selectors.rleaves((2, None)),
     ),
 )
 
@@ -421,7 +421,7 @@ maker(
     baca.hairpin(
         "(p) >o niente",
         measures=14,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -457,7 +457,7 @@ maker(
         baca.flat_glissando(
             right_broken=True,
         ),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.stem_tremolo(
         baca.selectors.phead(0),
@@ -503,19 +503,19 @@ maker(
         abjad.tweak(3).staff_padding,
         measures=(4, 7),
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.text_spanner(
         "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
         measures=(10, 11),
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "(mf) >o niente",
         measures=12,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\harmony-rh-bow-markup",
@@ -670,7 +670,7 @@ maker(
         "o< ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -678,7 +678,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -796,7 +796,7 @@ maker(
     baca.hairpin(
         "o< ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -804,7 +804,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -922,7 +922,7 @@ maker(
         "o< ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -930,7 +930,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -955,13 +955,13 @@ maker(
         "(pp) >o niente o< mf >o niente",
         measures=(12, 15),
         pieces=lambda _: baca.Selection(_).mgroups([1, 1, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
         abjad.tweak(3).staff_padding,
         pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 1, 1, 2, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -977,7 +977,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -1095,7 +1095,7 @@ maker(
         "o< ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T4 -> P1 -> T4",
@@ -1103,7 +1103,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

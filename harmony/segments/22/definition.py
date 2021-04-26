@@ -112,7 +112,7 @@ maker(
         "o< mp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -147,7 +147,7 @@ maker(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
         "niente",
@@ -196,7 +196,7 @@ maker(
         "o< pp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -498,7 +498,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -533,7 +533,7 @@ maker(
             bookend=-1,
         ),
         pieces=baca.leaves().partition_by_ratio((4, 3)),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -553,7 +553,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -581,7 +581,7 @@ maker(
         "o< mp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -617,7 +617,7 @@ maker(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
         "niente",
@@ -673,7 +673,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -714,7 +714,7 @@ maker(
             bookend=-1,
         ),
         pieces=baca.leaves().partition_by_ratio((4, 3)),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -734,7 +734,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -766,7 +766,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -791,7 +791,7 @@ maker(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
         "niente",
@@ -882,7 +882,7 @@ maker(
             bookend=-1,
         ),
         pieces=baca.leaves().partition_by_ratio((4, 3)),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.dls_staff_padding(4),
 )
@@ -904,7 +904,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

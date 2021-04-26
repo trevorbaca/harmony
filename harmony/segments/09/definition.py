@@ -152,7 +152,7 @@ maker(
     ),
     baca.new(
         harmony.bass_drum_staff_position(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.accent(
         baca.selectors.pheads((None, -1)),
