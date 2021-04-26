@@ -1287,7 +1287,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.new(
         baca.trill_spanner(

@@ -144,7 +144,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -223,7 +223,7 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -465,7 +465,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -553,7 +553,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -646,7 +646,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,

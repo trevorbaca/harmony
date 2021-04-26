@@ -748,15 +748,15 @@ maker(
         baca.selectors.rleaves(),
     ),
     baca.stem_tremolo(
-        baca.leaves().rleak().pleaves(),
+        lambda _: baca.Selection(_).leaves().rleak().pleaves(),
     ),
     baca.accent(
-        baca.leaves().rleak().pheads(),
+        lambda _: baca.Selection(_).leaves().rleak().pheads(),
     ),
     baca.hairpin(
         "o< f >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
-        selector=baca.leaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
     ),
     baca.dls_staff_padding(6),
     baca.scp_spanner(

@@ -137,7 +137,7 @@ maker(
         ),
         measures=10,
         right_broken=True,
-        selector=baca.selectors.rleaves((1, None)),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
 )
 

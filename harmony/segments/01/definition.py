@@ -168,7 +168,7 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o<| mf",
-        selector=baca.leaves()[:1].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:1].rleak(),
     ),
     baca.hairpin(
         "o<| f",
@@ -375,7 +375,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.lparts([4, 5]),
-        selector=baca.leaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
     ),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",

@@ -207,7 +207,7 @@ maker(
             baca.rehearsal_mark_down(),
             baca.rehearsal_mark_padding(12),
             baca.rehearsal_mark_self_alignment_x(abjad.Right),
-            selector=baca.leaves().rleak()[-1],
+            selector=baca.selectors.rleaf(-1),
         ),
     ),
 )
@@ -233,7 +233,7 @@ maker(
     ),
     baca.hairpin(
         "pp < p >o niente",
-        pieces=baca.leaves().rleak().lparts([1, 3]),
+        pieces=lambda _: baca.Selection(_).leaves().rleak().lparts([1, 3]),
     ),
 )
 

@@ -587,7 +587,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.selectors.rleaves((4, None)),
+        selector=baca.selectors.leaves((4, None), rleak=True),
     ),
     baca.dls_staff_padding(
         4,

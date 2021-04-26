@@ -503,7 +503,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak(),
     ),
 )
 
@@ -645,7 +645,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves()[-1:].rleak()[-1],
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak()[-1],
     ),
 )
 
@@ -906,7 +906,7 @@ maker(
     ("cb2", (12, 13)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[4:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[4:].rleak(),
     ),
 )
 

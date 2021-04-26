@@ -420,7 +420,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak(),
     ),
 )
 
