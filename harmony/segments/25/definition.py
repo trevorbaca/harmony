@@ -50,14 +50,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "Y",
-            baca.skip(2 - 1),
+            baca.selectors.skip(2 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "Y",
-            baca.skip(2 - 1),
+            baca.selectors.skip(2 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -66,20 +66,20 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("144", baca.skip(1 - 1)),
-    baca.metronome_mark("3:2(8)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(2 - 1)),
-    baca.metronome_mark("4:5(2)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("48", baca.skip(3 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.skip(3 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(5 - 1)),
-    baca.metronome_mark("6:5(4)=4", baca.skip(5 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("3:2(8)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("4:5(2)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("5:6(4)=4", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("6:5(4)=4", baca.selectors.skip(5 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(4 - 1)),
-    baca.global_fermata("fermata", baca.rest(11 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(4 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(11 - 1)),
 )
 
 # text
@@ -91,7 +91,7 @@ maker(
             r"\harmony-text-twenty-two",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(4 - 1),
+            selector=baca.selectors.skip(4 - 1),
         ),
     ),
 )
@@ -103,7 +103,7 @@ maker(
             r"\harmony-text-twenty-three",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(11 - 1),
+            selector=baca.selectors.skip(11 - 1),
         ),
     ),
 )
@@ -395,7 +395,7 @@ maker(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -453,7 +453,7 @@ maker(
     ),
     baca.pitch("G1"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "f-sempre",

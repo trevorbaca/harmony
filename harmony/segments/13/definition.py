@@ -45,14 +45,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "M",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "M",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -61,18 +61,18 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("144", baca.skip(1 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("48", baca.skip(4 - 1)),
-    baca.metronome_mark("2.=4", baca.skip(4 - 1)),
-    baca.metronome_mark("96", baca.skip(5 - 1)),
-    baca.metronome_mark("8=4", baca.skip(5 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("2.=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(5 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(2 - 1)),
-    baca.global_fermata("short", baca.rest(6 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(2 - 1)),
+    baca.global_fermata("short", baca.selectors.rest(6 - 1)),
 )
 
 # text
@@ -84,7 +84,7 @@ maker(
             r"\harmony-text-twelve",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(2 - 1),
+            selector=baca.selectors.skip(2 - 1),
         ),
     ),
 )
@@ -96,7 +96,7 @@ maker(
             r"\harmony-text-thirteen",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(6 - 1),
+            selector=baca.selectors.skip(6 - 1),
         ),
     ),
 )
@@ -232,11 +232,11 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.rest(1),
+        selector=baca.selectors.rest(1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -256,7 +256,7 @@ maker(
     baca.staff_position(0),
     baca.dynamic(
         "p",
-        selector=baca.rest(-1),
+        selector=baca.selectors.rest(-1),
     ),
 )
 
@@ -323,11 +323,11 @@ maker(
     ),
     baca.dynamic(
         "p",
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.rest(1),
+        selector=baca.selectors.rest(1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -347,7 +347,7 @@ maker(
     baca.staff_position(0),
     baca.dynamic(
         "p",
-        selector=baca.rest(-1),
+        selector=baca.selectors.rest(-1),
     ),
 )
 
@@ -373,7 +373,7 @@ maker(
         harmony.bass_drum_staff_position(),
         baca.flat_glissando(),
         baca.stem_tremolo(),
-        selector=baca.plt(0),
+        selector=baca.selectors.plt(0),
     ),
     baca.new(
         harmony.brake_drum_staff_position(),
@@ -413,7 +413,7 @@ maker(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=baca.rests().filter_duration(">=", (1, 2)),
+        map=harmony.rests_filter_duration((">=", (1, 2))),
     ),
 )
 
@@ -456,7 +456,7 @@ maker(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.ptails()[:-1],
+        baca.selectors.ptails((None, -1)),
     ),
     baca.dynamic("f"),
     baca.new(
@@ -638,7 +638,7 @@ maker(
         baca.hairpin(
             "(mp) >o niente",
         ),
-        selector=baca.plt(0),
+        selector=baca.selectors.plt(0),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -791,7 +791,7 @@ maker(
         baca.hairpin(
             "(mp) >o niente",
         ),
-        selector=baca.plt(0),
+        selector=baca.selectors.plt(0),
     ),
     baca.scp_spanner(
         "T4 =|",

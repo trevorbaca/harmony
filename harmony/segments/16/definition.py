@@ -48,14 +48,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "P",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "P",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -68,7 +68,7 @@ maker(
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(7 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(7 - 1)),
 )
 
 # bfl
@@ -155,11 +155,11 @@ maker(
     ),
     baca.flat_glissando(
         hide_stem_selector=baca.selectors.pleaves((1, -2)),
-        selector=baca.run(0),
+        selector=baca.selectors.run(0),
     ),
     baca.flat_glissando(
         hide_middle_stems=True,
-        selector=baca.run(1),
+        selector=baca.selectors.run(1),
     ),
     harmony.brake_drum_staff_position(),
     baca.dynamic(

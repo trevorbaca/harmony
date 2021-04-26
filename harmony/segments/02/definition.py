@@ -51,14 +51,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "B",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "B",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -67,19 +67,19 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("144", baca.skip(1 - 1)),
-    baca.metronome_mark("5:4(8)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("96", baca.skip(6 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(6 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(7 - 1)),
-    baca.metronome_mark("3:5(4)=4", baca.skip(7 - 1)),
-    baca.metronome_mark("144", baca.skip(8 - 1)),
-    baca.metronome_mark("5:4(8)=4", baca.skip(8 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("5:4(8)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("3:5(4)=4", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(8 - 1)),
+    baca.metronome_mark("5:4(8)=4", baca.selectors.skip(8 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(12 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(12 - 1)),
 )
 
 divisions = baca.Sequence([16, 20, 12, 12, 12, 16])
@@ -95,7 +95,7 @@ maker(
             r"\harmony-text-one",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(12 - 1),
+            selector=baca.selectors.skip(12 - 1),
         ),
     ),
 )
@@ -313,22 +313,22 @@ maker(
     baca.staff_position(-2),
     baca.new(
         baca.dynamic("p"),
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
         measures=8,
     ),
     baca.new(
         baca.dynamic("mp"),
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
         measures=9,
     ),
     baca.new(
         baca.dynamic("mf"),
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
         measures=10,
     ),
     baca.new(
         baca.dynamic("f"),
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
         measures=11,
     ),
     baca.dls_staff_padding(
@@ -1077,7 +1077,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(
         (-1, 0),
-        baca.rest(-1),
+        baca.selectors.rest(-1),
     ),
 )
 

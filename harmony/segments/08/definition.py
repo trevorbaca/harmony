@@ -46,30 +46,30 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "H",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "H",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
     ),
-    baca.open_volta(baca.skip(8 - 1)),
+    baca.open_volta(baca.selectors.skip(8 - 1)),
 )
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("96", baca.skip(1 - 1)),
-    baca.metronome_mark("5:3(4)=4", baca.skip(1 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("5:3(4)=4", baca.selectors.skip(1 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("short", baca.rest(7 - 1)),
+    baca.global_fermata("short", baca.selectors.rest(7 - 1)),
 )
 
 # text
@@ -81,7 +81,7 @@ maker(
             r"\harmony-text-seven",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(7 - 1),
+            selector=baca.selectors.skip(7 - 1),
         ),
     ),
 )

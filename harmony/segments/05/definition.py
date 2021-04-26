@@ -43,14 +43,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "E",
-            baca.skip(4 - 1),
+            baca.selectors.skip(4 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "E",
-            baca.skip(4 - 1),
+            baca.selectors.skip(4 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -59,14 +59,14 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("48", baca.skip(1 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(2 - 1)),
-    baca.metronome_mark("6:5(4)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("72", baca.skip(3 - 1)),
-    baca.metronome_mark("5:4(4)=4", baca.skip(3 - 1)),
-    baca.metronome_mark("96", baca.skip(4 - 1)),
-    baca.metronome_mark("4:3(4)=4", baca.skip(4 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("6:5(4)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("5:4(4)=4", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("4:3(4)=4", baca.selectors.skip(4 - 1)),
 )
 
 # bfl
@@ -332,7 +332,7 @@ maker(
     ),
     baca.pitches("F#4 G#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -403,7 +403,7 @@ maker(
     ),
     baca.pitch("Eb4"),
     baca.damp(
-        baca.rest(-1),
+        baca.selectors.rest(-1),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4),

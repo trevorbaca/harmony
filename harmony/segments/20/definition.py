@@ -47,14 +47,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "T",
-            baca.skip(3 - 1),
+            baca.selectors.skip(3 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "T",
-            baca.skip(3 - 1),
+            baca.selectors.skip(3 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -63,12 +63,12 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("57 3/5", baca.skip(1 - 1)),
-    baca.metronome_mark("4:5(2)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("72", baca.skip(2 - 1)),
-    baca.metronome_mark("5:4(4)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("144", baca.skip(3 - 1)),
-    baca.metronome_mark("8=4", baca.skip(3 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("4:5(2)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("5:4(4)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(3 - 1)),
 )
 
 # bfl
@@ -219,7 +219,7 @@ maker(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
@@ -330,7 +330,7 @@ maker(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "p-sempre",
@@ -358,7 +358,7 @@ maker(
     ),
     baca.pitch("Bb3"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
@@ -599,7 +599,7 @@ maker(
     ("cb1", 10),
     baca.rest_extra_offset(
         (-1.5, 0),
-        baca.rest(-1),
+        baca.selectors.rest(-1),
     ),
 )
 
@@ -662,7 +662,7 @@ maker(
     ("cb2", 10),
     baca.rest_extra_offset(
         (-1.5, 0),
-        baca.rest(-1),
+        baca.selectors.rest(-1),
     ),
 )
 
