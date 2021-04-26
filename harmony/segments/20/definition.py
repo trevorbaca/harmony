@@ -400,7 +400,7 @@ maker(
     baca.new(
         baca.tuplet_bracket_staff_padding(2),
         harmony.bridge_staff_position(),
-        selector=baca.leaves().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(),
@@ -447,12 +447,12 @@ maker(
         autodetect_right_padding=False,
         bookend=True,
         right_broken=True,
-        selector=baca.selectors.rleaves((3, None)),
+        selector=baca.selectors.leaves((3, None), rleak=True),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=baca.selectors.rleaves((3, None)),
+        selector=baca.selectors.leaves((3, None), rleak=True),
     ),
 )
 
@@ -654,7 +654,7 @@ maker(
     ("cb2", (2, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.selectors.rleaves((1, None)),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
 )
 

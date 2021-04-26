@@ -536,13 +536,13 @@ maker(
     baca.new(
         harmony.bridge_staff_position(),
         baca.dls_staff_padding(6),
-        selector=baca.leaves().rleak().rleak().rleak(),
+        selector=lambda _: baca.Selection(_).leaves().rleak().rleak().rleak(),
     ),
     baca.accent(
-        baca.leaves().rleak().rleak().rleak().pheads(),
+        lambda _: baca.Selection(_).leaves().rleak().rleak().rleak().pheads(),
     ),
     baca.stem_tremolo(
-        baca.leaves().rleak().rleak().rleak().pleaves(),
+        lambda _: baca.Selection(_).leaves().rleak().rleak().rleak().pleaves(),
     ),
     baca.dynamic(
         '"ff"',
@@ -603,12 +603,12 @@ maker(
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
-        selector=baca.selectors.rleaves((4, None)),
+        selector=baca.selectors.leaves((4, None), rleak=True),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=baca.selectors.rleaves((4, None)),
+        selector=baca.selectors.leaves((4, None), rleak=True),
     ),
 )
 

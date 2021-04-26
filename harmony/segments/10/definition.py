@@ -405,7 +405,7 @@ maker(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.selectors.rleaves((2, None)),
+        selector=baca.selectors.leaves((2, None), rleak=True),
     ),
 )
 
@@ -1123,7 +1123,7 @@ maker(
             "XFB =|",
             abjad.tweak(5.5).staff_padding,
         ),
-        selector=baca.leaves()[:2].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
         match=[0, 1, 2],
     ),
     baca.new(
@@ -1135,7 +1135,7 @@ maker(
             "XFB =|",
             abjad.tweak(8).staff_padding,
         ),
-        selector=baca.leaves()[:2].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
         match=[3],
     ),
     baca.hairpin(

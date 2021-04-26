@@ -1014,7 +1014,7 @@ maker(
         abjad.tweak(3).staff_padding,
         abjad.tweak(3).bound_details__right__padding,
         autodetect_right_padding=False,
-        selector=baca.selectors.rleaves((4, None)),
+        selector=baca.selectors.leaves((4, None), rleak=True),
     ),
 )
 

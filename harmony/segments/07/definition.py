@@ -141,7 +141,7 @@ maker(
     baca.hairpin(
         "o<| mf |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
         -2,
@@ -468,7 +468,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:2].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
     ),
 )
 
@@ -889,7 +889,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-4:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-4:].rleak(),
     ),
 )
 

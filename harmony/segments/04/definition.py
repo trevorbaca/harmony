@@ -595,7 +595,8 @@ maker(
         do_not_transpose=True,
     ),
     baca.pizzicato_spanner(
-        abjad.tweak(5.5).staff_padding, selector=baca.leaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding,
+        selector=lambda _: baca.Selection(_).leaves().rleak(grace=False),
     ),
     baca.markup(
         r"\baca-eleven-e",
@@ -625,7 +626,8 @@ maker(
         do_not_transpose=True,
     ),
     baca.pizzicato_spanner(
-        abjad.tweak(5.5).staff_padding, selector=baca.leaves().rleak(grace=False)
+        abjad.tweak(5.5).staff_padding,
+        selector=lambda _: baca.Selection(_).leaves().rleak(grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",

@@ -127,7 +127,7 @@ maker(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         baca.levine_multiphonic(5),
@@ -180,7 +180,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -205,7 +205,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([4]),
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -215,7 +215,7 @@ maker(
     baca.hairpin(
         'o< "f" >o niente o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 1, 2, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -426,7 +426,7 @@ maker(
     ),
     baca.hairpin(
         "(p) >o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -490,7 +490,7 @@ maker(
     ("perc2", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
     ),
 )
 
@@ -629,7 +629,7 @@ maker(
     ("hp", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[5:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[5:].rleak(),
     ),
 )
 
@@ -702,7 +702,7 @@ maker(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -745,7 +745,7 @@ maker(
     ),
     baca.pitch(
         "A5",
-        baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -775,7 +775,7 @@ maker(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
@@ -783,7 +783,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        selector=baca.leaves()[-2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
     ),
 )
 
@@ -793,7 +793,7 @@ maker(
         abjad.tweak(10.5 + 1.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        # selector=baca.leaves()[2:].rleak(),
+        # selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
         selector=baca.selectors.tleaves(rleak=True),
     ),
 )
@@ -842,7 +842,7 @@ maker(
     ),
     baca.pitch(
         "Gqs6",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-eleven-d",
@@ -872,7 +872,7 @@ maker(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -901,7 +901,7 @@ maker(
     ),
     baca.pitch(
         "F#5",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -943,7 +943,7 @@ maker(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
@@ -951,7 +951,7 @@ maker(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        selector=baca.leaves()[-2:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
     ),
 )
 
@@ -961,7 +961,7 @@ maker(
         abjad.tweak(10.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        # selector=baca.leaves()[2:].rleak(),
+        # selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
         selector=baca.selectors.tleaves(rleak=True),
     ),
 )
@@ -982,7 +982,7 @@ maker(
     ),
     baca.pitch(
         "C#6",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
         do_not_transpose=True,
     ),
     baca.markup(
@@ -1037,7 +1037,7 @@ maker(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -1057,7 +1057,7 @@ maker(
     ),
     baca.pitch(
         "Cqf6",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
         do_not_transpose=True,
     ),
     baca.markup(
@@ -1153,7 +1153,7 @@ maker(
     baca.note_head_style_harmonic(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
@@ -1214,6 +1214,6 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[4:].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[4:].rleak(),
     ),
 )

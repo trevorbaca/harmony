@@ -78,7 +78,7 @@ maker(
             abjad.tweak(5.5).staff_padding,
             left_broken=True,
         ),
-        selector=baca.leaves()[:2].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
     ),
 )
 
@@ -297,12 +297,12 @@ maker(
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.tweak(5.5).staff_padding,
-            selector=baca.leaves()[-2:].rleak(),
+            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
             right_broken=True,
-            selector=baca.leaves()[-2:].rleak(),
+            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
         ),
         match=[0, 1, 2],
     ),
@@ -310,12 +310,12 @@ maker(
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.tweak(8).staff_padding,
-            selector=baca.leaves()[-2:].rleak(),
+            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(10.5).staff_padding,
             right_broken=True,
-            selector=baca.leaves()[-2:].rleak(),
+            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
         ),
         match=[3],
     ),
