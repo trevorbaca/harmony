@@ -182,12 +182,12 @@ maker(
     baca.pitch("A1"),
     baca.flat_glissando(
         left_broken=True,
-        selector=baca.leaves()[:1],
+        selector=baca.selectors.leaves((None, 1)),
     ),
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> T4+",
@@ -195,7 +195,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         left_broken=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

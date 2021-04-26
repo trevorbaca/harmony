@@ -202,7 +202,7 @@ maker(
         abjad.tweak(10).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -227,7 +227,7 @@ maker(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.selectors.runs(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
@@ -235,7 +235,7 @@ maker(
             literal=True,
         ).bound_details__left__text,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -250,7 +250,7 @@ maker(
     baca.hairpin(
         "pp < p >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -372,7 +372,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -596,7 +596,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -633,7 +633,7 @@ maker(
         abjad.tweak(5).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -661,12 +661,12 @@ maker(
     baca.make_notes(),
     baca.pitch(
         "Gqf3",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
     ),
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -696,7 +696,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -724,7 +724,7 @@ maker(
         pieces=baca.plts(),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -781,7 +781,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -810,7 +810,7 @@ maker(
         pieces=baca.selectors.lparts([1, 2, 3, 2]),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -872,7 +872,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -901,7 +901,7 @@ maker(
         pieces=baca.selectors.lparts([2, 3, 2]),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -960,7 +960,7 @@ maker(
     baca.tuplet_bracket_down(),
     baca.pitch(
         "F#1",
-        baca.leaves()[:4],
+        baca.selectors.leaves((None, 4)),
     ),
     baca.pitch(
         "Gb2",
@@ -971,7 +971,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.accent(
         baca.selectors.pheads((1, 3)),
@@ -997,7 +997,7 @@ maker(
     ("cb2", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[4:13],
+        selector=baca.selectors.leaves((4, 13)),
     ),
 )
 
@@ -1014,7 +1014,7 @@ maker(
         abjad.tweak(3).staff_padding,
         abjad.tweak(3).bound_details__right__padding,
         autodetect_right_padding=False,
-        selector=baca.leaves()[4:].rleak(),
+        selector=baca.selectors.rleaves((4, None)),
     ),
 )
 
@@ -1028,7 +1028,7 @@ maker(
         pieces=baca.selectors.lparts([2, 1, 1]),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -1058,7 +1058,7 @@ maker(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -1116,7 +1116,7 @@ maker(
     baca.hairpin(
         "niente o< mp >o niente o< mp >o niente",
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

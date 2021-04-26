@@ -238,7 +238,7 @@ maker(
         ),
         baca.hairpin(
             "o<| f",
-            selector=baca.leaves()[-3:],
+            selector=baca.selectors.leaves((-3, None)),
         ),
         baca.markup(
             r"\baca-bd-superball-markup",
@@ -260,11 +260,11 @@ maker(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o<| mf",
-        selector=baca.leaves()[:1].rleak(),
+        selector=lambda _: baca.Selection(_).leaves()[:1].rleak(),
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
@@ -277,7 +277,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves(grace=False)[2:8],
+        selector=baca.selectors.leaves((2, 8), grace=False),
     ),
 )
 
@@ -669,7 +669,7 @@ maker(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.leaves(grace=False)[:-1],
+        selector=baca.selectors.leaves((None, -1), grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -745,7 +745,7 @@ maker(
     ("vc1", (5, 6)),
     baca.pitch(
         "A2",
-        baca.leaves().rleak(),
+        baca.selectors.rleaves(),
     ),
     baca.stem_tremolo(
         baca.leaves().rleak().pleaves(),
@@ -791,7 +791,7 @@ maker(
     ("vc1", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:5],
+        selector=baca.selectors.leaves((1, 5)),
     ),
 )
 
@@ -813,7 +813,7 @@ maker(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.leaves(grace=False)[:-1],
+        selector=baca.selectors.leaves((None, -1), grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -958,7 +958,7 @@ maker(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.leaves(grace=False)[:-1],
+        selector=baca.selectors.leaves((None, -1), grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -992,7 +992,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:4],
+        selector=baca.selectors.leaves((None, 4)),
     ),
 )
 
@@ -1048,7 +1048,7 @@ maker(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
     baca.scp_spanner(
@@ -1097,7 +1097,7 @@ maker(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.leaves(grace=False)[:-1],
+        selector=baca.selectors.leaves((None, -1), grace=False),
     ),
     baca.dls_staff_padding(
         6,
@@ -1247,7 +1247,7 @@ maker(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.leaves(grace=False)[:-1],
+        selector=baca.selectors.leaves((None, -1), grace=False),
     ),
     baca.dls_staff_padding(
         6,

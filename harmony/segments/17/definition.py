@@ -108,7 +108,7 @@ maker(
             abjad.tweak(8).staff_padding,
         ),
         left_broken=True,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -423,7 +423,7 @@ maker(
     baca.pitch("D4"),
     baca.hairpin(
         "pp >o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -492,7 +492,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -557,7 +557,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -625,7 +625,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -690,7 +690,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -749,7 +749,7 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], 5),
     baca.hairpin(
         "f >o niente",
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

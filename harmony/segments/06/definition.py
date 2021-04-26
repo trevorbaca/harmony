@@ -739,7 +739,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
 )
@@ -840,7 +840,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -1455,7 +1455,7 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([2, 4]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -1560,20 +1560,20 @@ maker(
     baca.flat_glissando(
         "E1",
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< mf > p < f > p < ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([1, 1, 1, 1, 1, 2]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
         abjad.tweak(3).staff_padding,
         pieces=baca.selectors.cmgroups([1]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1590,7 +1590,7 @@ maker(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([3, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -1668,7 +1668,7 @@ maker(
     baca.hairpin(
         "o< f > p < ff >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 -> P2 -> T1 -> P1 -> T1",
@@ -1676,7 +1676,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 2]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

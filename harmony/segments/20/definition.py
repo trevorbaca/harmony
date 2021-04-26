@@ -85,7 +85,7 @@ maker(
         "o< f >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         alteration="m2",
@@ -110,7 +110,7 @@ maker(
         "o< mp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -174,7 +174,7 @@ maker(
         "o< pp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -224,7 +224,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -318,7 +318,7 @@ maker(
     ("hp", (1, 2)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:],
+        selector=baca.selectors.leaves((1, None)),
     ),
 )
 
@@ -447,12 +447,12 @@ maker(
         autodetect_right_padding=False,
         bookend=True,
         right_broken=True,
-        selector=baca.leaves()[3:].rleak(),
+        selector=baca.selectors.rleaves((3, None)),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[3:].rleak(),
+        selector=baca.selectors.rleaves((3, None)),
     ),
 )
 
@@ -481,7 +481,7 @@ maker(
         "o< mp >o niente",
         map=baca.selectors.runs(),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -639,7 +639,7 @@ maker(
     ("cb2", (2, 10)),
     baca.dls_staff_padding(
         6,
-        baca.leaves()[1:],
+        baca.selectors.leaves((1, None)),
     ),
 )
 
@@ -654,7 +654,7 @@ maker(
     ("cb2", (2, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.rleaves((1, None)),
     ),
 )
 
@@ -688,7 +688,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

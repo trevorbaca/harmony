@@ -105,7 +105,7 @@ maker(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.selectors.runs(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
@@ -113,7 +113,7 @@ maker(
             literal=True,
         ).bound_details__left__text,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -368,7 +368,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.Selection(_).mgroups([2, 1]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -388,7 +388,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -445,7 +445,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -553,7 +553,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -666,14 +666,14 @@ maker(
     baca.hairpin(
         "ff >o",
         bookend=False,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "P3 -> T1",
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -693,7 +693,7 @@ maker(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

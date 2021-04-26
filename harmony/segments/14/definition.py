@@ -256,7 +256,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -756,7 +756,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -893,7 +893,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1013,7 +1013,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -1128,7 +1128,7 @@ maker(
     baca.hairpin(
         "o<| f",
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -1230,7 +1230,7 @@ maker(
         autodetect_right_padding=False,
         bookend=True,
         map=baca.selectors.runs(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 

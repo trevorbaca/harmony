@@ -126,25 +126,25 @@ maker(
         "o< mf >o niente",
         match=[0],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< mp >o niente",
         match=[1],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< p >o niente",
         match=[2],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< pp >o niente",
         match=[3],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.new(
         baca.metric_modulation_spanner(
@@ -222,7 +222,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -247,7 +247,7 @@ maker(
         bookend=False,
         map=baca.selectors.clparts([4]),
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -302,7 +302,7 @@ maker(
         ' o< "f" >o niente o< p >o niente'
         ' o< "f" >o niente o< f >o niente',
         pieces=baca.selectors.lparts([1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -1184,12 +1184,12 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(2).bound_details__right__padding,
         left_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

@@ -361,7 +361,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -441,7 +441,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -491,7 +491,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -580,7 +580,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -633,7 +633,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.plts(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
 )
 
@@ -668,7 +668,7 @@ maker(
             abjad.tweak(3).staff_padding,
             autodetect_right_padding=False,
             bookend=True,
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
         match=[0, 1],
     ),
@@ -678,7 +678,7 @@ maker(
             abjad.tweak(5.5).staff_padding,
             autodetect_right_padding=False,
             bookend=True,
-            selector=baca.leaves(),
+            selector=baca.selectors.leaves(),
         ),
         match=[2],
     ),
@@ -699,7 +699,7 @@ maker(
     baca.hairpin(
         "(pp) < f",
         measures=(7, 8),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 

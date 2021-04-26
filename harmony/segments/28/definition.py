@@ -114,7 +114,7 @@ maker(
         "o< mp >o niente",
         pieces=baca.leaves().partition_by_ratio((4, 5)),
         map=baca.selectors.runs(),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
         abjad.tweak(
@@ -122,7 +122,7 @@ maker(
             literal=True,
         ).bound_details__left__text,
         map=baca.selectors.runs(),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
 )
 
@@ -136,7 +136,7 @@ maker(
     baca.pitch("A4"),
     baca.flat_glissando(
         hide_stem_selector=baca.selectors.pleaves((1, -1)),
-        selector=baca.leaves()[:-6],
+        selector=baca.selectors.leaves((None, -6)),
     ),
     baca.hairpin(
         "p < mp >",
@@ -212,7 +212,7 @@ maker(
     harmony.triangle_staff_position(),
     baca.flat_glissando(
         hide_stem_selector=baca.selectors.pleaves((1, -1)),
-        selector=baca.leaves()[:-6],
+        selector=baca.selectors.leaves((None, -6)),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves([0, -7]),
@@ -344,7 +344,7 @@ maker(
         " -> 0 pul. / beat",
         abjad.tweak(3).staff_padding,
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\harmony-rh-bow-plus-lh-bow-markup",
@@ -411,7 +411,7 @@ maker(
         "o< mp >o",
         bookend=False,
         pieces=baca.selectors.cmgroups([2, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-i-markup",
@@ -427,10 +427,10 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 3, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -494,7 +494,7 @@ maker(
         "o< mp >o",
         bookend=False,
         pieces=baca.selectors.cmgroups([2, 3]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-i-markup",
@@ -510,10 +510,10 @@ maker(
     baca.hairpin(
         "pp -- ! < mp -- ! >o niente",
         pieces=baca.selectors.lparts([1, 2, 3, 2 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -604,10 +604,10 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 3, 2 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -674,13 +674,13 @@ maker(
     baca.flat_glissando(
         hide_middle_stems=True,
         hide_stem_selector=baca.selectors.pleaves((1, -2)),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.hairpin(
         "o< ff >o",
         bookend=False,
         pieces=lambda _: baca.Selection(_).mgroups([3, 2]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T4 -> P1 -> T4",
@@ -688,7 +688,7 @@ maker(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.lparts([2, 3]),
-        selector=baca.leaves(),
+        selector=baca.selectors.leaves(),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -705,10 +705,10 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 1, 1 + 1]),
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.untie(
-        baca.leaves(),
+        baca.selectors.leaves(),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -735,13 +735,13 @@ maker(
     baca.flat_glissando(
         "A1",
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o< ff (ff) >o niente",
         pieces=lambda _: baca.Selection(_).mgroups([2, 1, 2]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
@@ -749,7 +749,7 @@ maker(
         bookend=-1,
         pieces=baca.selectors.lparts([3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
         right_broken=True,
-        selector=baca.leaves().rleak(),
+        selector=baca.selectors.rleaves(),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
