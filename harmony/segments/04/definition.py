@@ -50,14 +50,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "D",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "D",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -66,18 +66,18 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("72", baca.skip(1 - 1)),
-    baca.metronome_mark("5:4(4)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("144", baca.skip(9 - 1)),
-    baca.metronome_mark("8=4", baca.skip(9 - 1)),
-    baca.metronome_mark("72", baca.skip(11 - 1)),
-    baca.metronome_mark("2=4", baca.skip(11 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("5:4(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(9 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(9 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(11 - 1)),
+    baca.metronome_mark("2=4", baca.selectors.skip(11 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(7 - 1)),
-    baca.global_fermata("short", baca.rest(10 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(7 - 1)),
+    baca.global_fermata("short", baca.selectors.rest(10 - 1)),
 )
 
 # bfl

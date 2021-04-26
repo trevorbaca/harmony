@@ -48,14 +48,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -64,17 +64,17 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("48", baca.skip(1 - 1)),
-    baca.metronome_mark("2.=4", baca.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(5 - 1)),
-    baca.metronome_mark("6:5(4)=4", baca.skip(5 - 1)),
-    baca.metronome_mark("48", baca.skip(7 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.skip(7 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("2.=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("6:5(4)=4", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("5:6(4)=4", baca.selectors.skip(7 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(6 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(6 - 1)),
 )
 
 # text
@@ -86,7 +86,7 @@ maker(
             r"\harmony-text-twenty-seven",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(6 - 1),
+            selector=baca.selectors.skip(6 - 1),
         ),
     ),
 )
@@ -250,7 +250,7 @@ maker(
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.markup(
         r"\baca-glockenspiel-markup",
@@ -294,7 +294,7 @@ maker(
     ),
     baca.pitch("A4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "mp-sempre",
@@ -321,7 +321,7 @@ maker(
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
 )
 

@@ -52,14 +52,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "K",
-            baca.skip(2 - 1),
+            baca.selectors.skip(2 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "K",
-            baca.skip(2 - 1),
+            baca.selectors.skip(2 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -68,22 +68,22 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("96", baca.skip(1 - 1)),
-    baca.metronome_mark("8=4", baca.skip(1 - 1)),
-    baca.metronome_mark("72", baca.skip(2 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("144", baca.skip(6 - 1)),
-    baca.metronome_mark("8=4", baca.skip(6 - 1)),
-    baca.metronome_mark("96", baca.skip(7 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(7 - 1)),
-    baca.metronome_mark("72", baca.skip(10 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.skip(10 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(10 - 1)),
+    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(10 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.rest(9 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(9 - 1)),
 )
 
 # text
@@ -95,7 +95,7 @@ maker(
             r"\harmony-text-nine",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(3 - 1),
+            selector=baca.selectors.skip(3 - 1),
         ),
     ),
 )
@@ -107,7 +107,7 @@ maker(
             r"\harmony-text-ten",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(9 - 1),
+            selector=baca.selectors.skip(9 - 1),
         ),
     ),
 )
@@ -653,7 +653,7 @@ maker(
     baca.hairpin(
         'o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 3]),
-        selector=baca.run(0),
+        selector=baca.selectors.run(0),
     ),
     baca.dls_staff_padding(6),
     baca.dynamic_text_x_offset(
@@ -819,18 +819,18 @@ maker(
     ("vc1", (6, 8)),
     baca.pitch(
         "B4",
-        baca.run(0),
+        baca.selectors.run(0),
     ),
     baca.pitch(
         "Aqf3",
-        baca.run(1),
+        baca.selectors.run(1),
     ),
     baca.markup(
         r"\baca-eleven-e-flat",
         abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
-        selector=baca.run(1).leaf(0),
+        selector=lambda _: baca.Selection(_).run(1).leaf(0),
     ),
 )
 
@@ -916,11 +916,11 @@ maker(
     ("vc2", (6, 8)),
     baca.pitch(
         "Dqs4",
-        baca.run(0),
+        baca.selectors.run(0),
     ),
     baca.pitch(
         "F3",
-        baca.run(1),
+        baca.selectors.run(1),
     ),
 )
 
@@ -1006,22 +1006,22 @@ maker(
     ("cb1", (6, 8)),
     baca.clef("bass"),
     baca.note_head_style_harmonic(
-        baca.run(0),
+        baca.selectors.run(0),
     ),
     baca.pitch(
         "E3",
-        baca.run(0),
+        baca.selectors.run(0),
     ),
     baca.pitch(
         "Dtqf3",
-        baca.run(1),
+        baca.selectors.run(1),
     ),
     baca.markup(
         r"\baca-seven-e-flat",
         # abjad.tweak(1).padding,
         direction=abjad.Down,
         literal=True,
-        selector=baca.run(1).leaf(0),
+        selector=lambda _: baca.Selection(_).run(1).leaf(0),
     ),
 )
 
@@ -1080,11 +1080,11 @@ maker(
     baca.clef("bass"),
     baca.pitch(
         "A1",
-        baca.run(0),
+        baca.selectors.run(0),
     ),
     baca.pitch(
         "Eb2",
-        baca.run(1),
+        baca.selectors.run(1),
     ),
 )
 
@@ -1179,7 +1179,7 @@ maker(
         [-4, 8, -6, 6],
     ),
     baca.stop_on_string(
-        baca.rest(1),
+        baca.selectors.rest(1),
     ),
     baca.hairpin(
         "o<| ff",
@@ -1189,7 +1189,7 @@ maker(
         baca.selectors.phead(-1),
     ),
     baca.stem_tremolo(
-        baca.plt(-1),
+        baca.selectors.plt(-1),
     ),
     baca.dynamic(
         "p",

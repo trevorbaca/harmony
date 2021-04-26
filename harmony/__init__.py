@@ -26,6 +26,7 @@ from .library import (
     metronome_marks,
     phjc,
     purpleheart_staff_positions,
+    rests_filter_duration,
     rimbalzandi,
     sixteenths,
     slate_staff_position,

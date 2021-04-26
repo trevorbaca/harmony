@@ -38,14 +38,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "I",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "I",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -54,11 +54,11 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("144", baca.skip(1 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(1 - 1)),
-    baca.open_volta(baca.skip(1 - 1)),
-    baca.double_volta(baca.skip(2 - 1)),
-    baca.close_volta(baca.skip(2 - 1), format_slot="after"),
+    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
+    baca.open_volta(baca.selectors.skip(1 - 1)),
+    baca.double_volta(baca.selectors.skip(2 - 1)),
+    baca.close_volta(baca.selectors.skip(2 - 1), format_slot="after"),
 )
 
 # bfl
@@ -347,7 +347,7 @@ maker(
     ),
     baca.note_head_style_harmonic(),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("ff"),
     baca.pizzicato_spanner(

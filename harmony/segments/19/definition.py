@@ -54,42 +54,42 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "S",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "S",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
     ),
-    baca.open_volta(baca.skip(1 - 1)),
-    baca.close_volta(baca.skip(2 - 1)),
+    baca.open_volta(baca.selectors.skip(1 - 1)),
+    baca.close_volta(baca.selectors.skip(2 - 1)),
 )
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("96", baca.skip(1 - 1)),
-    baca.metronome_mark("4:3(4)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("72", baca.skip(2 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("96", baca.skip(4 - 1)),
-    baca.metronome_mark("4:3(4)=4", baca.skip(4 - 1)),
-    baca.metronome_mark("144", baca.skip(11 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(11 - 1)),
-    baca.metronome_mark("96", baca.skip(12 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(12 - 1)),
-    baca.metronome_mark("144", baca.skip(13 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(13 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("4:3(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("4:3(4)=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(11 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(11 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(12 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(12 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(13 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(13 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.rest(10 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(10 - 1)),
 )
 
 # text
@@ -101,7 +101,7 @@ maker(
             r"\harmony-text-eighteen",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(3 - 1),
+            selector=baca.selectors.skip(3 - 1),
         ),
     ),
 )
@@ -113,7 +113,7 @@ maker(
             r"\harmony-text-nineteen",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(10 - 1),
+            selector=baca.selectors.skip(10 - 1),
         ),
     ),
 )
@@ -232,7 +232,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.rest(2),
+        selector=baca.selectors.rest(2),
     ),
     baca.dls_staff_padding(
         5,
@@ -281,7 +281,7 @@ maker(
     baca.dynamic(
         "ff-sempre",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.rest(1),
+        selector=baca.selectors.rest(1),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -317,7 +317,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
     ),
     baca.dls_staff_padding(
         5,
@@ -368,7 +368,7 @@ maker(
     ),
     baca.dynamic(
         "ff-ancora",
-        selector=baca.rest(1),
+        selector=baca.selectors.rest(1),
     ),
     baca.dls_staff_padding(5),
     baca.metric_modulation_spanner(
@@ -430,7 +430,7 @@ maker(
     baca.dynamic(
         "ff-sempre",
         abjad.tweak(-0.9).self_alignment_X,
-        selector=baca.rest(1),
+        selector=baca.selectors.rest(1),
     ),
     baca.dls_staff_padding(5),
 )
@@ -469,7 +469,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.rest(0),
+        selector=baca.selectors.rest(0),
     ),
     baca.dls_staff_padding(
         5,
@@ -515,7 +515,7 @@ maker(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=baca.rests().filter_duration(">=", (1, 2)),
+        map=harmony.rests_filter_duration((">=", (1, 2))),
     ),
 )
 
@@ -609,7 +609,7 @@ maker(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
@@ -752,7 +752,7 @@ maker(
     baca.new(
         baca.rest_extra_offset(
             (-1.5, 0),
-            baca.rest(-1),
+            baca.selectors.rest(-1),
         ),
         match=[0],
     ),

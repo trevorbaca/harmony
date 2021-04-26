@@ -48,14 +48,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "O",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "O",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -134,7 +134,7 @@ maker(
     ),
     baca.pitch(
         "E3",
-        baca.plt(0),
+        baca.selectors.plt(0),
     ),
     baca.pitch(
         "F#5",
@@ -197,7 +197,7 @@ maker(
     ),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -325,7 +325,7 @@ maker(
         denominator=None,
     ),
     baca.damp(
-        baca.rest(0),
+        baca.selectors.rest(0),
     ),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
@@ -345,7 +345,7 @@ maker(
     baca.pitch("Eb4"),
     baca.dynamic("mp"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
 )
 

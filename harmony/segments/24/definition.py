@@ -47,14 +47,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "X",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "X",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -63,12 +63,12 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("48", baca.skip(1 - 1)),
-    baca.metronome_mark("2.=4", baca.skip(1 - 1)),
-    baca.metronome_mark("72", baca.skip(4 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(4 - 1)),
-    baca.metronome_mark("48", baca.skip(5 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(5 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("2.=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(5 - 1)),
 )
 
 # bfl
@@ -231,7 +231,7 @@ maker(
     baca.new(
         harmony.tam_tam_staff_position(),
         baca.flat_glissando(),
-        selector=baca.run(0),
+        selector=baca.selectors.run(0),
     ),
     baca.new(
         harmony.purpleheart_staff_positions([2]),
@@ -282,7 +282,7 @@ maker(
     ),
     baca.pitch("A4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "mf",

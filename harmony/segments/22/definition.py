@@ -53,14 +53,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "V",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "V",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -69,19 +69,19 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("72", baca.skip(1 - 1)),
-    baca.metronome_mark("5:4(4)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("144", baca.skip(4 - 1)),
-    baca.metronome_mark("8=4", baca.skip(4 - 1)),
-    baca.metronome_mark("72", baca.skip(5 - 1)),
-    baca.metronome_mark("2=4", baca.skip(5 - 1)),
-    baca.metronome_mark("144", baca.skip(13 - 1)),
-    baca.metronome_mark("8=4", baca.skip(13 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("5:4(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("2=4", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(13 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(13 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(11 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(11 - 1)),
 )
 
 # text
@@ -93,7 +93,7 @@ maker(
             r"\harmony-text-twenty-one",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(11 - 1),
+            selector=baca.selectors.skip(11 - 1),
         ),
     ),
 )
@@ -377,7 +377,7 @@ maker(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
@@ -410,7 +410,7 @@ maker(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "p-ancora",
@@ -457,7 +457,7 @@ maker(
     baca.clef("treble"),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("p-ancora"),
     baca.markup(
@@ -686,7 +686,7 @@ maker(
     baca.tuplet_bracket_staff_padding(3),
     baca.rest_extra_offset(
         (-2, 0),
-        baca.rest(-1),
+        baca.selectors.rest(-1),
     ),
 )
 

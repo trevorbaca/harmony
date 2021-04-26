@@ -50,14 +50,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "AA",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "AA",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -66,31 +66,31 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("144", baca.skip(1 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.skip(1 - 1)),
-    baca.metronome_mark("48", baca.skip(3 - 1)),
-    baca.metronome_mark("2.=4", baca.skip(3 - 1)),
-    baca.metronome_mark("144", baca.skip(4 - 1)),
-    baca.metronome_mark("3:2(8)=4", baca.skip(4 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(6 - 1)),
-    baca.metronome_mark("4:5(2)=4", baca.skip(6 - 1)),
-    baca.metronome_mark("48", baca.skip(7 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.skip(7 - 1)),
-    baca.metronome_mark("144", baca.skip(9 - 1)),
-    baca.metronome_mark("3:2(8)=4", baca.skip(9 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("2.=4", baca.selectors.skip(3 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("3:2(8)=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("4:5(2)=4", baca.selectors.skip(6 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("5:6(4)=4", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(9 - 1)),
+    baca.metronome_mark("3:2(8)=4", baca.selectors.skip(9 - 1)),
 )
 
 maker(
     "Global_Skips",
-    baca.open_volta(baca.skip(4 - 1)),
-    baca.close_volta(baca.skip(6 - 1)),
+    baca.open_volta(baca.selectors.skip(4 - 1)),
+    baca.close_volta(baca.selectors.skip(6 - 1)),
     baca.not_parts(
         baca.markup(
             r"\harmony-repeat-three-markup",
             abjad.tweak(10).font_size,
             abjad.tweak((0, 17)).extra_offset,
             literal=True,
-            selector=baca.skip(4 - 1),
+            selector=baca.selectors.skip(4 - 1),
         ),
     ),
     baca.only_parts(
@@ -99,7 +99,7 @@ maker(
             abjad.tweak(4).font_size,
             abjad.tweak((0, 9)).extra_offset,
             literal=True,
-            selector=baca.skip(4 - 1),
+            selector=baca.selectors.skip(4 - 1),
         ),
     ),
     baca.text_script_extra_offset((1.5, 12)),
@@ -107,8 +107,8 @@ maker(
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(2 - 1)),
-    baca.global_fermata("fermata", baca.rest(8 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(2 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(8 - 1)),
 )
 
 # text
@@ -120,7 +120,7 @@ maker(
             r"\harmony-text-twenty-five",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(2 - 1),
+            selector=baca.selectors.skip(2 - 1),
         ),
     ),
 )
@@ -132,7 +132,7 @@ maker(
             r"\harmony-text-twenty-six",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(8 - 1),
+            selector=baca.selectors.skip(8 - 1),
         ),
     ),
 )
@@ -485,7 +485,7 @@ maker(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("f-ancora"),
     baca.dls_staff_padding(4),
@@ -522,7 +522,7 @@ maker(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("f"),
     baca.markup(

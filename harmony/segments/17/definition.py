@@ -45,14 +45,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "Q",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "Q",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -61,18 +61,18 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("48", baca.skip(1 - 1)),
-    baca.metronome_mark("2=4", baca.skip(1 - 1)),
-    baca.metronome_mark("96", baca.skip(2 - 1)),
-    baca.metronome_mark("8=4", baca.skip(2 - 1)),
-    baca.metronome_mark("48", baca.skip(5 - 1)),
-    baca.metronome_mark("2=4", baca.skip(5 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("2=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("48", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("2=4", baca.selectors.skip(5 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("short", baca.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.rest(6 - 1)),
+    baca.global_fermata("short", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(6 - 1)),
 )
 
 # text
@@ -84,7 +84,7 @@ maker(
             r"\harmony-text-sixteen",
             abjad.tweak((4, -30)).extra_offset,
             literal=True,
-            selector=baca.skip(6 - 1),
+            selector=baca.selectors.skip(6 - 1),
         ),
     ),
 )
@@ -160,7 +160,7 @@ maker(
     ),
     baca.pitch(
         "F#5",
-        baca.run(0),
+        baca.selectors.run(0),
     ),
 )
 
@@ -212,7 +212,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.rest(2),
+        selector=baca.selectors.rest(2),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -287,7 +287,7 @@ maker(
     harmony.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.rest(2),
+        selector=baca.selectors.rest(2),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -331,7 +331,7 @@ maker(
         baca.dots_extra_offset((2, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=baca.rests().filter_duration(">=", (1, 2)),
+        map=harmony.rests_filter_duration((">=", (1, 2))),
     ),
 )
 

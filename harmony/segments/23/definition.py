@@ -49,14 +49,14 @@ maker(
     baca.not_parts(
         baca.rehearsal_mark(
             "W",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 18)).extra_offset,
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "W",
-            baca.skip(1 - 1),
+            baca.selectors.skip(1 - 1),
             abjad.tweak((0, 10)).extra_offset,
             font_size=4,
         ),
@@ -65,21 +65,21 @@ maker(
 
 maker(
     "Global_Skips",
-    baca.metronome_mark("96", baca.skip(1 - 1)),
-    baca.metronome_mark("4.=4", baca.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.skip(2 - 1)),
-    baca.metronome_mark("3:5(4)=4", baca.skip(2 - 1)),
-    baca.metronome_mark("96", baca.skip(4 - 1)),
-    baca.metronome_mark("5:3(4)=4", baca.skip(4 - 1)),
-    baca.metronome_mark("72", baca.skip(7 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.skip(7 - 1)),
-    baca.metronome_mark("144", baca.skip(8 - 1)),
-    baca.metronome_mark("8=4", baca.skip(8 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("4.=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("57 3/5", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("3:5(4)=4", baca.selectors.skip(2 - 1)),
+    baca.metronome_mark("96", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("5:3(4)=4", baca.selectors.skip(4 - 1)),
+    baca.metronome_mark("72", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("144", baca.selectors.skip(8 - 1)),
+    baca.metronome_mark("8=4", baca.selectors.skip(8 - 1)),
 )
 
 maker(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.rest(3 - 1)),
+    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
 )
 
 # bfl
@@ -157,7 +157,7 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -174,7 +174,7 @@ maker(
     ),
     harmony.bass_drum_staff_position(),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic(
         "mp-ancora",
@@ -232,7 +232,7 @@ maker(
     ),
     baca.pitch(
         "E4",
-        baca.plt(0),
+        baca.selectors.plt(0),
     ),
     baca.laissez_vibrer(),
     baca.dynamic(
@@ -299,7 +299,7 @@ maker(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
@@ -315,7 +315,7 @@ maker(
     ),
     baca.pitch("E4"),
     baca.laissez_vibrer(
-        baca.ptails(),
+        baca.selectors.ptails(),
     ),
     baca.dynamic("f"),
     baca.markup(
