@@ -78,6 +78,7 @@ __all__ = [
     "bridge_staff_position",
     "brake_drum_staff_position",
     "purpleheart_staff_positions",
+    "rests_filter_duration",
     "slate_staff_position",
     "tam_tam_staff_position",
     "triangle_staff_position",
