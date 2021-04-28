@@ -466,7 +466,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
     baca.scp_spanner(
         "T -> P =|",
@@ -619,7 +619,7 @@ maker(
     baca.dynamic("p"),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
     baca.scp_spanner(
         "T -> P =|",

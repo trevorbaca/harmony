@@ -269,7 +269,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
@@ -409,7 +409,7 @@ maker(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        map=baca.leaves().rleak().runs().get([0, -1]),
+        map=lambda _: baca.Selection(_).leaves().rleak().runs().get([0, -1]),
     ),
 )
 
@@ -545,7 +545,7 @@ maker(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        map=baca.leaves().rleak().runs().get([0, -1]),
+        map=lambda _: baca.Selection(_).leaves().rleak().runs().get([0, -1]),
     ),
 )
 

@@ -155,7 +155,7 @@ maker(
         "o<| f |>o niente",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
@@ -181,7 +181,7 @@ maker(
     ("bfl", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[3:7].rleak(),
+        selector=baca.selectors.leaves((3, 7), rleak=True),
     ),
 )
 
@@ -217,7 +217,7 @@ maker(
         "o<| f |>o niente",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
@@ -243,7 +243,7 @@ maker(
     ("bfl", (5, 6)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[3:7].rleak(),
+        selector=baca.selectors.leaves((3, 7), rleak=True),
     ),
 )
 
@@ -716,7 +716,7 @@ maker(
     baca.tuplet_bracket_up(),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[4:8].rleak(),
+        selector=baca.selectors.leaves((4, 8), rleak=True),
     ),
 )
 
