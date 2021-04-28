@@ -255,7 +255,7 @@ maker(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[2:],
+        selector=baca.selectors.leaves((2, None)),
     ),
 )
 
@@ -307,7 +307,7 @@ maker(
     ("perc1", (9, 10)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[3:],
+        selector=baca.selectors.leaves((3, None)),
     ),
 )
 
@@ -503,7 +503,7 @@ maker(
     harmony.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:],
+        selector=baca.selectors.leaves((1, None)),
     ),
 )
 

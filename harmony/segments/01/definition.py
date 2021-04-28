@@ -148,7 +148,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -172,7 +172,7 @@ maker(
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
@@ -414,15 +414,15 @@ maker(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dls_staff_padding(6),
-        selector=baca.leaves().pheads()[:-1],
+        selector=baca.selectors.pheads((None, -1)),
     ),
     baca.new(
         baca.dls_staff_padding(6),
-        selector=baca.leaves().pheads()[-1:],
+        selector=baca.selectors.pheads((-1, None)),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[2:-2],
+        selector=baca.selectors.leaves((2, -2)),
     ),
 )
 

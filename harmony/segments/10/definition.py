@@ -1140,7 +1140,7 @@ maker(
     ),
     baca.hairpin(
         "mp >o niente",
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 

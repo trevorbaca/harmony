@@ -132,7 +132,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -188,7 +188,7 @@ maker(
         "o< f >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
 )
 
@@ -201,7 +201,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
         ),
-        selector=baca.leaves()[1:8],
+        selector=baca.selectors.leaves((1, 8)),
     ),
 )
 
@@ -219,7 +219,7 @@ maker(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -232,7 +232,7 @@ maker(
     baca.tuplet_bracket_staff_padding(6.5),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5 + 1).staff_padding,
-        selector=baca.leaves()[4:9],
+        selector=baca.selectors.leaves((4, 9)),
     ),
 )
 
@@ -583,7 +583,7 @@ maker(
     #        'o< "f" >o',
     #        forbid_al_niente_to_bar_line=True,
     #        pieces=baca.selectors.lparts([1, 1]),
-    #        selector=baca.leaves()[-2:],
+    #        selector=baca.selectors.leaves((-2, None)),
     #    ),
     baca.new(
         baca.dynamic('"f"'),
@@ -604,7 +604,7 @@ maker(
     #    baca.hairpin(
     #        'o< "f" >o niente',
     #        pieces=baca.selectors.lparts([1, 2]),
-    #        selector=baca.leaves()[:3],
+    #        selector=baca.selectors.leaves((None, 3)),
     #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6 + 2),
@@ -614,7 +614,7 @@ maker(
     ("hp", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[5:10],
+        selector=baca.selectors.leaves((5, 10)),
     ),
 )
 
@@ -674,7 +674,7 @@ maker(
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[7:12],
+        selector=baca.selectors.leaves((7, 12)),
     ),
 )
 
@@ -711,7 +711,7 @@ maker(
     ),
     baca.hairpin(
         "pp >o niente",
-        selector=baca.leaves()[1:3],
+        selector=baca.selectors.leaves((1, 3)),
     ),
 )
 
@@ -749,7 +749,7 @@ maker(
     ("va", (5, 6)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[2:6],
+        selector=baca.selectors.leaves((2, 6)),
     ),
 )
 

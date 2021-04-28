@@ -149,7 +149,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -173,7 +173,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -211,7 +211,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "o<| f |>o niente",
@@ -235,7 +235,7 @@ maker(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -891,7 +891,7 @@ maker(
     baca.dynamic('"f"'),
     baca.dls_staff_padding(
         6,
-        baca.leaves()[-3:],
+        baca.selectors.leaves((-3, None)),
     ),
     baca.markup(
         r"\baca-whisk-markup",
@@ -922,7 +922,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 

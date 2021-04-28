@@ -238,7 +238,7 @@ maker(
     ("perc1", (2, 3)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[1:8],
+        selector=baca.selectors.leaves((1, 8)),
     ),
 )
 
@@ -288,7 +288,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -440,7 +440,7 @@ maker(
     harmony.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[1:8],
+        selector=baca.selectors.leaves((1, 8)),
     ),
 )
 
@@ -522,7 +522,7 @@ maker(
             baca.selectors.leaf(-1),
         ),
         baca.note_head_transparent(
-            baca.leaves()[1:-1],
+            baca.selectors.leaves((1, -1)),
         ),
     ),
 )
@@ -582,7 +582,7 @@ maker(
             baca.selectors.pleaves([0, -1]),
         ),
         baca.note_head_transparent(
-            baca.leaves()[1:-1],
+            baca.selectors.leaves((1, -1)),
         ),
     ),
 )
@@ -646,7 +646,7 @@ maker(
             baca.selectors.pleaves((1, -1)),
         ),
         baca.note_head_transparent(
-            baca.leaves()[1:-1],
+            baca.selectors.leaves((1, -1)),
         ),
     ),
 )
@@ -710,7 +710,7 @@ maker(
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            baca.leaves()[1:-1],
+            baca.selectors.leaves((1, -1)),
         ),
     ),
 )
@@ -779,7 +779,7 @@ maker(
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            baca.leaves()[1:-1],
+            baca.selectors.leaves((1, -1)),
         ),
     ),
 )

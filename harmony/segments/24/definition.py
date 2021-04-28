@@ -235,7 +235,7 @@ maker(
     ),
     baca.new(
         harmony.purpleheart_staff_positions([2]),
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.stem_tremolo(
         baca.selectors.pheads([0, 2]),
@@ -243,7 +243,7 @@ maker(
     baca.dynamic("p"),
     baca.dls_staff_padding(
         6,
-        baca.leaves()[:-2],
+        baca.selectors.leaves((None, -2)),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -392,7 +392,7 @@ maker(
     baca.scp_spanner(
         "T4 =|",
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[5:12],
+        selector=baca.selectors.leaves((5, 12)),
     ),
     baca.new(
         baca.pitch("F4"),
@@ -426,7 +426,7 @@ maker(
     ("vc1", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[2:],
+        selector=baca.selectors.leaves((2, None)),
     ),
 )
 
@@ -525,7 +525,7 @@ maker(
     baca.scp_spanner(
         "T4 =|",
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[5:12],
+        selector=baca.selectors.leaves((5, 12)),
     ),
     baca.new(
         baca.pitch(
@@ -565,7 +565,7 @@ maker(
     ("cb1", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[2:],
+        selector=baca.selectors.leaves((2, None)),
     ),
 )
 

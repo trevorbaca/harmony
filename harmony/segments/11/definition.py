@@ -161,7 +161,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(5.5).staff_padding,
         ),
-        selector=baca.leaves()[1:9],
+        selector=baca.selectors.leaves((1, 9)),
     ),
 )
 
@@ -313,12 +313,12 @@ maker(
     baca.hairpin(
         "o< p > pp",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "pp < mp > pp",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves()[5:8],
+        selector=baca.selectors.leaves((5, 8)),
     ),
 )
 
@@ -387,7 +387,7 @@ maker(
     ),
     harmony.triangle_staff_position(),
     baca.flat_glissando(
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.stem_tremolo(
         baca.selectors.pheads(),
@@ -1118,12 +1118,12 @@ maker(
     baca.hairpin(
         "o<| p |> pp",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "pp <| mp |> pp",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.leaves()[5:8],
+        selector=baca.selectors.leaves((5, 8)),
     ),
     baca.trill_spanner(),
 )
@@ -1183,7 +1183,7 @@ maker(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.leaves()[1:3],
+        selector=baca.selectors.leaves((1, 3)),
     ),
     baca.accent(
         baca.selectors.phead(-1),

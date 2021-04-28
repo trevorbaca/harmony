@@ -374,7 +374,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -843,7 +843,7 @@ maker(
     # TODO: text spanner currently must precede pitched trill spanner; fix
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[1:8],
+        selector=baca.selectors.leaves((1, 8)),
     ),
     baca.trill_spanner(
         alteration="Fqs5",
