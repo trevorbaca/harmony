@@ -151,7 +151,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(3).bound_details__right__padding,
@@ -469,7 +469,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-1:].rleak(),
+        selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
 )
 
@@ -621,7 +621,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(2.5).bound_details__right__padding,
@@ -795,7 +795,7 @@ maker(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.leaves().rleak()[-1],
+        selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
         abjad.tweak(2.5).bound_details__right__padding,
@@ -858,7 +858,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:].rleak(),
+        selector=baca.selectors.leaves((1, None), rleak=True),
     ),
 )
 

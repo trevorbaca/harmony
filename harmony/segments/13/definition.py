@@ -401,7 +401,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[3:].rleak(),
+        selector=baca.selectors.leaves((3, None), rleak=True),
     ),
 )
 
@@ -471,7 +471,7 @@ maker(
     ("hp", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[1:8].rleak(),
+        selector=baca.selectors.leaves((1, 8), rleak=True),
     ),
 )
 
@@ -490,7 +490,7 @@ maker(
     ("hp", (4, 5)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=baca.leaves()[6:].rleak(),
+        selector=baca.selectors.leaves((6, None), rleak=True),
     ),
 )
 
@@ -911,7 +911,7 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], (4, 5)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[-4:].rleak(),
+        selector=baca.selectors.leaves((-4, None), rleak=True),
     ),
 )
 

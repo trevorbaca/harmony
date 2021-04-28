@@ -278,7 +278,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=baca.leaves()[-2:].rleak(),
+        selector=baca.selectors.leaves((-2, None), rleak=True),
     ),
 )
 
