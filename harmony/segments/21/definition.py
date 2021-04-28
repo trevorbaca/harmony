@@ -244,7 +244,7 @@ maker(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=baca.leaves()[2:],
+        selector=baca.selectors.leaves((2, None)),
     ),
 )
 
@@ -278,7 +278,7 @@ maker(
     ),
     baca.dls_staff_padding(
         4,
-        baca.leaves()[:2],
+        baca.selectors.leaves((None, 2)),
     ),
     baca.new(
         baca.clef("percussion"),
@@ -312,7 +312,7 @@ maker(
         baca.metric_modulation_spanner(
             abjad.tweak(10.5).staff_padding,
         ),
-        selector=baca.leaves()[2:],
+        selector=baca.selectors.leaves((2, None)),
     ),
 )
 

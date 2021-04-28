@@ -126,7 +126,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:3],
+        selector=baca.selectors.leaves((None, 3)),
     ),
 )
 
@@ -519,11 +519,11 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.leaves(grace=False)[2:],
+        selector=baca.selectors.leaves((2, None), grace=False),
     ),
 )
 
@@ -592,11 +592,11 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.leaves(grace=False)[2:],
+        selector=baca.selectors.leaves((2, None), grace=False),
     ),
 )
 
@@ -705,7 +705,7 @@ maker(
     ),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
@@ -745,11 +745,11 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.leaves(grace=False)[2:],
+        selector=baca.selectors.leaves((2, None), grace=False),
     ),
 )
 
@@ -858,7 +858,7 @@ maker(
     ),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 

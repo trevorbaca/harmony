@@ -366,7 +366,7 @@ maker(
     baca.hairpin(
         "(p) >o",
         bookend=False,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -506,7 +506,7 @@ maker(
     baca.hairpin(
         "(p) >o",
         bookend=False,
-        selector=baca.leaves()[-2:],
+        selector=baca.selectors.leaves((-2, None)),
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,

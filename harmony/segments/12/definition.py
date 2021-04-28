@@ -273,7 +273,7 @@ maker(
         autodetect_right_padding=True,
         bookend=False,
         pieces=baca.selectors.lparts([2, 4]),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
@@ -286,7 +286,7 @@ maker(
     ("bfl", (11, 15)),
     baca.pitch(
         "Dtqf5",
-        baca.leaves()[:-2],
+        baca.selectors.leaves((None, -2)),
     ),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -295,7 +295,7 @@ maker(
     ),
     baca.pitch(
         "B4",
-        baca.leaves()[-2:],
+        baca.selectors.leaves((-2, None)),
     ),
     baca.hairpin(
         'o< "f" >o niente o< p >o niente'

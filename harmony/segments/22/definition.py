@@ -382,7 +382,7 @@ maker(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         left_broken=True,
-        selector=baca.leaves()[:2],
+        selector=baca.selectors.leaves((None, 2)),
     ),
 )
 
@@ -639,7 +639,7 @@ maker(
     ("vc1", (4, 5)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=baca.leaves()[:9],
+        selector=baca.selectors.leaves((None, 9)),
     ),
 )
 

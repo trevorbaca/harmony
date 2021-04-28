@@ -237,7 +237,7 @@ maker(
     harmony.slate_staff_position(),
     baca.new(
         baca.flat_glissando(
-            hide_stem_selector=baca.leaves()[2:-1],
+            hide_stem_selector=baca.selectors.leaves((2, -1)),
         ),
         measures=(7, 9),
     ),
@@ -467,7 +467,7 @@ maker(
     baca.hairpin(
         "o<| fff-scratch",
         map=baca.selectors.runs((1, 2)),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
@@ -544,7 +544,7 @@ maker(
     baca.hairpin(
         "o<| fff-scratch",
         map=baca.selectors.runs((1, 2)),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
@@ -626,7 +626,7 @@ maker(
     baca.hairpin(
         "o<| fff-scratch",
         map=baca.selectors.runs((1, 2)),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
@@ -703,7 +703,7 @@ maker(
     baca.hairpin(
         "o<| fff-scratch",
         map=baca.selectors.runs((1, 2)),
-        selector=baca.leaves()[:-1],
+        selector=baca.selectors.leaves((None, -1)),
     ),
 )
 
