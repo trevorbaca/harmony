@@ -485,7 +485,10 @@ def rimbalzandi(
     """
     commands: typing.List[rmakers.Command] = []
     if rest_except is not None:
-        selector = lambda _: baca.Selection(_).leaves().exclude(rest_except)
+
+        def selector(argument):
+            return baca.Selection(argument).leaves().exclude(rest_except)
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
