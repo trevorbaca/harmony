@@ -532,7 +532,7 @@ maker(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -713,7 +713,7 @@ maker(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -881,7 +881,7 @@ maker(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=baca.leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
         selector=baca.selectors.leaves(),
     ),
     baca.dls_staff_padding(4),

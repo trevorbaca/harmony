@@ -376,7 +376,7 @@ def appoggiato(
             selector,
         )
         commands.append(written_)
-        selector = baca.leaves(grace=False)
+        selector = baca.selectors.leaves(grace=False)
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if invisible is not None:
@@ -485,7 +485,7 @@ def rimbalzandi(
     """
     commands: typing.List[rmakers.Command] = []
     if rest_except is not None:
-        selector = baca.leaves().exclude(rest_except)
+        selector = lambda _: baca.Selection(_).leaves().exclude(rest_except)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
@@ -678,11 +678,11 @@ def sixteenths(
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if untie is True:
-        selector = baca.leaves()
+        selector = baca.selectors.leaves()
         untie_ = rmakers.untie(selector)
         commands.append(untie_)
     if unbeam is True:
-        selector = baca.leaves()
+        selector = baca.selectors.leaves()
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if after_graces:
@@ -827,14 +827,16 @@ def train(counts, *, rest_leaves: abjad.IntegerSequence = None) -> baca.RhythmCo
     """
     commands: typing.List[rmakers.Command] = []
     if rest_leaves is not None:
-        selector = baca.leaves().get(rest_leaves)
+        selector = baca.selectors.leaves(rest_leaves)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
         rmakers.talea(counts, 16),
         *commands,
         rmakers.extract_trivial(),
-        rmakers.beam(baca.leaves().group()),
+        rmakers.beam(
+            lambda _: baca.Selection(_).leaves().group(),
+        ),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
         tag=_site(inspect.currentframe()),

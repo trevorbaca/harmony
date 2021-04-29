@@ -131,7 +131,7 @@ maker(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(

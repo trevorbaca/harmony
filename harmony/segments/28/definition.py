@@ -112,7 +112,7 @@ maker(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.leaves().partition_by_ratio((4, 5)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 5)),
         map=baca.selectors.runs(),
         selector=baca.selectors.leaves(),
     ),
