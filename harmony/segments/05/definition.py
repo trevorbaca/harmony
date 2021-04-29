@@ -612,7 +612,7 @@ maker(
     ),
     baca.dls_staff_padding(
         5.5,
-        baca.leaves().lleak(),
+        baca.selectors.leaves(lleak=True),
     ),
 )
 
@@ -802,7 +802,7 @@ maker(
     ),
     baca.dls_staff_padding(
         5.5,
-        baca.leaves().lleak(),
+        baca.selectors.leaves(lleak=True),
     ),
 )
 

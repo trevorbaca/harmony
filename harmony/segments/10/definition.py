@@ -202,11 +202,11 @@ maker(
     ),
     baca.pitch(
         "G3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_g,
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.hairpin(
         "o< mp >o",
@@ -257,7 +257,7 @@ maker(
     ("bfl", (11, 12)),
     baca.pitch(
         "G4",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
 )
 
@@ -279,7 +279,7 @@ maker(
     ("bfl", (13, 14)),
     baca.pitch(
         "G#4",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
 )
 
@@ -291,11 +291,11 @@ maker(
     ),
     baca.pitches(
         "A3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a.rotate(-9),
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.dynamic(
         "p",

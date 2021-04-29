@@ -107,7 +107,7 @@ maker(
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
     baca.dots_x_extent_false(
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
 )
 
@@ -369,7 +369,7 @@ maker(
         r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
     ),
     baca.repeat_tie(
-        baca.leaves().get([1, 4]),
+        baca.selectors.leaves([1, 4]),
     ),
     baca.tuplet_bracket_down(),
     baca.hairpin(

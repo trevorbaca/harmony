@@ -185,11 +185,11 @@ maker(
     ),
     baca.pitches(
         "A3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a.rotate(-9),
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.dynamic(
         "p",
@@ -735,18 +735,18 @@ maker(
         rest_to=1,
     ),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitch(
         "Db3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_d_flat_3,
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -819,18 +819,18 @@ maker(
         rest_from=1,
     ),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitch(
         "C3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_c_3,
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -1004,18 +1004,18 @@ maker(
     ),
     baca.clef("bass"),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitch(
         "B2",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_b_2,
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.hairpin(
         "mf >o niente",

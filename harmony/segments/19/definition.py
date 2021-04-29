@@ -139,7 +139,7 @@ maker(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -187,7 +187,7 @@ maker(
     ),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -236,7 +236,7 @@ maker(
     ),
     baca.dls_staff_padding(
         5,
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -321,7 +321,7 @@ maker(
     ),
     baca.dls_staff_padding(
         5,
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -473,7 +473,7 @@ maker(
     ),
     baca.dls_staff_padding(
         5,
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",

@@ -707,7 +707,7 @@ maker(
     ),
     baca.dls_staff_padding(
         6,
-        baca.leaves().lleak().lleak(),
+        lambda _: baca.Selection(_).leaves().lleak().lleak(),
     ),
 )
 

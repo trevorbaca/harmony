@@ -350,7 +350,7 @@ maker(
     ),
     baca.dls_staff_padding(
         4,
-        selector=baca.leaves(grace=False),
+        selector=baca.selectors.leaves(grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -567,7 +567,7 @@ maker(
     ),
     baca.dls_staff_padding(
         6,
-        selector=baca.leaves(grace=False),
+        selector=baca.selectors.leaves(grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",

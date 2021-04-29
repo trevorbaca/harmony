@@ -118,7 +118,7 @@ maker(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -1277,7 +1277,7 @@ maker(
     (["va", "vc2", "cb2"], (9, 11)),
     # TODO: move invisible command into rhythm-maker
     baca.invisible_music(
-        baca.leaves().get([1], 2),
+        baca.selectors.leaves(([1], 2)),
     ),
     baca.hairpin(
         "niente o< p >o",

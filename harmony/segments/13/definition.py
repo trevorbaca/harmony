@@ -156,11 +156,11 @@ maker(
     ),
     baca.pitches(
         "A3",
-        baca.leaves(grace=False),
+        baca.selectors.leaves(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a.rotate(-9),
-        baca.leaves(grace=True),
+        baca.selectors.leaves(grace=True),
     ),
     baca.dynamic(
         "p",
@@ -651,7 +651,7 @@ maker(
     ("vc1", 5),
     baca.pitch(
         "Aqf3",
-        baca.leaves().lleak(),
+        baca.selectors.leaves(lleak=True),
     ),
 )
 
@@ -804,7 +804,7 @@ maker(
     ("cb1", 5),
     baca.pitch(
         "Dtqf2",
-        baca.leaves().lleak(),
+        baca.selectors.leaves(lleak=True),
     ),
 )
 
