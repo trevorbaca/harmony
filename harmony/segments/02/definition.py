@@ -131,11 +131,11 @@ maker(
     ),
     baca.pitches(
         "A3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -184,7 +184,7 @@ maker(
     ),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
-        baca.plts().get([0, 1], 3),
+        baca.selectors.plts(([0, 1], 3)),
     ),
     baca.hairpin(
         "p <| mp |> p",
@@ -273,7 +273,7 @@ maker(
     baca.new(
         harmony.bass_drum_staff_position(),
         baca.dls_staff_padding(6),
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -586,11 +586,11 @@ maker(
     ),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -627,7 +627,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 
@@ -661,11 +661,11 @@ maker(
     ("va", (8, 11)),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-27),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.hairpin(
         "p < ff",
@@ -699,11 +699,11 @@ maker(
     ),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-1),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -762,7 +762,7 @@ maker(
     baca.scp_spanner(
         "P2 -> P4 -> P1 -> P3 ->",
         abjad.tweak(3).staff_padding,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -805,11 +805,11 @@ maker(
     ("vc1", (8, 11)),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-19),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.hairpin(
         "p < ff",
@@ -877,11 +877,11 @@ maker(
     ),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-3),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -914,7 +914,7 @@ maker(
     baca.dls_staff_padding(3),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 
@@ -950,11 +950,11 @@ maker(
     baca.clef("tenor"),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-18),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.hairpin(
         "p < ff",
@@ -1007,12 +1007,12 @@ maker(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-2),
         do_not_transpose=True,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -1055,7 +1055,7 @@ maker(
         "P2 -> P4 -> P1 -> P3 ->",
         abjad.tweak(3).staff_padding,
         final_piece_spanner=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -1088,12 +1088,12 @@ maker(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-32),
         do_not_transpose=True,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.hairpin(
         "p < ff",
@@ -1161,12 +1161,12 @@ maker(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(n=-4),
         do_not_transpose=True,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -1204,7 +1204,7 @@ maker(
     baca.dls_staff_padding(3),
     baca.damp_spanner(
         abjad.tweak(3 + 1).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 
@@ -1241,12 +1241,12 @@ maker(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-23),
         do_not_transpose=True,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.hairpin(
         "p < ff",

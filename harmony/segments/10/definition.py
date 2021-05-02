@@ -610,7 +610,7 @@ maker(
     ),
     baca.pitches(
         "F#4 D3",
-        baca.plts().get([0, -1]),
+        baca.selectors.plts([0, -1]),
     ),
     baca.staff_positions(
         [
@@ -663,7 +663,7 @@ maker(
             -5,
             -2,
         ],
-        baca.plts()[1:-1],
+        baca.selectors.plts((1, -1)),
     ),
     baca.glissando(),
     baca.hairpin(
@@ -737,7 +737,7 @@ maker(
     baca.clef("bass"),
     baca.pitches(
         "F#3 D2",
-        baca.plts().get([0, -1]),
+        baca.selectors.plts([0, -1]),
     ),
     baca.staff_positions(
         [
@@ -790,7 +790,7 @@ maker(
             -6,
             -3,
         ],
-        baca.plts()[1:-1],
+        baca.selectors.plts((1, -1)),
     ),
     baca.glissando(),
     baca.hairpin(
@@ -868,7 +868,7 @@ maker(
     baca.clef("bass"),
     baca.pitches(
         "F#3 D2",
-        baca.plts().get([0, -1]),
+        baca.selectors.plts([0, -1]),
     ),
     baca.staff_positions(
         [
@@ -915,7 +915,7 @@ maker(
             -6,
             -3,
         ],
-        baca.plts()[1:-1],
+        baca.selectors.plts((1, -1)),
     ),
     baca.glissando(),
     baca.hairpin(
@@ -1041,7 +1041,7 @@ maker(
     baca.tuplet_bracket_up(),
     baca.pitches(
         "F#3 D2",
-        baca.plts().get([0, -1]),
+        baca.selectors.plts([0, -1]),
     ),
     baca.staff_positions(
         [
@@ -1088,7 +1088,7 @@ maker(
             -1,
             2,
         ],
-        baca.plts()[1:-1],
+        baca.selectors.plts((1, -1)),
     ),
     baca.glissando(),
     baca.hairpin(

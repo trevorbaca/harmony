@@ -360,7 +360,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -440,7 +440,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -490,7 +490,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -579,7 +579,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -632,7 +632,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )

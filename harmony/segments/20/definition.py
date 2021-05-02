@@ -432,7 +432,7 @@ maker(
     baca.new(
         baca.pitch("E3"),
         baca.dls_staff_padding(4),
-        selector=baca.plts()[1:],
+        selector=baca.selectors.plts((1, None)),
     ),
     baca.triple_staccato(
         baca.selectors.pheads((1, None)),

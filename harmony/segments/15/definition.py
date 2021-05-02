@@ -138,7 +138,7 @@ maker(
     ),
     baca.pitch(
         "F#5",
-        baca.plts()[1:],
+        baca.selectors.plts((1, None)),
     ),
     baca.accent(),
     baca.dynamic("mf"),

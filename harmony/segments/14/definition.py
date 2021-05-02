@@ -467,7 +467,7 @@ maker(
     baca.hairpin(
         # '"ff" "ff" "ff" "f" "f" mf mp p pp',
         '"ff" "ff" "f" "f" mf mp p pp',
-        pieces=baca.plts()[1:],
+        pieces=baca.selectors.plts((1, None)),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -735,7 +735,7 @@ maker(
     ),
     baca.hairpin(
         '"ff" "ff"',
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -809,7 +809,7 @@ maker(
     ),
     baca.hairpin(
         '"ff" "ff" "f" "f" mf mp p',
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -872,7 +872,7 @@ maker(
     ),
     baca.hairpin(
         '"ff" "ff"',
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -936,7 +936,7 @@ maker(
     ),
     baca.hairpin(
         '"ff" "ff" "f" mf mp p pp',
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
