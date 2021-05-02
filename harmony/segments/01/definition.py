@@ -82,11 +82,11 @@ maker(
     ),
     baca.pitch(
         "A3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -329,7 +329,7 @@ maker(
     baca.dls_staff_padding(4),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 
@@ -380,7 +380,7 @@ maker(
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",
         abjad.tweak(3).staff_padding,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -446,7 +446,7 @@ maker(
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 
@@ -513,7 +513,7 @@ maker(
         "P1 -> P3 -> P2 -> P4 ->",
         abjad.tweak(3).staff_padding,
         final_piece_spanner=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -566,7 +566,7 @@ maker(
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.tweak(3 + 1).staff_padding,
-        map=baca.plts(),
+        map=baca.selectors.plts(),
     ),
 )
 

@@ -172,11 +172,11 @@ maker(
     ),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "pp-ppp",
@@ -595,7 +595,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -625,7 +625,7 @@ maker(
     ("va", (4, 5)),
     baca.pitch(
         "Ab4",
-        selector=baca.plts()[:-1],
+        selector=baca.selectors.plts((None, -1)),
     ),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -648,7 +648,7 @@ maker(
         baca.note_head_style_harmonic_black(),
         baca.pitch("<G4 Ab4 Bb4>"),
         baca.stem_tremolo(),
-        selector=baca.plts(),
+        selector=baca.selectors.plts(),
     ),
     baca.dynamic(
         "pp",
@@ -695,7 +695,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -721,7 +721,7 @@ maker(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.tweak(True).to_barline,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -780,7 +780,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -871,7 +871,7 @@ maker(
         abjad.tweak(5.5).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -964,7 +964,7 @@ maker(
     ),
     baca.pitch(
         "Gb2",
-        baca.plts()[-3:],
+        baca.selectors.plts((-3, None)),
     ),
     baca.scp_spanner(
         "P1 -> P2",
@@ -977,7 +977,7 @@ maker(
         baca.selectors.pheads((1, 3)),
     ),
     baca.stem_tremolo(
-        baca.plts()[:2],
+        baca.selectors.plts((None, 2)),
     ),
     baca.dynamic("f"),
     baca.dynamic(

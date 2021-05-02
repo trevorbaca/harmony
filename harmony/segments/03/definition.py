@@ -454,7 +454,7 @@ maker(
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -487,7 +487,7 @@ maker(
     baca.hairpin(
         "p mp",
         bookend=False,
-        pieces=baca.plts()[1:],
+        pieces=baca.selectors.plts((1, None)),
     ),
 )
 
@@ -552,7 +552,7 @@ maker(
         # '"ff" "f" mf mp p pp ppp ppp',
         '"f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
         selector=lambda _: baca.Selection(_).leaves()[1:].rleak().rleak().rleak(),
     ),
 )
@@ -798,7 +798,7 @@ maker(
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -919,6 +919,6 @@ maker(
     baca.hairpin(
         "pp p mp mf f",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )

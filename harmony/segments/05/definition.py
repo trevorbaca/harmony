@@ -93,7 +93,7 @@ maker(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -369,7 +369,7 @@ maker(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(4),
 )
@@ -563,7 +563,7 @@ maker(
     baca.hairpin(
         "p mp",
         bookend=False,
-        pieces=baca.plts()[1:],
+        pieces=baca.selectors.plts((1, None)),
     ),
 )
 
@@ -741,7 +741,7 @@ maker(
     baca.hairpin(
         "pp ppp",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(6),
 )
@@ -762,11 +762,11 @@ maker(
     baca.hairpin(
         "pp p mp",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.dls_staff_padding(
         4,
-        baca.plts()[:-1],
+        baca.selectors.plts((None, -1)),
     ),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
@@ -877,7 +877,7 @@ maker(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,

@@ -111,7 +111,7 @@ maker(
     ),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
-        baca.plts().get([0, 1], 3),
+        baca.selectors.plts(([0, 1], 3)),
     ),
     baca.hairpin(
         "o<| ff |> p",
@@ -337,11 +337,11 @@ maker(
     baca.staff_lines(5),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-27 - 21),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -418,11 +418,11 @@ maker(
     baca.clef("tenor"),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-19 - 21),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -479,11 +479,11 @@ maker(
     baca.clef("tenor"),
     baca.pitch(
         "Ab3",
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-18 - 21),
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -553,12 +553,12 @@ maker(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.plts(grace=False),
+        selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
         harmony.appoggiato_pitches_a_flat.rotate(-32 - 21),
         do_not_transpose=True,
-        selector=baca.plts(grace=True),
+        selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -727,7 +727,7 @@ maker(
     baca.hairpin(
         "pp p mp mf f",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -736,7 +736,7 @@ maker(
     baca.hairpin(
         "mf mp p pp pp pp",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -745,7 +745,7 @@ maker(
     baca.hairpin(
         'pp p mp mf "f"',
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
@@ -754,7 +754,7 @@ maker(
     baca.hairpin(
         'p mp mf "f"',
         bookend=False,
-        pieces=baca.plts()[1:],
+        pieces=baca.selectors.plts((1, None)),
     ),
 )
 
@@ -763,7 +763,7 @@ maker(
     baca.hairpin(
         "mf mp p pp pp pp",
         bookend=False,
-        pieces=baca.plts(),
+        pieces=baca.selectors.plts(),
     ),
 )
 
