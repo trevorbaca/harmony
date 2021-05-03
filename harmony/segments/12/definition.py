@@ -1248,7 +1248,7 @@ maker(
     baca.hairpin(
         "sffp >o niente",
         right_broken=True,
-        selector=baca.plts()[-1:].rleak(),
+        selector=baca.selectors.plts((-1, None), rleak=True),
     ),
 )
 

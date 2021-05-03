@@ -504,7 +504,7 @@ maker(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=baca.plts().partition_by_counts(
+            pieces=lambda _: baca.Selection(_).plts().partition_by_counts(
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -568,7 +568,7 @@ maker(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
             " mf < ff-scratch -- niente",
-            pieces=baca.plts().partition_by_counts(
+            pieces=lambda _: baca.Selection(_).plts().partition_by_counts(
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -628,7 +628,7 @@ maker(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=baca.plts().partition_by_counts(
+            pieces=lambda _: baca.Selection(_).plts().partition_by_counts(
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -695,7 +695,7 @@ maker(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=baca.plts().partition_by_counts(
+            pieces=lambda _: baca.Selection(_).plts().partition_by_counts(
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -759,7 +759,7 @@ maker(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=baca.plts().partition_by_counts(
+            pieces=lambda _: baca.Selection(_).plts().partition_by_counts(
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),

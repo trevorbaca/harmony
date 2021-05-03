@@ -677,7 +677,7 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.plts()[:1].rleak(),
+        selector=baca.selectors.plts((None, 1), rleak=True),
     ),
     baca.dynamic(
         "mp",
@@ -685,7 +685,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.plts()[1:].rleak(),
+        selector=baca.selectors.plts((1, None), rleak=True),
     ),
 )
 
@@ -721,7 +721,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.plts()[:1].rleak(),
+        selector=baca.selectors.plts((None, 1), rleak=True),
     ),
 )
 
@@ -830,7 +830,7 @@ maker(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.plts()[:1].rleak(),
+        selector=baca.selectors.plts((None, 1), rleak=True),
     ),
     baca.dynamic(
         "mp",
@@ -838,7 +838,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.plts()[1:].rleak(),
+        selector=baca.selectors.plts((1, None), rleak=True),
     ),
 )
 
@@ -874,7 +874,7 @@ maker(
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
-        selector=baca.plts()[:1].rleak(),
+        selector=baca.selectors.plts((None, 1), rleak=True),
     ),
 )
 
