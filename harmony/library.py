@@ -345,24 +345,24 @@ def appoggiato(
         prefix_counts = [1]
     commands: typing.List[rmakers.Command] = []
     if rest_to:
-        selector = baca.plts(grace=False)[:rest_to]
+        selector = baca.selectors.plts((None, rest_to), grace=False)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if rest_from is not None:
-        selector = baca.plts(grace=False)[-rest_from:]
+        selector = baca.selectors.plts((-rest_from, None), grace=False)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
-            counts, baca.plts(), leaf_duration=(1, 20)
+            counts, baca.selectors.plts(), leaf_duration=(1, 20)
         )
         commands.append(on_beat_)
     if rest_after is True:
-        selector = baca.plts(grace=False)
+        selector = baca.selectors.plts(grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     elif rest_after is not None:
-        selector = baca.plts(grace=False).get(rest_after)
+        selector = baca.selectors.plts(rest_after, grace=False)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if tie is not None:
@@ -761,7 +761,7 @@ def tessera_2(
         counts = baca.Sequence(new_counts)
     commands: typing.List[rmakers.Command] = []
     if rest_plts is not None:
-        selector = baca.plts().get(rest_plts)
+        selector = baca.selectors.plts(rest_plts)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
