@@ -1,5 +1,5 @@
 #(ly:set-option 'relative-includes #t)
-\include "../../stylesheets/stylesheet.ily"
+\include "../../stylesheet.ily"
 
 #(set-default-paper-size "letter")
 #(set-global-staff-size 11)
