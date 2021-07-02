@@ -3,7 +3,6 @@ import typing
 
 import abjad
 import baca
-import ide
 import quicktions
 from abjadext import rmakers
 
@@ -1033,16 +1032,16 @@ class ScoreTemplate(baca.ScoreTemplate):
     # _global_rests_in_topmost_staff = True
     _global_rests_in_every_staff = True
 
-    _part_manifest = ide.PartManifest(
-        ide.Part(section="BassFlute", section_abbreviation="BFL"),
-        ide.Part(section="PercussionI", section_abbreviation="PERC1"),
-        ide.Part(section="PercussionII", section_abbreviation="PERC2"),
-        ide.Part(section="Harp", section_abbreviation="HP"),
-        ide.Part(section="Viola", section_abbreviation="VA"),
-        ide.Part(section="CelloI", section_abbreviation="VC1"),
-        ide.Part(section="CelloII", section_abbreviation="VC2"),
-        ide.Part(section="ContrabassI", section_abbreviation="CB1"),
-        ide.Part(section="ContrabassII", section_abbreviation="CB2"),
+    _part_manifest = baca.PartManifest(
+        baca.Part(section="BassFlute", section_abbreviation="BFL"),
+        baca.Part(section="PercussionI", section_abbreviation="PERC1"),
+        baca.Part(section="PercussionII", section_abbreviation="PERC2"),
+        baca.Part(section="Harp", section_abbreviation="HP"),
+        baca.Part(section="Viola", section_abbreviation="VA"),
+        baca.Part(section="CelloI", section_abbreviation="VC1"),
+        baca.Part(section="CelloII", section_abbreviation="VC2"),
+        baca.Part(section="ContrabassI", section_abbreviation="CB1"),
+        baca.Part(section="ContrabassII", section_abbreviation="CB2"),
     )
 
     ### INITIALIZER ###
