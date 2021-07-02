@@ -1,4 +1,4 @@
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Global_Skips = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -765,11 +765,11 @@ b_Global_Skips = {
     \once \override Score.SpanBar.transparent = ##t
 
 %! abjad.ScoreTemplate._make_global_context()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Global_Rests = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -846,11 +846,11 @@ b_Global_Rests = {
     R1 * 1/4
 
 %! abjad.ScoreTemplate._make_global_context()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Bass_Flute_Music_Voice_A = {
 
     %! abjad.on_beat_grace_container(4)
@@ -904,11 +904,11 @@ b_Bass_Flute_Music_Voice_A = {
     a'2
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Bass_Flute_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -936,11 +936,11 @@ b_Bass_Flute_Music_Voice_B = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Bass_Flute_Music_Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -1899,7 +1899,7 @@ b_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Bass_Flute_Music_Voice_A
 
     >>
@@ -1952,7 +1952,7 @@ b_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Bass_Flute_Music_Voice_B
 
     >>
@@ -2805,31 +2805,31 @@ b_Bass_Flute_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Bass_Flute_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Bass_Flute_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Bass_Flute_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_A = {
 
     %! harmony.appoggiato()
@@ -2890,11 +2890,11 @@ b_Percussion_I_Music_Voice_A = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_B = {
 
     %! harmony.appoggiato()
@@ -2903,21 +2903,21 @@ b_Percussion_I_Music_Voice_B = {
     %! harmony.appoggiato()
     r4
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_C = {
 
     %! harmony.appoggiato()
     r1
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_D = {
 
     %! harmony.appoggiato()
@@ -2926,11 +2926,11 @@ b_Percussion_I_Music_Voice_D = {
     %! harmony.appoggiato()
     r4
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_E = {
 
     %! harmony.appoggiato()
@@ -2962,11 +2962,11 @@ b_Percussion_I_Music_Voice_E = {
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_F = {
 
     %! baca.dls_staff_padding()
@@ -3045,11 +3045,11 @@ b_Percussion_I_Music_Voice_F = {
     %! harmony.appoggiato()
     r4
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_G = {
 
     %! harmony.appoggiato()
@@ -3070,11 +3070,11 @@ b_Percussion_I_Music_Voice_G = {
     %! harmony.appoggiato()
     r4
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_H = {
 
     %! harmony.appoggiato()
@@ -3095,11 +3095,11 @@ b_Percussion_I_Music_Voice_H = {
     %! harmony.appoggiato()
     r4
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice_I = {
 
     %! harmony.appoggiato()
@@ -3128,11 +3128,11 @@ b_Percussion_I_Music_Voice_I = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Voice = {
 
     <<
@@ -3249,7 +3249,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_A
 
     >>
@@ -3294,7 +3294,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_B
 
     >>
@@ -3339,7 +3339,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_C
 
     >>
@@ -3384,7 +3384,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_D
 
     >>
@@ -3429,7 +3429,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_E
 
     >>
@@ -3992,7 +3992,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_F
 
     >>
@@ -4052,7 +4052,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_G
 
     >>
@@ -4112,7 +4112,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_H
 
     >>
@@ -4172,7 +4172,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Percussion_I_Music_Voice_I
 
     >>
@@ -4340,11 +4340,11 @@ b_Percussion_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_I_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -4352,21 +4352,21 @@ b_Percussion_I_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Percussion_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Percussion_I_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_II_Music_Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -5615,11 +5615,11 @@ b_Percussion_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Percussion_II_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -5627,21 +5627,21 @@ b_Percussion_II_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Percussion_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Percussion_II_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Harp_Music_Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -7389,11 +7389,11 @@ b_Harp_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Harp_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -7401,21 +7401,21 @@ b_Harp_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Harp_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Harp_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_A = {
 
     %! baca.dls_staff_padding()
@@ -7521,11 +7521,11 @@ b_Viola_Music_Voice_A = {
     %! SPANNER_START
     \startTextSpan
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7545,11 +7545,11 @@ b_Viola_Music_Voice_B = {
     %! REDUNDANT_DYNAMIC
     \baca-f-mp
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_C = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7577,11 +7577,11 @@ b_Viola_Music_Voice_C = {
     af2
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_D = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7609,11 +7609,11 @@ b_Viola_Music_Voice_D = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_E = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7633,11 +7633,11 @@ b_Viola_Music_Voice_E = {
     %! REDUNDANT_DYNAMIC
     \baca-f-mp
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_F = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7665,11 +7665,11 @@ b_Viola_Music_Voice_F = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_G = {
 
     %! baca.dls_staff_padding()
@@ -7799,11 +7799,11 @@ b_Viola_Music_Voice_G = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_H = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7819,11 +7819,11 @@ b_Viola_Music_Voice_H = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_I = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7839,11 +7839,11 @@ b_Viola_Music_Voice_I = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice_J = {
 
     %! abjad.on_beat_grace_container(4)
@@ -7881,11 +7881,11 @@ b_Viola_Music_Voice_J = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Voice = {
 
     <<
@@ -8019,7 +8019,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_A
 
     >>
@@ -8070,7 +8070,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_B
 
     >>
@@ -8124,7 +8124,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_C
 
     >>
@@ -8183,7 +8183,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_D
 
     >>
@@ -8247,7 +8247,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_E
 
     >>
@@ -8318,7 +8318,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_F
 
     >>
@@ -8810,7 +8810,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_G
 
     >>
@@ -8881,7 +8881,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_H
 
     >>
@@ -8952,7 +8952,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_I
 
     >>
@@ -9023,7 +9023,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Viola_Music_Voice_J
 
     >>
@@ -9195,11 +9195,11 @@ b_Viola_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Viola_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -9207,21 +9207,21 @@ b_Viola_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Viola_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Viola_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_A = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9277,11 +9277,11 @@ b_Cello_I_Music_Voice_A = {
     af2.
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9309,11 +9309,11 @@ b_Cello_I_Music_Voice_B = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_C = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9341,11 +9341,11 @@ b_Cello_I_Music_Voice_C = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_D = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9373,11 +9373,11 @@ b_Cello_I_Music_Voice_D = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_E = {
 
     %! baca.dls_staff_padding()
@@ -9507,11 +9507,11 @@ b_Cello_I_Music_Voice_E = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_F = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9527,11 +9527,11 @@ b_Cello_I_Music_Voice_F = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_G = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9547,11 +9547,11 @@ b_Cello_I_Music_Voice_G = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice_H = {
 
     %! abjad.on_beat_grace_container(4)
@@ -9589,11 +9589,11 @@ b_Cello_I_Music_Voice_H = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -9788,7 +9788,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_A
 
     >>
@@ -9842,7 +9842,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_B
 
     >>
@@ -9901,7 +9901,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_C
 
     >>
@@ -9965,7 +9965,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_D
 
     >>
@@ -10665,7 +10665,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_E
 
     >>
@@ -10736,7 +10736,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_F
 
     >>
@@ -10807,7 +10807,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_G
 
     >>
@@ -10878,7 +10878,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_I_Music_Voice_H
 
     >>
@@ -11047,11 +11047,11 @@ b_Cello_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_I_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -11059,21 +11059,21 @@ b_Cello_I_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Cello_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Cello_I_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_A = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11129,11 +11129,11 @@ b_Cello_II_Music_Voice_A = {
     af2
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11153,11 +11153,11 @@ b_Cello_II_Music_Voice_B = {
     %! REDUNDANT_DYNAMIC
     \baca-f-mp
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_C = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11185,11 +11185,11 @@ b_Cello_II_Music_Voice_C = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_D = {
 
     %! baca.dls_staff_padding()
@@ -11319,11 +11319,11 @@ b_Cello_II_Music_Voice_D = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_E = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11339,11 +11339,11 @@ b_Cello_II_Music_Voice_E = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_F = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11359,11 +11359,11 @@ b_Cello_II_Music_Voice_F = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice_G = {
 
     %! abjad.on_beat_grace_container(4)
@@ -11401,11 +11401,11 @@ b_Cello_II_Music_Voice_G = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Voice = {
 
     %! harmony.sixteenths()
@@ -11828,7 +11828,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_A
 
     >>
@@ -11887,7 +11887,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_B
 
     >>
@@ -11953,7 +11953,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_C
 
     >>
@@ -12469,7 +12469,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_D
 
     >>
@@ -12540,7 +12540,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_E
 
     >>
@@ -12611,7 +12611,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_F
 
     >>
@@ -12682,7 +12682,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Cello_II_Music_Voice_G
 
     >>
@@ -12851,11 +12851,11 @@ b_Cello_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Cello_II_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -12863,21 +12863,21 @@ b_Cello_II_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Cello_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Cello_II_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_A = {
 
     %! baca.dls_staff_padding()
@@ -12983,11 +12983,11 @@ b_Contrabass_I_Music_Voice_A = {
     %! SPANNER_START
     \startTextSpan
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13015,11 +13015,11 @@ b_Contrabass_I_Music_Voice_B = {
     af2.
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_C = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13047,11 +13047,11 @@ b_Contrabass_I_Music_Voice_C = {
     af2
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_D = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13079,11 +13079,11 @@ b_Contrabass_I_Music_Voice_D = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_E = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13111,11 +13111,11 @@ b_Contrabass_I_Music_Voice_E = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_F = {
 
     %! baca.dls_staff_padding()
@@ -13245,11 +13245,11 @@ b_Contrabass_I_Music_Voice_F = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_G = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13265,11 +13265,11 @@ b_Contrabass_I_Music_Voice_G = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_H = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13285,11 +13285,11 @@ b_Contrabass_I_Music_Voice_H = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice_I = {
 
     %! abjad.on_beat_grace_container(4)
@@ -13327,11 +13327,11 @@ b_Contrabass_I_Music_Voice_I = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
@@ -13650,7 +13650,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_A
 
     >>
@@ -13714,7 +13714,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_B
 
     >>
@@ -13783,7 +13783,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_C
 
     >>
@@ -13842,7 +13842,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_D
 
     >>
@@ -13906,7 +13906,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_E
 
     >>
@@ -14481,7 +14481,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_F
 
     >>
@@ -14552,7 +14552,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_G
 
     >>
@@ -14623,7 +14623,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_H
 
     >>
@@ -14694,7 +14694,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_I_Music_Voice_I
 
     >>
@@ -14863,11 +14863,11 @@ b_Contrabass_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_I_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -14875,21 +14875,21 @@ b_Contrabass_I_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Contrabass_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Contrabass_I_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_A = {
 
     %! abjad.on_beat_grace_container(4)
@@ -14945,11 +14945,11 @@ b_Contrabass_II_Music_Voice_A = {
     af2
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_B = {
 
     %! abjad.on_beat_grace_container(4)
@@ -14969,11 +14969,11 @@ b_Contrabass_II_Music_Voice_B = {
     %! REDUNDANT_DYNAMIC
     \baca-f-mp
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_C = {
 
     %! abjad.on_beat_grace_container(4)
@@ -15001,11 +15001,11 @@ b_Contrabass_II_Music_Voice_C = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_D = {
 
     %! baca.dls_staff_padding()
@@ -15135,11 +15135,11 @@ b_Contrabass_II_Music_Voice_D = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_E = {
 
     %! abjad.on_beat_grace_container(4)
@@ -15155,11 +15155,11 @@ b_Contrabass_II_Music_Voice_E = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_F = {
 
     %! abjad.on_beat_grace_container(4)
@@ -15175,11 +15175,11 @@ b_Contrabass_II_Music_Voice_F = {
     af4
     \repeatTie
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice_G = {
 
     %! abjad.on_beat_grace_container(4)
@@ -15217,11 +15217,11 @@ b_Contrabass_II_Music_Voice_G = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Voice = {
 
     %! harmony.sixteenths()
@@ -15654,7 +15654,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_A
 
     >>
@@ -15723,7 +15723,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_B
 
     >>
@@ -15789,7 +15789,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_C
 
     >>
@@ -16311,7 +16311,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_D
 
     >>
@@ -16382,7 +16382,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_E
 
     >>
@@ -16453,7 +16453,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_F
 
     >>
@@ -16524,7 +16524,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        %! ide.Path.extern()
+        %! baca.Path.extern()
         \b_Contrabass_II_Music_Voice_G
 
     >>
@@ -16696,11 +16696,11 @@ b_Contrabass_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 }
 
 
-%! ide.Path.extern()
+%! baca.Path.extern()
 b_Contrabass_II_Music_Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -16708,15 +16708,15 @@ b_Contrabass_II_Music_Staff = <<
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! ide.Path.extern()
+    %! baca.Path.extern()
 %%% \b_Global_Rests
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Contrabass_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! ide.Path.extern()
+    %! baca.Path.extern()
     \b_Contrabass_II_Music_Voice
 
 %! harmony.ScoreTemplate.__call__()
-%! ide.Path.extern()
+%! baca.Path.extern()
 >>
