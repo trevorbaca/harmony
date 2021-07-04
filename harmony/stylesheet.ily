@@ -1,7 +1,7 @@
 #(set-default-paper-size "11x17landscape")
 #(set-global-staff-size 10)
 
-\include "/Users/trevorbaca/baca/lilypond/baca.ily"
+\include "baca.ily"
 \include "text-markups.ily"
 
 
