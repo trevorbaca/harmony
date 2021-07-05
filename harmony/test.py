@@ -1,1 +1,0 @@
-/Users/trevorbaca/baca/dotfiles/test_segments.py
