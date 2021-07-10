@@ -1,7 +1,4 @@
-import abjad
-import baca
-
-persist = abjad.OrderedDict(
+abjad.OrderedDict(
     [
         (
             "alive_during_segment",

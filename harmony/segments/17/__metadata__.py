@@ -1,6 +1,4 @@
-import abjad
-
-metadata = abjad.OrderedDict(
+abjad.OrderedDict(
     [
         (
             "bol_measure_numbers",
