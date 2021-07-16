@@ -45,7 +45,6 @@ maker = baca.SegmentMaker(
         (4, 4),
     ],
     transpose_score=True,
-    validate_measure_count=13,
 )
 
 maker(
