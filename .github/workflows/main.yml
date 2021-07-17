@@ -32,8 +32,11 @@ jobs:
       run: |
         python --version
         python -m pip install --upgrade pip
+        echo HOME:
         echo $HOME
+        echo GITHUB_WORKSPACE:
         echo $GITHUB_WORKSPACE
+        echo PATH:
         echo $PATH
 
     - name: Install LilyPond
@@ -44,44 +47,42 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
-    - name: Install Abjad
+    - name: Install trevor/dev Abjad branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        pip install -e /tmp/abjad
+        pip install --use-feature=in-tree-build /tmp/abjad
+        echo Priming Abjad parser tables ...
+        import="import abjad; from abjad.parsers"
+        python -c "${import}.parser import LilyPondParser; LilyPondParser()"
+        python -c "${import}.reduced import ReducedLyParser; ReducedLyParser()"
+        python -c "${import}.scheme import SchemeParser; SchemeParser()"
 
     - name: Install rmakers
       run: |
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
-        pip install /tmp/abjad-ext-rmakers
+        pip install --use-feature=in-tree-build /tmp/abjad-ext-rmakers
 
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        # -e to make sure baca/boilerplate directory is copied
-        pip install -e /tmp/baca
+        pip install --use-feature=in-tree-build /tmp/baca
 
     - name: Install this score
-      run: pip install -e .
+      run: pip install --use-feature=in-tree-build .
 
-    - name: Prime parser tables
-      run: /tmp/abjad/scr/prime-parser-tables
-
-    - name: Set scores directory for path management
-      run: |
-        CFG=~/.abjad/abjad.cfg
-        echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
-        cat ~/.abjad/abjad.cfg
-
-    - name: Log versions
-      run: |
-        black --version
-        flake8 --version
-        isort --version
-        pytest --version
+#    - name: Set scores directory for path management
+#      run: |
+#        CFG=~/.abjad/abjad.cfg
+#        echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
+#        cat ~/.abjad/abjad.cfg
 
     - name: Run black, flake8, isort
       run: |
+        echo black version:
+        black --version
         make black-check
+        echo flake8 version:
+        flake8 --version
         make flake8
         make isort-check
 
@@ -95,50 +96,25 @@ jobs:
         export PATH=/home/runner/bin:${PATH}
         NAME=$(basename $GITHUB_WORKSPACE)
         if [ -e $GITHUB_WORKSPACE/$NAME/test.py ]; then
+            pytest --version
             py.test -rf $GITHUB_WORKSPACE/$NAME/test.py
         fi
 
-    - name: Check definition files
+    - name: Make segments
       run: |
-        NAME=$(basename $GITHUB_WORKSPACE)
-        segment_directory=$GITHUB_WORKSPACE/$NAME/segments
-        if [ ! -d $segment_directory ]; then
-            exit 0
-        fi
-        cd $segment_directory
-        export PATH=/tmp/baca/scr:${PATH}
-        RC=0
-        for path in $(find . -name definition.py | sort); do
-            echo -n "Checking $path ... "
-            SECONDS=0
-            python $path 1>/dev/null 2>&1
-            if [ $? -eq 0 ]; then
-                echo OK "($SECONDS sec.)"
-            else
-                RC=1
-                echo FAIL "($SECONDS sec.)"
-            fi
-        done
-        echo
-        exit $RC
-
-    - name: Rerender segments
-      run: |
-        export BACA=/tmp/baca
-        export PATH=$BACA/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         package_name=$(basename "$GITHUB_WORKSPACE")
         wrapper_directory="$GITHUB_WORKSPACE"
-        echo Wrapper directory is "$wrapper_directory"
+        echo Wrapper directory "$wrapper_directory" ...
         contents_directory="$wrapper_directory"/"$package_name"
-        echo Contents directory is "$contents_directory"
+        echo Contents directory "$contents_directory" ...
         segments_directory="$contents_directory"/segments
-        echo Segments directory is "$segments_directory"
+        echo Segments directory "$segments_directory" ...
         if [ ! -d "$segments_directory"/01 ]; then
             echo Score contains no segments ...
             exit 0
         fi
-        segment_directories=$(ls -d "$segments_directory"/[0-9]*)
-        for segment_directory in $segment_directories; do
+        for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
             echo Segment directory "$segment_directory" ...
             illustration_ly="$segment_directory/illustration.ly"
             illustration_old_ly="$segment_directory/illustration.old.ly"
@@ -153,17 +129,9 @@ jobs:
             fi
             rm "$illustration_ily"
             current_directory=$(pwd)
-            echo Current directory was "$current_directory" ...
             cd "$segment_directory"
-            echo Current directory is now $(pwd) ...
-            ls
-            echo Calling make-segment-pdf ...
-            # $BACA/scr/make-segment-pdf --do-not-open
-            which make-segment-pdf
-            make-segment-pdf --do-not-open
-            echo Done with make-segment-pdf
+            make-segment-pdf
             cd "$current_directory"
-            echo Current directory is now "$current_directory" ...
             if [ -f "$illustration_ly" ]; then
                 echo Found "$illustration_ly" ...
             else
@@ -174,15 +142,9 @@ jobs:
             else
                 exit -1
             fi
-            differences=$(diff -I '^\\version' "$illustration_ly" "$illustration_old_ly")
-            if [ -z "$differences" ]; then
-                echo Found matching illustration.ly files ...
-            else
-                echo Found mismatched illustration.ly files ...
-                diff -I '^\\version' "$illustration_ly" "$illustration_old_ly"
-                exit -1
-            fi
+            echo Calling diff ...
             differences=$(diff -I '^\\version' $illustration_ily $illustration_old_ily)
+            echo Done calling diff ...
             if [ -z "$differences" ]; then
                 echo Found matching illustration.ily files ...
             else
