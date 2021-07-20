@@ -67,14 +67,9 @@ jobs:
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
         pip install --use-feature=in-tree-build /tmp/baca
 
-    - name: Install this score
-      run: pip install --use-feature=in-tree-build .
-
-#    - name: Set scores directory for path management
-#      run: |
-#        CFG=~/.abjad/abjad.cfg
-#        echo composer_scores_directory = $(dirname $GITHUB_WORKSPACE) > $CFG
-#        cat ~/.abjad/abjad.cfg
+    # -e for doctest to process "import <score>" statements
+    - name: Install this score ("editable")
+      run: pip install --use-feature=in-tree-build -e .
 
     - name: Run black, flake8, isort
       run: |
