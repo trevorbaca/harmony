@@ -708,7 +708,7 @@ spacing.override((266, 267), (1, 24))
 spacing.override(268, mol_fermata_spacing)
 
 if __name__ == "__main__":
-    baca.build.make_layout_ly(__file__)
+    baca.build.make_layout_ly(__file__, breaks, spacing)
 
 if __name__ == "__main__":
-    baca.build.make_layout_ly(__file__)
+    baca.build.make_layout_ly(__file__, breaks, spacing)
