@@ -1218,3 +1218,6 @@ maker(
         selector=lambda _: baca.Selection(_).leaves()[4:].rleak(),
     ),
 )
+
+if __name__ == "__main__":
+    baca.build.make_segment_pdf(maker)

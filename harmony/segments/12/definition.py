@@ -1257,3 +1257,6 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], (13, 15)),
     baca.tuplet_bracket_up(),
 )
+
+if __name__ == "__main__":
+    baca.build.make_segment_pdf(maker)

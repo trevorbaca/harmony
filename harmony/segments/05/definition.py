@@ -935,3 +935,6 @@ maker(
         abjad.tweak(8).staff_padding,
     ),
 )
+
+if __name__ == "__main__":
+    baca.build.make_segment_pdf(maker)
