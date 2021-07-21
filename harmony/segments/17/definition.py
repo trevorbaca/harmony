@@ -758,3 +758,6 @@ maker(
     (["vc1", "vc2", "cb1", "cb2"], [1, 5]),
     baca.triple_staccato(baca.selectors.pheads()),
 )
+
+if __name__ == "__main__":
+    baca.build.make_segment_pdf(maker)
