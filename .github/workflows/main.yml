@@ -125,7 +125,7 @@ jobs:
             rm "$illustration_ily"
             current_directory=$(pwd)
             cd "$segment_directory"
-            make-segment-pdf
+            python definition.py
             cd "$current_directory"
             if [ -f "$illustration_ly" ]; then
                 echo Found "$illustration_ly" ...
