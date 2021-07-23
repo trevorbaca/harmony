@@ -10,6 +10,7 @@
 # LaTeX
 *.aux
 *.log
+*.gz
 
 # Packages
 *.egg
