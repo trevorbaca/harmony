@@ -52,7 +52,7 @@ jobs:
     - name: Install trevor/dev Abjad branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
-        pip install --use-feature=in-tree-build /tmp/abjad
+        python -m pip install --use-feature=in-tree-build /tmp/abjad
         echo Priming Abjad parser tables ...
         import="import abjad; from abjad.parsers"
         python -c "${import}.parser import LilyPondParser; LilyPondParser()"
@@ -62,21 +62,21 @@ jobs:
     - name: Install rmakers
       run: |
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
-        pip install --use-feature=in-tree-build /tmp/abjad-ext-rmakers
+        python -m pip install --use-feature=in-tree-build /tmp/abjad-ext-rmakers
 
     - name: Install Bača
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
-        pip install --use-feature=in-tree-build /tmp/baca
+        python -m pip install --use-feature=in-tree-build /tmp/baca
 
     # -e for doctest to process "import <score>" statements
     - name: Install this score ("editable")
       run: |
-        pip install --use-feature=in-tree-build -e .
+        python -m pip install --use-feature=in-tree-build -e .
 
     - name: List installed packages
       run: |
-        pip list
+        python -m pip list
 
     - name: Run black, flake8, isort
       run: |
