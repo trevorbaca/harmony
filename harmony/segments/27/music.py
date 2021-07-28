@@ -3,7 +3,7 @@ import pathlib
 import abjad
 import baca
 
-import harmony
+from harmony import library as harmony
 
 ###############################################################################
 ##################################### [AA] ####################################

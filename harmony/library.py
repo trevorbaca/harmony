@@ -1018,9 +1018,6 @@ def whisk_staff_position() -> baca.Suite:
 class ScoreTemplate(baca.ScoreTemplate):
     """
     Score template.
-
-    >>> import harmony
-
     """
 
     ### CLASS VARIABLES ###
@@ -1321,7 +1318,8 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         ..  container:: example
 
-            >>> score_template = harmony.ScoreTemplate()
+            >>> import harmony
+            >>> score_template = harmony.library.ScoreTemplate()
             >>> for part in score_template.part_manifest.parts:
             ...     part
             Part(instrument='BassFlute', number=1, section='BassFlute', section_abbreviation='BFL')
@@ -1344,7 +1342,7 @@ class ScoreTemplate(baca.ScoreTemplate):
 
         ..  container:: example
 
-            >>> score_template = harmony.ScoreTemplate()
+            >>> score_template = harmony.library.ScoreTemplate()
             >>> string = abjad.storage(score_template.voice_abbreviations)
             >>> print(string)
             abjad.OrderedDict(
