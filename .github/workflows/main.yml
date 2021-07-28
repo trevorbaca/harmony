@@ -118,40 +118,40 @@ jobs:
         fi
         for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
             echo Segment directory "$segment_directory" ...
-            illustration_ly="$segment_directory/illustration.ly"
-            illustration_old_ly="$segment_directory/illustration.old.ly"
-            if [ -f "$illustration_ly" ]; then
-                cp "$illustration_ly" "$illustration_old_ly"
+            music_ly="$segment_directory/music.ly"
+            music_old_ly="$segment_directory/music.old.ly"
+            if [ -f "$music_ly" ]; then
+                cp "$music_ly" "$music_old_ly"
             fi
-            rm "$illustration_ly"
-            illustration_ily="$segment_directory"/illustration.ily
-            illustration_old_ily="$segment_directory"/illustration.old.ily
-            if [ -f "$illustration_ily" ]; then
-                cp "$illustration_ily" "$illustration_old_ily"
+            rm "$music_ly"
+            music_ily="$segment_directory"/music.ily
+            music_old_ily="$segment_directory"/music.old.ily
+            if [ -f "$music_ily" ]; then
+                cp "$music_ily" "$music_old_ily"
             fi
-            rm "$illustration_ily"
+            rm "$music_ily"
             current_directory=$(pwd)
             cd "$segment_directory"
-            python definition.py
+            python music.py
             cd "$current_directory"
-            if [ -f "$illustration_ly" ]; then
-                echo Found "$illustration_ly" ...
+            if [ -f "$music_ly" ]; then
+                echo Found "$music_ly" ...
             else
                 exit -1
             fi
-            if [ -f "$illustration_old_ly" ]; then
-                echo Found "$illustration_old_ly" ...
+            if [ -f "$music_old_ly" ]; then
+                echo Found "$music_old_ly" ...
             else
                 exit -1
             fi
             echo Calling diff ...
-            differences=$(diff -I '^\\version' $illustration_ily $illustration_old_ily)
+            differences=$(diff -I '^\\version' $music_ily $music_old_ily)
             echo Done calling diff ...
             if [ -z "$differences" ]; then
-                echo Found matching illustration.ily files ...
+                echo Found matching music.ily files ...
             else
-                echo Found mismatched illustration.ily files ...
-                diff -I '^\\version' "$illustration_ily" "$illustration_old_ily"
+                echo Found mismatched music.ily files ...
+                diff -I '^\\version' "$music_ily" "$music_old_ily"
                 exit -1
             fi
             echo

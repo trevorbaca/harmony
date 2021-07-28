@@ -51,6 +51,7 @@ nosetests.xml
 # score packages
 *backup
 illustration.pdf
+music.pdf
 
 # mypy
 .mypy_cache
