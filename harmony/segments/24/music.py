@@ -27,7 +27,6 @@ maker = baca.SegmentMaker(
         baca.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     parts_metric_modulation_multiplier=(0.525, 0.525),
-    segment_directory=pathlib.Path(__file__).resolve().parent,
     stage_markup=stage_markup,
     time_signatures=[
         (4, 4),
