@@ -49,7 +49,7 @@ jobs:
         wget -q -O $lilypond $lilypond_url/$lilypond_source
         sh $lilypond --batch
 
-    - name: Install trevor/dev Abjad branch
+    - name: Install Abjad trevor/dev branch
       run: |
         git clone -b trevor/dev https://github.com/Abjad/abjad.git /tmp/abjad
         python -m pip install --use-feature=in-tree-build /tmp/abjad
@@ -118,40 +118,40 @@ jobs:
         fi
         for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
             echo Segment directory "$segment_directory" ...
-            music_ly="$segment_directory/music.ly"
-            music_old_ly="$segment_directory/music.old.ly"
-            if [ -f "$music_ly" ]; then
-                cp "$music_ly" "$music_old_ly"
+            music_ly_tagged="$segment_directory/music.ly.tagged"
+            music_ly_tagged_old="$segment_directory/music.ly.tagged.old"
+            if [ -f "$music_ly_tagged" ]; then
+                cp "$music_ly_tagged" "$music_ly_tagged_old"
             fi
-            rm "$music_ly"
-            music_ily="$segment_directory"/music.ily
-            music_old_ily="$segment_directory"/music.old.ily
-            if [ -f "$music_ily" ]; then
-                cp "$music_ily" "$music_old_ily"
+            rm "$music_ly_tagged"
+            music_ily_tagged="$segment_directory"/music.ily.tagged
+            music_ily_tagged_old="$segment_directory"/music.ily.tagged.old
+            if [ -f "$music_ily_tagged" ]; then
+                cp "$music_ily_tagged" "$music_ily_tagged_old"
             fi
-            rm "$music_ily"
+            rm "$music_ily_tagged"
             current_directory=$(pwd)
             cd "$segment_directory"
             python music.py
             cd "$current_directory"
-            if [ -f "$music_ly" ]; then
-                echo Found "$music_ly" ...
+            if [ -f "$music_ly_tagged" ]; then
+                echo Found "$music_ly_tagged" ...
             else
                 exit -1
             fi
-            if [ -f "$music_old_ly" ]; then
-                echo Found "$music_old_ly" ...
+            if [ -f "$music_ly_tagged_old" ]; then
+                echo Found "$music_ly_tagged_old" ...
             else
                 exit -1
             fi
             echo Calling diff ...
-            differences=$(diff -I '^\\version' $music_ily $music_old_ily)
+            differences=$(diff -I '^\\version' $music_ily_tagged $music_ily_tagged_old)
             echo Done calling diff ...
             if [ -z "$differences" ]; then
-                echo Found matching music.ily files ...
+                echo Found matching music.ily.tagged files ...
             else
-                echo Found mismatched music.ily files ...
-                diff -I '^\\version' "$music_ily" "$music_old_ily"
+                echo Found mismatched music.ily.tagged files ...
+                diff -I '^\\version' "$music_ily_tagged" "$music_ily_tagged_old"
                 exit -1
             fi
             echo

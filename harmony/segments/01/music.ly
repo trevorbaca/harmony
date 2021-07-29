@@ -1,7 +1,7 @@
 \version "2.23.1"
 \language "english"
 \include "../../stylesheet.ily"
-\include "music.ily"
+\include "music.ily.tagged"
 
 \score
 {
@@ -9,7 +9,7 @@
     <<
 
         {
-            \include "layout.ly"
+            \include "layout.ly.tagged"
         }
 
         \context Score = "Score"

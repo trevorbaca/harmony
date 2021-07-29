@@ -8,7 +8,7 @@
 %! abjad.LilyPondFile._get_formatted_includes()
 \include "../../stylesheet.ily"
 %! baca.Path.extern()
-\include "music.ily"
+\include "music.ily.tagged"
 
 %! baca.SegmentMaker._make_lilypond_file()
 \header { composer = ##f poet = ##f title = ##f }
@@ -32,7 +32,7 @@
         %! baca.SegmentMaker._make_lilypond_file()
         {
             %! baca.SegmentMaker._make_lilypond_file()
-            \include "layout.ly"
+            \include "layout.ly.tagged"
         %! baca.SegmentMaker._make_lilypond_file()
         }
 
