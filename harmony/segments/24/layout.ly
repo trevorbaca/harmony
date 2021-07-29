@@ -17,9 +17,9 @@
     <<
 
         \context PageLayout = "Page_Layout"
-        {   %*% Page_Layout
+        {   %*% x_Page_Layout
 
-            % [Page_Layout measure 217]
+            % [24 Page_Layout measure 217]
             \baca-new-spacing-section #1 #40
             \autoPageBreaksOff
             \noBreak
@@ -27,47 +27,47 @@
             \pageBreak
             s1 * 1
 
-            % [Page_Layout measure 218]
+            % [24 Page_Layout measure 218]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 219]
+            % [24 Page_Layout measure 219]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 220]
+            % [24 Page_Layout measure 220]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 3/4
 
-            % [Page_Layout measure 221]
+            % [24 Page_Layout measure 221]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 222]
+            % [24 Page_Layout measure 222]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 223]
+            % [24 Page_Layout measure 223]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 224]
+            % [24 Page_Layout measure 224]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 225]
+            % [24 Page_Layout measure 225]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 5/4
 
-            % [Page_Layout measure 226]
+            % [24 Page_Layout measure 226]
             \baca-new-spacing-section #1 #4
             \noBreak
             \baca-time-signature-transparent
@@ -75,7 +75,7 @@
             \once \override Score.BarLine.transparent = ##t
             \once \override Score.SpanBar.transparent = ##t
 
-        }   %*% Page_Layout
+        }   %*% x_Page_Layout
 
     >>
 

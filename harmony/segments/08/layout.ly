@@ -17,9 +17,9 @@
     <<
 
         \context PageLayout = "Page_Layout"
-        {   %*% Page_Layout
+        {   %*% h_Page_Layout
 
-            % [Page_Layout measure 63]
+            % [08 Page_Layout measure 63]
             \baca-new-spacing-section #1 #40
             \autoPageBreaksOff
             \noBreak
@@ -27,49 +27,49 @@
             \pageBreak
             s1 * 3/4
 
-            % [Page_Layout measure 64]
+            % [08 Page_Layout measure 64]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 65]
+            % [08 Page_Layout measure 65]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 3/4
 
-            % [Page_Layout measure 66]
+            % [08 Page_Layout measure 66]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 67]
+            % [08 Page_Layout measure 67]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 3/4
 
-            % [Page_Layout measure 68]
+            % [08 Page_Layout measure 68]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1
 
-            % [Page_Layout measure 69]
+            % [08 Page_Layout measure 69]
             \baca-new-spacing-section #35 #6912
             \noBreak
             s1 * 1/4
 
-            % [Page_Layout measure 70]
+            % [08 Page_Layout measure 70]
             \baca-new-spacing-section #1 #40
             \noBreak
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
             \pageBreak
             s1 * 3/4
 
-            % [Page_Layout measure 71]
+            % [08 Page_Layout measure 71]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 3/4
 
-            % [Page_Layout measure 72]
+            % [08 Page_Layout measure 72]
             \baca-new-spacing-section #1 #4
             \noBreak
             \baca-time-signature-transparent
@@ -77,7 +77,7 @@
             \once \override Score.BarLine.transparent = ##t
             \once \override Score.SpanBar.transparent = ##t
 
-        }   %*% Page_Layout
+        }   %*% h_Page_Layout
 
     >>
 
