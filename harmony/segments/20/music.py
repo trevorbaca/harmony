@@ -24,6 +24,9 @@ maker = baca.SegmentMaker(
         baca.tags.RHYTHM_ANNOTATION_SPANNER,
     ],
     parts_metric_modulation_multiplier=(0.525, 0.525),
+    instruments=harmony.instruments,
+    margin_markups=harmony.margin_markups,
+    metronome_marks=harmony.metronome_marks,
     score_template=harmony.ScoreTemplate(),
     stage_markup=stage_markup,
     time_signatures=[
