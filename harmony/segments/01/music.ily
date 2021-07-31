@@ -1,6 +1,6 @@
 a_Global_Skips = {
 
-    % [01 Global_Skips measure 1]
+    % [Global_Skips measure 1]
     \time 6/4
     \baca-time-signature-color #'blue
     s1 * 3/2
@@ -12,7 +12,7 @@ a_Global_Skips = {
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "96" #'blue
     \bacaStartTextSpanMM
 
-    % [01 Global_Skips measure 2]
+    % [Global_Skips measure 2]
     \bar ".|:"
 %%% \once \override Score.BarLine.X-extent = #'(0 . 2)
     \once \override Score.BarLine.X-extent = #'(0 . 3)
@@ -30,7 +30,7 @@ a_Global_Skips = {
     - \baca-start-snm-left-only "[A.2]"
     \bacaStartTextSpanSNM
 
-    % [01 Global_Skips measure 3]
+    % [Global_Skips measure 3]
     \time 3/4
     \baca-time-signature-color #'blue
     s1 * 3/4
@@ -47,7 +47,7 @@ a_Global_Skips = {
     \bar ":|."
 %%% \once \override Score.BarLine.X-extent = #'(0 . 1.5)
 
-    % [01 Global_Skips measure 4]
+    % [Global_Skips measure 4]
     \time 1/4
     \baca-time-signature-transparent
     s1 * 1/4
@@ -62,16 +62,16 @@ a_Global_Skips = {
 
 a_Global_Rests = {
 
-    % [01 Global_Rests measure 1]
+    % [Global_Rests measure 1]
     R1 * 3/2
 
-    % [01 Global_Rests measure 2]
+    % [Global_Rests measure 2]
     R1 * 5/4
 
-    % [01 Global_Rests measure 3]
+    % [Global_Rests measure 3]
     R1 * 3/4
 
-    % [01 Global_Rests measure 4]
+    % [Global_Rests measure 4]
     R1 * 1/4
 
 }
@@ -132,7 +132,7 @@ a_Bass_Flute_Music_Voice_D = {
 
 a_Bass_Flute_Music_Voice = {
 
-    % [01 Bass_Flute_Music_Voice measure 1]
+    % [Bass_Flute_Music_Voice measure 1]
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
@@ -231,7 +231,7 @@ a_Bass_Flute_Music_Voice = {
     >>
     \oneVoice
 
-    % [01 Bass_Flute_Music_Voice measure 2]
+    % [Bass_Flute_Music_Voice measure 2]
     r16
 
     <<
@@ -309,7 +309,7 @@ a_Bass_Flute_Music_Voice = {
 
     >>
 
-    % [01 Bass_Flute_Music_Voice measure 3]
+    % [Bass_Flute_Music_Voice measure 3]
     \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
     r2
@@ -335,7 +335,7 @@ a_Bass_Flute_Music_Voice = {
         \context Voice = "Bass_Flute_Music_Voice"
         {
 
-            % [01 Bass_Flute_Music_Voice measure 4]
+            % [Bass_Flute_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             b'1 * 1/4
@@ -346,7 +346,7 @@ a_Bass_Flute_Music_Voice = {
         \context Voice = "Bass_Flute_Rest_Voice"
         {
 
-            % [01 Bass_Flute_Rest_Voice measure 4]
+            % [Bass_Flute_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -374,7 +374,7 @@ a_Bass_Flute_Music_Staff = <<
 
 a_Percussion_I_Music_Voice = {
 
-    % [01 Percussion_I_Music_Voice measure 1]
+    % [Percussion_I_Music_Voice measure 1]
     \set Staff.shortInstrumentName = \harmony-perc-i-markup
     \set Staff.instrumentName = \harmony-percussion-i-markup
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -411,7 +411,7 @@ a_Percussion_I_Music_Voice = {
     \f
     \breathe
 
-    % [01 Percussion_I_Music_Voice measure 2]
+    % [Percussion_I_Music_Voice measure 2]
     b4 * 3/4
     \laissezVibrer
     - \tweak color #(x11-color 'blue)
@@ -440,7 +440,7 @@ a_Percussion_I_Music_Voice = {
     \revert Stem.direction
     \revert TupletBracket.direction
 
-    % [01 Percussion_I_Music_Voice measure 3]
+    % [Percussion_I_Music_Voice measure 3]
     \override Staff.BarLine.bar-extent = #'(-2 . 1)
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 3
@@ -487,7 +487,7 @@ a_Percussion_I_Music_Voice = {
         \context Voice = "Percussion_I_Music_Voice"
         {
 
-            % [01 Percussion_I_Music_Voice measure 4]
+            % [Percussion_I_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             c'1 * 1/4
@@ -497,7 +497,7 @@ a_Percussion_I_Music_Voice = {
         \context Voice = "Percussion_I_Rest_Voice"
         {
 
-            % [01 Percussion_I_Rest_Voice measure 4]
+            % [Percussion_I_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -525,7 +525,7 @@ a_Percussion_I_Music_Staff = <<
 
 a_Percussion_II_Music_Voice = {
 
-    % [01 Percussion_II_Music_Voice measure 1]
+    % [Percussion_II_Music_Voice measure 1]
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup
     \set Staff.instrumentName = \harmony-percussion-ii-markup
     \stopStaff
@@ -561,7 +561,7 @@ a_Percussion_II_Music_Voice = {
 
     r8
 
-    % [01 Percussion_II_Music_Voice measure 2]
+    % [Percussion_II_Music_Voice measure 2]
     d'4
 
     r4
@@ -589,7 +589,7 @@ a_Percussion_II_Music_Voice = {
     \revert TupletBracket.direction
     \revert DynamicLineSpanner.staff-padding
 
-    % [01 Percussion_II_Music_Voice measure 3]
+    % [Percussion_II_Music_Voice measure 3]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 3
     \startStaff
@@ -642,7 +642,7 @@ a_Percussion_II_Music_Voice = {
         \context Voice = "Percussion_II_Music_Voice"
         {
 
-            % [01 Percussion_II_Music_Voice measure 4]
+            % [Percussion_II_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             c'1 * 1/4
@@ -652,7 +652,7 @@ a_Percussion_II_Music_Voice = {
         \context Voice = "Percussion_II_Rest_Voice"
         {
 
-            % [01 Percussion_II_Rest_Voice measure 4]
+            % [Percussion_II_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -680,7 +680,7 @@ a_Percussion_II_Music_Staff = <<
 
 a_Harp_Music_Voice = {
 
-    % [01 Harp_Music_Voice measure 1]
+    % [Harp_Music_Voice measure 1]
     \set Staff.shortInstrumentName = \harmony-hp-markup
     \set Staff.instrumentName = \harmony-harp-markup
     \override Staff.BarLine.bar-extent = #'(0 . 2)
@@ -717,7 +717,7 @@ a_Harp_Music_Voice = {
 
     r8
 
-    % [01 Harp_Music_Voice measure 2]
+    % [Harp_Music_Voice measure 2]
     c'4
 
     r4
@@ -745,7 +745,7 @@ a_Harp_Music_Voice = {
     \revert TupletBracket.direction
     \revert DynamicLineSpanner.staff-padding
 
-    % [01 Harp_Music_Voice measure 3]
+    % [Harp_Music_Voice measure 3]
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
@@ -777,7 +777,7 @@ a_Harp_Music_Voice = {
         \context Voice = "Harp_Music_Voice"
         {
 
-            % [01 Harp_Music_Voice measure 4]
+            % [Harp_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             d1 * 1/4
@@ -787,7 +787,7 @@ a_Harp_Music_Voice = {
         \context Voice = "Harp_Rest_Voice"
         {
 
-            % [01 Harp_Rest_Voice measure 4]
+            % [Harp_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -815,7 +815,7 @@ a_Harp_Music_Staff = <<
 
 a_Viola_Music_Voice = {
 
-    % [01 Viola_Music_Voice measure 1]
+    % [Viola_Music_Voice measure 1]
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
@@ -854,7 +854,7 @@ a_Viola_Music_Voice = {
     - \tweak staff-padding 3
     \bacaStartTextSpanDamp
 
-    % [01 Viola_Music_Voice measure 2]
+    % [Viola_Music_Voice measure 2]
     r16
     \bacaStopTextSpanDamp
 
@@ -883,7 +883,7 @@ a_Viola_Music_Voice = {
     \bacaStartTextSpanDamp
     \revert DynamicLineSpanner.staff-padding
 
-    % [01 Viola_Music_Voice measure 3]
+    % [Viola_Music_Voice measure 3]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 1
     \startStaff
@@ -926,7 +926,7 @@ a_Viola_Music_Voice = {
         \context Voice = "Viola_Music_Voice"
         {
 
-            % [01 Viola_Music_Voice measure 4]
+            % [Viola_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             c'1 * 1/4
@@ -936,7 +936,7 @@ a_Viola_Music_Voice = {
         \context Voice = "Viola_Rest_Voice"
         {
 
-            % [01 Viola_Rest_Voice measure 4]
+            % [Viola_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -964,7 +964,7 @@ a_Viola_Music_Staff = <<
 
 a_Cello_I_Music_Voice = {
 
-    % [01 Cello_I_Music_Voice measure 1]
+    % [Cello_I_Music_Voice measure 1]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
@@ -1029,7 +1029,7 @@ a_Cello_I_Music_Voice = {
     \times 5/3
     {
 
-        % [01 Cello_I_Music_Voice measure 2]
+        % [Cello_I_Music_Voice measure 2]
         a,4
         - \tweak color #(x11-color 'blue)
         \f
@@ -1063,7 +1063,7 @@ a_Cello_I_Music_Voice = {
 
     }
 
-    % [01 Cello_I_Music_Voice measure 3]
+    % [Cello_I_Music_Voice measure 3]
     a,4
     :32
     - \accent
@@ -1105,7 +1105,7 @@ a_Cello_I_Music_Voice = {
         \context Voice = "Cello_I_Music_Voice"
         {
 
-            % [01 Cello_I_Music_Voice measure 4]
+            % [Cello_I_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             c'1 * 1/4
@@ -1115,7 +1115,7 @@ a_Cello_I_Music_Voice = {
         \context Voice = "Cello_I_Rest_Voice"
         {
 
-            % [01 Cello_I_Rest_Voice measure 4]
+            % [Cello_I_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -1143,7 +1143,7 @@ a_Cello_I_Music_Staff = <<
 
 a_Cello_II_Music_Voice = {
 
-    % [01 Cello_II_Music_Voice measure 1]
+    % [Cello_II_Music_Voice measure 1]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
@@ -1179,7 +1179,7 @@ a_Cello_II_Music_Voice = {
     - \tweak staff-padding 3
     \bacaStartTextSpanDamp
 
-    % [01 Cello_II_Music_Voice measure 2]
+    % [Cello_II_Music_Voice measure 2]
     r16
     \bacaStopTextSpanDamp
 
@@ -1207,7 +1207,7 @@ a_Cello_II_Music_Voice = {
     - \tweak staff-padding 3
     \bacaStartTextSpanDamp
 
-    % [01 Cello_II_Music_Voice measure 3]
+    % [Cello_II_Music_Voice measure 3]
     g,2
     :32
     - \tweak color #(x11-color 'blue)
@@ -1252,7 +1252,7 @@ a_Cello_II_Music_Voice = {
         \context Voice = "Cello_II_Music_Voice"
         {
 
-            % [01 Cello_II_Music_Voice measure 4]
+            % [Cello_II_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             d1 * 1/4
@@ -1262,7 +1262,7 @@ a_Cello_II_Music_Voice = {
         \context Voice = "Cello_II_Rest_Voice"
         {
 
-            % [01 Cello_II_Rest_Voice measure 4]
+            % [Cello_II_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -1290,7 +1290,7 @@ a_Cello_II_Music_Staff = <<
 
 a_Contrabass_I_Music_Voice = {
 
-    % [01 Contrabass_I_Music_Voice measure 1]
+    % [Contrabass_I_Music_Voice measure 1]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
     \startStaff
@@ -1337,7 +1337,7 @@ a_Contrabass_I_Music_Voice = {
     :32
     \repeatTie
 
-    % [01 Contrabass_I_Music_Voice measure 2]
+    % [Contrabass_I_Music_Voice measure 2]
     a,2
     :32
     - \tweak color #(x11-color 'blue)
@@ -1393,7 +1393,7 @@ a_Contrabass_I_Music_Voice = {
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
 
-    % [01 Contrabass_I_Music_Voice measure 3]
+    % [Contrabass_I_Music_Voice measure 3]
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 1
     \startStaff
@@ -1447,7 +1447,7 @@ a_Contrabass_I_Music_Voice = {
         \context Voice = "Contrabass_I_Music_Voice"
         {
 
-            % [01 Contrabass_I_Music_Voice measure 4]
+            % [Contrabass_I_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             c'1 * 1/4
@@ -1458,7 +1458,7 @@ a_Contrabass_I_Music_Voice = {
         \context Voice = "Contrabass_I_Rest_Voice"
         {
 
-            % [01 Contrabass_I_Rest_Voice measure 4]
+            % [Contrabass_I_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
@@ -1486,7 +1486,7 @@ a_Contrabass_I_Music_Staff = <<
 
 a_Contrabass_II_Music_Voice = {
 
-    % [01 Contrabass_II_Music_Voice measure 1]
+    % [Contrabass_II_Music_Voice measure 1]
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 5
@@ -1525,7 +1525,7 @@ a_Contrabass_II_Music_Voice = {
     - \tweak staff-padding 4
     \bacaStartTextSpanDamp
 
-    % [01 Contrabass_II_Music_Voice measure 2]
+    % [Contrabass_II_Music_Voice measure 2]
     r16
     \bacaStopTextSpanDamp
 
@@ -1553,7 +1553,7 @@ a_Contrabass_II_Music_Voice = {
     - \tweak staff-padding 4
     \bacaStartTextSpanDamp
 
-    % [01 Contrabass_II_Music_Voice measure 3]
+    % [Contrabass_II_Music_Voice measure 3]
     g2
     :32
     - \tweak color #(x11-color 'blue)
@@ -1598,7 +1598,7 @@ a_Contrabass_II_Music_Voice = {
         \context Voice = "Contrabass_II_Music_Voice"
         {
 
-            % [01 Contrabass_II_Music_Voice measure 4]
+            % [Contrabass_II_Music_Voice measure 4]
             \abjad-invisible-music-coloring
             \baca-not-yet-pitched-coloring
             d1 * 1/4
@@ -1608,7 +1608,7 @@ a_Contrabass_II_Music_Voice = {
         \context Voice = "Contrabass_II_Rest_Voice"
         {
 
-            % [01 Contrabass_II_Rest_Voice measure 4]
+            % [Contrabass_II_Rest_Voice measure 4]
             \once \override Score.TimeSignature.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \stopStaff
