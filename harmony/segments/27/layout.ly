@@ -19,7 +19,7 @@
         \context PageLayout = "Page_Layout"
         {   %*% aa_Page_Layout
 
-            % [27 Page_Layout measure 247]
+            % [Page_Layout measure 247]
             \baca-new-spacing-section #1 #40
             \autoPageBreaksOff
             \noBreak
@@ -27,49 +27,49 @@
             \pageBreak
             s1 * 7/4
 
-            % [27 Page_Layout measure 248]
+            % [Page_Layout measure 248]
             \baca-new-spacing-section #1 #288
             \noBreak
             s1 * 1/4
 
-            % [27 Page_Layout measure 249]
+            % [Page_Layout measure 249]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 5/4
 
-            % [27 Page_Layout measure 250]
+            % [Page_Layout measure 250]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 7/4
 
-            % [27 Page_Layout measure 251]
+            % [Page_Layout measure 251]
             \baca-new-spacing-section #35 #960
             \noBreak
             s1 * 3/2
 
-            % [27 Page_Layout measure 252]
+            % [Page_Layout measure 252]
             \baca-new-spacing-section #1 #40
             \noBreak
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
             \pageBreak
             s1 * 3/2
 
-            % [27 Page_Layout measure 253]
+            % [Page_Layout measure 253]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 1/2
 
-            % [27 Page_Layout measure 254]
+            % [Page_Layout measure 254]
             \baca-new-spacing-section #1 #288
             \noBreak
             s1 * 1/4
 
-            % [27 Page_Layout measure 255]
+            % [Page_Layout measure 255]
             \baca-new-spacing-section #1 #40
             \noBreak
             s1 * 7/4
 
-            % [27 Page_Layout measure 256]
+            % [Page_Layout measure 256]
             \baca-new-spacing-section #1 #4
             \noBreak
             \baca-time-signature-transparent
