@@ -1,5 +1,4 @@
 import inspect
-import typing
 
 import abjad
 import baca
@@ -305,23 +304,23 @@ def _site(frame):
 
 def appoggiato(
     *,
-    divisions: abjad.IntegerSequence = None,
-    counts: abjad.IntegerSequence = None,
-    extra_counts: abjad.IntegerSequence = None,
-    fuse: bool = None,
-    incise: bool = None,
+    divisions=None,
+    counts=None,
+    extra_counts=None,
+    fuse=False,
+    incise=False,
     prefix_talea=None,
     prefix_counts=None,
-    rest_after: typing.Union[abjad.IntegerSequence, bool] = None,
-    rest_to: int = None,
-    rest_from: int = None,
+    rest_after=None,
+    rest_to=None,
+    rest_from=None,
     suffix_talea=None,
     suffix_counts=None,
-    tie: abjad.IntegerSequence = None,
-    written_quarters: abjad.IntegerSequence = None,
-    invisible: abjad.IntegerSequence = None,
-    after_graces: abjad.IntegerSequence = None,
-) -> baca.RhythmCommand:
+    tie=None,
+    written_quarters=None,
+    invisible=None,
+    after_graces=None,
+):
     """
     Makes appoggiato rhythm.
     """
@@ -342,7 +341,7 @@ def appoggiato(
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if rest_to:
         selector = baca.selectors.plts((None, rest_to), grace=False)
         force_rest_ = rmakers.force_rest(selector)
@@ -413,16 +412,16 @@ def appoggiato(
 
 
 def phjc(
-    divisions: abjad.IntegerSequence,
-    counts: abjad.IntegerSequence,
+    divisions,
+    counts,
     *,
-    extra_counts: abjad.IntegerSequence = None,
-    rest: abjad.IntegerSequence = None,
-    rest_cyclic: typing.Tuple[abjad.IntegerSequence, int] = None,
-    rest_except: abjad.IntegerSequence = None,
-    rest_pleaves: abjad.IntegerSequence = None,
-    rest_most: bool = None,
-    rest_nonfirst: bool = None,
+    extra_counts=None,
+    rest=None,
+    rest_cyclic=None,
+    rest_except=None,
+    rest_pleaves=None,
+    rest_most=None,
+    rest_nonfirst=False,
 ) -> baca.RhythmCommand:
     """
     Makes purpleheart jerky contintuity.
@@ -432,7 +431,7 @@ def phjc(
         argument = baca.Sequence(argument).fuse().quarters().partition(divisions)
         return baca.Sequence(baca.Sequence(_).flatten().fuse() for _ in argument)
 
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if rest is not None:
         selector = baca.selectors.tuplets(rest)
         force_ = rmakers.force_rest(selector)
@@ -474,15 +473,11 @@ def phjc(
     )
 
 
-def rimbalzandi(
-    *,
-    extra_counts: abjad.IntegerSequence = None,
-    rest_except: abjad.IntegerSequence = None,
-) -> baca.RhythmCommand:
+def rimbalzandi(*, extra_counts=None, rest_except=None):
     """
     Makes rimbalzandi rhythm.
     """
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if rest_except is not None:
 
         def selector(argument):
@@ -505,32 +500,32 @@ def rimbalzandi(
 
 
 def sixteenths(
-    counts: typing.Sequence,
+    counts,
     *,
-    beam: bool = None,
-    fuse: bool = None,
-    preprocessor: abjad.Expression = None,
+    beam=False,
+    fuse=False,
+    preprocessor=None,
     denominator=(1, 16),
-    do_not_rewrite_meter: bool = None,
-    extra_counts: abjad.IntegerSequence = None,
-    written_eighths: typing.Union[abjad.PatternTyping, bool] = None,
-    written_quarters: typing.Union[abjad.PatternTyping, bool] = None,
-    written_dotted_quarters: typing.Union[abjad.PatternTyping, bool] = None,
-    written_halves: typing.Union[abjad.PatternTyping, bool] = None,
-    written_dotted_halves: typing.Union[abjad.PatternTyping, bool] = None,
-    written_wholes: typing.Union[abjad.PatternTyping, bool] = None,
-    written_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
-    written_double_dotted_wholes: typing.Union[abjad.PatternTyping, bool] = None,
-    invisible: typing.Union[abjad.PatternTyping, bool] = None,
-    invisible_pairs: bool = None,
-    talea_denominator: int = None,
-    tie: abjad.PatternTyping = None,
-    tie_runs: bool = None,
-    tie_all: bool = None,
-    untie: bool = None,
-    unbeam: bool = None,
-    after_graces: abjad.IntegerSequence = None,
-) -> baca.RhythmCommand:
+    do_not_rewrite_meter=False,
+    extra_counts=None,
+    written_eighths=None,
+    written_quarters=None,
+    written_dotted_quarters=None,
+    written_halves=None,
+    written_dotted_halves=None,
+    written_wholes=None,
+    written_dotted_wholes=None,
+    written_double_dotted_wholes=None,
+    invisible=None,
+    invisible_pairs=False,
+    talea_denominator=None,
+    tie=None,
+    tie_runs=False,
+    tie_all=False,
+    untie=False,
+    unbeam=False,
+    after_graces=None,
+):
     """
     Makes sixteenths rhythm.
     """
@@ -547,11 +542,11 @@ def sixteenths(
 
     else:
         preprocessor_ = preprocessor
-    beam_commands: typing.List[rmakers.Command] = []
+    beam_commands = []
     if beam:
         beam_ = rmakers.beam()
         beam_commands.append(beam_)
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if denominator is not None:
         denominator_ = rmakers.denominator(denominator)
         commands.append(denominator_)
@@ -713,9 +708,7 @@ def sixteenths(
     )
 
 
-def tessera_1(
-    part: int, *, advance: int = None, gap: bool = None
-) -> baca.RhythmCommand:
+def tessera_1(part, *, advance=0, gap=False):
     """
     Makes tessera 1.
     """
@@ -738,13 +731,7 @@ def tessera_1(
     )
 
 
-def tessera_2(
-    part: int,
-    *,
-    advance: int = None,
-    gap: bool = None,
-    rest_plts: abjad.IntegerSequence = None,
-) -> baca.RhythmCommand:
+def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
     """
     Makes tessera 2.
     """
@@ -758,7 +745,7 @@ def tessera_2(
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = baca.Sequence(new_counts)
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if rest_plts is not None:
         selector = baca.selectors.plts(rest_plts)
         force_ = rmakers.force_rest(selector)
@@ -773,9 +760,7 @@ def tessera_2(
     )
 
 
-def tessera_3(
-    part: int, *, advance: int = None, gap: bool = None
-) -> baca.RhythmCommand:
+def tessera_3(part, *, advance=0, gap=False):
     """
     Makes tessera 3.
     """
@@ -798,9 +783,7 @@ def tessera_3(
     )
 
 
-def tessera_4(
-    part: int, *, advance: int = None, gap: bool = None
-) -> baca.RhythmCommand:
+def tessera_4(part, *, advance=0, gap=False):
     """
     Makes tessera 4.
     """
@@ -823,11 +806,11 @@ def tessera_4(
     )
 
 
-def train(counts, *, rest_leaves: abjad.IntegerSequence = None) -> baca.RhythmCommand:
+def train(counts, *, rest_leaves=None):
     """
     Makes pulse train.
     """
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if rest_leaves is not None:
         selector = baca.selectors.leaves(rest_leaves)
         force_ = rmakers.force_rest(selector)
@@ -848,14 +831,14 @@ def train(counts, *, rest_leaves: abjad.IntegerSequence = None) -> baca.RhythmCo
 def tuplet(
     ratios,
     *,
-    denominator: abjad.IntegerPair = None,
-    force_augmentation: bool = None,
-    written_quarters: bool = None,
-) -> baca.RhythmCommand:
+    denominator=None,
+    force_augmentation=False,
+    written_quarters=False,
+):
     """
     Makes tuplet.
     """
-    commands: typing.List[rmakers.Command] = []
+    commands = []
     if denominator is not None:
         denominator_ = rmakers.denominator(denominator)
         commands.append(denominator_)
@@ -880,11 +863,11 @@ def tuplet(
 
 def warble(
     *,
-    sixteenths: abjad.IntegerSequence = None,
-    extra_counts: abjad.IntegerSequence = None,
-    rest_tuplets: abjad.IntegerSequence = None,
-    rest_tuplets_cyclic: typing.Tuple[abjad.IntegerSequence, int] = None,
-) -> baca.RhythmCommand:
+    sixteenths=None,
+    extra_counts=None,
+    rest_tuplets=None,
+    rest_tuplets_cyclic=None,
+):
     """
     Makes warble rhythm.
     """
@@ -898,7 +881,7 @@ def warble(
             argument = argument.split_divisions(divisions_, cyclic=True)
             return argument
 
-    rests: typing.List[rmakers.Command] = []
+    rests = []
     if rest_tuplets is not None:
         selector = baca.selectors.tuplets(rest_tuplets)
         force_rest_ = rmakers.force_rest(selector)
@@ -1441,12 +1424,12 @@ class ScoreTemplate(baca.ScoreTemplate):
 
 
 def margin_markup(
-    key: str,
+    key,
     *,
-    alert: baca.IndicatorCommand = None,
-    context: str = "Staff",
-    selector: abjad.Expression = baca.selectors.leaf(0),
-) -> baca.CommandTyping:
+    alert=None,
+    context="Staff",
+    selector=baca.selectors.leaf(0),
+):
     """
     Makes tagged margin markup indicator command.
     """
