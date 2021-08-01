@@ -11,8 +11,6 @@ abjad.OrderedDict(
         ),
         ("final_measure_number", 255),
         ("first_measure_number", 247),
-        ("segment_name", "27"),
-        ("segment_number", 27),
         ("start_clock_time", "13'26''"),
         ("stop_clock_time", "13'56''"),
         (
