@@ -41,7 +41,7 @@
 \score {
     <<
         \keepWithTag ContrabassI {
-            \include "layout.ly"
+            \include "layout.ly.tagged"
         }
         \keepWithTag ContrabassI {
             \include "../_segments/01.ly"
