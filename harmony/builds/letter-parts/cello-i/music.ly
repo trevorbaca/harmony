@@ -41,7 +41,7 @@
 \score {
     <<
         \keepWithTag CelloI {
-            \include "layout.ly"
+            \include "layout.ly.tagged"
         }
         \keepWithTag CelloI {
             \include "../_segments/01.ly"

@@ -41,7 +41,7 @@
 \score {
     <<
         \keepWithTag Harp {
-            \include "layout.ly"
+            \include "layout.ly.tagged"
         }
         \keepWithTag Harp {
             \include "../_segments/01.ly"
