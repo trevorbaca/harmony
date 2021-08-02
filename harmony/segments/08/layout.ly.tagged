@@ -27,7 +27,7 @@
         %! abjad.ScoreTemplate._make_global_context()
         \context PageLayout = "Page_Layout"
         %! abjad.ScoreTemplate._make_global_context()
-        {   %*% h_Page_Layout
+        {   %*% segment.08.Page.Layout
 
             %! baca.SegmentMaker._comment_measure_numbers()
             % [Page_Layout measure 63]
@@ -254,7 +254,7 @@
             \once \override Score.SpanBar.transparent = ##t
 
         %! abjad.ScoreTemplate._make_global_context()
-        }   %*% h_Page_Layout
+        }   %*% segment.08.Page.Layout
 
     %! abjad.ScoreTemplate._make_global_context()
     >>

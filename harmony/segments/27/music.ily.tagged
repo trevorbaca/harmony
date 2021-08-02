@@ -1,5 +1,5 @@
-%! baca.Path.extern()
-aa_Global_Skips = {
+%! baca.path.extern()
+segment.27.Global.Skips = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
     % [Global_Skips measure 247 / measure 1]
@@ -857,12 +857,12 @@ aa_Global_Skips = {
     \once \override Score.SpanBar.transparent = ##t
 
 %! abjad.ScoreTemplate._make_global_context()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Global_Rests = {
+%! baca.path.extern()
+segment.27.Global.Rests = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
     % [Global_Rests measure 247 / measure 1]
@@ -930,12 +930,12 @@ aa_Global_Rests = {
     R1 * 1/4
 
 %! abjad.ScoreTemplate._make_global_context()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Bass_Flute_Music_Voice_A = {
+%! baca.path.extern()
+segment.27.Bass.Flute.Music.Voice.A = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -995,12 +995,12 @@ aa_Bass_Flute_Music_Voice_A = {
     af'1
     \repeatTie
 
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Bass_Flute_Music_Voice_B = {
+%! baca.path.extern()
+segment.27.Bass.Flute.Music.Voice.B = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -1037,12 +1037,12 @@ aa_Bass_Flute_Music_Voice_B = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Bass_Flute_Music_Voice = {
+%! baca.path.extern()
+segment.27.Bass.Flute.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -1899,8 +1899,8 @@ aa_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        %! baca.Path.extern()
-        \aa_Bass_Flute_Music_Voice_A
+        %! baca.path.extern()
+        { \segment.27.Bass.Flute.Music.Voice.A }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -1964,8 +1964,8 @@ aa_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        %! baca.Path.extern()
-        \aa_Bass_Flute_Music_Voice_B
+        %! baca.path.extern()
+        { \segment.27.Bass.Flute.Music.Voice.B }
 
     >>
 
@@ -2703,32 +2703,32 @@ aa_Bass_Flute_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Bass_Flute_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Bass.Flute.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
-    %! baca.Path.extern()
-    \aa_Global_Rests
+    %! baca.path.extern()
+    { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Bass_Flute_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Bass_Flute_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Bass.Flute.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Percussion_I_Music_Voice = {
+%! baca.path.extern()
+segment.27.Percussion.I.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -3647,34 +3647,34 @@ aa_Percussion_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Percussion_I_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Percussion.I.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Percussion_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Percussion_I_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Percussion.I.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Percussion_II_Music_Voice = {
+%! baca.path.extern()
+segment.27.Percussion.II.Music.Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 247 / measure 1]
@@ -4665,34 +4665,34 @@ aa_Percussion_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Percussion_II_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Percussion.II.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Percussion_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Percussion_II_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Percussion.II.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Harp_Music_Voice = {
+%! baca.path.extern()
+segment.27.Harp.Music.Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
     % [Harp_Music_Voice measure 247 / measure 1]
@@ -5691,34 +5691,34 @@ aa_Harp_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Harp_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Harp.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Harp_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Harp_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Harp.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Viola_Music_Voice = {
+%! baca.path.extern()
+segment.27.Viola.Music.Voice = {
 
     %! baca.SegmentMaker._comment_measure_numbers()
     % [Viola_Music_Voice measure 247 / measure 1]
@@ -6886,34 +6886,34 @@ aa_Viola_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Viola_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Viola.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Viola_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Viola_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Viola.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Cello_I_Music_Voice = {
+%! baca.path.extern()
+segment.27.Cello.I.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -8383,34 +8383,34 @@ aa_Cello_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Cello_I_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Cello.I.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Cello_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Cello_I_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Cello.I.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Cello_II_Music_Voice = {
+%! baca.path.extern()
+segment.27.Cello.II.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -9838,34 +9838,34 @@ aa_Cello_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Cello_II_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Cello.II.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Cello_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Cello_II_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Cello.II.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Contrabass_I_Music_Voice = {
+%! baca.path.extern()
+segment.27.Contrabass.I.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -11322,34 +11322,34 @@ aa_Contrabass_I_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Contrabass_I_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Contrabass.I.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Contrabass_I_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Contrabass_I_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Contrabass.I.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>
 
 
-%! baca.Path.extern()
-aa_Contrabass_II_Music_Voice = {
+%! baca.path.extern()
+segment.27.Contrabass.II.Music.Voice = {
 
     %! baca.SegmentMaker._make_multimeasure_rest_container(7)
     <<
@@ -12692,27 +12692,27 @@ aa_Contrabass_II_Music_Voice = {
     >>
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 }
 
 
-%! baca.Path.extern()
-aa_Contrabass_II_Music_Staff = <<
+%! baca.path.extern()
+segment.27.Contrabass.II.Music.Staff = <<
 
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
     %! abjad.ScoreTemplate._make_global_context()
     %! NOT_TOPMOST
-    %! baca.Path.extern()
-%%% \aa_Global_Rests
+    %! baca.path.extern()
+%%% { \segment.27.Global.Rests }
 
     %! harmony.ScoreTemplate.__call__()
     \context Voice = "Contrabass_II_Music_Voice"
     %! harmony.ScoreTemplate.__call__()
-    %! baca.Path.extern()
-    \aa_Contrabass_II_Music_Voice
+    %! baca.path.extern()
+    { \segment.27.Contrabass.II.Music.Voice }
 
 %! harmony.ScoreTemplate.__call__()
-%! baca.Path.extern()
+%! baca.path.extern()
 >>

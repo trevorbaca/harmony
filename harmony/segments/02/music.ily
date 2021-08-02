@@ -1,4 +1,4 @@
-b_Global_Skips = {
+segment.02.Global.Skips = {
 
     % [Global_Skips measure 4 / measure 1]
     \time 4/4
@@ -134,7 +134,7 @@ b_Global_Skips = {
 }
 
 
-b_Global_Rests = {
+segment.02.Global.Rests = {
 
     % [Global_Rests measure 4 / measure 1]
     R1 * 1
@@ -181,7 +181,7 @@ b_Global_Rests = {
 }
 
 
-b_Bass_Flute_Music_Voice_A = {
+segment.02.Bass.Flute.Music.Voice.A = {
 
     \voiceTwo
     a'8.
@@ -202,7 +202,7 @@ b_Bass_Flute_Music_Voice_A = {
 }
 
 
-b_Bass_Flute_Music_Voice_B = {
+segment.02.Bass.Flute.Music.Voice.B = {
 
     \voiceTwo
     a'4..
@@ -213,7 +213,7 @@ b_Bass_Flute_Music_Voice_B = {
 }
 
 
-b_Bass_Flute_Music_Voice = {
+segment.02.Bass.Flute.Music.Voice = {
 
     % [Bass_Flute_Music_Voice measure 4 / measure 1]
     \set Staff.shortInstrumentName = \harmony-bfl-markup
@@ -418,7 +418,7 @@ b_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        \b_Bass_Flute_Music_Voice_A
+        { \segment.02.Bass.Flute.Music.Voice.A }
 
     >>
     \oneVoice
@@ -453,7 +453,7 @@ b_Bass_Flute_Music_Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        \b_Bass_Flute_Music_Voice_B
+        { \segment.02.Bass.Flute.Music.Voice.B }
 
     >>
 
@@ -639,41 +639,25 @@ b_Bass_Flute_Music_Voice = {
 }
 
 
-b_Bass_Flute_Music_Staff = <<
+segment.02.Bass.Flute.Music.Staff = <<
 
     \context GlobalRests = "Global_Rests"
-    \b_Global_Rests
+    { \segment.02.Global.Rests }
 
     \context Voice = "Bass_Flute_Music_Voice"
-    \b_Bass_Flute_Music_Voice
+    { \segment.02.Bass.Flute.Music.Voice }
 
 >>
 
 
-b_Percussion_I_Music_Voice_A = {
+segment.02.Percussion.I.Music.Voice.A = {
 
     r1
 
 }
 
 
-b_Percussion_I_Music_Voice_B = {
-
-    r1
-
-    r4
-
-}
-
-
-b_Percussion_I_Music_Voice_C = {
-
-    r1
-
-}
-
-
-b_Percussion_I_Music_Voice_D = {
+segment.02.Percussion.I.Music.Voice.B = {
 
     r1
 
@@ -682,7 +666,23 @@ b_Percussion_I_Music_Voice_D = {
 }
 
 
-b_Percussion_I_Music_Voice_E = {
+segment.02.Percussion.I.Music.Voice.C = {
+
+    r1
+
+}
+
+
+segment.02.Percussion.I.Music.Voice.D = {
+
+    r1
+
+    r4
+
+}
+
+
+segment.02.Percussion.I.Music.Voice.E = {
 
     r2
 
@@ -696,7 +696,7 @@ b_Percussion_I_Music_Voice_E = {
 }
 
 
-b_Percussion_I_Music_Voice_F = {
+segment.02.Percussion.I.Music.Voice.F = {
 
     \override DynamicLineSpanner.staff-padding = 5.5
     r1
@@ -708,7 +708,7 @@ b_Percussion_I_Music_Voice_F = {
 }
 
 
-b_Percussion_I_Music_Voice_G = {
+segment.02.Percussion.I.Music.Voice.G = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -719,7 +719,7 @@ b_Percussion_I_Music_Voice_G = {
 }
 
 
-b_Percussion_I_Music_Voice_H = {
+segment.02.Percussion.I.Music.Voice.H = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -730,7 +730,7 @@ b_Percussion_I_Music_Voice_H = {
 }
 
 
-b_Percussion_I_Music_Voice_I = {
+segment.02.Percussion.I.Music.Voice.I = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -742,7 +742,7 @@ b_Percussion_I_Music_Voice_I = {
 }
 
 
-b_Percussion_I_Music_Voice = {
+segment.02.Percussion.I.Music.Voice = {
 
     <<
 
@@ -782,7 +782,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_A
+        { \segment.02.Percussion.I.Music.Voice.A }
 
     >>
 
@@ -810,7 +810,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_B
+        { \segment.02.Percussion.I.Music.Voice.B }
 
     >>
 
@@ -838,7 +838,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_C
+        { \segment.02.Percussion.I.Music.Voice.C }
 
     >>
 
@@ -866,7 +866,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_D
+        { \segment.02.Percussion.I.Music.Voice.D }
 
     >>
 
@@ -894,7 +894,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_E
+        { \segment.02.Percussion.I.Music.Voice.E }
 
     >>
     \oneVoice
@@ -1026,7 +1026,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_F
+        { \segment.02.Percussion.I.Music.Voice.F }
 
     >>
 
@@ -1060,7 +1060,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_G
+        { \segment.02.Percussion.I.Music.Voice.G }
 
     >>
 
@@ -1094,7 +1094,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_H
+        { \segment.02.Percussion.I.Music.Voice.H }
 
     >>
 
@@ -1128,7 +1128,7 @@ b_Percussion_I_Music_Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        \b_Percussion_I_Music_Voice_I
+        { \segment.02.Percussion.I.Music.Voice.I }
 
     >>
 
@@ -1188,18 +1188,18 @@ b_Percussion_I_Music_Voice = {
 }
 
 
-b_Percussion_I_Music_Staff = <<
+segment.02.Percussion.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Percussion_I_Music_Voice"
-    \b_Percussion_I_Music_Voice
+    { \segment.02.Percussion.I.Music.Voice }
 
 >>
 
 
-b_Percussion_II_Music_Voice = {
+segment.02.Percussion.II.Music.Voice = {
 
     % [Percussion_II_Music_Voice measure 4 / measure 1]
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup
@@ -1477,18 +1477,18 @@ b_Percussion_II_Music_Voice = {
 }
 
 
-b_Percussion_II_Music_Staff = <<
+segment.02.Percussion.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Percussion_II_Music_Voice"
-    \b_Percussion_II_Music_Voice
+    { \segment.02.Percussion.II.Music.Voice }
 
 >>
 
 
-b_Harp_Music_Voice = {
+segment.02.Harp.Music.Voice = {
 
     % [Harp_Music_Voice measure 4 / measure 1]
     \set Staff.shortInstrumentName = \harmony-hp-markup
@@ -1854,18 +1854,18 @@ b_Harp_Music_Voice = {
 }
 
 
-b_Harp_Music_Staff = <<
+segment.02.Harp.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Harp_Music_Voice"
-    \b_Harp_Music_Voice
+    { \segment.02.Harp.Music.Voice }
 
 >>
 
 
-b_Viola_Music_Voice_A = {
+segment.02.Viola.Music.Voice.A = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1882,7 +1882,7 @@ b_Viola_Music_Voice_A = {
 }
 
 
-b_Viola_Music_Voice_B = {
+segment.02.Viola.Music.Voice.B = {
 
     \voiceTwo
     af!2.
@@ -1892,7 +1892,7 @@ b_Viola_Music_Voice_B = {
 }
 
 
-b_Viola_Music_Voice_C = {
+segment.02.Viola.Music.Voice.C = {
 
     \voiceTwo
     af!2
@@ -1908,7 +1908,7 @@ b_Viola_Music_Voice_C = {
 }
 
 
-b_Viola_Music_Voice_D = {
+segment.02.Viola.Music.Voice.D = {
 
     \voiceTwo
     af!2
@@ -1924,7 +1924,7 @@ b_Viola_Music_Voice_D = {
 }
 
 
-b_Viola_Music_Voice_E = {
+segment.02.Viola.Music.Voice.E = {
 
     \voiceTwo
     af!1
@@ -1934,7 +1934,7 @@ b_Viola_Music_Voice_E = {
 }
 
 
-b_Viola_Music_Voice_F = {
+segment.02.Viola.Music.Voice.F = {
 
     \voiceTwo
     af!1
@@ -1945,7 +1945,7 @@ b_Viola_Music_Voice_F = {
 }
 
 
-b_Viola_Music_Voice_G = {
+segment.02.Viola.Music.Voice.G = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1969,7 +1969,7 @@ b_Viola_Music_Voice_G = {
 }
 
 
-b_Viola_Music_Voice_H = {
+segment.02.Viola.Music.Voice.H = {
 
     \voiceTwo
     af!1
@@ -1982,7 +1982,7 @@ b_Viola_Music_Voice_H = {
 }
 
 
-b_Viola_Music_Voice_I = {
+segment.02.Viola.Music.Voice.I = {
 
     \voiceTwo
     af!1
@@ -1995,7 +1995,7 @@ b_Viola_Music_Voice_I = {
 }
 
 
-b_Viola_Music_Voice_J = {
+segment.02.Viola.Music.Voice.J = {
 
     \voiceTwo
     af!1
@@ -2011,7 +2011,7 @@ b_Viola_Music_Voice_J = {
 }
 
 
-b_Viola_Music_Voice = {
+segment.02.Viola.Music.Voice = {
 
     <<
 
@@ -2056,7 +2056,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_A
+        { \segment.02.Viola.Music.Voice.A }
 
     >>
 
@@ -2089,7 +2089,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_B
+        { \segment.02.Viola.Music.Voice.B }
 
     >>
 
@@ -2123,7 +2123,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_C
+        { \segment.02.Viola.Music.Voice.C }
 
     >>
 
@@ -2159,7 +2159,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_D
+        { \segment.02.Viola.Music.Voice.D }
 
     >>
 
@@ -2197,7 +2197,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_E
+        { \segment.02.Viola.Music.Voice.E }
 
     >>
 
@@ -2238,7 +2238,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_F
+        { \segment.02.Viola.Music.Voice.F }
 
     >>
 
@@ -2363,7 +2363,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_G
+        { \segment.02.Viola.Music.Voice.G }
 
     >>
 
@@ -2404,7 +2404,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_H
+        { \segment.02.Viola.Music.Voice.H }
 
     >>
 
@@ -2445,7 +2445,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_I
+        { \segment.02.Viola.Music.Voice.I }
 
     >>
 
@@ -2486,7 +2486,7 @@ b_Viola_Music_Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        \b_Viola_Music_Voice_J
+        { \segment.02.Viola.Music.Voice.J }
 
     >>
 
@@ -2547,18 +2547,18 @@ b_Viola_Music_Voice = {
 }
 
 
-b_Viola_Music_Staff = <<
+segment.02.Viola.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Viola_Music_Voice"
-    \b_Viola_Music_Voice
+    { \segment.02.Viola.Music.Voice }
 
 >>
 
 
-b_Cello_I_Music_Voice_A = {
+segment.02.Cello.I.Music.Voice.A = {
 
     \voiceTwo
     af!4
@@ -2580,7 +2580,7 @@ b_Cello_I_Music_Voice_A = {
 }
 
 
-b_Cello_I_Music_Voice_B = {
+segment.02.Cello.I.Music.Voice.B = {
 
     \voiceTwo
     af!2
@@ -2596,7 +2596,7 @@ b_Cello_I_Music_Voice_B = {
 }
 
 
-b_Cello_I_Music_Voice_C = {
+segment.02.Cello.I.Music.Voice.C = {
 
     \voiceTwo
     af!2.
@@ -2612,7 +2612,7 @@ b_Cello_I_Music_Voice_C = {
 }
 
 
-b_Cello_I_Music_Voice_D = {
+segment.02.Cello.I.Music.Voice.D = {
 
     \voiceTwo
     af!1
@@ -2623,7 +2623,7 @@ b_Cello_I_Music_Voice_D = {
 }
 
 
-b_Cello_I_Music_Voice_E = {
+segment.02.Cello.I.Music.Voice.E = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -2647,7 +2647,7 @@ b_Cello_I_Music_Voice_E = {
 }
 
 
-b_Cello_I_Music_Voice_F = {
+segment.02.Cello.I.Music.Voice.F = {
 
     \voiceTwo
     af!1
@@ -2660,7 +2660,7 @@ b_Cello_I_Music_Voice_F = {
 }
 
 
-b_Cello_I_Music_Voice_G = {
+segment.02.Cello.I.Music.Voice.G = {
 
     \voiceTwo
     af!1
@@ -2673,7 +2673,7 @@ b_Cello_I_Music_Voice_G = {
 }
 
 
-b_Cello_I_Music_Voice_H = {
+segment.02.Cello.I.Music.Voice.H = {
 
     \voiceTwo
     af!1
@@ -2689,7 +2689,7 @@ b_Cello_I_Music_Voice_H = {
 }
 
 
-b_Cello_I_Music_Voice = {
+segment.02.Cello.I.Music.Voice = {
 
     % [Cello_I_Music_Voice measure 4 / measure 1]
     \set Staff.shortInstrumentName = \harmony-vc-i-markup
@@ -2738,7 +2738,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_A
+        { \segment.02.Cello.I.Music.Voice.A }
 
     >>
 
@@ -2772,7 +2772,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_B
+        { \segment.02.Cello.I.Music.Voice.B }
 
     >>
 
@@ -2808,7 +2808,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_C
+        { \segment.02.Cello.I.Music.Voice.C }
 
     >>
 
@@ -2846,7 +2846,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_D
+        { \segment.02.Cello.I.Music.Voice.D }
 
     >>
 
@@ -3002,7 +3002,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_E
+        { \segment.02.Cello.I.Music.Voice.E }
 
     >>
 
@@ -3043,7 +3043,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_F
+        { \segment.02.Cello.I.Music.Voice.F }
 
     >>
 
@@ -3084,7 +3084,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_G
+        { \segment.02.Cello.I.Music.Voice.G }
 
     >>
 
@@ -3125,7 +3125,7 @@ b_Cello_I_Music_Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        \b_Cello_I_Music_Voice_H
+        { \segment.02.Cello.I.Music.Voice.H }
 
     >>
 
@@ -3185,18 +3185,18 @@ b_Cello_I_Music_Voice = {
 }
 
 
-b_Cello_I_Music_Staff = <<
+segment.02.Cello.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Cello_I_Music_Voice"
-    \b_Cello_I_Music_Voice
+    { \segment.02.Cello.I.Music.Voice }
 
 >>
 
 
-b_Cello_II_Music_Voice_A = {
+segment.02.Cello.II.Music.Voice.A = {
 
     \voiceTwo
     af!2
@@ -3218,7 +3218,7 @@ b_Cello_II_Music_Voice_A = {
 }
 
 
-b_Cello_II_Music_Voice_B = {
+segment.02.Cello.II.Music.Voice.B = {
 
     \voiceTwo
     af!2.
@@ -3228,7 +3228,7 @@ b_Cello_II_Music_Voice_B = {
 }
 
 
-b_Cello_II_Music_Voice_C = {
+segment.02.Cello.II.Music.Voice.C = {
 
     \voiceTwo
     af!1
@@ -3239,7 +3239,7 @@ b_Cello_II_Music_Voice_C = {
 }
 
 
-b_Cello_II_Music_Voice_D = {
+segment.02.Cello.II.Music.Voice.D = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -3263,7 +3263,7 @@ b_Cello_II_Music_Voice_D = {
 }
 
 
-b_Cello_II_Music_Voice_E = {
+segment.02.Cello.II.Music.Voice.E = {
 
     \voiceTwo
     af!1
@@ -3276,7 +3276,7 @@ b_Cello_II_Music_Voice_E = {
 }
 
 
-b_Cello_II_Music_Voice_F = {
+segment.02.Cello.II.Music.Voice.F = {
 
     \voiceTwo
     af!1
@@ -3289,7 +3289,7 @@ b_Cello_II_Music_Voice_F = {
 }
 
 
-b_Cello_II_Music_Voice_G = {
+segment.02.Cello.II.Music.Voice.G = {
 
     \voiceTwo
     af!1
@@ -3305,7 +3305,7 @@ b_Cello_II_Music_Voice_G = {
 }
 
 
-b_Cello_II_Music_Voice = {
+segment.02.Cello.II.Music.Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
@@ -3409,7 +3409,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_A
+        { \segment.02.Cello.II.Music.Voice.A }
 
     >>
 
@@ -3445,7 +3445,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_B
+        { \segment.02.Cello.II.Music.Voice.B }
 
     >>
 
@@ -3484,7 +3484,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_C
+        { \segment.02.Cello.II.Music.Voice.C }
 
     >>
 
@@ -3611,7 +3611,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_D
+        { \segment.02.Cello.II.Music.Voice.D }
 
     >>
 
@@ -3652,7 +3652,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_E
+        { \segment.02.Cello.II.Music.Voice.E }
 
     >>
 
@@ -3693,7 +3693,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_F
+        { \segment.02.Cello.II.Music.Voice.F }
 
     >>
 
@@ -3734,7 +3734,7 @@ b_Cello_II_Music_Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        \b_Cello_II_Music_Voice_G
+        { \segment.02.Cello.II.Music.Voice.G }
 
     >>
 
@@ -3794,18 +3794,18 @@ b_Cello_II_Music_Voice = {
 }
 
 
-b_Cello_II_Music_Staff = <<
+segment.02.Cello.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Cello_II_Music_Voice"
-    \b_Cello_II_Music_Voice
+    { \segment.02.Cello.II.Music.Voice }
 
 >>
 
 
-b_Contrabass_I_Music_Voice_A = {
+segment.02.Contrabass.I.Music.Voice.A = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -3822,7 +3822,7 @@ b_Contrabass_I_Music_Voice_A = {
 }
 
 
-b_Contrabass_I_Music_Voice_B = {
+segment.02.Contrabass.I.Music.Voice.B = {
 
     \voiceTwo
     af!4
@@ -3838,7 +3838,7 @@ b_Contrabass_I_Music_Voice_B = {
 }
 
 
-b_Contrabass_I_Music_Voice_C = {
+segment.02.Contrabass.I.Music.Voice.C = {
 
     \voiceTwo
     af!4
@@ -3854,7 +3854,7 @@ b_Contrabass_I_Music_Voice_C = {
 }
 
 
-b_Contrabass_I_Music_Voice_D = {
+segment.02.Contrabass.I.Music.Voice.D = {
 
     \voiceTwo
     af!2.
@@ -3870,7 +3870,7 @@ b_Contrabass_I_Music_Voice_D = {
 }
 
 
-b_Contrabass_I_Music_Voice_E = {
+segment.02.Contrabass.I.Music.Voice.E = {
 
     \voiceTwo
     af!2.
@@ -3881,7 +3881,7 @@ b_Contrabass_I_Music_Voice_E = {
 }
 
 
-b_Contrabass_I_Music_Voice_F = {
+segment.02.Contrabass.I.Music.Voice.F = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -3905,7 +3905,7 @@ b_Contrabass_I_Music_Voice_F = {
 }
 
 
-b_Contrabass_I_Music_Voice_G = {
+segment.02.Contrabass.I.Music.Voice.G = {
 
     \voiceTwo
     af!1
@@ -3918,7 +3918,7 @@ b_Contrabass_I_Music_Voice_G = {
 }
 
 
-b_Contrabass_I_Music_Voice_H = {
+segment.02.Contrabass.I.Music.Voice.H = {
 
     \voiceTwo
     af!1
@@ -3931,7 +3931,7 @@ b_Contrabass_I_Music_Voice_H = {
 }
 
 
-b_Contrabass_I_Music_Voice_I = {
+segment.02.Contrabass.I.Music.Voice.I = {
 
     \voiceTwo
     af!1
@@ -3947,7 +3947,7 @@ b_Contrabass_I_Music_Voice_I = {
 }
 
 
-b_Contrabass_I_Music_Voice = {
+segment.02.Contrabass.I.Music.Voice = {
 
     % [Contrabass_I_Music_Voice measure 4 / measure 1]
     \set Staff.shortInstrumentName = \harmony-cb-i-markup
@@ -4030,7 +4030,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_A
+        { \segment.02.Contrabass.I.Music.Voice.A }
 
     >>
 
@@ -4068,7 +4068,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_B
+        { \segment.02.Contrabass.I.Music.Voice.B }
 
     >>
 
@@ -4108,7 +4108,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_C
+        { \segment.02.Contrabass.I.Music.Voice.C }
 
     >>
 
@@ -4144,7 +4144,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_D
+        { \segment.02.Contrabass.I.Music.Voice.D }
 
     >>
 
@@ -4182,7 +4182,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_E
+        { \segment.02.Contrabass.I.Music.Voice.E }
 
     >>
 
@@ -4328,7 +4328,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_F
+        { \segment.02.Contrabass.I.Music.Voice.F }
 
     >>
 
@@ -4369,7 +4369,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_G
+        { \segment.02.Contrabass.I.Music.Voice.G }
 
     >>
 
@@ -4410,7 +4410,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_H
+        { \segment.02.Contrabass.I.Music.Voice.H }
 
     >>
 
@@ -4451,7 +4451,7 @@ b_Contrabass_I_Music_Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        \b_Contrabass_I_Music_Voice_I
+        { \segment.02.Contrabass.I.Music.Voice.I }
 
     >>
 
@@ -4511,18 +4511,18 @@ b_Contrabass_I_Music_Voice = {
 }
 
 
-b_Contrabass_I_Music_Staff = <<
+segment.02.Contrabass.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Contrabass_I_Music_Voice"
-    \b_Contrabass_I_Music_Voice
+    { \segment.02.Contrabass.I.Music.Voice }
 
 >>
 
 
-b_Contrabass_II_Music_Voice_A = {
+segment.02.Contrabass.II.Music.Voice.A = {
 
     \voiceTwo
     af!2
@@ -4544,7 +4544,7 @@ b_Contrabass_II_Music_Voice_A = {
 }
 
 
-b_Contrabass_II_Music_Voice_B = {
+segment.02.Contrabass.II.Music.Voice.B = {
 
     \voiceTwo
     af!2.
@@ -4554,7 +4554,7 @@ b_Contrabass_II_Music_Voice_B = {
 }
 
 
-b_Contrabass_II_Music_Voice_C = {
+segment.02.Contrabass.II.Music.Voice.C = {
 
     \voiceTwo
     af!1
@@ -4565,7 +4565,7 @@ b_Contrabass_II_Music_Voice_C = {
 }
 
 
-b_Contrabass_II_Music_Voice_D = {
+segment.02.Contrabass.II.Music.Voice.D = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -4589,7 +4589,7 @@ b_Contrabass_II_Music_Voice_D = {
 }
 
 
-b_Contrabass_II_Music_Voice_E = {
+segment.02.Contrabass.II.Music.Voice.E = {
 
     \voiceTwo
     af!1
@@ -4602,7 +4602,7 @@ b_Contrabass_II_Music_Voice_E = {
 }
 
 
-b_Contrabass_II_Music_Voice_F = {
+segment.02.Contrabass.II.Music.Voice.F = {
 
     \voiceTwo
     af!1
@@ -4615,7 +4615,7 @@ b_Contrabass_II_Music_Voice_F = {
 }
 
 
-b_Contrabass_II_Music_Voice_G = {
+segment.02.Contrabass.II.Music.Voice.G = {
 
     \voiceTwo
     af!1
@@ -4631,7 +4631,7 @@ b_Contrabass_II_Music_Voice_G = {
 }
 
 
-b_Contrabass_II_Music_Voice = {
+segment.02.Contrabass.II.Music.Voice = {
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
@@ -4738,7 +4738,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_A
+        { \segment.02.Contrabass.II.Music.Voice.A }
 
     >>
 
@@ -4778,7 +4778,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_B
+        { \segment.02.Contrabass.II.Music.Voice.B }
 
     >>
 
@@ -4817,7 +4817,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_C
+        { \segment.02.Contrabass.II.Music.Voice.C }
 
     >>
 
@@ -4946,7 +4946,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_D
+        { \segment.02.Contrabass.II.Music.Voice.D }
 
     >>
 
@@ -4987,7 +4987,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_E
+        { \segment.02.Contrabass.II.Music.Voice.E }
 
     >>
 
@@ -5028,7 +5028,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_F
+        { \segment.02.Contrabass.II.Music.Voice.F }
 
     >>
 
@@ -5069,7 +5069,7 @@ b_Contrabass_II_Music_Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        \b_Contrabass_II_Music_Voice_G
+        { \segment.02.Contrabass.II.Music.Voice.G }
 
     >>
 
@@ -5130,12 +5130,12 @@ b_Contrabass_II_Music_Voice = {
 }
 
 
-b_Contrabass_II_Music_Staff = <<
+segment.02.Contrabass.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \b_Global_Rests
+%%% { \segment.02.Global.Rests }
 
     \context Voice = "Contrabass_II_Music_Voice"
-    \b_Contrabass_II_Music_Voice
+    { \segment.02.Contrabass.II.Music.Voice }
 
 >>
