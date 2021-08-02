@@ -1,4 +1,4 @@
-o_Global_Skips = {
+segment.15.Global.Skips = {
 
     % [Global_Skips measure 131 / measure 1]
     \time 4/4
@@ -97,7 +97,7 @@ o_Global_Skips = {
 }
 
 
-o_Global_Rests = {
+segment.15.Global.Rests = {
 
     % [Global_Rests measure 131 / measure 1]
     R1 * 1
@@ -135,7 +135,7 @@ o_Global_Rests = {
 }
 
 
-o_Bass_Flute_Music_Voice = {
+segment.15.Bass.Flute.Music.Voice = {
 
     % [Bass_Flute_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-bfl-markup
@@ -338,18 +338,18 @@ o_Bass_Flute_Music_Voice = {
 }
 
 
-o_Bass_Flute_Music_Staff = <<
+segment.15.Bass.Flute.Music.Staff = <<
 
     \context GlobalRests = "Global_Rests"
-    \o_Global_Rests
+    { \segment.15.Global.Rests }
 
     \context Voice = "Bass_Flute_Music_Voice"
-    \o_Bass_Flute_Music_Voice
+    { \segment.15.Bass.Flute.Music.Voice }
 
 >>
 
 
-o_Percussion_I_Music_Voice = {
+segment.15.Percussion.I.Music.Voice = {
 
     % [Percussion_I_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-perc-i-markup
@@ -546,18 +546,18 @@ o_Percussion_I_Music_Voice = {
 }
 
 
-o_Percussion_I_Music_Staff = <<
+segment.15.Percussion.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Percussion_I_Music_Voice"
-    \o_Percussion_I_Music_Voice
+    { \segment.15.Percussion.I.Music.Voice }
 
 >>
 
 
-o_Percussion_II_Music_Voice = {
+segment.15.Percussion.II.Music.Voice = {
 
     <<
 
@@ -773,18 +773,18 @@ o_Percussion_II_Music_Voice = {
 }
 
 
-o_Percussion_II_Music_Staff = <<
+segment.15.Percussion.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Percussion_II_Music_Voice"
-    \o_Percussion_II_Music_Voice
+    { \segment.15.Percussion.II.Music.Voice }
 
 >>
 
 
-o_Harp_Music_Voice = {
+segment.15.Harp.Music.Voice = {
 
     % [Harp_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-hp-markup
@@ -982,18 +982,18 @@ o_Harp_Music_Voice = {
 }
 
 
-o_Harp_Music_Staff = <<
+segment.15.Harp.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Harp_Music_Voice"
-    \o_Harp_Music_Voice
+    { \segment.15.Harp.Music.Voice }
 
 >>
 
 
-o_Viola_Music_Voice = {
+segment.15.Viola.Music.Voice = {
 
     <<
 
@@ -1164,18 +1164,18 @@ o_Viola_Music_Voice = {
 }
 
 
-o_Viola_Music_Staff = <<
+segment.15.Viola.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Viola_Music_Voice"
-    \o_Viola_Music_Voice
+    { \segment.15.Viola.Music.Voice }
 
 >>
 
 
-o_Cello_I_Music_Voice = {
+segment.15.Cello.I.Music.Voice = {
 
     % [Cello_I_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-vc-i-markup
@@ -1384,18 +1384,18 @@ o_Cello_I_Music_Voice = {
 }
 
 
-o_Cello_I_Music_Staff = <<
+segment.15.Cello.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Cello_I_Music_Voice"
-    \o_Cello_I_Music_Voice
+    { \segment.15.Cello.I.Music.Voice }
 
 >>
 
 
-o_Cello_II_Music_Voice = {
+segment.15.Cello.II.Music.Voice = {
 
     % [Cello_II_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup
@@ -1608,18 +1608,18 @@ o_Cello_II_Music_Voice = {
 }
 
 
-o_Cello_II_Music_Staff = <<
+segment.15.Cello.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Cello_II_Music_Voice"
-    \o_Cello_II_Music_Voice
+    { \segment.15.Cello.II.Music.Voice }
 
 >>
 
 
-o_Contrabass_I_Music_Voice = {
+segment.15.Contrabass.I.Music.Voice = {
 
     % [Contrabass_I_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-cb-i-markup
@@ -1836,18 +1836,18 @@ o_Contrabass_I_Music_Voice = {
 }
 
 
-o_Contrabass_I_Music_Staff = <<
+segment.15.Contrabass.I.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Contrabass_I_Music_Voice"
-    \o_Contrabass_I_Music_Voice
+    { \segment.15.Contrabass.I.Music.Voice }
 
 >>
 
 
-o_Contrabass_II_Music_Voice = {
+segment.15.Contrabass.II.Music.Voice = {
 
     % [Contrabass_II_Music_Voice measure 131 / measure 1]
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup
@@ -2063,12 +2063,12 @@ o_Contrabass_II_Music_Voice = {
 }
 
 
-o_Contrabass_II_Music_Staff = <<
+segment.15.Contrabass.II.Music.Staff = <<
 
 %%% \context GlobalRests = "Global_Rests"
-%%% \o_Global_Rests
+%%% { \segment.15.Global.Rests }
 
     \context Voice = "Contrabass_II_Music_Voice"
-    \o_Contrabass_II_Music_Voice
+    { \segment.15.Contrabass.II.Music.Voice }
 
 >>

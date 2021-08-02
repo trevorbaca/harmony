@@ -24,7 +24,7 @@
             <<
 
                 \context GlobalSkips = "Global_Skips"
-                \n_Global_Skips
+                { \segment.14.Global.Skips }
 
             >>
 
@@ -36,7 +36,7 @@
 
                     \tag BassFlute
                     \context Staff = "Bass_Flute_Music_Staff"
-                    \n_Bass_Flute_Music_Staff
+                    { \segment.14.Bass.Flute.Music.Staff }
 
                 >>
 
@@ -45,15 +45,15 @@
 
                     \tag PercussionI
                     \context Staff = "Percussion_I_Music_Staff"
-                    \n_Percussion_I_Music_Staff
+                    { \segment.14.Percussion.I.Music.Staff }
 
                     \tag PercussionII
                     \context Staff = "Percussion_II_Music_Staff"
-                    \n_Percussion_II_Music_Staff
+                    { \segment.14.Percussion.II.Music.Staff }
 
                     \tag Harp
                     \context Staff = "Harp_Music_Staff"
-                    \n_Harp_Music_Staff
+                    { \segment.14.Harp.Music.Staff }
 
                 >>
 
@@ -62,23 +62,23 @@
 
                     \tag Viola
                     \context Staff = "Viola_Music_Staff"
-                    \n_Viola_Music_Staff
+                    { \segment.14.Viola.Music.Staff }
 
                     \tag CelloI
                     \context Staff = "Cello_I_Music_Staff"
-                    \n_Cello_I_Music_Staff
+                    { \segment.14.Cello.I.Music.Staff }
 
                     \tag CelloII
                     \context Staff = "Cello_II_Music_Staff"
-                    \n_Cello_II_Music_Staff
+                    { \segment.14.Cello.II.Music.Staff }
 
                     \tag ContrabassI
                     \context Staff = "Contrabass_I_Music_Staff"
-                    \n_Contrabass_I_Music_Staff
+                    { \segment.14.Contrabass.I.Music.Staff }
 
                     \tag ContrabassII
                     \context Staff = "Contrabass_II_Music_Staff"
-                    \n_Contrabass_II_Music_Staff
+                    { \segment.14.Contrabass.II.Music.Staff }
 
                 >>
 
