@@ -217,7 +217,7 @@ segment.10.Global.Rests = {
 }
 
 
-segment.10.Bass.Flute.Music.Voice.1 = {
+segment.10.Bass.Flute.Music.Voice.count.1 = {
 
     \voiceTwo
     g'8.
@@ -239,7 +239,7 @@ segment.10.Bass.Flute.Music.Voice.1 = {
 }
 
 
-segment.10.Bass.Flute.Music.Voice.2 = {
+segment.10.Bass.Flute.Music.Voice.count.2 = {
 
     \voiceTwo
     a'8.
@@ -495,7 +495,7 @@ segment.10.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.10.Bass.Flute.Music.Voice.1 }
+        { \segment.10.Bass.Flute.Music.Voice.count.1 }
 
     >>
     \oneVoice
@@ -614,7 +614,7 @@ segment.10.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.10.Bass.Flute.Music.Voice.2 }
+        { \segment.10.Bass.Flute.Music.Voice.count.2 }
 
     >>
 

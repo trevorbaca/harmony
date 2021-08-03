@@ -181,7 +181,7 @@ segment.02.Global.Rests = {
 }
 
 
-segment.02.Bass.Flute.Music.Voice.1 = {
+segment.02.Bass.Flute.Music.Voice.count.1 = {
 
     \voiceTwo
     a'8.
@@ -202,7 +202,7 @@ segment.02.Bass.Flute.Music.Voice.1 = {
 }
 
 
-segment.02.Bass.Flute.Music.Voice.2 = {
+segment.02.Bass.Flute.Music.Voice.count.2 = {
 
     \voiceTwo
     a'4..
@@ -418,7 +418,7 @@ segment.02.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.02.Bass.Flute.Music.Voice.1 }
+        { \segment.02.Bass.Flute.Music.Voice.count.1 }
 
     >>
     \oneVoice
@@ -453,7 +453,7 @@ segment.02.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.02.Bass.Flute.Music.Voice.2 }
+        { \segment.02.Bass.Flute.Music.Voice.count.2 }
 
     >>
 
@@ -650,30 +650,14 @@ segment.02.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.02.Percussion.I.Music.Voice.1 = {
+segment.02.Percussion.I.Music.Voice.count.1 = {
 
     r1
 
 }
 
 
-segment.02.Percussion.I.Music.Voice.2 = {
-
-    r1
-
-    r4
-
-}
-
-
-segment.02.Percussion.I.Music.Voice.3 = {
-
-    r1
-
-}
-
-
-segment.02.Percussion.I.Music.Voice.4 = {
+segment.02.Percussion.I.Music.Voice.count.2 = {
 
     r1
 
@@ -682,7 +666,23 @@ segment.02.Percussion.I.Music.Voice.4 = {
 }
 
 
-segment.02.Percussion.I.Music.Voice.5 = {
+segment.02.Percussion.I.Music.Voice.count.3 = {
+
+    r1
+
+}
+
+
+segment.02.Percussion.I.Music.Voice.count.4 = {
+
+    r1
+
+    r4
+
+}
+
+
+segment.02.Percussion.I.Music.Voice.count.5 = {
 
     r2
 
@@ -696,7 +696,7 @@ segment.02.Percussion.I.Music.Voice.5 = {
 }
 
 
-segment.02.Percussion.I.Music.Voice.6 = {
+segment.02.Percussion.I.Music.Voice.count.6 = {
 
     \override DynamicLineSpanner.staff-padding = 5.5
     r1
@@ -708,7 +708,7 @@ segment.02.Percussion.I.Music.Voice.6 = {
 }
 
 
-segment.02.Percussion.I.Music.Voice.7 = {
+segment.02.Percussion.I.Music.Voice.count.7 = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -719,7 +719,7 @@ segment.02.Percussion.I.Music.Voice.7 = {
 }
 
 
-segment.02.Percussion.I.Music.Voice.8 = {
+segment.02.Percussion.I.Music.Voice.count.8 = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -730,7 +730,7 @@ segment.02.Percussion.I.Music.Voice.8 = {
 }
 
 
-segment.02.Percussion.I.Music.Voice.9 = {
+segment.02.Percussion.I.Music.Voice.count.9 = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -782,7 +782,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.1 }
+        { \segment.02.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -810,7 +810,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.2 }
+        { \segment.02.Percussion.I.Music.Voice.count.2 }
 
     >>
 
@@ -838,7 +838,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.3 }
+        { \segment.02.Percussion.I.Music.Voice.count.3 }
 
     >>
 
@@ -866,7 +866,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.4 }
+        { \segment.02.Percussion.I.Music.Voice.count.4 }
 
     >>
 
@@ -894,7 +894,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.5 }
+        { \segment.02.Percussion.I.Music.Voice.count.5 }
 
     >>
     \oneVoice
@@ -1026,7 +1026,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.6 }
+        { \segment.02.Percussion.I.Music.Voice.count.6 }
 
     >>
 
@@ -1060,7 +1060,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.7 }
+        { \segment.02.Percussion.I.Music.Voice.count.7 }
 
     >>
 
@@ -1094,7 +1094,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.8 }
+        { \segment.02.Percussion.I.Music.Voice.count.8 }
 
     >>
 
@@ -1128,7 +1128,7 @@ segment.02.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.02.Percussion.I.Music.Voice.9 }
+        { \segment.02.Percussion.I.Music.Voice.count.9 }
 
     >>
 
@@ -1865,7 +1865,7 @@ segment.02.Harp.Music.Staff = <<
 >>
 
 
-segment.02.Viola.Music.Voice.1 = {
+segment.02.Viola.Music.Voice.count.1 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1882,7 +1882,7 @@ segment.02.Viola.Music.Voice.1 = {
 }
 
 
-segment.02.Viola.Music.Voice.2 = {
+segment.02.Viola.Music.Voice.count.2 = {
 
     \voiceTwo
     af!2.
@@ -1892,7 +1892,7 @@ segment.02.Viola.Music.Voice.2 = {
 }
 
 
-segment.02.Viola.Music.Voice.3 = {
+segment.02.Viola.Music.Voice.count.3 = {
 
     \voiceTwo
     af!2
@@ -1908,7 +1908,7 @@ segment.02.Viola.Music.Voice.3 = {
 }
 
 
-segment.02.Viola.Music.Voice.4 = {
+segment.02.Viola.Music.Voice.count.4 = {
 
     \voiceTwo
     af!2
@@ -1924,7 +1924,7 @@ segment.02.Viola.Music.Voice.4 = {
 }
 
 
-segment.02.Viola.Music.Voice.5 = {
+segment.02.Viola.Music.Voice.count.5 = {
 
     \voiceTwo
     af!1
@@ -1934,7 +1934,7 @@ segment.02.Viola.Music.Voice.5 = {
 }
 
 
-segment.02.Viola.Music.Voice.6 = {
+segment.02.Viola.Music.Voice.count.6 = {
 
     \voiceTwo
     af!1
@@ -1945,7 +1945,7 @@ segment.02.Viola.Music.Voice.6 = {
 }
 
 
-segment.02.Viola.Music.Voice.7 = {
+segment.02.Viola.Music.Voice.count.7 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1969,7 +1969,7 @@ segment.02.Viola.Music.Voice.7 = {
 }
 
 
-segment.02.Viola.Music.Voice.8 = {
+segment.02.Viola.Music.Voice.count.8 = {
 
     \voiceTwo
     af!1
@@ -1982,7 +1982,7 @@ segment.02.Viola.Music.Voice.8 = {
 }
 
 
-segment.02.Viola.Music.Voice.9 = {
+segment.02.Viola.Music.Voice.count.9 = {
 
     \voiceTwo
     af!1
@@ -1995,7 +1995,7 @@ segment.02.Viola.Music.Voice.9 = {
 }
 
 
-segment.02.Viola.Music.Voice.10 = {
+segment.02.Viola.Music.Voice.count.10 = {
 
     \voiceTwo
     af!1
@@ -2056,7 +2056,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.1 }
+        { \segment.02.Viola.Music.Voice.count.1 }
 
     >>
 
@@ -2089,7 +2089,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.2 }
+        { \segment.02.Viola.Music.Voice.count.2 }
 
     >>
 
@@ -2123,7 +2123,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.3 }
+        { \segment.02.Viola.Music.Voice.count.3 }
 
     >>
 
@@ -2159,7 +2159,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.4 }
+        { \segment.02.Viola.Music.Voice.count.4 }
 
     >>
 
@@ -2197,7 +2197,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.5 }
+        { \segment.02.Viola.Music.Voice.count.5 }
 
     >>
 
@@ -2238,7 +2238,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.6 }
+        { \segment.02.Viola.Music.Voice.count.6 }
 
     >>
 
@@ -2363,7 +2363,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.7 }
+        { \segment.02.Viola.Music.Voice.count.7 }
 
     >>
 
@@ -2404,7 +2404,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.8 }
+        { \segment.02.Viola.Music.Voice.count.8 }
 
     >>
 
@@ -2445,7 +2445,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.9 }
+        { \segment.02.Viola.Music.Voice.count.9 }
 
     >>
 
@@ -2486,7 +2486,7 @@ segment.02.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.02.Viola.Music.Voice.10 }
+        { \segment.02.Viola.Music.Voice.count.10 }
 
     >>
 
@@ -2558,7 +2558,7 @@ segment.02.Viola.Music.Staff = <<
 >>
 
 
-segment.02.Cello.I.Music.Voice.1 = {
+segment.02.Cello.I.Music.Voice.count.1 = {
 
     \voiceTwo
     af!4
@@ -2580,7 +2580,7 @@ segment.02.Cello.I.Music.Voice.1 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.2 = {
+segment.02.Cello.I.Music.Voice.count.2 = {
 
     \voiceTwo
     af!2
@@ -2596,7 +2596,7 @@ segment.02.Cello.I.Music.Voice.2 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.3 = {
+segment.02.Cello.I.Music.Voice.count.3 = {
 
     \voiceTwo
     af!2.
@@ -2612,7 +2612,7 @@ segment.02.Cello.I.Music.Voice.3 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.4 = {
+segment.02.Cello.I.Music.Voice.count.4 = {
 
     \voiceTwo
     af!1
@@ -2623,7 +2623,7 @@ segment.02.Cello.I.Music.Voice.4 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.5 = {
+segment.02.Cello.I.Music.Voice.count.5 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -2647,7 +2647,7 @@ segment.02.Cello.I.Music.Voice.5 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.6 = {
+segment.02.Cello.I.Music.Voice.count.6 = {
 
     \voiceTwo
     af!1
@@ -2660,7 +2660,7 @@ segment.02.Cello.I.Music.Voice.6 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.7 = {
+segment.02.Cello.I.Music.Voice.count.7 = {
 
     \voiceTwo
     af!1
@@ -2673,7 +2673,7 @@ segment.02.Cello.I.Music.Voice.7 = {
 }
 
 
-segment.02.Cello.I.Music.Voice.8 = {
+segment.02.Cello.I.Music.Voice.count.8 = {
 
     \voiceTwo
     af!1
@@ -2738,7 +2738,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.1 }
+        { \segment.02.Cello.I.Music.Voice.count.1 }
 
     >>
 
@@ -2772,7 +2772,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.2 }
+        { \segment.02.Cello.I.Music.Voice.count.2 }
 
     >>
 
@@ -2808,7 +2808,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.3 }
+        { \segment.02.Cello.I.Music.Voice.count.3 }
 
     >>
 
@@ -2846,7 +2846,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.4 }
+        { \segment.02.Cello.I.Music.Voice.count.4 }
 
     >>
 
@@ -3002,7 +3002,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.5 }
+        { \segment.02.Cello.I.Music.Voice.count.5 }
 
     >>
 
@@ -3043,7 +3043,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.6 }
+        { \segment.02.Cello.I.Music.Voice.count.6 }
 
     >>
 
@@ -3084,7 +3084,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.7 }
+        { \segment.02.Cello.I.Music.Voice.count.7 }
 
     >>
 
@@ -3125,7 +3125,7 @@ segment.02.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.02.Cello.I.Music.Voice.8 }
+        { \segment.02.Cello.I.Music.Voice.count.8 }
 
     >>
 
@@ -3196,7 +3196,7 @@ segment.02.Cello.I.Music.Staff = <<
 >>
 
 
-segment.02.Cello.II.Music.Voice.1 = {
+segment.02.Cello.II.Music.Voice.count.1 = {
 
     \voiceTwo
     af!2
@@ -3218,7 +3218,7 @@ segment.02.Cello.II.Music.Voice.1 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.2 = {
+segment.02.Cello.II.Music.Voice.count.2 = {
 
     \voiceTwo
     af!2.
@@ -3228,7 +3228,7 @@ segment.02.Cello.II.Music.Voice.2 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.3 = {
+segment.02.Cello.II.Music.Voice.count.3 = {
 
     \voiceTwo
     af!1
@@ -3239,7 +3239,7 @@ segment.02.Cello.II.Music.Voice.3 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.4 = {
+segment.02.Cello.II.Music.Voice.count.4 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -3263,7 +3263,7 @@ segment.02.Cello.II.Music.Voice.4 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.5 = {
+segment.02.Cello.II.Music.Voice.count.5 = {
 
     \voiceTwo
     af!1
@@ -3276,7 +3276,7 @@ segment.02.Cello.II.Music.Voice.5 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.6 = {
+segment.02.Cello.II.Music.Voice.count.6 = {
 
     \voiceTwo
     af!1
@@ -3289,7 +3289,7 @@ segment.02.Cello.II.Music.Voice.6 = {
 }
 
 
-segment.02.Cello.II.Music.Voice.7 = {
+segment.02.Cello.II.Music.Voice.count.7 = {
 
     \voiceTwo
     af!1
@@ -3409,7 +3409,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.1 }
+        { \segment.02.Cello.II.Music.Voice.count.1 }
 
     >>
 
@@ -3445,7 +3445,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.2 }
+        { \segment.02.Cello.II.Music.Voice.count.2 }
 
     >>
 
@@ -3484,7 +3484,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.3 }
+        { \segment.02.Cello.II.Music.Voice.count.3 }
 
     >>
 
@@ -3611,7 +3611,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.4 }
+        { \segment.02.Cello.II.Music.Voice.count.4 }
 
     >>
 
@@ -3652,7 +3652,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.5 }
+        { \segment.02.Cello.II.Music.Voice.count.5 }
 
     >>
 
@@ -3693,7 +3693,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.6 }
+        { \segment.02.Cello.II.Music.Voice.count.6 }
 
     >>
 
@@ -3734,7 +3734,7 @@ segment.02.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.02.Cello.II.Music.Voice.7 }
+        { \segment.02.Cello.II.Music.Voice.count.7 }
 
     >>
 
@@ -3805,7 +3805,7 @@ segment.02.Cello.II.Music.Staff = <<
 >>
 
 
-segment.02.Contrabass.I.Music.Voice.1 = {
+segment.02.Contrabass.I.Music.Voice.count.1 = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -3822,7 +3822,7 @@ segment.02.Contrabass.I.Music.Voice.1 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.2 = {
+segment.02.Contrabass.I.Music.Voice.count.2 = {
 
     \voiceTwo
     af!4
@@ -3838,7 +3838,7 @@ segment.02.Contrabass.I.Music.Voice.2 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.3 = {
+segment.02.Contrabass.I.Music.Voice.count.3 = {
 
     \voiceTwo
     af!4
@@ -3854,7 +3854,7 @@ segment.02.Contrabass.I.Music.Voice.3 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.4 = {
+segment.02.Contrabass.I.Music.Voice.count.4 = {
 
     \voiceTwo
     af!2.
@@ -3870,7 +3870,7 @@ segment.02.Contrabass.I.Music.Voice.4 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.5 = {
+segment.02.Contrabass.I.Music.Voice.count.5 = {
 
     \voiceTwo
     af!2.
@@ -3881,7 +3881,7 @@ segment.02.Contrabass.I.Music.Voice.5 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.6 = {
+segment.02.Contrabass.I.Music.Voice.count.6 = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -3905,7 +3905,7 @@ segment.02.Contrabass.I.Music.Voice.6 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.7 = {
+segment.02.Contrabass.I.Music.Voice.count.7 = {
 
     \voiceTwo
     af!1
@@ -3918,7 +3918,7 @@ segment.02.Contrabass.I.Music.Voice.7 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.8 = {
+segment.02.Contrabass.I.Music.Voice.count.8 = {
 
     \voiceTwo
     af!1
@@ -3931,7 +3931,7 @@ segment.02.Contrabass.I.Music.Voice.8 = {
 }
 
 
-segment.02.Contrabass.I.Music.Voice.9 = {
+segment.02.Contrabass.I.Music.Voice.count.9 = {
 
     \voiceTwo
     af!1
@@ -4030,7 +4030,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.1 }
+        { \segment.02.Contrabass.I.Music.Voice.count.1 }
 
     >>
 
@@ -4068,7 +4068,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.2 }
+        { \segment.02.Contrabass.I.Music.Voice.count.2 }
 
     >>
 
@@ -4108,7 +4108,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.3 }
+        { \segment.02.Contrabass.I.Music.Voice.count.3 }
 
     >>
 
@@ -4144,7 +4144,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.4 }
+        { \segment.02.Contrabass.I.Music.Voice.count.4 }
 
     >>
 
@@ -4182,7 +4182,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.5 }
+        { \segment.02.Contrabass.I.Music.Voice.count.5 }
 
     >>
 
@@ -4328,7 +4328,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.6 }
+        { \segment.02.Contrabass.I.Music.Voice.count.6 }
 
     >>
 
@@ -4369,7 +4369,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.7 }
+        { \segment.02.Contrabass.I.Music.Voice.count.7 }
 
     >>
 
@@ -4410,7 +4410,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.8 }
+        { \segment.02.Contrabass.I.Music.Voice.count.8 }
 
     >>
 
@@ -4451,7 +4451,7 @@ segment.02.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.02.Contrabass.I.Music.Voice.9 }
+        { \segment.02.Contrabass.I.Music.Voice.count.9 }
 
     >>
 
@@ -4522,7 +4522,7 @@ segment.02.Contrabass.I.Music.Staff = <<
 >>
 
 
-segment.02.Contrabass.II.Music.Voice.1 = {
+segment.02.Contrabass.II.Music.Voice.count.1 = {
 
     \voiceTwo
     af!2
@@ -4544,7 +4544,7 @@ segment.02.Contrabass.II.Music.Voice.1 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.2 = {
+segment.02.Contrabass.II.Music.Voice.count.2 = {
 
     \voiceTwo
     af!2.
@@ -4554,7 +4554,7 @@ segment.02.Contrabass.II.Music.Voice.2 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.3 = {
+segment.02.Contrabass.II.Music.Voice.count.3 = {
 
     \voiceTwo
     af!1
@@ -4565,7 +4565,7 @@ segment.02.Contrabass.II.Music.Voice.3 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.4 = {
+segment.02.Contrabass.II.Music.Voice.count.4 = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -4589,7 +4589,7 @@ segment.02.Contrabass.II.Music.Voice.4 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.5 = {
+segment.02.Contrabass.II.Music.Voice.count.5 = {
 
     \voiceTwo
     af!1
@@ -4602,7 +4602,7 @@ segment.02.Contrabass.II.Music.Voice.5 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.6 = {
+segment.02.Contrabass.II.Music.Voice.count.6 = {
 
     \voiceTwo
     af!1
@@ -4615,7 +4615,7 @@ segment.02.Contrabass.II.Music.Voice.6 = {
 }
 
 
-segment.02.Contrabass.II.Music.Voice.7 = {
+segment.02.Contrabass.II.Music.Voice.count.7 = {
 
     \voiceTwo
     af!1
@@ -4738,7 +4738,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.1 }
+        { \segment.02.Contrabass.II.Music.Voice.count.1 }
 
     >>
 
@@ -4778,7 +4778,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.2 }
+        { \segment.02.Contrabass.II.Music.Voice.count.2 }
 
     >>
 
@@ -4817,7 +4817,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.3 }
+        { \segment.02.Contrabass.II.Music.Voice.count.3 }
 
     >>
 
@@ -4946,7 +4946,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.4 }
+        { \segment.02.Contrabass.II.Music.Voice.count.4 }
 
     >>
 
@@ -4987,7 +4987,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.5 }
+        { \segment.02.Contrabass.II.Music.Voice.count.5 }
 
     >>
 
@@ -5028,7 +5028,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.6 }
+        { \segment.02.Contrabass.II.Music.Voice.count.6 }
 
     >>
 
@@ -5069,7 +5069,7 @@ segment.02.Contrabass.II.Music.Voice = {
         }
 
         \context Voice = "Contrabass_II_Music_Voice"
-        { \segment.02.Contrabass.II.Music.Voice.7 }
+        { \segment.02.Contrabass.II.Music.Voice.count.7 }
 
     >>
 

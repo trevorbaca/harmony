@@ -2537,7 +2537,7 @@ segment.19.Bass.Flute.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.1 = {
+segment.19.Percussion.I.Music.Voice.count.1 = {
 
     %! harmony.appoggiato()
     r8.
@@ -2591,7 +2591,7 @@ segment.19.Percussion.I.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.2 = {
+segment.19.Percussion.I.Music.Voice.count.2 = {
 
     %! harmony.appoggiato()
     r8.
@@ -2636,7 +2636,7 @@ segment.19.Percussion.I.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.3 = {
+segment.19.Percussion.I.Music.Voice.count.3 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -2655,7 +2655,7 @@ segment.19.Percussion.I.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.4 = {
+segment.19.Percussion.I.Music.Voice.count.4 = {
 
     %! harmony.appoggiato()
     r8.
@@ -2677,7 +2677,7 @@ segment.19.Percussion.I.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.5 = {
+segment.19.Percussion.I.Music.Voice.count.5 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -2696,7 +2696,7 @@ segment.19.Percussion.I.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.6 = {
+segment.19.Percussion.I.Music.Voice.count.6 = {
 
     %! harmony.appoggiato()
     r8.
@@ -2726,7 +2726,7 @@ segment.19.Percussion.I.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.7 = {
+segment.19.Percussion.I.Music.Voice.count.7 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -2811,7 +2811,7 @@ segment.19.Percussion.I.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.I.Music.Voice.8 = {
+segment.19.Percussion.I.Music.Voice.count.8 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -3123,7 +3123,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.1 }
+        { \segment.19.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -3510,7 +3510,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.2 }
+        { \segment.19.Percussion.I.Music.Voice.count.2 }
 
     >>
 
@@ -3571,7 +3571,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.3 }
+        { \segment.19.Percussion.I.Music.Voice.count.3 }
 
     >>
 
@@ -3637,7 +3637,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.4 }
+        { \segment.19.Percussion.I.Music.Voice.count.4 }
 
     >>
 
@@ -3708,7 +3708,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.5 }
+        { \segment.19.Percussion.I.Music.Voice.count.5 }
 
     >>
 
@@ -3784,7 +3784,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.6 }
+        { \segment.19.Percussion.I.Music.Voice.count.6 }
 
     >>
 
@@ -3907,7 +3907,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.7 }
+        { \segment.19.Percussion.I.Music.Voice.count.7 }
 
     >>
 
@@ -4328,7 +4328,7 @@ segment.19.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.I.Music.Voice.8 }
+        { \segment.19.Percussion.I.Music.Voice.count.8 }
 
     >>
 
@@ -4626,7 +4626,7 @@ segment.19.Percussion.I.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.1 = {
+segment.19.Percussion.II.Music.Voice.count.1 = {
 
     %! harmony.appoggiato()
     r8.
@@ -4668,7 +4668,7 @@ segment.19.Percussion.II.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.2 = {
+segment.19.Percussion.II.Music.Voice.count.2 = {
 
     %! harmony.appoggiato()
     r8.
@@ -4713,7 +4713,7 @@ segment.19.Percussion.II.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.3 = {
+segment.19.Percussion.II.Music.Voice.count.3 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -4732,7 +4732,7 @@ segment.19.Percussion.II.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.4 = {
+segment.19.Percussion.II.Music.Voice.count.4 = {
 
     %! harmony.appoggiato()
     r8.
@@ -4754,7 +4754,7 @@ segment.19.Percussion.II.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.5 = {
+segment.19.Percussion.II.Music.Voice.count.5 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -4773,7 +4773,7 @@ segment.19.Percussion.II.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.6 = {
+segment.19.Percussion.II.Music.Voice.count.6 = {
 
     %! harmony.appoggiato()
     r8.
@@ -4800,7 +4800,7 @@ segment.19.Percussion.II.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.7 = {
+segment.19.Percussion.II.Music.Voice.count.7 = {
 
     %! baca.dots_extra_offset()
     %! baca.OverrideCommand._call(1)
@@ -4888,7 +4888,7 @@ segment.19.Percussion.II.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.19.Percussion.II.Music.Voice.8 = {
+segment.19.Percussion.II.Music.Voice.count.8 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -5243,7 +5243,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.1 }
+        { \segment.19.Percussion.II.Music.Voice.count.1 }
 
     >>
 
@@ -5581,7 +5581,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.2 }
+        { \segment.19.Percussion.II.Music.Voice.count.2 }
 
     >>
 
@@ -5637,7 +5637,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.3 }
+        { \segment.19.Percussion.II.Music.Voice.count.3 }
 
     >>
 
@@ -5698,7 +5698,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.4 }
+        { \segment.19.Percussion.II.Music.Voice.count.4 }
 
     >>
 
@@ -5764,7 +5764,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.5 }
+        { \segment.19.Percussion.II.Music.Voice.count.5 }
 
     >>
 
@@ -5835,7 +5835,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.6 }
+        { \segment.19.Percussion.II.Music.Voice.count.6 }
 
     >>
 
@@ -5953,7 +5953,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.7 }
+        { \segment.19.Percussion.II.Music.Voice.count.7 }
 
     >>
 
@@ -6362,7 +6362,7 @@ segment.19.Percussion.II.Music.Voice = {
 
         \context Voice = "Percussion_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.19.Percussion.II.Music.Voice.8 }
+        { \segment.19.Percussion.II.Music.Voice.count.8 }
 
     >>
 
