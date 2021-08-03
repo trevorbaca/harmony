@@ -120,7 +120,7 @@ segment.13.Global.Rests = {
 }
 
 
-segment.13.Bass.Flute.Music.Voice.1 = {
+segment.13.Bass.Flute.Music.Voice.count.1 = {
 
     \voiceTwo
     a'8.
@@ -294,7 +294,7 @@ segment.13.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.13.Bass.Flute.Music.Voice.1 }
+        { \segment.13.Bass.Flute.Music.Voice.count.1 }
 
     >>
 
@@ -399,7 +399,7 @@ segment.13.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.13.Percussion.I.Music.Voice.1 = {
+segment.13.Percussion.I.Music.Voice.count.1 = {
 
     r4.
     - \tweak color #(x11-color 'blue)
@@ -410,7 +410,7 @@ segment.13.Percussion.I.Music.Voice.1 = {
 }
 
 
-segment.13.Percussion.I.Music.Voice.2 = {
+segment.13.Percussion.I.Music.Voice.count.2 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -422,7 +422,7 @@ segment.13.Percussion.I.Music.Voice.2 = {
 }
 
 
-segment.13.Percussion.I.Music.Voice.3 = {
+segment.13.Percussion.I.Music.Voice.count.3 = {
 
     r4
     - \tweak color #(x11-color 'blue)
@@ -473,7 +473,7 @@ segment.13.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.13.Percussion.I.Music.Voice.1 }
+        { \segment.13.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -500,7 +500,7 @@ segment.13.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.13.Percussion.I.Music.Voice.2 }
+        { \segment.13.Percussion.I.Music.Voice.count.2 }
 
     >>
 
@@ -561,7 +561,7 @@ segment.13.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.13.Percussion.I.Music.Voice.3 }
+        { \segment.13.Percussion.I.Music.Voice.count.3 }
 
     >>
 
@@ -669,7 +669,7 @@ segment.13.Percussion.I.Music.Staff = <<
 >>
 
 
-segment.13.Percussion.II.Music.Voice.1 = {
+segment.13.Percussion.II.Music.Voice.count.1 = {
 
     r4.
     - \tweak color #(x11-color 'blue)
@@ -680,7 +680,7 @@ segment.13.Percussion.II.Music.Voice.1 = {
 }
 
 
-segment.13.Percussion.II.Music.Voice.2 = {
+segment.13.Percussion.II.Music.Voice.count.2 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -692,7 +692,7 @@ segment.13.Percussion.II.Music.Voice.2 = {
 }
 
 
-segment.13.Percussion.II.Music.Voice.3 = {
+segment.13.Percussion.II.Music.Voice.count.3 = {
 
     r4
     - \tweak color #(x11-color 'blue)
@@ -740,7 +740,7 @@ segment.13.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.13.Percussion.II.Music.Voice.1 }
+        { \segment.13.Percussion.II.Music.Voice.count.1 }
 
     >>
 
@@ -769,7 +769,7 @@ segment.13.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.13.Percussion.II.Music.Voice.2 }
+        { \segment.13.Percussion.II.Music.Voice.count.2 }
 
     >>
 
@@ -830,7 +830,7 @@ segment.13.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.13.Percussion.II.Music.Voice.3 }
+        { \segment.13.Percussion.II.Music.Voice.count.3 }
 
     >>
 
@@ -1175,7 +1175,7 @@ segment.13.Harp.Music.Staff = <<
 >>
 
 
-segment.13.Viola.Music.Voice.1 = {
+segment.13.Viola.Music.Voice.count.1 = {
 
     \override NoteHead.style = #'harmonic-black
     \voiceTwo
@@ -1256,7 +1256,7 @@ segment.13.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.13.Viola.Music.Voice.1 }
+        { \segment.13.Viola.Music.Voice.count.1 }
 
     >>
     \oneVoice
@@ -1392,7 +1392,7 @@ segment.13.Viola.Music.Staff = <<
 >>
 
 
-segment.13.Cello.I.Music.Voice.1 = {
+segment.13.Cello.I.Music.Voice.count.1 = {
 
     \override NoteHead.style = #'harmonic-black
     \voiceTwo
@@ -1470,7 +1470,7 @@ segment.13.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.13.Cello.I.Music.Voice.1 }
+        { \segment.13.Cello.I.Music.Voice.count.1 }
 
     >>
     \oneVoice
@@ -1834,7 +1834,7 @@ segment.13.Cello.II.Music.Staff = <<
 >>
 
 
-segment.13.Contrabass.I.Music.Voice.1 = {
+segment.13.Contrabass.I.Music.Voice.count.1 = {
 
     \override NoteHead.style = #'harmonic-black
     \voiceTwo
@@ -1912,7 +1912,7 @@ segment.13.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.13.Contrabass.I.Music.Voice.1 }
+        { \segment.13.Contrabass.I.Music.Voice.count.1 }
 
     >>
     \oneVoice

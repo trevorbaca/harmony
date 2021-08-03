@@ -348,7 +348,7 @@ segment.17.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.17.Percussion.I.Music.Voice.1 = {
+segment.17.Percussion.I.Music.Voice.count.1 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -438,7 +438,7 @@ segment.17.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.17.Percussion.I.Music.Voice.1 }
+        { \segment.17.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -574,7 +574,7 @@ segment.17.Percussion.I.Music.Staff = <<
 >>
 
 
-segment.17.Percussion.II.Music.Voice.1 = {
+segment.17.Percussion.II.Music.Voice.count.1 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -655,7 +655,7 @@ segment.17.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.17.Percussion.II.Music.Voice.1 }
+        { \segment.17.Percussion.II.Music.Voice.count.1 }
 
     >>
 

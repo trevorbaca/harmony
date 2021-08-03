@@ -449,7 +449,7 @@ segment.04.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.04.Percussion.I.Music.Voice.1 = {
+segment.04.Percussion.I.Music.Voice.count.1 = {
 
     r1
     - \tweak color #(x11-color 'blue)
@@ -694,7 +694,7 @@ segment.04.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.04.Percussion.I.Music.Voice.1 }
+        { \segment.04.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -1349,7 +1349,7 @@ segment.04.Harp.Music.Staff = <<
 >>
 
 
-segment.04.Viola.Music.Voice.1 = {
+segment.04.Viola.Music.Voice.count.1 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1589,7 +1589,7 @@ segment.04.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.04.Viola.Music.Voice.1 }
+        { \segment.04.Viola.Music.Voice.count.1 }
 
     >>
 
@@ -1705,7 +1705,7 @@ segment.04.Viola.Music.Staff = <<
 >>
 
 
-segment.04.Cello.I.Music.Voice.1 = {
+segment.04.Cello.I.Music.Voice.count.1 = {
 
     \voiceTwo
     af!1
@@ -1957,7 +1957,7 @@ segment.04.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.04.Cello.I.Music.Voice.1 }
+        { \segment.04.Cello.I.Music.Voice.count.1 }
 
     >>
 
@@ -2069,7 +2069,7 @@ segment.04.Cello.I.Music.Staff = <<
 >>
 
 
-segment.04.Cello.II.Music.Voice.1 = {
+segment.04.Cello.II.Music.Voice.count.1 = {
 
     \voiceTwo
     af!1
@@ -2311,7 +2311,7 @@ segment.04.Cello.II.Music.Voice = {
         }
 
         \context Voice = "Cello_II_Music_Voice"
-        { \segment.04.Cello.II.Music.Voice.1 }
+        { \segment.04.Cello.II.Music.Voice.count.1 }
 
     >>
 
@@ -2413,7 +2413,7 @@ segment.04.Cello.II.Music.Staff = <<
 >>
 
 
-segment.04.Contrabass.I.Music.Voice.1 = {
+segment.04.Contrabass.I.Music.Voice.count.1 = {
 
     \override DynamicLineSpanner.staff-padding = 6
     \voiceTwo
@@ -2666,7 +2666,7 @@ segment.04.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.04.Contrabass.I.Music.Voice.1 }
+        { \segment.04.Contrabass.I.Music.Voice.count.1 }
 
     >>
 

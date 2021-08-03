@@ -851,7 +851,7 @@ segment.02.Global.Rests = {
 
 
 %! baca.path.extern()
-segment.02.Bass.Flute.Music.Voice.1 = {
+segment.02.Bass.Flute.Music.Voice.count.1 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -909,7 +909,7 @@ segment.02.Bass.Flute.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Bass.Flute.Music.Voice.2 = {
+segment.02.Bass.Flute.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -1900,7 +1900,7 @@ segment.02.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Bass.Flute.Music.Voice.1 }
+        { \segment.02.Bass.Flute.Music.Voice.count.1 }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -1953,7 +1953,7 @@ segment.02.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Bass.Flute.Music.Voice.2 }
+        { \segment.02.Bass.Flute.Music.Voice.count.2 }
 
     >>
 
@@ -2830,7 +2830,7 @@ segment.02.Bass.Flute.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.1 = {
+segment.02.Percussion.I.Music.Voice.count.1 = {
 
     %! harmony.appoggiato()
     r1
@@ -2895,7 +2895,7 @@ segment.02.Percussion.I.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.2 = {
+segment.02.Percussion.I.Music.Voice.count.2 = {
 
     %! harmony.appoggiato()
     r1
@@ -2908,7 +2908,7 @@ segment.02.Percussion.I.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.3 = {
+segment.02.Percussion.I.Music.Voice.count.3 = {
 
     %! harmony.appoggiato()
     r1
@@ -2918,7 +2918,7 @@ segment.02.Percussion.I.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.4 = {
+segment.02.Percussion.I.Music.Voice.count.4 = {
 
     %! harmony.appoggiato()
     r1
@@ -2931,7 +2931,7 @@ segment.02.Percussion.I.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.5 = {
+segment.02.Percussion.I.Music.Voice.count.5 = {
 
     %! harmony.appoggiato()
     r2
@@ -2967,7 +2967,7 @@ segment.02.Percussion.I.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.6 = {
+segment.02.Percussion.I.Music.Voice.count.6 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -3050,7 +3050,7 @@ segment.02.Percussion.I.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.7 = {
+segment.02.Percussion.I.Music.Voice.count.7 = {
 
     %! harmony.appoggiato()
     r1
@@ -3075,7 +3075,7 @@ segment.02.Percussion.I.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.8 = {
+segment.02.Percussion.I.Music.Voice.count.8 = {
 
     %! harmony.appoggiato()
     r1
@@ -3100,7 +3100,7 @@ segment.02.Percussion.I.Music.Voice.8 = {
 
 
 %! baca.path.extern()
-segment.02.Percussion.I.Music.Voice.9 = {
+segment.02.Percussion.I.Music.Voice.count.9 = {
 
     %! harmony.appoggiato()
     r1
@@ -3250,7 +3250,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.1 }
+        { \segment.02.Percussion.I.Music.Voice.count.1 }
 
     >>
 
@@ -3295,7 +3295,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.2 }
+        { \segment.02.Percussion.I.Music.Voice.count.2 }
 
     >>
 
@@ -3340,7 +3340,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.3 }
+        { \segment.02.Percussion.I.Music.Voice.count.3 }
 
     >>
 
@@ -3385,7 +3385,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.4 }
+        { \segment.02.Percussion.I.Music.Voice.count.4 }
 
     >>
 
@@ -3430,7 +3430,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.5 }
+        { \segment.02.Percussion.I.Music.Voice.count.5 }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -3993,7 +3993,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.6 }
+        { \segment.02.Percussion.I.Music.Voice.count.6 }
 
     >>
 
@@ -4053,7 +4053,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.7 }
+        { \segment.02.Percussion.I.Music.Voice.count.7 }
 
     >>
 
@@ -4113,7 +4113,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.8 }
+        { \segment.02.Percussion.I.Music.Voice.count.8 }
 
     >>
 
@@ -4173,7 +4173,7 @@ segment.02.Percussion.I.Music.Voice = {
 
         \context Voice = "Percussion_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Percussion.I.Music.Voice.9 }
+        { \segment.02.Percussion.I.Music.Voice.count.9 }
 
     >>
 
@@ -7416,7 +7416,7 @@ segment.02.Harp.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.1 = {
+segment.02.Viola.Music.Voice.count.1 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -7526,7 +7526,7 @@ segment.02.Viola.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.2 = {
+segment.02.Viola.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7550,7 +7550,7 @@ segment.02.Viola.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.3 = {
+segment.02.Viola.Music.Voice.count.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7582,7 +7582,7 @@ segment.02.Viola.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.4 = {
+segment.02.Viola.Music.Voice.count.4 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7614,7 +7614,7 @@ segment.02.Viola.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.5 = {
+segment.02.Viola.Music.Voice.count.5 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7638,7 +7638,7 @@ segment.02.Viola.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.6 = {
+segment.02.Viola.Music.Voice.count.6 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7670,7 +7670,7 @@ segment.02.Viola.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.7 = {
+segment.02.Viola.Music.Voice.count.7 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -7804,7 +7804,7 @@ segment.02.Viola.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.8 = {
+segment.02.Viola.Music.Voice.count.8 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7824,7 +7824,7 @@ segment.02.Viola.Music.Voice.8 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.9 = {
+segment.02.Viola.Music.Voice.count.9 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -7844,7 +7844,7 @@ segment.02.Viola.Music.Voice.9 = {
 
 
 %! baca.path.extern()
-segment.02.Viola.Music.Voice.10 = {
+segment.02.Viola.Music.Voice.count.10 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -8020,7 +8020,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.1 }
+        { \segment.02.Viola.Music.Voice.count.1 }
 
     >>
 
@@ -8071,7 +8071,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.2 }
+        { \segment.02.Viola.Music.Voice.count.2 }
 
     >>
 
@@ -8125,7 +8125,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.3 }
+        { \segment.02.Viola.Music.Voice.count.3 }
 
     >>
 
@@ -8184,7 +8184,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.4 }
+        { \segment.02.Viola.Music.Voice.count.4 }
 
     >>
 
@@ -8248,7 +8248,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.5 }
+        { \segment.02.Viola.Music.Voice.count.5 }
 
     >>
 
@@ -8319,7 +8319,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.6 }
+        { \segment.02.Viola.Music.Voice.count.6 }
 
     >>
 
@@ -8811,7 +8811,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.7 }
+        { \segment.02.Viola.Music.Voice.count.7 }
 
     >>
 
@@ -8882,7 +8882,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.8 }
+        { \segment.02.Viola.Music.Voice.count.8 }
 
     >>
 
@@ -8953,7 +8953,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.9 }
+        { \segment.02.Viola.Music.Voice.count.9 }
 
     >>
 
@@ -9024,7 +9024,7 @@ segment.02.Viola.Music.Voice = {
 
         \context Voice = "Viola_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Viola.Music.Voice.10 }
+        { \segment.02.Viola.Music.Voice.count.10 }
 
     >>
 
@@ -9222,7 +9222,7 @@ segment.02.Viola.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.1 = {
+segment.02.Cello.I.Music.Voice.count.1 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9282,7 +9282,7 @@ segment.02.Cello.I.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.2 = {
+segment.02.Cello.I.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9314,7 +9314,7 @@ segment.02.Cello.I.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.3 = {
+segment.02.Cello.I.Music.Voice.count.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9346,7 +9346,7 @@ segment.02.Cello.I.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.4 = {
+segment.02.Cello.I.Music.Voice.count.4 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9378,7 +9378,7 @@ segment.02.Cello.I.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.5 = {
+segment.02.Cello.I.Music.Voice.count.5 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -9512,7 +9512,7 @@ segment.02.Cello.I.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.6 = {
+segment.02.Cello.I.Music.Voice.count.6 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9532,7 +9532,7 @@ segment.02.Cello.I.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.7 = {
+segment.02.Cello.I.Music.Voice.count.7 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9552,7 +9552,7 @@ segment.02.Cello.I.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.I.Music.Voice.8 = {
+segment.02.Cello.I.Music.Voice.count.8 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -9789,7 +9789,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.1 }
+        { \segment.02.Cello.I.Music.Voice.count.1 }
 
     >>
 
@@ -9843,7 +9843,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.2 }
+        { \segment.02.Cello.I.Music.Voice.count.2 }
 
     >>
 
@@ -9902,7 +9902,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.3 }
+        { \segment.02.Cello.I.Music.Voice.count.3 }
 
     >>
 
@@ -9966,7 +9966,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.4 }
+        { \segment.02.Cello.I.Music.Voice.count.4 }
 
     >>
 
@@ -10666,7 +10666,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.5 }
+        { \segment.02.Cello.I.Music.Voice.count.5 }
 
     >>
 
@@ -10737,7 +10737,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.6 }
+        { \segment.02.Cello.I.Music.Voice.count.6 }
 
     >>
 
@@ -10808,7 +10808,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.7 }
+        { \segment.02.Cello.I.Music.Voice.count.7 }
 
     >>
 
@@ -10879,7 +10879,7 @@ segment.02.Cello.I.Music.Voice = {
 
         \context Voice = "Cello_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.I.Music.Voice.8 }
+        { \segment.02.Cello.I.Music.Voice.count.8 }
 
     >>
 
@@ -11074,7 +11074,7 @@ segment.02.Cello.I.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.1 = {
+segment.02.Cello.II.Music.Voice.count.1 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11134,7 +11134,7 @@ segment.02.Cello.II.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.2 = {
+segment.02.Cello.II.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11158,7 +11158,7 @@ segment.02.Cello.II.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.3 = {
+segment.02.Cello.II.Music.Voice.count.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11190,7 +11190,7 @@ segment.02.Cello.II.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.4 = {
+segment.02.Cello.II.Music.Voice.count.4 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -11324,7 +11324,7 @@ segment.02.Cello.II.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.5 = {
+segment.02.Cello.II.Music.Voice.count.5 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11344,7 +11344,7 @@ segment.02.Cello.II.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.6 = {
+segment.02.Cello.II.Music.Voice.count.6 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11364,7 +11364,7 @@ segment.02.Cello.II.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Cello.II.Music.Voice.7 = {
+segment.02.Cello.II.Music.Voice.count.7 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -11829,7 +11829,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.1 }
+        { \segment.02.Cello.II.Music.Voice.count.1 }
 
     >>
 
@@ -11888,7 +11888,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.2 }
+        { \segment.02.Cello.II.Music.Voice.count.2 }
 
     >>
 
@@ -11954,7 +11954,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.3 }
+        { \segment.02.Cello.II.Music.Voice.count.3 }
 
     >>
 
@@ -12470,7 +12470,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.4 }
+        { \segment.02.Cello.II.Music.Voice.count.4 }
 
     >>
 
@@ -12541,7 +12541,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.5 }
+        { \segment.02.Cello.II.Music.Voice.count.5 }
 
     >>
 
@@ -12612,7 +12612,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.6 }
+        { \segment.02.Cello.II.Music.Voice.count.6 }
 
     >>
 
@@ -12683,7 +12683,7 @@ segment.02.Cello.II.Music.Voice = {
 
         \context Voice = "Cello_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Cello.II.Music.Voice.7 }
+        { \segment.02.Cello.II.Music.Voice.count.7 }
 
     >>
 
@@ -12878,7 +12878,7 @@ segment.02.Cello.II.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.1 = {
+segment.02.Contrabass.I.Music.Voice.count.1 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -12988,7 +12988,7 @@ segment.02.Contrabass.I.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.2 = {
+segment.02.Contrabass.I.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13020,7 +13020,7 @@ segment.02.Contrabass.I.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.3 = {
+segment.02.Contrabass.I.Music.Voice.count.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13052,7 +13052,7 @@ segment.02.Contrabass.I.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.4 = {
+segment.02.Contrabass.I.Music.Voice.count.4 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13084,7 +13084,7 @@ segment.02.Contrabass.I.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.5 = {
+segment.02.Contrabass.I.Music.Voice.count.5 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13116,7 +13116,7 @@ segment.02.Contrabass.I.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.6 = {
+segment.02.Contrabass.I.Music.Voice.count.6 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -13250,7 +13250,7 @@ segment.02.Contrabass.I.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.7 = {
+segment.02.Contrabass.I.Music.Voice.count.7 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13270,7 +13270,7 @@ segment.02.Contrabass.I.Music.Voice.7 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.8 = {
+segment.02.Contrabass.I.Music.Voice.count.8 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13290,7 +13290,7 @@ segment.02.Contrabass.I.Music.Voice.8 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.I.Music.Voice.9 = {
+segment.02.Contrabass.I.Music.Voice.count.9 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -13651,7 +13651,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.1 }
+        { \segment.02.Contrabass.I.Music.Voice.count.1 }
 
     >>
 
@@ -13715,7 +13715,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.2 }
+        { \segment.02.Contrabass.I.Music.Voice.count.2 }
 
     >>
 
@@ -13784,7 +13784,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.3 }
+        { \segment.02.Contrabass.I.Music.Voice.count.3 }
 
     >>
 
@@ -13843,7 +13843,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.4 }
+        { \segment.02.Contrabass.I.Music.Voice.count.4 }
 
     >>
 
@@ -13907,7 +13907,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.5 }
+        { \segment.02.Contrabass.I.Music.Voice.count.5 }
 
     >>
 
@@ -14482,7 +14482,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.6 }
+        { \segment.02.Contrabass.I.Music.Voice.count.6 }
 
     >>
 
@@ -14553,7 +14553,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.7 }
+        { \segment.02.Contrabass.I.Music.Voice.count.7 }
 
     >>
 
@@ -14624,7 +14624,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.8 }
+        { \segment.02.Contrabass.I.Music.Voice.count.8 }
 
     >>
 
@@ -14695,7 +14695,7 @@ segment.02.Contrabass.I.Music.Voice = {
 
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.I.Music.Voice.9 }
+        { \segment.02.Contrabass.I.Music.Voice.count.9 }
 
     >>
 
@@ -14890,7 +14890,7 @@ segment.02.Contrabass.I.Music.Staff = <<
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.1 = {
+segment.02.Contrabass.II.Music.Voice.count.1 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -14950,7 +14950,7 @@ segment.02.Contrabass.II.Music.Voice.1 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.2 = {
+segment.02.Contrabass.II.Music.Voice.count.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -14974,7 +14974,7 @@ segment.02.Contrabass.II.Music.Voice.2 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.3 = {
+segment.02.Contrabass.II.Music.Voice.count.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -15006,7 +15006,7 @@ segment.02.Contrabass.II.Music.Voice.3 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.4 = {
+segment.02.Contrabass.II.Music.Voice.count.4 = {
 
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
@@ -15140,7 +15140,7 @@ segment.02.Contrabass.II.Music.Voice.4 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.5 = {
+segment.02.Contrabass.II.Music.Voice.count.5 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -15160,7 +15160,7 @@ segment.02.Contrabass.II.Music.Voice.5 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.6 = {
+segment.02.Contrabass.II.Music.Voice.count.6 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -15180,7 +15180,7 @@ segment.02.Contrabass.II.Music.Voice.6 = {
 
 
 %! baca.path.extern()
-segment.02.Contrabass.II.Music.Voice.7 = {
+segment.02.Contrabass.II.Music.Voice.count.7 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -15655,7 +15655,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.1 }
+        { \segment.02.Contrabass.II.Music.Voice.count.1 }
 
     >>
 
@@ -15724,7 +15724,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.2 }
+        { \segment.02.Contrabass.II.Music.Voice.count.2 }
 
     >>
 
@@ -15790,7 +15790,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.3 }
+        { \segment.02.Contrabass.II.Music.Voice.count.3 }
 
     >>
 
@@ -16312,7 +16312,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.4 }
+        { \segment.02.Contrabass.II.Music.Voice.count.4 }
 
     >>
 
@@ -16383,7 +16383,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.5 }
+        { \segment.02.Contrabass.II.Music.Voice.count.5 }
 
     >>
 
@@ -16454,7 +16454,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.6 }
+        { \segment.02.Contrabass.II.Music.Voice.count.6 }
 
     >>
 
@@ -16525,7 +16525,7 @@ segment.02.Contrabass.II.Music.Voice = {
 
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca.path.extern()
-        { \segment.02.Contrabass.II.Music.Voice.7 }
+        { \segment.02.Contrabass.II.Music.Voice.count.7 }
 
     >>
 
