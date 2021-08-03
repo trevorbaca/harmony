@@ -22,7 +22,6 @@ isort-check:
 	--thirdparty=abjadext \
 	--thirdparty=baca \
 	--thirdparty=ply \
-	--thirdparty=roman \
 	--thirdparty=uqbar \
 	--trailing-comma \
 	--use-parentheses \
@@ -37,7 +36,6 @@ isort-reformat:
 	--thirdparty=abjadext \
 	--thirdparty=baca \
 	--thirdparty=ply \
-	--thirdparty=roman \
 	--thirdparty=uqbar \
 	--trailing-comma \
 	--use-parentheses \
