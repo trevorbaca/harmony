@@ -237,7 +237,7 @@ segment.12.Global.Rests = {
 }
 
 
-segment.12.Bass.Flute.Music.Voice.A = {
+segment.12.Bass.Flute.Music.Voice.1 = {
 
     \voiceTwo
     a'8.
@@ -501,7 +501,7 @@ segment.12.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.12.Bass.Flute.Music.Voice.A }
+        { \segment.12.Bass.Flute.Music.Voice.1 }
 
     >>
 
@@ -760,7 +760,7 @@ segment.12.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.12.Percussion.I.Music.Voice.A = {
+segment.12.Percussion.I.Music.Voice.1 = {
 
     r4.
     - \tweak color #(x11-color 'blue)
@@ -771,7 +771,7 @@ segment.12.Percussion.I.Music.Voice.A = {
 }
 
 
-segment.12.Percussion.I.Music.Voice.B = {
+segment.12.Percussion.I.Music.Voice.2 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -845,7 +845,7 @@ segment.12.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.12.Percussion.I.Music.Voice.A }
+        { \segment.12.Percussion.I.Music.Voice.1 }
 
     >>
 
@@ -872,7 +872,7 @@ segment.12.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.12.Percussion.I.Music.Voice.B }
+        { \segment.12.Percussion.I.Music.Voice.2 }
 
     >>
 
@@ -1125,7 +1125,7 @@ segment.12.Percussion.I.Music.Staff = <<
 >>
 
 
-segment.12.Percussion.II.Music.Voice.A = {
+segment.12.Percussion.II.Music.Voice.1 = {
 
     r4.
     - \tweak color #(x11-color 'blue)
@@ -1136,7 +1136,7 @@ segment.12.Percussion.II.Music.Voice.A = {
 }
 
 
-segment.12.Percussion.II.Music.Voice.B = {
+segment.12.Percussion.II.Music.Voice.2 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -1200,7 +1200,7 @@ segment.12.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.12.Percussion.II.Music.Voice.A }
+        { \segment.12.Percussion.II.Music.Voice.1 }
 
     >>
 
@@ -1229,7 +1229,7 @@ segment.12.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.12.Percussion.II.Music.Voice.B }
+        { \segment.12.Percussion.II.Music.Voice.2 }
 
     >>
 
@@ -1721,7 +1721,7 @@ segment.12.Harp.Music.Staff = <<
 >>
 
 
-segment.12.Viola.Music.Voice.A = {
+segment.12.Viola.Music.Voice.1 = {
 
     \voiceTwo
     df!1
@@ -1838,7 +1838,7 @@ segment.12.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.12.Viola.Music.Voice.A }
+        { \segment.12.Viola.Music.Voice.1 }
 
     >>
 
@@ -2123,7 +2123,7 @@ segment.12.Viola.Music.Staff = <<
 >>
 
 
-segment.12.Cello.I.Music.Voice.A = {
+segment.12.Cello.I.Music.Voice.1 = {
 
     \voiceTwo
     c2.
@@ -2217,7 +2217,7 @@ segment.12.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.12.Cello.I.Music.Voice.A }
+        { \segment.12.Cello.I.Music.Voice.1 }
 
     >>
     \oneVoice
@@ -2966,7 +2966,7 @@ segment.12.Cello.II.Music.Staff = <<
 >>
 
 
-segment.12.Contrabass.I.Music.Voice.A = {
+segment.12.Contrabass.I.Music.Voice.1 = {
 
     \voiceTwo
     b2.
@@ -3060,7 +3060,7 @@ segment.12.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.12.Contrabass.I.Music.Voice.A }
+        { \segment.12.Contrabass.I.Music.Voice.1 }
 
     >>
     \oneVoice
