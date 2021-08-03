@@ -658,7 +658,7 @@ segment.19.Bass.Flute.Music.Staff = <<
 >>
 
 
-segment.19.Percussion.I.Music.Voice.A = {
+segment.19.Percussion.I.Music.Voice.1 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -677,7 +677,7 @@ segment.19.Percussion.I.Music.Voice.A = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.B = {
+segment.19.Percussion.I.Music.Voice.2 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -694,7 +694,7 @@ segment.19.Percussion.I.Music.Voice.B = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.C = {
+segment.19.Percussion.I.Music.Voice.3 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -704,7 +704,7 @@ segment.19.Percussion.I.Music.Voice.C = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.D = {
+segment.19.Percussion.I.Music.Voice.4 = {
 
     r8.
 
@@ -716,7 +716,7 @@ segment.19.Percussion.I.Music.Voice.D = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.E = {
+segment.19.Percussion.I.Music.Voice.5 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -726,7 +726,7 @@ segment.19.Percussion.I.Music.Voice.E = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.F = {
+segment.19.Percussion.I.Music.Voice.6 = {
 
     r8.
 
@@ -739,7 +739,7 @@ segment.19.Percussion.I.Music.Voice.F = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.G = {
+segment.19.Percussion.I.Music.Voice.7 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -751,7 +751,7 @@ segment.19.Percussion.I.Music.Voice.G = {
 }
 
 
-segment.19.Percussion.I.Music.Voice.H = {
+segment.19.Percussion.I.Music.Voice.8 = {
 
     \override DynamicLineSpanner.staff-padding = 5
     \once \override Dots.extra-offset = #'(1 . 0)
@@ -822,7 +822,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.A }
+        { \segment.19.Percussion.I.Music.Voice.1 }
 
     >>
 
@@ -921,7 +921,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.B }
+        { \segment.19.Percussion.I.Music.Voice.2 }
 
     >>
 
@@ -956,7 +956,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.C }
+        { \segment.19.Percussion.I.Music.Voice.3 }
 
     >>
 
@@ -993,7 +993,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.D }
+        { \segment.19.Percussion.I.Music.Voice.4 }
 
     >>
 
@@ -1032,7 +1032,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.E }
+        { \segment.19.Percussion.I.Music.Voice.5 }
 
     >>
 
@@ -1073,7 +1073,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.F }
+        { \segment.19.Percussion.I.Music.Voice.6 }
 
     >>
 
@@ -1132,7 +1132,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.G }
+        { \segment.19.Percussion.I.Music.Voice.7 }
 
     >>
 
@@ -1282,7 +1282,7 @@ segment.19.Percussion.I.Music.Voice = {
         }
 
         \context Voice = "Percussion_I_Music_Voice"
-        { \segment.19.Percussion.I.Music.Voice.H }
+        { \segment.19.Percussion.I.Music.Voice.8 }
 
     >>
 
@@ -1372,7 +1372,7 @@ segment.19.Percussion.I.Music.Staff = <<
 >>
 
 
-segment.19.Percussion.II.Music.Voice.A = {
+segment.19.Percussion.II.Music.Voice.1 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -1387,7 +1387,7 @@ segment.19.Percussion.II.Music.Voice.A = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.B = {
+segment.19.Percussion.II.Music.Voice.2 = {
 
     r8.
     - \tweak color #(x11-color 'blue)
@@ -1404,7 +1404,7 @@ segment.19.Percussion.II.Music.Voice.B = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.C = {
+segment.19.Percussion.II.Music.Voice.3 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -1414,7 +1414,7 @@ segment.19.Percussion.II.Music.Voice.C = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.D = {
+segment.19.Percussion.II.Music.Voice.4 = {
 
     r8.
 
@@ -1426,7 +1426,7 @@ segment.19.Percussion.II.Music.Voice.D = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.E = {
+segment.19.Percussion.II.Music.Voice.5 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -1436,7 +1436,7 @@ segment.19.Percussion.II.Music.Voice.E = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.F = {
+segment.19.Percussion.II.Music.Voice.6 = {
 
     r8.
 
@@ -1448,7 +1448,7 @@ segment.19.Percussion.II.Music.Voice.F = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.G = {
+segment.19.Percussion.II.Music.Voice.7 = {
 
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Dots.X-extent = ##f
@@ -1461,7 +1461,7 @@ segment.19.Percussion.II.Music.Voice.G = {
 }
 
 
-segment.19.Percussion.II.Music.Voice.H = {
+segment.19.Percussion.II.Music.Voice.8 = {
 
     \override DynamicLineSpanner.staff-padding = 5
     \once \override Dots.extra-offset = #'(1 . 0)
@@ -1540,7 +1540,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.A }
+        { \segment.19.Percussion.II.Music.Voice.1 }
 
     >>
 
@@ -1628,7 +1628,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.B }
+        { \segment.19.Percussion.II.Music.Voice.2 }
 
     >>
 
@@ -1661,7 +1661,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.C }
+        { \segment.19.Percussion.II.Music.Voice.3 }
 
     >>
 
@@ -1696,7 +1696,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.D }
+        { \segment.19.Percussion.II.Music.Voice.4 }
 
     >>
 
@@ -1733,7 +1733,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.E }
+        { \segment.19.Percussion.II.Music.Voice.5 }
 
     >>
 
@@ -1772,7 +1772,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.F }
+        { \segment.19.Percussion.II.Music.Voice.6 }
 
     >>
 
@@ -1829,7 +1829,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.G }
+        { \segment.19.Percussion.II.Music.Voice.7 }
 
     >>
 
@@ -1974,7 +1974,7 @@ segment.19.Percussion.II.Music.Voice = {
         }
 
         \context Voice = "Percussion_II_Music_Voice"
-        { \segment.19.Percussion.II.Music.Voice.H }
+        { \segment.19.Percussion.II.Music.Voice.8 }
 
     >>
 

@@ -1800,7 +1800,7 @@ segment.06.Harp.Music.Staff = <<
 >>
 
 
-segment.06.Viola.Music.Voice.A = {
+segment.06.Viola.Music.Voice.1 = {
 
     \voiceTwo
     bf!1
@@ -1819,7 +1819,7 @@ segment.06.Viola.Music.Voice.A = {
 }
 
 
-segment.06.Viola.Music.Voice.B = {
+segment.06.Viola.Music.Voice.2 = {
 
     \voiceTwo
     bf!1
@@ -1942,7 +1942,7 @@ segment.06.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.06.Viola.Music.Voice.A }
+        { \segment.06.Viola.Music.Voice.1 }
 
     >>
 
@@ -2009,7 +2009,7 @@ segment.06.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.06.Viola.Music.Voice.B }
+        { \segment.06.Viola.Music.Voice.2 }
 
     >>
 
@@ -2297,7 +2297,7 @@ segment.06.Viola.Music.Staff = <<
 >>
 
 
-segment.06.Cello.I.Music.Voice.A = {
+segment.06.Cello.I.Music.Voice.1 = {
 
     \voiceTwo
     bf!1
@@ -2316,7 +2316,7 @@ segment.06.Cello.I.Music.Voice.A = {
 }
 
 
-segment.06.Cello.I.Music.Voice.B = {
+segment.06.Cello.I.Music.Voice.2 = {
 
     \voiceTwo
     bf!1
@@ -2428,7 +2428,7 @@ segment.06.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.06.Cello.I.Music.Voice.A }
+        { \segment.06.Cello.I.Music.Voice.1 }
 
     >>
 
@@ -2491,7 +2491,7 @@ segment.06.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.06.Cello.I.Music.Voice.B }
+        { \segment.06.Cello.I.Music.Voice.2 }
 
     >>
 

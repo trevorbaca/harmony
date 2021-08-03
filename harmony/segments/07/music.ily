@@ -1156,7 +1156,7 @@ segment.07.Harp.Music.Staff = <<
 >>
 
 
-segment.07.Viola.Music.Voice.A = {
+segment.07.Viola.Music.Voice.1 = {
 
     \override DynamicLineSpanner.staff-padding = 4
     \voiceTwo
@@ -1176,7 +1176,7 @@ segment.07.Viola.Music.Voice.A = {
 }
 
 
-segment.07.Viola.Music.Voice.B = {
+segment.07.Viola.Music.Voice.2 = {
 
     \voiceTwo
     bf!1
@@ -1243,7 +1243,7 @@ segment.07.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.07.Viola.Music.Voice.A }
+        { \segment.07.Viola.Music.Voice.1 }
 
     >>
 
@@ -1341,7 +1341,7 @@ segment.07.Viola.Music.Voice = {
         }
 
         \context Voice = "Viola_Music_Voice"
-        { \segment.07.Viola.Music.Voice.B }
+        { \segment.07.Viola.Music.Voice.2 }
 
     >>
 
@@ -1466,7 +1466,7 @@ segment.07.Viola.Music.Staff = <<
 >>
 
 
-segment.07.Cello.I.Music.Voice.A = {
+segment.07.Cello.I.Music.Voice.1 = {
 
     \voiceTwo
     bf!4
@@ -1585,7 +1585,7 @@ segment.07.Cello.I.Music.Voice = {
         }
 
         \context Voice = "Cello_I_Music_Voice"
-        { \segment.07.Cello.I.Music.Voice.A }
+        { \segment.07.Cello.I.Music.Voice.1 }
 
     >>
     \oneVoice
@@ -1926,7 +1926,7 @@ segment.07.Cello.II.Music.Staff = <<
 >>
 
 
-segment.07.Contrabass.I.Music.Voice.A = {
+segment.07.Contrabass.I.Music.Voice.1 = {
 
     \voiceTwo
     bf!1
@@ -2068,7 +2068,7 @@ segment.07.Contrabass.I.Music.Voice = {
         }
 
         \context Voice = "Contrabass_I_Music_Voice"
-        { \segment.07.Contrabass.I.Music.Voice.A }
+        { \segment.07.Contrabass.I.Music.Voice.1 }
 
     >>
 

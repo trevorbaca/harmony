@@ -185,7 +185,7 @@ segment.27.Global.Rests = {
 }
 
 
-segment.27.Bass.Flute.Music.Voice.A = {
+segment.27.Bass.Flute.Music.Voice.1 = {
 
     \voiceTwo
     af'!8.
@@ -211,7 +211,7 @@ segment.27.Bass.Flute.Music.Voice.A = {
 }
 
 
-segment.27.Bass.Flute.Music.Voice.B = {
+segment.27.Bass.Flute.Music.Voice.2 = {
 
     \voiceTwo
     af'!8.
@@ -436,7 +436,7 @@ segment.27.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.27.Bass.Flute.Music.Voice.A }
+        { \segment.27.Bass.Flute.Music.Voice.1 }
 
     >>
     \oneVoice
@@ -476,7 +476,7 @@ segment.27.Bass.Flute.Music.Voice = {
         }
 
         \context Voice = "Bass_Flute_Music_Voice"
-        { \segment.27.Bass.Flute.Music.Voice.B }
+        { \segment.27.Bass.Flute.Music.Voice.2 }
 
     >>
 

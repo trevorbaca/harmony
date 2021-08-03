@@ -330,7 +330,7 @@ segment.01.Global.Rests = {
 
 
 %! baca.path.extern()
-segment.01.Bass.Flute.Music.Voice.A = {
+segment.01.Bass.Flute.Music.Voice.1 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -382,7 +382,7 @@ segment.01.Bass.Flute.Music.Voice.A = {
 
 
 %! baca.path.extern()
-segment.01.Bass.Flute.Music.Voice.B = {
+segment.01.Bass.Flute.Music.Voice.2 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -406,7 +406,7 @@ segment.01.Bass.Flute.Music.Voice.B = {
 
 
 %! baca.path.extern()
-segment.01.Bass.Flute.Music.Voice.C = {
+segment.01.Bass.Flute.Music.Voice.3 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -436,7 +436,7 @@ segment.01.Bass.Flute.Music.Voice.C = {
 
 
 %! baca.path.extern()
-segment.01.Bass.Flute.Music.Voice.D = {
+segment.01.Bass.Flute.Music.Voice.4 = {
 
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
@@ -678,7 +678,7 @@ segment.01.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.01.Bass.Flute.Music.Voice.A }
+        { \segment.01.Bass.Flute.Music.Voice.1 }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -741,7 +741,7 @@ segment.01.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.01.Bass.Flute.Music.Voice.B }
+        { \segment.01.Bass.Flute.Music.Voice.2 }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -816,7 +816,7 @@ segment.01.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.01.Bass.Flute.Music.Voice.C }
+        { \segment.01.Bass.Flute.Music.Voice.3 }
 
     >>
     %! abjad.on_beat_grace_container(5)
@@ -869,7 +869,7 @@ segment.01.Bass.Flute.Music.Voice = {
 
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca.path.extern()
-        { \segment.01.Bass.Flute.Music.Voice.D }
+        { \segment.01.Bass.Flute.Music.Voice.4 }
 
     >>
 
