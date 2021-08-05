@@ -5,7 +5,7 @@ distances = [20, (34), (31, 31, 34), (31, 31, 31, 31, 34)]
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            *[22, (28), (25, 25, 28), (25, 25, 25, 25, 28)],
+            [22, (28), (25, 25, 28), (25, 25, 25, 25, 28)],
             measure=1,
             y_offset=90,
         ),
@@ -13,7 +13,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=5,
             measure=4,
             y_offset=32,
@@ -22,7 +22,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=9,
             measure=8,
             y_offset=32,
@@ -31,7 +31,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=13,
             measure=12,
             y_offset=32,
@@ -40,7 +40,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=17,
             # measure=16,
             # measure=17,
@@ -51,7 +51,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=21,
             y_offset=32,
         ),
@@ -59,7 +59,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=25,
             y_offset=32,
         ),
@@ -67,7 +67,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=29,
             y_offset=32,
         ),
@@ -75,7 +75,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=33,
             measure=34,
             y_offset=32,
@@ -84,7 +84,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=37,
             y_offset=32,
         ),
@@ -92,7 +92,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=41,
             measure=40,
             y_offset=32,
@@ -101,7 +101,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=45,
             y_offset=32,
         ),
@@ -109,7 +109,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=49,
             y_offset=32,
         ),
@@ -117,7 +117,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=53,
             y_offset=32,
         ),
@@ -125,7 +125,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=57,
             measure=58,
             y_offset=32,
@@ -134,7 +134,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=61,
             y_offset=32,
         ),
@@ -142,7 +142,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=65,
             y_offset=32,
         ),
@@ -150,7 +150,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=70,
             measure=68,
             y_offset=32,
@@ -159,7 +159,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=73,
             y_offset=32,
         ),
@@ -167,7 +167,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=77,
             y_offset=32,
         ),
@@ -175,7 +175,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=81,
             y_offset=32,
         ),
@@ -183,7 +183,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=85,
             y_offset=32,
         ),
@@ -191,7 +191,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=89,
             y_offset=32,
         ),
@@ -199,7 +199,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=93,
             measure=94,
             y_offset=32,
@@ -208,7 +208,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=98,
             y_offset=32,
         ),
@@ -216,7 +216,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=101,
             y_offset=32,
         ),
@@ -224,7 +224,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=105,
             y_offset=32,
         ),
@@ -232,7 +232,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=109,
             y_offset=32,
         ),
@@ -240,7 +240,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=113,
             y_offset=32,
         ),
@@ -248,7 +248,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=117,
             y_offset=32,
         ),
@@ -256,7 +256,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=121,
             y_offset=32,
         ),
@@ -264,7 +264,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=125,
             y_offset=32,
         ),
@@ -272,7 +272,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=130,
             y_offset=32,
         ),
@@ -280,7 +280,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=133,
             y_offset=32,
         ),
@@ -288,7 +288,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=137,
             y_offset=32,
         ),
@@ -296,7 +296,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=141,
             y_offset=32,
         ),
@@ -304,7 +304,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=145,
             y_offset=32,
         ),
@@ -312,7 +312,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=149,
             y_offset=32,
         ),
@@ -320,7 +320,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=154,
             y_offset=32,
         ),
@@ -328,7 +328,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=157,
             y_offset=32,
         ),
@@ -336,7 +336,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=161,
             y_offset=32,
         ),
@@ -344,7 +344,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=165,
             y_offset=32,
         ),
@@ -352,7 +352,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=169,
             y_offset=32,
         ),
@@ -360,7 +360,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=173,
             y_offset=32,
         ),
@@ -368,7 +368,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=177,
             measure=178,
             y_offset=32,
@@ -377,7 +377,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=181,
             y_offset=32,
         ),
@@ -385,7 +385,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=185,
             y_offset=32,
         ),
@@ -393,7 +393,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=189,
             y_offset=32,
         ),
@@ -401,7 +401,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=193,
             measure=194,
             y_offset=32,
@@ -410,7 +410,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=197,
             y_offset=32,
         ),
@@ -418,7 +418,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=201,
             y_offset=32,
         ),
@@ -426,7 +426,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=205,
             y_offset=32,
         ),
@@ -434,7 +434,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=209,
             y_offset=32,
         ),
@@ -442,7 +442,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=213,
             y_offset=32,
         ),
@@ -450,7 +450,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=217,
             y_offset=32,
         ),
@@ -458,7 +458,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=221,
             y_offset=32,
         ),
@@ -466,7 +466,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=225,
             y_offset=32,
         ),
@@ -474,7 +474,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=229,
             # measure=230,
             measure=228,
@@ -484,7 +484,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=233,
             measure=232,
             y_offset=32,
@@ -493,7 +493,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=237,
             measure=235,
             y_offset=32,
@@ -502,7 +502,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=241,
             measure=240,
             y_offset=32,
@@ -511,7 +511,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=245,
             y_offset=32,
         ),
@@ -519,7 +519,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=249,
             y_offset=32,
         ),
@@ -527,7 +527,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=253,
             # measure=255,
             # measure=253,
@@ -538,7 +538,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             # measure=259,
             # measure=260,
             measure=256,
@@ -548,7 +548,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=260,
             y_offset=32,
         ),
@@ -556,7 +556,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=263,
             y_offset=32,
         ),
@@ -564,7 +564,7 @@ breaks = baca.breaks(
     ),
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=266,
             y_offset=32,
         ),

@@ -4,7 +4,7 @@ distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            *distances,
+            distances,
             measure=1,
             y_offset=40,
         ),
