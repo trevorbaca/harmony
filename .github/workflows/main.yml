@@ -102,57 +102,57 @@ jobs:
             py.test -rf $GITHUB_WORKSPACE/$NAME/test.py
         fi
 
-#    - name: Make segments
-#      run: |
-#        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
-#        package_name=$(basename "$GITHUB_WORKSPACE")
-#        wrapper_directory="$GITHUB_WORKSPACE"
-#        echo Wrapper directory "$wrapper_directory" ...
-#        contents_directory="$wrapper_directory"/"$package_name"
-#        echo Contents directory "$contents_directory" ...
-#        segments_directory="$contents_directory"/segments
-#        echo Segments directory "$segments_directory" ...
-#        if [ ! -d "$segments_directory"/01 ]; then
-#            echo Score contains no segments ...
-#            exit 0
-#        fi
-#        for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
-#            echo Segment directory "$segment_directory" ...
-#            music_ly_tagged="$segment_directory/music.ly.tagged"
-#            music_ly_tagged_old="$segment_directory/music.ly.tagged.old"
-#            if [ -f "$music_ly_tagged" ]; then
-#                cp "$music_ly_tagged" "$music_ly_tagged_old"
-#            fi
-#            rm "$music_ly_tagged"
-#            music_ily_tagged="$segment_directory"/music.ily.tagged
-#            music_ily_tagged_old="$segment_directory"/music.ily.tagged.old
-#            if [ -f "$music_ily_tagged" ]; then
-#                cp "$music_ily_tagged" "$music_ily_tagged_old"
-#            fi
-#            rm "$music_ily_tagged"
-#            current_directory=$(pwd)
-#            cd "$segment_directory"
-#            python music.py
-#            cd "$current_directory"
-#            if [ -f "$music_ly_tagged" ]; then
-#                echo Found "$music_ly_tagged" ...
-#            else
-#                exit -1
-#            fi
-#            if [ -f "$music_ly_tagged_old" ]; then
-#                echo Found "$music_ly_tagged_old" ...
-#            else
-#                exit -1
-#            fi
-#            echo Calling diff ...
-#            differences=$(diff -I '^\\version' $music_ily_tagged $music_ily_tagged_old)
-#            echo Done calling diff ...
-#            if [ -z "$differences" ]; then
-#                echo Found matching music.ily.tagged files ...
-#            else
-#                echo Found mismatched music.ily.tagged files ...
-#                diff -I '^\\version' "$music_ily_tagged" "$music_ily_tagged_old"
-#                exit -1
-#            fi
-#            echo
-#        done
+    - name: Make segments
+      run: |
+        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        package_name=$(basename "$GITHUB_WORKSPACE")
+        wrapper_directory="$GITHUB_WORKSPACE"
+        echo Wrapper directory "$wrapper_directory" ...
+        contents_directory="$wrapper_directory"/"$package_name"
+        echo Contents directory "$contents_directory" ...
+        segments_directory="$contents_directory"/segments
+        echo Segments directory "$segments_directory" ...
+        if [ ! -d "$segments_directory"/01 ]; then
+            echo Score contains no segments ...
+            exit 0
+        fi
+        for segment_directory in $(ls -d "$segments_directory"/[0-9]*); do
+            echo Segment directory "$segment_directory" ...
+            music_ly="$segment_directory/music.ly"
+            music_ly_old="$segment_directory/music.ly.old"
+            if [ -f "$music_ly" ]; then
+                cp "$music_ly" "$music_ly_old"
+            fi
+            rm "$music_ly"
+            music_ily="$segment_directory"/music.ily
+            music_ily_old="$segment_directory"/music.ily.old
+            if [ -f "$music_ily" ]; then
+                cp "$music_ily" "$music_ily_old"
+            fi
+            rm "$music_ily"
+            current_directory=$(pwd)
+            cd "$segment_directory"
+            python music.py
+            cd "$current_directory"
+            if [ -f "$music_ly" ]; then
+                echo Found "$music_ly" ...
+            else
+                exit -1
+            fi
+            if [ -f "$music_ly_old" ]; then
+                echo Found "$music_ly_old" ...
+            else
+                exit -1
+            fi
+            echo Calling diff ...
+            differences=$(diff -I '^\\version' $music_ily $music_ily_old)
+            echo Done calling diff ...
+            if [ -z "$differences" ]; then
+                echo Found matching music.ily files ...
+            else
+                echo Found mismatched music.ily files ...
+                diff -I '^\\version' "$music_ily" "$music_ily_old"
+                exit -1
+            fi
+            echo
+        done
