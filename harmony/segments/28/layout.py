@@ -1,6 +1,7 @@
 import baca
 
 distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
+
 breaks = baca.breaks(
     baca.page(
         baca.system(measure=1, y_offset=40, distances=distances),
@@ -10,7 +11,6 @@ breaks = baca.breaks(
         baca.system(measure=7, y_offset=40, distances=distances),
         number=2,
     ),
-    local_measure_numbers=True,
 )
 
 spacing = baca.scorewide_spacing(

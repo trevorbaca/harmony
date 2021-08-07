@@ -14,7 +14,7 @@
 %! baca.SingleStaffScoreTemplate.__call__()
 {
 %! baca.SingleStaffScoreTemplate.__call__()
-    currentBarNumber = 1
+    currentBarNumber = 168
 %! baca.SingleStaffScoreTemplate.__call__()
 }
 %! baca.SingleStaffScoreTemplate.__call__()
