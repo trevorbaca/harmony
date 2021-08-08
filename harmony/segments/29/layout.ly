@@ -9,14 +9,6 @@
 %! baca.SingleStaffScoreTemplate.__call__()
 \context Score = "Score"
 %! baca.SingleStaffScoreTemplate.__call__()
-\with
-%! baca.SingleStaffScoreTemplate.__call__()
-{
-%! baca.SingleStaffScoreTemplate.__call__()
-    currentBarNumber = 266
-%! baca.SingleStaffScoreTemplate.__call__()
-}
-%! baca.SingleStaffScoreTemplate.__call__()
 <<
 
     %! abjad.ScoreTemplate._make_global_context()
