@@ -18,7 +18,7 @@ spacing = baca.scorewide_spacing(
     breaks=breaks,
     fallback_duration=(1, 40),
 )
-spacing.override([12], (1, 288), fermata=True, force_local=True)
+spacing.override([12], (1, 288), fermata=True)
 
 if __name__ == "__main__":
     baca.build.make_layout_ly(__file__, breaks, spacing)
