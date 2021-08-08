@@ -89,7 +89,7 @@ breaks = baca.breaks(
     ),
 )
 
-spacing = baca.scorewide_spacing(
+spacing = baca.spacing(
     __file__,
     breaks=breaks,
     fallback_duration=(1, 32),
