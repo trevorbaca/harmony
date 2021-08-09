@@ -18,4 +18,4 @@ spacing = baca.spacing(
 )
 
 if __name__ == "__main__":
-    baca.build.make_layout_ly(__file__, breaks, spacing)
+    baca.build.make_layout_ly(breaks, spacing)
