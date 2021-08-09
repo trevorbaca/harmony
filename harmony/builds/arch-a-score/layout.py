@@ -281,12 +281,6 @@ breaks = baca.breaks(
     ),
 )
 
-spacing = baca.spacing(
-    __file__,
-    breaks=breaks,
-    fallback_duration=(1, 40),
-)
-
 text_measure_numbers = [
     15,
     18,
@@ -321,103 +315,108 @@ text_measure_numbers = [
 eol_fermata_spacing = (1, 132)
 mol_fermata_spacing = (1, 172)
 
-# spacing.override(text_measure_numbers, (1, 288), fermata=True)
-# spacing.override(text_measure_numbers, (1, 144), fermata=True)
-spacing.override(text_measure_numbers, eol_fermata_spacing, fermata=True)
+overrides = (
+    # baca.space(text_measure_numbers, (1, 288), fermata=True),
+    # baca.space(text_measure_numbers, (1, 144), fermata=True),
+    baca.space(text_measure_numbers, eol_fermata_spacing, fermata=True),
 
-spacing.override(11, (1, 20))
+    baca.space(11, (1, 20)),
 
-# spacing.override([12, 13, 14], (1, 16))
-spacing.override([12, 13, 14], (1, 20))
-# spacing.override([16, 17, 19], (1, 20))
-# spacing.override([16, 17, 19], (1, 16))
-# spacing.override([16, 19], (1, 16))
-spacing.override(19, (1, 16))
+    # baca.space([12, 13, 14], (1, 16)),
+    baca.space([12, 13, 14], (1, 20)),
+    # baca.space([16, 17, 19], (1, 20)),
+    # baca.space([16, 17, 19], (1, 16)),
+    # baca.space([16, 19], (1, 16)),
+    baca.space(19, (1, 16)),
 
-# spacing.override(18, (1, 144))
-# spacing.override(18, (1, 188))
-# spacing.override(18, (1, 166))
-spacing.override(18, mol_fermata_spacing)
+    # baca.space(18, (1, 144)),
+    # baca.space(18, (1, 188)),
+    # baca.space(18, (1, 166)),
+    baca.space(18, mol_fermata_spacing),
 
+    baca.space(41, mol_fermata_spacing),
+    # baca.space([40, 42, 43, 44], (1, 32)),
+    # baca.space([40, 42, 43, 44], (1, 20)),
+    baca.space([40, 42, 43, 44], (1, 16)),
 
-spacing.override(41, mol_fermata_spacing)
-# spacing.override([40, 42, 43, 44], (1, 32))
-# spacing.override([40, 42, 43, 44], (1, 20))
-spacing.override([40, 42, 43, 44], (1, 16))
+    baca.space((45, 47), (1, 36)),
+    # baca.space((53, 56), (1, 36)),
+    # baca.space((53, 56), (1, 32)),
+    baca.space((53, 56), (1, 20)),
 
-spacing.override((45, 47), (1, 36))
-# spacing.override((53, 56), (1, 36))
-# spacing.override((53, 56), (1, 32))
-spacing.override((53, 56), (1, 20))
+    baca.space(69, mol_fermata_spacing),
+    baca.space([68, 70, 71, 72], (1, 20)),
 
-spacing.override(69, mol_fermata_spacing)
-spacing.override([68, 70, 71, 72], (1, 20))
+    baca.space(82, mol_fermata_spacing),
+    baca.space([81, 83, 84], (1, 20)),
 
-spacing.override(82, mol_fermata_spacing)
-spacing.override([81, 83, 84], (1, 20))
+    baca.space(91, mol_fermata_spacing),
+    baca.space([90, 92, 93], (1, 20)),
+    baca.space((94, 96), (1, 32)),
 
-spacing.override(91, mol_fermata_spacing)
-spacing.override([90, 92, 93], (1, 20))
-spacing.override((94, 96), (1, 32))
+    baca.space(107, mol_fermata_spacing),
+    baca.space([105, 106, 108], (1, 20)),
 
-spacing.override(107, mol_fermata_spacing)
-spacing.override([105, 106, 108], (1, 20))
+    baca.space(115, mol_fermata_spacing),
+    baca.space([113, 114, 116], (1, 20)),
 
-spacing.override(115, mol_fermata_spacing)
-spacing.override([113, 114, 116], (1, 20))
+    baca.space(119, mol_fermata_spacing),
+    baca.space([117, 118, 120], (1, 32)),
 
-spacing.override(119, mol_fermata_spacing)
-spacing.override([117, 118, 120], (1, 32))
+    baca.space(122, mol_fermata_spacing),
+    # baca.space([121, 123, 124], (1, 32)),
+    baca.space([121, 123, 124], (1, 24)),
+    # baca.space((125, 128), (1, 32)),
+    baca.space((125, 128), (1, 24)),
 
-spacing.override(122, mol_fermata_spacing)
-# spacing.override([121, 123, 124], (1, 32))
-spacing.override([121, 123, 124], (1, 24))
-# spacing.override((125, 128), (1, 32))
-spacing.override((125, 128), (1, 24))
+    baca.space(163, mol_fermata_spacing),
+    # baca.space([161, 162, 164], (1, 32)),
+    baca.space([161, 162, 164], (1, 24)),
 
-spacing.override(163, mol_fermata_spacing)
-# spacing.override([161, 162, 164], (1, 32))
-spacing.override([161, 162, 164], (1, 24))
+    baca.space(170, mol_fermata_spacing),
+    # baca.space([169, 171, 172], (1, 32)),
+    baca.space([169, 171, 172], (1, 24)),
+    # baca.space((173, 176), (1, 32)),
+    baca.space((173, 176), (1, 20)),
+    baca.space((189, 192), (1, 20)),
 
-spacing.override(170, mol_fermata_spacing)
-# spacing.override([169, 171, 172], (1, 32))
-spacing.override([169, 171, 172], (1, 24))
-# spacing.override((173, 176), (1, 32))
-spacing.override((173, 176), (1, 20))
-spacing.override((189, 192), (1, 20))
+    baca.space(206, mol_fermata_spacing),
+    baca.space([205, 207, 208], (1, 32)),
+    # baca.space((226, 227), (1, 20)),
+    ### baca.space((225, 228), (1, 20)),
+    # baca.space((233, 235), (1, 32)),
+    baca.space(229, mol_fermata_spacing),
+    baca.space([228, 230, 231], (1, 20)),
 
-spacing.override(206, mol_fermata_spacing)
-spacing.override([205, 207, 208], (1, 32))
-# spacing.override((226, 227), (1, 20))
-### spacing.override((225, 228), (1, 20))
-# spacing.override((233, 235), (1, 32))
-spacing.override(229, mol_fermata_spacing)
-spacing.override([228, 230, 231], (1, 20))
+    ### baca.space((233, 235), (1, 20)),
+    ### baca.space(239, mol_fermata_spacing),
+    # baca.space([237, 238, 240], (1, 32)),
+    ### baca.space([237, 238, 240], (1, 24)),
+    baca.space(236, mol_fermata_spacing),
+    baca.space(235, (1, 20)),
+    baca.space([237, 238], (1, 12)),
 
-### spacing.override((233, 235), (1, 20))
-### spacing.override(239, mol_fermata_spacing)
-# spacing.override([237, 238, 240], (1, 32))
-### spacing.override([237, 238, 240], (1, 24))
-spacing.override(236, mol_fermata_spacing)
-spacing.override(235, (1, 20))
-spacing.override([237, 238], (1, 12))
+    # baca.space((246, 247), (1, 20)),
+    baca.space((245, 247), (1, 20)),
 
-# spacing.override((246, 247), (1, 20))
-spacing.override((245, 247), (1, 20))
+    baca.space(254, mol_fermata_spacing),
+    baca.space(255, (1, 12)),
 
-spacing.override(254, mol_fermata_spacing)
-spacing.override(255, (1, 12))
+    baca.space((256, 259), (1, 56)),
 
-spacing.override((256, 259), (1, 56))
+    baca.space(261, mol_fermata_spacing),
+    baca.space(262, (1, 24)),
 
-spacing.override(261, mol_fermata_spacing)
-spacing.override(262, (1, 24))
+    baca.space((266, 267), (1, 24)),
+    baca.space(268, mol_fermata_spacing),
+)
 
-spacing.override((266, 267), (1, 24))
-spacing.override(268, mol_fermata_spacing)
-
-if __name__ == "__main__":
-    baca.build.make_layout_ly(__file__, breaks, spacing)
+spacing = baca.spacing(
+    __file__,
+    breaks=breaks,
+    fallback_duration=(1, 40),
+    overrides=overrides,
+)
 
 if __name__ == "__main__":
     baca.build.make_layout_ly(__file__, breaks, spacing)
