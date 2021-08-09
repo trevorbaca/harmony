@@ -90,12 +90,6 @@ breaks = baca.breaks(
     ),
 )
 
-spacing = baca.spacing(
-    __file__,
-    breaks=breaks,
-    fallback_duration=(1, 32),
-)
-
 empty_measures = [
     51,
     73,
@@ -136,7 +130,14 @@ empty_measures = [
     267,
 ]
 
-spacing.override(empty_measures, (1, 4))
+spacing = baca.spacing(
+    __file__,
+    breaks=breaks,
+    fallback_duration=(1, 32),
+    overrides=(
+        baca.space(empty_measures, (1, 4)),
+    ),
+)
 
 if __name__ == "__main__":
     baca.build.make_layout_ly(__file__, breaks, spacing)

@@ -5,10 +5,9 @@ distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
 breaks = baca.breaks(
     baca.page(
         baca.system(
-            [18, (26), (21, 21, 26), (21, 21, 21, 21, 26)],
             measure=1,
             y_offset=90,
-            distances=distances,
+            distances=[18, (26), (21, 21, 26), (21, 21, 21, 21, 26)],
         ),
         number=1,
     ),
@@ -166,12 +165,6 @@ breaks = baca.breaks(
     ),
 )
 
-spacing = baca.spacing(
-    __file__,
-    breaks=breaks,
-    fallback_duration=(1, 40),
-)
-
 text_measure_numbers = [
     15,
     18,
@@ -202,14 +195,21 @@ text_measure_numbers = [
     261,
     268,
 ]
-spacing.override(text_measure_numbers, (1, 288), fermata=True)
 
-spacing.override((21, 26), (1, 32))
-spacing.override((49, 56), (1, 20))
-spacing.override((113, 114), (1, 20))
-spacing.override((116, 118), (1, 20))
-spacing.override((171, 176), (1, 20))
-spacing.override([191, 192, 194, 195], (1, 32))
+spacing = baca.spacing(
+    __file__,
+    breaks=breaks,
+    fallback_duration=(1, 40),
+    overrides=(
+        baca.space((21, 26), (1, 32)),
+        baca.space((49, 56), (1, 20)),
+        baca.space((113, 114), (1, 20)),
+        baca.space((116, 118), (1, 20)),
+        baca.space((171, 176), (1, 20)),
+        baca.space([191, 192, 194, 195], (1, 32)),
+        baca.space(text_measure_numbers, (1, 288), fermata=True),
+    ),
+)
 
 if __name__ == "__main__":
     baca.build.make_layout_ly(__file__, breaks, spacing)
