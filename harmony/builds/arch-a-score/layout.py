@@ -316,9 +316,9 @@ eol_fermata_spacing = (1, 132)
 mol_fermata_spacing = (1, 172)
 
 overrides = (
-    # baca.space(text_measure_numbers, (1, 288), fermata=True),
-    # baca.space(text_measure_numbers, (1, 144), fermata=True),
-    baca.space(text_measure_numbers, eol_fermata_spacing, fermata=True),
+    # baca.space(text_measure_numbers, (1, 288)),
+    # baca.space(text_measure_numbers, (1, 144)),
+    baca.space(text_measure_numbers, eol_fermata_spacing),
     baca.space(11, (1, 20)),
     # baca.space([12, 13, 14], (1, 16)),
     baca.space([12, 13, 14], (1, 20)),
