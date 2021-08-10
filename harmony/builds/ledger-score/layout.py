@@ -196,19 +196,17 @@ text_measure_numbers = [
     268,
 ]
 
-spacing = baca.spacing(
-    breaks=breaks,
-    fallback_duration=(1, 40),
-    overrides=(
-        baca.space((21, 26), (1, 32)),
-        baca.space((49, 56), (1, 20)),
-        baca.space((113, 114), (1, 20)),
-        baca.space((116, 118), (1, 20)),
-        baca.space((171, 176), (1, 20)),
-        baca.space([191, 192, 194, 195], (1, 32)),
-        baca.space(text_measure_numbers, (1, 288), fermata=True),
-    ),
-)
-
 if __name__ == "__main__":
-    baca.build.make_layout_ly(breaks, spacing)
+    baca.build.make_layout_ly(
+        breaks,
+        fallback_duration=(1, 40),
+        overrides=(
+            baca.space((21, 26), (1, 32)),
+            baca.space((49, 56), (1, 20)),
+            baca.space((113, 114), (1, 20)),
+            baca.space((116, 118), (1, 20)),
+            baca.space((171, 176), (1, 20)),
+            baca.space([191, 192, 194, 195], (1, 32)),
+            baca.space(text_measure_numbers, (1, 288), fermata=True),
+        ),
+    )
