@@ -207,6 +207,6 @@ if __name__ == "__main__":
             baca.space((116, 118), (1, 20)),
             baca.space((171, 176), (1, 20)),
             baca.space([191, 192, 194, 195], (1, 32)),
-            baca.space(text_measure_numbers, (1, 288), fermata=True),
+            baca.space(text_measure_numbers, (1, 288)),
         ),
     )

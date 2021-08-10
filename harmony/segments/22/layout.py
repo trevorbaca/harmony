@@ -17,5 +17,5 @@ if __name__ == "__main__":
     baca.build.make_layout_ly(
         breaks,
         fallback_duration=(1, 40),
-        overrides=(baca.space([11], (1, 288), fermata=True),),
+        overrides=(baca.space([11], (1, 288)),),
     )
