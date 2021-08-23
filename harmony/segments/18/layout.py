@@ -5,12 +5,12 @@ distances = [18, (32), (26, 26, 32), (26, 26, 26, 26, 32)]
 spacing = baca.SpacingSpecifier(
     breaks=baca.breaks(
         baca.page(
+            1,
             baca.system(measure=1, y_offset=40, distances=distances),
-            number=1,
         ),
         baca.page(
+            2,
             baca.system(measure=8, y_offset=40, distances=distances),
-            number=2,
         ),
     ),
     fallback_duration=(1, 40),
