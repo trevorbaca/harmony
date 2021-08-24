@@ -2,12 +2,10 @@ import baca
 
 distances = [18, (26), (21, 21, 26), (21, 21, 21, 21, 26)]
 
-spacing = baca.SpacingSpecifier(
-    breaks=baca.breaks(
-        baca.page(
-            1,
-            baca.system(measure=1, y_offset=90, distances=distances),
-        ),
+spacing = baca.make_layout(
+    baca.page(
+        1,
+        baca.system(measure=1, y_offset=90, distances=distances),
     ),
     fallback_duration=(1, 40),
     overrides=(baca.space(3, (1, 64)),),
