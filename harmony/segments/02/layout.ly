@@ -7,9 +7,9 @@
 %  ]
 
 
-%! baca.SingleStaffScoreTemplate.__call__()
+%! baca.make_configuration_empty_score()
 \context Score = "Score"
-%! baca.SingleStaffScoreTemplate.__call__()
+%! baca.make_configuration_empty_score()
 <<
 
     %! abjad.ScoreTemplate._make_global_context()
@@ -312,5 +312,5 @@
     %! abjad.ScoreTemplate._make_global_context()
     >>
 
-%! baca.SingleStaffScoreTemplate.__call__()
+%! baca.make_configuration_empty_score()
 >>
