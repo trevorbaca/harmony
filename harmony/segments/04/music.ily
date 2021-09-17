@@ -5405,7 +5405,7 @@ segment.04.Viola.Music.Voice = {
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(1)
     \once \override TupletBracket.direction = #up
-    %! baca.SegmentMaker._color_repeat_pitch_classes_()
+    %! baca.segmentmaker.color_repeat_pitch_classes()
     %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'2.
@@ -5520,7 +5520,7 @@ segment.04.Viola.Music.Voice = {
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(1)
             \override NoteHead.style = #'harmonic
-            %! baca.SegmentMaker._color_repeat_pitch_classes_()
+            %! baca.segmentmaker.color_repeat_pitch_classes()
             %! REPEAT_PITCH_CLASS_COLORING
             \baca-repeat-pitch-class-coloring
             %! baca.clef_x_extent_false()
