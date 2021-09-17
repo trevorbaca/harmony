@@ -298,8 +298,9 @@ def rests_filter_duration(pair):
 
 
 def _site(frame):
-    prefix = "harmony"
-    return baca.site(frame, prefix)
+    #prefix = "harmony"
+    #return baca.site(frame, prefix)
+    return baca.site_new(frame)
 
 
 def appoggiato(
