@@ -329,7 +329,7 @@ segment.29.Bass.Flute.Music.Voice = {
     %! baca.SegmentMaker.attach_color_literal(2)
     %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf''!4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -445,7 +445,7 @@ segment.29.Bass.Flute.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf''4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -461,7 +461,7 @@ segment.29.Bass.Flute.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -494,9 +494,9 @@ segment.29.Bass.Flute.Music.Voice = {
     %! baca.SegmentMaker._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf''1
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -765,7 +765,7 @@ segment.29.Percussion.I.Music.Voice = {
     %! baca.SegmentMaker.attach_color_literal(2)
     %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     c'16
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -859,16 +859,16 @@ segment.29.Percussion.I.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r8.
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r1
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r8.
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     c'16
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1128,7 +1128,7 @@ segment.29.Percussion.II.Music.Voice = {
     %! baca.SegmentMaker.attach_color_literal(2)
     %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r1
     %! REAPPLIED_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1214,22 +1214,22 @@ segment.29.Percussion.II.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r4
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r8.
 
     %! baca.SegmentMaker._color_not_yet_pitched()
     %! NOT_YET_PITCHED_COLORING
     \baca-not-yet-pitched-coloring
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     b'16
     %! baca.damp()
     %! baca.IndicatorCommand._call()
@@ -1493,7 +1493,7 @@ segment.29.Harp.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'!16
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1584,13 +1584,13 @@ segment.29.Harp.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r8.
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r1
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     r4
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -1844,7 +1844,7 @@ segment.29.Viola.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \pitchedTrill
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'!4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1960,7 +1960,7 @@ segment.29.Viola.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1976,7 +1976,7 @@ segment.29.Viola.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2009,9 +2009,9 @@ segment.29.Viola.Music.Voice = {
     %! baca.SegmentMaker._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'1
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -2278,7 +2278,7 @@ segment.29.Cello.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \pitchedTrill
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'!4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2394,7 +2394,7 @@ segment.29.Cello.I.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2410,7 +2410,7 @@ segment.29.Cello.I.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2443,11 +2443,11 @@ segment.29.Cello.I.Music.Voice = {
     %! baca.SegmentMaker._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'1
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     - \tweak direction #up
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -2714,7 +2714,7 @@ segment.29.Cello.II.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \pitchedTrill
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'!4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2830,7 +2830,7 @@ segment.29.Cello.II.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2846,7 +2846,7 @@ segment.29.Cello.II.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2879,11 +2879,11 @@ segment.29.Cello.II.Music.Voice = {
     %! baca.SegmentMaker._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'1
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     - \tweak direction #up
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -3150,7 +3150,7 @@ segment.29.Contrabass.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \pitchedTrill
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'!4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3266,7 +3266,7 @@ segment.29.Contrabass.I.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3282,7 +3282,7 @@ segment.29.Contrabass.I.Music.Voice = {
     %! baca.SegmentMaker._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3315,11 +3315,11 @@ segment.29.Contrabass.I.Music.Voice = {
     %! baca.SegmentMaker._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     bf'1
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     - \tweak direction #up
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -3614,7 +3614,7 @@ segment.29.Contrabass.II.Music.Voice = {
     %! baca.glissando()
     %! abjad.glissando(6)
     \undo \hide NoteHead
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     a,1. * 2/3
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3781,31 +3781,31 @@ segment.29.Contrabass.II.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     a,4
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     a,8
 
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    %! harmony.sixteenths()
+    %! harmony.library.sixteenths()
     a,8
     %! baca.scp_spanner()
     %! SCP_SPANNER
