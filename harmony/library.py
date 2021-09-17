@@ -297,12 +297,6 @@ def rests_filter_duration(pair):
 ### FUNCTIONS ###
 
 
-def _site(frame):
-    #prefix = "harmony"
-    #return baca.site(frame, prefix)
-    return baca.site_new(frame)
-
-
 def appoggiato(
     *,
     divisions=None,
@@ -408,7 +402,7 @@ def appoggiato(
         *commands,
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
@@ -470,7 +464,7 @@ def phjc(
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
@@ -496,7 +490,7 @@ def rimbalzandi(*, extra_counts=None, rest_except=None):
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
         preprocessor=lambda _: baca.Sequence(_).fuse([2], cyclic=True),
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
@@ -705,7 +699,7 @@ def sixteenths(
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor_,
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
@@ -825,7 +819,7 @@ def train(counts, *, rest_leaves=None):
         ),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
@@ -905,7 +899,7 @@ def warble(
         rmakers.denominator((1, 16)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=_site(inspect.currentframe()),
+        tag=baca.site(inspect.currentframe()),
     )
 
 
