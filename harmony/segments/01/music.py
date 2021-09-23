@@ -14,6 +14,7 @@ stage_markup = (
 )
 
 maker = baca.SegmentMaker(
+    **baca.segments(),
     activate=[
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.STAGE_NUMBER,
