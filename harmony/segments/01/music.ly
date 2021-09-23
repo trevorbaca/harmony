@@ -1,30 +1,30 @@
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_format_pieces()
 \version "2.23.1"
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_formatted_includes()
 \include "../../stylesheet.ily"
 %! baca.path.extern()
 \include "music.ily"
 
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_formatted_blocks()
 \score
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_formatted_blocks()
 {
 
-    %! baca.SegmentMaker._make_lilypond_file()
+    %! baca._make_lilypond_file()
     <<
 
-        %! baca.SegmentMaker._make_lilypond_file()
+        %! baca._make_lilypond_file()
         {
-            %! baca.SegmentMaker._make_lilypond_file()
+            %! baca._make_lilypond_file()
             \include "layout.ly"
-        %! baca.SegmentMaker._make_lilypond_file()
+        %! baca._make_lilypond_file()
         }
 
         %! harmony.ScoreTemplate.__call__()
@@ -153,9 +153,9 @@
         %! harmony.ScoreTemplate.__call__()
         >>
 
-    %! baca.SegmentMaker._make_lilypond_file()
+    %! baca._make_lilypond_file()
     >>
 
-%! baca.SegmentMaker._make_lilypond_file()
+%! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_formatted_blocks()
 }
