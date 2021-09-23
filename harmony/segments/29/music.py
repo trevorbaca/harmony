@@ -10,6 +10,7 @@ from harmony import library as harmony
 stage_markup = (("[CC.1-2]", 1),)
 
 maker = baca.SegmentMaker(
+    **baca.segments(),
     activate=[
         baca.tags.LOCAL_MEASURE_NUMBER,
         baca.tags.STAGE_NUMBER,
