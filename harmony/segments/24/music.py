@@ -16,15 +16,6 @@ stage_markup = (
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    activate=[
-        baca.tags.LOCAL_MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
-    ],
-    deactivate=[
-        *baca.tags.instrument_color_tags(),
-        *baca.tags.margin_markup_color_tags(),
-        baca.tags.RHYTHM_ANNOTATION_SPANNER,
-    ],
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
@@ -714,4 +705,16 @@ maker(
 )
 
 if __name__ == "__main__":
-    baca.build.make_segment_pdf(maker, runtime=baca.segments(runtime=True))
+    baca.build.make_segment_pdf(
+        maker,
+        **baca.segments(runtime=True),
+        activate=[
+            baca.tags.LOCAL_MEASURE_NUMBER,
+            baca.tags.STAGE_NUMBER,
+        ],
+        deactivate=[
+            *baca.tags.instrument_color_tags(),
+            *baca.tags.margin_markup_color_tags(),
+            baca.tags.RHYTHM_ANNOTATION_SPANNER,
+        ],
+    )
