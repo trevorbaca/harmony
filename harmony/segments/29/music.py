@@ -11,15 +11,6 @@ stage_markup = (("[CC.1-2]", 1),)
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    activate=[
-        baca.tags.LOCAL_MEASURE_NUMBER,
-        baca.tags.STAGE_NUMBER,
-    ],
-    deactivate=[
-        *baca.tags.instrument_color_tags(),
-        *baca.tags.margin_markup_color_tags(),
-        baca.tags.RHYTHM_ANNOTATION_SPANNER,
-    ],
     fermata_measure_empty_overrides=[3],
     final_segment=True,
     instruments=harmony.instruments,
@@ -248,4 +239,16 @@ maker(
 )
 
 if __name__ == "__main__":
-    baca.build.make_segment_pdf(maker, runtime=baca.segments(runtime=True))
+    baca.build.make_segment_pdf(
+        maker,
+        **baca.segments(runtime=True),
+        activate=[
+            baca.tags.LOCAL_MEASURE_NUMBER,
+            baca.tags.STAGE_NUMBER,
+        ],
+        deactivate=[
+            *baca.tags.instrument_color_tags(),
+            *baca.tags.margin_markup_color_tags(),
+            baca.tags.RHYTHM_ANNOTATION_SPANNER,
+        ],
+    )
