@@ -16,13 +16,10 @@ stage_markup = (
 
 maker = baca.SegmentMaker(
     **baca.segments(),
-    fermata_measure_empty_overrides=[3, 6],
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
-    parts_metric_modulation_multiplier=(0.525, 0.525),
     score_template=harmony.ScoreTemplate(),
-    stage_markup=stage_markup,
     time_signatures=[
         (6, 4),
         (4, 4),
@@ -31,7 +28,6 @@ maker = baca.SegmentMaker(
         (5, 4),
         (1, 4),
     ],
-    transpose_score=True,
 )
 
 maker(
@@ -765,4 +761,8 @@ if __name__ == "__main__":
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
+        fermata_measure_empty_overrides=[3, 6],
+        parts_metric_modulation_multiplier=(0.525, 0.525),
+        stage_markup=stage_markup,
+        transpose_score=True,
     )
