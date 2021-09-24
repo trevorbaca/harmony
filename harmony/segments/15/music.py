@@ -19,9 +19,7 @@ maker = baca.SegmentMaker(
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
-    parts_metric_modulation_multiplier=(0.525, 0.525),
     score_template=harmony.ScoreTemplate(),
-    stage_markup=stage_markup,
     time_signatures=[
         (4, 4),
         (4, 4),
@@ -34,7 +32,6 @@ maker = baca.SegmentMaker(
         (3, 4),
         (2, 4),
     ],
-    transpose_score=True,
 )
 
 maker(
@@ -735,4 +732,7 @@ if __name__ == "__main__":
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
+        parts_metric_modulation_multiplier=(0.525, 0.525),
+        stage_markup=stage_markup,
+        transpose_score=True,
     )
