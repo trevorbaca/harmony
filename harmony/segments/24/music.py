@@ -14,7 +14,7 @@ stage_markup = (
     ("[X.6-8]", 7),
 )
 
-maker = baca.SegmentMaker(
+maker = baca.CommandAccumulator(
     **baca.segments(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,

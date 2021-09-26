@@ -9,7 +9,7 @@ from harmony import library as harmony
 
 stage_markup = (("[CC.1-2]", 1),)
 
-maker = baca.SegmentMaker(
+maker = baca.CommandAccumulator(
     **baca.segments(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
