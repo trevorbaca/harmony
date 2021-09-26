@@ -15,7 +15,7 @@ stage_markup = (
     ("[▶P.1]", 11, "#darkgreen"),
 )
 
-maker = baca.SegmentMaker(
+maker = baca.CommandAccumulator(
     **baca.segments(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
