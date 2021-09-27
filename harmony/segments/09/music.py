@@ -12,7 +12,7 @@ stage_markup = (
     ("[I.2]", 2),
 )
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
@@ -24,7 +24,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.not_parts(
         baca.rehearsal_mark(
@@ -43,7 +43,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
     baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
@@ -54,7 +54,7 @@ maker(
 
 # bfl
 
-maker(
+commands(
     ("bfl", 1),
     harmony.sixteenths(
         [-4, 8, "-"],
@@ -73,7 +73,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("bfl", 2),
     harmony.sixteenths(
         [3, 6, 3, 3, 6, 3],
@@ -86,14 +86,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("bfl", (1, 2)),
     baca.dls_staff_padding(4),
 )
 
 # perc1
 
-maker(
+commands(
     ("perc1", 1),
     harmony.sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
@@ -112,7 +112,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("perc1", 2),
     harmony.sixteenths(
         [2, -2, -4, -4, 2, -2, 2, -2, -4],
@@ -128,7 +128,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("perc1", (1, 2)),
     harmony.slate_staff_position(),
     baca.dls_staff_padding(6),
@@ -136,7 +136,7 @@ maker(
 
 # perc2
 
-maker(
+commands(
     ("perc2", 2),
     harmony.sixteenths(
         [3, -6, 3, 3, -6, 3],
@@ -174,14 +174,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("perc2", (1, 2)),
     baca.dls_staff_padding(6),
 )
 
 # hp
 
-maker(
+commands(
     ("hp", 1),
     harmony.sixteenths(
         [-6, -2, 4, "-"],
@@ -201,7 +201,7 @@ maker(
 
 # va
 
-maker(
+commands(
     ("va", 1),
     harmony.sixteenths(
         [-4, "+"],
@@ -223,21 +223,21 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("va", 2),
     baca.pitch("C4"),
 )
 
 # vc1
 
-maker(
+commands(
     ("vc1", (1, 2)),
     baca.pitch("B4"),
 )
 
 # vc2
 
-maker(
+commands(
     ("vc2", (1, 2)),
     baca.pitch("Dqs4"),
     baca.markup(
@@ -249,7 +249,7 @@ maker(
 
 # cb1
 
-maker(
+commands(
     ("cb1", 1),
     baca.clef("bass"),
     baca.pitch("E3"),
@@ -262,14 +262,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("cb1", 2),
     baca.pitch("F3"),
 )
 
 # va, vc1, vc2, cb2
 
-maker(
+commands(
     (["va", "vc1", "vc2", "cb1"], 2),
     harmony.sixteenths(
         [-12, 12, -4],
@@ -314,7 +314,7 @@ maker(
 
 # cb2
 
-maker(
+commands(
     ("cb2", 1),
     baca.clef("bass"),
     baca.pitch("A1"),
@@ -326,7 +326,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("cb2", 2),
     harmony.sixteenths(
         [-9, 3, -9, 3],
@@ -366,7 +366,7 @@ maker(
 
 # vc1, vc2, cb1, cb2
 
-maker(
+commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
     harmony.sixteenths(
         [-4, 8, "-"],
@@ -380,14 +380,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
     baca.dls_staff_padding(4),
 )
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,

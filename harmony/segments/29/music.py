@@ -9,7 +9,7 @@ from harmony import library as harmony
 
 stage_markup = (("[CC.1-2]", 1),)
 
-maker = baca.CommandAccumulator(
+commands = baca.CommandAccumulator(
     **baca.segments(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
@@ -22,7 +22,7 @@ maker = baca.CommandAccumulator(
     ],
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.not_parts(
         baca.rehearsal_mark(
@@ -42,20 +42,20 @@ maker(
     baca.bar_line("|.", baca.selectors.skip(-1)),
 )
 
-maker(
+commands(
     "Global_Skips",
     baca.metronome_mark("72", baca.selectors.skip(1 - 1)),
     baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
 )
 
-maker(
+commands(
     "Global_Rests",
     baca.global_fermata("very_long", baca.selectors.rest(3 - 1)),
 )
 
 # text
 
-maker(
+commands(
     "Global_Skips",
     baca.not_parts(
         baca.markup(
@@ -69,7 +69,7 @@ maker(
 
 # bfl
 
-maker(
+commands(
     ("bfl", 1),
     baca.pitch("Bb4"),
     baca.trill_spanner(
@@ -77,14 +77,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("bfl", (1, 2)),
     baca.dls_staff_padding(4),
 )
 
 # perc1
 
-maker(
+commands(
     ("perc1", 1),
     harmony.sixteenths(
         [1, -22, 1],
@@ -103,14 +103,14 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("perc1", (1, 2)),
     baca.dls_staff_padding(6),
 )
 
 # perc2
 
-maker(
+commands(
     ("perc2", 1),
     harmony.sixteenths(
         ["-", 1],
@@ -123,7 +123,7 @@ maker(
 
 # hp
 
-maker(
+commands(
     ("hp", 1),
     harmony.sixteenths(
         [1, "-"],
@@ -134,7 +134,7 @@ maker(
     baca.dynamic("f"),
 )
 
-maker(
+commands(
     ("hp", (1, 2)),
     baca.dls_staff_padding(4),
 )
@@ -147,7 +147,7 @@ maker(
 
 # cb1
 
-maker(
+commands(
     ("cb1", 1),
     baca.pitch(
         "Bb4",
@@ -161,7 +161,7 @@ maker(
 
 # cb2
 
-maker(
+commands(
     ("cb2", 1),
     harmony.sixteenths(
         [16, 4, 2, 2],
@@ -188,7 +188,7 @@ maker(
     ),
 )
 
-maker(
+commands(
     ("cb2", -1),
     baca.not_parts(
         baca.chunk(
@@ -203,7 +203,7 @@ maker(
 
 # va, vc1, vc2
 
-maker(
+commands(
     (["va", "vc1", "vc2"], 1),
     baca.pitch("Bb4"),
     baca.trill_spanner(
@@ -214,7 +214,7 @@ maker(
 
 # va, vc1, vc2, cb1
 
-maker(
+commands(
     (["bfl", "va", "vc1", "vc2", "cb1"], 1),
     harmony.sixteenths(
         [4, 4, 16],
@@ -228,14 +228,14 @@ maker(
 
 # va, vc1, vc2, cb1, cb2
 
-maker(
+commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
     baca.dls_staff_padding(4),
 )
 
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
-        maker,
+        commands,
         **baca.segments(runtime=True),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
