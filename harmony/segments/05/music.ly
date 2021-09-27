@@ -10,11 +10,8 @@
 %! baca.path.extern()
 \include "music.ily"
 
-%! baca._make_lilypond_file()
 \header { composer = ##f poet = ##f title = ##f }
-%! baca._make_lilypond_file()
 \layout { indent = 0 }
-%! baca._make_lilypond_file()
 \paper { print-first-page-number = ##t }
 %! __make_segment_pdf__
 \paper { first-page-number = #7 }

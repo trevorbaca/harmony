@@ -10,7 +10,7 @@ segment.10.Global.Skips = {
     \time 6/4
     %! EMPTY_START_BAR
     %! +SEGMENT
-    %! baca._make_global_skips(4)
+    %! baca._attach_nonfirst_empty_start_bar()
     \bar ""
     %! baca.attach_color_literal(2)
     %! REAPPLIED_TIME_SIGNATURE_COLOR
