@@ -16,7 +16,7 @@ stage_markup = (
 )
 
 commands = baca.CommandAccumulator(
-    **baca.segments(),
+    **baca.segment_accumulation_defaults(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
@@ -959,7 +959,7 @@ commands(
 if __name__ == "__main__":
     baca.build.make_segment_pdf(
         commands,
-        **baca.segments(runtime=True),
+        **baca.segment_interpretation_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
