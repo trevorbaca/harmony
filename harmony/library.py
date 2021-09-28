@@ -1000,8 +1000,6 @@ class ScoreTemplate(baca.ScoreTemplate):
 
     ### CLASS VARIABLES ###
 
-    __documentation_section__ = None
-
     _always_make_global_rests = True
 
     # _global_rests_in_topmost_staff = True
