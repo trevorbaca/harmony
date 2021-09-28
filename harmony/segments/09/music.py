@@ -17,11 +17,12 @@ commands = baca.CommandAccumulator(
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
-    score_template=harmony.ScoreTemplate(),
+    score_template=harmony.make_empty_score,
     time_signatures=[
         (6, 4),
         (6, 4),
     ],
+    voice_abbreviations=harmony.voice_abbreviations,
 )
 
 commands(
@@ -41,6 +42,7 @@ commands(
             font_size=4,
         ),
     ),
+    voice_abbreviations=harmony.voice_abbreviations,
 )
 
 commands(
@@ -393,6 +395,8 @@ if __name__ == "__main__":
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
         ],
+        always_make_global_rests=True,
+        global_rests_in_every_staff=True,
         deactivate=[
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
