@@ -42,7 +42,6 @@ commands(
             font_size=4,
         ),
     ),
-    voice_abbreviations=harmony.voice_abbreviations,
 )
 
 commands(
