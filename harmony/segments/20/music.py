@@ -3,9 +3,9 @@ import baca
 
 from harmony import library as harmony
 
-###############################################################################
-##################################### [T] #####################################
-###############################################################################
+#########################################################################################
+######################################### 20 [T] ########################################
+#########################################################################################
 
 stage_markup = (
     ("[▶U.1]", 1, "#darkgreen"),
@@ -13,12 +13,14 @@ stage_markup = (
     ("[T.1-8]", 3),
 )
 
+score = harmony.make_empty_score()
+voice_names = baca.accumulator.get_voice_names(score)
+
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
     instruments=harmony.instruments,
     margin_markups=harmony.margin_markups,
     metronome_marks=harmony.metronome_marks,
-    score_template=harmony.make_empty_score,
     time_signatures=[
         (4, 4),
         (3, 4),
@@ -32,6 +34,7 @@ commands = baca.CommandAccumulator(
         (4, 4),
     ],
     voice_abbreviations=harmony.voice_abbreviations,
+    voice_names=voice_names,
 )
 
 commands(
@@ -718,6 +721,7 @@ if __name__ == "__main__":
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
         parts_metric_modulation_multiplier=(0.525, 0.525),
+        score=score,
         stage_markup=stage_markup,
         transpose_score=True,
     )
