@@ -511,7 +511,7 @@ segment.01.Bass.Flute.Music.Voice = {
     %! baca.dots_x_extent_false()
     %! baca.OverrideCommand._call(1)
     \override Dots.X-extent = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "treble"
@@ -521,7 +521,7 @@ segment.01.Bass.Flute.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
@@ -2985,7 +2985,7 @@ segment.01.Viola.Music.Voice = {
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 4
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "alto"
@@ -2995,7 +2995,7 @@ segment.01.Viola.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
@@ -3627,7 +3627,7 @@ segment.01.Cello.I.Music.Voice = {
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 6
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "bass"
@@ -3637,7 +3637,7 @@ segment.01.Cello.I.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
@@ -4375,7 +4375,7 @@ segment.01.Cello.II.Music.Voice = {
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 4
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "bass"
@@ -4385,7 +4385,7 @@ segment.01.Cello.II.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
@@ -5023,7 +5023,7 @@ segment.01.Contrabass.I.Music.Voice = {
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 4
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "bass"
@@ -5033,7 +5033,7 @@ segment.01.Contrabass.I.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
@@ -5815,7 +5815,7 @@ segment.01.Contrabass.II.Music.Voice = {
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 4
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
     \clef "bass"
@@ -5825,7 +5825,7 @@ segment.01.Contrabass.II.Music.Voice = {
     %! baca.attach_color_literal(1)
     %! DEFAULT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
-    %! abjad.ScoreTemplate.attach_defaults(3)
+    %! baca._attach_default_indicators(3)
     %! baca.treat_persistent_wrapper(2)
     %! baca._set_status_tag()
     %! DEFAULT_CLEF
