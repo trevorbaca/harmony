@@ -1065,8 +1065,7 @@ voice_abbreviations = {
 
 
 def make_empty_score():
-    site = "harmony.ScoreTemplate.__call__()"
-    tag = abjad.Tag(site)
+    tag = baca.site(inspect.currentframe())
     # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
 

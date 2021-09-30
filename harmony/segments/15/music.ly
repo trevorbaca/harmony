@@ -33,9 +33,9 @@
         %! baca._make_lilypond_file()
         }
 
-        %! harmony.ScoreTemplate.__call__()
+        %! harmony.make_empty_score()
         \context Score = "Score"
-        %! harmony.ScoreTemplate.__call__()
+        %! harmony.make_empty_score()
         <<
 
             %! abjad.ScoreTemplate._make_global_context()
@@ -52,111 +52,111 @@
             %! abjad.ScoreTemplate._make_global_context()
             >>
 
-            %! harmony.ScoreTemplate.__call__()
+            %! harmony.make_empty_score()
             \context MusicContext = "Music_Context"
-            %! harmony.ScoreTemplate.__call__()
+            %! harmony.make_empty_score()
             <<
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 \context WindSectionStaffGroup = "Wind_Section_Staff_Group"
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 <<
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag BassFlute
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Bass_Flute_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Bass.Flute.Music.Staff }
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 >>
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 \context PercussionSectionStaffGroup = "Percussion_Section_Staff_Group"
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 <<
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag PercussionI
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Percussion_I_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Percussion.I.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag PercussionII
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Percussion_II_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Percussion.II.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag Harp
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Harp_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Harp.Music.Staff }
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 >>
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 \context StringSectionStaffGroup = "String_Section_Staff_Group"
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 <<
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag Viola
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Viola_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Viola.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag CelloI
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Cello_I_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Cello.I.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag CelloII
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Cello_II_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Cello.II.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag ContrabassI
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Contrabass_I_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Contrabass.I.Music.Staff }
 
                     %! baca.ScoreTemplate._attach_liypond_tag()
                     \tag ContrabassII
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     \context Staff = "Contrabass_II_Music_Staff"
-                    %! harmony.ScoreTemplate.__call__()
+                    %! harmony.make_empty_score()
                     %! baca.path.extern()
                     { \segment.15.Contrabass.II.Music.Staff }
 
-                %! harmony.ScoreTemplate.__call__()
+                %! harmony.make_empty_score()
                 >>
 
-            %! harmony.ScoreTemplate.__call__()
+            %! harmony.make_empty_score()
             >>
 
-        %! harmony.ScoreTemplate.__call__()
+        %! harmony.make_empty_score()
         >>
 
     %! baca._make_lilypond_file()

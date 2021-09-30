@@ -895,7 +895,7 @@ segment.23.Bass.Flute.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 2]
-    %! harmony.library.warble()
+    %! harmony.warble()
     r2
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -953,17 +953,17 @@ segment.23.Bass.Flute.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.warble()
+    %! harmony.warble()
     r2
 
-    %! harmony.library.warble()
+    %! harmony.warble()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.warble()
+    %! harmony.warble()
     \times 8/9
-    %! harmony.library.warble()
+    %! harmony.warble()
     {
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         r32
 
         %! baca.note_head_font_size()
@@ -978,7 +978,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca.accidental_y_offset()
         %! baca.OverrideCommand._call(1)
         \override Accidental.Y-offset = -2
-        %! harmony.library.warble()
+        %! harmony.warble()
         cs''!32
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -1000,7 +1000,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! harmony.library.warble()
+        %! harmony.warble()
         [
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
@@ -1011,28 +1011,28 @@ segment.23.Bass.Flute.Music.Voice = {
         %! SPANNER_START
         \startTrillSpan
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         c''32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         b'32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         bf'!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         a'32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         af'!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         g'32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         gs'!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         a'32
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -1075,28 +1075,28 @@ segment.23.Bass.Flute.Music.Voice = {
         %! EXPLICIT_DYNAMIC
         \>
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         as'!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         b'32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         c''32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         cs''!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         c''32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         b'32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         bf'!32
 
-        %! harmony.library.warble()
+        %! harmony.warble()
         a'32
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -1112,7 +1112,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \!
-        %! harmony.library.warble()
+        %! harmony.warble()
         ]
         %! baca.note_head_font_size()
         %! baca.OverrideCommand._call(2)
@@ -1132,7 +1132,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! SPANNER_STOP
         %@% <> \bacaStopTextSpanRhythmAnnotation
 
-    %! harmony.library.warble()
+    %! harmony.warble()
     }
 
     %! baca._make_multimeasure_rest_container(7)
@@ -1431,16 +1431,16 @@ segment.23.Bass.Flute.Music.Voice = {
     %! baca._make_multimeasure_rest_container(7)
     >>
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
         %! baca._comment_measure_numbers()
         % [Bass_Flute_Music_Voice measure 8]
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r4
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
@@ -1498,7 +1498,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! SPANNER_START
         %@% \bacaStartTextSpanRhythmAnnotation
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         ef'!16
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -1549,34 +1549,34 @@ segment.23.Bass.Flute.Music.Voice = {
         %! SPANNER_START
         \bacaStartTextSpanCovered
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     ef'4
     %! baca._attach_shadow_tie_indicators()
     - \tweak stencil ##f
     %! baca._attach_shadow_tie_indicators()
     ~
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         ef'8
         \repeatTie
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8.
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.covered_spanner()
     %! COVERED_SPANNER
@@ -1683,7 +1683,7 @@ segment.23.Bass.Flute.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -1697,13 +1697,13 @@ segment.23.Bass.Flute.Music.Staff = <<
     %! baca.path.extern()
     { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Bass_Flute_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Bass.Flute.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -1764,7 +1764,7 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
     %! REAPPLIED_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1853,7 +1853,7 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.stem_down()
     %! baca.OverrideCommand._call(1)
     \once \override Stem.direction = #down
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     b4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -1973,7 +1973,7 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(1)
     \override TupletBracket.direction = #up
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     b4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2051,23 +2051,23 @@ segment.23.Percussion.I.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 5]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     b4
     %! baca.laissez_vibrer()
     %! baca.IndicatorCommand._call()
     \laissezVibrer
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 6]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     b4
     %! baca.laissez_vibrer()
     %! baca.IndicatorCommand._call()
@@ -2076,10 +2076,10 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.OverrideCommand._call(2)
     \revert Stem.direction
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(2)
@@ -2184,7 +2184,7 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(1)
     \override TupletBracket.direction = #up
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -2242,20 +2242,20 @@ segment.23.Percussion.I.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 2/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
         %! baca.stem_down()
         %! baca.OverrideCommand._call(1)
         \override Stem.direction = #down
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         d'4
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -2285,30 +2285,30 @@ segment.23.Percussion.I.Music.Voice = {
         %! baca._attach_shadow_tie_indicators()
         ~
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 2/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         d'4
         \repeatTie
         %! baca.stem_down()
         %! baca.OverrideCommand._call(2)
         \revert Stem.direction
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(2)
@@ -2413,7 +2413,7 @@ segment.23.Percussion.I.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -2429,13 +2429,13 @@ segment.23.Percussion.I.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Percussion_I_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Percussion.I.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -2661,7 +2661,7 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2748,10 +2748,10 @@ segment.23.Percussion.II.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(2)
@@ -2820,7 +2820,7 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     b4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -2902,7 +2902,7 @@ segment.23.Percussion.II.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r2
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(2)
@@ -2913,11 +2913,11 @@ segment.23.Percussion.II.Music.Voice = {
     %! SPANNER_STOP
     %@% <> \bacaStopTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
         %! baca._comment_measure_numbers()
@@ -2925,7 +2925,7 @@ segment.23.Percussion.II.Music.Voice = {
         %! baca.tuplet_bracket_up()
         %! baca.OverrideCommand._call(1)
         \override TupletBracket.direction = #up
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
@@ -2986,7 +2986,7 @@ segment.23.Percussion.II.Music.Voice = {
         %! baca.stem_down()
         %! baca.OverrideCommand._call(1)
         \override Stem.direction = #down
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         d'8
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -3013,26 +3013,26 @@ segment.23.Percussion.II.Music.Voice = {
         %! baca.IndicatorCommand._call()
         ^ \baca-slate-brush-markup
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r16
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         d'8
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -3044,13 +3044,13 @@ segment.23.Percussion.II.Music.Voice = {
         %! baca.OverrideCommand._call(2)
         \revert Stem.direction
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r16
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(2)
@@ -3155,7 +3155,7 @@ segment.23.Percussion.II.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -3171,13 +3171,13 @@ segment.23.Percussion.II.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Percussion_II_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Percussion.II.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -3232,7 +3232,7 @@ segment.23.Harp.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     fs'!4
     %! REAPPLIED_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3357,7 +3357,7 @@ segment.23.Harp.Music.Voice = {
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
     %! baca.metric_modulation_spanner()
     %! METRIC_MODULATION_SPANNER
@@ -3468,7 +3468,7 @@ segment.23.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 6]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e'4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3547,10 +3547,10 @@ segment.23.Harp.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -3711,7 +3711,7 @@ segment.23.Harp.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -3727,13 +3727,13 @@ segment.23.Harp.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Harp_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Harp.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -3808,7 +3808,7 @@ segment.23.Viola.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -3929,7 +3929,7 @@ segment.23.Viola.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
     %! baca.scp_spanner()
     %! SCP_SPANNER
@@ -4101,7 +4101,7 @@ segment.23.Viola.Music.Voice = {
     %! baca._style_fermata_measures(4)
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -4194,25 +4194,25 @@ segment.23.Viola.Music.Voice = {
     %! SPANNER_START
     \bacaStartTextSpanSCP
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -4220,31 +4220,31 @@ segment.23.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 5]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -4252,7 +4252,7 @@ segment.23.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 6]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -4298,31 +4298,31 @@ segment.23.Viola.Music.Voice = {
     %! SPANNER_START
     \bacaStartTextSpanSCP
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -4341,7 +4341,7 @@ segment.23.Viola.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 7]
     \afterGrace
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     d'2.
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -4565,7 +4565,7 @@ segment.23.Viola.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -4631,17 +4631,17 @@ segment.23.Viola.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 2/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
         %! baca.stem_down()
         %! baca.OverrideCommand._call(1)
         \override Stem.direction = #down
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -4662,20 +4662,20 @@ segment.23.Viola.Music.Voice = {
         %! baca.IndicatorCommand._call()
         - \accent
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 2/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -4687,13 +4687,13 @@ segment.23.Viola.Music.Voice = {
         %! baca.OverrideCommand._call(2)
         \revert Stem.direction
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(2)
@@ -4798,7 +4798,7 @@ segment.23.Viola.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -4814,13 +4814,13 @@ segment.23.Viola.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Viola_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Viola.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -4890,7 +4890,7 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -5011,7 +5011,7 @@ segment.23.Cello.I.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
     %! baca.scp_spanner()
     %! SCP_SPANNER
@@ -5238,7 +5238,7 @@ segment.23.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -5349,25 +5349,25 @@ segment.23.Cello.I.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -5375,31 +5375,31 @@ segment.23.Cello.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 5]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -5420,7 +5420,7 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.tuplet_bracket_down()
     %! baca.OverrideCommand._call(1)
     \override TupletBracket.direction = #down
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r2
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -5478,14 +5478,14 @@ segment.23.Cello.I.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! baca.triple_staccato()
         %! baca.IndicatorCommand._call()
@@ -5541,24 +5541,24 @@ segment.23.Cello.I.Music.Voice = {
         %! SPANNER_START
         \bacaStartTextSpanSCP
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! baca.triple_staccato()
         %! baca.IndicatorCommand._call()
         - \baca-staccati #3
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! baca.triple_staccato()
         %! baca.IndicatorCommand._call()
         - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 7]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -5599,13 +5599,13 @@ segment.23.Cello.I.Music.Voice = {
     %! SPANNER_START
     \bacaStartTextSpanSCP
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -5677,7 +5677,7 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
     %! baca.metric_modulation_spanner()
     %! METRIC_MODULATION_SPANNER
@@ -5748,20 +5748,20 @@ segment.23.Cello.I.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
         %! baca.stem_down()
         %! baca.OverrideCommand._call(1)
         \override Stem.direction = #down
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8.
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -5782,23 +5782,23 @@ segment.23.Cello.I.Music.Voice = {
         %! baca.IndicatorCommand._call()
         - \accent
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8.
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -5821,7 +5821,7 @@ segment.23.Cello.I.Music.Voice = {
         %! SPANNER_STOP
         %@% <> \bacaStopTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
     %! baca._make_multimeasure_rest_container(7)
@@ -5915,7 +5915,7 @@ segment.23.Cello.I.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -5931,13 +5931,13 @@ segment.23.Cello.I.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Cello_I_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Cello.I.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -6575,7 +6575,7 @@ segment.23.Cello.II.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 7]
     \afterGrace
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     d2.
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -6804,7 +6804,7 @@ segment.23.Cello.II.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r2
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -6865,17 +6865,17 @@ segment.23.Cello.II.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
         %! baca.stem_down()
         %! baca.OverrideCommand._call(1)
         \override Stem.direction = #down
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8.
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -6896,23 +6896,23 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.IndicatorCommand._call()
         - \accent
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/5
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         r8.
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         c'8
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -6935,7 +6935,7 @@ segment.23.Cello.II.Music.Voice = {
         %! SPANNER_STOP
         %@% <> \bacaStopTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
     %! baca._make_multimeasure_rest_container(7)
@@ -7029,7 +7029,7 @@ segment.23.Cello.II.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -7045,13 +7045,13 @@ segment.23.Cello.II.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Cello_II_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Cello.II.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -7121,7 +7121,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -7242,7 +7242,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r1
     %! baca.scp_spanner()
     %! SCP_SPANNER
@@ -7491,7 +7491,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.tuplet_bracket_down()
     %! baca.OverrideCommand._call(1)
     \override TupletBracket.direction = #down
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r2
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -7549,14 +7549,14 @@ segment.23.Contrabass.I.Music.Voice = {
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     \times 4/3
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     {
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
@@ -7624,24 +7624,24 @@ segment.23.Contrabass.I.Music.Voice = {
         %! SPANNER_START
         \bacaStartTextSpanSCP
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! baca.triple_staccato()
         %! baca.IndicatorCommand._call()
         - \baca-staccati #3
 
-        %! harmony.library.sixteenths()
+        %! harmony.sixteenths()
         e,4
         %! baca.triple_staccato()
         %! baca.IndicatorCommand._call()
         - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     }
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 7]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -7682,13 +7682,13 @@ segment.23.Contrabass.I.Music.Voice = {
     %! SPANNER_START
     \bacaStartTextSpanSCP
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
@@ -7763,7 +7763,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.attach_color_literal(2)
     %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     c'16
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
@@ -7852,16 +7852,16 @@ segment.23.Contrabass.I.Music.Voice = {
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r8.
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r2
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     r8.
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     c'16
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
@@ -7975,7 +7975,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -7991,13 +7991,13 @@ segment.23.Contrabass.I.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Contrabass_I_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Contrabass.I.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
 
@@ -8353,7 +8353,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -8504,33 +8504,33 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca.glissando()
     %! abjad.glissando(1)
     \override NoteHead.no-ledgers = ##t
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 6]
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
 
     %! baca.glissando()
@@ -8545,7 +8545,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca.glissando()
     %! abjad.glissando(6)
     \undo \hide NoteHead
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     e,4
     %! baca.scp_spanner()
     %! SCP_SPANNER
@@ -8561,7 +8561,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 7]
     \afterGrace
-    %! harmony.library.sixteenths()
+    %! harmony.sixteenths()
     d2.
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
@@ -8875,7 +8875,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! PHANTOM
     >>
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 }
 
@@ -8891,12 +8891,12 @@ segment.23.Contrabass.II.Music.Staff = <<
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
 
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     \context Voice = "Contrabass_II_Music_Voice"
-    %! harmony.ScoreTemplate.__call__()
+    %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Contrabass.II.Music.Voice }
 
-%! harmony.ScoreTemplate.__call__()
+%! harmony.make_empty_score()
 %! baca.path.extern()
 >>
