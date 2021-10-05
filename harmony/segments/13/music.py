@@ -920,18 +920,22 @@ if __name__ == "__main__":
     baca.build.make_segment_pdf(
         commands,
         **baca.segment_interpretation_defaults(),
-        activate=[
+        activate=(
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
-        ],
+        ),
         always_make_global_rests=True,
-        global_rests_in_every_staff=True,
-        deactivate=[
+        deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
-        ],
+        ),
         fermata_measure_empty_overrides=[2, 6],
+        global_rests_in_every_staff=True,
+        lilypond_file_keywords=baca.make_lilypond_file_dictionary(
+            include_layout_ly=True,
+            includes=["../../stylesheet.ily"],
+        ),
         parts_metric_modulation_multiplier=(0.525, 0.525),
         score=score,
         stage_markup=stage_markup,
