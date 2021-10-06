@@ -931,7 +931,9 @@ commands(
 )
 
 if __name__ == "__main__":
-    keywords = baca.interpret.make_keyword_dictionary(
+    metadata, persist, score, timing = baca.build.interpret_segment(
+        score,
+        commands,
         **baca.score_interpretation_defaults(),
         activate=(
             baca.tags.LOCAL_MEASURE_NUMBER,
@@ -945,13 +947,8 @@ if __name__ == "__main__":
         ),
         global_rests_in_every_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
-        score=score,
         stage_markup=stage_markup,
         transpose_score=True,
-    )
-    metadata, persist, score, timing = baca.build.interpret_segment(
-        commands,
-        **keywords,
     )
     lilypond_file = baca.make_lilypond_file(
         score,
