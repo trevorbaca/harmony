@@ -13,7 +13,7 @@
 \header { composer = ##f poet = ##f title = ##f }
 \layout { indent = 0 }
 \paper { print-first-page-number = ##t }
-%! __make_segment_pdf__
+%! baca._add_nonfirst_segment_preamble()
 \paper { first-page-number = #7 }
 
 %! baca._make_lilypond_file()
