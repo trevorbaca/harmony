@@ -1,4 +1,4 @@
-abjad.OrderedDict(
+dict(
     [
         ("catalog_number", "AWN-020"),
         ("composer", "Bača"),
