@@ -12,7 +12,7 @@ _reference_meters = (
 
 # instruments
 
-instruments = abjad.OrderedDict(
+instruments = dict(
     [
         ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
         #        ("Glockenspiel", abjad.Glockenspiel()),
@@ -41,7 +41,7 @@ instruments = abjad.OrderedDict(
 
 # margin markups
 
-margin_markups = abjad.OrderedDict(
+margin_markups = dict(
     [
         ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),
         ("Perc. I", abjad.MarginMarkup(markup=r"\harmony-perc-i-markup")),
@@ -55,7 +55,7 @@ margin_markups = abjad.OrderedDict(
     ]
 )
 
-metronome_marks = abjad.OrderedDict(
+metronome_marks = dict(
     [
         ("48", abjad.MetronomeMark((1, 4), 48)),
         (

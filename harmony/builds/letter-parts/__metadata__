@@ -1,4 +1,4 @@
-abjad.OrderedDict(
+dict(
     [
         ("catalog_number_suffix", "LET"),
         ("paper_size", "letter"),
