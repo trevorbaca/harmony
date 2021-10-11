@@ -5434,7 +5434,7 @@ segment.01.Contrabass.I.Music.Voice = {
     \startStaff
     %! baca.tuplet_number_text()
     %! baca.OverrideCommand._call(1)
-    \override TupletNumber.text = \markup { 5:4 }
+    \override TupletNumber.text = \markup 5:4
     %! baca.tuplet_bracket_up()
     %! baca.OverrideCommand._call(1)
     \override TupletBracket.direction = #up

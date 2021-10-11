@@ -5882,7 +5882,7 @@ segment.03.Cello.I.Music.Voice = {
 
         %! baca.tuplet_number_text()
         %! baca.OverrideCommand._call(1)
-        \once \override TupletNumber.text = \markup { 5:4 }
+        \once \override TupletNumber.text = \markup 5:4
         %! baca.skeleton()
         r8
 
@@ -6750,7 +6750,7 @@ segment.03.Cello.I.Music.Voice = {
         % [Cello_I_Music_Voice measure 8]
         %! baca.tuplet_number_text()
         %! baca.OverrideCommand._call(1)
-        \override TupletNumber.text = \markup { 5:4 }
+        \override TupletNumber.text = \markup 5:4
         %! baca.skeleton()
         c'16
         %! baca.stem_tremolo()
