@@ -94,7 +94,6 @@ commands(
         baca.markup(
             r"\harmony-text-eight",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(9 - 1),
         ),
     ),
@@ -336,7 +335,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -358,7 +356,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -420,7 +417,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -514,18 +510,15 @@ commands(
     baca.markup(
         r"\harmony-rh-bow-markup",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
     ),
     baca.markup(
         r"\harmony-rh-bow-plus-lh-bow-markup",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
         measures=4,
     ),
     baca.markup(
         r"\harmony-rh-bow-only-markup",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
         measures=12,
     ),
 )
@@ -551,7 +544,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -691,7 +683,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -817,7 +808,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -827,7 +817,6 @@ commands(
     baca.markup(
         r"\baca-eleven-a",
         abjad.tweak(1.5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -988,7 +977,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -1003,7 +991,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 

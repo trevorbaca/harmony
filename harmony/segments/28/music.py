@@ -79,7 +79,6 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-seven",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(6 - 1),
         ),
     ),
@@ -175,7 +174,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -192,7 +190,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -222,7 +219,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -249,7 +245,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -275,7 +270,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -299,7 +293,6 @@ commands(
         r"\baca-glockenspiel-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -343,7 +336,6 @@ commands(
     baca.markup(
         r"\harmony-rh-bow-plus-lh-bow-markup",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -411,7 +403,6 @@ commands(
         r"\baca-string-i-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -470,7 +461,6 @@ commands(
         r"\baca-string-i-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -494,7 +484,6 @@ commands(
         r"\baca-string-i-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -558,7 +547,6 @@ commands(
         r"\baca-string-i-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -588,7 +576,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -649,7 +636,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -688,7 +674,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -749,7 +734,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -760,10 +744,7 @@ commands(
     baca.stem_tremolo(
         baca.selectors.pleaves([0, -1]),
     ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
-    ),
+    baca.markup(r"\baca-quasi-bisb-markup"),
 )
 
 commands(

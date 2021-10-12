@@ -149,7 +149,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -174,7 +173,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -198,7 +196,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -239,7 +236,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -264,7 +260,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -334,7 +329,6 @@ commands(
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -457,10 +451,7 @@ commands(
     ("vc1", 1),
     baca.clef("treble"),
     baca.pitch("Aqf4"),
-    baca.markup(
-        r"\baca-eleven-e-flat",
-        literal=True,
-    ),
+    baca.markup(r"\baca-eleven-e-flat"),
 )
 
 commands(
@@ -486,7 +477,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 

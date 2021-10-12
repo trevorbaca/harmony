@@ -65,10 +65,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Bfl."),
-        baca.start_markup(
-            r"\harmony-bass-flute-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-bass-flute-markup"),
     ),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
@@ -130,10 +127,7 @@ commands(
 commands(
     ("perc1", 1),
     harmony.margin_markup("Perc. I"),
-    baca.start_markup(
-        r"\harmony-percussion-i-markup",
-        literal=True,
-    ),
+    baca.start_markup(r"\harmony-percussion-i-markup"),
     baca.clef("percussion"),
     baca.staff_lines(1),
     harmony.sixteenths(
@@ -149,7 +143,6 @@ commands(
         r"\baca-bd-superball-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -200,7 +193,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(5 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -210,10 +202,7 @@ commands(
     ("perc2", (1, 2)),
     baca.suite(
         harmony.margin_markup("Perc. II"),
-        baca.start_markup(
-            r"\harmony-percussion-ii-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-percussion-ii-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
@@ -226,7 +215,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -250,7 +238,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(5 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -260,10 +247,7 @@ commands(
     ("hp", (1, 2)),
     baca.suite(
         harmony.margin_markup("Hp."),
-        baca.start_markup(
-            r"\harmony-harp-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-harp-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
@@ -276,7 +260,6 @@ commands(
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -305,10 +288,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Va."),
-        baca.start_markup(
-            r"\harmony-viola-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-viola-markup"),
     ),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
@@ -318,7 +298,6 @@ commands(
     baca.markup(
         r"\baca-seven-a",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -355,10 +334,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Vc. I"),
-        baca.start_markup(
-            r"\harmony-cello-i-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-cello-i-markup"),
     ),
     baca.skeleton(
         r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
@@ -428,10 +404,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Vc. II"),
-        baca.start_markup(
-            r"\harmony-cello-ii-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-cello-ii-markup"),
     ),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
@@ -483,10 +456,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Cb. I"),
-        baca.start_markup(
-            r"\harmony-contrabass-i-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-contrabass-i-markup"),
     ),
     harmony.sixteenths(
         [18, 6, 10, 4, 6],
@@ -519,7 +489,9 @@ commands(
     baca.skeleton(
         r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
     ),
-    baca.tuplet_number_text(abjad.Markup(r"\markup 5:4", literal=True)),
+    baca.tuplet_number_text(
+        abjad.Markup(r"\markup 5:4"),
+    ),
     harmony.bridge_staff_position(),
     baca.accent(
         baca.selectors.pheads(),
@@ -543,10 +515,7 @@ commands(
     baca.staff_lines(5),
     baca.suite(
         harmony.margin_markup("Cb. II"),
-        baca.start_markup(
-            r"\harmony-contrabass-ii-markup",
-            literal=True,
-        ),
+        baca.start_markup(r"\harmony-contrabass-ii-markup"),
     ),
     harmony.appoggiato(
         divisions=[16, 8, 12, 8],
@@ -556,7 +525,6 @@ commands(
     baca.markup(
         r"\baca-eleven-a",
         abjad.tweak(5.5 + 1).staff_padding,
-        literal=True,
     ),
     baca.dynamic("mp"),
     baca.damp_spanner(

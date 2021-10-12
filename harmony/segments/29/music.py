@@ -65,7 +65,6 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-eight",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -103,7 +102,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 

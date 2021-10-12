@@ -88,7 +88,6 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-four",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -209,7 +208,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -269,7 +267,6 @@ commands(
         baca.markup(
             r"\baca-brake-drum-markup",
             abjad.tweak(6).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(0),
     ),
@@ -284,7 +281,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
         selector=baca.selectors.pleaf(1),
     ),
 )
@@ -329,7 +325,6 @@ commands(
     baca.markup(
         r"\baca-bd-struck-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -359,7 +354,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -382,7 +376,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -409,7 +402,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         abjad.tweak(1).self_alignment_X,
-        literal=True,
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -436,7 +428,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
         selector=baca.selectors.pheads(),
     ),
 )
@@ -456,7 +447,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
         selector=baca.selectors.pheads(),
     ),
 )
@@ -479,7 +469,6 @@ commands(
         baca.markup(
             r"\baca-whisk-markup",
             abjad.tweak(3).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(0),
     ),
@@ -523,7 +512,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
         selector=baca.selectors.pheads(),
     ),
 )
@@ -814,10 +802,7 @@ commands(
     baca.stem_tremolo(
         baca.selectors.pleaves([0, -1]),
     ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
-    ),
+    baca.markup(r"\baca-quasi-bisb-markup"),
 )
 
 commands(

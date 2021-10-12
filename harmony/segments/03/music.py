@@ -81,7 +81,6 @@ commands(
         baca.markup(
             r"\harmony-text-two",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -93,7 +92,6 @@ commands(
         baca.markup(
             r"\harmony-text-three",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(5 - 1),
         ),
     ),
@@ -193,7 +191,6 @@ commands(
         r"\baca-bd-superball-markup",
         abjad.tweak(1).self_alignment_X,
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -241,7 +238,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -281,7 +277,6 @@ commands(
         r"\baca-brake-drum-markup",
         abjad.tweak(1).self_alignment_X,
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -310,7 +305,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(5 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -352,7 +346,6 @@ commands(
     baca.markup(
         r"\baca-pdlt-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -462,7 +455,7 @@ commands(
         r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
     baca.tuplet_number_text(
-        abjad.Markup(r"\markup 5:4", literal=True),
+        abjad.Markup(r"\markup 5:4"),
         baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_up(),
@@ -557,7 +550,7 @@ commands(
         r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
     baca.tuplet_number_text(
-        abjad.Markup(r"\markup 5:4", literal=True),
+        abjad.Markup(r"\markup 5:4"),
         baca.selectors.leaves(),
     ),
     baca.new(
@@ -739,14 +732,10 @@ commands(
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
     ),
-    baca.markup(
-        r"\baca-eleven-e",
-        literal=True,
-    ),
+    baca.markup(r"\baca-eleven-e"),
     baca.markup(
         r"\baca-string-iv-markup",
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -843,7 +832,6 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         direction=abjad.Down,
-        literal=True,
     ),
 )
 

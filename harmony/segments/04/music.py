@@ -288,7 +288,6 @@ commands(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -592,15 +591,11 @@ commands(
         abjad.tweak(5.5).staff_padding,
         selector=lambda _: baca.Selection(_).leaves().rleak(grace=False),
     ),
-    baca.markup(
-        r"\baca-eleven-e",
-        literal=True,
-    ),
+    baca.markup(r"\baca-eleven-e"),
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -628,7 +623,6 @@ commands(
         abjad.tweak(2.5).X_offset,
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 

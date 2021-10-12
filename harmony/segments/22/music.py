@@ -86,7 +86,6 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-one",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(11 - 1),
         ),
     ),
@@ -195,7 +194,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -211,7 +209,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -232,7 +229,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -264,7 +260,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -288,7 +283,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -309,7 +303,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -329,7 +322,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -350,7 +342,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -413,7 +404,6 @@ commands(
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -458,7 +448,6 @@ commands(
         r"\baca-sons-xylophoniques-markup",
         abjad.tweak(4).staff_padding,
         abjad.tweak(0).self_alignment_X,
-        literal=True,
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -585,7 +574,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -625,7 +613,6 @@ commands(
         r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -795,15 +782,11 @@ commands(
         abjad.tweak(2.5).bound_details__right__padding,
         abjad.tweak(3).staff_padding,
     ),
-    baca.markup(
-        r"\baca-seven-d",
-        literal=True,
-    ),
+    baca.markup(r"\baca-seven-d"),
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 

@@ -77,7 +77,6 @@ commands(
         baca.markup(
             r"\harmony-text-twelve",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(2 - 1),
         ),
     ),
@@ -89,7 +88,6 @@ commands(
         baca.markup(
             r"\harmony-text-thirteen",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(6 - 1),
         ),
     ),
@@ -180,7 +178,6 @@ commands(
     baca.markup(
         r"\baca-seven-e-flat",
         abjad.tweak(8).staff_padding,
-        literal=True,
     ),
     baca.breathe(
         baca.selectors.pleaf(1),
@@ -235,7 +232,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
-        literal=True,
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -269,7 +265,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -288,7 +283,6 @@ commands(
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -326,7 +320,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
-        literal=True,
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -359,7 +352,6 @@ commands(
         baca.markup(
             r"\baca-bd-fingertips-markup",
             abjad.tweak(6).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(0),
     ),
@@ -376,7 +368,6 @@ commands(
             r"\baca-brake-drum-markup",
             abjad.tweak(6).staff_padding,
             abjad.tweak(0.5).self_alignment_X,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(-1),
     ),
@@ -432,7 +423,6 @@ commands(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -528,7 +518,6 @@ commands(
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
@@ -601,7 +590,6 @@ commands(
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
@@ -754,7 +742,6 @@ commands(
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
