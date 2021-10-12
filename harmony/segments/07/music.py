@@ -86,7 +86,6 @@ commands(
         baca.markup(
             r"\harmony-text-six",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -250,7 +249,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.75).self_alignment_X,
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -266,7 +264,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -286,7 +283,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -302,7 +298,6 @@ commands(
         r"\baca-bd-superball-markup",
         abjad.tweak(1).self_alignment_X,
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -321,7 +316,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
     baca.dynamic(
         '"f"',
@@ -347,7 +341,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(-0.75).self_alignment_X,
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -369,7 +362,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -397,7 +389,6 @@ commands(
             r"\baca-brake-drum-markup",
             abjad.tweak(1).self_alignment_X,
             abjad.tweak(6).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(-1),
     ),
@@ -432,7 +423,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -490,7 +480,6 @@ commands(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(2.5).padding,
-        literal=True,
     ),
 )
 
@@ -511,7 +500,6 @@ commands(
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -558,7 +546,6 @@ commands(
         baca.markup(
             r"\baca-lv-markup",
             abjad.tweak(1.5).padding,
-            literal=True,
         ),
         baca.dls_staff_padding(4 + 2),
         selector=baca.selectors.pleaf(0),
@@ -567,10 +554,7 @@ commands(
         baca.clef("percussion"),
         baca.staff_lines(1),
         harmony.whisk_staff_position(),
-        baca.markup(
-            r"\baca-whisk-markup",
-            literal=True,
-        ),
+        baca.markup(r"\baca-whisk-markup"),
         selector=baca.selectors.pleaf(-2),
     ),
     #    baca.hairpin(
@@ -955,7 +939,6 @@ commands(
     baca.markup(
         r"\baca-eleven-a",
         abjad.tweak(1).padding,
-        literal=True,
     ),
 )
 
@@ -1078,7 +1061,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -1158,7 +1140,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -1191,7 +1172,6 @@ commands(
     baca.markup(
         r"\baca-quasi-bisb-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 

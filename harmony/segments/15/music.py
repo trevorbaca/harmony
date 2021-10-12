@@ -101,7 +101,6 @@ commands(
     baca.markup(
         r"\baca-seven-e-flat",
         abjad.tweak(8).staff_padding,
-        literal=True,
     ),
     baca.hairpin(
         'o< "f" >o niente',
@@ -179,7 +178,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -199,7 +197,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -220,7 +217,6 @@ commands(
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -245,7 +241,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -266,7 +261,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -289,7 +283,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -328,7 +321,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
@@ -372,7 +364,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
@@ -578,7 +569,6 @@ commands(
     baca.markup(
         r"\baca-seven-e-flat",
         abjad.tweak(3).X_offset,
-        literal=True,
     ),
     baca.triple_staccato(
         baca.selectors.pheads(),

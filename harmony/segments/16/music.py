@@ -163,7 +163,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -180,7 +179,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -195,7 +193,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -223,7 +220,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -278,7 +274,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 

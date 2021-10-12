@@ -88,7 +88,6 @@ commands(
         baca.markup(
             r"\harmony-text-one",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(12 - 1),
         ),
     ),
@@ -237,7 +236,6 @@ commands(
         baca.markup(
             r"\baca-bd-superball-markup",
             abjad.tweak(6).staff_padding,
-            literal=True,
             selector=baca.selectors.pleaf(0, grace=False),
         ),
         measures=5,
@@ -294,7 +292,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(5 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -345,7 +342,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -379,7 +375,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -419,7 +414,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(3).staff_padding,
-        literal=True,
     ),
 )
 
@@ -454,7 +448,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -487,7 +480,6 @@ commands(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
     baca.dls_staff_padding(3),
 )
@@ -505,7 +497,6 @@ commands(
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -563,7 +554,6 @@ commands(
     baca.markup(
         r"\baca-bisb-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
     baca.dls_staff_padding(3),
 )
@@ -617,7 +607,6 @@ commands(
     baca.markup(
         r"\baca-seven-a",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
     ),
     baca.damp_spanner(
         abjad.tweak(3).staff_padding,
@@ -1192,7 +1181,6 @@ commands(
     baca.markup(
         r"\baca-eleven-a",
         abjad.tweak(5.5 + 1).staff_padding,
-        literal=True,
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(3),

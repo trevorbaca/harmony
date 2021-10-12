@@ -112,7 +112,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -156,7 +155,6 @@ commands(
     baca.markup(
         r"\baca-bd-sponge-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
     baca.flat_glissando(
         right_broken=True,
@@ -173,7 +171,6 @@ commands(
         r"\baca-bd-fingertips-markup",
         abjad.tweak(0.25).self_alignment_X,
         abjad.tweak(6).staff_padding,
-        literal=True,
         selector=baca.selectors.pleaf(-1),
     ),
 )
@@ -199,7 +196,6 @@ commands(
     baca.markup(
         r"\baca-lv-markup",
         abjad.tweak(1.5).padding,
-        literal=True,
     ),
 )
 
@@ -219,7 +215,6 @@ commands(
     baca.markup(
         r"\harmony-match-harp-decay-markup",
         abjad.tweak(5.5).staff_padding,
-        literal=True,
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -247,7 +242,6 @@ commands(
     baca.markup(
         r"\baca-eleven-a",
         abjad.tweak(1.5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -262,7 +256,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -326,7 +319,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        literal=True,
     ),
 )
 
@@ -353,17 +345,14 @@ commands(
         r"\baca-string-iii-markup",
         direction=abjad.Down,
         selector=baca.selectors.pheads(),
-        literal=True,
     ),
     baca.markup(
         r"\baca-thirteen-a",
         abjad.tweak(3).staff_padding,
-        literal=True,
     ),
     baca.markup(
         r"\baca-fourteen-a",
         abjad.tweak(3).staff_padding,
-        literal=True,
         selector=baca.selectors.phead(-1),
     ),
 )

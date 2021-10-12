@@ -79,7 +79,6 @@ commands(
         baca.markup(
             r"\harmony-text-twenty",
             abjad.tweak((4, -30)).extra_offset,
-            literal=True,
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -120,7 +119,6 @@ commands(
     baca.pitch("<B3 Dqf4>"),
     baca.markup(
         baca.levine_multiphonic(42),
-        literal=True,
         match=[0],
     ),
     baca.espressivo(
@@ -167,7 +165,6 @@ commands(
     baca.markup(
         r"\baca-bd-struck-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -186,7 +183,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -211,7 +207,6 @@ commands(
     baca.markup(
         r"\baca-bd-struck-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
     baca.new(
         harmony.brake_drum_staff_position(),
@@ -219,7 +214,6 @@ commands(
         baca.markup(
             r"\baca-brake-drum-paper-towel-markup",
             abjad.tweak(6).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(1),
     ),
@@ -268,7 +262,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
     baca.dls_staff_padding(
         4,
@@ -282,7 +275,6 @@ commands(
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.tweak(6).staff_padding,
-            literal=True,
         ),
         selector=baca.selectors.pleaf(-1),
     ),
@@ -326,7 +318,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -349,7 +340,6 @@ commands(
     baca.markup(
         r"\baca-bd-fingertips-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -378,7 +368,6 @@ commands(
     baca.markup(
         r"\baca-xyl-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
         match=[0],
     ),
 )
@@ -532,10 +521,7 @@ commands(
     ("vc1", [2, 5]),
     baca.clef("treble"),
     baca.pitch("Aqf4"),
-    baca.markup(
-        r"\baca-eleven-e-flat",
-        literal=True,
-    ),
+    baca.markup(r"\baca-eleven-e-flat"),
 )
 
 # vc2
@@ -619,10 +605,7 @@ commands(
     ("cb1", [2, 5]),
     baca.clef("treble"),
     baca.pitch("Dtqf4"),
-    baca.markup(
-        r"\baca-seven-e-flat",
-        literal=True,
-    ),
+    baca.markup(r"\baca-seven-e-flat"),
 )
 
 # cb2

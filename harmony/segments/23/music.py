@@ -157,7 +157,6 @@ commands(
     baca.markup(
         r"\baca-bd-struck-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -187,7 +186,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -206,7 +204,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6 + 1).staff_padding,
-        literal=True,
     ),
 )
 
@@ -237,7 +234,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.tweak(4 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -254,7 +250,6 @@ commands(
     baca.markup(
         r"\baca-bd-struck-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -275,7 +270,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.tweak(6 + 2).staff_padding,
-        literal=True,
     ),
 )
 
@@ -315,7 +309,6 @@ commands(
     baca.markup(
         r"\baca-xyl-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -712,10 +705,7 @@ commands(
     baca.stem_tremolo(
         baca.selectors.pleaves(),
     ),
-    baca.markup(
-        r"\baca-quasi-bisb-markup",
-        literal=True,
-    ),
+    baca.markup(r"\baca-quasi-bisb-markup"),
 )
 
 commands(

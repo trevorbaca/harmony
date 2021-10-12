@@ -132,7 +132,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -150,7 +149,6 @@ commands(
     baca.markup(
         r"\baca-triangle-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -167,7 +165,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -192,7 +189,6 @@ commands(
     baca.markup(
         r"\baca-bd-superball-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
@@ -208,7 +204,6 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
-        literal=True,
     ),
 )
 
@@ -243,7 +238,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
     baca.new(
         baca.dynamic("ff"),
@@ -258,7 +252,6 @@ commands(
         r"\baca-purpleheart-markup",
         abjad.tweak(5).staff_padding,
         abjad.tweak(1).self_alignment_X,
-        literal=True,
         selector=baca.selectors.leaf(-1),
     ),
     baca.metric_modulation_spanner(
@@ -291,7 +284,6 @@ commands(
     baca.markup(
         r"\baca-pdlt-markup",
         abjad.tweak(4).staff_padding,
-        literal=True,
     ),
 )
 
@@ -311,7 +303,6 @@ commands(
     baca.markup(
         r"\baca-whisk-markup",
         abjad.tweak(6).staff_padding,
-        literal=True,
     ),
 )
 
