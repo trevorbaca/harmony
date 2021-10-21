@@ -1,6 +1,6 @@
 %! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.1"
+\version "2.20.0"
 %! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
