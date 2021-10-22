@@ -1,10 +1,10 @@
 # This makefile is copied into every Bača score directory.
 
 black-check:
-	black --check --diff --target-version=py38 .
+	black --check --diff --target-version=py39 .
 
 black-reformat:
-	black --target-version=py38 .
+	black --target-version=py39 .
 
 flake_ignore = --ignore=E203,E266,E501,W503
 flake_options = --isolated --max-line-length=88
