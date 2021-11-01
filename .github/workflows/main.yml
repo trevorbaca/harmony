@@ -128,29 +128,78 @@ jobs:
                 cp "$music_ily" "$music_ily_old"
             fi
             rm "$music_ily"
+            clicktrack_midi="$segment_directory/clicktrack.midi"
+            clicktrack_midi_old="$segment_directory/clicktrack.midi.old"
+            if [ -f "$clicktrack_midi" ]; then
+                cp "$clicktrack_midi" "$clicktrack_midi_old"
+                rm "$clicktrack_midi"
+            fi
+            music_midi="$segment_directory/music.midi"
+            music_midi_old="$segment_directory/music.midi.old"
+            if [ -f "$music_midi" ]; then
+                cp "$music_midi" "$music_midi_old"
+                rm "$music_midi"
+            fi
             current_directory=$(pwd)
             cd "$segment_directory"
-            python music.py --pdf
+            python music.py --pdf --clicktrack --midi
             cd "$current_directory"
             if [ -f "$music_ly" ]; then
                 echo Found "$music_ly" ...
             else
                 exit -1
             fi
-            if [ -f "$music_ly_old" ]; then
-                echo Found "$music_ly_old" ...
+            differences=$(diff -I '^\\version' $music_ly $music_ly_old)
+            if [ -z "$differences" ]; then
+                echo Found matching music.ly files ...
+            else
+                echo Found mismatched music.ly files ...
+                diff -I '^\\version' "$music_ly" "$music_ly_old"
+                exit -1
+            fi
+            if [ -f "$music_ily" ]; then
+                echo Found "$music_ily" ...
             else
                 exit -1
             fi
-            echo Calling diff ...
             differences=$(diff -I '^\\version' $music_ily $music_ily_old)
-            echo Done calling diff ...
             if [ -z "$differences" ]; then
                 echo Found matching music.ily files ...
             else
                 echo Found mismatched music.ily files ...
                 diff -I '^\\version' "$music_ily" "$music_ily_old"
                 exit -1
+            fi
+
+            if [ -f "$clicktrack_midi" ]; then
+                echo Found "$clicktrack_midi" ...
+            else
+                exit -1
+            fi
+            if [ -f "$clicktrack_midi_old" ]; then
+                differences=$(diff $clicktrack_midi $clicktrack_midi_old)
+                if [ -z "$differences" ]; then
+                    echo Found matching clicktrack.midi files ...
+                else
+                    echo Found mismatched clicktrack.midi files ...
+                    diff $clicktrack_midi $clicktrack_midi_old
+                    exit -1
+                fi
+            fi
+            if [ -f "$music_midi" ]; then
+                echo Found "$music_midi" ...
+            else
+                exit -1
+            fi
+            if [ -f "$music_midi_old" ]; then
+                differences=$(diff $music_midi $music_midi_old)
+                if [ -z "$differences" ]; then
+                    echo Found matching music.midi files ...
+                else
+                    echo Found mismatched music.midi files ...
+                    diff $music_midi $music_midi_old
+                    exit -1
+                fi
             fi
             echo
         done
