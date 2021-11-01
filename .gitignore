@@ -1,55 +1,29 @@
-# Byte-compiled objects
-*.py[cod]
-.cache
-
-# C extensions
-*.so
-
 # LaTeX
 *.aux
 *.log
 *.gz
 
-# Packages
-*.egg
-*.egg-info
-dist
-!build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
-__pycache__
-.pytest_cache
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
-
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Etc.
+# macOS
 .DS_Store
-
-# score packages
-*backup
-illustration.pdf
-music.pdf
 
 # mypy
 .mypy_cache
+
+# output
+*.midi
+*.pdf
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.coverage
+.pytest_cache
+htmlcov
+
+# python
+*.egg
+*.egg-info
+*.py[cod]
+__pycache__
