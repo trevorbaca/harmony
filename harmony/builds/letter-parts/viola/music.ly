@@ -41,7 +41,7 @@
 \score {
     <<
         \keepWithTag Viola {
-            \include "layout.ly.tagged"
+            \include "layout.ly"
         }
         \keepWithTag Viola {
             \include "../_segments/01.ly"
