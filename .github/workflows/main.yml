@@ -101,7 +101,12 @@ jobs:
             py.test -rf $GITHUB_WORKSPACE/$NAME/test.py
         fi
 
-    - name: Make segments
+    - name: Test segments
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         /tmp/baca/scr/github-test-segment
+
+    - name: Test builds
+      run: |
+        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        /tmp/baca/scr/test-builds
