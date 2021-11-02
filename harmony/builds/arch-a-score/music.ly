@@ -39,7 +39,7 @@
 \score {
     <<
         {
-        \include "layout.ly.tagged"
+        \include "layout.ly"
         }
         {
         \include "_segments/01.ly"
