@@ -4,7 +4,6 @@
 \version "2.19.83"
 \language "english"
 
-#(ly:set-option 'relative-includes #t)
 \include "../stylesheet.ily"
 \include "stylesheet.ily"
 \include "../_segments/01.ily"
