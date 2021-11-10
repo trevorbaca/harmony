@@ -10,4 +10,3 @@
 ( H A R M O N Y ) for narrator & nine players. Commissioned by Monday Evening Concerts.
 
 Text by Paul Griffiths. Title includes the intercalated spaces.
-
