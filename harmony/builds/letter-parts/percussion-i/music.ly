@@ -2,7 +2,6 @@
 % part_identifier = 'PERC1'
 
 \version "2.19.83"
-\language "english"
 
 \include "../stylesheet.ily"
 \include "stylesheet.ily"
