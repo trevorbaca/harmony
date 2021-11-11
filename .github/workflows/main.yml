@@ -63,13 +63,12 @@ jobs:
         git clone https://github.com/Abjad/abjad-ext-rmakers.git /tmp/abjad-ext-rmakers
         python -m pip install --use-feature=in-tree-build /tmp/abjad-ext-rmakers
 
-    - name: Install Bača ("editable" to include lilypond/baca.ily)
+    - name: Install Bača ("editable" to include baca.ily)
       run: |
         git clone https://github.com/trevorbaca/baca.git /tmp/baca
         python -m pip install --use-feature=in-tree-build -e /tmp/baca
 
-    # -e for doctest to process "import <score>" statements
-    - name: Install this score ("editable")
+    - name: Install this score ("editable" for doctest to import package)
       run: |
         python -m pip install --use-feature=in-tree-build -e .
 
@@ -104,9 +103,15 @@ jobs:
     - name: Test segments
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
-        /tmp/baca/scr/github-test-segment
+        /tmp/baca/scr/test-segments
 
-    - name: Test builds
+    - name: Test score builds
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
-        /tmp/baca/scr/test-builds
+        NAME=$(basename $GITHUB_WORKSPACE)
+        BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
+        if [ -d $BUILDS_DIRECTORY ]; then
+          cd $BUILDS_DIRECTORY
+          /tmp/baca/scr/test-score-builds
+        fi
+        cd $GITHUB_WORKSPACE
