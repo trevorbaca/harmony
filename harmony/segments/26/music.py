@@ -858,7 +858,7 @@ if __name__ == "__main__":
     lilypond_file = baca.make_lilypond_file(
         score,
         include_layout_ly=True,
-        includes=["../../stylesheet.ily"],
+        includes=["../stylesheet.ily"],
         preamble=baca.interpret.nonfirst_preamble.split("\n"),
     )
     baca.build.make_segment_pdf(lilypond_file, metadata, persist, timing)
