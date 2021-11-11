@@ -27,18 +27,18 @@
         %! harmony.make_empty_score()
         <<
 
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             \context GlobalContext = "Global_Context"
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             <<
 
-                %! abjad.ScoreTemplate._make_global_context()
+                %! baca.make_global_context()
                 \context GlobalSkips = "Global_Skips"
-                %! abjad.ScoreTemplate._make_global_context()
+                %! baca.make_global_context()
                 %! baca.path.extern()
                 { \segment.01.Global.Skips }
 
-            %! abjad.ScoreTemplate._make_global_context()
+            %! baca.make_global_context()
             >>
 
             %! harmony.make_empty_score()
@@ -51,7 +51,7 @@
                 %! harmony.make_empty_score()
                 <<
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag BassFlute
                     %! harmony.make_empty_score()
                     \context Staff = "Bass_Flute_Music_Staff"
@@ -67,7 +67,7 @@
                 %! harmony.make_empty_score()
                 <<
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag PercussionI
                     %! harmony.make_empty_score()
                     \context Staff = "Percussion_I_Music_Staff"
@@ -75,7 +75,7 @@
                     %! baca.path.extern()
                     { \segment.01.Percussion.I.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag PercussionII
                     %! harmony.make_empty_score()
                     \context Staff = "Percussion_II_Music_Staff"
@@ -83,7 +83,7 @@
                     %! baca.path.extern()
                     { \segment.01.Percussion.II.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag Harp
                     %! harmony.make_empty_score()
                     \context Staff = "Harp_Music_Staff"
@@ -99,7 +99,7 @@
                 %! harmony.make_empty_score()
                 <<
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag Viola
                     %! harmony.make_empty_score()
                     \context Staff = "Viola_Music_Staff"
@@ -107,7 +107,7 @@
                     %! baca.path.extern()
                     { \segment.01.Viola.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag CelloI
                     %! harmony.make_empty_score()
                     \context Staff = "Cello_I_Music_Staff"
@@ -115,7 +115,7 @@
                     %! baca.path.extern()
                     { \segment.01.Cello.I.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag CelloII
                     %! harmony.make_empty_score()
                     \context Staff = "Cello_II_Music_Staff"
@@ -123,7 +123,7 @@
                     %! baca.path.extern()
                     { \segment.01.Cello.II.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag ContrabassI
                     %! harmony.make_empty_score()
                     \context Staff = "Contrabass_I_Music_Staff"
@@ -131,7 +131,7 @@
                     %! baca.path.extern()
                     { \segment.01.Contrabass.I.Music.Staff }
 
-                    %! baca.ScoreTemplate._attach_liypond_tag()
+                    %! baca.attach_lilypond_tag()
                     \tag ContrabassII
                     %! harmony.make_empty_score()
                     \context Staff = "Contrabass_II_Music_Staff"

@@ -576,7 +576,7 @@ segment.24.Global.Skips = {
     %! PHANTOM
     \once \override Score.SpanBar.transparent = ##t
 
-%! abjad.ScoreTemplate._make_global_context()
+%! baca.make_global_context()
 %! baca.path.extern()
 }
 
@@ -635,7 +635,7 @@ segment.24.Global.Rests = {
     %! PHANTOM
     R1 * 1/4
 
-%! abjad.ScoreTemplate._make_global_context()
+%! baca.make_global_context()
 %! baca.path.extern()
 }
 
@@ -4237,9 +4237,9 @@ segment.24.Bass.Flute.Music.Voice = {
 %! baca.path.extern()
 segment.24.Bass.Flute.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! baca.path.extern()
     { \segment.24.Global.Rests }
 
@@ -4965,10 +4965,10 @@ segment.24.Percussion.I.Music.Voice = {
 %! baca.path.extern()
 segment.24.Percussion.I.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -6063,10 +6063,10 @@ segment.24.Percussion.II.Music.Voice = {
 %! baca.path.extern()
 segment.24.Percussion.II.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -6829,10 +6829,10 @@ segment.24.Harp.Music.Voice = {
 %! baca.path.extern()
 segment.24.Harp.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -8466,10 +8466,10 @@ segment.24.Viola.Music.Voice = {
 %! baca.path.extern()
 segment.24.Viola.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -9905,10 +9905,10 @@ segment.24.Cello.I.Music.Voice = {
 %! baca.path.extern()
 segment.24.Cello.I.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -11534,10 +11534,10 @@ segment.24.Cello.II.Music.Voice = {
 %! baca.path.extern()
 segment.24.Cello.II.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -12982,10 +12982,10 @@ segment.24.Contrabass.I.Music.Voice = {
 %! baca.path.extern()
 segment.24.Contrabass.I.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
@@ -14641,10 +14641,10 @@ segment.24.Contrabass.II.Music.Voice = {
 %! baca.path.extern()
 segment.24.Contrabass.II.Music.Staff = <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
 %%% \context GlobalRests = "Global_Rests"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     %! NOT_TOPMOST
     %! baca.path.extern()
 %%% { \segment.24.Global.Rests }
