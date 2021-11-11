@@ -12,14 +12,14 @@
 %! baca.make_configuration_empty_score()
 <<
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     \context GlobalContext = "Global_Context"
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     <<
 
-        %! abjad.ScoreTemplate._make_global_context()
+        %! baca.make_global_context()
         \context PageLayout = "Page_Layout"
-        %! abjad.ScoreTemplate._make_global_context()
+        %! baca.make_global_context()
         {   %*% Page.Layout
 
             %! baca._comment_measure_numbers()
@@ -372,10 +372,10 @@
             %! PHANTOM
             \once \override Score.SpanBar.transparent = ##t
 
-        %! abjad.ScoreTemplate._make_global_context()
+        %! baca.make_global_context()
         }   %*% Page.Layout
 
-    %! abjad.ScoreTemplate._make_global_context()
+    %! baca.make_global_context()
     >>
 
 %! baca.make_configuration_empty_score()
