@@ -103,11 +103,13 @@ jobs:
     - name: Test segments
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PYTHONUNBUFFERED=TRUE
         /tmp/baca/scr/test-segments
 
     - name: Test score builds
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PYTHONUNBUFFERED=TRUE
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
         if [ -d $BUILDS_DIRECTORY ]; then
