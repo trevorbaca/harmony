@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from harmony import library as harmony
+from harmony import library
 
 #########################################################################################
 ######################################### 01 [A] ########################################
@@ -13,20 +13,20 @@ stage_markup = (
     ("[▶C.1]", 3, "#darkgreen"),
 )
 
-score = harmony.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=harmony.instruments,
-    margin_markups=harmony.margin_markups,
-    metronome_marks=harmony.metronome_marks,
+    instruments=library.instruments,
+    margin_markups=library.margin_markups,
+    metronome_marks=library.metronome_marks,
     time_signatures=[
         (6, 4),
         (5, 4),
         (3, 4),
     ],
-    voice_abbreviations=harmony.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -64,10 +64,10 @@ commands(
     ("bfl", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Bfl."),
+        library.margin_markup("Bfl."),
         baca.start_markup(r"\harmony-bass-flute-markup"),
     ),
-    harmony.appoggiato(
+    library.appoggiato(
         divisions=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
@@ -77,7 +77,7 @@ commands(
         selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
-        harmony.appoggiato_pitches_a,
+        library.appoggiato_pitches_a,
         selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
@@ -105,8 +105,8 @@ commands(
 
 commands(
     ("bfl", 3),
-    harmony.sixteenths(
-        harmony.cerulean[1:],
+    library.sixteenths(
+        library.cerulean[1:],
     ),
     baca.pitch("F3"),
     baca.dynamic("mf"),
@@ -126,11 +126,11 @@ commands(
 
 commands(
     ("perc1", 1),
-    harmony.margin_markup("Perc. I"),
+    library.margin_markup("Perc. I"),
     baca.start_markup(r"\harmony-percussion-i-markup"),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(
+    library.sixteenths(
         ["-", 3, 1],
         written_quarters=True,
         invisible_pairs=True,
@@ -148,7 +148,7 @@ commands(
 
 commands(
     ("perc1", 2),
-    harmony.sixteenths(
+    library.sixteenths(
         [3, 1, "-", 3, 1],
         written_quarters=True,
         invisible_pairs=True,
@@ -171,19 +171,19 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    harmony.bass_drum_staff_position(),
+    library.bass_drum_staff_position(),
 )
 
 commands(
     ("perc1", 3),
     baca.staff_lines(3),
-    harmony.phjc(
+    library.phjc(
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_most=True,
     ),
-    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
+    library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.selectors.tleaves(),
@@ -201,15 +201,15 @@ commands(
 commands(
     ("perc2", (1, 2)),
     baca.suite(
-        harmony.margin_markup("Perc. II"),
+        library.margin_markup("Perc. II"),
         baca.start_markup(r"\harmony-percussion-ii-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
-    harmony.slate_staff_position(),
+    library.slate_staff_position(),
     baca.dynamic("mf"),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -221,14 +221,14 @@ commands(
 commands(
     ("perc2", 3),
     baca.staff_lines(3),
-    harmony.phjc(
+    library.phjc(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
-    harmony.purpleheart_staff_positions([0, 0, -2, 0, -2]),
+    library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
         selector=baca.selectors.tleaves(),
@@ -246,15 +246,15 @@ commands(
 commands(
     ("hp", (1, 2)),
     baca.suite(
-        harmony.margin_markup("Hp."),
+        library.margin_markup("Hp."),
         baca.start_markup(r"\harmony-harp-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
-    harmony.whisk_staff_position(),
+    library.whisk_staff_position(),
     baca.dynamic("mf"),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -267,7 +267,7 @@ commands(
     ("hp", 3),
     baca.clef("bass"),
     baca.staff_lines(5),
-    harmony.sixteenths(
+    library.sixteenths(
         [10, "-"],
     ),
     baca.pitch("G1"),
@@ -287,10 +287,10 @@ commands(
     ("va", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Va."),
+        library.margin_markup("Va."),
         baca.start_markup(r"\harmony-viola-markup"),
     ),
-    harmony.appoggiato(
+    library.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -311,12 +311,12 @@ commands(
     ("va", 3),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(
-        harmony.cerulean[1:],
+    library.sixteenths(
+        library.cerulean[1:],
         extra_counts=[2],
         denominator=None,
     ),
-    harmony.bridge_staff_position(),
+    library.bridge_staff_position(),
     baca.accent(
         baca.selectors.pheads(),
     ),
@@ -333,7 +333,7 @@ commands(
     ("vc1", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Vc. I"),
+        library.margin_markup("Vc. I"),
         baca.start_markup(r"\harmony-cello-i-markup"),
     ),
     baca.skeleton(
@@ -365,12 +365,12 @@ commands(
         1,
         baca.selectors.leaf(1),
     ),
-    harmony.sixteenths(
+    library.sixteenths(
         [5, -5, 1, -4],
         extra_counts=[1],
     ),
     baca.new(
-        harmony.bridge_staff_position(),
+        library.bridge_staff_position(),
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("sfp"),
@@ -403,10 +403,10 @@ commands(
     ("vc2", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Vc. II"),
+        library.margin_markup("Vc. II"),
         baca.start_markup(r"\harmony-cello-ii-markup"),
     ),
-    harmony.appoggiato(
+    library.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -420,7 +420,7 @@ commands(
 
 commands(
     ("vc2", 3),
-    harmony.sixteenths(
+    library.sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
@@ -455,10 +455,10 @@ commands(
     ("cb1", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Cb. I"),
+        library.margin_markup("Cb. I"),
         baca.start_markup(r"\harmony-contrabass-i-markup"),
     ),
-    harmony.sixteenths(
+    library.sixteenths(
         [18, 6, 10, 4, 6],
     ),
     baca.pitch("A1"),
@@ -492,7 +492,7 @@ commands(
     baca.tuplet_number_text(
         abjad.Markup(r"\markup 5:4"),
     ),
-    harmony.bridge_staff_position(),
+    library.bridge_staff_position(),
     baca.accent(
         baca.selectors.pheads(),
     ),
@@ -514,10 +514,10 @@ commands(
     ("cb2", (1, 2)),
     baca.staff_lines(5),
     baca.suite(
-        harmony.margin_markup("Cb. II"),
+        library.margin_markup("Cb. II"),
         baca.start_markup(r"\harmony-contrabass-ii-markup"),
     ),
-    harmony.appoggiato(
+    library.appoggiato(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -535,7 +535,7 @@ commands(
 
 commands(
     ("cb2", 3),
-    harmony.sixteenths(
+    library.sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],

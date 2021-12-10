@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from harmony import library as harmony
+from harmony import library
 
 #########################################################################################
 ######################################### 24 [X] ########################################
@@ -14,14 +14,14 @@ stage_markup = (
     ("[X.6-8]", 7),
 )
 
-score = harmony.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=harmony.instruments,
-    margin_markups=harmony.margin_markups,
-    metronome_marks=harmony.metronome_marks,
+    instruments=library.instruments,
+    margin_markups=library.margin_markups,
+    metronome_marks=library.metronome_marks,
     time_signatures=[
         (4, 4),
         (4, 4),
@@ -33,7 +33,7 @@ commands = baca.CommandAccumulator(
         (4, 4),
         (5, 4),
     ],
-    voice_abbreviations=harmony.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -70,7 +70,7 @@ commands(
 
 commands(
     ("bfl", (1, 3)),
-    harmony.sixteenths(
+    library.sixteenths(
         [2, 3, -3],
     ),
     baca.pitch("F5"),
@@ -93,7 +93,7 @@ commands(
 
 commands(
     ("bfl", (5, 9)),
-    harmony.sixteenths(
+    library.sixteenths(
         [2, 2, -2],
     ),
     baca.pitch("F#5"),
@@ -124,10 +124,10 @@ commands(
 
 commands(
     ("perc1", (1, 3)),
-    harmony.sixteenths(
+    library.sixteenths(
         [5, -3],
     ),
-    harmony.slate_staff_position(),
+    library.slate_staff_position(),
     baca.dynamic("mp"),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -138,7 +138,7 @@ commands(
 commands(
     ("perc1", 4),
     baca.make_notes(),
-    harmony.triangle_staff_position(),
+    library.triangle_staff_position(),
     baca.stem_tremolo(
         baca.selectors.pleaves(),
     ),
@@ -154,10 +154,10 @@ commands(
 
 commands(
     ("perc1", (5, 9)),
-    harmony.sixteenths(
+    library.sixteenths(
         [3, -3],
     ),
-    harmony.slate_staff_position(),
+    library.slate_staff_position(),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.9).self_alignment_X,
@@ -177,10 +177,10 @@ commands(
 
 commands(
     ("perc2", (1, 3)),
-    harmony.sixteenths(
+    library.sixteenths(
         [2, -8, 2, -3, 2, -8],
     ),
-    harmony.bass_drum_staff_position(),
+    library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| mf",
         map=baca.selectors.rleak_runs(),
@@ -195,10 +195,10 @@ commands(
 commands(
     ("perc2", 5),
     baca.staff_lines(3),
-    harmony.sixteenths(
+    library.sixteenths(
         [1, "-"],
     ),
-    harmony.purpleheart_staff_positions([2]),
+    library.purpleheart_staff_positions([2]),
     baca.dynamic("ff"),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -210,7 +210,7 @@ commands(
 commands(
     ("perc2", (7, 9)),
     baca.staff_lines(1),
-    harmony.sixteenths(
+    library.sixteenths(
         [16, 16, 16, -4, 2],
         preprocessor=lambda _: baca.Sequence(_)
         .fuse()
@@ -219,12 +219,12 @@ commands(
         denominator=None,
     ),
     baca.new(
-        harmony.tam_tam_staff_position(),
+        library.tam_tam_staff_position(),
         baca.flat_glissando(),
         selector=baca.selectors.run(0),
     ),
     baca.new(
-        harmony.purpleheart_staff_positions([2]),
+        library.purpleheart_staff_positions([2]),
         selector=baca.selectors.leaves((-2, None)),
     ),
     baca.stem_tremolo(
@@ -265,7 +265,7 @@ commands(
 
 commands(
     ("hp", (1, 3)),
-    harmony.sixteenths(
+    library.sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
     baca.pitch("A4"),
@@ -291,10 +291,10 @@ commands(
     ("hp", (5, 9)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    harmony.sixteenths(
+    library.sixteenths(
         [3, -3],
     ),
-    harmony.whisk_staff_position(),
+    library.whisk_staff_position(),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.9).self_alignment_X,
@@ -326,7 +326,7 @@ commands(
 
 commands(
     ("va", 4),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -339,7 +339,7 @@ commands(
 
 commands(
     ("va", (5, 9)),
-    harmony.tessera_3(4),
+    library.tessera_3(4),
     baca.pitch("F#3"),
     baca.scp_spanner(
         "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
@@ -357,7 +357,7 @@ commands(
     ("vc1", (1, 3)),
     baca.clef("treble"),
     baca.staff_lines(5),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=lambda _: baca.Sequence(_)
         .fuse()
@@ -401,7 +401,7 @@ commands(
 
 commands(
     ("vc1", 4),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, "-"],
     ),
     baca.pitch("F4"),
@@ -418,7 +418,7 @@ commands(
 
 commands(
     ("vc1", (5, 9)),
-    harmony.tessera_3(3),
+    library.tessera_3(3),
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -456,7 +456,7 @@ commands(
 
 commands(
     ("vc2", 4),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -469,7 +469,7 @@ commands(
 
 commands(
     ("vc2", (5, 9)),
-    harmony.tessera_3(2),
+    library.tessera_3(2),
     baca.pitch("F#2"),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
@@ -487,7 +487,7 @@ commands(
     ("cb1", (1, 3)),
     baca.clef("treble"),
     baca.staff_lines(5),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=lambda _: baca.Sequence(_)
         .fuse()
@@ -537,7 +537,7 @@ commands(
 
 commands(
     ("cb1", 4),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, "-"],
     ),
     baca.pitch(
@@ -557,7 +557,7 @@ commands(
 
 commands(
     ("cb1", (5, 9)),
-    harmony.tessera_3(1),
+    library.tessera_3(1),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -598,7 +598,7 @@ commands(
 
 commands(
     ("cb2", 4),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -611,7 +611,7 @@ commands(
 
 commands(
     ("cb2", (5, 9)),
-    harmony.tessera_3(0),
+    library.tessera_3(0),
     baca.pitch("F#1"),
     baca.scp_spanner(
         "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
@@ -631,7 +631,7 @@ commands(
         baca.staff_lines(5),
         match=[0, 1],
     ),
-    harmony.sixteenths(
+    library.sixteenths(
         [2, 2, -10],
         written_quarters=[0, 1, 4, 5],
         invisible=[1, 5],
