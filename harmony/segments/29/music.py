@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from harmony import library as harmony
+from harmony import library
 
 #########################################################################################
 ######################################## 29 [CC] ########################################
@@ -9,20 +9,20 @@ from harmony import library as harmony
 
 stage_markup = (("[CC.1-2]", 1),)
 
-score = harmony.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=harmony.instruments,
-    margin_markups=harmony.margin_markups,
-    metronome_marks=harmony.metronome_marks,
+    instruments=library.instruments,
+    margin_markups=library.margin_markups,
+    metronome_marks=library.metronome_marks,
     time_signatures=[
         (6, 4),
         (6, 4),
         (1, 4),
     ],
-    voice_abbreviations=harmony.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -89,10 +89,10 @@ commands(
 
 commands(
     ("perc1", 1),
-    harmony.sixteenths(
+    library.sixteenths(
         [1, -22, 1],
     ),
-    harmony.brake_drum_staff_position(),
+    library.brake_drum_staff_position(),
     baca.dynamic("f"),
     baca.new(
         baca.dynamic("mf"),
@@ -114,7 +114,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    harmony.sixteenths(
+    library.sixteenths(
         ["-", 1],
         invisible=[-1],
     ),
@@ -127,7 +127,7 @@ commands(
 
 commands(
     ("hp", 1),
-    harmony.sixteenths(
+    library.sixteenths(
         [1, "-"],
     ),
     baca.clef("treble"),
@@ -165,7 +165,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    harmony.sixteenths(
+    library.sixteenths(
         [16, 4, 2, 2],
         written_dotted_wholes=[0],
         invisible=[1, 2, 3],
@@ -218,7 +218,7 @@ commands(
 
 commands(
     (["bfl", "va", "vc1", "vc2", "cb1"], 1),
-    harmony.sixteenths(
+    library.sixteenths(
         [4, 4, 16],
         tie_all=True,
     ),

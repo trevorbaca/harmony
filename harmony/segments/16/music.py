@@ -1,7 +1,7 @@
 import abjad
 import baca
 
-from harmony import library as harmony
+from harmony import library
 
 #########################################################################################
 ######################################### 16 [P] ########################################
@@ -13,14 +13,14 @@ stage_markup = (
     ("[P.7-8]", 9),
 )
 
-score = harmony.make_empty_score()
+score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.segment_accumulation_defaults(),
-    instruments=harmony.instruments,
-    margin_markups=harmony.margin_markups,
-    metronome_marks=harmony.metronome_marks,
+    instruments=library.instruments,
+    margin_markups=library.margin_markups,
+    metronome_marks=library.metronome_marks,
     time_signatures=[
         (3, 4),
         (3, 4),
@@ -33,7 +33,7 @@ commands = baca.CommandAccumulator(
         (3, 4),
         (3, 4),
     ],
-    voice_abbreviations=harmony.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -69,8 +69,8 @@ commands(
 
 commands(
     ("bfl", (1, 6)),
-    harmony.sixteenths(
-        harmony.damp_counts,
+    library.sixteenths(
+        library.damp_counts,
     ),
     baca.pitch("D5"),
     baca.dynamic(
@@ -89,7 +89,7 @@ commands(
 
 commands(
     ("bfl", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
     ),
     baca.pitch("F#5"),
@@ -104,8 +104,8 @@ commands(
 
 commands(
     ("bfl", (9, 10)),
-    harmony.sixteenths(
-        harmony.damp_counts_curtailed,
+    library.sixteenths(
+        library.damp_counts_curtailed,
     ),
     baca.pitch("D5"),
     baca.new(
@@ -144,7 +144,7 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    harmony.sixteenths(
+    library.sixteenths(
         [41, -7, "+"],
     ),
     baca.flat_glissando(
@@ -155,7 +155,7 @@ commands(
         hide_middle_stems=True,
         selector=baca.selectors.run(1),
     ),
-    harmony.brake_drum_staff_position(),
+    library.brake_drum_staff_position(),
     baca.dynamic(
         "p-sempre",
         abjad.tweak(-0.9).self_alignment_X,
@@ -168,10 +168,10 @@ commands(
 
 commands(
     ("perc1", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
     ),
-    harmony.slate_staff_position(),
+    library.slate_staff_position(),
     baca.dynamic(
         '"f"',
         abjad.tweak(-0.9).self_alignment_X,
@@ -184,10 +184,10 @@ commands(
 
 commands(
     ("perc1", (9, 10)),
-    harmony.sixteenths(
+    library.sixteenths(
         [12, 4, 4, 1, "-"],
     ),
-    harmony.brake_drum_staff_position(),
+    library.brake_drum_staff_position(),
     baca.flat_glissando(),
     baca.dynamic("p"),
     baca.markup(
@@ -206,10 +206,10 @@ commands(
 commands(
     ("perc2", (1, 6)),
     baca.staff_lines(1),
-    harmony.sixteenths(
-        harmony.duration_color,
+    library.sixteenths(
+        library.duration_color,
     ),
-    harmony.tam_tam_staff_position(),
+    library.tam_tam_staff_position(),
     baca.damp(
         baca.selectors.leaf_after_each_ptail(),
     ),
@@ -225,10 +225,10 @@ commands(
 
 commands(
     ("perc2", (9, 10)),
-    harmony.sixteenths(
-        harmony.duration_color,
+    library.sixteenths(
+        library.duration_color,
     ),
-    harmony.tam_tam_staff_position(),
+    library.tam_tam_staff_position(),
     baca.damp(
         baca.selectors.leaf_after_each_ptail(),
     ),
@@ -245,8 +245,8 @@ commands(
 commands(
     ("hp", (1, 6)),
     baca.clef("bass"),
-    harmony.sixteenths(
-        harmony.duration_color,
+    library.sixteenths(
+        library.duration_color,
     ),
     baca.pitch("F1"),
     baca.damp(
@@ -262,7 +262,7 @@ commands(
 commands(
     ("hp", 8),
     baca.clef("treble"),
-    harmony.sixteenths(
+    library.sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -280,8 +280,8 @@ commands(
 commands(
     ("hp", (9, 10)),
     baca.clef("bass"),
-    harmony.sixteenths(
-        harmony.duration_color,
+    library.sixteenths(
+        library.duration_color,
     ),
     baca.pitch("F1"),
     baca.damp(
@@ -295,8 +295,8 @@ commands(
 
 commands(
     ("va", (1, 6)),
-    harmony.sixteenths(
-        harmony.glissando_counts,
+    library.sixteenths(
+        library.glissando_counts,
     ),
     baca.pitches("D4 Eb4"),
     baca.glissando(
@@ -316,7 +316,7 @@ commands(
 
 commands(
     ("va", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+"],
     ),
     baca.pitch("F4"),
@@ -350,8 +350,8 @@ commands(
 
 commands(
     ("vc1", (1, 6)),
-    harmony.sixteenths(
-        harmony.damp_counts,
+    library.sixteenths(
+        library.damp_counts,
     ),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
@@ -363,7 +363,7 @@ commands(
 
 commands(
     ("vc1", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+", -1],
     ),
     baca.pitch("A2"),
@@ -380,8 +380,8 @@ commands(
 
 commands(
     ("vc1", (9, 10)),
-    harmony.sixteenths(
-        harmony.damp_counts_curtailed,
+    library.sixteenths(
+        library.damp_counts_curtailed,
     ),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
@@ -395,8 +395,8 @@ commands(
 
 commands(
     ("vc2", (1, 6)),
-    harmony.sixteenths(
-        harmony.damp_counts,
+    library.sixteenths(
+        library.damp_counts,
     ),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
@@ -408,7 +408,7 @@ commands(
 
 commands(
     ("vc2", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+", -1],
     ),
     baca.pitch("G2"),
@@ -425,8 +425,8 @@ commands(
 
 commands(
     ("vc2", (9, 10)),
-    harmony.sixteenths(
-        harmony.damp_counts_curtailed,
+    library.sixteenths(
+        library.damp_counts_curtailed,
     ),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
@@ -440,8 +440,8 @@ commands(
 
 commands(
     ("cb1", (1, 6)),
-    harmony.sixteenths(
-        harmony.glissando_counts,
+    library.sixteenths(
+        library.glissando_counts,
     ),
     baca.pitches("E3 D#3"),
     baca.glissando(
@@ -461,7 +461,7 @@ commands(
 
 commands(
     ("cb1", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+", -1],
     ),
     baca.pitch("G#1"),
@@ -478,8 +478,8 @@ commands(
 
 commands(
     ("cb1", (9, 10)),
-    harmony.sixteenths(
-        harmony.glissando_counts_curtailed,
+    library.sixteenths(
+        library.glissando_counts_curtailed,
     ),
     baca.pitches("E3 D#3"),
     baca.glissando(
@@ -501,8 +501,8 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    harmony.sixteenths(
-        harmony.glissando_counts,
+    library.sixteenths(
+        library.glissando_counts,
     ),
     baca.pitches("C#3 D3"),
     baca.glissando(
@@ -522,7 +522,7 @@ commands(
 
 commands(
     ("cb2", 8),
-    harmony.sixteenths(
+    library.sixteenths(
         ["+", -1],
     ),
     baca.pitch("F#1"),
@@ -539,8 +539,8 @@ commands(
 
 commands(
     ("cb2", (9, 10)),
-    harmony.sixteenths(
-        harmony.glissando_counts_curtailed,
+    library.sixteenths(
+        library.glissando_counts_curtailed,
     ),
     baca.pitches("C#3 D3"),
     baca.glissando(
