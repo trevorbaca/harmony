@@ -263,4 +263,4 @@ if __name__ == "__main__":
         includes=["../stylesheet.ily"],
         preamble=baca.interpret.nonfirst_preamble.split("\n"),
     )
-    baca.build.make_segment_pdf(lilypond_file, metadata, persist, timing)
+    baca.build.persist(lilypond_file, metadata, persist, timing)
