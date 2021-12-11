@@ -114,6 +114,6 @@ jobs:
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
         if [ -d $BUILDS_DIRECTORY ]; then
           cd $BUILDS_DIRECTORY
-          /tmp/baca/scr/test-score-builds
+          /tmp/baca/scr/test-score-build-music
         fi
         cd $GITHUB_WORKSPACE
