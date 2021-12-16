@@ -5,9 +5,6 @@
 %! baca.path.extern()
 \include "music.ily"
 
-\header { composer = ##f poet = ##f title = ##f }
-\layout { indent = 0 }
-\paper { print-first-page-number = ##t }
 %! baca._add_nonfirst_segment_preamble()
 \paper { first-page-number = #2 }
 
