@@ -5,9 +5,6 @@
 %! baca.path.extern()
 \include "music.ily"
 
-%! baca._add_nonfirst_segment_preamble()
-\paper { first-page-number = #8 }
-
 %! baca._make_lilypond_file()
 %! abjad.LilyPondFile._get_format_pieces()
 \score
