@@ -1,6 +1,5 @@
 name: CI
 
-
 on:
   push:
     branches: [ main ]
@@ -17,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9, "3.10"]
+        python-version: ["3.10"]
 
     steps:
     - uses: actions/checkout@v2
@@ -90,15 +89,6 @@ jobs:
       run: |
         export PATH=/home/runner/bin:$PATH
         /tmp/baca/scr/doctest $GITHUB_WORKSPACE
-
-    - name: Run pytest
-      run: |
-        export PATH=/home/runner/bin:${PATH}
-        NAME=$(basename $GITHUB_WORKSPACE)
-        if [ -e $GITHUB_WORKSPACE/$NAME/test.py ]; then
-            pytest --version
-            py.test -rf $GITHUB_WORKSPACE/$NAME/test.py
-        fi
 
     - name: Test segments
       run: |
