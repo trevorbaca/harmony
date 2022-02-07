@@ -1,25 +1,23 @@
-dict(
-    {
-        "bol_measure_numbers": [226, 232],
-        "duration": "0'57''",
-        "fermata_measure_numbers": [229, 236],
-        "final_measure_is_fermata": True,
-        "final_measure_number": 236,
-        "first_measure_number": 226,
-        "start_clock_time": "11'54''",
-        "stop_clock_time": "12'51''",
-        "time_signatures": [
-            "7/4",
-            "6/4",
-            "5/4",
-            "1/4",
-            "6/4",
-            "6/4",
-            "6/4",
-            "6/4",
-            "6/4",
-            "6/4",
-            "1/4",
-        ],
-    }
-)
+{
+    "bol_measure_numbers": [226, 232],
+    "duration": "0'57''",
+    "fermata_measure_numbers": [229, 236],
+    "final_measure_is_fermata": True,
+    "final_measure_number": 236,
+    "first_measure_number": 226,
+    "start_clock_time": "11'54''",
+    "stop_clock_time": "12'51''",
+    "time_signatures": [
+        "7/4",
+        "6/4",
+        "5/4",
+        "1/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "6/4",
+        "1/4",
+    ],
+}
