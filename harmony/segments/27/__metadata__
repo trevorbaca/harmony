@@ -1,22 +1,10 @@
-dict(
-    {
-        "bol_measure_numbers": [247, 252],
-        "duration": "0'30''",
-        "fermata_measure_numbers": [248, 254],
-        "final_measure_number": 255,
-        "first_measure_number": 247,
-        "start_clock_time": "13'26''",
-        "stop_clock_time": "13'56''",
-        "time_signatures": [
-            "7/4",
-            "1/4",
-            "5/4",
-            "7/4",
-            "6/4",
-            "6/4",
-            "2/4",
-            "1/4",
-            "7/4",
-        ],
-    }
-)
+{
+    "bol_measure_numbers": [247, 252],
+    "duration": "0'30''",
+    "fermata_measure_numbers": [248, 254],
+    "final_measure_number": 255,
+    "first_measure_number": 247,
+    "start_clock_time": "13'26''",
+    "stop_clock_time": "13'56''",
+    "time_signatures": ["7/4", "1/4", "5/4", "7/4", "6/4", "6/4", "2/4", "1/4", "7/4"],
+}
