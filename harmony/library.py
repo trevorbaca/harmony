@@ -502,7 +502,7 @@ def sixteenths(
     preprocessor=None,
     denominator=(1, 16),
     do_not_rewrite_meter=False,
-    extra_counts=None,
+    extra_counts=(),
     written_eighths=None,
     written_quarters=None,
     written_dotted_quarters=None,
