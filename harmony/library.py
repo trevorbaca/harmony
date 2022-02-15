@@ -282,17 +282,6 @@ appoggiato_pitches_g = baca.Sequence(
     "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 )
 
-# selectors
-
-
-def rests_filter_duration(pair):
-    def selector(argument):
-        result = baca.Selection(argument).rests()
-        result = result.filter_duration(*pair)
-        return result
-
-    return selector
-
 
 ### FUNCTIONS ###
 
