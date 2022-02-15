@@ -398,7 +398,9 @@ commands(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=library.rests_filter_duration((">=", (1, 2))),
+        map=lambda _: baca.Selection(_)
+        .rests()
+        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 2))),
     ),
 )
 

@@ -489,7 +489,9 @@ commands(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=library.rests_filter_duration((">=", (1, 2))),
+        map=lambda _: baca.Selection(_)
+        .rests()
+        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 2))),
     ),
 )
 
@@ -1212,7 +1214,9 @@ commands(
 commands(
     (["va", "cb1", "cb2"], 11),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_).pheads().filter_duration(">=", (1, 8)),
+        lambda _: baca.Selection(_)
+        .pheads()
+        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
         abjad.tweak(4).staff_padding,
         full=True,
     ),
