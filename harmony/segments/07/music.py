@@ -153,13 +153,18 @@ commands(
     baca.dynamic("mf"),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(7, 8), (5, 8)])
+    return result
+
+
 commands(
     ("bfl", 7),
     library.sixteenths(
         [-4, 8, "-", 2, 2],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(7, 8), (5, 8)]),
+        preprocessor=preprocessor,
         extra_counts=[0, -2],
         denominator=None,
         written_quarters=[-2, -1],
@@ -527,13 +532,18 @@ commands(
     ),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(1, 4), (2, 4), (1, 8), (5, 8)])
+    return result
+
+
 commands(
     ("hp", 7),
     library.sixteenths(
         [-4, -4, 8, -2, -4, 2, 2],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(1, 4), (2, 4), (1, 8), (5, 8)]),
+        preprocessor=preprocessor,
         extra_counts=[0, 4, 0, -2],
         denominator=None,
         written_quarters=[-2, -1],
@@ -669,13 +679,18 @@ commands(
     ),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
+    return result
+
+
 commands(
     ("va", 5),
     library.sixteenths(
         [6, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(1, 4), (3, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[0, -2],
         denominator=None,
         tie=[0],
@@ -849,13 +864,18 @@ commands(
     baca.pitch("B4"),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
+    return result
+
+
 commands(
     ("vc1", 8),
     library.sixteenths(
         [8, 4, 4, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(1, 4), (3, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[0, 8],
         denominator=None,
     ),

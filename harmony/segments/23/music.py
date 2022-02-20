@@ -436,13 +436,18 @@ commands(
     ),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(2, 4), (4, 4), (3, 4)])
+    return result
+
+
 commands(
     ("vc1", (6, 7)),
     library.sixteenths(
         [-8, 4, 4, 4, 4, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(2, 4), (4, 4), (3, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[0, -4, 0],
         denominator=None,
     ),
@@ -588,13 +593,18 @@ commands(
     baca.clef("bass"),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(2, 4), (4, 4), (3, 4)])
+    return result
+
+
 commands(
     ("cb1", (6, 7)),
     library.sixteenths(
         [-8, 4, 4, 4, 4, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(2, 4), (4, 4), (3, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[0, -4, 0],
         denominator=True,
     ),
