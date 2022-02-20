@@ -499,15 +499,20 @@ commands(
     ),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(1, 4), (2, 4)])
+    return result
+
+
 commands(
     ("vc1", 2),
     baca.clef("percussion"),
     baca.staff_lines(1),
     library.sixteenths(
         [1, -3, 1, -2, 3, -1, 3, -1],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(1, 4), (2, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[1, 2],
         denominator=None,
     ),

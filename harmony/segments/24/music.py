@@ -207,14 +207,19 @@ commands(
     ),
 )
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(4, 4), (4, 4), (4, 4), (1, 4)])
+    return result
+
+
 commands(
     ("perc2", (7, 9)),
     baca.staff_lines(1),
     library.sixteenths(
         [16, 16, 16, -4, 2],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(4, 4), (4, 4), (4, 4), (1, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[0, 0, 0, 2],
         denominator=None,
     ),
@@ -353,15 +358,20 @@ commands(
 
 # vc1
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(2, 4), (8, 4), (2, 4)])
+    return result
+
+
 commands(
     ("vc1", (1, 3)),
     baca.clef("treble"),
     baca.staff_lines(5),
     library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(2, 4), (8, 4), (2, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[4, 0, 4],
         denominator=None,
         written_quarters=[5],
@@ -483,15 +493,20 @@ commands(
 
 # cb1
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(2, 4), (8, 4), (2, 4)])
+    return result
+
+
 commands(
     ("cb1", (1, 3)),
     baca.clef("treble"),
     baca.staff_lines(5),
     library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(2, 4), (8, 4), (2, 4)]),
+        preprocessor=preprocessor,
         extra_counts=[4, 0, 4],
         denominator=None,
         written_quarters=[5],

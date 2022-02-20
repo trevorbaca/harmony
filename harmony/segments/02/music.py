@@ -76,8 +76,8 @@ commands(
     baca.global_fermata("fermata", baca.selectors.rest(12 - 1)),
 )
 
-divisions = baca.Sequence([16, 20, 12, 12, 12, 16])
-sixteenths = baca.Sequence([(2, 2, _ - 4) for _ in divisions])
+divisions = abjad.Sequence([16, 20, 12, 12, 12, 16])
+sixteenths = abjad.Sequence([(2, 2, _ - 4) for _ in divisions])
 sixteenths = sixteenths.flatten()
 
 # text
@@ -815,13 +815,18 @@ commands(
 
 # vc2
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(15, 8), (3, 8)])
+    return result
+
+
 commands(
     ("vc2", (1, 2)),
     library.sixteenths(
         [20, "-"],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(15, 8), (3, 8)]),
+        preprocessor=preprocessor,
         denominator=None,
         do_not_rewrite_meter=True,
         extra_counts=[-6],
@@ -1099,13 +1104,18 @@ commands(
 
 # cb2
 
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(15, 8), (3, 8)])
+    return result
+
+
 commands(
     ("cb2", (1, 2)),
     library.sixteenths(
         [20, "-"],
-        preprocessor=lambda _: baca.Sequence(_)
-        .fuse()
-        .split_divisions([(15, 8), (3, 8)]),
+        preprocessor=preprocessor,
         denominator=None,
         do_not_rewrite_meter=True,
         extra_counts=[-6],
