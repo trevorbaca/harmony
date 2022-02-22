@@ -76,8 +76,8 @@ commands(
     baca.global_fermata("fermata", baca.selectors.rest(12 - 1)),
 )
 
-divisions = abjad.Sequence([16, 20, 12, 12, 12, 16])
-sixteenths = abjad.Sequence([(2, 2, _ - 4) for _ in divisions])
+divisions = [16, 20, 12, 12, 12, 16]
+sixteenths = [(2, 2, _ - 4) for _ in divisions]
 sixteenths = abjad.sequence.flatten(sixteenths)
 
 # text

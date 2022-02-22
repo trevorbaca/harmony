@@ -671,7 +671,7 @@ commands(
 
 # vc1
 
-sixteenths = abjad.Sequence([6, -2, 4, -2, 4, -2, 2, -2])
+sixteenths = [6, -2, 4, -2, 4, -2, 2, -2]
 
 commands(
     ("vc1", 3),
