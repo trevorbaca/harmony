@@ -204,7 +204,7 @@ commands(
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
     baca.pitches(
-        library.warble_pitches.rotate(-10),
+        abjad.sequence.rotate(library.warble_pitches, -10),
     ),
     baca.new(
         baca.note_head_font_size(-3),
@@ -776,14 +776,14 @@ commands(
 commands(
     ("vc2", 4),
     library.sixteenths(
-        sixteenths.rotate(-2)[:4] + ["-"],
+        abjad.sequence.rotate(sixteenths, -2)[:4] + ["-"],
     ),
 )
 
 commands(
     ("vc2", 5),
     library.sixteenths(
-        sixteenths.rotate(-2),
+        abjad.sequence.rotate(sixteenths, -2),
     ),
 )
 
@@ -866,14 +866,14 @@ commands(
 commands(
     ("cb1", 4),
     library.sixteenths(
-        sixteenths.rotate(-4)[:4] + ["-"],
+        abjad.sequence.rotate(sixteenths, -4)[:4] + ["-"],
     ),
 )
 
 commands(
     ("cb1", 5),
     library.sixteenths(
-        sixteenths.rotate(-4),
+        abjad.sequence.rotate(sixteenths, -4),
     ),
 )
 
@@ -990,7 +990,7 @@ commands(
 commands(
     ("cb2", 5),
     library.sixteenths(
-        sixteenths.rotate(-6),
+        abjad.sequence.rotate(sixteenths, -6),
     ),
 )
 

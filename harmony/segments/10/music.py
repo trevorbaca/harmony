@@ -287,7 +287,7 @@ commands(
         baca.selectors.leaves(grace=False),
     ),
     baca.pitches(
-        library.appoggiato_pitches_a.rotate(-9),
+        abjad.sequence.rotate(library.appoggiato_pitches_a, -9),
         baca.selectors.leaves(grace=True),
     ),
     baca.dynamic(

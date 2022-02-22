@@ -715,7 +715,7 @@ commands(
         selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
-        library.appoggiato_pitches_b_flat.rotate(-5),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5),
         selector=baca.selectors.plts(grace=True),
     ),
     baca.text_spanner(
@@ -815,7 +815,7 @@ commands(
         selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
-        library.appoggiato_pitches_b_flat.rotate(-5 - 1),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5 - 1),
         selector=baca.selectors.plts(grace=True),
     ),
     baca.dynamic(
@@ -1028,7 +1028,7 @@ commands(
         selector=baca.selectors.plts(grace=False),
     ),
     baca.pitches(
-        library.appoggiato_pitches_b_flat.rotate(-5 - 2),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5 - 2),
         do_not_transpose=True,
         selector=baca.selectors.plts(grace=True),
     ),

@@ -184,7 +184,7 @@ commands(
         rest_tuplets=[1],
     ),
     baca.pitches(
-        library.warble_pitches.rotate(-1),
+        abjad.sequence.rotate(library.warble_pitches, -1),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -208,7 +208,7 @@ commands(
         rest_tuplets=[0],
     ),
     baca.pitches(
-        library.warble_pitches.rotate(-2),
+        abjad.sequence.rotate(library.warble_pitches, -2),
     ),
     baca.hairpin(
         "o< mp >o niente",

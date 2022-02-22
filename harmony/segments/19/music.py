@@ -120,7 +120,7 @@ commands(
         rest_tuplets=[1],
     ),
     baca.pitches(
-        library.warble_pitches.rotate(-5),
+        abjad.sequence.rotate(library.warble_pitches, -5),
     ),
     baca.new(
         baca.note_head_font_size(-3),
@@ -173,7 +173,7 @@ commands(
         extra_counts=[2],
     ),
     baca.pitches(
-        library.warble_pitches.rotate(-5),
+        abjad.sequence.rotate(library.warble_pitches, -5),
     ),
     baca.new(
         baca.note_head_font_size(-3),
