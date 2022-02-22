@@ -517,7 +517,6 @@ def sixteenths(
     if fuse is True:
 
         def preprocessor_(argument):
-            # return abjad.Sequence(argument)
             return list(argument)
 
     elif preprocessor is None:
@@ -708,7 +707,6 @@ def tessera_1(part, *, advance=0, gap=False):
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        # counts = abjad.Sequence(new_counts)
         counts = list(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
@@ -732,7 +730,6 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        # counts = abjad.Sequence(new_counts)
         counts = list(new_counts)
     commands = []
     if rest_plts is not None:
@@ -762,7 +759,6 @@ def tessera_3(part, *, advance=0, gap=False):
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        # counts = abjad.Sequence(new_counts)
         counts = list(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
@@ -786,7 +782,6 @@ def tessera_4(part, *, advance=0, gap=False):
         new_counts = []
         for count in counts:
             new_counts.extend([count - 1, -1])
-        # counts = abjad.Sequence(new_counts)
         counts = list(new_counts)
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
