@@ -414,12 +414,11 @@ def phjc(
     """
 
     def preprocessor(argument):
-        #        argument = baca.Sequence(argument).fuse().quarters().partition(divisions)
-        #        return baca.Sequence(baca.Sequence(_).flatten().fuse() for _ in argument)
         result = baca.sequence.fuse(argument)
         result = baca.sequence.quarters(result)
         result = baca.sequence.partition(result, divisions)
-        result = [baca.sequence.fuse(abjad.Sequence(_).flatten()) for _ in result]
+        result = [abjad.sequence.flatten(_) for _ in result]
+        result = [baca.sequence.fuse(_) for _ in result]
         return result
 
     commands = []
