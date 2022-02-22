@@ -709,7 +709,7 @@ def tessera_1(part, *, advance=0, gap=False):
     permutation = abjad.Sequence([2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7])
     assert sum(counts) == 96
     for i in range(part):
-        counts = counts.permute(permutation)
+        counts = abjad.sequence.permute(counts, permutation)
     if gap is True:
         new_counts = []
         for count in counts:
@@ -732,7 +732,7 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
     permutation = abjad.Sequence([2, 3, 4, 0, 5, 6, 1])
     assert sum(counts) == 44
     for i in range(part):
-        counts = counts.permute(permutation)
+        counts = abjad.sequence.permute(counts, permutation)
     if gap is True:
         new_counts = []
         for count in counts:
@@ -761,7 +761,7 @@ def tessera_3(part, *, advance=0, gap=False):
     permutation = abjad.Sequence([8, 9, 2, 3, 4, 0, 5, 6, 7, 1])
     assert sum(counts) == 84
     for i in range(part):
-        counts = counts.permute(permutation)
+        counts = abjad.sequence.permute(counts, permutation)
     if gap is True:
         new_counts = []
         for count in counts:
@@ -784,7 +784,7 @@ def tessera_4(part, *, advance=0, gap=False):
     permutation = abjad.Sequence([11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7])
     assert sum(counts) == 144
     for i in range(part):
-        counts = counts.permute(permutation)
+        counts = abjad.sequence.permute(counts, permutation)
     if gap is True:
         new_counts = []
         for count in counts:
