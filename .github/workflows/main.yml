@@ -90,11 +90,11 @@ jobs:
         export PATH=/home/runner/bin:$PATH
         /tmp/baca/scr/doctest $GITHUB_WORKSPACE
 
-    - name: Test segments
+    - name: Test sections
       run: |
         export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
-        /tmp/baca/scr/test-segments
+        /tmp/baca/scr/test-sections
 
     - name: Test score builds
       run: |
