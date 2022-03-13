@@ -156,7 +156,7 @@ commands(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o<| mf",
-        selector=lambda _: baca.Selection(_).leaves()[:1].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[:1]),
     ),
     baca.hairpin(
         "o<| f",
@@ -346,7 +346,7 @@ commands(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.lparts([4, 5]),
-        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
+        selector=lambda _: baca.rleaves(_, count=2),
     ),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",
