@@ -520,7 +520,7 @@ commands(
     (["vc1", "vc2"], [(1, 6), 8, 11]),
     baca.damp_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).ltleaves().rleak(grace=False),
+        selector=lambda _: baca.rleak(baca.ltleaves(_), grace=False),
     ),
 )
 
@@ -589,7 +589,7 @@ commands(
     ),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves().rleak(grace=False),
+        selector=lambda _: baca.rleaves(_, grace=False),
     ),
     baca.markup(r"\baca-eleven-e"),
     baca.markup(
@@ -616,7 +616,7 @@ commands(
     ),
     baca.pizzicato_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves().rleak(grace=False),
+        selector=lambda _: baca.rleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -775,7 +775,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
 )
 

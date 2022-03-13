@@ -707,7 +707,7 @@ commands(
     ),
     baca.dls_staff_padding(
         6,
-        lambda _: baca.Selection(_).leaves().lleak().lleak(),
+        lambda _: baca.lleaves(_, count=2),
     ),
 )
 
@@ -789,7 +789,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
+        selector=lambda _: baca.rleak(baca.tleaves(_), count=2),
     ),
 )
 
@@ -944,7 +944,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.pitch(
         "Bb3",
@@ -966,7 +966,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=lambda _: baca.Selection(_).tleaves(grace=False).rleak().rleak(),
+        selector=lambda _: baca.rleak(baca.tleaves(_, grace=False), count=2),
     ),
 )
 
@@ -1022,7 +1022,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
 )
 
@@ -1120,7 +1120,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.pitch(
         "Bb3",
@@ -1142,7 +1142,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.Down,
-        selector=lambda _: baca.Selection(_).tleaves(grace=False).rleak().rleak(),
+        selector=lambda _: baca.rleak(baca.tleaves(_, grace=False), count=2),
     ),
 )
 
@@ -1177,7 +1177,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.pitch(
         "Bb3",
@@ -1573,7 +1573,7 @@ commands(
     ),
     baca.hairpin(
         "o< mf > p < f > p < ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([1, 1, 1, 1, 1, 2]),
+        pieces=lambda _: baca.mgroups(_, [1, 1, 1, 1, 1, 2]),
         right_broken=True,
         selector=baca.selectors.rleaves(),
     ),
@@ -1627,7 +1627,7 @@ commands(
     baca.hairpin(
         "o< mp > p < f",
         bookend=False,
-        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 2]),
+        pieces=lambda _: baca.mgroups(_, [2, 1, 1, 2]),
         selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.scp_spanner(
@@ -1676,7 +1676,7 @@ commands(
     baca.flat_glissando("E1"),
     baca.hairpin(
         "o< f > p < ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 3]),
+        pieces=lambda _: baca.mgroups(_, [2, 1, 1, 3]),
         selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
@@ -1684,7 +1684,7 @@ commands(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 2]),
+        pieces=lambda _: baca.mgroups(_, [2, 1, 1, 2]),
         selector=baca.selectors.leaves(),
     ),
 )

@@ -911,9 +911,8 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda _: [
+            x for x in baca.pheads(_) if abjad.get.duration(x) >= abjad.Duration((1, 8))],
         abjad.tweak(4).staff_padding,
         full=True,
     ),

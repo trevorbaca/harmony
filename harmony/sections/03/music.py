@@ -523,13 +523,13 @@ commands(
     baca.new(
         library.bridge_staff_position(),
         baca.dls_staff_padding(6),
-        selector=lambda _: baca.Selection(_).leaves().rleak().rleak().rleak(),
+        selector=lambda _: baca.rleaves(_, count=3),
     ),
     baca.accent(
-        lambda _: baca.Selection(_).leaves().rleak().rleak().rleak().pheads(),
+        lambda _: baca.pheads(baca.rleaves(_, count=3)),
     ),
     baca.stem_tremolo(
-        lambda _: baca.Selection(_).leaves().rleak().rleak().rleak().pleaves(),
+        lambda _: baca.pheads(baca.rleaves(_, count=3)),
     ),
     baca.dynamic(
         '"ff"',
@@ -540,7 +540,7 @@ commands(
         '"f" mf mp p pp ppp ppp',
         bookend=False,
         pieces=baca.selectors.plts(),
-        selector=lambda _: baca.Selection(_).leaves()[1:].rleak().rleak().rleak(),
+        selector=lambda _: baca.rleaves(_, count=3)[1:],
     ),
 )
 
@@ -581,7 +581,7 @@ commands(
         baca.selectors.leaves((4, None)),
     ),
     baca.accent(
-        lambda _: baca.Selection(_).leaves()[4:].pheads(),
+        lambda _: baca.pheads(abjad.select.leaves(_)[4:]),
     ),
     baca.dynamic(
         "mf",

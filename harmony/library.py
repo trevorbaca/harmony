@@ -10,12 +10,9 @@ _reference_meters = (
     abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
 )
 
-# instruments
-
 instruments = dict(
     [
         ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
-        #        ("Glockenspiel", abjad.Glockenspiel()),
         (
             "Percussion",
             abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
@@ -38,8 +35,6 @@ instruments = dict(
         ("ContrabassII", abjad.Contrabass(pitch_range="[E1, +inf]")),
     ]
 )
-
-# margin markups
 
 margin_markups = dict(
     [
@@ -178,8 +173,6 @@ metronome_marks = dict(
     ]
 )
 
-### TAGS ###
-
 LETTER_PARTS_BFL = abjad.Tag("+LETTER_PARTS_BFL")
 LETTER_PARTS_PERC_I = abjad.Tag("+LETTER_PARTS_PERC_I")
 LETTER_PARTS_PERC_II = abjad.Tag("+LETTER_PARTS_PERC_II")
@@ -200,18 +193,13 @@ NOT_LETTER_PARTS_VC_II = abjad.Tag("-LETTER_PARTS_VC_II")
 NOT_LETTER_PARTS_CB_I = abjad.Tag("-LETTER_PARTS_CB_I")
 NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
 
-### CONSTANTS ###
-
 cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
 
 warble_pitches = "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
 
-# shared counts
-
 damp_counts = [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
 
 damp_counts_curtailed = [3, -1, 8, -8, 3, -1]
-
 
 glissando_counts = [
     2,
@@ -260,12 +248,12 @@ appoggiato_pitches_b_2 = (
     "D#3 E3  C3 C#3 Ctqs3 D3 Dqs3 D#3  C#3 D#3 Dtqs3 E3 Eqs3".split()
 )
 
-# Bb:
+# Bb
 appoggiato_pitches_b_flat = (
     "D5 D#5  B4 C5 Cqs5 C#5 Ctqs5 D5  C5 D5 Dqs5 D#5 Dtqs5".split()
 )
 
-# A:
+# A
 appoggiato_pitches_a = "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
 
 # Ab/G#
@@ -273,11 +261,8 @@ appoggiato_pitches_a_flat = (
     "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
 )
 
-# G:
+# G
 appoggiato_pitches_g = "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
-
-
-### FUNCTIONS ###
 
 
 def appoggiato(
@@ -299,9 +284,6 @@ def appoggiato(
     invisible=None,
     after_graces=None,
 ):
-    """
-    Makes appoggiato rhythm.
-    """
     preprocessor = None
     if fuse is True:
 
@@ -403,10 +385,6 @@ def phjc(
     rest_most=None,
     rest_nonfirst=False,
 ) -> baca.RhythmCommand:
-    """
-    Makes purpleheart jerky contintuity.
-    """
-
     def preprocessor(argument):
         result = baca.sequence.fuse(argument)
         result = baca.sequence.quarters(result)
@@ -458,14 +436,13 @@ def phjc(
 
 
 def rimbalzandi(*, extra_counts=None, rest_except=None):
-    """
-    Makes rimbalzandi rhythm.
-    """
     commands = []
     if rest_except is not None:
 
         def selector(argument):
-            return baca.Selection(argument).leaves().exclude(rest_except)
+            leaves = abjad.select.leaves(argument)
+            leaves = abjad.select.exclude(leaves, rest_except)
+            return leaves
 
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
@@ -510,9 +487,6 @@ def sixteenths(
     unbeam=False,
     after_graces=None,
 ):
-    """
-    Makes sixteenths rhythm.
-    """
     talea_denominator = talea_denominator or 16
     if fuse is True:
 
@@ -695,9 +669,6 @@ def sixteenths(
 
 
 def tessera_1(part, *, advance=0, gap=False):
-    """
-    Makes tessera 1.
-    """
     counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
     permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
     assert sum(counts) == 96
@@ -718,9 +689,6 @@ def tessera_1(part, *, advance=0, gap=False):
 
 
 def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
-    """
-    Makes tessera 2.
-    """
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
     assert sum(counts) == 44
@@ -747,9 +715,6 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
 
 
 def tessera_3(part, *, advance=0, gap=False):
-    """
-    Makes tessera 3.
-    """
     counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
     permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
     assert sum(counts) == 84
@@ -770,9 +735,6 @@ def tessera_3(part, *, advance=0, gap=False):
 
 
 def tessera_4(part, *, advance=0, gap=False):
-    """
-    Makes tessera 4.
-    """
     counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
     permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
     assert sum(counts) == 144
@@ -793,9 +755,6 @@ def tessera_4(part, *, advance=0, gap=False):
 
 
 def train(counts, *, rest_leaves=None):
-    """
-    Makes pulse train.
-    """
     commands = []
     if rest_leaves is not None:
         selector = baca.selectors.leaves(rest_leaves)
@@ -805,9 +764,7 @@ def train(counts, *, rest_leaves=None):
         rmakers.talea(counts, 16),
         *commands,
         rmakers.extract_trivial(),
-        rmakers.beam(
-            lambda _: baca.Selection(_).leaves().group(),
-        ),
+        rmakers.beam(lambda _: [abjad.select.leaves(_)]),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
         tag=baca.site(inspect.currentframe()),
@@ -821,9 +778,6 @@ def tuplet(
     force_augmentation=False,
     written_quarters=False,
 ):
-    """
-    Makes tuplet.
-    """
     commands = []
     if denominator is not None:
         denominator_ = rmakers.denominator(denominator)
@@ -854,9 +808,6 @@ def warble(
     rest_tuplets=None,
     rest_tuplets_cyclic=None,
 ):
-    """
-    Makes warble rhythm.
-    """
     preprocessor = None
     if sixteenths is not None:
         divisions_ = [(_, 16) for _ in sixteenths]
@@ -893,9 +844,6 @@ def warble(
     )
 
 
-### STAFF POSITIONS ###
-
-
 def bass_drum_staff_position() -> baca.Suite:
     """
     Sets bass drum staff position (-1), stem down, tuplet bracket up.
@@ -927,8 +875,8 @@ def brake_drum_staff_position() -> baca.Suite:
 
 def purpleheart_staff_positions(argument) -> baca.Suite:
     """
-    Sets staff position, stem direction, tuplet bracket direction,
-    tuplet bracket staff padding.
+    Sets staff position, stem direction, tuplet bracket direction, tuplet bracket staff
+    padding.
     """
     assert isinstance(argument, list), repr(argument)
     assert all(_ in (-2, 0, 2) for _ in argument), repr(argument)
@@ -1058,7 +1006,6 @@ def make_empty_score():
     tag = baca.site(inspect.currentframe())
     # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
-
     # BASS FLUTE
     bass_flute_music_voice = abjad.Voice(name="Bass_Flute_Music_Voice", tag=tag)
     bass_flute_music_staff = abjad.Staff(
@@ -1074,7 +1021,6 @@ def make_empty_score():
     )
     abjad.annotate(bass_flute_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
-
     # PERCUSSION 1
     percussion_1_music_voice = abjad.Voice(name="Percussion_I_Music_Voice", tag=tag)
     percussion_1_music_staff = abjad.Staff(
@@ -1090,7 +1036,6 @@ def make_empty_score():
     )
     abjad.annotate(percussion_1_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("PercussionI", percussion_1_music_staff)
-
     # PERCUSSION 2
     percussion_2_music_voice = abjad.Voice(name="Percussion_II_Music_Voice", tag=tag)
     percussion_2_music_staff = abjad.Staff(
@@ -1106,7 +1051,6 @@ def make_empty_score():
     )
     abjad.annotate(percussion_2_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("PercussionII", percussion_2_music_staff)
-
     # HARP
     harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=tag)
     harp_music_staff = abjad.Staff(
@@ -1118,7 +1062,6 @@ def make_empty_score():
     abjad.annotate(harp_music_staff, "default_instrument", instruments["Harp"])
     abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("Harp", harp_music_staff)
-
     # VIOLA
     viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=tag)
     viola_music_staff = abjad.Staff(
@@ -1134,7 +1077,6 @@ def make_empty_score():
     )
     abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
     baca.score.attach_lilypond_tag("Viola", viola_music_staff)
-
     # CELLO 1
     cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=tag)
     cello_1_music_staff = abjad.Staff(
@@ -1150,7 +1092,6 @@ def make_empty_score():
     )
     abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("CelloI", cello_1_music_staff)
-
     # CELLO 2
     cello_2_music_voice = abjad.Voice(name="Cello_II_Music_Voice", tag=tag)
     cello_2_music_staff = abjad.Staff(
@@ -1166,7 +1107,6 @@ def make_empty_score():
     )
     abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("CelloII", cello_2_music_staff)
-
     # CONTRABASS 1
     contrabass_1_music_voice = abjad.Voice(name="Contrabass_I_Music_Voice", tag=tag)
     contrabass_1_music_staff = abjad.Staff(
@@ -1182,7 +1122,6 @@ def make_empty_score():
     )
     abjad.annotate(contrabass_1_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
-
     # CONTRABASS 2
     contrabass_2_music_voice = abjad.Voice(name="Contrabass_II_Music_Voice", tag=tag)
     contrabass_2_music_staff = abjad.Staff(
@@ -1198,7 +1137,6 @@ def make_empty_score():
     )
     abjad.annotate(contrabass_2_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
-
     # WIND SECTION STAFF GROUP
     wind_section_staff_group = abjad.StaffGroup(
         [bass_flute_music_staff],
@@ -1206,7 +1144,6 @@ def make_empty_score():
         name="Wind_Section_Staff_Group",
         tag=tag,
     )
-
     # PERCUSSION SECTION STAFF GROUP
     percussion_section_staff_group = abjad.StaffGroup(
         [
@@ -1218,7 +1155,6 @@ def make_empty_score():
         name="Percussion_Section_Staff_Group",
         tag=tag,
     )
-
     # STRING SECTION STAFF GROUP
     string_section_staff_group = abjad.StaffGroup(
         [
@@ -1232,7 +1168,6 @@ def make_empty_score():
         name="String_Section_Staff_Group",
         tag=tag,
     )
-
     # MUSIC CONTEXT
     music_context = abjad.Context(
         [
@@ -1245,7 +1180,6 @@ def make_empty_score():
         name="Music_Context",
         tag=tag,
     )
-
     # SCORE
     score = abjad.Score([global_context, music_context], name="Score", tag=tag)
     baca.score.assert_lilypond_identifiers(score)
@@ -1261,9 +1195,6 @@ def margin_markup(
     context="Staff",
     selector=baca.selectors.leaf(0),
 ):
-    """
-    Makes tagged margin markup indicator command.
-    """
     margin_markup = margin_markups[key]
     command = baca.margin_markup(
         margin_markup,
