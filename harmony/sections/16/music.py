@@ -305,9 +305,9 @@ commands(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda x: [
+            _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(1.5).staff_padding,
         full=True,
     ),
@@ -452,9 +452,9 @@ commands(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda x: [
+            _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -492,9 +492,9 @@ commands(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda x: [
+            _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -517,9 +517,9 @@ commands(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda x: [
+            _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(4).staff_padding,
         full=True,
     ),
@@ -557,9 +557,9 @@ commands(
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
-        lambda _: baca.Selection(_)
-        .pheads()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 8))),
+        lambda x: [
+            _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(4).staff_padding,
         full=True,
     ),

@@ -224,7 +224,7 @@ commands(
     ),
     baca.hairpin(
         "pp < p >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().rleak().lparts([1, 3]),
+        pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
     ),
 )
 

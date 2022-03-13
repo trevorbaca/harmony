@@ -124,7 +124,10 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_),
+            (3, 4),
+        ),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -317,9 +320,11 @@ commands(
         baca.dots_extra_offset((2, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=lambda _: baca.Selection(_)
-        .rests()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 2))),
+        map=lambda _: [
+            x
+            for x in abjad.select.rests(_)
+            if abjad.get.duration(x) >= abjad.Duration((1, 2))
+        ],
     ),
 )
 

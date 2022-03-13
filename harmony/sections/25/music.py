@@ -121,7 +121,9 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 5)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 5)
+        ),
         map=baca.selectors.runs(),
     ),
     baca.trill_spanner(
@@ -177,7 +179,9 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 5)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 5)
+        ),
         map=baca.selectors.runs(),
         selector=baca.selectors.leaves(),
     ),
@@ -498,9 +502,8 @@ commands(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=lambda _: baca.Selection(_)
-            .plts()
-            .partition_by_counts(
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -564,9 +567,8 @@ commands(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
             " mf < ff-scratch -- niente",
-            pieces=lambda _: baca.Selection(_)
-            .plts()
-            .partition_by_counts(
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -626,9 +628,8 @@ commands(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=lambda _: baca.Selection(_)
-            .plts()
-            .partition_by_counts(
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -695,9 +696,8 @@ commands(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=lambda _: baca.Selection(_)
-            .plts()
-            .partition_by_counts(
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),
@@ -761,9 +761,8 @@ commands(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
-            pieces=lambda _: baca.Selection(_)
-            .plts()
-            .partition_by_counts(
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=baca.selectors.rleaves(),

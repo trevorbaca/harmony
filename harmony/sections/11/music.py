@@ -177,8 +177,8 @@ commands(
 
 
 def selector(argument):
-    selection = baca.Selection(argument).cmgroups([1])
-    return baca.Selection(baca.Selection(_).pleaf(-1) for _ in selection)
+    result = baca.cmgroups(argument, [1])
+    return [baca.pleaf(_, -1) for _ in result]
 
 
 commands(
@@ -473,7 +473,7 @@ commands(
     ("perc2", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[2:]),
     ),
 )
 
@@ -614,7 +614,7 @@ commands(
     ("hp", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves()[5:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[5:]),
     ),
 )
 
@@ -762,7 +762,7 @@ commands(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
@@ -770,7 +770,7 @@ commands(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
 )
 
@@ -780,8 +780,7 @@ commands(
         abjad.tweak(10.5 + 1.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        # selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.rleak(baca.tleaves(_)),
     ),
 )
 
@@ -816,7 +815,7 @@ commands(
         r"\baca-eleven-e-flat",
         abjad.tweak(1).padding,
         direction=abjad.Down,
-        selector=lambda _: baca.Selection(_).run(1).leaf(0),
+        selector=lambda _: abjad.select.run(_, 1)[0],
     ),
 )
 
@@ -931,7 +930,7 @@ commands(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
@@ -939,7 +938,7 @@ commands(
     ),
     baca.trill_spanner(
         abjad.tweak(2.75).bound_details__right__padding,
-        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
 )
 
@@ -949,8 +948,8 @@ commands(
         abjad.tweak(10.5).staff_padding,
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        # selector=lambda _: baca.Selection(_).leaves()[2:].rleak(),
-        selector=baca.selectors.tleaves(rleak=True),
+        # selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.rleak(baca.tleaves(_)),
     ),
 )
 
@@ -1006,7 +1005,7 @@ commands(
         r"\baca-seven-e-flat",
         # abjad.tweak(1).padding,
         direction=abjad.Down,
-        selector=lambda _: baca.Selection(_).run(1).leaf(0),
+        selector=lambda _: abjad.select.run(_, 1)[0],
     ),
 )
 
@@ -1197,7 +1196,7 @@ commands(
     (["vc1", "vc2", "cb1", "cb2"], (6, 7)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves()[4:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[4:]),
     ),
 )
 

@@ -73,7 +73,7 @@ commands(
             abjad.tweak(5.5).staff_padding,
             left_broken=True,
         ),
-        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
     ),
 )
 
@@ -290,12 +290,12 @@ commands(
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.tweak(5.5).staff_padding,
-            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(8).staff_padding,
             right_broken=True,
-            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         match=[0, 1, 2],
     ),
@@ -303,12 +303,12 @@ commands(
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.tweak(8).staff_padding,
-            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.metric_modulation_spanner(
             abjad.tweak(10.5).staff_padding,
             right_broken=True,
-            selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         match=[3],
     ),
