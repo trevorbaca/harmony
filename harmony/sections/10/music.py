@@ -204,9 +204,9 @@ commands(
     baca.hairpin(
         "o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=lambda _: baca.Selection(_)
-        .pleaves(grace=False)
-        .partition_by_counts([2, 1]),
+        pieces=lambda _: abjad.select.partition_by_counts(
+            baca.pleaves(_, grace=False), [2, 1]
+        ),
     ),
     baca.text_spanner(
         r"\harmony-g-sounds-ottava-higher-markup =|",
@@ -654,7 +654,7 @@ commands(
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
+        pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
         selector=baca.selectors.rleaves(),
     ),
@@ -663,7 +663,7 @@ commands(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
+        pieces=lambda _: baca.mgroups(_, [3, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -780,7 +780,7 @@ commands(
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
+        pieces=lambda _: baca.mgroups(_, [3, 4]),
         selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
@@ -788,7 +788,7 @@ commands(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
+        pieces=lambda _: baca.mgroups(_, [3, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -903,7 +903,7 @@ commands(
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
+        pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
         selector=baca.selectors.rleaves(),
     ),
@@ -912,7 +912,7 @@ commands(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
+        pieces=lambda _: baca.mgroups(_, [3, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -937,13 +937,13 @@ commands(
     baca.hairpin(
         "(pp) >o niente o< mf >o niente",
         measures=(12, 15),
-        pieces=lambda _: baca.Selection(_).mgroups([1, 1, 3]),
+        pieces=lambda _: baca.mgroups(_, [1, 1, 3]),
         selector=baca.selectors.rleaves(),
     ),
     baca.scp_spanner(
         "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
         abjad.tweak(3).staff_padding,
-        pieces=lambda _: baca.Selection(_).mgroups([2, 1, 1, 1, 1, 2, 1, 1, 2]),
+        pieces=lambda _: baca.mgroups(_, [2, 1, 1, 1, 1, 2, 1, 1, 2]),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -959,7 +959,7 @@ commands(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
+        pieces=lambda _: baca.mgroups(_, [1, 2]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -1074,7 +1074,7 @@ commands(
     baca.glissando(),
     baca.hairpin(
         "o< ff >o niente",
-        pieces=lambda _: baca.Selection(_).mgroups([3, 4]),
+        pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
         selector=baca.selectors.rleaves(),
     ),
@@ -1083,7 +1083,7 @@ commands(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([3, 3]),
+        pieces=lambda _: baca.mgroups(_, [3, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -1104,7 +1104,7 @@ commands(
             "XFB =|",
             abjad.tweak(5.5).staff_padding,
         ),
-        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
         match=[0, 1, 2],
     ),
     baca.new(
@@ -1116,7 +1116,7 @@ commands(
             "XFB =|",
             abjad.tweak(8).staff_padding,
         ),
-        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
         match=[3],
     ),
     baca.hairpin(

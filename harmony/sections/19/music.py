@@ -131,7 +131,10 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_),
+            (3, 4),
+        ),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -184,7 +187,10 @@ commands(
     ),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((3, 4)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_),
+            (3, 4),
+        ),
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
@@ -490,7 +496,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:]),
     ),
 )
 
@@ -502,9 +508,11 @@ commands(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=lambda _: baca.Selection(_)
-        .rests()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 2))),
+        map=lambda x: [
+            _
+            for _ in abjad.select.rests(x)
+            if abjad.get.duration(_) >= abjad.Duration((1, 2))
+        ],
     ),
 )
 
@@ -635,7 +643,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak()[-1],
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:])[-1],
     ),
 )
 
@@ -893,7 +901,7 @@ commands(
     ("cb2", (12, 13)),
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
-        selector=lambda _: baca.Selection(_).leaves()[4:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[4:]),
     ),
 )
 

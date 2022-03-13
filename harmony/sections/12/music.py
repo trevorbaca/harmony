@@ -221,8 +221,8 @@ commands(
 
 
 def selector(argument):
-    selection = baca.Selection(argument).cmgroups([1])
-    return baca.Selection(baca.Selection(_).pleaf(-1) for _ in selection)
+    result = baca.cmgroups(argument, [1])
+    return [baca.pleaf(_, -1) for _ in result]
 
 
 commands(
@@ -572,9 +572,11 @@ commands(
         baca.dots_extra_offset((1, 0)),
         baca.dots_x_extent_false(),
         baca.rest_x_extent_zero(),
-        map=lambda _: baca.Selection(_)
-        .rests()
-        .filter(lambda _: abjad.get.duration(_) >= abjad.Duration((1, 2))),
+        map=lambda x: [
+            _
+            for _ in abjad.select.rests(x)
+            if abjad.get.duration(_) >= abjad.Duration((1, 2))
+        ],
     ),
 )
 

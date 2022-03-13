@@ -409,7 +409,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
         right_broken=True,
-        selector=lambda _: baca.Selection(_).leaves()[-3:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-3:]),
     ),
 )
 
@@ -481,7 +481,7 @@ commands(
     baca.pizzicato_spanner(
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=False,
-        selector=lambda _: baca.Selection(_).tleaves().rleak().rleak(),
+        selector=lambda _: baca.rleak(baca.tleaves(_), count=2),
     ),
 )
 

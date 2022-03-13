@@ -515,7 +515,9 @@ commands(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 3)
+        ),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -694,7 +696,9 @@ commands(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 3)
+        ),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -858,7 +862,9 @@ commands(
             autodetect_right_padding=False,
             bookend=-1,
         ),
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 3)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 3)
+        ),
         selector=baca.selectors.leaves(),
     ),
     baca.dls_staff_padding(4),

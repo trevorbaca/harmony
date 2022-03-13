@@ -134,7 +134,7 @@ commands(
     baca.hairpin(
         "o<| mf |>o niente",
         pieces=baca.selectors.clparts([1]),
-        selector=lambda _: baca.Selection(_).leaves()[-2:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
     baca.dynamic_text_x_offset(
         -2,
@@ -457,7 +457,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         left_broken=True,
-        selector=lambda _: baca.Selection(_).leaves()[:2].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
     ),
 )
 
@@ -655,7 +655,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
         baca.selectors.pheads((1, None), grace=False),
@@ -731,7 +731,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
         baca.selectors.pheads((1, None), grace=False),
@@ -836,7 +836,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
         baca.selectors.pheads((1, None), grace=False),
@@ -887,7 +887,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.tweak(5.5).staff_padding,
         right_broken=True,
-        selector=lambda _: baca.Selection(_).leaves()[-4:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-4:]),
     ),
 )
 
@@ -1050,7 +1050,7 @@ commands(
         baca.note_head_style_harmonic(
             baca.selectors.pleaves(grace=True),
         ),
-        map=lambda _: baca.Selection(_).pleaves(grace=True).runs(),
+        map=lambda _: abjad.select.runs(_, grace=True),
     ),
 )
 

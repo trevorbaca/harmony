@@ -389,7 +389,7 @@ commands(
     baca.new(
         baca.tuplet_bracket_staff_padding(2),
         library.bridge_staff_position(),
-        selector=lambda _: baca.Selection(_).leaves().rleak().rleak(),
+        selector=lambda _: baca.rleaves(_, count=2),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(),

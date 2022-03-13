@@ -405,7 +405,9 @@ commands(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        map=lambda _: baca.Selection(_).leaves().rleak().runs().get([0, -1]),
+        map=lambda _: abjad.select.get(
+            abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
+        ),
     ),
 )
 
@@ -546,7 +548,9 @@ commands(
     baca.scp_spanner(
         "P =|",
         abjad.tweak(3).staff_padding,
-        map=lambda _: baca.Selection(_).leaves().rleak().runs().get([0, -1]),
+        map=lambda _: abjad.select.get(
+            abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
+        ),
     ),
 )
 

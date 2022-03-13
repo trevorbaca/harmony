@@ -97,7 +97,9 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 5)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 5)
+        ),
         map=baca.selectors.runs(),
         selector=baca.selectors.leaves(),
     ),
@@ -354,7 +356,7 @@ commands(
         abjad.tweak(3).staff_padding,
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=lambda _: baca.Selection(_).mgroups([2, 1]),
+        pieces=lambda _: baca.mgroups(_, [2, 1]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -463,7 +465,7 @@ commands(
     baca.scp_spanner(
         "T -> P =|",
         abjad.tweak(3).staff_padding,
-        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
+        pieces=lambda _: baca.mgroups(_, [1, 2]),
     ),
 )
 
@@ -621,7 +623,7 @@ commands(
     baca.scp_spanner(
         "T -> P =|",
         abjad.tweak(3).staff_padding,
-        pieces=lambda _: baca.Selection(_).mgroups([1, 2]),
+        pieces=lambda _: baca.mgroups(_, [1, 2]),
     ),
 )
 

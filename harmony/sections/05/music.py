@@ -912,7 +912,8 @@ commands(
     ),
     baca.alternate_bow_strokes(
         lambda _: [
-            x for x in baca.pheads(_) if abjad.get.duration(x) >= abjad.Duration((1, 8))],
+            x for x in baca.pheads(_) if abjad.get.duration(x) >= abjad.Duration((1, 8))
+        ],
         abjad.tweak(4).staff_padding,
         full=True,
     ),

@@ -163,7 +163,9 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=lambda _: baca.Selection(_).leaves().partition_by_ratio((4, 5)),
+        pieces=lambda _: abjad.select.partition_by_ratio(
+            abjad.select.leaves(_), (4, 5)
+        ),
         map=baca.selectors.runs(),
         selector=baca.selectors.leaves(),
     ),
@@ -411,7 +413,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
         right_broken=True,
-        selector=lambda _: baca.Selection(_).leaves()[-1:].rleak(),
+        selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:]),
     ),
 )
 
