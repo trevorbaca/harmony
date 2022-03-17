@@ -610,7 +610,7 @@ commands(
         r"\baca-string-iv-markup",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -689,7 +689,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -988,7 +988,7 @@ commands(
         r"\baca-string-iv-markup",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -1058,7 +1058,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -1101,7 +1101,7 @@ commands(
         r"\baca-string-iv-markup",
         # abjad.tweak((-3, 0)).extra_offset,
         # abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -1157,7 +1157,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 

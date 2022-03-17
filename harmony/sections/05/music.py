@@ -766,7 +766,7 @@ commands(
         r"\baca-string-iv-markup",
         abjad.tweak(1).padding,
         abjad.tweak(2.5).X_offset,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 

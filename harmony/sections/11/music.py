@@ -733,7 +733,7 @@ commands(
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
 )
@@ -814,7 +814,7 @@ commands(
     baca.markup(
         r"\baca-eleven-e-flat",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=lambda _: abjad.select.run(_, 1)[0],
     ),
 )
@@ -832,13 +832,13 @@ commands(
     baca.markup(
         r"\baca-eleven-d",
         abjad.tweak(2.5).X_offset,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
 )
@@ -889,7 +889,7 @@ commands(
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
 )
@@ -976,13 +976,13 @@ commands(
         r"\baca-fifteen-d",
         # abjad.tweak(1).padding,
         abjad.tweak(2.5).X_offset,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
 )
@@ -1004,7 +1004,7 @@ commands(
     baca.markup(
         r"\baca-seven-e-flat",
         # abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=lambda _: abjad.select.run(_, 1)[0],
     ),
 )
@@ -1052,7 +1052,7 @@ commands(
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         match=[0, 2],
     ),
 )

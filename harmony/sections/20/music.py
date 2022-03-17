@@ -476,7 +476,7 @@ commands(
     baca.markup(
         r"\baca-string-ii-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 

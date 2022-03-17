@@ -255,7 +255,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -323,7 +323,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -348,7 +348,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iii-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.pheads(),
     ),
     baca.markup(
