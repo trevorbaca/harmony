@@ -197,7 +197,7 @@ commands(
             baca.mark(r"\harmony-colophon-markup"),
             baca.rehearsal_mark_down(),
             baca.rehearsal_mark_padding(12),
-            baca.rehearsal_mark_self_alignment_x(abjad.Right),
+            baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
             selector=baca.selectors.rleaf(-1),
         ),
     ),

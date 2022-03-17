@@ -655,7 +655,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -669,7 +669,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -680,7 +680,7 @@ commands(
     baca.markup(
         r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -722,7 +722,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -754,7 +754,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -765,7 +765,7 @@ commands(
     baca.markup(
         r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -805,7 +805,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -847,7 +847,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -861,7 +861,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -998,7 +998,7 @@ commands(
     baca.markup(
         r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -1032,7 +1032,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(8).staff_padding,
@@ -1084,7 +1084,7 @@ commands(
     baca.markup(
         r"\baca-string-i-markup",
         abjad.tweak(1.5).staff_padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 

@@ -347,11 +347,11 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(abjad.DOWN).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
@@ -424,11 +424,11 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(abjad.DOWN).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
@@ -485,11 +485,11 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(abjad.DOWN).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
@@ -564,11 +564,11 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(abjad.DOWN).direction,
         abjad.tweak(10).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )
@@ -595,7 +595,7 @@ commands(
     baca.markup(
         r"\baca-string-iv-markup",
         abjad.tweak(1.5).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -622,7 +622,7 @@ commands(
         r"\baca-string-iv-markup",
         abjad.tweak(2.5).X_offset,
         abjad.tweak(1).padding,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 

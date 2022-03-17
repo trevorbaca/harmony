@@ -160,11 +160,11 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.Down).direction,
+        abjad.tweak(abjad.DOWN).direction,
         abjad.tweak(8).staff_padding,
         autodetect_right_padding=True,
         bookend=False,
-        direction=abjad.Down,
+        direction=abjad.DOWN,
         selector=baca.selectors.tleaves(grace=False, rleak=True),
     ),
 )

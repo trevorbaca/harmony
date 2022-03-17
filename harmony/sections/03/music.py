@@ -735,7 +735,7 @@ commands(
     baca.markup(r"\baca-eleven-e"),
     baca.markup(
         r"\baca-string-iv-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
@@ -831,7 +831,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        direction=abjad.Down,
+        direction=abjad.DOWN,
     ),
 )
 
