@@ -53,7 +53,7 @@ commands(
     baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
     baca.open_volta(baca.selectors.skip(1 - 1)),
     baca.double_volta(baca.selectors.skip(2 - 1)),
-    baca.close_volta(baca.selectors.skip(2 - 1), format_slot="after"),
+    baca.close_volta(baca.selectors.skip(2 - 1), site="after"),
 )
 
 # bfl
