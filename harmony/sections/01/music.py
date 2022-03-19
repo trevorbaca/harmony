@@ -52,7 +52,7 @@ commands(
 commands(
     "Global_Skips",
     baca.open_volta(baca.selectors.skip(2 - 1)),
-    baca.close_volta(baca.selectors.skip(3 - 1), format_slot="after"),
+    baca.close_volta(baca.selectors.skip(3 - 1), site="after"),
     baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
     baca.metronome_mark("57 3/5", baca.selectors.skip(3 - 1)),
     baca.metronome_mark("3:5(4)=4", baca.selectors.skip(3 - 1)),
