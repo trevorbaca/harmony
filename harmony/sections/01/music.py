@@ -489,9 +489,7 @@ commands(
     baca.skeleton(
         r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
     ),
-    baca.tuplet_number_text(
-        abjad.Markup(r"\markup 5:4"),
-    ),
+    baca.tuplet_number_text(r"\markup 5:4"),
     library.bridge_staff_position(),
     baca.accent(
         baca.selectors.pheads(),

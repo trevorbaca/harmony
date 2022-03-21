@@ -131,11 +131,8 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(
-            r"\harmony-d-d-sharp-markup",
-            literal=True,
-        ).bound_details__left__text,
-        abjad.tweak(8, literal=True).staff_padding,
+        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.tweak(8).staff_padding,
         selector=baca.selectors.tleaves(),
     ),
 )

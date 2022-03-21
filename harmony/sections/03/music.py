@@ -455,7 +455,7 @@ commands(
         r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
     baca.tuplet_number_text(
-        abjad.Markup(r"\markup 5:4"),
+        r"\markup 5:4",
         baca.selectors.leaf(1),
     ),
     baca.tuplet_bracket_up(),
@@ -550,7 +550,7 @@ commands(
         r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
     baca.tuplet_number_text(
-        abjad.Markup(r"\markup 5:4"),
+        r"\markup 5:4",
         baca.selectors.leaves(),
     ),
     baca.new(
