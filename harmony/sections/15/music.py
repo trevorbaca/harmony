@@ -70,7 +70,7 @@ commands(
     ),
     baca.dynamic("mf"),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         selector=baca.selectors.tleaves(rleak=True),
     ),
 )
@@ -109,7 +109,7 @@ commands(
     ),
     baca.text_spanner(
         "T -> A =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.clparts([2]),
@@ -146,7 +146,7 @@ commands(
         selector=baca.selectors.phead(2),
     ),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         argument=r"\baca-cov-markup =|",
         map=baca.selectors.runs((None, 1)),
         selector=baca.selectors.tleaves(rleak=True),
@@ -379,7 +379,7 @@ commands(
     baca.pitch("Bb3"),
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -400,7 +400,7 @@ commands(
     ),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -430,7 +430,7 @@ commands(
     baca.pitch("Aqf3"),
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -498,7 +498,7 @@ commands(
     ),
     baca.scp_spanner(
         "P4 ||",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -507,7 +507,7 @@ commands(
     baca.pitch("F3"),
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -579,7 +579,7 @@ commands(
     ),
     baca.scp_spanner(
         "P4 ||",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -588,7 +588,7 @@ commands(
     baca.pitch("Dtqf3"),
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -656,7 +656,7 @@ commands(
     ),
     baca.scp_spanner(
         "P4 ||",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -665,7 +665,7 @@ commands(
     baca.pitch("Dtqf3"),
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 

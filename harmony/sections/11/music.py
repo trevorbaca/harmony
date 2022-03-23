@@ -147,10 +147,10 @@ commands(
     ("bfl", (5, 6)),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
         selector=baca.selectors.leaves((1, 9)),
     ),
@@ -166,7 +166,7 @@ commands(
     ),
     baca.text_spanner(
         "T -> A =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.clparts([2]),
@@ -191,7 +191,7 @@ commands(
     ),
     baca.text_spanner(
         "T -> A =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.clparts([4]),
@@ -231,7 +231,7 @@ commands(
     ),
     baca.new(
         baca.metric_modulation_spanner(
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             right_broken=True,
         ),
         selector=baca.selectors.runs((-1, None), rleak=True),
@@ -472,7 +472,7 @@ commands(
 commands(
     ("perc2", (6, 7)),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 10.5"),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[2:]),
     ),
 )
@@ -613,7 +613,7 @@ commands(
 commands(
     ("hp", (6, 7)),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[5:]),
     ),
 )
@@ -707,7 +707,7 @@ commands(
     ),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -777,7 +777,7 @@ commands(
 commands(
     ("vc1", (1, 2)),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5 + 1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 12.0"),
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
         selector=lambda _: baca.rleak(baca.tleaves(_)),
@@ -945,7 +945,7 @@ commands(
 commands(
     ("cb1", (1, 2)),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 10.5"),
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
         # selector=baca.selectors.tleaves(rleak=True),
@@ -1193,7 +1193,7 @@ commands(
 commands(
     (["vc1", "vc2", "cb1", "cb2"], (6, 7)),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[4:]),
     ),
 )

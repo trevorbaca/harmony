@@ -194,10 +194,10 @@ commands(
     ("bfl", (6, 7)),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(8).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
         selector=baca.selectors.leaves((1, 8)),
     ),
@@ -229,7 +229,7 @@ commands(
     ("bfl", (7, 8)),
     baca.tuplet_bracket_staff_padding(6.5),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 11.5"),
         selector=baca.selectors.leaves((4, 9)),
     ),
 )
@@ -455,7 +455,7 @@ commands(
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         left_broken=True,
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
     ),
@@ -525,7 +525,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.text_spanner(
         r"\baca-fingernail-markup =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
         selector=baca.selectors.rleaves(),
@@ -601,7 +601,7 @@ commands(
 commands(
     ("hp", (7, 8)),
     baca.metric_modulation_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=baca.selectors.leaves((5, 10)),
     ),
 )
@@ -644,8 +644,8 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.DOWN).direction,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak direction #down"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
@@ -661,7 +661,7 @@ commands(
         baca.selectors.pheads((1, None), grace=False),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((7, 12)),
     ),
 )
@@ -720,8 +720,8 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.DOWN).direction,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak direction #down"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         autodetect_right_padding=False,
         bookend=False,
         direction=abjad.DOWN,
@@ -741,7 +741,7 @@ commands(
 commands(
     ("va", (5, 6)),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((2, 6)),
     ),
 )
@@ -759,7 +759,7 @@ commands(
     ),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -790,8 +790,8 @@ commands(
     ),
     baca.bow_speed_spanner(
         "scr. =|",
-        abjad.tweak(3.5).staff_padding,
-        abjad.tweak(-1.5).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding -1.5"),
+        abjad.Tweak(r"- \tweak staff-padding 3.5"),
         autodetect_right_padding=False,
         left_broken=True,
         selector=baca.selectors.leaves(),
@@ -825,8 +825,8 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.DOWN).direction,
-        abjad.tweak(9).staff_padding,
+        abjad.Tweak(r"- \tweak direction #down"),
+        abjad.Tweak(r"- \tweak staff-padding 9"),
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
@@ -852,7 +852,7 @@ commands(
     baca.dynamic("f"),
     baca.bow_speed_spanner(
         "scr. =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
         selector=baca.selectors.tleaves(rleak=True),
@@ -885,7 +885,7 @@ commands(
     ),
     baca.dynamic("pp"),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         right_broken=True,
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-4:]),
     ),
@@ -907,8 +907,8 @@ commands(
     baca.pitch("B2"),
     baca.dynamic("p"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-        abjad.tweak(4).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
     ),
 )
@@ -932,7 +932,7 @@ commands(
     baca.pitch("B2"),
     baca.dynamic("p"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -946,7 +946,7 @@ commands(
     baca.dynamic("f"),
     baca.bow_speed_spanner(
         "scr. =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         map=baca.selectors.runs(),
         selector=baca.selectors.tleaves(rleak=True),
@@ -969,7 +969,7 @@ commands(
     baca.pitch("B2"),
     baca.dynamic("p"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         right_broken=True,
     ),
 )
@@ -998,7 +998,7 @@ commands(
     ),
     baca.scp_spanner(
         "P1 -> T1",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
         left_broken=True,
@@ -1039,8 +1039,8 @@ commands(
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.DOWN).direction,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak direction #down"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
@@ -1066,7 +1066,7 @@ commands(
     ),
     baca.scp_spanner(
         "P1 -> T1",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
         selector=baca.selectors.leaves(),
@@ -1115,7 +1115,7 @@ commands(
     baca.pitch("Bb2"),
     baca.dynamic("p"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -1130,7 +1130,7 @@ commands(
         abjad.tweak(-0.9).self_alignment_X,
     ),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -1145,7 +1145,7 @@ commands(
     ),
     baca.scp_spanner(
         "T1 -> P2 -> O",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.lparts([2, 3]),
@@ -1169,7 +1169,7 @@ commands(
     baca.pitch("Bb2"),
     baca.dynamic("p"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         right_broken=True,
     ),
 )

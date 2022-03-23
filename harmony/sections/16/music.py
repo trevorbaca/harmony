@@ -79,7 +79,7 @@ commands(
     ),
     baca.text_spanner(
         "A =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
         map=baca.selectors.runs(),
@@ -111,7 +111,7 @@ commands(
     baca.new(
         baca.text_spanner(
             "A =|",
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=True,
             bookend=False,
             map=baca.selectors.runs(),
@@ -122,12 +122,12 @@ commands(
     baca.new(
         baca.text_spanner(
             "A =|",
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=True,
             bookend=False,
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(8).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
         measures=10,
         right_broken=True,
@@ -312,7 +312,7 @@ commands(
         full=True,
     ),
     baca.half_clt_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -325,7 +325,7 @@ commands(
     baca.dynamic("p"),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -342,7 +342,7 @@ commands(
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         right_broken=True,
         selector=baca.selectors.rleaves(),
     ),
@@ -358,7 +358,7 @@ commands(
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -388,7 +388,7 @@ commands(
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -403,7 +403,7 @@ commands(
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -433,7 +433,7 @@ commands(
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
 )
@@ -459,7 +459,7 @@ commands(
         full=True,
     ),
     baca.half_clt_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -499,7 +499,7 @@ commands(
         full=True,
     ),
     baca.half_clt_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -524,7 +524,7 @@ commands(
         full=True,
     ),
     baca.half_clt_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -564,7 +564,7 @@ commands(
         full=True,
     ),
     baca.half_clt_spanner(
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 

@@ -66,11 +66,11 @@ commands(
     baca.pitch("G3"),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             left_broken=True,
         ),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
@@ -86,7 +86,7 @@ commands(
     baca.color_fingerings([0, 1, 2]),
     baca.dynamic("mp"),
     baca.covered_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
 )
 
@@ -218,7 +218,7 @@ commands(
     ),
     baca.bow_speed_spanner(
         "XFB =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -289,11 +289,11 @@ commands(
     baca.new(
         baca.bow_speed_spanner(
             "XFB =|",
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(8).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 8"),
             right_broken=True,
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
@@ -302,11 +302,11 @@ commands(
     baca.new(
         baca.bow_speed_spanner(
             "XFB =|",
-            abjad.tweak(8).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 8"),
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(10.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 10.5"),
             right_broken=True,
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
         ),
@@ -343,7 +343,7 @@ commands(
     ),
     baca.dynamic("ff"),
     baca.pizzicato_spanner(
-        abjad.tweak(5.5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6.5"),
         selector=baca.selectors.tleaves(rleak=True),
     ),
     baca.markup(

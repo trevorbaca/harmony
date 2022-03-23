@@ -102,11 +102,11 @@ commands(
     baca.dls_staff_padding(4),
     baca.new(
         baca.covered_spanner(
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             right_broken=True,
         ),
         baca.metric_modulation_spanner(
-            abjad.tweak(8).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 8"),
             right_broken=True,
         ),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[1:]),
@@ -283,8 +283,8 @@ commands(
         baca.selectors.pheads((1, None)),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
-        abjad.tweak(4.5).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         left_broken=True,
     ),
@@ -368,8 +368,8 @@ commands(
         selector=baca.selectors.leaves((-2, None)),
     ),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-        abjad.tweak(4.5).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         left_broken=True,
         selector=baca.selectors.rleaves(),
@@ -506,8 +506,8 @@ commands(
         selector=baca.selectors.leaves((-2, None)),
     ),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
-        abjad.tweak(4.5).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         left_broken=True,
         selector=baca.selectors.rleaves(),
