@@ -32,14 +32,14 @@ commands(
         baca.rehearsal_mark(
             "CC",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "CC",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -64,7 +64,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-twenty-eight",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -101,7 +101,7 @@ commands(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 

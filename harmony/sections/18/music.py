@@ -47,14 +47,14 @@ commands(
         baca.rehearsal_mark(
             "R",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "R",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -84,7 +84,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-seventeen",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(7 - 1),
         ),
     ),
@@ -199,7 +199,7 @@ commands(
     ),
     baca.markup(
         r"\baca-bd-struck-then-superball-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -240,7 +240,7 @@ commands(
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5"),
         selector=baca.selectors.leaf(2, grace=False),
     ),
 )
@@ -259,7 +259,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -274,7 +274,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-glockenspiel-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -293,7 +293,7 @@ commands(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -358,7 +358,7 @@ commands(
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -400,7 +400,7 @@ commands(
     baca.dls_staff_padding(5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5"),
         selector=baca.selectors.leaf(2, grace=False),
     ),
 )
@@ -418,7 +418,7 @@ commands(
     baca.dynamic("pp"),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -440,7 +440,7 @@ commands(
     baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -464,7 +464,7 @@ commands(
     baca.dls_staff_padding(5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -548,7 +548,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-pdlt-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -573,7 +573,7 @@ commands(
     ),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
         match=0,
     ),
 )
@@ -616,7 +616,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -651,7 +651,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -665,7 +665,7 @@ commands(
     baca.pitch("D5"),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -676,7 +676,7 @@ commands(
     baca.pitch("<G#5 A5 Bb5>"),
     baca.markup(
         r"\baca-string-i-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -718,7 +718,7 @@ commands(
     baca.pitch("D5"),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -750,7 +750,7 @@ commands(
     baca.markup(r"\baca-seven-c"),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -761,7 +761,7 @@ commands(
     baca.pitch("<A5 Bb5 Cb6>"),
     baca.markup(
         r"\baca-string-i-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -801,7 +801,7 @@ commands(
     baca.clef("treble"),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -843,7 +843,7 @@ commands(
     baca.pitch("<B5 C6 Db6>", do_not_transpose=True),
     baca.markup(
         r"\baca-string-iii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -857,7 +857,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -878,7 +878,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -994,7 +994,7 @@ commands(
     baca.pitch("G3"),
     baca.markup(
         r"\baca-string-i-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -1028,7 +1028,7 @@ commands(
     baca.pitch("<A#5 B5 C6>", do_not_transpose=True),
     baca.markup(
         r"\baca-string-iii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
     baca.metric_modulation_spanner(
@@ -1053,7 +1053,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -1080,7 +1080,7 @@ commands(
     baca.pitch("G3"),
     baca.markup(
         r"\baca-string-i-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )

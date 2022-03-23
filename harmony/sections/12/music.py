@@ -51,14 +51,14 @@ commands(
         baca.rehearsal_mark(
             "L",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "L",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -97,7 +97,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-eleven",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(9 - 1),
         ),
     ),
@@ -283,7 +283,7 @@ commands(
     ),
     baca.markup(
         r"\baca-seven-e-flat",
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
     baca.pitch(
         "B4",
@@ -318,7 +318,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-glockenspiel-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -351,7 +351,7 @@ commands(
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -401,7 +401,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-glockenspiel-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -420,7 +420,7 @@ commands(
     baca.dynamic("f"),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -438,7 +438,7 @@ commands(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
         match=[0],
     ),
 )
@@ -461,7 +461,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -491,7 +491,7 @@ commands(
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -525,7 +525,7 @@ commands(
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -542,7 +542,7 @@ commands(
     baca.dynamic("p"),
     baca.markup(
         r"\baca-bd-fingertips-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -555,7 +555,7 @@ commands(
     baca.dynamic('"f"'),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -593,7 +593,7 @@ commands(
     baca.dynamic("mf"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -634,7 +634,7 @@ commands(
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -663,7 +663,7 @@ commands(
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -696,7 +696,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -876,14 +876,14 @@ commands(
     baca.pitch("Aqf3"),
     baca.markup(
         r"\baca-eleven-e-flat",
-        abjad.tweak(1).self_alignment_X,
-        abjad.tweak((-2, 0)).extra_offset,
+        abjad.Tweak(r"- \tweak extra-offset #'(-2 . 0)"),
+        abjad.Tweak(r"- \tweak self-alignment-X 1"),
         match=[0],
     ),
     baca.markup(
         r"\baca-eleven-e-flat",
-        abjad.tweak(1).padding,
-        abjad.tweak(3).X_offset,
+        abjad.Tweak(r"- \tweak X-offset 3"),
+        abjad.Tweak(r"- \tweak padding 1"),
         match=[1],
     ),
 )
@@ -1058,14 +1058,14 @@ commands(
     baca.pitch("Dtqf3"),
     baca.markup(
         r"\baca-seven-e-flat",
-        abjad.tweak(1).self_alignment_X,
-        abjad.tweak((-2, 0)).extra_offset,
+        abjad.Tweak(r"- \tweak extra-offset #'(-2 . 0)"),
+        abjad.Tweak(r"- \tweak self-alignment-X 1"),
         match=[0],
     ),
     baca.markup(
         r"\baca-seven-e-flat",
-        abjad.tweak(3).X_offset,
-        abjad.tweak(1).padding,
+        abjad.Tweak(r"- \tweak X-offset 3"),
+        abjad.Tweak(r"- \tweak padding 1"),
         match=[1],
     ),
 )

@@ -34,14 +34,14 @@ commands(
         baca.rehearsal_mark(
             "I",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "I",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -111,7 +111,7 @@ commands(
     baca.dynamic('"f"'),
     baca.markup(
         r"\baca-slate-brush-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -154,7 +154,7 @@ commands(
     baca.dynamic("mp"),
     baca.markup(
         r"\baca-bd-sponge-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
     baca.flat_glissando(
         right_broken=True,
@@ -169,8 +169,8 @@ commands(
     ),
     baca.markup(
         r"\baca-bd-fingertips-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(r"- \tweak staff-padding 6"),
         selector=baca.selectors.pleaf(-1),
     ),
 )
@@ -195,7 +195,7 @@ commands(
     baca.dls_staff_padding(4 + 2),
     baca.markup(
         r"\baca-lv-markup",
-        abjad.tweak(1.5).padding,
+        abjad.Tweak(r"- \tweak padding 1.5"),
     ),
 )
 
@@ -214,7 +214,7 @@ commands(
     ),
     baca.markup(
         r"\harmony-match-harp-decay-markup",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -241,7 +241,7 @@ commands(
     baca.pitch("Dqs4"),
     baca.markup(
         r"\baca-eleven-a",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
     ),
 )
 
@@ -254,7 +254,7 @@ commands(
     baca.note_head_style_harmonic(),
     baca.markup(
         r"\baca-string-iii-markup",
-        abjad.tweak(1).padding,
+        abjad.Tweak(r"- \tweak padding 1"),
         direction=abjad.DOWN,
     ),
 )
@@ -322,7 +322,7 @@ commands(
     baca.pitch("A1"),
     baca.markup(
         r"\baca-string-iii-markup",
-        abjad.tweak(1).padding,
+        abjad.Tweak(r"- \tweak padding 1"),
         direction=abjad.DOWN,
     ),
 )
@@ -353,11 +353,11 @@ commands(
     ),
     baca.markup(
         r"\baca-thirteen-a",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
     baca.markup(
         r"\baca-fourteen-a",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         selector=baca.selectors.phead(-1),
     ),
 )
