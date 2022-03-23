@@ -328,7 +328,7 @@ commands(
     baca.text_spanner(
         "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
         " -> 0 pul. / beat",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
         selector=baca.selectors.rleaves(),
     ),
@@ -350,8 +350,8 @@ commands(
     ),
     baca.bow_speed_spanner(
         "poc. scr. =|",
-        abjad.tweak(3).staff_padding,
-        abjad.tweak(6).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         left_broken=True,
     ),
@@ -378,7 +378,7 @@ commands(
     ),
     baca.bow_speed_spanner(
         "poco scr. =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
 )
 
@@ -663,7 +663,7 @@ commands(
     ),
     baca.scp_spanner(
         "T4 -> P1 -> T4",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.lparts([2, 3]),
@@ -723,7 +723,7 @@ commands(
     ),
     baca.scp_spanner(
         "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         bookend=-1,
         pieces=baca.selectors.lparts([3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
         right_broken=True,

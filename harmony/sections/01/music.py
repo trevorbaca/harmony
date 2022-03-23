@@ -91,8 +91,8 @@ commands(
     baca.dls_staff_padding(5),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
-        abjad.tweak(abjad.DOWN).direction,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak direction #down"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
@@ -112,7 +112,7 @@ commands(
     baca.dynamic("mf"),
     baca.dls_staff_padding(3),
     baca.covered_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         argument=r"\baca-cov-markup =|",
     ),
 )
@@ -302,7 +302,7 @@ commands(
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.plts(),
     ),
 )
@@ -350,7 +350,7 @@ commands(
     ),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=baca.selectors.plts(),
     ),
 )
@@ -392,7 +392,7 @@ commands(
         selector=baca.selectors.pheads((-1, None)),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((2, -2)),
     ),
 )
@@ -413,7 +413,7 @@ commands(
     baca.pitch("B3"),
     baca.dynamic("mp"),
     baca.damp_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.plts(),
     ),
 )
@@ -438,7 +438,7 @@ commands(
     ),
     baca.scp_spanner(
         "P1 =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         selector=baca.selectors.tleaves(rleak=True),
     ),
@@ -476,7 +476,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         final_piece_spanner=False,
         pieces=baca.selectors.plts(),
     ),
@@ -500,7 +500,7 @@ commands(
     baca.dynamic("sfp"),
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5 + 1).staff_padding,
+        abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
         right_broken=True,
         selector=baca.selectors.leaves((-4, None), rleak=True),
     ),
@@ -526,7 +526,7 @@ commands(
     ),
     baca.dynamic("mp"),
     baca.damp_spanner(
-        abjad.tweak(3 + 1).staff_padding,
+        abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
         map=baca.selectors.plts(),
     ),
 )
@@ -551,7 +551,7 @@ commands(
     ),
     baca.scp_spanner(
         "P1 =|",
-        abjad.tweak(3 + 1).staff_padding,
+        abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
         autodetect_right_padding=False,
         selector=baca.selectors.tleaves(rleak=True),
     ),

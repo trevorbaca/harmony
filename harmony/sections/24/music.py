@@ -85,7 +85,7 @@ commands(
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(9).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 9"),
         pieces=baca.selectors.lparts([1, 2 + 1]),
         map=baca.selectors.rleak_runs(),
     ),
@@ -109,7 +109,7 @@ commands(
     ),
     baca.text_spanner(
         "A -> T -> A",
-        abjad.tweak(10).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         map=baca.selectors.rleak_runs(),
     ),
@@ -260,7 +260,7 @@ commands(
         selector=baca.selectors.leaf(-1),
     ),
     baca.metric_modulation_spanner(
-        abjad.tweak(10.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 10.5"),
         right_broken=True,
         selector=baca.selectors.leaves((-1, None), rleak=True),
     ),
@@ -320,7 +320,7 @@ commands(
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -348,7 +348,7 @@ commands(
     baca.pitch("F#3"),
     baca.scp_spanner(
         "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.plts(),
@@ -387,7 +387,7 @@ commands(
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((5, 12)),
     ),
     baca.new(
@@ -404,7 +404,7 @@ commands(
     ),
     baca.scp_spanner(
         "P =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: abjad.select.get(
             abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
         ),
@@ -423,7 +423,7 @@ commands(
 commands(
     ("vc1", (3, 4)),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((2, None)),
     ),
 )
@@ -435,7 +435,7 @@ commands(
     baca.pitch("F#2"),
     baca.scp_spanner(
         "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.plts(),
@@ -452,7 +452,7 @@ commands(
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -485,7 +485,7 @@ commands(
     baca.pitch("F#2"),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.plts(),
@@ -527,7 +527,7 @@ commands(
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((5, 12)),
     ),
     baca.new(
@@ -547,7 +547,7 @@ commands(
     ),
     baca.scp_spanner(
         "P =|",
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: abjad.select.get(
             abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
         ),
@@ -569,7 +569,7 @@ commands(
 commands(
     ("cb1", (3, 4)),
     baca.metric_modulation_spanner(
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=baca.selectors.leaves((2, None)),
     ),
 )
@@ -581,7 +581,7 @@ commands(
     baca.pitch("F#1"),
     baca.scp_spanner(
         "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.plts(),
@@ -601,7 +601,7 @@ commands(
     # NOTE: text spanner must currently lexically precede pitched trill
     baca.scp_spanner(
         "T4 =|",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
         abjad.tweak(3).staff_padding,
@@ -634,7 +634,7 @@ commands(
     baca.pitch("F#1"),
     baca.scp_spanner(
         "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
         pieces=baca.selectors.plts(),
@@ -670,7 +670,7 @@ commands(
     baca.new(
         baca.scp_spanner(
             "T2 -> T4",
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=True,
             selector=baca.selectors.leaves(),
@@ -680,7 +680,7 @@ commands(
     baca.new(
         baca.scp_spanner(
             "T2 -> T4",
-            abjad.tweak(5.5).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=True,
             selector=baca.selectors.leaves(),
