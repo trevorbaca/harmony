@@ -42,14 +42,14 @@ commands(
         baca.rehearsal_mark(
             "C",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "C",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -80,7 +80,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-two",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(3 - 1),
         ),
     ),
@@ -91,7 +91,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-three",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(5 - 1),
         ),
     ),
@@ -189,8 +189,8 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(1).self_alignment_X,
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 1"),
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -236,8 +236,8 @@ commands(
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(5).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(r"- \tweak staff-padding 5"),
     ),
 )
 
@@ -275,8 +275,8 @@ commands(
     baca.dls_staff_padding(5),
     baca.markup(
         r"\baca-brake-drum-markup",
-        abjad.tweak(1).self_alignment_X,
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 1"),
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -303,8 +303,8 @@ commands(
     baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
     ),
 )
 
@@ -345,7 +345,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.markup(
         r"\baca-pdlt-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 

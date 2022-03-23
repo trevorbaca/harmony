@@ -48,14 +48,14 @@ commands(
         baca.rehearsal_mark(
             "V",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "V",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -85,7 +85,7 @@ commands(
     baca.not_parts(
         baca.markup(
             r"\harmony-text-twenty-one",
-            abjad.tweak((4, -30)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
             selector=baca.selectors.skip(11 - 1),
         ),
     ),
@@ -193,7 +193,7 @@ commands(
     ),
     baca.markup(
         r"\baca-triangle-markup",
-        abjad.tweak(6 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 7"),
     ),
 )
 
@@ -208,7 +208,7 @@ commands(
     baca.dynamic("pp"),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 7"),
     ),
 )
 
@@ -228,7 +228,7 @@ commands(
     ),
     baca.markup(
         r"\baca-triangle-markup",
-        abjad.tweak(6 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 7"),
     ),
 )
 
@@ -259,7 +259,7 @@ commands(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 7"),
     ),
 )
 
@@ -282,7 +282,7 @@ commands(
     baca.dynamic("p-ancora"),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -302,7 +302,7 @@ commands(
     baca.dynamic("pp"),
     baca.markup(
         r"\baca-slate-brush-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -321,7 +321,7 @@ commands(
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -341,7 +341,7 @@ commands(
     baca.dynamic("pp"),
     baca.markup(
         r"\baca-slate-brush-markup",
-        abjad.tweak(6 + 2).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
 )
 
@@ -403,7 +403,7 @@ commands(
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -446,8 +446,8 @@ commands(
     baca.dynamic("p-ancora"),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
-        abjad.tweak(4).staff_padding,
-        abjad.tweak(0).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X 0"),
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
     baca.metric_modulation_spanner(
         abjad.tweak(10.5).staff_padding,
@@ -574,7 +574,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-ii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -613,7 +613,7 @@ commands(
     ),
     baca.markup(
         r"\baca-string-ii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -789,7 +789,7 @@ commands(
     baca.markup(r"\baca-seven-d"),
     baca.markup(
         r"\baca-string-ii-markup",
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
 )

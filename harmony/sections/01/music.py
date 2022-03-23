@@ -36,14 +36,14 @@ commands(
         baca.rehearsal_mark(
             "A",
             baca.selectors.skip(2 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "A",
             baca.selectors.skip(2 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -141,8 +141,8 @@ commands(
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -191,8 +191,8 @@ commands(
     baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
     ),
 )
 
@@ -214,7 +214,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -236,8 +236,8 @@ commands(
     baca.dls_staff_padding(5.5),
     baca.markup(
         r"\baca-purpleheart-markup",
-        abjad.tweak(0.25).self_alignment_X,
-        abjad.tweak(5 + 1).staff_padding,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+        abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
     ),
 )
 
@@ -259,7 +259,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.markup(
         r"\baca-whisk-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -297,7 +297,7 @@ commands(
     baca.pitch("Gqf4"),
     baca.markup(
         r"\baca-seven-a",
-        abjad.tweak(5.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -522,7 +522,7 @@ commands(
     baca.pitch("Dqs3"),
     baca.markup(
         r"\baca-eleven-a",
-        abjad.tweak(5.5 + 1).staff_padding,
+        abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
     ),
     baca.dynamic("mp"),
     baca.damp_spanner(

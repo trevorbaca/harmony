@@ -43,14 +43,14 @@ commands(
         baca.rehearsal_mark(
             "P",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "P",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -162,7 +162,7 @@ commands(
     ),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -178,7 +178,7 @@ commands(
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -192,7 +192,7 @@ commands(
     baca.dynamic("p"),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -219,7 +219,7 @@ commands(
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
-        abjad.tweak(6).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
 )
 
@@ -273,7 +273,7 @@ commands(
     baca.dls_staff_padding(4 + 2),
     baca.markup(
         r"\baca-lv-markup",
-        abjad.tweak(1.5).padding,
+        abjad.Tweak(r"- \tweak padding 1.5"),
     ),
 )
 
@@ -308,7 +308,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(1.5).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 1.5"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -455,7 +455,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -495,7 +495,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -520,7 +520,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(
@@ -560,7 +560,7 @@ commands(
         lambda x: [
             _ for _ in baca.pheads(x) if abjad.get.duration(_) >= abjad.Duration((1, 8))
         ],
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
         full=True,
     ),
     baca.half_clt_spanner(

@@ -45,14 +45,14 @@ commands(
         baca.rehearsal_mark(
             "D",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 18)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "D",
             baca.selectors.skip(1 - 1),
-            abjad.tweak((0, 10)).extra_offset,
+            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
@@ -287,7 +287,7 @@ commands(
     ),
     baca.markup(
         r"\baca-bisb-markup",
-        abjad.tweak(4).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
 )
 
@@ -594,7 +594,7 @@ commands(
     baca.markup(r"\baca-eleven-e"),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(1.5).padding,
+        abjad.Tweak(r"- \tweak padding 1.5"),
         direction=abjad.DOWN,
     ),
 )
@@ -620,8 +620,8 @@ commands(
     ),
     baca.markup(
         r"\baca-string-iv-markup",
-        abjad.tweak(2.5).X_offset,
-        abjad.tweak(1).padding,
+        abjad.Tweak(r"- \tweak X-offset 2.5"),
+        abjad.Tweak(r"- \tweak padding 1"),
         direction=abjad.DOWN,
     ),
 )
