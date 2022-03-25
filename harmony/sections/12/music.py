@@ -521,7 +521,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -1165,7 +1165,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         left_broken=True,
         selector=baca.selectors.rleaves(),
     ),

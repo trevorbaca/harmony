@@ -260,7 +260,7 @@ commands(
     ),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -347,7 +347,7 @@ commands(
     baca.new(
         baca.dynamic(
             "p-ancora",
-            abjad.tweak(-0.9).self_alignment_X,
+            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
         baca.markup(
             r"\baca-bd-fingertips-markup",
@@ -680,7 +680,7 @@ commands(
     baca.make_notes(),
     baca.dynamic(
         "mp-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -832,7 +832,7 @@ commands(
     baca.make_notes(),
     baca.dynamic(
         "mp-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 

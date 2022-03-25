@@ -142,7 +142,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         selector=baca.selectors.phead(2),
     ),
     baca.covered_spanner(
@@ -155,7 +155,7 @@ commands(
         map=baca.selectors.runs((1, 2)),
     ),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         map=baca.selectors.runs((2, 3)),
     ),
 )
@@ -235,7 +235,7 @@ commands(
     baca.dynamic('"f"'),
     baca.dynamic(
         '"f"-sempre',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.phead(2),
     ),
     baca.markup(
@@ -395,7 +395,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.phead(2),
     ),
     baca.bow_speed_spanner(
@@ -494,7 +494,7 @@ commands(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.scp_spanner(
         "P4 ||",
@@ -575,7 +575,7 @@ commands(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.scp_spanner(
         "P4 ||",
@@ -652,7 +652,7 @@ commands(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.scp_spanner(
         "P4 ||",

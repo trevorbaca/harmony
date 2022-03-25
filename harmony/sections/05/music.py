@@ -115,7 +115,7 @@ commands(
     baca.note_head_style_harmonic(),
     baca.dynamic(
         "ff-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.markup(
         r"\baca-jet-whistle-markup",

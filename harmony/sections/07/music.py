@@ -324,7 +324,7 @@ commands(
     ),
     baca.dynamic(
         '"f"',
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -376,7 +376,7 @@ commands(
     baca.stem_tremolo(),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -620,7 +620,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -674,7 +674,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -820,7 +820,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -919,7 +919,7 @@ commands(
     baca.pitch("<B4 C5 D5>"),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 
@@ -1034,7 +1034,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -1127,7 +1127,7 @@ commands(
     baca.pitch("Bb2"),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),

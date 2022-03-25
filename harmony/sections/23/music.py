@@ -104,7 +104,7 @@ commands(
         selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=baca.selectors.runs(),
         selector=baca.selectors.rleaves(),
     ),
@@ -170,7 +170,7 @@ commands(
     ),
     baca.dynamic(
         "mp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 
@@ -198,7 +198,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -227,7 +227,7 @@ commands(
     baca.laissez_vibrer(),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -647,7 +647,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 

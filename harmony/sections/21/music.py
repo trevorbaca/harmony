@@ -105,7 +105,7 @@ commands(
         map=baca.selectors.runs((None, 1)),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="m2",
         map=baca.selectors.runs((1, 2)),
     ),
@@ -371,7 +371,7 @@ commands(
     baca.new(
         baca.dynamic(
             "f-ancora",
-            abjad.tweak(-0.9).self_alignment_X,
+            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
         match=[1],
     ),

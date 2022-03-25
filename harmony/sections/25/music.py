@@ -127,7 +127,7 @@ commands(
         map=baca.selectors.runs(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=baca.selectors.runs(),
         selector=baca.selectors.rleaves(),
     ),
@@ -146,7 +146,7 @@ commands(
         map=baca.selectors.rleak_runs(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.text_spanner(
@@ -183,7 +183,7 @@ commands(
         selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=baca.selectors.runs(),
         selector=baca.selectors.rleaves(),
     ),
@@ -207,7 +207,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -239,7 +239,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -450,7 +450,7 @@ commands(
     ),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(4 + 3),
     baca.markup(

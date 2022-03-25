@@ -351,7 +351,7 @@ commands(
     ),
     baca.dynamic(
         '"f"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -454,7 +454,7 @@ commands(
     ),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 

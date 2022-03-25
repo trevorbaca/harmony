@@ -108,7 +108,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="A5",
         map=baca.selectors.runs(),
     ),
@@ -147,8 +147,8 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="A5",
     ),
 )
@@ -224,7 +224,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -241,7 +241,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 
@@ -255,7 +255,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -317,7 +317,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -399,7 +399,7 @@ commands(
     ),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
@@ -427,7 +427,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -569,7 +569,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.markup(
@@ -608,8 +608,8 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(2.5).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -783,8 +783,8 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(2.5).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
     ),
     baca.markup(r"\baca-seven-d"),
     baca.markup(
@@ -822,7 +822,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.phead(0),
     ),
 )

@@ -131,8 +131,8 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -161,7 +161,7 @@ commands(
     ("bfl", (4, 5)),
     baca.new(
         baca.trill_spanner(
-            abjad.tweak(2).bound_details__right__padding,
+            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 9"),
@@ -223,7 +223,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         '"f"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
     baca.markup(

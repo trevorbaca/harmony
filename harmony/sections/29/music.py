@@ -76,7 +76,7 @@ commands(
     ("bfl", 1),
     baca.pitch("Bb4"),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
     ),
 )
 
@@ -156,7 +156,7 @@ commands(
         do_not_transpose=True,
     ),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         alteration="Cb5",
     ),
 )
@@ -209,7 +209,7 @@ commands(
     (["va", "vc1", "vc2"], 1),
     baca.pitch("Bb4"),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         alteration="Cb5",
     ),
 )

@@ -484,7 +484,7 @@ commands(
     ),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -560,7 +560,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -608,7 +608,7 @@ commands(
     baca.pitch("E1"),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.damp(
         baca.selectors.leaf_after_each_ptail(),
@@ -956,7 +956,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -1006,7 +1006,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -1060,7 +1060,7 @@ commands(
     ),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.hairpin(
         "f >o niente",
@@ -1132,7 +1132,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -1189,7 +1189,7 @@ commands(
     ),
     baca.dynamic(
         "mp-pp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -1262,7 +1262,7 @@ commands(
     ),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -1425,7 +1425,7 @@ commands(
     ),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.bow_speed_spanner(
         "scr. =|",

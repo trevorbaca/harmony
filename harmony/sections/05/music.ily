@@ -6542,28 +6542,28 @@ segment.05.Contrabass.II.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Cb. II”]"
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
     %! baca.PiecewiseCommand._call(2)
     %! LEFT_BROKEN
     %! SPANNER_START
     %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    %! REDUNDANT_DYNAMIC
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.hairpin()
     %! baca.PiecewiseCommand._call(2)
     %! LEFT_BROKEN
     %! SPANNER_START
     %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
+    %! REDUNDANT_DYNAMIC
     - \tweak circled-tip ##t
     %! baca.hairpin()
     %! baca.PiecewiseCommand._call(2)
     %! LEFT_BROKEN
     %! SPANNER_START
     %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
+    %! REDUNDANT_DYNAMIC
     \<
     %! baca.glissando()
     %! abjad.glissando(7)
