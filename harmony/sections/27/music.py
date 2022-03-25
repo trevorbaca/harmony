@@ -142,7 +142,7 @@ commands(
         map=baca.selectors.rleak_runs(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.text_spanner(
@@ -222,7 +222,7 @@ commands(
         selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=baca.selectors.runs(),
         selector=baca.selectors.rleaves(),
     ),
@@ -242,7 +242,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
     ),
 )
 
@@ -708,7 +708,7 @@ commands(
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         pieces=baca.selectors.plts(),
     ),
     baca.untie(
@@ -734,7 +734,7 @@ commands(
         direction=abjad.DOWN,
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="E6",
     ),
 )
@@ -792,7 +792,7 @@ commands(
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp -- ! >",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         bookend=False,
         pieces=baca.selectors.lparts([1, 2, 3, 2]),
     ),
@@ -823,7 +823,7 @@ commands(
         direction=abjad.DOWN,
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="C#6",
     ),
 )
@@ -882,7 +882,7 @@ commands(
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         bookend=False,
         pieces=baca.selectors.lparts([2, 3, 2]),
     ),
@@ -913,7 +913,7 @@ commands(
         direction=abjad.DOWN,
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
     ),
 )
 
@@ -1009,7 +1009,7 @@ commands(
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >",
-        abjad.tweak(True).to_barline,
+        abjad.Tweak(r"- \tweak to-barline ##t"),
         pieces=baca.selectors.lparts([2, 1, 1]),
     ),
     baca.untie(

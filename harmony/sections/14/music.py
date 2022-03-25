@@ -132,7 +132,7 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -193,7 +193,7 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -216,7 +216,7 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -264,7 +264,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -330,7 +330,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -444,7 +444,7 @@ commands(
     ),
     baca.dynamic(
         '"ff"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.hairpin(
         # '"ff" "ff" "ff" "f" "f" mf mp p pp',
@@ -465,7 +465,7 @@ commands(
     library.tam_tam_staff_position(),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -823,7 +823,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 
@@ -946,7 +946,7 @@ commands(
     baca.pitch("C#3"),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(4),
     baca.damp_spanner(
@@ -1220,7 +1220,7 @@ commands(
     ),
     baca.dynamic(
         "ppp",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.half_clt_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),

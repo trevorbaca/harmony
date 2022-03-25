@@ -112,7 +112,7 @@ commands(
         selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=baca.selectors.runs(),
         selector=baca.selectors.rleaves(),
     ),
@@ -139,7 +139,7 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
     ),
 )
 
@@ -184,7 +184,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -285,7 +285,7 @@ commands(
     ),
     baca.dynamic(
         "mp-sempre",
-        abjad.tweak(0.25).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -322,7 +322,7 @@ commands(
     ),
     baca.dynamic(
         "mp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(4),
     baca.text_spanner(
@@ -374,7 +374,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -452,7 +452,7 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="E6",
         harmonic=True,
     ),
@@ -538,7 +538,7 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="C#6",
         harmonic=True,
     ),
@@ -568,7 +568,7 @@ commands(
         pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         map=baca.selectors.runs(),
     ),
     baca.markup(
@@ -629,7 +629,7 @@ commands(
         selector=baca.selectors.rleaf(-1),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
     ),
     baca.markup(
         r"\baca-string-iii-markup",

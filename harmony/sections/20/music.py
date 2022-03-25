@@ -87,7 +87,7 @@ commands(
         map=baca.selectors.runs((None, 1)),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="m2",
         map=baca.selectors.runs((1, 2)),
     ),
@@ -108,7 +108,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="A5",
         map=baca.selectors.runs(),
     ),
@@ -191,7 +191,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -255,7 +255,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -324,7 +324,7 @@ commands(
     ),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-sons-xylophoniques-markup",
@@ -399,7 +399,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
 )
@@ -470,7 +470,7 @@ commands(
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.markup(
@@ -494,7 +494,7 @@ commands(
     baca.tuplet_bracket_staff_padding(2),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
 )
@@ -537,7 +537,7 @@ commands(
     baca.tuplet_bracket_staff_padding(2),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
 )
@@ -575,7 +575,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
 )
@@ -616,7 +616,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 

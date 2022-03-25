@@ -118,8 +118,8 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -132,7 +132,7 @@ commands(
     baca.pitch("D4"),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.text_spanner(
         "A =|",
@@ -1095,8 +1095,8 @@ commands(
     ),
     baca.trill_spanner(
         # large right padding because open-volta follows in next segment
-        abjad.tweak(6).bound_details__right__padding,
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="Fqs5",
     ),
     baca.markup(r"\baca-eleven-c"),
@@ -1253,8 +1253,8 @@ commands(
     baca.new(
         baca.trill_spanner(
             # large right padding because open-volta follows in next segment
-            abjad.tweak(6).bound_details__right__padding,
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
+            abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
         # excluded cb2 because of gliss / trill order contention
         match=[0, 1],

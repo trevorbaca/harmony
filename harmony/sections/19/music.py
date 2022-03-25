@@ -138,8 +138,8 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -191,8 +191,8 @@ commands(
         selector=baca.selectors.tleaves(),
     ),
     baca.trill_spanner(
-        abjad.tweak(r"\harmony-d-d-sharp-markup").bound_details__left__text,
-        abjad.tweak(8).staff_padding,
+        abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
+        abjad.Tweak(r"- \tweak staff-padding 8"),
         selector=baca.selectors.tleaves(),
     ),
 )
@@ -275,7 +275,7 @@ commands(
     ),
     baca.dynamic(
         "ff-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.rest(1),
     ),
     baca.dls_staff_padding(5),
@@ -419,7 +419,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.rest(1),
     ),
     baca.dls_staff_padding(5),
@@ -560,7 +560,7 @@ commands(
     ),
     baca.dynamic(
         "pp-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(4 + 2),
     baca.markup(
@@ -989,7 +989,7 @@ commands(
     ),
     baca.dynamic(
         "fff-scratch",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )

@@ -124,8 +124,8 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
-        abjad.tweak((0, 0)).X_extent,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+        abjad.Tweak(r"- \tweak X-extent #'(0 . 0)"),
     ),
     baca.dls_staff_padding(6),
     baca.markup(

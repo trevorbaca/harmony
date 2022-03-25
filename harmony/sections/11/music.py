@@ -324,7 +324,7 @@ commands(
     ),
     baca.dynamic(
         '"f"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -380,7 +380,7 @@ commands(
     ),
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
-        abjad.tweak(10).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=baca.selectors.tleaves(rleak=True),
     ),
@@ -442,7 +442,7 @@ commands(
     ),
     baca.dynamic(
         "mp-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -558,7 +558,7 @@ commands(
     ),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
 )
 
@@ -584,7 +584,7 @@ commands(
         baca.double_flageolet(),
         baca.dynamic(
             "f-ancora",
-            abjad.tweak(-0.9).self_alignment_X,
+            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
         selector=baca.selectors.pleaf(0),
     ),
@@ -592,7 +592,7 @@ commands(
         baca.pitch("E4"),
         baca.dynamic(
             "f-ancora",
-            abjad.tweak(-0.9).self_alignment_X,
+            abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
         baca.snap_pizzicato(),
         selector=baca.selectors.phead(-1),
@@ -769,7 +769,7 @@ commands(
         baca.selectors.pleaf(1),
     ),
     baca.trill_spanner(
-        abjad.tweak(2.75).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
 )
@@ -937,7 +937,7 @@ commands(
         baca.selectors.pleaf(1),
     ),
     baca.trill_spanner(
-        abjad.tweak(2.75).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
 )

@@ -129,7 +129,7 @@ commands(
     baca.pitch("F3"),
     baca.dynamic(
         "mf-sempre",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -385,7 +385,7 @@ commands(
     ),
     baca.dynamic(
         '"ff"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
 )
 
@@ -533,7 +533,7 @@ commands(
     ),
     baca.dynamic(
         '"ff"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.hairpin(
         # '"ff" "f" mf mp p pp ppp ppp',
@@ -710,7 +710,7 @@ commands(
     ),
     baca.dynamic(
         '"ff"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(

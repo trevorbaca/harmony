@@ -166,7 +166,7 @@ commands(
     library.purpleheart_staff_positions([-2]),
     baca.dynamic(
         "f-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
 )
@@ -338,7 +338,7 @@ commands(
     ),
     baca.dynamic(
         "ff-p",
-        abjad.tweak(-0.5).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.dls_staff_padding(
@@ -419,7 +419,7 @@ commands(
     ),
     baca.dynamic(
         "ff-p",
-        abjad.tweak(-0.5).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -480,7 +480,7 @@ commands(
     ),
     baca.dynamic(
         "ff-p",
-        abjad.tweak(-0.5).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.text_spanner(
@@ -555,7 +555,7 @@ commands(
     ),
     baca.dynamic(
         "ff-p",
-        abjad.tweak(-0.5).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         selector=baca.selectors.leaf(0, grace=False),
     ),
     baca.dls_staff_padding(

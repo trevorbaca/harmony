@@ -276,7 +276,7 @@ commands(
     ),
     baca.dynamic(
         "mf-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
 )

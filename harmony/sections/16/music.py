@@ -75,7 +75,7 @@ commands(
     baca.pitch("D5"),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.text_spanner(
         "A =|",
@@ -95,10 +95,10 @@ commands(
     baca.pitch("F#5"),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.trill_spanner(
-        abjad.tweak(2).bound_details__right__padding,
+        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
     ),
 )
 
@@ -158,7 +158,7 @@ commands(
     library.brake_drum_staff_position(),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-brake-drum-paper-towel-markup",
@@ -174,7 +174,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         '"f"',
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",

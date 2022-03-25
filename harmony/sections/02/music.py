@@ -336,7 +336,7 @@ commands(
     baca.make_repeat_tied_notes(),
     baca.dynamic(
         "p-ancora",
-        abjad.tweak(-0.75).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
     ),
     baca.dls_staff_padding(6),
     baca.markup(

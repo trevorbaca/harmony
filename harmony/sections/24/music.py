@@ -80,7 +80,7 @@ commands(
         map=baca.selectors.rleak_runs(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.text_spanner(
@@ -104,7 +104,7 @@ commands(
         map=baca.selectors.rleak_runs(),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         map=baca.selectors.runs(),
     ),
     baca.text_spanner(
@@ -144,7 +144,7 @@ commands(
     ),
     baca.dynamic(
         "pp-ancora",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -160,7 +160,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -302,7 +302,7 @@ commands(
     library.whisk_staff_position(),
     baca.dynamic(
         "p-sempre",
-        abjad.tweak(-0.9).self_alignment_X,
+        abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -323,7 +323,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="M2",
         map=baca.selectors.rleak_runs(),
     ),
@@ -397,7 +397,7 @@ commands(
             pieces=baca.selectors.lparts([1, 1 + 1]),
         ),
         baca.trill_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="M2",
         ),
         map=baca.selectors.rleak_runs(1, -1),
@@ -455,7 +455,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="M2",
         map=baca.selectors.rleak_runs(),
     ),
@@ -540,7 +540,7 @@ commands(
             pieces=baca.selectors.lparts([1, 1 + 1]),
         ),
         baca.trill_spanner(
-            abjad.tweak(3).staff_padding,
+            abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="m2",
         ),
         map=baca.selectors.rleak_runs(1, -1),
@@ -604,7 +604,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
     ),
     baca.trill_spanner(
-        abjad.tweak(3).staff_padding,
+        abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="m2",
         map=baca.selectors.rleak_runs(),
     ),
