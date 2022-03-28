@@ -3693,13 +3693,13 @@ segment.09.Contrabass.II.Music.Voice = {
     \laissezVibrer
     %! baca.markup()
     %! baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
     - \tweak staff-padding 3
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-thirteen-a
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    _ \baca-string-iii-markup
     %! baca.pizzicato_spanner()
     %! PIZZICATO_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -3749,13 +3749,13 @@ segment.09.Contrabass.II.Music.Voice = {
     \laissezVibrer
     %! baca.markup()
     %! baca.IndicatorCommand._call()
+    _ \baca-string-iii-markup
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
     - \tweak staff-padding 3
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-fourteen-a
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    _ \baca-string-iii-markup
     %! baca.note_head_style_harmonic()
     %! baca.OverrideCommand._call(2)
     \revert NoteHead.style
