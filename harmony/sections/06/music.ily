@@ -4706,15 +4706,15 @@ segment.06.Harp.Music.Voice = {
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.sixteenths()
     c'4 * 1/2
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 3
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-whisk-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -4976,15 +4976,15 @@ segment.06.Harp.Music.Voice = {
         \override DynamicLineSpanner.staff-padding = 6
         %! harmony.sixteenths()
         c'4 * 1/2
+        %! baca._label_duration_multipliers()
+        %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         - \tweak staff-padding 8
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-whisk-markup
-        %! baca._label_duration_multipliers()
-        %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()
@@ -5929,15 +5929,15 @@ segment.06.Harp.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \baca-effort-f
+        %! baca._label_duration_multipliers()
+        %! DURATION_MULTIPLIER
+        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         - \tweak staff-padding 8
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-whisk-markup
-        %! baca._label_duration_multipliers()
-        %! DURATION_MULTIPLIER
-        %@% ^ \baca-duration-multiplier-markup #"1" #"2"
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)

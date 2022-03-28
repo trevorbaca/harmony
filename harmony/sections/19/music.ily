@@ -6293,16 +6293,16 @@ segment.19.Viola.Music.Voice = {
     %@% ^ \baca-reapplied-indicator-markup "[“Va.”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
-    - \tweak padding 1
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    ^ \baca-string-i-markup
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    - \tweak padding 1
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -6999,13 +6999,13 @@ segment.19.Viola.Music.Voice = {
         :32
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()
@@ -7396,13 +7396,13 @@ segment.19.Viola.Music.Voice = {
         \baca-fff-scratch
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! baca.attach_color_literal(2)
         %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -7757,16 +7757,16 @@ segment.19.Cello.I.Music.Voice = {
     %@% ^ \baca-reapplied-indicator-markup "[“Vc. I”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
-    - \tweak padding 1
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    ^ \baca-string-i-markup
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    - \tweak padding 1
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -8253,13 +8253,13 @@ segment.19.Cello.I.Music.Voice = {
         :32
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()
@@ -8618,13 +8618,13 @@ segment.19.Cello.I.Music.Voice = {
         \baca-fff-scratch
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! baca.attach_color_literal(2)
         %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -8941,16 +8941,16 @@ segment.19.Cello.II.Music.Voice = {
     %@% ^ \baca-reapplied-indicator-markup "[“Vc. II”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
-    - \tweak padding 1
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    ^ \baca-string-i-markup
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    - \tweak padding 1
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    ^ \baca-string-i-markup
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -9437,13 +9437,13 @@ segment.19.Cello.II.Music.Voice = {
         :32
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()
@@ -9850,13 +9850,13 @@ segment.19.Cello.II.Music.Voice = {
         \baca-fff-scratch
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-i-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! baca.attach_color_literal(2)
         %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -10218,16 +10218,16 @@ segment.19.Contrabass.I.Music.Voice = {
     %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
-    - \tweak padding 1
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
-    ^ \baca-string-iii-markup
-    %! baca.markup()
-    %! baca.IndicatorCommand._call()
     ^ \baca-quasi-bisb-markup
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    - \tweak padding 1
+    %! baca.markup()
+    %! baca.IndicatorCommand._call()
+    ^ \baca-string-iii-markup
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -10767,13 +10767,13 @@ segment.19.Contrabass.I.Music.Voice = {
         :32
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-iii-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()
@@ -11126,13 +11126,13 @@ segment.19.Contrabass.I.Music.Voice = {
         \baca-fff-scratch
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-iii-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! baca.attach_color_literal(2)
         %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -12002,13 +12002,13 @@ segment.19.Contrabass.II.Music.Voice = {
         :32
         %! baca.markup()
         %! baca.IndicatorCommand._call()
+        ^ \baca-quasi-bisb-markup
+        %! baca.markup()
+        %! baca.IndicatorCommand._call()
         - \tweak padding 1
         %! baca.markup()
         %! baca.IndicatorCommand._call()
         ^ \baca-string-iii-markup
-        %! baca.markup()
-        %! baca.IndicatorCommand._call()
-        ^ \baca-quasi-bisb-markup
         %! EXPLICIT_DYNAMIC_COLOR
         %! _treat_persistent_wrapper(1)
         %! baca.hairpin()

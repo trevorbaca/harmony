@@ -2541,15 +2541,15 @@ segment.28.Percussion.I.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-triangle-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -2894,15 +2894,15 @@ segment.28.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"7"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-triangle-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"7"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()

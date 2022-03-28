@@ -3387,15 +3387,15 @@ segment.07.Harp.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak padding 2.5
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-bisb-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()

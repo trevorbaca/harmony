@@ -3601,15 +3601,15 @@ segment.04.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 4
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-bisb-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()

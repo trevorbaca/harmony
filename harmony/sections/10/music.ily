@@ -2595,15 +2595,15 @@ segment.10.Percussion.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-triangle-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()

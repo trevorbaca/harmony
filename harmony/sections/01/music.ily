@@ -1116,6 +1116,9 @@ segment.01.Percussion.I.Music.Voice = {
     \override Stem.direction = #down
     %! harmony.sixteenths()
     b4 * 3/4
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak self-alignment-X 0.25
@@ -1125,9 +1128,6 @@ segment.01.Percussion.I.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-bd-superball-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -1658,15 +1658,15 @@ segment.01.Percussion.II.Music.Voice = {
     %! DEFAULT_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-default-indicator-markup "(“Percussion”)"
+    %! EXPLICIT_MARGIN_MARKUP_ALERT
+    %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-explicit-indicator-markup "[“Perc. II”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-slate-scrape-markup
-    %! EXPLICIT_MARGIN_MARKUP_ALERT
-    %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Perc. II”]"
     %! baca.attach_color_literal(2)
     %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)
@@ -2100,15 +2100,15 @@ segment.01.Harp.Music.Voice = {
     %! DEFAULT_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-default-indicator-markup "(“Harp”)"
+    %! EXPLICIT_MARGIN_MARKUP_ALERT
+    %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-explicit-indicator-markup "[“Hp.”]"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-whisk-markup
-    %! EXPLICIT_MARGIN_MARKUP_ALERT
-    %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Hp.”]"
     %! baca.attach_color_literal(2)
     %! REDRAWN_EXPLICIT_MARGIN_MARKUP_COLOR
     %@% \override Staff.InstrumentName.color = #(x11-color 'DeepSkyBlue2)

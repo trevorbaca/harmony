@@ -2061,15 +2061,15 @@ segment.11.Percussion.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-triangle-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -2598,15 +2598,15 @@ segment.11.Percussion.I.Music.Voice = {
     \override TupletBracket.direction = #up
     %! harmony.sixteenths()
     b4 * 3/4
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-bd-superball-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -2826,15 +2826,15 @@ segment.11.Percussion.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-triangle-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -4610,15 +4610,15 @@ segment.11.Harp.Music.Voice = {
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.sixteenths()
     c'4 * 3/4
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-whisk-markup
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! EXPLICIT_DYNAMIC_COLOR
     %! _treat_persistent_wrapper(1)
     %! baca.hairpin()
@@ -11284,15 +11284,15 @@ segment.11.Contrabass.II.Music.Voice = {
     \override NoteHead.style = #'harmonic
     %! harmony.sixteenths()
     cqf'''!4 * 1/2
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 5.5
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-fourteen-d
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak padding 1
@@ -12096,15 +12096,15 @@ segment.11.Contrabass.II.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     cqf'''!4 * 1/2
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 5.5
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-fourteen-d
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak padding 1
