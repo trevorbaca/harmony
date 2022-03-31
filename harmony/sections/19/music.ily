@@ -1500,21 +1500,6 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.covered_spanner()
@@ -1527,6 +1512,21 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 5.5
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-covered-markup
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -1679,21 +1679,6 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.covered_spanner()
@@ -1706,6 +1691,21 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 5.5
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-covered-markup
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -2033,21 +2033,6 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-markup \baca-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
-        %! baca.covered_spanner()
-        %! COVERED_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.covered_spanner()
@@ -2060,6 +2045,21 @@ segment.19.Bass.Flute.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 5.5
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-markup \baca-covered-markup
+        %! baca.covered_spanner()
+        %! COVERED_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
         %! baca.covered_spanner()
         %! COVERED_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -4194,18 +4194,6 @@ segment.19.Percussion.II.Music.Voice = {
     %! METRIC_MODULATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! LEFT_BROKEN
-    %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-    %! baca.metric_modulation_spanner()
-    %! METRIC_MODULATION_SPANNER
-    %! baca.PiecewiseCommand._call(2)
-    %! LEFT_BROKEN
-    %! SPANNER_START
-    - \baca-text-spanner-left-text "MM"
-    %! baca.metric_modulation_spanner()
-    %! METRIC_MODULATION_SPANNER
-    %! baca.PiecewiseCommand._call(2)
-    %! LEFT_BROKEN
     %! AUTODETECT
     %! SPANNER_START
     %! baca.metric_modulation_spanner()
@@ -4220,6 +4208,18 @@ segment.19.Percussion.II.Music.Voice = {
     %! LEFT_BROKEN
     %! SPANNER_START
     - \tweak staff-padding 10.5
+    %! baca.metric_modulation_spanner()
+    %! METRIC_MODULATION_SPANNER
+    %! baca.PiecewiseCommand._call(2)
+    %! LEFT_BROKEN
+    %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+    %! baca.metric_modulation_spanner()
+    %! METRIC_MODULATION_SPANNER
+    %! baca.PiecewiseCommand._call(2)
+    %! LEFT_BROKEN
+    %! SPANNER_START
+    - \baca-text-spanner-left-text "MM"
     %! baca.metric_modulation_spanner()
     %! METRIC_MODULATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5280,16 +5280,6 @@ segment.19.Percussion.II.Music.Voice = {
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
-    %@% - \abjad-dashed-line-with-hook
-    %! baca.rhythm_annotation_spanner()
-    %! RHYTHM_ANNOTATION_SPANNER
-    %! baca.PiecewiseCommand._call(2)
-    %! SPANNER_START
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
-    %! baca.rhythm_annotation_spanner()
-    %! RHYTHM_ANNOTATION_SPANNER
-    %! baca.PiecewiseCommand._call(2)
-    %! SPANNER_START
 %@%     %! baca.rhythm_annotation_spanner()
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
@@ -5326,6 +5316,16 @@ segment.19.Percussion.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     %@% - \tweak staff-padding 8
+    %! baca.rhythm_annotation_spanner()
+    %! RHYTHM_ANNOTATION_SPANNER
+    %! baca.PiecewiseCommand._call(2)
+    %! SPANNER_START
+    %@% - \abjad-dashed-line-with-hook
+    %! baca.rhythm_annotation_spanner()
+    %! RHYTHM_ANNOTATION_SPANNER
+    %! baca.PiecewiseCommand._call(2)
+    %! SPANNER_START
+    %@% - \baca-text-spanner-left-text "baca.skeleton()"
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5372,18 +5372,6 @@ segment.19.Percussion.II.Music.Voice = {
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
         %! RIGHT_BROKEN
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! RIGHT_BROKEN
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! RIGHT_BROKEN
         %! AUTODETECT
         %! SPANNER_START
         %! baca.metric_modulation_spanner()
@@ -5398,6 +5386,18 @@ segment.19.Percussion.II.Music.Voice = {
         %! RIGHT_BROKEN
         %! SPANNER_START
         - \tweak staff-padding 10.5
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! RIGHT_BROKEN
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! RIGHT_BROKEN
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -11514,16 +11514,6 @@ segment.19.Contrabass.II.Music.Voice = {
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.metric_modulation_spanner()
@@ -11536,6 +11526,16 @@ segment.19.Contrabass.II.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 8
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -12326,16 +12326,6 @@ segment.19.Contrabass.II.Music.Voice = {
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
-        %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-        %! baca.metric_modulation_spanner()
-        %! METRIC_MODULATION_SPANNER
-        %! baca.PiecewiseCommand._call(2)
         %! AUTODETECT
         %! SPANNER_START
         %! baca.metric_modulation_spanner()
@@ -12348,6 +12338,16 @@ segment.19.Contrabass.II.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         - \tweak staff-padding 5.5
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+        %! baca.metric_modulation_spanner()
+        %! METRIC_MODULATION_SPANNER
+        %! baca.PiecewiseCommand._call(2)
+        %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
