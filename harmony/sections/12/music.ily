@@ -3777,15 +3777,15 @@ segment.12.Percussion.I.Music.Voice = {
     \override TupletBracket.direction = #up
     %! harmony.sixteenths()
     b4 * 3/4
-    %! baca._label_duration_multipliers()
-    %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 6
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     ^ \baca-bd-superball-markup
+    %! baca._label_duration_multipliers()
+    %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
