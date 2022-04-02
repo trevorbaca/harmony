@@ -1009,14 +1009,6 @@ segment.17.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    - \tweak bound-details.right.padding 2
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \startTrillSpan
     %! baca.metric_modulation_spanner()
     %! METRIC_MODULATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -1047,6 +1039,14 @@ segment.17.Bass.Flute.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \bacaStartTextSpanMetricModulation
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    - \tweak bound-details.right.padding 2
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \startTrillSpan
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 5]

@@ -1167,14 +1167,6 @@ segment.25.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    - \tweak staff-padding 3
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \startTrillSpan
     %! baca.text_spanner()
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
@@ -1191,6 +1183,14 @@ segment.25.Bass.Flute.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \startTextSpan
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    - \tweak staff-padding 3
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \startTrillSpan
 
     %! harmony.sixteenths()
     fs'''!8
@@ -1324,14 +1324,6 @@ segment.25.Bass.Flute.Music.Voice = {
     \<
     %! rmakers.RewriteMeterCommand.__call__
     [
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    - \tweak staff-padding 3
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \startTrillSpan
     %! baca.text_spanner()
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
@@ -1348,6 +1340,14 @@ segment.25.Bass.Flute.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \startTextSpan
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    - \tweak staff-padding 3
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \startTrillSpan
 
     %! harmony.sixteenths()
     fs'''!8
@@ -1481,14 +1481,6 @@ segment.25.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    - \tweak staff-padding 3
-    %! baca.trill_spanner()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \startTrillSpan
     %! baca.text_spanner()
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
@@ -1505,6 +1497,14 @@ segment.25.Bass.Flute.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \startTextSpan
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    - \tweak staff-padding 3
+    %! baca.trill_spanner()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \startTrillSpan
 
     %! harmony.sixteenths()
     fs'''!8
