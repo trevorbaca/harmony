@@ -2513,10 +2513,6 @@ segment.17.Harp.Music.Voice = {
     \set Staff.shortInstrumentName = \harmony-hp-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-hp-markup
-    %! baca.ottava_bassa()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \ottava -1
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(1)
     \once \override Staff.OttavaBracket.staff-padding = 8
@@ -2526,6 +2522,10 @@ segment.17.Harp.Music.Voice = {
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override Staff.OttavaBracket.staff-padding = 8
+    %! baca.ottava_bassa()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \ottava -1
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_CLEF
@@ -2810,10 +2810,6 @@ segment.17.Harp.Music.Voice = {
     %! baca.laissez_vibrer()
     %! baca.IndicatorCommand._call()
     \laissezVibrer
-    %! baca.ottava_bassa()
-    %! baca.SpannerIndicatorCommand._call(4)
-    %! SPANNER_STOP
-    \ottava 0
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(2)
     \revert Staff.OttavaBracket.staff-padding
@@ -2823,6 +2819,10 @@ segment.17.Harp.Music.Voice = {
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(2)
     \revert Staff.OttavaBracket.staff-padding
+    %! baca.ottava_bassa()
+    %! baca.SpannerIndicatorCommand._call(4)
+    %! SPANNER_STOP
+    \ottava 0
 
     %! baca._make_multimeasure_rest_container(7)
     <<

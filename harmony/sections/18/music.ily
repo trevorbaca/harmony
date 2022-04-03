@@ -3735,16 +3735,16 @@ segment.18.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 6]
-    %! baca.ottava_bassa()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \ottava -1
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(1)
     \once \override Staff.OttavaBracket.staff-padding = 8
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \once \override DynamicLineSpanner.staff-padding = 5
+    %! baca.ottava_bassa()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \ottava -1
     %! baca.make_notes()
     df,,!1.
     %! EXPLICIT_DYNAMIC_COLOR
