@@ -4809,10 +4809,6 @@ segment.22.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 5]
-    %! baca.ottava_bassa()
-    %! baca.SpannerIndicatorCommand._call(2)
-    %! SPANNER_START
-    \ottava -1
     %! baca.clef_x_extent_false()
     %! baca.clef_shift()
     %! SHIFTED_CLEF
@@ -4825,6 +4821,10 @@ segment.22.Harp.Music.Voice = {
     %! MEASURE_200
     %! baca.OverrideCommand._call(1)
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    %! baca.ottava_bassa()
+    %! baca.SpannerIndicatorCommand._call(2)
+    %! SPANNER_START
+    \ottava -1
     %! baca.clef()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()

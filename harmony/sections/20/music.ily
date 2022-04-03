@@ -2567,12 +2567,12 @@ segment.20.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
-    %! baca.laissez_vibrer()
-    %! baca.IndicatorCommand._call()
-    \laissezVibrer
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
+    %! baca.laissez_vibrer()
+    %! baca.IndicatorCommand._call()
+    \laissezVibrer
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     - \tweak staff-padding 8

@@ -5819,16 +5819,16 @@ segment.19.Harp.Music.Voice = {
         %! baca._style_fermata_measures(4)
         %! FERMATA_MEASURE_NEXT_BAR_EXTENT
         \override Staff.BarLine.bar-extent = #'(-2 . 2)
-        %! baca.ottava()
-        %! baca.SpannerIndicatorCommand._call(2)
-        %! SPANNER_START
-        \ottava 1
         %! baca.ottava_bracket_staff_padding()
         %! baca.OverrideCommand._call(1)
         \override Staff.OttavaBracket.staff-padding = 5.5
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
         \override DynamicLineSpanner.staff-padding = 6
+        %! baca.ottava()
+        %! baca.SpannerIndicatorCommand._call(2)
+        %! SPANNER_START
+        \ottava 1
         <g''' a''' bf'''!>1
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
@@ -5905,16 +5905,16 @@ segment.19.Harp.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    %! baca.ottava()
-    %! baca.SpannerIndicatorCommand._call(4)
-    %! SPANNER_STOP
-    \ottava 0
     %! baca.ottava_bracket_staff_padding()
     %! baca.OverrideCommand._call(2)
     \revert Staff.OttavaBracket.staff-padding
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(2)
     \revert DynamicLineSpanner.staff-padding
+    %! baca.ottava()
+    %! baca.SpannerIndicatorCommand._call(4)
+    %! SPANNER_STOP
+    \ottava 0
 
     %! baca._make_multimeasure_rest_container(7)
     <<
@@ -6032,16 +6032,16 @@ segment.19.Harp.Music.Voice = {
 
         %! baca._comment_measure_numbers()
         % [Harp_Music_Voice measure 12]
-        %! baca.ottava()
-        %! baca.SpannerIndicatorCommand._call(2)
-        %! SPANNER_START
-        \ottava 1
         %! baca.ottava_bracket_staff_padding()
         %! baca.OverrideCommand._call(1)
         \once \override Staff.OttavaBracket.staff-padding = 5.5
         %! baca.dls_staff_padding()
         %! baca.OverrideCommand._call(1)
         \once \override DynamicLineSpanner.staff-padding = 6
+        %! baca.ottava()
+        %! baca.SpannerIndicatorCommand._call(2)
+        %! SPANNER_START
+        \ottava 1
         <g''' a''' bf'''!>1
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()

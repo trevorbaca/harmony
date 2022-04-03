@@ -23,18 +23,18 @@
 
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 1]
-            %! SPACING_COMMAND
-            %! baca.SpacingSpecifier.__call__(1)
-            \baca-new-spacing-section #1 #40
+            %! BREAK
+            %! baca.IndicatorCommand._call()
+            \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
             %! BREAK
             %! baca._apply_breaks(1)
             \autoPageBreaksOff
             %! BREAK
             %! baca._apply_breaks(2)
             \noBreak
-            %! BREAK
-            %! baca.IndicatorCommand._call()
-            \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
+            %! SPACING_COMMAND
+            %! baca.SpacingSpecifier.__call__(1)
+            \baca-new-spacing-section #1 #40
             %! BREAK
             %! baca.IndicatorCommand._call()
             \pageBreak
@@ -49,12 +49,12 @@
 
             %! baca._comment_measure_numbers()
             % [Page_Layout measure 2]
-            %! SPACING_COMMAND
-            %! baca.SpacingSpecifier.__call__(1)
-            \baca-new-spacing-section #1 #40
             %! BREAK
             %! baca._apply_breaks(2)
             \noBreak
+            %! SPACING_COMMAND
+            %! baca.SpacingSpecifier.__call__(1)
+            \baca-new-spacing-section #1 #40
             %! baca._make_global_skips(1)
             s1 * 3/2
             %! SPACING
@@ -71,16 +71,16 @@
             %! baca._style_phantom_measures(1)
             %! PHANTOM
             % [Page_Layout measure 3]
-            %! SPACING_COMMAND
-            %! baca.SpacingSpecifier.__call__(1)
-            %! baca._style_phantom_measures(1)
-            %! PHANTOM
-            \baca-new-spacing-section #1 #4
             %! BREAK
             %! baca._apply_breaks(2)
             %! baca._style_phantom_measures(1)
             %! PHANTOM
             \noBreak
+            %! SPACING_COMMAND
+            %! baca.SpacingSpecifier.__call__(1)
+            %! baca._style_phantom_measures(1)
+            %! PHANTOM
+            \baca-new-spacing-section #1 #4
             %! baca._style_phantom_measures(2)
             %! PHANTOM
             \baca-time-signature-transparent
