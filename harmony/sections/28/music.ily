@@ -15171,8 +15171,14 @@ segment.28.Contrabass.II.Music.Voice = {
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
     %! RIGHT_BROKEN
+    %! AUTODETECT
     %! SPANNER_START
-    - \tweak bound-details.right.padding 0.5
+    %! baca.scp_spanner()
+    %! SCP_SPANNER
+    %! baca.PiecewiseCommand._call(2)
+    %! RIGHT_BROKEN
+    %! SPANNER_START
+    - \tweak bound-details.right.padding 3.25
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
