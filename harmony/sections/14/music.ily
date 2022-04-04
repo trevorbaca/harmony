@@ -1050,6 +1050,8 @@ segment.14.Bass.Flute.Music.Voice = {
         \override Accidental.Y-offset = -2
         %! harmony.warble()
         g'32
+        %! harmony.warble()
+        [
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -1070,8 +1072,6 @@ segment.14.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! harmony.warble()
-        [
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
@@ -1367,6 +1367,11 @@ segment.14.Bass.Flute.Music.Voice = {
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.covered_spanner()
+    %! COVERED_SPANNER
+    %! baca.PiecewiseCommand._call(4)
+    %! SPANNER_STOP
+    \bacaStopTextSpanCovered
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -1393,11 +1398,6 @@ segment.14.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.covered_spanner()
-    %! COVERED_SPANNER
-    %! baca.PiecewiseCommand._call(4)
-    %! SPANNER_STOP
-    \bacaStopTextSpanCovered
 
     %! harmony.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
@@ -1516,6 +1516,8 @@ segment.14.Bass.Flute.Music.Voice = {
         \override Accidental.Y-offset = -2
         %! harmony.warble()
         gs'!32
+        %! harmony.warble()
+        [
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -1536,8 +1538,6 @@ segment.14.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! harmony.warble()
-        [
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
@@ -1740,6 +1740,8 @@ segment.14.Bass.Flute.Music.Voice = {
 
         %! harmony.warble()
         a'32
+        %! harmony.warble()
+        [
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -1760,8 +1762,6 @@ segment.14.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! harmony.warble()
-        [
         %! baca.trill_spanner()
         %! baca.SpannerIndicatorCommand._call(2)
         %! SPANNER_START
@@ -4821,6 +4821,9 @@ segment.14.Viola.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -4841,9 +4844,6 @@ segment.14.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5228,6 +5228,9 @@ segment.14.Viola.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -5248,9 +5251,6 @@ segment.14.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5347,6 +5347,9 @@ segment.14.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -5367,9 +5370,6 @@ segment.14.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5468,6 +5468,9 @@ segment.14.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -5488,9 +5491,6 @@ segment.14.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5585,6 +5585,9 @@ segment.14.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -5605,9 +5608,6 @@ segment.14.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -8681,6 +8681,9 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -8701,9 +8704,6 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9085,6 +9085,9 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -9105,9 +9108,6 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9204,6 +9204,9 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -9224,9 +9227,6 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9326,6 +9326,9 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -9346,9 +9349,6 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9445,6 +9445,9 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -9465,9 +9468,6 @@ segment.14.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9959,6 +9959,9 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -9979,9 +9982,6 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -10330,6 +10330,14 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca.markup()
     %! baca.IndicatorCommand._call()
     _ \baca-string-iv-markup
+    %! baca.damp_spanner()
+    %! DAMP_SPANNER
+    %! baca.PiecewiseCommand._call(4)
+    %! SPANNER_STOP
+    \bacaStopTextSpanDamp
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -10350,14 +10358,6 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.damp_spanner()
-    %! DAMP_SPANNER
-    %! baca.PiecewiseCommand._call(4)
-    %! SPANNER_STOP
-    \bacaStopTextSpanDamp
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -10454,6 +10454,9 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -10474,9 +10477,6 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -10573,6 +10573,9 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -10593,9 +10596,6 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -10695,6 +10695,9 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -10715,9 +10718,6 @@ segment.14.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)

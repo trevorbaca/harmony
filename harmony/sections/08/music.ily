@@ -3260,6 +3260,11 @@ segment.08.Cello.I.Music.Voice = {
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %! baca.metric_modulation_spanner()
+    %! METRIC_MODULATION_SPANNER
+    %! baca.PiecewiseCommand._call(4)
+    %! SPANNER_STOP
+    \bacaStopTextSpanMetricModulation
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -3274,11 +3279,6 @@ segment.08.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.metric_modulation_spanner()
-    %! METRIC_MODULATION_SPANNER
-    %! baca.PiecewiseCommand._call(4)
-    %! SPANNER_STOP
-    \bacaStopTextSpanMetricModulation
 
     %! harmony.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND

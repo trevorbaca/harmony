@@ -1674,6 +1674,8 @@ segment.04.Percussion.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \f
+        %! harmony.phjc()
+        [
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -1688,8 +1690,6 @@ segment.04.Percussion.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \>
-        %! harmony.phjc()
-        [
 
         %! harmony.phjc()
         a8
@@ -1842,6 +1842,8 @@ segment.04.Percussion.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \p
+        %! harmony.phjc()
+        [
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -1856,8 +1858,6 @@ segment.04.Percussion.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! harmony.phjc()
-        [
 
         %! harmony.phjc()
         e'8
@@ -2592,6 +2592,8 @@ segment.04.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \p
+    %! harmony.train()
+    [
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -2606,8 +2608,6 @@ segment.04.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! harmony.train()
-    [
 
     %! harmony.train()
     e'8
@@ -8490,6 +8490,9 @@ segment.04.Contrabass.II.Music.Voice = {
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
     %! baca.make_notes()
     e,2.
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -8513,9 +8516,6 @@ segment.04.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)

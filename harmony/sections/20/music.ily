@@ -3871,6 +3871,16 @@ segment.20.Viola.Music.Voice = {
         \override TupletBracket.direction = #up
         %! harmony.sixteenths()
         d'8
+        %! baca.bow_speed_spanner()
+        %! BOW_SPEED_SPANNER
+        %! baca.PiecewiseCommand._call(4)
+        %! SPANNER_STOP
+        \bacaStopTextSpanBowSpeed
+        %! rmakers.RewriteMeterCommand.__call__
+        [
+        %! baca.glissando()
+        %! abjad.glissando(7)
+        \glissando
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -3891,16 +3901,6 @@ segment.20.Viola.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! baca.bow_speed_spanner()
-        %! BOW_SPEED_SPANNER
-        %! baca.PiecewiseCommand._call(4)
-        %! SPANNER_STOP
-        \bacaStopTextSpanBowSpeed
-        %! rmakers.RewriteMeterCommand.__call__
-        [
-        %! baca.glissando()
-        %! abjad.glissando(7)
-        \glissando
 
         %! harmony.sixteenths()
         cs'!8.
@@ -6840,6 +6840,11 @@ segment.20.Contrabass.I.Music.Voice = {
     % [Contrabass_I_Music_Voice measure 2]
     %! harmony.sixteenths()
     d8.
+    %! rmakers.RewriteMeterCommand.__call__
+    [
+    %! baca.glissando()
+    %! abjad.glissando(7)
+    \glissando
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -6860,11 +6865,6 @@ segment.20.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
-    %! rmakers.RewriteMeterCommand.__call__
-    [
-    %! baca.glissando()
-    %! abjad.glissando(7)
-    \glissando
 
     %! harmony.sixteenths()
     cs!16
