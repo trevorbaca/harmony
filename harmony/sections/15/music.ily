@@ -1043,6 +1043,10 @@ segment.15.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \baca-p-sempre
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -1051,10 +1055,6 @@ segment.15.Bass.Flute.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
 
     %! harmony.sixteenths()
     fs'''2

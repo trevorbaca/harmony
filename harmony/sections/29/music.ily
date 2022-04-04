@@ -365,6 +365,10 @@ segment.29.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -373,10 +377,6 @@ segment.29.Bass.Flute.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -1640,6 +1640,10 @@ segment.29.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -1648,10 +1652,6 @@ segment.29.Viola.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2014,6 +2014,10 @@ segment.29.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -2022,10 +2026,6 @@ segment.29.Cello.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2390,6 +2390,10 @@ segment.29.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -2398,10 +2402,6 @@ segment.29.Cello.II.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2766,6 +2766,10 @@ segment.29.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -2774,10 +2778,6 @@ segment.29.Contrabass.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)

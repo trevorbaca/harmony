@@ -9706,14 +9706,6 @@ segment.11.Contrabass.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \<
-        %! baca.trill_spanner()
-        %! baca.SpannerIndicatorCommand._call(2)
-        %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-        %! baca.trill_spanner()
-        %! baca.SpannerIndicatorCommand._call(2)
-        %! SPANNER_START
-        \startTrillSpan
         %! baca.metric_modulation_spanner()
         %! METRIC_MODULATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -9734,6 +9726,14 @@ segment.11.Contrabass.I.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         \bacaStartTextSpanMetricModulation
+        %! baca.trill_spanner()
+        %! baca.SpannerIndicatorCommand._call(2)
+        %! SPANNER_START
+        - \tweak bound-details.right.padding 2.75
+        %! baca.trill_spanner()
+        %! baca.SpannerIndicatorCommand._call(2)
+        %! SPANNER_START
+        \startTrillSpan
 
         %! baca.dynamic_text_x_offset()
         %! baca.OverrideCommand._call(1)

@@ -1209,6 +1209,10 @@ segment.26.Bass.Flute.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \startTextSpan
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -1217,10 +1221,6 @@ segment.26.Bass.Flute.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
 
     %! harmony.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
@@ -4646,6 +4646,10 @@ segment.26.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -4654,10 +4658,6 @@ segment.26.Viola.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
 
     %! harmony.sixteenths()
     %! INVISIBLE_MUSIC_COMMAND
@@ -5488,6 +5488,10 @@ segment.26.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -5496,10 +5500,6 @@ segment.26.Cello.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -6766,6 +6766,10 @@ segment.26.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -6774,10 +6778,6 @@ segment.26.Cello.II.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -7987,6 +7987,10 @@ segment.26.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -7995,10 +7999,6 @@ segment.26.Contrabass.I.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -9232,6 +9232,10 @@ segment.26.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \<
+    %! baca._attach_shadow_tie_indicators()
+    - \tweak stencil ##f
+    %! baca._attach_shadow_tie_indicators()
+    ~
     %! baca.trill_spanner()
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
@@ -9240,10 +9244,6 @@ segment.26.Contrabass.II.Music.Voice = {
     %! baca.SpannerIndicatorCommand._call(2)
     %! SPANNER_START
     \startTrillSpan cf''
-    %! baca._attach_shadow_tie_indicators()
-    - \tweak stencil ##f
-    %! baca._attach_shadow_tie_indicators()
-    ~
     %! baca.attach_color_literal(2)
     %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
