@@ -511,9 +511,9 @@ segment.09.Bass.Flute.Music.Voice = {
 
     %! harmony.sixteenths()
     gf'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     gf'!8.
@@ -542,9 +542,9 @@ segment.09.Bass.Flute.Music.Voice = {
 
     %! harmony.sixteenths()
     gf'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     gf'!8.

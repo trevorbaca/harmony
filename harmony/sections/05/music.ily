@@ -2697,9 +2697,9 @@ segment.05.Harp.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     cs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -5959,9 +5959,9 @@ segment.05.Contrabass.I.Music.Voice = {
     ~
 
     aqs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(2)
     \revert DynamicLineSpanner.staff-padding
@@ -6921,9 +6921,9 @@ segment.05.Contrabass.II.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8.
     %! EXPLICIT_DYNAMIC_COLOR

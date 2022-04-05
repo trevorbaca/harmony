@@ -5402,9 +5402,9 @@ segment.22.Viola.Music.Voice = {
         % [Viola_Music_Voice measure 3]
         %! harmony.sixteenths()
         d'8
-        \repeatTie
         %! rmakers.RewriteMeterCommand.__call__
         [
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         \glissando
@@ -5737,9 +5737,9 @@ segment.22.Viola.Music.Voice = {
         % [Viola_Music_Voice measure 6]
         %! harmony.sixteenths()
         d'8.
-        \repeatTie
         %! rmakers.RewriteMeterCommand.__call__
         [
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         \glissando
@@ -5811,9 +5811,9 @@ segment.22.Viola.Music.Voice = {
         % [Viola_Music_Voice measure 8]
         %! harmony.sixteenths()
         cs'16
-        \repeatTie
         %! rmakers.RewriteMeterCommand.__call__
         [
+        \repeatTie
         %! baca.glissando()
         %! abjad.glissando(7)
         \glissando
@@ -10272,9 +10272,9 @@ segment.22.Contrabass.I.Music.Voice = {
     % [Contrabass_I_Music_Voice measure 3]
     %! harmony.sixteenths()
     d8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -12910,9 +12910,9 @@ segment.22.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     d16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -12944,9 +12944,9 @@ segment.22.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     d8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -12964,9 +12964,9 @@ segment.22.Contrabass.II.Music.Voice = {
     % [Contrabass_II_Music_Voice measure 7]
     %! harmony.sixteenths()
     cs16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -13120,9 +13120,9 @@ segment.22.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     cs8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando

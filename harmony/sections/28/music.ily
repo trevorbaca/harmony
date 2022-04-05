@@ -5930,9 +5930,9 @@ segment.28.Cello.I.Music.Voice = {
     % [Cello_I_Music_Voice measure 2]
     %! harmony.sixteenths()
     e'''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -6006,9 +6006,9 @@ segment.28.Cello.I.Music.Voice = {
     % [Cello_I_Music_Voice measure 4]
     %! harmony.sixteenths()
     e'''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -8679,9 +8679,9 @@ segment.28.Cello.II.Music.Voice = {
     % [Cello_II_Music_Voice measure 2]
     %! harmony.sixteenths()
     a''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -8755,9 +8755,9 @@ segment.28.Cello.II.Music.Voice = {
     % [Cello_II_Music_Voice measure 4]
     %! harmony.sixteenths()
     a''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando

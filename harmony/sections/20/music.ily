@@ -4506,9 +4506,9 @@ segment.20.Viola.Music.Voice = {
 
     %! harmony.sixteenths()
     e8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     e8
@@ -4540,9 +4540,9 @@ segment.20.Viola.Music.Voice = {
 
     %! harmony.sixteenths()
     e8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     e8

@@ -5520,11 +5520,11 @@ segment.10.Viola.Music.Voice = {
 
     %! harmony.sixteenths()
     fs'16
+    %! rmakers.RewriteMeterCommand.__call__
+    [
     %! baca.repeat_tie()
     %! baca.IndicatorCommand._call()
     \repeatTie
-    %! rmakers.RewriteMeterCommand.__call__
-    [
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -6714,11 +6714,11 @@ segment.10.Cello.I.Music.Voice = {
 
     %! harmony.sixteenths()
     fs16
+    %! rmakers.RewriteMeterCommand.__call__
+    [
     %! baca.repeat_tie()
     %! baca.IndicatorCommand._call()
     \repeatTie
-    %! rmakers.RewriteMeterCommand.__call__
-    [
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -7915,11 +7915,11 @@ segment.10.Cello.II.Music.Voice = {
 
     %! harmony.sixteenths()
     fs8
+    %! rmakers.RewriteMeterCommand.__call__
+    [
     %! baca.repeat_tie()
     %! baca.IndicatorCommand._call()
     \repeatTie
-    %! rmakers.RewriteMeterCommand.__call__
-    [
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -9996,11 +9996,11 @@ segment.10.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     fs'16
+    %! rmakers.RewriteMeterCommand.__call__
+    [
     %! baca.repeat_tie()
     %! baca.IndicatorCommand._call()
     \repeatTie
-    %! rmakers.RewriteMeterCommand.__call__
-    [
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -10042,9 +10042,9 @@ segment.10.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     g8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
@@ -10100,9 +10100,9 @@ segment.10.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     g8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
     %! baca.glissando()
     %! abjad.glissando(7)
     \glissando
