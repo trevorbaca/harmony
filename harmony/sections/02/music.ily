@@ -6205,13 +6205,13 @@ segment.02.Viola.Music.Voice.count.1 = {
     \voiceTwo
     %! harmony.appoggiato()
     af!1
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -7762,13 +7762,13 @@ segment.02.Cello.I.Music.Voice.count.1 = {
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
     af!4
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -9374,13 +9374,13 @@ segment.02.Cello.II.Music.Voice.count.1 = {
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
     af!2
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -10877,13 +10877,13 @@ segment.02.Contrabass.I.Music.Voice.count.1 = {
     \voiceTwo
     %! harmony.appoggiato()
     af!1
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -12580,13 +12580,13 @@ segment.02.Contrabass.II.Music.Voice.count.1 = {
     %! abjad.on_beat_grace_container(4)
     \voiceTwo
     af!2
-    %! EXPLICIT_DYNAMIC_COLOR
+    %! REDUNDANT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
+    - \tweak color #(x11-color 'DeepPink1)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
