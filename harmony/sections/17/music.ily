@@ -2570,6 +2570,10 @@ segment.17.Harp.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
+    %! baca.ottava_bassa()
+    %! baca.SpannerIndicatorCommand._call(4)
+    %! SPANNER_STOP
+    \ottava 0
     %! baca.attach_color_literal(2)
     %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2582,10 +2586,6 @@ segment.17.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! REDRAWN_REAPPLIED_MARGIN_MARKUP
     \set Staff.shortInstrumentName = \harmony-hp-markup
-    %! baca.ottava_bassa()
-    %! baca.SpannerIndicatorCommand._call(4)
-    %! SPANNER_STOP
-    \ottava 0
 
     %! baca._make_multimeasure_rest_container(7)
     <<
