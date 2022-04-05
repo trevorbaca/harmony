@@ -6726,9 +6726,9 @@ segment.06.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -7015,9 +7015,9 @@ segment.06.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -8091,9 +8091,9 @@ segment.06.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -8431,9 +8431,9 @@ segment.06.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9456,9 +9456,9 @@ segment.06.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -9824,9 +9824,9 @@ segment.06.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)

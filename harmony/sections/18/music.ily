@@ -13470,9 +13470,9 @@ segment.18.Contrabass.II.Music.Voice = {
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     d'8.
     %! rmakers.RewriteMeterCommand.__call__
@@ -13482,9 +13482,9 @@ segment.18.Contrabass.II.Music.Voice = {
     %! baca.triple_staccato()
     %! baca.IndicatorCommand._call()
     - \baca-staccati #3
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     d'2.
     %! baca._attach_shadow_tie_indicators()

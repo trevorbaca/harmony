@@ -6868,9 +6868,9 @@ segment.20.Contrabass.I.Music.Voice = {
 
     %! harmony.sixteenths()
     cs!16
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     \afterGrace
     %! harmony.sixteenths()

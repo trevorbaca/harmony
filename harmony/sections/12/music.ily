@@ -6549,9 +6549,9 @@ segment.12.Viola.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 14]
@@ -11573,9 +11573,9 @@ segment.12.Contrabass.II.Music.Voice = {
         %! baca.accent()
         %! baca.IndicatorCommand._call()
         - \accent
-        ~
         %! rmakers.RewriteMeterCommand.__call__
         ]
+        ~
 
     %! harmony.sixteenths()
     }

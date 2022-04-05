@@ -4120,9 +4120,9 @@ segment.25.Percussion.II.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -4280,9 +4280,9 @@ segment.25.Percussion.II.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()

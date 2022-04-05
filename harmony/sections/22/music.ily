@@ -5746,9 +5746,9 @@ segment.22.Viola.Music.Voice = {
 
         %! harmony.sixteenths()
         cs'!8
-        ~
         %! rmakers.RewriteMeterCommand.__call__
         ]
+        ~
 
     %! harmony.sixteenths()
     }
@@ -5826,9 +5826,9 @@ segment.22.Viola.Music.Voice = {
 
         %! harmony.sixteenths()
         cs'!16
-        ~
         %! rmakers.RewriteMeterCommand.__call__
         ]
+        ~
 
     %! harmony.sixteenths()
     }
@@ -5968,9 +5968,9 @@ segment.22.Viola.Music.Voice = {
 
         %! harmony.sixteenths()
         d'16
-        ~
         %! rmakers.RewriteMeterCommand.__call__
         ]
+        ~
 
     %! harmony.sixteenths()
     }
@@ -10281,9 +10281,9 @@ segment.22.Contrabass.I.Music.Voice = {
 
     %! harmony.sixteenths()
     cs!16
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     \afterGrace
     %! harmony.sixteenths()
@@ -13028,9 +13028,9 @@ segment.22.Contrabass.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()

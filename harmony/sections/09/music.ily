@@ -498,9 +498,9 @@ segment.09.Bass.Flute.Music.Voice = {
     %! harmony.sixteenths()
     gf'!16
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! harmony.sixteenths()
     gf'4
@@ -529,9 +529,9 @@ segment.09.Bass.Flute.Music.Voice = {
     %! harmony.sixteenths()
     gf'!16
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! harmony.sixteenths()
     gf'4

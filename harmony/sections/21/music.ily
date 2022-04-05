@@ -4314,9 +4314,9 @@ segment.21.Cello.I.Music.Voice = {
     %! baca.espressivo()
     %! baca.IndicatorCommand._call()
     - \espressivo
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! harmony.sixteenths()
     aqf'4
@@ -5011,9 +5011,9 @@ segment.21.Cello.II.Music.Voice = {
     %! baca.espressivo()
     %! baca.IndicatorCommand._call()
     - \espressivo
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! harmony.sixteenths()
     f'8.
@@ -5025,9 +5025,9 @@ segment.21.Cello.II.Music.Voice = {
     %! baca.espressivo()
     %! baca.IndicatorCommand._call()
     - \espressivo
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! harmony.sixteenths()
     f'4
