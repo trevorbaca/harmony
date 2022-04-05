@@ -836,14 +836,14 @@ segment.13.Bass.Flute.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    %! baca.repeat_tie()
-    %! baca.IndicatorCommand._call()
-    \repeatTie
     %! baca.metric_modulation_spanner()
     %! METRIC_MODULATION_SPANNER
     %! baca.PiecewiseCommand._call(4)
     %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
+    %! baca.repeat_tie()
+    %! baca.IndicatorCommand._call()
+    \repeatTie
 
     %! harmony.sixteenths()
     r2.

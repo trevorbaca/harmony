@@ -1436,9 +1436,9 @@ segment.11.Bass.Flute.Music.Voice = {
 
     %! harmony.sixteenths()
     dtqf'''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     dtqf'''!8
@@ -10490,9 +10490,9 @@ segment.11.Contrabass.I.Music.Voice = {
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
         :32
-        \repeatTie
         %! rmakers.RewriteMeterCommand.__call__
         [
+        \repeatTie
 
         %! harmony.sixteenths()
         dtqf'!8.
@@ -11948,9 +11948,9 @@ segment.11.Contrabass.II.Music.Voice = {
         %! baca.stem_tremolo()
         %! baca.IndicatorCommand._call()
         :32
-        \repeatTie
         %! rmakers.RewriteMeterCommand.__call__
         [
+        \repeatTie
 
         %! harmony.sixteenths()
         ef!8

@@ -3175,9 +3175,9 @@ segment.03.Harp.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     cs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7124,9 +7124,9 @@ segment.03.Contrabass.I.Music.Voice = {
     ~
 
     aqs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -8157,9 +8157,9 @@ segment.03.Contrabass.II.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8.
     %! EXPLICIT_DYNAMIC_COLOR

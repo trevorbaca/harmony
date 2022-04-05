@@ -2387,9 +2387,9 @@ segment.21.Percussion.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     b8
@@ -2411,9 +2411,9 @@ segment.21.Percussion.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     b8.
@@ -4327,9 +4327,9 @@ segment.21.Cello.I.Music.Voice = {
 
     %! harmony.sixteenths()
     aqf'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     aqf'!8
@@ -4345,9 +4345,9 @@ segment.21.Cello.I.Music.Voice = {
 
     %! harmony.sixteenths()
     aqf'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     aqf'!8
@@ -5002,9 +5002,9 @@ segment.21.Cello.II.Music.Voice = {
 
     %! harmony.sixteenths()
     f'8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     f'16
@@ -5038,9 +5038,9 @@ segment.21.Cello.II.Music.Voice = {
 
     %! harmony.sixteenths()
     f'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     f'8.
@@ -5775,9 +5775,9 @@ segment.21.Contrabass.I.Music.Voice = {
 
     %! harmony.sixteenths()
     dtqf''8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     dtqf''!8
@@ -5793,9 +5793,9 @@ segment.21.Contrabass.I.Music.Voice = {
 
     %! harmony.sixteenths()
     dtqf''16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     dtqf''!8.
@@ -6529,9 +6529,9 @@ segment.21.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     ef8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     ef!8
@@ -6547,9 +6547,9 @@ segment.21.Contrabass.II.Music.Voice = {
 
     %! harmony.sixteenths()
     ef16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     ef!8.

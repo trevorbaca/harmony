@@ -4705,9 +4705,9 @@ segment.27.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs!8
@@ -4754,9 +4754,9 @@ segment.27.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs!8.
@@ -4818,12 +4818,12 @@ segment.27.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 4]
@@ -4878,9 +4878,6 @@ segment.27.Viola.Music.Voice = {
     \override TupletBracket.direction = #up
     %! baca.skeleton()
     af'2.
-    %! baca.repeat_tie()
-    %! baca.IndicatorCommand._call()
-    \repeatTie
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -4936,6 +4933,9 @@ segment.27.Viola.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
+    %! baca.repeat_tie()
+    %! baca.IndicatorCommand._call()
+    \repeatTie
     %! baca._attach_shadow_tie_indicators()
     - \tweak stencil ##f
     %! baca._attach_shadow_tie_indicators()
@@ -5633,9 +5633,9 @@ segment.27.Cello.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -5697,12 +5697,12 @@ segment.27.Cello.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 4]
@@ -6658,9 +6658,9 @@ segment.27.Cello.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -6722,12 +6722,12 @@ segment.27.Cello.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 4]
@@ -6790,9 +6790,9 @@ segment.27.Cello.II.Music.Voice = {
 
     %! harmony.sixteenths()
     g8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    \repeatTie
 
     %! harmony.sixteenths()
     r8
@@ -7758,9 +7758,9 @@ segment.27.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -7822,12 +7822,12 @@ segment.27.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 4]
@@ -8848,9 +8848,9 @@ segment.27.Contrabass.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.

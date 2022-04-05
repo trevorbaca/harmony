@@ -3750,9 +3750,9 @@ segment.17.Cello.I.Music.Voice = {
     ~
 
     e16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     e8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -4330,9 +4330,9 @@ segment.17.Cello.I.Music.Voice = {
     ~
 
     e16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     e8.
     %! baca.triple_staccato()
@@ -4346,9 +4346,9 @@ segment.17.Cello.I.Music.Voice = {
     ~
 
     e8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     e16
     %! baca.triple_staccato()
@@ -4734,9 +4734,9 @@ segment.17.Cello.II.Music.Voice = {
     ~
 
     d16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d8.
     %! baca.triple_staccato()
@@ -5326,9 +5326,9 @@ segment.17.Cello.II.Music.Voice = {
     ~
 
     d8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d8
     %! baca.triple_staccato()
@@ -5349,9 +5349,9 @@ segment.17.Cello.II.Music.Voice = {
     ~
 
     d8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d8
     %! baca.triple_staccato()
@@ -5365,9 +5365,9 @@ segment.17.Cello.II.Music.Voice = {
     ~
 
     d8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d8
     %! baca.triple_staccato()
@@ -5734,9 +5734,9 @@ segment.17.Contrabass.I.Music.Voice = {
     ~
 
     e'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     e'8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -6703,9 +6703,9 @@ segment.17.Contrabass.II.Music.Voice = {
     ~
 
     d'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d'16
     %! baca.triple_staccato()
@@ -7297,9 +7297,9 @@ segment.17.Contrabass.II.Music.Voice = {
     ~
 
     d'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     d'8.
     %! baca.triple_staccato()

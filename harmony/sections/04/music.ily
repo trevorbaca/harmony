@@ -3207,9 +3207,9 @@ segment.04.Harp.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     cs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3246,9 +3246,9 @@ segment.04.Harp.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 2]
     cs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!16
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3301,9 +3301,9 @@ segment.04.Harp.Music.Voice = {
     ~
 
     cs'8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!16
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3336,9 +3336,9 @@ segment.04.Harp.Music.Voice = {
     ~
 
     cs'8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!16
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3373,9 +3373,9 @@ segment.04.Harp.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 5]
     cs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3419,9 +3419,9 @@ segment.04.Harp.Music.Voice = {
     ~
 
     cs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3449,9 +3449,9 @@ segment.04.Harp.Music.Voice = {
     ~
 
     cs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     cs'!8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7054,9 +7054,9 @@ segment.04.Contrabass.I.Music.Voice = {
     ~
 
     aqs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7095,9 +7095,9 @@ segment.04.Contrabass.I.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 3]
     aqs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7132,9 +7132,9 @@ segment.04.Contrabass.I.Music.Voice = {
     ~
 
     aqs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7171,9 +7171,9 @@ segment.04.Contrabass.I.Music.Voice = {
     ~
 
     aqs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7203,9 +7203,9 @@ segment.04.Contrabass.I.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 5]
     aqs'8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     aqs'!16
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7924,9 +7924,9 @@ segment.04.Contrabass.II.Music.Voice = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs'16
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -7963,9 +7963,9 @@ segment.04.Contrabass.II.Music.Voice = {
     ~
 
     fs'8.
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!16
     %! EXPLICIT_DYNAMIC_COLOR
@@ -8028,9 +8028,9 @@ segment.04.Contrabass.II.Music.Voice = {
     ~
 
     fs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -8067,9 +8067,9 @@ segment.04.Contrabass.II.Music.Voice = {
     ~
 
     fs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -8108,9 +8108,9 @@ segment.04.Contrabass.II.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 6]
     fs'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     fs'!8
     %! EXPLICIT_DYNAMIC_COLOR

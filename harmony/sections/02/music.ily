@@ -4159,9 +4159,9 @@ segment.02.Percussion.II.Music.Voice = {
 
     %! harmony.sixteenths()
     d'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     d'8
@@ -5453,9 +5453,9 @@ segment.02.Harp.Music.Voice = {
 
     %! harmony.sixteenths()
     c'8
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     c'8
@@ -8513,9 +8513,6 @@ segment.02.Cello.I.Music.Voice = {
         %! baca._set_status_tag()
         %! EXPLICIT_DYNAMIC
         \f
-        %! baca.repeat_tie()
-        %! baca.IndicatorCommand._call()
-        \repeatTie
         %! baca.rhythm_annotation_spanner()
         %! RHYTHM_ANNOTATION_SPANNER
         %! baca.PiecewiseCommand._call(2)
@@ -8571,6 +8568,9 @@ segment.02.Cello.I.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! SPANNER_START
         %@% \bacaStartTextSpanRhythmAnnotation
+        %! baca.repeat_tie()
+        %! baca.IndicatorCommand._call()
+        \repeatTie
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! baca.hairpin()
@@ -11843,9 +11843,9 @@ segment.02.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     a,8
@@ -11907,9 +11907,9 @@ segment.02.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     a,8

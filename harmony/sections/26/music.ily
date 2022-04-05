@@ -1247,12 +1247,12 @@ segment.26.Bass.Flute.Music.Voice = {
     %! baca._label_duration_multipliers()
     %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-    %! harmony.sixteenths()
-    \repeatTie
     %! baca.text_spanner()
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_STOP
     \stopTextSpan
+    %! harmony.sixteenths()
+    \repeatTie
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()
@@ -1314,12 +1314,12 @@ segment.26.Bass.Flute.Music.Voice = {
 
     %! harmony.sixteenths()
     bf''1
-    %! harmony.sixteenths()
-    \repeatTie
     %! baca.text_spanner()
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \stopTextSpan
+    %! harmony.sixteenths()
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 5]
@@ -4812,9 +4812,9 @@ segment.26.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs!8
@@ -4861,9 +4861,9 @@ segment.26.Viola.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs!8.
@@ -4939,12 +4939,12 @@ segment.26.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 9]
@@ -5925,9 +5925,9 @@ segment.26.Cello.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -6003,12 +6003,12 @@ segment.26.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 9]
@@ -7120,9 +7120,9 @@ segment.26.Cello.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -7198,12 +7198,12 @@ segment.26.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 9]
@@ -8375,9 +8375,9 @@ segment.26.Contrabass.I.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -8453,12 +8453,12 @@ segment.26.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 9]
@@ -9586,9 +9586,9 @@ segment.26.Contrabass.II.Music.Voice = {
     %! baca.stem_tremolo()
     %! baca.IndicatorCommand._call()
     :32
-    \repeatTie
     %! rmakers.RewriteMeterCommand.__call__
     [
+    \repeatTie
 
     %! harmony.sixteenths()
     fs,!8.
@@ -9664,12 +9664,12 @@ segment.26.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    \repeatTie
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(3)
     %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    \repeatTie
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 9]
