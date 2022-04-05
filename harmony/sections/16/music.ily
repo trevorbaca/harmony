@@ -2252,13 +2252,13 @@ segment.16.Harp.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     f,,2.
-    %! REDUNDANT_DYNAMIC_COLOR
+    %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'DeepPink1)
+    - \tweak color #(x11-color 'blue)
     %! baca.dynamic()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
