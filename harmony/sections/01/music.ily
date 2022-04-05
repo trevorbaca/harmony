@@ -475,6 +475,12 @@ segment.01.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-bfl-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -490,12 +496,6 @@ segment.01.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-bfl-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
@@ -1015,21 +1015,17 @@ segment.01.Percussion.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 1]
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
     %! baca.margin_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_MARGIN_MARKUP
     \set Staff.shortInstrumentName = \harmony-perc-i-markup
-    %! baca.start_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    \set Staff.instrumentName = \harmony-percussion-i-markup
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 0)
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -1045,6 +1041,10 @@ segment.01.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
+    %! baca.start_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    \set Staff.instrumentName = \harmony-percussion-i-markup
     %! baca.dls_staff_padding()
     %! baca.OverrideCommand._call(1)
     \override DynamicLineSpanner.staff-padding = 6
@@ -1578,10 +1578,6 @@ segment.01.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_MARGIN_MARKUP
     \set Staff.shortInstrumentName = \harmony-perc-ii-markup
-    %! baca.start_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    \set Staff.instrumentName = \harmony-percussion-ii-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -1597,6 +1593,10 @@ segment.01.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
+    %! baca.start_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    \set Staff.instrumentName = \harmony-percussion-ii-markup
     %! baca.stem_down()
     %! baca.OverrideCommand._call(1)
     \override Stem.direction = #down
@@ -2009,21 +2009,17 @@ segment.01.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 1]
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(0 . 2)
     %! baca.margin_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_MARGIN_MARKUP
     \set Staff.shortInstrumentName = \harmony-hp-markup
-    %! baca.start_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    \set Staff.instrumentName = \harmony-harp-markup
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(0 . 2)
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2039,6 +2035,10 @@ segment.01.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
+    %! baca.start_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    \set Staff.instrumentName = \harmony-harp-markup
     %! baca.stem_down()
     %! baca.OverrideCommand._call(1)
     \override Stem.direction = #down
@@ -2417,6 +2417,12 @@ segment.01.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-va-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2432,12 +2438,6 @@ segment.01.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-va-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
@@ -2936,6 +2936,12 @@ segment.01.Cello.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 1]
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2951,12 +2957,6 @@ segment.01.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-vc-i-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
@@ -3002,6 +3002,26 @@ segment.01.Cello.I.Music.Voice = {
     %! EXPLICIT_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-explicit-indicator-markup "[“Vc. I”]"
+    %! EXPLICIT_DYNAMIC_COLOR
+    %! baca.treat_persistent_wrapper()
+    %! baca.hairpin()
+    %! baca.PiecewiseCommand._call(2)
+    %! SPANNER_START
+    %! baca._set_status_tag()
+    %! EXPLICIT_DYNAMIC
+    - \tweak color #(x11-color 'blue)
+    %! baca.hairpin()
+    %! baca.PiecewiseCommand._call(2)
+    %! SPANNER_START
+    %! baca._set_status_tag()
+    %! EXPLICIT_DYNAMIC
+    - \tweak circled-tip ##t
+    %! baca.hairpin()
+    %! baca.PiecewiseCommand._call(2)
+    %! SPANNER_START
+    %! baca._set_status_tag()
+    %! EXPLICIT_DYNAMIC
+    \<
     %! baca.rhythm_annotation_spanner()
     %! RHYTHM_ANNOTATION_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -3057,26 +3077,6 @@ segment.01.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     %@% \bacaStartTextSpanRhythmAnnotation
-    %! EXPLICIT_DYNAMIC_COLOR
-    %! baca.treat_persistent_wrapper()
-    %! baca.hairpin()
-    %! baca.PiecewiseCommand._call(2)
-    %! SPANNER_START
-    %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
-    - \tweak color #(x11-color 'blue)
-    %! baca.hairpin()
-    %! baca.PiecewiseCommand._call(2)
-    %! SPANNER_START
-    %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
-    - \tweak circled-tip ##t
-    %! baca.hairpin()
-    %! baca.PiecewiseCommand._call(2)
-    %! SPANNER_START
-    %! baca._set_status_tag()
-    %! EXPLICIT_DYNAMIC
-    \<
     %! baca.scp_spanner()
     %! SCP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -3632,6 +3632,12 @@ segment.01.Cello.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 1]
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3647,12 +3653,6 @@ segment.01.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
@@ -4160,6 +4160,12 @@ segment.01.Contrabass.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 1]
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -4175,12 +4181,6 @@ segment.01.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-cb-i-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()
@@ -4897,6 +4897,12 @@ segment.01.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca.margin_markup()
+    %! -PARTS
+    %! baca.IndicatorCommand._call()
+    %! baca._set_status_tag()
+    %! EXPLICIT_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -4912,12 +4918,6 @@ segment.01.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_STAFF_LINES
     \startStaff
-    %! baca.margin_markup()
-    %! -PARTS
-    %! baca.IndicatorCommand._call()
-    %! baca._set_status_tag()
-    %! EXPLICIT_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
     %! baca.start_markup()
     %! -PARTS
     %! baca.IndicatorCommand._call()

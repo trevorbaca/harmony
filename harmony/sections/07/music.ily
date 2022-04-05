@@ -835,6 +835,11 @@ segment.07.Bass.Flute.Music.Voice = {
     %! REAPPLIED_BAR_EXTENT
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-bfl-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -847,11 +852,6 @@ segment.07.Bass.Flute.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-bfl-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-bfl-markup
     %! baca.dls_staff_padding()
@@ -1082,15 +1082,15 @@ segment.07.Bass.Flute.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 4]
+    %! baca._style_fermata_measures(4)
+    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
     %! baca._style_fermata_measures(3)
     \stopStaff
     %! baca._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
-    %! baca._style_fermata_measures(4)
-    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)
     %! FERMATA_MEASURE
     %! MEASURE_57
     %! baca._style_fermata_measures(7)
@@ -1846,15 +1846,15 @@ segment.07.Percussion.I.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 1]
     %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup
-    %! -PARTS
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 1)
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup
     %! baca.staff_lines()
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2526,6 +2526,11 @@ segment.07.Percussion.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 1]
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-perc-ii-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -2538,11 +2543,6 @@ segment.07.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-perc-ii-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-perc-ii-markup
     %! baca.tuplet_bracket_up()
@@ -3170,6 +3170,17 @@ segment.07.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 1]
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_BAR_EXTENT
+    %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(0 . 2)
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-hp-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -3182,17 +3193,6 @@ segment.07.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-hp-markup
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_BAR_EXTENT
-    %! EXPLICIT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(0 . 2)
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-hp-markup
     %! baca.stem_down()
@@ -4312,6 +4312,17 @@ segment.07.Viola.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Viola_Music_Voice measure 1]
+            %! -PARTS
+            %! baca._reapply_persistent_indicators(3)
+            %! baca._set_status_tag()
+            %! REAPPLIED_BAR_EXTENT
+            %! EXPLICIT_BAR_EXTENT
+            \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            %! -PARTS
+            %! baca._reapply_persistent_indicators(3)
+            %! baca._set_status_tag()
+            %! REAPPLIED_MARGIN_MARKUP
+            \set Staff.shortInstrumentName = \harmony-va-markup
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             %! REAPPLIED_STAFF_LINES
@@ -4324,17 +4335,6 @@ segment.07.Viola.Music.Voice = {
             %! baca._set_status_tag()
             %! REAPPLIED_STAFF_LINES
             \startStaff
-            %! -PARTS
-            %! baca._reapply_persistent_indicators(3)
-            %! baca._set_status_tag()
-            %! REAPPLIED_MARGIN_MARKUP
-            \set Staff.shortInstrumentName = \harmony-va-markup
-            %! -PARTS
-            %! baca._reapply_persistent_indicators(3)
-            %! baca._set_status_tag()
-            %! REAPPLIED_BAR_EXTENT
-            %! EXPLICIT_BAR_EXTENT
-            \override Staff.BarLine.bar-extent = #'(-2 . 2)
             %! baca._clone_segment_initial_short_instrument_name()
             \set Staff.instrumentName = \harmony-va-markup
             %! baca.note_head_style_harmonic()
@@ -4598,15 +4598,15 @@ segment.07.Viola.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Viola_Music_Voice measure 4]
+            %! baca._style_fermata_measures(4)
+            %! FERMATA_MEASURE_NEXT_BAR_EXTENT
+            \override Staff.BarLine.bar-extent = #'(-2 . 2)
             %! baca._style_fermata_measures(3)
             \stopStaff
             %! baca._style_fermata_measures(3)
             \once \override Staff.StaffSymbol.line-count = 5
             %! baca._style_fermata_measures(3)
             \startStaff
-            %! baca._style_fermata_measures(4)
-            %! FERMATA_MEASURE_NEXT_BAR_EXTENT
-            \override Staff.BarLine.bar-extent = #'(-2 . 2)
             %! baca.note_head_style_harmonic()
             %! baca.OverrideCommand._call(1)
             \override NoteHead.style = #'harmonic
@@ -5125,6 +5125,11 @@ segment.07.Cello.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 1]
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -5137,11 +5142,6 @@ segment.07.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-vc-i-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-vc-i-markup
     %! baca.dls_staff_padding()
@@ -5515,7 +5515,6 @@ segment.07.Cello.I.Music.Voice = {
     \f
     %! rmakers.RewriteMeterCommand.__call__
     [
-    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -5536,6 +5535,7 @@ segment.07.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+    ~
 
     e'16
     %! rmakers.RewriteMeterCommand.__call__
@@ -5835,6 +5835,11 @@ segment.07.Cello.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 1]
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -5847,11 +5852,6 @@ segment.07.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-vc-ii-markup
     %! baca.dls_staff_padding()
@@ -6252,7 +6252,6 @@ segment.07.Cello.II.Music.Voice = {
     \f
     %! rmakers.RewriteMeterCommand.__call__
     [
-    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -6273,6 +6272,7 @@ segment.07.Cello.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! SPANNER_START
     \bacaStartTextSpanBowSpeed
+    ~
 
     eqf'16
     %! rmakers.RewriteMeterCommand.__call__
@@ -6639,6 +6639,11 @@ segment.07.Contrabass.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 1]
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -6651,11 +6656,6 @@ segment.07.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-cb-i-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-cb-i-markup
     %! baca.dls_staff_padding()
@@ -7448,6 +7448,11 @@ segment.07.Contrabass.II.Music.Voice = {
     %! REAPPLIED_BAR_EXTENT
     %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! -PARTS
+    %! baca._reapply_persistent_indicators(3)
+    %! baca._set_status_tag()
+    %! REAPPLIED_MARGIN_MARKUP
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
@@ -7460,11 +7465,6 @@ segment.07.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! REAPPLIED_STAFF_LINES
     \startStaff
-    %! -PARTS
-    %! baca._reapply_persistent_indicators(3)
-    %! baca._set_status_tag()
-    %! REAPPLIED_MARGIN_MARKUP
-    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
     %! baca._clone_segment_initial_short_instrument_name()
     \set Staff.instrumentName = \harmony-cb-ii-markup
     %! baca.dls_staff_padding()
@@ -7652,15 +7652,15 @@ segment.07.Contrabass.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 4]
+    %! baca._style_fermata_measures(4)
+    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
     %! baca._style_fermata_measures(3)
     \stopStaff
     %! baca._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
-    %! baca._style_fermata_measures(4)
-    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)
     %! harmony.sixteenths()
     bf!1
     %! EXPLICIT_DYNAMIC_COLOR
