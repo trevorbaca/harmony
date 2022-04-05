@@ -11972,9 +11972,9 @@ segment.11.Contrabass.II.Music.Voice = {
         %! baca.accent()
         %! baca.IndicatorCommand._call()
         - \accent
-        ~
         %! rmakers.RewriteMeterCommand.__call__
         ]
+        ~
 
     %! harmony.sixteenths()
     }

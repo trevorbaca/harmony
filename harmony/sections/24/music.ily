@@ -4919,9 +4919,9 @@ segment.24.Percussion.II.Music.Voice = {
     r16
 
     b16
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! baca.hairpin()

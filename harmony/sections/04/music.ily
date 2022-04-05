@@ -1392,9 +1392,9 @@ segment.04.Bass.Flute.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
 
     fs'16
     %! rmakers.RewriteMeterCommand.__call__
@@ -3290,9 +3290,9 @@ segment.04.Harp.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     cs'4
     %! baca._attach_shadow_tie_indicators()
@@ -3323,9 +3323,9 @@ segment.04.Harp.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 3]
@@ -3358,9 +3358,9 @@ segment.04.Harp.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 4]
@@ -3783,9 +3783,9 @@ segment.04.Harp.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     cs'2
     %! baca.dls_staff_padding()
@@ -5379,9 +5379,9 @@ segment.04.Cello.I.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.damp_spanner()
     %! DAMP_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -7043,9 +7043,9 @@ segment.04.Contrabass.I.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     aqs'4
     %! baca._attach_shadow_tie_indicators()
@@ -7225,9 +7225,9 @@ segment.04.Contrabass.I.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     aqs'2
 
@@ -7985,9 +7985,9 @@ segment.04.Contrabass.II.Music.Voice = {
     %! baca.accent()
     %! baca.IndicatorCommand._call()
     - \accent
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     ]
+    ~
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 3]

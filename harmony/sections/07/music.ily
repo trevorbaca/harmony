@@ -5513,9 +5513,9 @@ segment.07.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
@@ -6250,9 +6250,9 @@ segment.07.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! EXPLICIT_DYNAMIC
     \f
-    ~
     %! rmakers.RewriteMeterCommand.__call__
     [
+    ~
     %! baca.bow_speed_spanner()
     %! BOW_SPEED_SPANNER
     %! baca.PiecewiseCommand._call(2)
