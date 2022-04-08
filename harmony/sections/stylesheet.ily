@@ -2,7 +2,7 @@
 
 \paper
 {
-  evenFooterMarkup = \markup \on-the-fly #print-page-number-check-first \fill-line
+  evenFooterMarkup = \markup \if \should-print-page-number \fill-line
   {
     \fontsize #3
     \override #'(font-name . "Adobe Garamond Pro")
