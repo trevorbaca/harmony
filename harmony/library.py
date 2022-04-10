@@ -384,7 +384,7 @@ def phjc(
     rest_pleaves=None,
     rest_most=None,
     rest_nonfirst=False,
-) -> baca.RhythmCommand:
+):
     def preprocessor(argument):
         result = baca.sequence.fuse(argument)
         result = baca.sequence.quarters(result)
@@ -395,23 +395,38 @@ def phjc(
 
     commands = []
     if rest is not None:
-        selector = baca.selectors.tuplets(rest)
+
+        def selector(argument):
+            return baca.select.tuplets(argument, rest)
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_cyclic is not None:
-        selector = baca.selectors.tuplets(rest_cyclic)
+
+        def selector(argument):
+            return baca.select.tuplets(argument, rest_cyclic)
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_except is not None:
-        selector = baca.selectors.tuplets(~abjad.Pattern(rest_except))
+
+        def selector(argument):
+            return baca.select.tuplets(argument, ~abjad.Pattern(rest_except))
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_most is True:
-        selector = baca.selectors.tuplets((None, 1))
+
+        def selector(argument):
+            return baca.select.tuplets(argument, (None, 1))
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_nonfirst is True:
-        selector = baca.selectors.tuplets((1, None))
+
+        def selector(argument):
+            return baca.select.tuplets(argument, (1, None))
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_pleaves is not None:
@@ -819,11 +834,17 @@ def warble(
 
     rests = []
     if rest_tuplets is not None:
-        selector = baca.selectors.tuplets(rest_tuplets)
+
+        def selector(argument):
+            return baca.select.tuplets(argument, rest_tuplets)
+
         force_rest_ = rmakers.force_rest(selector)
         rests.append(force_rest_)
     if rest_tuplets_cyclic is not None:
-        selector = baca.selectors.tuplets(rest_tuplets_cyclic)
+
+        def selector(argument):
+            return baca.select.tuplets(argument, rest_tuplets_cyclic)
+
         force_rest_ = rmakers.force_rest(selector)
         rests.append(force_rest_)
     selector = baca.selectors.leaf_in_each_tuplet(0)
