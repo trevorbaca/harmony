@@ -1064,7 +1064,9 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.selectors.plts((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(
+            baca.select.plts(_)[-1:],
+        ),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -1274,7 +1276,9 @@ commands(
     baca.hairpin(
         "f >o niente",
         right_broken=True,
-        selector=baca.selectors.plts((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(
+            baca.select.plts(_)[-1:],
+        ),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1435,7 +1439,9 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.selectors.plts((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(
+            baca.select.plts(_)[-1:],
+        ),
     ),
 )
 

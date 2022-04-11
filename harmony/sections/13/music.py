@@ -663,7 +663,7 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.plts((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[:1]),
     ),
     baca.dynamic(
         "mp",
@@ -671,7 +671,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.plts((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[1:]),
     ),
 )
 
@@ -707,7 +707,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.plts((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[:1]),
     ),
 )
 
@@ -815,7 +815,7 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.plts((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[:1]),
     ),
     baca.dynamic(
         "mp",
@@ -823,7 +823,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.plts((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[1:]),
     ),
 )
 
@@ -859,7 +859,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.plts((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[:1]),
     ),
 )
 

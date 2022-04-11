@@ -951,7 +951,7 @@ commands(
     ),
     baca.pitch(
         "Gb2",
-        baca.selectors.plts((-3, None)),
+        lambda _: baca.select.plts(_)[-3:],
     ),
     baca.scp_spanner(
         "P1 -> P2",
@@ -964,7 +964,7 @@ commands(
         baca.selectors.pheads((1, 3)),
     ),
     baca.stem_tremolo(
-        baca.selectors.plts((None, 2)),
+        lambda _: baca.select.plts(_)[:2],
     ),
     baca.dynamic("f"),
     baca.dynamic(
