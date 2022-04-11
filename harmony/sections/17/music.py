@@ -39,14 +39,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "Q",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "Q",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -55,12 +55,12 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("2=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("96", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("8=4", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("48", baca.selectors.skip(5 - 1)),
-    baca.metronome_mark("2=4", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("2=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("8=4", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 5 - 1)),
+    baca.metronome_mark("2=4", lambda _: baca.select.skip(_, 5 - 1)),
 )
 
 commands(
@@ -77,7 +77,7 @@ commands(
         baca.markup(
             r"\harmony-text-sixteen",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(6 - 1),
+            selector=lambda _: baca.select.skip(_, 6 - 1),
         ),
     ),
 )
@@ -120,7 +120,9 @@ commands(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -128,12 +130,16 @@ commands(
             abjad.select.leaves(_),
             (3, 4),
         ),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -434,7 +440,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -464,7 +472,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -498,7 +508,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -528,7 +540,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -562,7 +576,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -595,7 +611,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -626,7 +644,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -659,7 +679,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -704,7 +726,7 @@ commands(
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -3,
@@ -723,7 +745,9 @@ commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
     baca.hairpin(
         "p < f",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 

@@ -40,25 +40,25 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "H",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "H",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
-    baca.open_volta(baca.selectors.skip(8 - 1)),
+    baca.open_volta(lambda _: baca.select.skip(_, 8 - 1)),
 )
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("5:3(4)=4", baca.selectors.skip(1 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("5:3(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
 )
 
 commands(
@@ -74,7 +74,7 @@ commands(
         baca.markup(
             r"\harmony-text-seven",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(7 - 1),
+            selector=lambda _: baca.select.skip(_, 7 - 1),
         ),
     ),
 )

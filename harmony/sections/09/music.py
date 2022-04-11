@@ -33,14 +33,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "I",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "I",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -49,11 +49,11 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
-    baca.open_volta(baca.selectors.skip(1 - 1)),
-    baca.double_volta(baca.selectors.skip(2 - 1)),
-    baca.close_volta(baca.selectors.skip(2 - 1), site="after"),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.open_volta(lambda _: baca.select.skip(_, 1 - 1)),
+    baca.double_volta(lambda _: baca.select.skip(_, 2 - 1)),
+    baca.close_volta(lambda _: baca.select.skip(_, 2 - 1), site="after"),
 )
 
 # bfl
@@ -210,7 +210,7 @@ commands(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
         r"\harmony-match-harp-decay-markup",
@@ -284,7 +284,7 @@ commands(
     baca.tuplet_bracket_up(),
     baca.hairpin(
         "mp >o niente",
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
         baca.bow_speed_spanner(
@@ -344,7 +344,7 @@ commands(
     baca.dynamic("ff"),
     baca.pizzicato_spanner(
         abjad.Tweak(r"- \tweak staff-padding 6.5"),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -374,7 +374,7 @@ commands(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
 

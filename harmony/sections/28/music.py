@@ -42,14 +42,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "BB",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -58,12 +58,12 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("48", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("2.=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.selectors.skip(5 - 1)),
-    baca.metronome_mark("6:5(4)=4", baca.selectors.skip(5 - 1)),
-    baca.metronome_mark("48", baca.selectors.skip(7 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.selectors.skip(7 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("2.=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 5 - 1)),
+    baca.metronome_mark("6:5(4)=4", lambda _: baca.select.skip(_, 5 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 7 - 1)),
+    baca.metronome_mark("5:6(4)=4", lambda _: baca.select.skip(_, 7 - 1)),
 )
 
 commands(
@@ -79,7 +79,7 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-seven",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(6 - 1),
+            selector=lambda _: baca.select.skip(_, 6 - 1),
         ),
     ),
 )
@@ -101,7 +101,9 @@ commands(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
     baca.hairpin(
         "o< mp >o niente",
@@ -168,7 +170,9 @@ commands(
     baca.hairpin(
         "p < mp > p p < mp > p",
         pieces=baca.selectors.clparts([1]),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
     baca.markup(
         r"\baca-triangle-markup",

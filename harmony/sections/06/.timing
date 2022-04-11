@@ -5088,3 +5088,13 @@ LilyPond runtime: 7 seconds
 Segment interpretation time: 4 seconds
 Abjad format time: 0 seconds
 LilyPond runtime: 9 seconds
+
+2022-04-10 17:35:19
+Segment interpretation time: 2 seconds
+Abjad format time: 0 seconds
+LilyPond runtime: 7 seconds
+
+2022-04-10 17:46:53
+Segment interpretation time: 4 seconds
+Abjad format time: 0 seconds
+LilyPond runtime: 9 seconds
