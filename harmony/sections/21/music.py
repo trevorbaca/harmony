@@ -38,32 +38,32 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "U",
-            baca.selectors.skip(2 - 1),
+            lambda _: baca.select.skip(_, 2 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "U",
-            baca.selectors.skip(2 - 1),
+            lambda _: baca.select.skip(_, 2 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
     ),
-    baca.open_volta(baca.selectors.skip(1 - 1)),
-    baca.close_volta(baca.selectors.skip(3 - 1)),
+    baca.open_volta(lambda _: baca.select.skip(_, 1 - 1)),
+    baca.close_volta(lambda _: baca.select.skip(_, 3 - 1)),
 )
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("4.=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("57 3/5", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("3:5(4)=4", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("96", baca.selectors.skip(4 - 1)),
-    baca.metronome_mark("5:3(4)=4", baca.selectors.skip(4 - 1)),
-    baca.metronome_mark("57 3/5", baca.selectors.skip(5 - 1)),
-    baca.metronome_mark("3:5(4)=4", baca.selectors.skip(5 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("4.=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("3:5(4)=4", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 4 - 1)),
+    baca.metronome_mark("5:3(4)=4", lambda _: baca.select.skip(_, 4 - 1)),
+    baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 5 - 1)),
+    baca.metronome_mark("3:5(4)=4", lambda _: baca.select.skip(_, 5 - 1)),
 )
 
 commands(
@@ -79,7 +79,7 @@ commands(
         baca.markup(
             r"\harmony-text-twenty",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(3 - 1),
+            selector=lambda _: baca.select.skip(_, 3 - 1),
         ),
     ),
 )
@@ -518,7 +518,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -607,7 +609,9 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 

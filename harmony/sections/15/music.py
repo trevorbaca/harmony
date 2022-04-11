@@ -43,14 +43,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "O",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "O",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -71,7 +71,7 @@ commands(
     baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
 
@@ -149,7 +149,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         argument=r"\baca-cov-markup =|",
         map=baca.selectors.runs((None, 1)),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.trill_spanner(
         map=baca.selectors.runs((1, 2)),

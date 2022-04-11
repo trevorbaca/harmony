@@ -46,14 +46,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "K",
-            baca.selectors.skip(2 - 1),
+            lambda _: baca.select.skip(_, 2 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "K",
-            baca.selectors.skip(2 - 1),
+            lambda _: baca.select.skip(_, 2 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -62,16 +62,16 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("96", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("8=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("72", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(2 - 1)),
-    baca.metronome_mark("144", baca.selectors.skip(6 - 1)),
-    baca.metronome_mark("8=4", baca.selectors.skip(6 - 1)),
-    baca.metronome_mark("96", baca.selectors.skip(7 - 1)),
-    baca.metronome_mark("4.=4", baca.selectors.skip(7 - 1)),
-    baca.metronome_mark("72", baca.selectors.skip(10 - 1)),
-    baca.metronome_mark("3:4(4)=4", baca.selectors.skip(10 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("8=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("72", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("3:4(4)=4", lambda _: baca.select.skip(_, 2 - 1)),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 6 - 1)),
+    baca.metronome_mark("8=4", lambda _: baca.select.skip(_, 6 - 1)),
+    baca.metronome_mark("96", lambda _: baca.select.skip(_, 7 - 1)),
+    baca.metronome_mark("4.=4", lambda _: baca.select.skip(_, 7 - 1)),
+    baca.metronome_mark("72", lambda _: baca.select.skip(_, 10 - 1)),
+    baca.metronome_mark("3:4(4)=4", lambda _: baca.select.skip(_, 10 - 1)),
 )
 
 commands(
@@ -88,7 +88,7 @@ commands(
         baca.markup(
             r"\harmony-text-nine",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(3 - 1),
+            selector=lambda _: baca.select.skip(_, 3 - 1),
         ),
     ),
 )
@@ -99,7 +99,7 @@ commands(
         baca.markup(
             r"\harmony-text-ten",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(9 - 1),
+            selector=lambda _: baca.select.skip(_, 9 - 1),
         ),
     ),
 )
@@ -227,7 +227,7 @@ commands(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
         baca.metric_modulation_spanner(
@@ -278,7 +278,7 @@ commands(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -382,7 +382,7 @@ commands(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -699,7 +699,7 @@ commands(
     baca.flat_glissando(),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
         r"\harmony-match-harp-decay-markup",
@@ -948,7 +948,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         autodetect_right_padding=False,
         # TODO: pitched trill suppresses start of text spanner
-        # selector=baca.selectors.tleaves(rleak=True),
+        # selector=lambda _: baca.select.tleaves(_, rleak=True),
         selector=lambda _: baca.rleak(baca.tleaves(_)),
     ),
 )
@@ -1081,7 +1081,7 @@ commands(
     baca.hairpin(
         "o<| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.trill_spanner(),
 )
@@ -1139,7 +1139,7 @@ commands(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
         pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
         right_broken=True,
-        selector=baca.selectors.tleaves(rleak=True),
+        selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.trill_spanner(
         right_broken=True,

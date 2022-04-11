@@ -42,14 +42,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "P",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "P",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -376,7 +376,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -421,7 +423,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -476,7 +480,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -541,7 +547,9 @@ commands(
     ),
     baca.hairpin(
         "f <| fff-scratch",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 

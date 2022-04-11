@@ -44,14 +44,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "AA",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "AA",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -60,30 +60,30 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("144", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("3:2(4)=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("48", baca.selectors.skip(3 - 1)),
-    baca.metronome_mark("2.=4", baca.selectors.skip(3 - 1)),
-    baca.metronome_mark("144", baca.selectors.skip(4 - 1)),
-    baca.metronome_mark("3:2(8)=4", baca.selectors.skip(4 - 1)),
-    baca.metronome_mark("57 3/5", baca.selectors.skip(6 - 1)),
-    baca.metronome_mark("4:5(2)=4", baca.selectors.skip(6 - 1)),
-    baca.metronome_mark("48", baca.selectors.skip(7 - 1)),
-    baca.metronome_mark("5:6(4)=4", baca.selectors.skip(7 - 1)),
-    baca.metronome_mark("144", baca.selectors.skip(9 - 1)),
-    baca.metronome_mark("3:2(8)=4", baca.selectors.skip(9 - 1)),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 3 - 1)),
+    baca.metronome_mark("2.=4", lambda _: baca.select.skip(_, 3 - 1)),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 4 - 1)),
+    baca.metronome_mark("3:2(8)=4", lambda _: baca.select.skip(_, 4 - 1)),
+    baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 6 - 1)),
+    baca.metronome_mark("4:5(2)=4", lambda _: baca.select.skip(_, 6 - 1)),
+    baca.metronome_mark("48", lambda _: baca.select.skip(_, 7 - 1)),
+    baca.metronome_mark("5:6(4)=4", lambda _: baca.select.skip(_, 7 - 1)),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 9 - 1)),
+    baca.metronome_mark("3:2(8)=4", lambda _: baca.select.skip(_, 9 - 1)),
 )
 
 commands(
     "Global_Skips",
-    baca.open_volta(baca.selectors.skip(4 - 1)),
-    baca.close_volta(baca.selectors.skip(6 - 1)),
+    baca.open_volta(lambda _: baca.select.skip(_, 4 - 1)),
+    baca.close_volta(lambda _: baca.select.skip(_, 6 - 1)),
     baca.not_parts(
         baca.markup(
             r"\harmony-repeat-three-markup",
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
             abjad.Tweak(r"- \tweak font-size 10"),
-            selector=baca.selectors.skip(4 - 1),
+            selector=lambda _: baca.select.skip(_, 4 - 1),
         ),
     ),
     baca.only_parts(
@@ -91,7 +91,7 @@ commands(
             r"\harmony-repeat-three-markup",
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
             abjad.Tweak(r"- \tweak font-size 4"),
-            selector=baca.selectors.skip(4 - 1),
+            selector=lambda _: baca.select.skip(_, 4 - 1),
         ),
     ),
     baca.text_script_extra_offset((1.5, 12)),
@@ -111,7 +111,7 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-five",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(2 - 1),
+            selector=lambda _: baca.select.skip(_, 2 - 1),
         ),
     ),
 )
@@ -122,7 +122,7 @@ commands(
         baca.markup(
             r"\harmony-text-twenty-six",
             abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=baca.selectors.skip(8 - 1),
+            selector=lambda _: baca.select.skip(_, 8 - 1),
         ),
     ),
 )
@@ -185,7 +185,7 @@ commands(
         bookend=False,
         direction=abjad.DOWN,
         lilypond_id=2,
-        selector=baca.selectors.tleaves(grace=False, rleak=True),
+        selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
     baca.text_spanner(
         "A =|",
@@ -211,7 +211,9 @@ commands(
         baca.accidental_font_size(-3),
         baca.accidental_x_offset(0),
         baca.accidental_y_offset(-2),
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
     baca.hairpin(
         "o< mp >o niente",

@@ -44,14 +44,14 @@ commands(
     baca.not_parts(
         baca.rehearsal_mark(
             "D",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
         ),
     ),
     baca.only_parts(
         baca.rehearsal_mark(
             "D",
-            baca.selectors.skip(1 - 1),
+            lambda _: baca.select.skip(_, 1 - 1),
             abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
             font_size=4,
         ),
@@ -60,12 +60,12 @@ commands(
 
 commands(
     "Global_Skips",
-    baca.metronome_mark("72", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("5:4(4)=4", baca.selectors.skip(1 - 1)),
-    baca.metronome_mark("144", baca.selectors.skip(9 - 1)),
-    baca.metronome_mark("8=4", baca.selectors.skip(9 - 1)),
-    baca.metronome_mark("72", baca.selectors.skip(11 - 1)),
-    baca.metronome_mark("2=4", baca.selectors.skip(11 - 1)),
+    baca.metronome_mark("72", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("5:4(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
+    baca.metronome_mark("144", lambda _: baca.select.skip(_, 9 - 1)),
+    baca.metronome_mark("8=4", lambda _: baca.select.skip(_, 9 - 1)),
+    baca.metronome_mark("72", lambda _: baca.select.skip(_, 11 - 1)),
+    baca.metronome_mark("2=4", lambda _: baca.select.skip(_, 11 - 1)),
 )
 
 commands(
@@ -143,7 +143,9 @@ commands(
         library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
         baca.hairpin(
             "f > p",
-            selector=baca.selectors.tleaves(),
+            selector=lambda _: baca.select.tleaves(
+                _,
+            ),
         ),
         measures=(1, 2),
     ),
@@ -151,7 +153,9 @@ commands(
         library.purpleheart_staff_positions([0, 2, 0, 2, 2]),
         baca.hairpin(
             "p < f",
-            selector=baca.selectors.tleaves(),
+            selector=lambda _: baca.select.tleaves(
+                _,
+            ),
         ),
         measures=(5, 6),
     ),
@@ -188,7 +192,9 @@ commands(
     library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -201,7 +207,9 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.hairpin(
         "p < f",
-        selector=baca.selectors.tleaves(),
+        selector=lambda _: baca.select.tleaves(
+            _,
+        ),
     ),
 )
 
@@ -352,7 +360,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
-        selector=baca.selectors.tleaves(grace=False, rleak=True),
+        selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
 )
 
@@ -429,7 +437,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
-        selector=baca.selectors.tleaves(grace=False, rleak=True),
+        selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
 )
 
@@ -490,7 +498,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
-        selector=baca.selectors.tleaves(grace=False, rleak=True),
+        selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
 )
 
@@ -569,7 +577,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         direction=abjad.DOWN,
-        selector=baca.selectors.tleaves(grace=False, rleak=True),
+        selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
 )
 
