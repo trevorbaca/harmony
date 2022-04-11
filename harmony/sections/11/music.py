@@ -119,7 +119,7 @@ commands(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         baca.levine_multiphonic(5),
@@ -171,7 +171,7 @@ commands(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -196,7 +196,7 @@ commands(
         bookend=False,
         map=baca.selectors.clparts([4]),
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -206,7 +206,7 @@ commands(
     baca.hairpin(
         'o< "f" >o niente o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 1, 2, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -411,7 +411,7 @@ commands(
     ),
     baca.hairpin(
         "(p) >o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -686,7 +686,7 @@ commands(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -728,7 +728,7 @@ commands(
     ),
     baca.pitch(
         "A5",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -827,7 +827,7 @@ commands(
     ),
     baca.pitch(
         "Gqs6",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-eleven-d",
@@ -855,7 +855,7 @@ commands(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -884,7 +884,7 @@ commands(
     ),
     baca.pitch(
         "F#5",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -969,7 +969,7 @@ commands(
     ),
     baca.pitch(
         "C#6",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
         do_not_transpose=True,
     ),
     baca.markup(
@@ -1019,7 +1019,7 @@ commands(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -1039,7 +1039,7 @@ commands(
     ),
     baca.pitch(
         "Cqf6",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
         do_not_transpose=True,
     ),
     baca.markup(
@@ -1133,7 +1133,7 @@ commands(
     baca.note_head_style_harmonic(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",

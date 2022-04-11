@@ -691,13 +691,13 @@ commands(
         ),
         baca.hairpin(
             "mf >o niente",
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.scp_spanner(
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         map=lambda _: baca.select.runs(_),
     ),
@@ -887,13 +887,13 @@ commands(
         ),
         baca.hairpin(
             "mf >o niente",
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.scp_spanner(
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=False,
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         map=lambda _: baca.select.runs(_),
     ),

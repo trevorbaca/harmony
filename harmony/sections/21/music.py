@@ -98,7 +98,7 @@ commands(
         "o< f >o niente",
         map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
         alteration="m2",
@@ -140,7 +140,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -654,13 +654,13 @@ commands(
     baca.hairpin(
         "mf >o niente",
         match=[0],
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "mf >o",
         bookend=False,
         match=[1],
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "P1 -> T1",
@@ -713,7 +713,7 @@ commands(
     baca.hairpin(
         "o<| f",
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

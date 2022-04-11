@@ -412,7 +412,7 @@ commands(
     baca.hairpin(
         "(p) >o niente",
         measures=14,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -447,7 +447,7 @@ commands(
         baca.flat_glissando(
             right_broken=True,
         ),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(
         baca.selectors.phead(0),
@@ -493,19 +493,19 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         measures=(4, 7),
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         measures=(10, 11),
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(mf) >o niente",
         measures=12,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\harmony-rh-bow-markup",
@@ -656,7 +656,7 @@ commands(
         "o< ff >o niente",
         pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -781,7 +781,7 @@ commands(
     baca.hairpin(
         "o< ff >o niente",
         pieces=lambda _: baca.mgroups(_, [3, 4]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -905,7 +905,7 @@ commands(
         "o< ff >o niente",
         pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1",
@@ -938,13 +938,13 @@ commands(
         "(pp) >o niente o< mf >o niente",
         measures=(12, 15),
         pieces=lambda _: baca.mgroups(_, [1, 1, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=lambda _: baca.mgroups(_, [2, 1, 1, 1, 1, 2, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -1076,7 +1076,7 @@ commands(
         "o< ff >o niente",
         pieces=lambda _: baca.mgroups(_, [3, 4]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T4 -> P1 -> T4",

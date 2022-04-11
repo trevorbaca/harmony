@@ -732,7 +732,7 @@ commands(
     ("vc1", (5, 6)),
     baca.pitch(
         "A2",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(
         lambda _: baca.pleaves(baca.rleaves(_)),
@@ -1040,7 +1040,7 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
     baca.scp_spanner(

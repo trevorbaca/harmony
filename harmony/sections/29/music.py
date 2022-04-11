@@ -178,7 +178,7 @@ commands(
     baca.hairpin(
         "ff >o niente",
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> T4+",

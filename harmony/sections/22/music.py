@@ -105,7 +105,7 @@ commands(
         "o< mp >o niente",
         map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -189,7 +189,7 @@ commands(
         "o< pp >o niente",
         map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -566,7 +566,7 @@ commands(
         "o< mp >o niente",
         map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),

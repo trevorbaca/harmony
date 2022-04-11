@@ -261,7 +261,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -755,7 +755,7 @@ commands(
     baca.hairpin(
         "o<| f",
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -892,7 +892,7 @@ commands(
     baca.hairpin(
         "o<| f",
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1009,7 +1009,7 @@ commands(
     baca.hairpin(
         "o<| f",
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -1120,7 +1120,7 @@ commands(
     baca.hairpin(
         "o<| f",
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

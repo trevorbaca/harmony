@@ -475,7 +475,7 @@ commands(
     baca.hairpin(
         "o< f >o niente",
         pieces=baca.selectors.lparts([4, 7]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
     baca.scp_spanner(

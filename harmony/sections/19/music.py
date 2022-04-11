@@ -169,7 +169,7 @@ commands(
     baca.dynamic("mf"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

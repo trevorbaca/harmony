@@ -131,7 +131,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -189,7 +189,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -504,7 +504,7 @@ commands(
                 baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
             baca.selectors.leaves(),
@@ -569,7 +569,7 @@ commands(
                 baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
             baca.selectors.leaves(),
@@ -630,7 +630,7 @@ commands(
                 baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
             baca.selectors.leaves(),
@@ -698,7 +698,7 @@ commands(
                 baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
             baca.selectors.leaves(),
@@ -763,7 +763,7 @@ commands(
                 baca.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
             baca.selectors.leaves(),

@@ -739,7 +739,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
 )
@@ -845,7 +845,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -1464,7 +1464,7 @@ commands(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([2, 4]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -1569,20 +1569,20 @@ commands(
     baca.flat_glissando(
         "E1",
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< mf > p < f > p < ff >o niente",
         pieces=lambda _: baca.mgroups(_, [1, 1, 1, 1, 1, 2]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=baca.selectors.cmgroups([1]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1599,7 +1599,7 @@ commands(
     baca.hairpin(
         "o< p >o niente",
         pieces=baca.selectors.lparts([3, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -1677,7 +1677,7 @@ commands(
     baca.hairpin(
         "o< f > p < ff >o niente",
         pieces=lambda _: baca.mgroups(_, [2, 1, 1, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 -> P2 -> T1 -> P1 -> T1",

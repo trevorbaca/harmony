@@ -380,7 +380,7 @@ commands(
     baca.glissando(),
     baca.hairpin(
         '"f" >o niente',
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-tuning-key-glissando-markup",
@@ -478,7 +478,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -916,7 +916,7 @@ commands(
     baca.hairpin(
         '"f" >o niente',
         measures=5,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.alternate_bow_strokes(
         lambda _: [
