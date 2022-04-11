@@ -119,25 +119,25 @@ commands(
         "o< mf >o niente",
         match=[0],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< mp >o niente",
         match=[1],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< p >o niente",
         match=[2],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< pp >o niente",
         match=[3],
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.new(
         baca.metric_modulation_spanner(
@@ -215,7 +215,7 @@ commands(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -240,7 +240,7 @@ commands(
         bookend=False,
         map=baca.selectors.clparts([4]),
         pieces=baca.selectors.lparts([2, 2 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -294,7 +294,7 @@ commands(
         ' o< "f" >o niente o< p >o niente'
         ' o< "f" >o niente o< f >o niente',
         pieces=baca.selectors.lparts([1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -1172,12 +1172,12 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

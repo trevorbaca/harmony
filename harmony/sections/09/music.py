@@ -146,7 +146,7 @@ commands(
     ),
     baca.new(
         library.bass_drum_staff_position(),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.accent(
         baca.selectors.pheads((None, -1)),

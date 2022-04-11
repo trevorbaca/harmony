@@ -479,7 +479,7 @@ commands(
     baca.hairpin(
         "o< mf >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -528,7 +528,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -994,7 +994,7 @@ commands(
         "ff >o",
         bookend=False,
         left_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "P1 -> T1",

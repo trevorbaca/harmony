@@ -185,7 +185,7 @@ commands(
     baca.hairpin(
         'o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -194,7 +194,7 @@ commands(
         bookend=False,
         map=baca.selectors.clparts([2]),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -551,7 +551,7 @@ commands(
     baca.pitch("D3"),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =|",

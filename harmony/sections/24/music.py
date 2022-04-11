@@ -704,7 +704,7 @@ commands(
     baca.hairpin(
         "(pp) < f",
         measures=(7, 8),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

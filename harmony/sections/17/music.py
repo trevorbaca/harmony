@@ -418,7 +418,7 @@ commands(
     baca.pitch("D4"),
     baca.hairpin(
         "pp >o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -755,7 +755,7 @@ commands(
     (["vc1", "vc2", "cb1", "cb2"], 5),
     baca.hairpin(
         "f >o niente",
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

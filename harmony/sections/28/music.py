@@ -116,7 +116,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -334,7 +334,7 @@ commands(
         " -> 0 pul. / beat",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\harmony-rh-bow-plus-lh-bow-markup",
@@ -400,7 +400,7 @@ commands(
         "o< mp >o",
         bookend=False,
         pieces=baca.selectors.cmgroups([2, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-i-markup",
@@ -415,7 +415,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 3, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -481,7 +481,7 @@ commands(
         "o< mp >o",
         bookend=False,
         pieces=baca.selectors.cmgroups([2, 3]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-i-markup",
@@ -496,7 +496,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp -- ! >o niente",
         pieces=baca.selectors.lparts([1, 2, 3, 2 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -588,7 +588,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 3, 2 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -663,7 +663,7 @@ commands(
         "o< ff >o",
         bookend=False,
         pieces=lambda _: baca.mgroups(_, [3, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T4 -> P1 -> T4",
@@ -687,7 +687,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=baca.selectors.lparts([2, 1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -717,13 +717,13 @@ commands(
     baca.flat_glissando(
         "A1",
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< ff (ff) >o niente",
         pieces=lambda _: baca.mgroups(_, [2, 1, 2]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
@@ -731,7 +731,7 @@ commands(
         bookend=-1,
         pieces=baca.selectors.lparts([3, 2, 2, 3, 2, 2, 3, 2, 2, 8]),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-iii-markup",

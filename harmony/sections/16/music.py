@@ -83,7 +83,7 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -115,7 +115,7 @@ commands(
             autodetect_right_padding=True,
             bookend=False,
             map=lambda _: baca.select.runs(_),
-            selector=baca.selectors.rleaves(),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         measures=9,
     ),
@@ -337,14 +337,14 @@ commands(
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
         "poco scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

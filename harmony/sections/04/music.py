@@ -657,7 +657,7 @@ commands(
     baca.hairpin(
         'o< "mf" >o niente',
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -671,17 +671,17 @@ commands(
     baca.flat_glissando(
         "E1",
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "o< f",
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
         "T1 =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 

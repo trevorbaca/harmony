@@ -192,7 +192,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10"),
         autodetect_right_padding=True,
         bookend=False,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -226,7 +226,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
@@ -241,7 +241,7 @@ commands(
     baca.hairpin(
         "pp < p >o niente",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -652,12 +652,12 @@ commands(
     baca.make_notes(),
     baca.pitch(
         "Gqf3",
-        baca.selectors.rleaves(),
+        lambda _: baca.select.rleaves(_),
     ),
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -1045,7 +1045,7 @@ commands(
     baca.hairpin(
         "o< mp >o niente",
         pieces=baca.selectors.lparts([1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -1099,7 +1099,7 @@ commands(
     baca.hairpin(
         "niente o< mp >o niente o< mp >o niente",
         pieces=baca.selectors.lparts([1, 1, 1, 2]),
-        selector=baca.selectors.rleaves(),
+        selector=lambda _: baca.select.rleaves(_),
     ),
 )
 
