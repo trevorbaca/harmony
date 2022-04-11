@@ -134,11 +134,11 @@ commands(
     ),
     baca.pitch(
         "Bb5",
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.pitch(
         "E5",
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(),
@@ -201,11 +201,11 @@ commands(
     ),
     baca.pitch(
         "Bb5",
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.pitch(
         "E5",
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(),
@@ -983,7 +983,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
         ),
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
     baca.dynamic(
         "f",
@@ -1036,7 +1036,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -1070,13 +1070,13 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs((None, -1)),
+        map=lambda _: baca.select.runs(_)[:-1],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs((-1, None)),
+        map=lambda _: baca.select.runs(_)[-1:],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -1164,7 +1164,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
 )
 
@@ -1213,7 +1213,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -1257,7 +1257,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs((None, -1)),
+        map=lambda _: baca.select.runs(_)[:-1],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic(
@@ -1267,7 +1267,7 @@ commands(
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs((-1, None)),
+        map=lambda _: baca.select.runs(_)[-1:],
         right_broken=True,
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
@@ -1335,7 +1335,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
 )
 
@@ -1346,7 +1346,7 @@ commands(
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 
@@ -1374,7 +1374,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -1393,7 +1393,7 @@ commands(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -1420,7 +1420,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs((None, -1)),
+        map=lambda _: baca.select.runs(_)[:-1],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic(
@@ -1430,7 +1430,7 @@ commands(
     baca.bow_speed_spanner(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs((-1, None)),
+        map=lambda _: baca.select.runs(_)[-1:],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.hairpin(
@@ -1498,7 +1498,7 @@ commands(
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 
@@ -1513,18 +1513,18 @@ commands(
     ("cb1", (4, 7)),
     baca.new(
         baca.flat_glissando("E1"),
-        selector=baca.selectors.run(-1),
+        selector=lambda _: abjad.select.run(_, -1),
     ),
     baca.hairpin(
         "o< mf > p < f",
         pieces=baca.selectors.lparts([6, 5, 3, 2]),
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
     baca.scp_spanner(
         "T1 -> P1 -> T1 -> P1",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         pieces=baca.selectors.lparts([6, 5, 3, 2]),
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
 )
 
@@ -1651,7 +1651,7 @@ commands(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),

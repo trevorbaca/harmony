@@ -433,7 +433,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -518,7 +518,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -670,7 +670,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -699,7 +699,7 @@ commands(
             bookend=False,
             selector=baca.selectors.rleaves(),
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -895,7 +895,7 @@ commands(
             bookend=False,
             selector=baca.selectors.rleaves(),
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),

@@ -103,14 +103,14 @@ commands(
     baca.pitch("Gqs5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="A5",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -187,7 +187,7 @@ commands(
     ),
     baca.hairpin(
         "o< pp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
@@ -564,13 +564,13 @@ commands(
     baca.pitch("F#5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(
         r"\baca-string-ii-markup",

@@ -260,7 +260,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -316,11 +316,11 @@ commands(
     ),
     baca.staff_position(
         -2,
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.staff_position(
         0,
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.dynamic(
         "p",
@@ -422,11 +422,11 @@ commands(
     ),
     baca.staff_position(
         -2,
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.staff_position(
         0,
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.dynamic(
         "p",
@@ -682,12 +682,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("D#3", "E3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -706,7 +706,7 @@ commands(
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -754,7 +754,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -824,7 +824,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -835,7 +835,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -891,7 +891,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
     baca.dls_staff_padding(4),
@@ -967,7 +967,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -1008,7 +1008,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -1049,12 +1049,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("F2", "E2"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -1073,7 +1073,7 @@ commands(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -1119,7 +1119,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -1146,12 +1146,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.new(
         baca.interpolate_pitches("D#2", "E2"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.glissando(
         allow_repeats=True,
         hide_middle_note_heads=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -1170,7 +1170,7 @@ commands(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -1205,26 +1205,26 @@ commands(
     (["va", "cb1", "cb2"], (6, 9)),
     baca.hairpin(
         "o< mp",
-        selector=baca.selectors.run(0),
+        selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.hairpin(
         "o< mf",
-        selector=baca.selectors.run(1),
+        selector=lambda _: abjad.select.run(_, 1),
     ),
     baca.hairpin(
         "o< f",
-        selector=baca.selectors.run(2),
+        selector=lambda _: abjad.select.run(_, 2),
     ),
     baca.hairpin(
         "o< ff",
-        selector=baca.selectors.run(3),
+        selector=lambda _: abjad.select.run(_, 3),
     ),
     baca.scp_spanner(
         "T1 -> P1",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.leaves(),
     ),
 )

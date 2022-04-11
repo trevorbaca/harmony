@@ -82,7 +82,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -114,7 +114,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=True,
             bookend=False,
-            map=baca.selectors.runs(),
+            map=lambda _: baca.select.runs(_),
             selector=baca.selectors.rleaves(),
         ),
         measures=9,
@@ -149,11 +149,11 @@ commands(
     ),
     baca.flat_glissando(
         hide_stem_selector=baca.selectors.pleaves((1, -2)),
-        selector=baca.selectors.run(0),
+        selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.flat_glissando(
         hide_middle_stems=True,
-        selector=baca.selectors.run(1),
+        selector=lambda _: abjad.select.run(_, 1),
     ),
     library.brake_drum_staff_position(),
     baca.dynamic(
@@ -301,7 +301,7 @@ commands(
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -326,7 +326,7 @@ commands(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -359,7 +359,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -391,7 +391,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -406,7 +406,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -438,7 +438,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -452,7 +452,7 @@ commands(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -494,7 +494,7 @@ commands(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -519,7 +519,7 @@ commands(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -561,7 +561,7 @@ commands(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(

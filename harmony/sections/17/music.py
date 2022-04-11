@@ -159,7 +159,7 @@ commands(
     ),
     baca.pitch(
         "F#5",
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
 )
 
@@ -172,7 +172,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 9"),
         ),
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 
@@ -408,7 +408,7 @@ commands(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 

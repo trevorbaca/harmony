@@ -78,18 +78,18 @@ commands(
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 2]),
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         alteration="m2",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         alteration="m2",
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
     ),
 )
 
@@ -103,14 +103,14 @@ commands(
     baca.pitch("Gqs5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="A5",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -166,7 +166,7 @@ commands(
     ),
     baca.hairpin(
         "o< pp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
@@ -353,7 +353,7 @@ commands(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -465,13 +465,13 @@ commands(
     baca.pitch("F#5"),
     baca.hairpin(
         "o< mp >o niente",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
         selector=baca.selectors.rleaves(),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -672,7 +672,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
