@@ -74,11 +74,11 @@ commands(
     ),
     baca.pitch(
         "A3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         library.appoggiato_pitches_a,
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "f-mp",
@@ -307,7 +307,7 @@ commands(
     baca.dls_staff_padding(4),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.plts(),
+        map=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -355,7 +355,7 @@ commands(
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 ->",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -418,7 +418,7 @@ commands(
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.plts(),
+        map=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -482,7 +482,7 @@ commands(
         "P1 -> P3 -> P2 -> P4 ->",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         final_piece_spanner=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -531,7 +531,7 @@ commands(
     baca.dynamic("mp"),
     baca.damp_spanner(
         abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
-        map=baca.selectors.plts(),
+        map=lambda _: baca.select.plts(_),
     ),
 )
 

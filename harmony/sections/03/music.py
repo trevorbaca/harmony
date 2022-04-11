@@ -457,7 +457,7 @@ commands(
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -490,7 +490,7 @@ commands(
     baca.hairpin(
         "p mp",
         bookend=False,
-        pieces=baca.selectors.plts((1, None)),
+        pieces=lambda _: baca.select.plts(_)[1:],
     ),
 )
 
@@ -555,7 +555,7 @@ commands(
         # '"ff" "f" mf mp p pp ppp ppp',
         '"f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.rleaves(_, count=3)[1:],
     ),
 )
@@ -797,7 +797,7 @@ commands(
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -917,7 +917,7 @@ commands(
     baca.hairpin(
         "pp p mp mf f",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 

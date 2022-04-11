@@ -649,7 +649,7 @@ commands(
             -5,
             -2,
         ],
-        baca.selectors.plts((1, -1)),
+        lambda _: baca.select.plts(_)[1:-1],
     ),
     baca.glissando(),
     baca.hairpin(
@@ -775,7 +775,7 @@ commands(
             -6,
             -3,
         ],
-        baca.selectors.plts((1, -1)),
+        lambda _: baca.select.plts(_)[1:-1],
     ),
     baca.glissando(),
     baca.hairpin(
@@ -898,7 +898,7 @@ commands(
             -6,
             -3,
         ],
-        baca.selectors.plts((1, -1)),
+        lambda _: baca.select.plts(_)[1:-1],
     ),
     baca.glissando(),
     baca.hairpin(
@@ -1069,7 +1069,7 @@ commands(
             -1,
             2,
         ],
-        baca.selectors.plts((1, -1)),
+        lambda _: baca.select.plts(_)[1:-1],
     ),
     baca.glissando(),
     baca.hairpin(

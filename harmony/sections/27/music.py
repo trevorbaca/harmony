@@ -162,11 +162,11 @@ commands(
     ),
     baca.pitch(
         "Ab3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         library.appoggiato_pitches_a_flat,
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "pp-ppp",
@@ -587,7 +587,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -616,7 +616,7 @@ commands(
     ("va", (4, 5)),
     baca.pitch(
         "Ab4",
-        selector=baca.selectors.plts((None, -1)),
+        selector=lambda _: baca.select.plts(_)[:-1],
     ),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -639,7 +639,7 @@ commands(
         baca.note_head_style_harmonic_black(),
         baca.pitch("<G4 Ab4 Bb4>"),
         baca.stem_tremolo(),
-        selector=baca.selectors.plts(),
+        selector=lambda _: baca.select.plts(_),
     ),
     baca.dynamic(
         "pp",
@@ -685,7 +685,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -711,7 +711,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -769,7 +769,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -859,7 +859,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )

@@ -549,7 +549,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -575,7 +575,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -587,7 +587,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -620,7 +620,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -670,7 +670,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -717,7 +717,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
         selector=baca.selectors.leaves(),
     ),
 )
