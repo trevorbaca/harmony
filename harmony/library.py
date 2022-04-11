@@ -324,12 +324,10 @@ def appoggiato(
         prefix_counts = [1]
     commands = []
     if rest_to:
-        # selector = baca.selectors.plts((None, rest_to), grace=False)
         selector = make_plt_selector(None, rest_to)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if rest_from is not None:
-        # selector = baca.selectors.plts((-rest_from, None), grace=False)
         selector = make_plt_selector(-rest_from, None)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
@@ -339,12 +337,10 @@ def appoggiato(
         )
         commands.append(on_beat_)
     if rest_after is True:
-        # selector = lambda _: baca.select.plts(_, grace=False)
         selector = select_nongrace_plts
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     elif rest_after is not None:
-        # selector = baca.selectors.plts(rest_after, grace=False)
         selector = make_single_plt_selector(rest_after)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
@@ -748,7 +744,6 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
         counts = list(new_counts)
     commands = []
     if rest_plts is not None:
-        # selector = baca.selectors.plts(rest_plts)
         selector = make_plt_selector(rest_plts)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)

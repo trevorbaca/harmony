@@ -596,7 +596,7 @@ commands(
     ),
     baca.pitches(
         "F#4 D3",
-        baca.selectors.plts([0, -1]),
+        lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
     ),
     baca.staff_positions(
         [
@@ -722,7 +722,7 @@ commands(
     baca.clef("bass"),
     baca.pitches(
         "F#3 D2",
-        baca.selectors.plts([0, -1]),
+        lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
     ),
     baca.staff_positions(
         [
@@ -851,7 +851,7 @@ commands(
     baca.clef("bass"),
     baca.pitches(
         "F#3 D2",
-        baca.selectors.plts([0, -1]),
+        lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
     ),
     baca.staff_positions(
         [
@@ -1022,7 +1022,7 @@ commands(
     baca.tuplet_bracket_up(),
     baca.pitches(
         "F#3 D2",
-        baca.selectors.plts([0, -1]),
+        lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
     ),
     baca.staff_positions(
         [

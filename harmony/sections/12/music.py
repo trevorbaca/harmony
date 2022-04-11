@@ -1236,7 +1236,7 @@ commands(
     baca.hairpin(
         "sffp >o niente",
         right_broken=True,
-        selector=baca.selectors.plts((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.plts(_)[-1:]),
     ),
 )
 

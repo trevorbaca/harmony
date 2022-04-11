@@ -421,7 +421,7 @@ commands(
     baca.new(
         baca.pitch("E3"),
         baca.dls_staff_padding(4),
-        selector=baca.selectors.plts((1, None)),
+        selector=lambda _: baca.select.plts(_)[1:],
     ),
     baca.triple_staccato(
         baca.selectors.pheads((1, None)),
