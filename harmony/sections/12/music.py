@@ -396,7 +396,7 @@ commands(
     baca.staff_lines(5),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -517,7 +517,7 @@ commands(
     baca.tuplet_bracket_up(),
     library.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -643,7 +643,7 @@ commands(
     baca.clef("treble"),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.new(
         baca.dynamic("p"),

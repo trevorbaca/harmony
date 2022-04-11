@@ -281,7 +281,7 @@ commands(
     ),
     library.brake_drum_staff_position(),
     baca.damp(
-        baca.selectors.ptail(-1),
+        lambda _: baca.select.ptail(_, -1),
     ),
     baca.dynamic("mf"),
     baca.dls_staff_padding(5),
@@ -355,7 +355,7 @@ commands(
     ),
     baca.pitches("F#4 G#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),

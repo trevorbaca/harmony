@@ -198,7 +198,7 @@ commands(
             baca.rehearsal_mark_down(),
             baca.rehearsal_mark_padding(12),
             baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-            selector=baca.selectors.rleaf(-1),
+            selector=lambda _: baca.select.rleaf(_, -1),
         ),
     ),
 )

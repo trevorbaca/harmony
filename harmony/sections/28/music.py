@@ -138,7 +138,7 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -217,7 +217,7 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.markup(
         r"\baca-triangle-markup",
@@ -243,7 +243,7 @@ commands(
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.markup(
         r"\baca-glockenspiel-markup",
@@ -285,7 +285,7 @@ commands(
     ),
     baca.pitch("A4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "mp-sempre",
@@ -311,7 +311,7 @@ commands(
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
 )
 
@@ -453,7 +453,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -539,7 +539,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -630,7 +630,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),

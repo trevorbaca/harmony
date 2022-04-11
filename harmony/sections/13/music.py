@@ -444,7 +444,7 @@ commands(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails((None, -1)),
+        lambda _: baca.select.ptails(_)[:-1],
     ),
     baca.dynamic("f"),
     baca.new(

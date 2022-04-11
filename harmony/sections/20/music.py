@@ -211,7 +211,7 @@ commands(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -320,7 +320,7 @@ commands(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "p-sempre",
@@ -347,7 +347,7 @@ commands(
     ),
     baca.pitch("Bb3"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(

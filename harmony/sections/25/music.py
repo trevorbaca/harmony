@@ -394,7 +394,7 @@ commands(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -450,7 +450,7 @@ commands(
     ),
     baca.pitch("G1"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "f-sempre",
