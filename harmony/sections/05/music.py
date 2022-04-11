@@ -396,7 +396,7 @@ commands(
     ),
     baca.pitch("Eb4"),
     baca.damp(
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4),

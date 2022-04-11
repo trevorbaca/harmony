@@ -73,7 +73,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
 )
 
 # bfl
@@ -134,7 +134,7 @@ commands(
     baca.dynamic("pp"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 

@@ -74,7 +74,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(7 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
 )
 
 # text
@@ -242,7 +242,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(2),
+        selector=lambda _: baca.select.rest(_, 2),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -401,7 +401,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(2),
+        selector=lambda _: baca.select.rest(_, 2),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -596,7 +596,7 @@ commands(
     baca.pitch("C3"),
     baca.rest_extra_offset(
         (-1.5, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 
@@ -740,7 +740,7 @@ commands(
     baca.pitch("D3"),
     baca.hairpin(
         "mp -- niente",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),

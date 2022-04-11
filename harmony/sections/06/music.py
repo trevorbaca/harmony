@@ -85,8 +85,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(2 - 1)),
-    baca.global_fermata("fermata", baca.selectors.rest(9 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 2 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 9 - 1)),
 )
 
 # text
@@ -308,7 +308,7 @@ commands(
         selector=baca.selectors.pleaves((None, 1)),
     ),
     baca.damp(
-        baca.selectors.rest(0),
+        lambda _: baca.select.rest(_, 0),
     ),
     baca.new(
         library.bass_drum_staff_position(),
@@ -469,7 +469,7 @@ commands(
         selector=baca.selectors.pleaves(),
     ),
     baca.damp(
-        baca.selectors.rest(0),
+        lambda _: baca.select.rest(_, 0),
     ),
 )
 
@@ -661,7 +661,7 @@ commands(
         baca.selectors.plt(0),
     ),
     baca.damp(
-        baca.selectors.rest(0),
+        lambda _: baca.select.rest(_, 0),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(
@@ -672,7 +672,7 @@ commands(
         baca.new(
             baca.clef("percussion"),
             baca.staff_lines(1),
-            selector=baca.selectors.rest(-1),
+            selector=lambda _: baca.select.rest(_, -1),
         ),
         baca.new(
             library.whisk_staff_position(),
@@ -774,14 +774,14 @@ commands(
     baca.pitch("G1"),
     baca.new(
         baca.damp(
-            baca.selectors.rest(-1),
+            lambda _: baca.select.rest(_, -1),
             abjad.Tweak(r"- \tweak direction #down"),
         ),
         measures=7,
     ),
     baca.new(
         baca.damp(
-            baca.selectors.rest(-1),
+            lambda _: baca.select.rest(_, -1),
         ),
         measures=8,
     ),
@@ -885,7 +885,7 @@ commands(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.selectors.rest(-1),
+        selector=lambda _: baca.select.rest(_, -1),
     ),
     baca.new(
         library.whisk_staff_position(),

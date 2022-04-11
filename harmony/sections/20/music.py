@@ -584,7 +584,7 @@ commands(
     ("cb1", 10),
     baca.rest_extra_offset(
         (-1.5, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 
@@ -647,7 +647,7 @@ commands(
     ("cb2", 10),
     baca.rest_extra_offset(
         (-1.5, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 
@@ -668,7 +668,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",

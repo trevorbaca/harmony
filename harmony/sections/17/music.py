@@ -65,8 +65,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("short", baca.selectors.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.selectors.rest(6 - 1)),
+    baca.global_fermata("short", lambda _: baca.select.rest(_, 3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 6 - 1)),
 )
 
 # text
@@ -210,7 +210,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(2),
+        selector=lambda _: baca.select.rest(_, 2),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -281,7 +281,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(2),
+        selector=lambda _: baca.select.rest(_, 2),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -468,7 +468,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -536,7 +536,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -607,7 +607,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "f <| fff-scratch",
@@ -675,7 +675,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "f <| fff-scratch",
