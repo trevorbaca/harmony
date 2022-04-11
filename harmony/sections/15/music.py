@@ -190,7 +190,7 @@ commands(
     ),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(4),
@@ -332,7 +332,7 @@ commands(
     baca.pitch("Eb4"),
     baca.dynamic("mp"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
 )
 

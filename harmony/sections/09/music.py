@@ -339,7 +339,7 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("ff"),
     baca.pizzicato_spanner(

@@ -158,7 +158,7 @@ commands(
     ),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(6),
@@ -266,7 +266,7 @@ commands(
         baca.selectors.plt(0),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -297,7 +297,7 @@ commands(
     ),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
 )
 
@@ -321,7 +321,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(4),
@@ -362,7 +362,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.new(
         baca.dynamic("f"),
@@ -403,7 +403,7 @@ commands(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("f"),
     baca.metric_modulation_spanner(
@@ -434,7 +434,7 @@ commands(
         [-4, 4],
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
@@ -474,7 +474,7 @@ commands(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.note_head_style_harmonic(),
     baca.dynamic("mf"),

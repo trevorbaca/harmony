@@ -548,7 +548,7 @@ commands(
     baca.clef("treble"),
     baca.pitch("G4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mf"),
     baca.dls_staff_padding(4),
@@ -1274,7 +1274,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.new(
         baca.trill_spanner(

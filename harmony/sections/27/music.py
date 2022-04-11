@@ -475,7 +475,7 @@ commands(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("f-ancora"),
     baca.dls_staff_padding(4),
@@ -510,7 +510,7 @@ commands(
     ),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("f"),
     baca.markup(

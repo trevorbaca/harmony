@@ -144,7 +144,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -362,7 +362,7 @@ commands(
         baca.selectors.pheads(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -395,7 +395,7 @@ commands(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "p-ancora",
@@ -441,7 +441,7 @@ commands(
     baca.clef("treble"),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("p-ancora"),
     baca.markup(
@@ -605,7 +605,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
@@ -780,7 +780,7 @@ commands(
     ),
     baca.dynamic(
         "niente",
-        selector=baca.selectors.rleaf(-1),
+        selector=lambda _: baca.select.rleaf(_, -1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),

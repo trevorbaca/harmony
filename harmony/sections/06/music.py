@@ -519,7 +519,7 @@ commands(
     ),
     library.brake_drum_staff_position(),
     baca.damp(
-        baca.selectors.ptail(-1),
+        lambda _: baca.select.ptail(_, -1),
     ),
     baca.dynamic("mf"),
     baca.markup(
@@ -731,7 +731,7 @@ commands(
     ),
     baca.pitches("F#4 G#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("mf"),
     baca.text_spanner(
@@ -838,7 +838,7 @@ commands(
 commands(
     ("hp", (10, 14)),
     baca.laissez_vibrer(
-        baca.selectors.ptails(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.ptails(_, exclude=baca.const.HIDDEN),
     ),
     baca.text_spanner(
         r"\baca-fingernail-markup =|",

@@ -275,7 +275,7 @@ commands(
     ),
     baca.pitch("A4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic(
         "mf",

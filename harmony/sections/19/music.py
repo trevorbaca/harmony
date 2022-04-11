@@ -609,7 +609,7 @@ commands(
     ),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
-        baca.selectors.ptails(),
+        lambda _: baca.select.ptails(_),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
