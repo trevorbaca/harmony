@@ -82,8 +82,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.selectors.rest(10 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 10 - 1)),
 )
 
 # text
@@ -219,7 +219,7 @@ commands(
     baca.dynamic("pp"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -241,7 +241,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(2),
+        selector=lambda _: baca.select.rest(_, 2),
     ),
     baca.dls_staff_padding(
         5,
@@ -288,7 +288,7 @@ commands(
     baca.dynamic(
         "ff-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -323,7 +323,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dls_staff_padding(
         5,
@@ -372,7 +372,7 @@ commands(
     ),
     baca.dynamic(
         "ff-ancora",
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.dls_staff_padding(5),
     baca.metric_modulation_spanner(
@@ -432,7 +432,7 @@ commands(
     baca.dynamic(
         "ff-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.dls_staff_padding(5),
 )
@@ -470,7 +470,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dls_staff_padding(
         5,
@@ -753,7 +753,7 @@ commands(
     baca.new(
         baca.rest_extra_offset(
             (-1.5, 0),
-            baca.selectors.rest(-1),
+            lambda _: baca.select.rest(_, -1),
         ),
         match=[0],
     ),

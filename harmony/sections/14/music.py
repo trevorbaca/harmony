@@ -75,8 +75,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
-    baca.global_fermata("short", baca.selectors.rest(10 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
+    baca.global_fermata("short", lambda _: baca.select.rest(_, 10 - 1)),
 )
 
 cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
@@ -324,11 +324,11 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -430,11 +430,11 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -750,7 +750,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -887,7 +887,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -1004,7 +1004,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -1115,7 +1115,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",

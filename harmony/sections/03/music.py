@@ -69,8 +69,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
-    baca.global_fermata("fermata", baca.selectors.rest(5 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 5 - 1)),
 )
 
 # text
@@ -731,7 +731,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(
         (-0.75, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 

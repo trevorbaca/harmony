@@ -75,7 +75,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(11 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 11 - 1)),
 )
 
 # text
@@ -124,7 +124,7 @@ commands(
     baca.dynamic("pp"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -163,7 +163,7 @@ commands(
     baca.dynamic("pp"),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -669,7 +669,7 @@ commands(
     baca.tuplet_bracket_staff_padding(3),
     baca.rest_extra_offset(
         (-2, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 

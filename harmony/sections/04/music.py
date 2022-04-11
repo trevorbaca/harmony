@@ -70,8 +70,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(7 - 1)),
-    baca.global_fermata("short", baca.selectors.rest(10 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
+    baca.global_fermata("short", lambda _: baca.select.rest(_, 10 - 1)),
 )
 
 # bfl

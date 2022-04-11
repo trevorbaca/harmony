@@ -72,8 +72,8 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(4 - 1)),
-    baca.global_fermata("fermata", baca.selectors.rest(11 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 4 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 11 - 1)),
 )
 
 # text
@@ -145,7 +145,7 @@ commands(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -155,7 +155,7 @@ commands(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -336,7 +336,7 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -368,7 +368,7 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.selectors.rleak_runs(None, 1),
+        map=lambda _: baca.select.rleak_runs(_, None, 1),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",

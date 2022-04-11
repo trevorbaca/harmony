@@ -68,7 +68,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(6 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 6 - 1)),
 )
 
 # text
@@ -267,7 +267,7 @@ commands(
     ),
     baca.hairpin(
         "f >o niente",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.dls_staff_padding(5),
     baca.markup(
@@ -568,7 +568,7 @@ commands(
     ),
     baca.hairpin(
         "niente o< mp >o niente",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
         pieces=baca.selectors.lparts([1, 1 + 1]),
     ),
     baca.trill_spanner(

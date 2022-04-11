@@ -87,7 +87,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(9 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 9 - 1)),
 )
 
 # text
@@ -343,11 +343,11 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -483,11 +483,11 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.rest(1),
+        selector=lambda _: baca.select.rest(_, 1),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",

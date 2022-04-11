@@ -73,7 +73,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(12 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 12 - 1)),
 )
 
 divisions = [16, 20, 12, 12, 12, 16]
@@ -306,22 +306,22 @@ commands(
     baca.staff_position(-2),
     baca.new(
         baca.dynamic("p"),
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
         measures=8,
     ),
     baca.new(
         baca.dynamic("mp"),
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
         measures=9,
     ),
     baca.new(
         baca.dynamic("mf"),
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
         measures=10,
     ),
     baca.new(
         baca.dynamic("f"),
-        selector=baca.selectors.rest(0),
+        selector=lambda _: baca.select.rest(_, 0),
         measures=11,
     ),
     baca.dls_staff_padding(
@@ -1069,7 +1069,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.rest_extra_offset(
         (-1, 0),
-        baca.selectors.rest(-1),
+        lambda _: baca.select.rest(_, -1),
     ),
 )
 

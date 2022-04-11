@@ -75,7 +75,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
 )
 
 # text

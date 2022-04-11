@@ -77,7 +77,7 @@ commands(
     baca.hairpin(
         "niente o< mf >o",
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -87,7 +87,7 @@ commands(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 9"),
         pieces=baca.selectors.lparts([1, 2 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -101,7 +101,7 @@ commands(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -111,7 +111,7 @@ commands(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -183,7 +183,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| mf",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -325,7 +325,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="M2",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 
@@ -400,7 +400,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="M2",
         ),
-        map=baca.selectors.rleak_runs(1, -1),
+        map=lambda _: baca.select.rleak_runs(_, 1, -1),
     ),
     baca.scp_spanner(
         "P =|",
@@ -457,7 +457,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="M2",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     # NOTE: current clef / after-grace contention:
     baca.clef(
@@ -543,7 +543,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="m2",
         ),
-        map=baca.selectors.rleak_runs(1, -1),
+        map=lambda _: baca.select.rleak_runs(_, 1, -1),
     ),
     baca.scp_spanner(
         "P =|",
@@ -606,7 +606,7 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="m2",
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     # NOTE: current clef / after-grace contention:
     baca.clef(
@@ -659,7 +659,7 @@ commands(
     baca.hairpin(
         "niente o<| mp |>o",
         pieces=baca.selectors.lparts([1, 1 + 1]),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
 )
 

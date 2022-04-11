@@ -63,7 +63,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("short", baca.selectors.rest(7 - 1)),
+    baca.global_fermata("short", lambda _: baca.select.rest(_, 7 - 1)),
 )
 
 # text

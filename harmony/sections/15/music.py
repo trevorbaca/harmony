@@ -313,7 +313,7 @@ commands(
         denominator=None,
     ),
     baca.damp(
-        baca.selectors.rest(0),
+        lambda _: baca.select.rest(_, 0),
     ),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
@@ -416,7 +416,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -443,7 +443,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -468,7 +468,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -520,7 +520,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -545,7 +545,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -601,7 +601,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -626,7 +626,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
@@ -678,7 +678,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",

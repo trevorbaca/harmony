@@ -68,7 +68,7 @@ commands(
 
 commands(
     "Global_Rests",
-    baca.global_fermata("fermata", baca.selectors.rest(3 - 1)),
+    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
 )
 
 # text
@@ -708,7 +708,7 @@ commands(
     baca.new(
         baca.stop_on_string(),
         selector=baca.selectors.leaf(-1),
-        map=baca.selectors.rleak_runs(),
+        map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
         "o<| f",
