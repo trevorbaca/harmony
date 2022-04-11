@@ -145,7 +145,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -172,12 +172,12 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 
@@ -475,7 +475,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         right_broken=True,
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
 )
 
@@ -615,7 +615,7 @@ commands(
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -697,7 +697,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -744,7 +744,7 @@ commands(
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -784,7 +784,7 @@ commands(
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -838,11 +838,11 @@ commands(
     # NOTE: currently glissando must lexically precede trill spanner
     baca.new(
         baca.flat_glissando(),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.trill_spanner(
         alteration="Fqs5",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(r"\baca-eleven-c"),
 )
@@ -881,7 +881,7 @@ commands(
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(
@@ -921,11 +921,11 @@ commands(
     # NOTE: currently glissando must lexically precede trill spanner
     baca.new(
         baca.flat_glissando(),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.trill_spanner(
         alteration="Fqs5",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(r"\baca-eleven-c"),
 )
@@ -1066,7 +1066,7 @@ commands(
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.dynamic("ppp"),
     baca.alternate_bow_strokes(

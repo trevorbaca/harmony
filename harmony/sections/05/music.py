@@ -246,7 +246,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         left_broken=True,
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 
@@ -417,7 +417,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -473,7 +473,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -502,7 +502,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -628,7 +628,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -647,7 +647,7 @@ commands(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),
@@ -838,7 +838,7 @@ commands(
             allow_repeats=True,
             hide_middle_note_heads=True,
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves(grace=False),

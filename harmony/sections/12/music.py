@@ -334,12 +334,12 @@ commands(
     # TODO: should be baca.staff_position(-2):
     baca.staff_positions(
         [-2, -8, -8, -8, -8],
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
         allow_repeats=True,
     ),
     baca.staff_position(
         0,
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.dynamic(
         "p",
@@ -434,7 +434,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -475,11 +475,11 @@ commands(
     ),
     baca.staff_position(
         -2,
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.staff_position(
         0,
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.dynamic(
         "p",

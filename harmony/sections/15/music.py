@@ -148,15 +148,15 @@ commands(
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         argument=r"\baca-cov-markup =|",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.trill_spanner(
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-        map=baca.selectors.runs((2, 3)),
+        map=lambda _: baca.select.runs(_)[2:3],
     ),
 )
 
@@ -212,7 +212,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -401,7 +401,7 @@ commands(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -420,7 +420,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -447,12 +447,12 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
         selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
         selector=baca.selectors.leaves((None, -1)),
     ),
 )
@@ -472,7 +472,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -524,12 +524,12 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
         selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
         selector=baca.selectors.leaves((None, -1)),
     ),
 )
@@ -549,7 +549,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -605,12 +605,12 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
         selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
         selector=baca.selectors.leaves((None, -1)),
     ),
 )
@@ -630,7 +630,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -682,12 +682,12 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs((None, 1)),
+        map=lambda _: baca.select.runs(_)[:1],
         selector=baca.selectors.rleaves(),
     ),
     baca.hairpin(
         "o<| fff-scratch",
-        map=baca.selectors.runs((1, 2)),
+        map=lambda _: baca.select.runs(_)[1:2],
         selector=baca.selectors.leaves((None, -1)),
     ),
 )

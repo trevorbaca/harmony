@@ -126,11 +126,11 @@ commands(
         pieces=lambda _: abjad.select.partition_by_ratio(
             abjad.select.leaves(_), (4, 5)
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )
@@ -149,7 +149,7 @@ commands(
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.text_spanner(
         "A -> T -> A",
@@ -183,12 +183,12 @@ commands(
         pieces=lambda _: abjad.select.partition_by_ratio(
             abjad.select.leaves(_), (4, 5)
         ),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.leaves(),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=baca.selectors.rleaves(),
     ),
 )

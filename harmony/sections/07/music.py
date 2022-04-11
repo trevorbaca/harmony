@@ -173,11 +173,11 @@ commands(
     baca.tuplet_bracket_up(),
     baca.pitch(
         "G3",
-        baca.selectors.runs((None, 1)),
+        lambda _: baca.select.runs(_)[:1],
     ),
     baca.pitch(
         "Bb5",
-        baca.selectors.runs((1, None)),
+        lambda _: baca.select.runs(_)[1:],
     ),
     baca.stem_tremolo(
         baca.selectors.pleaves((-2, None)),
@@ -406,7 +406,7 @@ commands(
         baca.flat_glissando(
             hide_middle_stems=True,
         ),
-        selector=baca.selectors.run(0),
+        selector=lambda _: abjad.select.run(_, 0),
     ),
 )
 
@@ -854,7 +854,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -948,7 +948,7 @@ commands(
         "scr. =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )

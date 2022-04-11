@@ -81,7 +81,7 @@ commands(
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.text_spanner(
         "A -> T -> A",
@@ -105,7 +105,7 @@ commands(
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.text_spanner(
         "A -> T -> A",
@@ -226,7 +226,7 @@ commands(
     baca.new(
         library.tam_tam_staff_position(),
         baca.flat_glissando(),
-        selector=baca.selectors.run(0),
+        selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.new(
         library.purpleheart_staff_positions([2]),

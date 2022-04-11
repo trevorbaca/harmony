@@ -392,7 +392,7 @@ commands(
     library.slate_staff_position(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.runs((None, 1), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[:1]),
     ),
 )
 

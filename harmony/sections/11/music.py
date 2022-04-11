@@ -234,7 +234,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             right_broken=True,
         ),
-        selector=baca.selectors.runs((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.runs(_)[-1:]),
     ),
 )
 
@@ -342,7 +342,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -360,7 +360,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
-        map=baca.selectors.runs(),
+        map=lambda _: baca.select.runs(_),
     ),
 )
 
@@ -638,7 +638,7 @@ commands(
     baca.hairpin(
         'o< "f" >o niente',
         pieces=baca.selectors.lparts([1, 3]),
-        selector=baca.selectors.run(0),
+        selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.dls_staff_padding(6),
     baca.dynamic_text_x_offset(
@@ -805,11 +805,11 @@ commands(
     ("vc1", (6, 8)),
     baca.pitch(
         "B4",
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
     baca.pitch(
         "Aqf3",
-        baca.selectors.run(1),
+        lambda _: abjad.select.run(_, 1),
     ),
     baca.markup(
         r"\baca-eleven-e-flat",
@@ -898,11 +898,11 @@ commands(
     ("vc2", (6, 8)),
     baca.pitch(
         "Dqs4",
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
     baca.pitch(
         "F3",
-        baca.selectors.run(1),
+        lambda _: abjad.select.run(_, 1),
     ),
 )
 
@@ -990,15 +990,15 @@ commands(
     ("cb1", (6, 8)),
     baca.clef("bass"),
     baca.note_head_style_harmonic(
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
     baca.pitch(
         "E3",
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
     baca.pitch(
         "Dtqf3",
-        baca.selectors.run(1),
+        lambda _: abjad.select.run(_, 1),
     ),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -1060,11 +1060,11 @@ commands(
     baca.clef("bass"),
     baca.pitch(
         "A1",
-        baca.selectors.run(0),
+        lambda _: abjad.select.run(_, 0),
     ),
     baca.pitch(
         "Eb2",
-        baca.selectors.run(1),
+        lambda _: abjad.select.run(_, 1),
     ),
 )
 
