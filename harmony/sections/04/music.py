@@ -105,7 +105,7 @@ commands(
     ),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
-        baca.selectors.plts(([0, 1], 3)),
+        lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
     ),
     baca.hairpin(
         "o<| ff |> p",
@@ -338,11 +338,11 @@ commands(
     baca.staff_lines(5),
     baca.pitch(
         "Ab3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a_flat, -27 - 21),
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -419,11 +419,11 @@ commands(
     baca.clef("tenor"),
     baca.pitch(
         "Ab3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a_flat, -19 - 21),
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -480,11 +480,11 @@ commands(
     baca.clef("tenor"),
     baca.pitch(
         "Ab3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a_flat, -18 - 21),
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -554,12 +554,12 @@ commands(
     baca.pitch(
         "Ab3",
         do_not_transpose=True,
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a_flat, -32 - 21),
         do_not_transpose=True,
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "ff-p",
@@ -723,7 +723,7 @@ commands(
     baca.hairpin(
         "pp p mp mf f",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -732,7 +732,7 @@ commands(
     baca.hairpin(
         "mf mp p pp pp pp",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -741,7 +741,7 @@ commands(
     baca.hairpin(
         'pp p mp mf "f"',
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -750,7 +750,7 @@ commands(
     baca.hairpin(
         'p mp mf "f"',
         bookend=False,
-        pieces=baca.selectors.plts((1, None)),
+        pieces=lambda _: baca.select.plts(_)[1:],
     ),
 )
 
@@ -759,7 +759,7 @@ commands(
     baca.hairpin(
         "mf mp p pp pp pp",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 

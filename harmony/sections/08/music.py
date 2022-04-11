@@ -262,7 +262,7 @@ commands(
     ("va", (1, 9)),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.selectors.plts(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
     ),
     baca.dls_staff_padding(4),
 )
@@ -330,7 +330,7 @@ commands(
     ("vc1", (2, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        baca.selectors.plts(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -415,7 +415,7 @@ commands(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.selectors.plts(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
     ),
 )
 
@@ -478,7 +478,7 @@ commands(
     ("cb1", (4, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        baca.selectors.plts(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
         do_not_transpose=True,
     ),
 )
@@ -547,7 +547,7 @@ commands(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        baca.selectors.plts(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
         do_not_transpose=True,
     ),
 )

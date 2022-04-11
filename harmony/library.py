@@ -300,29 +300,52 @@ def appoggiato(
             )
             return divisions
 
+    def make_plt_selector(rest_from, rest_to):
+        def selector(argument):
+            result = baca.select.plts(argument, grace=False)
+            result = result[rest_from:rest_to]
+            return result
+
+        return selector
+
+    def make_single_plt_selector(rest_after):
+        def selector(argument):
+            result = baca.select.plts(argument, grace=False)
+            result = abjad.select.get(result, rest_after)
+            return result
+
+        return selector
+
+    def select_nongrace_plts(argument):
+        return baca.select.plts(argument, grace=False)
+
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
     commands = []
     if rest_to:
-        selector = baca.selectors.plts((None, rest_to), grace=False)
+        # selector = baca.selectors.plts((None, rest_to), grace=False)
+        selector = make_plt_selector(None, rest_to)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if rest_from is not None:
-        selector = baca.selectors.plts((-rest_from, None), grace=False)
+        # selector = baca.selectors.plts((-rest_from, None), grace=False)
+        selector = make_plt_selector(-rest_from, None)
         force_rest_ = rmakers.force_rest(selector)
         commands.append(force_rest_)
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
-            counts, baca.selectors.plts(), leaf_duration=(1, 20)
+            counts, lambda _: baca.select.plts(_), leaf_duration=(1, 20)
         )
         commands.append(on_beat_)
     if rest_after is True:
-        selector = baca.selectors.plts(grace=False)
+        # selector = lambda _: baca.select.plts(_, grace=False)
+        selector = select_nongrace_plts
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     elif rest_after is not None:
-        selector = baca.selectors.plts(rest_after, grace=False)
+        # selector = baca.selectors.plts(rest_after, grace=False)
+        selector = make_single_plt_selector(rest_after)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if tie is not None:
@@ -706,6 +729,15 @@ def tessera_1(part, *, advance=0, gap=False):
 def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
+
+    def make_plt_selector(rest_plts):
+        def selector(argument):
+            result = baca.select.plts(argument)
+            result = abjad.select.get(result, rest_plts)
+            return result
+
+        return selector
+
     assert sum(counts) == 44
     for i in range(part):
         counts = abjad.sequence.permute(counts, permutation)
@@ -716,7 +748,8 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
         counts = list(new_counts)
     commands = []
     if rest_plts is not None:
-        selector = baca.selectors.plts(rest_plts)
+        # selector = baca.selectors.plts(rest_plts)
+        selector = make_plt_selector(rest_plts)
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(

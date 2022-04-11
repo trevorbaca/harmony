@@ -88,7 +88,7 @@ commands(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 
@@ -363,7 +363,7 @@ commands(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(4),
 )
@@ -561,7 +561,7 @@ commands(
     baca.hairpin(
         "p mp",
         bookend=False,
-        pieces=baca.selectors.plts((1, None)),
+        pieces=lambda _: baca.select.plts(_)[1:],
     ),
 )
 
@@ -739,7 +739,7 @@ commands(
     baca.hairpin(
         "pp ppp",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -760,11 +760,11 @@ commands(
     baca.hairpin(
         "pp p mp",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.plts((None, -1)),
+        lambda _: baca.select.plts(_)[:-1],
     ),
     baca.pizzicato_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -871,7 +871,7 @@ commands(
     baca.hairpin(
         "pp p",
         bookend=False,
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.pizzicato_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),

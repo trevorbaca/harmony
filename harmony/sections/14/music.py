@@ -465,7 +465,7 @@ commands(
     baca.hairpin(
         # '"ff" "ff" "ff" "f" "f" mf mp p pp',
         '"ff" "ff" "f" "f" mf mp p pp',
-        pieces=baca.selectors.plts((1, None)),
+        pieces=lambda _: baca.select.plts(_)[1:],
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -734,7 +734,7 @@ commands(
     ),
     baca.hairpin(
         '"ff" "ff"',
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -808,7 +808,7 @@ commands(
     ),
     baca.hairpin(
         '"ff" "ff" "f" "f" mf mp p',
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -871,7 +871,7 @@ commands(
     ),
     baca.hairpin(
         '"ff" "ff"',
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
     baca.dls_staff_padding(6),
 )
@@ -935,7 +935,7 @@ commands(
     ),
     baca.hairpin(
         '"ff" "ff" "f" mf mp p pp',
-        pieces=baca.selectors.plts(),
+        pieces=lambda _: baca.select.plts(_),
     ),
 )
 

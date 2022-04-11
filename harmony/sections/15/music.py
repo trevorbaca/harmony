@@ -132,7 +132,7 @@ commands(
     ),
     baca.pitch(
         "F#5",
-        baca.selectors.plts((1, None)),
+        lambda _: baca.select.plts(_)[1:],
     ),
     baca.accent(),
     baca.dynamic("mf"),

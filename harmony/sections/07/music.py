@@ -636,11 +636,11 @@ commands(
     ("va", (1, 2)),
     baca.pitch(
         "Bb3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         library.appoggiato_pitches_b_flat,
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -712,11 +712,11 @@ commands(
     ("va", (4, 6)),
     baca.pitch(
         "Bb3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5),
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -812,11 +812,11 @@ commands(
     ),
     baca.pitch(
         "Bb3",
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5 - 1),
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "mp-pp",
@@ -1025,12 +1025,12 @@ commands(
     baca.pitch(
         "Bb3",
         do_not_transpose=True,
-        selector=baca.selectors.plts(grace=False),
+        selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -5 - 2),
         do_not_transpose=True,
-        selector=baca.selectors.plts(grace=True),
+        selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
         "mp-pp",
