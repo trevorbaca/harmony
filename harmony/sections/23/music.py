@@ -119,7 +119,7 @@ commands(
     ),
     baca.pitch("<B3 Dqf4>"),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("mp"),
 )
@@ -181,7 +181,7 @@ commands(
     baca.make_notes(),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -224,7 +224,7 @@ commands(
     ),
     baca.pitch(
         "E4",
-        baca.selectors.plt(0),
+        lambda _: baca.select.plt(_, 0),
     ),
     baca.laissez_vibrer(),
     baca.dynamic(
@@ -262,10 +262,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -323,7 +323,7 @@ commands(
     ),
     baca.pitch("E3"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("ff"),
     baca.scp_spanner(
@@ -347,7 +347,7 @@ commands(
     ),
     baca.pitch("E3"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -399,7 +399,7 @@ commands(
     ),
     baca.pitch("E2"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("ff"),
     baca.scp_spanner(
@@ -425,7 +425,7 @@ commands(
     baca.clef("bass"),
     baca.pitch("E2"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -455,7 +455,7 @@ commands(
     baca.tuplet_bracket_down(),
     baca.pitch("E2"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -568,7 +568,7 @@ commands(
     ),
     baca.pitch("E1"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("ff"),
     baca.scp_spanner(
@@ -612,7 +612,7 @@ commands(
     baca.tuplet_bracket_down(),
     baca.pitch("E1"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.metric_modulation_spanner(
@@ -714,7 +714,7 @@ commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
     baca.make_notes(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )
@@ -725,10 +725,10 @@ commands(
     baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),

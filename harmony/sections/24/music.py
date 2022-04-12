@@ -76,7 +76,7 @@ commands(
     baca.pitch("F5"),
     baca.hairpin(
         "niente o< mf >o",
-        pieces=baca.selectors.lparts([1, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
@@ -86,7 +86,7 @@ commands(
     baca.text_spanner(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 9"),
-        pieces=baca.selectors.lparts([1, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
 )
@@ -100,7 +100,7 @@ commands(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
@@ -110,7 +110,7 @@ commands(
     baca.text_spanner(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 10"),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
 )
@@ -140,7 +140,7 @@ commands(
     baca.make_notes(),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -247,7 +247,7 @@ commands(
     baca.new(
         baca.dynamic("ff"),
         baca.dls_staff_padding(5),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
     baca.staff_lines(
         3,
@@ -394,7 +394,7 @@ commands(
         baca.pitch("F4"),
         baca.hairpin(
             "niente o<| mp |>o",
-            pieces=baca.selectors.lparts([1, 1 + 1]),
+            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -537,7 +537,7 @@ commands(
         ),
         baca.hairpin(
             "niente o<| mp |>o",
-            pieces=baca.selectors.lparts([1, 1 + 1]),
+            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -658,7 +658,7 @@ commands(
     ),
     baca.hairpin(
         "niente o<| mp |>o",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
 )
@@ -692,11 +692,11 @@ commands(
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.chunk(
         baca.accent(
-            baca.selectors.pheads(),
+            lambda _: baca.select.pheads(_),
         ),
         baca.flat_glissando(),
     ),

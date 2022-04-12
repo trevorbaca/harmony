@@ -150,7 +150,7 @@ commands(
     ),
     baca.pitch("E3"),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -168,15 +168,15 @@ commands(
     ),
     # TODO: promote to library.sixteenths():
     baca.repeat_tie(
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.selectors.lparts([1, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -391,14 +391,14 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         '"ff"',
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
     baca.markup(
         r"\baca-slate-brush-markup",
@@ -453,10 +453,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         '"ff"',
@@ -551,11 +551,11 @@ commands(
     baca.clef("bass"),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
@@ -727,10 +727,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         '"ff" "ff"',
@@ -801,10 +801,10 @@ commands(
     baca.tuplet_bracket_staff_padding(3),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         '"ff" "ff" "f" "f" mf mp p',
@@ -864,10 +864,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         '"ff" "ff"',
@@ -913,10 +913,10 @@ commands(
         selector=baca.selectors.leaf(1),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic('"ff"'),
 )
@@ -928,10 +928,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         '"ff" "ff" "f" mf mp p pp',

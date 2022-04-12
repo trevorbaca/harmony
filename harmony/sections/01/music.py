@@ -322,10 +322,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("sfp"),
     baca.dls_staff_padding(6),
@@ -349,7 +349,7 @@ commands(
     baca.tuplet_bracket_down(),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.selectors.lparts([4, 5]),
+        pieces=lambda _: baca.select.lparts(_, [4, 5]),
         selector=lambda _: baca.rleaves(_, count=2),
     ),
     baca.scp_spanner(
@@ -378,7 +378,7 @@ commands(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("sfp"),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -467,14 +467,14 @@ commands(
     ),
     baca.pitch("A1"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.selectors.lparts([4, 7]),
+        pieces=lambda _: baca.select.lparts(_, [4, 7]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.dls_staff_padding(4),
@@ -496,10 +496,10 @@ commands(
     baca.tuplet_number_text(r"\markup 5:4"),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("sfp"),
     baca.dls_staff_padding(6),

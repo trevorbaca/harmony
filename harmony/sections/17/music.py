@@ -721,20 +721,20 @@ commands(
         baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 2, 1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )
@@ -761,7 +761,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], [1, 5]),
-    baca.triple_staccato(baca.selectors.pheads()),
+    baca.triple_staccato(lambda _: baca.select.pheads(_)),
 )
 
 if __name__ == "__main__":

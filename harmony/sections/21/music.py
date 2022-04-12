@@ -97,7 +97,7 @@ commands(
     baca.hairpin(
         "o< f >o niente",
         map=lambda _: baca.select.runs(_),
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
@@ -122,7 +122,7 @@ commands(
         match=[0],
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
 )
@@ -205,7 +205,7 @@ commands(
     baca.tuplet_bracket_down(),
     baca.new(
         library.bass_drum_staff_position(),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
     baca.laissez_vibrer(),
     baca.dynamic("mp"),
@@ -220,7 +220,7 @@ commands(
             r"\baca-brake-drum-paper-towel-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         ),
-        selector=baca.selectors.pleaf(1),
+        selector=lambda _: baca.select.pleaf(_, 1),
     ),
 )
 
@@ -263,7 +263,7 @@ commands(
     baca.tuplet_bracket_up(),
     baca.pitch(
         "E4",
-        baca.selectors.plt(0),
+        lambda _: baca.select.plt(_, 0),
     ),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -286,7 +286,7 @@ commands(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         ),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -340,10 +340,10 @@ commands(
     ),
     library.bass_drum_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(6),
@@ -400,7 +400,7 @@ commands(
     baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -451,7 +451,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -471,7 +471,7 @@ commands(
         extra_counts=[1],
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -510,7 +510,7 @@ commands(
     baca.clef("bass"),
     baca.pitch("E2"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -530,7 +530,7 @@ commands(
         [3, 7, 4, 6],
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -566,7 +566,7 @@ commands(
         [7, 4, 6, 3],
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -601,7 +601,7 @@ commands(
     baca.clef("bass"),
     baca.pitch("E1"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
     baca.scp_spanner(
@@ -621,7 +621,7 @@ commands(
         [4, 6, 3, 7],
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(
@@ -677,7 +677,7 @@ commands(
         [6, 3, 7, 4],
     ),
     baca.espressivo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.bow_speed_spanner(

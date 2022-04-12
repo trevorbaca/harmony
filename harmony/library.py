@@ -363,7 +363,10 @@ def appoggiato(
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if after_graces is not None:
-        selector = baca.selectors.pleaf(-1)
+
+        def selector(argument):
+            return baca.select.pleaf(argument, -1)
+
         beam_and_slash = None
         if after_graces != [1]:
             beam_and_slash = True

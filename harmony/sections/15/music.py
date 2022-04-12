@@ -66,7 +66,7 @@ commands(
     ),
     baca.pitch("E3"),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -87,7 +87,7 @@ commands(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mp >o !",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )
@@ -104,7 +104,7 @@ commands(
     ),
     baca.hairpin(
         'o< "f" >o niente',
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
@@ -112,12 +112,12 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.clparts([2]),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        map=lambda _: baca.select.clparts(_, [2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.breathe(
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
 )
 
@@ -128,7 +128,7 @@ commands(
     ),
     baca.pitch(
         "E3",
-        baca.selectors.plt(0),
+        lambda _: baca.select.plt(_, 0),
     ),
     baca.pitch(
         "F#5",
@@ -343,7 +343,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("f"),
 )
@@ -490,7 +490,7 @@ commands(
     ),
     baca.pitch("F3"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "f-ancora",
@@ -571,7 +571,7 @@ commands(
         abjad.Tweak(r"- \tweak X-offset 3"),
     ),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "f-ancora",
@@ -648,7 +648,7 @@ commands(
     ),
     baca.pitch("Eb2"),
     baca.triple_staccato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "f-ancora",
@@ -700,10 +700,10 @@ commands(
         [4],
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
 )

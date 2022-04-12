@@ -574,7 +574,7 @@ commands(
     baca.flat_glissando(),
     baca.hairpin(
         'o< "mf" >o niente',
-        pieces=baca.selectors.lparts([1, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
@@ -937,7 +937,7 @@ commands(
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.selectors.lparts([2, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 2 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.scp_spanner(
@@ -958,7 +958,7 @@ commands(
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.selectors.lparts([2, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 2 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.scp_spanner(
@@ -979,7 +979,7 @@ commands(
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.selectors.lparts([2, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.scp_spanner(
@@ -997,10 +997,10 @@ commands(
     ("cb1", (9, 11)),
     baca.pitch("E5", do_not_transpose=True),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -1028,12 +1028,12 @@ commands(
         invisible_pairs=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=lambda _: baca.select.tleaves(
             _,
         ),
@@ -1139,7 +1139,7 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.selectors.lparts([2, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
@@ -1161,7 +1161,7 @@ commands(
     ),
     baca.hairpin(
         "o< f >o niente",
-        pieces=baca.selectors.lparts([2, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
@@ -1181,20 +1181,20 @@ commands(
         baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 2, 1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -1210,7 +1210,7 @@ commands(
     ),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
@@ -1231,7 +1231,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 6),
-    baca.triple_staccato(baca.selectors.pheads()),
+    baca.triple_staccato(lambda _: baca.select.pheads(_)),
     baca.hairpin(
         "p < f",
         selector=lambda _: baca.select.tleaves(
@@ -1267,7 +1267,7 @@ commands(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=lambda _: baca.select.tleaves(
             _,
         ),

@@ -446,10 +446,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -568,7 +568,7 @@ commands(
     baca.ottava(),
     baca.ottava_bracket_staff_padding(5.5),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "pp-sempre",
@@ -591,7 +591,7 @@ commands(
     baca.ottava(),
     baca.ottava_bracket_staff_padding(5.5),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(4 + 2),
@@ -640,11 +640,11 @@ commands(
     ),
     baca.tuplet_bracket_up(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=lambda _: baca.select.tleaves(
             _,
         ),
@@ -836,7 +836,7 @@ commands(
     baca.hairpin(
         "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 2, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     # TODO: text spanner currently must precede pitched trill spanner; fix
@@ -896,10 +896,10 @@ commands(
     ("cb2", (11, 13)),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -926,20 +926,20 @@ commands(
         baca.selectors.pleaves(([1], 2)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 1, 2, 1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 2, 1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.dynamic_text_x_offset(
         -3,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.dynamic_text_x_offset(
         -0.25,
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )
@@ -953,7 +953,7 @@ commands(
     baca.flat_glissando(),
     baca.hairpin(
         "o< mp >o niente",
-        pieces=baca.selectors.lparts([2, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
@@ -983,7 +983,7 @@ commands(
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 9)),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< fff-scratch",
@@ -999,7 +999,7 @@ commands(
         force_augmentation=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "fff-scratch",
@@ -1019,10 +1019,10 @@ commands(
     baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
 )
@@ -1033,10 +1033,10 @@ commands(
     baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
 )

@@ -107,7 +107,7 @@ commands(
     baca.hairpin(
         "pp < p >o",
         bookend=False,
-        pieces=baca.selectors.lparts([1, 3]),
+        pieces=lambda _: baca.select.lparts(_, [1, 3]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
@@ -116,7 +116,7 @@ commands(
     baca.text_spanner(
         "(T) -> A -> (T)",
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
     ),
 )
 
@@ -129,7 +129,7 @@ commands(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
@@ -139,7 +139,7 @@ commands(
     baca.text_spanner(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 10"),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
 )
@@ -232,7 +232,7 @@ commands(
     library.slate_staff_position(),
     baca.dynamic(
         "p",
-        selector=baca.selectors.pleaf(1),
+        selector=lambda _: baca.select.pleaf(_, 1),
     ),
 )
 
@@ -274,7 +274,7 @@ commands(
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         ),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
     baca.new(
         library.slate_staff_position(),
@@ -282,12 +282,12 @@ commands(
     ),
     baca.dynamic(
         '"ff"',
-        selector=baca.selectors.pleaf(1),
+        selector=lambda _: baca.select.pleaf(_, 1),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-        selector=baca.selectors.pleaf(1),
+        selector=lambda _: baca.select.pleaf(_, 1),
     ),
 )
 
@@ -326,7 +326,7 @@ commands(
     baca.laissez_vibrer(),
     baca.dynamic(
         "mp",
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
     baca.markup(
         r"\baca-bd-struck-markup",
@@ -354,7 +354,7 @@ commands(
     library.tam_tam_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -370,10 +370,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "f >o niente",
@@ -428,13 +428,13 @@ commands(
     ),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("f"),
     baca.markup(
         r"\baca-lv-markup",
         abjad.Tweak(r"- \tweak padding 1.5"),
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -447,13 +447,13 @@ commands(
     ),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("f-ancora"),
     baca.markup(
         r"\baca-lv-markup",
         abjad.Tweak(r"- \tweak padding 1.5"),
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -476,7 +476,7 @@ commands(
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
 )
 
@@ -511,14 +511,14 @@ commands(
     ),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
     baca.markup(
         r"\baca-lv-markup",
         abjad.Tweak(r"- \tweak padding 1.5"),
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -633,7 +633,7 @@ commands(
         "pp -- ! < mp -- ! >",
         abjad.Tweak(r"- \tweak to-barline ##t"),
         bookend=False,
-        pieces=baca.selectors.lparts([1, 2, 3, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2, 3, 2]),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -683,7 +683,7 @@ commands(
         "pp -- ! < mp >",
         abjad.Tweak(r"- \tweak to-barline ##t"),
         bookend=False,
-        pieces=baca.selectors.lparts([2, 3, 2]),
+        pieces=lambda _: baca.select.lparts(_, [2, 3, 2]),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -729,7 +729,7 @@ commands(
     baca.hairpin(
         "pp -- ! < mp >",
         abjad.Tweak(r"- \tweak to-barline ##t"),
-        pieces=baca.selectors.lparts([2, 1, 1]),
+        pieces=lambda _: baca.select.lparts(_, [2, 1, 1]),
     ),
     baca.untie(
         baca.selectors.leaves(),
@@ -767,7 +767,7 @@ commands(
     ),
     baca.hairpin(
         "pp < p > pp",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
     ),
     baca.new(
         baca.clef("treble"),
@@ -793,7 +793,7 @@ commands(
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
         baca.selectors.pheads((1, None)),

@@ -145,7 +145,7 @@ commands(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -178,24 +178,24 @@ commands(
     ),
     baca.pitch("<B5 C6 D6>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "p < mf > p",
         measures=1,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=3,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < ff > p",
         measures=5,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -209,7 +209,7 @@ commands(
     baca.make_notes(),
     baca.pitch("<C6 Db6 Eb6>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
 )
@@ -231,25 +231,25 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
     ),
     baca.dynamic("p"),
     baca.hairpin(
         "(p) < mf > p",
         measures=2,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -300,24 +300,24 @@ commands(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
     ),
     baca.hairpin(
         "p < mf > p",
         measures=2,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -386,7 +386,7 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -395,13 +395,13 @@ commands(
     baca.hairpin(
         "(p) < f > p",
         measures=4,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -454,18 +454,18 @@ commands(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
     ),
     baca.hairpin(
         "p < f > p",
         measures=4,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -524,7 +524,7 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -533,7 +533,7 @@ commands(
     baca.hairpin(
         "(p) < ff >o niente",
         measures=6,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -564,7 +564,7 @@ commands(
     baca.make_notes(),
     baca.note_head_style_harmonic(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
