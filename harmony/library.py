@@ -345,11 +345,21 @@ def appoggiato(
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if tie is not None:
-        selector = baca.selectors.pleaves(tie)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, tie)
+            return result
+
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if written_quarters is not None:
-        selector = baca.selectors.pleaves(written_quarters)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_quarters)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 4),
             selector,
@@ -359,7 +369,12 @@ def appoggiato(
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if invisible is not None:
-        selector = baca.selectors.pleaves(invisible)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, invisible)
+            return result
+
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if after_graces is not None:
@@ -452,7 +467,12 @@ def phjc(
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     if rest_pleaves is not None:
-        selector = baca.selectors.pleaves(rest_pleaves)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, rest_pleaves)
+            return result
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(
@@ -553,7 +573,11 @@ def sixteenths(
         )
         commands.append(rewrite_)
     if written_eighths is True:
-        selector = baca.selectors.pleaves()
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 8),
             selector,
@@ -562,7 +586,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_eighths is not None:
-        selector = baca.selectors.pleaves(written_eighths)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_eighths)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 8),
             selector,
@@ -571,7 +600,11 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_quarters is True:
-        selector = baca.selectors.pleaves()
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 4),
             selector,
@@ -580,7 +613,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_quarters is not None:
-        selector = baca.selectors.pleaves(written_quarters)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_quarters)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 4),
             selector,
@@ -589,7 +627,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_quarters is not None:
-        selector = baca.selectors.pleaves(written_dotted_quarters)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_dotted_quarters)
+            return result
+
         written_ = rmakers.written_duration(
             (3, 8),
             selector,
@@ -598,7 +641,11 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_halves is True:
-        selector = baca.selectors.pleaves()
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 2),
             selector,
@@ -607,7 +654,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     elif written_halves is not None:
-        selector = baca.selectors.pleaves(written_halves)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_halves)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 2),
             selector,
@@ -616,7 +668,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_halves is not None:
-        selector = baca.selectors.pleaves(written_dotted_halves)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_dotted_halves)
+            return result
+
         written_ = rmakers.written_duration(
             (3, 4),
             selector,
@@ -625,7 +682,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_wholes is not None:
-        selector = baca.selectors.pleaves(written_wholes)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_wholes)
+            return result
+
         written_ = rmakers.written_duration(
             (1, 1),
             selector,
@@ -634,7 +696,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_dotted_wholes is not None:
-        selector = baca.selectors.pleaves(written_dotted_wholes)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_dotted_wholes)
+            return result
+
         written_ = rmakers.written_duration(
             (3, 2),
             selector,
@@ -643,7 +710,12 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if written_double_dotted_wholes is not None:
-        selector = baca.selectors.pleaves(written_double_dotted_wholes)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, written_double_dotted_wholes)
+            return result
+
         written_ = rmakers.written_duration(
             (7, 4),
             selector,
@@ -652,19 +724,38 @@ def sixteenths(
         unbeam_ = rmakers.unbeam()
         commands.append(unbeam_)
     if invisible_pairs is True:
-        selector = baca.selectors.pleaves(([1], 2))
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, ([1], 2))
+            return result
+
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if invisible is not None:
-        selector = baca.selectors.pleaves(invisible)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, invisible)
+            return result
+
         invisible_ = rmakers.invisible_music(selector)
         commands.append(invisible_)
     if tie is not None:
-        selector = baca.selectors.pleaves(tie)
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)
+            result = abjad.select.get(result, tie)
+            return result
+
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if tie_all is True:
-        selector = baca.selectors.pleaves((1, None))
+
+        def selector(argument):
+            result = baca.select.pleaves(argument)[1:]
+            return result
+
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if tie_runs is True:
@@ -672,11 +763,17 @@ def sixteenths(
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if untie is True:
-        selector = lambda _: baca.select.leaves(_)
+
+        def selector(argument):
+            return baca.select.leaves(argument)
+
         untie_ = rmakers.untie(selector)
         commands.append(untie_)
     if unbeam is True:
-        selector = lambda _: baca.select.leaves(_)
+
+        def selector(argument):
+            return baca.select.leaves(argument)
+
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if after_graces:
