@@ -104,15 +104,15 @@ commands(
     ),
     # TODO: promote into library.sixteenths():
     baca.repeat_tie(
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.selectors.lparts([1, 2 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.metric_modulation_spanner(
@@ -131,11 +131,11 @@ commands(
     ),
     baca.pitch("B4"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o<| f |>o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
 )
@@ -156,7 +156,7 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.pleaf(0, grace=False),
+        selector=lambda _: baca.select.pleaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -180,11 +180,11 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 8"),
     ),
     baca.breathe(
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.hairpin(
         'o< "f" >o niente',
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.text_spanner(
@@ -192,8 +192,8 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.clparts([2]),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        map=lambda _: baca.select.clparts(_, [2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )
@@ -256,7 +256,7 @@ commands(
     baca.make_notes(),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "p-ancora",
@@ -353,13 +353,13 @@ commands(
             r"\baca-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         ),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
     baca.new(
         library.bass_drum_staff_position(),
         baca.flat_glissando(),
         baca.stem_tremolo(),
-        selector=baca.selectors.plt(0),
+        selector=lambda _: baca.select.plt(_, 0),
     ),
     baca.new(
         library.brake_drum_staff_position(),
@@ -369,7 +369,7 @@ commands(
             abjad.Tweak(r"- \tweak self-alignment-X 0.5"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
         ),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -417,11 +417,11 @@ commands(
     ),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
@@ -441,7 +441,7 @@ commands(
         lambda _: baca.select.plts(_)[:-1],
     ),
     baca.flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_)[:-1],
@@ -470,7 +470,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -499,10 +499,10 @@ commands(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -571,10 +571,10 @@ commands(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -624,7 +624,7 @@ commands(
         baca.hairpin(
             "(mp) >o niente",
         ),
-        selector=baca.selectors.plt(0),
+        selector=lambda _: baca.select.plt(_, 0),
     ),
     baca.scp_spanner(
         "T1 =|",
@@ -667,7 +667,7 @@ commands(
     ),
     baca.dynamic(
         "mp",
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -723,10 +723,10 @@ commands(
         suffix_counts=[1, 0, 0],
     ),
     baca.repeat_tie(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.hairpin(
         "mp >o niente",
@@ -776,7 +776,7 @@ commands(
         baca.hairpin(
             "(mp) >o niente",
         ),
-        selector=baca.selectors.plt(0),
+        selector=lambda _: baca.select.plt(_, 0),
     ),
     baca.scp_spanner(
         "T4 =|",
@@ -819,7 +819,7 @@ commands(
     ),
     baca.dynamic(
         "mp",
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -885,10 +885,10 @@ commands(
         [4],
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 

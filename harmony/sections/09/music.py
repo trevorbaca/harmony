@@ -103,10 +103,10 @@ commands(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic('"f"'),
     baca.markup(
@@ -121,13 +121,13 @@ commands(
         [2, -2, -4, -4, 2, -2, 2, -2, -4],
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -161,17 +161,17 @@ commands(
         selector=baca.selectors.pleaves((-1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
     baca.markup(
         r"\baca-bd-fingertips-markup",
         abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
         abjad.Tweak(r"- \tweak staff-padding 6"),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
 )
 
@@ -349,7 +349,7 @@ commands(
     baca.markup(
         r"\baca-string-iii-markup",
         direction=abjad.DOWN,
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
     baca.markup(
         r"\baca-thirteen-a",

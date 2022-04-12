@@ -109,8 +109,8 @@ commands(
     ),
     baca.hairpin(
         "p <| mf |> p",
-        map=baca.selectors.clparts([3]),
-        pieces=baca.selectors.clparts([1]),
+        map=lambda _: baca.select.clparts(_, [3]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.dls_staff_padding(3),
 )
@@ -181,27 +181,27 @@ commands(
     ),
     baca.hairpin(
         "p <| mp |> p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=8,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "p <| mf |> p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=9,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "p <| f |> p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=10,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "p <| ff |> p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=11,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.dls_staff_padding(3),
 )
@@ -236,7 +236,7 @@ commands(
         baca.markup(
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
-            selector=baca.selectors.pleaf(0, grace=False),
+            selector=lambda _: baca.select.pleaf(_, 0, grace=False),
         ),
         measures=5,
     ),
@@ -467,19 +467,19 @@ commands(
     ),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "p < f > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=1,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "(p) < f > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=(2, 5),
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -529,31 +529,31 @@ commands(
     ),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "p < mp > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=8,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "(p) < mf > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=9,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "(p) < f > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=10,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.hairpin(
         "(p) < ff > p",
-        map=baca.selectors.clparts([3]),
+        map=lambda _: baca.select.clparts(_, [3]),
         measures=11,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -629,10 +629,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic('"ff"'),
     baca.dls_staff_padding(6),
@@ -723,7 +723,7 @@ commands(
         r" \times 5/3 { c4 c4 c4 }",
     ),
     baca.repeat_tie(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
     baca.tuplet_bracket_down(),
 )
@@ -770,7 +770,7 @@ commands(
         baca.stem_tremolo(),
         baca.dynamic('"ff"'),
         baca.dls_staff_padding(6),
-        selector=baca.selectors.pleaf(1),
+        selector=lambda _: baca.select.pleaf(_, 1),
     ),
 )
 
@@ -844,7 +844,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -976,10 +976,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1033,10 +1033,10 @@ commands(
     ),
     baca.pitch("A1"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "f >o niente",
@@ -1060,10 +1060,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic('"ff"'),
     baca.dls_staff_padding(6),
@@ -1132,7 +1132,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "mf >o niente",

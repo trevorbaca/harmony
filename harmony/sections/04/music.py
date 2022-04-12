@@ -109,8 +109,8 @@ commands(
     ),
     baca.hairpin(
         "o<| ff |> p",
-        map=baca.selectors.clparts([3]),
-        pieces=baca.selectors.clparts([1]),
+        map=lambda _: baca.select.clparts(_, [3]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
 )
 
@@ -286,12 +286,12 @@ commands(
     ),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "p < ff > p",
-        map=baca.selectors.clparts([3]),
-        pieces=baca.selectors.clparts([1]),
+        map=lambda _: baca.select.clparts(_, [3]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
     ),
     baca.markup(
         r"\baca-bisb-markup",
@@ -646,7 +646,7 @@ commands(
         force_augmentation=True,
     ),
     baca.repeat_tie(
-        baca.selectors.pleaf(0),
+        lambda _: baca.select.pleaf(_, 0),
     ),
 )
 
@@ -656,7 +656,7 @@ commands(
     baca.pitch("Ab1"),
     baca.hairpin(
         'o< "mf" >o niente',
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.scp_spanner(
@@ -707,14 +707,14 @@ commands(
 commands(
     (["bfl", "hp", "va", "vc1", "vc2", "cb1"], [(1, 6), 8, 11]),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 
 commands(
     ("cb2", (1, 6)),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 

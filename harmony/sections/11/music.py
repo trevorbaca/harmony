@@ -118,7 +118,7 @@ commands(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -162,15 +162,15 @@ commands(
         [4, 8],
     ),
     baca.breathe(
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.text_spanner(
         "T -> A =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.clparts([2]),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        map=lambda _: baca.select.clparts(_, [2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )
@@ -194,8 +194,8 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=True,
         bookend=False,
-        map=baca.selectors.clparts([4]),
-        pieces=baca.selectors.lparts([2, 2 + 1]),
+        map=lambda _: baca.select.clparts(_, [4]),
+        pieces=lambda _: baca.select.lparts(_, [2, 2 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
 )
@@ -205,7 +205,7 @@ commands(
     baca.pitch("Dtqf5"),
     baca.hairpin(
         'o< "f" >o niente o< "f" >o niente',
-        pieces=baca.selectors.lparts([1, 1, 2, 3]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 2, 3]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -226,7 +226,7 @@ commands(
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.new(
@@ -273,11 +273,11 @@ commands(
     ),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< p >o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
@@ -296,16 +296,16 @@ commands(
     library.triangle_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< p > pp",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "pp < mp > pp",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=baca.selectors.leaves((5, 8)),
     ),
 )
@@ -317,10 +317,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         '"f"',
@@ -376,12 +376,12 @@ commands(
         selector=baca.selectors.leaves((None, -1)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "o< p > pp pp < p > pp < p >o niente",
         abjad.Tweak(r"- \tweak staff-padding 10"),
-        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.markup(
@@ -407,7 +407,7 @@ commands(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaf(-1),
+        lambda _: baca.select.pleaf(_, -1),
     ),
     baca.hairpin(
         "(p) >o niente",
@@ -586,7 +586,7 @@ commands(
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
     baca.new(
         baca.pitch("E4"),
@@ -606,7 +606,7 @@ commands(
     ),
     baca.pitch("E4"),
     baca.snap_pizzicato(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -637,13 +637,13 @@ commands(
     library.whisk_staff_position(),
     baca.hairpin(
         'o< "f" >o niente',
-        pieces=baca.selectors.lparts([1, 3]),
+        pieces=lambda _: baca.select.lparts(_, [1, 3]),
         selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.dls_staff_padding(6),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.markup(
         r"\baca-whisk-markup",
@@ -761,12 +761,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
@@ -929,12 +929,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 2]),
+        pieces=lambda _: baca.select.lparts(_, [1, 2]),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
     ),
     baca.dynamic_text_x_offset(
         -1.5,
-        baca.selectors.pleaf(1),
+        lambda _: baca.select.pleaf(_, 1),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
@@ -1080,7 +1080,7 @@ commands(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
     baca.trill_spanner(),
@@ -1097,12 +1097,12 @@ commands(
     baca.note_head_style_harmonic(),
     baca.hairpin(
         "o<| p |> pp",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=baca.selectors.leaves((None, 3)),
     ),
     baca.hairpin(
         "pp <| mp |> pp",
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=baca.selectors.leaves((5, 8)),
     ),
     baca.trill_spanner(),
@@ -1112,10 +1112,10 @@ commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.tuplet_bracket_up(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "sfp",
@@ -1137,7 +1137,7 @@ commands(
     ),
     baca.hairpin(
         "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
-        pieces=baca.selectors.lparts([1, 1, 1, 1, 1, 1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1, 1, 1, 1, 1, 1 + 1]),
         right_broken=True,
         selector=lambda _: baca.select.tleaves(_, rleak=True),
     ),
@@ -1169,7 +1169,7 @@ commands(
         baca.selectors.phead(-1),
     ),
     baca.stem_tremolo(
-        baca.selectors.plt(-1),
+        lambda _: baca.select.plt(_, -1),
     ),
     baca.dynamic(
         "p",
@@ -1183,10 +1183,10 @@ commands(
         [4],
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
 )
 

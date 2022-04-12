@@ -215,7 +215,7 @@ commands(
     ),
     baca.dynamic(
         "pp",
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -254,7 +254,7 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
     baca.dls_staff_padding(4 + 3),
 )

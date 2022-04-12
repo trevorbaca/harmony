@@ -205,7 +205,7 @@ commands(
         selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
@@ -241,7 +241,7 @@ commands(
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 7"),
         ),
-        selector=baca.selectors.pleaf(-1),
+        selector=lambda _: baca.select.pleaf(_, -1),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -308,7 +308,7 @@ commands(
         selector=baca.selectors.pleaves((1, None), rleak=True),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(6),
@@ -358,7 +358,7 @@ commands(
     library.tessera_1(5),
     baca.pitch("C#4"),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "pp p",
@@ -574,7 +574,7 @@ commands(
     ),
     baca.dynamic(
         "mf",
-        selector=baca.selectors.pleaf(2),
+        selector=lambda _: baca.select.pleaf(_, 2),
     ),
     baca.tuplet_bracket_up(
         baca.selectors.leaves((3, None)),
@@ -600,7 +600,7 @@ commands(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.staff_positions(
         [2, 3, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 8],
@@ -689,7 +689,7 @@ commands(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.staff_positions(
         [2, -3, 0, -2, 4, -2, 1, -1, 5, -1, 2, 0, 6, 0, 4, 2, 3, 8],
@@ -731,10 +731,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "pp ppp",
@@ -755,7 +755,7 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "pp p mp",
@@ -786,7 +786,7 @@ commands(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.staff_positions(
         [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],
@@ -820,7 +820,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.lparts([2, 3]),
+        pieces=lambda _: baca.select.lparts(_, [2, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -866,7 +866,7 @@ commands(
     ),
     baca.note_head_style_harmonic(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "pp p",
@@ -890,7 +890,7 @@ commands(
     ),
     # TODO: promote into rhythm
     baca.untie(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.staff_positions(
         [9, 3, 6, 0, 2, 1, 4, -2, 0, -1, 2, -4, -2, -3, 0, -5, -4, -6],

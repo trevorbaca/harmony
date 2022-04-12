@@ -104,7 +104,7 @@ commands(
     baca.hairpin(
         "o< mp >o niente",
         map=lambda _: baca.select.runs(_),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
@@ -139,7 +139,7 @@ commands(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
@@ -183,12 +183,12 @@ commands(
     ),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "o< pp >o niente",
         map=lambda _: baca.select.runs(_),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -237,7 +237,7 @@ commands(
     baca.make_notes(),
     library.triangle_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -277,7 +277,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p-ancora"),
     baca.markup(
@@ -294,10 +294,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -313,7 +313,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.laissez_vibrer(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "p-sempre",
@@ -333,10 +333,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -359,7 +359,7 @@ commands(
     ),
     baca.pitch("D5"),
     baca.flageolet(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -382,7 +382,7 @@ commands(
         baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("p"),
 )
@@ -423,7 +423,7 @@ commands(
         baca.ottava_bassa(),
     ),
     baca.laissez_vibrer(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic(
         "p-sempre",
@@ -565,7 +565,7 @@ commands(
     baca.hairpin(
         "o< mp >o niente",
         map=lambda _: baca.select.runs(_),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.trill_spanner(
@@ -600,7 +600,7 @@ commands(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
@@ -775,7 +775,7 @@ commands(
     baca.hairpin(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.clparts([1]),
+        pieces=lambda _: baca.select.clparts(_, [1]),
         selector=baca.selectors.leaves(),
     ),
     baca.dynamic(
@@ -815,10 +815,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         "pp-ancora",
@@ -917,10 +917,10 @@ commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.new(
         baca.dynamic("pp"),
@@ -940,10 +940,10 @@ commands(
     baca.clef("percussion"),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),

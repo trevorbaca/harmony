@@ -377,7 +377,7 @@ commands(
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.pheads(),
+        selector=lambda _: baca.select.pheads(_),
     ),
 )
 
@@ -394,10 +394,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         '"ff"',
@@ -449,10 +449,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
@@ -476,7 +476,7 @@ commands(
     ),
     baca.tuplet_bracket_up(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.dynamic("mf"),
 )
@@ -722,7 +722,7 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic(
         '"ff"',
@@ -789,10 +789,10 @@ commands(
     ),
     library.bridge_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         '"ff" "f" mf mp p pp ppp ppp',
@@ -867,7 +867,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
-        pieces=baca.selectors.lparts([2, 3]),
+        pieces=lambda _: baca.select.lparts(_, [2, 3]),
         selector=baca.selectors.leaves(),
     ),
 )
@@ -912,7 +912,7 @@ commands(
 commands(
     (["bfl", "hp", "va", "vc2", "cb1", "cb2"], 2),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.hairpin(
         "pp p mp mf f",

@@ -144,7 +144,7 @@ commands(
     baca.hairpin(
         "niente o< p >o",
         forbid_al_niente_to_bar_line=True,
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.trill_spanner(
@@ -154,7 +154,7 @@ commands(
     baca.text_spanner(
         "A -> T -> A",
         abjad.Tweak(r"- \tweak staff-padding 10"),
-        pieces=baca.selectors.lparts([1, 1 + 1]),
+        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
     ),
 )
@@ -313,7 +313,7 @@ commands(
     library.tam_tam_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -329,10 +329,10 @@ commands(
     ),
     library.slate_staff_position(),
     baca.accent(
-        baca.selectors.pheads(),
+        lambda _: baca.select.pheads(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.hairpin(
         "f >o niente",
@@ -374,7 +374,7 @@ commands(
         r"\baca-slate-scrape-markup",
         abjad.Tweak(r"- \tweak self-alignment-X 0"),
         abjad.Tweak(r"- \tweak staff-padding 6"),
-        selector=baca.selectors.pleaf(2),
+        selector=lambda _: baca.select.pleaf(_, 2),
     ),
 )
 
@@ -421,7 +421,7 @@ commands(
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
-        selector=baca.selectors.pleaf(0),
+        selector=lambda _: baca.select.pleaf(_, 0),
     ),
 )
 
@@ -795,7 +795,7 @@ commands(
 commands(
     (["vc1", "vc2", "cb1", "cb2"], (1, 2)),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.dynamic("pp"),
     baca.markup(r"\baca-quasi-bisb-markup"),
@@ -810,7 +810,7 @@ commands(
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 3),
     baca.stem_tremolo(
-        baca.selectors.pleaves(),
+        lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
         baca.selectors.pheads((1, None)),
