@@ -221,7 +221,7 @@ commands(
             abjad.select.leaves(_), (4, 5)
         ),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
@@ -588,7 +588,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -608,7 +608,7 @@ commands(
     baca.tuplet_bracket_up(),
     baca.markup(
         r"\baca-quasi-bisb-markup",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -624,7 +624,7 @@ commands(
         abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -643,7 +643,7 @@ commands(
     ),
     baca.dynamic(
         "pp",
-        selector=baca.selectors.phead(0),
+        selector=lambda _: baca.select.phead(_, 0),
     ),
 )
 
@@ -686,7 +686,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -714,7 +714,7 @@ commands(
         pieces=lambda _: baca.select.plts(_),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -770,7 +770,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -799,7 +799,7 @@ commands(
         pieces=lambda _: baca.select.lparts(_, [1, 2, 3, 2]),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -860,7 +860,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -889,7 +889,7 @@ commands(
         pieces=lambda _: baca.select.lparts(_, [2, 3, 2]),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -969,7 +969,7 @@ commands(
     baca.dynamic("f"),
     baca.dynamic(
         "pp",
-        selector=baca.selectors.phead(2),
+        selector=lambda _: baca.select.phead(_, 2),
     ),
 )
 
@@ -1015,7 +1015,7 @@ commands(
         pieces=lambda _: baca.select.lparts(_, [2, 1, 1]),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(

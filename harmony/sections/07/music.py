@@ -499,7 +499,7 @@ commands(
     baca.dynamic('"f"'),
     baca.dynamic(
         "mf",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -621,7 +621,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -675,7 +675,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -794,7 +794,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3.5"),
         autodetect_right_padding=False,
         left_broken=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -821,7 +821,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1002,7 +1002,7 @@ commands(
         autodetect_right_padding=False,
         bookend=True,
         left_broken=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -1035,7 +1035,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1069,7 +1069,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -1149,7 +1149,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.lparts(_, [2, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

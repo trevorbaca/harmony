@@ -140,7 +140,7 @@ commands(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.dynamic(
         "niente",
@@ -481,7 +481,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -518,7 +518,7 @@ commands(
         pieces=lambda _: abjad.select.partition_by_ratio(
             abjad.select.leaves(_), (4, 3)
         ),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -538,7 +538,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -601,7 +601,7 @@ commands(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.dynamic(
         "niente",
@@ -656,7 +656,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -699,7 +699,7 @@ commands(
         pieces=lambda _: abjad.select.partition_by_ratio(
             abjad.select.leaves(_), (4, 3)
         ),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -719,7 +719,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -751,7 +751,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -776,7 +776,7 @@ commands(
         "niente o< mp >o",
         forbid_al_niente_to_bar_line=True,
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.dynamic(
         "niente",
@@ -811,7 +811,7 @@ commands(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     library.bridge_staff_position(),
     baca.accent(
@@ -823,7 +823,7 @@ commands(
     baca.dynamic(
         "pp-ancora",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.phead(0),
+        selector=lambda _: baca.select.phead(_, 0),
     ),
 )
 
@@ -865,7 +865,7 @@ commands(
         pieces=lambda _: abjad.select.partition_by_ratio(
             abjad.select.leaves(_), (4, 3)
         ),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.dls_staff_padding(4),
 )
@@ -887,7 +887,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

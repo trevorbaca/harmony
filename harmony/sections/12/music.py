@@ -352,7 +352,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -492,7 +492,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 

@@ -358,7 +358,7 @@ commands(
     baca.markup(
         r"\baca-fourteen-a",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 

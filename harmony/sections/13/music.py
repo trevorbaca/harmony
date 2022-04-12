@@ -232,7 +232,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -320,7 +320,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -451,7 +451,7 @@ commands(
         baca.pitch("E4"),
         baca.dynamic("f-ancora"),
         baca.snap_pizzicato(),
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -629,7 +629,7 @@ commands(
     baca.scp_spanner(
         "T1 =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -649,7 +649,7 @@ commands(
         [7, -1, 12],
     ),
     baca.repeat_tie(
-        baca.selectors.phead(0),
+        lambda _: baca.select.phead(_, 0),
     ),
     baca.new(
         baca.pitch("F3"),
@@ -687,7 +687,7 @@ commands(
 commands(
     ("vc2", 4),
     baca.repeat_tie(
-        baca.selectors.leaf(0),
+        lambda _: abjad.select.leaf(_, 0),
     ),
     baca.hairpin(
         "(mp) >o niente",
@@ -781,7 +781,7 @@ commands(
     baca.scp_spanner(
         "T4 =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -801,7 +801,7 @@ commands(
         [7, -1, 12],
     ),
     baca.repeat_tie(
-        baca.selectors.phead(0),
+        lambda _: baca.select.phead(_, 0),
     ),
     baca.new(
         baca.pitch("Eb2"),
@@ -839,7 +839,7 @@ commands(
 commands(
     ("cb2", 4),
     baca.repeat_tie(
-        baca.selectors.leaf(0),
+        lambda _: abjad.select.leaf(_, 0),
     ),
     baca.hairpin(
         "(mp) >o niente",
@@ -875,7 +875,7 @@ commands(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dynamic("p"),
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 

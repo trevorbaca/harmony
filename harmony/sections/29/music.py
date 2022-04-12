@@ -97,7 +97,7 @@ commands(
     baca.new(
         baca.dynamic("mf"),
         baca.damp(),
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
     baca.markup(
         r"\baca-brake-drum-markup",
@@ -119,7 +119,7 @@ commands(
         invisible=[-1],
     ),
     baca.damp(
-        baca.selectors.leaf(-1),
+        lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -186,7 +186,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         left_broken=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

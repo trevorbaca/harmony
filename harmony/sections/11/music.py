@@ -595,7 +595,7 @@ commands(
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         ),
         baca.snap_pizzicato(),
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -788,7 +788,7 @@ commands(
     ("vc1", 6),
     baca.clef(
         "bass",
-        baca.selectors.phead(-1),
+        lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -863,7 +863,7 @@ commands(
     ("vc2", 6),
     baca.clef(
         "bass",
-        baca.selectors.phead(-1),
+        lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -1166,14 +1166,14 @@ commands(
         selector=baca.selectors.leaves((1, 3)),
     ),
     baca.accent(
-        baca.selectors.phead(-1),
+        lambda _: baca.select.phead(_, -1),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.plt(_, -1),
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 

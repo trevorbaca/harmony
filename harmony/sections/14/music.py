@@ -333,7 +333,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -439,7 +439,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -749,7 +749,7 @@ commands(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -886,7 +886,7 @@ commands(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -910,7 +910,7 @@ commands(
         baca.clef("percussion"),
         baca.staff_lines(1),
         library.bridge_staff_position(),
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -1003,7 +1003,7 @@ commands(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -1114,7 +1114,7 @@ commands(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -1225,7 +1225,7 @@ commands(
         autodetect_right_padding=False,
         bookend=True,
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

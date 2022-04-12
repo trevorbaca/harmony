@@ -672,11 +672,11 @@ def sixteenths(
         repeat_tie_ = rmakers.repeat_tie(selector)
         commands.append(repeat_tie_)
     if untie is True:
-        selector = baca.selectors.leaves()
+        selector = lambda _: baca.select.leaves(_)
         untie_ = rmakers.untie(selector)
         commands.append(untie_)
     if unbeam is True:
-        selector = baca.selectors.leaves()
+        selector = lambda _: baca.select.leaves(_)
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if after_graces:
@@ -1245,7 +1245,7 @@ def margin_markup(
     *,
     alert=None,
     context="Staff",
-    selector=baca.selectors.leaf(0),
+    selector=lambda _: abjad.select.leaf(_, 0),
 ):
     margin_markup = margin_markups[key]
     command = baca.margin_markup(

@@ -138,12 +138,12 @@ commands(
     baca.dynamic("mf"),
     baca.dynamic(
         "p",
-        selector=baca.selectors.phead(1),
+        selector=lambda _: baca.select.phead(_, 1),
     ),
     baca.dynamic(
         "p-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
-        selector=baca.selectors.phead(2),
+        selector=lambda _: baca.select.phead(_, 2),
     ),
     baca.covered_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -236,7 +236,7 @@ commands(
     baca.dynamic(
         '"f"-sempre',
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.phead(2),
+        selector=lambda _: baca.select.phead(_, 2),
     ),
     baca.markup(
         r"\baca-slate-scrape-markup",
@@ -396,7 +396,7 @@ commands(
     baca.dynamic(
         "p-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.phead(2),
+        selector=lambda _: baca.select.phead(_, 2),
     ),
     baca.bow_speed_spanner(
         "XFB =|",
@@ -415,7 +415,7 @@ commands(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -442,7 +442,7 @@ commands(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -467,7 +467,7 @@ commands(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -519,7 +519,7 @@ commands(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -544,7 +544,7 @@ commands(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -600,7 +600,7 @@ commands(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -625,7 +625,7 @@ commands(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -677,7 +677,7 @@ commands(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(

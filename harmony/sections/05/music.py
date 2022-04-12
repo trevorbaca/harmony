@@ -224,7 +224,7 @@ commands(
     ),
     baca.staff_lines(
         1,
-        baca.selectors.leaf(2),
+        lambda _: abjad.select.leaf(_, 2),
     ),
     baca.new(
         library.purpleheart_staff_positions([0]),
@@ -541,14 +541,14 @@ commands(
         baca.script_extra_offset((-2, 0)),
         baca.stem_extra_offset((-2, 0)),
         baca.stem_tremolo_extra_offset((-2, 0)),
-        selector=baca.selectors.leaf(2),
+        selector=lambda _: abjad.select.leaf(_, 2),
     ),
     baca.new(
         baca.clef("bass"),
         baca.clef_extra_offset((-2, 0)),
         baca.clef_x_extent_false(),
         baca.staff_lines(5),
-        selector=baca.selectors.leaf(3),
+        selector=lambda _: abjad.select.leaf(_, 3),
     ),
 )
 
@@ -718,7 +718,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -821,7 +821,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.lparts(_, [2, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

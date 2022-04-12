@@ -371,7 +371,7 @@ commands(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -418,7 +418,7 @@ commands(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -475,7 +475,7 @@ commands(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -542,7 +542,7 @@ commands(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(

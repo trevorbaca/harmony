@@ -216,7 +216,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(2, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 2, grace=False),
     ),
 )
 
@@ -287,7 +287,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(2, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 2, grace=False),
     ),
 )
 
@@ -467,7 +467,7 @@ commands(
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -490,7 +490,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -535,7 +535,7 @@ commands(
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -558,7 +558,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -606,7 +606,7 @@ commands(
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -629,7 +629,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -674,7 +674,7 @@ commands(
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(
@@ -697,7 +697,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         bookend=True,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
