@@ -1119,7 +1119,7 @@ commands(
     ),
     baca.dynamic(
         "sfp",
-        selector=baca.selectors.pheads((1, None)),
+        selector=lambda _: baca.select.pheads(_)[1:],
     ),
 )
 

@@ -149,7 +149,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads((None, -1)),
+        lambda _: baca.select.pheads(_)[:-1],
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -158,7 +158,7 @@ commands(
     ),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.selectors.pleaves((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[-1:]),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaf(_, -1),

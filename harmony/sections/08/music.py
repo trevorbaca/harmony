@@ -157,7 +157,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -280,7 +280,7 @@ commands(
     ),
     baca.pitch("Bb4"),
     baca.espressivo(
-        baca.selectors.pheads((1, None)),
+        lambda _: baca.select.pheads(_)[1:],
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
@@ -440,7 +440,7 @@ commands(
         do_not_transpose=True,
     ),
     baca.espressivo(
-        baca.selectors.pheads((1, None)),
+        lambda _: baca.select.pheads(_)[1:],
     ),
 )
 

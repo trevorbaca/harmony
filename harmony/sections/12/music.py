@@ -206,7 +206,7 @@ commands(
         [4, 8, 4, 12],
     ),
     baca.breathe(
-        baca.selectors.pleaves([1, 3]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [1, 3]),
     ),
     baca.text_spanner(
         "T -> A =|",
@@ -254,7 +254,7 @@ commands(
         invisible=[-1],
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves((-2, None)),
+        lambda _: baca.select.pleaves(_)[-2:],
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -537,7 +537,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads([0, -1]),
+        lambda _: abjad.select.get(baca.select.pheads(_), [0, -1]),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -1231,7 +1231,7 @@ commands(
     ),
     baca.dynamic(
         "sffp",
-        selector=baca.selectors.pheads((1, -1)),
+        selector=lambda _: baca.select.pheads(_)[1:-1],
     ),
     baca.hairpin(
         "sffp >o niente",

@@ -180,7 +180,7 @@ commands(
         lambda _: baca.select.runs(_)[1:],
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves((-2, None)),
+        lambda _: baca.select.pleaves(_)[-2:],
     ),
     baca.hairpin(
         "o< f >o",
@@ -361,7 +361,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.dynamic("p"),
     baca.markup(
@@ -419,7 +419,7 @@ commands(
     baca.flat_glissando(
         hide_middle_stems=True,
         right_broken=True,
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -653,12 +653,12 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
-        baca.selectors.pheads((1, None), grace=False),
+        lambda _: baca.select.pheads(_, grace=False)[1:],
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -729,12 +729,12 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
-        baca.selectors.pheads((1, None), grace=False),
+        lambda _: baca.select.pheads(_, grace=False)[1:],
     ),
 )
 
@@ -834,12 +834,12 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
     baca.espressivo(
-        baca.selectors.pheads((1, None), grace=False),
+        lambda _: baca.select.pheads(_, grace=False)[1:],
     ),
 )
 
@@ -881,7 +881,7 @@ commands(
     ),
     baca.pitch("Bb4"),
     baca.espressivo(
-        baca.selectors.pheads((-4, None)),
+        lambda _: baca.select.pheads(_)[-4:],
     ),
     baca.dynamic("pp"),
     baca.metric_modulation_spanner(
@@ -1048,7 +1048,7 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),

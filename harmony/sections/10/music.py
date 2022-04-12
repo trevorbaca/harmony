@@ -406,7 +406,7 @@ commands(
     library.triangle_staff_position(),
     baca.flat_glissando(),
     baca.stem_tremolo(
-        baca.selectors.pheads([0, -1]),
+        lambda _: abjad.select.get(baca.select.pheads(_), [0, -1]),
     ),
     baca.dynamic("p"),
     baca.hairpin(

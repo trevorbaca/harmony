@@ -603,7 +603,7 @@ commands(
         r"c2. c8 \times 5/4 { c2 }",
     ),
     baca.repeat_tie(
-        baca.selectors.pleaves((None, 2)),
+        selector=lambda _: baca.select.pleaves(_)[:2],
     ),
     baca.tuplet_bracket_up(),
     baca.markup(
@@ -719,10 +719,10 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -804,14 +804,14 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.pitch(
         "C5",
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -894,11 +894,11 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -961,7 +961,7 @@ commands(
         selector=baca.selectors.leaves((None, 3)),
     ),
     baca.accent(
-        baca.selectors.pheads((1, 3)),
+        lambda _: baca.select.pheads(_)[1:3],
     ),
     baca.stem_tremolo(
         lambda _: baca.select.plts(_)[:2],
@@ -1020,16 +1020,16 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         do_not_transpose=True,
     ),
     baca.pitch(
         "C5",
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -1076,7 +1076,7 @@ commands(
         lambda _: baca.select.pleaves(_),
     ),
     baca.accent(
-        baca.selectors.pheads((1, None)),
+        lambda _: baca.select.pheads(_)[1:],
     ),
     baca.dynamic("f"),
 )
@@ -1084,7 +1084,7 @@ commands(
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 6),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )

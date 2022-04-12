@@ -82,11 +82,11 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads([0, 2], grace=False),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_, grace=False), [0, 2]),
     ),
     baca.dynamic(
         "mf-mp",
-        selector=baca.selectors.pheads([1, 3], grace=False),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_, grace=False), [1, 3]),
     ),
     baca.dls_staff_padding(5),
     baca.text_spanner(
@@ -389,11 +389,11 @@ commands(
         baca.accent(),
         baca.stem_tremolo(),
         baca.dls_staff_padding(6),
-        selector=baca.selectors.pheads((None, -1)),
+        selector=lambda _: baca.select.pheads(_)[:-1],
     ),
     baca.new(
         baca.dls_staff_padding(6),
-        selector=baca.selectors.pheads((-1, None)),
+        selector=lambda _: baca.select.pheads(_)[-1:],
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -435,7 +435,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -548,7 +548,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",

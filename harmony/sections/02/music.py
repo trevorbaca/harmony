@@ -105,7 +105,7 @@ commands(
     ),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
-        baca.selectors.pleaves(([0, 1], 3)),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, 1], 3),
     ),
     baca.hairpin(
         "p <| mf |> p",
@@ -132,11 +132,11 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads([0, 2], grace=False),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_, grace=False), [0, 2]),
     ),
     baca.dynamic(
         "mf-mp",
-        selector=baca.selectors.pheads([1, 3], grace=False),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_, grace=False), [1, 3]),
     ),
     baca.dls_staff_padding(
         4,
@@ -363,7 +363,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(([0, -1])),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
 )
 
@@ -443,7 +443,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(([0, -1])),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.hairpin(
         "p < mf",
@@ -582,7 +582,7 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads(grace=False),
+        selector=lambda _: baca.select.pheads(_, grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -694,7 +694,7 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads(grace=False),
+        selector=lambda _: baca.select.pheads(_, grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -877,7 +877,7 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads(grace=False),
+        selector=lambda _: baca.select.pheads(_, grace=False),
     ),
     baca.dls_staff_padding(
         4,
@@ -923,7 +923,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -1008,7 +1008,7 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads(grace=False),
+        selector=lambda _: baca.select.pheads(_, grace=False),
     ),
     baca.dls_staff_padding(
         6,
@@ -1167,7 +1167,7 @@ commands(
     ),
     baca.dynamic(
         "f-mp",
-        selector=baca.selectors.pheads(grace=False),
+        selector=lambda _: baca.select.pheads(_, grace=False),
     ),
     baca.dls_staff_padding(
         6,
@@ -1217,7 +1217,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -1276,7 +1276,7 @@ commands(
     (["va", "vc1", "cb1"], [(1, 5), (8, 11)]),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1286,7 +1286,7 @@ commands(
     ("vc2", [(3, 5), (8, 11)]),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1296,7 +1296,7 @@ commands(
     (["cb2"], [(3, 5), (8, 11)]),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
