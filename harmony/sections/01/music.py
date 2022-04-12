@@ -99,7 +99,7 @@ commands(
         selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
     ),
     baca.dots_x_extent_false(
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
 )
 
@@ -137,7 +137,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -160,7 +160,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
 )
 
@@ -344,7 +344,7 @@ commands(
         r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
     ),
     baca.repeat_tie(
-        baca.selectors.leaves([1, 4]),
+        selector=lambda _: abjad.select.get(baca.select.leaves(_), [1, 4]),
     ),
     baca.tuplet_bracket_down(),
     baca.hairpin(
@@ -397,7 +397,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((2, -2)),
+        selector=lambda _: baca.select.leaves(_)[2:-2],
     ),
 )
 
@@ -506,7 +506,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
         right_broken=True,
-        selector=baca.selectors.leaves((-4, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-4:]),
     ),
 )
 

@@ -130,7 +130,7 @@ commands(
     baca.pitch("A4"),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
-        selector=baca.selectors.leaves((None, -6)),
+        selector=lambda _: baca.select.leaves(_)[:-6],
     ),
     baca.hairpin(
         "p < mp >",
@@ -206,7 +206,7 @@ commands(
     library.triangle_staff_position(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
-        selector=baca.selectors.leaves((None, -6)),
+        selector=lambda _: baca.select.leaves(_)[:-6],
     ),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.pleaves(_), [0, -7]),
@@ -657,7 +657,7 @@ commands(
     baca.flat_glissando(
         hide_middle_stems=True,
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.hairpin(
         "o< ff >o",

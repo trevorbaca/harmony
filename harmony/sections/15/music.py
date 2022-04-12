@@ -228,7 +228,7 @@ commands(
     library.slate_staff_position(),
     baca.new(
         baca.flat_glissando(
-            hide_stem_selector=baca.selectors.leaves((2, -1)),
+            hide_stem_selector=lambda _: baca.select.leaves(_)[2:-1],
         ),
         measures=(7, 9),
     ),
@@ -453,7 +453,7 @@ commands(
     baca.hairpin(
         "o<| fff-scratch",
         map=lambda _: baca.select.runs(_)[1:2],
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -530,7 +530,7 @@ commands(
     baca.hairpin(
         "o<| fff-scratch",
         map=lambda _: baca.select.runs(_)[1:2],
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -611,7 +611,7 @@ commands(
     baca.hairpin(
         "o<| fff-scratch",
         map=lambda _: baca.select.runs(_)[1:2],
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -688,7 +688,7 @@ commands(
     baca.hairpin(
         "o<| fff-scratch",
         map=lambda _: baca.select.runs(_)[1:2],
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 

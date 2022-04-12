@@ -140,7 +140,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -222,7 +222,7 @@ commands(
     ),
     baca.staff_position(
         -2,
-        selector=baca.selectors.leaves(grace=True),
+        selector=lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.new(
         baca.staff_lines(
@@ -231,7 +231,7 @@ commands(
         ),
         baca.hairpin(
             "o<| f",
-            selector=baca.selectors.leaves((-3, None)),
+            selector=lambda _: baca.select.leaves(_)[-3:],
         ),
         baca.markup(
             r"\baca-bd-superball-markup",
@@ -256,7 +256,7 @@ commands(
     ),
     baca.hairpin(
         "o<| f",
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
 )
 
@@ -269,7 +269,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((2, 8), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[2:8],
     ),
 )
 
@@ -326,7 +326,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5.5,
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
 )
 
@@ -586,7 +586,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -656,11 +656,11 @@ commands(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.selectors.leaves((None, -1), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[:-1],
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -698,7 +698,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -778,7 +778,7 @@ commands(
     ("vc1", (6, 7)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((1, 5)),
+        selector=lambda _: baca.select.leaves(_)[1:5],
     ),
 )
 
@@ -800,11 +800,11 @@ commands(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.selectors.leaves((None, -1), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[:-1],
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -881,7 +881,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -950,11 +950,11 @@ commands(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.selectors.leaves((None, -1), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[:-1],
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -984,7 +984,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 4)),
+        selector=lambda _: baca.select.leaves(_)[:4],
     ),
 )
 
@@ -1012,7 +1012,7 @@ commands(
     ),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1089,11 +1089,11 @@ commands(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.selectors.leaves((None, -1), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[:-1],
     ),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1171,7 +1171,7 @@ commands(
     ),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1246,11 +1246,11 @@ commands(
     ),
     baca.hairpin(
         "p < ff",
-        selector=baca.selectors.leaves((None, -1), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[:-1],
     ),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",

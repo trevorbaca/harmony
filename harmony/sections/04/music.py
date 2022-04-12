@@ -351,7 +351,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -396,7 +396,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
 )
 
@@ -568,7 +568,7 @@ commands(
     ),
     baca.dls_staff_padding(
         6,
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-a-flat-sounds-ottava-higher-markup =|",

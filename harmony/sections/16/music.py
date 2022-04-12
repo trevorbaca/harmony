@@ -131,7 +131,7 @@ commands(
         ),
         measures=10,
         right_broken=True,
-        selector=baca.selectors.leaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
     ),
 )
 

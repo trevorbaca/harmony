@@ -173,7 +173,7 @@ commands(
     baca.pitch("A1"),
     baca.flat_glissando(
         left_broken=True,
-        selector=baca.selectors.leaves((None, 1)),
+        selector=lambda _: baca.select.leaves(_)[:1],
     ),
     baca.hairpin(
         "ff >o niente",

@@ -178,11 +178,11 @@ commands(
     ),
     baca.pitches(
         "A3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a, -9),
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.dynamic(
         "p",
@@ -266,12 +266,12 @@ commands(
         autodetect_right_padding=True,
         bookend=False,
         pieces=lambda _: baca.select.lparts(_, [2, 4]),
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         right_broken=True,
-        selector=baca.selectors.leaves((-2, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-2:]),
     ),
 )
 
@@ -279,7 +279,7 @@ commands(
     ("bfl", (11, 15)),
     baca.pitch(
         "Dtqf5",
-        baca.selectors.leaves((None, -2)),
+        lambda _: baca.select.leaves(_)[:-2],
     ),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -287,7 +287,7 @@ commands(
     ),
     baca.pitch(
         "B4",
-        baca.selectors.leaves((-2, None)),
+        lambda _: baca.select.leaves(_)[-2:],
     ),
     baca.hairpin(
         'o< "f" >o niente o< p >o niente'
@@ -717,18 +717,18 @@ commands(
         rest_to=1,
     ),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitch(
         "Db3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
         library.appoggiato_pitches_d_flat_3,
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -803,18 +803,18 @@ commands(
         rest_from=1,
     ),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitch(
         "C3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
         library.appoggiato_pitches_c_3,
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -990,18 +990,18 @@ commands(
     ),
     baca.clef("bass"),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitch(
         "B2",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.note_head_style_harmonic_black(
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
         library.appoggiato_pitches_b_2,
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "mf >o niente",

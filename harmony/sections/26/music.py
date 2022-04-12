@@ -248,7 +248,7 @@ commands(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((2, None)),
+        selector=lambda _: baca.select.leaves(_)[2:],
     ),
 )
 
@@ -303,7 +303,7 @@ commands(
     ("perc1", (9, 10)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((3, None)),
+        selector=lambda _: baca.select.leaves(_)[3:],
     ),
 )
 
@@ -492,7 +492,7 @@ commands(
     library.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((1, None)),
+        selector=lambda _: baca.select.leaves(_)[1:],
     ),
 )
 

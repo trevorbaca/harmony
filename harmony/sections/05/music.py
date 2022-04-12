@@ -228,7 +228,7 @@ commands(
     ),
     baca.new(
         library.purpleheart_staff_positions([0]),
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.new(
         library.brake_drum_staff_position(),
@@ -453,12 +453,12 @@ commands(
     baca.pitch("F3"),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((1, 12)),
+        selector=lambda _: baca.select.leaves(_)[1:12],
     ),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((1, 12)),
+        selector=lambda _: baca.select.leaves(_)[1:12],
     ),
 )
 
@@ -533,7 +533,7 @@ commands(
     baca.dynamic("ppp"),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves((None, 3)),
+        lambda _: baca.select.leaves(_)[:3],
     ),
     baca.new(
         baca.flag_extra_offset((-2, 0)),
@@ -577,19 +577,19 @@ commands(
         selector=lambda _: baca.select.pleaf(_, 2),
     ),
     baca.tuplet_bracket_up(
-        baca.selectors.leaves((3, None)),
+        lambda _: baca.select.leaves(_)[3:],
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((4, 11)),
+        selector=lambda _: baca.select.leaves(_)[4:11],
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((4, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[4:]),
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves((4, -1)),
+        lambda _: baca.select.leaves(_)[4:-1],
     ),
 )
 
@@ -610,7 +610,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5.5,
-        baca.selectors.leaves(lleak=True),
+        lambda _: baca.select.lleak(baca.select.leaves(_)),
     ),
 )
 
@@ -796,7 +796,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5.5,
-        baca.selectors.leaves(lleak=True),
+        lambda _: baca.select.lleak(baca.select.leaves(_)),
     ),
 )
 

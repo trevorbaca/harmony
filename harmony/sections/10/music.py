@@ -128,7 +128,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
-        selector=baca.selectors.leaves((2, 8)),
+        selector=lambda _: baca.select.leaves(_)[2:8],
     ),
 )
 
@@ -149,7 +149,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
-        selector=baca.selectors.leaves((4, 9)),
+        selector=lambda _: baca.select.leaves(_)[4:9],
     ),
 )
 
@@ -181,7 +181,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
-        selector=baca.selectors.leaves((1, 8)),
+        selector=lambda _: baca.select.leaves(_)[1:8],
     ),
 )
 
@@ -195,11 +195,11 @@ commands(
     ),
     baca.pitch(
         "G3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitches(
         library.appoggiato_pitches_g,
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "o< mp >o",
@@ -250,7 +250,7 @@ commands(
     ("bfl", (11, 12)),
     baca.pitch(
         "G4",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
 )
 
@@ -272,7 +272,7 @@ commands(
     ("bfl", (13, 14)),
     baca.pitch(
         "G#4",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
 )
 
@@ -284,11 +284,11 @@ commands(
     ),
     baca.pitches(
         "A3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a, -9),
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.dynamic(
         "p",
@@ -396,7 +396,7 @@ commands(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((2, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[2:]),
     ),
 )
 
@@ -1121,7 +1121,7 @@ commands(
     ),
     baca.hairpin(
         "mp >o niente",
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 

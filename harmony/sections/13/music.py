@@ -118,7 +118,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
 )
 
@@ -148,11 +148,11 @@ commands(
     ),
     baca.pitches(
         "A3",
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitches(
         abjad.sequence.rotate(library.appoggiato_pitches_a, -9),
-        baca.selectors.leaves(grace=True),
+        lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.dynamic(
         "p",
@@ -386,7 +386,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((3, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[3:]),
     ),
 )
 
@@ -459,7 +459,7 @@ commands(
     ("hp", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((1, 8), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:8]),
     ),
 )
 
@@ -478,7 +478,7 @@ commands(
     ("hp", (4, 5)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((6, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[6:]),
     ),
 )
 
@@ -507,11 +507,11 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.selectors.leaves((2, None), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[2:],
     ),
 )
 
@@ -579,11 +579,11 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.selectors.leaves((2, None), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[2:],
     ),
 )
 
@@ -637,7 +637,7 @@ commands(
     ("vc1", 5),
     baca.pitch(
         "Aqf3",
-        baca.selectors.leaves(lleak=True),
+        lambda _: baca.select.lleak(baca.select.leaves(_)),
     ),
 )
 
@@ -691,7 +691,7 @@ commands(
     ),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -731,11 +731,11 @@ commands(
     baca.hairpin(
         "mp >o niente",
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
     baca.hairpin(
         "mf >o niente",
-        selector=baca.selectors.leaves((2, None), grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False)[2:],
     ),
 )
 
@@ -789,7 +789,7 @@ commands(
     ("cb1", 5),
     baca.pitch(
         "Dtqf2",
-        baca.selectors.leaves(lleak=True),
+        lambda _: baca.select.lleak(baca.select.leaves(_)),
     ),
 )
 
@@ -843,7 +843,7 @@ commands(
     ),
     baca.hairpin(
         "(mp) >o niente",
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -896,7 +896,7 @@ commands(
     (["vc1", "vc2", "cb1", "cb2"], (4, 5)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((-4, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-4:]),
     ),
 )
 

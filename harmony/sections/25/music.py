@@ -231,7 +231,7 @@ commands(
     ("perc1", (2, 3)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((1, 8)),
+        selector=lambda _: baca.select.leaves(_)[1:8],
     ),
 )
 
@@ -285,7 +285,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
@@ -437,7 +437,7 @@ commands(
     library.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((1, 8)),
+        selector=lambda _: baca.select.leaves(_)[1:8],
     ),
 )
 
@@ -519,7 +519,7 @@ commands(
             lambda _: abjad.select.leaf(_, -1),
         ),
         baca.note_head_transparent(
-            baca.selectors.leaves((1, -1)),
+            lambda _: baca.select.leaves(_)[1:-1],
         ),
     ),
 )
@@ -580,7 +580,7 @@ commands(
             lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.note_head_transparent(
-            baca.selectors.leaves((1, -1)),
+            lambda _: baca.select.leaves(_)[1:-1],
         ),
     ),
 )
@@ -645,7 +645,7 @@ commands(
             lambda _: baca.select.pleaves(_)[1:-1],
         ),
         baca.note_head_transparent(
-            baca.selectors.leaves((1, -1)),
+            lambda _: baca.select.leaves(_)[1:-1],
         ),
     ),
 )
@@ -710,7 +710,7 @@ commands(
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            baca.selectors.leaves((1, -1)),
+            lambda _: baca.select.leaves(_)[1:-1],
         ),
     ),
 )
@@ -780,7 +780,7 @@ commands(
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            baca.selectors.leaves((1, -1)),
+            lambda _: baca.select.leaves(_)[1:-1],
         ),
     ),
 )
