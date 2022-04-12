@@ -227,7 +227,7 @@ commands(
     baca.new(
         baca.staff_lines(
             1,
-            baca.selectors.leaf(1, grace=False),
+            lambda _: abjad.select.leaf(_, 1, grace=False),
         ),
         baca.hairpin(
             "o<| f",
@@ -758,7 +758,7 @@ commands(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     library.sixteenths(
         [5, -5, 1, "-"],

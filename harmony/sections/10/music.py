@@ -435,7 +435,7 @@ commands(
         left_broken=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.phead(-1),
+        lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -450,7 +450,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.phead(0),
+        lambda _: baca.select.phead(_, 0),
     ),
     baca.dynamic(
         "p-ancora",
@@ -592,7 +592,7 @@ commands(
     ),
     baca.tuplet_bracket_up(),
     baca.repeat_tie(
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.pitches(
         "F#4 D3",
@@ -664,7 +664,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [3, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -717,7 +717,7 @@ commands(
         lambda _: baca.select.pleaves(_),
     ),
     baca.repeat_tie(
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.clef("bass"),
     baca.pitches(
@@ -789,7 +789,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [3, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -846,7 +846,7 @@ commands(
         lambda _: baca.select.pleaves(_),
     ),
     baca.repeat_tie(
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.clef("bass"),
     baca.pitches(
@@ -913,7 +913,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [3, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -960,7 +960,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [1, 2]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -1017,7 +1017,7 @@ commands(
 commands(
     ("cb2", (10, 15)),
     baca.repeat_tie(
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.tuplet_bracket_up(),
     baca.pitches(
@@ -1084,7 +1084,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [3, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

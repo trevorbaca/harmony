@@ -416,7 +416,7 @@ commands(
     baca.new(
         baca.clef("alto"),
         baca.staff_lines(5),
-        selector=baca.selectors.leaf(3),
+        selector=lambda _: abjad.select.leaf(_, 3),
     ),
     baca.new(
         baca.pitch("E3"),
@@ -428,7 +428,7 @@ commands(
     ),
     baca.dynamic(
         "p",
-        selector=baca.selectors.phead(1),
+        selector=lambda _: baca.select.phead(_, 1),
     ),
     baca.scp_spanner(
         "P4 -> T1",
@@ -605,7 +605,7 @@ commands(
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
-        selector=baca.selectors.leaf(1),
+        selector=lambda _: abjad.select.leaf(_, 1),
     ),
     library.bridge_staff_position(),
     baca.accent(
@@ -667,7 +667,7 @@ commands(
     ),
     baca.new(
         baca.stop_on_string(),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
         map=lambda _: baca.select.rleak_runs(_),
     ),
     baca.hairpin(

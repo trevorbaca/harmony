@@ -184,7 +184,7 @@ commands(
             abjad.select.leaves(_), (4, 5)
         ),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
@@ -459,7 +459,7 @@ commands(
     baca.dls_staff_padding(4 + 3),
     baca.markup(
         r"\baca-lv-into-fermata-markup",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -489,7 +489,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -507,16 +507,16 @@ commands(
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            baca.selectors.leaves(),
+            lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.selectors.leaf(0),
+            lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            baca.selectors.leaf(-1),
+            lambda _: abjad.select.leaf(_, -1),
         ),
         baca.note_head_transparent(
             baca.selectors.leaves((1, -1)),
@@ -553,7 +553,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -572,7 +572,7 @@ commands(
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            baca.selectors.leaves(),
+            lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
@@ -614,7 +614,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -633,7 +633,7 @@ commands(
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            baca.selectors.leaves(),
+            lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
@@ -682,7 +682,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -701,7 +701,7 @@ commands(
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            baca.selectors.leaves(),
+            lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
@@ -747,7 +747,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -766,7 +766,7 @@ commands(
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            baca.selectors.leaves(),
+            lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(

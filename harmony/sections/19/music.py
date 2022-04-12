@@ -250,7 +250,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(2, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 2, grace=False),
     ),
 )
 
@@ -263,7 +263,7 @@ commands(
     library.bass_drum_staff_position(),
     baca.accent(),
     baca.laissez_vibrer(
-        baca.selectors.phead(1),
+        lambda _: baca.select.phead(_, 1),
     ),
     baca.dynamic("mp"),
     baca.hairpin(
@@ -294,7 +294,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(1, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 1, grace=False),
     ),
 )
 
@@ -332,7 +332,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 
@@ -393,7 +393,7 @@ commands(
     baca.dynamic("p"),
     baca.dynamic(
         "f",
-        selector=baca.selectors.phead(1),
+        selector=lambda _: baca.select.phead(_, 1),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -413,7 +413,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(1, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 1, grace=False),
     ),
 )
 
@@ -479,7 +479,7 @@ commands(
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
 )
 

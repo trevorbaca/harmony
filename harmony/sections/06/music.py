@@ -957,7 +957,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -987,7 +987,7 @@ commands(
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
 )
 
@@ -1007,7 +1007,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1135,7 +1135,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1160,7 +1160,7 @@ commands(
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -1192,7 +1192,7 @@ commands(
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
-        selector=baca.selectors.leaf(0, grace=False),
+        selector=lambda _: abjad.select.leaf(_, 0, grace=False),
     ),
     baca.text_spanner(
         r"\harmony-b-flat-sounds-ottava-higher-markup =|",
@@ -1325,7 +1325,7 @@ commands(
     ),
     baca.clef(
         "treble",
-        baca.selectors.phead(-1),
+        lambda _: baca.select.phead(_, -1),
     ),
     baca.new(
         baca.pitch("Eqf4"),
@@ -1333,7 +1333,7 @@ commands(
     ),
     baca.dynamic(
         "f",
-        selector=baca.selectors.phead(-1),
+        selector=lambda _: baca.select.phead(_, -1),
     ),
     baca.bow_speed_spanner(
         "scr. =|",
@@ -1691,7 +1691,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.mgroups(_, [2, 1, 1, 2]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 

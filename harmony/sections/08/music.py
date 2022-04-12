@@ -276,7 +276,7 @@ commands(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.selectors.leaf(0),
+        lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch("Bb4"),
     baca.espressivo(
@@ -359,7 +359,7 @@ commands(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.selectors.leaf(0),
+        lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch("B2"),
     baca.hairpin(
@@ -433,7 +433,7 @@ commands(
     ),
     # TODO: promote into rhythm:
     baca.repeat_tie(
-        baca.selectors.leaf(0),
+        lambda _: abjad.select.leaf(_, 0),
     ),
     baca.pitch(
         "Bb4",

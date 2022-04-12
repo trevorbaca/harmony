@@ -251,13 +251,13 @@ commands(
     ),
     baca.staff_lines(
         3,
-        selector=baca.selectors.leaf(-2),
+        selector=lambda _: abjad.select.leaf(_, -2),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak self-alignment-X 1"),
         abjad.Tweak(r"- \tweak staff-padding 5"),
-        selector=baca.selectors.leaf(-1),
+        selector=lambda _: abjad.select.leaf(_, -1),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
@@ -352,7 +352,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -439,7 +439,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -462,7 +462,7 @@ commands(
     # NOTE: current clef / after-grace contention:
     baca.clef(
         "bass",
-        baca.selectors.leaf(-1),
+        lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -489,7 +489,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -585,7 +585,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -611,7 +611,7 @@ commands(
     # NOTE: current clef / after-grace contention:
     baca.clef(
         "bass",
-        baca.selectors.leaf(-1),
+        lambda _: abjad.select.leaf(_, -1),
     ),
 )
 
@@ -638,7 +638,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.plts(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -673,7 +673,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=True,
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
         match=[0, 1],
     ),
@@ -683,7 +683,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=True,
-            selector=baca.selectors.leaves(),
+            selector=lambda _: baca.select.leaves(_),
         ),
         match=[2],
     ),

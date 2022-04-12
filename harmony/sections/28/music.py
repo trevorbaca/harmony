@@ -111,7 +111,7 @@ commands(
             abjad.select.leaves(_), (4, 5)
         ),
         map=lambda _: baca.select.runs(_),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.left.text \harmony-d-d-sharp-markup"),
@@ -418,7 +418,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -499,7 +499,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -591,7 +591,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(
@@ -671,7 +671,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.lparts(_, [2, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
     baca.markup(
         r"\baca-string-iii-markup",
@@ -690,7 +690,7 @@ commands(
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.untie(
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.note_head_style_harmonic_black(),
     baca.pitch(

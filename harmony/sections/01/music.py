@@ -363,11 +363,11 @@ commands(
     ("vc1", 3),
     baca.clef(
         "percussion",
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.staff_lines(
         1,
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     library.sixteenths(
         [5, -5, 1, -4],

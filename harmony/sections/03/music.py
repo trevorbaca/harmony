@@ -472,7 +472,7 @@ commands(
     ),
     baca.tuplet_number_text(
         r"\markup 5:4",
-        baca.selectors.leaf(1),
+        lambda _: abjad.select.leaf(_, 1),
     ),
     baca.tuplet_bracket_up(),
     baca.accent(
@@ -567,17 +567,17 @@ commands(
     ),
     baca.tuplet_number_text(
         r"\markup 5:4",
-        baca.selectors.leaves(),
+        lambda _: baca.select.leaves(_),
     ),
     baca.new(
         baca.clef("bass"),
         baca.clef_extra_offset((-2, 0)),
         baca.clef_x_extent_false(),
-        selector=baca.selectors.leaf(3),
+        selector=lambda _: abjad.select.leaf(_, 3),
     ),
     baca.staff_lines(
         5,
-        baca.selectors.leaf(3),
+        lambda _: abjad.select.leaf(_, 3),
     ),
     baca.new(
         baca.flag_extra_offset((-2, 0)),
@@ -585,7 +585,7 @@ commands(
         baca.script_extra_offset((-2, 0)),
         baca.stem_extra_offset((-2, 0)),
         baca.stem_tremolo_extra_offset((-2, 0)),
-        selector=baca.selectors.leaf(2),
+        selector=lambda _: abjad.select.leaf(_, 2),
     ),
     baca.new(
         baca.tuplet_bracket_up(),
@@ -601,7 +601,7 @@ commands(
     ),
     baca.dynamic(
         "mf",
-        selector=baca.selectors.phead(-2),
+        selector=lambda _: baca.select.phead(_, -2),
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -771,7 +771,7 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         autodetect_right_padding=False,
         bookend=-1,
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -868,7 +868,7 @@ commands(
         autodetect_right_padding=False,
         bookend=-1,
         pieces=lambda _: baca.select.lparts(_, [2, 3]),
-        selector=baca.selectors.leaves(),
+        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
