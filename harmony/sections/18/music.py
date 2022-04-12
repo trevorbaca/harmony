@@ -653,7 +653,7 @@ commands(
     baca.note_head_style_harmonic(),
     baca.pitch("G4"),
     baca.flat_glissando(
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -819,7 +819,7 @@ commands(
 commands(
     ("vc2", (9, 11)),
     baca.flat_glissando(
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
 )
 
@@ -1113,7 +1113,7 @@ commands(
     baca.pitch("E5", do_not_transpose=True),
     # NOTE: currently glissando must lexically precede trill spanner
     baca.flat_glissando(
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.trill_spanner(
         # large right padding because open-volta follows in next segment
@@ -1262,7 +1262,7 @@ commands(
     (["va", "vc2", "cb2"], (9, 11)),
     # TODO: move invisible command into rhythm-commands
     baca.invisible_music(
-        baca.selectors.leaves(([1], 2)),
+        selector=lambda _: abjad.select.get(baca.select.leaves(_), ([1], 2)),
     ),
     baca.hairpin(
         "niente o< p >o",

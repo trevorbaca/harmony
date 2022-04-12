@@ -101,7 +101,7 @@ commands(
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
 )
 

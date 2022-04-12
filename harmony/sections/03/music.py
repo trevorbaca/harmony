@@ -502,7 +502,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((2, 9)),
+        selector=lambda _: baca.select.leaves(_)[2:9],
     ),
 )
 
@@ -590,11 +590,11 @@ commands(
     baca.new(
         baca.tuplet_bracket_up(),
         baca.dls_staff_padding(4.5),
-        selector=baca.selectors.leaves((-5, None)),
+        selector=lambda _: baca.select.leaves(_)[-5:],
     ),
     baca.pitch(
         "F#3",
-        baca.selectors.leaves((4, None)),
+        lambda _: baca.select.leaves(_)[4:],
     ),
     baca.accent(
         lambda _: baca.pheads(abjad.select.leaves(_)[4:]),
@@ -606,12 +606,12 @@ commands(
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         right_broken=True,
-        selector=baca.selectors.leaves((4, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[4:]),
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         right_broken=True,
-        selector=baca.selectors.leaves((4, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[4:]),
     ),
 )
 

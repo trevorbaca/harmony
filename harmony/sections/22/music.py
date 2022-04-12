@@ -367,7 +367,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
@@ -452,7 +452,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         right_broken=True,
-        selector=baca.selectors.leaves((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
     ),
 )
 
@@ -622,7 +622,7 @@ commands(
     ("vc1", (4, 5)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((None, 9)),
+        selector=lambda _: baca.select.leaves(_)[:9],
     ),
 )
 
@@ -839,7 +839,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
     ),
 )
 

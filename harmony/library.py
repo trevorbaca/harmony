@@ -365,7 +365,10 @@ def appoggiato(
             selector,
         )
         commands.append(written_)
-        selector = baca.selectors.leaves(grace=False)
+
+        def selector(argument):
+            return baca.select.leaves(argument, grace=False)
+
         unbeam_ = rmakers.unbeam(selector)
         commands.append(unbeam_)
     if invisible is not None:
@@ -900,7 +903,12 @@ def tessera_4(part, *, advance=0, gap=False):
 def train(counts, *, rest_leaves=None):
     commands = []
     if rest_leaves is not None:
-        selector = baca.selectors.leaves(rest_leaves)
+
+        def selector(argument):
+            result = baca.select.leaves(argument)
+            result = abjad.select.get(result, rest_leaves)
+            return result
+
         force_ = rmakers.force_rest(selector)
         commands.append(force_)
     return baca.rhythm(

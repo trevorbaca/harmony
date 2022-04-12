@@ -230,7 +230,7 @@ commands(
     ),
     baca.new(
         library.purpleheart_staff_positions([2]),
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.pheads(_), [0, 2]),
@@ -238,7 +238,7 @@ commands(
     baca.dynamic("p"),
     baca.dls_staff_padding(
         6,
-        baca.selectors.leaves((None, -2)),
+        lambda _: baca.select.leaves(_)[:-2],
     ),
     baca.markup(
         r"\baca-tam-tam-markup",
@@ -262,7 +262,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         right_broken=True,
-        selector=baca.selectors.leaves((-1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[-1:]),
     ),
 )
 
@@ -388,7 +388,7 @@ commands(
     baca.scp_spanner(
         "T4 =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((5, 12)),
+        selector=lambda _: baca.select.leaves(_)[5:12],
     ),
     baca.new(
         baca.pitch("F4"),
@@ -424,7 +424,7 @@ commands(
     ("vc1", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((2, None)),
+        selector=lambda _: baca.select.leaves(_)[2:],
     ),
 )
 
@@ -528,7 +528,7 @@ commands(
     baca.scp_spanner(
         "T4 =|",
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((5, 12)),
+        selector=lambda _: baca.select.leaves(_)[5:12],
     ),
     baca.new(
         baca.pitch(
@@ -570,7 +570,7 @@ commands(
     ("cb1", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((2, None)),
+        selector=lambda _: baca.select.leaves(_)[2:],
     ),
 )
 

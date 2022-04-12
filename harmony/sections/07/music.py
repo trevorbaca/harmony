@@ -125,7 +125,7 @@ commands(
     baca.hairpin(
         "o<| f |>o niente",
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -186,7 +186,7 @@ commands(
         "o< f >o",
         forbid_al_niente_to_bar_line=True,
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
 )
 
@@ -199,7 +199,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
-        selector=baca.selectors.leaves((1, 8)),
+        selector=lambda _: baca.select.leaves(_)[1:8],
     ),
 )
 
@@ -217,7 +217,7 @@ commands(
     baca.hairpin(
         "o< f >o niente",
         pieces=lambda _: baca.select.clparts(_, [1]),
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
     baca.dynamic_text_x_offset(
         -0.75,
@@ -230,7 +230,7 @@ commands(
     baca.tuplet_bracket_staff_padding(6.5),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 11.5"),
-        selector=baca.selectors.leaves((4, 9)),
+        selector=lambda _: baca.select.leaves(_)[4:9],
     ),
 )
 
@@ -571,7 +571,7 @@ commands(
     #        'o< "f" >o',
     #        forbid_al_niente_to_bar_line=True,
     #        pieces=lambda _: baca.select.lparts(_, [1, 1]),
-    #        selector=baca.selectors.leaves((-2, None)),
+    #        selector=lambda _: baca.select.leaves(_)[-2:],
     #    ),
     baca.new(
         baca.dynamic('"f"'),
@@ -592,7 +592,7 @@ commands(
     #    baca.hairpin(
     #        'o< "f" >o niente',
     #        pieces=lambda _: baca.select.lparts(_, [1, 2]),
-    #        selector=baca.selectors.leaves((None, 3)),
+    #        selector=lambda _: baca.select.leaves(_)[:3],
     #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6 + 2),
@@ -602,7 +602,7 @@ commands(
     ("hp", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((5, 10)),
+        selector=lambda _: baca.select.leaves(_)[5:10],
     ),
 )
 
@@ -662,7 +662,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((7, 12)),
+        selector=lambda _: baca.select.leaves(_)[7:12],
     ),
 )
 
@@ -704,7 +704,7 @@ commands(
     ),
     baca.hairpin(
         "pp >o niente",
-        selector=baca.selectors.leaves((1, 3)),
+        selector=lambda _: baca.select.leaves(_)[1:3],
     ),
 )
 
@@ -742,7 +742,7 @@ commands(
     ("va", (5, 6)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((2, 6)),
+        selector=lambda _: baca.select.leaves(_)[2:6],
     ),
 )
 
@@ -767,7 +767,7 @@ commands(
     ("va", (1, 8)),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
 )
 

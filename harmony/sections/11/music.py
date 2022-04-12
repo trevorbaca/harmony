@@ -152,7 +152,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
-        selector=baca.selectors.leaves((1, 9)),
+        selector=lambda _: baca.select.leaves(_)[1:9],
     ),
 )
 
@@ -301,12 +301,12 @@ commands(
     baca.hairpin(
         "o< p > pp",
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
     baca.hairpin(
         "pp < mp > pp",
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
-        selector=baca.selectors.leaves((5, 8)),
+        selector=lambda _: baca.select.leaves(_)[5:8],
     ),
 )
 
@@ -373,7 +373,7 @@ commands(
     ),
     library.triangle_staff_position(),
     baca.flat_glissando(
-        selector=baca.selectors.leaves((None, -1)),
+        selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pheads(_),
@@ -1098,12 +1098,12 @@ commands(
     baca.hairpin(
         "o<| p |> pp",
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
-        selector=baca.selectors.leaves((None, 3)),
+        selector=lambda _: baca.select.leaves(_)[:3],
     ),
     baca.hairpin(
         "pp <| mp |> pp",
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
-        selector=baca.selectors.leaves((5, 8)),
+        selector=lambda _: baca.select.leaves(_)[5:8],
     ),
     baca.trill_spanner(),
 )
@@ -1163,7 +1163,7 @@ commands(
     ),
     baca.hairpin(
         "o<| ff",
-        selector=baca.selectors.leaves((1, 3)),
+        selector=lambda _: baca.select.leaves(_)[1:3],
     ),
     baca.accent(
         lambda _: baca.select.phead(_, -1),

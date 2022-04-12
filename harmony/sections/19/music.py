@@ -245,7 +245,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -327,7 +327,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -378,7 +378,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
@@ -474,7 +474,7 @@ commands(
     ),
     baca.dls_staff_padding(
         5,
-        baca.selectors.leaves(grace=False),
+        lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-purpleheart-markup",
@@ -842,7 +842,7 @@ commands(
     # TODO: text spanner currently must precede pitched trill spanner; fix
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((1, 8)),
+        selector=lambda _: baca.select.leaves(_)[1:8],
     ),
     baca.trill_spanner(
         alteration="Fqs5",

@@ -237,7 +237,7 @@ commands(
     baca.dls_staff_padding(6),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
-        selector=baca.selectors.leaves((2, None)),
+        selector=lambda _: baca.select.leaves(_)[2:],
     ),
 )
 
@@ -275,7 +275,7 @@ commands(
     ),
     baca.dls_staff_padding(
         4,
-        baca.selectors.leaves((None, 2)),
+        lambda _: baca.select.leaves(_)[:2],
     ),
     baca.new(
         baca.clef("percussion"),
@@ -308,7 +308,7 @@ commands(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
         ),
-        selector=baca.selectors.leaves((2, None)),
+        selector=lambda _: baca.select.leaves(_)[2:],
     ),
 )
 

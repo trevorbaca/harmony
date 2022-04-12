@@ -365,7 +365,7 @@ commands(
     baca.hairpin(
         "(p) >o",
         bookend=False,
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
@@ -503,7 +503,7 @@ commands(
     baca.hairpin(
         "(p) >o",
         bookend=False,
-        selector=baca.selectors.leaves((-2, None)),
+        selector=lambda _: baca.select.leaves(_)[-2:],
     ),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),

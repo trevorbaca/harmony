@@ -650,7 +650,7 @@ commands(
     baca.new(
         baca.note_head_style_harmonic_black(),
         baca.pitch("Db3"),
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.accent(
         lambda _: baca.select.pheads(_)[:3],
@@ -660,7 +660,7 @@ commands(
         baca.pitches(
             library.appoggiato_pitches_d_flat_3,
         ),
-        selector=baca.selectors.leaves(grace=True),
+        selector=lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "f >o niente",
@@ -770,14 +770,14 @@ commands(
     baca.new(
         baca.note_head_style_harmonic_black(),
         baca.pitch("C3"),
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.new(
         baca.note_head_style_harmonic_black(),
         baca.pitches(
             library.appoggiato_pitches_c_3,
         ),
-        selector=baca.selectors.leaves(grace=True),
+        selector=lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -943,7 +943,7 @@ commands(
     ("vc2", (5, 6)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
-        selector=baca.selectors.leaves((1, -3)),
+        selector=lambda _: baca.select.leaves(_)[1:-3],
     ),
 )
 
@@ -1024,14 +1024,14 @@ commands(
     baca.new(
         baca.note_head_style_harmonic_black(),
         baca.pitch("B2"),
-        selector=baca.selectors.leaves(grace=False),
+        selector=lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.new(
         baca.note_head_style_harmonic_black(),
         baca.pitches(
             library.appoggiato_pitches_b_2,
         ),
-        selector=baca.selectors.leaves(grace=True),
+        selector=lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
         "mf >o niente",

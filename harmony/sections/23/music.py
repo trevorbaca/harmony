@@ -293,7 +293,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
-        selector=baca.selectors.leaves((None, 2)),
+        selector=lambda _: baca.select.leaves(_)[:2],
     ),
 )
 
@@ -459,7 +459,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
     ),
     baca.scp_spanner(
         "T -> P =|",
@@ -617,7 +617,7 @@ commands(
     baca.dynamic("p"),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.leaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.leaves(_)[1:]),
     ),
     baca.scp_spanner(
         "T -> P =|",
