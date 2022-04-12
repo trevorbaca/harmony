@@ -391,7 +391,7 @@ commands(
     baca.pitch("F4"),
     baca.dynamic(
         "p",
-        selector=baca.selectors.pheads((None, 2)),
+        selector=lambda _: baca.select.pheads(_)[:2],
     ),
     baca.dynamic(
         "p-sempre",

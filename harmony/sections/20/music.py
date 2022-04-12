@@ -424,7 +424,7 @@ commands(
         selector=lambda _: baca.select.plts(_)[1:],
     ),
     baca.triple_staccato(
-        baca.selectors.pheads((1, None)),
+        lambda _: baca.select.pheads(_)[1:],
     ),
     baca.dynamic(
         "p",

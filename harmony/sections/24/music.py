@@ -233,7 +233,7 @@ commands(
         selector=baca.selectors.leaves((-2, None)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pheads([0, 2]),
+        lambda _: abjad.select.get(baca.select.pheads(_), [0, 2]),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(
@@ -279,11 +279,11 @@ commands(
     ),
     baca.dynamic(
         "mf",
-        selector=baca.selectors.pheads(([0], 3)),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_), [0], 3),
     ),
     baca.dynamic(
         "mp",
-        selector=baca.selectors.pheads(([1], 3)),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_), [1], 3),
     ),
     baca.dls_staff_padding(4),
     baca.markup(
@@ -382,7 +382,7 @@ commands(
     baca.new(
         baca.pitch("F4"),
         baca.triple_staccato(),
-        selector=baca.selectors.pheads([0, 1, 2, -2, -1]),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_), [0, 1, 2, -2, -1]),
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(
@@ -522,7 +522,7 @@ commands(
             do_not_transpose=True,
         ),
         baca.triple_staccato(),
-        selector=baca.selectors.pheads([0, 1, 2, -2, -1]),
+        selector=lambda _: abjad.select.get(baca.select.pheads(_), [0, 1, 2, -2, -1]),
     ),
     # NOTE: text spanner must currently come before pitched trill spanner
     baca.scp_spanner(

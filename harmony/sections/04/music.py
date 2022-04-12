@@ -234,7 +234,7 @@ commands(
     library.purpleheart_staff_positions([2]),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -250,7 +250,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         right_broken=True,
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -781,7 +781,7 @@ commands(
     (["va", "vc1", "vc2", "cb1"], 9),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),

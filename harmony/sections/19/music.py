@@ -268,7 +268,7 @@ commands(
     baca.dynamic("mp"),
     baca.hairpin(
         "o< mf",
-        selector=baca.selectors.pleaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
     ),
     baca.dls_staff_padding(6),
     baca.markup(
@@ -364,11 +364,11 @@ commands(
     ),
     baca.new(
         library.purpleheart_staff_positions([0]),
-        selector=baca.selectors.pleaves((None, 1)),
+        selector=lambda _: baca.select.pleaves(_)[:1],
     ),
     baca.new(
         library.purpleheart_staff_positions([2]),
-        selector=baca.selectors.pleaves((1, None)),
+        selector=lambda _: baca.select.pleaves(_)[1:],
     ),
     baca.dynamic(
         "ff-ancora",
@@ -923,7 +923,7 @@ commands(
     ),
     # TODO: promote to library.sixteenths()
     baca.invisible_music(
-        baca.selectors.pleaves(([1], 2)),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),

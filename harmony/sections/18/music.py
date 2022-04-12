@@ -201,7 +201,7 @@ commands(
     baca.dynamic("mp"),
     baca.hairpin(
         "o< mf",
-        selector=baca.selectors.pleaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
     ),
     baca.markup(
         r"\baca-bd-struck-then-superball-markup",
@@ -221,7 +221,7 @@ commands(
     ),
     baca.hairpin(
         "o< mf",
-        selector=baca.selectors.pleaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
     ),
 )
 
@@ -295,7 +295,7 @@ commands(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mf",
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
     baca.markup(
         r"\baca-bd-superball-markup",
@@ -312,7 +312,7 @@ commands(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -325,7 +325,7 @@ commands(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -338,7 +338,7 @@ commands(
     baca.laissez_vibrer(),
     baca.hairpin(
         "o< mp",
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -1178,7 +1178,7 @@ commands(
     ),
     # TODO: promote to library.sixteenths()
     baca.invisible_music(
-        baca.selectors.pleaves(([1], 2)),
+        selector=lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),

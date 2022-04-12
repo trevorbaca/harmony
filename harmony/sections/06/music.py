@@ -305,7 +305,7 @@ commands(
             left_broken=True,
         ),
         baca.stem_tremolo(),
-        selector=baca.selectors.pleaves((None, 1)),
+        selector=lambda _: baca.select.pleaves(_)[:1],
     ),
     baca.damp(
         lambda _: baca.select.rest(_, 0),
@@ -676,13 +676,13 @@ commands(
         ),
         baca.new(
             library.whisk_staff_position(),
-            selector=baca.selectors.pleaves((-2, None)),
+            selector=lambda _: baca.select.pleaves(_)[-2:],
         ),
         baca.hairpin(
             'o< "f" >o',
             forbid_al_niente_to_bar_line=True,
             pieces=lambda _: baca.select.clparts(_, [1]),
-            selector=baca.selectors.pleaves((-2, None)),
+            selector=lambda _: baca.select.pleaves(_)[-2:],
         ),
         baca.markup(
             r"\baca-whisk-markup",
@@ -889,14 +889,14 @@ commands(
     ),
     baca.new(
         library.whisk_staff_position(),
-        selector=baca.selectors.pleaves((-2, None)),
+        selector=lambda _: baca.select.pleaves(_)[-2:],
     ),
     #    baca.hairpin(
     #        'o< "f" >o niente',
     #        forbid_al_niente_to_bar_line=True,
     #        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
     #        right_broken=True,
-    #        selector=baca.selectors.pleaves((-2, None), rleak=True),
+    #        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[-2:]),
     #    ),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(
@@ -911,7 +911,7 @@ commands(
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         right_broken=True,
-        selector=baca.selectors.pleaves(rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
     ),
 )
 
@@ -942,7 +942,7 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1020,7 +1020,7 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1120,7 +1120,7 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1177,7 +1177,7 @@ commands(
     ),
     baca.new(
         baca.note_head_style_harmonic(
-            baca.selectors.pleaves(grace=True),
+            lambda _: baca.select.pleaves(_, grace=True),
         ),
         map=lambda _: abjad.select.runs(_, grace=True),
     ),
@@ -1400,7 +1400,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",
@@ -1660,7 +1660,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.hairpin(
         "mf >o niente",

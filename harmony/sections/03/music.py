@@ -631,7 +631,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.new(
         baca.hairpin(
@@ -702,7 +702,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
 )
 
@@ -818,7 +818,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.new(
         baca.hairpin(
@@ -898,7 +898,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
 )
 

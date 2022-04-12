@@ -148,7 +148,7 @@ commands(
         [41, -7, "+"],
     ),
     baca.flat_glissando(
-        hide_stem_selector=baca.selectors.pleaves((1, -2)),
+        hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         selector=lambda _: abjad.select.run(_, 0),
     ),
     baca.flat_glissando(

@@ -220,7 +220,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.dynamic(
         "pp-ancora",

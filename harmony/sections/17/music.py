@@ -718,7 +718,7 @@ commands(
     ),
     # TODO: promote to library.sixteenths()
     baca.invisible_music(
-        baca.selectors.pleaves(([1], 2)),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),

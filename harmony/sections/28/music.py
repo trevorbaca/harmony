@@ -129,7 +129,7 @@ commands(
     ),
     baca.pitch("A4"),
     baca.flat_glissando(
-        hide_stem_selector=baca.selectors.pleaves((1, -1)),
+        hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         selector=baca.selectors.leaves((None, -6)),
     ),
     baca.hairpin(
@@ -165,7 +165,7 @@ commands(
         hide_middle_stems=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.hairpin(
         "p < mp > p p < mp > p",
@@ -205,11 +205,11 @@ commands(
     ),
     library.triangle_staff_position(),
     baca.flat_glissando(
-        hide_stem_selector=baca.selectors.pleaves((1, -1)),
+        hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         selector=baca.selectors.leaves((None, -6)),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -7]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -7]),
     ),
     baca.hairpin(
         "p < mp >",
@@ -423,10 +423,10 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -504,14 +504,14 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.pitch(
         "C5",
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -596,11 +596,11 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<A4 B4 C5>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -656,7 +656,7 @@ commands(
     baca.pitch("A1"),
     baca.flat_glissando(
         hide_middle_stems=True,
-        hide_stem_selector=baca.selectors.pleaves((1, -2)),
+        hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         selector=baca.selectors.leaves((None, -1)),
     ),
     baca.hairpin(
@@ -695,16 +695,16 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch(
         "<G4 Ab4 Bb4>",
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         do_not_transpose=True,
     ),
     baca.pitch(
         "C5",
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
         do_not_transpose=True,
     ),
     baca.note_head_transparent(
-        baca.selectors.pleaves((1, -1)),
+        lambda _: baca.select.pleaves(_)[1:-1],
     ),
 )
 
@@ -745,7 +745,7 @@ commands(
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 5),
     baca.stem_tremolo(
-        baca.selectors.pleaves([0, -1]),
+        lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
 )

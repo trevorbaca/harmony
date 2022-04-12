@@ -202,7 +202,7 @@ commands(
     library.triangle_staff_position(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.selectors.pleaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -305,7 +305,7 @@ commands(
     library.tam_tam_staff_position(),
     baca.flat_glissando(
         right_broken=True,
-        selector=baca.selectors.pleaves((1, None), rleak=True),
+        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
     ),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -528,7 +528,7 @@ commands(
         library.bridge_staff_position(),
         baca.accent(),
         baca.stem_tremolo(),
-        selector=baca.selectors.pleaves((None, 2)),
+        selector=lambda _: baca.select.pleaves(_)[:2],
     ),
     baca.dynamic("ppp"),
     baca.dls_staff_padding(
@@ -570,7 +570,7 @@ commands(
     baca.new(
         baca.pitch("F#3"),
         baca.accent(),
-        selector=baca.selectors.pheads((2, None)),
+        selector=lambda _: baca.select.pheads(_)[2:],
     ),
     baca.dynamic(
         "mf",
@@ -650,7 +650,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.new(
         baca.hairpin("mf >o niente"),
@@ -841,7 +841,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.new(
         baca.hairpin(

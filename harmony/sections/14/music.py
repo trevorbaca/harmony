@@ -611,7 +611,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -653,7 +653,7 @@ commands(
         selector=baca.selectors.leaves(grace=False),
     ),
     baca.accent(
-        baca.selectors.pheads((None, 3)),
+        lambda _: baca.select.pheads(_)[:3],
     ),
     baca.new(
         baca.note_head_style_harmonic_black(),
@@ -668,7 +668,7 @@ commands(
     ),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
-        selector=baca.selectors.pleaves((None, 4), grace=False),
+        selector=lambda _: baca.select.pleaves(_, grace=False)[:4],
     ),
 )
 
@@ -690,7 +690,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -987,7 +987,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1057,7 +1057,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1098,7 +1098,7 @@ commands(
         hide_middle_note_heads=True,
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
@@ -1154,7 +1154,7 @@ commands(
         map=lambda _: baca.select.runs(_),
     ),
     baca.stem_tremolo(
-        baca.selectors.pleaves(grace=False),
+        lambda _: baca.select.pleaves(_, grace=False),
     ),
     baca.markup(
         r"\baca-string-iv-markup",
