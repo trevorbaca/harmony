@@ -419,7 +419,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("pp"),
     baca.markup(
@@ -519,7 +519,7 @@ commands(
     ),
     baca.pitch("F1"),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("p"),
     baca.dls_staff_padding(7),

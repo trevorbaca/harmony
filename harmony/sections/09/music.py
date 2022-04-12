@@ -370,7 +370,7 @@ commands(
         [-4, 8, "-"],
     ),
     baca.stop_on_string(
-        baca.selectors.leaf_in_each_rleak_run(-1),
+        lambda _: baca.select.leaf_in_each_rleak_run(_, -1),
     ),
     baca.hairpin(
         "o<| ff",

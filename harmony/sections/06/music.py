@@ -348,7 +348,7 @@ commands(
     ),
     library.bass_drum_staff_position(),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("mp"),
     baca.dls_staff_padding(6),
@@ -494,7 +494,7 @@ commands(
         [9, "-"],
     ),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     library.tam_tam_staff_position(),
     baca.dynamic("mp"),
@@ -611,7 +611,7 @@ commands(
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
     ),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
 )
 
