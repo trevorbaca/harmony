@@ -830,7 +830,7 @@ commands(
     ),
     baca.stop_on_string(
         lambda _: abjad.select.leaf(_, 0),
-        map=baca.selectors.leaf_in_each_rleak_run(-1),
+        map=lambda _: baca.select.leaf_in_each_rleak_run(_, -1),
     ),
     baca.scp_spanner(
         "P1 =|",

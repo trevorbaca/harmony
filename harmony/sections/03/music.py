@@ -334,7 +334,7 @@ commands(
     ),
     baca.pitch("G1"),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(6),
@@ -373,7 +373,7 @@ commands(
     ),
     baca.pitch("G1"),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic(
         "f",

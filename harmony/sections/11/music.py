@@ -422,7 +422,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -438,7 +438,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic(
         "mp-ancora",
@@ -497,7 +497,7 @@ commands(
     ),
     library.tam_tam_staff_position(),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("mp"),
     baca.markup(
@@ -539,7 +539,7 @@ commands(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("f"),
 )
@@ -554,7 +554,7 @@ commands(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic(
         "f-ancora",
@@ -663,7 +663,7 @@ commands(
         baca.ottava_bassa(),
     ),
     baca.damp(
-        baca.selectors.leaf_after_each_ptail(),
+        lambda _: baca.select.leaf_after_each_ptail(_),
     ),
     baca.dynamic("f"),
     baca.dls_staff_padding(4),
