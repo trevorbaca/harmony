@@ -409,7 +409,7 @@ def appoggiato(
         *commands,
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -495,7 +495,7 @@ def phjc(
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -520,7 +520,7 @@ def rimbalzandi(*, extra_counts=None, rest_except=None):
         rmakers.extract_trivial(),
         frame=inspect.currentframe(),
         preprocessor=lambda _: baca.sequence.fuse(_, [2], cyclic=True),
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -811,7 +811,7 @@ def sixteenths(
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor_,
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -928,7 +928,7 @@ def train(counts, *, rest_leaves=None):
         rmakers.beam(lambda _: [abjad.select.leaves(_)]),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -1010,7 +1010,7 @@ def warble(
         rmakers.denominator((1, 16)),
         frame=inspect.currentframe(),
         preprocessor=preprocessor,
-        tag=baca.function_name(inspect.currentframe()),
+        tag=baca.tags.function_name(inspect.currentframe()),
     )
 
 
@@ -1173,7 +1173,7 @@ voice_abbreviations = {
 
 
 def make_empty_score():
-    tag = baca.function_name(inspect.currentframe())
+    tag = baca.tags.function_name(inspect.currentframe())
     # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
     # BASS FLUTE
