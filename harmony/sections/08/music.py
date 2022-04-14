@@ -231,7 +231,7 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
     baca.dynamic("p"),
     baca.hairpin(
@@ -262,7 +262,7 @@ commands(
     ("va", (1, 9)),
     baca.pitch(
         "<B4 C5 D5>",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
     baca.dls_staff_padding(4),
 )
@@ -300,7 +300,7 @@ commands(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
     baca.hairpin(
         "p < mf > p",
@@ -330,7 +330,7 @@ commands(
     ("vc1", (2, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
 )
 
@@ -386,7 +386,7 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -415,7 +415,7 @@ commands(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
 )
 
@@ -454,7 +454,7 @@ commands(
         invisible=([1], 3),
     ),
     baca.stem_tremolo(
-        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
     baca.hairpin(
         "p < f > p",
@@ -478,7 +478,7 @@ commands(
     ("cb1", (4, 9)),
     baca.pitch(
         "<C5 Db5 Eb5>",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
         do_not_transpose=True,
     ),
 )
@@ -524,7 +524,7 @@ commands(
         invisible=([2], 3),
     ),
     baca.stem_tremolo(
-        lambda _: baca.select.pleaves(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
     baca.dynamic(
         "p",
@@ -547,7 +547,7 @@ commands(
     baca.clef("treble"),
     baca.pitch(
         "<B4 C5 D5>",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
         do_not_transpose=True,
     ),
 )

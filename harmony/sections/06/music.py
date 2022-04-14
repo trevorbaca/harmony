@@ -838,7 +838,7 @@ commands(
 commands(
     ("hp", (10, 14)),
     baca.laissez_vibrer(
-        lambda _: baca.select.ptails(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.ptails(_, exclude=baca.enums.HIDDEN),
     ),
     baca.text_spanner(
         r"\baca-fingernail-markup =|",
@@ -859,7 +859,7 @@ commands(
     baca.hairpin(
         "mf f ff fff",
         bookend=False,
-        pieces=lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        pieces=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
     baca.dls_staff_padding(4),
 )
@@ -1087,7 +1087,7 @@ commands(
     ("va", [1, (6, 15)]),
     baca.pitch(
         "Eb3",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
 )
 
@@ -1287,7 +1287,7 @@ commands(
     ("vc1", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "E4",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
 )
 
@@ -1449,7 +1449,7 @@ commands(
     ("vc2", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "Eqf4",
-        lambda _: baca.select.plts(_, exclude=baca.const.HIDDEN),
+        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
     ),
 )
 
