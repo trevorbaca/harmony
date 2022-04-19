@@ -62,15 +62,16 @@ commands(
 
 commands(
     ("bfl", (1, 2)),
-    baca.staff_lines(5),
-    baca.suite(
-        library.margin_markup("Bfl."),
-        baca.start_markup(r"\harmony-bass-flute-markup"),
-    ),
     library.appoggiato(
         divisions=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
+    ),
+    baca.attach_first_segment_default_indicators(),
+    baca.staff_lines(5),
+    baca.suite(
+        library.margin_markup("Bfl."),
+        baca.start_markup(r"\harmony-bass-flute-markup"),
     ),
     baca.pitch(
         "A3",
@@ -120,6 +121,16 @@ commands(
 # perc1
 
 commands(
+    ("perc1", 1),
+    library.sixteenths(
+        ["-", 3, 1],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+    baca.attach_first_segment_default_indicators(),
+)
+
+commands(
     "perc1",
     baca.dls_staff_padding(6),
 )
@@ -130,11 +141,6 @@ commands(
     baca.start_markup(r"\harmony-percussion-i-markup"),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
-        ["-", 3, 1],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
     baca.hairpin(
         "o<| f",
         selector=lambda _: baca.select.leaves(_)[-2:],
@@ -202,15 +208,16 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
+    library.sixteenths(
+        [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Perc. II"),
         baca.start_markup(r"\harmony-percussion-ii-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
-        [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    ),
     library.slate_staff_position(),
     baca.dynamic("mf"),
     baca.dls_staff_padding(6),
@@ -249,15 +256,16 @@ commands(
 
 commands(
     ("hp", (1, 2)),
+    library.sixteenths(
+        [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Hp."),
         baca.start_markup(r"\harmony-harp-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
-        [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    ),
     library.whisk_staff_position(),
     baca.dynamic("mf"),
     baca.dls_staff_padding(6),
@@ -289,14 +297,15 @@ commands(
 
 commands(
     ("va", (1, 2)),
+    library.appoggiato(
+        divisions=[16, 8, 12, 8],
+        incise=True,
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Va."),
         baca.start_markup(r"\harmony-viola-markup"),
-    ),
-    library.appoggiato(
-        divisions=[16, 8, 12, 8],
-        incise=True,
     ),
     baca.pitch("Gqf4"),
     baca.markup(
@@ -335,13 +344,14 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
+    baca.skeleton(
+        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. I"),
         baca.start_markup(r"\harmony-cello-i-markup"),
-    ),
-    baca.skeleton(
-        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
     ),
     baca.repeat_tie(
         selector=lambda _: abjad.select.get(baca.select.leaves(_), [1, 4]),
@@ -405,14 +415,15 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
+    library.appoggiato(
+        divisions=[16, 8, 12, 8],
+        incise=True,
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. II"),
         baca.start_markup(r"\harmony-cello-ii-markup"),
-    ),
-    library.appoggiato(
-        divisions=[16, 8, 12, 8],
-        incise=True,
     ),
     baca.pitch("B3"),
     baca.dynamic("mp"),
@@ -457,13 +468,14 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
+    library.sixteenths(
+        [18, 6, 10, 4, 6],
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. I"),
         baca.start_markup(r"\harmony-contrabass-i-markup"),
-    ),
-    library.sixteenths(
-        [18, 6, 10, 4, 6],
     ),
     baca.pitch("A1"),
     baca.stem_tremolo(
@@ -514,14 +526,15 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
+    library.appoggiato(
+        divisions=[16, 8, 12, 8],
+        incise=True,
+    ),
+    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. II"),
         baca.start_markup(r"\harmony-contrabass-ii-markup"),
-    ),
-    library.appoggiato(
-        divisions=[16, 8, 12, 8],
-        incise=True,
     ),
     baca.pitch("Dqs3"),
     baca.markup(
