@@ -102,6 +102,7 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     # TODO: promote into library.sixteenths():
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, -1),
@@ -207,12 +208,13 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(3),
     library.appoggiato(
         divisions=[6, 14],
         counts=[5, 4],
         rest_after=True,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     baca.staff_position(
         -2,
         lambda _: baca.select.runs(_)[:1],
@@ -295,12 +297,13 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.staff_lines(3),
     library.appoggiato(
         divisions=[6, 14],
         counts=[4, 5],
         rest_after=True,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     baca.staff_position(
         -2,
         lambda _: baca.select.runs(_)[:1],
@@ -410,11 +413,12 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("bass"),
-    baca.staff_lines(5),
     library.sixteenths(
         [-4, 4, 8, -4],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     baca.pitch("<B2 C3 Db3>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -498,6 +502,7 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
     ),
@@ -570,6 +575,7 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
     ),
@@ -648,6 +654,7 @@ commands(
     library.sixteenths(
         [7, -1, 12],
     ),
+    baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.phead(_, 0),
     ),
@@ -722,6 +729,7 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
     ),
@@ -800,6 +808,7 @@ commands(
     library.sixteenths(
         [7, -1, 12],
     ),
+    baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.phead(_, 0),
     ),

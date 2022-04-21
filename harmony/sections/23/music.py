@@ -85,6 +85,7 @@ commands(
         extra_counts=[2],
         rest_tuplets=[0, 1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -6),
     ),
@@ -150,6 +151,7 @@ commands(
     library.sixteenths(
         [-16, 4],
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -217,11 +219,12 @@ commands(
 
 commands(
     ("perc2", 6),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch(
         "E4",
         lambda _: baca.select.plt(_, 0),
@@ -286,6 +289,7 @@ commands(
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -317,10 +321,11 @@ commands(
 
 commands(
     ("va", 1),
-    baca.clef("alto"),
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("alto"),
     baca.pitch("E3"),
     baca.triple_staccato(
         lambda _: baca.select.pheads(_),
@@ -393,10 +398,11 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.clef("bass"),
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("E2"),
     baca.triple_staccato(
         lambda _: baca.select.pheads(_),
@@ -480,11 +486,12 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.clef("bass"),
     library.tuplet(
         [(1,)],
         force_augmentation=True,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("Dqf3"),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -562,10 +569,11 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.clef("bass"),
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("E1"),
     baca.triple_staccato(
         lambda _: baca.select.pheads(_),
@@ -637,6 +645,8 @@ commands(
 
 commands(
     ("cb2", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
 )
 

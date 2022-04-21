@@ -64,6 +64,7 @@ commands(
     library.sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E3"),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -172,6 +173,7 @@ commands(
     library.sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6),
@@ -252,6 +254,12 @@ commands(
 # perc2
 
 commands(
+    ("perc2", (1, 3)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("perc2", 4),
     library.sixteenths(
         [2, -2],
@@ -306,12 +314,13 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("treble"),
     library.sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.damp(
         lambda _: baca.select.rest(_, 0),
     ),
@@ -375,6 +384,12 @@ commands(
 # va
 
 commands(
+    ("va", (1, 3)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("va", 4),
     baca.pitch("Bb3"),
     baca.scp_spanner(
@@ -412,6 +427,7 @@ commands(
     library.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
@@ -464,6 +480,7 @@ commands(
     library.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
@@ -541,6 +558,7 @@ commands(
     library.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
@@ -622,6 +640,7 @@ commands(
     library.sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),

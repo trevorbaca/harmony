@@ -96,6 +96,25 @@ commands(
 # bfl
 
 commands(
+    ("bfl", [(1, 2), (5, 7), 10]),
+    library.sixteenths(
+        [4, -12],
+    ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
+    ),
+    baca.pitch("C3"),
+    baca.dynamic("mp"),
+    baca.covered_spanner(
+        abjad.Tweak(r"- \tweak staff-padding 3"),
+        argument=r"\baca-cov-markup =|",
+        map=lambda _: baca.select.runs(_),
+    ),
+)
+
+
+commands(
     ("bfl", 4),
     library.sixteenths(
         [4, 4, 16],
@@ -179,20 +198,6 @@ commands(
 )
 
 commands(
-    ("bfl", [(1, 2), (5, 7), 10]),
-    library.sixteenths(
-        [4, -12],
-    ),
-    baca.pitch("C3"),
-    baca.dynamic("mp"),
-    baca.covered_spanner(
-        abjad.Tweak(r"- \tweak staff-padding 3"),
-        argument=r"\baca-cov-markup =|",
-        map=lambda _: baca.select.runs(_),
-    ),
-)
-
-commands(
     ("bfl", (1, 10)),
     baca.dls_staff_padding(4),
 )
@@ -204,6 +209,7 @@ commands(
     library.sixteenths(
         [4, -12],
     ),
+    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic('"ff"'),
     baca.markup(
@@ -322,6 +328,7 @@ commands(
         extra_counts=[-4],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(),
     baca.dynamic(
@@ -420,12 +427,13 @@ commands(
 
 commands(
     ("hp", (1, 2)),
-    baca.clef("treble"),
     library.sixteenths(
         [-12, -2, 4, -6, -12, -2, 4],
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
         lambda _: baca.select.pheads(_),
@@ -525,6 +533,12 @@ commands(
 # va
 
 commands(
+    ("va", (1, 3)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("va", (5, 7)),
     baca.make_repeat_tied_notes(),
 )
@@ -560,6 +574,19 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch("<G4 Ab4 Bb4>"),
     baca.dynamic("pp"),
+)
+
+# vc1, vc2, cb1, cb2
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
+    library.sixteenths(
+        [4, -12],
+    ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=[0, 3, 6, 9],
+    ),
 )
 
 # vc1
@@ -820,9 +847,13 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
-    library.sixteenths(
-        [4, -12],
-    ),
+    #    library.sixteenths(
+    #        [4, -12],
+    #    ),
+    #    baca.new(
+    #        baca.reapply_persistent_indicators(),
+    #        match=[0, 3, 6, 9],
+    #    ),
     baca.clef("bass"),
     baca.hairpin(
         "o<| ff",

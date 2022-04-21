@@ -75,6 +75,7 @@ commands(
         written_quarters=([0], 1),
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
@@ -136,13 +137,14 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(3),
     library.phjc(
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1, 1, 2, 2],
         rest_cyclic=([1], 2),
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2, -2, 0]),
     baca.dynamic("p"),
     baca.dls_staff_padding(5),
@@ -206,6 +208,7 @@ commands(
     library.sixteenths(
         [-4, 4],
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -278,6 +281,7 @@ commands(
         extra_counts=[4],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
@@ -341,10 +345,11 @@ commands(
 
 commands(
     ("va", 1),
-    baca.clef("alto"),
     library.sixteenths(
         [-4, 4],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("alto"),
     baca.pitch("Bb3"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -443,6 +448,16 @@ commands(
         right_broken=True,
         selector=lambda _: baca.select.rleak(baca.select.leaves(_)[3:]),
     ),
+)
+
+# vc1, vc2, cb1, cb2
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], 1),
+    library.sixteenths(
+        [-4, 3, -1],
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc1
@@ -662,9 +677,6 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
-    library.sixteenths(
-        [-4, 3, -1],
-    ),
     baca.new(
         baca.stop_on_string(),
         selector=lambda _: abjad.select.leaf(_, -1),

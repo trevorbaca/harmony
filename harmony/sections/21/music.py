@@ -93,6 +93,7 @@ commands(
         written_quarters=([0], 1),
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
@@ -156,6 +157,7 @@ commands(
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -252,14 +254,15 @@ def preprocessor(divisions):
 
 commands(
     ("perc2", 1),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [4, -8, 4],
         preprocessor=preprocessor,
         extra_counts=[0, -8],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.tuplet_bracket_up(),
     baca.pitch(
         "E4",
@@ -360,6 +363,7 @@ commands(
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -421,6 +425,30 @@ commands(
 # va
 
 commands(
+    ("va", [1, 4]),
+    library.sixteenths(
+        [4],
+    ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
+    ),
+    baca.pitch("E4"),
+    baca.triple_staccato(
+        lambda _: baca.select.pheads(_),
+    ),
+    baca.dynamic("p"),
+    baca.scp_spanner(
+        "P4 -> T1",
+        abjad.Tweak(r"- \tweak staff-padding 3"),
+        autodetect_right_padding=False,
+        bookend=-1,
+        left_broken=True,
+        selector=lambda _: baca.select.leaves(_),
+    ),
+)
+
+commands(
     ("va", 1),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -441,26 +469,6 @@ commands(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: baca.select.runs(_),
-    ),
-)
-
-commands(
-    ("va", [1, 4]),
-    library.sixteenths(
-        [4],
-    ),
-    baca.pitch("E4"),
-    baca.triple_staccato(
-        lambda _: baca.select.pheads(_),
-    ),
-    baca.dynamic("p"),
-    baca.scp_spanner(
-        "P4 -> T1",
-        abjad.Tweak(r"- \tweak staff-padding 3"),
-        autodetect_right_padding=False,
-        bookend=-1,
-        left_broken=True,
-        selector=lambda _: baca.select.leaves(_),
     ),
 )
 
@@ -507,6 +515,10 @@ commands(
         extra_counts=[0, -4],
         denominator=None,
     ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
+    ),
     baca.clef("bass"),
     baca.pitch("E2"),
     baca.triple_staccato(
@@ -551,6 +563,10 @@ commands(
 commands(
     ("vc2", [1, 4]),
     baca.make_notes(),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
+    ),
     baca.clef("bass"),
     baca.pitch("Dqf3"),
     baca.dynamic("p"),
@@ -597,6 +613,10 @@ commands(
         preprocessor=preprocessor,
         extra_counts=[0, -4],
         denominator=None,
+    ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
     ),
     baca.clef("bass"),
     baca.pitch("E1"),
@@ -648,6 +668,10 @@ commands(
     ("cb2", [1, 4]),
     library.sixteenths(
         [4],
+    ),
+    baca.new(
+        baca.reapply_persistent_indicators(),
+        match=0,
     ),
     baca.pitch("E1"),
     baca.flat_glissando(),

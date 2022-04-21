@@ -8,13 +8,13 @@ segment.04.Global.Skips = {
     %! baca._set_status_tag()
     %! REAPPLIED_TIME_SIGNATURE
     \time 3/4
+    %! baca._attach_color_literal(2)
+    %! REAPPLIED_TIME_SIGNATURE_COLOR
+    \baca-time-signature-color #'green4
     %! EMPTY_START_BAR
     %! +SEGMENT
     %! baca._attach_nonfirst_empty_start_bar()
     \bar ""
-    %! baca._attach_color_literal(2)
-    %! REAPPLIED_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'green4
     %! baca._make_global_skips(1)
     s1 * 3/4
     %! baca.rehearsal_mark()

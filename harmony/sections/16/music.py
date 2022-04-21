@@ -72,6 +72,7 @@ commands(
     library.sixteenths(
         library.damp_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D5"),
     baca.dynamic(
         "p-ancora",
@@ -147,6 +148,7 @@ commands(
     library.sixteenths(
         [41, -7, "+"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         selector=lambda _: abjad.select.run(_, 0),
@@ -205,10 +207,11 @@ commands(
 
 commands(
     ("perc2", (1, 6)),
-    baca.staff_lines(1),
     library.sixteenths(
         library.duration_color,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(1),
     library.tam_tam_staff_position(),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -244,10 +247,11 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    baca.clef("bass"),
     library.sixteenths(
         library.duration_color,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("F1"),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -298,6 +302,7 @@ commands(
     library.sixteenths(
         library.glissando_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
@@ -355,6 +360,7 @@ commands(
     library.sixteenths(
         library.damp_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -402,6 +408,7 @@ commands(
     library.sixteenths(
         library.damp_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -449,6 +456,7 @@ commands(
     library.sixteenths(
         library.glissando_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
@@ -516,6 +524,7 @@ commands(
     library.sixteenths(
         library.glissando_counts,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,

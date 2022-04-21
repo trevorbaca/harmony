@@ -100,6 +100,7 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Bb5"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -243,10 +244,11 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(3),
     library.sixteenths(
         [-15, 1],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     baca.staff_position(2),
     baca.dynamic("mp"),
     baca.dls_staff_padding(5),
@@ -356,6 +358,7 @@ commands(
     library.sixteenths(
         [-4, "+"],
     ),
+    baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -445,6 +448,7 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     library.whisk_staff_position(),
     #    baca.hairpin(
     #        'o< "f" >o niente',
@@ -618,6 +622,7 @@ commands(
         prefix_talea=[8, 4, 4],
         tie=[6],
     ),
+    baca.reapply_persistent_indicators(),
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
@@ -783,6 +788,7 @@ commands(
         invisible_pairs=True,
         tie=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E4"),
     baca.hairpin(
         "f >o niente",
@@ -903,6 +909,7 @@ commands(
     library.sixteenths(
         [-4, "+"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("B2"),
     baca.dynamic("p"),
@@ -986,6 +993,7 @@ commands(
     library.sixteenths(
         [4, 4, 4, 4],
     ),
+    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         "E1",
         left_broken=True,
@@ -1112,6 +1120,7 @@ commands(
     library.sixteenths(
         [-4, "+"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Bb2"),
     baca.dynamic("p"),
     baca.damp_spanner(

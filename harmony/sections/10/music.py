@@ -108,6 +108,7 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Eb3"),
     baca.dynamic("mf"),
 )
@@ -319,6 +320,7 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     library.triangle_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -430,6 +432,7 @@ commands(
 commands(
     ("perc2", (1, 7)),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.flat_glissando(
         left_broken=True,
@@ -459,6 +462,12 @@ commands(
 )
 
 # hp
+
+commands(
+    ("hp", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
 
 commands(
     ("hp", [(2, 8), (10, 12)]),
@@ -526,6 +535,16 @@ commands(
 commands(
     ("hp", (1, 13)),
     baca.dls_staff_padding(4),
+)
+
+# va, vc1, vc2, cb1
+
+commands(
+    (["va", "vc1", "vc2", "cb1"], 1),
+    library.sixteenths(
+        [3, "-"],
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -967,6 +986,12 @@ commands(
 # cb2
 
 commands(
+    ("cb2", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("cb2", 2),
     baca.pitch(
         "Dqf6",
@@ -1092,9 +1117,6 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1"], 1),
-    library.sixteenths(
-        [3, "-"],
-    ),
     baca.new(
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),

@@ -119,6 +119,7 @@ commands(
         extra_counts=[2],
         rest_tuplets=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -5),
     ),
@@ -232,12 +233,13 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(3),
     library.appoggiato(
         divisions=[5, 11],
         counts=[0, 5],
         rest_after=True,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
@@ -362,6 +364,7 @@ commands(
         counts=[0, 0, 4],
         rest_after=[-2, -1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.new(
         library.purpleheart_staff_positions([0]),
         selector=lambda _: baca.select.pleaves(_)[:1],
@@ -526,6 +529,8 @@ commands(
 
 commands(
     ("hp", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
 )
@@ -617,6 +622,17 @@ commands(
         r"\baca-sons-xylophoniques-markup",
         abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+commands(
+    (["va", "vc1", "vc2", "cb1"], 1),
+    library.sixteenths(
+        [2, 2, 2, 2, 2, 2, "-"],
+        written_quarters=True,
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -814,6 +830,7 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -917,10 +934,6 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1"], 1),
-    library.sixteenths(
-        [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
-    ),
     # TODO: promote to library.sixteenths()
     baca.invisible_music(
         lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),

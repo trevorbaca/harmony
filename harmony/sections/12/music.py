@@ -114,6 +114,7 @@ commands(
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
@@ -307,11 +308,12 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
@@ -455,6 +457,7 @@ commands(
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.laissez_vibrer(),
     baca.dynamic("pp"),
@@ -584,10 +587,11 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("treble"),
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
@@ -698,6 +702,16 @@ commands(
         r"\baca-whisk-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+commands(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    library.sixteenths(
+        ["+"],
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -1162,9 +1176,6 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
-    library.sixteenths(
-        ["+"],
-    ),
     baca.note_head_style_harmonic(),
     baca.flat_glissando(
         left_broken=True,

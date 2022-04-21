@@ -70,6 +70,21 @@ commands(
     ),
 )
 
+# bfl, va, vc1, vc2, cb1
+
+commands(
+    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
+    library.sixteenths(
+        [4, 4, 16],
+        tie_all=True,
+    ),
+    baca.reapply_persistent_indicators(),
+    baca.hairpin(
+        "pp < p >o niente",
+        pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
+    ),
+)
+
 # bfl
 
 commands(
@@ -92,6 +107,7 @@ commands(
     library.sixteenths(
         [1, -22, 1],
     ),
+    baca.reapply_persistent_indicators(),
     library.brake_drum_staff_position(),
     baca.dynamic("f"),
     baca.new(
@@ -118,6 +134,7 @@ commands(
         ["-", 1],
         invisible=[-1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.damp(
         lambda _: abjad.select.leaf(_, -1),
     ),
@@ -130,6 +147,7 @@ commands(
     library.sixteenths(
         [1, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("Bb4"),
     baca.snap_pizzicato(),
@@ -170,6 +188,7 @@ commands(
         written_dotted_wholes=[0],
         invisible=[1, 2, 3],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
         left_broken=True,
@@ -211,20 +230,6 @@ commands(
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         alteration="Cb5",
-    ),
-)
-
-# va, vc1, vc2, cb1
-
-commands(
-    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
-    library.sixteenths(
-        [4, 4, 16],
-        tie_all=True,
-    ),
-    baca.hairpin(
-        "pp < p >o niente",
-        pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
     ),
 )
 

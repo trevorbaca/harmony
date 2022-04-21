@@ -81,6 +81,12 @@ commands(
 
 # bfl
 
+commands(
+    ("bfl", (1, 7)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
 
 def preprocessor(divisions):
     result = baca.sequence.fuse(divisions)
@@ -117,10 +123,11 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    baca.staff_lines(1),
     library.sixteenths(
         [1, -11, -1, 1, -14],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(1),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-ancora",
@@ -139,6 +146,7 @@ commands(
 commands(
     ("perc2", (1, 6)),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -167,8 +175,6 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [6, 6, 16],
         do_not_rewrite_meter=True,
@@ -176,6 +182,9 @@ commands(
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("<B5 C6 D6>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -230,6 +239,7 @@ commands(
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     ),
+    baca.reapply_persistent_indicators(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
@@ -274,6 +284,7 @@ commands(
     library.sixteenths(
         [4, 4, 4],
     ),
+    baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
         lambda _: abjad.select.leaf(_, 0),
@@ -357,6 +368,7 @@ commands(
         written_wholes=[1],
         invisible=[-1],
     ),
+    baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
         lambda _: abjad.select.leaf(_, 0),
@@ -431,6 +443,7 @@ commands(
     library.sixteenths(
         [4, 4, 8, 4, 4, 8, 4, 4],
     ),
+    baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
         lambda _: abjad.select.leaf(_, 0),
@@ -499,6 +512,7 @@ commands(
         written_wholes=[-2],
         invisible=[-1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Bb2"),
     baca.hairpin(
         "(p) >o",

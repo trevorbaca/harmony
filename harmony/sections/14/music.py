@@ -108,6 +108,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 2),
     library.warble(
         sixteenths=[2 * 4],
@@ -277,6 +283,7 @@ commands(
     library.sixteenths(
         [2, "-", 2],
     ),
+    baca.reapply_persistent_indicators(),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-ancora",
@@ -389,6 +396,7 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -514,10 +522,11 @@ commands(
 
 commands(
     ("hp", (1, 2)),
-    baca.clef("bass"),
     library.sixteenths(
         [22, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("E1"),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -604,6 +613,7 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.interpolate_pitches("D#3", "E3"),
     baca.glissando(
@@ -719,12 +729,13 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.sixteenths(
         [-16, 1, -16, 1, -6],
         extra_counts=[1],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -857,11 +868,12 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.sixteenths(
         [-9, 1, -11, 1, -3, 1, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -980,6 +992,7 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.interpolate_pitches("F2", "E2"),
     baca.glissando(
@@ -1091,6 +1104,7 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.interpolate_pitches("D#2", "E2"),
     baca.glissando(

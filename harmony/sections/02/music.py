@@ -103,6 +103,7 @@ commands(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.pleaves(_), [0, 1], 3),
@@ -220,6 +221,7 @@ commands(
         written_quarters=[-2],
         invisible=[-1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.staff_position(
         -2,
         selector=lambda _: baca.select.leaves(_, grace=True),
@@ -334,8 +336,9 @@ commands(
 
 commands(
     ("perc2", (1, 3)),
-    baca.staff_lines(1),
     baca.make_repeat_tied_notes(),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(1),
     baca.dynamic(
         "p-ancora",
         abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
@@ -459,12 +462,13 @@ commands(
 
 commands(
     ("hp", (1, 5)),
-    baca.clef("treble"),
     library.sixteenths(
         sixteenths,
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -566,12 +570,13 @@ commands(
 
 commands(
     ("va", (1, 5)),
-    baca.clef("alto"),
-    baca.staff_lines(5),
     library.appoggiato(
         divisions=[16, 12, 16, 12, 16, 16],
         counts=[2, 3, 4, 5, 6, 7],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("alto"),
+    baca.staff_lines(5),
     baca.pitch(
         "Ab3",
         selector=lambda _: baca.select.plts(_, grace=False),
@@ -677,13 +682,14 @@ commands(
 
 commands(
     ("vc1", (1, 4)),
-    baca.clef("tenor"),
-    baca.staff_lines(5),
     library.appoggiato(
         divisions=[12, 16, 12, 16, 16, 16],
         counts=[3, 4, 5, 6, 7],
         rest_to=1,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("tenor"),
+    baca.staff_lines(5),
     baca.pitch(
         "Ab3",
         selector=lambda _: baca.select.plts(_, grace=False),
@@ -837,6 +843,7 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_down(),
     baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
@@ -974,6 +981,7 @@ commands(
     library.sixteenths(
         [2, -2, 2, -2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -1126,6 +1134,7 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,

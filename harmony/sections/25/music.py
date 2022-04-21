@@ -103,6 +103,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 2),
     library.warble(
         sixteenths=[2 * 4],
@@ -201,6 +207,12 @@ commands(
 # perc1
 
 commands(
+    ("perc1", 1),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("perc1", 2),
     library.sixteenths(
         ["-", 3, -3, 3, -1],
@@ -281,6 +293,7 @@ commands(
     library.sixteenths(
         [4, -20, 4],
     ),
+    baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -387,11 +400,12 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [-24, 4],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -468,6 +482,7 @@ commands(
 commands(
     ("va", (1, 2)),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.flat_glissando(),
     baca.dynamic("mp"),
@@ -531,6 +546,7 @@ commands(
     baca.skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -592,6 +608,7 @@ commands(
     baca.skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -657,6 +674,7 @@ commands(
     baca.skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -722,6 +740,7 @@ commands(
     baca.skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 

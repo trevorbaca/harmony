@@ -63,6 +63,7 @@ commands(
     library.sixteenths(
         [-4, 8, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("G3"),
     baca.new(
         baca.covered_spanner(
@@ -102,6 +103,7 @@ commands(
     library.sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.accent(
         lambda _: baca.select.pheads(_),
     ),
@@ -144,6 +146,7 @@ commands(
     library.sixteenths(
         [3, -6, 3, 3, -6, 3],
     ),
+    baca.reapply_persistent_indicators(),
     baca.new(
         library.bass_drum_staff_position(),
         selector=lambda _: baca.select.rleaves(_),
@@ -189,6 +192,7 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("<B5 C#6>"),
     baca.double_flageolet(),
     baca.dynamic("f"),
@@ -206,6 +210,7 @@ commands(
     library.sixteenths(
         [-4, "+"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("C#4"),
     baca.flat_glissando(),
     baca.hairpin(
@@ -225,6 +230,16 @@ commands(
 commands(
     ("va", 2),
     baca.pitch("C4"),
+)
+
+# vc1, vc2, cb1, cb2
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], 1),
+    library.sixteenths(
+        [-4, 8, "-"],
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc1
@@ -366,9 +381,6 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
-    library.sixteenths(
-        [-4, 8, "-"],
-    ),
     baca.stop_on_string(
         lambda _: baca.select.leaf_in_each_rleak_run(_, -1),
     ),
