@@ -130,6 +130,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 3),
     library.sixteenths(
         [-2, 2, 2],
@@ -267,6 +273,12 @@ commands(
 # perc1
 
 commands(
+    ("perc1", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("perc1", 3),
     library.sixteenths(
         [-2, 3, -3, 3, -3, 3, -3, 3, -3],
@@ -357,6 +369,7 @@ commands(
     library.sixteenths(
         [4, -20, 4],
     ),
+    baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -473,6 +486,7 @@ commands(
     library.sixteenths(
         [-24, 4],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -568,6 +582,7 @@ commands(
 commands(
     ("va", 1),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
@@ -668,6 +683,14 @@ commands(
         r"\baca-seven-a",
         direction=abjad.DOWN,
     ),
+)
+
+# vc1, vc2, cb1, cb2
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
 )
 
 # vc1

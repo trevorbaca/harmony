@@ -104,6 +104,7 @@ commands(
     library.sixteenths(
         library.cerulean[1:],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -151,6 +152,7 @@ commands(
         extra_counts=[2],
         rest_most=True,
     ),
+    baca.reapply_persistent_indicators(),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
@@ -229,7 +231,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.staff_lines(3),
     library.phjc(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
@@ -237,6 +238,8 @@ commands(
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
@@ -328,10 +331,11 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("bass"),
     library.sixteenths(
         [10, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("G1"),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -385,13 +389,14 @@ commands(
 
 commands(
     ("va", 1),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.sixteenths(
         library.cerulean[1:],
         extra_counts=[2],
         denominator=None,
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -466,10 +471,11 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.clef("bass"),
     baca.skeleton(
         r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.tuplet_number_text(
         r"\markup 5:4",
         lambda _: abjad.select.leaf(_, 1),
@@ -619,12 +625,13 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.clef("bass"),
     library.sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
         allow_repeats=True,
@@ -715,11 +722,12 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.sixteenths(
         library.cerulean[1:],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -806,12 +814,13 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.clef("bass"),
     library.sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,

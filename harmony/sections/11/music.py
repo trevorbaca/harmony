@@ -115,6 +115,7 @@ commands(
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
@@ -247,11 +248,12 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
@@ -402,6 +404,7 @@ commands(
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.flat_glissando(
         left_broken=True,
@@ -515,10 +518,11 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.clef("treble"),
     library.sixteenths(
         ["+"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
@@ -682,6 +686,7 @@ commands(
         ["+"],
         tie=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D3"),
     baca.hairpin(
         "ff >o niente",
@@ -757,6 +762,7 @@ commands(
         written_quarters=([0], 1),
         invisible=([1], 2),
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.note_head_style_harmonic(),
     baca.hairpin(
@@ -851,6 +857,7 @@ commands(
         ["+"],
         tie=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D2"),
     baca.hairpin(
         "ff >o niente",
@@ -925,6 +932,7 @@ commands(
         written_quarters=([0], 1),
         invisible=([1], 2),
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.note_head_style_harmonic(),
     baca.hairpin(
@@ -1015,6 +1023,7 @@ commands(
         ["+"],
         tie=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D2"),
     baca.hairpin(
         "ff >o niente",

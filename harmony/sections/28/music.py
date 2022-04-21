@@ -87,6 +87,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", (1, 4)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 5),
     library.warble(
         sixteenths=[12, 12, 1, 11, 12],
@@ -160,6 +166,7 @@ commands(
         fuse=True,
         written_halves=[0],
     ),
+    baca.reapply_persistent_indicators(),
     library.triangle_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -234,11 +241,12 @@ commands(
 
 commands(
     ("perc2", (1, 4)),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("C#5"),
     baca.dynamic("p"),
     baca.dls_staff_padding(4),
@@ -303,10 +311,11 @@ commands(
 
 commands(
     ("hp", (1, 4)),
-    baca.clef("bass"),
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("A1"),
     baca.dynamic("f"),
     baca.dls_staff_padding(4 + 2),
@@ -347,6 +356,7 @@ commands(
 commands(
     ("va", (1, 4)),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Gqf3"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -393,6 +403,7 @@ commands(
     library.sixteenths(
         [10, 6],
     ),
+    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("E6 C#6"),
     baca.glissando(),
@@ -474,6 +485,7 @@ commands(
     library.sixteenths(
         [10, 6],
     ),
+    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("A5 C#6"),
     baca.glissando(),
@@ -557,10 +569,11 @@ commands(
 
 commands(
     ("cb1", (1, 4)),
-    baca.clef("treble"),
     library.sixteenths(
         [4, 4, -8],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.note_head_style_harmonic(),
     baca.pitch(
         "C#4",
@@ -653,6 +666,7 @@ commands(
         written_halves=[-2],
         invisible=[-1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
         hide_middle_stems=True,

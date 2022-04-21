@@ -82,6 +82,7 @@ commands(
         6,
         gap=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F#3"),
 )
 
@@ -139,6 +140,7 @@ commands(
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.new(
         library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
         baca.hairpin(
@@ -189,6 +191,7 @@ commands(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
+    baca.reapply_persistent_indicators(),
     library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
         "f > p",
@@ -263,8 +266,9 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    baca.clef("treble"),
     library.tessera_1(5),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("C#4"),
 )
 
@@ -321,6 +325,7 @@ commands(
         4,
         gap=True,
     ),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -393,6 +398,7 @@ commands(
         3,
         gap=True,
     ),
+    baca.reapply_persistent_indicators(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
@@ -464,6 +470,7 @@ commands(
         2,
         gap=True,
     ),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -536,9 +543,10 @@ commands(
 
 commands(
     ("cb1", (1, 6)),
+    library.tessera_1(1),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
-    library.tessera_1(1),
 )
 
 commands(
@@ -616,8 +624,9 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    baca.clef("treble"),
     library.tessera_1(0),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch(
         "F#4",
         do_not_transpose=True,

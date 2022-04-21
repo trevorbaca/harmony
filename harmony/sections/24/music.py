@@ -73,6 +73,7 @@ commands(
     library.sixteenths(
         [2, 3, -3],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F5"),
     baca.hairpin(
         "niente o< mf >o",
@@ -127,6 +128,7 @@ commands(
     library.sixteenths(
         [5, -3],
     ),
+    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic("mp"),
     baca.markup(
@@ -180,6 +182,7 @@ commands(
     library.sixteenths(
         [2, -8, 2, -3, 2, -8],
     ),
+    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| mf",
@@ -273,6 +276,7 @@ commands(
     library.sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("A4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -309,6 +313,19 @@ commands(
         r"\baca-whisk-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+commands(
+    (["va", "vc2", "cb2"], (1, 3)),
+    library.sixteenths(
+        [2, 2, -10],
+        written_quarters=[0, 1, 4, 5],
+        invisible=[1, 5],
+        tie_runs=True,
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -367,8 +384,6 @@ def preprocessor(divisions):
 
 commands(
     ("vc1", (1, 3)),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=preprocessor,
@@ -378,6 +393,9 @@ commands(
         invisible=[6],
         tie=[6],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.tuplet_bracket_down(),
     baca.new(
         baca.pitch("F4"),
@@ -504,8 +522,6 @@ def preprocessor(divisions):
 
 commands(
     ("cb1", (1, 3)),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=preprocessor,
@@ -515,6 +531,9 @@ commands(
         invisible=[6],
         tie=[6],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.tuplet_bracket_down(),
     baca.new(
         baca.pitch(
@@ -649,12 +668,6 @@ commands(
     baca.new(
         baca.staff_lines(5),
         match=[0, 1],
-    ),
-    library.sixteenths(
-        [2, 2, -10],
-        written_quarters=[0, 1, 4, 5],
-        invisible=[1, 5],
-        tie_runs=True,
     ),
     baca.hairpin(
         "niente o<| mp |>o",

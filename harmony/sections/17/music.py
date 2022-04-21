@@ -89,6 +89,7 @@ commands(
     library.sixteenths(
         [4, 4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D5"),
     baca.new(
         baca.text_spanner(
@@ -185,9 +186,10 @@ commands(
 
 commands(
     ("perc1", 1),
+    baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
-    baca.make_notes(),
     baca.pitch("E4"),
     baca.laissez_vibrer(),
     baca.dynamic("f"),
@@ -260,6 +262,7 @@ commands(
 commands(
     ("perc2", 1),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.laissez_vibrer(),
     baca.dynamic("mp"),
@@ -336,6 +339,7 @@ commands(
 commands(
     ("hp", 1),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.pitch("Db1"),
     baca.ottava_bassa(),
     baca.ottava_bracket_staff_padding(8),
@@ -386,6 +390,7 @@ commands(
 commands(
     ("va", (1, 2)),
     baca.make_notes(),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D4"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -434,6 +439,7 @@ commands(
         3,
         rest_plts=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E3"),
     baca.scp_spanner(
         "T4 -> P1",
@@ -502,6 +508,7 @@ commands(
         2,
         rest_plts=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D3"),
     baca.scp_spanner(
         "T4 -> P1",
@@ -570,6 +577,7 @@ commands(
         1,
         rest_plts=[0],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("E3"),
     baca.scp_spanner(
         "T4 -> P1",
@@ -638,6 +646,7 @@ commands(
 commands(
     ("cb2", 1),
     library.tessera_2(0),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D3"),
     baca.scp_spanner(
         "T4 -> P1",

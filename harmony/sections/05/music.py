@@ -71,6 +71,7 @@ commands(
     library.sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -132,10 +133,11 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(1),
     library.sixteenths(
         [-19, 1],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(1),
     library.bass_drum_staff_position(),
     baca.dynamic("mf"),
     baca.dls_staff_padding(6 + 1),
@@ -222,6 +224,7 @@ commands(
     library.sixteenths(
         [4, 4, "-", 1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.staff_lines(
         1,
         lambda _: abjad.select.leaf(_, 2),
@@ -325,6 +328,7 @@ commands(
     library.sixteenths(
         [-2, 2, "-", 2],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitches("F#4 G#4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -406,11 +410,12 @@ commands(
 
 commands(
     ("va", 1),
-    baca.clef("alto"),
-    baca.staff_lines(5),
     library.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("alto"),
+    baca.staff_lines(5),
     baca.pitch("Eb3"),
     baca.dynamic("f"),
     baca.bow_speed_spanner(
@@ -494,6 +499,7 @@ commands(
     library.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("E4"),
     baca.dynamic("f"),
@@ -618,10 +624,11 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.clef("treble"),
     library.sixteenths(
         [-1, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("treble"),
     baca.pitch("Eqf4"),
     baca.dynamic("f"),
     baca.bow_speed_spanner(
@@ -704,10 +711,11 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.clef("bass"),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.clef("bass"),
     baca.pitch("E1"),
     baca.flat_glissando(),
     baca.hairpin(
@@ -807,6 +815,7 @@ commands(
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
+    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         "E1",
         left_broken=True,

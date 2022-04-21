@@ -93,6 +93,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 3),
     library.warble(
         sixteenths=[2 * 4],
@@ -190,10 +196,11 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.staff_lines(1),
     library.sixteenths(
         [4, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
+    baca.staff_lines(1),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(
         lambda _: baca.select.phead(_, 1),
@@ -355,6 +362,7 @@ commands(
     library.sixteenths(
         [4, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     library.brake_drum_staff_position(),
     baca.damp(),
     baca.dynamic("p"),
@@ -502,6 +510,7 @@ commands(
     library.sixteenths(
         [-4, 2, "-"],
     ),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -587,6 +596,17 @@ commands(
 commands(
     ("hp", (9, 11)),
     baca.dls_staff_padding(6),
+)
+
+# va, vc1, vc2, cb1, cb2
+
+commands(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 1),
+    library.sixteenths(
+        [-4, 6, 2, -4],
+        untie=True,
+    ),
+    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -1128,10 +1148,6 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 1),
-    library.sixteenths(
-        [-4, 6, 2, -4],
-        untie=True,
-    ),
     baca.new(
         # excluded cb1 because of current gliss / pitch trill order contention
         baca.flat_glissando(),

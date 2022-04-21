@@ -94,6 +94,12 @@ commands(
 # bfl
 
 commands(
+    ("bfl", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("bfl", 3),
     library.sixteenths(
         [-4, 2, 2, -4],
@@ -173,6 +179,12 @@ commands(
 )
 
 # perc1
+
+commands(
+    ("perc1", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
 
 commands(
     ("perc1", 3),
@@ -271,6 +283,12 @@ commands(
 # perc2
 
 commands(
+    ("perc2", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
+
+commands(
     ("perc2", 3),
     library.sixteenths(
         [-4, 4, -4],
@@ -357,6 +375,7 @@ commands(
     library.sixteenths(
         [4, "-"],
     ),
+    baca.reapply_persistent_indicators(),
     baca.pitch("D5"),
     baca.flageolet(
         lambda _: baca.select.pheads(_),
@@ -470,6 +489,7 @@ commands(
         extra_counts=[1],
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.pitches("D4 C#4"),
     baca.glissando(),
@@ -552,6 +572,12 @@ commands(
 )
 
 # vc1
+
+commands(
+    ("vc1", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
 
 commands(
     ("vc1", 3),
@@ -644,6 +670,7 @@ commands(
         denominator=None,
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.tuplet_bracket_staff_padding(1.5),
     baca.pitches("Gb4 F4"),
@@ -740,6 +767,7 @@ commands(
         [27],
         after_graces=[1],
     ),
+    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitches("D2 C#2"),
     baca.glissando(),
@@ -802,6 +830,12 @@ commands(
 )
 
 # cb2
+
+commands(
+    ("cb2", (1, 2)),
+    baca.make_mmrests(),
+    baca.reapply_persistent_indicators(),
+)
 
 commands(
     ("cb2", 3),
