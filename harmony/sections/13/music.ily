@@ -22,14 +22,6 @@ segment.13.Global.Skips = {
     s1 * 5/4
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "M" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -38,6 +30,14 @@ segment.13.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "M" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "M" #10
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
@@ -790,15 +790,15 @@ segment.13.Bass.Flute.Music.Voice = {
       %! baca.stem_tremolo()
     :32
     % MARKUP:
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
       %! REAPPLIED_MARGIN_MARKUP_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"
-      %! DURATION_MULTIPLIER
-      %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     % SPANNER_STARTS:
       %! AUTODETECT
       %! LEFT_BROKEN
@@ -2008,15 +2008,15 @@ segment.13.Percussion.I.Music.Voice = {
               %! baca._set_status_tag()
             \f
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
-              %! DURATION_MULTIPLIER
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
             % START_BEAM:
             [
             % SPANNER_STARTS:
@@ -2987,15 +2987,15 @@ segment.13.Percussion.II.Music.Voice = {
               %! baca._set_status_tag()
             \baca-effort-f
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
-              %! DURATION_MULTIPLIER
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
             % START_BEAM:
             [
             % SPANNER_STARTS:

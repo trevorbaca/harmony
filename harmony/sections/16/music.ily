@@ -22,14 +22,6 @@ segment.16.Global.Skips = {
     s1 * 3/4
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "P" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -38,6 +30,14 @@ segment.16.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "P" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "P" #10
     % SPANNER_STARTS:
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
       %! baca._attach_metronome_marks(3)
@@ -1586,18 +1586,18 @@ segment.16.Percussion.I.Music.Voice = {
       %! baca.dynamic()
     \baca-p-sempre
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-brake-drum-paper-towel-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
     % SPANNER_STARTS:
       %! abjad.glissando(7)
       %! baca.glissando()
@@ -2236,18 +2236,18 @@ segment.16.Percussion.II.Music.Voice = {
       %! baca.dynamic()
     \pp
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-tam-tam-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
     % SPANNER_STARTS:
       %! baca._attach_shadow_tie_indicators()
     - \tweak stencil ##f

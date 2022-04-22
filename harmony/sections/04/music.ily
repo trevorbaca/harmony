@@ -23,14 +23,6 @@ segment.04.Global.Skips = {
     s1 * 3/4
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "D" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -39,6 +31,14 @@ segment.04.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "D" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "D" #10
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
@@ -9186,21 +9186,21 @@ segment.04.Contrabass.I.Music.Voice = {
       %! baca.hairpin()
     \pp
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    ^ \baca-eleven-e
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak padding 1.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-eleven-e
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
     [
@@ -9699,13 +9699,13 @@ segment.04.Contrabass.I.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-eleven-e
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
     - \tweak padding 1.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-eleven-e
     % SPANNER_STARTS:
       %! AUTODETECT
       %! PIZZICATO_SPANNER
@@ -10046,13 +10046,13 @@ segment.04.Contrabass.I.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-eleven-e
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
     - \tweak padding 1.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-eleven-e
     % SPANNER_STARTS:
       %! AUTODETECT
       %! PIZZICATO_SPANNER
@@ -10371,12 +10371,6 @@ segment.04.Contrabass.II.Music.Voice = {
       %! baca.hairpin()
     \pp
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Cb. II”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak X-offset 2.5
@@ -10386,6 +10380,12 @@ segment.04.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Cb. II”]"
     % SPANNER_STARTS:
       %! AUTODETECT
       %! PIZZICATO_SPANNER

@@ -133,14 +133,6 @@ segment.21.Global.Skips = {
     s1 * 1
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "U" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -149,6 +141,14 @@ segment.21.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "U" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "U" #10
     % SPANNER_STOPS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -739,15 +739,15 @@ segment.21.Bass.Flute.Music.Voice = {
       %! baca.dynamic()
     \p
     % MARKUP:
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-boxed-markup "L.42"
       %! REAPPLIED_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
       %! REAPPLIED_MARGIN_MARKUP_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    ^ \baca-boxed-markup "L.42"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -1635,18 +1635,18 @@ segment.21.Percussion.I.Music.Voice = {
       %! baca.laissez_vibrer()
     \laissezVibrer
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-bd-struck-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2416,18 +2416,18 @@ segment.21.Percussion.II.Music.Voice = {
       %! baca.laissez_vibrer()
     \laissezVibrer
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 4
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-glockenspiel-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -3291,18 +3291,18 @@ segment.21.Harp.Music.Voice = {
       %! baca.laissez_vibrer()
     \laissezVibrer
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Harp”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 4
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-xyl-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Harp”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! REAPPLIED_CLEF_REDRAW_COLOR

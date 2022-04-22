@@ -22,14 +22,6 @@ segment.02.Global.Skips = {
     s1 * 1
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "B" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -38,6 +30,14 @@ segment.02.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "B" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "B" #10
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
@@ -1166,15 +1166,15 @@ segment.02.Bass.Flute.Music.Voice = {
       %! baca.hairpin()
     \p
     % MARKUP:
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
       %! REAPPLIED_MARGIN_MARKUP_ALERT
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"
-      %! DURATION_MULTIPLIER
-      %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -3499,15 +3499,15 @@ segment.02.Percussion.I.Music.Voice = {
               %! baca._set_status_tag()
             \p
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
-              %! DURATION_MULTIPLIER
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
             % START_BEAM:
             [
             % SPANNER_STARTS:
@@ -5156,18 +5156,18 @@ segment.02.Percussion.II.Music.Voice = {
       %! baca.dynamic()
     \baca-p-ancora
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-tam-tam-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
     % SPANNER_STARTS:
       %! abjad.glissando(7)
       %! baca.glissando()
@@ -6191,12 +6191,6 @@ segment.02.Harp.Music.Voice = {
       %! baca.hairpin()
     \p
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Harp”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 4
@@ -6206,6 +6200,12 @@ segment.02.Harp.Music.Voice = {
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Harp”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -8567,15 +8567,15 @@ segment.02.Viola.Music.Voice = {
               %! baca._set_status_tag()
             \sfp
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Viola”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Va.”]"
-              %! DURATION_MULTIPLIER
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
             % START_BEAM:
             [
             % SPANNER_STARTS:

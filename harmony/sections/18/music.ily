@@ -22,14 +22,6 @@ segment.18.Global.Skips = {
     s1 * 1
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "R" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -38,6 +30,14 @@ segment.18.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "R" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "R" #10
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
@@ -1064,17 +1064,17 @@ segment.18.Bass.Flute.Music.Voice = {
               %! baca._set_status_tag()
             \p
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! HIDDEN
+              %! NOTE
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"1" #"1"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"1"
             % ABSOLUTE_AFTER:
             % COMMANDS:
               %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -2052,18 +2052,18 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.dynamic()
     \mp
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-bd-struck-then-superball-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -3388,18 +3388,18 @@ segment.18.Percussion.II.Music.Voice = {
       %! baca.dynamic()
     \p
     % MARKUP:
-      %! REAPPLIED_INSTRUMENT_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
-      %! REAPPLIED_MARGIN_MARKUP_ALERT
-      %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 6
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     ^ \baca-brake-drum-markup
+      %! REAPPLIED_INSTRUMENT_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
+      %! REAPPLIED_MARGIN_MARKUP_ALERT
+      %! baca._attach_latent_indicator_alert()
+    %@% ^ \baca-reapplied-indicator-markup "[“Perc. II”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -6090,12 +6090,12 @@ segment.18.Viola.Music.Voice = {
       %! baca.stem_tremolo()
     :32
     % MARKUP:
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    ^ \baca-quasi-bisb-markup
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-quasi-bisb-markup
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -6958,15 +6958,15 @@ segment.18.Viola.Music.Voice = {
       %! baca.hairpin()
     \!
     % MARKUP:
-      %! DURATION_MULTIPLIER
-      %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     - \tweak staff-padding 1.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! DURATION_MULTIPLIER
+      %! baca._label_duration_multipliers()
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -8748,16 +8748,16 @@ segment.18.Cello.I.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-quasi-bisb-markup
+    - \tweak staff-padding 1.5
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    - \tweak staff-padding 1.5
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    _ \baca-string-i-markup
+    ^ \baca-quasi-bisb-markup
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -10486,13 +10486,13 @@ segment.18.Cello.II.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-seven-c
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
     - \tweak staff-padding 1.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-seven-c
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -10808,16 +10808,16 @@ segment.18.Cello.II.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-quasi-bisb-markup
+    - \tweak staff-padding 1.5
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    _ \baca-string-i-markup
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    - \tweak staff-padding 1.5
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    _ \baca-string-i-markup
+    ^ \baca-quasi-bisb-markup
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -13534,16 +13534,16 @@ segment.18.Contrabass.I.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-quasi-bisb-markup
+    - \tweak staff-padding 1.5
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    _ \baca-string-iii-markup
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    - \tweak staff-padding 1.5
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    _ \baca-string-iii-markup
+    ^ \baca-quasi-bisb-markup
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -15546,16 +15546,16 @@ segment.18.Contrabass.II.Music.Voice = {
         % MARKUP:
           %! baca.IndicatorCommand._call()
           %! baca.markup()
-        ^ \baca-quasi-bisb-markup
+        - \tweak staff-padding 1.5
+          %! baca.IndicatorCommand._call()
+          %! baca.markup()
+        _ \baca-string-iii-markup
           %! DURATION_MULTIPLIER
           %! baca._label_duration_multipliers()
         %@% ^ \baca-duration-multiplier-markup #"1" #"2"
           %! baca.IndicatorCommand._call()
           %! baca.markup()
-        - \tweak staff-padding 1.5
-          %! baca.IndicatorCommand._call()
-          %! baca.markup()
-        _ \baca-string-iii-markup
+        ^ \baca-quasi-bisb-markup
         % SPANNER_STARTS:
           %! AUTODETECT
           %! METRIC_MODULATION_SPANNER
@@ -16819,12 +16819,12 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.hairpin()
     \!
     % MARKUP:
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
-    ^ \baca-eleven-c
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-eleven-c
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
