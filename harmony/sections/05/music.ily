@@ -331,14 +331,6 @@ segment.05.Global.Skips = {
     s1 * 3/2
     % AFTER:
     % MARKUP:
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \tweak extra-offset #'(0 . 18)
-      %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.rehearsal_mark()
-    - \baca-rehearsal-mark-markup "E" #10
       %! +PARTS
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
@@ -347,6 +339,14 @@ segment.05.Global.Skips = {
       %! baca.IndicatorCommand._call()
       %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "E" #4
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \tweak extra-offset #'(0 . 18)
+      %! -PARTS
+      %! baca.IndicatorCommand._call()
+      %! baca.rehearsal_mark()
+    - \baca-rehearsal-mark-markup "E" #10
     % SPANNER_STOPS:
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -694,17 +694,17 @@ segment.05.Bass.Flute.Music.Voice = {
               %! baca._set_status_tag()
             \pp
             % MARKUP:
+              %! DURATION_MULTIPLIER
+              %! HIDDEN
+              %! NOTE
+              %! baca._label_duration_multipliers()
+            %@% ^ \baca-duration-multiplier-markup #"5" #"4"
               %! REAPPLIED_INSTRUMENT_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
               %! REAPPLIED_MARGIN_MARKUP_ALERT
               %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "[“Bfl.”]"
-              %! DURATION_MULTIPLIER
-              %! HIDDEN
-              %! NOTE
-              %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"5" #"4"
             % ABSOLUTE_AFTER:
             % COMMANDS:
               %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -7372,9 +7372,6 @@ segment.05.Contrabass.I.Music.Voice = {
     % MARKUP:
       %! baca.IndicatorCommand._call()
       %! baca.markup()
-    ^ \baca-eleven-e
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
     - \tweak X-offset 2.5
       %! baca.IndicatorCommand._call()
       %! baca.markup()
@@ -7382,6 +7379,9 @@ segment.05.Contrabass.I.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.markup()
     _ \baca-string-iv-markup
+      %! baca.IndicatorCommand._call()
+      %! baca.markup()
+    ^ \baca-eleven-e
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
     [
