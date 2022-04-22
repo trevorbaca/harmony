@@ -3,17 +3,17 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 1]
-    %! EXPLICIT_TIME_SIGNATURE
-    %! baca._make_global_skips(2)
-    %! baca._set_status_tag()
-    \time 4/4
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! +SEGMENT
     %! EMPTY_START_BAR
     %! baca._attach_nonfirst_empty_start_bar()
     \bar ""
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
+    %! EXPLICIT_TIME_SIGNATURE
+    %! baca._make_global_skips(2)
+    %! baca._set_status_tag()
+    \time 4/4
     %! baca._make_global_skips(1)
     s1 * 1
     %! -PARTS
@@ -113,13 +113,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 2]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 3/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 3/4
     %! LOCAL_MEASURE_NUMBER
@@ -152,13 +152,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 3]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 4/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 1
     %! LOCAL_MEASURE_NUMBER
@@ -256,13 +256,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 4]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 3/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 3/4
     %! LOCAL_MEASURE_NUMBER
@@ -336,13 +336,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 6]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 6/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 3/2
     %! LOCAL_MEASURE_NUMBER
@@ -440,13 +440,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 7]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 1/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 1/4
     %! -PARTS
@@ -487,13 +487,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 8]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 4/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 1
     %! LOCAL_MEASURE_NUMBER
@@ -591,13 +591,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 9]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 3/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 3/4
     %! LOCAL_MEASURE_NUMBER
@@ -639,13 +639,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 10]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 4/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 1
     %! LOCAL_MEASURE_NUMBER
@@ -678,13 +678,13 @@ segment.18.Global.Skips = {
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 11]
+    %! EXPLICIT_TIME_SIGNATURE_COLOR
+    %! baca._attach_color_literal(2)
+    \baca-time-signature-color #'blue
     %! EXPLICIT_TIME_SIGNATURE
     %! baca._make_global_skips(2)
     %! baca._set_status_tag()
     \time 3/4
-    %! EXPLICIT_TIME_SIGNATURE_COLOR
-    %! baca._attach_color_literal(2)
-    \baca-time-signature-color #'blue
     %! baca._make_global_skips(1)
     s1 * 3/4
     %! LOCAL_MEASURE_NUMBER
@@ -719,15 +719,15 @@ segment.18.Global.Skips = {
     %! baca._comment_measure_numbers()
     %! baca._style_phantom_measures(1)
     % [Global_Skips measure 12]
+    %! PHANTOM
+    %! baca._style_phantom_measures(2)
+    \baca-time-signature-transparent
     %! EXPLICIT_TIME_SIGNATURE
     %! PHANTOM
     %! baca._make_global_skips(3)
     %! baca._set_status_tag()
     %! baca._style_phantom_measures(1)
     \time 1/4
-    %! PHANTOM
-    %! baca._style_phantom_measures(2)
-    \baca-time-signature-transparent
     %! PHANTOM
     %! baca._make_global_skips(3)
     s1 * 1/4
@@ -857,11 +857,24 @@ segment.18.Bass.Flute.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Music_Voice measure 1]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
+            %! baca.OverrideCommand._call(1)
+            %! baca.dls_staff_padding()
+            \override DynamicLineSpanner.staff-padding = 4
             %! EXPLICIT_BAR_EXTENT
             %! baca._reanalyze_reapplied_synthetic_wrappers()
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            %! baca._clone_segment_initial_short_instrument_name()
+            \set Staff.instrumentName = \harmony-bfl-markup
             %! -PARTS
             %! REAPPLIED_MARGIN_MARKUP
             %! baca._reapply_persistent_indicators(3)
@@ -882,19 +895,6 @@ segment.18.Bass.Flute.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \startStaff
-            %! baca._clone_segment_initial_short_instrument_name()
-            \set Staff.instrumentName = \harmony-bfl-markup
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
-            %! baca.OverrideCommand._call(1)
-            %! baca.dls_staff_padding()
-            \override DynamicLineSpanner.staff-padding = 4
             %! REAPPLIED_CLEF
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
@@ -902,6 +902,12 @@ segment.18.Bass.Flute.Music.Voice = {
             %! REAPPLIED_CLEF_COLOR
             %! baca._attach_color_literal(2)
             \once \override Staff.Clef.color = #(x11-color 'green4)
+            %! REAPPLIED_MARGIN_MARKUP_COLOR
+            %! baca._attach_color_literal(2)
+            %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+            %! REAPPLIED_STAFF_LINES_COLOR
+            %! baca._attach_color_literal(2)
+            \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
             %! REAPPLIED_CLEF_COLOR_CANCELLATION
             %! baca._attach_color_literal(1)
             %@% \override Staff.Clef.color = ##f
@@ -910,12 +916,6 @@ segment.18.Bass.Flute.Music.Voice = {
             %! baca._set_status_tag()
             %! baca.treat_persistent_wrapper(2)
             \set Staff.forceClef = ##t
-            %! REAPPLIED_STAFF_LINES_COLOR
-            %! baca._attach_color_literal(2)
-            \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-            %! REAPPLIED_MARGIN_MARKUP_COLOR
-            %! baca._attach_color_literal(2)
-            %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -1001,17 +1001,17 @@ segment.18.Bass.Flute.Music.Voice = {
         r32
 
         %! baca.OverrideCommand._call(1)
-        %! baca.note_head_font_size()
-        \override NoteHead.font-size = -3
-        %! baca.OverrideCommand._call(1)
-        %! baca.accidental_font_size()
-        \override Accidental.font-size = -3
-        %! baca.OverrideCommand._call(1)
         %! baca.accidental_x_offset()
         \override Accidental.X-offset = 0
         %! baca.OverrideCommand._call(1)
         %! baca.accidental_y_offset()
         \override Accidental.Y-offset = -2
+        %! baca.OverrideCommand._call(1)
+        %! baca.accidental_font_size()
+        \override Accidental.font-size = -3
+        %! baca.OverrideCommand._call(1)
+        %! baca.note_head_font_size()
+        \override NoteHead.font-size = -3
         %! harmony.warble()
         b'32
         %! harmony.warble()
@@ -1157,17 +1157,17 @@ segment.18.Bass.Flute.Music.Voice = {
         %! harmony.warble()
         ]
         %! baca.OverrideCommand._call(2)
-        %! baca.note_head_font_size()
-        \revert NoteHead.font-size
-        %! baca.OverrideCommand._call(2)
-        %! baca.accidental_font_size()
-        \revert Accidental.font-size
-        %! baca.OverrideCommand._call(2)
         %! baca.accidental_x_offset()
         \revert Accidental.X-offset
         %! baca.OverrideCommand._call(2)
         %! baca.accidental_y_offset()
         \revert Accidental.Y-offset
+        %! baca.OverrideCommand._call(2)
+        %! baca.accidental_font_size()
+        \revert Accidental.font-size
+        %! baca.OverrideCommand._call(2)
+        %! baca.note_head_font_size()
+        \revert NoteHead.font-size
 
     %! harmony.warble()
     }
@@ -1354,20 +1354,20 @@ segment.18.Bass.Flute.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -1471,18 +1471,18 @@ segment.18.Bass.Flute.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Bass_Flute_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! MULTIMEASURE_REST
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! MULTIMEASURE_REST
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! MULTIMEASURE_REST
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -1512,11 +1512,11 @@ segment.18.Bass.Flute.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Bass_Flute_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -1597,11 +1597,11 @@ segment.18.Percussion.I.Music.Voice.count.1 = {
     ^ \baca-purpleheart-markup
 
     %! baca.OverrideCommand._call(1)
-    %! baca.dots_extra_offset()
-    \once \override Dots.extra-offset = #'(2 . 0)
-    %! baca.OverrideCommand._call(1)
     %! baca.dots_x_extent_false()
     \once \override Dots.X-extent = ##f
+    %! baca.OverrideCommand._call(1)
+    %! baca.dots_extra_offset()
+    \once \override Dots.extra-offset = #'(2 . 0)
     %! baca.OverrideCommand._call(1)
     %! baca.rest_x_extent_zero()
     \once \override Rest.X-extent = #'(0 . 0)
@@ -1623,11 +1623,22 @@ segment.18.Percussion.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 1]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
     %! -PARTS
     %! EXPLICIT_BAR_EXTENT
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_down()
+    \override Stem.direction = #down
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-perc-i-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -1648,17 +1659,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-perc-i-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_down()
-    \override Stem.direction = #down
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -1666,6 +1666,12 @@ segment.18.Percussion.I.Music.Voice = {
     %! REAPPLIED_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! EXPLICIT_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -1674,12 +1680,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
-    %! EXPLICIT_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.sixteenths()
     a'4
     %! EXPLICIT_DYNAMIC_COLOR
@@ -1844,19 +1844,37 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca.hairpin()
     \mf
     %! baca.OverrideCommand._call(2)
-    %! baca.tuplet_bracket_up()
-    \revert TupletBracket.direction
-    %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
+    %! baca.tuplet_bracket_up()
+    \revert TupletBracket.direction
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 3]
+    %! MEASURE_159
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+    \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_159
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! -PARTS
     %! EXPLICIT_BAR_EXTENT
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 1)
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_staff_padding()
+    \override TupletBracket.staff-padding = 0.5
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -1872,24 +1890,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_staff_padding()
-    \override TupletBracket.staff-padding = 0.5
-    %! MEASURE_159
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-    \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_159
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -1898,6 +1898,9 @@ segment.18.Percussion.I.Music.Voice = {
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! EXPLICIT_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -1907,9 +1910,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca.clef()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! EXPLICIT_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.appoggiato()
     r4
     %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1978,6 +1978,12 @@ segment.18.Percussion.I.Music.Voice = {
     %! ONE_VOICE_COMMAND
     %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice()
     \oneVoice
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_up()
+    \override Stem.direction = #up
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -1993,12 +1999,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_up()
-    \override Stem.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
     %! EXPLICIT_STAFF_LINES_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
@@ -2053,6 +2053,21 @@ segment.18.Percussion.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 6]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \once \override DynamicLineSpanner.staff-padding = 4
+    %! MEASURE_162
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+    \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_162
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! -PARTS
     %! EXPLICIT_BAR_EXTENT
     %! baca.IndicatorCommand._call()
@@ -2073,21 +2088,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \once \override DynamicLineSpanner.staff-padding = 4
-    %! MEASURE_162
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-    \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_162
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2096,6 +2096,9 @@ segment.18.Percussion.I.Music.Voice = {
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! EXPLICIT_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -2105,9 +2108,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca.clef()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! EXPLICIT_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! baca.make_notes()
     e'1.
     %! EXPLICIT_DYNAMIC_COLOR
@@ -2145,20 +2145,20 @@ segment.18.Percussion.I.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Percussion_I_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -2200,11 +2200,35 @@ segment.18.Percussion.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 8]
+    %! MEASURE_164
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+%%% \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_164
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_down()
+    \once \override Stem.direction = #down
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
     %! -PARTS
     %! EXPLICIT_BAR_EXTENT
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2220,30 +2244,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_down()
-    \once \override Stem.direction = #down
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
-    %! MEASURE_164
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-%%% \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_164
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2252,6 +2252,9 @@ segment.18.Percussion.I.Music.Voice = {
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! EXPLICIT_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -2261,9 +2264,6 @@ segment.18.Percussion.I.Music.Voice = {
     %! baca.clef()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! EXPLICIT_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.sixteenths()
     b8
     %! baca.IndicatorCommand._call()
@@ -2493,14 +2493,14 @@ segment.18.Percussion.I.Music.Voice = {
     %! harmony.sixteenths()
     r2
     %! baca.OverrideCommand._call(2)
-    %! baca.tuplet_bracket_up()
-    \revert TupletBracket.direction
-    %! baca.OverrideCommand._call(2)
-    %! baca.tuplet_bracket_up()
-    \revert TupletBracket.direction
-    %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
+    %! baca.tuplet_bracket_up()
+    \revert TupletBracket.direction
+    %! baca.OverrideCommand._call(2)
+    %! baca.tuplet_bracket_up()
+    \revert TupletBracket.direction
 
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
@@ -2517,18 +2517,18 @@ segment.18.Percussion.I.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_I_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -2558,11 +2558,11 @@ segment.18.Percussion.I.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Percussion_I_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -2645,25 +2645,25 @@ segment.18.Percussion.II.Music.Voice.count.1 = {
     ^ \baca-purpleheart-markup
 
     %! baca.OverrideCommand._call(1)
-    %! baca.dots_extra_offset()
-    \once \override Dots.extra-offset = #'(2 . 0)
-    %! baca.OverrideCommand._call(1)
     %! baca.dots_x_extent_false()
     \once \override Dots.X-extent = ##f
+    %! baca.OverrideCommand._call(1)
+    %! baca.dots_extra_offset()
+    \once \override Dots.extra-offset = #'(2 . 0)
     %! baca.OverrideCommand._call(1)
     %! baca.rest_x_extent_zero()
     \once \override Rest.X-extent = #'(0 . 0)
     %! harmony.appoggiato()
     r2
     %! baca.OverrideCommand._call(2)
+    %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_staff_padding()
     \revert TupletBracket.staff-padding
-    %! baca.OverrideCommand._call(2)
-    %! baca.dls_staff_padding()
-    \revert DynamicLineSpanner.staff-padding
 
 %! baca.path.extern()
 }
@@ -2674,6 +2674,14 @@ segment.18.Percussion.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 1]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_up()
+    \override Stem.direction = #up
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-perc-ii-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -2694,14 +2702,6 @@ segment.18.Percussion.II.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-perc-ii-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_up()
-    \override Stem.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -2709,6 +2709,12 @@ segment.18.Percussion.II.Music.Voice = {
     %! REAPPLIED_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -2717,12 +2723,6 @@ segment.18.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! harmony.sixteenths()
     c'4
     %! EXPLICIT_DYNAMIC_COLOR
@@ -2845,6 +2845,15 @@ segment.18.Percussion.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 3]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 5
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_staff_padding()
+    \override TupletBracket.staff-padding = 0.5
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2860,15 +2869,6 @@ segment.18.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_staff_padding()
-    \override TupletBracket.staff-padding = 0.5
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 5
     %! EXPLICIT_STAFF_LINES_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
@@ -2932,6 +2932,15 @@ segment.18.Percussion.II.Music.Voice = {
     %! ONE_VOICE_COMMAND
     %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice()
     \oneVoice
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_down()
+    \override Stem.direction = #down
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2947,15 +2956,6 @@ segment.18.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_down()
-    \override Stem.direction = #down
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
     %! EXPLICIT_STAFF_LINES_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
@@ -3047,20 +3047,20 @@ segment.18.Percussion.II.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Percussion_II_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -3099,15 +3099,15 @@ segment.18.Percussion.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 8]
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_up()
+    \once \override Stem.direction = #up
     %! baca._style_fermata_measures(3)
     \stopStaff
     %! baca._style_fermata_measures(3)
     \once \override Staff.StaffSymbol.line-count = 1
     %! baca._style_fermata_measures(3)
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_up()
-    \once \override Stem.direction = #up
     %! harmony.sixteenths()
     c'8
     %! EXPLICIT_DYNAMIC_COLOR
@@ -3148,14 +3148,14 @@ segment.18.Percussion.II.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Percussion_II_Music_Voice measure 9]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -3212,6 +3212,18 @@ segment.18.Percussion.II.Music.Voice = {
 
         %! baca._comment_measure_numbers()
         % [Percussion_II_Music_Voice measure 11]
+        %! baca.OverrideCommand._call(1)
+        %! baca.dls_staff_padding()
+        \override DynamicLineSpanner.staff-padding = 5
+        %! baca.OverrideCommand._call(1)
+        %! baca.tuplet_bracket_up()
+        \override TupletBracket.direction = #up
+        %! baca.OverrideCommand._call(1)
+        %! baca.tuplet_bracket_up()
+        \override TupletBracket.direction = #up
+        %! baca.OverrideCommand._call(1)
+        %! baca.tuplet_bracket_staff_padding()
+        \override TupletBracket.staff-padding = 0.5
         %! EXPLICIT_STAFF_LINES
         %! baca.IndicatorCommand._call()
         %! baca._set_status_tag()
@@ -3227,18 +3239,6 @@ segment.18.Percussion.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.staff_lines()
         \startStaff
-        %! baca.OverrideCommand._call(1)
-        %! baca.tuplet_bracket_up()
-        \override TupletBracket.direction = #up
-        %! baca.OverrideCommand._call(1)
-        %! baca.tuplet_bracket_up()
-        \override TupletBracket.direction = #up
-        %! baca.OverrideCommand._call(1)
-        %! baca.tuplet_bracket_staff_padding()
-        \override TupletBracket.staff-padding = 0.5
-        %! baca.OverrideCommand._call(1)
-        %! baca.dls_staff_padding()
-        \override DynamicLineSpanner.staff-padding = 5
         %! EXPLICIT_STAFF_LINES_COLOR
         %! baca._attach_color_literal(2)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
@@ -3308,8 +3308,8 @@ segment.18.Percussion.II.Music.Voice = {
         %! harmony.sixteenths()
         c'4
         %! baca.OverrideCommand._call(2)
-        %! baca.tuplet_bracket_up()
-        \revert TupletBracket.direction
+        %! baca.dls_staff_padding()
+        \revert DynamicLineSpanner.staff-padding
         %! baca.OverrideCommand._call(2)
         %! baca.stem_down()
         \revert Stem.direction
@@ -3317,11 +3317,11 @@ segment.18.Percussion.II.Music.Voice = {
         %! baca.tuplet_bracket_up()
         \revert TupletBracket.direction
         %! baca.OverrideCommand._call(2)
+        %! baca.tuplet_bracket_up()
+        \revert TupletBracket.direction
+        %! baca.OverrideCommand._call(2)
         %! baca.tuplet_bracket_staff_padding()
         \revert TupletBracket.staff-padding
-        %! baca.OverrideCommand._call(2)
-        %! baca.dls_staff_padding()
-        \revert DynamicLineSpanner.staff-padding
 
     %! harmony.sixteenths()
     }
@@ -3341,18 +3341,18 @@ segment.18.Percussion.II.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_II_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -3390,11 +3390,11 @@ segment.18.Percussion.II.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Percussion_II_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -3457,11 +3457,28 @@ segment.18.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 1]
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+%%% \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
     %! EXPLICIT_BAR_EXTENT
     %! baca._reanalyze_reapplied_synthetic_wrappers()
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-hp-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -3482,37 +3499,20 @@ segment.18.Harp.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-hp-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-%%% \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! baca.clef()
     \clef "treble"
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -3540,6 +3540,9 @@ segment.18.Harp.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
+    %! EXPLICIT_CLEF_REDRAW_COLOR
+    %! baca._attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     %! baca._attach_color_literal(2)
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
@@ -3549,9 +3552,6 @@ segment.18.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-hp-markup
-    %! EXPLICIT_CLEF_REDRAW_COLOR
-    %! baca._attach_color_literal(2)
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     %! harmony.sixteenths()
     g'8
@@ -3610,14 +3610,14 @@ segment.18.Harp.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Harp_Music_Voice measure 3]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -3656,9 +3656,6 @@ segment.18.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 4]
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 7
     %! MEASURE_160
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -3671,6 +3668,9 @@ segment.18.Harp.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 7
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3736,11 +3736,11 @@ segment.18.Harp.Music.Voice = {
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 6]
     %! baca.OverrideCommand._call(1)
-    %! baca.ottava_bracket_staff_padding()
-    \once \override Staff.OttavaBracket.staff-padding = 8
-    %! baca.OverrideCommand._call(1)
     %! baca.dls_staff_padding()
     \once \override DynamicLineSpanner.staff-padding = 5
+    %! baca.OverrideCommand._call(1)
+    %! baca.ottava_bracket_staff_padding()
+    \once \override Staff.OttavaBracket.staff-padding = 8
     %! SPANNER_START
     %! baca.SpannerIndicatorCommand._call(2)
     %! baca.ottava_bassa()
@@ -3777,20 +3777,20 @@ segment.18.Harp.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Harp_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -3832,18 +3832,6 @@ segment.18.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 8]
-    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
-    %! baca._style_fermata_measures(4)
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)
-    %! baca._style_fermata_measures(3)
-    \stopStaff
-    %! baca._style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5
-    %! baca._style_fermata_measures(3)
-    \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
     %! MEASURE_164
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -3856,6 +3844,18 @@ segment.18.Harp.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
+    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
+    %! baca._style_fermata_measures(4)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca._style_fermata_measures(3)
+    \stopStaff
+    %! baca._style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5
+    %! baca._style_fermata_measures(3)
+    \startStaff
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3911,6 +3911,27 @@ segment.18.Harp.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 9]
+    %! MEASURE_165
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+    \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_165
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 6
+    %! baca.OverrideCommand._call(1)
+    %! baca.stem_down()
+    \override Stem.direction = #down
+    %! baca.OverrideCommand._call(1)
+    %! baca.tuplet_bracket_up()
+    \override TupletBracket.direction = #up
     %! EXPLICIT_STAFF_LINES
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3926,27 +3947,6 @@ segment.18.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.stem_down()
-    \override Stem.direction = #down
-    %! baca.OverrideCommand._call(1)
-    %! baca.tuplet_bracket_up()
-    \override TupletBracket.direction = #up
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 6
-    %! MEASURE_165
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-    \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_165
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-    \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3955,6 +3955,9 @@ segment.18.Harp.Music.Voice = {
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! EXPLICIT_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -3964,9 +3967,6 @@ segment.18.Harp.Music.Voice = {
     %! baca.clef()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! EXPLICIT_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
     %! harmony.sixteenths()
     c'8.
     %! baca.IndicatorCommand._call()
@@ -4372,11 +4372,11 @@ segment.18.Harp.Music.Voice = {
     %! harmony.sixteenths()
     r4
     %! baca.OverrideCommand._call(2)
-    %! baca.tuplet_bracket_up()
-    \revert TupletBracket.direction
-    %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
+    %! baca.tuplet_bracket_up()
+    \revert TupletBracket.direction
 
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
@@ -4393,18 +4393,18 @@ segment.18.Harp.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Harp_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -4434,11 +4434,11 @@ segment.18.Harp.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Harp_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -4501,11 +4501,16 @@ segment.18.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 1]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
     %! EXPLICIT_BAR_EXTENT
     %! baca._reanalyze_reapplied_synthetic_wrappers()
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-va-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -4526,11 +4531,6 @@ segment.18.Viola.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-va-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -4538,6 +4538,12 @@ segment.18.Viola.Music.Voice = {
     %! REAPPLIED_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -4546,12 +4552,6 @@ segment.18.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! harmony.sixteenths()
     r4
     %! REAPPLIED_DYNAMIC_COLOR
@@ -4823,9 +4823,6 @@ segment.18.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 3]
-    %! baca.OverrideCommand._call(1)
-    %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
     %! MEASURE_159
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -4838,6 +4835,9 @@ segment.18.Viola.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.note_head_style_harmonic()
+    \override NoteHead.style = #'harmonic
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5307,20 +5307,20 @@ segment.18.Viola.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Viola_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -5367,15 +5367,6 @@ segment.18.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 8]
-    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
-    %! baca._style_fermata_measures(4)
-    \override Staff.BarLine.bar-extent = #'(-2 . 2)
-    %! baca._style_fermata_measures(3)
-    \stopStaff
-    %! baca._style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5
-    %! baca._style_fermata_measures(3)
-    \startStaff
     %! MEASURE_164
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5388,6 +5379,15 @@ segment.18.Viola.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    %! FERMATA_MEASURE_NEXT_BAR_EXTENT
+    %! baca._style_fermata_measures(4)
+    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca._style_fermata_measures(3)
+    \stopStaff
+    %! baca._style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5
+    %! baca._style_fermata_measures(3)
+    \startStaff
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5520,9 +5520,6 @@ segment.18.Viola.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 9]
-    %! baca.OverrideCommand._call(1)
-    %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
     %! MEASURE_165
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5535,6 +5532,9 @@ segment.18.Viola.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.note_head_style_harmonic()
+    \override NoteHead.style = #'harmonic
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5616,6 +5616,14 @@ segment.18.Viola.Music.Voice = {
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
+    %! INVISIBLE_MUSIC_COMMAND
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(1)
+    %@% \abjad-invisible-music
+    %! INVISIBLE_MUSIC_COLORING
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(2)
+    \abjad-invisible-music-coloring
     %! abjad.glissando(1)
     %! baca.glissando()
     \hide NoteHead
@@ -5628,14 +5636,6 @@ segment.18.Viola.Music.Voice = {
     %! abjad.glissando(1)
     %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-    %! INVISIBLE_MUSIC_COMMAND
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(1)
-    %@% \abjad-invisible-music
-    %! INVISIBLE_MUSIC_COLORING
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(2)
-    \abjad-invisible-music-coloring
     %! harmony.sixteenths()
     g'4 * 1/2
     %! EXPLICIT_DYNAMIC_COLOR
@@ -6568,11 +6568,11 @@ segment.18.Viola.Music.Voice = {
     %! baca.hairpin()
     \>
     %! baca.OverrideCommand._call(2)
-    %! baca.note_head_style_harmonic()
-    \revert NoteHead.style
-    %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
+    %! baca.note_head_style_harmonic()
+    \revert NoteHead.style
 
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
@@ -6589,18 +6589,18 @@ segment.18.Viola.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Viola_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -6652,11 +6652,11 @@ segment.18.Viola.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Viola_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -6719,6 +6719,23 @@ segment.18.Cello.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 1]
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+%%% \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-vc-i-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -6739,37 +6756,20 @@ segment.18.Cello.I.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-vc-i-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-%%% \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! baca.clef()
     \clef "treble"
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -6797,6 +6797,9 @@ segment.18.Cello.I.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Vc. I”]"
+    %! EXPLICIT_CLEF_REDRAW_COLOR
+    %! baca._attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     %! baca._attach_color_literal(2)
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
@@ -6806,9 +6809,6 @@ segment.18.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-vc-i-markup
-    %! EXPLICIT_CLEF_REDRAW_COLOR
-    %! baca._attach_color_literal(2)
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic()
@@ -7647,20 +7647,20 @@ segment.18.Cello.I.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Cello_I_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -7699,15 +7699,6 @@ segment.18.Cello.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 8]
-    %! baca._style_fermata_measures(3)
-    \stopStaff
-    %! baca._style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5
-    %! baca._style_fermata_measures(3)
-    \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
     %! MEASURE_164
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -7720,6 +7711,15 @@ segment.18.Cello.I.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.note_head_style_harmonic()
+    \override NoteHead.style = #'harmonic
+    %! baca._style_fermata_measures(3)
+    \stopStaff
+    %! baca._style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5
+    %! baca._style_fermata_measures(3)
+    \startStaff
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -8333,18 +8333,18 @@ segment.18.Cello.I.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_I_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -8374,11 +8374,11 @@ segment.18.Cello.I.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Cello_I_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -8441,6 +8441,23 @@ segment.18.Cello.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 1]
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+%%% \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-vc-ii-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -8461,37 +8478,20 @@ segment.18.Cello.II.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-vc-ii-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-%%% \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! baca.clef()
     \clef "treble"
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -8519,6 +8519,9 @@ segment.18.Cello.II.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Vc. II”]"
+    %! EXPLICIT_CLEF_REDRAW_COLOR
+    %! baca._attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     %! baca._attach_color_literal(2)
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
@@ -8528,9 +8531,6 @@ segment.18.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-vc-ii-markup
-    %! EXPLICIT_CLEF_REDRAW_COLOR
-    %! baca._attach_color_literal(2)
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic()
@@ -9381,20 +9381,20 @@ segment.18.Cello.II.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Cello_II_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -9433,15 +9433,6 @@ segment.18.Cello.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 8]
-    %! baca._style_fermata_measures(3)
-    \stopStaff
-    %! baca._style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5
-    %! baca._style_fermata_measures(3)
-    \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
     %! MEASURE_164
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -9454,6 +9445,15 @@ segment.18.Cello.II.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.note_head_style_harmonic()
+    \override NoteHead.style = #'harmonic
+    %! baca._style_fermata_measures(3)
+    \stopStaff
+    %! baca._style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5
+    %! baca._style_fermata_measures(3)
+    \startStaff
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -9661,6 +9661,14 @@ segment.18.Cello.II.Music.Voice = {
     %! baca.trill_spanner()
     \startTrillSpan
 
+    %! INVISIBLE_MUSIC_COMMAND
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(1)
+    %@% \abjad-invisible-music
+    %! INVISIBLE_MUSIC_COLORING
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(2)
+    \abjad-invisible-music-coloring
     %! abjad.glissando(1)
     %! baca.glissando()
     \hide NoteHead
@@ -9673,14 +9681,6 @@ segment.18.Cello.II.Music.Voice = {
     %! abjad.glissando(1)
     %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-    %! INVISIBLE_MUSIC_COMMAND
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(1)
-    %@% \abjad-invisible-music
-    %! INVISIBLE_MUSIC_COLORING
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(2)
-    \abjad-invisible-music-coloring
     %! harmony.sixteenths()
     btqf'!4 * 1/2
     %! EXPLICIT_DYNAMIC_COLOR
@@ -10613,11 +10613,11 @@ segment.18.Cello.II.Music.Voice = {
     %! baca.hairpin()
     \>
     %! baca.OverrideCommand._call(2)
-    %! baca.note_head_style_harmonic()
-    \revert NoteHead.style
-    %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    %! baca.OverrideCommand._call(2)
+    %! baca.note_head_style_harmonic()
+    \revert NoteHead.style
 
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
@@ -10634,18 +10634,18 @@ segment.18.Cello.II.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_II_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -10697,11 +10697,11 @@ segment.18.Cello.II.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Cello_II_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -10764,6 +10764,23 @@ segment.18.Contrabass.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 1]
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_shift()
+    %! baca.clef_x_extent_false()
+%%% \once \override Staff.Clef.X-extent = ##f
+    %! MEASURE_157
+    %! SHIFTED_CLEF
+    %! baca.OverrideCommand._call(1)
+    %! baca.clef_extra_offset()
+    %! baca.clef_shift()
+%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-cb-i-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -10784,37 +10801,20 @@ segment.18.Contrabass.I.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-cb-i-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_shift()
-    %! baca.clef_x_extent_false()
-%%% \once \override Staff.Clef.X-extent = ##f
-    %! MEASURE_157
-    %! SHIFTED_CLEF
-    %! baca.OverrideCommand._call(1)
-    %! baca.clef_extra_offset()
-    %! baca.clef_shift()
-%%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     %! baca.clef()
     \clef "treble"
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'blue)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -10842,6 +10842,9 @@ segment.18.Contrabass.I.Music.Voice = {
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"
+    %! EXPLICIT_CLEF_REDRAW_COLOR
+    %! baca._attach_color_literal(2)
+    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
     %! REDRAWN_REAPPLIED_MARGIN_MARKUP_COLOR
     %! baca._attach_color_literal(2)
     %@% \override Staff.InstrumentName.color = #(x11-color 'OliveDrab)
@@ -10851,9 +10854,6 @@ segment.18.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-cb-i-markup
-    %! EXPLICIT_CLEF_REDRAW_COLOR
-    %! baca._attach_color_literal(2)
-    \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     %! SPANNER_START
     %! baca.SpannerIndicatorCommand._call(2)
@@ -11646,20 +11646,20 @@ segment.18.Contrabass.I.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Contrabass_I_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -11698,12 +11698,6 @@ segment.18.Contrabass.I.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 8]
-    %! baca._style_fermata_measures(3)
-    \stopStaff
-    %! baca._style_fermata_measures(3)
-    \once \override Staff.StaffSymbol.line-count = 5
-    %! baca._style_fermata_measures(3)
-    \startStaff
     %! MEASURE_164
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -11716,6 +11710,12 @@ segment.18.Contrabass.I.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    %! baca._style_fermata_measures(3)
+    \stopStaff
+    %! baca._style_fermata_measures(3)
+    \once \override Staff.StaffSymbol.line-count = 5
+    %! baca._style_fermata_measures(3)
+    \startStaff
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -12368,18 +12368,18 @@ segment.18.Contrabass.I.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_I_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -12409,11 +12409,11 @@ segment.18.Contrabass.I.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Contrabass_I_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
@@ -12476,11 +12476,16 @@ segment.18.Contrabass.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 1]
+    %! baca.OverrideCommand._call(1)
+    %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
     %! EXPLICIT_BAR_EXTENT
     %! baca._reanalyze_reapplied_synthetic_wrappers()
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
+    %! baca._clone_segment_initial_short_instrument_name()
+    \set Staff.instrumentName = \harmony-cb-ii-markup
     %! -PARTS
     %! REAPPLIED_MARGIN_MARKUP
     %! baca._reapply_persistent_indicators(3)
@@ -12501,11 +12506,6 @@ segment.18.Contrabass.II.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
-    %! baca._clone_segment_initial_short_instrument_name()
-    \set Staff.instrumentName = \harmony-cb-ii-markup
-    %! baca.OverrideCommand._call(1)
-    %! baca.dls_staff_padding()
-    \override DynamicLineSpanner.staff-padding = 4
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -12513,6 +12513,12 @@ segment.18.Contrabass.II.Music.Voice = {
     %! REAPPLIED_CLEF_COLOR
     %! baca._attach_color_literal(2)
     \once \override Staff.Clef.color = #(x11-color 'green4)
+    %! REAPPLIED_MARGIN_MARKUP_COLOR
+    %! baca._attach_color_literal(2)
+    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
+    %! REAPPLIED_STAFF_LINES_COLOR
+    %! baca._attach_color_literal(2)
+    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
     %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %! baca._attach_color_literal(1)
     %@% \override Staff.Clef.color = ##f
@@ -12521,12 +12527,6 @@ segment.18.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-    %! REAPPLIED_STAFF_LINES_COLOR
-    %! baca._attach_color_literal(2)
-    \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    %! REAPPLIED_MARGIN_MARKUP_COLOR
-    %! baca._attach_color_literal(2)
-    %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
     %! harmony.sixteenths()
     r4
     %! REAPPLIED_DYNAMIC_COLOR
@@ -13541,20 +13541,20 @@ segment.18.Contrabass.II.Music.Voice = {
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Music_Voice measure 7]
+            %! INVISIBLE_MUSIC_COMMAND
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(3)
+            %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! baca._make_multimeasure_rest_container(2)
+            \abjad-invisible-music-coloring
             %! baca._style_fermata_measures(1)
             \stopStaff
             %! baca._style_fermata_measures(1)
             \once \override Staff.StaffSymbol.line-count = 0
             %! baca._style_fermata_measures(1)
             \startStaff
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(2)
-            \abjad-invisible-music-coloring
-            %! INVISIBLE_MUSIC_COMMAND
-            %! NOTE
-            %! baca._make_multimeasure_rest_container(3)
-            %@% \abjad-invisible-music
             %! HIDDEN
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
@@ -13596,6 +13596,9 @@ segment.18.Contrabass.II.Music.Voice = {
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 8]
+    %! baca.OverrideCommand._call(1)
+    %! baca.note_head_style_harmonic()
+    \override NoteHead.style = #'harmonic
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -13605,9 +13608,6 @@ segment.18.Contrabass.II.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
-    %! baca.OverrideCommand._call(1)
-    %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
     %! harmony.sixteenths()
     g'2
     %! baca.IndicatorCommand._call()
@@ -13823,6 +13823,14 @@ segment.18.Contrabass.II.Music.Voice = {
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
+    %! INVISIBLE_MUSIC_COMMAND
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(1)
+    %@% \abjad-invisible-music
+    %! INVISIBLE_MUSIC_COLORING
+    %! baca.IndicatorCommand._call()
+    %! baca.invisible_music(2)
+    \abjad-invisible-music-coloring
     %! abjad.glissando(1)
     %! baca.glissando()
     \hide NoteHead
@@ -13835,14 +13843,6 @@ segment.18.Contrabass.II.Music.Voice = {
     %! abjad.glissando(1)
     %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-    %! INVISIBLE_MUSIC_COMMAND
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(1)
-    %@% \abjad-invisible-music
-    %! INVISIBLE_MUSIC_COLORING
-    %! baca.IndicatorCommand._call()
-    %! baca.invisible_music(2)
-    \abjad-invisible-music-coloring
     %! harmony.sixteenths()
     e''4 * 1/2
     %! EXPLICIT_DYNAMIC_COLOR
@@ -14793,18 +14793,18 @@ segment.18.Contrabass.II.Music.Voice = {
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_II_Music_Voice measure 12]
-            %! INVISIBLE_MUSIC_COLORING
-            %! NOTE
-            %! PHANTOM
-            %! baca._make_multimeasure_rest_container(2)
-            %! baca._style_phantom_measures(5)
-            \abjad-invisible-music-coloring
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(3)
             %! baca._style_phantom_measures(5)
             %@% \abjad-invisible-music
+            %! INVISIBLE_MUSIC_COLORING
+            %! NOTE
+            %! PHANTOM
+            %! baca._make_multimeasure_rest_container(2)
+            %! baca._style_phantom_measures(5)
+            \abjad-invisible-music-coloring
             %! HIDDEN
             %! NOTE
             %! PHANTOM
@@ -14856,11 +14856,11 @@ segment.18.Contrabass.II.Music.Voice = {
             %! baca._style_phantom_measures(5)
             % [Contrabass_II_Rest_Voice measure 12]
             %! PHANTOM
-            %! baca._style_phantom_measures(6)
-            \once \override Score.TimeSignature.X-extent = ##f
-            %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
+            %! PHANTOM
+            %! baca._style_phantom_measures(6)
+            \once \override Score.TimeSignature.X-extent = ##f
             %! PHANTOM
             %! baca._style_phantom_measures(8)
             \stopStaff
