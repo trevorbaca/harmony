@@ -1,8 +1,12 @@
 %! baca.path.extern()
 segment.23.Global.Skips = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 1]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -16,6 +20,8 @@ segment.23.Global.Skips = {
     \time 5/4
     %! baca._make_global_skips(1)
     s1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! -PARTS
     %! baca.IndicatorCommand._call()
     %! baca.rehearsal_mark()
@@ -32,6 +38,7 @@ segment.23.Global.Skips = {
     %! baca.IndicatorCommand._call()
     %! baca.rehearsal_mark()
 %%% - \baca-rehearsal-mark-markup "W" #4
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "1"
@@ -110,9 +117,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 2]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -122,6 +133,8 @@ segment.23.Global.Skips = {
     \time 6/4
     %! baca._make_global_skips(1)
     s1 * 3/2
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -136,6 +149,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "2"
@@ -214,9 +228,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 3]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -226,6 +244,8 @@ segment.23.Global.Skips = {
     \time 1/4
     %! baca._make_global_skips(1)
     s1 * 1/4
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -235,6 +255,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "3"
@@ -253,9 +274,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 4]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -265,6 +290,8 @@ segment.23.Global.Skips = {
     \time 5/4
     %! baca._make_global_skips(1)
     s1 * 5/4
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -279,6 +306,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "4"
@@ -357,11 +385,15 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 5]
     %! baca._make_global_skips(1)
     s1 * 5/4
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -371,6 +403,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "5"
@@ -389,9 +422,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 6]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -401,6 +438,8 @@ segment.23.Global.Skips = {
     \time 6/4
     %! baca._make_global_skips(1)
     s1 * 3/2
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -413,6 +452,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "6"
@@ -437,9 +477,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 7]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -449,6 +493,8 @@ segment.23.Global.Skips = {
     \time 3/4
     %! baca._make_global_skips(1)
     s1 * 3/4
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -463,6 +509,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "7"
@@ -541,9 +588,13 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Skips measure 8]
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_TIME_SIGNATURE_COLOR
     %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
@@ -553,6 +604,8 @@ segment.23.Global.Skips = {
     \time 4/4
     %! baca._make_global_skips(1)
     s1 * 1
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     \bacaStopTextSpanLMN
@@ -567,6 +620,7 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStopTextSpanCT
+    % SPANNER_STARTS:
     %! LOCAL_MEASURE_NUMBER
     %! baca._label_measure_numbers()
     - \baca-start-lmn-left-only "8"
@@ -645,11 +699,15 @@ segment.23.Global.Skips = {
     %! CLOCK_TIME
     %! baca._label_clock_time()
     %@% \bacaStartTextSpanCT
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! PHANTOM
     %! baca._comment_measure_numbers()
     %! baca._style_phantom_measures(1)
     % [Global_Skips measure 9]
+    % OPENING:
+    % COMMANDS:
     %! PHANTOM
     %! baca._style_phantom_measures(2)
     \baca-time-signature-transparent
@@ -662,6 +720,8 @@ segment.23.Global.Skips = {
     %! PHANTOM
     %! baca._make_global_skips(3)
     s1 * 1/4
+    % AFTER:
+    % SPANNER_STOPS:
     %! LOCAL_MEASURE_NUMBER
     %! PHANTOM
     %! baca._label_measure_numbers()
@@ -687,13 +747,17 @@ segment.23.Global.Skips = {
     %! baca._label_clock_time()
     %! baca._style_phantom_measures(1)
     %@% \bacaStopTextSpanCT
+    % COMMANDS:
     %! PHANTOM
     %! baca._style_phantom_measures(3)
     \once \override Score.BarLine.transparent = ##t
     %! PHANTOM
     %! baca._style_phantom_measures(3)
     \once \override Score.SpanBar.transparent = ##t
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! baca.make_global_context()
 %! baca.path.extern()
 }
@@ -701,60 +765,87 @@ segment.23.Global.Skips = {
 
 %! baca.path.extern()
 segment.23.Global.Rests = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 1]
     %! baca._make_global_rests(1)
     R1 * 5/4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 2]
     %! baca._make_global_rests(1)
     R1 * 3/2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 3]
+    % BEFORE:
+    % GROB_OVERRIDES:
     \once \override MultiMeasureRestText.extra-offset = #'(0 . 2.5)
+    % OPENING:
+    % COMMANDS:
     %! baca.GlobalFermataCommand._call(2)
     %! baca.global_fermata()
     \baca-fermata-measure
     %! baca._make_global_rests(1)
     R1 * 1/4
+    % AFTER:
+    % MARKUP:
     %! baca.GlobalFermataCommand._call(1)
     %! baca.global_fermata()
     ^ \baca-fermata-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 4]
     %! baca._make_global_rests(1)
     R1 * 5/4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 5]
     %! baca._make_global_rests(1)
     R1 * 5/4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 6]
     %! baca._make_global_rests(1)
     R1 * 3/2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 7]
     %! baca._make_global_rests(1)
     R1 * 3/4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 8]
     %! baca._make_global_rests(1)
     R1 * 1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Global_Rests measure 9]
     %! PHANTOM
     %! baca._make_global_rests(2)
     R1 * 1/4
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! baca.make_global_context()
 %! baca.path.extern()
 }
@@ -762,17 +853,27 @@ segment.23.Global.Rests = {
 
 %! baca.path.extern()
 segment.23.Bass.Flute.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Music_Voice measure 1]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -808,6 +909,8 @@ segment.23.Bass.Flute.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \startStaff
+            % OPENING:
+            % COMMANDS:
             %! REAPPLIED_CLEF
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
@@ -833,6 +936,8 @@ segment.23.Bass.Flute.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 5/4
+            % AFTER:
+            % ARTICULATIONS:
             %! REAPPLIED_DYNAMIC_COLOR
             %! baca.treat_persistent_wrapper()
             %! REAPPLIED_DYNAMIC
@@ -843,6 +948,7 @@ segment.23.Bass.Flute.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \pp
+            % MARKUP:
             %! REAPPLIED_INSTRUMENT_ALERT
             %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“BassFlute”)"
@@ -854,6 +960,8 @@ segment.23.Bass.Flute.Music.Voice = {
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
             %! REAPPLIED_CLEF_REDRAW_COLOR
             %! baca._attach_color_literal(2)
             \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -866,14 +974,22 @@ segment.23.Bass.Flute.Music.Voice = {
             %! baca._set_status_tag()
             %! baca.treat_persistent_wrapper(3)
             \set Staff.shortInstrumentName = \harmony-bfl-markup
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Bass_Flute_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Rest_Voice measure 1]
@@ -881,36 +997,57 @@ segment.23.Bass.Flute.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 5/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 2]
     %! harmony.warble()
     r2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.warble()
     r2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.warble()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.warble()
     \times 8/9
     %! harmony.warble()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         r32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.accidental_x_offset()
         \override Accidental.X-offset = 0
@@ -925,8 +1062,11 @@ segment.23.Bass.Flute.Music.Voice = {
         \override NoteHead.font-size = -3
         %! harmony.warble()
         cs''!32
+        % AFTER:
+        % START_BEAM:
         %! harmony.warble()
         [
+        % SPANNER_STARTS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -947,6 +1087,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \<
+        % TRILL_SPANNER_STARTS:
         %! SPANNER_START
         %! baca.SpannerIndicatorCommand._call(2)
         %! baca.trill_spanner()
@@ -955,30 +1096,48 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca.SpannerIndicatorCommand._call(2)
         %! baca.trill_spanner()
         \startTrillSpan
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         c''32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         b'32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         bf'!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         a'32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         af'!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         g'32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         gs'!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         a'32
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -993,6 +1152,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \mp
+        % SPANNER_STARTS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -1019,30 +1179,48 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \>
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         as'!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         b'32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         c''32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         cs''!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         c''32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         b'32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         bf'!32
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.warble()
         a'32
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -1057,8 +1235,10 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \!
+        % STOP_BEAM:
         %! harmony.warble()
         ]
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.accidental_x_offset()
         \revert Accidental.X-offset
@@ -1071,20 +1251,33 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca.OverrideCommand._call(2)
         %! baca.note_head_font_size()
         \revert NoteHead.font-size
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.warble()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -1103,26 +1296,38 @@ segment.23.Bass.Flute.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % SPANNER_STOPS:
             %! SPANNER_STOP
             %! baca.SpannerIndicatorCommand._call(4)
             %! baca.trill_spanner()
             \stopTrillSpan
+            % COMMANDS:
             %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             %! baca._style_fermata_measures(2)
             \override Staff.BarLine.bar-extent = #'(0 . 0)
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Bass_Flute_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Rest_Voice measure 3]
@@ -1130,20 +1335,32 @@ segment.23.Bass.Flute.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -1153,6 +1370,8 @@ segment.23.Bass.Flute.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! FERMATA_MEASURE
     %! MEASURE_211
     %! baca._style_fermata_measures(7)
@@ -1162,6 +1381,8 @@ segment.23.Bass.Flute.Music.Voice = {
     %! baca._style_fermata_measures(7)
 %%% \once \override Score.SpanBar.transparent = ##t
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -1177,96 +1398,166 @@ segment.23.Bass.Flute.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 5]
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 6]
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     <b' dqf''!>4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.espressivo()
     - \espressivo
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Bass_Flute_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Music_Voice measure 7]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -1279,19 +1570,29 @@ segment.23.Bass.Flute.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 3/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Bass_Flute_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Bass_Flute_Rest_Voice measure 7]
@@ -1299,32 +1600,49 @@ segment.23.Bass.Flute.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 3/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! baca._comment_measure_numbers()
         % [Bass_Flute_Music_Voice measure 8]
         %! harmony.sixteenths()
         r4
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         ef'!16
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -1337,6 +1655,7 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.dynamic()
         \pp
+        % SPANNER_STARTS:
         %! AUTODETECT
         %! COVERED_SPANNER
         %! SPANNER_START
@@ -1373,60 +1692,94 @@ segment.23.Bass.Flute.Music.Voice = {
         %! baca.covered_spanner()
         \bacaStartTextSpanCovered
         ~
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     ef'4
+    % AFTER:
+    % SPANNER_STARTS:
     %! baca._attach_shadow_tie_indicators()
     - \tweak stencil ##f
     %! baca._attach_shadow_tie_indicators()
     ~
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         ef'8
+        % AFTER:
+        % SPANNER_STARTS:
         \repeatTie
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8.
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % SPANNER_STOPS:
     %! COVERED_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.covered_spanner()
     \bacaStopTextSpanCovered
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Bass_Flute_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Bass_Flute_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -1444,6 +1797,8 @@ segment.23.Bass.Flute.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -1451,22 +1806,32 @@ segment.23.Bass.Flute.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Bass_Flute_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Bass_Flute_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -1487,6 +1852,8 @@ segment.23.Bass.Flute.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -1494,15 +1861,24 @@ segment.23.Bass.Flute.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -1510,19 +1886,28 @@ segment.23.Bass.Flute.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Bass.Flute.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca.make_global_context()
     \context GlobalRests = "Global_Rests"
     %! baca.make_global_context()
     %! baca.path.extern()
     { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Bass_Flute_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Bass.Flute.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -1530,9 +1915,13 @@ segment.23.Bass.Flute.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Percussion.I.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 1]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.dls_staff_padding()
     \override DynamicLineSpanner.staff-padding = 6
@@ -1563,6 +1952,8 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -1586,6 +1977,8 @@ segment.23.Percussion.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     r1
+    % AFTER:
+    % ARTICULATIONS:
     %! REAPPLIED_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! REAPPLIED_DYNAMIC
@@ -1596,12 +1989,15 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \baca-pp-ancora
+    % MARKUP:
     %! REAPPLIED_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Perc. I”]"
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! REAPPLIED_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -1614,12 +2010,18 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-perc-i-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.stem_down()
     \once \override Stem.direction = #down
     %! harmony.sixteenths()
     b4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -1635,26 +2037,38 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     - \tweak staff-padding 6
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-bd-struck-markup
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Percussion_I_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Percussion_I_Music_Voice measure 2]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -1667,19 +2081,29 @@ segment.23.Percussion.I.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 3/2
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Percussion_I_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Percussion_I_Rest_Voice measure 2]
@@ -1687,20 +2111,32 @@ segment.23.Percussion.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 3/2
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 3]
+    % BEFORE:
+    % COMMANDS:
     %! baca._style_fermata_measures(1)
     \stopStaff
     %! baca._style_fermata_measures(1)
@@ -1709,15 +2145,22 @@ segment.23.Percussion.I.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 1/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    % COMMANDS:
     %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
     %! baca._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
@@ -1735,6 +2178,8 @@ segment.23.Percussion.I.Music.Voice = {
     \startStaff
     %! harmony.sixteenths()
     b4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -1755,51 +2200,77 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 5]
     %! harmony.sixteenths()
     b4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 6]
     %! harmony.sixteenths()
     b4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.stem_down()
     \revert Stem.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 7]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.stem_up()
     \once \override Stem.direction = #up
     %! baca.make_notes()
     d'2.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -1812,36 +2283,52 @@ segment.23.Percussion.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \pp
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     - \tweak staff-padding 7
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-triangle-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 8]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
     %! harmony.sixteenths()
     r4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 2/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.stem_down()
         \override Stem.direction = #down
         %! harmony.sixteenths()
         d'4
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -1859,64 +2346,96 @@ segment.23.Percussion.I.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.dynamic()
         \baca-pp-ancora
+        % MARKUP:
         %! baca.IndicatorCommand._call()
         %! baca.markup()
         - \tweak staff-padding 7
         %! baca.IndicatorCommand._call()
         %! baca.markup()
         ^ \baca-slate-scrape-markup
+        % SPANNER_STARTS:
         %! baca._attach_shadow_tie_indicators()
         - \tweak stencil ##f
         %! baca._attach_shadow_tie_indicators()
         ~
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 2/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         d'4
+        % AFTER:
+        % SPANNER_STARTS:
         \repeatTie
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.stem_down()
         \revert Stem.direction
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Percussion_I_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_I_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -1934,6 +2453,8 @@ segment.23.Percussion.I.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -1941,22 +2462,32 @@ segment.23.Percussion.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Percussion_I_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_I_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -1977,6 +2508,8 @@ segment.23.Percussion.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -1984,15 +2517,24 @@ segment.23.Percussion.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -2000,7 +2542,10 @@ segment.23.Percussion.I.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Percussion.I.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -2008,13 +2553,19 @@ segment.23.Percussion.I.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Percussion_I_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Percussion.I.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -2022,17 +2573,27 @@ segment.23.Percussion.I.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Percussion.II.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Percussion_II_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Percussion_II_Music_Voice measure 1]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -2060,6 +2621,8 @@ segment.23.Percussion.II.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \startStaff
+            % OPENING:
+            % COMMANDS:
             %! REAPPLIED_CLEF
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
@@ -2085,6 +2648,8 @@ segment.23.Percussion.II.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 5/4
+            % AFTER:
+            % ARTICULATIONS:
             %! REAPPLIED_DYNAMIC_COLOR
             %! baca.treat_persistent_wrapper()
             %! REAPPLIED_DYNAMIC
@@ -2095,6 +2660,7 @@ segment.23.Percussion.II.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \pp
+            % MARKUP:
             %! REAPPLIED_INSTRUMENT_ALERT
             %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Percussion”)"
@@ -2106,6 +2672,8 @@ segment.23.Percussion.II.Music.Voice = {
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
             %! REAPPLIED_CLEF_REDRAW_COLOR
             %! baca._attach_color_literal(2)
             \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2118,14 +2686,22 @@ segment.23.Percussion.II.Music.Voice = {
             %! baca._set_status_tag()
             %! baca.treat_persistent_wrapper(3)
             \set Staff.shortInstrumentName = \harmony-perc-ii-markup
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Percussion_II_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Percussion_II_Rest_Voice measure 1]
@@ -2133,28 +2709,44 @@ segment.23.Percussion.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 5/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 2]
     %! baca._make_measure_silences()
     R1 * 3/2
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 3]
+    % BEFORE:
+    % COMMANDS:
     %! baca._style_fermata_measures(1)
     \stopStaff
     %! baca._style_fermata_measures(1)
@@ -2163,12 +2755,18 @@ segment.23.Percussion.II.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 1/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! baca._style_fermata_measures(3)
     \stopStaff
     %! baca._style_fermata_measures(3)
@@ -2177,20 +2775,30 @@ segment.23.Percussion.II.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 5]
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 6]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_214
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -2221,6 +2829,8 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2243,6 +2853,8 @@ segment.23.Percussion.II.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e'4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -2263,27 +2875,40 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     - \tweak staff-padding 6
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-glockenspiel-markup
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 7]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_215
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -2320,6 +2945,8 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -2342,6 +2969,8 @@ segment.23.Percussion.II.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     b4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -2357,45 +2986,66 @@ segment.23.Percussion.II.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     - \tweak staff-padding 8
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-bd-struck-markup
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r2
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! baca._comment_measure_numbers()
         % [Percussion_II_Music_Voice measure 8]
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.tuplet_bracket_up()
         \override TupletBracket.direction = #up
         %! harmony.sixteenths()
         r8
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.stem_down()
         \override Stem.direction = #down
         %! harmony.sixteenths()
         d'8
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -2411,74 +3061,112 @@ segment.23.Percussion.II.Music.Voice = {
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % MARKUP:
         %! baca.IndicatorCommand._call()
         %! baca.markup()
         - \tweak staff-padding 8
         %! baca.IndicatorCommand._call()
         %! baca.markup()
         ^ \baca-slate-brush-markup
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r16
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         d'8
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.stem_down()
         \revert Stem.direction
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r16
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Percussion_II_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_II_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -2496,6 +3184,8 @@ segment.23.Percussion.II.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -2503,22 +3193,32 @@ segment.23.Percussion.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Percussion_II_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Percussion_II_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -2539,6 +3239,8 @@ segment.23.Percussion.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -2546,15 +3248,24 @@ segment.23.Percussion.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -2562,7 +3273,10 @@ segment.23.Percussion.II.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Percussion.II.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -2570,13 +3284,19 @@ segment.23.Percussion.II.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Percussion_II_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Percussion.II.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -2584,9 +3304,13 @@ segment.23.Percussion.II.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Harp.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 1]
+    % BEFORE:
+    % COMMANDS:
     %! EXPLICIT_BAR_EXTENT
     %! REAPPLIED_BAR_EXTENT
     %! baca._reapply_persistent_indicators(3)
@@ -2611,6 +3335,8 @@ segment.23.Harp.Music.Voice = {
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! REAPPLIED_CLEF
     %! baca._reapply_persistent_indicators(3)
     %! baca._set_status_tag()
@@ -2634,6 +3360,8 @@ segment.23.Harp.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     fs'!4
+    % AFTER:
+    % ARTICULATIONS:
     %! REAPPLIED_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! REAPPLIED_DYNAMIC
@@ -2647,12 +3375,14 @@ segment.23.Harp.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % MARKUP:
     %! REAPPLIED_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“Harp”)"
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Hp.”]"
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! LEFT_BROKEN
     %! METRIC_MODULATION_SPANNER
@@ -2689,6 +3419,8 @@ segment.23.Harp.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.metric_modulation_spanner()
     \bacaStartTextSpanMetricModulation
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! REAPPLIED_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
@@ -2701,25 +3433,39 @@ segment.23.Harp.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-hp-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % AFTER:
+    % SPANNER_STOPS:
     %! METRIC_MODULATION_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.metric_modulation_spanner()
     \bacaStopTextSpanMetricModulation
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Harp_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Harp_Music_Voice measure 2]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -2732,19 +3478,29 @@ segment.23.Harp.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 3/2
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Harp_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Harp_Rest_Voice measure 2]
@@ -2752,20 +3508,32 @@ segment.23.Harp.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 3/2
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 3]
+    % BEFORE:
+    % COMMANDS:
     %! baca._style_fermata_measures(1)
     \stopStaff
     %! baca._style_fermata_measures(1)
@@ -2774,15 +3542,22 @@ segment.23.Harp.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 1/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+    % COMMANDS:
     %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
     %! baca._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(0 . 2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -2794,22 +3569,32 @@ segment.23.Harp.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 5]
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 6]
     %! harmony.sixteenths()
     e'4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -2825,29 +3610,44 @@ segment.23.Harp.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.laissez_vibrer()
     \laissezVibrer
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     - \tweak staff-padding 4
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-xyl-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Harp_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Harp_Music_Voice measure 7]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -2860,19 +3660,29 @@ segment.23.Harp.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 3/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Harp_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Harp_Rest_Voice measure 7]
@@ -2880,41 +3690,63 @@ segment.23.Harp.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 3/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"3" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 8]
     %! baca._make_measure_silences()
     R1 * 1
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Harp_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Harp_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -2932,6 +3764,8 @@ segment.23.Harp.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! MULTIMEASURE_REST
@@ -2939,22 +3773,32 @@ segment.23.Harp.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Harp_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Harp_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -2975,6 +3819,8 @@ segment.23.Harp.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -2982,15 +3828,24 @@ segment.23.Harp.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -2998,7 +3853,10 @@ segment.23.Harp.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Harp.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -3006,13 +3864,19 @@ segment.23.Harp.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Harp_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Harp.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -3020,9 +3884,13 @@ segment.23.Harp.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Viola.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 1]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_209
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -3065,6 +3933,8 @@ segment.23.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3090,6 +3960,8 @@ segment.23.Viola.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3105,12 +3977,14 @@ segment.23.Viola.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % MARKUP:
     %! REAPPLIED_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“Viola”)"
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Va.”]"
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! SCP_SPANNER
     %! SPANNER_START
@@ -3141,6 +4015,8 @@ segment.23.Viola.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -3153,24 +4029,35 @@ segment.23.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-va-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % AFTER:
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 2]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic_black()
     \once \override NoteHead.style = #'harmonic-black
     <g' af'! bf'!>1.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3183,20 +4070,31 @@ segment.23.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \pp
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-quasi-bisb-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Viola_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Viola_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -3215,22 +4113,33 @@ segment.23.Viola.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % COMMANDS:
             %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             %! baca._style_fermata_measures(2)
             \override Staff.BarLine.bar-extent = #'(-2 . 0)
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Viola_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Viola_Rest_Voice measure 3]
@@ -3238,20 +4147,32 @@ segment.23.Viola.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3263,6 +4184,8 @@ segment.23.Viola.Music.Voice = {
     \startStaff
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3278,6 +4201,7 @@ segment.23.Viola.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STARTS:
     %! SCP_SPANNER
     %! SPANNER_START
     %! baca.PiecewiseCommand._call(2)
@@ -3298,75 +4222,117 @@ segment.23.Viola.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 5]
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 6]
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % SPANNER_STARTS:
     %! SCP_SPANNER
     %! SPANNER_START
     %! baca.PiecewiseCommand._call(2)
@@ -3402,47 +4368,73 @@ segment.23.Viola.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(3)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 7]
+    % OPENING:
     \afterGrace
     %! harmony.sixteenths()
     d'2.
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3457,6 +4449,7 @@ segment.23.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.hairpin()
     \pp
+    % SPANNER_STARTS:
     %! abjad.glissando(7)
     %! baca.glissando()
     \glissando
@@ -3521,9 +4514,14 @@ segment.23.Viola.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % OPEN_BRACKETS:
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         cs'!8
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -3538,20 +4536,31 @@ segment.23.Viola.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \!
+        % SPANNER_STOPS:
         %! SCP_SPANNER
         %! SPANNER_STOP
         %! baca.PiecewiseCommand._call(3)
         %! baca.scp_spanner()
         \bacaStopTextSpanSCP
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     }
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
 
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 8]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_216
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -3585,6 +4594,8 @@ segment.23.Viola.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3607,30 +4618,44 @@ segment.23.Viola.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! -PARTS
     %! EXPLICIT_BAR_EXTENT
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
     \override Staff.BarLine.bar-extent = #'(-2 . 0)
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 2/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.stem_down()
         \override Stem.direction = #down
         %! harmony.sixteenths()
         c'8
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -3646,62 +4671,95 @@ segment.23.Viola.Music.Voice = {
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r4
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 2/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         c'8
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.stem_down()
         \revert Stem.direction
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r4
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Viola_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Viola_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -3719,6 +4777,8 @@ segment.23.Viola.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -3726,22 +4786,32 @@ segment.23.Viola.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Viola_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Viola_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -3762,6 +4832,8 @@ segment.23.Viola.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -3769,15 +4841,24 @@ segment.23.Viola.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -3785,7 +4866,10 @@ segment.23.Viola.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Viola.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -3793,13 +4877,19 @@ segment.23.Viola.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Viola_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Viola.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -3807,9 +4897,13 @@ segment.23.Viola.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Cello.I.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 1]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_209
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -3847,6 +4941,8 @@ segment.23.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3872,6 +4968,8 @@ segment.23.Cello.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3887,12 +4985,14 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % MARKUP:
     %! REAPPLIED_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“Cello”)"
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Vc. I”]"
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! SCP_SPANNER
     %! SPANNER_START
@@ -3923,6 +5023,8 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -3935,17 +5037,25 @@ segment.23.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-vc-i-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % AFTER:
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 2]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic_black()
     \once \override NoteHead.style = #'harmonic-black
@@ -3961,6 +5071,8 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -3979,9 +5091,12 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
     <a' b' c''>1.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -3994,23 +5109,36 @@ segment.23.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \pp
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-quasi-bisb-markup
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Cello_I_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Cello_I_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -4029,19 +5157,29 @@ segment.23.Cello.I.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Cello_I_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Cello_I_Rest_Voice measure 3]
@@ -4049,20 +5187,32 @@ segment.23.Cello.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_212
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -4081,6 +5231,8 @@ segment.23.Cello.I.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -4100,6 +5252,8 @@ segment.23.Cello.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -4115,6 +5269,7 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STARTS:
     %! SCP_SPANNER
     %! SPANNER_START
     %! baca.PiecewiseCommand._call(2)
@@ -4150,91 +5305,142 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 5]
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(3)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 6]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.tuplet_bracket_down()
     \override TupletBracket.direction = #down
     %! harmony.sixteenths()
     r2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % SPANNER_STARTS:
         %! AUTODETECT
         %! METRIC_MODULATION_SPANNER
         %! SPANNER_START
@@ -4285,34 +5491,51 @@ segment.23.Cello.I.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! baca.scp_spanner()
         \bacaStartTextSpanSCP
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 7]
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! SCP_SPANNER
     %! SPANNER_START
@@ -4343,27 +5566,40 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_down()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 8]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_216
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -4397,6 +5633,8 @@ segment.23.Cello.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -4419,6 +5657,8 @@ segment.23.Cello.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     r4
+    % AFTER:
+    % SPANNER_STOPS:
     %! METRIC_MODULATION_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
@@ -4429,28 +5669,42 @@ segment.23.Cello.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(4)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.stem_down()
         \override Stem.direction = #down
         %! harmony.sixteenths()
         c'8.
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -4466,31 +5720,47 @@ segment.23.Cello.I.Music.Voice = {
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         c'8.
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
@@ -4500,25 +5770,38 @@ segment.23.Cello.I.Music.Voice = {
         %! baca.OverrideCommand._call(2)
         %! baca.tuplet_bracket_up()
         \revert TupletBracket.direction
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Cello_I_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_I_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -4536,6 +5819,8 @@ segment.23.Cello.I.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -4543,22 +5828,32 @@ segment.23.Cello.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Cello_I_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_I_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -4579,6 +5874,8 @@ segment.23.Cello.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -4586,15 +5883,24 @@ segment.23.Cello.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -4602,7 +5908,10 @@ segment.23.Cello.I.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Cello.I.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -4610,13 +5919,19 @@ segment.23.Cello.I.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Cello_I_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Cello.I.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -4624,13 +5939,20 @@ segment.23.Cello.I.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Cello.II.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! baca._comment_measure_numbers()
         % [Cello_II_Music_Voice measure 1]
+        % BEFORE:
+        % COMMANDS:
         %! MEASURE_209
         %! SHIFTED_CLEF
         %! baca.OverrideCommand._call(1)
@@ -4668,6 +5990,8 @@ segment.23.Cello.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.staff_lines()
         \startStaff
+        % OPENING:
+        % COMMANDS:
         %! EXPLICIT_CLEF
         %! baca.IndicatorCommand._call()
         %! baca._set_status_tag()
@@ -4692,6 +6016,8 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
         dqf!1
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -4704,12 +6030,14 @@ segment.23.Cello.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.dynamic()
         \p
+        % MARKUP:
         %! REAPPLIED_INSTRUMENT_ALERT
         %! baca._attach_latent_indicator_alert()
         %@% ^ \baca-reapplied-indicator-markup "(“Cello”)"
         %! REAPPLIED_MARGIN_MARKUP_ALERT
         %! baca._attach_latent_indicator_alert()
         %@% ^ \baca-reapplied-indicator-markup "[“Vc. II”]"
+        % SPANNER_STARTS:
         %! BOW_SPEED_SPANNER
         %! SPANNER_START
         %! baca.PiecewiseCommand._call(2)
@@ -4735,6 +6063,8 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! baca.bow_speed_spanner()
         \bacaStartTextSpanBowSpeed
+        % ABSOLUTE_AFTER:
+        % COMMANDS:
         %! EXPLICIT_CLEF_REDRAW_COLOR
         %! baca._attach_color_literal(2)
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -4747,11 +6077,18 @@ segment.23.Cello.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.treat_persistent_wrapper(3)
         \set Staff.shortInstrumentName = \harmony-vc-ii-markup
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 2]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic_black()
     \once \override NoteHead.style = #'harmonic-black
@@ -4767,6 +6104,8 @@ segment.23.Cello.II.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -4785,9 +6124,12 @@ segment.23.Cello.II.Music.Voice = {
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
     <g' af'! bf'!>1.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -4800,28 +6142,42 @@ segment.23.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \pp
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-quasi-bisb-markup
+    % SPANNER_STOPS:
     %! BOW_SPEED_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.bow_speed_spanner()
     \bacaStopTextSpanBowSpeed
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Cello_II_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Cello_II_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -4840,19 +6196,29 @@ segment.23.Cello.II.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Cello_II_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Cello_II_Rest_Voice measure 3]
@@ -4860,24 +6226,39 @@ segment.23.Cello.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! baca._comment_measure_numbers()
         % [Cello_II_Music_Voice measure 4]
+        % BEFORE:
+        % COMMANDS:
         %! MEASURE_212
         %! SHIFTED_CLEF
         %! baca.OverrideCommand._call(1)
@@ -4896,6 +6277,8 @@ segment.23.Cello.II.Music.Voice = {
         \once \override Staff.StaffSymbol.line-count = 5
         %! baca._style_fermata_measures(3)
         \startStaff
+        % OPENING:
+        % COMMANDS:
         %! EXPLICIT_CLEF
         %! baca.IndicatorCommand._call()
         %! baca._set_status_tag()
@@ -4914,6 +6297,8 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
         dqf!1
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -4926,6 +6311,7 @@ segment.23.Cello.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.dynamic()
         \p
+        % SPANNER_STARTS:
         %! abjad.glissando(7)
         %! baca.glissando()
         \glissando
@@ -4959,14 +6345,23 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! baca.bow_speed_spanner()
         \bacaStartTextSpanBowSpeed
+        % ABSOLUTE_AFTER:
+        % COMMANDS:
         %! EXPLICIT_CLEF_REDRAW_COLOR
         %! baca._attach_color_literal(2)
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 5]
+    % OPENING:
+    % COMMANDS:
     %! abjad.glissando(1)
     %! baca.glissando()
     \hide NoteHead
@@ -4986,11 +6381,17 @@ segment.23.Cello.II.Music.Voice = {
     %! baca.glissando()
     \override Stem.transparent = ##t
     dqf!2.
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     dqf!2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 6]
+    % OPENING:
+    % COMMANDS:
     %! abjad.glissando(6)
     %! baca.glissando()
     \revert Accidental.stencil
@@ -5011,12 +6412,17 @@ segment.23.Cello.II.Music.Voice = {
     \revert Stem.transparent
     %! baca.make_notes()
     dqf!1.
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 7]
+    % OPENING:
     \afterGrace
     %! harmony.sixteenths()
     d2.
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -5031,11 +6437,13 @@ segment.23.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.hairpin()
     \pp
+    % SPANNER_STOPS:
     %! BOW_SPEED_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.bow_speed_spanner()
     \bacaStopTextSpanBowSpeed
+    % SPANNER_STARTS:
     %! abjad.glissando(7)
     %! baca.glissando()
     \glissando
@@ -5100,9 +6508,14 @@ segment.23.Cello.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % OPEN_BRACKETS:
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         cs!8
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -5117,20 +6530,31 @@ segment.23.Cello.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \!
+        % SPANNER_STOPS:
         %! SCP_SPANNER
         %! SPANNER_STOP
         %! baca.PiecewiseCommand._call(3)
         %! baca.scp_spanner()
         \bacaStopTextSpanSCP
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     }
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
 
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 8]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_216
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5164,6 +6588,8 @@ segment.23.Cello.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5186,25 +6612,37 @@ segment.23.Cello.II.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     r2
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % BEFORE:
+        % COMMANDS:
         %! baca.OverrideCommand._call(1)
         %! baca.stem_down()
         \override Stem.direction = #down
         %! harmony.sixteenths()
         c'8.
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -5220,31 +6658,47 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/5
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         r8.
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         c'8
+        % AFTER:
+        % STEM_TREMOLOS:
         %! baca.IndicatorCommand._call()
         %! baca.stem_tremolo()
         :32
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.accent()
         - \accent
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
@@ -5254,25 +6708,38 @@ segment.23.Cello.II.Music.Voice = {
         %! baca.OverrideCommand._call(2)
         %! baca.tuplet_bracket_up()
         \revert TupletBracket.direction
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Cello_II_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_II_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -5290,6 +6757,8 @@ segment.23.Cello.II.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -5297,22 +6766,32 @@ segment.23.Cello.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Cello_II_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Cello_II_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -5333,6 +6812,8 @@ segment.23.Cello.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -5340,15 +6821,24 @@ segment.23.Cello.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -5356,7 +6846,10 @@ segment.23.Cello.II.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Cello.II.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -5364,13 +6857,19 @@ segment.23.Cello.II.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Cello_II_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Cello.II.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -5378,9 +6877,13 @@ segment.23.Cello.II.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Contrabass.I.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 1]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_209
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5418,6 +6921,8 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5443,6 +6948,8 @@ segment.23.Contrabass.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -5458,12 +6965,14 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % MARKUP:
     %! REAPPLIED_INSTRUMENT_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
     %! REAPPLIED_MARGIN_MARKUP_ALERT
     %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-indicator-markup "[“Cb. I”]"
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! SCP_SPANNER
     %! SPANNER_START
@@ -5494,6 +7003,8 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -5506,17 +7017,25 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-cb-i-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r1
+    % AFTER:
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 2]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic_black()
     \once \override NoteHead.style = #'harmonic-black
@@ -5532,6 +7051,8 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5550,9 +7071,12 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
     <a' b' c''>1.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -5565,23 +7089,36 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \pp
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-quasi-bisb-markup
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_I_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_I_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -5600,19 +7137,29 @@ segment.23.Contrabass.I.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_I_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_I_Rest_Voice measure 3]
@@ -5620,20 +7167,32 @@ segment.23.Contrabass.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_212
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5652,6 +7211,8 @@ segment.23.Contrabass.I.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 5
     %! baca._style_fermata_measures(3)
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5671,38 +7232,57 @@ segment.23.Contrabass.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 5]
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 6]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.tuplet_bracket_down()
     \override TupletBracket.direction = #down
     %! harmony.sixteenths()
     r2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
     %! harmony.sixteenths()
     \times 4/3
     %! harmony.sixteenths()
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -5718,6 +7298,7 @@ segment.23.Contrabass.I.Music.Voice = {
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % SPANNER_STARTS:
         %! AUTODETECT
         %! METRIC_MODULATION_SPANNER
         %! SPANNER_START
@@ -5768,34 +7349,51 @@ segment.23.Contrabass.I.Music.Voice = {
         %! baca.PiecewiseCommand._call(2)
         %! baca.scp_spanner()
         \bacaStartTextSpanSCP
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         %! harmony.sixteenths()
         e,4
+        % AFTER:
+        % ARTICULATIONS:
         %! baca.IndicatorCommand._call()
         %! baca.triple_staccato()
         - \baca-staccati #3
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! harmony.sixteenths()
     }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 7]
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % SPANNER_STARTS:
     %! AUTODETECT
     %! SCP_SPANNER
     %! SPANNER_START
@@ -5826,27 +7424,40 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.triple_staccato()
     - \baca-staccati #3
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_down()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 8]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_216
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -5883,6 +7494,8 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.staff_lines()
     \startStaff
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -5905,9 +7518,12 @@ segment.23.Contrabass.I.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     c'16
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -5923,6 +7539,7 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.IndicatorCommand._call()
     %! baca.accent()
     - \accent
+    % SPANNER_STOPS:
     %! METRIC_MODULATION_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(4)
@@ -5933,27 +7550,41 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.PiecewiseCommand._call(4)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r8.
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r2
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     r8.
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     c'16
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! baca.IndicatorCommand._call()
     %! baca.accent()
     - \accent
+    % COMMANDS:
     %! baca.OverrideCommand._call(2)
     %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
@@ -5963,22 +7594,32 @@ segment.23.Contrabass.I.Music.Voice = {
     %! baca.OverrideCommand._call(2)
     %! baca.tuplet_bracket_up()
     \revert TupletBracket.direction
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_I_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_I_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! PHANTOM
@@ -5996,6 +7637,8 @@ segment.23.Contrabass.I.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             c'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
@@ -6003,22 +7646,32 @@ segment.23.Contrabass.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_I_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_I_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -6039,6 +7692,8 @@ segment.23.Contrabass.I.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -6046,15 +7701,24 @@ segment.23.Contrabass.I.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -6062,7 +7726,10 @@ segment.23.Contrabass.I.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Contrabass.I.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -6070,13 +7737,19 @@ segment.23.Contrabass.I.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Contrabass_I_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Contrabass.I.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
@@ -6084,17 +7757,27 @@ segment.23.Contrabass.I.Music.Staff = <<
 
 %! baca.path.extern()
 segment.23.Contrabass.II.Music.Voice = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Music_Voice measure 1]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -6145,6 +7828,8 @@ segment.23.Contrabass.II.Music.Voice = {
             %! baca._set_status_tag()
             %! baca.staff_lines()
             \startStaff
+            % OPENING:
+            % COMMANDS:
             %! EXPLICIT_CLEF
             %! baca.IndicatorCommand._call()
             %! baca._set_status_tag()
@@ -6172,6 +7857,8 @@ segment.23.Contrabass.II.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 5/4
+            % AFTER:
+            % ARTICULATIONS:
             %! REAPPLIED_DYNAMIC_COLOR
             %! baca.treat_persistent_wrapper()
             %! REAPPLIED_DYNAMIC
@@ -6182,6 +7869,7 @@ segment.23.Contrabass.II.Music.Voice = {
             %! baca._reapply_persistent_indicators(3)
             %! baca._set_status_tag()
             \pp
+            % MARKUP:
             %! REAPPLIED_INSTRUMENT_ALERT
             %! baca._attach_latent_indicator_alert()
             %@% ^ \baca-reapplied-indicator-markup "(“Contrabass”)"
@@ -6193,6 +7881,8 @@ segment.23.Contrabass.II.Music.Voice = {
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
             %! EXPLICIT_CLEF_REDRAW_COLOR
             %! baca._attach_color_literal(2)
             \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -6205,14 +7895,22 @@ segment.23.Contrabass.II.Music.Voice = {
             %! baca._set_status_tag()
             %! baca.treat_persistent_wrapper(3)
             \set Staff.shortInstrumentName = \harmony-cb-ii-markup
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_II_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Rest_Voice measure 1]
@@ -6220,27 +7918,42 @@ segment.23.Contrabass.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 5/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 2]
+    % BEFORE:
+    % COMMANDS:
     %! baca.OverrideCommand._call(1)
     %! baca.note_head_style_harmonic_black()
     \once \override NoteHead.style = #'harmonic-black
     <g' af'! bf'!>1.
+    % AFTER:
+    % STEM_TREMOLOS:
     %! baca.IndicatorCommand._call()
     %! baca.stem_tremolo()
     :32
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -6258,20 +7971,31 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.dynamic()
     \baca-pp-ancora
+    % MARKUP:
     %! baca.IndicatorCommand._call()
     %! baca.markup()
     ^ \baca-quasi-bisb-markup
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Music_Voice measure 3]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -6290,22 +8014,33 @@ segment.23.Contrabass.II.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             b'1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % COMMANDS:
             %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
             %! baca._style_fermata_measures(2)
             \override Staff.BarLine.bar-extent = #'(0 . 2)
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_II_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Rest_Voice measure 3]
@@ -6313,20 +8048,32 @@ segment.23.Contrabass.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 4]
+    % BEFORE:
+    % COMMANDS:
     %! FERMATA_MEASURE_NEXT_BAR_EXTENT
     %! baca._style_fermata_measures(4)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -6338,12 +8085,18 @@ segment.23.Contrabass.II.Music.Voice = {
     \startStaff
     %! baca._make_measure_silences()
     R1 * 5/4
+    % AFTER:
+    % MARKUP:
     %! DURATION_MULTIPLIER
     %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"5" #"4"
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 5]
+    % BEFORE:
+    % COMMANDS:
     %! MEASURE_213
     %! SHIFTED_CLEF
     %! baca.OverrideCommand._call(1)
@@ -6356,6 +8109,8 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca.clef_extra_offset()
     %! baca.clef_shift()
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    % OPENING:
+    % COMMANDS:
     %! EXPLICIT_CLEF
     %! baca.IndicatorCommand._call()
     %! baca._set_status_tag()
@@ -6375,6 +8130,8 @@ segment.23.Contrabass.II.Music.Voice = {
     \set Staff.forceClef = ##t
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -6389,6 +8146,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.hairpin()
     \ff
+    % SPANNER_STARTS:
     %! abjad.glissando(7)
     %! baca.glissando()
     \glissando
@@ -6453,10 +8211,16 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
     %! EXPLICIT_CLEF_REDRAW_COLOR
     %! baca._attach_color_literal(2)
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPENING:
+    % COMMANDS:
     %! abjad.glissando(1)
     %! baca.glissando()
     \hide NoteHead
@@ -6471,33 +8235,53 @@ segment.23.Contrabass.II.Music.Voice = {
     \override NoteHead.no-ledgers = ##t
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 6]
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! harmony.sixteenths()
     e,4
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPENING:
+    % COMMANDS:
     %! abjad.glissando(6)
     %! baca.glissando()
     \revert Accidental.stencil
@@ -6512,17 +8296,24 @@ segment.23.Contrabass.II.Music.Voice = {
     \undo \hide NoteHead
     %! harmony.sixteenths()
     e,4
+    % AFTER:
+    % SPANNER_STOPS:
     %! SCP_SPANNER
     %! SPANNER_STOP
     %! baca.PiecewiseCommand._call(3)
     %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
     %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 7]
+    % OPENING:
     \afterGrace
     %! harmony.sixteenths()
     d2.
+    % AFTER:
+    % ARTICULATIONS:
     %! EXPLICIT_DYNAMIC_COLOR
     %! baca.treat_persistent_wrapper()
     %! EXPLICIT_DYNAMIC
@@ -6537,6 +8328,7 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca._set_status_tag()
     %! baca.hairpin()
     \pp
+    % SPANNER_STARTS:
     %! abjad.glissando(7)
     %! baca.glissando()
     \glissando
@@ -6601,9 +8393,14 @@ segment.23.Contrabass.II.Music.Voice = {
     %! baca.PiecewiseCommand._call(2)
     %! baca.scp_spanner()
     \bacaStartTextSpanSCP
+    % OPEN_BRACKETS:
     {
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
         cs!8
+        % AFTER:
+        % ARTICULATIONS:
         %! EXPLICIT_DYNAMIC_COLOR
         %! baca.treat_persistent_wrapper()
         %! EXPLICIT_DYNAMIC
@@ -6618,28 +8415,45 @@ segment.23.Contrabass.II.Music.Voice = {
         %! baca._set_status_tag()
         %! baca.hairpin()
         \!
+        % SPANNER_STOPS:
         %! SCP_SPANNER
         %! SPANNER_STOP
         %! baca.PiecewiseCommand._call(3)
         %! baca.scp_spanner()
         \bacaStopTextSpanSCP
+        % COMMANDS:
         %! baca.OverrideCommand._call(2)
         %! baca.dls_staff_padding()
         \revert DynamicLineSpanner.staff-padding
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     }
+    % ABSOLUTE_AFTER:
+    % COMMANDS:
 
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_II_Music_Voice"
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Music_Voice measure 8]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! NOTE
             %! baca._make_multimeasure_rest_container(3)
@@ -6652,19 +8466,29 @@ segment.23.Contrabass.II.Music.Voice = {
             %! NOTE
             %! baca._make_multimeasure_rest_container(1)
             d1 * 1
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! NOTE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_II_Rest_Voice"
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! baca._comment_measure_numbers()
             % [Contrabass_II_Rest_Voice measure 8]
@@ -6672,33 +8496,51 @@ segment.23.Contrabass.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! REST_VOICE
             %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     <<
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         \context Voice = "Contrabass_II_Music_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_II_Music_Voice measure 9]
+            % BEFORE:
+            % COMMANDS:
             %! INVISIBLE_MUSIC_COMMAND
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -6716,6 +8558,8 @@ segment.23.Contrabass.II.Music.Voice = {
             %! PHANTOM
             %! baca._make_multimeasure_rest_container(1)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! HIDDEN
             %! MULTIMEASURE_REST
@@ -6723,22 +8567,32 @@ segment.23.Contrabass.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(4)
         }
+        % ABSOLUTE_BEFORE:
+        % COMMANDS:
 
+        % OPEN_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         \context Voice = "Contrabass_II_Rest_Voice"
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         {
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
 
             %! PHANTOM
             %! baca._comment_measure_numbers()
             %! baca._style_phantom_measures(5)
             % [Contrabass_II_Rest_Voice measure 9]
+            % OPENING:
+            % COMMANDS:
             %! PHANTOM
             %! baca._style_phantom_measures(7)
             \once \override MultiMeasureRest.transparent = ##t
@@ -6759,6 +8613,8 @@ segment.23.Contrabass.II.Music.Voice = {
             %! REST_VOICE
             %! baca._make_multimeasure_rest_container(5)
             R1 * 1/4
+            % AFTER:
+            % MARKUP:
             %! DURATION_MULTIPLIER
             %! MULTIMEASURE_REST
             %! PHANTOM
@@ -6766,15 +8622,24 @@ segment.23.Contrabass.II.Music.Voice = {
             %! baca._label_duration_multipliers()
             %! baca._style_phantom_measures(5)
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
+            % CLOSING:
+            % COMMANDS:
 
+        % CLOSE_BRACKETS:
         %! PHANTOM
         %! baca._make_multimeasure_rest_container(6)
         }
+        % CLOSING:
+        % COMMANDS:
 
+    % CLOSE_BRACKETS:
     %! PHANTOM
     %! baca._make_multimeasure_rest_container(7)
     >>
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 }
@@ -6782,7 +8647,10 @@ segment.23.Contrabass.II.Music.Voice = {
 
 %! baca.path.extern()
 segment.23.Contrabass.II.Music.Staff = <<
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! NOT_TOPMOST
     %! baca.make_global_context()
 %%% \context GlobalRests = "Global_Rests"
@@ -6790,13 +8658,19 @@ segment.23.Contrabass.II.Music.Staff = <<
     %! baca.make_global_context()
     %! baca.path.extern()
 %%% { \segment.23.Global.Rests }
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
 
+    % OPEN_BRACKETS:
     %! harmony.make_empty_score()
     \context Voice = "Contrabass_II_Music_Voice"
     %! harmony.make_empty_score()
     %! baca.path.extern()
     { \segment.23.Contrabass.II.Music.Voice }
+    % CLOSING:
+    % COMMANDS:
 
+% CLOSE_BRACKETS:
 %! harmony.make_empty_score()
 %! baca.path.extern()
 >>
