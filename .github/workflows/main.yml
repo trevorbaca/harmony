@@ -41,11 +41,14 @@ jobs:
 
     - name: Install LilyPond
       run: |
-        lilypond=/tmp/lilypond
-        lilypond_url=http://lilypond.org/download/binaries/linux-64/
-        lilypond_source=lilypond-2.23.8-1.linux-64.sh
-        wget -q -O $lilypond $lilypond_url/$lilypond_source
-        sh $lilypond --batch
+        lilypond_version=2.23.8
+        lilypond_archive=lilypond-${lilypond_version}-linux-x86_64.tar.gz
+        lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/
+        lilypond_url=${lilypond_url}/v${lilypond_version}/downloads/${lilypond_archive}
+        echo ${lilypond_url}
+        cd /tmp
+        wget -q ${lilypond_url}
+        tar -xf ${lilypond_archive}
 
     - name: Install Abjad trevor/dev branch ("editable" to include abjad.ily)
       run: |
@@ -92,13 +95,13 @@ jobs:
 
     - name: Test sections
       run: |
-        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.8/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         /tmp/baca/scr/test-sections
 
     - name: Test score builds
       run: |
-        export PATH=/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.8/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
