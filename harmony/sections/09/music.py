@@ -60,7 +60,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -80,7 +80,7 @@ commands(
 
 commands(
     ("bfl", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 6, 3, 3, 6, 3],
     ),
     baca.pitch("Gb3"),
@@ -100,7 +100,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.reapply_persistent_indicators(),
@@ -119,7 +119,7 @@ commands(
 
 commands(
     ("perc1", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2, -4, -4, 2, -2, 2, -2, -4],
     ),
     baca.accent(
@@ -143,7 +143,7 @@ commands(
 
 commands(
     ("perc2", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, -6, 3, 3, -6, 3],
     ),
     baca.reapply_persistent_indicators(),
@@ -187,7 +187,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-6, -2, 4, "-"],
         extra_counts=[2],
         denominator=None,
@@ -207,7 +207,7 @@ commands(
 
 commands(
     ("va", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.reapply_persistent_indicators(),
@@ -236,7 +236,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -290,7 +290,7 @@ def preprocessor(divisions):
 
 commands(
     (["va", "vc1", "vc2", "cb1"], 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-12, 12, -4],
         preprocessor=preprocessor,
         extra_counts=[0, 4],
@@ -344,7 +344,7 @@ commands(
 
 commands(
     ("cb2", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-9, 3, -9, 3],
     ),
     baca.clef("treble"),

@@ -78,7 +78,7 @@ commands(
 
 commands(
     ("bfl", (1, 6)),
-    library.tessera_1(
+    library.make_tessera_1(
         6,
         gap=True,
     ),
@@ -88,7 +88,7 @@ commands(
 
 commands(
     ("bfl", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         6,
         advance=72,
         gap=True,
@@ -98,7 +98,7 @@ commands(
 
 commands(
     ("bfl", 9),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 16],
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
@@ -117,7 +117,7 @@ commands(
 
 commands(
     ("bfl", 11),
-    library.tessera_1(
+    library.make_tessera_1(
         6,
         advance=72 + 12,
         gap=True,
@@ -134,7 +134,7 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
@@ -165,7 +165,7 @@ commands(
 
 commands(
     ("perc1", 9),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[7],
         rest_after=True,
     ),
@@ -186,7 +186,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
@@ -203,7 +203,7 @@ commands(
 
 commands(
     ("perc2", (5, 6)),
-    library.train(
+    library.make_train_rhythm(
         [2],
         rest_leaves=[0],
     ),
@@ -218,7 +218,7 @@ commands(
 
 commands(
     ("perc2", 8),
-    library.train(
+    library.make_train_rhythm(
         [2],
         rest_leaves=[0, 1, 2],
     ),
@@ -227,7 +227,7 @@ commands(
 
 commands(
     ("perc2", 9),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, "-"],
     ),
 )
@@ -243,7 +243,7 @@ commands(
 
 commands(
     ("perc2", 11),
-    library.sixteenths(
+    library.make_sixteenths(
         [-6, 6],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -266,7 +266,7 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    library.tessera_1(5),
+    library.make_tessera_1(5),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("C#4"),
@@ -274,7 +274,7 @@ commands(
 
 commands(
     ("hp", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         5,
         advance=72,
     ),
@@ -283,7 +283,7 @@ commands(
 
 commands(
     ("hp", 9),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 16],
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
@@ -305,7 +305,7 @@ commands(
 
 commands(
     ("hp", 11),
-    library.tessera_1(
+    library.make_tessera_1(
         5,
         advance=72 + 12,
     ),
@@ -321,7 +321,7 @@ commands(
 
 commands(
     ("va", (1, 6)),
-    library.tessera_1(
+    library.make_tessera_1(
         4,
         gap=True,
     ),
@@ -330,7 +330,7 @@ commands(
 
 commands(
     ("va", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         4,
         advance=72,
         gap=True,
@@ -373,7 +373,7 @@ commands(
     ("va", 11),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.tessera_1(
+    library.make_tessera_1(
         4,
         advance=72 + 12,
         gap=True,
@@ -394,7 +394,7 @@ commands(
 
 commands(
     ("vc1", (1, 6)),
-    library.tessera_1(
+    library.make_tessera_1(
         3,
         gap=True,
     ),
@@ -408,7 +408,7 @@ commands(
 
 commands(
     ("vc1", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         3,
         advance=72,
         gap=True,
@@ -450,7 +450,7 @@ commands(
 commands(
     ("vc1", 11),
     baca.clef("bass"),
-    library.tessera_1(
+    library.make_tessera_1(
         3,
         advance=72 + 12,
         gap=True,
@@ -466,7 +466,7 @@ commands(
 
 commands(
     ("vc2", (1, 6)),
-    library.tessera_1(
+    library.make_tessera_1(
         2,
         gap=True,
     ),
@@ -475,7 +475,7 @@ commands(
 
 commands(
     ("vc2", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         2,
         advance=72,
         gap=True,
@@ -512,7 +512,7 @@ commands(
 commands(
     ("vc2", 11),
     baca.clef("bass"),
-    library.tessera_1(
+    library.make_tessera_1(
         2,
         advance=72 + 12,
         gap=True,
@@ -543,7 +543,7 @@ commands(
 
 commands(
     ("cb1", (1, 6)),
-    library.tessera_1(1),
+    library.make_tessera_1(1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -551,7 +551,7 @@ commands(
 
 commands(
     ("cb1", 8),
-    library.tessera_1(
+    library.make_tessera_1(
         1,
         advance=72,
     ),
@@ -591,7 +591,7 @@ commands(
 
 commands(
     ("cb1", 11),
-    library.tessera_1(
+    library.make_tessera_1(
         1,
         advance=72 + 12,
     ),
@@ -624,7 +624,7 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    library.tessera_1(0),
+    library.make_tessera_1(0),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch(
@@ -650,7 +650,7 @@ commands(
 
 commands(
     ("cb2", 9),
-    library.tuplet(
+    library.make_tuplet(
         [(1,)],
         force_augmentation=True,
     ),
@@ -781,7 +781,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1"], 9),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[7],
     ),
 )

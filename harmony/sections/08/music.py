@@ -96,7 +96,7 @@ def preprocessor(divisions):
 
 commands(
     ("bfl", (8, 9)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-8, -4, 8, -4, 8],
         preprocessor=preprocessor,
         extra_counts=[0, 4, 4],
@@ -123,7 +123,7 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, -11, -1, 1, -14],
     ),
     baca.reapply_persistent_indicators(),
@@ -175,7 +175,7 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, 6, 16],
         do_not_rewrite_meter=True,
         fuse=True,
@@ -232,7 +232,7 @@ commands(
 
 commands(
     ("va", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 8, 8],
         do_not_rewrite_meter=True,
         fuse=True,
@@ -281,7 +281,7 @@ commands(
 
 commands(
     ("vc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, 4],
     ),
     baca.reapply_persistent_indicators(),
@@ -303,7 +303,7 @@ commands(
 
 commands(
     ("vc1", (2, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, 8, 12],
         do_not_rewrite_meter=True,
         fuse=True,
@@ -361,7 +361,7 @@ def preprocessor(divisions):
 
 commands(
     ("vc2", (1, 2)),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", 1],
         preprocessor=preprocessor,
         do_not_rewrite_meter=True,
@@ -390,7 +390,7 @@ commands(
 
 commands(
     ("vc2", (3, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 8, 8],
         do_not_rewrite_meter=True,
         fuse=True,
@@ -440,7 +440,7 @@ commands(
 
 commands(
     ("cb1", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, 8, 4, 4, 8, 4, 4],
     ),
     baca.reapply_persistent_indicators(),
@@ -459,7 +459,7 @@ commands(
 
 commands(
     ("cb1", (4, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, 8, 12],
         do_not_rewrite_meter=True,
         fuse=True,
@@ -505,7 +505,7 @@ commands(
 
 commands(
     ("cb2", (1, 4)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 16, 12, 15, 1],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -530,7 +530,7 @@ commands(
 
 commands(
     ("cb2", (5, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 8, 8],
         do_not_rewrite_meter=True,
         fuse=True,

@@ -108,7 +108,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, 6],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -129,7 +129,7 @@ commands(
 
 commands(
     ("bfl", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4, -2, 4],
     ),
     baca.pitch("Ab3"),
@@ -138,7 +138,7 @@ commands(
 
 commands(
     ("bfl", 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
     baca.pitch("G3"),
@@ -159,7 +159,7 @@ commands(
 
 commands(
     ("bfl", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 8],
     ),
     baca.breathe(
@@ -184,7 +184,7 @@ def selector(argument):
 
 commands(
     ("bfl", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, 6],
     ),
     baca.breathe(
@@ -217,7 +217,7 @@ commands(
 
 commands(
     ("bfl", 10),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4, 4],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -248,7 +248,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.reapply_persistent_indicators(),
@@ -268,7 +268,7 @@ commands(
     ("perc1", 2),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-8, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -290,7 +290,7 @@ commands(
 
 commands(
     ("perc1", (4, 5)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
         written_quarters=[0, 1],
         invisible=[1],
@@ -314,7 +314,7 @@ commands(
 
 commands(
     ("perc1", 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     library.slate_staff_position(),
@@ -336,7 +336,7 @@ commands(
 
 commands(
     ("perc1", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 1, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -354,7 +354,7 @@ commands(
 
 commands(
     ("perc1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 1, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -368,7 +368,7 @@ commands(
 
 commands(
     ("perc1", 10),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
         written_quarters=[0, 1, 3, 4, 5, 6],
         invisible=[1, 4, 6],
@@ -401,7 +401,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.reapply_persistent_indicators(),
@@ -420,7 +420,7 @@ commands(
 
 commands(
     ("perc2", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-2, 10, "-"],
     ),
     library.tam_tam_staff_position(),
@@ -436,7 +436,7 @@ commands(
 
 commands(
     ("perc2", (4, 5)),
-    library.sixteenths(
+    library.make_sixteenths(
         [14, -4, 12, -2],
     ),
     library.tam_tam_staff_position(),
@@ -451,7 +451,7 @@ commands(
 
 commands(
     ("perc2", 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [-12, -6, 3, -3],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -466,7 +466,7 @@ commands(
 
 commands(
     ("perc2", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2],
     ),
     library.brake_drum_staff_position(),
@@ -482,7 +482,7 @@ commands(
 
 commands(
     ("perc2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, -6],
     ),
     library.slate_staff_position(),
@@ -495,7 +495,7 @@ commands(
 
 commands(
     ("perc2", 10),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, -4, 4, -2],
     ),
     library.tam_tam_staff_position(),
@@ -518,7 +518,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.reapply_persistent_indicators(),
@@ -535,7 +535,7 @@ commands(
 commands(
     ("hp", 2),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-2, 10, "-"],
     ),
     baca.chunk(
@@ -550,7 +550,7 @@ commands(
 
 commands(
     ("hp", (4, 5)),
-    library.sixteenths(
+    library.make_sixteenths(
         [14, -4, 12, -2],
     ),
     baca.chunk(
@@ -576,7 +576,7 @@ def preprocessor(divisions):
 commands(
     ("hp", 6),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, -2, 4, -4, -6, 3, -3],
         preprocessor=preprocessor,
         extra_counts=[0, 2, 0, 0],
@@ -605,7 +605,7 @@ commands(
 
 commands(
     ("hp", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2],
     ),
     baca.pitch("E4"),
@@ -631,7 +631,7 @@ commands(
     ("hp", 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 1, 1, 1, -6],
         tie_all=True,
         written_quarters=[0],
@@ -659,7 +659,7 @@ commands(
     ("hp", 10),
     baca.clef("bass"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [6, -4, 4, -2],
     ),
     baca.chunk(
@@ -682,7 +682,7 @@ commands(
 
 commands(
     ("va", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         tie=[0],
     ),
@@ -697,7 +697,7 @@ commands(
 
 commands(
     ("va", 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.pitch("C#4"),
@@ -718,7 +718,7 @@ commands(
 
 commands(
     ("va", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, 3, 6],
     ),
     baca.clef("alto"),
@@ -754,7 +754,7 @@ def preprocessor(divisions):
 
 commands(
     ("vc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, -2],
@@ -800,7 +800,7 @@ commands(
 
 commands(
     ("vc1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [14, 8, 8],
         extra_counts=[2],
         denominator=None,
@@ -853,7 +853,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         tie=[0],
     ),
@@ -876,7 +876,7 @@ commands(
 
 commands(
     ("vc2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, 8, 14],
         extra_counts=[2],
         denominator=None,
@@ -924,7 +924,7 @@ def preprocessor(divisions):
 
 commands(
     ("cb1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, -2],
@@ -963,7 +963,7 @@ commands(
 
 commands(
     ("cb1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 7, 8],
         extra_counts=[1],
     ),
@@ -1019,7 +1019,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         tie=[0],
     ),
@@ -1034,7 +1034,7 @@ commands(
 
 commands(
     ("cb2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, 7, 12],
         extra_counts=[1],
     ),
@@ -1081,7 +1081,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-8, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -1097,7 +1097,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
         written_quarters=[0, 1],
         invisible=[1],
@@ -1134,7 +1134,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], 10),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
         written_quarters=[0, 1, 3, 4, 5, 6],
         invisible=[1, 4, 6],
@@ -1164,7 +1164,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, -6, 6],
     ),
     baca.stop_on_string(
@@ -1188,7 +1188,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [4],
     ),
     baca.stem_tremolo(

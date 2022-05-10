@@ -1098,27 +1098,27 @@ segment.25.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 2]
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 8/9
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1137,11 +1137,11 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_font_size()
         \override NoteHead.font-size = -3
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1176,42 +1176,42 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % AFTER:
         % ARTICULATIONS:
@@ -1259,42 +1259,42 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % AFTER:
         % ARTICULATIONS:
@@ -1313,7 +1313,7 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
@@ -1332,14 +1332,14 @@ segment.25.Bass.Flute.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 3]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % SPANNER_STOPS:
@@ -1350,7 +1350,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1417,7 +1417,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1492,7 +1492,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -1522,7 +1522,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1592,7 +1592,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1670,7 +1670,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -1700,7 +1700,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1767,7 +1767,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs'''!8
     % AFTER:
     % ARTICULATIONS:
@@ -1842,7 +1842,7 @@ segment.25.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -1968,11 +1968,11 @@ segment.25.Bass.Flute.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 12/14
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2000,7 +2000,7 @@ segment.25.Bass.Flute.Music.Voice = {
           %! MEASURE_229
           %! baca._style_fermata_measures(7)
     %%% \once \override Score.SpanBar.transparent = ##t
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2019,11 +2019,11 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_font_size()
         \override NoteHead.font-size = -3
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2058,62 +2058,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % AFTER:
         % ARTICULATIONS:
@@ -2161,72 +2161,72 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % AFTER:
         % ARTICULATIONS:
@@ -2245,18 +2245,18 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -2269,31 +2269,31 @@ segment.25.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 6]
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 11/12
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2328,52 +2328,52 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % AFTER:
         % ARTICULATIONS:
@@ -2421,62 +2421,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % AFTER:
         % ARTICULATIONS:
@@ -2495,18 +2495,18 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -2518,27 +2518,27 @@ segment.25.Bass.Flute.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 12/14
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Bass_Flute_Music_Voice measure 7]
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2573,62 +2573,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % AFTER:
         % ARTICULATIONS:
@@ -2676,72 +2676,72 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % AFTER:
         % ARTICULATIONS:
@@ -2760,18 +2760,18 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -2784,31 +2784,31 @@ segment.25.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 8]
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 11/12
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -2843,52 +2843,52 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % AFTER:
         % ARTICULATIONS:
@@ -2936,62 +2936,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % AFTER:
         % ARTICULATIONS:
@@ -3010,18 +3010,18 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -3033,27 +3033,27 @@ segment.25.Bass.Flute.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 12/14
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Bass_Flute_Music_Voice measure 9]
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3088,62 +3088,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % AFTER:
         % ARTICULATIONS:
@@ -3191,72 +3191,72 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % AFTER:
         % ARTICULATIONS:
@@ -3275,18 +3275,18 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -3299,31 +3299,31 @@ segment.25.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 10]
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 11/12
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -3358,52 +3358,52 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % AFTER:
         % ARTICULATIONS:
@@ -3451,62 +3451,62 @@ segment.25.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % AFTER:
         % ARTICULATIONS:
@@ -3525,7 +3525,7 @@ segment.25.Bass.Flute.Music.Voice = {
           %! baca.hairpin()
         \!
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
@@ -3544,12 +3544,12 @@ segment.25.Bass.Flute.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2.
     % AFTER:
     % SPANNER_STOPS:
@@ -4001,11 +4001,11 @@ segment.25.Percussion.I.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 6/5
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4017,12 +4017,12 @@ segment.25.Percussion.I.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_up()
         \override TupletBracket.direction = #up
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r8
         % AFTER:
         % SPANNER_STARTS:
@@ -4064,7 +4064,7 @@ segment.25.Percussion.I.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.stem_down()
         \override Stem.direction = #down
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         d'8.
         % AFTER:
         % ARTICULATIONS:
@@ -4095,12 +4095,12 @@ segment.25.Percussion.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r8.
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         d'8.
         % AFTER:
         % COMMANDS:
@@ -4110,7 +4110,7 @@ segment.25.Percussion.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r16
         % AFTER:
         % COMMANDS:
@@ -4121,7 +4121,7 @@ segment.25.Percussion.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4133,7 +4133,7 @@ segment.25.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4143,7 +4143,7 @@ segment.25.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.stem_down()
     \override Stem.direction = #down
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % SPANNER_STOPS:
@@ -4160,7 +4160,7 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % SPANNER_STARTS:
@@ -4168,27 +4168,27 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % SPANNER_STARTS:
@@ -4199,7 +4199,7 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % SPANNER_STARTS:
@@ -4211,7 +4211,7 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % COMMANDS:
@@ -4332,7 +4332,7 @@ segment.25.Percussion.I.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -4363,100 +4363,100 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 6]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 7]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 8]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 9]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % COMMANDS:
@@ -4466,24 +4466,24 @@ segment.25.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 10]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4493,42 +4493,42 @@ segment.25.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.stem_up()
     \override Stem.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 3/5
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2.
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'4
         % AFTER:
         % COMMANDS:
@@ -4542,7 +4542,7 @@ segment.25.Percussion.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4851,7 +4851,7 @@ segment.25.Percussion.II.Music.Voice = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'4
     % AFTER:
     % ARTICULATIONS:
@@ -4926,7 +4926,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % SPANNER_STOPS:
@@ -4938,27 +4938,27 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 6/5
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4993,12 +4993,12 @@ segment.25.Percussion.II.Music.Voice = {
           %! EXPLICIT_STAFF_LINES_COLOR
           %! baca._attach_color_literal(2)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r8
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5008,7 +5008,7 @@ segment.25.Percussion.II.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.stem_down()
         \override Stem.direction = #down
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'2
         % AFTER:
         % STEM_TREMOLOS:
@@ -5056,7 +5056,7 @@ segment.25.Percussion.II.Music.Voice = {
           %! abjad.glissando(1)
           %! baca.glissando()
         \override NoteHead.no-ledgers = ##t
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'8
         % AFTER:
         % STEM_TREMOLOS:
@@ -5067,7 +5067,7 @@ segment.25.Percussion.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5223,7 +5223,7 @@ segment.25.Percussion.II.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % STEM_TREMOLOS:
@@ -5285,7 +5285,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5306,19 +5306,19 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 6]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5393,7 +5393,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -5414,19 +5414,19 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 7]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % STEM_TREMOLOS:
@@ -5481,7 +5481,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5502,19 +5502,19 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 8]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5589,7 +5589,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -5610,19 +5610,19 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 9]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % STEM_TREMOLOS:
@@ -5681,7 +5681,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5702,12 +5702,12 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -5724,7 +5724,7 @@ segment.25.Percussion.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5734,7 +5734,7 @@ segment.25.Percussion.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.stem_down()
     \override Stem.direction = #down
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % STEM_TREMOLOS:
@@ -5792,7 +5792,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % STEM_TREMOLOS:
@@ -5809,7 +5809,7 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -5830,27 +5830,27 @@ segment.25.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 3/5
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2.
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         d'4
         % AFTER:
         % MARKUP:
@@ -5866,7 +5866,7 @@ segment.25.Percussion.II.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         d'4
         % AFTER:
         % COMMANDS:
@@ -5883,7 +5883,7 @@ segment.25.Percussion.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6213,7 +6213,7 @@ segment.25.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2.
     % AFTER:
     % ARTICULATIONS:
@@ -6251,17 +6251,17 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     af'!4
     % AFTER:
     % ARTICULATIONS:
@@ -6295,11 +6295,11 @@ segment.25.Harp.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 6/5
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6311,12 +6311,12 @@ segment.25.Harp.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_up()
         \override TupletBracket.direction = #up
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r8
         % AFTER:
         % SPANNER_STARTS:
@@ -6398,7 +6398,7 @@ segment.25.Harp.Music.Voice = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'8.
         % AFTER:
         % ARTICULATIONS:
@@ -6435,35 +6435,35 @@ segment.25.Harp.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r8.
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'8.
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r16
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 3]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % SPANNER_STOPS:
@@ -6480,7 +6480,7 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % SPANNER_STARTS:
@@ -6488,27 +6488,27 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % SPANNER_STARTS:
@@ -6519,7 +6519,7 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % SPANNER_STARTS:
@@ -6531,7 +6531,7 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % COMMANDS:
@@ -6697,7 +6697,7 @@ segment.25.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1.
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -6709,12 +6709,12 @@ segment.25.Harp.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 6]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g,,8.
     % AFTER:
     % ARTICULATIONS:
@@ -6741,31 +6741,31 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 7]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 8]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g,,8.
     % AFTER:
     % ARTICULATIONS:
@@ -6775,31 +6775,31 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 9]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 10]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g,,8.
     % AFTER:
     % ARTICULATIONS:
@@ -6813,12 +6813,12 @@ segment.25.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -7250,7 +7250,7 @@ segment.25.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 3]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -7317,7 +7317,7 @@ segment.25.Viola.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!8
     % AFTER:
     % STEM_TREMOLOS:
@@ -7330,7 +7330,7 @@ segment.25.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!8
     % AFTER:
     % STEM_TREMOLOS:
@@ -7374,7 +7374,7 @@ segment.25.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!16
     % AFTER:
     % STEM_TREMOLOS:
@@ -7387,7 +7387,7 @@ segment.25.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -7460,7 +7460,7 @@ segment.25.Viola.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs!2
     % AFTER:
     % STEM_TREMOLOS:
@@ -8880,7 +8880,7 @@ segment.25.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -8952,7 +8952,7 @@ segment.25.Cello.I.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8
     % AFTER:
     % STEM_TREMOLOS:
@@ -8996,7 +8996,7 @@ segment.25.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8
     % AFTER:
     % STEM_TREMOLOS:
@@ -9040,7 +9040,7 @@ segment.25.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -9050,7 +9050,7 @@ segment.25.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!16
     % AFTER:
     % STEM_TREMOLOS:
@@ -9063,7 +9063,7 @@ segment.25.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -9136,7 +9136,7 @@ segment.25.Cello.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -10565,7 +10565,7 @@ segment.25.Cello.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!2
     % AFTER:
     % STEM_TREMOLOS:
@@ -10637,7 +10637,7 @@ segment.25.Cello.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!16
     % AFTER:
     % STEM_TREMOLOS:
@@ -10650,7 +10650,7 @@ segment.25.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -10723,7 +10723,7 @@ segment.25.Cello.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!2
     % AFTER:
     % STEM_TREMOLOS:
@@ -12000,7 +12000,7 @@ segment.25.Contrabass.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -12072,7 +12072,7 @@ segment.25.Contrabass.I.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!2
     % AFTER:
     % STEM_TREMOLOS:
@@ -12113,7 +12113,7 @@ segment.25.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!16
     % AFTER:
     % STEM_TREMOLOS:
@@ -12126,7 +12126,7 @@ segment.25.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -12199,7 +12199,7 @@ segment.25.Contrabass.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!4
     % AFTER:
     % STEM_TREMOLOS:
@@ -13686,7 +13686,7 @@ segment.25.Contrabass.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!2
     % AFTER:
     % STEM_TREMOLOS:
@@ -13758,7 +13758,7 @@ segment.25.Contrabass.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!16
     % AFTER:
     % STEM_TREMOLOS:
@@ -13771,7 +13771,7 @@ segment.25.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -13844,7 +13844,7 @@ segment.25.Contrabass.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     fs,!2
     % AFTER:
     % STEM_TREMOLOS:
