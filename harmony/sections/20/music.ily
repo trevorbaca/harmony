@@ -10243,7 +10243,7 @@ segment.20.Contrabass.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r4
     % AFTER:
     % SPANNER_STARTS:
@@ -10296,7 +10296,7 @@ segment.20.Contrabass.II.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -10350,7 +10350,7 @@ segment.20.Contrabass.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     c'16.
     % AFTER:
     % STEM_TREMOLOS:
@@ -10423,17 +10423,17 @@ segment.20.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r32
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     c'16.
     % AFTER:
     % STEM_TREMOLOS:
@@ -10451,12 +10451,12 @@ segment.20.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r32
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % AFTER:
     % COMMANDS:

@@ -11331,11 +11331,11 @@ segment.02.Cello.I.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/3
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -11347,7 +11347,7 @@ segment.02.Cello.I.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.tuplet_bracket_down()
         \override TupletBracket.direction = #down
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a,4
         % AFTER:
         % STEM_TREMOLOS:
@@ -11419,7 +11419,7 @@ segment.02.Cello.I.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        %@% - \baca-text-spanner-left-text "baca.skeleton()"
+        %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -11457,7 +11457,7 @@ segment.02.Cello.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a,4
         % AFTER:
         % STEM_TREMOLOS:
@@ -11528,7 +11528,7 @@ segment.02.Cello.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         a,4
         % AFTER:
         % STEM_TREMOLOS:
@@ -11604,7 +11604,7 @@ segment.02.Cello.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

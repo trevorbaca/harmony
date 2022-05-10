@@ -8646,7 +8646,7 @@ segment.25.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r1
     % AFTER:
     % ARTICULATIONS:
@@ -8717,7 +8717,7 @@ segment.25.Cello.I.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -8740,17 +8740,17 @@ segment.25.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -8829,7 +8829,7 @@ segment.25.Cello.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10331,7 +10331,7 @@ segment.25.Cello.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r1
     % AFTER:
     % ARTICULATIONS:
@@ -10402,7 +10402,7 @@ segment.25.Cello.II.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -10425,17 +10425,17 @@ segment.25.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -10514,7 +10514,7 @@ segment.25.Cello.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11766,7 +11766,7 @@ segment.25.Contrabass.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r1
     % AFTER:
     % ARTICULATIONS:
@@ -11837,7 +11837,7 @@ segment.25.Contrabass.I.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -11860,17 +11860,17 @@ segment.25.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -11949,7 +11949,7 @@ segment.25.Contrabass.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13452,7 +13452,7 @@ segment.25.Contrabass.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r1
     % AFTER:
     % ARTICULATIONS:
@@ -13523,7 +13523,7 @@ segment.25.Contrabass.II.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -13546,17 +13546,17 @@ segment.25.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -13635,7 +13635,7 @@ segment.25.Contrabass.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

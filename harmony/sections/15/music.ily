@@ -5891,9 +5891,9 @@ segment.15.Cello.II.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 8/10
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5908,7 +5908,7 @@ segment.15.Cello.II.Music.Voice = {
           %! baca.IndicatorCommand._call()
           %! baca.literal()
         \once \override TupletNumber.text = #"10:8"
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -5982,7 +5982,7 @@ segment.15.Cello.II.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        %@% - \baca-text-spanner-left-text "baca.skeleton()"
+        %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -6021,17 +6021,17 @@ segment.15.Cello.II.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r8.
         % AFTER:
         % LEAK:
@@ -6050,7 +6050,7 @@ segment.15.Cello.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6867,9 +6867,9 @@ segment.15.Contrabass.I.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 8/11
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6884,7 +6884,7 @@ segment.15.Contrabass.I.Music.Voice = {
           %! baca.IndicatorCommand._call()
           %! baca.literal()
         \once \override TupletNumber.text = #"11:8"
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % AFTER:
         % SPANNER_STARTS:
@@ -6937,7 +6937,7 @@ segment.15.Contrabass.I.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        %@% - \baca-text-spanner-left-text "baca.skeleton()"
+        %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -6946,7 +6946,7 @@ segment.15.Contrabass.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -7011,17 +7011,17 @@ segment.15.Contrabass.I.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r32
         % AFTER:
         % LEAK:
@@ -7040,7 +7040,7 @@ segment.15.Contrabass.I.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7862,9 +7862,9 @@ segment.15.Contrabass.II.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 8/12
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -7879,7 +7879,7 @@ segment.15.Contrabass.II.Music.Voice = {
           %! baca.IndicatorCommand._call()
           %! baca.literal()
         \once \override TupletNumber.text = #"12:8"
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % AFTER:
         % SPANNER_STARTS:
@@ -7932,7 +7932,7 @@ segment.15.Contrabass.II.Music.Voice = {
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
           %! baca.rhythm_annotation_spanner()
-        %@% - \baca-text-spanner-left-text "baca.skeleton()"
+        %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
           %! RHYTHM_ANNOTATION_SPANNER
           %! SPANNER_START
           %! baca.PiecewiseCommand._call(2)
@@ -7941,7 +7941,7 @@ segment.15.Contrabass.II.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -7999,17 +7999,17 @@ segment.15.Contrabass.II.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         r8
         % AFTER:
         % LEAK:
@@ -8028,7 +8028,7 @@ segment.15.Contrabass.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

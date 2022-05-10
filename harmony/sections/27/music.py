@@ -710,7 +710,7 @@ commands(
 
 commands(
     ("va", 5),
-    baca.skeleton(
+    baca.make_skeleton(
         r"c2. c8 \times 5/4 { c2 }",
     ),
     baca.repeat_tie(
