@@ -82,6 +82,10 @@ commands(
         6,
         gap=True,
     ),
+)
+
+commands(
+    ("bfl", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("F#3"),
 )
@@ -93,6 +97,10 @@ commands(
         advance=72,
         gap=True,
     ),
+)
+
+commands(
+    ("bfl", 8),
     baca.pitch("F#3"),
 )
 
@@ -104,6 +112,10 @@ commands(
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     ),
+)
+
+commands(
+    ("bfl", 9),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
@@ -122,6 +134,10 @@ commands(
         advance=72 + 12,
         gap=True,
     ),
+)
+
+commands(
+    ("bfl", 11),
     baca.pitch("F#3"),
 )
 
@@ -140,6 +156,10 @@ commands(
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     ),
+)
+
+commands(
+    ("perc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.new(
         library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
@@ -169,6 +189,10 @@ commands(
         counts=[7],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", 9),
     library.purpleheart_staff_positions([-2]),
     baca.dynamic(
         "f-ancora",
@@ -191,6 +215,10 @@ commands(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
+)
+
+commands(
+    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     library.purpleheart_staff_positions([0, -2, 0, -2, 0]),
     baca.hairpin(
@@ -207,6 +235,10 @@ commands(
         [2],
         rest_leaves=[0],
     ),
+)
+
+commands(
+    ("perc2", (5, 6)),
     library.purpleheart_staff_positions([2]),
     baca.hairpin(
         "p < f",
@@ -222,6 +254,10 @@ commands(
         [2],
         rest_leaves=[0, 1, 2],
     ),
+)
+
+commands(
+    ("perc2", 8),
     baca.dynamic("p-sub"),
 )
 
@@ -248,6 +284,10 @@ commands(
         fuse=True,
         do_not_rewrite_meter=True,
     ),
+)
+
+commands(
+    ("perc2", 11),
     library.purpleheart_staff_positions([0]),
     baca.dynamic("f-sub"),
     baca.metric_modulation_spanner(
@@ -267,6 +307,10 @@ commands(
 commands(
     ("hp", (1, 6)),
     library.make_tessera_1(5),
+)
+
+commands(
+    ("hp", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("C#4"),
@@ -278,6 +322,10 @@ commands(
         5,
         advance=72,
     ),
+)
+
+commands(
+    ("hp", 8),
     baca.pitch("C#4"),
 )
 
@@ -288,6 +336,10 @@ commands(
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
     ),
+)
+
+commands(
+    ("hp", 9),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -309,6 +361,10 @@ commands(
         5,
         advance=72 + 12,
     ),
+)
+
+commands(
+    ("hp", 11),
     baca.pitch("C#4"),
 )
 
@@ -325,6 +381,10 @@ commands(
         4,
         gap=True,
     ),
+)
+
+commands(
+    ("va", (1, 6)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -371,13 +431,17 @@ commands(
 
 commands(
     ("va", 11),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.make_tessera_1(
         4,
         advance=72 + 12,
         gap=True,
     ),
+)
+
+commands(
+    ("va", 11),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
 )
 
 commands(
@@ -398,6 +462,10 @@ commands(
         3,
         gap=True,
     ),
+)
+
+commands(
+    ("vc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -449,12 +517,16 @@ commands(
 
 commands(
     ("vc1", 11),
-    baca.clef("bass"),
     library.make_tessera_1(
         3,
         advance=72 + 12,
         gap=True,
     ),
+)
+
+commands(
+    ("vc1", 11),
+    baca.clef("bass"),
 )
 
 commands(
@@ -470,6 +542,10 @@ commands(
         2,
         gap=True,
     ),
+)
+
+commands(
+    ("vc2", (1, 6)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -511,12 +587,16 @@ commands(
 
 commands(
     ("vc2", 11),
-    baca.clef("bass"),
     library.make_tessera_1(
         2,
         advance=72 + 12,
         gap=True,
     ),
+)
+
+commands(
+    ("vc2", 11),
+    baca.clef("bass"),
 )
 
 commands(
@@ -544,6 +624,10 @@ commands(
 commands(
     ("cb1", (1, 6)),
     library.make_tessera_1(1),
+)
+
+commands(
+    ("cb1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -625,6 +709,10 @@ commands(
 commands(
     ("cb2", (1, 6)),
     library.make_tessera_1(0),
+)
+
+commands(
+    ("cb2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch(
@@ -677,6 +765,10 @@ commands(
 commands(
     ("cb2", 11),
     baca.make_notes(),
+)
+
+commands(
+    ("cb2", 11),
     baca.flat_glissando(
         "E1",
         right_broken=True,
@@ -780,7 +872,28 @@ commands(
 # va, vc1, vc2, cb1, cb2
 
 commands(
-    (["va", "vc1", "vc2", "cb1"], 9),
+    ("va", 9),
+    library.make_appoggiato_rhythm(
+        counts=[7],
+    ),
+)
+
+commands(
+    ("vc1", 9),
+    library.make_appoggiato_rhythm(
+        counts=[7],
+    ),
+)
+
+commands(
+    ("vc2", 9),
+    library.make_appoggiato_rhythm(
+        counts=[7],
+    ),
+)
+
+commands(
+    ("cb1", 9),
     library.make_appoggiato_rhythm(
         counts=[7],
     ),

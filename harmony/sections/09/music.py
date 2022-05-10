@@ -63,6 +63,10 @@ commands(
     library.make_sixteenths(
         [-4, 8, "-"],
     ),
+)
+
+commands(
+    ("bfl", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("G3"),
     baca.new(
@@ -83,6 +87,10 @@ commands(
     library.make_sixteenths(
         [3, 6, 3, 3, 6, 3],
     ),
+)
+
+commands(
+    ("bfl", 2),
     baca.pitch("Gb3"),
     baca.color_fingerings([0, 1, 2]),
     baca.dynamic("mp"),
@@ -103,6 +111,10 @@ commands(
     library.make_sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
+)
+
+commands(
+    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -122,6 +134,10 @@ commands(
     library.make_sixteenths(
         [2, -2, -4, -4, 2, -2, 2, -2, -4],
     ),
+)
+
+commands(
+    ("perc1", 2),
     baca.accent(
         lambda _: baca.select.pheads(_),
     ),
@@ -146,6 +162,10 @@ commands(
     library.make_sixteenths(
         [3, -6, 3, 3, -6, 3],
     ),
+)
+
+commands(
+    ("perc2", 2),
     baca.reapply_persistent_indicators(),
     baca.new(
         library.bass_drum_staff_position(),
@@ -192,6 +212,10 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("<B5 C#6>"),
     baca.double_flageolet(),
@@ -210,6 +234,10 @@ commands(
     library.make_sixteenths(
         [-4, "+"],
     ),
+)
+
+commands(
+    ("va", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("C#4"),
     baca.flat_glissando(),
@@ -235,10 +263,35 @@ commands(
 # vc1, vc2, cb1, cb2
 
 commands(
-    (["vc1", "vc2", "cb1", "cb2"], 1),
+    ("vc1", 1),
     library.make_sixteenths(
         [-4, 8, "-"],
     ),
+)
+
+commands(
+    ("vc2", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+commands(
+    ("cb1", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+commands(
+    ("cb2", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], 1),
     baca.reapply_persistent_indicators(),
 )
 
@@ -289,13 +342,47 @@ def preprocessor(divisions):
 
 
 commands(
-    (["va", "vc1", "vc2", "cb1"], 2),
+    ("va", 2),
     library.make_sixteenths(
         [-12, 12, -4],
         preprocessor=preprocessor,
         extra_counts=[0, 4],
         denominator=None,
     ),
+)
+
+commands(
+    ("vc1", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("vc2", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("cb1", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+commands(
+    (["va", "vc1", "vc2", "cb1"], 2),
     baca.tuplet_bracket_up(),
     baca.hairpin(
         "mp >o niente",
@@ -347,6 +434,10 @@ commands(
     library.make_sixteenths(
         [-9, 3, -9, 3],
     ),
+)
+
+commands(
+    ("cb2", 2),
     baca.clef("treble"),
     baca.pitches(
         "Fqs5 Gqf5",

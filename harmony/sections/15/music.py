@@ -64,6 +64,10 @@ commands(
     library.make_sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+)
+
+commands(
+    ("bfl", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("E3"),
     baca.accent(
@@ -85,6 +89,10 @@ commands(
         written_dotted_halves=([0], 1),
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("bfl", 3),
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mp >o !",
@@ -98,6 +106,10 @@ commands(
     library.make_sixteenths(
         [4, 8],
     ),
+)
+
+commands(
+    ("bfl", 4),
     baca.pitch("Dtqf5"),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -127,6 +139,10 @@ commands(
     library.make_sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
     ),
+)
+
+commands(
+    ("bfl", (5, 9)),
     baca.pitch(
         "E3",
         lambda _: baca.select.plt(_, 0),
@@ -173,6 +189,10 @@ commands(
     library.make_sixteenths(
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     ),
+)
+
+commands(
+    ("perc1", (1, 2)),
     baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic('"f"'),
@@ -185,11 +205,15 @@ commands(
 
 commands(
     ("perc1", 3),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.make_sixteenths(
         [12, 16, -4],
     ),
+)
+
+commands(
+    ("perc1", 3),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -204,13 +228,17 @@ commands(
 
 commands(
     ("perc1", 4),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [3, 1, "-"],
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("perc1", 4),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
@@ -227,6 +255,10 @@ commands(
     library.make_sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
     ),
+)
+
+commands(
+    ("perc1", (5, 9)),
     library.slate_staff_position(),
     baca.new(
         baca.flat_glissando(
@@ -256,6 +288,10 @@ commands(
 commands(
     ("perc2", (1, 3)),
     baca.make_mmrests(),
+)
+
+commands(
+    ("perc2", (1, 3)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -264,6 +300,10 @@ commands(
     library.make_sixteenths(
         [2, -2],
     ),
+)
+
+commands(
+    ("perc2", 4),
     library.brake_drum_staff_position(),
     baca.dynamic("f"),
     baca.markup(
@@ -279,13 +319,17 @@ commands(
 
 commands(
     ("perc2", 5),
-    baca.staff_lines(3),
     library.make_phjc_rhythm(
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1],
         rest_nonfirst=True,
     ),
+)
+
+commands(
+    ("perc2", 5),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2, -2, 0]),
     baca.dynamic("pp"),
     baca.markup(
@@ -302,6 +346,10 @@ commands(
         extra_counts=[1, 0],
         rest=[0, 1, -1],
     ),
+)
+
+commands(
+    ("perc2", (6, 7)),
     library.purpleheart_staff_positions([-2, 0, 2, 0, 2, -2]),
 )
 
@@ -319,6 +367,10 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.damp(
@@ -338,6 +390,10 @@ commands(
     library.make_sixteenths(
         [12, 16, -4],
     ),
+)
+
+commands(
+    ("hp", 3),
     baca.pitch("Eb4"),
     baca.dynamic("mp"),
     baca.laissez_vibrer(
@@ -350,6 +406,10 @@ commands(
     library.make_sixteenths(
         [2, -2],
     ),
+)
+
+commands(
+    ("hp", 4),
     baca.pitch("E4"),
     baca.snap_pizzicato(
         lambda _: baca.select.pheads(_),
@@ -358,12 +418,25 @@ commands(
 )
 
 commands(
-    ("hp", [5, 9]),
+    ("hp", 5),
     library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 9),
+    library.make_sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("hp", [5, 9]),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
     baca.new(
@@ -386,6 +459,10 @@ commands(
 commands(
     ("va", (1, 3)),
     baca.make_mmrests(),
+)
+
+commands(
+    ("va", (1, 3)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -403,6 +480,10 @@ commands(
     library.make_sixteenths(
         [5, -7, 5, -7, 37, "-"],
     ),
+)
+
+commands(
+    ("va", (5, 10)),
     baca.pitch("F4"),
     baca.dynamic(
         "p",
@@ -427,6 +508,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+)
+
+commands(
+    ("vc1", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("A2"),
     baca.new(
@@ -455,6 +540,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -8, 47, -1],
     ),
+)
+
+commands(
+    ("vc1", (5, 9)),
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
@@ -480,6 +569,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+)
+
+commands(
+    ("vc2", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("G2"),
     baca.new(
@@ -533,6 +626,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -8, 47, -1],
     ),
+)
+
+commands(
+    ("vc2", (5, 9)),
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
@@ -558,6 +655,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+)
+
+commands(
+    ("cb1", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("G#1"),
     baca.new(
@@ -615,6 +716,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -8, 47, -1],
     ),
+)
+
+commands(
+    ("cb1", (5, 9)),
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
@@ -640,6 +745,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     ),
+)
+
+commands(
+    ("cb2", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("F#1"),
     baca.new(
@@ -693,6 +802,10 @@ commands(
     library.make_sixteenths(
         [3, -1, -8, 47, -1],
     ),
+)
+
+commands(
+    ("cb2", (5, 9)),
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
@@ -714,10 +827,42 @@ commands(
 # va, vc1, vc2, cb1, cb2
 
 commands(
-    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
+    ("va", 4),
     library.make_sixteenths(
         [4],
     ),
+)
+
+commands(
+    ("vc1", 4),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    ("vc2", 4),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    ("cb1", 4),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    ("cb2", 4),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
     ),

@@ -73,6 +73,10 @@ commands(
     library.make_sixteenths(
         [2, 3, -3],
     ),
+)
+
+commands(
+    ("bfl", (1, 3)),
     baca.reapply_persistent_indicators(),
     baca.pitch("F5"),
     baca.hairpin(
@@ -97,6 +101,10 @@ commands(
     library.make_sixteenths(
         [2, 2, -2],
     ),
+)
+
+commands(
+    ("bfl", (5, 9)),
     baca.pitch("F#5"),
     baca.hairpin(
         "niente o< p >o",
@@ -128,6 +136,10 @@ commands(
     library.make_sixteenths(
         [5, -3],
     ),
+)
+
+commands(
+    ("perc1", (1, 3)),
     baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic("mp"),
@@ -140,6 +152,10 @@ commands(
 commands(
     ("perc1", 4),
     baca.make_notes(),
+)
+
+commands(
+    ("perc1", 4),
     library.triangle_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -159,6 +175,10 @@ commands(
     library.make_sixteenths(
         [3, -3],
     ),
+)
+
+commands(
+    ("perc1", (5, 9)),
     library.slate_staff_position(),
     baca.dynamic(
         "p-sempre",
@@ -182,6 +202,10 @@ commands(
     library.make_sixteenths(
         [2, -8, 2, -3, 2, -8],
     ),
+)
+
+commands(
+    ("perc2", (1, 3)),
     baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.hairpin(
@@ -197,10 +221,14 @@ commands(
 
 commands(
     ("perc2", 5),
-    baca.staff_lines(3),
     library.make_sixteenths(
         [1, "-"],
     ),
+)
+
+commands(
+    ("perc2", 5),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
     baca.dynamic("ff"),
     baca.dls_staff_padding(5),
@@ -219,13 +247,17 @@ def preprocessor(divisions):
 
 commands(
     ("perc2", (7, 9)),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [16, 16, 16, -4, 2],
         preprocessor=preprocessor,
         extra_counts=[0, 0, 0, 2],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc2", (7, 9)),
+    baca.staff_lines(1),
     baca.new(
         library.tam_tam_staff_position(),
         baca.flat_glissando(),
@@ -276,6 +308,10 @@ commands(
     library.make_sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
+)
+
+commands(
+    ("hp", (1, 3)),
     baca.reapply_persistent_indicators(),
     baca.pitch("A4"),
     baca.laissez_vibrer(
@@ -298,11 +334,15 @@ commands(
 
 commands(
     ("hp", (5, 9)),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [3, -3],
     ),
+)
+
+commands(
+    ("hp", (5, 9)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.whisk_staff_position(),
     baca.dynamic(
         "p-sempre",
@@ -318,13 +358,37 @@ commands(
 # va, vc1, vc2, cb1, cb2
 
 commands(
-    (["va", "vc2", "cb2"], (1, 3)),
+    ("va", (1, 3)),
     library.make_sixteenths(
         [2, 2, -10],
         written_quarters=[0, 1, 4, 5],
         invisible=[1, 5],
         tie_runs=True,
     ),
+)
+
+commands(
+    ("vc2", (1, 3)),
+    library.make_sixteenths(
+        [2, 2, -10],
+        written_quarters=[0, 1, 4, 5],
+        invisible=[1, 5],
+        tie_runs=True,
+    ),
+)
+
+commands(
+    ("cb2", (1, 3)),
+    library.make_sixteenths(
+        [2, 2, -10],
+        written_quarters=[0, 1, 4, 5],
+        invisible=[1, 5],
+        tie_runs=True,
+    ),
+)
+
+commands(
+    (["va", "vc2", "cb2"], (1, 3)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -352,6 +416,10 @@ commands(
         ["+"],
         after_graces=[1],
     ),
+)
+
+commands(
+    ("va", 4),
     baca.pitches("D4 C#4"),
     baca.glissando(),
     baca.hairpin(
@@ -362,6 +430,10 @@ commands(
 commands(
     ("va", (5, 9)),
     library.make_tessera_3(4),
+)
+
+commands(
+    ("va", (5, 9)),
     baca.pitch("F#3"),
     baca.scp_spanner(
         "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
@@ -393,6 +465,10 @@ commands(
         invisible=[6],
         tie=[6],
     ),
+)
+
+commands(
+    ("vc1", (1, 3)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -434,6 +510,10 @@ commands(
     library.make_sixteenths(
         [4, "-"],
     ),
+)
+
+commands(
+    ("vc1", 4),
     baca.pitch("F4"),
     baca.triple_staccato(),
 )
@@ -449,6 +529,10 @@ commands(
 commands(
     ("vc1", (5, 9)),
     library.make_tessera_3(3),
+)
+
+commands(
+    ("vc1", (5, 9)),
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -490,6 +574,10 @@ commands(
         ["+"],
         after_graces=[1],
     ),
+)
+
+commands(
+    ("vc2", 4),
     baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
@@ -500,6 +588,10 @@ commands(
 commands(
     ("vc2", (5, 9)),
     library.make_tessera_3(2),
+)
+
+commands(
+    ("vc2", (5, 9)),
     baca.pitch("F#2"),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
@@ -531,6 +623,10 @@ commands(
         invisible=[6],
         tie=[6],
     ),
+)
+
+commands(
+    ("cb1", (1, 3)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -578,6 +674,10 @@ commands(
     library.make_sixteenths(
         [4, "-"],
     ),
+)
+
+commands(
+    ("cb1", 4),
     baca.pitch(
         "E4",
         do_not_transpose=True,
@@ -596,6 +696,10 @@ commands(
 commands(
     ("cb1", (5, 9)),
     library.make_tessera_3(1),
+)
+
+commands(
+    ("cb1", (5, 9)),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -640,6 +744,10 @@ commands(
         ["+"],
         after_graces=[1],
     ),
+)
+
+commands(
+    ("cb2", 4),
     baca.pitches("D3 C#3"),
     baca.glissando(),
     baca.hairpin(
@@ -650,6 +758,10 @@ commands(
 commands(
     ("cb2", (5, 9)),
     library.make_tessera_3(0),
+)
+
+commands(
+    ("cb2", (5, 9)),
     baca.pitch("F#1"),
     baca.scp_spanner(
         "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",

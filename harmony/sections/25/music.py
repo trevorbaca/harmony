@@ -105,6 +105,10 @@ commands(
 commands(
     ("bfl", 1),
     baca.make_mmrests(),
+)
+
+commands(
+    ("bfl", 1),
     baca.reapply_persistent_indicators(),
 )
 
@@ -115,6 +119,10 @@ commands(
         extra_counts=[2],
         rest_tuplets=[0, 1],
     ),
+)
+
+commands(
+    ("bfl", 2),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -7),
     ),
@@ -146,6 +154,10 @@ commands(
     library.make_sixteenths(
         [-2, 2, 2],
     ),
+)
+
+commands(
+    ("bfl", 3),
     baca.pitch("F#5"),
     baca.hairpin(
         "niente o< p >o",
@@ -172,6 +184,10 @@ commands(
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
+)
+
+commands(
+    ("bfl", (5, 10)),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -8),
     ),
@@ -209,6 +225,10 @@ commands(
 commands(
     ("perc1", 1),
     baca.make_mmrests(),
+)
+
+commands(
+    ("perc1", 1),
     baca.reapply_persistent_indicators(),
 )
 
@@ -220,6 +240,10 @@ commands(
         extra_counts=[-4],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc1", 2),
     library.slate_staff_position(),
     baca.dynamic(
         "p-ancora",
@@ -236,6 +260,10 @@ commands(
     library.make_sixteenths(
         [-2, 3, -3, 3, -3, 3, -3, 3, -3],
     ),
+)
+
+commands(
+    ("perc1", 3),
     library.slate_staff_position(),
 )
 
@@ -252,6 +280,10 @@ commands(
     library.make_sixteenths(
         [1, -23, -1, 1, -22],
     ),
+)
+
+commands(
+    ("perc1", (5, 9)),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
@@ -278,6 +310,10 @@ commands(
         extra_counts=[0, 8],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc1", 10),
     library.brake_drum_staff_position(),
 )
 
@@ -293,6 +329,10 @@ commands(
     library.make_sixteenths(
         [4, -20, 4],
     ),
+)
+
+commands(
+    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
@@ -304,13 +344,17 @@ commands(
 
 commands(
     ("perc2", 2),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [-10, "+"],
         fuse=True,
         extra_counts=[-4],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc2", 2),
+    baca.staff_lines(1),
 )
 
 commands(
@@ -340,6 +384,10 @@ commands(
     library.make_sixteenths(
         [2, -22, -1, 2, -21],
     ),
+)
+
+commands(
+    ("perc2", (5, 9)),
     library.slate_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -372,6 +420,10 @@ commands(
         extra_counts=[0, 8],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc2", 10),
     library.slate_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_)[:2],
@@ -403,6 +455,10 @@ commands(
     library.make_sixteenths(
         [-24, 4],
     ),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -426,6 +482,10 @@ commands(
         extra_counts=[-4],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 2),
     baca.new(
         baca.clef("percussion"),
         baca.staff_lines(1),
@@ -457,11 +517,15 @@ commands(
 
 commands(
     ("hp", (5, 10)),
-    baca.clef("bass"),
-    baca.staff_lines(5),
     library.make_sixteenths(
         [-24, -1, 3, -20],
     ),
+)
+
+commands(
+    ("hp", (5, 10)),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     baca.pitch("G1"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -482,6 +546,10 @@ commands(
 commands(
     ("va", (1, 2)),
     baca.make_notes(),
+)
+
+commands(
+    ("va", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.flat_glissando(),
@@ -497,6 +565,10 @@ commands(
     library.make_sixteenths(
         [6, 3, 11],
     ),
+)
+
+commands(
+    ("va", 3),
     baca.pitch("F#3"),
     baca.scp_spanner(
         "P2 -> P1 -> P3 -> P2",
@@ -511,6 +583,10 @@ commands(
 commands(
     ("va", (5, 10)),
     library.make_tessera_4(4),
+)
+
+commands(
+    ("va", (5, 10)),
     baca.chunk(
         baca.hairpin(
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -561,6 +637,10 @@ commands(
     library.make_sixteenths(
         [4, 2, 7, 7],
     ),
+)
+
+commands(
+    ("vc1", 3),
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -576,6 +656,10 @@ commands(
 commands(
     ("vc1", (5, 10)),
     library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", (5, 10)),
     baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
@@ -623,6 +707,10 @@ commands(
     library.make_sixteenths(
         [9, 11],
     ),
+)
+
+commands(
+    ("vc2", 3),
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -638,6 +726,10 @@ commands(
 commands(
     ("vc2", (5, 10)),
     library.make_tessera_4(2),
+)
+
+commands(
+    ("vc2", (5, 10)),
     baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
@@ -692,6 +784,10 @@ commands(
     library.make_sixteenths(
         [4, 9, 7],
     ),
+)
+
+commands(
+    ("cb1", 3),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -707,6 +803,10 @@ commands(
 commands(
     ("cb1", (5, 10)),
     library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", (5, 10)),
     baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
@@ -758,6 +858,10 @@ commands(
     library.make_sixteenths(
         [9, 11],
     ),
+)
+
+commands(
+    ("cb2", 3),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -773,6 +877,10 @@ commands(
 commands(
     ("cb2", (5, 10)),
     library.make_tessera_4(0),
+)
+
+commands(
+    ("cb2", (5, 10)),
     baca.clef("treble"),
     baca.chunk(
         baca.hairpin(
@@ -807,7 +915,22 @@ commands(
 # vc1, vc2, cb1, cb2
 
 commands(
-    (["vc1", "vc2", "cb1", "cb2"], 2),
+    ("vc1", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", 2),
     baca.make_notes(),
 )
 

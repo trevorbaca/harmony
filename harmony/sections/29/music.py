@@ -73,11 +73,47 @@ commands(
 # bfl, va, vc1, vc2, cb1
 
 commands(
-    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
+    ("bfl", 1),
     library.make_sixteenths(
         [4, 4, 16],
         tie_all=True,
     ),
+)
+
+commands(
+    ("va", 1),
+    library.make_sixteenths(
+        [4, 4, 16],
+        tie_all=True,
+    ),
+)
+
+commands(
+    ("vc1", 1),
+    library.make_sixteenths(
+        [4, 4, 16],
+        tie_all=True,
+    ),
+)
+
+commands(
+    ("vc2", 1),
+    library.make_sixteenths(
+        [4, 4, 16],
+        tie_all=True,
+    ),
+)
+
+commands(
+    ("cb1", 1),
+    library.make_sixteenths(
+        [4, 4, 16],
+        tie_all=True,
+    ),
+)
+
+commands(
+    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
     baca.reapply_persistent_indicators(),
     baca.hairpin(
         "pp < p >o niente",
@@ -107,6 +143,10 @@ commands(
     library.make_sixteenths(
         [1, -22, 1],
     ),
+)
+
+commands(
+    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     library.brake_drum_staff_position(),
     baca.dynamic("f"),
@@ -134,6 +174,10 @@ commands(
         ["-", 1],
         invisible=[-1],
     ),
+)
+
+commands(
+    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.damp(
         lambda _: abjad.select.leaf(_, -1),
@@ -147,6 +191,10 @@ commands(
     library.make_sixteenths(
         [1, "-"],
     ),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("Bb4"),
@@ -188,6 +236,10 @@ commands(
         written_dotted_wholes=[0],
         invisible=[1, 2, 3],
     ),
+)
+
+commands(
+    ("cb2", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
