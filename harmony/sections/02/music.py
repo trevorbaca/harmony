@@ -131,6 +131,11 @@ commands(
     ),
 )
 
+commands(
+    ("bfl", 12),
+    baca.make_mmrests(),
+)
+
 # PERC1
 
 commands(
@@ -174,6 +179,11 @@ commands(
     ),
 )
 
+commands(
+    ("perc1", 12),
+    baca.make_mmrests(),
+)
+
 # PERC2
 
 commands(
@@ -215,7 +225,7 @@ commands(
 )
 
 commands(
-    ("perc2", [8, 11]),
+    ("perc2", 8),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
@@ -225,6 +235,19 @@ commands(
 commands(
     ("perc2", (9, 10)),
     baca.make_notes(),
+)
+
+commands(
+    ("perc2", 11),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("perc2", 12),
+    baca.make_mmrests(),
 )
 
 # HP
@@ -261,6 +284,11 @@ commands(
     ),
 )
 
+commands(
+    ("hp", 12),
+    baca.make_mmrests(),
+)
+
 # VA
 
 commands(
@@ -293,6 +321,11 @@ commands(
     library.make_appoggiato_rhythm(
         counts=[7],
     ),
+)
+
+commands(
+    ("va", 12),
+    baca.make_mmrests(),
 )
 
 # VC1
@@ -334,6 +367,11 @@ commands(
     library.make_appoggiato_rhythm(
         counts=[7],
     ),
+)
+
+commands(
+    ("vc1", 12),
+    baca.make_mmrests(),
 )
 
 # VC2
@@ -391,6 +429,11 @@ commands(
     ),
 )
 
+commands(
+    ("vc2", 12),
+    baca.make_mmrests(),
+)
+
 # CB1
 
 commands(
@@ -427,6 +470,11 @@ commands(
     library.make_appoggiato_rhythm(
         counts=[7],
     ),
+)
+
+commands(
+    ("cb1", 12),
+    baca.make_mmrests(),
 )
 
 # CB2
@@ -484,15 +532,29 @@ commands(
     ),
 )
 
+commands(
+    ("cb2", 12),
+    baca.make_mmrests(),
+)
+
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", (1, 5)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.pleaves(_), [0, 1], 3),
@@ -586,7 +648,6 @@ commands(
 
 commands(
     ("perc1", (1, 5)),
-    baca.reapply_persistent_indicators(),
     baca.staff_position(
         -2,
         selector=lambda _: baca.select.leaves(_, grace=True),
@@ -686,7 +747,6 @@ commands(
 
 commands(
     ("perc2", (1, 3)),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     baca.dynamic(
         "p-ancora",
@@ -777,7 +837,6 @@ commands(
 
 commands(
     ("hp", (1, 5)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("<G#4 A4 B4>"),
     baca.stem_tremolo(
@@ -869,7 +928,6 @@ commands(
 
 commands(
     ("va", (1, 5)),
-    baca.reapply_persistent_indicators(),
     baca.clef("alto"),
     baca.staff_lines(5),
     baca.pitch(
@@ -968,7 +1026,6 @@ commands(
 
 commands(
     ("vc1", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.clef("tenor"),
     baca.staff_lines(5),
     baca.pitch(
@@ -1098,7 +1155,6 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_down(),
     baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
@@ -1219,7 +1275,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -1347,7 +1402,6 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,
@@ -1513,13 +1567,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[12],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

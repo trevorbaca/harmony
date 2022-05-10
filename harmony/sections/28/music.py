@@ -101,6 +101,11 @@ commands(
 )
 
 commands(
+    ("bfl", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", (7, 10)),
     library.make_sixteenths(
         [4],
@@ -129,6 +134,11 @@ commands(
 )
 
 commands(
+    ("perc1", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", (7, 10)),
     library.make_sixteenths(
         [4],
@@ -154,6 +164,11 @@ commands(
 )
 
 commands(
+    ("perc2", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", (7, 10)),
     library.make_sixteenths(
         [-26, 2],
@@ -167,6 +182,11 @@ commands(
     library.make_sixteenths(
         [4, "-"],
     ),
+)
+
+commands(
+    ("hp", (5, 6)),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -189,6 +209,11 @@ commands(
 )
 
 commands(
+    ("va", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", (7, 10)),
     baca.make_notes(),
 )
@@ -205,6 +230,11 @@ commands(
 commands(
     ("vc1", 5),
     library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", 6),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -231,6 +261,11 @@ commands(
 )
 
 commands(
+    ("vc2", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", (7, 10)),
     library.make_sixteenths(
         [2],
@@ -251,6 +286,11 @@ commands(
 commands(
     ("cb1", 5),
     library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", 6),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -281,6 +321,11 @@ commands(
 )
 
 commands(
+    ("cb2", 6),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", (7, 10)),
     library.make_sixteenths(
         [4],
@@ -289,14 +334,19 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
 
-# bfl
-
 commands(
-    ("bfl", (1, 4)),
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
     baca.reapply_persistent_indicators(),
 )
+
+# bfl
 
 commands(
     ("bfl", 5),
@@ -356,7 +406,6 @@ commands(
 
 commands(
     ("perc1", (1, 4)),
-    baca.reapply_persistent_indicators(),
     library.triangle_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -423,7 +472,6 @@ commands(
 
 commands(
     ("perc2", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.pitch("C#5"),
@@ -484,7 +532,6 @@ commands(
 
 commands(
     ("hp", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("A1"),
     baca.dynamic("f"),
@@ -522,7 +569,6 @@ commands(
 
 commands(
     ("va", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("Gqf3"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -564,7 +610,6 @@ commands(
 
 commands(
     ("vc1", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("E6 C#6"),
     baca.glissando(),
@@ -637,7 +682,6 @@ commands(
 
 commands(
     ("vc2", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("A5 C#6"),
     baca.glissando(),
@@ -715,7 +759,6 @@ commands(
 
 commands(
     ("cb1", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.note_head_style_harmonic(),
     baca.pitch(
@@ -796,7 +839,6 @@ commands(
 
 commands(
     ("cb2", (1, 4)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -905,13 +947,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[6],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

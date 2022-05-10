@@ -67,6 +67,11 @@ commands(
 # BFL
 
 commands(
+    ("bfl", 1),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", 2),
     library.make_sixteenths(
         [-4, 1, -4, 1, "-"],
@@ -124,6 +129,11 @@ commands(
 )
 
 commands(
+    ("perc1", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", 5),
     library.make_sixteenths(
         [-3, "+"],
@@ -155,6 +165,11 @@ commands(
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     ),
+)
+
+commands(
+    ("perc2", 4),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -209,6 +224,11 @@ commands(
     library.make_sixteenths(
         [-1, 2, "-"],
     ),
+)
+
+commands(
+    ("va", 2),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -369,13 +389,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 2),
-    baca.reapply_persistent_indicators(),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -427,7 +456,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.bass_drum_staff_position(),
     baca.dynamic("mf"),
@@ -498,7 +526,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(
         1,
         lambda _: abjad.select.leaf(_, 2),
@@ -586,7 +613,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitches("F#4 G#4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -655,7 +681,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("alto"),
     baca.staff_lines(5),
     baca.pitch("Eb3"),
@@ -722,7 +747,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("E4"),
     baca.dynamic("f"),
@@ -828,7 +852,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("Eqf4"),
     baca.dynamic("f"),
@@ -900,7 +923,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("E1"),
     baca.flat_glissando(),
@@ -991,7 +1013,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         "E1",
         left_broken=True,
@@ -1116,12 +1137,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

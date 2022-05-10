@@ -312,13 +312,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("E5"),
     baca.hairpin(
         "o< f >o niente",
@@ -371,7 +380,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     library.purpleheart_staff_positions([2, -2, 0]),
     baca.dynamic("p"),
@@ -423,7 +431,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -483,7 +490,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.pitches("F5 E5 Eb5"),
     baca.flageolet(
@@ -541,7 +547,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("alto"),
     baca.pitch("Bb3"),
     baca.laissez_vibrer(
@@ -626,13 +631,6 @@ commands(
         right_broken=True,
         selector=lambda _: baca.select.rleak(baca.select.leaves(_)[3:]),
     ),
-)
-
-# vc1, vc2, cb1, cb2
-
-commands(
-    (["vc1", "vc2", "cb1", "cb2"], 1),
-    baca.reapply_persistent_indicators(),
 )
 
 # vc1
@@ -856,12 +854,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

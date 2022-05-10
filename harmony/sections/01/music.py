@@ -164,6 +164,13 @@ commands(
 # VC1
 
 commands(
+    ("vc1", (1, 2)),
+    baca.make_skeleton(
+        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
+    ),
+)
+
+commands(
     ("vc1", 3),
     library.make_sixteenths(
         [5, -5, 1, -4],
@@ -199,6 +206,13 @@ commands(
     ),
 )
 
+commands(
+    ("cb1", 3),
+    baca.make_skeleton(
+        r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
+    ),
+)
+
 # CB2
 
 commands(
@@ -220,7 +234,10 @@ commands(
 
 # phantom
 
-# after
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
 
 # bfl
 
@@ -459,9 +476,6 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.make_skeleton(
-        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
-    ),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -601,9 +615,6 @@ commands(
     ("cb1", 3),
     baca.staff_lines(1),
     baca.clef("percussion"),
-    baca.make_skeleton(
-        r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
-    ),
     baca.tuplet_number_text(r"\markup 5:4"),
     library.bridge_staff_position(),
     baca.accent(
@@ -679,12 +690,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

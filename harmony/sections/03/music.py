@@ -115,6 +115,11 @@ commands(
 )
 
 commands(
+    ("bfl", (3, 5)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", (6, 8)),
     library.make_sixteenths(
         library.cerulean[2:],
@@ -144,10 +149,20 @@ commands(
 )
 
 commands(
+    ("perc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", 4),
     library.make_sixteenths(
         [-19, 1],
     ),
+)
+
+commands(
+    ("perc1", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -183,10 +198,20 @@ commands(
 )
 
 commands(
+    ("perc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", 4),
     library.make_sixteenths(
         [-19, 1],
     ),
+)
+
+commands(
+    ("perc2", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -214,10 +239,20 @@ commands(
 )
 
 commands(
+    ("hp", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", 4),
     library.make_sixteenths(
         [-2, 2, "-", 2],
     ),
+)
+
+commands(
+    ("hp", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -247,10 +282,20 @@ commands(
 )
 
 commands(
+    ("va", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", 4),
     library.make_sixteenths(
         [-1, 2, "-"],
     ),
+)
+
+commands(
+    ("va", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -280,6 +325,11 @@ commands(
 )
 
 commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", 4),
     library.make_sixteenths(
         [-1, 2, "-"],
@@ -287,10 +337,22 @@ commands(
 )
 
 commands(
+    ("vc1", 5),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", (6, 7)),
     library.make_sixteenths(
         library.cerulean[2:],
         extra_counts=[1],
+    ),
+)
+
+commands(
+    ("vc1", 8),
+    baca.make_skeleton(
+        r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
     ),
 )
 
@@ -314,10 +376,20 @@ commands(
 )
 
 commands(
+    ("vc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", 4),
     library.make_sixteenths(
         [-1, 2, "-"],
     ),
+)
+
+commands(
+    ("vc2", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -344,10 +416,20 @@ commands(
 )
 
 commands(
+    ("cb1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", 4),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
+)
+
+commands(
+    ("cb1", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -374,10 +456,20 @@ commands(
 )
 
 commands(
+    ("cb2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 4),
     baca.make_repeated_duration_notes(
         [(1, 4)],
     ),
+)
+
+commands(
+    ("cb2", 5),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -391,13 +483,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -432,7 +533,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
@@ -496,7 +596,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
@@ -575,7 +674,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("G1"),
     baca.damp(
@@ -623,7 +721,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("percussion"),
     baca.staff_lines(1),
     library.bridge_staff_position(),
@@ -688,7 +785,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.tuplet_number_text(
         r"\markup 5:4",
@@ -771,9 +867,6 @@ commands(
 
 commands(
     ("vc1", 8),
-    baca.make_skeleton(
-        r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
-    ),
     baca.tuplet_number_text(
         r"\markup 5:4",
         lambda _: baca.select.leaves(_),
@@ -828,7 +921,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
@@ -908,7 +1000,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("percussion"),
     baca.staff_lines(1),
     library.bridge_staff_position(),
@@ -990,7 +1081,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
@@ -1102,13 +1192,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[3, 5],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

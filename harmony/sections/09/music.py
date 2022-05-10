@@ -91,6 +91,11 @@ commands(
 # PERC2
 
 commands(
+    ("perc2", 1),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", 2),
     library.make_sixteenths(
         [3, -6, 3, 3, -6, 3],
@@ -106,6 +111,11 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 2),
+    baca.make_mmrests(),
 )
 
 # VA
@@ -230,13 +240,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("G3"),
     baca.new(
         baca.covered_spanner(
@@ -270,7 +289,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.accent(
         lambda _: baca.select.pheads(_),
     ),
@@ -307,7 +325,6 @@ commands(
 
 commands(
     ("perc2", 2),
-    baca.reapply_persistent_indicators(),
     baca.new(
         library.bass_drum_staff_position(),
         selector=lambda _: baca.select.rleaves(_),
@@ -348,7 +365,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("<B5 C#6>"),
     baca.double_flageolet(),
     baca.dynamic("f"),
@@ -363,7 +379,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("C#4"),
     baca.flat_glissando(),
     baca.hairpin(
@@ -383,13 +398,6 @@ commands(
 commands(
     ("va", 2),
     baca.pitch("C4"),
-)
-
-# vc1, vc2, cb1, cb2
-
-commands(
-    (["vc1", "vc2", "cb1", "cb2"], 1),
-    baca.reapply_persistent_indicators(),
 )
 
 # vc1
@@ -540,12 +548,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

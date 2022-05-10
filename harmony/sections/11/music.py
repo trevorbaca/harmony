@@ -118,6 +118,11 @@ commands(
 )
 
 commands(
+    ("bfl", (2, 4)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", 5),
     library.make_sixteenths(
         ["-", 4, -2, 4],
@@ -143,6 +148,11 @@ commands(
     library.make_sixteenths(
         [6, 6],
     ),
+)
+
+commands(
+    ("bfl", 9),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -172,6 +182,11 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("perc1", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -209,6 +224,11 @@ commands(
 )
 
 commands(
+    ("perc1", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", 10),
     library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
@@ -231,6 +251,11 @@ commands(
     library.make_sixteenths(
         [-2, 10, "-"],
     ),
+)
+
+commands(
+    ("perc2", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -264,6 +289,11 @@ commands(
 )
 
 commands(
+    ("perc2", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", 10),
     library.make_sixteenths(
         [6, -4, 4, -2],
@@ -284,6 +314,11 @@ commands(
     library.make_sixteenths(
         [-2, 10, "-"],
     ),
+)
+
+commands(
+    ("hp", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -330,6 +365,11 @@ commands(
 )
 
 commands(
+    ("hp", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", 10),
     library.make_sixteenths(
         [6, -4, 4, -2],
@@ -356,6 +396,11 @@ commands(
 )
 
 commands(
+    ("va", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", (4, 5)),
     library.make_sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
@@ -372,10 +417,20 @@ commands(
 )
 
 commands(
+    ("va", 7),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", 8),
     library.make_sixteenths(
         [8, 3, 6],
     ),
+)
+
+commands(
+    ("va", 9),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -418,6 +473,11 @@ commands(
 )
 
 commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", (4, 5)),
     library.make_sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
@@ -450,6 +510,11 @@ commands(
 )
 
 commands(
+    ("vc1", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", 10),
     library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
@@ -475,6 +540,11 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("vc2", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -507,6 +577,11 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("vc2", 9),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -549,6 +624,11 @@ commands(
 )
 
 commands(
+    ("cb1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", (4, 5)),
     library.make_sixteenths(
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
@@ -580,6 +660,11 @@ commands(
 )
 
 commands(
+    ("cb1", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", 10),
     library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
@@ -605,6 +690,11 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("cb2", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -638,6 +728,11 @@ commands(
 )
 
 commands(
+    ("cb2", 9),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 10),
     library.make_sixteenths(
         [2, 2, 4, 2, 2, 2, 2],
@@ -648,13 +743,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("<Eb3 Eb4 Bb4>"),
     baca.hairpin(
         "o< mf >o niente",
@@ -768,7 +872,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.pitch("Eb4"),
@@ -890,7 +993,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.flat_glissando(
         left_broken=True,
@@ -984,7 +1086,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("Eb4"),
     baca.laissez_vibrer(),
@@ -1113,7 +1214,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("D3"),
     baca.hairpin(
         "ff >o niente",
@@ -1169,7 +1269,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.note_head_style_harmonic(),
     baca.hairpin(
@@ -1251,7 +1350,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("D2"),
     baca.hairpin(
         "ff >o niente",
@@ -1303,7 +1401,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
     baca.note_head_style_harmonic(),
     baca.hairpin(
@@ -1382,7 +1479,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("D2"),
     baca.hairpin(
         "ff >o niente",
@@ -1547,13 +1643,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[3, 9],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,
