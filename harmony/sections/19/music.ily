@@ -7413,7 +7413,7 @@ segment.19.Percussion.II.Music.Voice = {
       %! EXPLICIT_STAFF_LINES_COLOR
       %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     r4.
     % AFTER:
     % SPANNER_STARTS:
@@ -7466,7 +7466,7 @@ segment.19.Percussion.II.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -7476,11 +7476,11 @@ segment.19.Percussion.II.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -7490,7 +7490,7 @@ segment.19.Percussion.II.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.stem_down()
         \once \override Stem.direction = #down
-          %! baca.skeleton()
+          %! baca.make_skeleton()
         b2
         % AFTER:
         % ARTICULATIONS:
@@ -7582,7 +7582,7 @@ segment.19.Percussion.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

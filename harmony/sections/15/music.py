@@ -595,7 +595,7 @@ commands(
             r'\once \override TupletNumber.text = #"10:8"',
         ]
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         r"\times 8/10 { c4 r4 r4 r8. }",
     ),
     baca.pitch("F3"),
@@ -681,7 +681,7 @@ commands(
             r'\once \override TupletNumber.text = #"11:8"',
         ]
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         r"\times 8/11 { r4 c4 r4 r4 r32 }",
     ),
     baca.pitch("Dtqf3"),
@@ -771,7 +771,7 @@ commands(
             r'\once \override TupletNumber.text = #"12:8"',
         ]
     ),
-    baca.skeleton(
+    baca.make_skeleton(
         r"\times 8/12 { r4 c4 r4 r4 r8 }",
     ),
     baca.pitch("Eb2"),

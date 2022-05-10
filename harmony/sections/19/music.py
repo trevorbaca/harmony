@@ -558,7 +558,7 @@ commands(
 commands(
     ("perc2", 13),
     baca.staff_lines(1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"r4. \times 5/4 { c2 }",
     ),
     baca.tuplet_bracket_up(),

@@ -727,7 +727,7 @@ commands(
 
 commands(
     ("cb2", 2),
-    baca.skeleton(
+    baca.make_skeleton(
         "r4 c16. r32 r8 c16. r32 r8",
     ),
     baca.new(

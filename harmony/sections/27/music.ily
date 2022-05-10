@@ -6177,7 +6177,7 @@ segment.27.Viola.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     af'2.
     % AFTER:
     % SPANNER_STARTS:
@@ -6230,7 +6230,7 @@ segment.27.Viola.Music.Voice = {
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
       %! baca.rhythm_annotation_spanner()
-    %@% - \baca-text-spanner-left-text "baca.skeleton()"
+    %@% - \baca-text-spanner-left-text "baca.make_skeleton()"
       %! RHYTHM_ANNOTATION_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
@@ -6246,7 +6246,7 @@ segment.27.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     af'8
     % AFTER:
     % SPANNER_STARTS:
@@ -6257,11 +6257,11 @@ segment.27.Viola.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \tweak text #tuplet-number::calc-fraction-text
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     \times 5/4
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6320,7 +6320,7 @@ segment.27.Viola.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca.skeleton()
+      %! baca.make_skeleton()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

@@ -619,7 +619,7 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.reapply_persistent_indicators(),
@@ -689,7 +689,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.reapply_persistent_indicators(),
@@ -763,7 +763,7 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.reapply_persistent_indicators(),
@@ -837,7 +837,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.skeleton(
+    baca.make_skeleton(
         r"r1 r8 \times 5/4 { c2 }",
     ),
     baca.reapply_persistent_indicators(),
