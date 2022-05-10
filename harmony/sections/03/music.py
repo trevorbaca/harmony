@@ -101,7 +101,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[1:],
     ),
     baca.reapply_persistent_indicators(),
@@ -115,7 +115,7 @@ commands(
 
 commands(
     ("bfl", 2),
-    library.tessera_1(
+    library.make_tessera_1(
         6,
         gap=True,
     ),
@@ -124,7 +124,7 @@ commands(
 
 commands(
     ("bfl", (6, 8)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[2:],
     ),
     baca.pitch("F3"),
@@ -146,7 +146,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.phjc(
+    library.make_phjc_rhythm(
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
@@ -164,7 +164,7 @@ commands(
 
 commands(
     ("perc1", 2),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
@@ -187,7 +187,7 @@ commands(
 commands(
     ("perc1", 4),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-19, 1],
     ),
     library.bass_drum_staff_position(),
@@ -203,7 +203,7 @@ commands(
 commands(
     ("perc1", (6, 8)),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
@@ -231,7 +231,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
@@ -256,7 +256,7 @@ commands(
 
 commands(
     ("perc2", 2),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
@@ -279,7 +279,7 @@ commands(
 commands(
     ("perc2", 4),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-19, 1],
     ),
     library.brake_drum_staff_position(),
@@ -298,7 +298,7 @@ commands(
 commands(
     ("perc2", (6, 8)),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
@@ -331,7 +331,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -347,14 +347,14 @@ commands(
 commands(
     ("hp", 2),
     baca.clef("treble"),
-    library.tessera_1(5),
+    library.make_tessera_1(5),
     baca.pitch("C#4"),
     baca.dls_staff_padding(5),
 )
 
 commands(
     ("hp", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [-2, 2, "-", 2],
     ),
     baca.pitches("F#4 G#4"),
@@ -372,7 +372,7 @@ commands(
 commands(
     ("hp", (6, 8)),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [18, -12, 16, -4],
     ),
     baca.pitch("G1"),
@@ -389,7 +389,7 @@ commands(
 
 commands(
     ("va", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[1:],
         extra_counts=[2],
         denominator=None,
@@ -412,7 +412,7 @@ commands(
 
 commands(
     ("va", 2),
-    library.tessera_1(
+    library.make_tessera_1(
         4,
         gap=True,
     ),
@@ -428,7 +428,7 @@ commands(
     ("va", 4),
     baca.clef("alto"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-"],
     ),
     baca.pitch("Eb3"),
@@ -447,7 +447,7 @@ commands(
     ("va", (6, 8)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[2:],
         extra_counts=[2],
         denominator=None,
@@ -489,7 +489,7 @@ commands(
 
 commands(
     ("vc1", 2),
-    library.tessera_1(
+    library.make_tessera_1(
         3,
         gap=True,
     ),
@@ -515,7 +515,7 @@ commands(
 commands(
     ("vc1", 4),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-"],
     ),
     baca.pitch("E4"),
@@ -538,7 +538,7 @@ commands(
     ("vc1", (6, 7)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[2:],
         extra_counts=[1],
     ),
@@ -625,7 +625,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
@@ -655,7 +655,7 @@ commands(
 
 commands(
     ("vc2", 2),
-    library.tessera_1(
+    library.make_tessera_1(
         2,
         gap=True,
     ),
@@ -668,7 +668,7 @@ commands(
 commands(
     ("vc2", 4),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-"],
     ),
     baca.pitch("Eqf4"),
@@ -685,7 +685,7 @@ commands(
 commands(
     ("vc2", (6, 8)),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [18, -12, 16, -4],
         untie=True,
         after_graces=[1],
@@ -722,7 +722,7 @@ commands(
 
 commands(
     ("cb1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[1:],
     ),
     baca.reapply_persistent_indicators(),
@@ -747,7 +747,7 @@ commands(
     ("cb1", 2),
     baca.clef("treble"),
     baca.staff_lines(5),
-    library.tessera_1(1),
+    library.make_tessera_1(1),
     baca.pitch(
         "Aqs4",
         do_not_transpose=True,
@@ -792,7 +792,7 @@ commands(
     ("cb1", (6, 8)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[2:],
     ),
     library.bridge_staff_position(),
@@ -814,7 +814,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
@@ -845,7 +845,7 @@ commands(
 commands(
     ("cb2", 2),
     baca.clef("treble"),
-    library.tessera_1(0),
+    library.make_tessera_1(0),
     baca.pitch(
         "F#4",
         do_not_transpose=True,
@@ -883,7 +883,7 @@ commands(
 
 commands(
     ("cb2", (6, 8)),
-    library.sixteenths(
+    library.make_sixteenths(
         [18, -12, 16, -4],
         untie=True,
         after_graces=[1],

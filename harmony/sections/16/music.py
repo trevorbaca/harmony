@@ -69,7 +69,7 @@ commands(
 
 commands(
     ("bfl", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -90,7 +90,7 @@ commands(
 
 commands(
     ("bfl", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.pitch("F#5"),
@@ -105,7 +105,7 @@ commands(
 
 commands(
     ("bfl", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
     baca.pitch("D5"),
@@ -145,7 +145,7 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         [41, -7, "+"],
     ),
     baca.reapply_persistent_indicators(),
@@ -170,7 +170,7 @@ commands(
 
 commands(
     ("perc1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     library.slate_staff_position(),
@@ -186,7 +186,7 @@ commands(
 
 commands(
     ("perc1", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 4, 4, 1, "-"],
     ),
     library.brake_drum_staff_position(),
@@ -207,7 +207,7 @@ commands(
 
 commands(
     ("perc2", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.duration_color,
     ),
     baca.reapply_persistent_indicators(),
@@ -228,7 +228,7 @@ commands(
 
 commands(
     ("perc2", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.duration_color,
     ),
     library.tam_tam_staff_position(),
@@ -247,7 +247,7 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.duration_color,
     ),
     baca.reapply_persistent_indicators(),
@@ -266,7 +266,7 @@ commands(
 commands(
     ("hp", 8),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -284,7 +284,7 @@ commands(
 commands(
     ("hp", (9, 10)),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         library.duration_color,
     ),
     baca.pitch("F1"),
@@ -299,7 +299,7 @@ commands(
 
 commands(
     ("va", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.glissando_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -323,7 +323,7 @@ commands(
 
 commands(
     ("va", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.pitch("F4"),
@@ -357,7 +357,7 @@ commands(
 
 commands(
     ("vc1", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -371,7 +371,7 @@ commands(
 
 commands(
     ("vc1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.pitch("A2"),
@@ -390,7 +390,7 @@ commands(
 
 commands(
     ("vc1", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
     baca.pitch("D#3"),
@@ -405,7 +405,7 @@ commands(
 
 commands(
     ("vc2", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -419,7 +419,7 @@ commands(
 
 commands(
     ("vc2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.pitch("G2"),
@@ -438,7 +438,7 @@ commands(
 
 commands(
     ("vc2", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
     baca.pitch("C#3"),
@@ -453,7 +453,7 @@ commands(
 
 commands(
     ("cb1", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.glissando_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -477,7 +477,7 @@ commands(
 
 commands(
     ("cb1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.pitch("G#1"),
@@ -496,7 +496,7 @@ commands(
 
 commands(
     ("cb1", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.glissando_counts_curtailed,
     ),
     baca.pitches("E3 D#3"),
@@ -521,7 +521,7 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.glissando_counts,
     ),
     baca.reapply_persistent_indicators(),
@@ -545,7 +545,7 @@ commands(
 
 commands(
     ("cb2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.pitch("F#1"),
@@ -564,7 +564,7 @@ commands(
 
 commands(
     ("cb2", (9, 10)),
-    library.sixteenths(
+    library.make_sixteenths(
         library.glissando_counts_curtailed,
     ),
     baca.pitches("C#3 D3"),

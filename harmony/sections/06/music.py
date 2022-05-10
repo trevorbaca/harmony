@@ -130,7 +130,7 @@ def preprocessor(divisions):
 
 commands(
     ("bfl", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, -6, 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, -2],
@@ -164,7 +164,7 @@ commands(
 
 commands(
     ("bfl", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -197,7 +197,7 @@ def preprocessor(divisions):
 
 commands(
     ("bfl", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, -6, 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, -2],
@@ -231,7 +231,7 @@ commands(
 
 commands(
     ("bfl", 6),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -269,7 +269,7 @@ def preprocessor(divisions):
 
 commands(
     ("bfl", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         [-6, -4, 1, -5, 1, -1],
         preprocessor=preprocessor,
         extra_counts=[0, 2],
@@ -279,7 +279,7 @@ commands(
 
 commands(
     ("bfl", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
 )
@@ -302,7 +302,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [16, "-", 1],
     ),
     baca.reapply_persistent_indicators(),
@@ -334,7 +334,7 @@ commands(
 commands(
     ("perc1", 3),
     baca.staff_lines(3),
-    library.sixteenths(
+    library.make_sixteenths(
         [-15, 1],
     ),
     baca.staff_position(2),
@@ -350,7 +350,7 @@ commands(
 commands(
     ("perc1", 4),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-3, 6, "-"],
     ),
     library.bass_drum_staff_position(),
@@ -368,7 +368,7 @@ commands(
 commands(
     ("perc1", 5),
     baca.staff_lines(3),
-    library.sixteenths(
+    library.make_sixteenths(
         [-15, 1],
     ),
     baca.staff_position(2),
@@ -384,7 +384,7 @@ commands(
 commands(
     ("perc1", 6),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 1],
     ),
     library.bass_drum_staff_position(),
@@ -400,7 +400,7 @@ commands(
 commands(
     ("perc1", 8),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [2, 1],
         [1, 2, 2, 2, 2, 1, 2, 2, 2],
         extra_counts=[2],
@@ -417,7 +417,7 @@ commands(
 commands(
     ("perc1", 10),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, "-"],
     ),
     library.bass_drum_staff_position(),
@@ -433,7 +433,7 @@ commands(
 
 commands(
     ("perc1", 11),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 3, -4],
     ),
     library.bass_drum_staff_position(),
@@ -445,7 +445,7 @@ commands(
 
 commands(
     ("perc1", 15),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 5, -1],
     ),
     library.bass_drum_staff_position(),
@@ -464,7 +464,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [16, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -483,7 +483,7 @@ commands(
 
 commands(
     ("perc2", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     library.tam_tam_staff_position(),
@@ -498,7 +498,7 @@ commands(
 
 commands(
     ("perc2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [9, "-"],
     ),
     baca.damp(
@@ -510,7 +510,7 @@ commands(
 
 commands(
     ("perc2", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     library.tam_tam_staff_position(),
@@ -522,7 +522,7 @@ commands(
 
 commands(
     ("perc2", (6, 7)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-19, 1, "-"],
     ),
     library.brake_drum_staff_position(),
@@ -545,7 +545,7 @@ commands(
 commands(
     ("perc2", 8),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [1, 2, 2, 1, 2, 2, 2, 2, 2, 2],
         extra_counts=[0, 6],
@@ -562,7 +562,7 @@ commands(
 commands(
     ("perc2", 10),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, "-"],
     ),
     library.brake_drum_staff_position(),
@@ -578,7 +578,7 @@ commands(
 
 commands(
     ("perc2", 11),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 1, -1],
     ),
     library.brake_drum_staff_position(),
@@ -586,7 +586,7 @@ commands(
 
 commands(
     ("perc2", 14),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 1, -2],
     ),
     library.brake_drum_staff_position(),
@@ -594,7 +594,7 @@ commands(
 
 commands(
     ("perc2", 15),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 1, -5],
     ),
     library.brake_drum_staff_position(),
@@ -609,7 +609,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-10, 6, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -628,7 +628,7 @@ commands(
     ("hp", 3),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -657,7 +657,7 @@ commands(
     ("hp", 4),
     baca.clef("bass"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [9, "-", 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, 1],
@@ -703,7 +703,7 @@ commands(
 
 commands(
     ("hp", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -733,7 +733,7 @@ commands(
     ("hp", 6),
     baca.clef("treble"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [-2, 4, "-", 4],
         extra_counts=[2],
         denominator=None,
@@ -763,7 +763,7 @@ def preprocessor(divisions):
 commands(
     ("hp", 7),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 9, -2],
         preprocessor=preprocessor,
         extra_counts=[0, 2],
@@ -773,7 +773,7 @@ commands(
 
 commands(
     ("hp", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, -2],
     ),
 )
@@ -805,7 +805,7 @@ commands(
 commands(
     ("hp", 10),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, "-"],
         extra_counts=[2],
         denominator=None,
@@ -814,7 +814,7 @@ commands(
 
 commands(
     ("hp", 11),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -828,7 +828,7 @@ commands(
 
 commands(
     ("hp", 13),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, "-"],
         extra_counts=[2],
         denominator=None,
@@ -837,7 +837,7 @@ commands(
 
 commands(
     ("hp", 14),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -882,7 +882,7 @@ def preprocessor(divisions):
 
 commands(
     ("hp", 15),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 2, 2],
         preprocessor=preprocessor,
         extra_counts=[0, 1],
@@ -928,7 +928,7 @@ commands(
 
 commands(
     ("va", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -947,7 +947,7 @@ commands(
 
 commands(
     ("va", 3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[9],
     ),
     baca.new(
@@ -982,7 +982,7 @@ commands(
 
 commands(
     ("va", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, "-", 2, -3],
         tie=[0],
     ),
@@ -1003,7 +1003,7 @@ commands(
 
 commands(
     ("va", 5),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[9],
     ),
     baca.pitch(
@@ -1038,7 +1038,7 @@ commands(
 
 commands(
     ("va", (6, 7)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-", 3, -2],
     ),
     baca.dynamic("f"),
@@ -1065,7 +1065,7 @@ commands(
 
 commands(
     ("va", (10, 15)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-5, 2, -5, 3, -10, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+"],
     ),
     baca.dynamic(
@@ -1110,7 +1110,7 @@ commands(
 
 commands(
     ("vc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -1126,7 +1126,7 @@ commands(
 
 commands(
     ("vc1", 3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[7],
     ),
     baca.new(
@@ -1161,7 +1161,7 @@ commands(
 
 commands(
     ("vc1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, "-", 2, -3],
         tie=[0],
     ),
@@ -1183,7 +1183,7 @@ commands(
 
 commands(
     ("vc1", 5),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[7],
     ),
     baca.new(
@@ -1218,7 +1218,7 @@ commands(
 
 commands(
     ("vc1", (6, 7)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-", 3, -2],
     ),
     baca.dynamic("f"),
@@ -1240,7 +1240,7 @@ commands(
     ("vc1", 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, -3, 1, "-"],
         extra_counts=[1],
     ),
@@ -1263,7 +1263,7 @@ commands(
 
 commands(
     ("vc1", (10, 15)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-5, 2, -5, 3, -10 - 2, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+"],
     ),
     baca.bow_speed_spanner(
@@ -1306,7 +1306,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -1323,7 +1323,7 @@ commands(
 commands(
     ("vc2", 3),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.dynamic("p"),
@@ -1331,7 +1331,7 @@ commands(
 
 commands(
     ("vc2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, "-", 2, -3],
         tie=[0],
     ),
@@ -1369,7 +1369,7 @@ commands(
 commands(
     ("vc2", 5),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.pitch("B2"),
@@ -1382,7 +1382,7 @@ commands(
 commands(
     ("vc2", (6, 7)),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-1, 2, "-", 3, -2],
     ),
     baca.dynamic("f"),
@@ -1398,7 +1398,7 @@ commands(
 commands(
     ("vc2", 8),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, -2],
         untie=True,
         after_graces=[1],
@@ -1429,7 +1429,7 @@ commands(
 commands(
     ("vc2", (10, 15)),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-5, 2, -5, 3, -10 + 3, 4, -4, 5, -8, 2, -3, 8, -3, 14, -2, "+"],
     ),
     baca.bow_speed_spanner(
@@ -1493,7 +1493,7 @@ commands(
 
 commands(
     ("cb1", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.dynamic("p"),
@@ -1501,7 +1501,7 @@ commands(
 
 commands(
     ("cb1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [8, "-", 5],
         tie=[0],
     ),
@@ -1556,7 +1556,7 @@ commands(
     ("cb1", 8),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 1, -4, 1, "-"],
     ),
     library.bridge_staff_position(),
@@ -1629,7 +1629,7 @@ commands(
 
 commands(
     ("cb2", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4, 4, 4],
     ),
 )
@@ -1660,7 +1660,7 @@ commands(
 
 commands(
     ("cb2", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, -2],
         untie=True,
         after_graces=[1],

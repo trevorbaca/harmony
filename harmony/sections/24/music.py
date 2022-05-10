@@ -70,7 +70,7 @@ commands(
 
 commands(
     ("bfl", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 3, -3],
     ),
     baca.reapply_persistent_indicators(),
@@ -94,7 +94,7 @@ commands(
 
 commands(
     ("bfl", (5, 9)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, -2],
     ),
     baca.pitch("F#5"),
@@ -125,7 +125,7 @@ commands(
 
 commands(
     ("perc1", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [5, -3],
     ),
     baca.reapply_persistent_indicators(),
@@ -156,7 +156,7 @@ commands(
 
 commands(
     ("perc1", (5, 9)),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, -3],
     ),
     library.slate_staff_position(),
@@ -179,7 +179,7 @@ commands(
 
 commands(
     ("perc2", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -8, 2, -3, 2, -8],
     ),
     baca.reapply_persistent_indicators(),
@@ -198,7 +198,7 @@ commands(
 commands(
     ("perc2", 5),
     baca.staff_lines(3),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, "-"],
     ),
     library.purpleheart_staff_positions([2]),
@@ -220,7 +220,7 @@ def preprocessor(divisions):
 commands(
     ("perc2", (7, 9)),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [16, 16, 16, -4, 2],
         preprocessor=preprocessor,
         extra_counts=[0, 0, 0, 2],
@@ -273,7 +273,7 @@ commands(
 
 commands(
     ("hp", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
     baca.reapply_persistent_indicators(),
@@ -300,7 +300,7 @@ commands(
     ("hp", (5, 9)),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, -3],
     ),
     library.whisk_staff_position(),
@@ -319,7 +319,7 @@ commands(
 
 commands(
     (["va", "vc2", "cb2"], (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, -10],
         written_quarters=[0, 1, 4, 5],
         invisible=[1, 5],
@@ -348,7 +348,7 @@ commands(
 
 commands(
     ("va", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -361,7 +361,7 @@ commands(
 
 commands(
     ("va", (5, 9)),
-    library.tessera_3(4),
+    library.make_tessera_3(4),
     baca.pitch("F#3"),
     baca.scp_spanner(
         "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
@@ -384,7 +384,7 @@ def preprocessor(divisions):
 
 commands(
     ("vc1", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=preprocessor,
         extra_counts=[4, 0, 4],
@@ -431,7 +431,7 @@ commands(
 
 commands(
     ("vc1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, "-"],
     ),
     baca.pitch("F4"),
@@ -448,7 +448,7 @@ commands(
 
 commands(
     ("vc1", (5, 9)),
-    library.tessera_3(3),
+    library.make_tessera_3(3),
     baca.clef("bass"),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -486,7 +486,7 @@ commands(
 
 commands(
     ("vc2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -499,7 +499,7 @@ commands(
 
 commands(
     ("vc2", (5, 9)),
-    library.tessera_3(2),
+    library.make_tessera_3(2),
     baca.pitch("F#2"),
     baca.scp_spanner(
         "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
@@ -522,7 +522,7 @@ def preprocessor(divisions):
 
 commands(
     ("cb1", (1, 3)),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
         preprocessor=preprocessor,
         extra_counts=[4, 0, 4],
@@ -575,7 +575,7 @@ commands(
 
 commands(
     ("cb1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, "-"],
     ),
     baca.pitch(
@@ -595,7 +595,7 @@ commands(
 
 commands(
     ("cb1", (5, 9)),
-    library.tessera_3(1),
+    library.make_tessera_3(1),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -636,7 +636,7 @@ commands(
 
 commands(
     ("cb2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
         after_graces=[1],
     ),
@@ -649,7 +649,7 @@ commands(
 
 commands(
     ("cb2", (5, 9)),
-    library.tessera_3(0),
+    library.make_tessera_3(0),
     baca.pitch("F#1"),
     baca.scp_spanner(
         "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",

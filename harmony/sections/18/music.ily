@@ -1150,18 +1150,18 @@ segment.18.Bass.Flute.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     \times 8/9
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Bass_Flute_Music_Voice measure 3]
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1180,11 +1180,11 @@ segment.18.Bass.Flute.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.note_head_font_size()
         \override NoteHead.font-size = -3
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % AFTER:
         % START_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         [
         % SPANNER_STARTS:
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1223,37 +1223,37 @@ segment.18.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         bf'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         af'!32
         % AFTER:
         % ARTICULATIONS:
@@ -1301,47 +1301,47 @@ segment.18.Bass.Flute.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         g'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         gs'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         a'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         as'!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         cs''!32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         c''32
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         b'32
         % AFTER:
         % ARTICULATIONS:
@@ -1365,7 +1365,7 @@ segment.18.Bass.Flute.Music.Voice = {
           %! baca.trill_spanner()
         \stopTrillSpan
         % STOP_BEAM:
-          %! harmony.warble()
+          %! harmony.make_warble_rhythm()
         ]
         % COMMANDS:
           %! baca.OverrideCommand._call(2)
@@ -1384,19 +1384,19 @@ segment.18.Bass.Flute.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.warble()
+      %! harmony.make_warble_rhythm()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 4]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''8.
     % AFTER:
     % ARTICULATIONS:
@@ -1445,7 +1445,7 @@ segment.18.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % SPANNER_STOPS:
@@ -1456,7 +1456,7 @@ segment.18.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''2
     % AFTER:
     % SPANNER_STARTS:
@@ -1489,7 +1489,7 @@ segment.18.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % SPANNER_STOPS:
@@ -1500,7 +1500,7 @@ segment.18.Bass.Flute.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''2
     % AFTER:
     % SPANNER_STARTS:
@@ -1563,17 +1563,17 @@ segment.18.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 6]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r1
     % AFTER:
     % SPANNER_STOPS:
@@ -1918,7 +1918,7 @@ segment.18.Percussion.I.Music.Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -1955,7 +1955,7 @@ segment.18.Percussion.I.Music.Voice.count.1 = {
       %! baca.OverrideCommand._call(1)
       %! baca.rest_x_extent_zero()
     \once \override Rest.X-extent = #'(0 . 0)
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r2
     % AFTER:
     % COMMANDS:
@@ -2041,7 +2041,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     a'4
     % AFTER:
     % ARTICULATIONS:
@@ -2087,7 +2087,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     a'8
     % AFTER:
     % ARTICULATIONS:
@@ -2122,7 +2122,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -2143,7 +2143,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -2163,7 +2163,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     a'8
     % AFTER:
     % ARTICULATIONS:
@@ -2185,7 +2185,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     a'8
     % AFTER:
     % ARTICULATIONS:
@@ -2223,7 +2223,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % ARTICULATIONS:
@@ -2315,7 +2315,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r4
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -2325,7 +2325,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2463,7 +2463,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! EXPLICIT_STAFF_LINES_COLOR
       %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'2.
     % AFTER:
     % ARTICULATIONS:
@@ -2501,7 +2501,7 @@ segment.18.Percussion.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'2
     % AFTER:
     % SPANNER_STARTS:
@@ -2511,7 +2511,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % COMMANDS:
@@ -2521,7 +2521,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % COMMANDS:
@@ -2791,7 +2791,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     b8
     % AFTER:
     % ARTICULATIONS:
@@ -2834,7 +2834,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -2855,7 +2855,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2.
     % AFTER:
     % COMMANDS:
@@ -2875,7 +2875,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     b8
     % AFTER:
     % ARTICULATIONS:
@@ -2906,7 +2906,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -2927,7 +2927,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -3028,7 +3028,7 @@ segment.18.Percussion.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     b8
     % AFTER:
     % ARTICULATIONS:
@@ -3059,7 +3059,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -3080,7 +3080,7 @@ segment.18.Percussion.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -3262,7 +3262,7 @@ segment.18.Percussion.II.Music.Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -3299,7 +3299,7 @@ segment.18.Percussion.II.Music.Voice.count.1 = {
       %! baca.OverrideCommand._call(1)
       %! baca.rest_x_extent_zero()
     \once \override Rest.X-extent = #'(0 . 0)
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r2
     % AFTER:
     % COMMANDS:
@@ -3380,7 +3380,7 @@ segment.18.Percussion.II.Music.Voice = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'4
     % AFTER:
     % ARTICULATIONS:
@@ -3429,7 +3429,7 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -3452,12 +3452,12 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3469,7 +3469,7 @@ segment.18.Percussion.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.stem_up()
     \override Stem.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -3494,7 +3494,7 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -3523,7 +3523,7 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -3566,12 +3566,12 @@ segment.18.Percussion.II.Music.Voice = {
       %! EXPLICIT_STAFF_LINES_COLOR
       %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.appoggiato()
+      %! harmony.make_appoggiato_rhythm()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3703,7 +3703,7 @@ segment.18.Percussion.II.Music.Voice = {
       %! EXPLICIT_STAFF_LINES_COLOR
       %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'2.
     % AFTER:
     % ARTICULATIONS:
@@ -3736,7 +3736,7 @@ segment.18.Percussion.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Percussion_II_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'2
     % AFTER:
     % SPANNER_STARTS:
@@ -3748,7 +3748,7 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % SPANNER_STARTS:
@@ -3760,7 +3760,7 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -3912,7 +3912,7 @@ segment.18.Percussion.II.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -3941,12 +3941,12 @@ segment.18.Percussion.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4053,11 +4053,11 @@ segment.18.Percussion.II.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 3/4
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4098,7 +4098,7 @@ segment.18.Percussion.II.Music.Voice = {
           %! EXPLICIT_STAFF_LINES_COLOR
           %! baca._attach_color_literal(2)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4108,7 +4108,7 @@ segment.18.Percussion.II.Music.Voice = {
           %! baca.OverrideCommand._call(1)
           %! baca.stem_down()
         \override Stem.direction = #down
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'4
         % AFTER:
         % ARTICULATIONS:
@@ -4171,7 +4171,7 @@ segment.18.Percussion.II.Music.Voice = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         c'4
         % AFTER:
         % COMMANDS:
@@ -4194,7 +4194,7 @@ segment.18.Percussion.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4445,7 +4445,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -4483,7 +4483,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'8
     % AFTER:
     % ARTICULATIONS:
@@ -4512,24 +4512,24 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 2]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'8
     % AFTER:
     % ARTICULATIONS:
@@ -4539,7 +4539,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -4672,7 +4672,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     f,,2.
     % AFTER:
     % ARTICULATIONS:
@@ -4703,7 +4703,7 @@ segment.18.Harp.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     f,,2
     % AFTER:
     % SPANNER_STARTS:
@@ -4715,7 +4715,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     f,,16
     % AFTER:
     % SPANNER_STARTS:
@@ -4723,7 +4723,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -4920,7 +4920,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'8
     % AFTER:
     % ARTICULATIONS:
@@ -4954,12 +4954,12 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2.
     % AFTER:
     % COMMANDS:
@@ -5031,7 +5031,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8.
     % AFTER:
     % MARKUP:
@@ -5096,7 +5096,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -5161,7 +5161,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % COMMANDS:
@@ -5171,7 +5171,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5192,7 +5192,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -5212,7 +5212,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8.
     % AFTER:
     % START_BEAM:
@@ -5259,7 +5259,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -5324,7 +5324,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % COMMANDS:
@@ -5334,7 +5334,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5355,7 +5355,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % COMMANDS:
@@ -5375,7 +5375,7 @@ segment.18.Harp.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.tuplet_bracket_up()
     \override TupletBracket.direction = #up
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8.
     % AFTER:
     % START_BEAM:
@@ -5422,7 +5422,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -5487,7 +5487,7 @@ segment.18.Harp.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c'8
     % AFTER:
     % COMMANDS:
@@ -5497,7 +5497,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -5518,7 +5518,7 @@ segment.18.Harp.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -5754,7 +5754,7 @@ segment.18.Viola.Music.Voice = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -5792,7 +5792,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c4
     % AFTER:
     % SPANNER_STARTS:
@@ -5836,7 +5836,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c8
     % AFTER:
     % START_BEAM:
@@ -5859,7 +5859,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c8
     % AFTER:
     % ARTICULATIONS:
@@ -5910,7 +5910,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -5933,12 +5933,12 @@ segment.18.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 2]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c8
     % AFTER:
     % SPANNER_STARTS:
@@ -5982,7 +5982,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6001,7 +6001,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c8.
     % AFTER:
     % ARTICULATIONS:
@@ -6054,7 +6054,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.rest_extra_offset()
     \once \override Rest.extra-offset = #'(-1.5 . 0)
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -6405,7 +6405,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -6428,7 +6428,7 @@ segment.18.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 4]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % ARTICULATIONS:
@@ -6495,7 +6495,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ef'!16
     % AFTER:
     % STOP_BEAM:
@@ -6504,12 +6504,12 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'4
     % AFTER:
     % ARTICULATIONS:
@@ -6526,7 +6526,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ef'!8
     % AFTER:
     % ARTICULATIONS:
@@ -6546,7 +6546,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % STOP_BEAM:
@@ -6555,19 +6555,19 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ef'!8
     % AFTER:
     % ARTICULATIONS:
@@ -6587,7 +6587,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % STOP_BEAM:
@@ -6596,7 +6596,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6804,7 +6804,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c2
     % AFTER:
     % SPANNER_STARTS:
@@ -6865,7 +6865,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     c4
     % AFTER:
     % ARTICULATIONS:
@@ -6913,7 +6913,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -6972,7 +6972,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7067,7 +7067,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7113,7 +7113,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7169,7 +7169,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7215,7 +7215,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7271,7 +7271,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7833,7 +7833,7 @@ segment.18.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 11]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7889,7 +7889,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7935,7 +7935,7 @@ segment.18.Viola.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -7991,7 +7991,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -8051,7 +8051,7 @@ segment.18.Viola.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -8107,7 +8107,7 @@ segment.18.Viola.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -8416,7 +8416,7 @@ segment.18.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -8459,7 +8459,7 @@ segment.18.Cello.I.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_style_harmonic()
     \override NoteHead.style = #'harmonic
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''4
     % AFTER:
     % MARKUP:
@@ -8515,7 +8515,7 @@ segment.18.Cello.I.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''8
     % AFTER:
     % START_BEAM:
@@ -8538,7 +8538,7 @@ segment.18.Cello.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''8
     % AFTER:
     % ARTICULATIONS:
@@ -8589,7 +8589,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -8617,12 +8617,12 @@ segment.18.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 2]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''8
     % AFTER:
     % SPANNER_STARTS:
@@ -8671,7 +8671,7 @@ segment.18.Cello.I.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8690,7 +8690,7 @@ segment.18.Cello.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''8.
     % AFTER:
     % ARTICULATIONS:
@@ -8742,7 +8742,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -9068,7 +9068,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -9124,7 +9124,7 @@ segment.18.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds!8.
     % AFTER:
     % ARTICULATIONS:
@@ -9184,7 +9184,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % SPANNER_STOPS:
@@ -9196,7 +9196,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds!2
     % AFTER:
     % SPANNER_STARTS:
@@ -9240,7 +9240,7 @@ segment.18.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % SPANNER_STOPS:
@@ -9252,7 +9252,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds!8.
     % AFTER:
     % SPANNER_STARTS:
@@ -9294,7 +9294,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % SPANNER_STOPS:
@@ -9577,7 +9577,7 @@ segment.18.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''2
     % AFTER:
     % MARKUP:
@@ -9650,7 +9650,7 @@ segment.18.Cello.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d''4
     % AFTER:
     % ARTICULATIONS:
@@ -9702,7 +9702,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -9763,7 +9763,7 @@ segment.18.Cello.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d8.
     % AFTER:
     % ARTICULATIONS:
@@ -9845,7 +9845,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -9872,17 +9872,17 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d8
     % AFTER:
     % ARTICULATIONS:
@@ -9965,7 +9965,7 @@ segment.18.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 10]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d16
     % AFTER:
     % SPANNER_STARTS:
@@ -9973,7 +9973,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -10000,12 +10000,12 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d8.
     % AFTER:
     % ARTICULATIONS:
@@ -10082,7 +10082,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -10109,19 +10109,19 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 11]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d8
     % AFTER:
     % ARTICULATIONS:
@@ -10202,7 +10202,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d16
     % AFTER:
     % SPANNER_STARTS:
@@ -10210,7 +10210,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8.
     % AFTER:
     % ARTICULATIONS:
@@ -10237,7 +10237,7 @@ segment.18.Cello.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -10479,7 +10479,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -10522,7 +10522,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_style_harmonic()
     \override NoteHead.style = #'harmonic
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4
     % AFTER:
     % MARKUP:
@@ -10581,7 +10581,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!8
     % AFTER:
     % START_BEAM:
@@ -10604,7 +10604,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!8
     % AFTER:
     % ARTICULATIONS:
@@ -10655,7 +10655,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -10683,12 +10683,12 @@ segment.18.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 2]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!8
     % AFTER:
     % SPANNER_STARTS:
@@ -10737,7 +10737,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10756,7 +10756,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!8.
     % AFTER:
     % ARTICULATIONS:
@@ -10808,7 +10808,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -11134,7 +11134,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -11190,7 +11190,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs!8.
     % AFTER:
     % ARTICULATIONS:
@@ -11250,7 +11250,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % SPANNER_STOPS:
@@ -11262,7 +11262,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs!2
     % AFTER:
     % SPANNER_STARTS:
@@ -11306,7 +11306,7 @@ segment.18.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % AFTER:
     % SPANNER_STOPS:
@@ -11318,7 +11318,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs!8.
     % AFTER:
     % SPANNER_STARTS:
@@ -11360,7 +11360,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % SPANNER_STOPS:
@@ -11657,7 +11657,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!2
     % AFTER:
     % MARKUP:
@@ -11730,7 +11730,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4
     % AFTER:
     % ARTICULATIONS:
@@ -11782,7 +11782,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -11815,7 +11815,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_style_harmonic()
     \override NoteHead.style = #'harmonic
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -11899,7 +11899,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -11945,7 +11945,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12001,7 +12001,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12047,7 +12047,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12103,7 +12103,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12665,7 +12665,7 @@ segment.18.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 11]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12721,7 +12721,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12767,7 +12767,7 @@ segment.18.Cello.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12823,7 +12823,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12883,7 +12883,7 @@ segment.18.Cello.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -12939,7 +12939,7 @@ segment.18.Cello.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     btqf'!4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -13248,7 +13248,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -13292,7 +13292,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! baca.SpannerIndicatorCommand._call(2)
       %! baca.trill_spanner()
     \pitchedTrill
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4
     % AFTER:
     % MARKUP:
@@ -13345,7 +13345,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8
     % AFTER:
     % START_BEAM:
@@ -13368,7 +13368,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8
     % AFTER:
     % ARTICULATIONS:
@@ -13419,7 +13419,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -13447,7 +13447,7 @@ segment.18.Contrabass.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 2]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13545,7 +13545,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % AFTER:
     % ARTICULATIONS:
@@ -13866,7 +13866,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -13922,7 +13922,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'8
     % AFTER:
     % ARTICULATIONS:
@@ -13994,7 +13994,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds'!16
     % AFTER:
     % STOP_BEAM:
@@ -14003,12 +14003,12 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'4
     % AFTER:
     % ARTICULATIONS:
@@ -14025,7 +14025,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds'!8
     % AFTER:
     % ARTICULATIONS:
@@ -14045,7 +14045,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'16
     % AFTER:
     % STOP_BEAM:
@@ -14054,19 +14054,19 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     ds'!8
     % AFTER:
     % ARTICULATIONS:
@@ -14086,7 +14086,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e'16
     % AFTER:
     % STOP_BEAM:
@@ -14095,7 +14095,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14383,7 +14383,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! baca.SpannerIndicatorCommand._call(2)
       %! baca.trill_spanner()
     \pitchedTrill
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''2
     % AFTER:
     % MARKUP:
@@ -14453,7 +14453,7 @@ segment.18.Contrabass.I.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4
     % AFTER:
     % ARTICULATIONS:
@@ -14501,7 +14501,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -14529,7 +14529,7 @@ segment.18.Contrabass.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 9]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -14602,7 +14602,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -14624,7 +14624,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -14680,7 +14680,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -14703,7 +14703,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -14724,14 +14724,14 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 10]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8
     % AFTER:
     % STEM_TREMOLOS:
@@ -14804,7 +14804,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8
     % AFTER:
     % STEM_TREMOLOS:
@@ -14826,7 +14826,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -14882,7 +14882,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -14905,7 +14905,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -14926,14 +14926,14 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Contrabass_I_Music_Voice measure 11]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''16
     % AFTER:
     % STEM_TREMOLOS:
@@ -15006,7 +15006,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8.
     % AFTER:
     % STEM_TREMOLOS:
@@ -15023,7 +15023,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''8
     % AFTER:
     % STEM_TREMOLOS:
@@ -15084,7 +15084,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r8
     % AFTER:
     % ARTICULATIONS:
@@ -15105,7 +15105,7 @@ segment.18.Contrabass.I.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % COMMANDS:
@@ -15338,7 +15338,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -15381,7 +15381,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_style_harmonic()
     \override NoteHead.style = #'harmonic
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4
     % AFTER:
     % MARKUP:
@@ -15432,7 +15432,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'8
     % AFTER:
     % START_BEAM:
@@ -15455,7 +15455,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'8
     % AFTER:
     % ARTICULATIONS:
@@ -15510,7 +15510,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -15532,11 +15532,11 @@ segment.18.Contrabass.II.Music.Voice = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     \times 3/4
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -15576,7 +15576,7 @@ segment.18.Contrabass.II.Music.Voice = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         r2
         % ABSOLUTE_AFTER:
         % COMMANDS:
@@ -15673,10 +15673,10 @@ segment.18.Contrabass.II.Music.Voice = {
         % OPENING:
         % COMMANDS:
           %! INVISIBLE_MUSIC_COMMAND
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         %@% \abjad-invisible-music
           %! INVISIBLE_MUSIC_COLORING
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         \abjad-invisible-music-coloring
         <as''! b'' c'''>4 * 1/2
         % AFTER:
@@ -15791,10 +15791,10 @@ segment.18.Contrabass.II.Music.Voice = {
         % OPENING:
         % COMMANDS:
           %! INVISIBLE_MUSIC_COMMAND
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         %@% \abjad-invisible-music
           %! INVISIBLE_MUSIC_COLORING
-          %! harmony.sixteenths()
+          %! harmony.make_sixteenths()
         \abjad-invisible-music-coloring
         <as''! b'' c'''>4 * 1/2
         % AFTER:
@@ -15852,7 +15852,7 @@ segment.18.Contrabass.II.Music.Voice = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -16143,7 +16143,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -16205,7 +16205,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs'!8
     % AFTER:
     % ARTICULATIONS:
@@ -16277,7 +16277,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'16
     % AFTER:
     % STOP_BEAM:
@@ -16286,12 +16286,12 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs'!4
     % AFTER:
     % ARTICULATIONS:
@@ -16308,7 +16308,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % ARTICULATIONS:
@@ -16328,7 +16328,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs'!16
     % AFTER:
     % STOP_BEAM:
@@ -16337,19 +16337,19 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 5]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     d'8
     % AFTER:
     % ARTICULATIONS:
@@ -16369,7 +16369,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     cs'!16
     % AFTER:
     % STOP_BEAM:
@@ -16378,7 +16378,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -16681,7 +16681,7 @@ segment.18.Contrabass.II.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'2
     % AFTER:
     % MARKUP:
@@ -16744,7 +16744,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     g'4
     % AFTER:
     % ARTICULATIONS:
@@ -16796,7 +16796,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -16857,7 +16857,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.SpannerIndicatorCommand._call(2)
       %! baca.trill_spanner()
     \pitchedTrill
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -16949,7 +16949,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -16995,7 +16995,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17051,7 +17051,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17097,7 +17097,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17153,7 +17153,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17715,7 +17715,7 @@ segment.18.Contrabass.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 11]
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17771,7 +17771,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17817,7 +17817,7 @@ segment.18.Contrabass.II.Music.Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17873,7 +17873,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17933,7 +17933,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:
@@ -17989,7 +17989,7 @@ segment.18.Contrabass.II.Music.Voice = {
       %! baca.IndicatorCommand._call()
       %! baca.invisible_music(2)
     \abjad-invisible-music-coloring
-      %! harmony.sixteenths()
+      %! harmony.make_sixteenths()
     e''4 * 1/2
     % AFTER:
     % ARTICULATIONS:

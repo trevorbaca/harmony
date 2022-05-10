@@ -74,7 +74,7 @@ commands(
 
 commands(
     (["bfl", "va", "vc1", "vc2", "cb1"], 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, 16],
         tie_all=True,
     ),
@@ -104,7 +104,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, -22, 1],
     ),
     baca.reapply_persistent_indicators(),
@@ -130,7 +130,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 1],
         invisible=[-1],
     ),
@@ -144,7 +144,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [1, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -183,7 +183,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [16, 4, 2, 2],
         written_dotted_wholes=[0],
         invisible=[1, 2, 3],

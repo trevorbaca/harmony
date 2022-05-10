@@ -103,7 +103,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -115,7 +115,7 @@ commands(
 
 commands(
     ("bfl", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-2, 4, -2, -4, 4],
     ),
 )
@@ -135,7 +135,7 @@ commands(
 
 commands(
     ("bfl", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
 )
@@ -156,7 +156,7 @@ commands(
 
 commands(
     ("bfl", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4, -2, 4],
         extra_counts=[2],
         denominator=None,
@@ -168,7 +168,7 @@ commands(
 commands(
     ("bfl", 8),
     baca.pitch("E3"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
 )
@@ -188,7 +188,7 @@ commands(
 
 commands(
     ("bfl", 10),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[9, 0],
         divisions=[12, 12],
         prefix_talea=[-1],
@@ -222,7 +222,7 @@ commands(
 
 commands(
     ("bfl", (11, 13)),
-    library.sixteenths(
+    library.make_sixteenths(
         [12],
         written_dotted_wholes=([0], 2),
         invisible_pairs=True,
@@ -257,7 +257,7 @@ commands(
 
 commands(
     ("bfl", 14),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 8, 3, 1],
         written_dotted_wholes=([0], 2),
         invisible=[1, 2, 3],
@@ -279,7 +279,7 @@ commands(
 
 commands(
     ("bfl", 15),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[9],
         incise=True,
     ),
@@ -315,7 +315,7 @@ commands(
 
 commands(
     ("perc1", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-8, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -342,7 +342,7 @@ commands(
 
 commands(
     ("perc1", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
@@ -363,7 +363,7 @@ commands(
 
 commands(
     ("perc1", 7),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 2, -2, 2, -2],
         extra_counts=[2],
         denominator=None,
@@ -378,7 +378,7 @@ commands(
 
 commands(
     ("perc1", 8),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     ),
     baca.accent(
@@ -541,7 +541,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb1"], 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -568,7 +568,7 @@ commands(
 
 commands(
     ("va", [3, 8]),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, "+"],
     ),
     baca.new(
@@ -589,14 +589,14 @@ commands(
 
 commands(
     ("va", 10),
-    library.sixteenths(
+    library.make_sixteenths(
         [12, 1, 1, 1],
     ),
 )
 
 commands(
     ("va", (11, 14)),
-    library.tuplet([11 * (1,)]),
+    library.make_tuplet([11 * (1,)]),
 )
 
 commands(
@@ -712,14 +712,14 @@ commands(
 
 commands(
     ("vc1", (10, 11)),
-    library.sixteenths(
+    library.make_sixteenths(
         [13, 1, 1, 1],
     ),
 )
 
 commands(
     ("vc1", (12, 14)),
-    library.tuplet(
+    library.make_tuplet(
         [10 * (1,)],
         denominator=(1, 4),
     ),
@@ -841,14 +841,14 @@ commands(
 
 commands(
     ("vc2", (10, 12)),
-    library.sixteenths(
+    library.make_sixteenths(
         [14, 1, 1, 1],
     ),
 )
 
 commands(
     ("vc2", (13, 14)),
-    library.tuplet(
+    library.make_tuplet(
         [9 * (1,)],
         denominator=(1, 4),
     ),
@@ -1021,14 +1021,14 @@ commands(
 
 commands(
     ("cb2", (10, 12)),
-    library.sixteenths(
+    library.make_sixteenths(
         [16, 1, 1, 1],
     ),
 )
 
 commands(
     ("cb2", (13, 14)),
-    library.tuplet(
+    library.make_tuplet(
         [7 * (1,)],
         denominator=(1, 4),
     ),
@@ -1152,7 +1152,7 @@ commands(
 
 commands(
     (["va", "vc1", "vc2", "cb2"], 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [-8, 2, 2, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -1169,7 +1169,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb2"], [3, 8]),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8, "-"],
     ),
     baca.stop_on_string(

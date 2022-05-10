@@ -265,7 +265,36 @@ appoggiato_pitches_a_flat = (
 appoggiato_pitches_g = "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 
 
-def appoggiato(
+def bass_drum_staff_position() -> baca.Suite:
+    """
+    Sets bass drum staff position (-1), stem down, tuplet bracket up.
+    """
+    return baca.chunk(
+        baca.staff_position(-1),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
+    )
+
+
+def bridge_staff_position() -> baca.Suite:
+    """
+    Sets bridge position (0), stem down and tuplet bracket up.
+    """
+    return baca.chunk(
+        baca.staff_position(0),
+        baca.stem_down(),
+        baca.tuplet_bracket_up(),
+    )
+
+
+def brake_drum_staff_position() -> baca.Suite:
+    """
+    Sets brake drum staff position and stem direction.
+    """
+    return baca.chunk(baca.staff_position(0), baca.stem_up())
+
+
+def make_appoggiato_rhythm(
     *,
     divisions=None,
     counts=(),
@@ -413,7 +442,193 @@ def appoggiato(
     )
 
 
-def phjc(
+def make_empty_score():
+    tag = baca.tags.function_name(inspect.currentframe())
+    # GLOBAL CONTEXT
+    global_context = baca.score.make_global_context()
+    # BASS FLUTE
+    bass_flute_music_voice = abjad.Voice(name="Bass_Flute_Music_Voice", tag=tag)
+    bass_flute_music_staff = abjad.Staff(
+        [bass_flute_music_voice],
+        simultaneous=True,
+        name="Bass_Flute_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        bass_flute_music_staff,
+        "default_instrument",
+        instruments["BassFlute"],
+    )
+    abjad.annotate(bass_flute_music_staff, "default_clef", abjad.Clef("treble"))
+    baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
+    # PERCUSSION 1
+    percussion_1_music_voice = abjad.Voice(name="Percussion_I_Music_Voice", tag=tag)
+    percussion_1_music_staff = abjad.Staff(
+        [percussion_1_music_voice],
+        simultaneous=True,
+        name="Percussion_I_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        percussion_1_music_staff,
+        "default_instrument",
+        instruments["Percussion"],
+    )
+    abjad.annotate(percussion_1_music_staff, "default_clef", abjad.Clef("treble"))
+    baca.score.attach_lilypond_tag("PercussionI", percussion_1_music_staff)
+    # PERCUSSION 2
+    percussion_2_music_voice = abjad.Voice(name="Percussion_II_Music_Voice", tag=tag)
+    percussion_2_music_staff = abjad.Staff(
+        [percussion_2_music_voice],
+        simultaneous=True,
+        name="Percussion_II_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        percussion_2_music_staff,
+        "default_instrument",
+        instruments["Percussion"],
+    )
+    abjad.annotate(percussion_2_music_staff, "default_clef", abjad.Clef("treble"))
+    baca.score.attach_lilypond_tag("PercussionII", percussion_2_music_staff)
+    # HARP
+    harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=tag)
+    harp_music_staff = abjad.Staff(
+        [harp_music_voice],
+        simultaneous=True,
+        name="Harp_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(harp_music_staff, "default_instrument", instruments["Harp"])
+    abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
+    baca.score.attach_lilypond_tag("Harp", harp_music_staff)
+    # VIOLA
+    viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=tag)
+    viola_music_staff = abjad.Staff(
+        [viola_music_voice],
+        simultaneous=True,
+        name="Viola_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        viola_music_staff,
+        "default_instrument",
+        instruments["Viola"],
+    )
+    abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
+    baca.score.attach_lilypond_tag("Viola", viola_music_staff)
+    # CELLO 1
+    cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=tag)
+    cello_1_music_staff = abjad.Staff(
+        [cello_1_music_voice],
+        simultaneous=True,
+        name="Cello_I_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        cello_1_music_staff,
+        "default_instrument",
+        instruments["Cello"],
+    )
+    abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
+    baca.score.attach_lilypond_tag("CelloI", cello_1_music_staff)
+    # CELLO 2
+    cello_2_music_voice = abjad.Voice(name="Cello_II_Music_Voice", tag=tag)
+    cello_2_music_staff = abjad.Staff(
+        [cello_2_music_voice],
+        simultaneous=True,
+        name="Cello_II_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        cello_2_music_staff,
+        "default_instrument",
+        instruments["Cello"],
+    )
+    abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
+    baca.score.attach_lilypond_tag("CelloII", cello_2_music_staff)
+    # CONTRABASS 1
+    contrabass_1_music_voice = abjad.Voice(name="Contrabass_I_Music_Voice", tag=tag)
+    contrabass_1_music_staff = abjad.Staff(
+        [contrabass_1_music_voice],
+        simultaneous=True,
+        name="Contrabass_I_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        contrabass_1_music_staff,
+        "default_instrument",
+        instruments["Contrabass"],
+    )
+    abjad.annotate(contrabass_1_music_staff, "default_clef", abjad.Clef("bass"))
+    baca.score.attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
+    # CONTRABASS 2
+    contrabass_2_music_voice = abjad.Voice(name="Contrabass_II_Music_Voice", tag=tag)
+    contrabass_2_music_staff = abjad.Staff(
+        [contrabass_2_music_voice],
+        simultaneous=True,
+        name="Contrabass_II_Music_Staff",
+        tag=tag,
+    )
+    abjad.annotate(
+        contrabass_2_music_staff,
+        "default_instrument",
+        instruments["Contrabass"],
+    )
+    abjad.annotate(contrabass_2_music_staff, "default_clef", abjad.Clef("bass"))
+    baca.score.attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
+    # WIND SECTION STAFF GROUP
+    wind_section_staff_group = abjad.StaffGroup(
+        [bass_flute_music_staff],
+        lilypond_type="WindSectionStaffGroup",
+        name="Wind_Section_Staff_Group",
+        tag=tag,
+    )
+    # PERCUSSION SECTION STAFF GROUP
+    percussion_section_staff_group = abjad.StaffGroup(
+        [
+            percussion_1_music_staff,
+            percussion_2_music_staff,
+            harp_music_staff,
+        ],
+        lilypond_type="PercussionSectionStaffGroup",
+        name="Percussion_Section_Staff_Group",
+        tag=tag,
+    )
+    # STRING SECTION STAFF GROUP
+    string_section_staff_group = abjad.StaffGroup(
+        [
+            viola_music_staff,
+            cello_1_music_staff,
+            cello_2_music_staff,
+            contrabass_1_music_staff,
+            contrabass_2_music_staff,
+        ],
+        lilypond_type="StringSectionStaffGroup",
+        name="String_Section_Staff_Group",
+        tag=tag,
+    )
+    # MUSIC CONTEXT
+    music_context = abjad.Context(
+        [
+            wind_section_staff_group,
+            percussion_section_staff_group,
+            string_section_staff_group,
+        ],
+        lilypond_type="MusicContext",
+        simultaneous=True,
+        name="Music_Context",
+        tag=tag,
+    )
+    # SCORE
+    score = abjad.Score([global_context, music_context], name="Score", tag=tag)
+    baca.score.assert_lilypond_identifiers(score)
+    baca.score.assert_unique_context_names(score)
+    baca.score.assert_matching_custom_context_names(score)
+    return score
+
+
+def make_phjc_rhythm(
     divisions,
     counts,
     *,
@@ -499,7 +714,7 @@ def phjc(
     )
 
 
-def rimbalzandi(*, extra_counts=None, rest_except=None):
+def make_rimbalzandi_rhythm(*, extra_counts=None, rest_except=None):
     commands = []
     if rest_except is not None:
 
@@ -524,7 +739,7 @@ def rimbalzandi(*, extra_counts=None, rest_except=None):
     )
 
 
-def sixteenths(
+def make_sixteenths(
     counts,
     *,
     beam=False,
@@ -815,7 +1030,7 @@ def sixteenths(
     )
 
 
-def tessera_1(part, *, advance=0, gap=False):
+def make_tessera_1(part, *, advance=0, gap=False):
     counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
     permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
     assert sum(counts) == 96
@@ -835,7 +1050,7 @@ def tessera_1(part, *, advance=0, gap=False):
     )
 
 
-def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
+def make_tessera_2(part, *, advance=0, gap=False, rest_plts=None):
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
 
@@ -870,7 +1085,7 @@ def tessera_2(part, *, advance=0, gap=False, rest_plts=None):
     )
 
 
-def tessera_3(part, *, advance=0, gap=False):
+def make_tessera_3(part, *, advance=0, gap=False):
     counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
     permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
     assert sum(counts) == 84
@@ -890,7 +1105,7 @@ def tessera_3(part, *, advance=0, gap=False):
     )
 
 
-def tessera_4(part, *, advance=0, gap=False):
+def make_tessera_4(part, *, advance=0, gap=False):
     counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
     permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
     assert sum(counts) == 144
@@ -910,7 +1125,7 @@ def tessera_4(part, *, advance=0, gap=False):
     )
 
 
-def train(counts, *, rest_leaves=None):
+def make_train_rhythm(counts, *, rest_leaves=None):
     commands = []
     if rest_leaves is not None:
 
@@ -932,7 +1147,7 @@ def train(counts, *, rest_leaves=None):
     )
 
 
-def tuplet(
+def make_tuplet(
     ratios,
     *,
     denominator=None,
@@ -962,7 +1177,7 @@ def tuplet(
     )
 
 
-def warble(
+def make_warble_rhythm(
     *,
     sixteenths=None,
     extra_counts=None,
@@ -1014,33 +1229,21 @@ def warble(
     )
 
 
-def bass_drum_staff_position() -> baca.Suite:
-    """
-    Sets bass drum staff position (-1), stem down, tuplet bracket up.
-    """
-    return baca.chunk(
-        baca.staff_position(-1),
-        baca.stem_down(),
-        baca.tuplet_bracket_up(),
+def margin_markup(
+    key,
+    *,
+    alert=None,
+    context="Staff",
+    selector=lambda _: abjad.select.leaf(_, 0),
+):
+    margin_markup = margin_markups[key]
+    command = baca.margin_markup(
+        margin_markup,
+        alert=alert,
+        context=context,
+        selector=selector,
     )
-
-
-def bridge_staff_position() -> baca.Suite:
-    """
-    Sets bridge position (0), stem down and tuplet bracket up.
-    """
-    return baca.chunk(
-        baca.staff_position(0),
-        baca.stem_down(),
-        baca.tuplet_bracket_up(),
-    )
-
-
-def brake_drum_staff_position() -> baca.Suite:
-    """
-    Sets brake drum staff position and stem direction.
-    """
-    return baca.chunk(baca.staff_position(0), baca.stem_up())
+    return baca.not_parts(command)
 
 
 def purpleheart_staff_positions(argument) -> baca.Suite:
@@ -1170,206 +1373,3 @@ voice_abbreviations = {
         "Contrabass_II_Music_Voice",
     ],
 }
-
-
-def make_empty_score():
-    tag = baca.tags.function_name(inspect.currentframe())
-    # GLOBAL CONTEXT
-    global_context = baca.score.make_global_context()
-    # BASS FLUTE
-    bass_flute_music_voice = abjad.Voice(name="Bass_Flute_Music_Voice", tag=tag)
-    bass_flute_music_staff = abjad.Staff(
-        [bass_flute_music_voice],
-        simultaneous=True,
-        name="Bass_Flute_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        bass_flute_music_staff,
-        "default_instrument",
-        instruments["BassFlute"],
-    )
-    abjad.annotate(bass_flute_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
-    # PERCUSSION 1
-    percussion_1_music_voice = abjad.Voice(name="Percussion_I_Music_Voice", tag=tag)
-    percussion_1_music_staff = abjad.Staff(
-        [percussion_1_music_voice],
-        simultaneous=True,
-        name="Percussion_I_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        percussion_1_music_staff,
-        "default_instrument",
-        instruments["Percussion"],
-    )
-    abjad.annotate(percussion_1_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("PercussionI", percussion_1_music_staff)
-    # PERCUSSION 2
-    percussion_2_music_voice = abjad.Voice(name="Percussion_II_Music_Voice", tag=tag)
-    percussion_2_music_staff = abjad.Staff(
-        [percussion_2_music_voice],
-        simultaneous=True,
-        name="Percussion_II_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        percussion_2_music_staff,
-        "default_instrument",
-        instruments["Percussion"],
-    )
-    abjad.annotate(percussion_2_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("PercussionII", percussion_2_music_staff)
-    # HARP
-    harp_music_voice = abjad.Voice(name="Harp_Music_Voice", tag=tag)
-    harp_music_staff = abjad.Staff(
-        [harp_music_voice],
-        simultaneous=True,
-        name="Harp_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(harp_music_staff, "default_instrument", instruments["Harp"])
-    abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("Harp", harp_music_staff)
-    # VIOLA
-    viola_music_voice = abjad.Voice(name="Viola_Music_Voice", tag=tag)
-    viola_music_staff = abjad.Staff(
-        [viola_music_voice],
-        simultaneous=True,
-        name="Viola_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        viola_music_staff,
-        "default_instrument",
-        instruments["Viola"],
-    )
-    abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
-    baca.score.attach_lilypond_tag("Viola", viola_music_staff)
-    # CELLO 1
-    cello_1_music_voice = abjad.Voice(name="Cello_I_Music_Voice", tag=tag)
-    cello_1_music_staff = abjad.Staff(
-        [cello_1_music_voice],
-        simultaneous=True,
-        name="Cello_I_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        cello_1_music_staff,
-        "default_instrument",
-        instruments["Cello"],
-    )
-    abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("CelloI", cello_1_music_staff)
-    # CELLO 2
-    cello_2_music_voice = abjad.Voice(name="Cello_II_Music_Voice", tag=tag)
-    cello_2_music_staff = abjad.Staff(
-        [cello_2_music_voice],
-        simultaneous=True,
-        name="Cello_II_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        cello_2_music_staff,
-        "default_instrument",
-        instruments["Cello"],
-    )
-    abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("CelloII", cello_2_music_staff)
-    # CONTRABASS 1
-    contrabass_1_music_voice = abjad.Voice(name="Contrabass_I_Music_Voice", tag=tag)
-    contrabass_1_music_staff = abjad.Staff(
-        [contrabass_1_music_voice],
-        simultaneous=True,
-        name="Contrabass_I_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        contrabass_1_music_staff,
-        "default_instrument",
-        instruments["Contrabass"],
-    )
-    abjad.annotate(contrabass_1_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
-    # CONTRABASS 2
-    contrabass_2_music_voice = abjad.Voice(name="Contrabass_II_Music_Voice", tag=tag)
-    contrabass_2_music_staff = abjad.Staff(
-        [contrabass_2_music_voice],
-        simultaneous=True,
-        name="Contrabass_II_Music_Staff",
-        tag=tag,
-    )
-    abjad.annotate(
-        contrabass_2_music_staff,
-        "default_instrument",
-        instruments["Contrabass"],
-    )
-    abjad.annotate(contrabass_2_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
-    # WIND SECTION STAFF GROUP
-    wind_section_staff_group = abjad.StaffGroup(
-        [bass_flute_music_staff],
-        lilypond_type="WindSectionStaffGroup",
-        name="Wind_Section_Staff_Group",
-        tag=tag,
-    )
-    # PERCUSSION SECTION STAFF GROUP
-    percussion_section_staff_group = abjad.StaffGroup(
-        [
-            percussion_1_music_staff,
-            percussion_2_music_staff,
-            harp_music_staff,
-        ],
-        lilypond_type="PercussionSectionStaffGroup",
-        name="Percussion_Section_Staff_Group",
-        tag=tag,
-    )
-    # STRING SECTION STAFF GROUP
-    string_section_staff_group = abjad.StaffGroup(
-        [
-            viola_music_staff,
-            cello_1_music_staff,
-            cello_2_music_staff,
-            contrabass_1_music_staff,
-            contrabass_2_music_staff,
-        ],
-        lilypond_type="StringSectionStaffGroup",
-        name="String_Section_Staff_Group",
-        tag=tag,
-    )
-    # MUSIC CONTEXT
-    music_context = abjad.Context(
-        [
-            wind_section_staff_group,
-            percussion_section_staff_group,
-            string_section_staff_group,
-        ],
-        lilypond_type="MusicContext",
-        simultaneous=True,
-        name="Music_Context",
-        tag=tag,
-    )
-    # SCORE
-    score = abjad.Score([global_context, music_context], name="Score", tag=tag)
-    baca.score.assert_lilypond_identifiers(score)
-    baca.score.assert_unique_context_names(score)
-    baca.score.assert_matching_custom_context_names(score)
-    return score
-
-
-def margin_markup(
-    key,
-    *,
-    alert=None,
-    context="Staff",
-    selector=lambda _: abjad.select.leaf(_, 0),
-):
-    margin_markup = margin_markups[key]
-    command = baca.margin_markup(
-        margin_markup,
-        alert=alert,
-        context=context,
-        selector=selector,
-    )
-    return baca.not_parts(command)

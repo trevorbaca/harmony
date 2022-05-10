@@ -97,13 +97,13 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 4, "-"],
         written_quarters=True,
         invisible_pairs=True,
     ),
     baca.reapply_persistent_indicators(),
-    # TODO: promote into library.sixteenths():
+    # TODO: promote into library.make_sixteenths():
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, -1),
     ),
@@ -125,7 +125,7 @@ commands(
 
 commands(
     ("bfl", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 2, 2],
         written_quarters=True,
         invisible_pairs=True,
@@ -143,7 +143,7 @@ commands(
 
 commands(
     ("bfl", 4),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         counts=[9],
         incise=True,
     ),
@@ -172,7 +172,7 @@ commands(
 
 commands(
     ("bfl", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 8],
     ),
     baca.pitch("Dtqf5"),
@@ -208,7 +208,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[6, 14],
         counts=[5, 4],
         rest_after=True,
@@ -240,7 +240,7 @@ commands(
 
 commands(
     ("perc1", 3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[20, 8],
         counts=[0, 3],
         rest_after=True,
@@ -272,7 +272,7 @@ commands(
 
 commands(
     ("perc1", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 1, "-"],
         written_quarters=True,
         invisible_pairs=True,
@@ -297,7 +297,7 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[6, 14],
         counts=[4, 5],
         rest_after=True,
@@ -329,7 +329,7 @@ commands(
 
 commands(
     ("perc2", 3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[20, 8],
         counts=[0, 4],
         rest_after=True,
@@ -344,7 +344,7 @@ commands(
 commands(
     ("perc2", 4),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         [20, "-", 1, -1],
     ),
     baca.new(
@@ -378,7 +378,7 @@ commands(
 
 commands(
     ("perc2", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2],
     ),
     library.brake_drum_staff_position(),
@@ -413,7 +413,7 @@ commands(
 
 commands(
     ("hp", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 4, 8, -4],
     ),
     baca.reapply_persistent_indicators(),
@@ -436,7 +436,7 @@ commands(
 
 commands(
     ("hp", (3, 4)),
-    library.sixteenths(
+    library.make_sixteenths(
         [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
     ),
     baca.clef("treble"),
@@ -469,7 +469,7 @@ commands(
 
 commands(
     ("hp", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, -2],
     ),
     baca.pitch("E4"),
@@ -495,7 +495,7 @@ commands(
 
 commands(
     ("va", 1),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[4, 12, 4],
         counts=[0, 7, 0],
         rest_from=1,
@@ -568,7 +568,7 @@ commands(
 
 commands(
     ("vc1", 1),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[4, 12, 4],
         counts=[0, 6, 0],
         rest_from=1,
@@ -651,7 +651,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [7, -1, 12],
     ),
     baca.reapply_persistent_indicators(),
@@ -722,7 +722,7 @@ commands(
 
 commands(
     ("cb1", 1),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[4, 12, 4],
         counts=[0, 6, 0],
         rest_from=1,
@@ -805,7 +805,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [7, -1, 12],
     ),
     baca.reapply_persistent_indicators(),
@@ -876,7 +876,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", 2],
         unbeam=True,
     ),
@@ -890,7 +890,7 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [4],
     ),
     baca.stem_tremolo(

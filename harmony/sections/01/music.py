@@ -62,7 +62,7 @@ commands(
 
 commands(
     ("bfl", (1, 2)),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
@@ -106,7 +106,7 @@ commands(
 
 commands(
     ("bfl", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[1:],
     ),
     baca.pitch("F3"),
@@ -122,7 +122,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 3, 1],
         written_quarters=True,
         invisible_pairs=True,
@@ -154,7 +154,7 @@ commands(
 
 commands(
     ("perc1", 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [3, 1, "-", 3, 1],
         written_quarters=True,
         invisible_pairs=True,
@@ -183,7 +183,7 @@ commands(
 commands(
     ("perc1", 3),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
@@ -208,7 +208,7 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
     baca.attach_first_segment_default_indicators(),
@@ -230,7 +230,7 @@ commands(
 commands(
     ("perc2", 3),
     baca.staff_lines(3),
-    library.phjc(
+    library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
@@ -256,7 +256,7 @@ commands(
 
 commands(
     ("hp", (1, 2)),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
     baca.attach_first_segment_default_indicators(),
@@ -279,7 +279,7 @@ commands(
     ("hp", 3),
     baca.clef("bass"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
     ),
     baca.pitch("G1"),
@@ -297,7 +297,7 @@ commands(
 
 commands(
     ("va", (1, 2)),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -324,7 +324,7 @@ commands(
     ("va", 3),
     baca.clef("percussion"),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         library.cerulean[1:],
         extra_counts=[2],
         denominator=None,
@@ -379,7 +379,7 @@ commands(
         1,
         lambda _: abjad.select.leaf(_, 1),
     ),
-    library.sixteenths(
+    library.make_sixteenths(
         [5, -5, 1, -4],
         extra_counts=[1],
     ),
@@ -415,7 +415,7 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -435,7 +435,7 @@ commands(
 
 commands(
     ("vc2", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],
@@ -468,7 +468,7 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
-    library.sixteenths(
+    library.make_sixteenths(
         [18, 6, 10, 4, 6],
     ),
     baca.attach_first_segment_default_indicators(),
@@ -526,7 +526,7 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
@@ -550,7 +550,7 @@ commands(
 
 commands(
     ("cb2", 3),
-    library.sixteenths(
+    library.make_sixteenths(
         [10, "-"],
         untie=True,
         after_graces=[1],

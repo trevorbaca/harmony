@@ -86,7 +86,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, 4, "-"],
     ),
     baca.reapply_persistent_indicators(),
@@ -108,7 +108,7 @@ commands(
 
 commands(
     ("bfl", 2),
-    library.warble(
+    library.make_warble_rhythm(
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[1],
@@ -146,7 +146,7 @@ commands(
 
 commands(
     ("bfl", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         [-4, 8],
     ),
     baca.pitch("F#5"),
@@ -155,7 +155,7 @@ commands(
 
 commands(
     ("bfl", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [4, "-"],
     ),
     baca.pitch(
@@ -204,7 +204,7 @@ commands(
     ("perc1", 2),
     baca.clef("percussion"),
     baca.staff_lines(3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[5, 11],
         counts=[0, 5],
         rest_after=True,
@@ -225,7 +225,7 @@ commands(
 commands(
     ("perc1", 4),
     baca.staff_lines(1),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     library.slate_staff_position(),
@@ -244,7 +244,7 @@ commands(
     ("perc1", 5),
     baca.clef("treble"),
     baca.staff_lines(5),
-    library.sixteenths(
+    library.make_sixteenths(
         [-16, 4],
     ),
     baca.pitch("E4"),
@@ -276,7 +276,7 @@ commands(
 commands(
     ("perc2", 2),
     baca.staff_lines(3),
-    library.appoggiato(
+    library.make_appoggiato_rhythm(
         divisions=[5, 11],
         counts=[0, 4],
         rest_after=True,
@@ -301,7 +301,7 @@ commands(
 
 commands(
     ("perc2", 5),
-    library.sixteenths(
+    library.make_sixteenths(
         [-16, 4],
     ),
     library.tam_tam_staff_position(),
@@ -351,7 +351,7 @@ commands(
 commands(
     ("hp", 4),
     baca.clef("treble"),
-    library.sixteenths(
+    library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
@@ -369,7 +369,7 @@ commands(
 commands(
     ("hp", 5),
     baca.clef("bass"),
-    library.sixteenths(
+    library.make_sixteenths(
         [-16, 4],
     ),
     baca.pitch("Db1"),
@@ -405,7 +405,7 @@ commands(
 
 commands(
     ("va", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+"],
     ),
     baca.pitch("F4"),
@@ -435,7 +435,7 @@ commands(
 
 commands(
     ("vc1", 1),
-    library.tessera_2(
+    library.make_tessera_2(
         3,
         rest_plts=[0],
     ),
@@ -466,7 +466,7 @@ commands(
 
 commands(
     ("vc1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.clef("bass"),
@@ -486,7 +486,7 @@ commands(
 
 commands(
     ("vc1", 5),
-    library.tessera_2(
+    library.make_tessera_2(
         3,
         advance=24,
     ),
@@ -504,7 +504,7 @@ commands(
 
 commands(
     ("vc2", 1),
-    library.tessera_2(
+    library.make_tessera_2(
         2,
         rest_plts=[0],
     ),
@@ -535,7 +535,7 @@ commands(
 
 commands(
     ("vc2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.clef("bass"),
@@ -555,7 +555,7 @@ commands(
 
 commands(
     ("vc2", 5),
-    library.tessera_2(
+    library.make_tessera_2(
         2,
         advance=24,
     ),
@@ -573,7 +573,7 @@ commands(
 
 commands(
     ("cb1", 1),
-    library.tessera_2(
+    library.make_tessera_2(
         1,
         rest_plts=[0],
     ),
@@ -607,7 +607,7 @@ commands(
 
 commands(
     ("cb1", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.clef("bass"),
@@ -627,7 +627,7 @@ commands(
 
 commands(
     ("cb1", 5),
-    library.tessera_2(
+    library.make_tessera_2(
         1,
         advance=24,
     ),
@@ -645,7 +645,7 @@ commands(
 
 commands(
     ("cb2", 1),
-    library.tessera_2(0),
+    library.make_tessera_2(0),
     baca.reapply_persistent_indicators(),
     baca.pitch("D3"),
     baca.scp_spanner(
@@ -676,7 +676,7 @@ commands(
 
 commands(
     ("cb2", 4),
-    library.sixteenths(
+    library.make_sixteenths(
         ["+", -1],
     ),
     baca.clef("bass"),
@@ -696,7 +696,7 @@ commands(
 
 commands(
     ("cb2", 5),
-    library.tessera_2(
+    library.make_tessera_2(
         0,
         advance=24,
     ),
@@ -721,11 +721,11 @@ commands(
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 2),
-    library.sixteenths(
+    library.make_sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
     ),
-    # TODO: promote to library.sixteenths()
+    # TODO: promote to library.make_sixteenths()
     baca.invisible_music(
         lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
     ),
