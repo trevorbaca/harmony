@@ -103,6 +103,11 @@ commands(
 )
 
 commands(
+    ("bfl", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", 4),
     library.make_sixteenths(
         [4, 4, 16],
@@ -149,6 +154,11 @@ commands(
     library.make_sixteenths(
         [4, -12],
     ),
+)
+
+commands(
+    ("perc1", (3, 4)),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -199,6 +209,11 @@ commands(
 # PERC2
 
 commands(
+    ("perc2", 1),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", 2),
     library.make_sixteenths(
         [-8, 1, -3],
@@ -206,6 +221,11 @@ commands(
         extra_counts=[-4],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc2", (3, 6)),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -251,6 +271,11 @@ commands(
 )
 
 commands(
+    ("hp", (3, 4)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", (5, 6)),
     library.make_sixteenths(
         [-12, -2, 4, -6, -12, -2, 4],
@@ -271,6 +296,11 @@ commands(
     library.make_sixteenths(
         [1, -3, 3, -3, 3, -3],
     ),
+)
+
+commands(
+    ("hp", 9),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -316,6 +346,11 @@ commands(
     library.make_tessera_4(4),
 )
 
+commands(
+    ("va", 10),
+    baca.make_mmrests(),
+)
+
 # VC1
 
 commands(
@@ -323,6 +358,11 @@ commands(
     library.make_sixteenths(
         [4, -12],
     ),
+)
+
+commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -371,6 +411,11 @@ commands(
 )
 
 commands(
+    ("vc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", 4),
     library.make_sixteenths(
         [4, 4, 16],
@@ -413,6 +458,11 @@ commands(
     library.make_sixteenths(
         [4, -12],
     ),
+)
+
+commands(
+    ("cb1", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -461,6 +511,11 @@ commands(
 )
 
 commands(
+    ("cb2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 4),
     library.make_sixteenths(
         [4, 4, 16],
@@ -498,16 +553,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", [(1, 2), (5, 7), 10]),
-    baca.new(
-        baca.reapply_persistent_indicators(),
-        match=0,
-    ),
     baca.pitch("C3"),
     baca.dynamic("mp"),
     baca.covered_spanner(
@@ -596,7 +657,6 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic('"ff"'),
     baca.markup(
@@ -685,7 +745,6 @@ commands(
 
 commands(
     ("perc2", 2),
-    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(),
     baca.dynamic(
@@ -761,7 +820,6 @@ commands(
 
 commands(
     ("hp", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
@@ -842,11 +900,6 @@ commands(
 # va
 
 commands(
-    ("va", (1, 3)),
-    baca.reapply_persistent_indicators(),
-)
-
-commands(
     ("va", (4, 7)),
     baca.pitch("Bb4"),
     baca.trill_spanner(
@@ -873,16 +926,6 @@ commands(
     baca.note_head_style_harmonic_black(),
     baca.pitch("<G4 Ab4 Bb4>"),
     baca.dynamic("pp"),
-)
-
-# vc1, vc2, cb1, cb2
-
-commands(
-    (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
-    baca.new(
-        baca.reapply_persistent_indicators(),
-        match=[0, 3, 6, 9],
-    ),
 )
 
 # vc1
@@ -1148,13 +1191,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[3],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

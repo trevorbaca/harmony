@@ -75,6 +75,11 @@ commands(
 )
 
 commands(
+    ("bfl", 7),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", 8),
     library.make_sixteenths(
         ["+"],
@@ -95,6 +100,11 @@ commands(
     library.make_sixteenths(
         [41, -7, "+"],
     ),
+)
+
+commands(
+    ("perc1", 7),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -121,6 +131,11 @@ commands(
 )
 
 commands(
+    ("perc2", (7, 8)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", (9, 10)),
     library.make_sixteenths(
         library.duration_color,
@@ -134,6 +149,11 @@ commands(
     library.make_sixteenths(
         library.duration_color,
     ),
+)
+
+commands(
+    ("hp", 7),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -162,6 +182,11 @@ commands(
 )
 
 commands(
+    ("va", 7),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", 8),
     library.make_sixteenths(
         ["+"],
@@ -180,6 +205,11 @@ commands(
     library.make_sixteenths(
         library.damp_counts,
     ),
+)
+
+commands(
+    ("vc1", 7),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -206,6 +236,11 @@ commands(
 )
 
 commands(
+    ("vc2", 7),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", 8),
     library.make_sixteenths(
         ["+", -1],
@@ -226,6 +261,11 @@ commands(
     library.make_sixteenths(
         library.glissando_counts,
     ),
+)
+
+commands(
+    ("cb1", 7),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -252,6 +292,11 @@ commands(
 )
 
 commands(
+    ("cb2", 7),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 8),
     library.make_sixteenths(
         ["+", -1],
@@ -267,13 +312,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("D5"),
     baca.dynamic(
         "p-ancora",
@@ -340,7 +394,6 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         selector=lambda _: abjad.select.run(_, 0),
@@ -393,7 +446,6 @@ commands(
 
 commands(
     ("perc2", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.tam_tam_staff_position(),
     baca.damp(
@@ -427,7 +479,6 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("F1"),
     baca.damp(
@@ -468,7 +519,6 @@ commands(
 
 commands(
     ("va", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitches("D4 Eb4"),
     baca.glissando(
         allow_repeats=True,
@@ -519,7 +569,6 @@ commands(
 
 commands(
     ("vc1", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -558,7 +607,6 @@ commands(
 
 commands(
     ("vc2", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -597,7 +645,6 @@ commands(
 
 commands(
     ("cb1", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
@@ -656,7 +703,6 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    baca.reapply_persistent_indicators(),
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
@@ -728,13 +774,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[7],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

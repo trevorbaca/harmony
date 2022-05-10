@@ -122,6 +122,11 @@ commands(
     ),
 )
 
+commands(
+    ("bfl", (2, 8)),
+    baca.make_mmrests(),
+)
+
 
 def preprocessor(divisions):
     result = baca.sequence.fuse(divisions)
@@ -140,10 +145,8 @@ commands(
 )
 
 commands(
-    ("bfl", 12),
-    library.make_warble_rhythm(
-        extra_counts=[2],
-    ),
+    ("bfl", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -151,6 +154,13 @@ commands(
     library.make_sixteenths(
         [-8, 8, -16, 4],
         extra_counts=[1],
+    ),
+)
+
+commands(
+    ("bfl", 12),
+    library.make_warble_rhythm(
+        extra_counts=[2],
     ),
 )
 
@@ -181,6 +191,11 @@ commands(
 )
 
 commands(
+    ("perc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", (4, 8)),
     library.make_appoggiato_rhythm(
         divisions=[1, 19, 1, 15],
@@ -199,12 +214,8 @@ commands(
 )
 
 commands(
-    ("perc1", 12),
-    library.make_appoggiato_rhythm(
-        divisions=[20],
-        counts=[25],
-        rest_after=True,
-    ),
+    ("perc1", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -213,6 +224,15 @@ commands(
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
         denominator=None,
+    ),
+)
+
+commands(
+    ("perc1", 12),
+    library.make_appoggiato_rhythm(
+        divisions=[20],
+        counts=[25],
+        rest_after=True,
     ),
 )
 
@@ -244,6 +264,11 @@ commands(
 )
 
 commands(
+    ("perc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", (4, 8)),
     library.make_appoggiato_rhythm(
         divisions=[1, 19, 1, 15],
@@ -259,6 +284,11 @@ commands(
         counts=[18],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc2", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -300,23 +330,12 @@ commands(
 )
 
 commands(
+    ("hp", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", 4),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
-    ),
-)
-
-commands(
-    ("hp", 6),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
-    ),
-)
-
-commands(
-    ("hp", 8),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
@@ -329,8 +348,24 @@ commands(
 )
 
 commands(
+    ("hp", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
     ("hp", 7),
     baca.make_notes(),
+)
+
+commands(
+    ("hp", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
 )
 
 commands(
@@ -339,17 +374,22 @@ commands(
 )
 
 commands(
-    ("hp", 12),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
-    ),
+    ("hp", 10),
+    baca.make_mmrests(),
 )
 
 commands(
     ("hp", 11),
     library.make_sixteenths(
         [2, -20, 2, -24],
+    ),
+)
+
+commands(
+    ("hp", 12),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
     ),
 )
 
@@ -387,6 +427,11 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("va", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -429,11 +474,8 @@ commands(
 )
 
 commands(
-    ("va", 12),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
-    ),
+    ("va", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -442,6 +484,14 @@ commands(
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
         denominator=None,
+    ),
+)
+
+commands(
+    ("va", 12),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
     ),
 )
 
@@ -470,6 +520,11 @@ commands(
         [-4, 6, 2, -4],
         untie=True,
     ),
+)
+
+commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -509,6 +564,11 @@ commands(
 commands(
     ("vc1", 9),
     baca.make_notes(),
+)
+
+commands(
+    ("vc1", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -554,6 +614,11 @@ commands(
 )
 
 commands(
+    ("vc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", 4),
     library.make_tuplet(
         [(1,)],
@@ -580,16 +645,21 @@ commands(
 )
 
 commands(
-    ("vc2", 9),
-    baca.make_notes(),
-)
-
-commands(
     ("vc2", 8),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
     ),
+)
+
+commands(
+    ("vc2", 9),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -635,6 +705,11 @@ commands(
 )
 
 commands(
+    ("cb1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", 4),
     library.make_tuplet(
         [(1,)],
@@ -648,16 +723,16 @@ commands(
 )
 
 commands(
-    ("cb1", 7),
-    baca.make_notes(),
-)
-
-commands(
     ("cb1", 6),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
     ),
+)
+
+commands(
+    ("cb1", 7),
+    baca.make_notes(),
 )
 
 commands(
@@ -671,6 +746,11 @@ commands(
 commands(
     ("cb1", 9),
     baca.make_notes(),
+)
+
+commands(
+    ("cb1", 10),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -720,6 +800,11 @@ commands(
 )
 
 commands(
+    ("cb2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 4),
     library.make_tuplet(
         [(1,)],
@@ -759,6 +844,11 @@ commands(
 )
 
 commands(
+    ("cb2", 10),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", 11),
     library.make_sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
@@ -791,7 +881,17 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
@@ -804,7 +904,6 @@ commands(
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -5),
     ),
@@ -899,7 +998,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
@@ -993,7 +1091,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.new(
         library.purpleheart_staff_positions([0]),
         selector=lambda _: baca.select.pleaves(_)[:1],
@@ -1129,7 +1226,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
 )
@@ -1198,13 +1294,6 @@ commands(
         r"\baca-sons-xylophoniques-markup",
         abjad.Tweak(r"- \tweak staff-padding 4"),
     ),
-)
-
-# va, vc1, vc2, cb1, cb2
-
-commands(
-    (["va", "vc1", "vc2", "cb1"], 1),
-    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -1355,7 +1444,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -1533,13 +1621,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[3, 10],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

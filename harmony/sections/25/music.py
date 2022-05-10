@@ -124,12 +124,22 @@ commands(
 )
 
 commands(
+    ("bfl", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", (5, 10)),
     library.make_warble_rhythm(
         sixteenths=[12, 12, 1, 11, 12],
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
+)
+
+commands(
+    ("bfl", 11),
+    baca.make_mmrests(),
 )
 
 # PERC1
@@ -157,6 +167,11 @@ commands(
 )
 
 commands(
+    ("perc1", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", (5, 9)),
     library.make_sixteenths(
         [1, -23, -1, 1, -22],
@@ -178,6 +193,11 @@ commands(
         extra_counts=[0, 8],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc1", 11),
+    baca.make_mmrests(),
 )
 
 # PERC2
@@ -208,6 +228,11 @@ commands(
 )
 
 commands(
+    ("perc2", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", (5, 9)),
     library.make_sixteenths(
         [2, -22, -1, 2, -21],
@@ -229,6 +254,11 @@ commands(
         extra_counts=[0, 8],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc2", 11),
+    baca.make_mmrests(),
 )
 
 # HP
@@ -258,10 +288,20 @@ commands(
 )
 
 commands(
+    ("hp", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", (5, 10)),
     library.make_sixteenths(
         [-24, -1, 3, -20],
     ),
+)
+
+commands(
+    ("hp", 11),
+    baca.make_mmrests(),
 )
 
 # VA
@@ -279,8 +319,18 @@ commands(
 )
 
 commands(
+    ("va", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", (5, 10)),
     library.make_tessera_4(4),
+)
+
+commands(
+    ("va", 11),
+    baca.make_mmrests(),
 )
 
 # VC1
@@ -305,8 +355,18 @@ commands(
 )
 
 commands(
+    ("vc1", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", (5, 10)),
     library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", 11),
+    baca.make_mmrests(),
 )
 
 # VC2
@@ -331,8 +391,18 @@ commands(
 )
 
 commands(
+    ("vc2", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", (5, 10)),
     library.make_tessera_4(2),
+)
+
+commands(
+    ("vc2", 11),
+    baca.make_mmrests(),
 )
 
 # CB1
@@ -357,8 +427,18 @@ commands(
 )
 
 commands(
+    ("cb1", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", (5, 10)),
     library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", 11),
+    baca.make_mmrests(),
 )
 
 # CB2
@@ -383,20 +463,35 @@ commands(
 )
 
 commands(
+    ("cb2", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", (5, 10)),
     library.make_tessera_4(0),
 )
 
+commands(
+    ("cb2", 11),
+    baca.make_mmrests(),
+)
+
 # phantom
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
 
 # after
 
-# bfl
-
 commands(
-    ("bfl", 1),
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
     baca.reapply_persistent_indicators(),
 )
+
+# bfl
 
 commands(
     ("bfl", 2),
@@ -484,11 +579,6 @@ commands(
 # perc1
 
 commands(
-    ("perc1", 1),
-    baca.reapply_persistent_indicators(),
-)
-
-commands(
     ("perc1", 2),
     library.slate_staff_position(),
     baca.dynamic(
@@ -542,7 +632,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -620,7 +709,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.pitch("Ab4"),
@@ -682,7 +770,6 @@ commands(
 
 commands(
     ("va", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.flat_glissando(),
     baca.dynamic("mp"),
@@ -739,7 +826,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -794,7 +880,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -853,7 +938,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -912,7 +996,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
 
@@ -1024,13 +1107,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[4, 11],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

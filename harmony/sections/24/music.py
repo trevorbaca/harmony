@@ -76,6 +76,11 @@ commands(
 )
 
 commands(
+    ("bfl", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", (5, 9)),
     library.make_sixteenths(
         [2, 2, -2],
@@ -113,10 +118,20 @@ commands(
 )
 
 commands(
+    ("perc2", 4),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", 5),
     library.make_sixteenths(
         [1, "-"],
     ),
+)
+
+commands(
+    ("perc2", 6),
+    baca.make_mmrests(),
 )
 
 
@@ -143,6 +158,11 @@ commands(
     library.make_sixteenths(
         [1, -9, 1, -4, 1, -9],
     ),
+)
+
+commands(
+    ("hp", 4),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -299,13 +319,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", (1, 3)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("F5"),
     baca.hairpin(
         "niente o< mf >o",
@@ -354,7 +383,6 @@ commands(
 
 commands(
     ("perc1", (1, 3)),
-    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic("mp"),
     baca.markup(
@@ -401,7 +429,6 @@ commands(
 
 commands(
     ("perc2", (1, 3)),
-    baca.reapply_persistent_indicators(),
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| mf",
@@ -477,7 +504,6 @@ commands(
 
 commands(
     ("hp", (1, 3)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("A4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -511,13 +537,6 @@ commands(
         r"\baca-whisk-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
     ),
-)
-
-# va, vc1, vc2, cb1, cb2
-
-commands(
-    (["va", "vc2", "cb2"], (1, 3)),
-    baca.reapply_persistent_indicators(),
 )
 
 # va
@@ -565,7 +584,6 @@ commands(
 
 commands(
     ("vc1", (1, 3)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.tuplet_bracket_down(),
@@ -679,7 +697,6 @@ commands(
 
 commands(
     ("cb1", (1, 3)),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.tuplet_bracket_down(),
@@ -877,12 +894,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

@@ -103,6 +103,11 @@ commands(
 )
 
 commands(
+    ("bfl", (2, 3)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("bfl", (4, 5)),
     library.make_sixteenths(
         [1, 1, -28, 1, 1],
@@ -165,6 +170,11 @@ commands(
 )
 
 commands(
+    ("perc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc1", (4, 5)),
     library.make_sixteenths(
         [1, -16, 1, "-"],
@@ -202,6 +212,11 @@ commands(
 )
 
 commands(
+    ("perc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("perc2", (4, 5)),
     baca.make_notes(),
 )
@@ -211,6 +226,11 @@ commands(
     library.make_sixteenths(
         [16, "-", 1],
     ),
+)
+
+commands(
+    ("perc2", 7),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -240,6 +260,11 @@ commands(
         written_dotted_halves=[0],
         invisible=[1],
     ),
+)
+
+commands(
+    ("hp", 3),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -309,6 +334,11 @@ commands(
 )
 
 commands(
+    ("va", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("va", 4),
     library.make_appoggiato_rhythm(
         counts=[4],
@@ -370,6 +400,11 @@ commands(
 )
 
 commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", (4, 5)),
     library.make_appoggiato_rhythm(
         divisions=[4, 4, 4, 4, 4, 4, 4, 4],
@@ -425,6 +460,11 @@ commands(
 )
 
 commands(
+    ("vc2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc2", (4, 5)),
     library.make_sixteenths(
         ["+"],
@@ -467,6 +507,11 @@ commands(
 )
 
 commands(
+    ("cb1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb1", (4, 5)),
     library.make_appoggiato_rhythm(
         counts=[4],
@@ -505,6 +550,11 @@ commands(
 )
 
 commands(
+    ("cb2", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("cb2", (4, 5)),
     library.make_sixteenths(
         ["+"],
@@ -531,13 +581,22 @@ commands(
 
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("Bb5"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -652,7 +711,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     baca.staff_position(2),
     baca.dynamic("mp"),
@@ -745,7 +803,6 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -823,7 +880,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     library.whisk_staff_position(),
     #    baca.hairpin(
     #        'o< "f" >o niente',
@@ -954,7 +1010,6 @@ commands(
 
 commands(
     ("va", 1),
-    baca.reapply_persistent_indicators(),
     baca.dynamic(
         "mp-pp",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
@@ -1078,7 +1133,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.reapply_persistent_indicators(),
     baca.pitch("E4"),
     baca.hairpin(
         "f >o niente",
@@ -1177,7 +1231,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("B2"),
     baca.dynamic("p"),
@@ -1251,7 +1304,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         "E1",
         left_broken=True,
@@ -1365,7 +1417,6 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("Bb2"),
     baca.dynamic("p"),
     baca.damp_spanner(
@@ -1462,13 +1513,16 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         fermata_measure_empty_overrides=[3],
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,

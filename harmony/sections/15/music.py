@@ -91,6 +91,11 @@ commands(
     ),
 )
 
+commands(
+    ("bfl", 10),
+    baca.make_mmrests(),
+)
+
 # PERC1
 
 commands(
@@ -121,6 +126,11 @@ commands(
     library.make_sixteenths(
         [-1, 3, -8, 4, -8, -1, "+"],
     ),
+)
+
+commands(
+    ("perc1", 10),
+    baca.make_mmrests(),
 )
 
 # PERC2
@@ -157,6 +167,11 @@ commands(
     ),
 )
 
+commands(
+    ("perc2", (8, 10)),
+    baca.make_mmrests(),
+)
+
 # HP
 
 commands(
@@ -166,6 +181,11 @@ commands(
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 2),
+    baca.make_mmrests(),
 )
 
 commands(
@@ -192,12 +212,22 @@ commands(
 )
 
 commands(
+    ("hp", (6, 8)),
+    baca.make_mmrests(),
+)
+
+commands(
     ("hp", 9),
     library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 10),
+    baca.make_mmrests(),
 )
 
 # VA
@@ -231,6 +261,11 @@ commands(
 )
 
 commands(
+    ("vc1", 3),
+    baca.make_mmrests(),
+)
+
+commands(
     ("vc1", 4),
     library.make_sixteenths(
         [4],
@@ -242,6 +277,11 @@ commands(
     library.make_sixteenths(
         [3, -1, -8, 47, -1],
     ),
+)
+
+commands(
+    ("vc1", 10),
+    baca.make_mmrests(),
 )
 
 # VC2
@@ -274,12 +314,24 @@ commands(
     ),
 )
 
+commands(
+    ("vc2", 10),
+    baca.make_mmrests(),
+)
+
 # CB1
 
 commands(
     ("cb1", (1, 2)),
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
+    ),
+)
+
+commands(
+    ("cb1", 3),
+    baca.make_skeleton(
+        r"\times 8/11 { r4 c4 r4 r4 r32 }",
     ),
 )
 
@@ -297,12 +349,24 @@ commands(
     ),
 )
 
+commands(
+    ("cb1", 10),
+    baca.make_mmrests(),
+)
+
 # CB2
 
 commands(
     ("cb2", (1, 2)),
     library.make_sixteenths(
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
+    ),
+)
+
+commands(
+    ("cb2", 3),
+    baca.make_skeleton(
+        r"\times 8/12 { r4 c4 r4 r4 r8 }",
     ),
 )
 
@@ -319,15 +383,29 @@ commands(
     ),
 )
 
+commands(
+    ("cb2", 10),
+    baca.make_mmrests(),
+)
+
 # phantom
 
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.append_phantom_measure(),
+)
+
 # after
+
+commands(
+    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    baca.reapply_persistent_indicators(),
+)
 
 # bfl
 
 commands(
     ("bfl", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("E3"),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -420,7 +498,6 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    baca.reapply_persistent_indicators(),
     library.slate_staff_position(),
     baca.dynamic('"f"'),
     baca.dls_staff_padding(6),
@@ -490,11 +567,6 @@ commands(
 # perc2
 
 commands(
-    ("perc2", (1, 3)),
-    baca.reapply_persistent_indicators(),
-)
-
-commands(
     ("perc2", 4),
     library.brake_drum_staff_position(),
     baca.dynamic("f"),
@@ -534,7 +606,6 @@ commands(
 
 commands(
     ("hp", 1),
-    baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.damp(
         lambda _: baca.select.rest(_, 0),
@@ -588,11 +659,6 @@ commands(
 # va
 
 commands(
-    ("va", (1, 3)),
-    baca.reapply_persistent_indicators(),
-)
-
-commands(
     ("va", 4),
     baca.pitch("Bb3"),
     baca.scp_spanner(
@@ -624,7 +690,6 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
@@ -671,7 +736,6 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
@@ -740,7 +804,6 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
@@ -761,9 +824,6 @@ commands(
             r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
             r'\once \override TupletNumber.text = #"11:8"',
         ]
-    ),
-    baca.make_skeleton(
-        r"\times 8/11 { r4 c4 r4 r4 r32 }",
     ),
     baca.pitch("Dtqf3"),
     baca.markup(
@@ -816,7 +876,6 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.reapply_persistent_indicators(),
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
@@ -837,9 +896,6 @@ commands(
             r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
             r'\once \override TupletNumber.text = #"12:8"',
         ]
-    ),
-    baca.make_skeleton(
-        r"\times 8/12 { r4 c4 r4 r4 r8 }",
     ),
     baca.pitch("Eb2"),
     baca.triple_staccato(
@@ -912,12 +968,15 @@ if __name__ == "__main__":
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        append_phantom_measures_by_hand=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.margin_markup_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
+        do_not_sort_commands=True,
         global_rests_in_every_staff=True,
+        intercalate_mmrests_by_hand=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,
