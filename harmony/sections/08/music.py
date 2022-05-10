@@ -79,16 +79,11 @@ commands(
     ),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", (1, 7)),
     baca.make_mmrests(),
-)
-
-commands(
-    ("bfl", (1, 7)),
-    baca.reapply_persistent_indicators(),
 )
 
 
@@ -107,6 +102,189 @@ commands(
         denominator=None,
         do_not_rewrite_meter=True,
     ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", (1, 6)),
+    library.make_sixteenths(
+        [1, -11, -1, 1, -14],
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", (1, 6)),
+    baca.make_notes(),
+)
+
+commands(
+    ("perc2", (8, 9)),
+    baca.make_notes(),
+)
+
+# HP
+
+commands(
+    ("hp", (1, 6)),
+    library.make_sixteenths(
+        [6, 6, 16],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_dotted_halves=([0, 1], 3),
+        invisible=([1], 3),
+    ),
+)
+
+commands(
+    ("hp", (8, 9)),
+    baca.make_notes(),
+)
+
+# VA
+
+commands(
+    ("va", (1, 6)),
+    library.make_sixteenths(
+        [12, 8, 8],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([1, 2], 3),
+        invisible=([2], 3),
+    ),
+)
+
+commands(
+    ("va", (8, 9)),
+    baca.make_notes(),
+)
+
+# VC1
+
+commands(
+    ("vc1", 1),
+    library.make_sixteenths(
+        [4, 4, 4],
+    ),
+)
+
+commands(
+    ("vc1", (2, 6)),
+    library.make_sixteenths(
+        [8, 8, 12],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([0, 1], 3),
+        invisible=([1], 3),
+    ),
+)
+
+commands(
+    ("vc1", (8, 9)),
+    baca.make_notes(),
+)
+
+# VC2
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (4, 4)])
+    return result
+
+
+commands(
+    ("vc2", (1, 2)),
+    library.make_sixteenths(
+        ["+", 1],
+        preprocessor=preprocessor,
+        do_not_rewrite_meter=True,
+        written_wholes=[1],
+        invisible=[-1],
+    ),
+)
+
+commands(
+    ("vc2", (3, 6)),
+    library.make_sixteenths(
+        [12, 8, 8],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([1, 2], 3),
+        invisible=([2], 3),
+    ),
+)
+
+commands(
+    ("vc2", (8, 9)),
+    baca.make_notes(),
+)
+
+# CB1
+
+commands(
+    ("cb1", (1, 3)),
+    library.make_sixteenths(
+        [4, 4, 8, 4, 4, 8, 4, 4],
+    ),
+)
+
+commands(
+    ("cb1", (4, 6)),
+    library.make_sixteenths(
+        [8, 8, 12],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([0, 1], 3),
+        invisible=([1], 3),
+    ),
+)
+
+commands(
+    ("cb1", (8, 9)),
+    baca.make_notes(),
+)
+
+# CB2
+
+commands(
+    ("cb2", (1, 4)),
+    library.make_sixteenths(
+        [12, 16, 12, 15, 1],
+        fuse=True,
+        do_not_rewrite_meter=True,
+        written_wholes=[-2],
+        invisible=[-1],
+    ),
+)
+
+commands(
+    ("cb2", (5, 6)),
+    library.make_sixteenths(
+        [12, 8, 8],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_wholes=([1, 2], 3),
+        invisible=([2], 3),
+    ),
+)
+
+commands(
+    ("cb2", (8, 9)),
+    baca.make_notes(),
+)
+
+# phantom
+
+# after
+
+# bfl
+
+commands(
+    ("bfl", (1, 7)),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -131,13 +309,6 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    library.make_sixteenths(
-        [1, -11, -1, 1, -14],
-    ),
-)
-
-commands(
-    ("perc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.brake_drum_staff_position(),
@@ -157,11 +328,6 @@ commands(
 
 commands(
     ("perc2", (1, 6)),
-    baca.make_notes(),
-)
-
-commands(
-    ("perc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
@@ -171,11 +337,6 @@ commands(
     baca.stem_tremolo(
         lambda _: baca.select.pleaf(_, -1),
     ),
-)
-
-commands(
-    ("perc2", (8, 9)),
-    baca.make_notes(),
 )
 
 commands(
@@ -192,17 +353,6 @@ commands(
 )
 
 # hp
-
-commands(
-    ("hp", (1, 6)),
-    library.make_sixteenths(
-        [6, 6, 16],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_dotted_halves=([0, 1], 3),
-        invisible=([1], 3),
-    ),
-)
 
 commands(
     ("hp", (1, 6)),
@@ -239,11 +389,6 @@ commands(
 
 commands(
     ("hp", (8, 9)),
-    baca.make_notes(),
-)
-
-commands(
-    ("hp", (8, 9)),
     baca.pitch("<C6 Db6 Eb6>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -257,17 +402,6 @@ commands(
 )
 
 # va
-
-commands(
-    ("va", (1, 6)),
-    library.make_sixteenths(
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_wholes=([1, 2], 3),
-        invisible=([2], 3),
-    ),
-)
 
 commands(
     ("va", (1, 6)),
@@ -313,13 +447,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    library.make_sixteenths(
-        [4, 4, 4],
-    ),
-)
-
-commands(
-    ("vc1", 1),
     baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
@@ -334,17 +461,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         autodetect_right_padding=False,
         left_broken=True,
-    ),
-)
-
-commands(
-    ("vc1", (2, 6)),
-    library.make_sixteenths(
-        [8, 8, 12],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_wholes=([0, 1], 3),
-        invisible=([1], 3),
     ),
 )
 
@@ -393,23 +509,6 @@ commands(
 # vc2
 
 
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (4, 4)])
-    return result
-
-
-commands(
-    ("vc2", (1, 2)),
-    library.make_sixteenths(
-        ["+", 1],
-        preprocessor=preprocessor,
-        do_not_rewrite_meter=True,
-        written_wholes=[1],
-        invisible=[-1],
-    ),
-)
-
 commands(
     ("vc2", (1, 2)),
     baca.reapply_persistent_indicators(),
@@ -429,17 +528,6 @@ commands(
         autodetect_right_padding=False,
         left_broken=True,
         selector=lambda _: baca.select.rleaves(_),
-    ),
-)
-
-commands(
-    ("vc2", (3, 6)),
-    library.make_sixteenths(
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_wholes=([1, 2], 3),
-        invisible=([2], 3),
     ),
 )
 
@@ -488,13 +576,6 @@ commands(
 
 commands(
     ("cb1", (1, 3)),
-    library.make_sixteenths(
-        [4, 4, 8, 4, 4, 8, 4, 4],
-    ),
-)
-
-commands(
-    ("cb1", (1, 3)),
     baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
@@ -506,17 +587,6 @@ commands(
     ),
     baca.espressivo(
         lambda _: baca.select.pheads(_)[1:],
-    ),
-)
-
-commands(
-    ("cb1", (4, 6)),
-    library.make_sixteenths(
-        [8, 8, 12],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_wholes=([0, 1], 3),
-        invisible=([1], 3),
     ),
 )
 
@@ -561,17 +631,6 @@ commands(
 
 commands(
     ("cb2", (1, 4)),
-    library.make_sixteenths(
-        [12, 16, 12, 15, 1],
-        fuse=True,
-        do_not_rewrite_meter=True,
-        written_wholes=[-2],
-        invisible=[-1],
-    ),
-)
-
-commands(
-    ("cb2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Bb2"),
     baca.hairpin(
@@ -585,17 +644,6 @@ commands(
         autodetect_right_padding=False,
         left_broken=True,
         selector=lambda _: baca.select.rleaves(_),
-    ),
-)
-
-commands(
-    ("cb2", (5, 6)),
-    library.make_sixteenths(
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_wholes=([1, 2], 3),
-        invisible=([2], 3),
     ),
 )
 
@@ -636,31 +684,6 @@ commands(
 )
 
 # va, vc1, vc2, cb1, cb2
-
-commands(
-    ("va", (8, 9)),
-    baca.make_notes(),
-)
-
-commands(
-    ("vc1", (8, 9)),
-    baca.make_notes(),
-)
-
-commands(
-    ("vc2", (8, 9)),
-    baca.make_notes(),
-)
-
-commands(
-    ("cb1", (8, 9)),
-    baca.make_notes(),
-)
-
-commands(
-    ("cb2", (8, 9)),
-    baca.make_notes(),
-)
 
 commands(
     (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),

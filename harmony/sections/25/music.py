@@ -100,16 +100,11 @@ commands(
     ),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", 1),
     baca.make_mmrests(),
-)
-
-commands(
-    ("bfl", 1),
-    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -119,6 +114,288 @@ commands(
         extra_counts=[2],
         rest_tuplets=[0, 1],
     ),
+)
+
+commands(
+    ("bfl", 3),
+    library.make_sixteenths(
+        [-2, 2, 2],
+    ),
+)
+
+commands(
+    ("bfl", (5, 10)),
+    library.make_warble_rhythm(
+        sixteenths=[12, 12, 1, 11, 12],
+        extra_counts=[4, 0, 0, 2, 0],
+        rest_tuplets_cyclic=([1, 2, 4], 5),
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", 1),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("perc1", 2),
+    library.make_sixteenths(
+        ["-", 3, -3, 3, -1],
+        fuse=True,
+        extra_counts=[-4],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("perc1", 3),
+    library.make_sixteenths(
+        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
+    ),
+)
+
+commands(
+    ("perc1", (5, 9)),
+    library.make_sixteenths(
+        [1, -23, -1, 1, -22],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("perc1", 10),
+    library.make_sixteenths(
+        [-1, 1, -2, -8, -12, 4, 4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 8],
+        denominator=None,
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", 1),
+    library.make_sixteenths(
+        [4, -20, 4],
+    ),
+)
+
+commands(
+    ("perc2", 2),
+    library.make_sixteenths(
+        [-10, "+"],
+        fuse=True,
+        extra_counts=[-4],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("perc2", 3),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("perc2", (5, 9)),
+    library.make_sixteenths(
+        [2, -22, -1, 2, -21],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("perc2", 10),
+    library.make_sixteenths(
+        [-1, 1, 1, -1, -8, -12, 4, 4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 8],
+        denominator=None,
+    ),
+)
+
+# HP
+
+commands(
+    ("hp", 1),
+    library.make_sixteenths(
+        [-24, 4],
+    ),
+)
+
+commands(
+    ("hp", 2),
+    library.make_sixteenths(
+        ["-", 3, -3, 3, -1],
+        fuse=True,
+        extra_counts=[-4],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("hp", 3),
+    library.make_sixteenths(
+        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
+    ),
+)
+
+commands(
+    ("hp", (5, 10)),
+    library.make_sixteenths(
+        [-24, -1, 3, -20],
+    ),
+)
+
+# VA
+
+commands(
+    ("va", (1, 2)),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 3),
+    library.make_sixteenths(
+        [6, 3, 11],
+    ),
+)
+
+commands(
+    ("va", (5, 10)),
+    library.make_tessera_4(4),
+)
+
+# VC1
+
+commands(
+    ("vc1", 1),
+    baca.make_skeleton(
+        r"r1 r8 \times 5/4 { c2 }",
+    ),
+)
+
+commands(
+    ("vc1", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc1", 3),
+    library.make_sixteenths(
+        [4, 2, 7, 7],
+    ),
+)
+
+commands(
+    ("vc1", (5, 10)),
+    library.make_tessera_4(3),
+)
+
+# VC2
+
+commands(
+    ("vc2", 1),
+    baca.make_skeleton(
+        r"r1 r8 \times 5/4 { c2 }",
+    ),
+)
+
+commands(
+    ("vc2", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 3),
+    library.make_sixteenths(
+        [9, 11],
+    ),
+)
+
+commands(
+    ("vc2", (5, 10)),
+    library.make_tessera_4(2),
+)
+
+# CB1
+
+commands(
+    ("cb1", 1),
+    baca.make_skeleton(
+        r"r1 r8 \times 5/4 { c2 }",
+    ),
+)
+
+commands(
+    ("cb1", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", 3),
+    library.make_sixteenths(
+        [4, 9, 7],
+    ),
+)
+
+commands(
+    ("cb1", (5, 10)),
+    library.make_tessera_4(1),
+)
+
+# CB2
+
+commands(
+    ("cb2", 1),
+    baca.make_skeleton(
+        r"r1 r8 \times 5/4 { c2 }",
+    ),
+)
+
+commands(
+    ("cb2", 2),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", 3),
+    library.make_sixteenths(
+        [9, 11],
+    ),
+)
+
+commands(
+    ("cb2", (5, 10)),
+    library.make_tessera_4(0),
+)
+
+# phantom
+
+# after
+
+# bfl
+
+commands(
+    ("bfl", 1),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -151,13 +428,6 @@ commands(
 
 commands(
     ("bfl", 3),
-    library.make_sixteenths(
-        [-2, 2, 2],
-    ),
-)
-
-commands(
-    ("bfl", 3),
     baca.pitch("F#5"),
     baca.hairpin(
         "niente o< p >o",
@@ -174,15 +444,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
-    ),
-)
-
-commands(
-    ("bfl", (5, 10)),
-    library.make_warble_rhythm(
-        sixteenths=[12, 12, 1, 11, 12],
-        extra_counts=[4, 0, 0, 2, 0],
-        rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
 )
 
@@ -224,22 +485,7 @@ commands(
 
 commands(
     ("perc1", 1),
-    baca.make_mmrests(),
-)
-
-commands(
-    ("perc1", 1),
     baca.reapply_persistent_indicators(),
-)
-
-commands(
-    ("perc1", 2),
-    library.make_sixteenths(
-        ["-", 3, -3, 3, -1],
-        fuse=True,
-        extra_counts=[-4],
-        denominator=None,
-    ),
 )
 
 commands(
@@ -252,13 +498,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc1", 3),
-    library.make_sixteenths(
-        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
     ),
 )
 
@@ -277,13 +516,6 @@ commands(
 
 commands(
     ("perc1", (5, 9)),
-    library.make_sixteenths(
-        [1, -23, -1, 1, -22],
-    ),
-)
-
-commands(
-    ("perc1", (5, 9)),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
@@ -295,22 +527,6 @@ commands(
     ),
 )
 
-
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("perc1", 10),
-    library.make_sixteenths(
-        [-1, 1, -2, -8, -12, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 8],
-        denominator=None,
-    ),
-)
 
 commands(
     ("perc1", 10),
@@ -326,13 +542,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.make_sixteenths(
-        [4, -20, 4],
-    ),
-)
-
-commands(
-    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
@@ -344,25 +553,7 @@ commands(
 
 commands(
     ("perc2", 2),
-    library.make_sixteenths(
-        [-10, "+"],
-        fuse=True,
-        extra_counts=[-4],
-        denominator=None,
-    ),
-)
-
-commands(
-    ("perc2", 2),
     baca.staff_lines(1),
-)
-
-commands(
-    ("perc2", 3),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
-    ),
 )
 
 commands(
@@ -376,13 +567,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc2", (5, 9)),
-    library.make_sixteenths(
-        [2, -22, -1, 2, -21],
     ),
 )
 
@@ -405,22 +589,6 @@ commands(
     ),
 )
 
-
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("perc2", 10),
-    library.make_sixteenths(
-        [-1, 1, 1, -1, -8, -12, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 8],
-        denominator=None,
-    ),
-)
 
 commands(
     ("perc2", 10),
@@ -452,13 +620,6 @@ commands(
 
 commands(
     ("hp", 1),
-    library.make_sixteenths(
-        [-24, 4],
-    ),
-)
-
-commands(
-    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -471,16 +632,6 @@ commands(
     baca.markup(
         r"\baca-pince-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("hp", 2),
-    library.make_sixteenths(
-        ["-", 3, -3, 3, -1],
-        fuse=True,
-        extra_counts=[-4],
-        denominator=None,
     ),
 )
 
@@ -500,25 +651,11 @@ commands(
 )
 
 commands(
-    ("hp", 3),
-    library.make_sixteenths(
-        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
-    ),
-)
-
-commands(
     ("hp", (2, 3)),
     library.whisk_staff_position(),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         selector=lambda _: baca.select.leaves(_)[1:8],
-    ),
-)
-
-commands(
-    ("hp", (5, 10)),
-    library.make_sixteenths(
-        [-24, -1, 3, -20],
     ),
 )
 
@@ -545,11 +682,6 @@ commands(
 
 commands(
     ("va", (1, 2)),
-    baca.make_notes(),
-)
-
-commands(
-    ("va", (1, 2)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.flat_glissando(),
@@ -557,13 +689,6 @@ commands(
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-    ),
-)
-
-commands(
-    ("va", 3),
-    library.make_sixteenths(
-        [6, 3, 11],
     ),
 )
 
@@ -578,11 +703,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("va", (5, 10)),
-    library.make_tessera_4(4),
 )
 
 commands(
@@ -619,9 +739,6 @@ commands(
 
 commands(
     ("vc1", 1),
-    baca.make_skeleton(
-        r"r1 r8 \times 5/4 { c2 }",
-    ),
     baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
@@ -630,13 +747,6 @@ commands(
     ("vc1", (1, 2)),
     baca.clef("treble"),
     baca.pitch("<A4 B4 C5>"),
-)
-
-commands(
-    ("vc1", 3),
-    library.make_sixteenths(
-        [4, 2, 7, 7],
-    ),
 )
 
 commands(
@@ -651,11 +761,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("vc1", (5, 10)),
-    library.make_tessera_4(3),
 )
 
 commands(
@@ -689,9 +794,6 @@ commands(
 
 commands(
     ("vc2", 1),
-    baca.make_skeleton(
-        r"r1 r8 \times 5/4 { c2 }",
-    ),
     baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
@@ -700,13 +802,6 @@ commands(
     ("vc2", (1, 2)),
     baca.clef("treble"),
     baca.pitch("<G4 Ab4 Bb4>"),
-)
-
-commands(
-    ("vc2", 3),
-    library.make_sixteenths(
-        [9, 11],
-    ),
 )
 
 commands(
@@ -721,11 +816,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("vc2", (5, 10)),
-    library.make_tessera_4(2),
 )
 
 commands(
@@ -763,9 +853,6 @@ commands(
 
 commands(
     ("cb1", 1),
-    baca.make_skeleton(
-        r"r1 r8 \times 5/4 { c2 }",
-    ),
     baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
@@ -781,13 +868,6 @@ commands(
 
 commands(
     ("cb1", 3),
-    library.make_sixteenths(
-        [4, 9, 7],
-    ),
-)
-
-commands(
-    ("cb1", 3),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -798,11 +878,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("cb1", (5, 10)),
-    library.make_tessera_4(1),
 )
 
 commands(
@@ -837,9 +912,6 @@ commands(
 
 commands(
     ("cb2", 1),
-    baca.make_skeleton(
-        r"r1 r8 \times 5/4 { c2 }",
-    ),
     baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
@@ -855,13 +927,6 @@ commands(
 
 commands(
     ("cb2", 3),
-    library.make_sixteenths(
-        [9, 11],
-    ),
-)
-
-commands(
-    ("cb2", 3),
     baca.clef("bass"),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -872,11 +937,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("cb2", (5, 10)),
-    library.make_tessera_4(0),
 )
 
 commands(
@@ -913,26 +973,6 @@ commands(
 )
 
 # vc1, vc2, cb1, cb2
-
-commands(
-    ("vc1", 2),
-    baca.make_notes(),
-)
-
-commands(
-    ("vc2", 2),
-    baca.make_notes(),
-)
-
-commands(
-    ("cb1", 2),
-    baca.make_notes(),
-)
-
-commands(
-    ("cb2", 2),
-    baca.make_notes(),
-)
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], (1, 2)),

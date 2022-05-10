@@ -56,7 +56,7 @@ commands(
     baca.close_volta(lambda _: baca.select.skip(_, 2 - 1), site="after"),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", 1),
@@ -64,6 +64,175 @@ commands(
         [-4, 8, "-"],
     ),
 )
+
+commands(
+    ("bfl", 2),
+    library.make_sixteenths(
+        [3, 6, 3, 3, 6, 3],
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", 1),
+    library.make_sixteenths(
+        [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
+    ),
+)
+
+commands(
+    ("perc1", 2),
+    library.make_sixteenths(
+        [2, -2, -4, -4, 2, -2, 2, -2, -4],
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", 2),
+    library.make_sixteenths(
+        [3, -6, 3, 3, -6, 3],
+    ),
+)
+
+# HP
+
+commands(
+    ("hp", 1),
+    library.make_sixteenths(
+        [-6, -2, 4, "-"],
+        extra_counts=[2],
+        denominator=None,
+    ),
+)
+
+# VA
+
+commands(
+    ("va", 1),
+    library.make_sixteenths(
+        [-4, "+"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("va", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+# VC1
+
+commands(
+    ("vc1", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("vc1", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+# VC2
+
+commands(
+    ("vc2", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("vc2", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+# CB1
+
+commands(
+    ("cb1", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("cb1", 2),
+    library.make_sixteenths(
+        [-12, 12, -4],
+        preprocessor=preprocessor,
+        extra_counts=[0, 4],
+        denominator=None,
+    ),
+)
+
+# CB2
+
+commands(
+    ("cb2", 1),
+    library.make_sixteenths(
+        [-4, 8, "-"],
+    ),
+)
+
+commands(
+    ("cb2", 2),
+    library.make_sixteenths(
+        [-9, 3, -9, 3],
+    ),
+)
+
+# phantom
+
+# after
+
+# bfl
 
 commands(
     ("bfl", 1),
@@ -79,13 +248,6 @@ commands(
             left_broken=True,
         ),
         selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
-    ),
-)
-
-commands(
-    ("bfl", 2),
-    library.make_sixteenths(
-        [3, 6, 3, 3, 6, 3],
     ),
 )
 
@@ -108,13 +270,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.make_sixteenths(
-        [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
-    ),
-)
-
-commands(
-    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -126,13 +281,6 @@ commands(
     baca.markup(
         r"\baca-slate-brush-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc1", 2),
-    library.make_sixteenths(
-        [2, -2, -4, -4, 2, -2, 2, -2, -4],
     ),
 )
 
@@ -156,13 +304,6 @@ commands(
 )
 
 # perc2
-
-commands(
-    ("perc2", 2),
-    library.make_sixteenths(
-        [3, -6, 3, 3, -6, 3],
-    ),
-)
 
 commands(
     ("perc2", 2),
@@ -207,15 +348,6 @@ commands(
 
 commands(
     ("hp", 1),
-    library.make_sixteenths(
-        [-6, -2, 4, "-"],
-        extra_counts=[2],
-        denominator=None,
-    ),
-)
-
-commands(
-    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("<B5 C#6>"),
     baca.double_flageolet(),
@@ -228,13 +360,6 @@ commands(
 )
 
 # va
-
-commands(
-    ("va", 1),
-    library.make_sixteenths(
-        [-4, "+"],
-    ),
-)
 
 commands(
     ("va", 1),
@@ -261,34 +386,6 @@ commands(
 )
 
 # vc1, vc2, cb1, cb2
-
-commands(
-    ("vc1", 1),
-    library.make_sixteenths(
-        [-4, 8, "-"],
-    ),
-)
-
-commands(
-    ("vc2", 1),
-    library.make_sixteenths(
-        [-4, 8, "-"],
-    ),
-)
-
-commands(
-    ("cb1", 1),
-    library.make_sixteenths(
-        [-4, 8, "-"],
-    ),
-)
-
-commands(
-    ("cb2", 1),
-    library.make_sixteenths(
-        [-4, 8, "-"],
-    ),
-)
 
 commands(
     (["vc1", "vc2", "cb1", "cb2"], 1),
@@ -335,52 +432,6 @@ commands(
 # va, vc1, vc2, cb2
 
 
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("va", 2),
-    library.make_sixteenths(
-        [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
-        denominator=None,
-    ),
-)
-
-commands(
-    ("vc1", 2),
-    library.make_sixteenths(
-        [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
-        denominator=None,
-    ),
-)
-
-commands(
-    ("vc2", 2),
-    library.make_sixteenths(
-        [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
-        denominator=None,
-    ),
-)
-
-commands(
-    ("cb1", 2),
-    library.make_sixteenths(
-        [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
-        denominator=None,
-    ),
-)
-
 commands(
     (["va", "vc1", "vc2", "cb1"], 2),
     baca.tuplet_bracket_up(),
@@ -426,13 +477,6 @@ commands(
         r"\baca-string-iii-markup",
         abjad.Tweak(r"- \tweak padding 1"),
         direction=abjad.DOWN,
-    ),
-)
-
-commands(
-    ("cb2", 2),
-    library.make_sixteenths(
-        [-9, 3, -9, 3],
     ),
 )
 

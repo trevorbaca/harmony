@@ -84,16 +84,11 @@ commands(
     ),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", (1, 4)),
     baca.make_mmrests(),
-)
-
-commands(
-    ("bfl", (1, 4)),
-    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -103,6 +98,204 @@ commands(
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
+)
+
+commands(
+    ("bfl", (7, 10)),
+    library.make_sixteenths(
+        [4],
+        written_double_dotted_wholes=([0], 7),
+        invisible=([1, 2, 3, 4, 5, 6], 7),
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", (1, 4)),
+    library.make_sixteenths(
+        [4, 4, 8, 4, 4, 7, -1],
+        do_not_rewrite_meter=True,
+        fuse=True,
+        written_halves=[0],
+    ),
+)
+
+commands(
+    ("perc1", 5),
+    library.make_sixteenths(
+        [1, -23, -1, 1, -22],
+    ),
+)
+
+commands(
+    ("perc1", (7, 10)),
+    library.make_sixteenths(
+        [4],
+        written_double_dotted_wholes=([0], 7),
+        invisible=([1, 2, 3, 4, 5, 6], 7),
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", (1, 4)),
+    library.make_sixteenths(
+        [2, "-"],
+    ),
+)
+
+commands(
+    ("perc2", 5),
+    library.make_sixteenths(
+        [2, -22, -1, 2, -21],
+    ),
+)
+
+commands(
+    ("perc2", (7, 10)),
+    library.make_sixteenths(
+        [-26, 2],
+    ),
+)
+
+# HP
+
+commands(
+    ("hp", (1, 4)),
+    library.make_sixteenths(
+        [4, "-"],
+    ),
+)
+
+commands(
+    ("hp", (7, 10)),
+    library.make_sixteenths(
+        ["+"],
+    ),
+)
+
+# VA
+
+commands(
+    ("va", (1, 4)),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 5),
+    library.make_tessera_4(4),
+)
+
+commands(
+    ("va", (7, 10)),
+    baca.make_notes(),
+)
+
+# VC1
+
+commands(
+    ("vc1", (1, 4)),
+    library.make_sixteenths(
+        [10, 6],
+    ),
+)
+
+commands(
+    ("vc1", 5),
+    library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", (7, 10)),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+# VC2
+
+commands(
+    ("vc2", (1, 4)),
+    library.make_sixteenths(
+        [10, 6],
+    ),
+)
+
+commands(
+    ("vc2", 5),
+    library.make_tessera_4(2),
+)
+
+commands(
+    ("vc2", (7, 10)),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+# CB1
+
+commands(
+    ("cb1", (1, 4)),
+    library.make_sixteenths(
+        [4, 4, -8],
+    ),
+)
+
+commands(
+    ("cb1", 5),
+    library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", (7, 10)),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+# CB2
+
+commands(
+    ("cb2", (1, 4)),
+    library.make_sixteenths(
+        [8, 8, 8, 6, 2],
+        fuse=True,
+        do_not_rewrite_meter=True,
+        written_halves=[-2],
+        invisible=[-1],
+    ),
+)
+
+commands(
+    ("cb2", 5),
+    library.make_tessera_4(0),
+)
+
+commands(
+    ("cb2", (7, 10)),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+# phantom
+
+# after
+
+# bfl
+
+commands(
+    ("bfl", (1, 4)),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -136,15 +329,6 @@ commands(
 
 commands(
     ("bfl", (7, 10)),
-    library.make_sixteenths(
-        [4],
-        written_double_dotted_wholes=([0], 7),
-        invisible=([1, 2, 3, 4, 5, 6], 7),
-    ),
-)
-
-commands(
-    ("bfl", (7, 10)),
     baca.pitch("A4"),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
@@ -172,16 +356,6 @@ commands(
 
 commands(
     ("perc1", (1, 4)),
-    library.make_sixteenths(
-        [4, 4, 8, 4, 4, 7, -1],
-        do_not_rewrite_meter=True,
-        fuse=True,
-        written_halves=[0],
-    ),
-)
-
-commands(
-    ("perc1", (1, 4)),
     baca.reapply_persistent_indicators(),
     library.triangle_staff_position(),
     baca.flat_glissando(
@@ -205,13 +379,6 @@ commands(
 
 commands(
     ("perc1", 5),
-    library.make_sixteenths(
-        [1, -23, -1, 1, -22],
-    ),
-)
-
-commands(
-    ("perc1", 5),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
@@ -220,15 +387,6 @@ commands(
     baca.markup(
         r"\baca-brake-drum-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc1", (7, 10)),
-    library.make_sixteenths(
-        [4],
-        written_double_dotted_wholes=([0], 7),
-        invisible=([1, 2, 3, 4, 5, 6], 7),
     ),
 )
 
@@ -265,13 +423,6 @@ commands(
 
 commands(
     ("perc2", (1, 4)),
-    library.make_sixteenths(
-        [2, "-"],
-    ),
-)
-
-commands(
-    ("perc2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -284,13 +435,6 @@ commands(
     baca.markup(
         r"\baca-glockenspiel-markup",
         abjad.Tweak(r"- \tweak staff-padding 4"),
-    ),
-)
-
-commands(
-    ("perc2", 5),
-    library.make_sixteenths(
-        [2, -22, -1, 2, -21],
     ),
 )
 
@@ -318,13 +462,6 @@ commands(
 
 commands(
     ("perc2", (7, 10)),
-    library.make_sixteenths(
-        [-26, 2],
-    ),
-)
-
-commands(
-    ("perc2", (7, 10)),
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.pitch("A4"),
@@ -347,13 +484,6 @@ commands(
 
 commands(
     ("hp", (1, 4)),
-    library.make_sixteenths(
-        [4, "-"],
-    ),
-)
-
-commands(
-    ("hp", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("A1"),
@@ -361,13 +491,6 @@ commands(
     baca.dls_staff_padding(4 + 2),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
-    ),
-)
-
-commands(
-    ("hp", (7, 10)),
-    library.make_sixteenths(
-        ["+"],
     ),
 )
 
@@ -399,11 +522,6 @@ commands(
 
 commands(
     ("va", (1, 4)),
-    baca.make_notes(),
-)
-
-commands(
-    ("va", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Gqf3"),
     baca.flat_glissando(
@@ -421,19 +539,9 @@ commands(
 
 commands(
     ("va", 5),
-    library.make_tessera_4(4),
-)
-
-commands(
-    ("va", 5),
     baca.note_head_style_harmonic_black(),
     baca.pitch("<G4 Ab4 Bb4>"),
     baca.dynamic("pp"),
-)
-
-commands(
-    ("va", (7, 10)),
-    baca.make_notes(),
 )
 
 commands(
@@ -456,13 +564,6 @@ commands(
 
 commands(
     ("vc1", (1, 4)),
-    library.make_sixteenths(
-        [10, 6],
-    ),
-)
-
-commands(
-    ("vc1", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("E6 C#6"),
@@ -482,11 +583,6 @@ commands(
 
 commands(
     ("vc1", 5),
-    library.make_tessera_4(3),
-)
-
-commands(
-    ("vc1", 5),
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=lambda _: baca.select.lparts(_, [2, 3, 1 + 1]),
@@ -502,15 +598,6 @@ commands(
     ),
     baca.note_head_transparent(
         lambda _: baca.select.pleaves(_)[1:-1],
-    ),
-)
-
-commands(
-    ("vc1", (7, 10)),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
     ),
 )
 
@@ -550,13 +637,6 @@ commands(
 
 commands(
     ("vc2", (1, 4)),
-    library.make_sixteenths(
-        [10, 6],
-    ),
-)
-
-commands(
-    ("vc2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("A5 C#6"),
@@ -572,11 +652,6 @@ commands(
         abjad.Tweak(r"- \tweak padding 1"),
         direction=abjad.DOWN,
     ),
-)
-
-commands(
-    ("vc2", 5),
-    library.make_tessera_4(2),
 )
 
 commands(
@@ -600,15 +675,6 @@ commands(
     ),
     baca.note_head_transparent(
         lambda _: baca.select.pleaves(_)[1:-1],
-    ),
-)
-
-commands(
-    ("vc2", (7, 10)),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
     ),
 )
 
@@ -649,13 +715,6 @@ commands(
 
 commands(
     ("cb1", (1, 4)),
-    library.make_sixteenths(
-        [4, 4, -8],
-    ),
-)
-
-commands(
-    ("cb1", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.note_head_style_harmonic(),
@@ -681,11 +740,6 @@ commands(
 
 commands(
     ("cb1", 5),
-    library.make_tessera_4(1),
-)
-
-commands(
-    ("cb1", 5),
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=lambda _: baca.select.lparts(_, [2, 3, 2 + 1]),
@@ -702,15 +756,6 @@ commands(
     ),
     baca.note_head_transparent(
         lambda _: baca.select.pleaves(_)[1:-1],
-    ),
-)
-
-commands(
-    ("cb1", (7, 10)),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
     ),
 )
 
@@ -751,17 +796,6 @@ commands(
 
 commands(
     ("cb2", (1, 4)),
-    library.make_sixteenths(
-        [8, 8, 8, 6, 2],
-        fuse=True,
-        do_not_rewrite_meter=True,
-        written_halves=[-2],
-        invisible=[-1],
-    ),
-)
-
-commands(
-    ("cb2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
@@ -792,11 +826,6 @@ commands(
 
 commands(
     ("cb2", 5),
-    library.make_tessera_4(0),
-)
-
-commands(
-    ("cb2", 5),
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >o niente",
@@ -819,13 +848,6 @@ commands(
     ),
     baca.note_head_transparent(
         lambda _: baca.select.pleaves(_)[1:-1],
-    ),
-)
-
-commands(
-    ("cb2", (7, 10)),
-    library.make_sixteenths(
-        [4],
     ),
 )
 
