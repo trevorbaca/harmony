@@ -127,7 +127,7 @@ commands(
     ),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", (1, 2)),
@@ -135,15 +135,429 @@ commands(
 )
 
 commands(
-    ("bfl", (1, 2)),
-    baca.reapply_persistent_indicators(),
-)
-
-commands(
     ("bfl", 3),
     library.make_sixteenths(
         [-2, 2, 2],
     ),
+)
+
+commands(
+    ("bfl", (4, 5)),
+    library.make_appoggiato_rhythm(
+        divisions=[28, 24],
+        counts=[9, 6],
+        incise=True,
+    ),
+)
+
+commands(
+    ("bfl", 6),
+    library.make_warble_rhythm(
+        sixteenths=[12, 12, 1, 11, 12],
+        extra_counts=[4, 0, 0, 2, 0],
+        rest_tuplets_cyclic=([1, 2, 4], 5),
+    ),
+)
+
+commands(
+    ("bfl", 7),
+    library.make_sixteenths(
+        [4],
+        written_halves=True,
+        invisible_pairs=True,
+    ),
+)
+
+commands(
+    ("bfl", 9),
+    library.make_sixteenths(
+        [4, "-"],
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", (1, 2)),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("perc1", 3),
+    library.make_sixteenths(
+        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
+    ),
+)
+
+commands(
+    ("perc1", (4, 5)),
+    baca.make_repeat_tied_notes(),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("perc1", 6),
+    library.make_sixteenths(
+        [-12, -2, 1, "-"],
+        preprocessor=preprocessor,
+        extra_counts=[0, -2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("perc1", 7),
+    library.make_sixteenths(
+        [1, -23],
+    ),
+)
+
+commands(
+    ("perc1", 9),
+    baca.make_repeat_tied_notes(),
+)
+
+# PERC2
+
+commands(
+    ("perc2", 1),
+    library.make_sixteenths(
+        [4, -20, 4],
+    ),
+)
+
+commands(
+    ("perc2", 3),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("perc2", (4, 5)),
+    library.make_sixteenths(
+        [2, "-"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("perc2", 6),
+    library.make_sixteenths(
+        [-12, -2, 1, "-"],
+        preprocessor=preprocessor,
+        extra_counts=[0, -2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("perc2", 7),
+    library.make_sixteenths(
+        [1, -23],
+    ),
+)
+
+# HP
+
+commands(
+    ("hp", 1),
+    library.make_sixteenths(
+        [-24, 4],
+    ),
+)
+
+commands(
+    ("hp", 3),
+    library.make_sixteenths(
+        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
+    ),
+)
+
+commands(
+    ("hp", (4, 5)),
+    library.make_sixteenths(
+        [4, "-"],
+    ),
+)
+
+
+def preprocessor(divisions):
+    result = baca.sequence.fuse(divisions)
+    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
+    return result
+
+
+commands(
+    ("hp", 6),
+    library.make_sixteenths(
+        [-12, -2, 1, "-"],
+        preprocessor=preprocessor,
+        extra_counts=[0, -2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("hp", 7),
+    library.make_sixteenths(
+        [1, -23],
+    ),
+)
+
+# VA
+
+commands(
+    ("va", 1),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 3),
+    library.make_sixteenths(
+        [6, 3, 11],
+    ),
+)
+
+commands(
+    ("va", 4),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 5),
+    baca.make_skeleton(
+        r"c2. c8 \times 5/4 { c2 }",
+    ),
+    baca.repeat_tie(
+        selector=lambda _: baca.select.pleaves(_)[:2],
+    ),
+)
+
+commands(
+    ("va", 6),
+    library.make_tessera_4(4),
+)
+
+commands(
+    ("va", 9),
+    baca.make_notes(),
+)
+
+# VC1
+
+commands(
+    ("vc1", (1, 2)),
+    baca.make_mmrests(),
+)
+
+sixteenths = [6, -2, 4, -2, 4, -2, 2, -2]
+
+commands(
+    ("vc1", 3),
+    library.make_sixteenths(
+        [4, 2, 7, 7],
+    ),
+)
+
+commands(
+    ("vc1", 4),
+    library.make_sixteenths(
+        sixteenths[:4] + ["-"],
+    ),
+)
+
+commands(
+    ("vc1", 5),
+    library.make_sixteenths(
+        sixteenths,
+    ),
+)
+
+commands(
+    ("vc1", 6),
+    library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", 7),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+commands(
+    ("vc1", 9),
+    baca.make_notes(),
+)
+
+# VC2
+
+commands(
+    ("vc2", (1, 2)),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("vc2", 3),
+    library.make_sixteenths(
+        [9, 11],
+    ),
+)
+
+commands(
+    ("vc2", 4),
+    library.make_sixteenths(
+        abjad.sequence.rotate(sixteenths, -2)[:4] + ["-"],
+    ),
+)
+
+commands(
+    ("vc2", 5),
+    library.make_sixteenths(
+        abjad.sequence.rotate(sixteenths, -2),
+    ),
+)
+
+commands(
+    ("vc2", 6),
+    library.make_tessera_4(2),
+)
+
+commands(
+    ("vc2", 7),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+commands(
+    ("vc2", 9),
+    baca.make_notes(),
+)
+
+# CB1
+
+commands(
+    ("cb1", (1, 2)),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("cb1", 3),
+    library.make_sixteenths(
+        [4, 9, 7],
+    ),
+)
+
+commands(
+    ("cb1", 4),
+    library.make_sixteenths(
+        abjad.sequence.rotate(sixteenths, -4)[:4] + ["-"],
+    ),
+)
+
+commands(
+    ("cb1", 5),
+    library.make_sixteenths(
+        abjad.sequence.rotate(sixteenths, -4),
+    ),
+)
+
+commands(
+    ("cb1", 6),
+    library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", 7),
+    library.make_sixteenths(
+        [2],
+        written_quarters=True,
+        invisible_pairs=True,
+    ),
+)
+
+commands(
+    ("cb1", 9),
+    baca.make_notes(),
+)
+
+# CB2
+
+commands(
+    ("cb2", (1, 2)),
+    baca.make_mmrests(),
+)
+
+commands(
+    ("cb2", 3),
+    library.make_sixteenths(
+        [9, 7, 1, -1, 1, -1, 1, -1],
+        extra_counts=[0, 0, 0, 0, 2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("cb2", 4),
+    library.make_sixteenths(
+        [2, -2, 6, "-"],
+    ),
+)
+
+commands(
+    ("cb2", 5),
+    library.make_sixteenths(
+        abjad.sequence.rotate(sixteenths, -6),
+    ),
+)
+
+commands(
+    ("cb2", 6),
+    library.make_tessera_4(0),
+)
+
+commands(
+    ("cb2", 7),
+    library.make_sixteenths(
+        [4],
+        written_halves=True,
+        invisible_pairs=True,
+    ),
+)
+
+commands(
+    ("cb2", 9),
+    baca.make_notes(),
+)
+
+# phantom
+
+# after
+
+# bfl
+
+commands(
+    ("bfl", (1, 2)),
+    baca.reapply_persistent_indicators(),
 )
 
 commands(
@@ -164,15 +578,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10"),
         pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         map=lambda _: baca.select.rleak_runs(_),
-    ),
-)
-
-commands(
-    ("bfl", (4, 5)),
-    library.make_appoggiato_rhythm(
-        divisions=[28, 24],
-        counts=[9, 6],
-        incise=True,
     ),
 )
 
@@ -216,15 +621,6 @@ commands(
 
 commands(
     ("bfl", 6),
-    library.make_warble_rhythm(
-        sixteenths=[12, 12, 1, 11, 12],
-        extra_counts=[4, 0, 0, 2, 0],
-        rest_tuplets_cyclic=([1, 2, 4], 5),
-    ),
-)
-
-commands(
-    ("bfl", 6),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -10),
     ),
@@ -254,15 +650,6 @@ commands(
 
 commands(
     ("bfl", 7),
-    library.make_sixteenths(
-        [4],
-        written_halves=True,
-        invisible_pairs=True,
-    ),
-)
-
-commands(
-    ("bfl", 7),
     baca.pitch("Bb4"),
     baca.hairpin(
         "pp < p >o niente",
@@ -271,13 +658,6 @@ commands(
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
-    ),
-)
-
-commands(
-    ("bfl", 9),
-    library.make_sixteenths(
-        [4, "-"],
     ),
 )
 
@@ -298,19 +678,7 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    baca.make_mmrests(),
-)
-
-commands(
-    ("perc1", (1, 2)),
     baca.reapply_persistent_indicators(),
-)
-
-commands(
-    ("perc1", 3),
-    library.make_sixteenths(
-        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
-    ),
 )
 
 commands(
@@ -325,11 +693,6 @@ commands(
 
 commands(
     ("perc1", (4, 5)),
-    baca.make_repeat_tied_notes(),
-)
-
-commands(
-    ("perc1", (4, 5)),
     library.brake_drum_staff_position(),
     baca.flat_glissando(),
     baca.dynamic('"f"'),
@@ -340,22 +703,6 @@ commands(
 )
 
 
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("perc1", 6),
-    library.make_sixteenths(
-        [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
-        extra_counts=[0, -2],
-        denominator=None,
-    ),
-)
-
 commands(
     ("perc1", 6),
     baca.tuplet_bracket_up(),
@@ -365,13 +712,6 @@ commands(
         r"\baca-brake-drum-markup",
         abjad.Tweak(r"- \tweak self-alignment-X 0"),
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc1", 7),
-    library.make_sixteenths(
-        [1, -23],
     ),
 )
 
@@ -388,11 +728,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
         selector=lambda _: baca.rleak(baca.tleaves(_), count=2),
     ),
-)
-
-commands(
-    ("perc1", 9),
-    baca.make_repeat_tied_notes(),
 )
 
 commands(
@@ -414,27 +749,12 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.make_sixteenths(
-        [4, -20, 4],
-    ),
-)
-
-commands(
-    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_position(2),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 8"),
         left_broken=True,
         selector=lambda _: baca.select.leaves(_)[:2],
-    ),
-)
-
-commands(
-    ("perc2", 3),
-    library.make_tuplet(
-        [(1,)],
-        force_augmentation=True,
     ),
 )
 
@@ -459,13 +779,6 @@ commands(
 
 commands(
     ("perc2", (4, 5)),
-    library.make_sixteenths(
-        [2, "-"],
-    ),
-)
-
-commands(
-    ("perc2", (4, 5)),
     baca.staff_lines(3),
     baca.staff_position(2),
     baca.dynamic("ff"),
@@ -476,22 +789,6 @@ commands(
     ),
 )
 
-
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("perc2", 6),
-    library.make_sixteenths(
-        [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
-        extra_counts=[0, -2],
-        denominator=None,
-    ),
-)
 
 commands(
     ("perc2", 6),
@@ -513,13 +810,6 @@ commands(
         r"\baca-slate-brush-markup",
         abjad.Tweak(r"- \tweak self-alignment-X 0"),
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc2", 7),
-    library.make_sixteenths(
-        [1, -23],
     ),
 )
 
@@ -551,13 +841,6 @@ commands(
 
 commands(
     ("hp", 1),
-    library.make_sixteenths(
-        [-24, 4],
-    ),
-)
-
-commands(
-    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.laissez_vibrer(
@@ -573,13 +856,6 @@ commands(
 
 commands(
     ("hp", 3),
-    library.make_sixteenths(
-        [-2, 3, -3, 3, -3, 3, -3, 3, -3],
-    ),
-)
-
-commands(
-    ("hp", 3),
     baca.clef("percussion"),
     baca.staff_lines(1),
     library.whisk_staff_position(),
@@ -588,13 +864,6 @@ commands(
     baca.markup(
         r"\baca-whisk-markup",
         abjad.Tweak(r"- \tweak staff-padding 4"),
-    ),
-)
-
-commands(
-    ("hp", (4, 5)),
-    library.make_sixteenths(
-        [4, "-"],
     ),
 )
 
@@ -614,33 +883,10 @@ commands(
 )
 
 
-def preprocessor(divisions):
-    result = baca.sequence.fuse(divisions)
-    result = baca.sequence.split_divisions(result, [(3, 4), (3, 4)])
-    return result
-
-
-commands(
-    ("hp", 6),
-    library.make_sixteenths(
-        [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
-        extra_counts=[0, -2],
-        denominator=None,
-    ),
-)
-
 commands(
     ("hp", 6),
     baca.tuplet_bracket_up(),
     baca.dynamic("f-ancora"),
-)
-
-commands(
-    ("hp", 7),
-    library.make_sixteenths(
-        [1, -23],
-    ),
 )
 
 commands(
@@ -669,24 +915,12 @@ commands(
 
 commands(
     ("va", 1),
-    baca.make_notes(),
-)
-
-commands(
-    ("va", 1),
     baca.reapply_persistent_indicators(),
     baca.pitch("Ab4"),
     baca.dynamic("mp"),
     baca.bow_speed_spanner(
         "XFB =|",
         abjad.Tweak(r"- \tweak staff-padding 3"),
-    ),
-)
-
-commands(
-    ("va", 3),
-    library.make_sixteenths(
-        [6, 3, 11],
     ),
 )
 
@@ -704,18 +938,7 @@ commands(
 )
 
 commands(
-    ("va", 4),
-    baca.make_notes(),
-)
-
-commands(
     ("va", 5),
-    baca.make_skeleton(
-        r"c2. c8 \times 5/4 { c2 }",
-    ),
-    baca.repeat_tie(
-        selector=lambda _: baca.select.pleaves(_)[:2],
-    ),
     baca.tuplet_bracket_up(),
     baca.markup(
         r"\baca-quasi-bisb-markup",
@@ -740,11 +963,6 @@ commands(
 )
 
 commands(
-    ("va", 6),
-    library.make_tessera_4(4),
-)
-
-commands(
     ("va", (5, 6)),
     baca.new(
         baca.note_head_style_harmonic_black(),
@@ -756,11 +974,6 @@ commands(
         "pp",
         selector=lambda _: baca.select.phead(_, 0),
     ),
-)
-
-commands(
-    ("va", 9),
-    baca.make_notes(),
 )
 
 commands(
@@ -788,40 +1001,11 @@ commands(
 # vc1, vc2, cb1, cb2
 
 commands(
-    ("vc1", (1, 2)),
-    baca.make_mmrests(),
-)
-
-commands(
-    ("vc2", (1, 2)),
-    baca.make_mmrests(),
-)
-
-commands(
-    ("cb1", (1, 2)),
-    baca.make_mmrests(),
-)
-
-commands(
-    ("cb2", (1, 2)),
-    baca.make_mmrests(),
-)
-
-commands(
     (["vc1", "vc2", "cb1", "cb2"], (1, 2)),
     baca.reapply_persistent_indicators(),
 )
 
 # vc1
-
-sixteenths = [6, -2, 4, -2, 4, -2, 2, -2]
-
-commands(
-    ("vc1", 3),
-    library.make_sixteenths(
-        [4, 2, 7, 7],
-    ),
-)
 
 commands(
     ("vc1", 3),
@@ -834,25 +1018,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("vc1", 4),
-    library.make_sixteenths(
-        sixteenths[:4] + ["-"],
-    ),
-)
-
-commands(
-    ("vc1", 5),
-    library.make_sixteenths(
-        sixteenths,
-    ),
-)
-
-commands(
-    ("vc1", 6),
-    library.make_tessera_4(3),
 )
 
 commands(
@@ -893,11 +1058,6 @@ commands(
 
 commands(
     ("vc1", 9),
-    baca.make_notes(),
-)
-
-commands(
-    ("vc1", 9),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
         "poco scr. =|",
@@ -914,13 +1074,6 @@ commands(
 
 commands(
     ("vc2", 3),
-    library.make_sixteenths(
-        [9, 11],
-    ),
-)
-
-commands(
-    ("vc2", 3),
     baca.pitch("F#2"),
     baca.scp_spanner(
         "O -> P2 -> P1",
@@ -930,25 +1083,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("vc2", 4),
-    library.make_sixteenths(
-        abjad.sequence.rotate(sixteenths, -2)[:4] + ["-"],
-    ),
-)
-
-commands(
-    ("vc2", 5),
-    library.make_sixteenths(
-        abjad.sequence.rotate(sixteenths, -2),
-    ),
-)
-
-commands(
-    ("vc2", 6),
-    library.make_tessera_4(2),
 )
 
 commands(
@@ -994,11 +1128,6 @@ commands(
 
 commands(
     ("vc2", 9),
-    baca.make_notes(),
-)
-
-commands(
-    ("vc2", 9),
     baca.dynamic("p"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
@@ -1016,13 +1145,6 @@ commands(
 
 commands(
     ("cb1", 3),
-    library.make_sixteenths(
-        [4, 9, 7],
-    ),
-)
-
-commands(
-    ("cb1", 3),
     baca.pitch("F#1"),
     baca.scp_spanner(
         "P1 -> P2 -> O -> P2",
@@ -1032,25 +1154,6 @@ commands(
         pieces=lambda _: baca.select.plts(_),
         selector=lambda _: baca.select.leaves(_),
     ),
-)
-
-commands(
-    ("cb1", 4),
-    library.make_sixteenths(
-        abjad.sequence.rotate(sixteenths, -4)[:4] + ["-"],
-    ),
-)
-
-commands(
-    ("cb1", 5),
-    library.make_sixteenths(
-        abjad.sequence.rotate(sixteenths, -4),
-    ),
-)
-
-commands(
-    ("cb1", 6),
-    library.make_tessera_4(1),
 )
 
 commands(
@@ -1095,11 +1198,6 @@ commands(
 
 commands(
     ("cb1", 9),
-    baca.make_notes(),
-)
-
-commands(
-    ("cb1", 9),
     baca.clef("bass"),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -1114,15 +1212,6 @@ commands(
 )
 
 # cb2
-
-commands(
-    ("cb2", 3),
-    library.make_sixteenths(
-        [9, 7, 1, -1, 1, -1, 1, -1],
-        extra_counts=[0, 0, 0, 0, 2],
-        denominator=None,
-    ),
-)
 
 commands(
     ("cb2", 3),
@@ -1156,24 +1245,10 @@ commands(
 )
 
 commands(
-    ("cb2", 4),
-    library.make_sixteenths(
-        [2, -2, 6, "-"],
-    ),
-)
-
-commands(
     ("cb2", (3, 4)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
         selector=lambda _: baca.select.leaves(_)[4:13],
-    ),
-)
-
-commands(
-    ("cb2", 5),
-    library.make_sixteenths(
-        abjad.sequence.rotate(sixteenths, -6),
     ),
 )
 
@@ -1185,11 +1260,6 @@ commands(
         autodetect_right_padding=False,
         selector=lambda _: baca.select.rleak(baca.select.leaves(_)[4:]),
     ),
-)
-
-commands(
-    ("cb2", 6),
-    library.make_tessera_4(0),
 )
 
 commands(
@@ -1221,15 +1291,6 @@ commands(
 
 commands(
     ("cb2", 7),
-    library.make_sixteenths(
-        [4],
-        written_halves=True,
-        invisible_pairs=True,
-    ),
-)
-
-commands(
-    ("cb2", 7),
     baca.clef("bass"),
     baca.pitch("A1"),
     baca.hairpin(
@@ -1242,11 +1303,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 1.5"),
         direction=abjad.DOWN,
     ),
-)
-
-commands(
-    ("cb2", 9),
-    baca.make_notes(),
 )
 
 commands(
@@ -1281,33 +1337,6 @@ commands(
         lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
     ),
     baca.markup(r"\baca-quasi-bisb-markup"),
-)
-
-commands(
-    ("vc1", 7),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
-)
-
-commands(
-    ("vc2", 7),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
-)
-
-commands(
-    ("cb1", 7),
-    library.make_sixteenths(
-        [2],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
 )
 
 commands(

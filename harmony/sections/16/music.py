@@ -65,7 +65,7 @@ commands(
     baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
 )
 
-# bfl
+# BFL
 
 commands(
     ("bfl", (1, 6)),
@@ -73,6 +73,203 @@ commands(
         library.damp_counts,
     ),
 )
+
+commands(
+    ("bfl", 8),
+    library.make_sixteenths(
+        ["+"],
+    ),
+)
+
+commands(
+    ("bfl", (9, 10)),
+    library.make_sixteenths(
+        library.damp_counts_curtailed,
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", (1, 6)),
+    library.make_sixteenths(
+        [41, -7, "+"],
+    ),
+)
+
+commands(
+    ("perc1", 8),
+    library.make_sixteenths(
+        ["+"],
+    ),
+)
+
+commands(
+    ("perc1", (9, 10)),
+    library.make_sixteenths(
+        [12, 4, 4, 1, "-"],
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", (1, 6)),
+    library.make_sixteenths(
+        library.duration_color,
+    ),
+)
+
+commands(
+    ("perc2", (9, 10)),
+    library.make_sixteenths(
+        library.duration_color,
+    ),
+)
+
+# HP
+
+commands(
+    ("hp", (1, 6)),
+    library.make_sixteenths(
+        library.duration_color,
+    ),
+)
+
+commands(
+    ("hp", 8),
+    library.make_sixteenths(
+        ["-", 4],
+        extra_counts=[2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("hp", (9, 10)),
+    library.make_sixteenths(
+        library.duration_color,
+    ),
+)
+
+# VA
+
+commands(
+    ("va", (1, 6)),
+    library.make_sixteenths(
+        library.glissando_counts,
+    ),
+)
+
+commands(
+    ("va", 8),
+    library.make_sixteenths(
+        ["+"],
+    ),
+)
+
+commands(
+    ("va", (9, 10)),
+    baca.make_repeat_tied_notes(),
+)
+
+# VC1
+
+commands(
+    ("vc1", (1, 6)),
+    library.make_sixteenths(
+        library.damp_counts,
+    ),
+)
+
+commands(
+    ("vc1", 8),
+    library.make_sixteenths(
+        ["+", -1],
+    ),
+)
+
+commands(
+    ("vc1", (9, 10)),
+    library.make_sixteenths(
+        library.damp_counts_curtailed,
+    ),
+)
+
+# VC2
+
+commands(
+    ("vc2", (1, 6)),
+    library.make_sixteenths(
+        library.damp_counts,
+    ),
+)
+
+commands(
+    ("vc2", 8),
+    library.make_sixteenths(
+        ["+", -1],
+    ),
+)
+
+commands(
+    ("vc2", (9, 10)),
+    library.make_sixteenths(
+        library.damp_counts_curtailed,
+    ),
+)
+
+# CB1
+
+commands(
+    ("cb1", (1, 6)),
+    library.make_sixteenths(
+        library.glissando_counts,
+    ),
+)
+
+commands(
+    ("cb1", 8),
+    library.make_sixteenths(
+        ["+", -1],
+    ),
+)
+
+commands(
+    ("cb1", (9, 10)),
+    library.make_sixteenths(
+        library.glissando_counts_curtailed,
+    ),
+)
+
+# CB2
+
+commands(
+    ("cb2", (1, 6)),
+    library.make_sixteenths(
+        library.glissando_counts,
+    ),
+)
+
+commands(
+    ("cb2", 8),
+    library.make_sixteenths(
+        ["+", -1],
+    ),
+)
+
+commands(
+    ("cb2", (9, 10)),
+    library.make_sixteenths(
+        library.glissando_counts_curtailed,
+    ),
+)
+
+# phantom
+
+# after
+
+# bfl
 
 commands(
     ("bfl", (1, 6)),
@@ -94,13 +291,6 @@ commands(
 
 commands(
     ("bfl", 8),
-    library.make_sixteenths(
-        ["+"],
-    ),
-)
-
-commands(
-    ("bfl", 8),
     baca.pitch("F#5"),
     baca.dynamic(
         "p-ancora",
@@ -108,13 +298,6 @@ commands(
     ),
     baca.trill_spanner(
         abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-    ),
-)
-
-commands(
-    ("bfl", (9, 10)),
-    library.make_sixteenths(
-        library.damp_counts_curtailed,
     ),
 )
 
@@ -157,13 +340,6 @@ commands(
 
 commands(
     ("perc1", (1, 6)),
-    library.make_sixteenths(
-        [41, -7, "+"],
-    ),
-)
-
-commands(
-    ("perc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
@@ -186,13 +362,6 @@ commands(
 
 commands(
     ("perc1", 8),
-    library.make_sixteenths(
-        ["+"],
-    ),
-)
-
-commands(
-    ("perc1", 8),
     library.slate_staff_position(),
     baca.dynamic(
         '"f"',
@@ -201,13 +370,6 @@ commands(
     baca.markup(
         r"\baca-slate-scrape-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc1", (9, 10)),
-    library.make_sixteenths(
-        [12, 4, 4, 1, "-"],
     ),
 )
 
@@ -231,13 +393,6 @@ commands(
 
 commands(
     ("perc2", (1, 6)),
-    library.make_sixteenths(
-        library.duration_color,
-    ),
-)
-
-commands(
-    ("perc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.tam_tam_staff_position(),
@@ -251,13 +406,6 @@ commands(
     baca.markup(
         r"\baca-tam-tam-markup",
         abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-commands(
-    ("perc2", (9, 10)),
-    library.make_sixteenths(
-        library.duration_color,
     ),
 )
 
@@ -279,13 +427,6 @@ commands(
 
 commands(
     ("hp", (1, 6)),
-    library.make_sixteenths(
-        library.duration_color,
-    ),
-)
-
-commands(
-    ("hp", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("F1"),
@@ -297,15 +438,6 @@ commands(
         selector=lambda _: baca.select.pheads(_),
     ),
     baca.dls_staff_padding(4 + 3),
-)
-
-commands(
-    ("hp", 8),
-    library.make_sixteenths(
-        ["-", 4],
-        extra_counts=[2],
-        denominator=None,
-    ),
 )
 
 commands(
@@ -323,13 +455,6 @@ commands(
 
 commands(
     ("hp", (9, 10)),
-    library.make_sixteenths(
-        library.duration_color,
-    ),
-)
-
-commands(
-    ("hp", (9, 10)),
     baca.clef("bass"),
     baca.pitch("F1"),
     baca.damp(
@@ -340,13 +465,6 @@ commands(
 )
 
 # va
-
-commands(
-    ("va", (1, 6)),
-    library.make_sixteenths(
-        library.glissando_counts,
-    ),
-)
 
 commands(
     ("va", (1, 6)),
@@ -371,13 +489,6 @@ commands(
 
 commands(
     ("va", 8),
-    library.make_sixteenths(
-        ["+"],
-    ),
-)
-
-commands(
-    ("va", 8),
     baca.pitch("F4"),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -385,11 +496,6 @@ commands(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: baca.select.runs(_),
     ),
-)
-
-commands(
-    ("va", (9, 10)),
-    baca.make_repeat_tied_notes(),
 )
 
 commands(
@@ -413,26 +519,12 @@ commands(
 
 commands(
     ("vc1", (1, 6)),
-    library.make_sixteenths(
-        library.damp_counts,
-    ),
-)
-
-commands(
-    ("vc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: baca.select.runs(_),
-    ),
-)
-
-commands(
-    ("vc1", 8),
-    library.make_sixteenths(
-        ["+", -1],
     ),
 )
 
@@ -454,13 +546,6 @@ commands(
 
 commands(
     ("vc1", (9, 10)),
-    library.make_sixteenths(
-        library.damp_counts_curtailed,
-    ),
-)
-
-commands(
-    ("vc1", (9, 10)),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -473,26 +558,12 @@ commands(
 
 commands(
     ("vc2", (1, 6)),
-    library.make_sixteenths(
-        library.damp_counts,
-    ),
-)
-
-commands(
-    ("vc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
         abjad.Tweak(r"- \tweak staff-padding 3"),
         map=lambda _: baca.select.runs(_),
-    ),
-)
-
-commands(
-    ("vc2", 8),
-    library.make_sixteenths(
-        ["+", -1],
     ),
 )
 
@@ -514,13 +585,6 @@ commands(
 
 commands(
     ("vc2", (9, 10)),
-    library.make_sixteenths(
-        library.damp_counts_curtailed,
-    ),
-)
-
-commands(
-    ("vc2", (9, 10)),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -530,13 +594,6 @@ commands(
 )
 
 # cb1
-
-commands(
-    ("cb1", (1, 6)),
-    library.make_sixteenths(
-        library.glissando_counts,
-    ),
-)
 
 commands(
     ("cb1", (1, 6)),
@@ -561,13 +618,6 @@ commands(
 
 commands(
     ("cb1", 8),
-    library.make_sixteenths(
-        ["+", -1],
-    ),
-)
-
-commands(
-    ("cb1", 8),
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
@@ -579,13 +629,6 @@ commands(
         selector=lambda _: baca.select.tleaves(
             _,
         ),
-    ),
-)
-
-commands(
-    ("cb1", (9, 10)),
-    library.make_sixteenths(
-        library.glissando_counts_curtailed,
     ),
 )
 
@@ -613,13 +656,6 @@ commands(
 
 commands(
     ("cb2", (1, 6)),
-    library.make_sixteenths(
-        library.glissando_counts,
-    ),
-)
-
-commands(
-    ("cb2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitches("C#3 D3"),
     baca.glissando(
@@ -641,13 +677,6 @@ commands(
 
 commands(
     ("cb2", 8),
-    library.make_sixteenths(
-        ["+", -1],
-    ),
-)
-
-commands(
-    ("cb2", 8),
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
@@ -659,13 +688,6 @@ commands(
         selector=lambda _: baca.select.tleaves(
             _,
         ),
-    ),
-)
-
-commands(
-    ("cb2", (9, 10)),
-    library.make_sixteenths(
-        library.glissando_counts_curtailed,
     ),
 )
 

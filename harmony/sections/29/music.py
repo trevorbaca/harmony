@@ -70,7 +70,7 @@ commands(
     ),
 )
 
-# bfl, va, vc1, vc2, cb1
+# BFL
 
 commands(
     ("bfl", 1),
@@ -79,6 +79,36 @@ commands(
         tie_all=True,
     ),
 )
+# HP
+
+commands(
+    ("hp", 1),
+    library.make_sixteenths(
+        [1, "-"],
+    ),
+)
+
+# PERC1
+
+commands(
+    ("perc1", 1),
+    library.make_sixteenths(
+        [1, -22, 1],
+    ),
+)
+
+# PERC2
+
+commands(
+    ("perc2", 1),
+    library.make_sixteenths(
+        ["-", 1],
+        invisible=[-1],
+    ),
+)
+
+
+# VA
 
 commands(
     ("va", 1),
@@ -88,6 +118,8 @@ commands(
     ),
 )
 
+# VC1
+
 commands(
     ("vc1", 1),
     library.make_sixteenths(
@@ -95,6 +127,8 @@ commands(
         tie_all=True,
     ),
 )
+
+# VC2
 
 commands(
     ("vc2", 1),
@@ -104,6 +138,8 @@ commands(
     ),
 )
 
+# CB1
+
 commands(
     ("cb1", 1),
     library.make_sixteenths(
@@ -111,6 +147,23 @@ commands(
         tie_all=True,
     ),
 )
+
+# CB2
+
+commands(
+    ("cb2", 1),
+    library.make_sixteenths(
+        [16, 4, 2, 2],
+        written_dotted_wholes=[0],
+        invisible=[1, 2, 3],
+    ),
+)
+
+# phantom
+
+# after
+
+# bfl, va, vc1, vc2, cb1
 
 commands(
     (["bfl", "va", "vc1", "vc2", "cb1"], 1),
@@ -140,13 +193,6 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.make_sixteenths(
-        [1, -22, 1],
-    ),
-)
-
-commands(
-    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     library.brake_drum_staff_position(),
     baca.dynamic("f"),
@@ -170,14 +216,6 @@ commands(
 
 commands(
     ("perc2", 1),
-    library.make_sixteenths(
-        ["-", 1],
-        invisible=[-1],
-    ),
-)
-
-commands(
-    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.damp(
         lambda _: abjad.select.leaf(_, -1),
@@ -185,13 +223,6 @@ commands(
 )
 
 # hp
-
-commands(
-    ("hp", 1),
-    library.make_sixteenths(
-        [1, "-"],
-    ),
-)
 
 commands(
     ("hp", 1),
@@ -228,15 +259,6 @@ commands(
 )
 
 # cb2
-
-commands(
-    ("cb2", 1),
-    library.make_sixteenths(
-        [16, 4, 2, 2],
-        written_dotted_wholes=[0],
-        invisible=[1, 2, 3],
-    ),
-)
 
 commands(
     ("cb2", 1),
