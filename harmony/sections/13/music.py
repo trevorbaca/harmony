@@ -102,6 +102,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("bfl", 1),
     baca.reapply_persistent_indicators(),
     # TODO: promote into library.make_sixteenths():
     baca.repeat_tie(
@@ -130,6 +134,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("bfl", 3),
     baca.pitch("B4"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -147,6 +155,10 @@ commands(
         counts=[9],
         incise=True,
     ),
+)
+
+commands(
+    ("bfl", 4),
     baca.pitches(
         "A3",
         lambda _: baca.select.leaves(_, grace=False),
@@ -175,6 +187,10 @@ commands(
     library.make_sixteenths(
         [4, 8],
     ),
+)
+
+commands(
+    ("bfl", 5),
     baca.pitch("Dtqf5"),
     baca.markup(
         r"\baca-seven-e-flat",
@@ -213,6 +229,10 @@ commands(
         counts=[5, 4],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     baca.staff_position(
@@ -245,6 +265,10 @@ commands(
         counts=[0, 3],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", 3),
     baca.staff_position(0),
     baca.dynamic(
         "p",
@@ -254,8 +278,12 @@ commands(
 
 commands(
     ("perc1", 4),
-    baca.staff_lines(1),
     baca.make_notes(),
+)
+
+commands(
+    ("perc1", 4),
+    baca.staff_lines(1),
     library.triangle_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -277,6 +305,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("perc1", 5),
     library.bass_drum_staff_position(),
     baca.hairpin(
         "o<| f",
@@ -302,6 +334,10 @@ commands(
         counts=[4, 5],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     baca.staff_position(
@@ -334,6 +370,10 @@ commands(
         counts=[0, 4],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc2", 3),
     baca.staff_position(0),
     baca.dynamic(
         "p",
@@ -343,10 +383,14 @@ commands(
 
 commands(
     ("perc2", 4),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [20, "-", 1, -1],
     ),
+)
+
+commands(
+    ("perc2", 4),
+    baca.staff_lines(1),
     baca.new(
         baca.dynamic(
             "p-ancora",
@@ -381,6 +425,10 @@ commands(
     library.make_sixteenths(
         [2, -2],
     ),
+)
+
+commands(
+    ("perc2", 5),
     library.brake_drum_staff_position(),
 )
 
@@ -416,6 +464,10 @@ commands(
     library.make_sixteenths(
         [-4, 4, 8, -4],
     ),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.staff_lines(5),
@@ -439,6 +491,10 @@ commands(
     library.make_sixteenths(
         [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
     ),
+)
+
+commands(
+    ("hp", (3, 4)),
     baca.clef("treble"),
     baca.pitches(
         "Bb5 A5 G#5",
@@ -472,6 +528,10 @@ commands(
     library.make_sixteenths(
         [2, -2],
     ),
+)
+
+commands(
+    ("hp", 5),
     baca.pitch("E4"),
     baca.snap_pizzicato(
         lambda _: baca.select.pheads(_),
@@ -502,6 +562,10 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+)
+
+commands(
+    ("va", 1),
     baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
@@ -523,6 +587,10 @@ commands(
 commands(
     ("va", 3),
     baca.make_notes(),
+)
+
+commands(
+    ("va", 3),
     baca.dynamic("mp"),
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
@@ -553,6 +621,10 @@ commands(
 commands(
     ("va", (4, 5)),
     baca.make_repeat_tied_notes(),
+)
+
+commands(
+    ("va", (4, 5)),
     baca.pitch("D3"),
     baca.hairpin(
         "(mp) >o niente",
@@ -575,6 +647,10 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+)
+
+commands(
+    ("vc1", 1),
     baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
@@ -596,6 +672,10 @@ commands(
 commands(
     ("vc1", 3),
     baca.make_notes(),
+)
+
+commands(
+    ("vc1", 3),
     baca.dynamic("mp"),
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
@@ -654,6 +734,10 @@ commands(
     library.make_sixteenths(
         [7, -1, 12],
     ),
+)
+
+commands(
+    ("vc2", 1),
     baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.phead(_, 0),
@@ -685,6 +769,10 @@ commands(
 commands(
     ("vc2", 3),
     baca.make_notes(),
+)
+
+commands(
+    ("vc2", 3),
     baca.dynamic(
         "mp-ancora",
         abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
@@ -729,6 +817,10 @@ commands(
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
     ),
+)
+
+commands(
+    ("cb1", 1),
     baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, 0),
@@ -750,6 +842,10 @@ commands(
 commands(
     ("cb1", 3),
     baca.make_notes(),
+)
+
+commands(
+    ("cb1", 3),
     baca.dynamic("mp"),
     baca.markup(
         r"\harmony-half-harm-pressure-markup",
@@ -808,6 +904,10 @@ commands(
     library.make_sixteenths(
         [7, -1, 12],
     ),
+)
+
+commands(
+    ("cb2", 1),
     baca.reapply_persistent_indicators(),
     baca.repeat_tie(
         lambda _: baca.select.phead(_, 0),
@@ -839,6 +939,10 @@ commands(
 commands(
     ("cb2", 3),
     baca.make_notes(),
+)
+
+commands(
+    ("cb2", 3),
     baca.dynamic(
         "mp-ancora",
         abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
@@ -875,11 +979,39 @@ commands(
 # vc1, vc2, cb1, cb2
 
 commands(
-    (["vc1", "vc2", "cb1", "cb2"], 4),
+    ("vc1", 4),
     library.make_sixteenths(
         ["+", 2],
         unbeam=True,
     ),
+)
+
+commands(
+    ("vc2", 4),
+    library.make_sixteenths(
+        ["+", 2],
+        unbeam=True,
+    ),
+)
+
+commands(
+    ("cb1", 4),
+    library.make_sixteenths(
+        ["+", 2],
+        unbeam=True,
+    ),
+)
+
+commands(
+    ("cb2", 4),
+    library.make_sixteenths(
+        ["+", 2],
+        unbeam=True,
+    ),
+)
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], 4),
     baca.new(
         baca.accent(),
         baca.stem_tremolo(),
@@ -889,10 +1021,35 @@ commands(
 )
 
 commands(
-    (["vc1", "vc2", "cb1", "cb2"], 5),
+    ("vc1", 5),
     library.make_sixteenths(
         [4],
     ),
+)
+
+commands(
+    ("vc2", 5),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    ("cb1", 5),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    ("cb2", 5),
+    library.make_sixteenths(
+        [4],
+    ),
+)
+
+commands(
+    (["vc1", "vc2", "cb1", "cb2"], 5),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
     ),

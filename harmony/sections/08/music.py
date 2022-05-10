@@ -84,6 +84,10 @@ commands(
 commands(
     ("bfl", (1, 7)),
     baca.make_mmrests(),
+)
+
+commands(
+    ("bfl", (1, 7)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -103,6 +107,10 @@ commands(
         denominator=None,
         do_not_rewrite_meter=True,
     ),
+)
+
+commands(
+    ("bfl", (8, 9)),
     baca.pitch("Ab3"),
     baca.dynamic("mf"),
     baca.dls_staff_padding(4),
@@ -126,6 +134,10 @@ commands(
     library.make_sixteenths(
         [1, -11, -1, 1, -14],
     ),
+)
+
+commands(
+    ("perc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.brake_drum_staff_position(),
@@ -146,6 +158,10 @@ commands(
 commands(
     ("perc2", (1, 6)),
     baca.make_notes(),
+)
+
+commands(
+    ("perc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
@@ -160,6 +176,10 @@ commands(
 commands(
     ("perc2", (8, 9)),
     baca.make_notes(),
+)
+
+commands(
+    ("perc2", (8, 9)),
     library.tam_tam_staff_position(),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -182,6 +202,10 @@ commands(
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     ),
+)
+
+commands(
+    ("hp", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -216,6 +240,10 @@ commands(
 commands(
     ("hp", (8, 9)),
     baca.make_notes(),
+)
+
+commands(
+    ("hp", (8, 9)),
     baca.pitch("<C6 Db6 Eb6>"),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -239,6 +267,10 @@ commands(
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     ),
+)
+
+commands(
+    ("va", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
@@ -284,6 +316,10 @@ commands(
     library.make_sixteenths(
         [4, 4, 4],
     ),
+)
+
+commands(
+    ("vc1", 1),
     baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
@@ -310,6 +346,10 @@ commands(
         written_wholes=([0, 1], 3),
         invisible=([1], 3),
     ),
+)
+
+commands(
+    ("vc1", (2, 6)),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
@@ -368,6 +408,10 @@ commands(
         written_wholes=[1],
         invisible=[-1],
     ),
+)
+
+commands(
+    ("vc2", (1, 2)),
     baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
@@ -397,6 +441,10 @@ commands(
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     ),
+)
+
+commands(
+    ("vc2", (3, 6)),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
@@ -443,6 +491,10 @@ commands(
     library.make_sixteenths(
         [4, 4, 8, 4, 4, 8, 4, 4],
     ),
+)
+
+commands(
+    ("cb1", (1, 3)),
     baca.reapply_persistent_indicators(),
     # TODO: promote into rhythm:
     baca.repeat_tie(
@@ -466,6 +518,10 @@ commands(
         written_wholes=([0, 1], 3),
         invisible=([1], 3),
     ),
+)
+
+commands(
+    ("cb1", (4, 6)),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
@@ -512,6 +568,10 @@ commands(
         written_wholes=[-2],
         invisible=[-1],
     ),
+)
+
+commands(
+    ("cb2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Bb2"),
     baca.hairpin(
@@ -537,6 +597,10 @@ commands(
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     ),
+)
+
+commands(
+    ("cb2", (5, 6)),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
     ),
@@ -574,8 +638,32 @@ commands(
 # va, vc1, vc2, cb1, cb2
 
 commands(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
+    ("va", (8, 9)),
     baca.make_notes(),
+)
+
+commands(
+    ("vc1", (8, 9)),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", (8, 9)),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", (8, 9)),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", (8, 9)),
+    baca.make_notes(),
+)
+
+commands(
+    (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
     baca.note_head_style_harmonic(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),

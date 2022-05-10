@@ -166,6 +166,10 @@ commands(
         extra_counts=[4],
         denominator=None,
     ),
+)
+
+commands(
+    ("bfl", 9),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.covered_spanner(
@@ -179,6 +183,10 @@ commands(
     library.make_warble_rhythm(
         extra_counts=[2],
     ),
+)
+
+commands(
+    ("bfl", 12),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -5),
     ),
@@ -211,11 +219,23 @@ commands(
 )
 
 commands(
-    ("bfl", [11, 13]),
+    ("bfl", 11),
     library.make_sixteenths(
         [-8, 8, -16, 4],
         extra_counts=[1],
     ),
+)
+
+commands(
+    ("bfl", 13),
+    library.make_sixteenths(
+        [-8, 8, -16, 4],
+        extra_counts=[1],
+    ),
+)
+
+commands(
+    ("bfl", [11, 13]),
     baca.pitch("Eb3"),
     baca.dynamic("pp"),
     baca.covered_spanner(
@@ -238,6 +258,10 @@ commands(
         counts=[0, 5],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", 1),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
@@ -258,10 +282,14 @@ commands(
 
 commands(
     ("perc1", 2),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [4, 2, "-"],
     ),
+)
+
+commands(
+    ("perc1", 2),
+    baca.staff_lines(1),
     library.bass_drum_staff_position(),
     baca.accent(),
     baca.laissez_vibrer(
@@ -281,12 +309,16 @@ commands(
 
 commands(
     ("perc1", (4, 8)),
-    baca.staff_lines(3),
     library.make_appoggiato_rhythm(
         divisions=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", (4, 8)),
+    baca.staff_lines(3),
     baca.dynamic(
         "ff-sempre",
         abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
@@ -316,12 +348,16 @@ commands(
 
 commands(
     ("perc1", 12),
-    baca.staff_lines(3),
     library.make_appoggiato_rhythm(
         divisions=[20],
         counts=[25],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc1", 12),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
@@ -339,13 +375,26 @@ commands(
 )
 
 commands(
-    ("perc1", [11, 13]),
-    baca.staff_lines(1),
+    ("perc1", 11),
     library.make_sixteenths(
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("perc1", 13),
+    library.make_sixteenths(
+        [8, -8, 8, -8, 8, -16],
+        extra_counts=[2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("perc1", [11, 13]),
+    baca.staff_lines(1),
     library.slate_staff_position(),
     baca.dynamic("pp"),
     baca.dls_staff_padding(6),
@@ -364,6 +413,10 @@ commands(
         counts=[0, 0, 4],
         rest_after=[-2, -1],
     ),
+)
+
+commands(
+    ("perc2", 1),
     baca.reapply_persistent_indicators(),
     baca.new(
         library.purpleheart_staff_positions([0]),
@@ -387,10 +440,14 @@ commands(
 
 commands(
     ("perc2", 2),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [4, 2, "-"],
     ),
+)
+
+commands(
+    ("perc2", 2),
+    baca.staff_lines(1),
     library.brake_drum_staff_position(),
     baca.damp(),
     baca.dynamic("p"),
@@ -407,12 +464,16 @@ commands(
 
 commands(
     ("perc2", (4, 8)),
-    baca.staff_lines(3),
     library.make_appoggiato_rhythm(
         divisions=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc2", (4, 8)),
+    baca.staff_lines(3),
     baca.markup(
         r"\baca-purpleheart-markup",
         abjad.Tweak(r"- \tweak staff-padding 5"),
@@ -442,11 +503,15 @@ commands(
 
 commands(
     ("perc2", 11),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [2, -8, 2, -8, 2, -20],
         extra_counts=[1],
     ),
+)
+
+commands(
+    ("perc2", 11),
+    baca.staff_lines(1),
     library.slate_staff_position(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -464,12 +529,16 @@ commands(
 
 commands(
     ("perc2", 12),
-    baca.staff_lines(3),
     library.make_appoggiato_rhythm(
         divisions=[20],
         counts=[24],
         rest_after=True,
     ),
+)
+
+commands(
+    ("perc2", 12),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([2]),
     baca.dynamic(
         "ff",
@@ -530,6 +599,10 @@ commands(
 commands(
     ("hp", 1),
     baca.make_mmrests(),
+)
+
+commands(
+    ("hp", 1),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -540,6 +613,10 @@ commands(
     library.make_sixteenths(
         [-4, 2, "-"],
     ),
+)
+
+commands(
+    ("hp", 2),
     baca.pitch("G4"),
     baca.laissez_vibrer(),
     baca.dynamic("mf"),
@@ -555,7 +632,7 @@ commands(
 )
 
 commands(
-    ("hp", [4, 6, 8]),
+    ("hp", 4),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
@@ -563,7 +640,33 @@ commands(
 )
 
 commands(
-    ("hp", [5, 7, 9]),
+    ("hp", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("hp", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("hp", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("hp", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("hp", 9),
     baca.make_notes(),
 )
 
@@ -592,6 +695,10 @@ commands(
         [(1,)],
         force_augmentation=True,
     ),
+)
+
+commands(
+    ("hp", 12),
     baca.pitch("<G6 A6 Bb6>"),
     baca.ottava(),
     baca.ottava_bracket_staff_padding(5.5),
@@ -608,10 +715,21 @@ commands(
 )
 
 commands(
-    ("hp", [11, 13]),
+    ("hp", 11),
     library.make_sixteenths(
         [2, -20, 2, -24],
     ),
+)
+
+commands(
+    ("hp", 13),
+    library.make_sixteenths(
+        [2, -20, 2, -24],
+    ),
+)
+
+commands(
+    ("hp", [11, 13]),
     baca.pitch("F#4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -627,11 +745,39 @@ commands(
 # va, vc1, vc2, cb1, cb2
 
 commands(
-    (["va", "vc1", "vc2", "cb1"], 1),
+    ("va", 1),
     library.make_sixteenths(
         [2, 2, 2, 2, 2, 2, "-"],
         written_quarters=True,
     ),
+)
+
+commands(
+    ("vc1", 1),
+    library.make_sixteenths(
+        [2, 2, 2, 2, 2, 2, "-"],
+        written_quarters=True,
+    ),
+)
+
+commands(
+    ("vc2", 1),
+    library.make_sixteenths(
+        [2, 2, 2, 2, 2, 2, "-"],
+        written_quarters=True,
+    ),
+)
+
+commands(
+    ("cb1", 1),
+    library.make_sixteenths(
+        [2, 2, 2, 2, 2, 2, "-"],
+        written_quarters=True,
+    ),
+)
+
+commands(
+    (["va", "vc1", "vc2", "cb1"], 1),
     baca.reapply_persistent_indicators(),
 )
 
@@ -654,6 +800,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("va", 2),
     baca.tuplet_bracket_up(),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -687,7 +837,16 @@ commands(
 )
 
 commands(
-    ("va", [11, 13]),
+    ("va", 11),
+    library.make_sixteenths(
+        [2, -8, 2, -4, 2, -26],
+        extra_counts=[2],
+        denominator=None,
+    ),
+)
+
+commands(
+    ("va", 13),
     library.make_sixteenths(
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
@@ -697,7 +856,10 @@ commands(
 
 # vc1
 
-commands(("vc1", 1), baca.clef("treble"))
+commands(
+    ("vc1", 1),
+    baca.clef("treble"),
+)
 
 commands(
     ("vc1", 2),
@@ -725,7 +887,15 @@ commands(
 )
 
 commands(
-    ("vc1", [11, 13]),
+    ("vc1", 11),
+    library.make_sixteenths(
+        [3, -7, 3, -7, 3, -7, 3, -14],
+        extra_counts=[1],
+    ),
+)
+
+commands(
+    ("vc1", 13),
     library.make_sixteenths(
         [3, -7, 3, -7, 3, -7, 3, -14],
         extra_counts=[1],
@@ -760,11 +930,23 @@ commands(
 )
 
 commands(
-    ("vc2", [11, 13]),
+    ("vc2", 11),
     library.make_sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
         extra_counts=[1],
     ),
+)
+
+commands(
+    ("vc2", 13),
+    library.make_sixteenths(
+        [3, -5, 3, -5, 3, -5, 3, -23],
+        extra_counts=[1],
+    ),
+)
+
+commands(
+    ("vc2", [11, 13]),
     baca.tuplet_bracket_staff_padding(3),
     baca.new(
         baca.rest_extra_offset(
@@ -812,7 +994,14 @@ commands(
 )
 
 commands(
-    ("cb1", [11, 13]),
+    ("cb1", 11),
+    library.make_sixteenths(
+        [3, -7, 3, -7, 3, -7, 3, -14],
+    ),
+)
+
+commands(
+    ("cb1", 13),
     library.make_sixteenths(
         [3, -7, 3, -7, 3, -7, 3, -14],
     ),
@@ -830,6 +1019,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("cb2", 1),
     baca.reapply_persistent_indicators(),
     baca.tuplet_bracket_up(),
 )
@@ -886,7 +1079,14 @@ commands(
 )
 
 commands(
-    ("cb2", [11, 13]),
+    ("cb2", 11),
+    library.make_sixteenths(
+        [3, -5, 3, -5, 3, -5, 3, -23],
+    ),
+)
+
+commands(
+    ("cb2", 13),
     library.make_sixteenths(
         [3, -5, 3, -5, 3, -5, 3, -23],
     ),
@@ -958,11 +1158,31 @@ commands(
 )
 
 commands(
-    (["vc1", "vc2", "cb1"], 2),
+    ("vc1", 2),
     library.make_sixteenths(
         [-4, 6, 2, -4],
         untie=True,
     ),
+)
+
+commands(
+    ("vc2", 2),
+    library.make_sixteenths(
+        [-4, 6, 2, -4],
+        untie=True,
+    ),
+)
+
+commands(
+    ("cb1", 2),
+    library.make_sixteenths(
+        [-4, 6, 2, -4],
+        untie=True,
+    ),
+)
+
+commands(
+    (["vc1", "vc2", "cb1"], 2),
     baca.flat_glissando(),
     baca.hairpin(
         "o< mp >o niente",
@@ -981,7 +1201,7 @@ commands(
 )
 
 commands(
-    (["va", "vc1", "vc2", "cb1", "cb2"], [4, 6, 8]),
+    ("va", 4),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
@@ -989,7 +1209,189 @@ commands(
 )
 
 commands(
-    (["va", "vc1", "vc2", "cb1", "cb2"], [5, 7, 9]),
+    ("va", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("va", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc1", 4),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc1", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc1", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc2", 4),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc2", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc2", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb1", 4),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb1", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb1", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb2", 4),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb2", 6),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb2", 8),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("va", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("va", 9),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc1", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc1", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc1", 9),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("vc2", 9),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb1", 9),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", 5),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", 7),
+    baca.make_notes(),
+)
+
+commands(
+    ("cb2", 9),
     baca.make_notes(),
 )
 
@@ -1006,11 +1408,39 @@ commands(
 )
 
 commands(
-    (["va", "vc1", "vc2", "cb1"], 12),
+    ("va", 12),
     library.make_tuplet(
         [(1,)],
         force_augmentation=True,
     ),
+)
+
+commands(
+    ("vc1", 12),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("vc2", 12),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    ("cb1", 12),
+    library.make_tuplet(
+        [(1,)],
+        force_augmentation=True,
+    ),
+)
+
+commands(
+    (["va", "vc1", "vc2", "cb1"], 12),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
     ),

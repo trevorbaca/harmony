@@ -67,6 +67,10 @@ commands(
         counts=[9, 6, 8, 4],
         incise=True,
     ),
+)
+
+commands(
+    ("bfl", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -109,6 +113,10 @@ commands(
     library.make_sixteenths(
         library.cerulean[1:],
     ),
+)
+
+commands(
+    ("bfl", 3),
     baca.pitch("F3"),
     baca.dynamic("mf"),
     baca.dls_staff_padding(3),
@@ -127,6 +135,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("perc1", 1),
     baca.attach_first_segment_default_indicators(),
 )
 
@@ -159,6 +171,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("perc1", 2),
     baca.laissez_vibrer(),
     baca.hairpin(
         "o<| mf",
@@ -182,13 +198,17 @@ commands(
 
 commands(
     ("perc1", 3),
-    baca.staff_lines(3),
     library.make_phjc_rhythm(
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_most=True,
     ),
+)
+
+commands(
+    ("perc1", 3),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
@@ -211,6 +231,10 @@ commands(
     library.make_sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
+)
+
+commands(
+    ("perc2", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Perc. II"),
@@ -229,7 +253,6 @@ commands(
 
 commands(
     ("perc2", 3),
-    baca.staff_lines(3),
     library.make_phjc_rhythm(
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
@@ -237,6 +260,11 @@ commands(
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     ),
+)
+
+commands(
+    ("perc2", 3),
+    baca.staff_lines(3),
     library.purpleheart_staff_positions([0, 0, -2, 0, -2]),
     baca.hairpin(
         "f > p",
@@ -259,6 +287,10 @@ commands(
     library.make_sixteenths(
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
     ),
+)
+
+commands(
+    ("hp", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Hp."),
@@ -277,11 +309,15 @@ commands(
 
 commands(
     ("hp", 3),
-    baca.clef("bass"),
-    baca.staff_lines(5),
     library.make_sixteenths(
         [10, "-"],
     ),
+)
+
+commands(
+    ("hp", 3),
+    baca.clef("bass"),
+    baca.staff_lines(5),
     baca.pitch("G1"),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -301,6 +337,10 @@ commands(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
+)
+
+commands(
+    ("va", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -322,13 +362,17 @@ commands(
 
 commands(
     ("va", 3),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.make_sixteenths(
         library.cerulean[1:],
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("va", 3),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -371,6 +415,14 @@ commands(
 
 commands(
     ("vc1", 3),
+    library.make_sixteenths(
+        [5, -5, 1, -4],
+        extra_counts=[1],
+    ),
+)
+
+commands(
+    ("vc1", 3),
     baca.clef(
         "percussion",
         lambda _: abjad.select.leaf(_, 1),
@@ -378,10 +430,6 @@ commands(
     baca.staff_lines(
         1,
         lambda _: abjad.select.leaf(_, 1),
-    ),
-    library.make_sixteenths(
-        [5, -5, 1, -4],
-        extra_counts=[1],
     ),
     baca.new(
         library.bridge_staff_position(),
@@ -419,6 +467,10 @@ commands(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
+)
+
+commands(
+    ("vc2", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -440,6 +492,10 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+)
+
+commands(
+    ("vc2", 3),
     baca.interpolate_pitches("G2", "F2"),
     baca.glissando(
         allow_repeats=True,
@@ -471,6 +527,10 @@ commands(
     library.make_sixteenths(
         [18, 6, 10, 4, 6],
     ),
+)
+
+commands(
+    ("cb1", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -530,6 +590,10 @@ commands(
         divisions=[16, 8, 12, 8],
         incise=True,
     ),
+)
+
+commands(
+    ("cb2", (1, 2)),
     baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
@@ -555,6 +619,10 @@ commands(
         untie=True,
         after_graces=[1],
     ),
+)
+
+commands(
+    ("cb2", 3),
     baca.interpolate_pitches("G2", "F#2"),
     baca.glissando(
         allow_repeats=True,

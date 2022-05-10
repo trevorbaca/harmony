@@ -89,6 +89,10 @@ commands(
 commands(
     ("bfl", (1, 4)),
     baca.make_mmrests(),
+)
+
+commands(
+    ("bfl", (1, 4)),
     baca.reapply_persistent_indicators(),
 )
 
@@ -99,6 +103,10 @@ commands(
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     ),
+)
+
+commands(
+    ("bfl", 5),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches, -11),
     ),
@@ -133,6 +141,10 @@ commands(
         written_double_dotted_wholes=([0], 7),
         invisible=([1, 2, 3, 4, 5, 6], 7),
     ),
+)
+
+commands(
+    ("bfl", (7, 10)),
     baca.pitch("A4"),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
@@ -166,6 +178,10 @@ commands(
         fuse=True,
         written_halves=[0],
     ),
+)
+
+commands(
+    ("perc1", (1, 4)),
     baca.reapply_persistent_indicators(),
     library.triangle_staff_position(),
     baca.flat_glissando(
@@ -192,6 +208,10 @@ commands(
     library.make_sixteenths(
         [1, -23, -1, 1, -22],
     ),
+)
+
+commands(
+    ("perc1", 5),
     library.brake_drum_staff_position(),
     baca.dynamic(
         "f-sempre",
@@ -210,6 +230,10 @@ commands(
         written_double_dotted_wholes=([0], 7),
         invisible=([1, 2, 3, 4, 5, 6], 7),
     ),
+)
+
+commands(
+    ("perc1", (7, 10)),
     library.triangle_staff_position(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
@@ -244,6 +268,10 @@ commands(
     library.make_sixteenths(
         [2, "-"],
     ),
+)
+
+commands(
+    ("perc2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.staff_lines(5),
@@ -261,11 +289,15 @@ commands(
 
 commands(
     ("perc2", 5),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
     library.make_sixteenths(
         [2, -22, -1, 2, -21],
     ),
+)
+
+commands(
+    ("perc2", 5),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.slate_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),
@@ -286,11 +318,15 @@ commands(
 
 commands(
     ("perc2", (7, 10)),
-    baca.clef("treble"),
-    baca.staff_lines(5),
     library.make_sixteenths(
         [-26, 2],
     ),
+)
+
+commands(
+    ("perc2", (7, 10)),
+    baca.clef("treble"),
+    baca.staff_lines(5),
     baca.pitch("A4"),
     baca.laissez_vibrer(
         lambda _: baca.select.ptails(_),
@@ -314,6 +350,10 @@ commands(
     library.make_sixteenths(
         [4, "-"],
     ),
+)
+
+commands(
+    ("hp", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("A1"),
@@ -329,6 +369,10 @@ commands(
     library.make_sixteenths(
         ["+"],
     ),
+)
+
+commands(
+    ("hp", (7, 10)),
     baca.pitch("<E3 Fb3>"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -356,6 +400,10 @@ commands(
 commands(
     ("va", (1, 4)),
     baca.make_notes(),
+)
+
+commands(
+    ("va", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("Gqf3"),
     baca.flat_glissando(
@@ -374,6 +422,10 @@ commands(
 commands(
     ("va", 5),
     library.make_tessera_4(4),
+)
+
+commands(
+    ("va", 5),
     baca.note_head_style_harmonic_black(),
     baca.pitch("<G4 Ab4 Bb4>"),
     baca.dynamic("pp"),
@@ -382,6 +434,10 @@ commands(
 commands(
     ("va", (7, 10)),
     baca.make_notes(),
+)
+
+commands(
+    ("va", (7, 10)),
     baca.pitch("E3"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -403,6 +459,10 @@ commands(
     library.make_sixteenths(
         [10, 6],
     ),
+)
+
+commands(
+    ("vc1", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("E6 C#6"),
@@ -423,6 +483,10 @@ commands(
 commands(
     ("vc1", 5),
     library.make_tessera_4(3),
+)
+
+commands(
+    ("vc1", 5),
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=lambda _: baca.select.lparts(_, [2, 3, 1 + 1]),
@@ -448,6 +512,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("vc1", (7, 10)),
     baca.note_head_style_harmonic(),
     baca.pitch("C#6"),
     baca.hairpin(
@@ -485,6 +553,10 @@ commands(
     library.make_sixteenths(
         [10, 6],
     ),
+)
+
+commands(
+    ("vc2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.note_head_style_harmonic(),
     baca.pitches("A5 C#6"),
@@ -505,6 +577,10 @@ commands(
 commands(
     ("vc2", 5),
     library.make_tessera_4(2),
+)
+
+commands(
+    ("vc2", 5),
     baca.hairpin(
         "pp -- ! < mp -- ! >o niente",
         pieces=lambda _: baca.select.lparts(_, [1, 2, 3, 2 + 1]),
@@ -529,12 +605,16 @@ commands(
 
 commands(
     ("vc2", (7, 10)),
-    baca.note_head_style_harmonic(),
     library.make_sixteenths(
         [2],
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("vc2", (7, 10)),
+    baca.note_head_style_harmonic(),
     baca.note_head_style_harmonic(),
     baca.pitch("A5"),
     baca.hairpin(
@@ -572,6 +652,10 @@ commands(
     library.make_sixteenths(
         [4, 4, -8],
     ),
+)
+
+commands(
+    ("cb1", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.clef("treble"),
     baca.note_head_style_harmonic(),
@@ -598,6 +682,10 @@ commands(
 commands(
     ("cb1", 5),
     library.make_tessera_4(1),
+)
+
+commands(
+    ("cb1", 5),
     baca.hairpin(
         "pp -- ! < mp >o niente",
         pieces=lambda _: baca.select.lparts(_, [2, 3, 2 + 1]),
@@ -624,6 +712,10 @@ commands(
         written_quarters=True,
         invisible_pairs=True,
     ),
+)
+
+commands(
+    ("cb1", (7, 10)),
     baca.note_head_style_harmonic(),
     baca.pitch(
         "C#4",
@@ -666,6 +758,10 @@ commands(
         written_halves=[-2],
         invisible=[-1],
     ),
+)
+
+commands(
+    ("cb2", (1, 4)),
     baca.reapply_persistent_indicators(),
     baca.pitch("A1"),
     baca.flat_glissando(
@@ -697,6 +793,10 @@ commands(
 commands(
     ("cb2", 5),
     library.make_tessera_4(0),
+)
+
+commands(
+    ("cb2", 5),
     baca.clef("treble"),
     baca.hairpin(
         "pp -- ! < mp >o niente",
@@ -727,6 +827,10 @@ commands(
     library.make_sixteenths(
         [4],
     ),
+)
+
+commands(
+    ("cb2", (7, 10)),
     baca.clef("bass"),
     baca.flat_glissando(
         "A1",

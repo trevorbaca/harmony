@@ -72,6 +72,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts,
     ),
+)
+
+commands(
+    ("bfl", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("D5"),
     baca.dynamic(
@@ -93,6 +97,10 @@ commands(
     library.make_sixteenths(
         ["+"],
     ),
+)
+
+commands(
+    ("bfl", 8),
     baca.pitch("F#5"),
     baca.dynamic(
         "p-ancora",
@@ -108,6 +116,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
+)
+
+commands(
+    ("bfl", (9, 10)),
     baca.pitch("D5"),
     baca.new(
         baca.text_spanner(
@@ -148,6 +160,10 @@ commands(
     library.make_sixteenths(
         [41, -7, "+"],
     ),
+)
+
+commands(
+    ("perc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.flat_glissando(
         hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
@@ -173,6 +189,10 @@ commands(
     library.make_sixteenths(
         ["+"],
     ),
+)
+
+commands(
+    ("perc1", 8),
     library.slate_staff_position(),
     baca.dynamic(
         '"f"',
@@ -189,6 +209,10 @@ commands(
     library.make_sixteenths(
         [12, 4, 4, 1, "-"],
     ),
+)
+
+commands(
+    ("perc1", (9, 10)),
     library.brake_drum_staff_position(),
     baca.flat_glissando(),
     baca.dynamic("p"),
@@ -210,6 +234,10 @@ commands(
     library.make_sixteenths(
         library.duration_color,
     ),
+)
+
+commands(
+    ("perc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.staff_lines(1),
     library.tam_tam_staff_position(),
@@ -231,6 +259,10 @@ commands(
     library.make_sixteenths(
         library.duration_color,
     ),
+)
+
+commands(
+    ("perc2", (9, 10)),
     library.tam_tam_staff_position(),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -250,6 +282,10 @@ commands(
     library.make_sixteenths(
         library.duration_color,
     ),
+)
+
+commands(
+    ("hp", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.clef("bass"),
     baca.pitch("F1"),
@@ -265,12 +301,16 @@ commands(
 
 commands(
     ("hp", 8),
-    baca.clef("treble"),
     library.make_sixteenths(
         ["-", 4],
         extra_counts=[2],
         denominator=None,
     ),
+)
+
+commands(
+    ("hp", 8),
+    baca.clef("treble"),
     baca.pitch("<B4 C5>"),
     baca.double_flageolet(),
     baca.dynamic("f"),
@@ -283,10 +323,14 @@ commands(
 
 commands(
     ("hp", (9, 10)),
-    baca.clef("bass"),
     library.make_sixteenths(
         library.duration_color,
     ),
+)
+
+commands(
+    ("hp", (9, 10)),
+    baca.clef("bass"),
     baca.pitch("F1"),
     baca.damp(
         lambda _: baca.select.leaf_after_each_ptail(_),
@@ -302,6 +346,10 @@ commands(
     library.make_sixteenths(
         library.glissando_counts,
     ),
+)
+
+commands(
+    ("va", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitches("D4 Eb4"),
     baca.glissando(
@@ -326,6 +374,10 @@ commands(
     library.make_sixteenths(
         ["+"],
     ),
+)
+
+commands(
+    ("va", 8),
     baca.pitch("F4"),
     baca.dynamic("p"),
     baca.bow_speed_spanner(
@@ -338,6 +390,10 @@ commands(
 commands(
     ("va", (9, 10)),
     baca.make_repeat_tied_notes(),
+)
+
+commands(
+    ("va", (9, 10)),
     baca.pitch("D4"),
     baca.flat_glissando(
         hide_middle_stems=True,
@@ -360,6 +416,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts,
     ),
+)
+
+commands(
+    ("vc1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
@@ -374,6 +434,10 @@ commands(
     library.make_sixteenths(
         ["+", -1],
     ),
+)
+
+commands(
+    ("vc1", 8),
     baca.pitch("A2"),
     baca.new(
         baca.stop_on_string(),
@@ -393,6 +457,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
+)
+
+commands(
+    ("vc1", (9, 10)),
     baca.pitch("D#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -408,6 +476,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts,
     ),
+)
+
+commands(
+    ("vc2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
@@ -422,6 +494,10 @@ commands(
     library.make_sixteenths(
         ["+", -1],
     ),
+)
+
+commands(
+    ("vc2", 8),
     baca.pitch("G2"),
     baca.new(
         baca.stop_on_string(),
@@ -441,6 +517,10 @@ commands(
     library.make_sixteenths(
         library.damp_counts_curtailed,
     ),
+)
+
+commands(
+    ("vc2", (9, 10)),
     baca.pitch("C#3"),
     baca.dynamic("pp"),
     baca.damp_spanner(
@@ -456,6 +536,10 @@ commands(
     library.make_sixteenths(
         library.glissando_counts,
     ),
+)
+
+commands(
+    ("cb1", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitches("E3 D#3"),
     baca.glissando(
@@ -480,6 +564,10 @@ commands(
     library.make_sixteenths(
         ["+", -1],
     ),
+)
+
+commands(
+    ("cb1", 8),
     baca.pitch("G#1"),
     baca.new(
         baca.stop_on_string(),
@@ -499,6 +587,10 @@ commands(
     library.make_sixteenths(
         library.glissando_counts_curtailed,
     ),
+)
+
+commands(
+    ("cb1", (9, 10)),
     baca.pitches("E3 D#3"),
     baca.glissando(
         allow_repeats=True,
@@ -524,6 +616,10 @@ commands(
     library.make_sixteenths(
         library.glissando_counts,
     ),
+)
+
+commands(
+    ("cb2", (1, 6)),
     baca.reapply_persistent_indicators(),
     baca.pitches("C#3 D3"),
     baca.glissando(
@@ -548,6 +644,10 @@ commands(
     library.make_sixteenths(
         ["+", -1],
     ),
+)
+
+commands(
+    ("cb2", 8),
     baca.pitch("F#1"),
     baca.new(
         baca.stop_on_string(),
@@ -567,6 +667,10 @@ commands(
     library.make_sixteenths(
         library.glissando_counts_curtailed,
     ),
+)
+
+commands(
+    ("cb2", (9, 10)),
     baca.pitches("C#3 D3"),
     baca.glissando(
         allow_repeats=True,
