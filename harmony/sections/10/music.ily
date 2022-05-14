@@ -1828,7 +1828,7 @@ segment.10.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -1840,7 +1840,7 @@ segment.10.Bass.Flute.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Bass_Flute_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -3557,7 +3557,7 @@ segment.10.Percussion.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -3569,7 +3569,7 @@ segment.10.Percussion.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Percussion_I_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -4607,7 +4607,7 @@ segment.10.Percussion.II.Music.Voice = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -5734,7 +5734,7 @@ segment.10.Harp.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 14]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -5746,7 +5746,7 @@ segment.10.Harp.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Harp_Music_Voice measure 15]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -6610,7 +6610,7 @@ segment.10.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -6622,7 +6622,7 @@ segment.10.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -6634,7 +6634,7 @@ segment.10.Viola.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Viola_Music_Voice measure 7]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -8279,7 +8279,7 @@ segment.10.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -8291,7 +8291,7 @@ segment.10.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -8303,7 +8303,7 @@ segment.10.Cello.I.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_I_Music_Voice measure 7]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -9882,7 +9882,7 @@ segment.10.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -9894,7 +9894,7 @@ segment.10.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -9906,7 +9906,7 @@ segment.10.Cello.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Cello_II_Music_Voice measure 7]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -12573,7 +12573,7 @@ segment.10.Contrabass.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 5]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -12585,7 +12585,7 @@ segment.10.Contrabass.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 6]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
@@ -12597,7 +12597,7 @@ segment.10.Contrabass.II.Music.Voice = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass_II_Music_Voice measure 7]
-      %! baca._make_measure_silences()
+      %! baca._make_mmrests()
     R1 * 3/2
     % AFTER:
     % MARKUP:
