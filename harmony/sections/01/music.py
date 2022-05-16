@@ -232,18 +232,20 @@ commands(
     ),
 )
 
-# phantom
+# phantom & reapply
+
+music_voices = [_ for _ in voice_names if "Music_Voice" in _]
 
 commands(
-    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    music_voices,
     baca.append_phantom_measure(),
+    baca.attach_first_segment_default_indicators(),
 )
 
 # bfl
 
 commands(
     ("bfl", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Bfl."),
@@ -292,11 +294,6 @@ commands(
 )
 
 # perc1
-
-commands(
-    ("perc1", 1),
-    baca.attach_first_segment_default_indicators(),
-)
 
 commands(
     "perc1",
@@ -365,7 +362,6 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Perc. II"),
         baca.start_markup(r"\harmony-percussion-ii-markup"),
@@ -403,7 +399,6 @@ commands(
 
 commands(
     ("hp", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.suite(
         library.margin_markup("Hp."),
         baca.start_markup(r"\harmony-harp-markup"),
@@ -438,7 +433,6 @@ commands(
 
 commands(
     ("va", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Va."),
@@ -476,7 +470,6 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. I"),
@@ -540,7 +533,6 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. II"),
@@ -584,7 +576,6 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. I"),
@@ -636,7 +627,6 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.attach_first_segment_default_indicators(),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. II"),

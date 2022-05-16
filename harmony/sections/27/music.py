@@ -609,17 +609,13 @@ commands(
     baca.make_notes(),
 )
 
-# phantom
+# phantom & reapply
+
+music_voices = [_ for _ in voice_names if "Music_Voice" in _]
 
 commands(
-    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
+    music_voices,
     baca.append_phantom_measure(),
-)
-
-# after
-
-commands(
-    ["bfl", "perc1", "perc2", "hp", "va", "vc1", "vc2", "cb1", "cb2"],
     baca.reapply_persistent_indicators(),
 )
 
