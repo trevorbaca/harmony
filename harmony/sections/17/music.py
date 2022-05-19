@@ -9,8 +9,8 @@ from harmony import library
 
 stage_markup = (
     ("[Q.1]", 1),
-    ("[▶S.1]", 2, "#darkgreen"),
-    ("[◀O.4]", 4, "#darkgreen"),
+    ("[>S.1]", 2, "#darkgreen"),
+    ("[<O.4]", 4, "#darkgreen"),
     ("[Q.2]", 5),
 )
 

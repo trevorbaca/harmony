@@ -10,7 +10,7 @@ from harmony import library
 stage_markup = (
     ("[A.1]", 1),
     ("[A.2]", 2),
-    ("[▶C.1]", 3, "#darkgreen"),
+    ("[>C.1]", 3, "#darkgreen"),
 )
 
 score = library.make_empty_score()

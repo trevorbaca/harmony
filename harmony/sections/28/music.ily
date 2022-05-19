@@ -335,7 +335,7 @@ segment.28.Global.Skips = {
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
-    - \baca-start-snm-colored-left-only "[◀Y.2]" #darkgreen
+    - \baca-start-snm-colored-left-only "[<Y.2]" #darkgreen
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM
