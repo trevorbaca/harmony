@@ -83,7 +83,7 @@ commands(
 
 commands(
     ("bfl", (1, 7)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 
@@ -115,7 +115,7 @@ commands(
 
 commands(
     ("perc1", (7, 9)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 # PERC2
@@ -127,7 +127,7 @@ commands(
 
 commands(
     ("perc2", 7),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -150,7 +150,7 @@ commands(
 
 commands(
     ("hp", 7),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
