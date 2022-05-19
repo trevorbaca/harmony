@@ -111,7 +111,7 @@ segment.21.Global.Skips = {
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
-    - \baca-start-snm-colored-left-only "[▶W.4]" #darkgreen
+    - \baca-start-snm-colored-left-only "[>W.4]" #darkgreen
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM
@@ -415,7 +415,7 @@ segment.21.Global.Skips = {
     %@% \bacaStartTextSpanMN
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
-    - \baca-start-snm-colored-left-only "[▶W.4]" #darkgreen
+    - \baca-start-snm-colored-left-only "[>W.4]" #darkgreen
       %! STAGE_NUMBER
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM

@@ -9,10 +9,10 @@ from harmony import library
 
 stage_markup = (
     ("[N.1-2]", 1),
-    ("[▶O.1]", 4, "#darkgreen"),
-    ("[◀M.1]", 5, "#darkgreen"),
+    ("[>O.1]", 4, "#darkgreen"),
+    ("[<M.1]", 5, "#darkgreen"),
     ("[N.3-6]", 6),
-    ("[▶P.1]", 11, "#darkgreen"),
+    ("[>P.1]", 11, "#darkgreen"),
 )
 
 score = library.make_empty_score()
