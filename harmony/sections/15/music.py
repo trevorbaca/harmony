@@ -38,25 +38,6 @@ commands = baca.CommandAccumulator(
     voice_names=voice_names,
 )
 
-commands(
-    "Global_Skips",
-    baca.not_parts(
-        baca.rehearsal_mark(
-            "O",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
-        ),
-    ),
-    baca.only_parts(
-        baca.rehearsal_mark(
-            "O",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
-            font_size=4,
-        ),
-    ),
-)
-
 # BFL
 
 commands(

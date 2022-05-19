@@ -35,25 +35,6 @@ commands = baca.CommandAccumulator(
 
 commands(
     "Global_Skips",
-    baca.not_parts(
-        baca.rehearsal_mark(
-            "E",
-            lambda _: baca.select.skip(_, 4 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
-        ),
-    ),
-    baca.only_parts(
-        baca.rehearsal_mark(
-            "E",
-            lambda _: baca.select.skip(_, 4 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
-            font_size=4,
-        ),
-    ),
-)
-
-commands(
-    "Global_Skips",
     baca.metronome_mark("48", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("4.=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 2 - 1)),

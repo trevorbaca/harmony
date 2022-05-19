@@ -47,21 +47,6 @@ commands = baca.CommandAccumulator(
 
 commands(
     "Global_Skips",
-    baca.not_parts(
-        baca.rehearsal_mark(
-            "J",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
-        ),
-    ),
-    baca.only_parts(
-        baca.rehearsal_mark(
-            "J",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
-            font_size=4,
-        ),
-    ),
     baca.close_volta(lambda _: baca.select.skip(_, 2 - 1)),
 )
 
