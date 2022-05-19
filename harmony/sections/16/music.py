@@ -38,29 +38,6 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "Global_Skips",
-    baca.not_parts(
-        baca.rehearsal_mark(
-            "P",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 18)"),
-        ),
-    ),
-    baca.only_parts(
-        baca.rehearsal_mark(
-            "P",
-            lambda _: baca.select.skip(_, 1 - 1),
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 10)"),
-            font_size=4,
-        ),
-    ),
-)
-
-commands(
-    "Global_Skips",
-)
-
-commands(
     "Global_Rests",
     baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
 )
