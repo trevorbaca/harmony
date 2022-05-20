@@ -76,7 +76,7 @@ commands(
 
 commands(
     ("bfl", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -107,7 +107,7 @@ commands(
 
 commands(
     ("bfl", (11, 12)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -122,7 +122,7 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -150,7 +150,7 @@ commands(
 
 commands(
     ("perc1", 11),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -171,7 +171,7 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -198,7 +198,7 @@ commands(
 
 commands(
     ("perc2", (11, 12)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -220,7 +220,7 @@ commands(
 
 commands(
     ("hp", 2),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -246,7 +246,7 @@ commands(
 
 commands(
     ("hp", (11, 12)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -289,7 +289,7 @@ commands(
 
 commands(
     ("va", 11),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -313,7 +313,7 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -344,7 +344,7 @@ commands(
 
 commands(
     ("vc1", (11, 12)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -387,7 +387,7 @@ commands(
 
 commands(
     ("vc2", 11),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -434,7 +434,7 @@ commands(
 
 commands(
     ("cb1", (11, 12)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -448,7 +448,7 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -475,7 +475,7 @@ commands(
 
 commands(
     ("cb2", 11),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(

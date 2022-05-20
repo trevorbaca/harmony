@@ -81,7 +81,7 @@ commands(
 
 commands(
     ("perc1", 7),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -109,7 +109,7 @@ commands(
 
 commands(
     ("perc2", (7, 8)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -130,7 +130,7 @@ commands(
 
 commands(
     ("hp", 7),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
