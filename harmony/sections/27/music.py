@@ -112,7 +112,7 @@ commands(
 
 commands(
     ("bfl", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -165,7 +165,7 @@ commands(
 
 commands(
     ("perc1", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -206,7 +206,7 @@ commands(
 
 commands(
     ("perc1", 8),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -225,7 +225,7 @@ commands(
 
 commands(
     ("perc2", 2),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -269,7 +269,7 @@ commands(
 
 commands(
     ("perc2", (8, 9)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 # HP
@@ -283,7 +283,7 @@ commands(
 
 commands(
     ("hp", 2),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -326,7 +326,7 @@ commands(
 
 commands(
     ("hp", (8, 9)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 # VA
@@ -370,7 +370,7 @@ commands(
 
 commands(
     ("va", (7, 8)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -382,7 +382,7 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 sixteenths = [6, -2, 4, -2, 4, -2, 2, -2]
@@ -436,7 +436,7 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -488,7 +488,7 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(
@@ -540,7 +540,7 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 commands(

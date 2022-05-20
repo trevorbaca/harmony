@@ -66,20 +66,6 @@ commands(
     baca.make_mmrests(),
 )
 
-# HP
-
-commands(
-    ("hp", 1),
-    library.make_sixteenths(
-        [1, "-"],
-    ),
-)
-
-commands(
-    ("hp", (2, 3)),
-    baca.make_mmrests(),
-)
-
 # PERC1
 
 commands(
@@ -91,7 +77,7 @@ commands(
 
 commands(
     ("perc1", (2, 3)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
 )
 
 # PERC2
@@ -106,7 +92,21 @@ commands(
 
 commands(
     ("perc2", (2, 3)),
-    baca.make_mmrests(),
+    baca.make_mmrests_flat(),
+)
+
+# HP
+
+commands(
+    ("hp", 1),
+    library.make_sixteenths(
+        [1, "-"],
+    ),
+)
+
+commands(
+    ("hp", (2, 3)),
+    baca.make_mmrests_flat(),
 )
 
 # VA
