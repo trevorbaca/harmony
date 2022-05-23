@@ -580,7 +580,7 @@ segment.05.Global_Rests = {
 
 
   %! baca.path.extern()
-segment.05.Bass_Flute_Music_Voice = {
+segment.05.Bass_Flute.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -592,14 +592,14 @@ segment.05.Bass_Flute_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute_Music_Voice"
+        \context Voice = "Bass_Flute.Music_Voice"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute_Music_Voice measure 1]
+            % [Bass_Flute.Music_Voice measure 1]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -716,14 +716,14 @@ segment.05.Bass_Flute_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute_Rest_Voice"
+        \context Voice = "Bass_Flute.Rest_Voice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute_Rest_Voice measure 1]
+            % [Bass_Flute.Rest_Voice measure 1]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -751,7 +751,7 @@ segment.05.Bass_Flute_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute_Music_Voice measure 2]
+    % [Bass_Flute.Music_Voice measure 2]
       %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
@@ -833,7 +833,7 @@ segment.05.Bass_Flute_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute_Music_Voice measure 3]
+    % [Bass_Flute.Music_Voice measure 3]
     fs'!16
     % AFTER:
     % ARTICULATIONS:
@@ -897,7 +897,7 @@ segment.05.Bass_Flute_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute_Music_Voice measure 4]
+    % [Bass_Flute.Music_Voice measure 4]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -961,7 +961,7 @@ segment.05.Bass_Flute_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute_Music_Voice measure 5]
+    % [Bass_Flute.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
@@ -1038,7 +1038,7 @@ segment.05.Bass_Flute_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute_Music_Voice"
+        \context Voice = "Bass_Flute.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -1048,7 +1048,7 @@ segment.05.Bass_Flute_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Bass_Flute_Music_Voice measure 6]
+            % [Bass_Flute.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -1093,7 +1093,7 @@ segment.05.Bass_Flute_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute_Rest_Voice"
+        \context Voice = "Bass_Flute.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -1103,7 +1103,7 @@ segment.05.Bass_Flute_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Bass_Flute_Rest_Voice measure 6]
+            % [Bass_Flute.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -1174,10 +1174,10 @@ segment.05.Bass.Flute.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Bass_Flute_Music_Voice"
+    \context Voice = "Bass_Flute.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Bass_Flute_Music_Voice }
+    { \segment.05.Bass_Flute.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -1188,12 +1188,12 @@ segment.05.Bass.Flute.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Percussion_I_Music_Voice = {
+segment.05.Percussion.1.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_I_Music_Voice measure 1]
+    % [Percussion.1.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1347,7 +1347,7 @@ segment.05.Percussion_I_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Percussion_I_Music_Voice measure 2]
+        % [Percussion.1.Music_Voice measure 2]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1545,7 +1545,7 @@ segment.05.Percussion_I_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Percussion_I_Music_Voice measure 3]
+        % [Percussion.1.Music_Voice measure 3]
         % BEFORE:
         % COMMANDS:
           %! baca.OverrideCommand._call(1)
@@ -1708,14 +1708,14 @@ segment.05.Percussion_I_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Percussion_I_Music_Voice"
+        \context Voice = "Percussion.1.Music_Voice"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Percussion_I_Music_Voice measure 4]
+            % [Percussion.1.Music_Voice measure 4]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -1777,14 +1777,14 @@ segment.05.Percussion_I_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion_I_Rest_Voice"
+        \context Voice = "Percussion.1.Rest_Voice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Percussion_I_Rest_Voice measure 4]
+            % [Percussion.1.Rest_Voice measure 4]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -1812,7 +1812,7 @@ segment.05.Percussion_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_I_Music_Voice measure 5]
+    % [Percussion.1.Music_Voice measure 5]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1923,7 +1923,7 @@ segment.05.Percussion_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Percussion_I_Music_Voice"
+        \context Voice = "Percussion.1.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -1933,7 +1933,7 @@ segment.05.Percussion_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion_I_Music_Voice measure 6]
+            % [Percussion.1.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2008,7 +2008,7 @@ segment.05.Percussion_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion_I_Rest_Voice"
+        \context Voice = "Percussion.1.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -2018,7 +2018,7 @@ segment.05.Percussion_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion_I_Rest_Voice measure 6]
+            % [Percussion.1.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -2074,7 +2074,7 @@ segment.05.Percussion_I_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Percussion.I.Music.Staff = <<
+segment.05.Percussion.1.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2091,10 +2091,10 @@ segment.05.Percussion.I.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Percussion_I_Music_Voice"
+    \context Voice = "Percussion.1.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Percussion_I_Music_Voice }
+    { \segment.05.Percussion.1.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -2105,12 +2105,12 @@ segment.05.Percussion.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Percussion_II_Music_Voice = {
+segment.05.Percussion.2.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_II_Music_Voice measure 1]
+    % [Percussion.2.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2338,7 +2338,7 @@ segment.05.Percussion_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_II_Music_Voice measure 2]
+    % [Percussion.2.Music_Voice measure 2]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2525,7 +2525,7 @@ segment.05.Percussion_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_II_Music_Voice measure 3]
+    % [Percussion.2.Music_Voice measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2680,14 +2680,14 @@ segment.05.Percussion_II_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Percussion_II_Music_Voice"
+        \context Voice = "Percussion.2.Music_Voice"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Percussion_II_Music_Voice measure 4]
+            % [Percussion.2.Music_Voice measure 4]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2743,14 +2743,14 @@ segment.05.Percussion_II_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion_II_Rest_Voice"
+        \context Voice = "Percussion.2.Rest_Voice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Percussion_II_Rest_Voice measure 4]
+            % [Percussion.2.Rest_Voice measure 4]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2778,7 +2778,7 @@ segment.05.Percussion_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion_II_Music_Voice measure 5]
+    % [Percussion.2.Music_Voice measure 5]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2895,7 +2895,7 @@ segment.05.Percussion_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Percussion_II_Music_Voice"
+        \context Voice = "Percussion.2.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -2905,7 +2905,7 @@ segment.05.Percussion_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion_II_Music_Voice measure 6]
+            % [Percussion.2.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2980,7 +2980,7 @@ segment.05.Percussion_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion_II_Rest_Voice"
+        \context Voice = "Percussion.2.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -2990,7 +2990,7 @@ segment.05.Percussion_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion_II_Rest_Voice measure 6]
+            % [Percussion.2.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -3046,7 +3046,7 @@ segment.05.Percussion_II_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Percussion.II.Music.Staff = <<
+segment.05.Percussion.2.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3063,10 +3063,10 @@ segment.05.Percussion.II.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Percussion_II_Music_Voice"
+    \context Voice = "Percussion.2.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Percussion_II_Music_Voice }
+    { \segment.05.Percussion.2.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -3077,12 +3077,12 @@ segment.05.Percussion.II.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Harp_Music_Voice = {
+segment.05.Harp.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp_Music_Voice measure 1]
+    % [Harp.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -3227,7 +3227,7 @@ segment.05.Harp_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp_Music_Voice measure 2]
+    % [Harp.Music_Voice measure 2]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_36
@@ -3319,7 +3319,7 @@ segment.05.Harp_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp_Music_Voice measure 3]
+    % [Harp.Music_Voice measure 3]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_37
@@ -3442,7 +3442,7 @@ segment.05.Harp_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp_Music_Voice measure 4]
+    % [Harp.Music_Voice measure 4]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -3568,7 +3568,7 @@ segment.05.Harp_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp_Music_Voice measure 5]
+    % [Harp.Music_Voice measure 5]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -3638,7 +3638,7 @@ segment.05.Harp_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Harp_Music_Voice"
+        \context Voice = "Harp.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -3648,7 +3648,7 @@ segment.05.Harp_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Harp_Music_Voice measure 6]
+            % [Harp.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -3693,7 +3693,7 @@ segment.05.Harp_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Harp_Rest_Voice"
+        \context Voice = "Harp.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -3703,7 +3703,7 @@ segment.05.Harp_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Harp_Rest_Voice measure 6]
+            % [Harp.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -3776,10 +3776,10 @@ segment.05.Harp.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Harp_Music_Voice"
+    \context Voice = "Harp.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Harp_Music_Voice }
+    { \segment.05.Harp.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -3790,12 +3790,12 @@ segment.05.Harp.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Viola_Music_Voice = {
+segment.05.Viola.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Viola_Music_Voice measure 1]
+    % [Viola.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_35
@@ -3979,14 +3979,14 @@ segment.05.Viola_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Viola_Music_Voice"
+        \context Voice = "Viola.Music_Voice"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Viola_Music_Voice measure 2]
+            % [Viola.Music_Voice measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -4082,14 +4082,14 @@ segment.05.Viola_Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Viola_Rest_Voice"
+        \context Voice = "Viola.Rest_Voice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Viola_Rest_Voice measure 2]
+            % [Viola.Rest_Voice measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -4127,7 +4127,7 @@ segment.05.Viola_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Viola_Music_Voice measure 3]
+        % [Viola.Music_Voice measure 3]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_37
@@ -4306,7 +4306,7 @@ segment.05.Viola_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Viola_Music_Voice measure 4]
+    % [Viola.Music_Voice measure 4]
       %! harmony.make_sixteenths()
     f8.
     % ABSOLUTE_BEFORE:
@@ -4345,7 +4345,7 @@ segment.05.Viola_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Viola_Music_Voice measure 5]
+    % [Viola.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     ef!4
     % AFTER:
@@ -4516,7 +4516,7 @@ segment.05.Viola_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Viola_Music_Voice"
+        \context Voice = "Viola.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -4526,7 +4526,7 @@ segment.05.Viola_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Viola_Music_Voice measure 6]
+            % [Viola.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -4580,7 +4580,7 @@ segment.05.Viola_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Viola_Rest_Voice"
+        \context Voice = "Viola.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -4590,7 +4590,7 @@ segment.05.Viola_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Viola_Rest_Voice measure 6]
+            % [Viola.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -4663,10 +4663,10 @@ segment.05.Viola.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Viola_Music_Voice"
+    \context Voice = "Viola.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Viola_Music_Voice }
+    { \segment.05.Viola.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -4677,12 +4677,12 @@ segment.05.Viola.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Cello_I_Music_Voice = {
+segment.05.Cello.1.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_I_Music_Voice measure 1]
+    % [Cello.1.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_35
@@ -4866,7 +4866,7 @@ segment.05.Cello_I_Music_Voice = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Cello_I_Music_Voice measure 2]
+        % [Cello.1.Music_Voice measure 2]
         % BEFORE:
         % COMMANDS:
           %! MEASURE_36
@@ -5198,7 +5198,7 @@ segment.05.Cello_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_I_Music_Voice measure 3]
+    % [Cello.1.Music_Voice measure 3]
     fs!8.
     % AFTER:
     % ARTICULATIONS:
@@ -5295,7 +5295,7 @@ segment.05.Cello_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_I_Music_Voice measure 4]
+    % [Cello.1.Music_Voice measure 4]
       %! harmony.make_sixteenths()
     f2.
     % AFTER:
@@ -5486,7 +5486,7 @@ segment.05.Cello_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_I_Music_Voice measure 5]
+    % [Cello.1.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     e8
     % AFTER:
@@ -5706,7 +5706,7 @@ segment.05.Cello_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_I_Music_Voice"
+        \context Voice = "Cello.1.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -5716,7 +5716,7 @@ segment.05.Cello_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_I_Music_Voice measure 6]
+            % [Cello.1.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -5788,7 +5788,7 @@ segment.05.Cello_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_I_Rest_Voice"
+        \context Voice = "Cello.1.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -5798,7 +5798,7 @@ segment.05.Cello_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_I_Rest_Voice measure 6]
+            % [Cello.1.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -5854,7 +5854,7 @@ segment.05.Cello_I_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Cello.I.Music.Staff = <<
+segment.05.Cello.1.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5871,10 +5871,10 @@ segment.05.Cello.I.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Cello_I_Music_Voice"
+    \context Voice = "Cello.1.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Cello_I_Music_Voice }
+    { \segment.05.Cello.1.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -5885,12 +5885,12 @@ segment.05.Cello.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Cello_II_Music_Voice = {
+segment.05.Cello.2.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_II_Music_Voice measure 1]
+    % [Cello.2.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_35
@@ -6059,7 +6059,7 @@ segment.05.Cello_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_II_Music_Voice measure 2]
+    % [Cello.2.Music_Voice measure 2]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_36
@@ -6254,7 +6254,7 @@ segment.05.Cello_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_II_Music_Voice measure 3]
+    % [Cello.2.Music_Voice measure 3]
     % BEFORE:
     % COMMANDS:
       %! REPEAT_PITCH_CLASS_COLORING
@@ -6322,7 +6322,7 @@ segment.05.Cello_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_II_Music_Voice measure 4]
+    % [Cello.2.Music_Voice measure 4]
     % BEFORE:
     % COMMANDS:
       %! REPEAT_PITCH_CLASS_COLORING
@@ -6521,7 +6521,7 @@ segment.05.Cello_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello_II_Music_Voice measure 5]
+    % [Cello.2.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     c8
     % AFTER:
@@ -6741,7 +6741,7 @@ segment.05.Cello_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello_II_Music_Voice"
+        \context Voice = "Cello.2.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -6751,7 +6751,7 @@ segment.05.Cello_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_II_Music_Voice measure 6]
+            % [Cello.2.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -6823,7 +6823,7 @@ segment.05.Cello_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello_II_Rest_Voice"
+        \context Voice = "Cello.2.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -6833,7 +6833,7 @@ segment.05.Cello_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello_II_Rest_Voice measure 6]
+            % [Cello.2.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -6889,7 +6889,7 @@ segment.05.Cello_II_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Cello.II.Music.Staff = <<
+segment.05.Cello.2.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6906,10 +6906,10 @@ segment.05.Cello.II.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Cello_II_Music_Voice"
+    \context Voice = "Cello.2.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Cello_II_Music_Voice }
+    { \segment.05.Cello.2.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -6920,12 +6920,12 @@ segment.05.Cello.II.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Contrabass_I_Music_Voice = {
+segment.05.Contrabass.1.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_I_Music_Voice measure 1]
+    % [Contrabass.1.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_35
@@ -7150,7 +7150,7 @@ segment.05.Contrabass_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_I_Music_Voice measure 2]
+    % [Contrabass.1.Music_Voice measure 2]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_36
@@ -7307,7 +7307,7 @@ segment.05.Contrabass_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_I_Music_Voice measure 3]
+    % [Contrabass.1.Music_Voice measure 3]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_37
@@ -7533,7 +7533,7 @@ segment.05.Contrabass_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_I_Music_Voice measure 4]
+    % [Contrabass.1.Music_Voice measure 4]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_38
@@ -7762,7 +7762,7 @@ segment.05.Contrabass_I_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_I_Music_Voice measure 5]
+    % [Contrabass.1.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     b,16
     % AFTER:
@@ -7970,7 +7970,7 @@ segment.05.Contrabass_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Contrabass_I_Music_Voice"
+        \context Voice = "Contrabass.1.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -7980,7 +7980,7 @@ segment.05.Contrabass_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass_I_Music_Voice measure 6]
+            % [Contrabass.1.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -8052,7 +8052,7 @@ segment.05.Contrabass_I_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass_I_Rest_Voice"
+        \context Voice = "Contrabass.1.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -8062,7 +8062,7 @@ segment.05.Contrabass_I_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass_I_Rest_Voice measure 6]
+            % [Contrabass.1.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -8118,7 +8118,7 @@ segment.05.Contrabass_I_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Contrabass.I.Music.Staff = <<
+segment.05.Contrabass.1.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8135,10 +8135,10 @@ segment.05.Contrabass.I.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Contrabass_I_Music_Voice"
+    \context Voice = "Contrabass.1.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Contrabass_I_Music_Voice }
+    { \segment.05.Contrabass.1.Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -8149,12 +8149,12 @@ segment.05.Contrabass.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.05.Contrabass_II_Music_Voice = {
+segment.05.Contrabass.2.Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_II_Music_Voice measure 1]
+    % [Contrabass.2.Music_Voice measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -8403,7 +8403,7 @@ segment.05.Contrabass_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_II_Music_Voice measure 2]
+    % [Contrabass.2.Music_Voice measure 2]
       %! harmony.make_sixteenths()
     g2
     % AFTER:
@@ -8560,7 +8560,7 @@ segment.05.Contrabass_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_II_Music_Voice measure 3]
+    % [Contrabass.2.Music_Voice measure 3]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_37
@@ -8713,7 +8713,7 @@ segment.05.Contrabass_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_II_Music_Voice measure 4]
+    % [Contrabass.2.Music_Voice measure 4]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_38
@@ -8942,7 +8942,7 @@ segment.05.Contrabass_II_Music_Voice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass_II_Music_Voice measure 5]
+    % [Contrabass.2.Music_Voice measure 5]
       %! harmony.make_sixteenths()
     b,16
     % AFTER:
@@ -9150,7 +9150,7 @@ segment.05.Contrabass_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Contrabass_II_Music_Voice"
+        \context Voice = "Contrabass.2.Music_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(4)
         {
@@ -9160,7 +9160,7 @@ segment.05.Contrabass_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass_II_Music_Voice measure 6]
+            % [Contrabass.2.Music_Voice measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -9232,7 +9232,7 @@ segment.05.Contrabass_II_Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass_II_Rest_Voice"
+        \context Voice = "Contrabass.2.Rest_Voice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -9242,7 +9242,7 @@ segment.05.Contrabass_II_Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass_II_Rest_Voice measure 6]
+            % [Contrabass.2.Rest_Voice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -9298,7 +9298,7 @@ segment.05.Contrabass_II_Music_Voice = {
 
 
   %! baca.path.extern()
-segment.05.Contrabass.II.Music.Staff = <<
+segment.05.Contrabass.2.Music.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9315,10 +9315,10 @@ segment.05.Contrabass.II.Music.Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Contrabass_II_Music_Voice"
+    \context Voice = "Contrabass.2.Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.05.Contrabass_II_Music_Voice }
+    { \segment.05.Contrabass.2.Music_Voice }
     % CLOSING:
     % COMMANDS:
 

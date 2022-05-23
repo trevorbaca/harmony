@@ -75,7 +75,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context WindSectionStaffGroup = "Wind_Section_Staff_Group"
+                \context WindSectionStaffGroup = "Wind_Section.Staff_Group"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -87,7 +87,7 @@
                     \tag BassFlute
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Bass_Flute_Music_Staff"
+                    \context Staff = "Bass_Flute.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
                     { \segment.01.Bass.Flute.Music.Staff }
@@ -102,7 +102,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context PercussionSectionStaffGroup = "Percussion_Section_Staff_Group"
+                \context PercussionSectionStaffGroup = "Percussion_Section.Staff_Group"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -114,10 +114,10 @@
                     \tag PercussionI
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Percussion_I_Music_Staff"
+                    \context Staff = "Percussion.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Percussion.I.Music.Staff }
+                    { \segment.01.Percussion.1.Music.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -127,10 +127,10 @@
                     \tag PercussionII
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Percussion_II_Music_Staff"
+                    \context Staff = "Percussion.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Percussion.II.Music.Staff }
+                    { \segment.01.Percussion.2.Music.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -140,7 +140,7 @@
                     \tag Harp
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Harp_Music_Staff"
+                    \context Staff = "Harp.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
                     { \segment.01.Harp.Music.Staff }
@@ -155,7 +155,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context StringSectionStaffGroup = "String_Section_Staff_Group"
+                \context StringSectionStaffGroup = "String_Section.Staff_Group"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -167,7 +167,7 @@
                     \tag Viola
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Viola_Music_Staff"
+                    \context Staff = "Viola.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
                     { \segment.01.Viola.Music.Staff }
@@ -180,10 +180,10 @@
                     \tag CelloI
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Cello_I_Music_Staff"
+                    \context Staff = "Cello.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Cello.I.Music.Staff }
+                    { \segment.01.Cello.1.Music.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -193,10 +193,10 @@
                     \tag CelloII
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Cello_II_Music_Staff"
+                    \context Staff = "Cello.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Cello.II.Music.Staff }
+                    { \segment.01.Cello.2.Music.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -206,10 +206,10 @@
                     \tag ContrabassI
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Contrabass_I_Music_Staff"
+                    \context Staff = "Contrabass.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Contrabass.I.Music.Staff }
+                    { \segment.01.Contrabass.1.Music.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -219,10 +219,10 @@
                     \tag ContrabassII
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Contrabass_II_Music_Staff"
+                    \context Staff = "Contrabass.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Contrabass.II.Music.Staff }
+                    { \segment.01.Contrabass.2.Music.Staff }
                     % CLOSING:
                     % COMMANDS:
 
