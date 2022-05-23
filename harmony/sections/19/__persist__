@@ -4,42 +4,42 @@
         "Global_Context",
         "Global_Skips",
         "Music_Context",
-        "Wind_Section_Staff_Group",
-        "Bass_Flute_Music_Staff",
+        "Wind_Section.Staff_Group",
+        "Bass_Flute.Music_Staff",
         "Global_Rests",
-        "Bass_Flute_Music_Voice",
-        "Bass_Flute_Rest_Voice",
-        "Percussion_Section_Staff_Group",
-        "Percussion_I_Music_Staff",
-        "Percussion_I_Music_Voice",
-        "Percussion_I_Rest_Voice",
-        "Percussion_II_Music_Staff",
-        "Percussion_II_Music_Voice",
-        "Percussion_II_Rest_Voice",
-        "Harp_Music_Staff",
-        "Harp_Music_Voice",
-        "Harp_Rest_Voice",
-        "String_Section_Staff_Group",
-        "Viola_Music_Staff",
-        "Viola_Music_Voice",
-        "Viola_Rest_Voice",
-        "Cello_I_Music_Staff",
-        "Cello_I_Music_Voice",
-        "Cello_I_Rest_Voice",
-        "Cello_II_Music_Staff",
-        "Cello_II_Music_Voice",
-        "Cello_II_Rest_Voice",
-        "Contrabass_I_Music_Staff",
-        "Contrabass_I_Music_Voice",
-        "Contrabass_I_Rest_Voice",
-        "Contrabass_II_Music_Staff",
-        "Contrabass_II_Music_Voice",
-        "Contrabass_II_Rest_Voice",
+        "Bass_Flute.Music_Voice",
+        "Bass_Flute.Rest_Voice",
+        "Percussion_Section.Staff_Group",
+        "Percussion.1.Music_Staff",
+        "Percussion.1.Music_Voice",
+        "Percussion.1.Rest_Voice",
+        "Percussion.2.Music_Staff",
+        "Percussion.2.Music_Voice",
+        "Percussion.2.Rest_Voice",
+        "Harp.Music_Staff",
+        "Harp.Music_Voice",
+        "Harp.Rest_Voice",
+        "String_Section.Staff_Group",
+        "Viola.Music_Staff",
+        "Viola.Music_Voice",
+        "Viola.Rest_Voice",
+        "Cello.1.Music_Staff",
+        "Cello.1.Music_Voice",
+        "Cello.1.Rest_Voice",
+        "Cello.2.Music_Staff",
+        "Cello.2.Music_Voice",
+        "Cello.2.Rest_Voice",
+        "Contrabass.1.Music_Staff",
+        "Contrabass.1.Music_Voice",
+        "Contrabass.1.Rest_Voice",
+        "Contrabass.2.Music_Staff",
+        "Contrabass.2.Music_Voice",
+        "Contrabass.2.Rest_Voice",
     ],
     "persistent_indicators": {
-        "Bass_Flute_Music_Staff": [
+        "Bass_Flute.Music_Staff": [
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -47,7 +47,7 @@
                 value="BassFlute",
             ),
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -55,7 +55,7 @@
                 value="treble",
             ),
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -63,7 +63,7 @@
                 value=5,
             ),
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -71,7 +71,7 @@
                 value=5,
             ),
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -79,9 +79,9 @@
                 value="Bfl.",
             ),
         ],
-        "Bass_Flute_Music_Voice": [
+        "Bass_Flute.Music_Voice": [
             baca.Memento(
-                context="Bass_Flute_Music_Voice",
+                context="Bass_Flute.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -89,9 +89,9 @@
                 value="pp",
             )
         ],
-        "Cello_II_Music_Staff": [
+        "Cello.1.Music_Staff": [
             baca.Memento(
-                context="Cello_II_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -99,7 +99,7 @@
                 value="Cello",
             ),
             baca.Memento(
-                context="Cello_II_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -107,7 +107,7 @@
                 value="percussion",
             ),
             baca.Memento(
-                context="Cello_II_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -115,59 +115,7 @@
                 value=1,
             ),
             baca.Memento(
-                context="Cello_II_Music_Voice",
-                edition=Tag(string="-PARTS"),
-                manifest="margin_markups",
-                prototype=None,
-                synthetic_offset=None,
-                value="Vc. II",
-            ),
-            baca.Memento(
-                context="Cello_II_Music_Voice",
-                edition=Tag(string="-PARTS"),
-                manifest=None,
-                prototype="baca.BarExtent",
-                synthetic_offset=None,
-                value=1,
-            ),
-        ],
-        "Cello_II_Music_Voice": [
-            baca.Memento(
-                context="Cello_II_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="pp",
-            )
-        ],
-        "Cello_I_Music_Staff": [
-            baca.Memento(
-                context="Cello_I_Music_Voice",
-                edition=None,
-                manifest="instruments",
-                prototype=None,
-                synthetic_offset=None,
-                value="Cello",
-            ),
-            baca.Memento(
-                context="Cello_I_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Clef",
-                synthetic_offset=None,
-                value="percussion",
-            ),
-            baca.Memento(
-                context="Cello_I_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="baca.StaffLines",
-                synthetic_offset=None,
-                value=1,
-            ),
-            baca.Memento(
-                context="Cello_I_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -175,7 +123,7 @@
                 value="Vc. I",
             ),
             baca.Memento(
-                context="Cello_I_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -183,9 +131,9 @@
                 value=1,
             ),
         ],
-        "Cello_I_Music_Voice": [
+        "Cello.1.Music_Voice": [
             baca.Memento(
-                context="Cello_I_Music_Voice",
+                context="Cello.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -193,17 +141,17 @@
                 value="pp",
             )
         ],
-        "Contrabass_II_Music_Staff": [
+        "Cello.2.Music_Staff": [
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
                 synthetic_offset=None,
-                value="Contrabass",
+                value="Cello",
             ),
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -211,7 +159,7 @@
                 value="percussion",
             ),
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -219,15 +167,15 @@
                 value=1,
             ),
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
                 synthetic_offset=None,
-                value="Cb. II",
+                value="Vc. II",
             ),
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -235,9 +183,9 @@
                 value=1,
             ),
         ],
-        "Contrabass_II_Music_Voice": [
+        "Cello.2.Music_Voice": [
             baca.Memento(
-                context="Contrabass_II_Music_Voice",
+                context="Cello.2.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -245,9 +193,9 @@
                 value="pp",
             )
         ],
-        "Contrabass_I_Music_Staff": [
+        "Contrabass.1.Music_Staff": [
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -255,7 +203,7 @@
                 value="Contrabass",
             ),
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -263,7 +211,7 @@
                 value="percussion",
             ),
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -271,7 +219,7 @@
                 value=1,
             ),
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -279,7 +227,7 @@
                 value="Cb. I",
             ),
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -287,9 +235,9 @@
                 value=1,
             ),
         ],
-        "Contrabass_I_Music_Voice": [
+        "Contrabass.1.Music_Voice": [
             baca.Memento(
-                context="Contrabass_I_Music_Voice",
+                context="Contrabass.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -297,9 +245,61 @@
                 value="pp",
             )
         ],
-        "Harp_Music_Staff": [
+        "Contrabass.2.Music_Staff": [
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Contrabass.2.Music_Voice",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Contrabass",
+            ),
+            baca.Memento(
+                context="Contrabass.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="percussion",
+            ),
+            baca.Memento(
+                context="Contrabass.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=1,
+            ),
+            baca.Memento(
+                context="Contrabass.2.Music_Voice",
+                edition=Tag(string="-PARTS"),
+                manifest="margin_markups",
+                prototype=None,
+                synthetic_offset=None,
+                value="Cb. II",
+            ),
+            baca.Memento(
+                context="Contrabass.2.Music_Voice",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=1,
+            ),
+        ],
+        "Contrabass.2.Music_Voice": [
+            baca.Memento(
+                context="Contrabass.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="pp",
+            )
+        ],
+        "Harp.Music_Staff": [
+            baca.Memento(
+                context="Harp.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -307,7 +307,7 @@
                 value="treble",
             ),
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Harp.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -315,7 +315,7 @@
                 value=5,
             ),
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Harp.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -323,7 +323,7 @@
                 value=5,
             ),
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Harp.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -331,9 +331,9 @@
                 value="Hp.",
             ),
         ],
-        "Harp_Music_Voice": [
+        "Harp.Music_Voice": [
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Harp.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -341,9 +341,9 @@
                 value="p",
             )
         ],
-        "Percussion_II_Music_Staff": [
+        "Percussion.1.Music_Staff": [
             baca.Memento(
-                context="Percussion_II_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -351,7 +351,7 @@
                 value="Percussion",
             ),
             baca.Memento(
-                context="Percussion_II_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -359,7 +359,7 @@
                 value="percussion",
             ),
             baca.Memento(
-                context="Percussion_II_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -367,59 +367,7 @@
                 value=1,
             ),
             baca.Memento(
-                context="Percussion_II_Music_Voice",
-                edition=Tag(string="-PARTS"),
-                manifest="margin_markups",
-                prototype=None,
-                synthetic_offset=None,
-                value="Perc. II",
-            ),
-            baca.Memento(
-                context="Percussion_II_Music_Voice",
-                edition=Tag(string="-PARTS"),
-                manifest=None,
-                prototype="baca.BarExtent",
-                synthetic_offset=None,
-                value=1,
-            ),
-        ],
-        "Percussion_II_Music_Voice": [
-            baca.Memento(
-                context="Percussion_II_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Dynamic",
-                synthetic_offset=None,
-                value="mp",
-            )
-        ],
-        "Percussion_I_Music_Staff": [
-            baca.Memento(
-                context="Percussion_I_Music_Voice",
-                edition=None,
-                manifest="instruments",
-                prototype=None,
-                synthetic_offset=None,
-                value="Percussion",
-            ),
-            baca.Memento(
-                context="Percussion_I_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="abjad.Clef",
-                synthetic_offset=None,
-                value="percussion",
-            ),
-            baca.Memento(
-                context="Percussion_I_Music_Voice",
-                edition=None,
-                manifest=None,
-                prototype="baca.StaffLines",
-                synthetic_offset=None,
-                value=1,
-            ),
-            baca.Memento(
-                context="Percussion_I_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -427,7 +375,7 @@
                 value="Perc. I",
             ),
             baca.Memento(
-                context="Percussion_I_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -435,9 +383,9 @@
                 value=1,
             ),
         ],
-        "Percussion_I_Music_Voice": [
+        "Percussion.1.Music_Voice": [
             baca.Memento(
-                context="Percussion_I_Music_Voice",
+                context="Percussion.1.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
@@ -445,9 +393,61 @@
                 value="pp",
             )
         ],
-        "Percussion_Section_Staff_Group": [
+        "Percussion.2.Music_Staff": [
             baca.Memento(
-                context="Harp_Music_Voice",
+                context="Percussion.2.Music_Voice",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Percussion",
+            ),
+            baca.Memento(
+                context="Percussion.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Clef",
+                synthetic_offset=None,
+                value="percussion",
+            ),
+            baca.Memento(
+                context="Percussion.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="baca.StaffLines",
+                synthetic_offset=None,
+                value=1,
+            ),
+            baca.Memento(
+                context="Percussion.2.Music_Voice",
+                edition=Tag(string="-PARTS"),
+                manifest="margin_markups",
+                prototype=None,
+                synthetic_offset=None,
+                value="Perc. II",
+            ),
+            baca.Memento(
+                context="Percussion.2.Music_Voice",
+                edition=Tag(string="-PARTS"),
+                manifest=None,
+                prototype="baca.BarExtent",
+                synthetic_offset=None,
+                value=1,
+            ),
+        ],
+        "Percussion.2.Music_Voice": [
+            baca.Memento(
+                context="Percussion.2.Music_Voice",
+                edition=None,
+                manifest=None,
+                prototype="abjad.Dynamic",
+                synthetic_offset=None,
+                value="mp",
+            )
+        ],
+        "Percussion_Section.Staff_Group": [
+            baca.Memento(
+                context="Harp.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -473,9 +473,9 @@
                 value="4/4",
             ),
         ],
-        "Viola_Music_Staff": [
+        "Viola.Music_Staff": [
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=None,
                 manifest="instruments",
                 prototype=None,
@@ -483,7 +483,7 @@
                 value="Viola",
             ),
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
@@ -491,7 +491,7 @@
                 value="percussion",
             ),
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="baca.StaffLines",
@@ -499,7 +499,7 @@
                 value=1,
             ),
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest="margin_markups",
                 prototype=None,
@@ -507,7 +507,7 @@
                 value="Va.",
             ),
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=Tag(string="-PARTS"),
                 manifest=None,
                 prototype="baca.BarExtent",
@@ -515,9 +515,9 @@
                 value=1,
             ),
         ],
-        "Viola_Music_Voice": [
+        "Viola.Music_Voice": [
             baca.Memento(
-                context="Viola_Music_Voice",
+                context="Viola.Music_Voice",
                 edition=None,
                 manifest=None,
                 prototype="abjad.Dynamic",
