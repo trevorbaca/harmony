@@ -1,5 +1,5 @@
   %! baca.path.extern()
-segment.12.Global.Skips = {
+segment.12.Global_Skips = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1118,7 +1118,7 @@ segment.12.Global.Skips = {
 
 
   %! baca.path.extern()
-segment.12.Global.Rests = {
+segment.12.Global_Rests = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1255,7 +1255,7 @@ segment.12.Global.Rests = {
 
 
   %! baca.path.extern()
-segment.12.Bass.Flute.Music.Voice.count.1 = {
+segment.12.Bass_Flute_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1334,7 +1334,7 @@ segment.12.Bass.Flute.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Bass.Flute.Music.Voice = {
+segment.12.Bass_Flute_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2427,7 +2427,7 @@ segment.12.Bass.Flute.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Bass_Flute_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Bass.Flute.Music.Voice.count.1 }
+        { \segment.12.Bass_Flute_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -3601,7 +3601,7 @@ segment.12.Bass.Flute.Music.Staff = <<
     \context GlobalRests = "Global_Rests"
       %! baca.make_global_context()
       %! baca.path.extern()
-    { \segment.12.Global.Rests }
+    { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3610,7 +3610,7 @@ segment.12.Bass.Flute.Music.Staff = <<
     \context Voice = "Bass_Flute_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Bass.Flute.Music.Voice }
+    { \segment.12.Bass_Flute_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -3621,7 +3621,7 @@ segment.12.Bass.Flute.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Percussion.I.Music.Voice.count.1 = {
+segment.12.Percussion_I_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3657,7 +3657,7 @@ segment.12.Percussion.I.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Percussion.I.Music.Voice.count.2 = {
+segment.12.Percussion_I_Music_Voice.count.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3697,7 +3697,7 @@ segment.12.Percussion.I.Music.Voice.count.2 = {
 
 
   %! baca.path.extern()
-segment.12.Percussion.I.Music.Voice = {
+segment.12.Percussion_I_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3965,7 +3965,7 @@ segment.12.Percussion.I.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion_I_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Percussion.I.Music.Voice.count.1 }
+        { \segment.12.Percussion_I_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -4047,7 +4047,7 @@ segment.12.Percussion.I.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion_I_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Percussion.I.Music.Voice.count.2 }
+        { \segment.12.Percussion_I_Music_Voice.count.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -4867,7 +4867,7 @@ segment.12.Percussion.I.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4876,7 +4876,7 @@ segment.12.Percussion.I.Music.Staff = <<
     \context Voice = "Percussion_I_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Percussion.I.Music.Voice }
+    { \segment.12.Percussion_I_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -4887,7 +4887,7 @@ segment.12.Percussion.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Percussion.II.Music.Voice.count.1 = {
+segment.12.Percussion_II_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4923,7 +4923,7 @@ segment.12.Percussion.II.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Percussion.II.Music.Voice.count.2 = {
+segment.12.Percussion_II_Music_Voice.count.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4963,7 +4963,7 @@ segment.12.Percussion.II.Music.Voice.count.2 = {
 
 
   %! baca.path.extern()
-segment.12.Percussion.II.Music.Voice = {
+segment.12.Percussion_II_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5166,7 +5166,7 @@ segment.12.Percussion.II.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion_II_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Percussion.II.Music.Voice.count.1 }
+        { \segment.12.Percussion_II_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -5257,7 +5257,7 @@ segment.12.Percussion.II.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion_II_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Percussion.II.Music.Voice.count.2 }
+        { \segment.12.Percussion_II_Music_Voice.count.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -5862,7 +5862,7 @@ segment.12.Percussion.II.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5871,7 +5871,7 @@ segment.12.Percussion.II.Music.Staff = <<
     \context Voice = "Percussion_II_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Percussion.II.Music.Voice }
+    { \segment.12.Percussion_II_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -5882,7 +5882,7 @@ segment.12.Percussion.II.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Harp.Music.Voice = {
+segment.12.Harp_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6845,7 +6845,7 @@ segment.12.Harp.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6854,7 +6854,7 @@ segment.12.Harp.Music.Staff = <<
     \context Voice = "Harp_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Harp.Music.Voice }
+    { \segment.12.Harp_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -6865,7 +6865,7 @@ segment.12.Harp.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Viola.Music.Voice.count.1 = {
+segment.12.Viola_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6970,7 +6970,7 @@ segment.12.Viola.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Viola.Music.Voice = {
+segment.12.Viola_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7330,7 +7330,7 @@ segment.12.Viola.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Viola_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Viola.Music.Voice.count.1 }
+        { \segment.12.Viola_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -8419,7 +8419,7 @@ segment.12.Viola.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8428,7 +8428,7 @@ segment.12.Viola.Music.Staff = <<
     \context Voice = "Viola_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Viola.Music.Voice }
+    { \segment.12.Viola_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -8439,7 +8439,7 @@ segment.12.Viola.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Cello.I.Music.Voice.count.1 = {
+segment.12.Cello_I_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8501,7 +8501,7 @@ segment.12.Cello.I.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Cello.I.Music.Voice = {
+segment.12.Cello_I_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8844,7 +8844,7 @@ segment.12.Cello.I.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Cello_I_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Cello.I.Music.Voice.count.1 }
+        { \segment.12.Cello_I_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -10114,7 +10114,7 @@ segment.12.Cello.I.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10123,7 +10123,7 @@ segment.12.Cello.I.Music.Staff = <<
     \context Voice = "Cello_I_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Cello.I.Music.Voice }
+    { \segment.12.Cello_I_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -10134,7 +10134,7 @@ segment.12.Cello.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Cello.II.Music.Voice = {
+segment.12.Cello_II_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11659,7 +11659,7 @@ segment.12.Cello.II.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11668,7 +11668,7 @@ segment.12.Cello.II.Music.Staff = <<
     \context Voice = "Cello_II_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Cello.II.Music.Voice }
+    { \segment.12.Cello_II_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -11679,7 +11679,7 @@ segment.12.Cello.II.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Contrabass.I.Music.Voice.count.1 = {
+segment.12.Contrabass_I_Music_Voice.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11741,7 +11741,7 @@ segment.12.Contrabass.I.Music.Voice.count.1 = {
 
 
   %! baca.path.extern()
-segment.12.Contrabass.I.Music.Voice = {
+segment.12.Contrabass_I_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -12084,7 +12084,7 @@ segment.12.Contrabass.I.Music.Voice = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass_I_Music_Voice"
           %! baca.path.extern()
-        { \segment.12.Contrabass.I.Music.Voice.count.1 }
+        { \segment.12.Contrabass_I_Music_Voice.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -13455,7 +13455,7 @@ segment.12.Contrabass.I.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13464,7 +13464,7 @@ segment.12.Contrabass.I.Music.Staff = <<
     \context Voice = "Contrabass_I_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Contrabass.I.Music.Voice }
+    { \segment.12.Contrabass_I_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
@@ -13475,7 +13475,7 @@ segment.12.Contrabass.I.Music.Staff = <<
 
 
   %! baca.path.extern()
-segment.12.Contrabass.II.Music.Voice = {
+segment.12.Contrabass_II_Music_Voice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15030,7 +15030,7 @@ segment.12.Contrabass.II.Music.Staff = <<
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \segment.12.Global.Rests }
+%%% { \segment.12.Global_Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15039,7 +15039,7 @@ segment.12.Contrabass.II.Music.Staff = <<
     \context Voice = "Contrabass_II_Music_Voice"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \segment.12.Contrabass.II.Music.Voice }
+    { \segment.12.Contrabass_II_Music_Voice }
     % CLOSING:
     % COMMANDS:
 
