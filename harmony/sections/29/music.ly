@@ -54,7 +54,7 @@
                 \context GlobalSkips = "Global_Skips"
                   %! baca.make_global_context()
                   %! baca.path.extern()
-                { \segment.29.Global.Skips }
+                { \segment.29.Global_Skips }
                 % CLOSING:
                 % COMMANDS:
 
