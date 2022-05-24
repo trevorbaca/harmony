@@ -55,7 +55,7 @@
                 \context GlobalSkips = "Global_Skips"
                   %! baca.make_global_context()
                   %! baca.path.extern()
-                { \segment.01.Global_Skips }
+                { \section_number.01.Global_Skips }
                 % CLOSING:
                 % COMMANDS:
 
@@ -90,7 +90,7 @@
                     \context Staff = "Bass_Flute.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Bass.Flute.Music.Staff }
+                    { \section_number.01.Bass_Flute.Music_Staff }
                     % CLOSING:
                     % COMMANDS:
 
@@ -117,7 +117,7 @@
                     \context Staff = "Percussion.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Percussion.1.Music.Staff }
+                    { \section_number.01.Percussion.1.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -130,7 +130,7 @@
                     \context Staff = "Percussion.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Percussion.2.Music.Staff }
+                    { \section_number.01.Percussion.2.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -143,7 +143,7 @@
                     \context Staff = "Harp.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Harp.Music.Staff }
+                    { \section_number.01.Harp.Music_Staff }
                     % CLOSING:
                     % COMMANDS:
 
@@ -170,7 +170,7 @@
                     \context Staff = "Viola.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Viola.Music.Staff }
+                    { \section_number.01.Viola.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -183,7 +183,7 @@
                     \context Staff = "Cello.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Cello.1.Music.Staff }
+                    { \section_number.01.Cello.1.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -196,7 +196,7 @@
                     \context Staff = "Cello.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Cello.2.Music.Staff }
+                    { \section_number.01.Cello.2.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -209,7 +209,7 @@
                     \context Staff = "Contrabass.1.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Contrabass.1.Music.Staff }
+                    { \section_number.01.Contrabass.1.Music_Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -222,7 +222,7 @@
                     \context Staff = "Contrabass.2.Music_Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \segment.01.Contrabass.2.Music.Staff }
+                    { \section_number.01.Contrabass.2.Music_Staff }
                     % CLOSING:
                     % COMMANDS:
 
