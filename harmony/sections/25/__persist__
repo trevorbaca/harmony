@@ -1,5 +1,5 @@
 {
-    "alive_during_segment": [
+    "alive_during_section": [
         "Score",
         "Global_Context",
         "Global_Skips",
