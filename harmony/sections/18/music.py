@@ -1565,7 +1565,7 @@ commands(
         selector=lambda _: baca.select.leaves(_)[:-1],
     ),
     baca.trill_spanner(
-        # large right padding because open-volta follows in next segment
+        # large right padding because open-volta follows in next section
         abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
         abjad.Tweak(r"- \tweak staff-padding 3"),
         alteration="Fqs5",
@@ -1696,7 +1696,7 @@ commands(
     ),
     baca.new(
         baca.trill_spanner(
-            # large right padding because open-volta follows in next segment
+            # large right padding because open-volta follows in next section
             abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
         ),
