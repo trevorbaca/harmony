@@ -21,9 +21,9 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
-    instruments=library.instruments,
-    margin_markups=library.margin_markups,
-    metronome_marks=library.metronome_marks,
+    instruments=library.instruments(),
+    margin_markups=library.margin_markups(),
+    metronome_marks=library.metronome_marks(),
     time_signatures=[
         (3, 4),
         (5, 4),
@@ -41,7 +41,7 @@ commands = baca.CommandAccumulator(
         (3, 4),
         (4, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
 )
 
@@ -769,7 +769,7 @@ commands(
         lambda _: baca.select.leaves(_, grace=False),
     ),
     baca.pitches(
-        abjad.sequence.rotate(library.appoggiato_pitches_a, -9),
+        abjad.sequence.rotate(library.appoggiato_pitches_a(), -9),
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.dynamic(
@@ -1206,7 +1206,7 @@ commands(
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
-        library.appoggiato_pitches_d_flat_3,
+        library.appoggiato_pitches_d_flat_3(),
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
@@ -1276,7 +1276,7 @@ commands(
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
-        library.appoggiato_pitches_c_3,
+        library.appoggiato_pitches_c_3(),
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(
@@ -1428,7 +1428,7 @@ commands(
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.pitches(
-        library.appoggiato_pitches_b_2,
+        library.appoggiato_pitches_b_2(),
         lambda _: baca.select.leaves(_, grace=True),
     ),
     baca.hairpin(

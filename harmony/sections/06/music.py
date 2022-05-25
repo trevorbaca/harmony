@@ -22,9 +22,9 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
-    instruments=library.instruments,
-    margin_markups=library.margin_markups,
-    metronome_marks=library.metronome_marks,
+    instruments=library.instruments(),
+    margin_markups=library.margin_markups(),
+    metronome_marks=library.metronome_marks(),
     time_signatures=[
         (5, 4),
         (1, 4),
@@ -42,7 +42,7 @@ commands = baca.CommandAccumulator(
         (5, 4),
         (4, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
 )
 
@@ -1422,7 +1422,7 @@ commands(
         selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
-        library.appoggiato_pitches_b_flat,
+        library.appoggiato_pitches_b_flat(),
         selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
@@ -1465,7 +1465,7 @@ commands(
         selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
-        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -9),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat(), -9),
         selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
@@ -1581,7 +1581,7 @@ commands(
         selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
-        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -1),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat(), -1),
         selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(
@@ -1631,7 +1631,7 @@ commands(
         selector=lambda _: baca.select.plts(_, grace=False),
     ),
     baca.pitches(
-        abjad.sequence.rotate(library.appoggiato_pitches_b_flat, -1 - 7),
+        abjad.sequence.rotate(library.appoggiato_pitches_b_flat(), -1 - 7),
         selector=lambda _: baca.select.plts(_, grace=True),
     ),
     baca.dynamic(

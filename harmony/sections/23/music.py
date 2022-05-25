@@ -21,9 +21,9 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
-    instruments=library.instruments,
-    margin_markups=library.margin_markups,
-    metronome_marks=library.metronome_marks,
+    instruments=library.instruments(),
+    margin_markups=library.margin_markups(),
+    metronome_marks=library.metronome_marks(),
     time_signatures=[
         (5, 4),
         (6, 4),
@@ -34,7 +34,7 @@ commands = baca.CommandAccumulator(
         (3, 4),
         (4, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
 )
 
@@ -428,7 +428,7 @@ commands(
 commands(
     ("bfl", 2),
     baca.pitches(
-        abjad.sequence.rotate(library.warble_pitches, -6),
+        abjad.sequence.rotate(library.warble_pitches(), -6),
     ),
     baca.new(
         baca.note_head_font_size(-3),

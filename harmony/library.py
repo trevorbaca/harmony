@@ -5,267 +5,68 @@ import baca
 import quicktions
 from abjadext import rmakers
 
-_reference_meters = (
-    abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
-    abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
-)
-
-instruments = dict(
-    [
-        ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
-        (
-            "Percussion",
-            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
-        ),
-        (
-            "PercussionI",
-            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
-        ),
-        (
-            "PercussionII",
-            abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
-        ),
-        ("Harp", abjad.Harp()),
-        ("Viola", abjad.Viola(pitch_range="[C3, +inf]")),
-        ("Cello", abjad.Cello(pitch_range="[C2, +inf]")),
-        ("CelloI", abjad.Cello(pitch_range="[C2, +inf]")),
-        ("CelloII", abjad.Cello(pitch_range="[C2, +inf]")),
-        ("Contrabass", abjad.Contrabass(pitch_range="[E1, +inf]")),
-        ("ContrabassI", abjad.Contrabass(pitch_range="[E1, +inf]")),
-        ("ContrabassII", abjad.Contrabass(pitch_range="[E1, +inf]")),
-    ]
-)
-
-margin_markups = dict(
-    [
-        ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),
-        ("Perc. I", abjad.MarginMarkup(markup=r"\harmony-perc-i-markup")),
-        ("Perc. II", abjad.MarginMarkup(markup=r"\harmony-perc-ii-markup")),
-        ("Hp.", abjad.MarginMarkup(markup=r"\harmony-hp-markup")),
-        ("Va.", abjad.MarginMarkup(markup=r"\harmony-va-markup")),
-        ("Vc. I", abjad.MarginMarkup(markup=r"\harmony-vc-i-markup")),
-        ("Vc. II", abjad.MarginMarkup(markup=r"\harmony-vc-ii-markup")),
-        ("Cb. I", abjad.MarginMarkup(markup=r"\harmony-cb-i-markup")),
-        ("Cb. II", abjad.MarginMarkup(markup=r"\harmony-cb-ii-markup")),
-    ]
-)
-
-metronome_marks = dict(
-    [
-        ("48", abjad.MetronomeMark((1, 4), 48)),
-        (
-            "57 3/5",
-            abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
-        ),
-        ("72", abjad.MetronomeMark((1, 4), 72)),
-        ("96", abjad.MetronomeMark((1, 4), 96)),
-        ("144", abjad.MetronomeMark((1, 4), 144)),
-        # slower
-        (
-            "2.=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "4:5(2)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:5", "c2"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "2=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "5:6(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:6", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:4(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:4", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4.=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        # faster
-        (
-            "6:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("6:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:4(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:4", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:4(8)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:4", "c8"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:3(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:3", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4:3(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:3", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:2(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:2", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "8=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "3:2(8)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:2", "c8"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-    ]
-)
-
-LETTER_PARTS_BFL = abjad.Tag("+LETTER_PARTS_BFL")
-LETTER_PARTS_PERC_I = abjad.Tag("+LETTER_PARTS_PERC_I")
-LETTER_PARTS_PERC_II = abjad.Tag("+LETTER_PARTS_PERC_II")
-LETTER_PARTS_HP = abjad.Tag("+LETTER_PARTS_HP")
-LETTER_PARTS_VA = abjad.Tag("+LETTER_PARTS_VA")
-LETTER_PARTS_VC_I = abjad.Tag("+LETTER_PARTS_VC_I")
-LETTER_PARTS_VC_II = abjad.Tag("+LETTER_PARTS_VC_II")
-LETTER_PARTS_CB_I = abjad.Tag("+LETTER_PARTS_CB_I")
-LETTER_PARTS_CB_II = abjad.Tag("+LETTER_PARTS_CB_II")
-
-NOT_LETTER_PARTS_BFL = abjad.Tag("-LETTER_PARTS_BFL")
-NOT_LETTER_PARTS_PERC_I = abjad.Tag("-LETTER_PARTS_PERC_I")
-NOT_LETTER_PARTS_PERC_II = abjad.Tag("-LETTER_PARTS_PERC_II")
-NOT_LETTER_PARTS_HP = abjad.Tag("-LETTER_PARTS_HP")
-NOT_LETTER_PARTS_VA = abjad.Tag("-LETTER_PARTS_VA")
-NOT_LETTER_PARTS_VC_I = abjad.Tag("-LETTER_PARTS_VC_I")
-NOT_LETTER_PARTS_VC_II = abjad.Tag("-LETTER_PARTS_VC_II")
-NOT_LETTER_PARTS_CB_I = abjad.Tag("-LETTER_PARTS_CB_I")
-NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
-
-cerulean = [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
-
-warble_pitches = "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
-
-damp_counts = [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
-
-damp_counts_curtailed = [3, -1, 8, -8, 3, -1]
-
-glissando_counts = [
-    2,
-    1,
-    -1,
-    4,
-    2,
-    1,
-    -1,
-    -8,
-    4,
-    2,
-    1,
-    -1,
-    2,
-    1,
-    -1,
-    -16,
-    2,
-    1,
-    -1,
-    8,
-    2,
-    1,
-    -1,
-    -4,
-    2,
-    1,
-    -1,
-]
-
-glissando_counts_curtailed = [2, 1, -1, 4, 2, 1, -1, -8, 2, 1, -1]
-
-duration_color = [21, -14, 18, "-"]
-
-# Db3:
-appoggiato_pitches_d_flat_3 = (
-    "F3 F#3  D3 D#3 Dtqs3 E3 Eqs3 F3  D#3 F3 Fqs3 F#3 Ftqs3".split()
-)
-
-# C3
-appoggiato_pitches_c_3 = "E3 F3  C#3 D3 Dqs3 D#3 Dtqs3 E3  D3 E3 Eqs3 F3 Fqs3".split()
-
-# B2
-appoggiato_pitches_b_2 = (
-    "D#3 E3  C3 C#3 Ctqs3 D3 Dqs3 D#3  C#3 D#3 Dtqs3 E3 Eqs3".split()
-)
-
-# Bb
-appoggiato_pitches_b_flat = (
-    "D5 D#5  B4 C5 Cqs5 C#5 Ctqs5 D5  C5 D5 Dqs5 D#5 Dtqs5".split()
-)
-
-# A
-appoggiato_pitches_a = "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
-
-# Ab/G#
-appoggiato_pitches_a_flat = (
-    "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
-)
-
-# G
-appoggiato_pitches_g = "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
+# LETTER_PARTS_BFL = abjad.Tag("+LETTER_PARTS_BFL")
+# LETTER_PARTS_PERC_I = abjad.Tag("+LETTER_PARTS_PERC_I")
+# LETTER_PARTS_PERC_II = abjad.Tag("+LETTER_PARTS_PERC_II")
+# LETTER_PARTS_HP = abjad.Tag("+LETTER_PARTS_HP")
+# LETTER_PARTS_VA = abjad.Tag("+LETTER_PARTS_VA")
+# LETTER_PARTS_VC_I = abjad.Tag("+LETTER_PARTS_VC_I")
+# LETTER_PARTS_VC_II = abjad.Tag("+LETTER_PARTS_VC_II")
+# LETTER_PARTS_CB_I = abjad.Tag("+LETTER_PARTS_CB_I")
+# LETTER_PARTS_CB_II = abjad.Tag("+LETTER_PARTS_CB_II")
+#
+# NOT_LETTER_PARTS_BFL = abjad.Tag("-LETTER_PARTS_BFL")
+# NOT_LETTER_PARTS_PERC_I = abjad.Tag("-LETTER_PARTS_PERC_I")
+# NOT_LETTER_PARTS_PERC_II = abjad.Tag("-LETTER_PARTS_PERC_II")
+# NOT_LETTER_PARTS_HP = abjad.Tag("-LETTER_PARTS_HP")
+# NOT_LETTER_PARTS_VA = abjad.Tag("-LETTER_PARTS_VA")
+# NOT_LETTER_PARTS_VC_I = abjad.Tag("-LETTER_PARTS_VC_I")
+# NOT_LETTER_PARTS_VC_II = abjad.Tag("-LETTER_PARTS_VC_II")
+# NOT_LETTER_PARTS_CB_I = abjad.Tag("-LETTER_PARTS_CB_I")
+# NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
 
 
-def bass_drum_staff_position() -> baca.Suite:
+# _always_make_global_rests = True
+# _global_rests_in_topmost_staff = True
+# _global_rests_in_every_staff = True
+
+
+def _reference_meters():
+    return (
+        abjad.Meter("(5/4 (1/4 1/4 1/4 1/4 1/4))"),
+        abjad.Meter("(6/4 (1/4 1/4 1/4 1/4 1/4 1/4))"),
+    )
+
+
+def appoggiato_pitches_d_flat_3():
+    return "F3 F#3  D3 D#3 Dtqs3 E3 Eqs3 F3  D#3 F3 Fqs3 F#3 Ftqs3".split()
+
+
+def appoggiato_pitches_c_3():
+    return "E3 F3  C#3 D3 Dqs3 D#3 Dtqs3 E3  D3 E3 Eqs3 F3 Fqs3".split()
+
+
+def appoggiato_pitches_b_2():
+    return "D#3 E3  C3 C#3 Ctqs3 D3 Dqs3 D#3  C#3 D#3 Dtqs3 E3 Eqs3".split()
+
+
+def appoggiato_pitches_b_flat():
+    return "D5 D#5  B4 C5 Cqs5 C#5 Ctqs5 D5  C5 D5 Dqs5 D#5 Dtqs5".split()
+
+
+def appoggiato_pitches_a():
+    return "C#5 D5  A#4 B4 Bqs4 C5 Cqs5 C#5  B4 C#5 Ctqs5 D5 Dqs5".split()
+
+
+def appoggiato_pitches_a_flat():
+    return "C5 C#5  A4 A#4 Atqs4 B4 Bqs4 C5  A#4 C5 Cqs5 C#5 Ctqs5".split()
+
+
+def appoggiato_pitches_g():
+    return "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
+
+
+def bass_drum_staff_position():
     """
     Sets bass drum staff position (-1), stem down, tuplet bracket up.
     """
@@ -276,7 +77,7 @@ def bass_drum_staff_position() -> baca.Suite:
     )
 
 
-def bridge_staff_position() -> baca.Suite:
+def bridge_staff_position():
     """
     Sets bridge position (0), stem down and tuplet bracket up.
     """
@@ -287,11 +88,66 @@ def bridge_staff_position() -> baca.Suite:
     )
 
 
-def brake_drum_staff_position() -> baca.Suite:
+def brake_drum_staff_position():
     """
     Sets brake drum staff position and stem direction.
     """
     return baca.chunk(baca.staff_position(0), baca.stem_up())
+
+
+def cerulean():
+    return [1, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, "-"]
+
+
+def damp_counts():
+    return [3, -1, 8, -8, 7, -1, 4, -16, 16, -4, 4]
+
+
+def damp_counts_curtailed():
+    return [3, -1, 8, -8, 3, -1]
+
+
+def glissando_counts():
+    return eval(
+        """[2, 1, -1, 4, 2, 1, -1, -8, 4, 2, 1, -1, 2, 1, -1, -16, 2, 1, -1, 8,
+        2, 1, -1, -4, 2, 1, -1]"""
+    )
+
+
+def glissando_counts_curtailed():
+    return [2, 1, -1, 4, 2, 1, -1, -8, 2, 1, -1]
+
+
+def duration_color():
+    return [21, -14, 18, "-"]
+
+
+def instruments():
+    return dict(
+        [
+            ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
+            (
+                "Percussion",
+                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+            ),
+            (
+                "PercussionI",
+                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+            ),
+            (
+                "PercussionII",
+                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+            ),
+            ("Harp", abjad.Harp()),
+            ("Viola", abjad.Viola(pitch_range="[C3, +inf]")),
+            ("Cello", abjad.Cello(pitch_range="[C2, +inf]")),
+            ("CelloI", abjad.Cello(pitch_range="[C2, +inf]")),
+            ("CelloII", abjad.Cello(pitch_range="[C2, +inf]")),
+            ("Contrabass", abjad.Contrabass(pitch_range="[E1, +inf]")),
+            ("ContrabassI", abjad.Contrabass(pitch_range="[E1, +inf]")),
+            ("ContrabassII", abjad.Contrabass(pitch_range="[E1, +inf]")),
+        ]
+    )
 
 
 def make_appoggiato_rhythm(
@@ -433,7 +289,7 @@ def make_appoggiato_rhythm(
             talea_denominator=16,
         ),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters),
+        rmakers.rewrite_meter(reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
         *commands,
         frame=inspect.currentframe(),
@@ -444,6 +300,7 @@ def make_appoggiato_rhythm(
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
+    _instruments = instruments()
     # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
     # BASS FLUTE
@@ -457,7 +314,7 @@ def make_empty_score():
     abjad.annotate(
         bass_flute_music_staff,
         "default_instrument",
-        instruments["BassFlute"],
+        _instruments["BassFlute"],
     )
     abjad.annotate(bass_flute_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
@@ -472,7 +329,7 @@ def make_empty_score():
     abjad.annotate(
         percussion_1_music_staff,
         "default_instrument",
-        instruments["Percussion"],
+        _instruments["Percussion"],
     )
     abjad.annotate(percussion_1_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("PercussionI", percussion_1_music_staff)
@@ -487,7 +344,7 @@ def make_empty_score():
     abjad.annotate(
         percussion_2_music_staff,
         "default_instrument",
-        instruments["Percussion"],
+        _instruments["Percussion"],
     )
     abjad.annotate(percussion_2_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("PercussionII", percussion_2_music_staff)
@@ -499,7 +356,7 @@ def make_empty_score():
         name="Harp.Music_Staff",
         tag=tag,
     )
-    abjad.annotate(harp_music_staff, "default_instrument", instruments["Harp"])
+    abjad.annotate(harp_music_staff, "default_instrument", _instruments["Harp"])
     abjad.annotate(harp_music_staff, "default_clef", abjad.Clef("treble"))
     baca.score.attach_lilypond_tag("Harp", harp_music_staff)
     # VIOLA
@@ -513,7 +370,7 @@ def make_empty_score():
     abjad.annotate(
         viola_music_staff,
         "default_instrument",
-        instruments["Viola"],
+        _instruments["Viola"],
     )
     abjad.annotate(viola_music_staff, "default_clef", abjad.Clef("alto"))
     baca.score.attach_lilypond_tag("Viola", viola_music_staff)
@@ -528,7 +385,7 @@ def make_empty_score():
     abjad.annotate(
         cello_1_music_staff,
         "default_instrument",
-        instruments["Cello"],
+        _instruments["Cello"],
     )
     abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("CelloI", cello_1_music_staff)
@@ -543,7 +400,7 @@ def make_empty_score():
     abjad.annotate(
         cello_2_music_staff,
         "default_instrument",
-        instruments["Cello"],
+        _instruments["Cello"],
     )
     abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("CelloII", cello_2_music_staff)
@@ -558,7 +415,7 @@ def make_empty_score():
     abjad.annotate(
         contrabass_1_music_staff,
         "default_instrument",
-        instruments["Contrabass"],
+        _instruments["Contrabass"],
     )
     abjad.annotate(contrabass_1_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
@@ -573,7 +430,7 @@ def make_empty_score():
     abjad.annotate(
         contrabass_2_music_staff,
         "default_instrument",
-        instruments["Contrabass"],
+        _instruments["Contrabass"],
     )
     abjad.annotate(contrabass_2_music_staff, "default_clef", abjad.Clef("bass"))
     baca.score.attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
@@ -791,7 +648,7 @@ def make_sixteenths(
         commands.append(denominator_)
     if not do_not_rewrite_meter:
         rewrite_ = rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters
+            boundary_depth=1, reference_meters=_reference_meters()
         )
         commands.append(rewrite_)
     if written_eighths is True:
@@ -1044,7 +901,7 @@ def make_tessera_1(part, *, advance=0, gap=False):
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -1079,7 +936,7 @@ def make_tessera_2(part, *, advance=0, gap=False, rest_plts=None):
         rmakers.talea(counts, 16, advance=advance),
         *commands,
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -1099,7 +956,7 @@ def make_tessera_3(part, *, advance=0, gap=False):
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -1119,7 +976,7 @@ def make_tessera_4(part, *, advance=0, gap=False):
     return baca.rhythm(
         rmakers.talea(counts, 16, advance=advance),
         rmakers.extract_trivial(),
-        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters),
+        rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
         frame=inspect.currentframe(),
     )
@@ -1236,7 +1093,7 @@ def margin_markup(
     context="Staff",
     selector=lambda _: abjad.select.leaf(_, 0),
 ):
-    margin_markup = margin_markups[key]
+    margin_markup = margin_markups()[key]
     command = baca.margin_markup(
         margin_markup,
         alert=alert,
@@ -1246,7 +1103,162 @@ def margin_markup(
     return baca.not_parts(command)
 
 
-def purpleheart_staff_positions(argument) -> baca.Suite:
+def margin_markups():
+    return dict(
+        [
+            ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),
+            ("Perc. I", abjad.MarginMarkup(markup=r"\harmony-perc-i-markup")),
+            ("Perc. II", abjad.MarginMarkup(markup=r"\harmony-perc-ii-markup")),
+            ("Hp.", abjad.MarginMarkup(markup=r"\harmony-hp-markup")),
+            ("Va.", abjad.MarginMarkup(markup=r"\harmony-va-markup")),
+            ("Vc. I", abjad.MarginMarkup(markup=r"\harmony-vc-i-markup")),
+            ("Vc. II", abjad.MarginMarkup(markup=r"\harmony-vc-ii-markup")),
+            ("Cb. I", abjad.MarginMarkup(markup=r"\harmony-cb-i-markup")),
+            ("Cb. II", abjad.MarginMarkup(markup=r"\harmony-cb-ii-markup")),
+        ]
+    )
+
+
+def metronome_marks():
+    return dict(
+        [
+            ("48", abjad.MetronomeMark((1, 4), 48)),
+            (
+                "57 3/5",
+                abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
+            ),
+            ("72", abjad.MetronomeMark((1, 4), 72)),
+            ("96", abjad.MetronomeMark((1, 4), 96)),
+            ("144", abjad.MetronomeMark((1, 4), 144)),
+            # slower
+            (
+                "2.=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
+                ),
+            ),
+            (
+                "4:5(2)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("4:5", "c2"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "2=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
+                ),
+            ),
+            (
+                "5:6(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("5:6", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "4:5(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("4:5", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "3:5(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("3:5", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "3:4(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("3:4", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "4.=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
+                ),
+            ),
+            # faster
+            (
+                "6:5(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("6:5", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "5:4(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("5:4", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "5:4(8)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("5:4", "c8"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "5:3(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("5:3", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "4:3(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("4:3", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "3:2(4)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("3:2", "c4"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+            (
+                "8=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
+                ),
+            ),
+            (
+                "3:2(8)=4",
+                abjad.MetricModulation(
+                    left_rhythm=abjad.Tuplet("3:2", "c8"),
+                    right_rhythm=abjad.Note("c4"),
+                ),
+            ),
+        ]
+    )
+
+
+def part_manifest():
+    return baca.PartManifest(
+        baca.Part(section="BassFlute", section_abbreviation="BFL"),
+        baca.Part(section="PercussionI", section_abbreviation="PERC1"),
+        baca.Part(section="PercussionII", section_abbreviation="PERC2"),
+        baca.Part(section="Harp", section_abbreviation="HP"),
+        baca.Part(section="Viola", section_abbreviation="VA"),
+        baca.Part(section="CelloI", section_abbreviation="VC1"),
+        baca.Part(section="CelloII", section_abbreviation="VC2"),
+        baca.Part(section="ContrabassI", section_abbreviation="CB1"),
+        baca.Part(section="ContrabassII", section_abbreviation="CB2"),
+    )
+
+
+def purpleheart_staff_positions(argument):
     """
     Sets staff position, stem direction, tuplet bracket direction, tuplet bracket staff
     padding.
@@ -1264,7 +1276,7 @@ def purpleheart_staff_positions(argument) -> baca.Suite:
     )
 
 
-def slate_staff_position() -> baca.Suite:
+def slate_staff_position():
     """
     Sets slate staff position (1), stem down, tuplet bracket up.
     """
@@ -1275,7 +1287,7 @@ def slate_staff_position() -> baca.Suite:
     )
 
 
-def tam_tam_staff_position() -> baca.Suite:
+def tam_tam_staff_position():
     """
     Sets tam-tam staff position (0), stem down, tuplet bracket up.
     """
@@ -1286,14 +1298,73 @@ def tam_tam_staff_position() -> baca.Suite:
     )
 
 
-def triangle_staff_position() -> baca.Suite:
+def triangle_staff_position():
     """
     Sets triangle position and stem direction.
     """
     return baca.chunk(baca.staff_position(1), baca.stem_up())
 
 
-def whisk_staff_position() -> baca.Suite:
+def voice_abbreviations():
+    return {
+        "bfl": "Bass_Flute.Music_Voice",
+        "bflr": "Bass_Flute.Rest_Voice",
+        "bflx": ["Bass_Flute.Music_Voice", "Bass_Flute.Rest_Voice"],
+        "perc1": "Percussion.1.Music_Voice",
+        "perc1r": "Percussion.1.Rest_Voice",
+        "perc1x": [
+            "Percussion.1.Music_Voice",
+            "Percussion.1.Rest_Voice",
+        ],
+        "perc2": "Percussion.2.Music_Voice",
+        "perc2r": "Percussion.2.Rest_Voice",
+        "perc2x": [
+            "Percussion.2.Music_Voice",
+            "Percussion.2.Rest_Voice",
+        ],
+        "hp": "Harp.Music_Voice",
+        "hpr": "Harp.Rest_Voice",
+        "hpx": ["Harp.Music_Voice", "Harp.Rest_Voice"],
+        "va": "Viola.Music_Voice",
+        "var": "Viola.Rest_Voice",
+        "vax": ["Viola.Music_Voice", "Viola.Rest_Voice"],
+        "vc1": "Cello.1.Music_Voice",
+        "vc1r": "Cello.1.Rest_Voice",
+        "vc1x": ["Cello.1.Music_Voice", "Cello.1.Rest_Voice"],
+        "vc2": "Cello.2.Music_Voice",
+        "vc2r": "Cello.2.Rest_Voice",
+        "vc2x": ["Cello.2.Music_Voice", "Cello.2.Rest_Voice"],
+        "cb1": "Contrabass.1.Music_Voice",
+        "cb1r": "Contrabass.1.Rest_Voice",
+        "cb1x": [
+            "Contrabass.1.Music_Voice",
+            "Contrabass.1.Rest_Voice",
+        ],
+        "cb2": "Contrabass.2.Music_Voice",
+        "cb2r": "Contrabass.2.Rest_Voice",
+        "cb2x": [
+            "Contrabass.2.Music_Voice",
+            "Contrabass.2.Rest_Voice",
+        ],
+        "tutti": [
+            "Bass_Flute.Music_Voice",
+            "Percussion.1.Music_Voice",
+            "Percussion.2.Music_Voice",
+            "Harp.Music_Voice",
+            "Viola.Music_Voice",
+            "Cello.1.Music_Voice",
+            "Cello.2.Music_Voice",
+            "Contrabass.1.Music_Voice",
+            "Contrabass.2.Music_Voice",
+        ],
+    }
+
+
+def warble_pitches():
+    return "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
+
+
+def whisk_staff_position():
     """
     Sets whisk staff position (0), stem down and tuplet bracket up.
     """
@@ -1302,74 +1373,3 @@ def whisk_staff_position() -> baca.Suite:
         baca.stem_down(),
         baca.tuplet_bracket_up(),
     )
-
-
-_always_make_global_rests = True
-
-# _global_rests_in_topmost_staff = True
-_global_rests_in_every_staff = True
-
-part_manifest = baca.PartManifest(
-    baca.Part(section="BassFlute", section_abbreviation="BFL"),
-    baca.Part(section="PercussionI", section_abbreviation="PERC1"),
-    baca.Part(section="PercussionII", section_abbreviation="PERC2"),
-    baca.Part(section="Harp", section_abbreviation="HP"),
-    baca.Part(section="Viola", section_abbreviation="VA"),
-    baca.Part(section="CelloI", section_abbreviation="VC1"),
-    baca.Part(section="CelloII", section_abbreviation="VC2"),
-    baca.Part(section="ContrabassI", section_abbreviation="CB1"),
-    baca.Part(section="ContrabassII", section_abbreviation="CB2"),
-)
-
-voice_abbreviations = {
-    "bfl": "Bass_Flute.Music_Voice",
-    "bflr": "Bass_Flute.Rest_Voice",
-    "bflx": ["Bass_Flute.Music_Voice", "Bass_Flute.Rest_Voice"],
-    "perc1": "Percussion.1.Music_Voice",
-    "perc1r": "Percussion.1.Rest_Voice",
-    "perc1x": [
-        "Percussion.1.Music_Voice",
-        "Percussion.1.Rest_Voice",
-    ],
-    "perc2": "Percussion.2.Music_Voice",
-    "perc2r": "Percussion.2.Rest_Voice",
-    "perc2x": [
-        "Percussion.2.Music_Voice",
-        "Percussion.2.Rest_Voice",
-    ],
-    "hp": "Harp.Music_Voice",
-    "hpr": "Harp.Rest_Voice",
-    "hpx": ["Harp.Music_Voice", "Harp.Rest_Voice"],
-    "va": "Viola.Music_Voice",
-    "var": "Viola.Rest_Voice",
-    "vax": ["Viola.Music_Voice", "Viola.Rest_Voice"],
-    "vc1": "Cello.1.Music_Voice",
-    "vc1r": "Cello.1.Rest_Voice",
-    "vc1x": ["Cello.1.Music_Voice", "Cello.1.Rest_Voice"],
-    "vc2": "Cello.2.Music_Voice",
-    "vc2r": "Cello.2.Rest_Voice",
-    "vc2x": ["Cello.2.Music_Voice", "Cello.2.Rest_Voice"],
-    "cb1": "Contrabass.1.Music_Voice",
-    "cb1r": "Contrabass.1.Rest_Voice",
-    "cb1x": [
-        "Contrabass.1.Music_Voice",
-        "Contrabass.1.Rest_Voice",
-    ],
-    "cb2": "Contrabass.2.Music_Voice",
-    "cb2r": "Contrabass.2.Rest_Voice",
-    "cb2x": [
-        "Contrabass.2.Music_Voice",
-        "Contrabass.2.Rest_Voice",
-    ],
-    "tutti": [
-        "Bass_Flute.Music_Voice",
-        "Percussion.1.Music_Voice",
-        "Percussion.2.Music_Voice",
-        "Harp.Music_Voice",
-        "Viola.Music_Voice",
-        "Cello.1.Music_Voice",
-        "Cello.2.Music_Voice",
-        "Contrabass.1.Music_Voice",
-        "Contrabass.2.Music_Voice",
-    ],
-}

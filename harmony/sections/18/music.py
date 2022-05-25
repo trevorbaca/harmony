@@ -21,9 +21,9 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
-    instruments=library.instruments,
-    margin_markups=library.margin_markups,
-    metronome_marks=library.metronome_marks,
+    instruments=library.instruments(),
+    margin_markups=library.margin_markups(),
+    metronome_marks=library.metronome_marks(),
     time_signatures=[
         (4, 4),
         (3, 4),
@@ -37,7 +37,7 @@ commands = baca.CommandAccumulator(
         (4, 4),
         (3, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
 )
 
@@ -345,7 +345,7 @@ commands(
 commands(
     ("va", (4, 5)),
     library.make_sixteenths(
-        library.glissando_counts_curtailed,
+        library.glissando_counts_curtailed(),
     ),
 )
 
@@ -420,7 +420,7 @@ commands(
 commands(
     ("vc1", (4, 5)),
     library.make_sixteenths(
-        library.damp_counts_curtailed,
+        library.damp_counts_curtailed(),
     ),
 )
 
@@ -480,7 +480,7 @@ commands(
 commands(
     ("vc2", (4, 5)),
     library.make_sixteenths(
-        library.damp_counts_curtailed,
+        library.damp_counts_curtailed(),
     ),
 )
 
@@ -557,7 +557,7 @@ commands(
 commands(
     ("cb1", (4, 5)),
     library.make_sixteenths(
-        library.glissando_counts_curtailed,
+        library.glissando_counts_curtailed(),
     ),
 )
 
@@ -635,7 +635,7 @@ commands(
 commands(
     ("cb2", (4, 5)),
     library.make_sixteenths(
-        library.glissando_counts_curtailed,
+        library.glissando_counts_curtailed(),
     ),
 )
 
@@ -695,7 +695,7 @@ commands(
 commands(
     ("bfl", 3),
     baca.pitches(
-        abjad.sequence.rotate(library.warble_pitches, -4),
+        abjad.sequence.rotate(library.warble_pitches(), -4),
     ),
     baca.new(
         baca.note_head_font_size(-3),
