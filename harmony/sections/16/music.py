@@ -18,9 +18,9 @@ voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
-    instruments=library.instruments,
-    margin_markups=library.margin_markups,
-    metronome_marks=library.metronome_marks,
+    instruments=library.instruments(),
+    margin_markups=library.margin_markups(),
+    metronome_marks=library.metronome_marks(),
     time_signatures=[
         (3, 4),
         (3, 4),
@@ -33,7 +33,7 @@ commands = baca.CommandAccumulator(
         (3, 4),
         (3, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations,
+    voice_abbreviations=library.voice_abbreviations(),
     voice_names=voice_names,
 )
 
@@ -47,7 +47,7 @@ commands(
 commands(
     ("bfl", (1, 6)),
     library.make_sixteenths(
-        library.damp_counts,
+        library.damp_counts(),
     ),
 )
 
@@ -66,7 +66,7 @@ commands(
 commands(
     ("bfl", (9, 10)),
     library.make_sixteenths(
-        library.damp_counts_curtailed,
+        library.damp_counts_curtailed(),
     ),
 )
 
@@ -103,7 +103,7 @@ commands(
 commands(
     ("perc2", (1, 6)),
     library.make_sixteenths(
-        library.duration_color,
+        library.duration_color(),
     ),
 )
 
@@ -115,7 +115,7 @@ commands(
 commands(
     ("perc2", (9, 10)),
     library.make_sixteenths(
-        library.duration_color,
+        library.duration_color(),
     ),
 )
 
@@ -124,7 +124,7 @@ commands(
 commands(
     ("hp", (1, 6)),
     library.make_sixteenths(
-        library.duration_color,
+        library.duration_color(),
     ),
 )
 
@@ -145,7 +145,7 @@ commands(
 commands(
     ("hp", (9, 10)),
     library.make_sixteenths(
-        library.duration_color,
+        library.duration_color(),
     ),
 )
 
@@ -154,7 +154,7 @@ commands(
 commands(
     ("va", (1, 6)),
     library.make_sixteenths(
-        library.glissando_counts,
+        library.glissando_counts(),
     ),
 )
 
@@ -180,7 +180,7 @@ commands(
 commands(
     ("vc1", (1, 6)),
     library.make_sixteenths(
-        library.damp_counts,
+        library.damp_counts(),
     ),
 )
 
@@ -199,7 +199,7 @@ commands(
 commands(
     ("vc1", (9, 10)),
     library.make_sixteenths(
-        library.damp_counts_curtailed,
+        library.damp_counts_curtailed(),
     ),
 )
 
@@ -208,7 +208,7 @@ commands(
 commands(
     ("vc2", (1, 6)),
     library.make_sixteenths(
-        library.damp_counts,
+        library.damp_counts(),
     ),
 )
 
@@ -227,7 +227,7 @@ commands(
 commands(
     ("vc2", (9, 10)),
     library.make_sixteenths(
-        library.damp_counts_curtailed,
+        library.damp_counts_curtailed(),
     ),
 )
 
@@ -236,7 +236,7 @@ commands(
 commands(
     ("cb1", (1, 6)),
     library.make_sixteenths(
-        library.glissando_counts,
+        library.glissando_counts(),
     ),
 )
 
@@ -255,7 +255,7 @@ commands(
 commands(
     ("cb1", (9, 10)),
     library.make_sixteenths(
-        library.glissando_counts_curtailed,
+        library.glissando_counts_curtailed(),
     ),
 )
 
@@ -264,7 +264,7 @@ commands(
 commands(
     ("cb2", (1, 6)),
     library.make_sixteenths(
-        library.glissando_counts,
+        library.glissando_counts(),
     ),
 )
 
@@ -283,7 +283,7 @@ commands(
 commands(
     ("cb2", (9, 10)),
     library.make_sixteenths(
-        library.glissando_counts_curtailed,
+        library.glissando_counts_curtailed(),
     ),
 )
 
