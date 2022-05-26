@@ -5,31 +5,6 @@ import baca
 import quicktions
 from abjadext import rmakers
 
-# LETTER_PARTS_BFL = abjad.Tag("+LETTER_PARTS_BFL")
-# LETTER_PARTS_PERC_I = abjad.Tag("+LETTER_PARTS_PERC_I")
-# LETTER_PARTS_PERC_II = abjad.Tag("+LETTER_PARTS_PERC_II")
-# LETTER_PARTS_HP = abjad.Tag("+LETTER_PARTS_HP")
-# LETTER_PARTS_VA = abjad.Tag("+LETTER_PARTS_VA")
-# LETTER_PARTS_VC_I = abjad.Tag("+LETTER_PARTS_VC_I")
-# LETTER_PARTS_VC_II = abjad.Tag("+LETTER_PARTS_VC_II")
-# LETTER_PARTS_CB_I = abjad.Tag("+LETTER_PARTS_CB_I")
-# LETTER_PARTS_CB_II = abjad.Tag("+LETTER_PARTS_CB_II")
-#
-# NOT_LETTER_PARTS_BFL = abjad.Tag("-LETTER_PARTS_BFL")
-# NOT_LETTER_PARTS_PERC_I = abjad.Tag("-LETTER_PARTS_PERC_I")
-# NOT_LETTER_PARTS_PERC_II = abjad.Tag("-LETTER_PARTS_PERC_II")
-# NOT_LETTER_PARTS_HP = abjad.Tag("-LETTER_PARTS_HP")
-# NOT_LETTER_PARTS_VA = abjad.Tag("-LETTER_PARTS_VA")
-# NOT_LETTER_PARTS_VC_I = abjad.Tag("-LETTER_PARTS_VC_I")
-# NOT_LETTER_PARTS_VC_II = abjad.Tag("-LETTER_PARTS_VC_II")
-# NOT_LETTER_PARTS_CB_I = abjad.Tag("-LETTER_PARTS_CB_I")
-# NOT_LETTER_PARTS_CB_II = abjad.Tag("-LETTER_PARTS_CB_II")
-
-
-# _always_make_global_rests = True
-# _global_rests_in_topmost_staff = True
-# _global_rests_in_every_staff = True
-
 
 def _reference_meters():
     return (
@@ -317,7 +292,7 @@ def make_empty_score():
         _instruments["BassFlute"],
     )
     abjad.annotate(bass_flute_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
+    baca.score.attach_lilypond_tag("Bass_Flute", bass_flute_music_staff)
     # PERCUSSION 1
     percussion_1_music_voice = abjad.Voice(name="Percussion.1.Music_Voice", tag=tag)
     percussion_1_music_staff = abjad.Staff(
@@ -332,7 +307,7 @@ def make_empty_score():
         _instruments["Percussion"],
     )
     abjad.annotate(percussion_1_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("PercussionI", percussion_1_music_staff)
+    baca.score.attach_lilypond_tag("Percussion.1", percussion_1_music_staff)
     # PERCUSSION 2
     percussion_2_music_voice = abjad.Voice(name="Percussion.2.Music_Voice", tag=tag)
     percussion_2_music_staff = abjad.Staff(
@@ -347,7 +322,7 @@ def make_empty_score():
         _instruments["Percussion"],
     )
     abjad.annotate(percussion_2_music_staff, "default_clef", abjad.Clef("treble"))
-    baca.score.attach_lilypond_tag("PercussionII", percussion_2_music_staff)
+    baca.score.attach_lilypond_tag("Percussion.2", percussion_2_music_staff)
     # HARP
     harp_music_voice = abjad.Voice(name="Harp.Music_Voice", tag=tag)
     harp_music_staff = abjad.Staff(
@@ -388,7 +363,7 @@ def make_empty_score():
         _instruments["Cello"],
     )
     abjad.annotate(cello_1_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("CelloI", cello_1_music_staff)
+    baca.score.attach_lilypond_tag("Cello.1", cello_1_music_staff)
     # CELLO 2
     cello_2_music_voice = abjad.Voice(name="Cello.2.Music_Voice", tag=tag)
     cello_2_music_staff = abjad.Staff(
@@ -403,7 +378,7 @@ def make_empty_score():
         _instruments["Cello"],
     )
     abjad.annotate(cello_2_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("CelloII", cello_2_music_staff)
+    baca.score.attach_lilypond_tag("Cello.2", cello_2_music_staff)
     # CONTRABASS 1
     contrabass_1_music_voice = abjad.Voice(name="Contrabass.1.Music_Voice", tag=tag)
     contrabass_1_music_staff = abjad.Staff(
@@ -418,7 +393,7 @@ def make_empty_score():
         _instruments["Contrabass"],
     )
     abjad.annotate(contrabass_1_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("ContrabassI", contrabass_1_music_staff)
+    baca.score.attach_lilypond_tag("Contrabass.1", contrabass_1_music_staff)
     # CONTRABASS 2
     contrabass_2_music_voice = abjad.Voice(name="Contrabass.2.Music_Voice", tag=tag)
     contrabass_2_music_staff = abjad.Staff(
@@ -433,7 +408,7 @@ def make_empty_score():
         _instruments["Contrabass"],
     )
     abjad.annotate(contrabass_2_music_staff, "default_clef", abjad.Clef("bass"))
-    baca.score.attach_lilypond_tag("ContrabassII", contrabass_2_music_staff)
+    baca.score.attach_lilypond_tag("Contrabass.2", contrabass_2_music_staff)
     # WIND SECTION STAFF GROUP
     wind_section_staff_group = abjad.StaffGroup(
         [bass_flute_music_staff],

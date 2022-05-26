@@ -83,7 +83,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'BassFlute
+                    \tag #'Bass_Flute
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Bass_Flute.Music_Staff"
@@ -110,7 +110,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'PercussionI
+                    \tag #'Percussion.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Percussion.1.Music_Staff"
@@ -123,7 +123,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'PercussionII
+                    \tag #'Percussion.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Percussion.2.Music_Staff"
@@ -176,7 +176,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'CelloI
+                    \tag #'Cello.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Cello.1.Music_Staff"
@@ -189,7 +189,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'CelloII
+                    \tag #'Cello.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Cello.2.Music_Staff"
@@ -202,7 +202,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'ContrabassI
+                    \tag #'Contrabass.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Contrabass.1.Music_Staff"
@@ -215,7 +215,7 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'ContrabassII
+                    \tag #'Contrabass.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
                     \context Staff = "Contrabass.2.Music_Staff"
