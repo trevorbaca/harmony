@@ -1373,7 +1373,7 @@ number.21.Bass_Flute.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.Rest_Voice"
+        \context Voice = "Bass_Flute.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -1383,7 +1383,7 @@ number.21.Bass_Flute.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Bass_Flute.Rest_Voice measure 6]
+            % [Bass_Flute.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -2079,7 +2079,7 @@ number.21.Percussion.1.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion.1.Rest_Voice"
+        \context Voice = "Percussion.1.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -2089,7 +2089,7 @@ number.21.Percussion.1.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion.1.Rest_Voice measure 6]
+            % [Percussion.1.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -2904,7 +2904,7 @@ number.21.Percussion.2.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Percussion.2.Rest_Voice"
+        \context Voice = "Percussion.2.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -2914,7 +2914,7 @@ number.21.Percussion.2.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Percussion.2.Rest_Voice measure 6]
+            % [Percussion.2.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -3406,7 +3406,7 @@ number.21.Harp.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Harp.Rest_Voice"
+        \context Voice = "Harp.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -3416,7 +3416,7 @@ number.21.Harp.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Harp.Rest_Voice measure 6]
+            % [Harp.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -3927,14 +3927,14 @@ number.21.Viola.Music_Voice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Viola.Rest_Voice"
+        \context Voice = "Viola.RestVoice"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Viola.Rest_Voice measure 3]
+            % [Viola.RestVoice measure 3]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -4313,7 +4313,7 @@ number.21.Viola.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Viola.Rest_Voice"
+        \context Voice = "Viola.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -4323,7 +4323,7 @@ number.21.Viola.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Viola.Rest_Voice measure 6]
+            % [Viola.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -5226,7 +5226,7 @@ number.21.Cello.1.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.1.Rest_Voice"
+        \context Voice = "Cello.1.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -5236,7 +5236,7 @@ number.21.Cello.1.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello.1.Rest_Voice measure 6]
+            % [Cello.1.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -6016,7 +6016,7 @@ number.21.Cello.2.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.2.Rest_Voice"
+        \context Voice = "Cello.2.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -6026,7 +6026,7 @@ number.21.Cello.2.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Cello.2.Rest_Voice measure 6]
+            % [Cello.2.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -6915,7 +6915,7 @@ number.21.Contrabass.1.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass.1.Rest_Voice"
+        \context Voice = "Contrabass.1.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -6925,7 +6925,7 @@ number.21.Contrabass.1.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass.1.Rest_Voice measure 6]
+            % [Contrabass.1.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
@@ -7791,7 +7791,7 @@ number.21.Contrabass.2.Music_Voice = {
         % OPEN_BRACKETS:
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass.2.Rest_Voice"
+        \context Voice = "Contrabass.2.RestVoice"
           %! PHANTOM
           %! baca._make_multimeasure_rest_container(6)
         {
@@ -7801,7 +7801,7 @@ number.21.Contrabass.2.Music_Voice = {
               %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_phantom_measures(5)
-            % [Contrabass.2.Rest_Voice measure 6]
+            % [Contrabass.2.RestVoice measure 6]
             % OPENING:
             % COMMANDS:
               %! PHANTOM
