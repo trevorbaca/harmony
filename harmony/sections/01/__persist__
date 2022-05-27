@@ -311,14 +311,6 @@
             baca.Memento(
                 context="Harp.MusicVoice",
                 edition=None,
-                manifest="instruments",
-                prototype=None,
-                synthetic_offset=None,
-                value="Harp",
-            ),
-            baca.Memento(
-                context="Harp.MusicVoice",
-                edition=None,
                 manifest=None,
                 prototype="abjad.Clef",
                 synthetic_offset=None,
@@ -452,6 +444,16 @@
                 synthetic_offset=None,
                 value=3,
             ),
+        ],
+        "Percussion_Section.Staff_Group": [
+            baca.Memento(
+                context="Harp.MusicVoice",
+                edition=None,
+                manifest="instruments",
+                prototype=None,
+                synthetic_offset=None,
+                value="Harp",
+            )
         ],
         "Score": [
             baca.Memento(

@@ -15,6 +15,7 @@ stage_markup = (
 
 score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
+instruments = library.instruments()
 
 commands = baca.CommandAccumulator(
     **baca.section_accumulation_defaults(),
@@ -220,13 +221,16 @@ music_voices = [_ for _ in voice_names if "MusicVoice" in _]
 commands(
     music_voices,
     baca.append_phantom_measure(),
-    baca.attach_first_section_default_indicators(),
+    baca.attach_first_section_default_indicators(
+        attach_instruments_by_hand=True,
+    ),
 )
 
 # bfl
 
 commands(
     ("bfl", (1, 2)),
+    baca.instrument(instruments["BassFlute"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Bfl."),
@@ -278,6 +282,7 @@ commands(
 
 commands(
     "perc1",
+    baca.instrument(instruments["Percussion"]),
     baca.dls_staff_padding(6),
 )
 
@@ -343,6 +348,7 @@ commands(
 
 commands(
     ("perc2", (1, 2)),
+    baca.instrument(instruments["Percussion"]),
     baca.suite(
         library.margin_markup("Perc. II"),
         baca.start_markup(r"\harmony-percussion-ii-markup"),
@@ -380,6 +386,7 @@ commands(
 
 commands(
     ("hp", (1, 2)),
+    baca.instrument(instruments["Harp"]),
     baca.suite(
         library.margin_markup("Hp."),
         baca.start_markup(r"\harmony-harp-markup"),
@@ -414,6 +421,7 @@ commands(
 
 commands(
     ("va", (1, 2)),
+    baca.instrument(instruments["Viola"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Va."),
@@ -451,6 +459,7 @@ commands(
 
 commands(
     ("vc1", (1, 2)),
+    baca.instrument(instruments["Cello"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. I"),
@@ -514,6 +523,7 @@ commands(
 
 commands(
     ("vc2", (1, 2)),
+    baca.instrument(instruments["Cello"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. II"),
@@ -557,6 +567,7 @@ commands(
 
 commands(
     ("cb1", (1, 2)),
+    baca.instrument(instruments["Contrabass"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. I"),
@@ -608,6 +619,7 @@ commands(
 
 commands(
     ("cb2", (1, 2)),
+    baca.instrument(instruments["Contrabass"]),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. II"),
