@@ -13,7 +13,7 @@
 <<
 
       %! baca.make_global_context()
-    \context GlobalContext = "Global_Context"
+    \context GlobalContext = "GlobalContext"
       %! baca.make_global_context()
     <<
 

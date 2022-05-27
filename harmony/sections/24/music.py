@@ -38,7 +38,7 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "Global_Skips",
+    "GlobalSkips",
     baca.metronome_mark("48", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("2.=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("72", lambda _: baca.select.skip(_, 4 - 1)),

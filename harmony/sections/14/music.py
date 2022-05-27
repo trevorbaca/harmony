@@ -41,7 +41,7 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "Global_Skips",
+    "GlobalSkips",
     baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("3:5(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("96", lambda _: baca.select.skip(_, 4 - 1)),
@@ -55,7 +55,7 @@ commands(
 )
 
 commands(
-    "Global_Rests",
+    "GlobalRests",
     baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
     baca.global_fermata("short", lambda _: baca.select.rest(_, 10 - 1)),
 )
@@ -65,7 +65,7 @@ cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
 # text
 
 commands(
-    "Global_Skips",
+    "GlobalSkips",
     baca.not_parts(
         baca.markup(
             r"\harmony-text-fourteen",
@@ -76,7 +76,7 @@ commands(
 )
 
 commands(
-    "Global_Skips",
+    "GlobalSkips",
     baca.not_parts(
         baca.markup(
             r"\harmony-text-fifteen",
