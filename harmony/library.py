@@ -275,7 +275,6 @@ def make_appoggiato_rhythm(
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
-    _instruments = instruments()
     # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
     # BASS FLUTE
