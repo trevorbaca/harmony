@@ -231,6 +231,7 @@ commands(
 commands(
     ("bfl", (1, 2)),
     baca.instrument(instruments["BassFlute"]),
+    baca.clef("treble"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Bfl."),
@@ -283,6 +284,7 @@ commands(
 commands(
     "perc1",
     baca.instrument(instruments["Percussion"]),
+    baca.clef("percussion"),
     baca.dls_staff_padding(6),
 )
 
@@ -349,6 +351,7 @@ commands(
 commands(
     ("perc2", (1, 2)),
     baca.instrument(instruments["Percussion"]),
+    baca.clef("percussion"),
     baca.suite(
         library.margin_markup("Perc. II"),
         baca.start_markup(r"\harmony-percussion-ii-markup"),
@@ -387,6 +390,7 @@ commands(
 commands(
     ("hp", (1, 2)),
     baca.instrument(instruments["Harp"]),
+    baca.clef("percussion"),
     baca.suite(
         library.margin_markup("Hp."),
         baca.start_markup(r"\harmony-harp-markup"),
@@ -422,6 +426,7 @@ commands(
 commands(
     ("va", (1, 2)),
     baca.instrument(instruments["Viola"]),
+    baca.clef("alto"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Va."),
@@ -460,6 +465,7 @@ commands(
 commands(
     ("vc1", (1, 2)),
     baca.instrument(instruments["Cello"]),
+    baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. I"),
@@ -524,6 +530,7 @@ commands(
 commands(
     ("vc2", (1, 2)),
     baca.instrument(instruments["Cello"]),
+    baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Vc. II"),
@@ -568,6 +575,7 @@ commands(
 commands(
     ("cb1", (1, 2)),
     baca.instrument(instruments["Contrabass"]),
+    baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. I"),
@@ -620,6 +628,7 @@ commands(
 commands(
     ("cb2", (1, 2)),
     baca.instrument(instruments["Contrabass"]),
+    baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
         library.margin_markup("Cb. II"),
