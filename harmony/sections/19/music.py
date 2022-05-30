@@ -864,24 +864,23 @@ commands(
     ),
 )
 
-# phantom & reapply
+# anchor notes
+
+commands(
+    ["bfl", "perc2", "cb2"],
+    baca.append_anchor_note(),
+)
+
+# reapply
 
 music_voices = [_ for _ in voice_names if "MusicVoice" in _]
 
 commands(
     music_voices,
-    baca.append_phantom_measure(),
     baca.reapply_persistent_indicators(),
 )
 
 # bfl
-
-commands(
-    ("cb2", 11),
-    baca.clef("percussion"),
-    baca.staff_lines(1),
-)
-
 
 commands(
     ("bfl", 1),
@@ -1465,6 +1464,8 @@ commands(
 
 commands(
     ("cb2", (11, 13)),
+    baca.clef("percussion"),
+    baca.staff_lines(1),
     library.bridge_staff_position(),
     baca.accent(
         lambda _: baca.select.pheads(_),

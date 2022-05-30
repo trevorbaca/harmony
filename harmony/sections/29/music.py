@@ -185,13 +185,12 @@ commands(
     baca.make_mmrests(),
 )
 
-# phantom & reapply
+# reapply
 
 music_voices = [_ for _ in voice_names if "MusicVoice" in _]
 
 commands(
     music_voices,
-    baca.append_phantom_measure(),
     baca.reapply_persistent_indicators(),
 )
 
@@ -316,6 +315,7 @@ commands(
         baca.chunk(
             baca.mark(r"\harmony-colophon-markup"),
             baca.rehearsal_mark_down(),
+            baca.rehearsal_mark_extra_offset((92, 8)),
             baca.rehearsal_mark_padding(12),
             baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
             selector=lambda _: baca.select.rleaf(_, -1),
