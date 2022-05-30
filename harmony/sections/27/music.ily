@@ -1289,6 +1289,14 @@ number.27.Bass_Flute.MusicVoice = {
       %! baca._label_duration_multipliers()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % COMMANDS:
+      %! FERMATA_MEASURE
+      %! MEASURE_248
+      %! baca._style_fermata_measures(7)
+%%% \once \override Score.BarLine.transparent = ##t
+      %! FERMATA_MEASURE
+      %! MEASURE_248
+      %! baca._style_fermata_measures(7)
+%%% \once \override Score.SpanBar.transparent = ##t
       %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
       %! baca._style_fermata_measures(2)
     \override Staff.BarLine.bar-extent = #'(0 . 0)
@@ -1308,16 +1316,6 @@ number.27.Bass_Flute.MusicVoice = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-    % OPENING:
-    % COMMANDS:
-      %! FERMATA_MEASURE
-      %! MEASURE_248
-      %! baca._style_fermata_measures(7)
-%%% \once \override Score.BarLine.transparent = ##t
-      %! FERMATA_MEASURE
-      %! MEASURE_248
-      %! baca._style_fermata_measures(7)
-%%% \once \override Score.SpanBar.transparent = ##t
       %! harmony.make_sixteenths()
     r8
     % ABSOLUTE_BEFORE:
@@ -2607,6 +2605,14 @@ number.27.Bass_Flute.MusicVoice = {
               %! baca.trill_spanner()
             \stopTrillSpan
             % COMMANDS:
+              %! FERMATA_MEASURE
+              %! MEASURE_254
+              %! baca._style_fermata_measures(7)
+        %%% \once \override Score.BarLine.transparent = ##t
+              %! FERMATA_MEASURE
+              %! MEASURE_254
+              %! baca._style_fermata_measures(7)
+        %%% \once \override Score.SpanBar.transparent = ##t
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
               %! baca._style_fermata_measures(2)
             \override Staff.BarLine.bar-extent = #'(0 . 0)
@@ -2671,16 +2677,6 @@ number.27.Bass_Flute.MusicVoice = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-    % OPENING:
-    % COMMANDS:
-      %! FERMATA_MEASURE
-      %! MEASURE_254
-      %! baca._style_fermata_measures(7)
-%%% \once \override Score.BarLine.transparent = ##t
-      %! FERMATA_MEASURE
-      %! MEASURE_254
-      %! baca._style_fermata_measures(7)
-%%% \once \override Score.SpanBar.transparent = ##t
       %! harmony.make_sixteenths()
     g'4
     % AFTER:
