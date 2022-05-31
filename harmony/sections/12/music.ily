@@ -1237,14 +1237,6 @@ number.12.GlobalRests = {
     % [GlobalRests measure 15]
       %! baca._make_global_rests(1)
     R1 * 1
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! baca._comment_measure_numbers()
-    % [GlobalRests measure 16]
-      %! PHANTOM
-      %! baca._make_global_rests(2)
-    R1 * 1/4
     % CLOSING:
     % COMMANDS:
 
