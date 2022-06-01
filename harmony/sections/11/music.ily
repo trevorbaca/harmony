@@ -2003,28 +2003,28 @@ number.11.Bass_Flute.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Bass_Flute.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(2)
     \abjad-invisible-music-coloring
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! NOT_YET_PITCHED_COLORING
@@ -2034,22 +2034,22 @@ number.11.Bass_Flute.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -2059,7 +2059,7 @@ number.11.Bass_Flute.MusicVoice = {
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
       %! PHANTOM
       %! SPANNER_STOP
@@ -2068,7 +2068,7 @@ number.11.Bass_Flute.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.hairpin()
     - \tweak color #(x11-color 'blue)
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
       %! PHANTOM
       %! SPANNER_STOP
@@ -2078,7 +2078,7 @@ number.11.Bass_Flute.MusicVoice = {
       %! baca.hairpin()
     \!
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -2087,7 +2087,7 @@ number.11.Bass_Flute.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! METRIC_MODULATION_SPANNER
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -3585,28 +3585,28 @@ number.11.Percussion.1.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Percussion.1.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(2)
     \abjad-invisible-music-coloring
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! NOT_YET_PITCHED_COLORING
@@ -3616,22 +3616,22 @@ number.11.Percussion.1.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -3641,7 +3641,7 @@ number.11.Percussion.1.MusicVoice = {
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
       %! PHANTOM
       %! SPANNER_STOP
@@ -3650,7 +3650,7 @@ number.11.Percussion.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.hairpin()
     - \tweak color #(x11-color 'blue)
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! EXPLICIT_DYNAMIC
       %! PHANTOM
       %! SPANNER_STOP
@@ -3660,7 +3660,7 @@ number.11.Percussion.1.MusicVoice = {
       %! baca.hairpin()
     \!
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -6986,21 +6986,21 @@ number.11.Viola.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Viola.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
@@ -7009,7 +7009,7 @@ number.11.Viola.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -7017,7 +7017,7 @@ number.11.Viola.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert Accidental.stencil
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -7025,7 +7025,7 @@ number.11.Viola.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteColumn.glissando-skip
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -7033,7 +7033,7 @@ number.11.Viola.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteHead.no-ledgers
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -7041,22 +7041,22 @@ number.11.Viola.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \undo \hide NoteHead
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -7064,7 +7064,7 @@ number.11.Viola.MusicVoice = {
     a''1 * 1/4
     % AFTER:
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -7073,7 +7073,7 @@ number.11.Viola.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -7082,7 +7082,7 @@ number.11.Viola.MusicVoice = {
       %! baca.trill_spanner()
     \stopTrillSpan
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! baca.PiecewiseCommand._call(1)
@@ -8667,21 +8667,21 @@ number.11.Cello.1.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Cello.1.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
@@ -8690,7 +8690,7 @@ number.11.Cello.1.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -8698,7 +8698,7 @@ number.11.Cello.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert Accidental.stencil
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -8706,7 +8706,7 @@ number.11.Cello.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteColumn.glissando-skip
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -8714,7 +8714,7 @@ number.11.Cello.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteHead.no-ledgers
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -8722,22 +8722,22 @@ number.11.Cello.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \undo \hide NoteHead
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -8745,7 +8745,7 @@ number.11.Cello.1.MusicVoice = {
     gqs'''!1 * 1/4
     % AFTER:
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -8754,7 +8754,7 @@ number.11.Cello.1.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -8763,7 +8763,7 @@ number.11.Cello.1.MusicVoice = {
       %! baca.trill_spanner()
     \stopTrillSpan
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! baca.PiecewiseCommand._call(1)
@@ -10268,21 +10268,21 @@ number.11.Cello.2.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Cello.2.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
@@ -10291,7 +10291,7 @@ number.11.Cello.2.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -10299,7 +10299,7 @@ number.11.Cello.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert Accidental.stencil
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -10307,7 +10307,7 @@ number.11.Cello.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteColumn.glissando-skip
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -10315,7 +10315,7 @@ number.11.Cello.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteHead.no-ledgers
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -10323,22 +10323,22 @@ number.11.Cello.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \undo \hide NoteHead
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -10346,7 +10346,7 @@ number.11.Cello.2.MusicVoice = {
     fs''!1 * 1/4
     % AFTER:
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -10355,7 +10355,7 @@ number.11.Cello.2.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -10364,7 +10364,7 @@ number.11.Cello.2.MusicVoice = {
       %! baca.trill_spanner()
     \stopTrillSpan
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! baca.PiecewiseCommand._call(1)
@@ -11971,21 +11971,21 @@ number.11.Contrabass.1.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Contrabass.1.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
@@ -11994,7 +11994,7 @@ number.11.Contrabass.1.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -12002,7 +12002,7 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert Accidental.stencil
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -12010,7 +12010,7 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteColumn.glissando-skip
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -12018,7 +12018,7 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteHead.no-ledgers
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -12026,22 +12026,22 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \undo \hide NoteHead
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -12049,7 +12049,7 @@ number.11.Contrabass.1.MusicVoice = {
     cs'''!1 * 1/4
     % AFTER:
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -12058,7 +12058,7 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -12067,7 +12067,7 @@ number.11.Contrabass.1.MusicVoice = {
       %! baca.trill_spanner()
     \stopTrillSpan
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! baca.PiecewiseCommand._call(1)
@@ -13576,21 +13576,21 @@ number.11.Contrabass.2.MusicVoice = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
     % [Contrabass.2.MusicVoice measure 11]
     % BEFORE:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COMMAND
       %! NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(3)
     %@% \abjad-invisible-music
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! INVISIBLE_MUSIC_COLORING
       %! NOTE
       %! PHANTOM
@@ -13599,7 +13599,7 @@ number.11.Contrabass.2.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -13607,7 +13607,7 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert Accidental.stencil
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -13615,7 +13615,7 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteColumn.glissando-skip
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -13623,7 +13623,7 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \revert NoteHead.no-ledgers
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! PHANTOM
       %! RIGHT_BROKEN
@@ -13631,22 +13631,22 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca._style_anchor_notes()
       %! baca.glissando()
     \undo \hide NoteHead
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \once \override Staff.StaffSymbol.transparent = ##t
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \startStaff
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! HIDDEN
       %! NOTE
       %! PHANTOM
@@ -13654,7 +13654,7 @@ number.11.Contrabass.2.MusicVoice = {
     cqf'''!1 * 1/4
     % AFTER:
     % MARKUP:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! DURATION_MULTIPLIER
       %! HIDDEN
       %! NOTE
@@ -13663,7 +13663,7 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca._style_anchor_notes()
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     % SPANNER_STOPS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! SPANNER_STOP
@@ -13672,7 +13672,7 @@ number.11.Contrabass.2.MusicVoice = {
       %! baca.trill_spanner()
     \stopTrillSpan
     % COMMANDS:
-      %! ANCHOR
+      %! ANCHOR_NOTE
       %! PHANTOM
       %! RIGHT_BROKEN
       %! baca.PiecewiseCommand._call(1)
