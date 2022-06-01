@@ -2646,6 +2646,10 @@ number.28.Bass_Flute.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -4594,6 +4598,10 @@ number.28.Percussion.1.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -5244,6 +5252,10 @@ number.28.Percussion.2.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
@@ -6131,6 +6143,10 @@ number.28.Viola.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
@@ -9360,6 +9376,10 @@ number.28.Cello.1.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
@@ -12635,6 +12655,10 @@ number.28.Cello.2.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
@@ -15988,6 +16012,10 @@ number.28.Contrabass.1.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -17328,6 +17356,10 @@ number.28.Contrabass.2.MusicVoice = {
     \abjad-invisible-music-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! HIDE_TO_JOIN_BROKEN_SPANNERS
       %! RIGHT_BROKEN

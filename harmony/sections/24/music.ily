@@ -6019,6 +6019,10 @@ number.24.Percussion.2.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE

@@ -1319,6 +1319,10 @@ number.21.Bass_Flute.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -3034,6 +3038,10 @@ number.21.Harp.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -4663,6 +4671,10 @@ number.21.Cello.1.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -5383,6 +5395,10 @@ number.21.Cello.2.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
@@ -6216,6 +6232,10 @@ number.21.Contrabass.1.MusicVoice = {
     % COMMANDS:
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
     \stopStaff
       %! ANCHOR_NOTE
@@ -7022,6 +7042,10 @@ number.21.Contrabass.2.MusicVoice = {
     \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
+      %! ANCHOR_NOTE
+      %! baca._style_anchor_notes()
+      %! baca.append_anchor_note(5)
+    \once \override Accidental.stencil = ##f
       %! ANCHOR_NOTE
       %! baca._style_anchor_notes()
       %! baca.append_anchor_note(4)
