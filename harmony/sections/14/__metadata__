@@ -4,6 +4,7 @@
     "fermata_measure_numbers": [122, 129],
     "final_measure_number": 130,
     "first_measure_number": 120,
+    "has_anchor_skip": True,
     "start_clock_time": "6'52''",
     "stop_clock_time": "7'27''",
     "time_signatures": [
