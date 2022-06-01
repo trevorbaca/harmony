@@ -275,42 +275,34 @@
             %@% \bacaStartTextSpanSPM
 
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! baca._comment_measure_numbers()
               %! baca._style_anchor_skip(1)
             % [Page_Layout measure 13]
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! SPACING_COMMAND
               %! baca.SpacingSpecifier.__call__(1)
               %! baca._style_anchor_skip(1)
             \baca-new-spacing-section #1 #4
               %! ANCHOR_SKIP
               %! BREAK
-              %! PHANTOM
               %! baca._apply_breaks(2)
               %! baca._style_anchor_skip(1)
             \noBreak
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! baca._style_anchor_skip(2)
             \baca-time-signature-transparent
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! baca._make_global_skips(3)
             s1 * 1/4
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! SPACING
               %! baca.SpacingSpecifier.__call__(3)
               %! baca._style_anchor_skip(1)
             %@% \bacaStopTextSpanSPM
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! baca._style_anchor_skip(3)
             \once \override Score.BarLine.transparent = ##t
               %! ANCHOR_SKIP
-              %! PHANTOM
               %! baca._style_anchor_skip(3)
             \once \override Score.SpanBar.transparent = ##t
 
