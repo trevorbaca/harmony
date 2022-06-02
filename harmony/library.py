@@ -100,27 +100,36 @@ def duration_color():
 def instruments():
     return dict(
         [
-            ("BassFlute", abjad.BassFlute(pitch_range="[C3, E6]")),
+            ("BassFlute", abjad.BassFlute(pitch_range=abjad.PitchRange("[C3, E6]"))),
             (
                 "Percussion",
-                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
             ),
             (
                 "PercussionI",
-                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
             ),
             (
                 "PercussionII",
-                abjad.Percussion(allowable_clefs=["bass", "percussion", "treble"]),
+                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
             ),
             ("Harp", abjad.Harp()),
-            ("Viola", abjad.Viola(pitch_range="[C3, +inf]")),
-            ("Cello", abjad.Cello(pitch_range="[C2, +inf]")),
-            ("CelloI", abjad.Cello(pitch_range="[C2, +inf]")),
-            ("CelloII", abjad.Cello(pitch_range="[C2, +inf]")),
-            ("Contrabass", abjad.Contrabass(pitch_range="[E1, +inf]")),
-            ("ContrabassI", abjad.Contrabass(pitch_range="[E1, +inf]")),
-            ("ContrabassII", abjad.Contrabass(pitch_range="[E1, +inf]")),
+            ("Viola", abjad.Viola(pitch_range=abjad.PitchRange("[C3, +inf]"))),
+            ("Cello", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
+            ("CelloI", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
+            ("CelloII", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
+            (
+                "Contrabass",
+                abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
+            ),
+            (
+                "ContrabassI",
+                abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
+            ),
+            (
+                "ContrabassII",
+                abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
+            ),
         ]
     )
 
