@@ -19,7 +19,7 @@ instruments = library.instruments()
 
 commands = baca.CommandAccumulator(
     instruments=library.instruments(),
-    margin_markups=library.margin_markups(),
+    short_instrument_names=library.short_instrument_names(),
     metronome_marks=library.metronome_marks(),
     time_signatures=[
         (6, 4),
@@ -228,8 +228,8 @@ commands(
     baca.clef("treble"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Bfl."),
-        baca.start_markup(r"\harmony-bass-flute-markup"),
+        library.short_instrument_name("Bfl."),
+        baca.instrument_name(r"\harmony-bass-flute-markup"),
     ),
     baca.pitch(
         "A3",
@@ -284,8 +284,8 @@ commands(
 
 commands(
     ("perc1", 1),
-    library.margin_markup("Perc. I"),
-    baca.start_markup(r"\harmony-percussion-i-markup"),
+    library.short_instrument_name("Perc. I"),
+    baca.instrument_name(r"\harmony-percussion-i-markup"),
     baca.clef("percussion"),
     baca.staff_lines(1),
     baca.hairpin(
@@ -347,8 +347,8 @@ commands(
     baca.instrument(instruments["Percussion"]),
     baca.clef("percussion"),
     baca.suite(
-        library.margin_markup("Perc. II"),
-        baca.start_markup(r"\harmony-percussion-ii-markup"),
+        library.short_instrument_name("Perc. II"),
+        baca.instrument_name(r"\harmony-percussion-ii-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
@@ -386,8 +386,8 @@ commands(
     baca.instrument(instruments["Harp"]),
     baca.clef("percussion"),
     baca.suite(
-        library.margin_markup("Hp."),
-        baca.start_markup(r"\harmony-harp-markup"),
+        library.short_instrument_name("Hp."),
+        baca.instrument_name(r"\harmony-harp-markup"),
     ),
     baca.clef("percussion"),
     baca.staff_lines(1),
@@ -423,8 +423,8 @@ commands(
     baca.clef("alto"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Va."),
-        baca.start_markup(r"\harmony-viola-markup"),
+        library.short_instrument_name("Va."),
+        baca.instrument_name(r"\harmony-viola-markup"),
     ),
     baca.pitch("Gqf4"),
     baca.markup(
@@ -462,8 +462,8 @@ commands(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Vc. I"),
-        baca.start_markup(r"\harmony-cello-i-markup"),
+        library.short_instrument_name("Vc. I"),
+        baca.instrument_name(r"\harmony-cello-i-markup"),
     ),
     baca.repeat_tie(
         selector=lambda _: abjad.select.get(baca.select.leaves(_), [1, 4]),
@@ -527,8 +527,8 @@ commands(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Vc. II"),
-        baca.start_markup(r"\harmony-cello-ii-markup"),
+        library.short_instrument_name("Vc. II"),
+        baca.instrument_name(r"\harmony-cello-ii-markup"),
     ),
     baca.pitch("B3"),
     baca.dynamic("mp"),
@@ -572,8 +572,8 @@ commands(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Cb. I"),
-        baca.start_markup(r"\harmony-contrabass-i-markup"),
+        library.short_instrument_name("Cb. I"),
+        baca.instrument_name(r"\harmony-contrabass-i-markup"),
     ),
     baca.pitch("A1"),
     baca.stem_tremolo(
@@ -625,8 +625,8 @@ commands(
     baca.clef("bass"),
     baca.staff_lines(5),
     baca.suite(
-        library.margin_markup("Cb. II"),
-        baca.start_markup(r"\harmony-contrabass-ii-markup"),
+        library.short_instrument_name("Cb. II"),
+        baca.instrument_name(r"\harmony-contrabass-ii-markup"),
     ),
     baca.pitch("Dqs3"),
     baca.markup(
@@ -678,7 +678,7 @@ if __name__ == "__main__":
         always_make_global_rests=True,
         deactivate=(
             *baca.tags.instrument_color_tags(),
-            *baca.tags.margin_markup_color_tags(),
+            *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
         global_rests_in_every_staff=True,

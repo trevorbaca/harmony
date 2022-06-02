@@ -1010,16 +1010,16 @@ def make_warble_rhythm(
     )
 
 
-def margin_markup(
+def short_instrument_name(
     key,
     *,
     alert=None,
     context="Staff",
     selector=lambda _: abjad.select.leaf(_, 0),
 ):
-    margin_markup = margin_markups()[key]
-    command = baca.margin_markup(
-        margin_markup,
+    short_instrument_name = short_instrument_names()[key]
+    command = baca.short_instrument_name(
+        short_instrument_name,
         alert=alert,
         context=context,
         selector=selector,
@@ -1027,18 +1027,18 @@ def margin_markup(
     return baca.not_parts(command)
 
 
-def margin_markups():
+def short_instrument_names():
     return dict(
         [
-            ("Bfl.", abjad.MarginMarkup(markup=r"\harmony-bfl-markup")),
-            ("Perc. I", abjad.MarginMarkup(markup=r"\harmony-perc-i-markup")),
-            ("Perc. II", abjad.MarginMarkup(markup=r"\harmony-perc-ii-markup")),
-            ("Hp.", abjad.MarginMarkup(markup=r"\harmony-hp-markup")),
-            ("Va.", abjad.MarginMarkup(markup=r"\harmony-va-markup")),
-            ("Vc. I", abjad.MarginMarkup(markup=r"\harmony-vc-i-markup")),
-            ("Vc. II", abjad.MarginMarkup(markup=r"\harmony-vc-ii-markup")),
-            ("Cb. I", abjad.MarginMarkup(markup=r"\harmony-cb-i-markup")),
-            ("Cb. II", abjad.MarginMarkup(markup=r"\harmony-cb-ii-markup")),
+            ("Bfl.", abjad.ShortInstrumentName(r"\harmony-bfl-markup")),
+            ("Perc. I", abjad.ShortInstrumentName(r"\harmony-perc-i-markup")),
+            ("Perc. II", abjad.ShortInstrumentName(r"\harmony-perc-ii-markup")),
+            ("Hp.", abjad.ShortInstrumentName(r"\harmony-hp-markup")),
+            ("Va.", abjad.ShortInstrumentName(r"\harmony-va-markup")),
+            ("Vc. I", abjad.ShortInstrumentName(r"\harmony-vc-i-markup")),
+            ("Vc. II", abjad.ShortInstrumentName(r"\harmony-vc-ii-markup")),
+            ("Cb. I", abjad.ShortInstrumentName(r"\harmony-cb-i-markup")),
+            ("Cb. II", abjad.ShortInstrumentName(r"\harmony-cb-ii-markup")),
         ]
     )
 
