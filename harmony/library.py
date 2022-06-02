@@ -103,15 +103,15 @@ def instruments():
             ("BassFlute", abjad.BassFlute(pitch_range=abjad.PitchRange("[C3, E6]"))),
             (
                 "Percussion",
-                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
+                abjad.Percussion(clefs=("bass", "percussion", "treble")),
             ),
             (
                 "PercussionI",
-                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
+                abjad.Percussion(clefs=("bass", "percussion", "treble")),
             ),
             (
                 "PercussionII",
-                abjad.Percussion(allowable_clefs=("bass", "percussion", "treble")),
+                abjad.Percussion(clefs=("bass", "percussion", "treble")),
             ),
             ("Harp", abjad.Harp()),
             ("Viola", abjad.Viola(pitch_range=abjad.PitchRange("[C3, +inf]"))),
