@@ -407,7 +407,7 @@ def make_empty_score():
         ],
         lilypond_type="MusicContext",
         simultaneous=True,
-        name="Music_Context",
+        name="MusicContext",
         tag=tag,
     )
     # SCORE
