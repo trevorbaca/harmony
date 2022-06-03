@@ -300,12 +300,12 @@ number.29.GlobalRests = {
 
 
   %! baca.path.extern()
-number.29.Bass_Flute.MusicVoice = {
+number.29.Bass_Flute.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.MusicVoice measure 1]
+    % [Bass_Flute.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -499,14 +499,14 @@ number.29.Bass_Flute.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute.MusicVoice"
+        \context Voice = "Bass_Flute.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.MusicVoice measure 2]
+            % [Bass_Flute.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -566,14 +566,14 @@ number.29.Bass_Flute.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.RestVoice"
+        \context Voice = "Bass_Flute.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.RestVoice measure 2]
+            % [Bass_Flute.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -601,7 +601,7 @@ number.29.Bass_Flute.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.MusicVoice measure 3]
+    % [Bass_Flute.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -642,10 +642,10 @@ number.29.Bass_Flute.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Bass_Flute.MusicVoice"
+    \context Voice = "Bass_Flute.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Bass_Flute.MusicVoice }
+    { \number.29.Bass_Flute.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -656,12 +656,12 @@ number.29.Bass_Flute.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Percussion.1.MusicVoice = {
+number.29.Percussion.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.1.MusicVoice measure 1]
+    % [Percussion.1.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -805,7 +805,7 @@ number.29.Percussion.1.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.1.MusicVoice measure 2]
+    % [Percussion.1.Music measure 2]
       %! baca._make_mmrests_flat()
     R1 * 3/2
     % AFTER:
@@ -821,7 +821,7 @@ number.29.Percussion.1.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.1.MusicVoice measure 3]
+    % [Percussion.1.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -864,10 +864,10 @@ number.29.Percussion.1.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Percussion.1.MusicVoice"
+    \context Voice = "Percussion.1.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Percussion.1.MusicVoice }
+    { \number.29.Percussion.1.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -878,12 +878,12 @@ number.29.Percussion.1.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Percussion.2.MusicVoice = {
+number.29.Percussion.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.2.MusicVoice measure 1]
+    % [Percussion.2.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca._clone_section_initial_short_instrument_name()
@@ -1000,7 +1000,7 @@ number.29.Percussion.2.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.2.MusicVoice measure 2]
+    % [Percussion.2.Music measure 2]
       %! baca._make_mmrests_flat()
     R1 * 3/2
     % AFTER:
@@ -1012,7 +1012,7 @@ number.29.Percussion.2.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Percussion.2.MusicVoice measure 3]
+    % [Percussion.2.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -1055,10 +1055,10 @@ number.29.Percussion.2.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Percussion.2.MusicVoice"
+    \context Voice = "Percussion.2.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Percussion.2.MusicVoice }
+    { \number.29.Percussion.2.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1069,12 +1069,12 @@ number.29.Percussion.2.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Harp.MusicVoice = {
+number.29.Harp.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp.MusicVoice measure 1]
+    % [Harp.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! MEASURE_266
@@ -1200,7 +1200,7 @@ number.29.Harp.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp.MusicVoice measure 2]
+    % [Harp.Music measure 2]
       %! baca._make_mmrests_flat()
     R1 * 3/2
     % AFTER:
@@ -1216,7 +1216,7 @@ number.29.Harp.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Harp.MusicVoice measure 3]
+    % [Harp.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -1259,10 +1259,10 @@ number.29.Harp.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Harp.MusicVoice"
+    \context Voice = "Harp.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Harp.MusicVoice }
+    { \number.29.Harp.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1273,12 +1273,12 @@ number.29.Harp.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Viola.MusicVoice = {
+number.29.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Viola.MusicVoice measure 1]
+    % [Viola.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1477,14 +1477,14 @@ number.29.Viola.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Viola.MusicVoice"
+        \context Voice = "Viola.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Viola.MusicVoice measure 2]
+            % [Viola.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -1544,14 +1544,14 @@ number.29.Viola.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Viola.RestVoice"
+        \context Voice = "Viola.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Viola.RestVoice measure 2]
+            % [Viola.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -1579,7 +1579,7 @@ number.29.Viola.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Viola.MusicVoice measure 3]
+    % [Viola.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -1622,10 +1622,10 @@ number.29.Viola.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Viola.MusicVoice"
+    \context Voice = "Viola.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Viola.MusicVoice }
+    { \number.29.Viola.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1636,12 +1636,12 @@ number.29.Viola.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Cello.1.MusicVoice = {
+number.29.Cello.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello.1.MusicVoice measure 1]
+    % [Cello.1.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1837,14 +1837,14 @@ number.29.Cello.1.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello.1.MusicVoice"
+        \context Voice = "Cello.1.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.1.MusicVoice measure 2]
+            % [Cello.1.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -1904,14 +1904,14 @@ number.29.Cello.1.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.1.RestVoice"
+        \context Voice = "Cello.1.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.1.RestVoice measure 2]
+            % [Cello.1.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -1939,7 +1939,7 @@ number.29.Cello.1.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello.1.MusicVoice measure 3]
+    % [Cello.1.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -1982,10 +1982,10 @@ number.29.Cello.1.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Cello.1.MusicVoice"
+    \context Voice = "Cello.1.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Cello.1.MusicVoice }
+    { \number.29.Cello.1.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1996,12 +1996,12 @@ number.29.Cello.1.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Cello.2.MusicVoice = {
+number.29.Cello.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello.2.MusicVoice measure 1]
+    % [Cello.2.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2197,14 +2197,14 @@ number.29.Cello.2.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Cello.2.MusicVoice"
+        \context Voice = "Cello.2.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.2.MusicVoice measure 2]
+            % [Cello.2.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2264,14 +2264,14 @@ number.29.Cello.2.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Cello.2.RestVoice"
+        \context Voice = "Cello.2.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Cello.2.RestVoice measure 2]
+            % [Cello.2.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2299,7 +2299,7 @@ number.29.Cello.2.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Cello.2.MusicVoice measure 3]
+    % [Cello.2.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -2342,10 +2342,10 @@ number.29.Cello.2.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Cello.2.MusicVoice"
+    \context Voice = "Cello.2.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Cello.2.MusicVoice }
+    { \number.29.Cello.2.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -2356,12 +2356,12 @@ number.29.Cello.2.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Contrabass.1.MusicVoice = {
+number.29.Contrabass.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass.1.MusicVoice measure 1]
+    % [Contrabass.1.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2557,14 +2557,14 @@ number.29.Contrabass.1.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Contrabass.1.MusicVoice"
+        \context Voice = "Contrabass.1.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Contrabass.1.MusicVoice measure 2]
+            % [Contrabass.1.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2624,14 +2624,14 @@ number.29.Contrabass.1.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass.1.RestVoice"
+        \context Voice = "Contrabass.1.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Contrabass.1.RestVoice measure 2]
+            % [Contrabass.1.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2659,7 +2659,7 @@ number.29.Contrabass.1.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass.1.MusicVoice measure 3]
+    % [Contrabass.1.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -2702,10 +2702,10 @@ number.29.Contrabass.1.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Contrabass.1.MusicVoice"
+    \context Voice = "Contrabass.1.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Contrabass.1.MusicVoice }
+    { \number.29.Contrabass.1.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -2716,12 +2716,12 @@ number.29.Contrabass.1.Music_Staff = <<
 
 
   %! baca.path.extern()
-number.29.Contrabass.2.MusicVoice = {
+number.29.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass.2.MusicVoice measure 1]
+    % [Contrabass.2.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -2975,14 +2975,14 @@ number.29.Contrabass.2.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Contrabass.2.MusicVoice"
+        \context Voice = "Contrabass.2.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Contrabass.2.MusicVoice measure 2]
+            % [Contrabass.2.Music measure 2]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -3037,14 +3037,14 @@ number.29.Contrabass.2.MusicVoice = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Contrabass.2.RestVoice"
+        \context Voice = "Contrabass.2.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Contrabass.2.RestVoice measure 2]
+            % [Contrabass.2.Rests measure 2]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -3072,7 +3072,7 @@ number.29.Contrabass.2.MusicVoice = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Contrabass.2.MusicVoice measure 3]
+    % [Contrabass.2.Music measure 3]
     % BEFORE:
     % COMMANDS:
       %! -PARTS
@@ -3137,10 +3137,10 @@ number.29.Contrabass.2.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Contrabass.2.MusicVoice"
+    \context Voice = "Contrabass.2.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.29.Contrabass.2.MusicVoice }
+    { \number.29.Contrabass.2.Music }
     % CLOSING:
     % COMMANDS:
 
