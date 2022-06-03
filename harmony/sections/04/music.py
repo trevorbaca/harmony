@@ -39,7 +39,7 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "GlobalSkips",
+    "Skips",
     baca.metronome_mark("72", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("5:4(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("144", lambda _: baca.select.skip(_, 9 - 1)),
@@ -49,7 +49,7 @@ commands(
 )
 
 commands(
-    "GlobalRests",
+    "Rests",
     baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
     baca.global_fermata("short", lambda _: baca.select.rest(_, 10 - 1)),
 )

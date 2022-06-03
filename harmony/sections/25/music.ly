@@ -51,10 +51,10 @@
 
                 % OPEN_BRACKETS:
                   %! baca.make_global_context()
-                \context GlobalSkips = "GlobalSkips"
+                \context GlobalSkips = "Skips"
                   %! baca.make_global_context()
                   %! baca.path.extern()
-                { \number.25.GlobalSkips }
+                { \number.25.Skips }
                 % CLOSING:
                 % COMMANDS:
 
