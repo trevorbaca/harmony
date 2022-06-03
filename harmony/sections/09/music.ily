@@ -1,10 +1,10 @@
   %! baca.path.extern()
-number.9.GlobalSkips = {
+number.9.Skips = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [GlobalSkips measure 1]
+    % [Skips measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.IndicatorCommand._call()
@@ -119,7 +119,7 @@ number.9.GlobalSkips = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [GlobalSkips measure 2]
+    % [Skips measure 2]
     % BEFORE:
     % COMMANDS:
       %! baca.IndicatorCommand._call()
@@ -191,7 +191,7 @@ number.9.GlobalSkips = {
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_skip(1)
-    % [GlobalSkips measure 3]
+    % [Skips measure 3]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
@@ -249,19 +249,19 @@ number.9.GlobalSkips = {
 
 
   %! baca.path.extern()
-number.9.GlobalRests = {
+number.9.Rests = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [GlobalRests measure 1]
+    % [Rests measure 1]
       %! baca._make_global_rests(1)
     R1 * 3/2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [GlobalRests measure 2]
+    % [Rests measure 2]
       %! baca._make_global_rests(1)
     R1 * 3/2
     % CLOSING:
@@ -717,10 +717,10 @@ number.9.Bass_Flute.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! baca.make_global_context()
-    \context GlobalRests = "GlobalRests"
+    \context GlobalRests = "Rests"
       %! baca.make_global_context()
       %! baca.path.extern()
-    { \number.9.GlobalRests }
+    { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1047,11 +1047,11 @@ number.9.Percussion.1.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1429,11 +1429,11 @@ number.9.Percussion.2.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1634,11 +1634,11 @@ number.9.Harp.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2155,11 +2155,11 @@ number.9.Viola.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2587,11 +2587,11 @@ number.9.Cello.1.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3026,11 +3026,11 @@ number.9.Cello.2.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3484,11 +3484,11 @@ number.9.Contrabass.1.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3924,11 +3924,11 @@ number.9.Contrabass.2.Music_Staff = <<
     % OPEN_BRACKETS:
       %! NOT_TOPMOST
       %! baca.make_global_context()
-%%% \context GlobalRests = "GlobalRests"
+%%% \context GlobalRests = "Rests"
       %! NOT_TOPMOST
       %! baca.make_global_context()
       %! baca.path.extern()
-%%% { \number.9.GlobalRests }
+%%% { \number.9.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

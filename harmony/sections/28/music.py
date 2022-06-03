@@ -37,7 +37,7 @@ commands = baca.CommandAccumulator(
 )
 
 commands(
-    "GlobalSkips",
+    "Skips",
     baca.metronome_mark("48", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("2.=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 5 - 1)),
@@ -47,14 +47,14 @@ commands(
 )
 
 commands(
-    "GlobalRests",
+    "Rests",
     baca.global_fermata("fermata", lambda _: baca.select.rest(_, 6 - 1)),
 )
 
 # text
 
 commands(
-    "GlobalSkips",
+    "Skips",
     baca.not_parts(
         baca.markup(
             r"\harmony-text-twenty-seven",
