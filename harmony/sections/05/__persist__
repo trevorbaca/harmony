@@ -3,7 +3,7 @@
         "Score",
         "GlobalContext",
         "GlobalSkips",
-        "Music_Context",
+        "MusicContext",
         "Wind_Section.Staff_Group",
         "Bass_Flute.Music_Staff",
         "GlobalRests",
