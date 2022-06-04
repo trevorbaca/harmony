@@ -2273,17 +2273,6 @@ number.3.Percussion.1.Music_Staff = <<
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
       %! harmony.make_empty_score()
     \context Voice = "Percussion.1.Music"
       %! harmony.make_empty_score()
@@ -3148,17 +3137,6 @@ number.3.Percussion.2.Music_Staff = <<
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
       %! harmony.make_empty_score()
     \context Voice = "Percussion.2.Music"
       %! harmony.make_empty_score()
@@ -3737,17 +3715,6 @@ number.3.Harp.Music = {
 
   %! baca.path.extern()
 number.3.Harp.Music_Staff = <<
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4719,17 +4686,6 @@ number.3.Viola.Music = {
 
   %! baca.path.extern()
 number.3.Viola.Music_Staff = <<
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6098,17 +6054,6 @@ number.3.Cello.1.Music_Staff = <<
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
       %! harmony.make_empty_score()
     \context Voice = "Cello.1.Music"
       %! harmony.make_empty_score()
@@ -7087,17 +7032,6 @@ number.3.Cello.2.Music = {
 
   %! baca.path.extern()
 number.3.Cello.2.Music_Staff = <<
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8165,17 +8099,6 @@ number.3.Contrabass.1.Music = {
 
   %! baca.path.extern()
 number.3.Contrabass.1.Music_Staff = <<
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9329,17 +9252,6 @@ number.3.Contrabass.2.Music = {
 
   %! baca.path.extern()
 number.3.Contrabass.2.Music_Staff = <<
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-    % OPEN_BRACKETS:
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-%%% \context GlobalRests = "Rests"
-      %! NOT_TOPMOST
-      %! baca.make_global_context()
-      %! baca.path.extern()
-%%% { \number.3.Rests }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

@@ -1564,7 +1564,7 @@ if __name__ == "__main__":
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
         fermata_measure_empty_overrides=[3, 10],
-        global_rests_in_every_staff=True,
+        global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,
