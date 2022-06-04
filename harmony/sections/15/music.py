@@ -948,7 +948,7 @@ if __name__ == "__main__":
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
-        global_rests_in_every_staff=True,
+        global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         stage_markup=stage_markup,
         transpose_score=True,
