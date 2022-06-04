@@ -566,6 +566,15 @@ number.16.Rests = {
       %! baca.GlobalFermataCommand._call(1)
       %! baca.global_fermata()
     ^ \baca-fermata-markup
+    % COMMANDS:
+      %! FERMATA_MEASURE
+      %! MEASURE_147
+      %! baca._style_fermata_measures(7)
+%%% \once \override Score.BarLine.transparent = ##t
+      %! FERMATA_MEASURE
+      %! MEASURE_147
+      %! baca._style_fermata_measures(7)
+%%% \once \override Score.SpanBar.transparent = ##t
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -718,7 +727,7 @@ number.16.Bass_Flute.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-bfl-markup
+    \set Staff.shortInstrumentName = \harmony-bfl-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1023,14 +1032,6 @@ number.16.Bass_Flute.Music = {
               %! baca.text_spanner()
             \stopTextSpan
             % COMMANDS:
-              %! FERMATA_MEASURE
-              %! MEASURE_147
-              %! baca._style_fermata_measures(7)
-        %%% \once \override Score.BarLine.transparent = ##t
-              %! FERMATA_MEASURE
-              %! MEASURE_147
-              %! baca._style_fermata_measures(7)
-        %%% \once \override Score.SpanBar.transparent = ##t
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
               %! baca._style_fermata_measures(2)
             \override Staff.BarLine.bar-extent = #'(0 . 0)
@@ -1523,7 +1524,7 @@ number.16.Percussion.1.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1982,7 +1983,7 @@ number.16.Percussion.2.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-perc-ii-markup
+    \set Staff.shortInstrumentName = \harmony-perc-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2382,7 +2383,7 @@ number.16.Harp.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-hp-markup
+    \set Staff.shortInstrumentName = \harmony-hp-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2927,7 +2928,7 @@ number.16.Viola.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-va-markup
+    \set Staff.shortInstrumentName = \harmony-va-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3776,7 +3777,7 @@ number.16.Cello.1.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-vc-i-markup
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4618,7 +4619,7 @@ number.16.Cello.2.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5472,7 +5473,7 @@ number.16.Contrabass.1.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-cb-i-markup
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6386,7 +6387,7 @@ number.16.Contrabass.2.Music = {
       %! baca._reapply_persistent_indicators(3)
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

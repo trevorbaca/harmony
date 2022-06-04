@@ -268,9 +268,6 @@
               %! baca._style_anchor_skip(1)
             \noBreak
               %! ANCHOR_SKIP
-              %! baca._style_anchor_skip(2)
-            \baca-time-signature-transparent
-              %! ANCHOR_SKIP
               %! baca._make_global_skips(3)
             s1 * 1/4
               %! ANCHOR_SKIP
