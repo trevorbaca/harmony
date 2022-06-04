@@ -615,10 +615,10 @@ number.1.Bass_Flute.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“BassFlute”)"
+    %@% ^ \baca-explicit-instrument-markup "(“BassFlute”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Bfl.”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Bfl.”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1389,10 +1389,10 @@ number.1.Percussion.1.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Percussion”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Percussion”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Perc. I”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Perc. I”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -1970,10 +1970,10 @@ number.1.Percussion.2.Music = {
     ^ \baca-slate-scrape-markup
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Percussion”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Percussion”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Perc. II”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Perc. II”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2426,10 +2426,10 @@ number.1.Harp.Music = {
     ^ \baca-whisk-markup
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Harp”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Harp”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Hp.”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Hp.”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -2799,10 +2799,10 @@ number.1.Viola.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Viola”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Viola”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Va.”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Va.”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -3341,10 +3341,10 @@ number.1.Cello.1.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Cello”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Vc. I”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Vc. I”]"
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -3992,10 +3992,10 @@ number.1.Cello.2.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Cello”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Vc. II”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Vc. II”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
@@ -4535,10 +4535,10 @@ number.1.Contrabass.1.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Contrabass”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Contrabass”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Cb. I”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Cb. I”]"
     % SPANNER_STARTS:
       %! EXPLICIT_DYNAMIC_COLOR
       %! baca.treat_persistent_wrapper()
@@ -5306,10 +5306,10 @@ number.1.Contrabass.2.Music = {
     % MARKUP:
       %! EXPLICIT_INSTRUMENT_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "(“Contrabass”)"
+    %@% ^ \baca-explicit-instrument-markup "(“Contrabass”)"
       %! EXPLICIT_SHORT_INSTRUMENT_NAME_ALERT
       %! baca._attach_latent_indicator_alert()
-    %@% ^ \baca-explicit-indicator-markup "[“Cb. II”]"
+    %@% ^ \baca-explicit-short-instrument-name-markup "[“Cb. II”]"
     % ABSOLUTE_AFTER:
     % COMMANDS:
       %! EXPLICIT_CLEF_REDRAW_COLOR
