@@ -630,7 +630,7 @@ number.1.Bass_Flute.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-bfl-markup
+    \set Staff.shortInstrumentName = \harmony-bfl-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1401,7 +1401,7 @@ number.1.Percussion.1.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-perc-i-markup
+    \set Staff.shortInstrumentName = \harmony-perc-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1979,7 +1979,7 @@ number.1.Percussion.2.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-perc-ii-markup
+    \set Staff.shortInstrumentName = \harmony-perc-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2432,7 +2432,7 @@ number.1.Harp.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-hp-markup
+    \set Staff.shortInstrumentName = \harmony-hp-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2802,7 +2802,7 @@ number.1.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-va-markup
+    \set Staff.shortInstrumentName = \harmony-va-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3386,7 +3386,7 @@ number.1.Cello.1.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-vc-i-markup
+    \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3989,7 +3989,7 @@ number.1.Cello.2.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-vc-ii-markup
+    \set Staff.shortInstrumentName = \harmony-vc-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4574,7 +4574,7 @@ number.1.Contrabass.1.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-cb-i-markup
+    \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5297,7 +5297,7 @@ number.1.Contrabass.2.Music = {
       %! baca._set_status_tag()
       %! baca.short_instrument_name()
       %! baca.treat_persistent_wrapper(3)
-    \set Staff.shortInstrumentName = \harmony-cb-ii-markup
+    \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
