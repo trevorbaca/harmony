@@ -445,7 +445,7 @@ number.16.Skips = {
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_skip(1)
-    % [Skips measure 11]
+    % [anchor skip]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
@@ -1307,7 +1307,7 @@ number.16.Bass_Flute.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Bass_Flute.Music measure 11]
+    % [Bass_Flute.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -3523,7 +3523,7 @@ number.16.Viola.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Viola.Music measure 11]
+    % [Viola.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -6168,7 +6168,7 @@ number.16.Contrabass.1.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Contrabass.1.Music measure 11]
+    % [Contrabass.1.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -7092,7 +7092,7 @@ number.16.Contrabass.2.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Contrabass.2.Music measure 11]
+    % [Contrabass.2.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE

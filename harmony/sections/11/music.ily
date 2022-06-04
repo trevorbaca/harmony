@@ -115,7 +115,7 @@ number.11.Skips = {
       %! baca._set_status_tag()
     \time 4/4
       %! baca._make_global_skips(1)
-    s1 * 1
+    s1 * 4/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -281,7 +281,7 @@ number.11.Skips = {
       %! baca._set_status_tag()
     \time 4/4
       %! baca._make_global_skips(1)
-    s1 * 1
+    s1 * 4/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -327,7 +327,7 @@ number.11.Skips = {
       %! baca._comment_measure_numbers()
     % [Skips measure 5]
       %! baca._make_global_skips(1)
-    s1 * 1
+    s1 * 4/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -373,7 +373,7 @@ number.11.Skips = {
       %! baca._set_status_tag()
     \time 6/4
       %! baca._make_global_skips(1)
-    s1 * 3/2
+    s1 * 6/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -696,7 +696,7 @@ number.11.Skips = {
       %! baca._set_status_tag()
     \time 4/4
       %! baca._make_global_skips(1)
-    s1 * 1
+    s1 * 4/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -798,7 +798,7 @@ number.11.Skips = {
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_skip(1)
-    % [Skips measure 11]
+    % [anchor skip]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
@@ -870,7 +870,7 @@ number.11.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 2]
       %! baca._make_global_rests(1)
-    R1 * 1
+    R1 * 4/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -897,21 +897,21 @@ number.11.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 4]
       %! baca._make_global_rests(1)
-    R1 * 1
+    R1 * 4/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Rests measure 5]
       %! baca._make_global_rests(1)
-    R1 * 1
+    R1 * 4/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Rests measure 6]
       %! baca._make_global_rests(1)
-    R1 * 3/2
+    R1 * 6/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -952,7 +952,7 @@ number.11.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 10]
       %! baca._make_global_rests(1)
-    R1 * 1
+    R1 * 4/4
     % CLOSING:
     % COMMANDS:
 
@@ -1158,7 +1158,7 @@ number.11.Bass_Flute.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            b'1 * 1
+            b'1 * 4/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -1180,7 +1180,7 @@ number.11.Bass_Flute.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+            %@% ^ \baca-duration-multiplier-markup #"4" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -1203,14 +1203,14 @@ number.11.Bass_Flute.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 1
+            R1 * 4/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+            %@% ^ \baca-duration-multiplier-markup #"4" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -1272,12 +1272,12 @@ number.11.Bass_Flute.Music = {
       %! baca._style_fermata_measures(3)
     \startStaff
       %! baca._make_mmrests()
-    R1 * 1
+    R1 * 4/4
     % AFTER:
     % MARKUP:
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"1" #"1"
+    %@% ^ \baca-duration-multiplier-markup #"4" #"4"
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2005,7 +2005,7 @@ number.11.Bass_Flute.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Bass_Flute.Music measure 11]
+    % [Bass_Flute.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -3579,7 +3579,7 @@ number.11.Percussion.1.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Percussion.1.Music measure 11]
+    % [Percussion.1.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -6973,7 +6973,7 @@ number.11.Viola.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Viola.Music measure 11]
+    % [Viola.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -8644,7 +8644,7 @@ number.11.Cello.1.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Cello.1.Music measure 11]
+    % [Cello.1.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -10235,7 +10235,7 @@ number.11.Cello.2.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Cello.2.Music measure 11]
+    % [Cello.2.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -11928,7 +11928,7 @@ number.11.Contrabass.1.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Contrabass.1.Music measure 11]
+    % [Contrabass.1.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -13523,7 +13523,7 @@ number.11.Contrabass.2.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Contrabass.2.Music measure 11]
+    % [Contrabass.2.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE

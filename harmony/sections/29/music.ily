@@ -19,7 +19,7 @@ number.29.Skips = {
       %! baca._set_status_tag()
     \time 6/4
       %! baca._make_global_skips(1)
-    s1 * 3/2
+    s1 * 6/4
     % AFTER:
     % SPANNER_STARTS:
       %! EXPLICIT_METRONOME_MARK
@@ -106,7 +106,7 @@ number.29.Skips = {
       %! baca._comment_measure_numbers()
     % [Skips measure 2]
       %! baca._make_global_skips(1)
-    s1 * 3/2
+    s1 * 6/4
     % AFTER:
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -202,7 +202,7 @@ number.29.Skips = {
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_skip(1)
-    % [Skips measure 4]
+    % [anchor skip]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
@@ -262,14 +262,14 @@ number.29.Rests = {
       %! baca._comment_measure_numbers()
     % [Rests measure 1]
       %! baca._make_global_rests(1)
-    R1 * 3/2
+    R1 * 6/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Rests measure 2]
       %! baca._make_global_rests(1)
-    R1 * 3/2
+    R1 * 6/4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -523,7 +523,7 @@ number.29.Bass_Flute.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            b'1 * 3/2
+            b'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -545,7 +545,7 @@ number.29.Bass_Flute.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
               %! baca.SpannerIndicatorCommand._call(4)
@@ -577,14 +577,14 @@ number.29.Bass_Flute.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -807,12 +807,12 @@ number.29.Percussion.1.Music = {
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 2]
       %! baca._make_mmrests_flat()
-    R1 * 3/2
+    R1 * 6/4
     % AFTER:
     % MARKUP:
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     % COMMANDS:
       %! baca.OverrideCommand._call(2)
       %! baca.dls_staff_padding()
@@ -1002,12 +1002,12 @@ number.29.Percussion.2.Music = {
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 2]
       %! baca._make_mmrests_flat()
-    R1 * 3/2
+    R1 * 6/4
     % AFTER:
     % MARKUP:
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1202,12 +1202,12 @@ number.29.Harp.Music = {
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 2]
       %! baca._make_mmrests_flat()
-    R1 * 3/2
+    R1 * 6/4
     % AFTER:
     % MARKUP:
       %! DURATION_MULTIPLIER
       %! baca._label_duration_multipliers()
-    %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"6" #"4"
     % COMMANDS:
       %! baca.OverrideCommand._call(2)
       %! baca.dls_staff_padding()
@@ -1501,7 +1501,7 @@ number.29.Viola.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            c'1 * 3/2
+            c'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -1523,7 +1523,7 @@ number.29.Viola.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
               %! baca.SpannerIndicatorCommand._call(4)
@@ -1555,14 +1555,14 @@ number.29.Viola.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -1861,7 +1861,7 @@ number.29.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            b'1 * 3/2
+            b'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -1883,7 +1883,7 @@ number.29.Cello.1.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
               %! baca.SpannerIndicatorCommand._call(4)
@@ -1915,14 +1915,14 @@ number.29.Cello.1.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -2221,7 +2221,7 @@ number.29.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            b'1 * 3/2
+            b'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -2243,7 +2243,7 @@ number.29.Cello.2.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
               %! baca.SpannerIndicatorCommand._call(4)
@@ -2275,14 +2275,14 @@ number.29.Cello.2.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -2581,7 +2581,7 @@ number.29.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            b'1 * 3/2
+            b'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -2603,7 +2603,7 @@ number.29.Contrabass.1.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
               %! baca.SpannerIndicatorCommand._call(4)
@@ -2635,14 +2635,14 @@ number.29.Contrabass.1.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
@@ -2999,7 +2999,7 @@ number.29.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._make_multimeasure_rest_container(1)
-            d1 * 3/2
+            d1 * 6/4
             % AFTER:
             % ARTICULATIONS:
               %! EXPLICIT_DYNAMIC_COLOR
@@ -3021,7 +3021,7 @@ number.29.Contrabass.2.Music = {
               %! HIDDEN
               %! NOTE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % COMMANDS:
               %! baca.OverrideCommand._call(2)
               %! baca.dls_staff_padding()
@@ -3048,14 +3048,14 @@ number.29.Contrabass.2.Music = {
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
-            R1 * 3/2
+            R1 * 6/4
             % AFTER:
             % MARKUP:
               %! DURATION_MULTIPLIER
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._label_duration_multipliers()
-            %@% ^ \baca-duration-multiplier-markup #"3" #"2"
+            %@% ^ \baca-duration-multiplier-markup #"6" #"4"
             % CLOSING:
             % COMMANDS:
 
