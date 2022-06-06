@@ -48,21 +48,26 @@ baca.interpret.set_up_score(
     stage_markup=stage_markup,
 )
 
-commands(
-    "Skips",
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 1 - 1)),
-    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
-    baca.metronome_mark("48", lambda _: baca.select.skip(_, 3 - 1)),
-    baca.metronome_mark("2.=4", lambda _: baca.select.skip(_, 3 - 1)),
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 4 - 1)),
-    baca.metronome_mark("3:2(8)=4", lambda _: baca.select.skip(_, 4 - 1)),
-    baca.metronome_mark("57 3/5", lambda _: baca.select.skip(_, 6 - 1)),
-    baca.metronome_mark("4:5(2)=4", lambda _: baca.select.skip(_, 6 - 1)),
-    baca.metronome_mark("48", lambda _: baca.select.skip(_, 7 - 1)),
-    baca.metronome_mark("5:6(4)=4", lambda _: baca.select.skip(_, 7 - 1)),
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 9 - 1)),
-    baca.metronome_mark("3:2(8)=4", lambda _: baca.select.skip(_, 9 - 1)),
-)
+skips = score["Skips"]
+manifests = commands.manifests()
+
+for index, item in (
+    (1 - 1, "144"),
+    (1 - 1, "3:2(4)=4"),
+    (3 - 1, "48"),
+    (3 - 1, "2.=4"),
+    (4 - 1, "144"),
+    (4 - 1, "3:2(8)=4"),
+    (6 - 1, "57 3/5"),
+    (6 - 1, "4:5(2)=4"),
+    (7 - 1, "48"),
+    (7 - 1, "5:6(4)=4"),
+    (9 - 1, "144"),
+    (9 - 1, "3:2(8)=4"),
+):
+    skip = skips[index]
+    indicator = commands.metronome_marks.get(item, item)
+    baca.commands._metronome_mark(skip, indicator, manifests)
 
 commands(
     "Skips",
