@@ -58,21 +58,26 @@ commands(
     baca.close_volta(lambda _: baca.select.skip(_, 2 - 1)),
 )
 
-commands(
-    "Skips",
-    baca.metronome_mark("96", lambda _: baca.select.skip(_, 1 - 1)),
-    baca.metronome_mark("4:3(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
-    baca.metronome_mark("72", lambda _: baca.select.skip(_, 2 - 1)),
-    baca.metronome_mark("3:4(4)=4", lambda _: baca.select.skip(_, 2 - 1)),
-    baca.metronome_mark("96", lambda _: baca.select.skip(_, 4 - 1)),
-    baca.metronome_mark("4:3(4)=4", lambda _: baca.select.skip(_, 4 - 1)),
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 11 - 1)),
-    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 11 - 1)),
-    baca.metronome_mark("96", lambda _: baca.select.skip(_, 12 - 1)),
-    baca.metronome_mark("4.=4", lambda _: baca.select.skip(_, 12 - 1)),
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 13 - 1)),
-    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 13 - 1)),
-)
+skips = score["Skips"]
+manifests = commands.manifests()
+
+for index, item in (
+    (1 - 1, "96"),
+    (1 - 1, "4:3(4)=4"),
+    (2 - 1, "72"),
+    (2 - 1, "3:4(4)=4"),
+    (4 - 1, "96"),
+    (4 - 1, "4:3(4)=4"),
+    (11 - 1, "144"),
+    (11 - 1, "3:2(4)=4"),
+    (12 - 1, "96"),
+    (12 - 1, "4.=4"),
+    (13 - 1, "144"),
+    (13 - 1, "3:2(4)=4"),
+):
+    skip = skips[index]
+    indicator = commands.metronome_marks.get(item, item)
+    baca.commands._metronome_mark(skip, indicator, manifests)
 
 commands(
     "Rests",

@@ -39,12 +39,21 @@ baca.interpret.set_up_score(
 
 commands(
     "Skips",
-    baca.metronome_mark("144", lambda _: baca.select.skip(_, 1 - 1)),
-    baca.metronome_mark("3:2(4)=4", lambda _: baca.select.skip(_, 1 - 1)),
     baca.open_volta(lambda _: baca.select.skip(_, 1 - 1)),
     baca.double_volta(lambda _: baca.select.skip(_, 2 - 1)),
     baca.close_volta(lambda _: baca.select.skip(_, 2 - 1), site="after"),
 )
+
+skips = score["Skips"]
+manifests = commands.manifests()
+
+for index, item in (
+    (1 - 1, "144"),
+    (1 - 1, "3:2(4)=4"),
+):
+    skip = skips[index]
+    indicator = commands.metronome_marks.get(item, item)
+    baca.commands._metronome_mark(skip, indicator, manifests)
 
 # BFL
 
