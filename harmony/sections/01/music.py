@@ -59,7 +59,7 @@ commands(
     baca.close_volta(lambda _: baca.select.skip(_, 3 - 1), site="after"),
 )
 
-baca.commands._open_volta(skips[2 - 1], commands.first_measure_number)
+baca.open_volta(skips[2 - 1], commands.first_measure_number)
 
 # BFL
 

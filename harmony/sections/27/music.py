@@ -92,7 +92,7 @@ commands(
     baca.text_script_extra_offset((1.5, 12)),
 )
 
-baca.commands._open_volta(skips[4 - 1], commands.first_measure_number)
+baca.open_volta(skips[4 - 1], commands.first_measure_number)
 
 commands(
     "Rests",

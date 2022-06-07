@@ -193,7 +193,6 @@ number.29.Skips = {
       %! baca._label_measure_numbers()
     %@% \bacaStartTextSpanMN
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
       %! baca.bar_line()
     \bar "|."
     % ABSOLUTE_BEFORE:
