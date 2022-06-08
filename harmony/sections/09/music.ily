@@ -121,18 +121,17 @@ number.9.Skips = {
     % [Skips measure 2]
     % BEFORE:
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
-      %! baca.bar_line_command()
+      %! baca.bar_line()
     \bar ":.|.:"
       %! MEASURE_73
       %! NOT_MOL
-      %! baca.OverrideCommand._call(1)
-      %! baca.bar_line_x_extent_command()
+      %! baca.bar_line_x_extent(1)
+      %! baca.double_volta()
 %%% \once \override Score.BarLine.X-extent = #'(0 . 3)
       %! MEASURE_73
       %! ONLY_MOL
-      %! baca.OverrideCommand._call(1)
-      %! baca.bar_line_x_extent_command()
+      %! baca.bar_line_x_extent(1)
+      %! baca.double_volta()
     \once \override Score.BarLine.X-extent = #'(0 . 4)
       %! baca._make_global_skips(1)
     s1 * 6/4
@@ -176,13 +175,12 @@ number.9.Skips = {
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
-      %! baca.bar_line_command()
+      %! baca.bar_line()
     \bar ":|."
       %! MEASURE_74
       %! ONLY_MOL
-      %! baca.OverrideCommand._call(1)
-      %! baca.bar_line_x_extent_command()
+      %! baca.bar_line_x_extent(1)
+      %! baca.close_volta()
 %%% \once \override Score.BarLine.X-extent = #'(0 . 1.5)
     % ABSOLUTE_BEFORE:
     % COMMANDS:

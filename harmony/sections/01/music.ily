@@ -244,13 +244,12 @@ number.1.Skips = {
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM
     % COMMANDS:
-      %! baca.IndicatorCommand._call()
-      %! baca.bar_line_command()
+      %! baca.bar_line()
     \bar ":|."
       %! MEASURE_4
       %! ONLY_MOL
-      %! baca.OverrideCommand._call(1)
-      %! baca.bar_line_x_extent_command()
+      %! baca.bar_line_x_extent(1)
+      %! baca.close_volta()
 %%% \once \override Score.BarLine.X-extent = #'(0 . 1.5)
     % ABSOLUTE_BEFORE:
     % COMMANDS:
