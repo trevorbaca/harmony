@@ -79,9 +79,7 @@ for index, item in (
 baca.close_volta(skips[2 - 1], commands.first_measure_number)
 
 rests = score["Rests"]
-for index, string in (
-    (9 - 1, "fermata"),
-):
+for index, string in ((9 - 1, "fermata"),):
     baca.global_fermata(rests[index], string)
 
 # text
