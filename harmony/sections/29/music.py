@@ -49,10 +49,11 @@ for index, item in (
 
 baca.bar_line(score["Skips"][3 - 1], "|.")
 
-commands(
-    "Rests",
-    baca.global_fermata("very_long", lambda _: baca.select.rest(_, 3 - 1)),
-)
+rests = score["Rests"]
+for index, string in (
+    (3 - 1, "very_long"),
+):
+    baca.global_fermata(rests[index], string)
 
 # text
 

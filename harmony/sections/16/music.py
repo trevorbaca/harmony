@@ -47,10 +47,11 @@ baca.interpret.set_up_score(
     stage_markup=stage_markup,
 )
 
-commands(
-    "Rests",
-    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 7 - 1)),
-)
+rests = score["Rests"]
+for index, string in (
+    (7 - 1, "fermata"),
+):
+    baca.global_fermata(rests[index], string)
 
 # BFL
 

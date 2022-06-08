@@ -69,11 +69,12 @@ for index, item in (
     indicator = commands.metronome_marks.get(item, item)
     baca.commands._metronome_mark(skip, indicator, manifests)
 
-commands(
-    "Rests",
-    baca.global_fermata("fermata", lambda _: baca.select.rest(_, 3 - 1)),
-    baca.global_fermata("short", lambda _: baca.select.rest(_, 10 - 1)),
-)
+rests = score["Rests"]
+for index, string in (
+    (3 - 1, "fermata"),
+    (10 - 1, "short"),
+):
+    baca.global_fermata(rests[index], string)
 
 cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
 
