@@ -72,26 +72,18 @@ for index, string in (
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-two",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 3 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[3 - 1],
+    r"\harmony-text-two",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-three",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 5 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[5 - 1],
+    r"\harmony-text-three",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL

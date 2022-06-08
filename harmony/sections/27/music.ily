@@ -7,8 +7,7 @@ number.27.Skips = {
     % [Skips measure 1]
     % BEFORE:
     % COMMANDS:
-      %! baca.OverrideCommand._call(1)
-      %! baca.text_script_extra_offset()
+      %! baca.text_script_extra_offset_function(1)
     \override TextScript.extra-offset = #'(1.5 . 12)
     % OPENING:
     % COMMANDS:
@@ -124,12 +123,10 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     ^ \harmony-text-twenty-five
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -304,28 +301,22 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     - \tweak extra-offset #'(0 . 17)
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     - \tweak font-size 10
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     ^ \harmony-repeat-three-markup
       %! +PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
 %%% - \tweak extra-offset #'(0 . 9)
       %! +PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
 %%% - \tweak font-size 4
       %! +PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
 %%% ^ \harmony-repeat-three-markup
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -708,12 +699,10 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     ^ \harmony-text-twenty-six
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -856,8 +845,7 @@ number.27.Skips = {
       %! baca._label_stage_numbers()
     \bacaStartTextSpanSNM
     % COMMANDS:
-      %! baca.OverrideCommand._call(2)
-      %! baca.text_script_extra_offset()
+      %! baca.text_script_extra_offset_function(2)
     \revert TextScript.extra-offset
     % ABSOLUTE_BEFORE:
     % COMMANDS:

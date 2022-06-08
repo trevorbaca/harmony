@@ -80,26 +80,18 @@ cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-fourteen",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 3 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[3 - 1],
+    r"\harmony-text-fourteen",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-fifteen",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 10 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[10 - 1],
+    r"\harmony-text-fifteen",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL

@@ -64,15 +64,11 @@ for index, string in ((7 - 1, "short"),):
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-seven",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 7 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[7 - 1],
+    r"\harmony-text-seven",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL

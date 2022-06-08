@@ -571,12 +571,10 @@ number.12.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.IndicatorCommand._call()
-      %! baca.markup()
+      %! baca.markup_function()
     ^ \harmony-text-eleven
     % SPANNER_STOPS:
       %! CLOCK_TIME

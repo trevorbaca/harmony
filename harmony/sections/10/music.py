@@ -84,15 +84,11 @@ for index, string in ((9 - 1, "fermata"),):
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-eight",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 9 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[9 - 1],
+    r"\harmony-text-eight",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL
