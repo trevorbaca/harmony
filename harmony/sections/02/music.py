@@ -121,7 +121,7 @@ commands(
 
 commands(
     ("bfl", 12),
-    baca.make_mmrests_flat(),
+    baca.make_mmrests(),
 )
 
 # PERC1
@@ -169,7 +169,7 @@ commands(
 
 commands(
     ("perc1", 12),
-    baca.make_mmrests_flat(),
+    baca.make_mmrests(),
 )
 
 # PERC2
@@ -235,7 +235,7 @@ commands(
 
 commands(
     ("perc2", 12),
-    baca.make_mmrests_flat(),
+    baca.make_mmrests(),
 )
 
 # HP
@@ -274,7 +274,7 @@ commands(
 
 commands(
     ("hp", 12),
-    baca.make_mmrests_flat(),
+    baca.make_mmrests(),
 )
 
 # VA
@@ -313,7 +313,7 @@ commands(
 
 commands(
     ("va", 12),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # VC1
@@ -359,7 +359,7 @@ commands(
 
 commands(
     ("vc1", 12),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # VC2
@@ -419,7 +419,7 @@ commands(
 
 commands(
     ("vc2", 12),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # CB1
@@ -462,7 +462,7 @@ commands(
 
 commands(
     ("cb1", 12),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # CB2
@@ -522,7 +522,7 @@ commands(
 
 commands(
     ("cb2", 12),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 # reapply

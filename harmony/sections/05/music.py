@@ -64,7 +64,7 @@ for index, item in (
 
 commands(
     ("bfl", 1),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
@@ -126,7 +126,7 @@ commands(
 
 commands(
     ("perc1", 4),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
@@ -165,7 +165,7 @@ commands(
 
 commands(
     ("perc2", 4),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
@@ -224,7 +224,7 @@ commands(
 
 commands(
     ("va", 2),
-    baca.make_mmrests(),
+    baca.make_mmrests(head=True),
 )
 
 commands(
