@@ -72,7 +72,6 @@ for index, item in (
 
 commands(
     "Skips",
-    baca.close_volta(lambda _: baca.select.skip(_, 6 - 1)),
     baca.not_parts(
         baca.markup(
             r"\harmony-repeat-three-markup",
@@ -93,6 +92,7 @@ commands(
 )
 
 baca.open_volta(skips[4 - 1], commands.first_measure_number)
+baca.close_volta(skips[6 - 1], commands.first_measure_number)
 
 commands(
     "Rests",
