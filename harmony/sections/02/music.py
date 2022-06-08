@@ -67,6 +67,12 @@ for index, item in (
     indicator = commands.metronome_marks.get(item, item)
     baca.commands._metronome_mark(skip, indicator, manifests)
 
+baca.markup_function(
+    skips[12 - 1],
+    r"\harmony-text-one",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+)
+
 rests = score["Rests"]
 for index, string in ((12 - 1, "fermata"),):
     baca.global_fermata(rests[index], string)
@@ -74,19 +80,6 @@ for index, string in ((12 - 1, "fermata"),):
 divisions = [16, 20, 12, 12, 12, 16]
 sixteenths = [(2, 2, _ - 4) for _ in divisions]
 sixteenths = abjad.sequence.flatten(sixteenths)
-
-# text
-
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-one",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 12 - 1),
-        ),
-    ),
-)
 
 # BFL
 

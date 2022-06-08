@@ -47,7 +47,7 @@ for index, item in (
     indicator = commands.metronome_marks.get(item, item)
     baca.commands._metronome_mark(skip, indicator, manifests)
 
-baca.bar_line(score["Skips"][3 - 1], "|.")
+baca.bar_line(skips[3 - 1], "|.")
 
 rests = score["Rests"]
 for index, string in ((3 - 1, "very_long"),):
@@ -55,15 +55,11 @@ for index, string in ((3 - 1, "very_long"),):
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-twenty-eight",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 3 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[3 - 1],
+    r"\harmony-text-twenty-eight",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL

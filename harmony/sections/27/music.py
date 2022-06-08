@@ -70,26 +70,23 @@ for index, item in (
     indicator = commands.metronome_marks.get(item, item)
     baca.commands._metronome_mark(skip, indicator, manifests)
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-repeat-three-markup",
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
-            abjad.Tweak(r"- \tweak font-size 10"),
-            selector=lambda _: baca.select.skip(_, 4 - 1),
-        ),
-    ),
-    baca.only_parts(
-        baca.markup(
-            r"\harmony-repeat-three-markup",
-            abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
-            abjad.Tweak(r"- \tweak font-size 4"),
-            selector=lambda _: baca.select.skip(_, 4 - 1),
-        ),
-    ),
-    baca.text_script_extra_offset((1.5, 12)),
+baca.markup_function(
+    skips[4 - 1],
+    r"\harmony-repeat-three-markup",
+    abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
+    abjad.Tweak(r"- \tweak font-size 10"),
+    tags=[baca.tags.NOT_PARTS],
+),
+
+baca.markup_function(
+    skips[4 - 1],
+    r"\harmony-repeat-three-markup",
+    abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
+    abjad.Tweak(r"- \tweak font-size 4"),
+    tags=[baca.tags.ONLY_PARTS],
 )
+
+baca.text_script_extra_offset_function(skips[:-1], (1.5, 12))
 
 baca.open_volta(skips[4 - 1], commands.first_measure_number)
 baca.close_volta(skips[6 - 1], commands.first_measure_number)
@@ -103,26 +100,18 @@ for index, string in (
 
 # text
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-twenty-five",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 2 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[2 - 1],
+    r"\harmony-text-twenty-five",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
-commands(
-    "Skips",
-    baca.not_parts(
-        baca.markup(
-            r"\harmony-text-twenty-six",
-            abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-            selector=lambda _: baca.select.skip(_, 8 - 1),
-        ),
-    ),
+baca.markup_function(
+    skips[8 - 1],
+    r"\harmony-text-twenty-six",
+    abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    tags=[baca.tags.NOT_PARTS],
 )
 
 # BFL
