@@ -1248,7 +1248,7 @@ number.12.Rests = {
 
 
   %! baca.path.extern()
-number.12.Bass_Flute.Music.count.1 = {
+number.12.BassFlute.Music.count.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1327,12 +1327,12 @@ number.12.Bass_Flute.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.12.Bass_Flute.Music = {
+number.12.BassFlute.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 1]
+    % [BassFlute.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1521,7 +1521,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 2]
+    % [BassFlute.Music measure 2]
       %! harmony.make_sixteenths()
     b''4 * 1/2
     % AFTER:
@@ -1694,7 +1694,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 3]
+    % [BassFlute.Music measure 3]
     <ef'! ef''! bf''!>4.
     % AFTER:
     % SPANNER_STARTS:
@@ -1784,14 +1784,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute.Music"
+        \context Voice = "BassFlute.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Music measure 4]
+            % [BassFlute.Music measure 4]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -1842,14 +1842,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.Rests"
+        \context Voice = "BassFlute.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Rests measure 4]
+            % [BassFlute.Rests measure 4]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -1877,7 +1877,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 5]
+    % [BassFlute.Music measure 5]
     <ef'! ef''! bf''!>4.
     % AFTER:
     % SPANNER_STARTS:
@@ -1967,14 +1967,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute.Music"
+        \context Voice = "BassFlute.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Music measure 6]
+            % [BassFlute.Music measure 6]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2025,14 +2025,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.Rests"
+        \context Voice = "BassFlute.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Rests measure 6]
+            % [BassFlute.Rests measure 6]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2060,7 +2060,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 7]
+    % [BassFlute.Music measure 7]
     <ef'! ef''! bf''!>4.
     % AFTER:
     % SPANNER_STARTS:
@@ -2150,14 +2150,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute.Music"
+        \context Voice = "BassFlute.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Music measure 8]
+            % [BassFlute.Music measure 8]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -2208,14 +2208,14 @@ number.12.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.Rests"
+        \context Voice = "BassFlute.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Rests measure 8]
+            % [BassFlute.Rests measure 8]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -2243,7 +2243,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 9]
+    % [BassFlute.Music measure 9]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -2267,7 +2267,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 10]
+    % [BassFlute.Music measure 10]
     % BEFORE:
     % COMMANDS:
       %! FERMATA_MEASURE_NEXT_BAR_EXTENT
@@ -2405,9 +2405,9 @@ number.12.Bass_Flute.Music = {
         % COMMANDS:
 
         % OPEN_BRACKETS:
-        \context Voice = "Bass_Flute.Music"
+        \context Voice = "BassFlute.Music"
           %! baca.path.extern()
-        { \number.12.Bass_Flute.Music.count.1 }
+        { \number.12.BassFlute.Music.count.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -2417,7 +2417,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 11]
+    % [BassFlute.Music measure 11]
       %! ONE_VOICE_COMMAND
       %! abjad.OnBeatGraceContainer._attach_lilypond_one_voice()
     \oneVoice
@@ -2558,7 +2558,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 12]
+    % [BassFlute.Music measure 12]
       %! harmony.make_sixteenths()
     dtqf'''!4
     % AFTER:
@@ -2704,7 +2704,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 13]
+    % [BassFlute.Music measure 13]
       %! harmony.make_sixteenths()
     dtqf'''!4
     % AFTER:
@@ -2880,7 +2880,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 14]
+    % [BassFlute.Music measure 14]
       %! harmony.make_sixteenths()
     dtqf'''!4
     % AFTER:
@@ -3056,7 +3056,7 @@ number.12.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 15]
+    % [BassFlute.Music measure 15]
       %! harmony.make_sixteenths()
     dtqf'''!4
     % AFTER:
@@ -3416,7 +3416,7 @@ number.12.Bass_Flute.Music = {
       %! ANCHOR_NOTE
       %! baca._comment_measure_numbers()
       %! baca._style_anchor_notes()
-    % [Bass_Flute.Music anchor note]
+    % [BassFlute.Music anchor note]
     % BEFORE:
     % COMMANDS:
       %! ANCHOR_NOTE
@@ -3508,7 +3508,7 @@ number.12.Bass_Flute.Music = {
 
 
   %! baca.path.extern()
-number.12.Bass_Flute.Music_Staff = <<
+number.12.BassFlute.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3523,10 +3523,10 @@ number.12.Bass_Flute.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Bass_Flute.Music"
+    \context Voice = "BassFlute.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.12.Bass_Flute.Music }
+    { \number.12.BassFlute.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -4645,7 +4645,7 @@ number.12.Percussion.1.Music = {
 
 
   %! baca.path.extern()
-number.12.Percussion.1.Music_Staff = <<
+number.12.Percussion.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5502,7 +5502,7 @@ number.12.Percussion.2.Music = {
 
 
   %! baca.path.extern()
-number.12.Percussion.2.Music_Staff = <<
+number.12.Percussion.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6347,7 +6347,7 @@ number.12.Harp.Music = {
 
 
   %! baca.path.extern()
-number.12.Harp.Music_Staff = <<
+number.12.Harp.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7843,7 +7843,7 @@ number.12.Viola.Music = {
 
 
   %! baca.path.extern()
-number.12.Viola.Music_Staff = <<
+number.12.Viola.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9460,7 +9460,7 @@ number.12.Cello.1.Music = {
 
 
   %! baca.path.extern()
-number.12.Cello.1.Music_Staff = <<
+number.12.Cello.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10927,7 +10927,7 @@ number.12.Cello.2.Music = {
 
 
   %! baca.path.extern()
-number.12.Cello.2.Music_Staff = <<
+number.12.Cello.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -12645,7 +12645,7 @@ number.12.Contrabass.1.Music = {
 
 
   %! baca.path.extern()
-number.12.Contrabass.1.Music_Staff = <<
+number.12.Contrabass.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -14142,7 +14142,7 @@ number.12.Contrabass.2.Music = {
 
 
   %! baca.path.extern()
-number.12.Contrabass.2.Music_Staff = <<
+number.12.Contrabass.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

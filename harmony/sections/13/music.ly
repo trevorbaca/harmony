@@ -83,13 +83,13 @@
                     % BEFORE:
                     % COMMANDS:
                       %! baca.attach_lilypond_tag()
-                    \tag #'Bass_Flute
+                    \tag #'BassFlute
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Bass_Flute.Music_Staff"
+                    \context Staff = "BassFlute.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Bass_Flute.Music_Staff }
+                    { \number.13.BassFlute.Staff }
                     % CLOSING:
                     % COMMANDS:
 
@@ -113,10 +113,10 @@
                     \tag #'Percussion.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Percussion.1.Music_Staff"
+                    \context Staff = "Percussion.1.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Percussion.1.Music_Staff }
+                    { \number.13.Percussion.1.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -126,10 +126,10 @@
                     \tag #'Percussion.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Percussion.2.Music_Staff"
+                    \context Staff = "Percussion.2.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Percussion.2.Music_Staff }
+                    { \number.13.Percussion.2.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -139,10 +139,10 @@
                     \tag #'Harp
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Harp.Music_Staff"
+                    \context Staff = "Harp.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Harp.Music_Staff }
+                    { \number.13.Harp.Staff }
                     % CLOSING:
                     % COMMANDS:
 
@@ -166,10 +166,10 @@
                     \tag #'Viola
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Viola.Music_Staff"
+                    \context Staff = "Viola.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Viola.Music_Staff }
+                    { \number.13.Viola.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -179,10 +179,10 @@
                     \tag #'Cello.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Cello.1.Music_Staff"
+                    \context Staff = "Cello.1.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Cello.1.Music_Staff }
+                    { \number.13.Cello.1.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -192,10 +192,10 @@
                     \tag #'Cello.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Cello.2.Music_Staff"
+                    \context Staff = "Cello.2.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Cello.2.Music_Staff }
+                    { \number.13.Cello.2.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -205,10 +205,10 @@
                     \tag #'Contrabass.1
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Contrabass.1.Music_Staff"
+                    \context Staff = "Contrabass.1.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Contrabass.1.Music_Staff }
+                    { \number.13.Contrabass.1.Staff }
                     % ABSOLUTE_BEFORE:
                     % COMMANDS:
 
@@ -218,10 +218,10 @@
                     \tag #'Contrabass.2
                     % OPEN_BRACKETS:
                       %! harmony.make_empty_score()
-                    \context Staff = "Contrabass.2.Music_Staff"
+                    \context Staff = "Contrabass.2.Staff"
                       %! harmony.make_empty_score()
                       %! baca.path.extern()
-                    { \number.13.Contrabass.2.Music_Staff }
+                    { \number.13.Contrabass.2.Staff }
                     % CLOSING:
                     % COMMANDS:
 
