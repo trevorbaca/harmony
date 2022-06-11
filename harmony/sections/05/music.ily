@@ -571,7 +571,7 @@ number.5.Rests = {
 
 
   %! baca.path.extern()
-number.5.Bass_Flute.Music = {
+number.5.BassFlute.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -583,14 +583,14 @@ number.5.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(4)
-        \context Voice = "Bass_Flute.Music"
+        \context Voice = "BassFlute.Music"
           %! baca._make_multimeasure_rest_container(4)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Music measure 1]
+            % [BassFlute.Music measure 1]
             % BEFORE:
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
@@ -704,14 +704,14 @@ number.5.Bass_Flute.Music = {
 
         % OPEN_BRACKETS:
           %! baca._make_multimeasure_rest_container(6)
-        \context Voice = "Bass_Flute.Rests"
+        \context Voice = "BassFlute.Rests"
           %! baca._make_multimeasure_rest_container(6)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
 
               %! baca._comment_measure_numbers()
-            % [Bass_Flute.Rests measure 1]
+            % [BassFlute.Rests measure 1]
               %! MULTIMEASURE_REST
               %! REST_VOICE
               %! baca._make_multimeasure_rest_container(5)
@@ -739,7 +739,7 @@ number.5.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 2]
+    % [BassFlute.Music measure 2]
       %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
@@ -821,7 +821,7 @@ number.5.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 3]
+    % [BassFlute.Music measure 3]
     fs'!16
     % AFTER:
     % ARTICULATIONS:
@@ -885,7 +885,7 @@ number.5.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 4]
+    % [BassFlute.Music measure 4]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -949,7 +949,7 @@ number.5.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 5]
+    % [BassFlute.Music measure 5]
       %! harmony.make_sixteenths()
     r8.
     % ABSOLUTE_BEFORE:
@@ -1023,7 +1023,7 @@ number.5.Bass_Flute.Music = {
 
 
   %! baca.path.extern()
-number.5.Bass_Flute.Music_Staff = <<
+number.5.BassFlute.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1038,10 +1038,10 @@ number.5.Bass_Flute.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Bass_Flute.Music"
+    \context Voice = "BassFlute.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.5.Bass_Flute.Music }
+    { \number.5.BassFlute.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -1869,7 +1869,7 @@ number.5.Percussion.1.Music = {
 
 
   %! baca.path.extern()
-number.5.Percussion.1.Music_Staff = <<
+number.5.Percussion.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2761,7 +2761,7 @@ number.5.Percussion.2.Music = {
 
 
   %! baca.path.extern()
-number.5.Percussion.2.Music_Staff = <<
+number.5.Percussion.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3336,7 +3336,7 @@ number.5.Harp.Music = {
 
 
   %! baca.path.extern()
-number.5.Harp.Music_Staff = <<
+number.5.Harp.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4145,7 +4145,7 @@ number.5.Viola.Music = {
 
 
   %! baca.path.extern()
-number.5.Viola.Music_Staff = <<
+number.5.Viola.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5275,7 +5275,7 @@ number.5.Cello.1.Music = {
 
 
   %! baca.path.extern()
-number.5.Cello.1.Music_Staff = <<
+number.5.Cello.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6232,7 +6232,7 @@ number.5.Cello.2.Music = {
 
 
   %! baca.path.extern()
-number.5.Cello.2.Music_Staff = <<
+number.5.Cello.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7383,7 +7383,7 @@ number.5.Contrabass.1.Music = {
 
 
   %! baca.path.extern()
-number.5.Contrabass.1.Music_Staff = <<
+number.5.Contrabass.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8485,7 +8485,7 @@ number.5.Contrabass.2.Music = {
 
 
   %! baca.path.extern()
-number.5.Contrabass.2.Music_Staff = <<
+number.5.Contrabass.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 

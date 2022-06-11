@@ -906,12 +906,12 @@ number.25.Rests = {
 
 
   %! baca.path.extern()
-number.25.Bass_Flute.Music = {
+number.25.BassFlute.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 1]
+    % [BassFlute.Music measure 1]
     % BEFORE:
     % COMMANDS:
       %! baca.OverrideCommand._call(1)
@@ -1003,7 +1003,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 2]
+    % [BassFlute.Music measure 2]
       %! harmony.make_warble_rhythm()
     r2
     % ABSOLUTE_BEFORE:
@@ -1244,7 +1244,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 3]
+    % [BassFlute.Music measure 3]
       %! harmony.make_sixteenths()
     r8
     % AFTER:
@@ -1779,7 +1779,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 4]
+    % [BassFlute.Music measure 4]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -1813,7 +1813,7 @@ number.25.Bass_Flute.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Bass_Flute.Music measure 5]
+        % [BassFlute.Music measure 5]
         % BEFORE:
         % COMMANDS:
           %! FERMATA_MEASURE_NEXT_BAR_EXTENT
@@ -2093,7 +2093,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 6]
+    % [BassFlute.Music measure 6]
       %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
@@ -2353,7 +2353,7 @@ number.25.Bass_Flute.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Bass_Flute.Music measure 7]
+        % [BassFlute.Music measure 7]
           %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
@@ -2608,7 +2608,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 8]
+    % [BassFlute.Music measure 8]
       %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
@@ -2868,7 +2868,7 @@ number.25.Bass_Flute.Music = {
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
-        % [Bass_Flute.Music measure 9]
+        % [BassFlute.Music measure 9]
           %! harmony.make_warble_rhythm()
         r32
         % ABSOLUTE_BEFORE:
@@ -3123,7 +3123,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 10]
+    % [BassFlute.Music measure 10]
       %! harmony.make_warble_rhythm()
     r16
     % ABSOLUTE_BEFORE:
@@ -3390,7 +3390,7 @@ number.25.Bass_Flute.Music = {
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
-    % [Bass_Flute.Music measure 11]
+    % [BassFlute.Music measure 11]
     % BEFORE:
     % COMMANDS:
       %! baca._style_fermata_measures(1)
@@ -3420,7 +3420,7 @@ number.25.Bass_Flute.Music = {
 
 
   %! baca.path.extern()
-number.25.Bass_Flute.Music_Staff = <<
+number.25.BassFlute.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3435,10 +3435,10 @@ number.25.Bass_Flute.Music_Staff = <<
 
     % OPEN_BRACKETS:
       %! harmony.make_empty_score()
-    \context Voice = "Bass_Flute.Music"
+    \context Voice = "BassFlute.Music"
       %! harmony.make_empty_score()
       %! baca.path.extern()
-    { \number.25.Bass_Flute.Music }
+    { \number.25.BassFlute.Music }
     % CLOSING:
     % COMMANDS:
 
@@ -4052,7 +4052,7 @@ number.25.Percussion.1.Music = {
 
 
   %! baca.path.extern()
-number.25.Percussion.1.Music_Staff = <<
+number.25.Percussion.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5112,7 +5112,7 @@ number.25.Percussion.2.Music = {
 
 
   %! baca.path.extern()
-number.25.Percussion.2.Music_Staff = <<
+number.25.Percussion.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -5779,7 +5779,7 @@ number.25.Harp.Music = {
 
 
   %! baca.path.extern()
-number.25.Harp.Music_Staff = <<
+number.25.Harp.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -6996,7 +6996,7 @@ number.25.Viola.Music = {
 
 
   %! baca.path.extern()
-number.25.Viola.Music_Staff = <<
+number.25.Viola.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8336,7 +8336,7 @@ number.25.Cello.1.Music = {
 
 
   %! baca.path.extern()
-number.25.Cello.1.Music_Staff = <<
+number.25.Cello.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9426,7 +9426,7 @@ number.25.Cello.2.Music = {
 
 
   %! baca.path.extern()
-number.25.Cello.2.Music_Staff = <<
+number.25.Cello.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10762,7 +10762,7 @@ number.25.Contrabass.1.Music = {
 
 
   %! baca.path.extern()
-number.25.Contrabass.1.Music_Staff = <<
+number.25.Contrabass.1.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11842,7 +11842,7 @@ number.25.Contrabass.2.Music = {
 
 
   %! baca.path.extern()
-number.25.Contrabass.2.Music_Staff = <<
+number.25.Contrabass.2.Staff = <<
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
