@@ -13,7 +13,7 @@ stage_markup = (
     ("[>C.1]", 3, "#darkgreen"),
 )
 
-score = library.make_empty_score()
+score = music = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 instruments = library.instruments()
 
@@ -60,191 +60,176 @@ baca.close_volta(skips[3 - 1], commands.first_measure_number, site="after")
 
 voice = score["BassFlute.Music"]
 
-commands(
-    ("bfl", (1, 2)),
-    library.make_appoggiato_rhythm(
-        divisions=[16, 8, 12, 8],
-        counts=[9, 6, 8, 4],
-        incise=True,
-    ),
+music = library.make_appoggiato_rhythm(
+    divisions=[16, 8, 12, 8],
+    counts=[9, 6, 8, 4],
+    incise=True,
+    function=commands.get(1, 2),
+    voice_name=voice.name,
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 3),
-    library.make_sixteenths(
-        library.cerulean()[1:],
-    ),
+music = library.make_sixteenths(
+    library.cerulean()[1:],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # PERC1
 
 voice = score["Percussion.1.Music"]
 
-commands(
-    ("perc1", 1),
-    library.make_sixteenths(
-        ["-", 3, 1],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
+music = library.make_sixteenths(
+    ["-", 3, 1],
+    written_quarters=True,
+    invisible_pairs=True,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 2),
-    library.make_sixteenths(
-        [3, 1, "-", 3, 1],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
+music = library.make_sixteenths(
+    [3, 1, "-", 3, 1],
+    written_quarters=True,
+    invisible_pairs=True,
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 3),
-    library.make_phjc_rhythm(
-        [2, 1, 1],
-        [2, 2, 2, 2, 2, 2, 2, 1],
-        extra_counts=[2],
-        rest_most=True,
-    ),
+music = library.make_phjc_rhythm(
+    [2, 1, 1],
+    [2, 2, 2, 2, 2, 2, 2, 1],
+    extra_counts=[2],
+    rest_most=True,
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # PERC2
 
 voice = score["Percussion.2.Music"]
 
-commands(
-    ("perc2", (1, 2)),
-    library.make_sixteenths(
-        [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    ),
+music = library.make_sixteenths(
+    [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    function=commands.get(1, 2),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 3),
-    library.make_phjc_rhythm(
-        [1, 2],
-        [2, 2, 2, 2, 2, 2, 2, 1],
-        extra_counts=[0, 6],
-        rest_most=True,
-        rest_pleaves=[0, 1, 2, 3],
-    ),
+music = library.make_phjc_rhythm(
+    [1, 2],
+    [2, 2, 2, 2, 2, 2, 2, 1],
+    extra_counts=[0, 6],
+    rest_most=True,
+    rest_pleaves=[0, 1, 2, 3],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # HP
 
 voice = score["Harp.Music"]
 
-commands(
-    ("hp", (1, 2)),
-    library.make_sixteenths(
-        [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    ),
+music = library.make_sixteenths(
+    [4, -14, 4, -2, 4, -6, 4, 4, -2],
+    function=commands.get(1, 2),
 )
+voice.extend(music)
 
-commands(
-    ("hp", 3),
-    library.make_sixteenths(
-        [10, "-"],
-    ),
+music = library.make_sixteenths(
+    [10, "-"],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # VA
 
-commands(
-    ("va", (1, 2)),
-    library.make_appoggiato_rhythm(
-        divisions=[16, 8, 12, 8],
-        incise=True,
-    ),
-)
+voice = score["Viola.Music"]
 
-commands(
-    ("va", 3),
-    library.make_sixteenths(
-        library.cerulean()[1:],
-        extra_counts=[2],
-        denominator=None,
-    ),
+music = library.make_appoggiato_rhythm(
+    divisions=[16, 8, 12, 8],
+    incise=True,
+    function=commands.get(1, 2),
+    voice_name=voice.name,
 )
+voice.extend(music)
+
+music = library.make_sixteenths(
+    library.cerulean()[1:],
+    extra_counts=[2],
+    denominator=None,
+    function=commands.get(3),
+)
+voice.extend(music)
 
 # VC1
 
 voice = score["Cello.1.Music"]
 
-commands(
-    ("vc1", (1, 2)),
-    baca.make_skeleton(
-        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
-    ),
+music = baca.make_skeleton_function(
+    r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 3),
-    library.make_sixteenths(
-        [5, -5, 1, -4],
-        extra_counts=[1],
-    ),
+music = library.make_sixteenths(
+    [5, -5, 1, -4],
+    extra_counts=[1],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # VC2
 
 voice = score["Cello.2.Music"]
 
-commands(
-    ("vc2", (1, 2)),
-    library.make_appoggiato_rhythm(
-        divisions=[16, 8, 12, 8],
-        incise=True,
-    ),
+music = library.make_appoggiato_rhythm(
+    divisions=[16, 8, 12, 8],
+    incise=True,
+    function=commands.get(1, 2),
+    voice_name=voice.name,
 )
+voice.extend(music)
 
-commands(
-    ("vc2", 3),
-    library.make_sixteenths(
-        [10, "-"],
-        untie=True,
-        after_graces=[1],
-    ),
+music = library.make_sixteenths(
+    [10, "-"],
+    untie=True,
+    after_graces=[1],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # CB1
 
 voice = score["Contrabass.1.Music"]
 
-commands(
-    ("cb1", (1, 2)),
-    library.make_sixteenths(
-        [18, 6, 10, 4, 6],
-    ),
+music = library.make_sixteenths(
+    [18, 6, 10, 4, 6],
+    function=commands.get(1, 2),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 3),
-    baca.make_skeleton(
-        r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
-    ),
+music = baca.make_skeleton_function(
+    r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
 )
+voice.extend(music)
 
 # CB2
 
 voice = score["Contrabass.2.Music"]
 
-commands(
-    ("cb2", (1, 2)),
-    library.make_appoggiato_rhythm(
-        divisions=[16, 8, 12, 8],
-        incise=True,
-    ),
+music = library.make_appoggiato_rhythm(
+    divisions=[16, 8, 12, 8],
+    incise=True,
+    function=commands.get(1, 2),
+    voice_name=voice.name,
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 3),
-    library.make_sixteenths(
-        [10, "-"],
-        untie=True,
-        after_graces=[1],
-    ),
+music = library.make_sixteenths(
+    [10, "-"],
+    untie=True,
+    after_graces=[1],
+    function=commands.get(3),
 )
+voice.extend(music)
 
 # anchor notes
 

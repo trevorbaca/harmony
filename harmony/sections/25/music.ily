@@ -6283,9 +6283,9 @@ number.25.Viola.Music = {
     % [Viola.Music measure 6]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_transparent()
     \override NoteHead.transparent = ##t
@@ -6319,9 +6319,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -6368,18 +6368,18 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % START_BEAM:
@@ -6390,9 +6390,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8.
     % AFTER:
     % ARTICULATIONS:
@@ -6423,18 +6423,18 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % START_BEAM:
@@ -6445,9 +6445,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8.
     % AFTER:
     % ARTICULATIONS:
@@ -6488,9 +6488,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % START_BEAM:
@@ -6501,9 +6501,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -6552,18 +6552,18 @@ number.25.Viola.Music = {
     % [Viola.Music measure 7]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % START_BEAM:
@@ -6574,9 +6574,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -6607,9 +6607,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6618,9 +6618,9 @@ number.25.Viola.Music = {
     % [Viola.Music measure 8]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % START_BEAM:
@@ -6631,9 +6631,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -6674,18 +6674,18 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % START_BEAM:
@@ -6696,9 +6696,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8.
     % AFTER:
     % ARTICULATIONS:
@@ -6745,9 +6745,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6756,18 +6756,18 @@ number.25.Viola.Music = {
     % [Viola.Music measure 9]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % START_BEAM:
@@ -6778,9 +6778,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -6808,18 +6808,18 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -6860,9 +6860,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6871,18 +6871,18 @@ number.25.Viola.Music = {
     % [Viola.Music measure 10]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % START_BEAM:
@@ -6893,9 +6893,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % STOP_BEAM:
@@ -6906,9 +6906,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -6934,9 +6934,9 @@ number.25.Viola.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
     c'8
     % AFTER:
     % STOP_BEAM:
@@ -7545,6 +7545,9 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 5]
     % BEFORE:
     % COMMANDS:
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
       %! MEASURE_230
       %! SHIFTED_CLEF
       %! baca.OverrideCommand._call(1)
@@ -7641,13 +7644,13 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_transparent()
     \override NoteHead.transparent = ##t
-    b'8
+    c'8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -7657,10 +7660,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -7690,19 +7693,19 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -7712,10 +7715,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -7763,10 +7766,10 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 6]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'2.
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -7793,10 +7796,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8.
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -7806,10 +7809,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'16
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -7849,19 +7852,19 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8.
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -7871,10 +7874,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'16
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -7922,19 +7925,19 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 7]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -7961,10 +7964,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'2.
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -8001,10 +8004,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -8014,10 +8017,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -8065,19 +8068,19 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 8]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -8087,10 +8090,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -8120,19 +8123,19 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -8142,10 +8145,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8.
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -8185,10 +8188,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -8196,28 +8199,28 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 9]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'1
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -8227,10 +8230,10 @@ number.25.Cello.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'8.
     % AFTER:
     % STOP_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -8242,28 +8245,28 @@ number.25.Cello.1.Music = {
     % [Cello.1.Music measure 10]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'1
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c'16
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -9918,6 +9921,9 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 5]
     % BEFORE:
     % COMMANDS:
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
       %! MEASURE_230
       %! SHIFTED_CLEF
       %! baca.OverrideCommand._call(1)
@@ -10014,13 +10020,13 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_transparent()
     \override NoteHead.transparent = ##t
-    b'8.
+    c''8.
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10030,10 +10036,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -10063,19 +10069,19 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8.
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10085,10 +10091,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10134,10 +10140,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10145,19 +10151,19 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 6]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10167,10 +10173,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8.
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -10200,19 +10206,19 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10222,10 +10228,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8.
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10265,10 +10271,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10276,28 +10282,28 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 7]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'1
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10307,10 +10313,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8.
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10358,19 +10364,19 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 8]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -10397,10 +10403,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10410,10 +10416,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10453,10 +10459,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'4
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10464,19 +10470,19 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 9]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10486,10 +10492,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10535,10 +10541,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -10546,19 +10552,19 @@ number.25.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 10]
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'2
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10568,10 +10574,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8
     % AFTER:
     % ARTICULATIONS:
       %! SPANNER_STOP
@@ -10601,10 +10607,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10614,10 +10620,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'8.
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''8.
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10657,10 +10663,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % START_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
@@ -10670,19 +10676,19 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % ARTICULATIONS:
       %! EXPLICIT_DYNAMIC_COLOR
@@ -10704,10 +10710,10 @@ number.25.Contrabass.1.Music = {
 
     % BEFORE:
     % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
-    b'16
+      %! REPEAT_PITCH_CLASS_COLORING
+      %! baca.color_repeat_pitch_classes()
+    \baca-repeat-pitch-class-coloring
+    c''16
     % AFTER:
     % STOP_BEAM:
       %! rmakers.RewriteMeterCommand.__call__
