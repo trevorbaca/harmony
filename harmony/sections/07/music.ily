@@ -4100,6 +4100,9 @@ number.7.Harp.Music = {
 
         % BEFORE:
         % COMMANDS:
+          %! REPEAT_PITCH_CLASS_COLORING
+          %! baca.color_repeat_pitch_classes()
+        \baca-repeat-pitch-class-coloring
           %! baca.OverrideCommand._call(1)
           %! baca.dls_staff_padding()
         \once \override DynamicLineSpanner.staff-padding = 8
@@ -4216,9 +4219,9 @@ number.7.Harp.Music = {
 
         % BEFORE:
         % COMMANDS:
-          %! NOT_YET_PITCHED_COLORING
-          %! baca._color_not_yet_pitched()
-        \baca-not-yet-pitched-coloring
+          %! REPEAT_PITCH_CLASS_COLORING
+          %! baca.color_repeat_pitch_classes()
+        \baca-repeat-pitch-class-coloring
         % OPENING:
         % COMMANDS:
           %! INVISIBLE_MUSIC_COMMAND

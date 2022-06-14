@@ -80,67 +80,73 @@ baca.markup_function(
 
 voice = score["BassFlute.Music"]
 
-commands(
-    ("bfl", 1),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("bfl", 1)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 2),
-    library.make_sixteenths(
-        [-4, 2, 2],
-        written_quarters=([0], 1),
-        invisible_pairs=True,
-    ),
+# commands(
+#    ("bfl", 2)
+music = library.make_sixteenths(
+    [-4, 2, 2],
+    written_quarters=([0], 1),
+    invisible_pairs=True,
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("bfl", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("bfl", 4),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("bfl", 4)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 5),
-    library.make_sixteenths(
-        [4, -4],
-    ),
+# commands(
+#    ("bfl", 5)
+music = library.make_sixteenths(
+    [4, -4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # PERC1
 
 voice = score["Percussion.1.Music"]
 
-commands(
-    ("perc1", 1),
-    library.make_sixteenths(
-        [4, "-"],
-    ),
+# commands(
+#    ("perc1", 1)
+music = library.make_sixteenths(
+    [4, "-"],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 2),
-    library.make_phjc_rhythm(
-        [1],
-        [1, 2, 1, 1, -1],
-        extra_counts=[1, 1, 2, 2],
-        rest_cyclic=([1], 2),
-    ),
+# commands(
+#    ("perc1", 2)
+music = library.make_phjc_rhythm(
+    [1],
+    [1, 2, 1, 1, -1],
+    extra_counts=[1, 1, 2, 2],
+    rest_cyclic=([1], 2),
+    function=commands.get(2),
 )
+voice.extend(music)
 
 
-commands(
-    ("perc1", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("perc1", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
 
 def preprocessor(divisions):
@@ -149,22 +155,24 @@ def preprocessor(divisions):
     return result
 
 
-commands(
-    ("perc1", 4),
-    library.make_sixteenths(
-        [4, -4, 4, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -8],
-        denominator=None,
-    ),
+# commands(
+#    ("perc1", 4)
+music = library.make_sixteenths(
+    [4, -4, 4, -4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -8],
+    denominator=None,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 5),
-    library.make_sixteenths(
-        [4, -4],
-    ),
+# commands(
+#    ("perc1", 5)
+music = library.make_sixteenths(
+    [4, -4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # PERC2
 
@@ -177,65 +185,71 @@ def preprocessor(divisions):
     return result
 
 
-commands(
-    ("perc2", 1),
-    library.make_sixteenths(
-        [4, -8, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -8],
-        denominator=None,
-    ),
+# commands(
+#    ("perc2", 1)
+music = library.make_sixteenths(
+    [4, -8, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -8],
+    denominator=None,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 2),
-    library.make_sixteenths(
-        [-4, 4],
-    ),
+# commands(
+#    ("perc2", 2)
+music = library.make_sixteenths(
+    [-4, 4],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("perc2", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("perc2", 4),
-    library.make_sixteenths(
-        [4, "-"],
-    ),
+# commands(
+#    ("perc2", 4)
+music = library.make_sixteenths(
+    [4, "-"],
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 5),
-    library.make_sixteenths(
-        [6, 3, 7, 4],
-    ),
+# commands(
+#    ("perc2", 5)
+music = library.make_sixteenths(
+    [6, 3, 7, 4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # HP
 
 voice = score["Harp.Music"]
 
-commands(
-    ("hp", 1),
-    library.make_sixteenths(
-        [4, "-"],
-    ),
+# commands(
+#    ("hp", 1)
+music = library.make_sixteenths(
+    [4, "-"],
+    function=commands.get(1),
 )
+voice.extend(music)
 
 
-commands(
-    ("hp", (2, 3)),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("hp", (2, 3))
+music = baca.make_mmrests_function(commands.get(2, 3))
+voice.extend(music)
 
-commands(
-    ("hp", 4),
-    library.make_sixteenths(
-        [4, "-"],
-    ),
+# commands(
+#    ("hp", 4)
+music = library.make_sixteenths(
+    [4, "-"],
+    function=commands.get(4),
 )
+voice.extend(music)
 
 
 def preprocessor(divisions):
@@ -244,51 +258,58 @@ def preprocessor(divisions):
     return result
 
 
-commands(
-    ("hp", 5),
-    library.make_sixteenths(
-        [-12, 4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
-        denominator=None,
-    ),
+# commands(
+#    ("hp", 5)
+music = library.make_sixteenths(
+    [-12, 4, 4, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, 4],
+    denominator=None,
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # VA
 
-commands(
-    ("va", 1),
-    library.make_sixteenths(
-        [4],
-    ),
-)
+voice = score["Viola.Music"]
 
-commands(
-    ("va", 2),
-    library.make_sixteenths(
-        [-4, 4],
-    ),
+# commands(
+#    ("va", 1)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("va", 3),
-    baca.make_mmrests(head=True),
+# commands(
+#    ("va", 2)
+music = library.make_sixteenths(
+    [-4, 4],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("va", 4),
-    library.make_sixteenths(
-        [4],
-    ),
-)
+# commands(
+#    ("va", 3)
+music = baca.make_mmrests_function(commands.get(3), head=voice.name)
+voice.extend(music)
 
-commands(
-    ("va", 5),
-    library.make_sixteenths(
-        [-6, 1, -10, 1, "-"],
-        extra_counts=[1],
-    ),
+# commands(
+#    ("va", 4)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(4),
 )
+voice.extend(music)
+
+# commands(
+#    ("va", 5)
+music = library.make_sixteenths(
+    [-6, 1, -10, 1, "-"],
+    extra_counts=[1],
+    function=commands.get(5),
+)
+voice.extend(music)
 
 # VC1
 
@@ -301,77 +322,83 @@ def preprocessor(divisions):
     return result
 
 
-commands(
-    ("vc1", 1),
-    library.make_sixteenths(
-        [-8, 4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -4],
-        denominator=None,
-    ),
+# commands(
+#    ("vc1", 1)
+music = library.make_sixteenths(
+    [-8, 4, 4, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -4],
+    denominator=None,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 2),
-    library.make_sixteenths(
-        [-4, 3, -1],
-    ),
+# commands(
+#    ("vc1", 2)
+music = library.make_sixteenths(
+    [-4, 3, -1],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("vc1", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("vc1", 4),
-    library.make_sixteenths(
-        [-8, 4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -4],
-        denominator=None,
-    ),
+# commands(
+#    ("vc1", 4)
+music = library.make_sixteenths(
+    [-8, 4, 4, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -4],
+    denominator=None,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 5),
-    library.make_sixteenths(
-        [3, 7, 4, 6],
-    ),
+# commands(
+#    ("vc1", 5)
+music = library.make_sixteenths(
+    [3, 7, 4, 6],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # VC2
 
 voice = score["Cello.2.Music"]
 
-commands(
-    ("vc2", 1),
-    baca.make_notes(),
-)
+# commands(
+#    ("vc2", 1)
+music = baca.make_notes_function(commands.get(1))
+voice.extend(music)
 
-commands(
-    ("vc2", 2),
-    library.make_sixteenths(
-        [-4, 3, -1],
-    ),
+# commands(
+#    ("vc2", 2)
+music = library.make_sixteenths(
+    [-4, 3, -1],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("vc2", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("vc2", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("vc2", 4),
-    baca.make_notes(),
-)
+# commands(
+#    ("vc2", 4)
+music = baca.make_notes_function(commands.get(4))
+voice.extend(music)
 
-commands(
-    ("vc2", 5),
-    library.make_sixteenths(
-        [7, 4, 6, 3],
-    ),
+# commands(
+#    ("vc2", 5)
+music = library.make_sixteenths(
+    [7, 4, 6, 3],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # CB1
 
@@ -384,81 +411,89 @@ def preprocessor(divisions):
     return result
 
 
-commands(
-    ("cb1", 1),
-    library.make_sixteenths(
-        [-8, 4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -4],
-        denominator=None,
-    ),
+# commands(
+#    ("cb1", 1)
+music = library.make_sixteenths(
+    [-8, 4, 4, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -4],
+    denominator=None,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 2),
-    library.make_sixteenths(
-        [-4, 3, -1],
-    ),
+# commands(
+#    ("cb1", 2)
+music = library.make_sixteenths(
+    [-4, 3, -1],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("cb1", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("cb1", 4),
-    library.make_sixteenths(
-        [-8, 4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, -4],
-        denominator=None,
-    ),
+# commands(
+#    ("cb1", 4)
+music = library.make_sixteenths(
+    [-8, 4, 4, 4],
+    preprocessor=preprocessor,
+    extra_counts=[0, -4],
+    denominator=None,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 5),
-    library.make_sixteenths(
-        [4, 6, 3, 7],
-    ),
+# commands(
+#    ("cb1", 5)
+music = library.make_sixteenths(
+    [4, 6, 3, 7],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # CB2
 
 voice = score["Contrabass.2.Music"]
 
-commands(
-    ("cb2", 1),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("cb2", 1)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 2),
-    library.make_sixteenths(
-        [-4, 3, -1],
-    ),
+# commands(
+#    ("cb2", 2)
+music = library.make_sixteenths(
+    [-4, 3, -1],
+    function=commands.get(2),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 3),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("cb2", 3)
+music = baca.make_mmrests_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("cb2", 4),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("cb2", 4)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 5),
-    library.make_sixteenths(
-        [6, 3, 7, 4],
-    ),
+# commands(
+#    ("cb2", 5)
+music = library.make_sixteenths(
+    [6, 3, 7, 4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
 # anchor notes
 

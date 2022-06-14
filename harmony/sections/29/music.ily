@@ -946,11 +946,6 @@ number.29.Percussion.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-    % BEFORE:
-    % COMMANDS:
-      %! NOT_YET_PITCHED_COLORING
-      %! baca._color_not_yet_pitched()
-    \baca-not-yet-pitched-coloring
     % OPENING:
     % COMMANDS:
       %! INVISIBLE_MUSIC_COMMAND
@@ -960,7 +955,7 @@ number.29.Percussion.2.Music = {
       %! harmony.make_sixteenths()
     \abjad-invisible-music-coloring
       %! harmony.make_sixteenths()
-    b'16
+    c'16
     % AFTER:
     % ARTICULATIONS:
       %! baca.IndicatorCommand._call()

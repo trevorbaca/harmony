@@ -9522,7 +9522,6 @@ number.4.Contrabass.2.Music = {
           %! baca._set_status_tag()
           %! baca.hairpin()
         \>
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % CLOSING:

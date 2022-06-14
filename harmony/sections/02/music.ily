@@ -10404,7 +10404,6 @@ number.2.Cello.1.Music = {
           %! baca._set_status_tag()
           %! baca.hairpin()
         \>
-          %! baca.IndicatorCommand._call()
           %! baca.repeat_tie()
         \repeatTie
         % ABSOLUTE_BEFORE:

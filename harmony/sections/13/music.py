@@ -14,7 +14,7 @@ stage_markup = (
     ("[<L.4]", 5, "#darkgreen"),
 )
 
-score = library.make_empty_score()
+score = music = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
 commands = baca.CommandAccumulator(
@@ -86,380 +86,417 @@ baca.markup_function(
 
 voice = score["BassFlute.Music"]
 
-commands(
-    ("bfl", 1),
-    library.make_sixteenths(
-        [2, 2, 4, "-"],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
+# commands(
+#    ("bfl", 1)
+music = library.make_sixteenths(
+    [2, 2, 4, "-"],
+    written_quarters=True,
+    invisible_pairs=True,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("bfl", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("bfl", 3),
-    library.make_sixteenths(
-        ["-", 2, 2],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
+# commands(
+#    ("bfl", 3)
+music = library.make_sixteenths(
+    ["-", 2, 2],
+    written_quarters=True,
+    invisible_pairs=True,
+    function=commands.get(3),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 4),
-    library.make_appoggiato_rhythm(
-        counts=[9],
-        incise=True,
-    ),
+# commands(
+#    ("bfl", 4)
+music = library.make_appoggiato_rhythm(
+    counts=[9],
+    incise=True,
+    voice_name=voice.name,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 5),
-    library.make_sixteenths(
-        [4, 8],
-    ),
+# commands(
+#    ("bfl", 5)
+music = library.make_sixteenths(
+    [4, 8],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("bfl", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("bfl", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # PERC1
 
 voice = score["Percussion.1.Music"]
 
-commands(
-    ("perc1", 1),
-    library.make_appoggiato_rhythm(
-        divisions=[6, 14],
-        counts=[5, 4],
-        rest_after=True,
-    ),
+# commands(
+#    ("perc1", 1)
+music = library.make_appoggiato_rhythm(
+    divisions=[6, 14],
+    counts=[5, 4],
+    rest_after=True,
+    voice_name=voice.name,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("perc1", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("perc1", 3),
-    library.make_appoggiato_rhythm(
-        divisions=[20, 8],
-        counts=[0, 3],
-        rest_after=True,
-    ),
+# commands(
+#    ("perc1", 3)
+music = library.make_appoggiato_rhythm(
+    divisions=[20, 8],
+    counts=[0, 3],
+    rest_after=True,
+    voice_name=voice.name,
+    function=commands.get(3),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 4),
-    baca.make_notes(),
-)
+# commands(
+#    ("perc1", 4)
+music = baca.make_notes_function(commands.get(4))
+voice.extend(music)
 
-commands(
-    ("perc1", 5),
-    library.make_sixteenths(
-        [3, 1, "-"],
-        written_quarters=True,
-        invisible_pairs=True,
-    ),
+# commands(
+#    ("perc1", 5)
+music = library.make_sixteenths(
+    [3, 1, "-"],
+    written_quarters=True,
+    invisible_pairs=True,
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("perc1", 6),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("perc1", 6)
+music = baca.make_mmrests_function(commands.get(6))
+voice.extend(music)
 
 # PERC2
 
 voice = score["Percussion.2.Music"]
 
-commands(
-    ("perc2", 1),
-    library.make_appoggiato_rhythm(
-        divisions=[6, 14],
-        counts=[4, 5],
-        rest_after=True,
-    ),
+# commands(
+#    ("perc2", 1)
+music = library.make_appoggiato_rhythm(
+    divisions=[6, 14],
+    counts=[4, 5],
+    rest_after=True,
+    voice_name=voice.name,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("perc2", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("perc2", 3),
-    library.make_appoggiato_rhythm(
-        divisions=[20, 8],
-        counts=[0, 4],
-        rest_after=True,
-    ),
+# commands(
+#    ("perc2", 3)
+music = library.make_appoggiato_rhythm(
+    divisions=[20, 8],
+    counts=[0, 4],
+    rest_after=True,
+    voice_name=voice.name,
+    function=commands.get(3),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 4),
-    library.make_sixteenths(
-        [20, "-", 1, -1],
-    ),
+# commands(
+#    ("perc2", 4)
+music = library.make_sixteenths(
+    [20, "-", 1, -1],
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 5),
-    library.make_sixteenths(
-        [2, -2],
-    ),
+# commands(
+#    ("perc2", 5)
+music = library.make_sixteenths(
+    [2, -2],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("perc2", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("perc2", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # HP
 
 voice = score["Harp.Music"]
 
-commands(
-    ("hp", 1),
-    library.make_sixteenths(
-        [-4, 4, 8, -4],
-    ),
+# commands(
+#    ("hp", 1)
+music = library.make_sixteenths(
+    [-4, 4, 8, -4],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("hp", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("hp", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("hp", (3, 4)),
-    library.make_sixteenths(
-        [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
-    ),
+# commands(
+#    ("hp", (3, 4))
+music = library.make_sixteenths(
+    [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
+    function=commands.get(3, 4),
 )
+voice.extend(music)
 
-commands(
-    ("hp", 5),
-    library.make_sixteenths(
-        [2, -2],
-    ),
+# commands(
+#    ("hp", 5)
+music = library.make_sixteenths(
+    [2, -2],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("hp", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("hp", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # VA
 
-commands(
-    ("va", 1),
-    library.make_appoggiato_rhythm(
-        divisions=[4, 12, 4],
-        counts=[0, 7, 0],
-        rest_from=1,
-        suffix_talea=[-1],
-        suffix_counts=[1, 0, 0],
-    ),
-)
+voice = score["Viola.Music"]
 
-commands(
-    ("va", 2),
-    baca.make_mmrests(),
+# commands(
+#    ("va", 1)
+music = library.make_appoggiato_rhythm(
+    divisions=[4, 12, 4],
+    counts=[0, 7, 0],
+    rest_from=1,
+    suffix_talea=[-1],
+    suffix_counts=[1, 0, 0],
+    voice_name=voice.name,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("va", 3),
-    baca.make_notes(),
-)
+# commands(
+#    ("va", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("va", (4, 5)),
-    baca.make_repeat_tied_notes(),
-)
+# commands(
+#    ("va", 3)
+music = baca.make_notes_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("va", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("va", (4, 5))
+music = baca.make_repeat_tied_notes_function(commands.get(4, 5))
+voice.extend(music)
+
+# commands(
+#    ("va", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # VC1
 
 voice = score["Cello.1.Music"]
 
-commands(
-    ("vc1", 1),
-    library.make_appoggiato_rhythm(
-        divisions=[4, 12, 4],
-        counts=[0, 6, 0],
-        rest_from=1,
-        suffix_talea=[-1],
-        suffix_counts=[1, 0, 0],
-    ),
+# commands(
+#    ("vc1", 1)
+music = library.make_appoggiato_rhythm(
+    divisions=[4, 12, 4],
+    counts=[0, 6, 0],
+    rest_from=1,
+    suffix_talea=[-1],
+    suffix_counts=[1, 0, 0],
+    voice_name=voice.name,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("vc1", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("vc1", 3),
-    baca.make_notes(),
-)
+# commands(
+#    ("vc1", 3)
+music = baca.make_notes_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("vc1", 4),
-    library.make_sixteenths(
-        ["+", 2],
-        unbeam=True,
-    ),
+# commands(
+#    ("vc1", 4)
+music = library.make_sixteenths(
+    ["+", 2],
+    unbeam=True,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 5),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("vc1", 5)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("vc1", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("vc1", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # VC2
 
 voice = score["Cello.2.Music"]
 
-commands(
-    ("vc2", 1),
-    library.make_sixteenths(
-        [7, -1, 12],
-    ),
+# commands(
+#    ("vc2", 1)
+music = library.make_sixteenths(
+    [7, -1, 12],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("vc2", 2),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("vc2", 2)
+music = baca.make_mmrests_function(commands.get(2), head=voice.name)
+voice.extend(music)
 
-commands(
-    ("vc2", 3),
-    baca.make_notes(),
-)
+# commands(
+#    ("vc2", 3)
+music = baca.make_notes_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("vc2", 4),
-    library.make_sixteenths(
-        ["+", 2],
-        unbeam=True,
-    ),
+# commands(
+#    ("vc2", 4)
+music = library.make_sixteenths(
+    ["+", 2],
+    unbeam=True,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("vc2", 5),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("vc2", 5)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("vc2", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("vc2", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # CB1
 
 voice = score["Contrabass.1.Music"]
 
-commands(
-    ("cb1", 1),
-    library.make_appoggiato_rhythm(
-        divisions=[4, 12, 4],
-        counts=[0, 6, 0],
-        rest_from=1,
-        suffix_talea=[-1],
-        suffix_counts=[1, 0, 0],
-    ),
+# commands(
+#    ("cb1", 1)
+music = library.make_appoggiato_rhythm(
+    divisions=[4, 12, 4],
+    counts=[0, 6, 0],
+    rest_from=1,
+    suffix_talea=[-1],
+    suffix_counts=[1, 0, 0],
+    voice_name=voice.name,
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 2),
-    baca.make_mmrests(),
-)
+# commands(
+#    ("cb1", 2)
+music = baca.make_mmrests_function(commands.get(2))
+voice.extend(music)
 
-commands(
-    ("cb1", 3),
-    baca.make_notes(),
-)
+# commands(
+#    ("cb1", 3)
+music = baca.make_notes_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("cb1", 4),
-    library.make_sixteenths(
-        ["+", 2],
-        unbeam=True,
-    ),
+# commands(
+#    ("cb1", 4)
+music = library.make_sixteenths(
+    ["+", 2],
+    unbeam=True,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 5),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("cb1", 5)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("cb1", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("cb1", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # CB2
 
 voice = score["Contrabass.2.Music"]
 
-commands(
-    ("cb2", 1),
-    library.make_sixteenths(
-        [7, -1, 12],
-    ),
+# commands(
+#    ("cb2", 1)
+music = library.make_sixteenths(
+    [7, -1, 12],
+    function=commands.get(1),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 2),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("cb2", 2)
+music = baca.make_mmrests_function(commands.get(2), head=voice.name)
+voice.extend(music)
 
-commands(
-    ("cb2", 3),
-    baca.make_notes(),
-)
+# commands(
+#    ("cb2", 3)
+music = baca.make_notes_function(commands.get(3))
+voice.extend(music)
 
-commands(
-    ("cb2", 4),
-    library.make_sixteenths(
-        ["+", 2],
-        unbeam=True,
-    ),
+# commands(
+#    ("cb2", 4)
+music = library.make_sixteenths(
+    ["+", 2],
+    unbeam=True,
+    function=commands.get(4),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 5),
-    library.make_sixteenths(
-        [4],
-    ),
+# commands(
+#    ("cb2", 5)
+music = library.make_sixteenths(
+    [4],
+    function=commands.get(5),
 )
+voice.extend(music)
 
-commands(
-    ("cb2", 6),
-    baca.make_mmrests(head=True),
-)
+# commands(
+#    ("cb2", 6)
+music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+voice.extend(music)
 
 # reapply
 
@@ -474,7 +511,7 @@ commands(
 
 commands(
     ("bfl", 1),
-    # TODO: promote into library.make_sixteenths():
+    # TODO: promote into music = library.make_sixteenths():
     baca.repeat_tie(
         lambda _: baca.select.pleaf(_, -1),
     ),

@@ -138,6 +138,7 @@ def make_appoggiato_rhythm(
     written_quarters=None,
     invisible=None,
     after_graces=None,
+    voice_name="",
     function=None,
 ):
     preprocessor = None
@@ -189,7 +190,10 @@ def make_appoggiato_rhythm(
         commands.append(force_rest_)
     if counts:
         on_beat_ = rmakers.on_beat_grace_container(
-            counts, lambda _: baca.select.plts(_), leaf_duration=(1, 20)
+            counts,
+            lambda _: baca.select.plts(_),
+            leaf_duration=(1, 20),
+            voice_name=voice_name,
         )
         commands.append(on_beat_)
     if rest_after is True:
