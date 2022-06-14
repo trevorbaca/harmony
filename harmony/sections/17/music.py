@@ -77,6 +77,8 @@ baca.markup_function(
 
 # BFL
 
+voice = score["BassFlute.Music"]
+
 commands(
     ("bfl", 1),
     library.make_sixteenths(
@@ -119,6 +121,8 @@ commands(
 
 # PERC1
 
+voice = score["Percussion.1.Music"]
+
 commands(
     ("perc1", 1),
     baca.make_notes(),
@@ -159,6 +163,8 @@ commands(
 
 # PERC2
 
+voice = score["Percussion.2.Music"]
+
 commands(
     ("perc2", 1),
     baca.make_notes(),
@@ -191,6 +197,8 @@ commands(
 )
 
 # HP
+
+voice = score["Harp.Music"]
 
 commands(
     ("hp", 1),
@@ -254,6 +262,8 @@ commands(
 
 # VC1
 
+voice = score["Cello.1.Music"]
+
 commands(
     ("vc1", 1),
     library.make_tessera_2(
@@ -296,6 +306,8 @@ commands(
 )
 
 # VC2
+
+voice = score["Cello.2.Music"]
 
 commands(
     ("vc2", 1),
@@ -340,6 +352,8 @@ commands(
 
 # CB1
 
+voice = score["Contrabass.1.Music"]
+
 commands(
     ("cb1", 1),
     library.make_tessera_2(
@@ -382,6 +396,8 @@ commands(
 )
 
 # CB2
+
+voice = score["Contrabass.2.Music"]
 
 commands(
     ("cb2", 1),
