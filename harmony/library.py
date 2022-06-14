@@ -106,28 +106,14 @@ def instruments():
                 abjad.Percussion(clefs=("bass", "percussion", "treble")),
             ),
             (
-                "PercussionI",
-                abjad.Percussion(clefs=("bass", "percussion", "treble")),
-            ),
-            (
-                "PercussionII",
+                "Percussion",
                 abjad.Percussion(clefs=("bass", "percussion", "treble")),
             ),
             ("Harp", abjad.Harp()),
             ("Viola", abjad.Viola(pitch_range=abjad.PitchRange("[C3, +inf]"))),
             ("Cello", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
-            ("CelloI", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
-            ("CelloII", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
             (
                 "Contrabass",
-                abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
-            ),
-            (
-                "ContrabassI",
-                abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
-            ),
-            (
-                "ContrabassII",
                 abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
             ),
         ]
@@ -371,7 +357,7 @@ def make_empty_score():
     wind_section_staff_group = abjad.StaffGroup(
         [bass_flute_music_staff],
         lilypond_type="WindSectionStaffGroup",
-        name="Wind_Section.Staff_Group",
+        name="WindSectionStaffGroup",
         tag=tag,
     )
     # PERCUSSION SECTION STAFF GROUP
@@ -382,7 +368,7 @@ def make_empty_score():
             harp_music_staff,
         ],
         lilypond_type="PercussionSectionStaffGroup",
-        name="Percussion_Section.Staff_Group",
+        name="PercussionSectionStaffGroup",
         tag=tag,
     )
     # STRING SECTION STAFF GROUP
@@ -395,7 +381,7 @@ def make_empty_score():
             contrabass_2_music_staff,
         ],
         lilypond_type="StringSectionStaffGroup",
-        name="String_Section.Staff_Group",
+        name="StringSectionStaffGroup",
         tag=tag,
     )
     # MUSIC CONTEXT
@@ -1180,14 +1166,14 @@ def metronome_marks():
 def part_manifest():
     return baca.PartManifest(
         baca.Part(section="BassFlute", section_abbreviation="BFL"),
-        baca.Part(section="PercussionI", section_abbreviation="PERC1"),
-        baca.Part(section="PercussionII", section_abbreviation="PERC2"),
+        baca.Part(section="Percussion.1", section_abbreviation="PERC1"),
+        baca.Part(section="Percussion.2", section_abbreviation="PERC2"),
         baca.Part(section="Harp", section_abbreviation="HP"),
         baca.Part(section="Viola", section_abbreviation="VA"),
-        baca.Part(section="CelloI", section_abbreviation="VC1"),
-        baca.Part(section="CelloII", section_abbreviation="VC2"),
-        baca.Part(section="ContrabassI", section_abbreviation="CB1"),
-        baca.Part(section="ContrabassII", section_abbreviation="CB2"),
+        baca.Part(section="Cello.1", section_abbreviation="VC1"),
+        baca.Part(section="Cello.2", section_abbreviation="VC2"),
+        baca.Part(section="Contrabass.1", section_abbreviation="CB1"),
+        baca.Part(section="Contrabass.2", section_abbreviation="CB2"),
     )
 
 

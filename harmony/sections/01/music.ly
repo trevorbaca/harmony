@@ -75,7 +75,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context WindSectionStaffGroup = "Wind_Section.Staff_Group"
+                \context WindSectionStaffGroup = "WindSectionStaffGroup"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -102,7 +102,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context PercussionSectionStaffGroup = "Percussion_Section.Staff_Group"
+                \context PercussionSectionStaffGroup = "PercussionSectionStaffGroup"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:
@@ -155,7 +155,7 @@
 
                 % OPEN_BRACKETS:
                   %! harmony.make_empty_score()
-                \context StringSectionStaffGroup = "String_Section.Staff_Group"
+                \context StringSectionStaffGroup = "StringSectionStaffGroup"
                   %! harmony.make_empty_score()
                 <<
                     % ABSOLUTE_BEFORE:

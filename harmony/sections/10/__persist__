@@ -4,11 +4,11 @@
         "GlobalContext",
         "Skips",
         "MusicContext",
-        "Wind_Section.Staff_Group",
+        "WindSectionStaffGroup",
         "BassFlute.Staff",
         "Rests",
         "BassFlute.Music",
-        "Percussion_Section.Staff_Group",
+        "PercussionSectionStaffGroup",
         "Percussion.1.Staff",
         "Percussion.1.Music",
         "Percussion.1.Rests",
@@ -17,7 +17,7 @@
         "Harp.Staff",
         "Harp.Music",
         "Harp.Rests",
-        "String_Section.Staff_Group",
+        "StringSectionStaffGroup",
         "Viola.Staff",
         "Viola.Music",
         "Viola.Rests",
@@ -439,7 +439,7 @@
                 value="Perc. II",
             ),
         ],
-        "Percussion_Section.Staff_Group": [
+        "PercussionSectionStaffGroup": [
             baca.Memento(
                 context="Harp.Music",
                 edition=None,
