@@ -948,7 +948,7 @@ number.2.Rests = {
 
 
   %! baca.path.extern()
-number.2.BassFlute.Music.count.1 = {
+number.2.BassFlute.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1020,7 +1020,7 @@ number.2.BassFlute.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.BassFlute.Music.count.2 = {
+number.2.BassFlute.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2087,7 +2087,7 @@ number.2.BassFlute.Music = {
         % OPEN_BRACKETS:
         \context Voice = "BassFlute.Music"
           %! baca.path.extern()
-        { \number.2.BassFlute.Music.count.1 }
+        { \number.2.BassFlute.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -2181,7 +2181,7 @@ number.2.BassFlute.Music = {
         % OPEN_BRACKETS:
         \context Voice = "BassFlute.Music"
           %! baca.path.extern()
-        { \number.2.BassFlute.Music.count.2 }
+        { \number.2.BassFlute.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -2912,7 +2912,7 @@ number.2.BassFlute.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.1 = {
+number.2.Percussion.1.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2927,42 +2927,7 @@ number.2.Percussion.1.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.2 = {
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! harmony.make_appoggiato_rhythm()
-    r1
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! harmony.make_appoggiato_rhythm()
-    r4
-    % CLOSING:
-    % COMMANDS:
-
-% CLOSE_BRACKETS:
-  %! baca.path.extern()
-}
-
-
-  %! baca.path.extern()
-number.2.Percussion.1.Music.count.3 = {
-    % ABSOLUTE_BEFORE:
-    % COMMANDS:
-
-      %! harmony.make_appoggiato_rhythm()
-    r1
-    % CLOSING:
-    % COMMANDS:
-
-% CLOSE_BRACKETS:
-  %! baca.path.extern()
-}
-
-
-  %! baca.path.extern()
-number.2.Percussion.1.Music.count.4 = {
+number.2.Percussion.1.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2982,7 +2947,42 @@ number.2.Percussion.1.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.5 = {
+number.2.Percussion.1.Music.item.3 = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
+
+      %! harmony.make_appoggiato_rhythm()
+    r1
+    % CLOSING:
+    % COMMANDS:
+
+% CLOSE_BRACKETS:
+  %! baca.path.extern()
+}
+
+
+  %! baca.path.extern()
+number.2.Percussion.1.Music.item.4 = {
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
+
+      %! harmony.make_appoggiato_rhythm()
+    r1
+    % ABSOLUTE_BEFORE:
+    % COMMANDS:
+
+      %! harmony.make_appoggiato_rhythm()
+    r4
+    % CLOSING:
+    % COMMANDS:
+
+% CLOSE_BRACKETS:
+  %! baca.path.extern()
+}
+
+
+  %! baca.path.extern()
+number.2.Percussion.1.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3031,7 +3031,7 @@ number.2.Percussion.1.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.6 = {
+number.2.Percussion.1.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3070,7 +3070,7 @@ number.2.Percussion.1.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.7 = {
+number.2.Percussion.1.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3104,7 +3104,7 @@ number.2.Percussion.1.Music.count.7 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.8 = {
+number.2.Percussion.1.Music.item.8 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3138,7 +3138,7 @@ number.2.Percussion.1.Music.count.8 = {
 
 
   %! baca.path.extern()
-number.2.Percussion.1.Music.count.9 = {
+number.2.Percussion.1.Music.item.9 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -3332,7 +3332,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.1 }
+        { \number.2.Percussion.1.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -3416,7 +3416,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.2 }
+        { \number.2.Percussion.1.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -3500,7 +3500,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.3 }
+        { \number.2.Percussion.1.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -3584,7 +3584,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.4 }
+        { \number.2.Percussion.1.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -3668,7 +3668,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.5 }
+        { \number.2.Percussion.1.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -4236,7 +4236,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.6 }
+        { \number.2.Percussion.1.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -4347,7 +4347,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.7 }
+        { \number.2.Percussion.1.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
@@ -4458,7 +4458,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.8 }
+        { \number.2.Percussion.1.Music.item.8 }
         % CLOSING:
         % COMMANDS:
 
@@ -4569,7 +4569,7 @@ number.2.Percussion.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Percussion.1.Music"
           %! baca.path.extern()
-        { \number.2.Percussion.1.Music.count.9 }
+        { \number.2.Percussion.1.Music.item.9 }
         % CLOSING:
         % COMMANDS:
 
@@ -7137,7 +7137,7 @@ number.2.Harp.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.1 = {
+number.2.Viola.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7204,7 +7204,7 @@ number.2.Viola.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.2 = {
+number.2.Viola.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7237,7 +7237,7 @@ number.2.Viola.Music.count.2 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.3 = {
+number.2.Viola.Music.item.3 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7283,7 +7283,7 @@ number.2.Viola.Music.count.3 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.4 = {
+number.2.Viola.Music.item.4 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7329,7 +7329,7 @@ number.2.Viola.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.5 = {
+number.2.Viola.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7362,7 +7362,7 @@ number.2.Viola.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.6 = {
+number.2.Viola.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7399,7 +7399,7 @@ number.2.Viola.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.7 = {
+number.2.Viola.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7494,7 +7494,7 @@ number.2.Viola.Music.count.7 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.8 = {
+number.2.Viola.Music.item.8 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7527,7 +7527,7 @@ number.2.Viola.Music.count.8 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.9 = {
+number.2.Viola.Music.item.9 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7560,7 +7560,7 @@ number.2.Viola.Music.count.9 = {
 
 
   %! baca.path.extern()
-number.2.Viola.Music.count.10 = {
+number.2.Viola.Music.item.10 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -7777,7 +7777,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.1 }
+        { \number.2.Viola.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -7866,7 +7866,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.2 }
+        { \number.2.Viola.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -7962,7 +7962,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.3 }
+        { \number.2.Viola.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -8067,7 +8067,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.4 }
+        { \number.2.Viola.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -8181,7 +8181,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.5 }
+        { \number.2.Viola.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -8306,7 +8306,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.6 }
+        { \number.2.Viola.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -8791,7 +8791,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.7 }
+        { \number.2.Viola.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
@@ -8916,7 +8916,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.8 }
+        { \number.2.Viola.Music.item.8 }
         % CLOSING:
         % COMMANDS:
 
@@ -9041,7 +9041,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.9 }
+        { \number.2.Viola.Music.item.9 }
         % CLOSING:
         % COMMANDS:
 
@@ -9166,7 +9166,7 @@ number.2.Viola.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Viola.Music"
           %! baca.path.extern()
-        { \number.2.Viola.Music.count.10 }
+        { \number.2.Viola.Music.item.10 }
         % CLOSING:
         % COMMANDS:
 
@@ -9305,7 +9305,7 @@ number.2.Viola.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.1 = {
+number.2.Cello.1.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9379,7 +9379,7 @@ number.2.Cello.1.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.2 = {
+number.2.Cello.1.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9425,7 +9425,7 @@ number.2.Cello.1.Music.count.2 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.3 = {
+number.2.Cello.1.Music.item.3 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9471,7 +9471,7 @@ number.2.Cello.1.Music.count.3 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.4 = {
+number.2.Cello.1.Music.item.4 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9508,7 +9508,7 @@ number.2.Cello.1.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.5 = {
+number.2.Cello.1.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9603,7 +9603,7 @@ number.2.Cello.1.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.6 = {
+number.2.Cello.1.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9636,7 +9636,7 @@ number.2.Cello.1.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.7 = {
+number.2.Cello.1.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9669,7 +9669,7 @@ number.2.Cello.1.Music.count.7 = {
 
 
   %! baca.path.extern()
-number.2.Cello.1.Music.count.8 = {
+number.2.Cello.1.Music.item.8 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -9904,7 +9904,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.1 }
+        { \number.2.Cello.1.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -10000,7 +10000,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.2 }
+        { \number.2.Cello.1.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -10105,7 +10105,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.3 }
+        { \number.2.Cello.1.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -10219,7 +10219,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.4 }
+        { \number.2.Cello.1.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -10868,7 +10868,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.5 }
+        { \number.2.Cello.1.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -10993,7 +10993,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.6 }
+        { \number.2.Cello.1.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -11118,7 +11118,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.7 }
+        { \number.2.Cello.1.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
@@ -11243,7 +11243,7 @@ number.2.Cello.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.1.Music"
           %! baca.path.extern()
-        { \number.2.Cello.1.Music.count.8 }
+        { \number.2.Cello.1.Music.item.8 }
         % CLOSING:
         % COMMANDS:
 
@@ -11378,7 +11378,7 @@ number.2.Cello.1.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.1 = {
+number.2.Cello.2.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11452,7 +11452,7 @@ number.2.Cello.2.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.2 = {
+number.2.Cello.2.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11485,7 +11485,7 @@ number.2.Cello.2.Music.count.2 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.3 = {
+number.2.Cello.2.Music.item.3 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11522,7 +11522,7 @@ number.2.Cello.2.Music.count.3 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.4 = {
+number.2.Cello.2.Music.item.4 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11617,7 +11617,7 @@ number.2.Cello.2.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.5 = {
+number.2.Cello.2.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11650,7 +11650,7 @@ number.2.Cello.2.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.6 = {
+number.2.Cello.2.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -11683,7 +11683,7 @@ number.2.Cello.2.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Cello.2.Music.count.7 = {
+number.2.Cello.2.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -12133,7 +12133,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.1 }
+        { \number.2.Cello.2.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -12238,7 +12238,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.2 }
+        { \number.2.Cello.2.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -12354,7 +12354,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.3 }
+        { \number.2.Cello.2.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -12865,7 +12865,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.4 }
+        { \number.2.Cello.2.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -12990,7 +12990,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.5 }
+        { \number.2.Cello.2.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -13115,7 +13115,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.6 }
+        { \number.2.Cello.2.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -13240,7 +13240,7 @@ number.2.Cello.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Cello.2.Music"
           %! baca.path.extern()
-        { \number.2.Cello.2.Music.count.7 }
+        { \number.2.Cello.2.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
@@ -13375,7 +13375,7 @@ number.2.Cello.2.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.1 = {
+number.2.Contrabass.1.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13442,7 +13442,7 @@ number.2.Contrabass.1.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.2 = {
+number.2.Contrabass.1.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13488,7 +13488,7 @@ number.2.Contrabass.1.Music.count.2 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.3 = {
+number.2.Contrabass.1.Music.item.3 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13534,7 +13534,7 @@ number.2.Contrabass.1.Music.count.3 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.4 = {
+number.2.Contrabass.1.Music.item.4 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13580,7 +13580,7 @@ number.2.Contrabass.1.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.5 = {
+number.2.Contrabass.1.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13617,7 +13617,7 @@ number.2.Contrabass.1.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.6 = {
+number.2.Contrabass.1.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13712,7 +13712,7 @@ number.2.Contrabass.1.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.7 = {
+number.2.Contrabass.1.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13745,7 +13745,7 @@ number.2.Contrabass.1.Music.count.7 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.8 = {
+number.2.Contrabass.1.Music.item.8 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -13778,7 +13778,7 @@ number.2.Contrabass.1.Music.count.8 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.1.Music.count.9 = {
+number.2.Contrabass.1.Music.item.9 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -14160,7 +14160,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.1 }
+        { \number.2.Contrabass.1.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -14274,7 +14274,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.2 }
+        { \number.2.Contrabass.1.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -14397,7 +14397,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.3 }
+        { \number.2.Contrabass.1.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -14502,7 +14502,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.4 }
+        { \number.2.Contrabass.1.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -14616,7 +14616,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.5 }
+        { \number.2.Contrabass.1.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -15199,7 +15199,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.6 }
+        { \number.2.Contrabass.1.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -15324,7 +15324,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.7 }
+        { \number.2.Contrabass.1.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
@@ -15449,7 +15449,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.8 }
+        { \number.2.Contrabass.1.Music.item.8 }
         % CLOSING:
         % COMMANDS:
 
@@ -15574,7 +15574,7 @@ number.2.Contrabass.1.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.1.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.1.Music.count.9 }
+        { \number.2.Contrabass.1.Music.item.9 }
         % CLOSING:
         % COMMANDS:
 
@@ -15709,7 +15709,7 @@ number.2.Contrabass.1.Staff = <<
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.1 = {
+number.2.Contrabass.2.Music.item.1 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15783,7 +15783,7 @@ number.2.Contrabass.2.Music.count.1 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.2 = {
+number.2.Contrabass.2.Music.item.2 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15816,7 +15816,7 @@ number.2.Contrabass.2.Music.count.2 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.3 = {
+number.2.Contrabass.2.Music.item.3 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15853,7 +15853,7 @@ number.2.Contrabass.2.Music.count.3 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.4 = {
+number.2.Contrabass.2.Music.item.4 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15948,7 +15948,7 @@ number.2.Contrabass.2.Music.count.4 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.5 = {
+number.2.Contrabass.2.Music.item.5 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -15981,7 +15981,7 @@ number.2.Contrabass.2.Music.count.5 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.6 = {
+number.2.Contrabass.2.Music.item.6 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -16014,7 +16014,7 @@ number.2.Contrabass.2.Music.count.6 = {
 
 
   %! baca.path.extern()
-number.2.Contrabass.2.Music.count.7 = {
+number.2.Contrabass.2.Music.item.7 = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -16482,7 +16482,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.1 }
+        { \number.2.Contrabass.2.Music.item.1 }
         % CLOSING:
         % COMMANDS:
 
@@ -16605,7 +16605,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.2 }
+        { \number.2.Contrabass.2.Music.item.2 }
         % CLOSING:
         % COMMANDS:
 
@@ -16721,7 +16721,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.3 }
+        { \number.2.Contrabass.2.Music.item.3 }
         % CLOSING:
         % COMMANDS:
 
@@ -17239,7 +17239,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.4 }
+        { \number.2.Contrabass.2.Music.item.4 }
         % CLOSING:
         % COMMANDS:
 
@@ -17364,7 +17364,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.5 }
+        { \number.2.Contrabass.2.Music.item.5 }
         % CLOSING:
         % COMMANDS:
 
@@ -17489,7 +17489,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.6 }
+        { \number.2.Contrabass.2.Music.item.6 }
         % CLOSING:
         % COMMANDS:
 
@@ -17614,7 +17614,7 @@ number.2.Contrabass.2.Music = {
         % OPEN_BRACKETS:
         \context Voice = "Contrabass.2.Music"
           %! baca.path.extern()
-        { \number.2.Contrabass.2.Music.count.7 }
+        { \number.2.Contrabass.2.Music.item.7 }
         % CLOSING:
         % COMMANDS:
 
