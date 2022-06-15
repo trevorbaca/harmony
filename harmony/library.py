@@ -1218,15 +1218,15 @@ def metronome_marks():
 
 def part_manifest():
     return baca.PartManifest(
-        baca.Part(section="BassFlute", section_abbreviation="BFL"),
-        baca.Part(section="Percussion.1", section_abbreviation="PERC1"),
-        baca.Part(section="Percussion.2", section_abbreviation="PERC2"),
-        baca.Part(section="Harp", section_abbreviation="HP"),
-        baca.Part(section="Viola", section_abbreviation="VA"),
-        baca.Part(section="Cello.1", section_abbreviation="VC1"),
-        baca.Part(section="Cello.2", section_abbreviation="VC2"),
-        baca.Part(section="Contrabass.1", section_abbreviation="CB1"),
-        baca.Part(section="Contrabass.2", section_abbreviation="CB2"),
+        baca.Part(section="BassFlute"),
+        baca.Part(section="Percussion.1"),
+        baca.Part(section="Percussion.2"),
+        baca.Part(section="Harp"),
+        baca.Part(section="Viola"),
+        baca.Part(section="Cello.1"),
+        baca.Part(section="Cello.2"),
+        baca.Part(section="Contrabass.1"),
+        baca.Part(section="Contrabass.2"),
     )
 
 
