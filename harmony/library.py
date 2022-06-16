@@ -1217,7 +1217,7 @@ def metronome_marks():
 
 
 def part_manifest():
-    return baca.PartManifest(
+    return (
         baca.Part("BassFlute"),
         baca.Part("Percussion.1"),
         baca.Part("Percussion.2"),
