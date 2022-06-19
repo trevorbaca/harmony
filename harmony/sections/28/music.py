@@ -79,7 +79,7 @@ baca.markup_function(
 
 voice = score["BassFlute.Music"]
 
-music = baca.make_mmrests_function(commands.get(1, 4))
+music = baca.make_mmrests(commands.get(1, 4))
 voice.extend(music)
 
 music = library.make_warble_rhythm(
@@ -90,7 +90,7 @@ music = library.make_warble_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6))
+music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -120,7 +120,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6))
+music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -147,7 +147,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6))
+music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -166,7 +166,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(5, 6))
+music = baca.make_mmrests(commands.get(5, 6))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -185,7 +185,7 @@ voice.extend(music)
 music = library.make_tessera_4(4, function=commands.get(5))
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6))
+music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(7, 10))
@@ -204,7 +204,7 @@ voice.extend(music)
 music = library.make_tessera_4(3, function=commands.get(5))
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -228,7 +228,7 @@ voice.extend(music)
 music = library.make_tessera_4(2, function=commands.get(5))
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -252,7 +252,7 @@ voice.extend(music)
 music = library.make_tessera_4(1, function=commands.get(5))
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -280,7 +280,7 @@ voice.extend(music)
 music = library.make_tessera_4(0, function=commands.get(5))
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(

@@ -1104,7 +1104,7 @@ number.9.Percussion.2.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % ARTICULATIONS:
@@ -1573,7 +1573,7 @@ number.9.Harp.Music = {
 
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 2]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:

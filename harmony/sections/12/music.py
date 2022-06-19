@@ -123,7 +123,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(4), head=voice.name)
+music = baca.make_mmrests(commands.get(4), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -136,7 +136,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(6), head=voice.name)
+music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -149,7 +149,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(8, 9), head=voice.name)
+music = baca.make_mmrests(commands.get(8, 9), head=voice.name)
 voice.extend(music)
 
 music = library.make_appoggiato_rhythm(
@@ -240,7 +240,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9, 10))
+music = baca.make_mmrests(commands.get(9, 10))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -257,7 +257,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(14))
+music = baca.make_mmrests(commands.get(14))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -326,7 +326,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9))
+music = baca.make_mmrests(commands.get(9))
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10, 12))
@@ -393,7 +393,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9, 10))
+music = baca.make_mmrests(commands.get(9, 10))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -433,7 +433,7 @@ music = library.make_rimbalzandi_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9), head=voice.name)
+music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10))
@@ -478,7 +478,7 @@ music = library.make_rimbalzandi_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9), head=voice.name)
+music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10))
@@ -521,7 +521,7 @@ music = library.make_rimbalzandi_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9), head=voice.name)
+music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10))
@@ -568,7 +568,7 @@ music = library.make_rimbalzandi_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9), head=voice.name)
+music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10))
@@ -610,7 +610,7 @@ music = library.make_rimbalzandi_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(9), head=voice.name)
+music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
 music = baca.make_notes_function(commands.get(10))

@@ -73,7 +73,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # PERC1
@@ -86,7 +86,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3))
+music = baca.make_mmrests(commands.get(2, 3))
 voice.extend(music)
 
 # PERC2
@@ -100,7 +100,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3))
+music = baca.make_mmrests(commands.get(2, 3))
 voice.extend(music)
 
 # HP
@@ -113,7 +113,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3))
+music = baca.make_mmrests(commands.get(2, 3))
 voice.extend(music)
 
 # VA
@@ -127,7 +127,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # VC1
@@ -141,7 +141,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # VC2
@@ -155,7 +155,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # CB1
@@ -169,7 +169,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # CB2
@@ -184,7 +184,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2, 3), head=voice.name)
+music = baca.make_mmrests(commands.get(2, 3), head=voice.name)
 voice.extend(music)
 
 # reapply
