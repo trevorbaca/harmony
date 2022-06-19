@@ -118,7 +118,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12))
+music = baca.make_mmrests(commands.get(12))
 voice.extend(music)
 
 # PERC1
@@ -164,7 +164,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12))
+music = baca.make_mmrests(commands.get(12))
 voice.extend(music)
 
 # PERC2
@@ -220,7 +220,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12))
+music = baca.make_mmrests(commands.get(12))
 voice.extend(music)
 
 # HP
@@ -255,7 +255,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12))
+music = baca.make_mmrests(commands.get(12))
 voice.extend(music)
 
 # VA
@@ -293,7 +293,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12), head=voice.name)
+music = baca.make_mmrests(commands.get(12), head=voice.name)
 voice.extend(music)
 
 # VC1
@@ -333,7 +333,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12), head=voice.name)
+music = baca.make_mmrests(commands.get(12), head=voice.name)
 voice.extend(music)
 
 # VC2
@@ -391,7 +391,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12), head=voice.name)
+music = baca.make_mmrests(commands.get(12), head=voice.name)
 voice.extend(music)
 
 # CB1
@@ -431,7 +431,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12), head=voice.name)
+music = baca.make_mmrests(commands.get(12), head=voice.name)
 voice.extend(music)
 
 # CB2
@@ -489,7 +489,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(12), head=voice.name)
+music = baca.make_mmrests(commands.get(12), head=voice.name)
 voice.extend(music)
 
 # reapply

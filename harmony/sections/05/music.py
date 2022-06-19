@@ -64,7 +64,7 @@ for index, item in (
 
 voice = score["BassFlute.Music"]
 
-music = baca.make_mmrests_function(commands.get(1), head=voice.name)
+music = baca.make_mmrests(commands.get(1), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -119,7 +119,7 @@ music = library.make_phjc_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(4), head=voice.name)
+music = baca.make_mmrests(commands.get(4), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -154,7 +154,7 @@ music = library.make_phjc_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(4), head=voice.name)
+music = baca.make_mmrests(commands.get(4), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -207,7 +207,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests_function(commands.get(2), head=voice.name)
+music = baca.make_mmrests(commands.get(2), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(

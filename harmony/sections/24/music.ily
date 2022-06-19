@@ -1959,7 +1959,7 @@ number.24.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 3/4
     % AFTER:
     % MARKUP:
@@ -5608,7 +5608,7 @@ number.24.Percussion.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 3/4
     % AFTER:
     % MARKUP:
@@ -5703,7 +5703,7 @@ number.24.Percussion.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 4/4
     % AFTER:
     % MARKUP:
@@ -6332,7 +6332,7 @@ number.24.Harp.Music = {
 
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 3/4
     % AFTER:
     % MARKUP:

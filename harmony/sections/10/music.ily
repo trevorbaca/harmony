@@ -1718,7 +1718,7 @@ number.10.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -1730,7 +1730,7 @@ number.10.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -1742,7 +1742,7 @@ number.10.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -1931,7 +1931,7 @@ number.10.BassFlute.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -2834,7 +2834,7 @@ number.10.Percussion.1.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % ARTICULATIONS:
@@ -3155,7 +3155,7 @@ number.10.Percussion.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -3167,7 +3167,7 @@ number.10.Percussion.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -3179,7 +3179,7 @@ number.10.Percussion.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -3414,15 +3414,15 @@ number.10.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     <<
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         \context Voice = "Percussion.1.Music"
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -3433,11 +3433,11 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
+              %! baca.make_mmrests(4)
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
+              %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
               %! baca._style_fermata_measures(1)
             \stopStaff
@@ -3450,7 +3450,7 @@ number.10.Percussion.1.Music = {
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
+              %! baca.make_mmrests(2)
             c'1 * 1/4
             % AFTER:
             % MARKUP:
@@ -3473,15 +3473,15 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         \context Voice = "Percussion.1.Rests"
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -3490,7 +3490,7 @@ number.10.Percussion.1.Music = {
             % [Percussion.1.Rests measure 9]
               %! MULTIMEASURE_REST
               %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
+              %! baca.make_mmrests(6)
             R1 * 1/4
             % AFTER:
             % MARKUP:
@@ -3503,13 +3503,13 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     >>
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3672,15 +3672,15 @@ number.10.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     <<
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         \context Voice = "Percussion.1.Music"
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -3691,18 +3691,18 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
+              %! baca.make_mmrests(4)
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
+              %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
             % GROB_OVERRIDES:
             \once \override Accidental.stencil = ##f
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
+              %! baca.make_mmrests(2)
             c'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
@@ -3734,15 +3734,15 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         \context Voice = "Percussion.1.Rests"
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -3751,7 +3751,7 @@ number.10.Percussion.1.Music = {
             % [Percussion.1.Rests measure 15]
               %! MULTIMEASURE_REST
               %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
+              %! baca.make_mmrests(6)
             R1 * 6/4
             % AFTER:
             % MARKUP:
@@ -3764,13 +3764,13 @@ number.10.Percussion.1.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     >>
     % CLOSING:
     % COMMANDS:
@@ -3989,7 +3989,7 @@ number.10.Percussion.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 8]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -4009,7 +4009,7 @@ number.10.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -4301,7 +4301,7 @@ number.10.Harp.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % ARTICULATIONS:
@@ -4629,7 +4629,7 @@ number.10.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -4802,15 +4802,15 @@ number.10.Harp.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     <<
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         \context Voice = "Harp.Music"
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -4821,18 +4821,18 @@ number.10.Harp.Music = {
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
+              %! baca.make_mmrests(4)
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
+              %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
             % GROB_OVERRIDES:
             \once \override Accidental.stencil = ##f
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
+              %! baca.make_mmrests(2)
             d1 * 6/4
             % AFTER:
             % ARTICULATIONS:
@@ -4864,15 +4864,15 @@ number.10.Harp.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         \context Voice = "Harp.Rests"
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -4881,7 +4881,7 @@ number.10.Harp.Music = {
             % [Harp.Rests measure 13]
               %! MULTIMEASURE_REST
               %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
+              %! baca.make_mmrests(6)
             R1 * 6/4
             % AFTER:
             % MARKUP:
@@ -4894,20 +4894,20 @@ number.10.Harp.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     >>
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 14]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(8)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -4919,7 +4919,7 @@ number.10.Harp.Music = {
 
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 15]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(8)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -5541,15 +5541,15 @@ number.10.Viola.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     <<
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         \context Voice = "Viola.Music"
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -5560,18 +5560,18 @@ number.10.Viola.Music = {
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
+              %! baca.make_mmrests(4)
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
+              %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
             % GROB_OVERRIDES:
             \once \override Accidental.stencil = ##f
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
+              %! baca.make_mmrests(2)
             c'1 * 6/4
             % AFTER:
             % ARTICULATIONS:
@@ -5605,15 +5605,15 @@ number.10.Viola.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         \context Voice = "Viola.Rests"
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -5622,7 +5622,7 @@ number.10.Viola.Music = {
             % [Viola.Rests measure 4]
               %! MULTIMEASURE_REST
               %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
+              %! baca.make_mmrests(6)
             R1 * 6/4
             % AFTER:
             % MARKUP:
@@ -5635,20 +5635,20 @@ number.10.Viola.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     >>
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(8)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -5660,7 +5660,7 @@ number.10.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(8)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -5672,7 +5672,7 @@ number.10.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 7]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(8)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -5802,15 +5802,15 @@ number.10.Viola.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     <<
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         \context Voice = "Viola.Music"
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -5821,11 +5821,11 @@ number.10.Viola.Music = {
             % COMMANDS:
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
-              %! baca._make_multimeasure_rest_container(3)
+              %! baca.make_mmrests(4)
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
-              %! baca._make_multimeasure_rest_container(2)
+              %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
               %! baca._style_fermata_measures(1)
             \stopStaff
@@ -5838,7 +5838,7 @@ number.10.Viola.Music = {
             \once \override NoteColumn.ignore-collision = ##t
               %! HIDDEN
               %! NOTE
-              %! baca._make_multimeasure_rest_container(1)
+              %! baca.make_mmrests(2)
             c'1 * 1/4
             % AFTER:
             % ARTICULATIONS:
@@ -5876,15 +5876,15 @@ number.10.Viola.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(4)
+          %! baca.make_mmrests(5)
         }
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
         % OPEN_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         \context Voice = "Viola.Rests"
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         {
             % ABSOLUTE_BEFORE:
             % COMMANDS:
@@ -5893,7 +5893,7 @@ number.10.Viola.Music = {
             % [Viola.Rests measure 9]
               %! MULTIMEASURE_REST
               %! REST_VOICE
-              %! baca._make_multimeasure_rest_container(5)
+              %! baca.make_mmrests(6)
             R1 * 1/4
             % AFTER:
             % MARKUP:
@@ -5906,13 +5906,13 @@ number.10.Viola.Music = {
             % COMMANDS:
 
         % CLOSE_BRACKETS:
-          %! baca._make_multimeasure_rest_container(6)
+          %! baca.make_mmrests(7)
         }
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! baca._make_multimeasure_rest_container(7)
+      %! baca.make_mmrests(8)
     >>
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7154,7 +7154,7 @@ number.10.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -7166,7 +7166,7 @@ number.10.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -7178,7 +7178,7 @@ number.10.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -7190,7 +7190,7 @@ number.10.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 7]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -7274,7 +7274,7 @@ number.10.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -8535,7 +8535,7 @@ number.10.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -8547,7 +8547,7 @@ number.10.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -8559,7 +8559,7 @@ number.10.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -8571,7 +8571,7 @@ number.10.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 7]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -8662,7 +8662,7 @@ number.10.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -9917,7 +9917,7 @@ number.10.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
@@ -10479,7 +10479,7 @@ number.10.Contrabass.2.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % ARTICULATIONS:
@@ -10784,7 +10784,7 @@ number.10.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 4]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -10796,7 +10796,7 @@ number.10.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 5]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -10808,7 +10808,7 @@ number.10.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 6]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -10820,7 +10820,7 @@ number.10.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 7]
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 6/4
     % AFTER:
     % MARKUP:
@@ -10911,7 +10911,7 @@ number.10.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 0
       %! baca._style_fermata_measures(1)
     \startStaff
-      %! baca.make_mmrests_function()
+      %! baca.make_mmrests(1)
     R1 * 1/4
     % AFTER:
     % MARKUP:
