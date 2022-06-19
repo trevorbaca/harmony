@@ -195,7 +195,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(3))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(4, 5))
+music = baca.make_notes(commands.get(4, 5))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -438,7 +438,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(8))
+music = baca.make_repeat_tied_notes(commands.get(8))
 voice.extend(music)
 
 # CB1
@@ -468,7 +468,7 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(6),
     [(1, 4)],
 )
@@ -505,7 +505,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(6),
     [(1, 4)],
 )
@@ -517,7 +517,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(8))
+music = baca.make_repeat_tied_notes(commands.get(8))
 voice.extend(music)
 
 # anchor notes

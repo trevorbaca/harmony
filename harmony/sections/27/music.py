@@ -174,7 +174,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(4, 5))
+music = baca.make_repeat_tied_notes(commands.get(4, 5))
 voice.extend(music)
 
 
@@ -202,7 +202,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(8))
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(9))
+music = baca.make_repeat_tied_notes(commands.get(9))
 voice.extend(music)
 
 # PERC2
@@ -310,7 +310,7 @@ voice.extend(music)
 
 voice = score["Viola.Music"]
 
-music = baca.make_notes_function(commands.get(1))
+music = baca.make_notes(commands.get(1))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(2), head=voice.name)
@@ -322,10 +322,10 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(4))
+music = baca.make_notes(commands.get(4))
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"c2. c8 \times 5/4 { c2 }",
 )
 for pleaf in baca.select.pleaves(music)[:2]:
@@ -338,7 +338,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7, 8))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9))
+music = baca.make_notes(commands.get(9))
 voice.extend(music)
 
 # VC1
@@ -382,7 +382,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(8), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9))
+music = baca.make_notes(commands.get(9))
 voice.extend(music)
 
 # VC2
@@ -424,7 +424,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(8), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9))
+music = baca.make_notes(commands.get(9))
 voice.extend(music)
 
 # CB1
@@ -466,7 +466,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(8), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9))
+music = baca.make_notes(commands.get(9))
 voice.extend(music)
 
 # CB2
@@ -510,7 +510,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(8), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9))
+music = baca.make_notes(commands.get(9))
 voice.extend(music)
 
 # anchor notes

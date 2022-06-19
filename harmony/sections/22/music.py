@@ -145,13 +145,13 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(5, 10))
+music = baca.make_notes(commands.get(5, 10))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(11))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(12))
+music = baca.make_notes(commands.get(12))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -413,7 +413,7 @@ voice = score["Contrabass.2.Music"]
 music = baca.make_mmrests(commands.get(1, 2))
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     "r4 c16. r32 r8 c16. r32 r8",
 )
 voice.extend(music)

@@ -293,7 +293,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(5, 7))
+music = baca.make_repeat_tied_notes(commands.get(5, 7))
 voice.extend(music)
 
 music = library.make_sixteenths(

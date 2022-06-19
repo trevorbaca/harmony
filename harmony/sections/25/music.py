@@ -269,7 +269,7 @@ voice.extend(music)
 
 voice = score["Viola.Music"]
 
-music = baca.make_notes_function(commands.get(1, 2))
+music = baca.make_notes(commands.get(1, 2))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -291,12 +291,12 @@ voice.extend(music)
 
 voice = score["Cello.1.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r1 r8 \times 5/4 { c2 }",
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2))
+music = baca.make_notes(commands.get(2))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -318,12 +318,12 @@ voice.extend(music)
 
 voice = score["Cello.2.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r1 r8 \times 5/4 { c2 }",
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2))
+music = baca.make_notes(commands.get(2))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -345,12 +345,12 @@ voice.extend(music)
 
 voice = score["Contrabass.1.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r1 r8 \times 5/4 { c2 }",
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2))
+music = baca.make_notes(commands.get(2))
 voice.extend(music)
 
 music = library.make_sixteenths(
@@ -372,12 +372,12 @@ voice.extend(music)
 
 voice = score["Contrabass.2.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r1 r8 \times 5/4 { c2 }",
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2))
+music = baca.make_notes(commands.get(2))
 voice.extend(music)
 
 music = library.make_sixteenths(

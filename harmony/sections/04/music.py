@@ -388,7 +388,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8))
+music = baca.make_notes(commands.get(8))
 voice.extend(music)
 
 music = library.make_tuplet(
@@ -403,7 +403,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(10), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(11))
+music = baca.make_notes(commands.get(11))
 voice.extend(music)
 
 # anchor notes

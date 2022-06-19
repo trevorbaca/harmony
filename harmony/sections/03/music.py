@@ -272,7 +272,7 @@ voice.extend(music)
 
 voice = score["Cello.1.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
 )
 voice.extend(music)
@@ -303,7 +303,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
 )
 voice.extend(music)
@@ -363,7 +363,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(3), head=voice.name)
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(4),
     [(1, 4)],
 )
@@ -396,7 +396,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(3), head=voice.name)
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(4),
     [(1, 4)],
 )

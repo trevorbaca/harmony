@@ -164,7 +164,7 @@ voice.extend(music)
 
 voice = score["Cello.1.Music"]
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
 )
 voice.extend(music)
@@ -206,7 +206,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
 )
 voice.extend(music)

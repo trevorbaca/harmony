@@ -305,7 +305,7 @@ voice.extend(music)
 
 voice = score["Contrabass.1.Music"]
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(1),
     [(1, 4)],
 )
@@ -330,7 +330,7 @@ voice.extend(music)
 
 voice = score["Contrabass.2.Music"]
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(1),
     [(1, 4)],
 )

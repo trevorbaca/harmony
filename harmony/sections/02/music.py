@@ -171,7 +171,7 @@ voice.extend(music)
 
 voice = score["Percussion.2.Music"]
 
-music = baca.make_repeat_tied_notes_function(commands.get(1, 3))
+music = baca.make_repeat_tied_notes(commands.get(1, 3))
 voice.extend(music)
 
 music = library.make_tuplet(
@@ -210,7 +210,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(9, 10))
+music = baca.make_notes(commands.get(9, 10))
 voice.extend(music)
 
 music = library.make_tuplet(
@@ -309,10 +309,10 @@ music = library.make_appoggiato_rhythm(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(5))
+music = baca.make_notes(commands.get(5))
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r" \times 5/3 { c4 c4 c4 }",
 )
 pleaf = baca.select.pleaf(music, 0)
