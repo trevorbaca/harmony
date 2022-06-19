@@ -83,10 +83,10 @@ music = baca.make_mmrests(commands.get(1, 4))
 voice.extend(music)
 
 music = library.make_warble_rhythm(
+    commands.get(5),
     sixteenths=[12, 12, 1, 11, 12],
     extra_counts=[4, 0, 0, 2, 0],
     rest_tuplets_cyclic=([1, 2, 4], 5),
-    function=commands.get(5),
 )
 voice.extend(music)
 
@@ -94,10 +94,10 @@ music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [4],
     written_double_dotted_wholes=([0], 7),
     invisible=([1, 2, 3, 4, 5, 6], 7),
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -106,17 +106,17 @@ voice.extend(music)
 voice = score["Percussion.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [4, 4, 8, 4, 4, 7, -1],
     do_not_rewrite_meter=True,
     fuse=True,
     written_halves=[0],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(5),
     [1, -23, -1, 1, -22],
-    function=commands.get(5),
 )
 voice.extend(music)
 
@@ -124,10 +124,10 @@ music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [4],
     written_double_dotted_wholes=([0], 7),
     invisible=([1, 2, 3, 4, 5, 6], 7),
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -136,14 +136,14 @@ voice.extend(music)
 voice = score["Percussion.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [2, "-"],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(5),
     [2, -22, -1, 2, -21],
-    function=commands.get(5),
 )
 voice.extend(music)
 
@@ -151,8 +151,8 @@ music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [-26, 2],
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -161,8 +161,8 @@ voice.extend(music)
 voice = score["Harp.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [4, "-"],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
@@ -170,8 +170,8 @@ music = baca.make_mmrests(commands.get(5, 6))
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     ["+"],
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -182,7 +182,10 @@ voice = score["Viola.Music"]
 music = baca.make_notes(commands.get(1, 4))
 voice.extend(music)
 
-music = library.make_tessera_4(4, function=commands.get(5))
+music = library.make_tessera_4(
+    commands.get(5),
+    4,
+)
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6))
@@ -196,22 +199,25 @@ voice.extend(music)
 voice = score["Cello.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [10, 6],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
-music = library.make_tessera_4(3, function=commands.get(5))
+music = library.make_tessera_4(
+    commands.get(5),
+    3,
+)
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [2],
     written_quarters=True,
     invisible_pairs=True,
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -220,22 +226,25 @@ voice.extend(music)
 voice = score["Cello.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [10, 6],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
-music = library.make_tessera_4(2, function=commands.get(5))
+music = library.make_tessera_4(
+    commands.get(5),
+    2,
+)
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [2],
     written_quarters=True,
     invisible_pairs=True,
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -244,22 +253,25 @@ voice.extend(music)
 voice = score["Contrabass.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [4, 4, -8],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
-music = library.make_tessera_4(1, function=commands.get(5))
+music = library.make_tessera_4(
+    commands.get(5),
+    1,
+)
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [2],
     written_quarters=True,
     invisible_pairs=True,
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 
@@ -268,24 +280,27 @@ voice.extend(music)
 voice = score["Contrabass.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [8, 8, 8, 6, 2],
     fuse=True,
     do_not_rewrite_meter=True,
     written_halves=[-2],
     invisible=[-1],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
-music = library.make_tessera_4(0, function=commands.get(5))
+music = library.make_tessera_4(
+    commands.get(5),
+    0,
+)
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6), head=voice.name)
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(7, 10),
     [4],
-    function=commands.get(7, 10),
 )
 voice.extend(music)
 

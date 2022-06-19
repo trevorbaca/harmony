@@ -121,6 +121,7 @@ def instruments():
 
 
 def make_appoggiato_rhythm(
+    time_signatures,
     *,
     divisions=None,
     counts=(),
@@ -139,7 +140,6 @@ def make_appoggiato_rhythm(
     invisible=None,
     after_graces=None,
     voice_name="",
-    function=None,
 ):
     preprocessor = None
     if fuse is True:
@@ -270,7 +270,7 @@ def make_appoggiato_rhythm(
         preprocessor=preprocessor,
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
@@ -411,6 +411,7 @@ def make_empty_score():
 
 
 def make_phjc_rhythm(
+    time_signatures,
     divisions,
     counts,
     *,
@@ -421,7 +422,6 @@ def make_phjc_rhythm(
     rest_pleaves=None,
     rest_most=None,
     rest_nonfirst=False,
-    function=None,
 ):
     def preprocessor(argument):
         result = baca.sequence.fuse(argument)
@@ -494,11 +494,11 @@ def make_phjc_rhythm(
         preprocessor=preprocessor,
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_rimbalzandi_rhythm(*, extra_counts=None, rest_except=None, function=None):
+def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=None, rest_except=None):
     commands = []
     if rest_except is not None:
 
@@ -520,11 +520,12 @@ def make_rimbalzandi_rhythm(*, extra_counts=None, rest_except=None, function=Non
         preprocessor=lambda _: baca.sequence.fuse(_, [2], cyclic=True),
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
 def make_sixteenths(
+    time_signatures,
     counts,
     *,
     beam=False,
@@ -550,7 +551,6 @@ def make_sixteenths(
     untie=False,
     unbeam=False,
     after_graces=None,
-    function=None,
 ):
     talea_denominator = talea_denominator or 16
     if fuse is True:
@@ -813,11 +813,11 @@ def make_sixteenths(
         preprocessor=preprocessor_,
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_tessera_1(part, *, advance=0, gap=False, function=None):
+def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
     counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
     permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
     assert sum(counts) == 96
@@ -834,11 +834,11 @@ def make_tessera_1(part, *, advance=0, gap=False, function=None):
         rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_tessera_2(part, *, advance=0, gap=False, rest_plts=None, function=None):
+def make_tessera_2(time_signatures, part, *, advance=0, gap=False, rest_plts=None):
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
 
@@ -870,11 +870,11 @@ def make_tessera_2(part, *, advance=0, gap=False, rest_plts=None, function=None)
         rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_tessera_3(part, *, advance=0, gap=False, function=None):
+def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
     counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
     permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
     assert sum(counts) == 84
@@ -891,11 +891,11 @@ def make_tessera_3(part, *, advance=0, gap=False, function=None):
         rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_tessera_4(part, *, advance=0, gap=False, function=None):
+def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
     counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
     permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
     assert sum(counts) == 144
@@ -912,11 +912,11 @@ def make_tessera_4(part, *, advance=0, gap=False, function=None):
         rmakers.rewrite_meter(boundary_depth=1, reference_meters=_reference_meters()),
         rmakers.force_repeat_tie((1, 8)),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
-def make_train_rhythm(counts, *, rest_leaves=None, function=None):
+def make_train_rhythm(time_signatures, counts, *, rest_leaves=None):
     commands = []
     if rest_leaves is not None:
 
@@ -935,17 +935,17 @@ def make_train_rhythm(counts, *, rest_leaves=None, function=None):
         rmakers.force_repeat_tie((1, 8)),
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
 def make_tuplet(
+    time_signatures,
     ratios,
     *,
     denominator=None,
     force_augmentation=False,
     written_quarters=False,
-    function=None,
 ):
     commands = []
     if denominator is not None:
@@ -967,17 +967,17 @@ def make_tuplet(
         rmakers.extract_trivial(),
         rmakers.reduce_multiplier(),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 
 def make_warble_rhythm(
+    time_signatures,
     *,
     sixteenths=None,
     extra_counts=None,
     rest_tuplets=None,
     rest_tuplets_cyclic=None,
-    function=None,
 ):
     preprocessor = None
     if sixteenths is not None:
@@ -1021,7 +1021,7 @@ def make_warble_rhythm(
         preprocessor=preprocessor,
         tag=baca.tags.function_name(inspect.currentframe()),
     )
-    music = rhythm_maker(function)
+    music = rhythm_maker(time_signatures)
     return music
 
 

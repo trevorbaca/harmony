@@ -86,12 +86,12 @@ def preprocessor(divisions):
 
 
 music = library.make_sixteenths(
+    commands.get(8, 9),
     [-8, -4, 8, -4, 8],
     preprocessor=preprocessor,
     extra_counts=[0, 4, 4],
     denominator=None,
     do_not_rewrite_meter=True,
-    function=commands.get(8, 9),
 )
 voice.extend(music)
 
@@ -100,8 +100,8 @@ voice.extend(music)
 voice = score["Percussion.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 6),
     [1, -11, -1, 1, -14],
-    function=commands.get(1, 6),
 )
 voice.extend(music)
 
@@ -126,12 +126,12 @@ voice.extend(music)
 voice = score["Harp.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 6),
     [6, 6, 16],
     do_not_rewrite_meter=True,
     fuse=True,
     written_dotted_halves=([0, 1], 3),
     invisible=([1], 3),
-    function=commands.get(1, 6),
 )
 voice.extend(music)
 
@@ -146,12 +146,12 @@ voice.extend(music)
 voice = score["Viola.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 6),
     [12, 8, 8],
     do_not_rewrite_meter=True,
     fuse=True,
     written_wholes=([1, 2], 3),
     invisible=([2], 3),
-    function=commands.get(1, 6),
 )
 voice.extend(music)
 
@@ -166,18 +166,18 @@ voice.extend(music)
 voice = score["Cello.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 4],
-    function=commands.get(1),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(2, 6),
     [8, 8, 12],
     do_not_rewrite_meter=True,
     fuse=True,
     written_wholes=([0, 1], 3),
     invisible=([1], 3),
-    function=commands.get(2, 6),
 )
 voice.extend(music)
 
@@ -199,22 +199,22 @@ def preprocessor(divisions):
 
 
 music = library.make_sixteenths(
+    commands.get(1, 2),
     ["+", 1],
     preprocessor=preprocessor,
     do_not_rewrite_meter=True,
     written_wholes=[1],
     invisible=[-1],
-    function=commands.get(1, 2),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3, 6),
     [12, 8, 8],
     do_not_rewrite_meter=True,
     fuse=True,
     written_wholes=([1, 2], 3),
     invisible=([2], 3),
-    function=commands.get(3, 6),
 )
 voice.extend(music)
 
@@ -229,18 +229,18 @@ voice.extend(music)
 voice = score["Contrabass.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 3),
     [4, 4, 8, 4, 4, 8, 4, 4],
-    function=commands.get(1, 3),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(4, 6),
     [8, 8, 12],
     do_not_rewrite_meter=True,
     fuse=True,
     written_wholes=([0, 1], 3),
     invisible=([1], 3),
-    function=commands.get(4, 6),
 )
 voice.extend(music)
 
@@ -255,22 +255,22 @@ voice.extend(music)
 voice = score["Contrabass.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 4),
     [12, 16, 12, 15, 1],
     fuse=True,
     do_not_rewrite_meter=True,
     written_wholes=[-2],
     invisible=[-1],
-    function=commands.get(1, 4),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(5, 6),
     [12, 8, 8],
     do_not_rewrite_meter=True,
     fuse=True,
     written_wholes=([1, 2], 3),
     invisible=([2], 3),
-    function=commands.get(5, 6),
 )
 voice.extend(music)
 
