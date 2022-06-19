@@ -61,17 +61,17 @@ baca.close_volta(skips[3 - 1], commands.first_measure_number, site="after")
 voice = score["BassFlute.Music"]
 
 music = library.make_appoggiato_rhythm(
+    commands.get(1, 2),
     divisions=[16, 8, 12, 8],
     counts=[9, 6, 8, 4],
     incise=True,
-    function=commands.get(1, 2),
     voice_name=voice.name,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     library.cerulean()[1:],
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -80,27 +80,27 @@ voice.extend(music)
 voice = score["Percussion.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     ["-", 3, 1],
     written_quarters=True,
     invisible_pairs=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(2),
     [3, 1, "-", 3, 1],
     written_quarters=True,
     invisible_pairs=True,
-    function=commands.get(2),
 )
 voice.extend(music)
 
 music = library.make_phjc_rhythm(
+    commands.get(3),
     [2, 1, 1],
     [2, 2, 2, 2, 2, 2, 2, 1],
     extra_counts=[2],
     rest_most=True,
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -109,18 +109,18 @@ voice.extend(music)
 voice = score["Percussion.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 2),
     [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    function=commands.get(1, 2),
 )
 voice.extend(music)
 
 music = library.make_phjc_rhythm(
+    commands.get(3),
     [1, 2],
     [2, 2, 2, 2, 2, 2, 2, 1],
     extra_counts=[0, 6],
     rest_most=True,
     rest_pleaves=[0, 1, 2, 3],
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -129,14 +129,14 @@ voice.extend(music)
 voice = score["Harp.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 2),
     [4, -14, 4, -2, 4, -6, 4, 4, -2],
-    function=commands.get(1, 2),
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     [10, "-"],
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -145,18 +145,18 @@ voice.extend(music)
 voice = score["Viola.Music"]
 
 music = library.make_appoggiato_rhythm(
+    commands.get(1, 2),
     divisions=[16, 8, 12, 8],
     incise=True,
-    function=commands.get(1, 2),
     voice_name=voice.name,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     library.cerulean()[1:],
     extra_counts=[2],
     denominator=None,
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -170,9 +170,9 @@ music = baca.make_skeleton(
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     [5, -5, 1, -4],
     extra_counts=[1],
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -181,18 +181,18 @@ voice.extend(music)
 voice = score["Cello.2.Music"]
 
 music = library.make_appoggiato_rhythm(
+    commands.get(1, 2),
     divisions=[16, 8, 12, 8],
     incise=True,
-    function=commands.get(1, 2),
     voice_name=voice.name,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     [10, "-"],
     untie=True,
     after_graces=[1],
-    function=commands.get(3),
 )
 voice.extend(music)
 
@@ -201,8 +201,8 @@ voice.extend(music)
 voice = score["Contrabass.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1, 2),
     [18, 6, 10, 4, 6],
-    function=commands.get(1, 2),
 )
 voice.extend(music)
 
@@ -216,18 +216,18 @@ voice.extend(music)
 voice = score["Contrabass.2.Music"]
 
 music = library.make_appoggiato_rhythm(
+    commands.get(1, 2),
     divisions=[16, 8, 12, 8],
     incise=True,
-    function=commands.get(1, 2),
     voice_name=voice.name,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
+    commands.get(3),
     [10, "-"],
     untie=True,
     after_graces=[1],
-    function=commands.get(3),
 )
 voice.extend(music)
 

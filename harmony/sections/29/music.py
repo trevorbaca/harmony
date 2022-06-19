@@ -67,9 +67,9 @@ baca.markup_function(
 voice = score["BassFlute.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 16],
     tie_all=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -81,8 +81,8 @@ voice.extend(music)
 voice = score["Percussion.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [1, -22, 1],
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -94,9 +94,9 @@ voice.extend(music)
 voice = score["Percussion.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     ["-", 1],
     invisible=[-1],
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -108,8 +108,8 @@ voice.extend(music)
 voice = score["Harp.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [1, "-"],
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -121,9 +121,9 @@ voice.extend(music)
 voice = score["Viola.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 16],
     tie_all=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -135,9 +135,9 @@ voice.extend(music)
 voice = score["Cello.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 16],
     tie_all=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -149,9 +149,9 @@ voice.extend(music)
 voice = score["Cello.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 16],
     tie_all=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -163,9 +163,9 @@ voice.extend(music)
 voice = score["Contrabass.1.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [4, 4, 16],
     tie_all=True,
-    function=commands.get(1),
 )
 voice.extend(music)
 
@@ -177,10 +177,10 @@ voice.extend(music)
 voice = score["Contrabass.2.Music"]
 
 music = library.make_sixteenths(
+    commands.get(1),
     [16, 4, 2, 2],
     written_dotted_wholes=[0],
     invisible=[1, 2, 3],
-    function=commands.get(1),
 )
 voice.extend(music)
 
