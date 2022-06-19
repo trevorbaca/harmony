@@ -210,7 +210,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(9), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(10, 14))
+music = baca.make_notes(commands.get(10, 14))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(15), head=voice.name)
@@ -220,13 +220,13 @@ voice.extend(music)
 
 voice = score["Percussion.2.Music"]
 
-music = baca.make_notes_function(commands.get(1, 7))
+music = baca.make_notes(commands.get(1, 7))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(8, 9))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(10, 15))
+music = baca.make_notes(commands.get(10, 15))
 voice.extend(music)
 
 # HP
@@ -236,13 +236,13 @@ voice = score["Harp.Music"]
 music = baca.make_mmrests(commands.get(1))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2, 8))
+music = baca.make_notes(commands.get(2, 8))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(9))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(10, 12))
+music = baca.make_notes(commands.get(10, 12))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(13, 15), head=voice.name)
@@ -293,7 +293,7 @@ voice.extend(music)
 music = library.make_tuplet([11 * (1,)], function=commands.get(11, 14))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(15))
+music = baca.make_notes(commands.get(15))
 voice.extend(music)
 
 # VC1
@@ -345,7 +345,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(15))
+music = baca.make_notes(commands.get(15))
 voice.extend(music)
 
 # VC2
@@ -397,7 +397,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(15))
+music = baca.make_notes(commands.get(15))
 voice.extend(music)
 
 # CB1
@@ -410,13 +410,13 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(2, 8))
+music = baca.make_notes(commands.get(2, 8))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(9))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(10, 15))
+music = baca.make_notes(commands.get(10, 15))
 voice.extend(music)
 
 # CB2
@@ -465,7 +465,7 @@ music = library.make_tuplet(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(15))
+music = baca.make_notes(commands.get(15))
 voice.extend(music)
 
 # anchor notes

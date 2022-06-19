@@ -115,7 +115,7 @@ voice.extend(music)
 
 voice = score["Percussion.1.Music"]
 
-music = baca.make_notes_function(commands.get(1))
+music = baca.make_notes(commands.get(1))
 voice.extend(music)
 
 music = library.make_appoggiato_rhythm(
@@ -149,7 +149,7 @@ voice.extend(music)
 
 voice = score["Percussion.2.Music"]
 
-music = baca.make_notes_function(commands.get(1))
+music = baca.make_notes(commands.get(1))
 voice.extend(music)
 
 music = library.make_appoggiato_rhythm(
@@ -177,7 +177,7 @@ voice.extend(music)
 
 voice = score["Harp.Music"]
 
-music = baca.make_notes_function(commands.get(1))
+music = baca.make_notes(commands.get(1))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(2, 3))
@@ -204,7 +204,7 @@ voice.extend(music)
 
 voice = score["Viola.Music"]
 
-music = baca.make_notes_function(commands.get(1, 2))
+music = baca.make_notes(commands.get(1, 2))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(3), head=voice.name)
@@ -216,7 +216,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(5))
+music = baca.make_repeat_tied_notes(commands.get(5))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(6), head=voice.name)

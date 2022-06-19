@@ -630,7 +630,7 @@ voice.extend(music)
 
 voice = score["Contrabass.1.Music"]
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(1),
     [(1, 4)],
 )
@@ -652,7 +652,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(5, 7),
     [(1, 4)],
 )
@@ -667,7 +667,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(9))
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(10, 15),
     [(1, 4)],
 )
@@ -677,7 +677,7 @@ voice.extend(music)
 
 voice = score["Contrabass.2.Music"]
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(1),
     [(1, 4)],
 )
@@ -692,7 +692,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(4, 7),
     [(1, 4)],
 )
@@ -709,7 +709,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(9))
 voice.extend(music)
 
-music = baca.make_repeated_duration_notes_function(
+music = baca.make_repeated_duration_notes(
     commands.get(10, 15),
     [(1, 4)],
 )

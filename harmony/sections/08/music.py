@@ -112,13 +112,13 @@ voice.extend(music)
 
 voice = score["Percussion.2.Music"]
 
-music = baca.make_notes_function(commands.get(1, 6))
+music = baca.make_notes(commands.get(1, 6))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(7))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # HP
@@ -138,7 +138,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # VA
@@ -158,7 +158,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # VC1
@@ -184,7 +184,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # VC2
@@ -221,7 +221,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # CB1
@@ -247,7 +247,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # CB2
@@ -277,7 +277,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(7), head=voice.name)
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(8, 9))
+music = baca.make_notes(commands.get(8, 9))
 voice.extend(music)
 
 # anchor notes

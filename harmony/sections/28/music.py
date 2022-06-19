@@ -179,7 +179,7 @@ voice.extend(music)
 
 voice = score["Viola.Music"]
 
-music = baca.make_notes_function(commands.get(1, 4))
+music = baca.make_notes(commands.get(1, 4))
 voice.extend(music)
 
 music = library.make_tessera_4(4, function=commands.get(5))
@@ -188,7 +188,7 @@ voice.extend(music)
 music = baca.make_mmrests(commands.get(6))
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(7, 10))
+music = baca.make_notes(commands.get(7, 10))
 voice.extend(music)
 
 # VC1

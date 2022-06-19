@@ -148,7 +148,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(6))
+music = baca.make_notes(commands.get(6))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(7))
@@ -209,7 +209,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(6))
+music = baca.make_notes(commands.get(6))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(7))
@@ -258,7 +258,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(6))
+music = baca.make_notes(commands.get(6))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(7))
@@ -322,7 +322,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(6))
+music = baca.make_notes(commands.get(6))
 voice.extend(music)
 
 music = baca.make_mmrests(commands.get(7), head=voice.name)

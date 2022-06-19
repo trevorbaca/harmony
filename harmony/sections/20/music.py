@@ -284,7 +284,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     "r4 c16. r32 r8 c16. r32 r8",
 )
 voice.extend(music)

@@ -91,7 +91,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_notes_function(commands.get(4))
+music = baca.make_notes(commands.get(4))
 voice.extend(music)
 
 music = library.make_sixteenths(

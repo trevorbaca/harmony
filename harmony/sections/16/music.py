@@ -166,7 +166,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes_function(commands.get(9, 10))
+music = baca.make_repeat_tied_notes(commands.get(9, 10))
 voice.extend(music)
 
 # VC1

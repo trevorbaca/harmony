@@ -256,7 +256,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"\times 8/10 { c4 r4 r4 r8. }",
 )
 voice.extend(music)
@@ -286,7 +286,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"\times 8/11 { r4 c4 r4 r4 r32 }",
 )
 voice.extend(music)
@@ -316,7 +316,7 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_skeleton_function(
+music = baca.make_skeleton(
     r"\times 8/12 { r4 c4 r4 r4 r8 }",
 )
 voice.extend(music)
