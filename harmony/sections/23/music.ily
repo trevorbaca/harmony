@@ -2237,15 +2237,11 @@ number.23.Percussion.2.Music = {
     % COMMANDS:
       %! MEASURE_214
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_214
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -2347,15 +2343,11 @@ number.23.Percussion.2.Music = {
     % COMMANDS:
       %! MEASURE_215
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_215
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.stem_down()
@@ -2922,15 +2914,11 @@ number.23.Viola.Music = {
     % COMMANDS:
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
 %%% \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -3521,15 +3509,11 @@ number.23.Viola.Music = {
     % COMMANDS:
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -3732,15 +3716,11 @@ number.23.Cello.1.Music = {
     % COMMANDS:
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
 %%% \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -3884,15 +3864,11 @@ number.23.Cello.1.Music = {
     \once \override NoteHead.style = #'harmonic-black
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     % OPENING:
     % COMMANDS:
@@ -3970,15 +3946,11 @@ number.23.Cello.1.Music = {
     % COMMANDS:
       %! MEASURE_212
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_212
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! baca._style_fermata_measures(3)
     \stopStaff
@@ -4357,15 +4329,11 @@ number.23.Cello.1.Music = {
     % COMMANDS:
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -4578,15 +4546,11 @@ number.23.Cello.2.Music = {
         % COMMANDS:
           %! MEASURE_209
           %! SHIFTED_CLEF
-          %! baca.OverrideCommand._call(1)
-          %! baca.clef_shift()
-          %! baca.clef_x_extent_false()
+          %! baca.clef_x_extent_false_function(1)
     %%% \once \override Staff.Clef.X-extent = ##f
           %! MEASURE_209
           %! SHIFTED_CLEF
-          %! baca.OverrideCommand._call(1)
-          %! baca.clef_extra_offset()
-          %! baca.clef_shift()
+          %! baca.clef_extra_offset_function(1)
     %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
           %! baca.OverrideCommand._call(1)
           %! baca.dls_staff_padding()
@@ -4714,15 +4678,11 @@ number.23.Cello.2.Music = {
     \once \override NoteHead.style = #'harmonic-black
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     % OPENING:
     % COMMANDS:
@@ -4813,15 +4773,11 @@ number.23.Cello.2.Music = {
         % COMMANDS:
           %! MEASURE_212
           %! SHIFTED_CLEF
-          %! baca.OverrideCommand._call(1)
-          %! baca.clef_shift()
-          %! baca.clef_x_extent_false()
+          %! baca.clef_x_extent_false_function(1)
         \once \override Staff.Clef.X-extent = ##f
           %! MEASURE_212
           %! SHIFTED_CLEF
-          %! baca.OverrideCommand._call(1)
-          %! baca.clef_extra_offset()
-          %! baca.clef_shift()
+          %! baca.clef_extra_offset_function(1)
         \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
           %! baca._style_fermata_measures(3)
         \stopStaff
@@ -5109,15 +5065,11 @@ number.23.Cello.2.Music = {
     % COMMANDS:
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -5306,15 +5258,11 @@ number.23.Contrabass.1.Music = {
     % COMMANDS:
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
 %%% \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -5458,15 +5406,11 @@ number.23.Contrabass.1.Music = {
     \once \override NoteHead.style = #'harmonic-black
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_210
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
     % OPENING:
     % COMMANDS:
@@ -5544,15 +5488,11 @@ number.23.Contrabass.1.Music = {
     % COMMANDS:
       %! MEASURE_212
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_212
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
       %! baca._style_fermata_measures(3)
     \stopStaff
@@ -5809,15 +5749,11 @@ number.23.Contrabass.1.Music = {
     % COMMANDS:
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_216
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -5983,15 +5919,11 @@ number.23.Contrabass.2.Music = {
     % COMMANDS:
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
 %%% \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_209
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
@@ -6177,15 +6109,11 @@ number.23.Contrabass.2.Music = {
     % COMMANDS:
       %! MEASURE_213
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_shift()
-      %! baca.clef_x_extent_false()
+      %! baca.clef_x_extent_false_function(1)
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_213
       %! SHIFTED_CLEF
-      %! baca.OverrideCommand._call(1)
-      %! baca.clef_extra_offset()
-      %! baca.clef_shift()
+      %! baca.clef_extra_offset_function(1)
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
     % OPENING:
     % COMMANDS:
