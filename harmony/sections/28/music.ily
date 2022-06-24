@@ -341,10 +341,10 @@ number.28.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     ^ \harmony-text-twenty-seven
     % SPANNER_STOPS:
       %! CLOCK_TIME

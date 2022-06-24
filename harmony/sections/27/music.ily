@@ -123,10 +123,10 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     ^ \harmony-text-twenty-five
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -301,22 +301,22 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     - \tweak extra-offset #'(0 . 17)
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     - \tweak font-size 10
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     ^ \harmony-repeat-three-markup
       %! +PARTS
-      %! baca.markup_function()
+      %! baca.markup()
 %%% - \tweak extra-offset #'(0 . 9)
       %! +PARTS
-      %! baca.markup_function()
+      %! baca.markup()
 %%% - \tweak font-size 4
       %! +PARTS
-      %! baca.markup_function()
+      %! baca.markup()
 %%% ^ \harmony-repeat-three-markup
     % SPANNER_STOPS:
       %! CLOCK_TIME
@@ -699,10 +699,10 @@ number.27.Skips = {
     % AFTER:
     % MARKUP:
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     - \tweak extra-offset #'(4 . -30)
       %! -PARTS
-      %! baca.markup_function()
+      %! baca.markup()
     ^ \harmony-text-twenty-six
     % SPANNER_STOPS:
       %! CLOCK_TIME
