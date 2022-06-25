@@ -72,7 +72,7 @@ for index, item in (
 ):
     skip = skips[index]
     indicator = commands.metronome_marks.get(item, item)
-    baca.commands._metronome_mark(skip, indicator, manifests)
+    baca.metronome_mark(skip, indicator, manifests)
 
 baca.open_volta(skips[11 - 1], commands.first_measure_number)
 baca.double_volta(skips[13 - 1], commands.first_measure_number)
