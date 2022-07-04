@@ -41,12 +41,12 @@ def appoggiato_pitches_g():
     return "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 
 
-def bass_drum_staff_position():
+def bass_drum_staff_position(allow_hidden=False):
     """
     Sets bass drum staff position (-1), stem down, tuplet bracket up.
     """
     return baca.chunk(
-        baca.staff_position(-1),
+        baca.staff_position(-1, allow_hidden=allow_hidden),
         baca.stem_down(),
         baca.tuplet_bracket_up(),
     )

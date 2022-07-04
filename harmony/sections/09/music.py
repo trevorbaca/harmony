@@ -323,7 +323,7 @@ commands(
 commands(
     ("perc2", 2),
     baca.new(
-        library.bass_drum_staff_position(),
+        library.bass_drum_staff_position(allow_hidden=True),
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.accent(

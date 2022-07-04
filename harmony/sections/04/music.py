@@ -869,6 +869,7 @@ commands(
     ("cb2", 11),
     baca.flat_glissando(
         "E1",
+        allow_hidden=True,
         right_broken=True,
         selector=lambda _: baca.select.rleaves(_),
     ),

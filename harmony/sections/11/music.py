@@ -1165,6 +1165,7 @@ commands(
     ),
     baca.pitch(
         "A5",
+        allow_hidden=True,
         selector=lambda _: baca.select.rleaves(_),
     ),
     baca.markup(
@@ -1242,6 +1243,7 @@ commands(
     baca.pitch(
         "Gqs6",
         lambda _: baca.select.rleaves(_),
+        allow_hidden=True,
     ),
     baca.markup(
         r"\baca-eleven-d",
@@ -1286,6 +1288,7 @@ commands(
     baca.pitch(
         "F#5",
         lambda _: baca.select.rleaves(_),
+        allow_hidden=True,
     ),
     baca.markup(
         r"\baca-string-ii-markup",
@@ -1349,6 +1352,7 @@ commands(
     baca.pitch(
         "C#6",
         lambda _: baca.select.rleaves(_),
+        allow_hidden=True,
         do_not_transpose=True,
     ),
     baca.markup(
@@ -1407,6 +1411,7 @@ commands(
     baca.pitch(
         "Cqf6",
         lambda _: baca.select.rleaves(_),
+        allow_hidden=True,
         do_not_transpose=True,
     ),
     baca.markup(

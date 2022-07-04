@@ -959,6 +959,7 @@ commands(
     baca.pitch(
         "Gqf3",
         lambda _: baca.select.rleaves(_),
+        allow_hidden=True,
     ),
     baca.flat_glissando(
         hide_middle_stems=True,

@@ -872,6 +872,7 @@ commands(
     baca.clef("bass"),
     baca.flat_glissando(
         "A1",
+        allow_hidden=True,
         right_broken=True,
         selector=lambda _: baca.select.rleaves(_),
     ),
