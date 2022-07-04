@@ -1466,7 +1466,7 @@ commands(
     ("va", [1, (6, 15)]),
     baca.pitch(
         "Eb3",
-        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+        lambda _: baca.select.plts(_),
     ),
 )
 
@@ -1643,7 +1643,7 @@ commands(
     ("vc1", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "E4",
-        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+        lambda _: baca.select.plts(_),
     ),
 )
 
@@ -1781,7 +1781,7 @@ commands(
     ("vc2", [1, (6, 7), (10, 15)]),
     baca.pitch(
         "Eqf4",
-        lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+        lambda _: baca.select.plts(_),
     ),
 )
 
@@ -1883,6 +1883,7 @@ commands(
     ("cb1", (10, 15)),
     baca.flat_glissando(
         "E1",
+        allow_hidden=True,
         right_broken=True,
         selector=lambda _: baca.select.rleaves(_),
     ),

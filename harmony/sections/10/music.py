@@ -765,7 +765,7 @@ commands(
 commands(
     ("perc2", (10, 15)),
     baca.new(
-        library.bass_drum_staff_position(),
+        library.bass_drum_staff_position(allow_hidden=True),
         baca.flat_glissando(
             right_broken=True,
         ),
