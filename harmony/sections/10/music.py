@@ -1395,13 +1395,15 @@ commands(
 if __name__ == "__main__":
     metadata, persist, score, timing = baca.build.interpret_section(
         score,
-        commands,
+        commands.manifests(),
+        commands.time_signatures,
         **baca.score_interpretation_defaults(),
         activate=(
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
+        commands=commands,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.short_instrument_name_color_tags(),
