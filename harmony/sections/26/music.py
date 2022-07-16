@@ -19,7 +19,7 @@ stage_markup = (
 score = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
-commands = baca.CommandAccumulator(
+accumulator = baca.CommandAccumulator(
     instruments=library.instruments(),
     short_instrument_names=library.short_instrument_names(),
     metronome_marks=library.metronome_marks(),
@@ -41,9 +41,9 @@ commands = baca.CommandAccumulator(
 
 baca.interpret.set_up_score(
     score,
-    commands,
-    commands.manifests(),
-    commands.time_signatures,
+    accumulator,
+    accumulator.manifests(),
+    accumulator.time_signatures,
     append_anchor_skip=True,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
@@ -51,7 +51,7 @@ baca.interpret.set_up_score(
 )
 
 skips = score["Skips"]
-manifests = commands.manifests()
+manifests = accumulator.manifests()
 
 for index, item in (
     (1 - 1, "96"),
@@ -68,7 +68,7 @@ for index, item in (
     (10 - 1, "5:3(4)=4"),
 ):
     skip = skips[index]
-    indicator = commands.metronome_marks.get(item, item)
+    indicator = accumulator.metronome_marks.get(item, item)
     baca.metronome_mark(skip, indicator, manifests)
 
 rests = score["Rests"]
@@ -89,16 +89,16 @@ baca.markup_function(
 voice = score["BassFlute.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3))
+music = baca.make_mmrests(accumulator.get(3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1],
     invisible_pairs=True,
@@ -107,19 +107,19 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 7),
+    accumulator.get(5, 7),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [-2, 2, 2],
 )
 voice.extend(music)
 
 music = library.make_warble_rhythm(
-    commands.get(9),
+    accumulator.get(9),
     sixteenths=[12, 12, 1, 11, 12],
     extra_counts=[4, 0, 0, 2, 0],
     rest_tuplets_cyclic=([1, 2, 4], 5),
@@ -127,7 +127,7 @@ music = library.make_warble_rhythm(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
@@ -137,28 +137,28 @@ voice.extend(music)
 voice = score["Percussion.1.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3, 4))
+music = baca.make_mmrests(accumulator.get(3, 4))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 6),
+    accumulator.get(5, 6),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(7),
+    accumulator.get(7),
     [4, "-", 6, -2],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [-2, 3, -3, 3, -3, 3, -3, 3, -3],
 )
 voice.extend(music)
@@ -171,7 +171,7 @@ def preprocessor(divisions):
 
 
 music = library.make_sixteenths(
-    commands.get(9),
+    accumulator.get(9),
     [1, -11, 4, -12, 4],
     preprocessor=preprocessor,
     extra_counts=[0, 8],
@@ -180,7 +180,7 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
@@ -189,11 +189,11 @@ voice.extend(music)
 
 voice = score["Percussion.2.Music"]
 
-music = baca.make_mmrests(commands.get(1))
+music = baca.make_mmrests(accumulator.get(1))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(2),
+    accumulator.get(2),
     [-8, 1, -3],
     fuse=True,
     extra_counts=[-4],
@@ -201,30 +201,30 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3, 6))
+music = baca.make_mmrests(accumulator.get(3, 6))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(7),
+    accumulator.get(7),
     [-8, "+"],
 )
 voice.extend(music)
 
 music = library.make_tuplet(
-    commands.get(8),
+    accumulator.get(8),
     [(1,)],
     force_augmentation=True,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(9),
+    accumulator.get(9),
     [2, -22, -1, 2, -21],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     ["-", 2],
     extra_counts=[2],
     denominator=None,
@@ -236,18 +236,18 @@ voice.extend(music)
 voice = score["Harp.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [-12, -2, 4, -6, -12, -2, 4],
     extra_counts=[2],
     denominator=None,
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3, 4))
+music = baca.make_mmrests(accumulator.get(3, 4))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 6),
+    accumulator.get(5, 6),
     [-12, -2, 4, -6, -12, -2, 4],
     extra_counts=[2],
     denominator=None,
@@ -255,22 +255,22 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(7),
+    accumulator.get(7),
     ["-", 6, -2],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [1, -3, 3, -3, 3, -3],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(9))
+music = baca.make_mmrests(accumulator.get(9))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [-2, 4, "-"],
     extra_counts=[2],
     denominator=None,
@@ -281,11 +281,11 @@ voice.extend(music)
 
 voice = score["Viola.Music"]
 
-music = baca.make_mmrests(commands.get(1, 3))
+music = baca.make_mmrests(accumulator.get(1, 3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1, 3, 4],
     invisible=[1, 4],
@@ -293,22 +293,22 @@ music = library.make_sixteenths(
 )
 voice.extend(music)
 
-music = baca.make_repeat_tied_notes(commands.get(5, 7))
+music = baca.make_repeat_tied_notes(accumulator.get(5, 7))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [6, 3, 11],
 )
 voice.extend(music)
 
 music = library.make_tessera_4(
-    commands.get(9),
+    accumulator.get(9),
     4,
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(10))
+music = baca.make_mmrests(accumulator.get(10))
 voice.extend(music)
 
 # VC1
@@ -316,16 +316,16 @@ voice.extend(music)
 voice = score["Cello.1.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3))
+music = baca.make_mmrests(accumulator.get(3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1, 3, 4],
     invisible=[1, 4],
@@ -334,25 +334,25 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 7),
+    accumulator.get(5, 7),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [4, 2, 7, 7],
 )
 voice.extend(music)
 
 music = library.make_tessera_4(
-    commands.get(9),
+    accumulator.get(9),
     3,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
@@ -362,16 +362,16 @@ voice.extend(music)
 voice = score["Cello.2.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3))
+music = baca.make_mmrests(accumulator.get(3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1, 3, 4],
     invisible=[1, 4],
@@ -380,25 +380,25 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 7),
+    accumulator.get(5, 7),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [9, 11],
 )
 voice.extend(music)
 
 music = library.make_tessera_4(
-    commands.get(9),
+    accumulator.get(9),
     2,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
@@ -408,16 +408,16 @@ voice.extend(music)
 voice = score["Contrabass.1.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3))
+music = baca.make_mmrests(accumulator.get(3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1, 3, 4],
     invisible=[1, 4],
@@ -426,25 +426,25 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 7),
+    accumulator.get(5, 7),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [4, 9, 7],
 )
 voice.extend(music)
 
 music = library.make_tessera_4(
-    commands.get(9),
+    accumulator.get(9),
     1,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
@@ -454,16 +454,16 @@ voice.extend(music)
 voice = score["Contrabass.2.Music"]
 
 music = library.make_sixteenths(
-    commands.get(1, 2),
+    accumulator.get(1, 2),
     [4, -12],
 )
 voice.extend(music)
 
-music = baca.make_mmrests(commands.get(3))
+music = baca.make_mmrests(accumulator.get(3))
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(4),
+    accumulator.get(4),
     [4, 4, 16],
     written_halves=[0, 1, 3, 4],
     invisible=[1, 4],
@@ -472,32 +472,32 @@ music = library.make_sixteenths(
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(5, 7),
+    accumulator.get(5, 7),
     [4, -12],
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(8),
+    accumulator.get(8),
     [9, 11],
 )
 voice.extend(music)
 
 music = library.make_tessera_4(
-    commands.get(9),
+    accumulator.get(9),
     0,
 )
 voice.extend(music)
 
 music = library.make_sixteenths(
-    commands.get(10),
+    accumulator.get(10),
     [4, -12],
 )
 voice.extend(music)
 
 # anchor notes
 
-commands(
+accumulator(
     "perc2",
     baca.append_anchor_note(),
 )
@@ -506,14 +506,14 @@ commands(
 
 music_voices = [_ for _ in voice_names if "Music" in _]
 
-commands(
+accumulator(
     music_voices,
     baca.reapply_persistent_indicators(),
 )
 
 # bfl
 
-commands(
+accumulator(
     ("bfl", [(1, 2), (5, 7), 10]),
     baca.pitch("C3"),
     baca.dynamic("mp"),
@@ -525,7 +525,7 @@ commands(
 )
 
 
-commands(
+accumulator(
     ("bfl", 4),
     baca.pitch("Bb4"),
     baca.hairpin(
@@ -544,7 +544,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("bfl", 8),
     baca.pitch("F#5"),
     baca.hairpin(
@@ -565,7 +565,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("bfl", 9),
     baca.pitches(
         abjad.sequence.rotate(library.warble_pitches(), -9),
@@ -594,14 +594,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("bfl", (1, 10)),
     baca.dls_staff_padding(4),
 )
 
 # perc1
 
-commands(
+accumulator(
     ("perc1", (1, 2)),
     library.slate_staff_position(),
     baca.dynamic('"ff"'),
@@ -611,7 +611,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc1", (5, 6)),
     library.slate_staff_position(),
     baca.dynamic(
@@ -620,7 +620,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc1", 7),
     library.slate_staff_position(),
     baca.dynamic(
@@ -629,12 +629,12 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc1", 8),
     library.slate_staff_position(),
 )
 
-commands(
+accumulator(
     ("perc1", (7, 8)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -643,7 +643,7 @@ commands(
 )
 
 
-commands(
+accumulator(
     ("perc1", 9),
     baca.new(
         library.brake_drum_staff_position(),
@@ -669,12 +669,12 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc1", 10),
     library.slate_staff_position(),
 )
 
-commands(
+accumulator(
     ("perc1", (9, 10)),
     baca.metric_modulation_spanner(
         abjad.Tweak(r"- \tweak staff-padding 10.5"),
@@ -682,14 +682,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc1", (1, 10)),
     baca.dls_staff_padding(6),
 )
 
 # perc2
 
-commands(
+accumulator(
     ("perc2", 2),
     library.bass_drum_staff_position(),
     baca.laissez_vibrer(),
@@ -703,7 +703,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc2", (7, 8)),
     library.tam_tam_staff_position(),
     baca.flat_glissando(),
@@ -717,7 +717,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc2", 9),
     library.slate_staff_position(),
     baca.accent(
@@ -736,12 +736,12 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("perc2", (1, 9)),
     baca.dls_staff_padding(6),
 )
 
-commands(
+accumulator(
     ("perc2", 10),
     baca.staff_lines(
         3,
@@ -764,7 +764,7 @@ commands(
 
 # hp
 
-commands(
+accumulator(
     ("hp", (1, 2)),
     baca.clef("treble"),
     baca.pitch("<C#5 D5>"),
@@ -779,7 +779,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("hp", (5, 6)),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
@@ -793,12 +793,12 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("hp", (1, 6)),
     baca.dls_staff_padding(4 + 2),
 )
 
-commands(
+accumulator(
     ("hp", 7),
     baca.new(
         baca.clef("percussion"),
@@ -813,7 +813,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("hp", (7, 8)),
     library.whisk_staff_position(),
     baca.metric_modulation_spanner(
@@ -822,13 +822,13 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("hp", 9),
     baca.clef("treble"),
     baca.staff_lines(5),
 )
 
-commands(
+accumulator(
     ("hp", 10),
     baca.pitch("<C#5 D5>"),
     baca.double_flageolet(
@@ -845,7 +845,7 @@ commands(
 
 # va
 
-commands(
+accumulator(
     ("va", (4, 7)),
     baca.pitch("Bb4"),
     baca.trill_spanner(
@@ -854,7 +854,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("va", 8),
     baca.pitch("F#3"),
     baca.scp_spanner(
@@ -867,7 +867,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("va", 9),
     baca.note_head_style_harmonic_black(),
     baca.pitch("<G4 Ab4 Bb4>"),
@@ -876,7 +876,7 @@ commands(
 
 # vc1
 
-commands(
+accumulator(
     ("vc1", 8),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -889,7 +889,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc1", 9),
     baca.clef("treble"),
     baca.hairpin(
@@ -910,14 +910,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc1", [(1, 2), (5, 7), 10]),
     baca.pitch("D2"),
 )
 
 # vc2
 
-commands(
+accumulator(
     ("vc2", 8),
     baca.pitch("F#2"),
     baca.scp_spanner(
@@ -930,7 +930,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc2", 9),
     baca.clef("treble"),
     baca.hairpin(
@@ -956,14 +956,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("vc2", [(1, 2), (5, 7), 10]),
     baca.pitch("C#2"),
 )
 
 # cb1
 
-commands(
+accumulator(
     ("cb1", 8),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -976,7 +976,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("cb1", 9),
     baca.clef("treble"),
     baca.hairpin(
@@ -999,14 +999,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("cb1", [(1, 2), (5, 7), 10]),
     baca.pitch("D2"),
 )
 
 # cb2
 
-commands(
+accumulator(
     ("cb2", 8),
     baca.pitch("F#1"),
     baca.scp_spanner(
@@ -1019,7 +1019,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("cb2", 9),
     baca.clef("treble"),
     baca.hairpin(
@@ -1046,14 +1046,14 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     ("cb2", [(1, 2), (5, 7), 10]),
     baca.pitch("C#2"),
 )
 
 # va, vc1, vc2, cb1, cb2
 
-commands(
+accumulator(
     (["va", "vc1", "vc2", "cb1", "cb2"], 4),
     baca.hairpin(
         "pp < p > pp",
@@ -1080,7 +1080,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     (["va", "vc1", "vc2", "cb1", "cb2"], 8),
     baca.stem_tremolo(
         lambda _: baca.select.pleaves(_),
@@ -1093,7 +1093,7 @@ commands(
     ),
 )
 
-commands(
+accumulator(
     (["va", "vc1", "vc2", "cb1", "cb2"], 9),
     baca.stem_tremolo(
         lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -1101,14 +1101,14 @@ commands(
     baca.markup(r"\baca-quasi-bisb-markup"),
 )
 
-commands(
+accumulator(
     (["va", "vc1", "vc2", "cb1", "cb2"], (1, 10)),
     baca.dls_staff_padding(4),
 )
 
 # vc1, vc2, cb1, cb2
 
-commands(
+accumulator(
     (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
     baca.clef("bass"),
     baca.hairpin(
@@ -1128,17 +1128,17 @@ commands(
 )
 
 if __name__ == "__main__":
-    metadata, persist, score, timing = baca.build.interpret_section(
+    metadata, persist, score, timing = baca.build.section(
         score,
-        commands.manifests(),
-        commands.time_signatures,
-        **baca.score_interpretation_defaults(),
+        accumulator.manifests(),
+        accumulator.time_signatures,
+        **baca.interpret.section_defaults(),
         activate=(
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
         ),
         always_make_global_rests=True,
-        commands=commands,
+        commands=accumulator.commands,
         deactivate=(
             *baca.tags.instrument_color_tags(),
             *baca.tags.short_instrument_name_color_tags(),
@@ -1149,7 +1149,7 @@ if __name__ == "__main__":
         parts_metric_modulation_multiplier=(0.525, 0.525),
         transpose_score=True,
     )
-    lilypond_file = baca.make_lilypond_file(
+    lilypond_file = baca.lilypond.file(
         score,
         include_layout_ly=True,
         includes=["../stylesheet.ily"],
