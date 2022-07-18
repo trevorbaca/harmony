@@ -62,288 +62,267 @@ baca.markup_function(
     tags=[baca.tags.NOT_PARTS],
 )
 
-# BFL
 
-voice = score["BassFlute.Music"]
+def BFL(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [4, 4, 16],
+        tie_all=True,
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [4, 4, 16],
-    tie_all=True,
-)
-voice.extend(music)
 
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
+def PERC1(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [1, -22, 1],
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3))
+    voice.extend(music)
 
-# PERC1
 
-voice = score["Percussion.1.Music"]
+def PERC2(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        ["-", 1],
+        invisible=[-1],
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3))
+    voice.extend(music)
 
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [1, -22, 1],
-)
-voice.extend(music)
 
-music = baca.make_mmrests(accumulator.get(2, 3))
-voice.extend(music)
+def HP(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [1, "-"],
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3))
+    voice.extend(music)
 
-# PERC2
 
-voice = score["Percussion.2.Music"]
+def VA(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [4, 4, 16],
+        tie_all=True,
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-music = library.make_sixteenths(
-    accumulator.get(1),
-    ["-", 1],
-    invisible=[-1],
-)
-voice.extend(music)
 
-music = baca.make_mmrests(accumulator.get(2, 3))
-voice.extend(music)
+def VC1(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [4, 4, 16],
+        tie_all=True,
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-# HP
 
-voice = score["Harp.Music"]
+def VC2(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [4, 4, 16],
+        tie_all=True,
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [1, "-"],
-)
-voice.extend(music)
 
-music = baca.make_mmrests(accumulator.get(2, 3))
-voice.extend(music)
+def CB1(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [4, 4, 16],
+        tie_all=True,
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-# VA
 
-voice = score["Viola.Music"]
+def CB2(voice):
+    music = library.make_sixteenths(
+        accumulator.get(1),
+        [16, 4, 2, 2],
+        written_dotted_wholes=[0],
+        invisible=[1, 2, 3],
+    )
+    voice.extend(music)
+    music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
+    voice.extend(music)
 
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [4, 4, 16],
-    tie_all=True,
-)
-voice.extend(music)
 
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
-
-# VC1
-
-voice = score["Cello.1.Music"]
-
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [4, 4, 16],
-    tie_all=True,
-)
-voice.extend(music)
-
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
-
-# VC2
-
-voice = score["Cello.2.Music"]
-
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [4, 4, 16],
-    tie_all=True,
-)
-voice.extend(music)
-
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
-
-# CB1
-
-voice = score["Contrabass.1.Music"]
-
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [4, 4, 16],
-    tie_all=True,
-)
-voice.extend(music)
-
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
-
-# CB2
-
-voice = score["Contrabass.2.Music"]
-
-music = library.make_sixteenths(
-    accumulator.get(1),
-    [16, 4, 2, 2],
-    written_dotted_wholes=[0],
-    invisible=[1, 2, 3],
-)
-voice.extend(music)
-
-music = baca.make_mmrests(accumulator.get(2, 3), head=voice.name)
-voice.extend(music)
-
-# reapply
-
-music_voices = [_ for _ in voice_names if "Music" in _]
-
-accumulator(
-    music_voices,
-    baca.reapply_persistent_indicators(),
-)
-
-# bfl, va, vc1, vc2, cb1
-
-accumulator(
-    (["bfl", "va", "vc1", "vc2", "cb1"], 1),
-    baca.hairpin(
-        "pp < p >o niente",
-        pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
-    ),
-)
-
-# bfl
-
-accumulator(
-    ("bfl", 1),
-    baca.pitch("Bb4"),
-    baca.trill_spanner(
-        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-    ),
-)
-
-accumulator(
-    ("bfl", (1, 2)),
-    baca.dls_staff_padding(4),
-)
-
-# perc1
-
-accumulator(
-    ("perc1", 1),
-    library.brake_drum_staff_position(),
-    baca.dynamic("f"),
-    baca.new(
-        baca.dynamic("mf"),
-        baca.damp(),
-        selector=lambda _: baca.select.phead(_, -1),
-    ),
-    baca.markup(
-        r"\baca-brake-drum-markup",
-        abjad.Tweak(r"- \tweak staff-padding 6"),
-    ),
-)
-
-accumulator(
-    ("perc1", (1, 2)),
-    baca.dls_staff_padding(6),
-)
-
-# perc2
-
-accumulator(
-    ("perc2", 1),
-    baca.damp(
-        lambda _: abjad.select.leaf(_, -1),
-    ),
-)
-
-# hp
-
-accumulator(
-    ("hp", 1),
-    baca.clef("treble"),
-    baca.pitch("Bb4"),
-    baca.snap_pizzicato(),
-    baca.dynamic("f"),
-)
-
-accumulator(
-    ("hp", (1, 2)),
-    baca.dls_staff_padding(4),
-)
-
-# va
-
-# vc1
-
-# vc2
-
-# cb1
-
-accumulator(
-    ("cb1", 1),
-    baca.pitch(
-        "Bb4",
-        do_not_transpose=True,
-    ),
-    baca.trill_spanner(
-        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-        alteration="Cb5",
-    ),
-)
-
-# cb2
-
-accumulator(
-    ("cb2", 1),
-    baca.pitch("A1"),
-    baca.flat_glissando(
-        left_broken=True,
-        selector=lambda _: baca.select.leaves(_)[:1],
-    ),
-    baca.hairpin(
-        "ff >o niente",
-        left_broken=True,
-        selector=lambda _: baca.select.rleaves(_),
-    ),
-    baca.scp_spanner(
-        "T1 -> T4+",
-        abjad.Tweak(r"- \tweak staff-padding 3"),
-        autodetect_right_padding=False,
-        bookend=-1,
-        left_broken=True,
-        selector=lambda _: baca.select.leaves(_),
-    ),
-)
-
-accumulator(
-    ("cb2", -1),
-    baca.not_parts(
-        baca.chunk(
-            baca.mark(r"\harmony-colophon-markup"),
-            baca.rehearsal_mark_down(),
-            baca.rehearsal_mark_extra_offset((92, 8)),
-            baca.rehearsal_mark_padding(12),
-            baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-            selector=lambda _: baca.select.rleaf(_, -1),
+def bfl(m):
+    accumulator(
+        ("bfl", 1),
+        baca.pitch("Bb4"),
+        baca.trill_spanner(
+            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         ),
-    ),
-)
+    )
+    accumulator(
+        ("bfl", (1, 2)),
+        baca.dls_staff_padding(4),
+    )
 
-# va, vc1, vc2
 
-accumulator(
-    (["va", "vc1", "vc2"], 1),
-    baca.pitch("Bb4"),
-    baca.trill_spanner(
-        abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-        alteration="Cb5",
-    ),
-)
+def perc1(m):
+    accumulator(
+        ("perc1", 1),
+        library.brake_drum_staff_position(),
+        baca.dynamic("f"),
+        baca.new(
+            baca.dynamic("mf"),
+            baca.damp(),
+            selector=lambda _: baca.select.phead(_, -1),
+        ),
+        baca.markup(
+            r"\baca-brake-drum-markup",
+            abjad.Tweak(r"- \tweak staff-padding 6"),
+        ),
+    )
+    accumulator(
+        ("perc1", (1, 2)),
+        baca.dls_staff_padding(6),
+    )
 
-# va, vc1, vc2, cb1, cb2
 
-accumulator(
-    (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
-    baca.dls_staff_padding(4),
-)
+def perc2(m):
+    accumulator(
+        ("perc2", 1),
+        baca.damp(
+            lambda _: abjad.select.leaf(_, -1),
+        ),
+    )
+
+
+def hp(m):
+    accumulator(
+        ("hp", 1),
+        baca.clef("treble"),
+        baca.pitch("Bb4"),
+        baca.snap_pizzicato(),
+        baca.dynamic("f"),
+    )
+    accumulator(
+        ("hp", (1, 2)),
+        baca.dls_staff_padding(4),
+    )
+
+
+def cb1(m):
+    accumulator(
+        ("cb1", 1),
+        baca.pitch(
+            "Bb4",
+            do_not_transpose=True,
+        ),
+        baca.trill_spanner(
+            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            alteration="Cb5",
+        ),
+    )
+
+
+def cb2(m):
+    accumulator(
+        ("cb2", 1),
+        baca.pitch("A1"),
+        baca.flat_glissando(
+            left_broken=True,
+            selector=lambda _: baca.select.leaves(_)[:1],
+        ),
+        baca.hairpin(
+            "ff >o niente",
+            left_broken=True,
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.scp_spanner(
+            "T1 -> T4+",
+            abjad.Tweak(r"- \tweak staff-padding 3"),
+            autodetect_right_padding=False,
+            bookend=-1,
+            left_broken=True,
+            selector=lambda _: baca.select.leaves(_),
+        ),
+    )
+    accumulator(
+        ("cb2", -1),
+        baca.not_parts(
+            baca.chunk(
+                baca.mark(r"\harmony-colophon-markup"),
+                baca.rehearsal_mark_down(),
+                baca.rehearsal_mark_extra_offset((92, 8)),
+                baca.rehearsal_mark_padding(12),
+                baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
+                selector=lambda _: baca.select.rleaf(_, -1),
+            ),
+        ),
+    )
+
+
+def composites(cache):
+    # bfl, va, vc1, vc2, cb1
+    accumulator(
+        (["bfl", "va", "vc1", "vc2", "cb1"], 1),
+        baca.hairpin(
+            "pp < p >o niente",
+            pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
+        ),
+    )
+    # va, vc1, vc2
+    accumulator(
+        (["va", "vc1", "vc2"], 1),
+        baca.pitch("Bb4"),
+        baca.trill_spanner(
+            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            alteration="Cb5",
+        ),
+    )
+    # va, vc1, vc2, cb1, cb2
+    accumulator(
+        (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
+        baca.dls_staff_padding(4),
+    )
+
+
+def main():
+    BFL(accumulator.voice("bfl"))
+    PERC1(accumulator.voice("perc1"))
+    PERC2(accumulator.voice("perc2"))
+    HP(accumulator.voice("hp"))
+    VA(accumulator.voice("va"))
+    VC1(accumulator.voice("vc1"))
+    VC2(accumulator.voice("vc2"))
+    CB1(accumulator.voice("cb1"))
+    CB2(accumulator.voice("cb2"))
+    previous_persist = baca.previous_metadata(__file__, file_name="__persist__")
+    baca.reapply(accumulator, accumulator.manifests(), previous_persist, voice_names)
+    cache = baca.interpret.cache_leaves(
+        score,
+        len(accumulator.time_signatures),
+        accumulator.voice_abbreviations,
+    )
+    bfl(cache["bfl"])
+    perc1(cache["perc1"])
+    perc2(cache["perc2"])
+    hp(cache["hp"])
+    cb1(cache["cb1"])
+    cb2(cache["cb2"])
+    composites(cache)
+
 
 if __name__ == "__main__":
+    main()
     metadata, persist, score, timing = baca.build.section(
         score,
         accumulator.manifests(),
