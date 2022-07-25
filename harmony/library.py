@@ -406,7 +406,6 @@ def make_empty_score():
     score = abjad.Score([global_context, music_context], name="Score", tag=tag)
     baca.score.assert_lilypond_identifiers(score)
     baca.score.assert_unique_context_names(score)
-    # baca.score.assert_matching_custom_context_names(score)
     return score
 
 
