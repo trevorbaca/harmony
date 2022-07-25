@@ -75,6 +75,7 @@ baca.markup_function(
     r"\harmony-repeat-three-markup",
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
     abjad.Tweak(r"- \tweak font-size 10"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 ),
 
@@ -83,6 +84,7 @@ baca.markup_function(
     r"\harmony-repeat-three-markup",
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
     abjad.Tweak(r"- \tweak font-size 4"),
+    allow_rests=True,
     tags=[baca.tags.ONLY_PARTS],
 )
 
@@ -104,6 +106,7 @@ baca.markup_function(
     skips[2 - 1],
     r"\harmony-text-twenty-five",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 
@@ -111,6 +114,7 @@ baca.markup_function(
     skips[8 - 1],
     r"\harmony-text-twenty-six",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 

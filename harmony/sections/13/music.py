@@ -72,6 +72,7 @@ baca.markup_function(
     skips[2 - 1],
     r"\harmony-text-twelve",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 
@@ -79,6 +80,7 @@ baca.markup_function(
     skips[6 - 1],
     r"\harmony-text-thirteen",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 

@@ -90,6 +90,7 @@ baca.markup_function(
     skips[3 - 1],
     r"\harmony-text-eighteen",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 
@@ -97,6 +98,7 @@ baca.markup_function(
     skips[10 - 1],
     r"\harmony-text-nineteen",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
+    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 
