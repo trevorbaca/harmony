@@ -503,7 +503,7 @@ def percs(m):
         baca.new(
             baca.dots_extra_offset((2, 0)),
             baca.dots_x_extent_false(),
-            baca.rest_x_extent_zero(),
+            baca.rest_x_extent_zero(selector=lambda _: abjad.select.rest(_, 0)),
             map=lambda _: [
                 x
                 for x in abjad.select.rests(_)
