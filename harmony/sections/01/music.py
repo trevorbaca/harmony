@@ -247,7 +247,7 @@ def bfl(m):
             selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
         ),
         baca.dots_x_extent_false(
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
     )
     accumulator(
@@ -387,7 +387,7 @@ def hp(m):
         baca.staff_lines(5),
         baca.pitch("G1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic(
             "mf-ancora",
@@ -425,10 +425,10 @@ def va(m):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("sfp"),
         baca.dls_staff_padding(6),
@@ -464,11 +464,11 @@ def vc1(m):
         ("vc1", 3),
         baca.clef(
             "percussion",
-            lambda _: abjad.select.leaf(_, 1),
+            selector=lambda _: abjad.select.leaf(_, 1),
         ),
         baca.staff_lines(
             1,
-            lambda _: abjad.select.leaf(_, 1),
+            selector=lambda _: abjad.select.leaf(_, 1),
         ),
         baca.new(
             library.bridge_staff_position(),
@@ -523,7 +523,7 @@ def vc2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.hairpin(
             "mf >o niente",
@@ -553,10 +553,10 @@ def cb1(m):
         ),
         baca.pitch("A1"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.hairpin(
             "o< f >o niente",
@@ -578,10 +578,10 @@ def cb1(m):
         baca.tuplet_number_text(r"\markup 5:4"),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("sfp"),
         baca.dls_staff_padding(6),
@@ -622,7 +622,7 @@ def cb2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.hairpin(
             "mf >o niente",

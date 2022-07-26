@@ -370,7 +370,7 @@ def bfl(m):
         ("bfl", 5),
         baca.pitch(
             "F#5",
-            lambda _: abjad.select.run(_, 0),
+            selector=lambda _: abjad.select.run(_, 0),
         ),
     )
     accumulator(
@@ -822,10 +822,10 @@ def composites(cache):
         (["vc1", "vc2", "cb1", "cb2"], 2),
         # TODO: promote to music = library.make_sixteenths()
         baca.invisible_music(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [1], 2),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o<| mp |> pp pp <| mp |>o niente",
@@ -834,11 +834,11 @@ def composites(cache):
         ),
         baca.dynamic_text_x_offset(
             -3,
-            lambda _: baca.select.pleaf(_, 1),
+            selector=lambda _: baca.select.pleaf(_, 1),
         ),
         baca.dynamic_text_x_offset(
             -0.25,
-            lambda _: baca.select.pleaf(_, -1),
+            selector=lambda _: baca.select.pleaf(_, -1),
         ),
         baca.markup(r"\baca-quasi-bisb-markup"),
     )
