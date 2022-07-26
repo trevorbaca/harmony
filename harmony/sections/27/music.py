@@ -826,7 +826,9 @@ def va(m):
     accumulator(
         ("va", (5, 6)),
         baca.new(
-            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+            baca.note_head_style_harmonic_black(
+                selector=lambda _: baca.select.pleaves(_)
+            ),
             baca.pitch("<G4 Ab4 Bb4>"),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.plts(_),
