@@ -1210,7 +1210,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 7),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("E3"),
         baca.markup(
             r"\baca-string-iii-markup",

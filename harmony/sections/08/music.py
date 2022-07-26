@@ -618,7 +618,7 @@ def cb2(m):
 def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),

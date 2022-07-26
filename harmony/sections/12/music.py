@@ -1350,7 +1350,7 @@ def composites(cache):
     # va, vc1, vc2, cb1, cb2
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 1),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.flat_glissando(
             left_broken=True,
         ),

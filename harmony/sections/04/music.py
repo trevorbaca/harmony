@@ -787,11 +787,11 @@ def cb2(m):
 def cbs(cache):
     accumulator(
         ("cb1", [(1, 6), 8, 11]),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
     )
     accumulator(
         ("cb2", (1, 6)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
     )
 
 

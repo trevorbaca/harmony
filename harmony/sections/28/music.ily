@@ -9956,9 +9956,6 @@ number.28.Cello.2.Music = {
       %! baca.OverrideCommand._call(1)
       %! baca.note_head_style_harmonic()
     \override NoteHead.style = #'harmonic
-      %! baca.OverrideCommand._call(1)
-      %! baca.note_head_style_harmonic()
-    \override NoteHead.style = #'harmonic
       %! baca._style_fermata_measures(3)
     \stopStaff
       %! baca._style_fermata_measures(3)
@@ -12527,9 +12524,6 @@ number.28.Cello.2.Music = {
       %! baca.OverrideCommand._call(2)
       %! baca.dls_staff_padding()
     \revert DynamicLineSpanner.staff-padding
-      %! baca.OverrideCommand._call(2)
-      %! baca.note_head_style_harmonic()
-    \revert NoteHead.style
       %! baca.OverrideCommand._call(2)
       %! baca.note_head_style_harmonic()
     \revert NoteHead.style

@@ -375,7 +375,7 @@ def cb1(m):
         ("cb1", 1),
         baca.clef("bass"),
         baca.pitch("E3"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.markup(
             r"\baca-string-iii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
@@ -406,7 +406,7 @@ def cb2(m):
             "Fqs5 Gqf5",
             do_not_transpose=True,
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),

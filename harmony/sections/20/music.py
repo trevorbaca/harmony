@@ -562,7 +562,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", 2),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("F#5"),
         baca.hairpin(
             "o< mp >o niente",

@@ -499,7 +499,7 @@ def va(m):
     )
     accumulator(
         ("va", 5),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G4 Ab4 Bb4>"),
         baca.dynamic("pp"),
     )
@@ -523,7 +523,7 @@ def va(m):
 def vc1(m):
     accumulator(
         ("vc1", (1, 4)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitches("E6 C#6"),
         baca.glissando(),
         baca.hairpin(
@@ -548,7 +548,7 @@ def vc1(m):
         baca.untie(
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<A4 B4 C5>",
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -559,7 +559,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (7, 10)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("C#6"),
         baca.hairpin(
             "niente o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
@@ -593,7 +593,7 @@ def vc1(m):
 def vc2(m):
     accumulator(
         ("vc2", (1, 4)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitches("A5 C#6"),
         baca.glissando(),
         baca.hairpin(
@@ -618,7 +618,7 @@ def vc2(m):
         baca.untie(
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<G4 Ab4 Bb4>",
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -633,8 +633,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", (7, 10)),
-        baca.note_head_style_harmonic(),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("A5"),
         baca.hairpin(
             "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
@@ -669,7 +668,7 @@ def cb1(m):
     accumulator(
         ("cb1", (1, 4)),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "C#4",
             do_not_transpose=True,
@@ -699,7 +698,7 @@ def cb1(m):
         baca.untie(
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<A4 B4 C5>",
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -711,7 +710,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (7, 10)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "C#4",
             do_not_transpose=True,
@@ -783,7 +782,7 @@ def cb2(m):
         baca.untie(
             selector=lambda _: baca.select.leaves(_),
         ),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<G4 Ab4 Bb4>",
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
