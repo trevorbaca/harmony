@@ -530,7 +530,7 @@ def hp(m):
     accumulator(
         ("hp", 2),
         baca.clef("bass"),
-        baca.clef_whiteout(2),
+        baca.clef_whiteout(2, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("G1"),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
