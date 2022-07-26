@@ -643,7 +643,7 @@ def va(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.dynamic("mf"),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),

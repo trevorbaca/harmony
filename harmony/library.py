@@ -47,7 +47,7 @@ def bass_drum_staff_position(allow_hidden=False):
     """
     return baca.chunk(
         baca.staff_position(-1, allow_hidden=allow_hidden),
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
     )
 
@@ -58,7 +58,7 @@ def bridge_staff_position():
     """
     return baca.chunk(
         baca.staff_position(0),
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
     )
 
@@ -67,7 +67,10 @@ def brake_drum_staff_position():
     """
     Sets brake drum staff position and stem direction.
     """
-    return baca.chunk(baca.staff_position(0), baca.stem_up())
+    return baca.chunk(
+        baca.staff_position(0),
+        baca.stem_up(selector=lambda _: baca.select.pleaves(_)),
+    )
 
 
 def cerulean():
@@ -1204,7 +1207,7 @@ def purpleheart_staff_positions(argument):
     assert isinstance(argument, list), repr(argument)
     assert all(_ in (-2, 0, 2) for _ in argument), repr(argument)
     return baca.chunk(
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(0.5),
         baca.staff_positions(
@@ -1220,7 +1223,7 @@ def slate_staff_position():
     """
     return baca.chunk(
         baca.staff_position(1),
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
     )
 
@@ -1231,7 +1234,7 @@ def tam_tam_staff_position():
     """
     return baca.chunk(
         baca.staff_position(0),
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
     )
 
@@ -1240,7 +1243,10 @@ def triangle_staff_position():
     """
     Sets triangle position and stem direction.
     """
-    return baca.chunk(baca.staff_position(1), baca.stem_up())
+    return baca.chunk(
+        baca.staff_position(1),
+        baca.stem_up(selector=lambda _: baca.select.pleaves(_)),
+    )
 
 
 def voice_abbreviations():
@@ -1278,6 +1284,6 @@ def whisk_staff_position():
     """
     return baca.chunk(
         baca.staff_position(0),
-        baca.stem_down(),
+        baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
     )

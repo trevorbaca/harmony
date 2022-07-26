@@ -861,7 +861,7 @@ def cb1(m):
         ),
         baca.clef("treble"),
         baca.staff_lines(5),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
@@ -942,7 +942,7 @@ def cb2(m):
             "F#4",
             do_not_transpose=True,
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),

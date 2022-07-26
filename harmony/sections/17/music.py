@@ -606,7 +606,7 @@ def vc1(m):
     accumulator(
         ("vc1", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G#5 A5 Bb5>"),
         baca.markup(
             r"\baca-string-i-markup",
@@ -660,7 +660,7 @@ def vc2(m):
     accumulator(
         ("vc2", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<A5 Bb5 Cb6>"),
         baca.markup(
             r"\baca-string-i-markup",
@@ -714,7 +714,7 @@ def cb1(m):
     accumulator(
         ("cb1", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<B5 C6 Db6>",
             do_not_transpose=True,
@@ -771,7 +771,7 @@ def cb2(m):
     accumulator(
         ("cb2", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<A#5 B5 C6>",
             do_not_transpose=True,

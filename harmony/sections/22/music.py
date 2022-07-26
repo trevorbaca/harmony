@@ -730,7 +730,7 @@ def va(m):
 def vc1(m):
     accumulator(
         ("vc1", 3),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("F#5"),
         baca.hairpin(
             "o< mp >o niente",
@@ -752,7 +752,7 @@ def vc1(m):
         ("vc1", (5, 10)),
         baca.clef("treble"),
         baca.pitch("F#5"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
@@ -872,7 +872,7 @@ def cb1(m):
     accumulator(
         ("cb1", (5, 10)),
         baca.clef("treble"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("Cqf5"),
         baca.hairpin(
             "niente o< mp >o",

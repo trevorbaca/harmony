@@ -517,7 +517,7 @@ def va(m):
     )
     accumulator(
         ("va", 2),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G4 Ab4 Bb4>"),
         baca.dynamic("pp"),
     )
@@ -572,7 +572,7 @@ def vc1(m):
     accumulator(
         ("vc1", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<A4 B4 C5>"),
         baca.dynamic("pp"),
     )
@@ -627,7 +627,7 @@ def vc2(m):
     accumulator(
         ("vc2", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G4 Ab4 Bb4>"),
         baca.dynamic("pp"),
     )
@@ -679,7 +679,7 @@ def cb1(m):
     accumulator(
         ("cb1", 2),
         baca.clef("treble"),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<A4 B4 C5>",
             do_not_transpose=True,
@@ -717,7 +717,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 2),
-        baca.note_head_style_harmonic_black(),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "<G4 Ab4 Bb4>",
             do_not_transpose=True,

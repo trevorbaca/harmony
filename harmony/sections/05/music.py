@@ -340,7 +340,7 @@ def bfl(m):
     accumulator(
         ("bfl", 4),
         baca.pitch("F3"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.dynamic("ff"),
         baca.markup(
             r"\baca-jet-whistle-markup",
@@ -350,7 +350,7 @@ def bfl(m):
     accumulator(
         ("bfl", 5),
         baca.pitch("E3"),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.dynamic(
             "ff-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
@@ -848,7 +848,7 @@ def cb1(m):
             "Aqs4",
             do_not_transpose=True,
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),
@@ -944,7 +944,7 @@ def cb2(m):
             "F#4",
             do_not_transpose=True,
         ),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),

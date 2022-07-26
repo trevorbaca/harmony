@@ -850,7 +850,7 @@ def hp(m):
 def va(m):
     accumulator(
         ("va", (1, 2)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.interpolate_pitches("D#3", "E3"),
         baca.glissando(
             allow_repeats=True,
@@ -892,7 +892,7 @@ def va(m):
     )
     accumulator(
         ("va", (6, 9)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.new(
             baca.interpolate_pitches("D#3", "E3"),
             map=lambda _: baca.select.runs(_),
@@ -1127,7 +1127,7 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", (1, 2)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.interpolate_pitches("F2", "E2"),
         baca.glissando(
             allow_repeats=True,
@@ -1176,7 +1176,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (6, 9)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.new(
             baca.interpolate_pitches("F2", "E2"),
             map=lambda _: baca.select.runs(_),
@@ -1211,7 +1211,7 @@ def cb1(m):
 def cb2(m):
     accumulator(
         ("cb2", (1, 2)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.interpolate_pitches("D#2", "E2"),
         baca.glissando(
             allow_repeats=True,
@@ -1249,7 +1249,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (6, 9)),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.new(
             baca.interpolate_pitches("D#2", "E2"),
             map=lambda _: baca.select.runs(_),

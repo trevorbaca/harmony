@@ -1043,7 +1043,7 @@ def vc1(m):
     accumulator(
         ("vc1", 1),
         baca.tuplet_bracket_up(),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o<| mp |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -1169,7 +1169,7 @@ def cb1(m):
     accumulator(
         ("cb1", 1),
         baca.tuplet_bracket_up(),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o<| mp |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
@@ -1293,7 +1293,7 @@ def composites(cache):
     # va, vc1, vc2, cb1, cb2
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 2),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o<| mp |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
@@ -1304,7 +1304,7 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
         baca.flat_glissando(),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o<| p |> pp",
             pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
@@ -1333,7 +1333,7 @@ def composites(cache):
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 10),
-        baca.note_head_style_harmonic(),
+        baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.flat_glissando(
             right_broken=True,
             selector=lambda _: baca.select.rleaves(_),

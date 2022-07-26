@@ -642,7 +642,7 @@ def va(m):
             baca.untie(
                 selector=lambda _: baca.select.leaves(_),
             ),
-            baca.note_head_style_harmonic_black(),
+            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
             baca.pitch(
                 "<G4 Ab4 Bb4>",
                 selector=lambda _: abjad.select.leaf(_, 0),
@@ -697,7 +697,7 @@ def vc1(m):
             baca.untie(
                 selector=lambda _: baca.select.leaves(_),
             ),
-            baca.note_head_style_harmonic_black(),
+            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
             baca.pitch(
                 "<A4 B4 C5>",
                 selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -748,7 +748,7 @@ def vc2(m):
             baca.untie(
                 selector=lambda _: baca.select.leaves(_),
             ),
-            baca.note_head_style_harmonic_black(),
+            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
             baca.pitch(
                 "<G4 Ab4 Bb4>",
                 selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -806,7 +806,7 @@ def cb1(m):
             baca.untie(
                 selector=lambda _: baca.select.leaves(_),
             ),
-            baca.note_head_style_harmonic_black(),
+            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
             baca.pitch(
                 "<A4 B4 C5>",
                 selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -861,7 +861,7 @@ def cb2(m):
             baca.untie(
                 selector=lambda _: baca.select.leaves(_),
             ),
-            baca.note_head_style_harmonic_black(),
+            baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
             baca.pitch(
                 "<G4 Ab4 Bb4>",
                 selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
