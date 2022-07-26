@@ -324,7 +324,7 @@ def perc1(m):
         ("perc1", 4),
         library.triangle_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic(
             "pp-ancora",
@@ -391,12 +391,12 @@ def perc2(m):
             selector=lambda _: baca.select.leaves(_)[-2:],
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pheads(_), [0, 2]),
+            selector=lambda _: abjad.select.get(baca.select.pheads(_), [0, 2]),
         ),
         baca.dynamic("p"),
         baca.dls_staff_padding(
             6,
-            lambda _: baca.select.leaves(_)[:-2],
+            selector=lambda _: baca.select.leaves(_)[:-2],
         ),
         baca.markup(
             r"\baca-tam-tam-markup",
@@ -430,7 +430,7 @@ def hp(m):
         ("hp", (1, 3)),
         baca.pitch("A4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic(
             "mf",
@@ -585,7 +585,7 @@ def vc2(m):
         # NOTE: current clef / after-grace contention:
         baca.clef(
             "bass",
-            lambda _: abjad.select.leaf(_, -1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     )
     accumulator(
@@ -706,7 +706,7 @@ def cb2(m):
         # NOTE: current clef / after-grace contention:
         baca.clef(
             "bass",
-            lambda _: abjad.select.leaf(_, -1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     )
     accumulator(
@@ -772,11 +772,11 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (5, 9)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.chunk(
             baca.accent(
-                lambda _: baca.select.pheads(_),
+                selector=lambda _: baca.select.pheads(_),
             ),
             baca.flat_glissando(),
         ),

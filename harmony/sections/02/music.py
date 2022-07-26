@@ -433,7 +433,7 @@ def bfl(m):
         ("bfl", (1, 5)),
         baca.pitch("Ab4"),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, 1], 3),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, 1], 3),
         ),
         baca.hairpin(
             "p <| mf |> p",
@@ -466,7 +466,7 @@ def bfl(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-sounds-ottava-higher-markup =|",
@@ -492,7 +492,7 @@ def bfl(m):
         ("bfl", (8, 11)),
         baca.pitch("Ab4"),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
+            selector=lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
         ),
         baca.hairpin(
             "p <| mp |> p",
@@ -532,7 +532,7 @@ def perc1(m):
         baca.new(
             baca.staff_lines(
                 1,
-                lambda _: abjad.select.leaf(_, 1, grace=False),
+                selector=lambda _: abjad.select.leaf(_, 1, grace=False),
             ),
             baca.hairpin(
                 "o<| f",
@@ -642,7 +642,7 @@ def perc2(m):
             hide_middle_stems=True,
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
     )
     accumulator(
@@ -688,7 +688,7 @@ def perc2(m):
             hide_middle_stems=True,
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.hairpin(
             "p < mf",
@@ -707,7 +707,7 @@ def hp(m):
         baca.clef("treble"),
         baca.pitch("<G#4 A4 B4>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "p < f > p",
@@ -745,7 +745,7 @@ def hp(m):
         baca.staff_lines(5),
         baca.pitch("G1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic("f"),
         baca.dls_staff_padding(6),
@@ -755,7 +755,7 @@ def hp(m):
         baca.clef("treble"),
         baca.pitch("<G#4 A4 B4>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "p < mp > p",
@@ -808,7 +808,7 @@ def va(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -840,10 +840,10 @@ def va(m):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic('"ff"'),
         baca.dls_staff_padding(6),
@@ -869,7 +869,7 @@ def va(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -902,7 +902,7 @@ def vc1(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -926,13 +926,13 @@ def vc1(m):
         ("vc1", (5, 6)),
         baca.pitch(
             "A2",
-            lambda _: baca.select.rleaves(_),
+            selector=lambda _: baca.select.rleaves(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.pleaves(baca.rleaves(_)),
+            selector=lambda _: baca.pleaves(baca.rleaves(_)),
         ),
         baca.accent(
-            lambda _: baca.pheads(baca.rleaves(_)),
+            selector=lambda _: baca.pheads(baca.rleaves(_)),
         ),
         baca.hairpin(
             "o< f >o niente",
@@ -990,7 +990,7 @@ def vc1(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1014,7 +1014,7 @@ def vc2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "mf >o niente",
@@ -1045,7 +1045,7 @@ def vc2(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1076,7 +1076,7 @@ def vc2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.hairpin(
             "mf >o niente",
@@ -1106,7 +1106,7 @@ def vc2(m):
         ),
         baca.dls_staff_padding(
             4,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1125,10 +1125,10 @@ def cb1(m):
         ("cb1", 1),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -1156,7 +1156,7 @@ def cb1(m):
         ),
         baca.dls_staff_padding(
             6,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1173,10 +1173,10 @@ def cb1(m):
         baca.clef("bass"),
         baca.pitch("A1"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.hairpin(
             "f >o niente",
@@ -1196,16 +1196,16 @@ def cb1(m):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic('"ff"'),
         baca.dls_staff_padding(6),
         baca.rest_extra_offset(
             (-1, 0),
-            lambda _: baca.select.rest(_, -1),
+            selector=lambda _: baca.select.rest(_, -1),
         ),
     )
     accumulator(
@@ -1228,7 +1228,7 @@ def cb1(m):
         ),
         baca.dls_staff_padding(
             6,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1251,7 +1251,7 @@ def cb2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "mf >o niente",
@@ -1284,7 +1284,7 @@ def cb2(m):
         ),
         baca.dls_staff_padding(
             6,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1319,7 +1319,7 @@ def cb2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.hairpin(
             "mf >o niente",
@@ -1351,7 +1351,7 @@ def cb2(m):
         ),
         baca.dls_staff_padding(
             6,
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.text_spanner(
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -1370,7 +1370,7 @@ def strings(cache):
         (["va", "vc1", "cb1"], [(1, 5), (8, 11)]),
         baca.new(
             baca.note_head_style_harmonic(
-                lambda _: baca.select.pleaves(_, grace=True),
+                selector=lambda _: baca.select.pleaves(_, grace=True),
             ),
             map=lambda _: abjad.select.runs(_, grace=True),
         ),
@@ -1379,7 +1379,7 @@ def strings(cache):
         ("vc2", [(3, 5), (8, 11)]),
         baca.new(
             baca.note_head_style_harmonic(
-                lambda _: baca.select.pleaves(_, grace=True),
+                selector=lambda _: baca.select.pleaves(_, grace=True),
             ),
             map=lambda _: abjad.select.runs(_, grace=True),
         ),
@@ -1388,7 +1388,7 @@ def strings(cache):
         (["cb2"], [(3, 5), (8, 11)]),
         baca.new(
             baca.note_head_style_harmonic(
-                lambda _: baca.select.pleaves(_, grace=True),
+                selector=lambda _: baca.select.pleaves(_, grace=True),
             ),
             map=lambda _: abjad.select.runs(_, grace=True),
         ),

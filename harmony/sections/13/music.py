@@ -341,11 +341,11 @@ def bfl(m):
         ("bfl", 1),
         # TODO: promote into music = library.make_sixteenths():
         baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, -1),
+            selector=lambda _: baca.select.pleaf(_, -1),
         ),
         baca.pitch("B4"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o<| f |>o niente",
@@ -362,7 +362,7 @@ def bfl(m):
         ("bfl", 3),
         baca.pitch("B4"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o<| f |>o niente",
@@ -374,11 +374,11 @@ def bfl(m):
         ("bfl", 4),
         baca.pitches(
             "A3",
-            lambda _: baca.select.leaves(_, grace=False),
+            selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.pitches(
             abjad.sequence.rotate(library.appoggiato_pitches_a(), -9),
-            lambda _: baca.select.leaves(_, grace=True),
+            selector=lambda _: baca.select.leaves(_, grace=True),
         ),
         baca.dynamic(
             "p",
@@ -402,7 +402,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         ),
         baca.breathe(
-            lambda _: baca.select.pleaf(_, 1),
+            selector=lambda _: baca.select.pleaf(_, 1),
         ),
         baca.hairpin(
             'o< "f" >o niente',
@@ -431,11 +431,11 @@ def perc1(m):
         baca.staff_lines(3),
         baca.staff_position(
             -2,
-            lambda _: baca.select.runs(_)[:1],
+            selector=lambda _: baca.select.runs(_)[:1],
         ),
         baca.staff_position(
             0,
-            lambda _: baca.select.runs(_)[1:],
+            selector=lambda _: baca.select.runs(_)[1:],
         ),
         baca.dynamic(
             "p",
@@ -464,7 +464,7 @@ def perc1(m):
         baca.staff_lines(1),
         library.triangle_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic(
             "p-ancora",
@@ -499,11 +499,11 @@ def perc2(m):
         baca.staff_lines(3),
         baca.staff_position(
             -2,
-            lambda _: baca.select.runs(_)[:1],
+            selector=lambda _: baca.select.runs(_)[:1],
         ),
         baca.staff_position(
             0,
-            lambda _: baca.select.runs(_)[1:],
+            selector=lambda _: baca.select.runs(_)[1:],
         ),
         baca.dynamic(
             "p",
@@ -595,7 +595,7 @@ def hp(m):
         baca.staff_lines(5),
         baca.pitch("<B2 C3 Db3>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o< mf >o niente",
@@ -612,13 +612,13 @@ def hp(m):
         baca.clef("treble"),
         baca.pitches(
             "Bb5 A5 G#5",
-            lambda _: baca.select.plts(_)[:-1],
+            selector=lambda _: baca.select.plts(_)[:-1],
         ),
         baca.flageolet(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_)[:-1],
+            selector=lambda _: baca.select.ptails(_)[:-1],
         ),
         baca.dynamic("f"),
         baca.new(
@@ -639,7 +639,7 @@ def hp(m):
         ("hp", 5),
         baca.pitch("E4"),
         baca.snap_pizzicato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
     )
     accumulator(
@@ -659,10 +659,10 @@ def va(m):
     accumulator(
         ("va", 1),
         baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.hairpin(
             "mp >o niente",
@@ -719,10 +719,10 @@ def vc1(m):
     accumulator(
         ("vc1", 1),
         baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.hairpin(
             "mp >o niente",
@@ -780,7 +780,7 @@ def vc1(m):
         ("vc1", 5),
         baca.pitch(
             "Aqf3",
-            lambda _: baca.select.lleak(baca.select.leaves(_)),
+            selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         ),
     )
 
@@ -789,7 +789,7 @@ def vc2(m):
     accumulator(
         ("vc2", 1),
         baca.repeat_tie(
-            lambda _: baca.select.phead(_, 0),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.new(
             baca.pitch("F3"),
@@ -824,7 +824,7 @@ def vc2(m):
     accumulator(
         ("vc2", 4),
         baca.repeat_tie(
-            lambda _: abjad.select.leaf(_, 0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.hairpin(
             "(mp) >o niente",
@@ -835,11 +835,11 @@ def vc2(m):
         ("vc2", (3, 5)),
         baca.pitch(
             "C3",
-            lambda _: baca.select.plts(_)[:1],
+            selector=lambda _: baca.select.plts(_)[:1],
         ),
         baca.pitch(
             "F3",
-            lambda _: baca.select.plts(_)[1:],
+            selector=lambda _: baca.select.plts(_)[1:],
         ),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -852,10 +852,10 @@ def cb1(m):
     accumulator(
         ("cb1", 1),
         baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaf(_, 0),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.hairpin(
             "mp >o niente",
@@ -913,7 +913,7 @@ def cb1(m):
         ("cb1", 5),
         baca.pitch(
             "Dtqf2",
-            lambda _: baca.select.lleak(baca.select.leaves(_)),
+            selector=lambda _: baca.select.lleak(baca.select.leaves(_)),
         ),
     )
 
@@ -922,7 +922,7 @@ def cb2(m):
     accumulator(
         ("cb2", 1),
         baca.repeat_tie(
-            lambda _: baca.select.phead(_, 0),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.new(
             baca.pitch("Eb2"),
@@ -931,7 +931,7 @@ def cb2(m):
         ),
         baca.pitch(
             "B2",
-            lambda _: baca.select.plts(_)[1:],
+            selector=lambda _: baca.select.plts(_)[1:],
         ),
         baca.hairpin(
             "mp >o niente",
@@ -957,7 +957,7 @@ def cb2(m):
     accumulator(
         ("cb2", 4),
         baca.repeat_tie(
-            lambda _: abjad.select.leaf(_, 0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.hairpin(
             "(mp) >o niente",
@@ -968,11 +968,11 @@ def cb2(m):
         ("cb2", (3, 5)),
         baca.pitch(
             "B2",
-            lambda _: baca.select.plts(_)[:1],
+            selector=lambda _: baca.select.plts(_)[:1],
         ),
         baca.pitch(
             "Eb2",
-            lambda _: baca.select.plts(_)[1:],
+            selector=lambda _: baca.select.plts(_)[1:],
         ),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -995,10 +995,10 @@ def composites(cache):
     accumulator(
         (["vc1", "vc2", "cb1", "cb2"], 5),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
     )
     accumulator(

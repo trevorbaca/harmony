@@ -289,7 +289,7 @@ def perc2(m):
             left_broken=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaf(_, -1),
+            selector=lambda _: baca.select.pleaf(_, -1),
         ),
     )
     accumulator(
@@ -299,7 +299,7 @@ def perc2(m):
             hide_middle_stems=True,
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.dynamic("pp"),
         baca.dls_staff_padding(6),
@@ -313,7 +313,7 @@ def hp(m):
         baca.staff_lines(5),
         baca.pitch("<B5 C6 D6>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "p < mf > p",
@@ -342,7 +342,7 @@ def hp(m):
         ("hp", (8, 9)),
         baca.pitch("<C6 Db6 Eb6>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("pp"),
     )
@@ -356,7 +356,7 @@ def va(m):
     accumulator(
         ("va", (1, 6)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
         baca.dynamic("p"),
         baca.hairpin(
@@ -386,7 +386,7 @@ def va(m):
         ("va", (1, 9)),
         baca.pitch(
             "<B4 C5 D5>",
-            lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
         ),
         baca.dls_staff_padding(4),
     )
@@ -397,11 +397,11 @@ def vc1(m):
         ("vc1", 1),
         # TODO: promote into rhythm:
         baca.repeat_tie(
-            lambda _: abjad.select.leaf(_, 0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("Bb4"),
         baca.espressivo(
-            lambda _: baca.select.pheads(_)[1:],
+            selector=lambda _: baca.select.pheads(_)[1:],
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
@@ -413,7 +413,7 @@ def vc1(m):
     accumulator(
         ("vc1", (2, 6)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
         baca.hairpin(
             "p < mf > p",
@@ -442,7 +442,7 @@ def vc1(m):
         ("vc1", (2, 9)),
         baca.pitch(
             "<C5 Db5 Eb5>",
-            lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
         ),
     )
     accumulator(
@@ -456,7 +456,7 @@ def vc2(m):
         ("vc2", (1, 2)),
         # TODO: promote into rhythm:
         baca.repeat_tie(
-            lambda _: abjad.select.leaf(_, 0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("B2"),
         baca.hairpin(
@@ -475,7 +475,7 @@ def vc2(m):
     accumulator(
         ("vc2", (3, 6)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
         baca.dynamic(
             "p",
@@ -503,7 +503,7 @@ def vc2(m):
         baca.clef("treble"),
         baca.pitch(
             "<B4 C5 D5>",
-            lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
         ),
     )
     accumulator(
@@ -517,20 +517,20 @@ def cb1(m):
         ("cb1", (1, 3)),
         # TODO: promote into rhythm:
         baca.repeat_tie(
-            lambda _: abjad.select.leaf(_, 0),
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch(
             "Bb4",
             do_not_transpose=True,
         ),
         baca.espressivo(
-            lambda _: baca.select.pheads(_)[1:],
+            selector=lambda _: baca.select.pheads(_)[1:],
         ),
     )
     accumulator(
         ("cb1", (4, 6)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
         baca.hairpin(
             "p < f > p",
@@ -553,7 +553,7 @@ def cb1(m):
         ("cb1", (4, 9)),
         baca.pitch(
             "<C5 Db5 Eb5>",
-            lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
             do_not_transpose=True,
         ),
     )
@@ -583,7 +583,7 @@ def cb2(m):
     accumulator(
         ("cb2", (5, 6)),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
         baca.dynamic(
             "p",
@@ -605,7 +605,7 @@ def cb2(m):
         baca.clef("treble"),
         baca.pitch(
             "<B4 C5 D5>",
-            lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
+            selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
             do_not_transpose=True,
         ),
     )
@@ -620,7 +620,7 @@ def composites(cache):
         (["va", "vc1", "vc2", "cb1", "cb2"], (8, 9)),
         baca.note_head_style_harmonic(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("pp"),
         baca.markup(

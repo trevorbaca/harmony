@@ -348,7 +348,7 @@ def perc2(m):
         baca.staff_lines(1),
         library.tam_tam_staff_position(),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic(
             "pp",
@@ -363,7 +363,7 @@ def perc2(m):
         ("perc2", (9, 10)),
         library.tam_tam_staff_position(),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic("pp"),
     )
@@ -379,7 +379,7 @@ def hp(m):
         baca.clef("bass"),
         baca.pitch("F1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic(
             "p",
@@ -404,7 +404,7 @@ def hp(m):
         baca.clef("bass"),
         baca.pitch("F1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic("p"),
         baca.dls_staff_padding(4 + 3),
@@ -421,13 +421,13 @@ def va(m):
         ),
         baca.dynamic("ppp"),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 1.5"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 1.5"),
-            full=True,
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -543,13 +543,13 @@ def cb1(m):
         ),
         baca.dynamic("ppp"),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 4"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 4"),
-            full=True,
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -579,13 +579,13 @@ def cb1(m):
         ),
         baca.dynamic("ppp"),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 4"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 4"),
-            full=True,
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -603,13 +603,13 @@ def cb2(m):
         ),
         baca.dynamic("ppp"),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 4"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 4"),
-            full=True,
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -639,13 +639,13 @@ def cb2(m):
         ),
         baca.dynamic("ppp"),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 4"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 4"),
-            full=True,
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),

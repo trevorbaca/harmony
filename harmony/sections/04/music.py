@@ -371,7 +371,7 @@ def bfl(m):
         ("bfl", 9),
         baca.pitch("Ab4"),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
+            selector=lambda _: abjad.select.get(baca.select.plts(_), [0, 1], 3),
         ),
         baca.hairpin(
             "o<| ff |> p",
@@ -491,7 +491,7 @@ def hp(m):
         ("hp", 9),
         baca.pitch("<G#4 A4 B4>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "p < ff > p",
@@ -799,13 +799,13 @@ def composites(cache):
     accumulator(
         (["bfl", "hp", "va", "vc1", "vc2", "cb1"], [(1, 6), 8, 11]),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
     )
     accumulator(
         ("cb2", (1, 6)),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
     )
     accumulator(
@@ -859,7 +859,7 @@ def harmonics(cache):
         (["va", "vc1", "vc2", "cb1"], 9),
         baca.new(
             baca.note_head_style_harmonic(
-                lambda _: baca.select.pleaves(_, grace=True),
+                selector=lambda _: baca.select.pleaves(_, grace=True),
             ),
             map=lambda _: abjad.select.runs(_, grace=True),
         ),

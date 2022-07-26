@@ -245,10 +245,10 @@ def perc1(m):
     accumulator(
         ("perc1", 1),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic('"f"'),
         baca.markup(
@@ -259,13 +259,13 @@ def perc1(m):
     accumulator(
         ("perc1", 2),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
     )
     accumulator(
@@ -283,7 +283,7 @@ def perc2(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_)[:-1],
+            selector=lambda _: baca.select.pheads(_)[:-1],
         ),
         baca.dynamic("mp"),
         baca.markup(
@@ -295,7 +295,7 @@ def perc2(m):
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[-1:]),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaf(_, -1),
+            selector=lambda _: baca.select.pleaf(_, -1),
         ),
         baca.dynamic(
             "p",
@@ -408,7 +408,7 @@ def cb2(m):
         ),
         baca.note_head_style_harmonic(),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic("ff"),
         baca.pizzicato_spanner(
@@ -470,7 +470,7 @@ def composites(cache):
     accumulator(
         (["vc1", "vc2", "cb1", "cb2"], 1),
         baca.stop_on_string(
-            lambda _: baca.select.leaf_in_each_rleak_run(_, -1),
+            selector=lambda _: baca.select.leaf_in_each_rleak_run(_, -1),
         ),
         baca.hairpin(
             "o<| ff",

@@ -332,7 +332,7 @@ def perc1(m):
             hide_middle_stems=True,
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.hairpin(
             "p < mp > p p < mp > p",
@@ -366,7 +366,7 @@ def perc1(m):
             selector=lambda _: baca.select.leaves(_)[:-6],
         ),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -7]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -7]),
         ),
         baca.hairpin(
             "p < mp >",
@@ -396,7 +396,7 @@ def perc2(m):
         baca.dynamic("p"),
         baca.dls_staff_padding(4),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.markup(
             r"\baca-glockenspiel-markup",
@@ -409,10 +409,10 @@ def perc2(m):
         baca.staff_lines(1),
         library.slate_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "f >o niente",
@@ -430,7 +430,7 @@ def perc2(m):
         baca.staff_lines(5),
         baca.pitch("A4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic(
             "mp-sempre",
@@ -453,7 +453,7 @@ def hp(m):
         baca.dynamic("f"),
         baca.dls_staff_padding(4 + 2),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
     )
     accumulator(
@@ -546,15 +546,15 @@ def vc1(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -616,19 +616,19 @@ def vc2(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.pitch(
             "C5",
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -697,16 +697,16 @@ def cb1(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -781,21 +781,21 @@ def cb2(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
             do_not_transpose=True,
         ),
         baca.pitch(
             "C5",
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -834,7 +834,7 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 5),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.markup(r"\baca-quasi-bisb-markup"),
     )

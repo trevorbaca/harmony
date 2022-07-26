@@ -347,7 +347,7 @@ def bfl(m):
         ("bfl", (4, 6)),
         baca.pitch("<B3 Dqf4>"),
         baca.espressivo(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("mp"),
     )
@@ -371,7 +371,7 @@ def perc1(m):
         ("perc1", 1),
         library.bass_drum_staff_position(),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic("mp"),
         baca.markup(
@@ -383,7 +383,7 @@ def perc1(m):
         ("perc1", (4, 6)),
         library.bass_drum_staff_position(),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic(
             "mp-ancora",
@@ -394,7 +394,7 @@ def perc1(m):
         ("perc1", 7),
         library.triangle_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("pp"),
         baca.markup(
@@ -427,7 +427,7 @@ def perc2(m):
         baca.staff_lines(5),
         baca.pitch(
             "E4",
-            lambda _: baca.select.plt(_, 0),
+            selector=lambda _: baca.select.plt(_, 0),
         ),
         baca.laissez_vibrer(),
         baca.dynamic(
@@ -456,10 +456,10 @@ def perc2(m):
         ("perc2", 8),
         library.slate_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("pp"),
         baca.markup(
@@ -478,7 +478,7 @@ def hp(m):
         ("hp", 1),
         baca.pitch("F#4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -490,7 +490,7 @@ def hp(m):
         ("hp", 6),
         baca.pitch("E4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic("f"),
         baca.markup(
@@ -506,7 +506,7 @@ def va(m):
         baca.clef("alto"),
         baca.pitch("E3"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("ff"),
         baca.scp_spanner(
@@ -525,7 +525,7 @@ def va(m):
         ("va", (4, 6)),
         baca.pitch("E3"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("p"),
         baca.scp_spanner(
@@ -560,7 +560,7 @@ def vc1(m):
         baca.clef("bass"),
         baca.pitch("E2"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("ff"),
         baca.scp_spanner(
@@ -581,7 +581,7 @@ def vc1(m):
         baca.clef("bass"),
         baca.pitch("E2"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("p"),
         baca.scp_spanner(
@@ -597,7 +597,7 @@ def vc1(m):
         baca.tuplet_bracket_down(),
         baca.pitch("E2"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -667,7 +667,7 @@ def cb1(m):
         baca.clef("bass"),
         baca.pitch("E1"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("ff"),
         baca.scp_spanner(
@@ -695,7 +695,7 @@ def cb1(m):
         baca.tuplet_bracket_down(),
         baca.pitch("E1"),
         baca.triple_staccato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("p"),
         baca.metric_modulation_spanner(
@@ -776,7 +776,7 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 2),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.markup(r"\baca-quasi-bisb-markup"),
     )
@@ -786,10 +786,10 @@ def composites(cache):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("pp"),
         baca.dls_staff_padding(6),

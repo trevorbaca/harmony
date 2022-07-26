@@ -644,7 +644,7 @@ def perc2(m):
         baca.staff_lines(1),
         library.tam_tam_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("p"),
         baca.markup(
@@ -676,7 +676,7 @@ def perc2(m):
             selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(),
         baca.hairpin(
@@ -717,7 +717,7 @@ def hp(m):
         ("hp", 1),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic("f-ancora"),
         baca.dls_staff_padding(4),
@@ -744,7 +744,7 @@ def hp(m):
         baca.staff_lines(5),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
-            lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptails(_),
         ),
         baca.dynamic("f"),
         baca.markup(
@@ -765,7 +765,7 @@ def hp(m):
         ("hp", (6, 7)),
         baca.pitch("Bb4"),
         baca.snap_pizzicato(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -840,7 +840,7 @@ def va(m):
         ("va", 9),
         baca.pitch(
             "Gqf3",
-            lambda _: baca.select.rleaves(_),
+            selector=lambda _: baca.select.rleaves(_),
             allow_hidden=True,
         ),
         baca.flat_glissando(
@@ -882,15 +882,15 @@ def vc1(m):
             pieces=lambda _: baca.select.plts(_),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -944,19 +944,19 @@ def vc2(m):
             pieces=lambda _: baca.select.lparts(_, [1, 2, 3, 2]),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.pitch(
             "C5",
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -1011,16 +1011,16 @@ def cb1(m):
             pieces=lambda _: baca.select.lparts(_, [2, 3, 2]),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<A4 B4 C5>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -1060,11 +1060,11 @@ def cb2(m):
         baca.tuplet_bracket_down(),
         baca.pitch(
             "F#1",
-            lambda _: baca.select.leaves(_)[:4],
+            selector=lambda _: baca.select.leaves(_)[:4],
         ),
         baca.pitch(
             "Gb2",
-            lambda _: baca.select.plts(_)[-3:],
+            selector=lambda _: baca.select.plts(_)[-3:],
         ),
         baca.scp_spanner(
             "P1 -> P2",
@@ -1074,10 +1074,10 @@ def cb2(m):
             selector=lambda _: baca.select.leaves(_)[:3],
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_)[1:3],
+            selector=lambda _: baca.select.pheads(_)[1:3],
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.plts(_)[:2],
+            selector=lambda _: baca.select.plts(_)[:2],
         ),
         baca.dynamic("f"),
         baca.dynamic(
@@ -1110,21 +1110,21 @@ def cb2(m):
             pieces=lambda _: baca.select.lparts(_, [2, 1, 1]),
         ),
         baca.untie(
-            lambda _: baca.select.leaves(_),
+            selector=lambda _: baca.select.leaves(_),
         ),
         baca.note_head_style_harmonic_black(),
         baca.pitch(
             "<G4 Ab4 Bb4>",
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
             do_not_transpose=True,
         ),
         baca.pitch(
             "C5",
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
             do_not_transpose=True,
         ),
         baca.note_head_transparent(
-            lambda _: baca.select.pleaves(_)[1:-1],
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
         ),
     )
     accumulator(
@@ -1160,17 +1160,17 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1"], 3),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_)[1:],
+            selector=lambda _: baca.select.pheads(_)[1:],
         ),
         baca.dynamic("f"),
     )
     accumulator(
         (["vc1", "vc2", "cb1", "cb2"], 6),
         baca.stem_tremolo(
-            lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
         baca.markup(r"\baca-quasi-bisb-markup"),
     )

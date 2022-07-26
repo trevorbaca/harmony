@@ -498,7 +498,7 @@ def bfl(m):
         ("bfl", 4),
         baca.pitch("E3"),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic("mf"),
         baca.covered_spanner(
@@ -510,11 +510,11 @@ def bfl(m):
         ("bfl", 5),
         # TODO: promote to music = library.make_sixteenths():
         baca.repeat_tie(
-            lambda _: baca.select.pleaf(_, -1),
+            selector=lambda _: baca.select.pleaf(_, -1),
         ),
         baca.pitch("B4"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o<| f |>o niente",
@@ -626,11 +626,11 @@ def perc1(m):
         baca.staff_lines(3),
         baca.staff_position(
             -2,
-            lambda _: baca.select.runs(_)[:1],
+            selector=lambda _: baca.select.runs(_)[:1],
         ),
         baca.staff_position(
             0,
-            lambda _: baca.select.runs(_)[1:],
+            selector=lambda _: baca.select.runs(_)[1:],
         ),
         baca.dynamic(
             "p",
@@ -683,10 +683,10 @@ def perc2(m):
         ("perc2", (1, 2)),
         library.slate_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic(
             '"ff"',
@@ -707,11 +707,11 @@ def perc2(m):
         baca.staff_lines(3),
         baca.staff_position(
             -2,
-            lambda _: baca.select.runs(_)[:1],
+            selector=lambda _: baca.select.runs(_)[:1],
         ),
         baca.staff_position(
             0,
-            lambda _: baca.select.runs(_)[1:],
+            selector=lambda _: baca.select.runs(_)[1:],
         ),
         baca.dynamic(
             "p",
@@ -732,10 +732,10 @@ def perc2(m):
         baca.staff_lines(1),
         library.slate_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.dynamic(
             '"ff"',
@@ -791,7 +791,7 @@ def hp(m):
         baca.clef("bass"),
         baca.pitch("E1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic("f"),
         baca.dls_staff_padding(7),
@@ -812,7 +812,7 @@ def hp(m):
         baca.clef("bass"),
         baca.pitch("<B2 C3 Db3>"),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             "o< mf >o niente",
@@ -832,7 +832,7 @@ def hp(m):
         ("hp", (6, 9)),
         baca.pitch("E1"),
         baca.damp(
-            lambda _: baca.select.leaf_after_each_ptail(_),
+            selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
         baca.dynamic("f"),
     )
@@ -857,7 +857,7 @@ def va(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -872,7 +872,7 @@ def va(m):
             selector=lambda _: baca.select.leaves(_, grace=False),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_)[:3],
+            selector=lambda _: baca.select.pheads(_)[:3],
         ),
         baca.new(
             baca.note_head_style_harmonic_black(),
@@ -903,7 +903,7 @@ def va(m):
             map=lambda _: baca.select.runs(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -931,10 +931,10 @@ def vc1(m):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.hairpin(
             '"ff" "ff"',
@@ -988,10 +988,10 @@ def vc1(m):
         baca.tuplet_bracket_staff_padding(3),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             '"ff" "ff" "f" "f" mf mp p',
@@ -1037,10 +1037,10 @@ def vc2(m):
         baca.staff_lines(1),
         library.bridge_staff_position(),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.hairpin(
             '"ff" "ff"',
@@ -1075,10 +1075,10 @@ def vc2(m):
             selector=lambda _: abjad.select.leaf(_, 1),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic('"ff"'),
     )
@@ -1086,10 +1086,10 @@ def vc2(m):
         ("vc2", (6, 9)),
         library.bridge_staff_position(),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_),
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.accent(
-            lambda _: baca.select.pheads(_),
+            selector=lambda _: baca.select.pheads(_),
         ),
         baca.hairpin(
             '"ff" "ff" "f" mf mp p pp',
@@ -1134,7 +1134,7 @@ def cb1(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -1187,7 +1187,7 @@ def cb1(m):
             map=lambda _: baca.select.runs(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -1218,7 +1218,7 @@ def cb2(m):
             hide_middle_note_heads=True,
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -1260,7 +1260,7 @@ def cb2(m):
             map=lambda _: baca.select.runs(_),
         ),
         baca.stem_tremolo(
-            lambda _: baca.select.pleaves(_, grace=False),
+            selector=lambda _: baca.select.pleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -1331,13 +1331,13 @@ def composites(cache):
     accumulator(
         (["va", "cb1", "cb2"], 11),
         baca.alternate_bow_strokes(
-            lambda x: [
+            abjad.Tweak(r"- \tweak staff-padding 4"),
+            full=True,
+            selector=lambda x: [
                 _
                 for _ in baca.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
-            abjad.Tweak(r"- \tweak staff-padding 4"),
-            full=True,
         ),
         baca.dynamic(
             "ppp",

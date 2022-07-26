@@ -201,7 +201,7 @@ def perc2(m):
     accumulator(
         ("perc2", 1),
         baca.damp(
-            lambda _: abjad.select.leaf(_, -1),
+            selector=lambda _: abjad.select.leaf(_, -1),
         ),
     )
 
