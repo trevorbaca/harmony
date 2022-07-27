@@ -665,7 +665,9 @@ def perc1(m):
         baca.clef("treble"),
         baca.staff_lines(5),
         baca.pitch("E4"),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("f"),
         baca.dls_staff_padding(4),
         baca.markup(
@@ -678,7 +680,9 @@ def perc1(m):
         baca.clef("percussion"),
         baca.staff_lines(1),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.hairpin(
             "o< mf",
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
@@ -691,7 +695,9 @@ def perc1(m):
     accumulator(
         ("perc1", 9),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.hairpin(
             "o< mp",
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
@@ -700,7 +706,9 @@ def perc1(m):
     accumulator(
         ("perc1", 10),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.hairpin(
             "o< mp",
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
@@ -709,7 +717,9 @@ def perc1(m):
     accumulator(
         ("perc1", 11),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.hairpin(
             "o< mp",
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)),
@@ -745,7 +755,9 @@ def perc2(m):
             baca.damp(),
         ),
         baca.new(
-            baca.laissez_vibrer(),
+            baca.laissez_vibrer(
+                selector=lambda _: baca.select.ptails(_),
+            ),
             baca.dynamic("f"),
             selector=lambda _: baca.select.phead(_, 1),
         ),
@@ -785,13 +797,17 @@ def perc2(m):
     accumulator(
         ("perc2", 6),
         library.tam_tam_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mp"),
     )
     accumulator(
         ("perc2", 8),
         library.brake_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("f"),
         baca.markup(
             r"\baca-brake-drum-markup",
@@ -852,7 +868,9 @@ def hp(m):
         ("hp", 6),
         baca.pitch("Db1"),
         baca.ottava_bassa(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.ottava_bracket_staff_padding(8),
         baca.dynamic("f"),
         baca.dls_staff_padding(5),

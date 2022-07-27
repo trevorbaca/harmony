@@ -429,7 +429,9 @@ def perc2(m):
             "E4",
             selector=lambda _: baca.select.plt(_, 0),
         ),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic(
             "pp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
@@ -445,7 +447,9 @@ def perc2(m):
         baca.clef("percussion"),
         baca.staff_lines(1),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mp"),
         baca.markup(
             r"\baca-bd-struck-markup",

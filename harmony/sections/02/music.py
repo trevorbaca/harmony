@@ -548,7 +548,9 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 6),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptail(_, 0),
+        ),
         baca.hairpin(
             "o<| mf",
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[:1]),

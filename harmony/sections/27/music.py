@@ -678,7 +678,9 @@ def perc2(m):
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.stem_tremolo(),
+        baca.stem_tremolo(
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.hairpin(
             "f >o niente",
             map=lambda _: baca.select.rleak_runs(_, None, 1),
@@ -692,7 +694,9 @@ def perc2(m):
     accumulator(
         ("perc2", 7),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mp"),
         baca.markup(
             r"\baca-bd-struck-markup",

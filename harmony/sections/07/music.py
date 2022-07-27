@@ -679,7 +679,9 @@ def perc2(m):
     )
     accumulator(
         ("perc2", (4, 5)),
-        baca.stem_tremolo(),
+        baca.stem_tremolo(
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.dynamic(
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
@@ -687,7 +689,9 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 6),
-        baca.stem_tremolo(),
+        baca.stem_tremolo(
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.new(
             library.brake_drum_staff_position(),
             baca.damp(),

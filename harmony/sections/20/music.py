@@ -519,7 +519,9 @@ def va(m):
     accumulator(
         ("va", (9, 10)),
         baca.accent(),
-        baca.stem_tremolo(),
+        baca.stem_tremolo(
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.new(
             baca.clef("alto"),
             baca.staff_lines(5),

@@ -287,7 +287,9 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 2),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptail(_, 0),
+        ),
         baca.hairpin(
             "o<| mf",
             selector=lambda _: baca.rleak(abjad.select.leaves(_)[:1]),
@@ -299,7 +301,9 @@ def perc1(m):
     )
     accumulator(
         ("perc1", [1, 2]),
-        baca.breathe(),
+        baca.breathe(
+            selector=lambda _: baca.select.pleaf(_, -1, exclude=baca.enums.HIDDEN),
+        ),
     )
     accumulator(
         ("perc1", (1, 2)),

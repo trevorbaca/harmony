@@ -408,7 +408,7 @@ def perc1(m):
         ("perc1", 1),
         library.bass_drum_staff_position(),
         baca.laissez_vibrer(
-            selector=lambda _: baca.select.ptails(_),
+            selector=lambda _: baca.select.ptail(_, 0),
         ),
         baca.dynamic("mp"),
         baca.dls_staff_padding(6),
@@ -436,7 +436,9 @@ def perc1(m):
             library.bass_drum_staff_position(),
             selector=lambda _: baca.select.pleaf(_, 0),
         ),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptail(_, 0),
+        ),
         baca.dynamic("mp"),
         baca.markup(
             r"\baca-bd-struck-markup",
