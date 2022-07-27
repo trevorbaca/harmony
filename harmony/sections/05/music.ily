@@ -5632,11 +5632,6 @@ number.5.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 3]
-    % BEFORE:
-    % COMMANDS:
-      %! REPEAT_PITCH_CLASS_COLORING
-      %! baca.color_repeat_pitch_classes()
-    \baca-repeat-pitch-class-coloring
     f2.
     % AFTER:
     % ARTICULATIONS:
@@ -5702,9 +5697,6 @@ number.5.Cello.2.Music = {
     % [Cello.2.Music measure 4]
     % BEFORE:
     % COMMANDS:
-      %! REPEAT_PITCH_CLASS_COLORING
-      %! baca.color_repeat_pitch_classes()
-    \baca-repeat-pitch-class-coloring
       %! baca.OverrideCommand._call(1)
       %! baca.dls_staff_padding()
     \override DynamicLineSpanner.staff-padding = 5.5
