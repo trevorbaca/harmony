@@ -919,7 +919,9 @@ def perc2(m):
         baca.tuplet_bracket_up(),
         library.bass_drum_staff_position(),
         baca.accent(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mp"),
         baca.dls_staff_padding(6),
         baca.markup(
@@ -960,7 +962,9 @@ def hp(m):
     accumulator(
         ("hp", 2),
         baca.pitch("G4"),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mf"),
         baca.markup(
             r"\baca-pdlt-markup",

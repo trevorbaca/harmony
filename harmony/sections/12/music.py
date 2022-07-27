@@ -717,7 +717,9 @@ def perc1(m):
         baca.clef("treble"),
         baca.staff_lines(5),
         baca.pitch("Eb4"),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mf"),
         baca.dls_staff_padding(4),
         baca.markup(
@@ -820,7 +822,9 @@ def perc2(m):
     accumulator(
         ("perc2", 1),
         library.tam_tam_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("pp"),
         baca.dls_staff_padding(6),
         baca.markup(
@@ -921,7 +925,9 @@ def hp(m):
         ("hp", 1),
         baca.clef("treble"),
         baca.pitch("Eb4"),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic("mf"),
         baca.markup(
             r"\baca-sons-xylophoniques-markup",

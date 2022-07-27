@@ -592,7 +592,9 @@ def perc2(m):
     accumulator(
         ("perc2", 2),
         library.bass_drum_staff_position(),
-        baca.laissez_vibrer(),
+        baca.laissez_vibrer(
+            selector=lambda _: baca.select.ptails(_),
+        ),
         baca.dynamic(
             "mp",
             selector=lambda _: baca.select.pheads(_),
