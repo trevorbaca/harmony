@@ -209,7 +209,9 @@ def CB2(voice):
 def bfl(m):
     accumulator(
         ("bfl", (1, 2)),
-        baca.instrument(instruments["BassFlute"]),
+        baca.instrument(
+            instruments["BassFlute"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("treble"),
         baca.staff_lines(5),
         baca.suite(
@@ -265,7 +267,9 @@ def bfl(m):
 def perc1(m):
     accumulator(
         "perc1",
-        baca.instrument(instruments["Percussion"]),
+        baca.instrument(
+            instruments["Percussion"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("percussion"),
         baca.dls_staff_padding(6),
     )
@@ -331,7 +335,9 @@ def perc1(m):
 def perc2(m):
     accumulator(
         ("perc2", (1, 2)),
-        baca.instrument(instruments["Percussion"]),
+        baca.instrument(
+            instruments["Percussion"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("percussion"),
         baca.suite(
             library.short_instrument_name("Perc. II"),
@@ -369,7 +375,9 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (1, 2)),
-        baca.instrument(instruments["Harp"]),
+        baca.instrument(
+            instruments["Harp"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("percussion"),
         baca.suite(
             library.short_instrument_name("Hp."),
@@ -404,7 +412,9 @@ def hp(m):
 def va(m):
     accumulator(
         ("va", (1, 2)),
-        baca.instrument(instruments["Viola"]),
+        baca.instrument(
+            instruments["Viola"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("alto"),
         baca.staff_lines(5),
         baca.suite(
@@ -442,7 +452,9 @@ def va(m):
 def vc1(m):
     accumulator(
         ("vc1", (1, 2)),
-        baca.instrument(instruments["Cello"]),
+        baca.instrument(
+            instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("bass"),
         baca.staff_lines(5),
         baca.suite(
@@ -505,7 +517,9 @@ def vc1(m):
 def vc2(m):
     accumulator(
         ("vc2", (1, 2)),
-        baca.instrument(instruments["Cello"]),
+        baca.instrument(
+            instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("bass"),
         baca.staff_lines(5),
         baca.suite(
@@ -548,7 +562,9 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", (1, 2)),
-        baca.instrument(instruments["Contrabass"]),
+        baca.instrument(
+            instruments["Contrabass"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("bass"),
         baca.staff_lines(5),
         baca.suite(
@@ -600,7 +616,9 @@ def cb1(m):
 def cb2(m):
     accumulator(
         ("cb2", (1, 2)),
-        baca.instrument(instruments["Contrabass"]),
+        baca.instrument(
+            instruments["Contrabass"], selector=lambda _: abjad.select.leaf(_, 0)
+        ),
         baca.clef("bass"),
         baca.staff_lines(5),
         baca.suite(
