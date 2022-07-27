@@ -1210,10 +1210,7 @@ def purpleheart_staff_positions(argument):
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(0.5),
-        baca.staff_positions(
-            argument,
-            allow_repeats=True,
-        ),
+        baca.staff_positions(argument),
     )
 
 
