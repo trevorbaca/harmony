@@ -986,7 +986,7 @@ def composites(cache):
     accumulator(
         (["vc1", "vc2", "cb1", "cb2"], 4),
         baca.new(
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             baca.stem_tremolo(),
             baca.dynamic("p"),
             selector=lambda _: baca.select.phead(_, -1),

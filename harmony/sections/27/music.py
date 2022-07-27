@@ -604,7 +604,7 @@ def perc1(m):
     accumulator(
         ("perc1", 7),
         library.brake_drum_staff_position(),
-        baca.damp(),
+        baca.damp(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("mf"),
     )
     accumulator(

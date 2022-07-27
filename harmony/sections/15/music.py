@@ -339,7 +339,7 @@ def bfl(m):
             "F#5",
             selector=lambda _: baca.select.plts(_)[1:],
         ),
-        baca.accent(),
+        baca.accent(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("mf"),
         baca.dynamic(
             "p",
@@ -478,7 +478,7 @@ def hp(m):
             selector=lambda _: baca.select.rest(_, 0),
         ),
         baca.pitch("<B4 C5>"),
-        baca.double_flageolet(),
+        baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f"),
         baca.markup(
             r"\baca-lv-markup",
@@ -504,7 +504,7 @@ def hp(m):
     accumulator(
         ("hp", [5, 9]),
         baca.pitch("<B4 C5>"),
-        baca.double_flageolet(),
+        baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
         baca.new(
             baca.dynamic("f-ancora"),
             match=[0],

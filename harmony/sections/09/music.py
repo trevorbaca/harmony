@@ -318,7 +318,7 @@ def hp(m):
     accumulator(
         ("hp", 1),
         baca.pitch("<B5 C#6>"),
-        baca.double_flageolet(),
+        baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f"),
         baca.dls_staff_padding(4 + 2),
         baca.markup(

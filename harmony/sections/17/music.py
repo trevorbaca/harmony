@@ -537,7 +537,7 @@ def hp(m):
         ("hp", 4),
         baca.clef("treble"),
         baca.pitch("<B4 C5>"),
-        baca.double_flageolet(),
+        baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f-ancora"),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
