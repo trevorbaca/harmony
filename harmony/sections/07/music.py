@@ -694,7 +694,7 @@ def perc2(m):
         ),
         baca.new(
             library.brake_drum_staff_position(),
-            baca.damp(),
+            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
             baca.dynamic("mf"),
             baca.markup(
                 r"\baca-brake-drum-markup",
@@ -812,7 +812,7 @@ def hp(m):
         ("hp", 7),
         baca.new(
             baca.pitch("<B5 C#6>"),
-            baca.double_flageolet(),
+            baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
             baca.dynamic("f"),
             baca.markup(
                 r"\baca-lv-markup",

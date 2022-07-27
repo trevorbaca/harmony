@@ -543,7 +543,7 @@ def vc1(m):
     accumulator(
         ("vc1", 4),
         baca.pitch("F4"),
-        baca.triple_staccato(),
+        baca.triple_staccato(selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("vc1", (3, 4)),
@@ -661,7 +661,7 @@ def cb1(m):
             "E4",
             do_not_transpose=True,
         ),
-        baca.triple_staccato(),
+        baca.triple_staccato(selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("cb1", (3, 4)),

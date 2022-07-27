@@ -183,7 +183,7 @@ def perc1(m):
         baca.dynamic("f"),
         baca.new(
             baca.dynamic("mf"),
-            baca.damp(),
+            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
             selector=lambda _: baca.select.phead(_, -1),
         ),
         baca.markup(
@@ -211,7 +211,7 @@ def hp(m):
         ("hp", 1),
         baca.clef("treble"),
         baca.pitch("Bb4"),
-        baca.snap_pizzicato(),
+        baca.snap_pizzicato(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f"),
     )
     accumulator(

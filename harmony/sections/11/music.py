@@ -916,7 +916,7 @@ def hp(m):
         baca.clef("treble"),
         baca.new(
             baca.pitch("<B5 C#6>"),
-            baca.double_flageolet(),
+            baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
             baca.dynamic(
                 "f-ancora",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),

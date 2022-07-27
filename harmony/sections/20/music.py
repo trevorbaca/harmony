@@ -518,7 +518,7 @@ def va(m):
     )
     accumulator(
         ("va", (9, 10)),
-        baca.accent(),
+        baca.accent(selector=lambda _: baca.select.phead(_, 0)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaf(_, 0),
         ),

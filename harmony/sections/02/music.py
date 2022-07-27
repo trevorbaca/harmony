@@ -957,7 +957,7 @@ def vc1(m):
         ),
         baca.new(
             library.bridge_staff_position(),
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             baca.stem_tremolo(),
             baca.dynamic('"ff"'),
             baca.dls_staff_padding(6),

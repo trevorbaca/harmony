@@ -476,7 +476,7 @@ def vc1(m):
         ),
         baca.new(
             library.bridge_staff_position(),
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             baca.stem_tremolo(),
             baca.dynamic("sfp"),
             selector=lambda _: baca.select.pleaf(_, -1),
@@ -486,7 +486,7 @@ def vc1(m):
         ("vc1", (1, 3)),
         baca.new(
             baca.pitch("A2"),
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             baca.stem_tremolo(),
             baca.dls_staff_padding(6),
             selector=lambda _: baca.select.pheads(_)[:-1],

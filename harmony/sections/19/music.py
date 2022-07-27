@@ -756,7 +756,7 @@ def perc1(m):
         ("perc1", 2),
         baca.staff_lines(1),
         library.bass_drum_staff_position(),
-        baca.accent(),
+        baca.accent(selector=lambda _: baca.select.phead(_, 0)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.phead(_, 1),
         ),
@@ -847,7 +847,7 @@ def perc2(m):
         ("perc2", 2),
         baca.staff_lines(1),
         library.brake_drum_staff_position(),
-        baca.damp(),
+        baca.damp(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("p"),
         baca.dynamic(
             "f",
@@ -918,7 +918,7 @@ def perc2(m):
         baca.staff_lines(1),
         baca.tuplet_bracket_up(),
         library.bass_drum_staff_position(),
-        baca.accent(),
+        baca.accent(selector=lambda _: baca.select.phead(_, 0)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),

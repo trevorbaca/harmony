@@ -444,8 +444,8 @@ def perc2(m):
         ),
         baca.new(
             library.brake_drum_staff_position(),
-            baca.accent(),
-            baca.damp(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
+            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
             baca.dynamic("mf"),
             baca.dls_staff_padding(6 + 1),
             baca.markup(
@@ -659,7 +659,7 @@ def vc1(m):
         baca.staff_lines(1),
         baca.new(
             library.bridge_staff_position(),
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             baca.stem_tremolo(),
             selector=lambda _: baca.select.pleaves(_)[:2],
         ),
@@ -696,7 +696,7 @@ def vc1(m):
         ("vc1", (2, 3)),
         baca.new(
             baca.pitch("F#3"),
-            baca.accent(),
+            baca.accent(selector=lambda _: baca.select.phead(_, 0)),
             selector=lambda _: baca.select.pheads(_)[2:],
         ),
         baca.dynamic(
@@ -779,7 +779,7 @@ def vc2(m):
     accumulator(
         ("vc2", 3),
         baca.pitch("F3"),
-        baca.accent(),
+        baca.accent(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("pp"),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),

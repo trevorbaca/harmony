@@ -742,7 +742,7 @@ def perc1(m):
         ),
         baca.new(
             library.bass_drum_staff_position(),
-            baca.damp(),
+            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
             baca.dynamic("mp"),
             baca.dls_staff_padding(6),
             baca.markup(
