@@ -614,7 +614,8 @@ def vc2(m):
             [
                 r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
                 r'\once \override TupletNumber.text = #"10:8"',
-            ]
+            ],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("F3"),
         baca.triple_staccato(
@@ -679,7 +680,8 @@ def cb1(m):
             [
                 r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
                 r'\once \override TupletNumber.text = #"11:8"',
-            ]
+            ],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("Dtqf3"),
         baca.markup(
@@ -748,7 +750,8 @@ def cb2(m):
             [
                 r"\once \override TupletBracket.edge-height = #'(0.7 . 0)",
                 r'\once \override TupletNumber.text = #"12:8"',
-            ]
+            ],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("Eb2"),
         baca.triple_staccato(
