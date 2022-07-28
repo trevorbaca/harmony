@@ -521,7 +521,7 @@ def va(m):
     accumulator(
         ("va", 9),
         baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "Ab3",
             selector=lambda _: baca.select.plts(_, grace=False),
@@ -552,7 +552,7 @@ def va(m):
     accumulator(
         ("va", 11),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         ("va", [(1, 6), 8, 11]),
@@ -671,7 +671,7 @@ def cb1(m):
     accumulator(
         ("cb1", (1, 6)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         ("cb1", 9),

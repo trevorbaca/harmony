@@ -647,7 +647,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 3),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         library.tam_tam_staff_position(),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -665,7 +665,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", (4, 5)),
-        baca.staff_lines(3),
+        baca.staff_lines(3, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_position(2),
         baca.dynamic("ff", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
@@ -677,7 +677,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 6),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.tuplet_bracket_up(),
         baca.new(
             library.slate_staff_position(),
@@ -744,7 +744,7 @@ def hp(m):
     accumulator(
         ("hp", 3),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         library.whisk_staff_position(),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
@@ -757,7 +757,7 @@ def hp(m):
     accumulator(
         ("hp", (4, 5)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),

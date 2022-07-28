@@ -352,7 +352,7 @@ def perc1(m):
 def perc2(m):
     accumulator(
         ("perc2", (1, 6)),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         library.tam_tam_staff_position(),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),

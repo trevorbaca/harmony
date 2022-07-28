@@ -724,7 +724,7 @@ def hp(m):
     accumulator(
         ("hp", 9),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         ("hp", 10),

@@ -995,7 +995,7 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1"], 4),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 4),
@@ -1014,11 +1014,11 @@ def composites(cache):
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 5),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 13),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         library.bridge_staff_position(),
         baca.stem_tremolo(

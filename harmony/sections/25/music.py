@@ -491,7 +491,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 2),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
     )
     accumulator(
         ("perc2", (2, 3)),
@@ -556,7 +556,7 @@ def hp(m):
     accumulator(
         ("hp", 1),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -594,7 +594,7 @@ def hp(m):
     accumulator(
         ("hp", (5, 10)),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("G1"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
