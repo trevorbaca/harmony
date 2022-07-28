@@ -555,7 +555,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", 1),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
@@ -572,7 +572,7 @@ def hp(m):
     accumulator(
         ("hp", 2),
         baca.new(
-            baca.clef("percussion"),
+            baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
             baca.staff_lines(1),
             baca.dynamic("p"),
             baca.dls_staff_padding(6),
@@ -593,7 +593,7 @@ def hp(m):
     )
     accumulator(
         ("hp", (5, 10)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("G1"),
         baca.laissez_vibrer(
@@ -675,12 +675,12 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("<A4 B4 C5>"),
     )
     accumulator(
         ("vc1", 3),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#2"),
         baca.scp_spanner(
             "P2 -> O -> P2 -> P1 -> P3",
@@ -693,7 +693,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (5, 10)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.chunk(
             baca.hairpin(
                 "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
@@ -728,12 +728,12 @@ def vc2(m):
     )
     accumulator(
         ("vc2", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("<G4 Ab4 Bb4>"),
     )
     accumulator(
         ("vc2", 3),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#2"),
         baca.scp_spanner(
             "O -> P2 -> P1",
@@ -746,7 +746,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", (5, 10)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.chunk(
             baca.hairpin(
                 "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -785,7 +785,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "<A4 B4 C5>",
             do_not_transpose=True,
@@ -793,7 +793,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 3),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#1"),
         baca.scp_spanner(
             "P1 -> P2 -> O -> P2",
@@ -806,7 +806,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (5, 10)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.chunk(
             baca.hairpin(
                 "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
@@ -842,7 +842,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "<G4 Ab4 Bb4>",
             do_not_transpose=True,
@@ -850,7 +850,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 3),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#1"),
         baca.scp_spanner(
             "P1 -> P2 -> O",
@@ -863,7 +863,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (5, 10)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.chunk(
             baca.hairpin(
                 "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"

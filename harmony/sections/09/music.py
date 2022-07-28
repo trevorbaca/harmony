@@ -378,7 +378,7 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", 1),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("E3"),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.markup(
@@ -397,7 +397,7 @@ def cb1(m):
 def cb2(m):
     accumulator(
         ("cb2", 1),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A1"),
         baca.markup(
             r"\baca-string-iii-markup",
@@ -408,7 +408,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 2),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches(
             "Fqs5 Gqf5",
             do_not_transpose=True,

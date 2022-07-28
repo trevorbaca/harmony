@@ -596,7 +596,7 @@ def percs(cache):
 def hp(m):
     accumulator(
         ("hp", 1),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("<B2 C3 Db3>"),
         baca.stem_tremolo(
@@ -615,7 +615,7 @@ def hp(m):
     )
     accumulator(
         ("hp", (3, 4)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches(
             "Bb5 A5 G#5",
             selector=lambda _: baca.select.plts(_)[:-1],

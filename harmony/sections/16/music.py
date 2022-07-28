@@ -384,7 +384,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (1, 6)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F1"),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
@@ -397,7 +397,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 8),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("<B4 C5>"),
         baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
@@ -410,7 +410,7 @@ def hp(m):
     )
     accumulator(
         ("hp", (9, 10)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F1"),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),

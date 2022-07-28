@@ -311,7 +311,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (1, 6)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("<B5 C6 D6>"),
         baca.stem_tremolo(
@@ -507,7 +507,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", (3, 9)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "<B4 C5 D5>",
             selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),
@@ -612,7 +612,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (5, 9)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "<B4 C5 D5>",
             selector=lambda _: baca.select.plts(_, exclude=baca.enums.HIDDEN),

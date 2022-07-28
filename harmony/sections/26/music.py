@@ -670,7 +670,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("<C#5 D5>"),
         baca.double_flageolet(
             selector=lambda _: baca.select.pheads(_),
@@ -702,7 +702,7 @@ def hp(m):
     accumulator(
         ("hp", 7),
         baca.new(
-            baca.clef("percussion"),
+            baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
             baca.staff_lines(1),
             baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
             baca.dls_staff_padding(6),
@@ -723,7 +723,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
     )
     accumulator(
@@ -786,7 +786,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -825,7 +825,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -869,7 +869,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -910,7 +910,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 9),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -949,7 +949,7 @@ def composites(cache):
             pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
         ),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             baca.trill_spanner(
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 alteration="Cb5",
@@ -996,7 +996,7 @@ def composites(cache):
     # vc1, vc2, cb1, cb2
     accumulator(
         (["vc1", "vc2", "cb1", "cb2"], [(1, 2), (5, 7), 10]),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "o<| ff",
             map=lambda _: baca.select.rleak_runs(_),

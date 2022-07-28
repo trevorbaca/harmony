@@ -635,7 +635,7 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 3),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(3),
         library.purpleheart_staff_positions([2]),
         baca.dynamic(
@@ -665,7 +665,7 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("E4"),
         baca.laissez_vibrer(
@@ -681,7 +681,7 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 8),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.bass_drum_staff_position(),
         baca.laissez_vibrer(
@@ -865,7 +865,7 @@ def percs(cache):
 def hp(m):
     accumulator(
         ("hp", (4, 5)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F1"),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
@@ -886,7 +886,7 @@ def hp(m):
     )
     accumulator(
         ("hp", [(1, 2), 8]),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("G4"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -901,7 +901,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 9),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
     )
     accumulator(
@@ -937,7 +937,7 @@ def va(m):
     )
     accumulator(
         ("va", 3),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G#5 A5 Bb5>"),
     )
@@ -973,12 +973,12 @@ def va(m):
     )
     accumulator(
         ("va", 8),
-        baca.clef("alto"),
+        baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("C3"),
     )
     accumulator(
         ("va", (9, 11)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("G4"),
         baca.flat_glissando(
@@ -996,7 +996,7 @@ def va(m):
 def vc1(m):
     accumulator(
         ("vc1", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("D5"),
         baca.markup(
@@ -1019,7 +1019,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (4, 5)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("D#3"),
         baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
@@ -1042,7 +1042,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", 8),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("D5"),
         baca.markup(
@@ -1054,7 +1054,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (9, 11)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("D3"),
         baca.hairpin(
             "mp -- niente",
@@ -1070,7 +1070,7 @@ def vc1(m):
 def vc2(m):
     accumulator(
         ("vc2", (1, 2)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("Btqf4"),
         baca.markup(r"\baca-seven-c", selector=lambda _: baca.select.pleaf(_, 0)),
@@ -1094,7 +1094,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", (4, 5)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("C#3"),
         baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
@@ -1117,7 +1117,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", 8),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.markup(
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
@@ -1141,7 +1141,7 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", 1),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("E5", do_not_transpose=True),
         # NOTE: currently glissando must lexically precede trill spanner
         baca.new(
@@ -1181,7 +1181,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (4, 5)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches("E3 D#3"),
         baca.glissando(
             allow_repeats=True,
@@ -1216,7 +1216,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 8),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("E5", do_not_transpose=True),
         # NOTE: currently glissando must lexically precede trill spanner
         baca.new(
@@ -1323,7 +1323,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (2, 3)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<A#5 B5 C6>", do_not_transpose=True),
         baca.markup(
@@ -1339,7 +1339,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (4, 5)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches("C#3 D3"),
         baca.glissando(
             allow_repeats=True,
@@ -1385,7 +1385,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (9, 11)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("E5", do_not_transpose=True),
         # NOTE: currently glissando must lexically precede trill spanner
         baca.flat_glissando(

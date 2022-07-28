@@ -675,7 +675,7 @@ def bfl(m):
 def perc1(m):
     accumulator(
         ("perc1", 1),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("Eb4"),
         baca.laissez_vibrer(
@@ -691,7 +691,7 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 2),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.triangle_staff_position(),
         baca.stem_tremolo(
@@ -887,7 +887,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", 1),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Eb4"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -901,7 +901,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 2),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.chunk(
             baca.pitch("C1"),
             baca.ottava_bassa(),
@@ -928,7 +928,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.new(
             baca.pitch("<B5 C#6>"),
             baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
@@ -970,7 +970,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 8),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.whisk_staff_position(),
         baca.hairpin(
@@ -991,7 +991,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 10),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.chunk(
             baca.pitch("C1"),
@@ -1039,13 +1039,13 @@ def va(m):
     )
     accumulator(
         ("va", 8),
-        baca.clef("alto"),
+        baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Eb3"),
     )
     accumulator(
         ("va", [2, (4, 5), 10]),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0, 2],
         ),
         baca.pitch(
@@ -1118,7 +1118,7 @@ def vc1(m):
     accumulator(
         ("vc1", [(1, 2), (4, 5), 10]),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0, 2],
         ),
         baca.pitch(
@@ -1163,7 +1163,7 @@ def vc2(m):
     accumulator(
         ("vc2", [2, (4, 5), 10]),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0, 2],
         ),
         baca.pitch(
@@ -1224,7 +1224,7 @@ def cb1(m):
     accumulator(
         ("cb1", [(1, 2), (4, 5), 10]),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0, 2],
         ),
         baca.pitch(
@@ -1250,7 +1250,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (6, 8)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(
             selector=lambda _: abjad.select.run(_, 0),
         ),
@@ -1283,7 +1283,7 @@ def cb2(m):
     accumulator(
         ("cb2", [2, (4, 5), 10]),
         baca.new(
-            baca.clef("treble"),
+            baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0, 2],
         ),
         baca.pitch(
@@ -1308,7 +1308,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (6, 8)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "A1",
             selector=lambda _: abjad.select.run(_, 0),
