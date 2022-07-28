@@ -428,6 +428,7 @@ def perc1(m):
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -467,6 +468,7 @@ def perc2(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -496,6 +498,7 @@ def perc2(m):
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -521,6 +524,7 @@ def perc2(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -553,6 +557,7 @@ def hp(m):
         baca.markup(
             r"\baca-pdlt-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -865,10 +870,14 @@ def cb1(m):
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
-        baca.markup(r"\baca-eleven-e"),
+        baca.markup(
+            r"\baca-eleven-e",
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.markup(
             r"\baca-string-iv-markup",
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -949,6 +958,7 @@ def cb2(m):
         baca.markup(
             r"\baca-string-iv-markup",
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

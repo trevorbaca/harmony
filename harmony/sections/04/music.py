@@ -501,6 +501,7 @@ def hp(m):
         baca.markup(
             r"\baca-bisb-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -713,11 +714,15 @@ def cb1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             selector=lambda _: baca.rleaves(_, grace=False),
         ),
-        baca.markup(r"\baca-eleven-e"),
+        baca.markup(
+            r"\baca-eleven-e",
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.markup(
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -743,6 +748,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak X-offset 2.5"),
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

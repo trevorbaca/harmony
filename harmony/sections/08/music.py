@@ -276,6 +276,7 @@ def perc1(m):
         baca.markup(
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -336,6 +337,7 @@ def hp(m):
         baca.markup(
             r"\baca-bisb-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -380,6 +382,7 @@ def va(m):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -436,6 +439,7 @@ def vc1(m):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -496,6 +500,7 @@ def vc2(m):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -547,6 +552,7 @@ def cb1(m):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -598,6 +604,7 @@ def cb2(m):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -626,6 +633,7 @@ def composites(cache):
         baca.markup(
             r"\baca-quasi-bisb-ancora-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 

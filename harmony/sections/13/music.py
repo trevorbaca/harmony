@@ -400,6 +400,7 @@ def bfl(m):
         baca.markup(
             r"\baca-seven-e-flat",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.breathe(
             selector=lambda _: baca.select.pleaf(_, 1),
@@ -473,6 +474,7 @@ def perc1(m):
         baca.markup(
             r"\baca-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -485,6 +487,7 @@ def perc1(m):
         baca.markup(
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -605,6 +608,7 @@ def hp(m):
         baca.markup(
             r"\baca-bisb-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -680,6 +684,7 @@ def va(m):
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -740,6 +745,7 @@ def vc1(m):
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -873,6 +879,7 @@ def cb1(m):
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

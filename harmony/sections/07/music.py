@@ -586,6 +586,7 @@ def perc1(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.75"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -597,6 +598,7 @@ def perc1(m):
         baca.markup(
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -612,6 +614,7 @@ def perc1(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -623,6 +626,7 @@ def perc1(m):
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -637,6 +641,7 @@ def perc1(m):
         baca.markup(
             r"\baca-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.dynamic(
             '"f"',
@@ -657,6 +662,7 @@ def perc1(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -675,6 +681,7 @@ def perc2(m):
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -729,6 +736,7 @@ def perc2(m):
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -772,6 +780,7 @@ def hp(m):
         baca.markup(
             r"\baca-bisb-markup",
             abjad.Tweak(r"- \tweak padding 2.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -788,6 +797,7 @@ def hp(m):
         baca.markup(
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -1115,6 +1125,7 @@ def vc2(m):
         baca.markup(
             r"\baca-eleven-a",
             abjad.Tweak(r"- \tweak padding 1"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -1220,6 +1231,7 @@ def cb1(m):
             r"\baca-string-iii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -1282,6 +1294,7 @@ def cb2(m):
             r"\baca-string-iii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -1308,6 +1321,7 @@ def composites(cache):
         baca.markup(
             r"\baca-quasi-bisb-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

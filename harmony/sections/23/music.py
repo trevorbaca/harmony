@@ -377,6 +377,7 @@ def perc1(m):
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -400,6 +401,7 @@ def perc1(m):
         baca.markup(
             r"\baca-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -412,6 +414,7 @@ def perc1(m):
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -440,6 +443,7 @@ def perc2(m):
         baca.markup(
             r"\baca-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -454,6 +458,7 @@ def perc2(m):
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -469,6 +474,7 @@ def perc2(m):
         baca.markup(
             r"\baca-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -500,6 +506,7 @@ def hp(m):
         baca.markup(
             r"\baca-xyl-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -782,7 +789,9 @@ def composites(cache):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.markup(r"\baca-quasi-bisb-markup"),
+        baca.markup(
+            r"\baca-quasi-bisb-markup", selector=lambda _: baca.select.pleaf(_, 0)
+        ),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1"], 8),

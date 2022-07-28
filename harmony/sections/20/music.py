@@ -320,6 +320,7 @@ def perc1(m):
         baca.markup(
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -338,6 +339,7 @@ def perc1(m):
         baca.markup(
             r"\baca-triangle-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -354,6 +356,7 @@ def perc1(m):
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 7"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -387,6 +390,7 @@ def perc2(m):
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -406,6 +410,7 @@ def perc2(m):
         baca.markup(
             r"\baca-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -459,6 +464,7 @@ def hp(m):
         baca.markup(
             r"\baca-sons-xylophoniques-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -560,7 +566,7 @@ def vc1(m):
         ("vc1", 1),
         baca.clef("treble"),
         baca.pitch("Aqf4"),
-        baca.markup(r"\baca-eleven-e-flat"),
+        baca.markup(r"\baca-eleven-e-flat", selector=lambda _: baca.select.pleaf(_, 0)),
     )
     accumulator(
         ("vc1", 2),
@@ -580,6 +586,7 @@ def vc1(m):
             r"\baca-string-ii-markup",
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

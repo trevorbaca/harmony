@@ -345,6 +345,7 @@ def bfl(m):
         baca.markup(
             r"\baca-jet-whistle-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -358,6 +359,7 @@ def bfl(m):
         baca.markup(
             r"\baca-jet-whistle-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -377,6 +379,7 @@ def perc1(m):
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 1"),
             abjad.Tweak(r"- \tweak staff-padding 7"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -392,6 +395,7 @@ def perc1(m):
         baca.markup(
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -427,6 +431,7 @@ def perc1(m):
         baca.markup(
             r"\baca-triangle-small-beater-markup",
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -474,6 +479,7 @@ def perc2(m):
         baca.markup(
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -509,6 +515,7 @@ def perc2(m):
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -525,6 +532,7 @@ def hp(m):
         baca.markup(
             r"\baca-pdlt-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -563,6 +571,7 @@ def hp(m):
         baca.markup(
             r"\baca-tuning-key-glissando-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.dls_staff_padding(6.5),
     )
@@ -864,12 +873,16 @@ def cb1(m):
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
-        baca.markup(r"\baca-eleven-e"),
+        baca.markup(
+            r"\baca-eleven-e",
+            selector=lambda _: baca.select.pleaf(_, 0),
+        ),
         baca.markup(
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak X-offset 2.5"),
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -959,6 +972,7 @@ def cb2(m):
         baca.markup(
             r"\baca-string-iv-markup",
             abjad.Tweak(r"- \tweak padding 1"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
