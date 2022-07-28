@@ -436,6 +436,7 @@ def perc1(m):
         baca.dynamic(
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-slate-scrape-markup",
@@ -460,6 +461,7 @@ def perc1(m):
         baca.dynamic(
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-brake-drum-markup",
@@ -498,7 +500,7 @@ def perc2(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -559,7 +561,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-pince-markup",
@@ -600,6 +602,7 @@ def hp(m):
         baca.dynamic(
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(4 + 3),
         baca.markup(
@@ -614,7 +617,7 @@ def va(m):
         ("va", (1, 2)),
         baca.pitch("Ab4"),
         baca.flat_glissando(),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -901,7 +904,7 @@ def composites(cache):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-quasi-bisb-markup", selector=lambda _: baca.select.pleaf(_, 0)
         ),
@@ -920,7 +923,7 @@ def composites(cache):
             selector=lambda _: baca.select.pheads(_)[1:],
         ),
         baca.flat_glissando(),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (5, 10)),

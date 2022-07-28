@@ -353,6 +353,7 @@ def perc1(m):
         baca.dynamic(
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-brake-drum-markup",
@@ -396,7 +397,7 @@ def perc2(m):
         baca.clef("treble"),
         baca.staff_lines(5),
         baca.pitch("C#5"),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -440,6 +441,7 @@ def perc2(m):
         baca.dynamic(
             "mp-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(4),
         baca.markup(
@@ -456,7 +458,7 @@ def hp(m):
         ("hp", (1, 4)),
         baca.clef("bass"),
         baca.pitch("A1"),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -471,6 +473,7 @@ def hp(m):
         baca.dynamic(
             "mp-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(4),
         baca.text_spanner(
@@ -508,7 +511,7 @@ def va(m):
         ("va", 5),
         baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G4 Ab4 Bb4>"),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("va", (7, 10)),
@@ -519,6 +522,7 @@ def va(m):
         baca.dynamic(
             "p-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.bow_speed_spanner(
             "poco scr. =|",

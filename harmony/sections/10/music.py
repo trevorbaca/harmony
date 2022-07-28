@@ -407,7 +407,7 @@ def bfl(m):
     accumulator(
         ("bfl", 1),
         baca.pitch("Eb3"),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("bfl", (1, 2)),
@@ -437,7 +437,7 @@ def bfl(m):
     accumulator(
         ("bfl", 7),
         baca.pitch("F3"),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("bfl", 8),
@@ -588,6 +588,7 @@ def perc1(m):
         baca.dynamic(
             '"f"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-slate-brush-markup",
@@ -631,7 +632,7 @@ def perc1(m):
         baca.stem_tremolo(
             selector=lambda _: abjad.select.get(baca.select.pheads(_), [0, -1]),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "(p) >o niente",
             measures=14,
@@ -675,6 +676,7 @@ def perc2(m):
         baca.dynamic(
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
 
@@ -701,7 +703,7 @@ def hp(m):
             baca.pitch("F#3"),
             measures=12,
         ),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.text_spanner(
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
@@ -1079,7 +1081,7 @@ def cb1(m):
         ("cb1", (2, 12)),
         baca.pitch("F#1"),
         baca.flat_glissando(),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "(pp) >o niente o< mf >o niente",
             measures=(12, 15),

@@ -314,7 +314,7 @@ def perc1(m):
     accumulator(
         ("perc1", (1, 3)),
         library.slate_staff_position(),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -330,6 +330,7 @@ def perc1(m):
         baca.dynamic(
             "pp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-triangle-markup",
@@ -343,6 +344,7 @@ def perc1(m):
         baca.dynamic(
             "p-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-slate-scrape-markup",
@@ -375,7 +377,7 @@ def perc2(m):
         ("perc2", 5),
         baca.staff_lines(3),
         library.purpleheart_staff_positions([2]),
-        baca.dynamic("ff"),
+        baca.dynamic("ff", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
         baca.markup(
             r"\baca-purpleheart-markup",
@@ -398,7 +400,7 @@ def perc2(m):
         baca.stem_tremolo(
             selector=lambda _: abjad.select.get(baca.select.pheads(_), [0, 2]),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(
             6,
             selector=lambda _: baca.select.leaves(_)[:-2],
@@ -461,6 +463,7 @@ def hp(m):
         baca.dynamic(
             "p-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(6),
         baca.markup(
@@ -788,7 +791,7 @@ def composites(cache):
             ),
             baca.flat_glissando(),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "(pp) < f",
             measures=(7, 8),

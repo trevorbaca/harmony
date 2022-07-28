@@ -430,7 +430,7 @@ def bfl(m):
     accumulator(
         ("bfl", [(1, 2), (5, 7), 10]),
         baca.pitch("C3"),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             argument=r"\baca-cov-markup =|",
@@ -513,7 +513,7 @@ def perc1(m):
     accumulator(
         ("perc1", (1, 2)),
         library.slate_staff_position(),
-        baca.dynamic('"ff"'),
+        baca.dynamic('"ff"', selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -526,6 +526,7 @@ def perc1(m):
         baca.dynamic(
             '"ff"-ancora',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
     accumulator(
@@ -551,7 +552,7 @@ def perc1(m):
         ("perc1", 9),
         baca.new(
             library.brake_drum_staff_position(),
-            baca.dynamic("f"),
+            baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
             baca.markup(
                 r"\baca-brake-drum-markup",
                 abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -613,7 +614,7 @@ def perc2(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -650,7 +651,7 @@ def perc2(m):
             selector=lambda _: abjad.select.leaf(_, -2),
         ),
         library.purpleheart_staff_positions([2]),
-        baca.dynamic("ff"),
+        baca.dynamic("ff", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
         baca.markup(
             r"\baca-purpleheart-markup",
@@ -674,7 +675,7 @@ def hp(m):
         baca.double_flageolet(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-lv-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -687,7 +688,7 @@ def hp(m):
         baca.double_flageolet(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("f-ancora"),
+        baca.dynamic("f-ancora", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-lv-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -703,7 +704,7 @@ def hp(m):
         baca.new(
             baca.clef("percussion"),
             baca.staff_lines(1),
-            baca.dynamic("p"),
+            baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
             baca.dls_staff_padding(6),
             baca.markup(
                 r"\baca-whisk-markup",
@@ -731,7 +732,7 @@ def hp(m):
         baca.double_flageolet(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
             r"\baca-lv-markup",
@@ -766,7 +767,7 @@ def va(m):
         ("va", 9),
         baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch("<G4 Ab4 Bb4>"),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
 
 

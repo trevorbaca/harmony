@@ -230,7 +230,7 @@ def bfl(m):
         ("bfl", 2),
         baca.pitch("Gb3"),
         baca.color_fingerings([0, 1, 2]),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         ),
@@ -250,7 +250,7 @@ def perc1(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic('"f"'),
+        baca.dynamic('"f"', selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -286,7 +286,7 @@ def perc2(m):
         baca.accent(
             selector=lambda _: baca.select.pheads(_)[:-1],
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-bd-sponge-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -321,7 +321,7 @@ def hp(m):
         ("hp", 1),
         baca.pitch("<B5 C#6>"),
         baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
             r"\baca-lv-markup",
@@ -417,7 +417,7 @@ def cb2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("ff"),
+        baca.dynamic("ff", selector=lambda _: baca.select.phead(_, 0)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 6.5"),
             selector=lambda _: baca.select.tleaves(_, rleak=True),

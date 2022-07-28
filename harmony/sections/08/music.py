@@ -246,7 +246,7 @@ def bfl(m):
     accumulator(
         ("bfl", (8, 9)),
         baca.pitch("Ab3"),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.new(
             baca.covered_spanner(
@@ -271,6 +271,7 @@ def perc1(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
             abjad.Tweak(r"- \tweak X-extent #'(0 . 0)"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(6),
         baca.markup(
@@ -302,7 +303,7 @@ def perc2(m):
         baca.stem_tremolo(
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
     )
 
@@ -346,7 +347,7 @@ def hp(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("hp", (1, 9)),
@@ -360,7 +361,7 @@ def va(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, exclude=baca.enums.HIDDEN),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "(p) < mf > p",
             measures=2,
@@ -484,6 +485,7 @@ def vc2(m):
         baca.dynamic(
             "p",
             measures=3,
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.hairpin(
             "(p) < f > p",
@@ -594,6 +596,7 @@ def cb2(m):
         baca.dynamic(
             "p",
             measures=5,
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.hairpin(
             "(p) < ff >o niente",
@@ -629,7 +632,7 @@ def composites(cache):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-quasi-bisb-ancora-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),

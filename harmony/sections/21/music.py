@@ -383,12 +383,12 @@ def bfl(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("bfl", 5),
         baca.pitch("E5"),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.text_spanner(
             "A =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -411,7 +411,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptail(_, 0),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-bd-struck-markup",
@@ -423,7 +423,7 @@ def perc1(m):
         ("perc1", 2),
         baca.staff_lines(3),
         library.purpleheart_staff_positions([2, -2, 0]),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
         baca.markup(
             r"\baca-purpleheart-markup",
@@ -442,7 +442,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptail(_, 0),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -450,7 +450,7 @@ def perc1(m):
         ),
         baca.new(
             library.brake_drum_staff_position(),
-            baca.dynamic("mp-ancora"),
+            baca.dynamic("mp-ancora", selector=lambda _: baca.select.phead(_, 0)),
             baca.markup(
                 r"\baca-brake-drum-paper-towel-markup",
                 abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -485,7 +485,7 @@ def perc2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
@@ -499,7 +499,7 @@ def perc2(m):
             baca.clef("percussion"),
             baca.staff_lines(1),
             library.bass_drum_staff_position(),
-            baca.dynamic("mp"),
+            baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
             baca.markup(
                 r"\baca-bd-struck-markup",
                 abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -532,7 +532,7 @@ def perc2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-glockenspiel-markup",
@@ -551,7 +551,7 @@ def perc2(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-bd-fingertips-markup",
@@ -569,13 +569,14 @@ def hp(m):
             selector=lambda _: baca.select.ptails(_),
         ),
         baca.new(
-            baca.dynamic("f"),
+            baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
             match=[0],
         ),
         baca.new(
             baca.dynamic(
                 "f-ancora",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                selector=lambda _: baca.select.phead(_, 0),
             ),
             match=[1],
         ),
@@ -596,7 +597,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
             right_broken=True,
@@ -616,7 +617,7 @@ def va(m):
         baca.triple_staccato(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.scp_spanner(
             "P4 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -638,7 +639,7 @@ def va(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -654,7 +655,7 @@ def va(m):
             selector=lambda _: baca.select.ptails(_),
         ),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
             autodetect_right_padding=False,
@@ -675,7 +676,7 @@ def vc1(m):
         baca.triple_staccato(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.scp_spanner(
             "T -> P",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -691,7 +692,7 @@ def vc1(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -710,7 +711,7 @@ def vc2(m):
         ("vc2", [1, 4]),
         baca.clef("bass"),
         baca.pitch("Dqf3"),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -721,7 +722,7 @@ def vc2(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -742,7 +743,7 @@ def cb1(m):
         baca.triple_staccato(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.scp_spanner(
             "T -> P",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -758,7 +759,7 @@ def cb1(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -805,7 +806,7 @@ def cb2(m):
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
