@@ -429,7 +429,7 @@ def bfl(m):
 def perc1(m):
     accumulator(
         ("perc1", 1),
-        baca.staff_lines(3),
+        baca.staff_lines(3, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_position(
             -2,
             selector=lambda _: baca.select.runs(_)[:1],
@@ -462,7 +462,7 @@ def perc1(m):
     )
     accumulator(
         ("perc1", 4),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         library.triangle_staff_position(),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -500,7 +500,7 @@ def perc1(m):
 def perc2(m):
     accumulator(
         ("perc2", 1),
-        baca.staff_lines(3),
+        baca.staff_lines(3, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_position(
             -2,
             selector=lambda _: baca.select.runs(_)[:1],
@@ -533,7 +533,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 4),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.new(
             baca.dynamic(
                 "p-ancora",
@@ -597,7 +597,7 @@ def hp(m):
     accumulator(
         ("hp", 1),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("<B2 C3 Db3>"),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),

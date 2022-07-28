@@ -395,7 +395,7 @@ def perc2(m):
     accumulator(
         ("perc2", (1, 4)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("C#5"),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
@@ -411,7 +411,7 @@ def perc2(m):
     accumulator(
         ("perc2", 5),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(1),
+        baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
         library.slate_staff_position(),
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
@@ -433,7 +433,7 @@ def perc2(m):
     accumulator(
         ("perc2", (7, 10)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5),
+        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A4"),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
