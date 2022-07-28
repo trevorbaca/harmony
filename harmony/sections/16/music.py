@@ -312,6 +312,7 @@ def perc1(m):
         baca.markup(
             r"\baca-brake-drum-paper-towel-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -324,6 +325,7 @@ def perc1(m):
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -334,6 +336,7 @@ def perc1(m):
         baca.markup(
             r"\baca-brake-drum-paper-towel-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -357,6 +360,7 @@ def perc2(m):
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -397,6 +401,7 @@ def hp(m):
         baca.markup(
             r"\baca-lv-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(

@@ -378,6 +378,7 @@ def bfl(m):
         baca.markup(
             baca.levine_multiphonic(42),
             match=[0],
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.espressivo(
             selector=lambda _: baca.select.pheads(_),
@@ -415,6 +416,7 @@ def perc1(m):
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -426,6 +428,7 @@ def perc1(m):
         baca.markup(
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak staff-padding 5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -443,6 +446,7 @@ def perc1(m):
         baca.markup(
             r"\baca-bd-struck-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.new(
             library.brake_drum_staff_position(),
@@ -485,6 +489,7 @@ def perc2(m):
         baca.markup(
             r"\baca-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.dls_staff_padding(
             4,
@@ -532,6 +537,7 @@ def perc2(m):
         baca.markup(
             r"\baca-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -550,6 +556,7 @@ def perc2(m):
         baca.markup(
             r"\baca-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -576,6 +583,7 @@ def hp(m):
             r"\baca-xyl-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
             match=[0],
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -693,7 +701,7 @@ def vc1(m):
         ("vc1", [2, 5]),
         baca.clef("treble"),
         baca.pitch("Aqf4"),
-        baca.markup(r"\baca-eleven-e-flat"),
+        baca.markup(r"\baca-eleven-e-flat", selector=lambda _: baca.select.pleaf(_, 0)),
     )
 
 
@@ -760,7 +768,7 @@ def cb1(m):
         ("cb1", [2, 5]),
         baca.clef("treble"),
         baca.pitch("Dtqf4"),
-        baca.markup(r"\baca-seven-e-flat"),
+        baca.markup(r"\baca-seven-e-flat", selector=lambda _: baca.select.pleaf(_, 0)),
     )
 
 

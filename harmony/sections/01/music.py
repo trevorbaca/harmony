@@ -292,6 +292,7 @@ def perc1(m):
             r"\baca-bd-superball-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -333,6 +334,7 @@ def perc1(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -359,6 +361,7 @@ def perc2(m):
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -376,6 +379,7 @@ def perc2(m):
             r"\baca-purpleheart-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(rf"- \tweak staff-padding {5 + 1}"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
 
@@ -401,6 +405,7 @@ def hp(m):
         baca.markup(
             r"\baca-whisk-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
     )
     accumulator(
@@ -437,6 +442,7 @@ def va(m):
         baca.markup(
             r"\baca-seven-a",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.dynamic("mp"),
         baca.dls_staff_padding(4),
@@ -651,6 +657,7 @@ def cb2(m):
         baca.markup(
             r"\baca-eleven-a",
             abjad.Tweak(rf"- \tweak staff-padding {5.5 + 1}"),
+            selector=lambda _: baca.select.pleaf(_, 0),
         ),
         baca.dynamic("mp"),
         baca.damp_spanner(
