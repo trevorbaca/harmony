@@ -451,7 +451,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 8),
-        baca.dynamic("p-sub"),
+        baca.dynamic("p-sub", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("perc2", (8, 9)),
@@ -464,7 +464,7 @@ def perc2(m):
     accumulator(
         ("perc2", 11),
         library.purpleheart_staff_positions([0]),
-        baca.dynamic("f-sub"),
+        baca.dynamic("f-sub", selector=lambda _: baca.select.phead(_, 0)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
@@ -856,7 +856,7 @@ def composites(cache):
     )
     accumulator(
         (["bfl", "hp", "va", "vc1", "vc2", "cb1"], [8, 11]),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
 
 

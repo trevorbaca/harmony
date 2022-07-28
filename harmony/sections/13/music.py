@@ -470,6 +470,7 @@ def perc1(m):
         baca.dynamic(
             "p-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-triangle-markup",
@@ -537,6 +538,7 @@ def perc2(m):
             baca.dynamic(
                 "p-ancora",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                selector=lambda _: baca.select.phead(_, 0),
             ),
             baca.markup(
                 r"\baca-bd-fingertips-markup",
@@ -552,7 +554,7 @@ def perc2(m):
         ),
         baca.new(
             library.brake_drum_staff_position(),
-            baca.dynamic("f"),
+            baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
             baca.markup(
                 r"\baca-brake-drum-markup",
                 abjad.Tweak(r"- \tweak self-alignment-X 0.5"),
@@ -624,7 +626,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_)[:-1],
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.new(
             baca.pitch("E4"),
             baca.dynamic("f-ancora"),
@@ -680,7 +682,7 @@ def va(m):
     )
     accumulator(
         ("va", 3),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -741,7 +743,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", 3),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -825,6 +827,7 @@ def vc2(m):
         baca.dynamic(
             "mp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
     accumulator(
@@ -875,7 +878,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 3),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\harmony-half-harm-pressure-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -959,6 +962,7 @@ def cb2(m):
         baca.dynamic(
             "mp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
     accumulator(

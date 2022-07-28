@@ -180,7 +180,7 @@ def perc1(m):
     accumulator(
         ("perc1", 1),
         library.brake_drum_staff_position(),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.new(
             baca.dynamic("mf"),
             baca.damp(selector=lambda _: baca.select.phead(_, 0)),
@@ -213,7 +213,7 @@ def hp(m):
         baca.clef("treble"),
         baca.pitch("Bb4"),
         baca.snap_pizzicato(selector=lambda _: baca.select.phead(_, 0)),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("hp", (1, 2)),

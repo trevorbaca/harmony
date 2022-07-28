@@ -680,7 +680,7 @@ def bfl(m):
     accumulator(
         ("bfl", 9),
         baca.pitch("F3"),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             selector=lambda _: baca.select.rleaves(_),
@@ -721,7 +721,7 @@ def bfl(m):
     accumulator(
         ("bfl", [11, 13]),
         baca.pitch("Eb3"),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             map=lambda _: baca.select.rleak_runs(_),
@@ -760,7 +760,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.phead(_, 1),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "o< mf",
             selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[1:]),
@@ -813,7 +813,7 @@ def perc1(m):
         ("perc1", [11, 13]),
         baca.staff_lines(1),
         library.slate_staff_position(),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-slate-scrape-markup",
@@ -850,7 +850,7 @@ def perc2(m):
         baca.staff_lines(1),
         library.brake_drum_staff_position(),
         baca.damp(selector=lambda _: baca.select.phead(_, 0)),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic(
             "f",
             selector=lambda _: baca.select.phead(_, 1),
@@ -891,7 +891,7 @@ def perc2(m):
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-slate-brush-markup",
@@ -926,7 +926,7 @@ def perc2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-bd-struck-markup",
@@ -970,7 +970,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-pdlt-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
@@ -992,6 +992,7 @@ def hp(m):
         baca.dynamic(
             "pp-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
@@ -1008,7 +1009,7 @@ def hp(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
             r"\baca-bisb-markup",
@@ -1023,7 +1024,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-sons-xylophoniques-markup",
@@ -1222,7 +1223,7 @@ def cb2(m):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
     )
     accumulator(
@@ -1300,6 +1301,7 @@ def composites(cache):
         baca.dynamic(
             "fff-scratch",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-quasi-bisb-markup", selector=lambda _: baca.select.pleaf(_, 0)
@@ -1320,7 +1322,7 @@ def composites(cache):
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1"], 13),
@@ -1333,7 +1335,7 @@ def composites(cache):
         baca.accent(
             selector=lambda _: baca.select.pheads(_),
         ),
-        baca.dynamic("pp"),
+        baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (11, 13)),

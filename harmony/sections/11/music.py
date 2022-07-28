@@ -583,7 +583,7 @@ def bfl(m):
     accumulator(
         ("bfl", 5),
         baca.pitch("Ab3"),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("bfl", 6),
@@ -681,7 +681,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-glockenspiel-markup",
@@ -738,6 +738,7 @@ def perc1(m):
         baca.dynamic(
             '"f"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.markup(
             r"\baca-slate-brush-markup",
@@ -814,7 +815,7 @@ def perc2(m):
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -830,12 +831,13 @@ def perc2(m):
         baca.dynamic(
             "mp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
     accumulator(
         ("perc2", 6),
         library.brake_drum_staff_position(),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -856,7 +858,7 @@ def perc2(m):
     accumulator(
         ("perc2", 8),
         library.slate_staff_position(),
-        baca.dynamic('"f"'),
+        baca.dynamic('"f"', selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-slate-scrape-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -869,7 +871,7 @@ def perc2(m):
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -890,7 +892,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mf"),
+        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-sons-xylophoniques-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
@@ -907,7 +909,7 @@ def hp(m):
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("hp", (4, 5)),
@@ -921,6 +923,7 @@ def hp(m):
         baca.dynamic(
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
     )
     accumulator(
@@ -932,6 +935,7 @@ def hp(m):
             baca.dynamic(
                 "f-ancora",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                selector=lambda _: baca.select.phead(_, 0),
             ),
             selector=lambda _: baca.select.pleaf(_, 0),
         ),
@@ -940,6 +944,7 @@ def hp(m):
             baca.dynamic(
                 "f-ancora",
                 abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+                selector=lambda _: baca.select.phead(_, 0),
             ),
             baca.snap_pizzicato(),
             selector=lambda _: baca.select.phead(_, -1),
@@ -995,7 +1000,7 @@ def hp(m):
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
     )
     accumulator(

@@ -364,7 +364,7 @@ def bfl(m):
     accumulator(
         ("bfl", 4),
         baca.pitch("F#5"),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
     )
     accumulator(
         ("bfl", 5),
@@ -400,7 +400,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-glockenspiel-markup",
@@ -431,6 +431,7 @@ def perc1(m):
         baca.dynamic(
             '"f"',
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
+            selector=lambda _: baca.select.phead(_, 0),
         ),
         baca.dls_staff_padding(6),
         baca.markup(
@@ -447,7 +448,7 @@ def perc1(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4),
         baca.markup(
             r"\baca-glockenspiel-markup",
@@ -464,7 +465,7 @@ def perc2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
         baca.markup(
             r"\baca-tam-tam-markup",
@@ -497,7 +498,7 @@ def perc2(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("mp"),
+        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-tam-tam-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
@@ -535,7 +536,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("f"),
+        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
     )
     accumulator(
@@ -543,7 +544,7 @@ def hp(m):
         baca.clef("treble"),
         baca.pitch("<B4 C5>"),
         baca.double_flageolet(selector=lambda _: baca.select.phead(_, 0)),
-        baca.dynamic("f-ancora"),
+        baca.dynamic("f-ancora", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
         baca.markup(
             r"\baca-lv-markup",
@@ -560,7 +561,7 @@ def hp(m):
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
-        baca.dynamic("f-ancora"),
+        baca.dynamic("f-ancora", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(5),
     )
     accumulator(
@@ -586,7 +587,7 @@ def va(m):
     accumulator(
         ("va", 4),
         baca.pitch("F4"),
-        baca.dynamic("p"),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
