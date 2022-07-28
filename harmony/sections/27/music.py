@@ -743,7 +743,7 @@ def hp(m):
     )
     accumulator(
         ("hp", 3),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.whisk_staff_position(),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
@@ -756,7 +756,7 @@ def hp(m):
     )
     accumulator(
         ("hp", (4, 5)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("Ab4"),
         baca.laissez_vibrer(
@@ -895,7 +895,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -957,7 +957,7 @@ def vc2(m):
     )
     accumulator(
         ("vc2", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -1025,7 +1025,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -1064,7 +1064,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", 9),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.bow_speed_spanner(
             "poco scr. =|",
@@ -1126,7 +1126,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 6),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
@@ -1152,7 +1152,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 7),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A1"),
         baca.hairpin(
             "o< mp >o niente",

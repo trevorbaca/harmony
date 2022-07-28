@@ -684,7 +684,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (2, 12)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.new(
             baca.pitch("F#3"),
             baca.flat_glissando(
@@ -755,7 +755,7 @@ def va(m):
     )
     accumulator(
         ("va", 2),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A5"),
         baca.trill_spanner(),
         baca.markup(
@@ -768,7 +768,7 @@ def va(m):
     accumulator(
         ("va", [3, 8]),
         baca.new(
-            baca.clef("alto"),
+            baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0],
         ),
         baca.pitch("C#4"),
@@ -894,7 +894,7 @@ def vc1(m):
         baca.repeat_tie(
             selector=lambda _: abjad.select.leaf(_, 1),
         ),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches(
             "F#3 D2",
             selector=lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
@@ -1002,7 +1002,7 @@ def vc2(m):
         baca.repeat_tie(
             selector=lambda _: abjad.select.leaf(_, 1),
         ),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches(
             "F#3 D2",
             selector=lambda _: abjad.select.get(baca.select.plts(_), [0, -1]),
@@ -1130,7 +1130,7 @@ def cb2(m):
     accumulator(
         ("cb2", [3, 8]),
         baca.new(
-            baca.clef("bass"),
+            baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
             match=[0],
         ),
         baca.pitch("A1"),

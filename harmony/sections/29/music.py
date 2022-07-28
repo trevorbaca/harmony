@@ -210,7 +210,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", 1),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Bb4"),
         baca.snap_pizzicato(selector=lambda _: baca.select.phead(_, 0)),
         baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),

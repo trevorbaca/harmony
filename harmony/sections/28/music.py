@@ -394,7 +394,7 @@ def perc1(m):
 def perc2(m):
     accumulator(
         ("perc2", (1, 4)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("C#5"),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
@@ -410,7 +410,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", 5),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.slate_staff_position(),
         baca.accent(
@@ -432,7 +432,7 @@ def perc2(m):
     )
     accumulator(
         ("perc2", (7, 10)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.pitch("A4"),
         baca.laissez_vibrer(
@@ -456,7 +456,7 @@ def perc2(m):
 def hp(m):
     accumulator(
         ("hp", (1, 4)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A1"),
         baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(4 + 2),
@@ -682,7 +682,7 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", (1, 4)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitch(
             "C#4",
@@ -791,7 +791,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", 5),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.hairpin(
             "pp -- ! < mp >o niente",
             pieces=lambda _: baca.select.lparts(_, [2, 1, 1 + 1]),
@@ -817,7 +817,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (7, 10)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.flat_glissando(
             "A1",
             allow_hidden=True,

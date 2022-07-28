@@ -457,7 +457,7 @@ def hp(m):
     )
     accumulator(
         ("hp", (5, 9)),
-        baca.clef("percussion"),
+        baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1),
         library.whisk_staff_position(),
         baca.dynamic(
@@ -477,7 +477,7 @@ def hp(m):
 def va(m):
     accumulator(
         ("va", (1, 3)),
-        baca.clef("alto"),
+        baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F4"),
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.scp_spanner(
@@ -515,7 +515,7 @@ def va(m):
 def vc1(m):
     accumulator(
         ("vc1", (1, 3)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.tuplet_bracket_down(),
         baca.new(
@@ -565,7 +565,7 @@ def vc1(m):
     )
     accumulator(
         ("vc1", (5, 9)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#2"),
         baca.scp_spanner(
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
@@ -581,7 +581,7 @@ def vc1(m):
 def vc2(m):
     accumulator(
         ("vc2", (1, 3)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F4"),
         # NOTE: text spanner must currently lexically precede pitched trill
         baca.scp_spanner(
@@ -624,7 +624,7 @@ def vc2(m):
 def cb1(m):
     accumulator(
         ("cb1", (1, 3)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5),
         baca.tuplet_bracket_down(),
         baca.new(
@@ -683,7 +683,7 @@ def cb1(m):
     )
     accumulator(
         ("cb1", (5, 9)),
-        baca.clef("bass"),
+        baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("F#1"),
         baca.scp_spanner(
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
@@ -699,7 +699,7 @@ def cb1(m):
 def cb2(m):
     accumulator(
         ("cb2", (1, 3)),
-        baca.clef("treble"),
+        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch(
             "E4",
             do_not_transpose=True,
