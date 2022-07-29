@@ -900,10 +900,8 @@ def hp(m):
     accumulator(
         ("hp", 2),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.pitch("C1"),
-            baca.ottava_bassa(),
-        ),
+        baca.pitch("C1"),
+        baca.ottava_bassa(),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
@@ -911,10 +909,8 @@ def hp(m):
     )
     accumulator(
         ("hp", (4, 5)),
-        baca.chunk(
-            baca.pitch("C1"),
-            baca.ottava_bassa(),
-        ),
+        baca.pitch("C1"),
+        baca.ottava_bassa(),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
@@ -991,10 +987,8 @@ def hp(m):
         ("hp", 10),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.pitch("C1"),
-            baca.ottava_bassa(),
-        ),
+        baca.pitch("C1"),
+        baca.ottava_bassa(),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
