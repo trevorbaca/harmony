@@ -72,7 +72,6 @@ baca.markup_function(
     skips[6 - 1],
     r"\harmony-text-twenty-seven",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    allow_rests=True,
     tags=[baca.tags.NOT_PARTS],
 )
 
