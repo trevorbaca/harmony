@@ -1006,27 +1006,25 @@ def hp(m):
             7,
             selector=lambda _: baca.select.plt(_, 0),
         ),
-        baca.chunk(
-            baca.new(
-                baca.clef("percussion"),
-                baca.staff_lines(1),
-                selector=lambda _: baca.select.rest(_, -1),
-            ),
-            baca.new(
-                library.whisk_staff_position(),
-                selector=lambda _: baca.select.pleaves(_)[-2:],
-            ),
-            baca.hairpin(
-                'o< "f" >o',
-                forbid_al_niente_to_bar_line=True,
-                pieces=lambda _: baca.select.clparts(_, [1]),
-                selector=lambda _: baca.select.pleaves(_)[-2:],
-            ),
-            baca.markup(
-                r"\baca-whisk-markup",
-                abjad.Tweak(r"- \tweak staff-padding 8"),
-                selector=lambda _: baca.select.pleaf(_, -2),
-            ),
+        baca.new(
+            baca.clef("percussion"),
+            baca.staff_lines(1),
+            selector=lambda _: baca.select.rest(_, -1),
+        ),
+        baca.new(
+            library.whisk_staff_position(),
+            selector=lambda _: baca.select.pleaves(_)[-2:],
+        ),
+        baca.hairpin(
+            'o< "f" >o',
+            forbid_al_niente_to_bar_line=True,
+            pieces=lambda _: baca.select.clparts(_, [1]),
+            selector=lambda _: baca.select.pleaves(_)[-2:],
+        ),
+        baca.markup(
+            r"\baca-whisk-markup",
+            abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.pleaf(_, -2),
         ),
     )
     accumulator(

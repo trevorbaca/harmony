@@ -635,33 +635,29 @@ def va(m):
     )
     accumulator(
         ("va", (5, 10)),
-        baca.chunk(
-            baca.hairpin(
-                "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-                " < ff-scratch -- niente",
-                pieces=lambda _: abjad.select.partition_by_counts(
-                    baca.plts(_),
-                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-                ),
-                selector=lambda _: baca.select.rleaves(_),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            baca.untie(
-                selector=lambda _: baca.select.leaves(_),
-            ),
-            baca.note_head_style_harmonic_black(
-                selector=lambda _: baca.select.pleaves(_)
-            ),
-            baca.pitch(
-                "<G4 Ab4 Bb4>",
-                selector=lambda _: abjad.select.leaf(_, 0),
-            ),
-            baca.pitch(
-                "<G4 Ab4 Bb4>",
-                selector=lambda _: abjad.select.leaf(_, -1),
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: baca.select.leaves(_)[1:-1],
-            ),
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.untie(
+            selector=lambda _: baca.select.leaves(_),
+        ),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            selector=lambda _: abjad.select.leaf(_, 0),
+        ),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            selector=lambda _: abjad.select.leaf(_, -1),
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: baca.select.leaves(_)[1:-1],
         ),
     )
 
@@ -692,29 +688,25 @@ def vc1(m):
     accumulator(
         ("vc1", (5, 10)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.hairpin(
-                "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
-                " mf < ff-scratch -- niente",
-                pieces=lambda _: abjad.select.partition_by_counts(
-                    baca.plts(_),
-                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-                ),
-                selector=lambda _: baca.select.rleaves(_),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
+            " mf < ff-scratch -- niente",
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            baca.untie(
-                selector=lambda _: baca.select.leaves(_),
-            ),
-            baca.note_head_style_harmonic_black(
-                selector=lambda _: baca.select.pleaves(_)
-            ),
-            baca.pitch(
-                "<A4 B4 C5>",
-                selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: baca.select.leaves(_)[1:-1],
-            ),
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.untie(
+            selector=lambda _: baca.select.leaves(_),
+        ),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+        baca.pitch(
+            "<A4 B4 C5>",
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: baca.select.leaves(_)[1:-1],
         ),
     )
 
@@ -745,33 +737,29 @@ def vc2(m):
     accumulator(
         ("vc2", (5, 10)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.hairpin(
-                "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-                " < ff-scratch -- niente",
-                pieces=lambda _: abjad.select.partition_by_counts(
-                    baca.plts(_),
-                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-                ),
-                selector=lambda _: baca.select.rleaves(_),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            baca.untie(
-                selector=lambda _: baca.select.leaves(_),
-            ),
-            baca.note_head_style_harmonic_black(
-                selector=lambda _: baca.select.pleaves(_)
-            ),
-            baca.pitch(
-                "<G4 Ab4 Bb4>",
-                selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
-            ),
-            baca.pitch(
-                "C5",
-                selector=lambda _: baca.select.pleaves(_)[1:-1],
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: baca.select.leaves(_)[1:-1],
-            ),
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.untie(
+            selector=lambda _: baca.select.leaves(_),
+        ),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+        ),
+        baca.pitch(
+            "C5",
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: baca.select.leaves(_)[1:-1],
         ),
     )
 
@@ -805,30 +793,26 @@ def cb1(m):
     accumulator(
         ("cb1", (5, 10)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.hairpin(
-                "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-                " < ff-scratch -- niente",
-                pieces=lambda _: abjad.select.partition_by_counts(
-                    baca.plts(_),
-                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-                ),
-                selector=lambda _: baca.select.rleaves(_),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            baca.untie(
-                selector=lambda _: baca.select.leaves(_),
-            ),
-            baca.note_head_style_harmonic_black(
-                selector=lambda _: baca.select.pleaves(_)
-            ),
-            baca.pitch(
-                "<A4 B4 C5>",
-                selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
-                do_not_transpose=True,
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: baca.select.leaves(_)[1:-1],
-            ),
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.untie(
+            selector=lambda _: baca.select.leaves(_),
+        ),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+        baca.pitch(
+            "<A4 B4 C5>",
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            do_not_transpose=True,
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: baca.select.leaves(_)[1:-1],
         ),
     )
 
@@ -862,35 +846,31 @@ def cb2(m):
     accumulator(
         ("cb2", (5, 10)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.chunk(
-            baca.hairpin(
-                "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
-                " < ff-scratch -- niente",
-                pieces=lambda _: abjad.select.partition_by_counts(
-                    baca.plts(_),
-                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-                ),
-                selector=lambda _: baca.select.rleaves(_),
+        baca.hairpin(
+            "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
+            " < ff-scratch -- niente",
+            pieces=lambda _: abjad.select.partition_by_counts(
+                baca.plts(_),
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
-            baca.untie(
-                selector=lambda _: baca.select.leaves(_),
-            ),
-            baca.note_head_style_harmonic_black(
-                selector=lambda _: baca.select.pleaves(_)
-            ),
-            baca.pitch(
-                "<G4 Ab4 Bb4>",
-                selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
-                do_not_transpose=True,
-            ),
-            baca.pitch(
-                "C5",
-                selector=lambda _: baca.select.pleaves(_)[1:-1],
-                do_not_transpose=True,
-            ),
-            baca.note_head_transparent(
-                selector=lambda _: baca.select.leaves(_)[1:-1],
-            ),
+            selector=lambda _: baca.select.rleaves(_),
+        ),
+        baca.untie(
+            selector=lambda _: baca.select.leaves(_),
+        ),
+        baca.note_head_style_harmonic_black(selector=lambda _: baca.select.pleaves(_)),
+        baca.pitch(
+            "<G4 Ab4 Bb4>",
+            selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
+            do_not_transpose=True,
+        ),
+        baca.pitch(
+            "C5",
+            selector=lambda _: baca.select.pleaves(_)[1:-1],
+            do_not_transpose=True,
+        ),
+        baca.note_head_transparent(
+            selector=lambda _: baca.select.leaves(_)[1:-1],
         ),
     )
 

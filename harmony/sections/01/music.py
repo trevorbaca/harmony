@@ -214,12 +214,10 @@ def bfl(m):
         ),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Bfl."),
-            baca.instrument_name(
-                r"\harmony-bass-flute-markup",
-                selector=lambda _: abjad.select.leaf(_, 0),
-            ),
+        library.short_instrument_name("Bfl."),
+        baca.instrument_name(
+            r"\harmony-bass-flute-markup",
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch(
             "A3",
@@ -346,12 +344,10 @@ def perc2(m):
             instruments["Percussion"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Perc. II"),
-            baca.instrument_name(
-                r"\harmony-percussion-ii-markup",
-                selector=lambda _: abjad.select.leaf(_, 0),
-            ),
+        library.short_instrument_name("Perc. II"),
+        baca.instrument_name(
+            r"\harmony-percussion-ii-markup",
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -391,11 +387,9 @@ def hp(m):
             instruments["Harp"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Hp."),
-            baca.instrument_name(
-                r"\harmony-harp-markup", selector=lambda _: abjad.select.leaf(_, 0)
-            ),
+        library.short_instrument_name("Hp."),
+        baca.instrument_name(
+            r"\harmony-harp-markup", selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(1, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -433,11 +427,9 @@ def va(m):
         ),
         baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Va."),
-            baca.instrument_name(
-                r"\harmony-viola-markup", selector=lambda _: abjad.select.leaf(_, 0)
-            ),
+        library.short_instrument_name("Va."),
+        baca.instrument_name(
+            r"\harmony-viola-markup", selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.pitch("Gqf4"),
         baca.markup(
@@ -476,11 +468,9 @@ def vc1(m):
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Vc. I"),
-            baca.instrument_name(
-                r"\harmony-cello-i-markup", selector=lambda _: abjad.select.leaf(_, 0)
-            ),
+        library.short_instrument_name("Vc. I"),
+        baca.instrument_name(
+            r"\harmony-cello-i-markup", selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.repeat_tie(
             selector=lambda _: abjad.select.get(baca.select.leaves(_), [1, 4]),
@@ -543,11 +533,9 @@ def vc2(m):
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Vc. II"),
-            baca.instrument_name(
-                r"\harmony-cello-ii-markup", selector=lambda _: abjad.select.leaf(_, 0)
-            ),
+        library.short_instrument_name("Vc. II"),
+        baca.instrument_name(
+            r"\harmony-cello-ii-markup", selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.pitch("B3"),
         baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
@@ -590,12 +578,10 @@ def cb1(m):
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Cb. I"),
-            baca.instrument_name(
-                r"\harmony-contrabass-i-markup",
-                selector=lambda _: abjad.select.leaf(_, 0),
-            ),
+        library.short_instrument_name("Cb. I"),
+        baca.instrument_name(
+            r"\harmony-contrabass-i-markup",
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("A1"),
         baca.stem_tremolo(
@@ -647,12 +633,10 @@ def cb2(m):
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.suite(
-            library.short_instrument_name("Cb. II"),
-            baca.instrument_name(
-                r"\harmony-contrabass-ii-markup",
-                selector=lambda _: abjad.select.leaf(_, 0),
-            ),
+        library.short_instrument_name("Cb. II"),
+        baca.instrument_name(
+            r"\harmony-contrabass-ii-markup",
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.pitch("Dqs3"),
         baca.markup(

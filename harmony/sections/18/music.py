@@ -755,10 +755,8 @@ def perc2(m):
     accumulator(
         ("perc2", 2),
         library.brake_drum_staff_position(),
-        baca.chunk(
-            baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
-            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
-        ),
+        baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
+        baca.damp(selector=lambda _: baca.select.phead(_, 0)),
         baca.new(
             baca.laissez_vibrer(
                 selector=lambda _: baca.select.ptails(_),

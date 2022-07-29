@@ -785,12 +785,10 @@ def composites(cache):
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
-        baca.chunk(
-            baca.accent(
-                selector=lambda _: baca.select.pheads(_),
-            ),
-            baca.flat_glissando(),
+        baca.accent(
+            selector=lambda _: baca.select.pheads(_),
         ),
+        baca.flat_glissando(),
         baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.hairpin(
             "(pp) < f",
