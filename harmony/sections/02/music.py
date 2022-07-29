@@ -71,7 +71,6 @@ baca.markup_function(
     skips[12 - 1],
     r"\harmony-text-one",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    allow_rests=True,
 )
 
 rests = score["Rests"]
