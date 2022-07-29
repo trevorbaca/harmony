@@ -74,13 +74,13 @@ for index, item in (
 ):
     skip = skips[index]
     indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, indicator, manifests)
 
-baca.close_volta(skips[2 - 1], accumulator.first_measure_number)
+baca.close_volta_function(skips[2 - 1], accumulator.first_measure_number)
 
 rests = score["Rests"]
 for index, string in ((9 - 1, "fermata"),):
-    baca.global_fermata(rests[index], string)
+    baca.global_fermata_function(rests[index], string)
 
 # text
 

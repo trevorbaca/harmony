@@ -65,7 +65,7 @@ for index, item in (
 ):
     skip = skips[index]
     indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, indicator, manifests)
 
 baca.markup_function(
     skips[12 - 1],
@@ -75,7 +75,7 @@ baca.markup_function(
 
 rests = score["Rests"]
 for index, string in ((12 - 1, "fermata"),):
-    baca.global_fermata(rests[index], string)
+    baca.global_fermata_function(rests[index], string)
 
 divisions = [16, 20, 12, 12, 12, 16]
 sixteenths = [(2, 2, _ - 4) for _ in divisions]
