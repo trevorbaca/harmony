@@ -260,7 +260,10 @@ def cb2(m):
         ("cb2", -1),
         baca.not_parts(
             baca.chunk(
-                baca.mark(r"\harmony-colophon-markup", selector=lambda _: abjad.select.leaf(_, 0)),
+                baca.mark(
+                    r"\harmony-colophon-markup",
+                    selector=lambda _: abjad.select.leaf(_, 0),
+                ),
                 baca.rehearsal_mark_down(),
                 baca.rehearsal_mark_extra_offset((92, 8)),
                 baca.rehearsal_mark_padding(12),
