@@ -687,7 +687,7 @@ def va(m):
         ("va", (1, 3)),
         baca.tuplet_bracket_up(),
         baca.pitches("D4 C#4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< f",
         ),
@@ -704,7 +704,7 @@ def va(m):
         baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.tuplet_bracket_up(),
         baca.pitches("D4 C#4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.new(
             baca.hairpin(
                 "o< ff >o niente",
@@ -724,7 +724,7 @@ def va(m):
     accumulator(
         ("va", 12),
         baca.pitches("D4 C#4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),
@@ -801,7 +801,7 @@ def vc2(m):
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(1.5),
         baca.pitches("Gb4 F4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< f",
         ),
@@ -827,7 +827,7 @@ def vc2(m):
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(3),
         baca.pitches("Gb4 F4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.new(
             baca.hairpin(
                 "o< ff >o niente",
@@ -847,7 +847,7 @@ def vc2(m):
     accumulator(
         ("vc2", 12),
         baca.pitches("D3 C#3"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),
@@ -870,7 +870,7 @@ def cb1(m):
         ("cb1", (1, 3)),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches("D2 C#2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< f",
         ),
@@ -944,7 +944,7 @@ def cb2(m):
         ("cb2", (5, 10)),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitches("D2 C#2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.new(
             baca.hairpin(
                 "o< ff >o niente",
@@ -965,7 +965,7 @@ def cb2(m):
     accumulator(
         ("cb2", 12),
         baca.pitches("D2 C#2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),

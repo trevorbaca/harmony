@@ -673,6 +673,7 @@ def perc2(m):
         library.tam_tam_staff_position(),
         baca.flat_glissando(
             hide_middle_stems=True,
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -967,7 +968,7 @@ def va(m):
     accumulator(
         ("va", (7, 8)),
         baca.pitch("C#4"),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "mf >o niente",
             selector=lambda _: baca.select.tleaves(_, rleak=True),

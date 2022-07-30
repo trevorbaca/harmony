@@ -1023,6 +1023,7 @@ def vc2(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -1085,6 +1086,7 @@ def vc2(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -1260,6 +1262,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -1329,6 +1332,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),

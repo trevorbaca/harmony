@@ -709,7 +709,7 @@ def perc1(m):
     accumulator(
         ("perc1", (4, 5)),
         library.triangle_staff_position(),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
@@ -1014,7 +1014,7 @@ def va(m):
     accumulator(
         ("va", 6),
         baca.pitch("C#4"),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "mf >o niente",
             selector=lambda _: baca.select.tleaves(_, rleak=True),
@@ -1326,7 +1326,7 @@ def composites(cache):
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o<| p |> pp",

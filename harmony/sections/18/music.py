@@ -653,6 +653,7 @@ def perc1(m):
         library.brake_drum_staff_position(),
         baca.flat_glissando(
             do_not_hide_middle_note_heads=True,
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.dls_staff_padding(6),
@@ -904,7 +905,7 @@ def hp(m):
     accumulator(
         ("hp", [9, 10, 11]),
         library.whisk_staff_position(),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             'o< "mf" >o niente',
             pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
@@ -944,6 +945,7 @@ def va(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -1183,6 +1185,7 @@ def cb1(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -1341,6 +1344,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -1404,7 +1408,7 @@ def composites(cache):
         (["va", "vc1", "vc2", "cb1", "cb2"], 1),
         baca.new(
             # excluded cb1 because of current gliss / pitch trill order contention
-            baca.flat_glissando(),
+            baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
             match=[0, 1, 2, 4],
         ),
         baca.hairpin(
@@ -1421,7 +1425,7 @@ def composites(cache):
         (["va", "vc1", "vc2", "cb1"], 2),
         baca.new(
             # excluded cb1 because of gliss / pitch trill order contention
-            baca.flat_glissando(),
+            baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
             match=[0, 1, 2],
         ),
         baca.hairpin(
@@ -1460,7 +1464,7 @@ def composites(cache):
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 8),
         baca.new(
-            baca.flat_glissando(),
+            baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
             # excluded cb1 because of current gliss / trill order contention
             match=[0, 1, 2, 4],
         ),

@@ -564,7 +564,7 @@ def hp(m):
     accumulator(
         ("hp", 4),
         baca.pitches("F4 D4 A4 G3 B3 E3"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             '"f" >o niente',
             selector=lambda _: baca.select.rleaves(_),
@@ -740,6 +740,7 @@ def vc1(m):
         ),
         baca.glissando(
             allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dls_staff_padding(
             5.5,
@@ -770,6 +771,7 @@ def vc2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
@@ -810,6 +812,7 @@ def vc2(m):
         ),
         baca.glissando(
             allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dls_staff_padding(5.5),
     )
@@ -898,6 +901,7 @@ def cb1(m):
         ),
         baca.glissando(
             allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dls_staff_padding(
             5.5,
@@ -933,6 +937,7 @@ def cb2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
@@ -988,6 +993,7 @@ def cb2(m):
         ),
         baca.glissando(
             allow_repeats=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
     )
     accumulator(

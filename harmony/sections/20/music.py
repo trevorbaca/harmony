@@ -495,7 +495,7 @@ def va(m):
         ("va", 2),
         baca.tuplet_bracket_up(),
         baca.pitches("D4 C#4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< mf",
         ),
@@ -619,7 +619,7 @@ def vc2(m):
         ("vc2", 2),
         baca.tuplet_bracket_staff_padding(2),
         baca.pitches("Gb4 F4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< mf",
         ),
@@ -649,7 +649,7 @@ def cb1(m):
     accumulator(
         ("cb1", 2),
         baca.pitches("D2 C#2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< mf",
         ),

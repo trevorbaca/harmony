@@ -1263,7 +1263,7 @@ def composites(cache):
     )
     accumulator(
         (["vc1", "vc2", "cb1"], 2),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o< mp >o niente",
             pieces=lambda _: baca.select.lparts(_, [2, 1 + 1]),

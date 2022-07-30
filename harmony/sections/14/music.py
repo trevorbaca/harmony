@@ -866,6 +866,7 @@ def va(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -913,6 +914,7 @@ def va(m):
             allow_repeats=True,
             hide_middle_note_heads=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -929,6 +931,7 @@ def va(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
     )
     accumulator(
@@ -1147,6 +1150,7 @@ def cb1(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -1201,6 +1205,7 @@ def cb1(m):
             allow_repeats=True,
             hide_middle_note_heads=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -1217,6 +1222,7 @@ def cb1(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
     )
     accumulator(
@@ -1233,6 +1239,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -1276,6 +1283,7 @@ def cb2(m):
             allow_repeats=True,
             hide_middle_note_heads=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_, grace=False),
@@ -1292,6 +1300,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
     )
     accumulator(

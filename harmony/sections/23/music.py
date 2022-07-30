@@ -554,7 +554,7 @@ def va(m):
     accumulator(
         ("va", 7),
         baca.pitches("D4 C#4"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),
@@ -661,7 +661,7 @@ def vc2(m):
     accumulator(
         ("vc2", 7),
         baca.pitches("D3 C#3"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),
@@ -763,7 +763,7 @@ def cb2(m):
     accumulator(
         ("cb2", 7),
         baca.pitches("D2 C#2"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "pp >o niente",
         ),

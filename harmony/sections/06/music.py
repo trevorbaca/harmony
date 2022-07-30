@@ -1559,6 +1559,7 @@ def vc2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
@@ -1726,7 +1727,7 @@ def cb2(m):
     accumulator(
         ("cb2", 1),
         baca.pitch("E1"),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o< p >o niente",
             pieces=lambda _: baca.select.lparts(_, [3, 3]),
@@ -1739,7 +1740,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (3, 7)),
-        baca.flat_glissando("E1"),
+        baca.flat_glissando("E1", selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o< mp > p < f",
             bookend=False,
@@ -1760,6 +1761,7 @@ def cb2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
@@ -1779,7 +1781,7 @@ def cb2(m):
     )
     accumulator(
         ("cb2", (10, 15)),
-        baca.flat_glissando("E1"),
+        baca.flat_glissando("E1", selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o< f > p < ff >o niente",
             pieces=lambda _: baca.mgroups(_, [2, 1, 1, 3]),

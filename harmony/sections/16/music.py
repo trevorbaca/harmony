@@ -335,7 +335,7 @@ def perc1(m):
     accumulator(
         ("perc1", (9, 10)),
         library.brake_drum_staff_position(),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.markup(
             r"\baca-brake-drum-paper-towel-markup",
@@ -427,6 +427,7 @@ def va(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -549,6 +550,7 @@ def cb1(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -585,6 +587,7 @@ def cb1(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -609,6 +612,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
@@ -645,6 +649,7 @@ def cb2(m):
         baca.glissando(
             allow_repeats=True,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.dynamic("ppp", selector=lambda _: baca.select.phead(_, 0)),
         baca.alternate_bow_strokes(
