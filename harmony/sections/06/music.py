@@ -1559,7 +1559,7 @@ def vc2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
-            selector=lambda _: baca.select.tleaves(_),
+                selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
@@ -1761,7 +1761,7 @@ def cb2(m):
             baca.glissando(
                 allow_repeats=True,
                 hide_middle_note_heads=True,
-            selector=lambda _: baca.select.tleaves(_),
+                selector=lambda _: baca.select.tleaves(_),
             ),
             map=lambda _: baca.select.runs(_),
         ),
