@@ -771,7 +771,7 @@ def va(m):
             match=[0],
         ),
         baca.pitch("C#4"),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "mf >o niente",
             selector=lambda _: baca.select.tleaves(_, rleak=True),
@@ -847,7 +847,7 @@ def va(m):
             ],
             selector=lambda _: baca.select.plts(_)[1:-1],
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< ff >o niente",
             pieces=lambda _: baca.mgroups(_, [3, 4]),
@@ -951,7 +951,7 @@ def vc1(m):
             ],
             selector=lambda _: baca.select.plts(_)[1:-1],
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< ff >o niente",
             pieces=lambda _: baca.mgroups(_, [3, 4]),
@@ -1053,7 +1053,7 @@ def vc2(m):
             ],
             selector=lambda _: baca.select.plts(_)[1:-1],
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< ff >o niente",
             pieces=lambda _: baca.mgroups(_, [3, 4]),
@@ -1099,6 +1099,7 @@ def cb1(m):
         baca.interpolate_pitches("F#2", "D2"),
         baca.glissando(
             hide_middle_note_heads=True,
+            selector=lambda _: baca.select.tleaves(_),
         ),
         baca.scp_spanner(
             "T4 -> O -> T4",
@@ -1197,7 +1198,7 @@ def cb2(m):
             ],
             selector=lambda _: baca.select.plts(_)[1:-1],
         ),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< ff >o niente",
             pieces=lambda _: baca.mgroups(_, [3, 4]),

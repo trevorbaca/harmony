@@ -420,6 +420,7 @@ def perc1(m):
         baca.new(
             baca.flat_glissando(
                 hide_stem_selector=lambda _: baca.select.leaves(_)[2:-1],
+                selector=lambda _: baca.select.pleaves(_),
             ),
             measures=(7, 9),
         ),

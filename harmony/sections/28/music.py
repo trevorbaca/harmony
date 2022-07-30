@@ -329,6 +329,7 @@ def perc1(m):
         library.triangle_staff_position(),
         baca.flat_glissando(
             hide_middle_stems=True,
+            selector=lambda _: baca.select.pleaves(_),
         ),
         baca.stem_tremolo(
             selector=lambda _: abjad.select.get(baca.select.pleaves(_), [0, -1]),
@@ -535,7 +536,7 @@ def vc1(m):
         ("vc1", (1, 4)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitches("E6 C#6"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< mp >o",
             bookend=False,
@@ -607,7 +608,7 @@ def vc2(m):
         ("vc2", (1, 4)),
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pitches("A5 C#6"),
-        baca.glissando(),
+        baca.glissando(selector=lambda _: baca.select.tleaves(_)),
         baca.hairpin(
             "o< mp >o",
             bookend=False,

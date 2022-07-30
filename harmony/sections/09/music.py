@@ -335,7 +335,7 @@ def va(m):
     accumulator(
         ("va", 1),
         baca.pitch("C#4"),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "mf >o niente",
             selector=lambda _: baca.select.tleaves(_, rleak=True),

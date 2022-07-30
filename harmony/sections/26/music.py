@@ -609,7 +609,7 @@ def perc2(m):
     accumulator(
         ("perc2", (7, 8)),
         library.tam_tam_staff_position(),
-        baca.flat_glissando(),
+        baca.flat_glissando(selector=lambda _: baca.select.pleaves(_)),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
         ),
