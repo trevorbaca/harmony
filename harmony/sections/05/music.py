@@ -326,6 +326,7 @@ def bfl(m):
         baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -635,6 +636,7 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -795,6 +797,7 @@ def vc2(m):
         baca.dynamic("pp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -876,6 +879,7 @@ def cb1(m):
         ),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.markup(
             r"\baca-eleven-e",
@@ -974,6 +978,7 @@ def cb2(m):
         ),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.markup(
             r"\baca-string-iv-markup",
@@ -1025,6 +1030,7 @@ def strings(cache):
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 

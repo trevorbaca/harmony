@@ -763,6 +763,7 @@ def cb2(m):
         baca.scp_spanner(
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(

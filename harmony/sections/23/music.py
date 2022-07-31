@@ -358,6 +358,7 @@ def bfl(m):
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -621,6 +622,7 @@ def vc1(m):
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=lambda _: baca.mgroups(_, [1, 2]),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 
@@ -636,6 +638,7 @@ def vc2(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -656,6 +659,7 @@ def vc2(m):
         baca.bow_speed_spanner(
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -720,6 +724,7 @@ def cb1(m):
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=lambda _: baca.mgroups(_, [1, 2]),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 

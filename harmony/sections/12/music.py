@@ -577,6 +577,7 @@ def bfl(m):
             baca.metric_modulation_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 left_broken=True,
+                selector=lambda _: baca.select.rleaves(_),
             ),
             match=[0],
         ),
@@ -1077,6 +1078,7 @@ def va(m):
         baca.scp_spanner(
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1146,6 +1148,7 @@ def vc1(m):
         baca.scp_spanner(
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1184,6 +1187,7 @@ def vc2(m):
         baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1216,6 +1220,7 @@ def vc2(m):
         baca.scp_spanner(
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1288,6 +1293,7 @@ def cb1(m):
         baca.scp_spanner(
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1329,6 +1335,7 @@ def cb2(m):
         baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1361,6 +1368,7 @@ def cb2(m):
         baca.scp_spanner(
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1413,6 +1421,7 @@ def composites(cache):
             autodetect_right_padding=False,
             bookend=True,
             match=[0, 1, 2],
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.scp_spanner(
             "(T4) -> O",
@@ -1420,6 +1429,7 @@ def composites(cache):
             autodetect_right_padding=False,
             bookend=True,
             match=[3, 4],
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(

@@ -409,6 +409,7 @@ def bfl(m):
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -438,6 +439,7 @@ def bfl(m):
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(

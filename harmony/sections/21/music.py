@@ -633,6 +633,7 @@ def va(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            selector=lambda _: baca.select.rleaves(_),
         ),
     )
     accumulator(
@@ -645,6 +646,7 @@ def va(m):
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -697,6 +699,7 @@ def vc1(m):
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -716,6 +719,7 @@ def vc2(m):
         baca.bow_speed_spanner(
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -727,6 +731,7 @@ def vc2(m):
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -764,6 +769,7 @@ def cb1(m):
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -811,6 +817,7 @@ def cb2(m):
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(

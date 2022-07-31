@@ -434,6 +434,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             argument=r"\baca-cov-markup =|",
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
