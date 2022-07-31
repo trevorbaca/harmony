@@ -493,6 +493,10 @@ number.29.BassFlute.Music = {
     % SPANNER_STARTS:
       %! harmony.make_sixteenths()
     \repeatTie
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -556,10 +560,6 @@ number.29.BassFlute.Music = {
               %! baca.SpannerIndicatorCommand._call(4)
               %! baca.trill_spanner()
             \stopTrillSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -1417,6 +1417,10 @@ number.29.Viola.Music = {
     % SPANNER_STARTS:
       %! harmony.make_sixteenths()
     \repeatTie
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1480,10 +1484,6 @@ number.29.Viola.Music = {
               %! baca.SpannerIndicatorCommand._call(4)
               %! baca.trill_spanner()
             \stopTrillSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -1763,6 +1763,10 @@ number.29.Cello.1.Music = {
     - \tweak direction #up
       %! harmony.make_sixteenths()
     \repeatTie
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -1826,10 +1830,6 @@ number.29.Cello.1.Music = {
               %! baca.SpannerIndicatorCommand._call(4)
               %! baca.trill_spanner()
             \stopTrillSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -2109,6 +2109,10 @@ number.29.Cello.2.Music = {
     - \tweak direction #up
       %! harmony.make_sixteenths()
     \repeatTie
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2172,10 +2176,6 @@ number.29.Cello.2.Music = {
               %! baca.SpannerIndicatorCommand._call(4)
               %! baca.trill_spanner()
             \stopTrillSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -2455,6 +2455,10 @@ number.29.Contrabass.1.Music = {
     - \tweak direction #up
       %! harmony.make_sixteenths()
     \repeatTie
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2518,10 +2522,6 @@ number.29.Contrabass.1.Music = {
               %! baca.SpannerIndicatorCommand._call(4)
               %! baca.trill_spanner()
             \stopTrillSpan
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -2859,6 +2859,10 @@ number.29.Contrabass.2.Music = {
       %! baca.PiecewiseCommand._call(3)
       %! baca.scp_spanner()
     \bacaStopTextSpanSCP
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -2917,10 +2921,6 @@ number.29.Contrabass.2.Music = {
               %! NOTE
               %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 

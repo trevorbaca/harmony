@@ -673,9 +673,6 @@ number.5.BassFlute.Music = {
               %! NOTE
               %! baca.make_mmrests(3)
             \abjad-invisible-music-coloring
-              %! baca.OverrideCommand._call(1)
-              %! baca.dls_staff_padding()
-            \override DynamicLineSpanner.staff-padding = 4
               %! EXPLICIT_BAR_EXTENT
               %! REAPPLIED_BAR_EXTENT
               %! baca._reapply_persistent_indicators(3)
@@ -812,6 +809,11 @@ number.5.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 2]
+    % BEFORE:
+    % COMMANDS:
+      %! baca.OverrideCommand._call(1)
+      %! baca.dls_staff_padding()
+    \override DynamicLineSpanner.staff-padding = 4
       %! harmony.make_sixteenths()
     r4
     % ABSOLUTE_BEFORE:
