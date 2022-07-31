@@ -982,7 +982,7 @@ def hp(m):
     accumulator(
         ("hp", (4, 9)),
         baca.pitch("<G6 A6 Bb6>"),
-        baca.ottava(),
+        baca.ottava(selector=lambda _: baca.select.tleaves(_)),
         baca.ottava_bracket_staff_padding(5.5),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -1002,7 +1002,7 @@ def hp(m):
     accumulator(
         ("hp", 12),
         baca.pitch("<G6 A6 Bb6>"),
-        baca.ottava(),
+        baca.ottava(selector=lambda _: baca.select.tleaves(_)),
         baca.ottava_bracket_staff_padding(5.5),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),
@@ -1195,6 +1195,7 @@ def cb2(m):
         ),
         baca.trill_spanner(
             alteration="Fqs5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -1270,7 +1271,7 @@ def composites(cache):
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.new(
-            baca.trill_spanner(),
+            baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
             match=[0, 1],
         ),
     )

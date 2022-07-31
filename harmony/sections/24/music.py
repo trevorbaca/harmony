@@ -276,6 +276,7 @@ def bfl(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "A -> T -> A",
@@ -296,6 +297,7 @@ def bfl(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "A -> T -> A",
@@ -488,6 +490,7 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="M2",
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -540,6 +543,7 @@ def vc1(m):
             baca.trill_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="M2",
+                selector=lambda _: baca.select.tleaves(_, rleak=True),
             ),
             map=lambda _: baca.select.rleak_runs(_, 1, -1),
         ),
@@ -592,6 +596,7 @@ def vc2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="M2",
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         # NOTE: current clef / after-grace contention:
         baca.clef(
@@ -655,6 +660,7 @@ def cb1(m):
             baca.trill_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 alteration="m2",
+                selector=lambda _: baca.select.tleaves(_, rleak=True),
             ),
             map=lambda _: baca.select.rleak_runs(_, 1, -1),
         ),
@@ -713,6 +719,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="m2",
             map=lambda _: baca.select.rleak_runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         # NOTE: current clef / after-grace contention:
         baca.clef(

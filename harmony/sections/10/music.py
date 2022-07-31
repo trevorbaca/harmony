@@ -756,7 +756,7 @@ def va(m):
         ("va", 2),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("A5"),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
         baca.markup(
             r"\baca-string-ii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
@@ -873,7 +873,7 @@ def vc1(m):
     accumulator(
         ("vc1", 2),
         baca.pitch("Gqs6"),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
         baca.markup(
             r"\baca-string-ii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
@@ -976,7 +976,7 @@ def vc2(m):
     accumulator(
         ("vc2", 2),
         baca.pitch("F#5"),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
         baca.markup(
             r"\baca-string-ii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
@@ -1119,7 +1119,7 @@ def cb2(m):
             "Dqf6",
             do_not_transpose=True,
         ),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
         baca.markup(
             r"\baca-string-ii-markup",
             abjad.Tweak(r"- \tweak padding 1"),

@@ -468,6 +468,7 @@ def bfl(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "A -> T -> A",
@@ -551,6 +552,7 @@ def bfl(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -922,6 +924,7 @@ def vc1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -989,6 +992,7 @@ def vc2(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -1056,6 +1060,7 @@ def cb1(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(

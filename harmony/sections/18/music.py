@@ -874,7 +874,7 @@ def hp(m):
     accumulator(
         ("hp", 6),
         baca.pitch("Db1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
         ),
@@ -1150,6 +1150,7 @@ def cb1(m):
         baca.trill_spanner(
             alteration="Fqs5",
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(r"\baca-eleven-c", selector=lambda _: baca.select.pleaf(_, 0)),
     )
@@ -1226,6 +1227,7 @@ def cb1(m):
         baca.trill_spanner(
             alteration="Fqs5",
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(r"\baca-eleven-c", selector=lambda _: baca.select.pleaf(_, 0)),
     )
@@ -1397,6 +1399,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="Fqs5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(r"\baca-eleven-c", selector=lambda _: baca.select.pleaf(_, 0)),
     )
@@ -1417,7 +1420,7 @@ def composites(cache):
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.new(
-            baca.trill_spanner(),
+            baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
             match=[1, 2],
         ),
     )
@@ -1434,7 +1437,7 @@ def composites(cache):
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.new(
-            baca.trill_spanner(),
+            baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
             match=[1, 2],
         ),
     )
@@ -1474,7 +1477,7 @@ def composites(cache):
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.new(
-            baca.trill_spanner(),
+            baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
             # excluded cb1 because of current gliss / trill order contention
             match=[1, 2],
         ),
@@ -1521,6 +1524,7 @@ def composites(cache):
                 # large right padding because open-volta follows in next section
                 abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                selector=lambda _: baca.select.tleaves(_, rleak=True),
             ),
             # excluded cb2 because of gliss / trill order contention
             match=[0, 1],
