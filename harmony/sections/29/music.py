@@ -167,6 +167,7 @@ def bfl(m):
         baca.pitch("Bb4"),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -230,6 +231,7 @@ def cb1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
 
@@ -290,6 +292,7 @@ def composites(cache):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     # va, vc1, vc2, cb1, cb2

@@ -399,6 +399,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="A5",
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -427,6 +428,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="A5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -614,7 +616,7 @@ def hp(m):
         ("hp", 3),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("D1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.pheads(_),
         ),
@@ -646,7 +648,7 @@ def hp(m):
         ("hp", (5, 10)),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("D1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.pheads(_),
         ),
@@ -752,6 +754,7 @@ def vc1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-ii-markup",
@@ -778,6 +781,7 @@ def vc1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-ii-markup",
@@ -900,6 +904,7 @@ def cb1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(r"\baca-seven-d", selector=lambda _: baca.select.pleaf(_, 0)),
         baca.markup(

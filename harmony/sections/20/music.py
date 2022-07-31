@@ -274,11 +274,13 @@ def bfl(m):
         baca.trill_spanner(
             alteration="m2",
             map=lambda _: baca.select.runs(_)[:1],
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="m2",
             map=lambda _: baca.select.runs(_)[1:2],
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -294,6 +296,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             alteration="A5",
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -438,7 +441,7 @@ def hp(m):
         ("hp", 2),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("D1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.ottava_bracket_staff_padding(8),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.pheads(_),
@@ -585,6 +588,7 @@ def vc1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-ii-markup",

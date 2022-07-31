@@ -315,6 +315,7 @@ def bfl(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -593,6 +594,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="E6",
             harmonic=True,
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-i-markup",
@@ -669,6 +671,7 @@ def vc2(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             alteration="C#6",
             harmonic=True,
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-i-markup",
@@ -696,6 +699,7 @@ def cb1(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-iii-markup",
@@ -749,6 +753,7 @@ def cb1(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.markup(
             r"\baca-string-iii-markup",

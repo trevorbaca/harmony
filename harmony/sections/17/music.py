@@ -377,6 +377,7 @@ def bfl(m):
         baca.new(
             baca.trill_spanner(
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                selector=lambda _: baca.select.tleaves(_, rleak=True),
             ),
             baca.metric_modulation_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 9"),
@@ -530,7 +531,7 @@ def hp(m):
     accumulator(
         ("hp", 1),
         baca.pitch("Db1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.ottava_bracket_staff_padding(8),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),
@@ -555,7 +556,7 @@ def hp(m):
         ("hp", 5),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("Db1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.ottava_bracket_staff_padding(8),
         baca.laissez_vibrer(
             selector=lambda _: baca.select.ptails(_),

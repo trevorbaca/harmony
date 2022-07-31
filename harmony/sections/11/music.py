@@ -901,7 +901,7 @@ def hp(m):
         ("hp", 2),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("C1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
@@ -910,7 +910,7 @@ def hp(m):
     accumulator(
         ("hp", (4, 5)),
         baca.pitch("C1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
@@ -988,7 +988,7 @@ def hp(m):
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
         baca.pitch("C1"),
-        baca.ottava_bassa(),
+        baca.ottava_bassa(selector=lambda _: baca.select.tleaves(_)),
         baca.damp(
             selector=lambda _: baca.select.leaf_after_each_ptail(_),
         ),
@@ -1322,7 +1322,7 @@ def composites(cache):
             pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], (4, 5)),
@@ -1338,7 +1338,7 @@ def composites(cache):
             pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
             selector=lambda _: baca.select.leaves(_)[5:8],
         ),
-        baca.trill_spanner(),
+        baca.trill_spanner(selector=lambda _: baca.select.tleaves(_, rleak=True)),
     )
     accumulator(
         (["va", "vc1", "vc2", "cb1", "cb2"], 8),
@@ -1369,6 +1369,7 @@ def composites(cache):
         ),
         baca.trill_spanner(
             right_broken=True,
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(

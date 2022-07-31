@@ -447,6 +447,7 @@ def bfl(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "(T) -> A -> (T)",
@@ -466,6 +467,7 @@ def bfl(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "A -> T -> A",
@@ -748,6 +750,7 @@ def va(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
@@ -952,6 +955,7 @@ def composites(cache):
             baca.trill_spanner(
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 alteration="Cb5",
+                selector=lambda _: baca.select.tleaves(_, rleak=True),
             ),
             match=[1, 2, 3, 4],
         ),

@@ -385,6 +385,7 @@ def bfl(m):
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.text_spanner(
             "A -> T -> A",

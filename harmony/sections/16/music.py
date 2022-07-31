@@ -258,6 +258,7 @@ def bfl(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+            selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
     )
     accumulator(
