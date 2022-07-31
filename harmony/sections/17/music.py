@@ -582,6 +582,7 @@ def va(m):
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -592,6 +593,7 @@ def va(m):
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -604,6 +606,7 @@ def va(m):
         baca.bow_speed_spanner(
             "poco scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 

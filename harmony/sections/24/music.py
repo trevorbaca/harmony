@@ -485,6 +485,7 @@ def va(m):
         baca.scp_spanner(
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -553,6 +554,7 @@ def vc1(m):
             map=lambda _: abjad.select.get(
                 abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
             ),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -591,6 +593,7 @@ def vc2(m):
         baca.scp_spanner(
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -670,6 +673,7 @@ def cb1(m):
             map=lambda _: abjad.select.get(
                 abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
             ),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -714,6 +718,7 @@ def cb2(m):
         baca.scp_spanner(
             "T4 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),

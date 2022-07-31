@@ -976,6 +976,7 @@ def va(m):
         baca.bow_speed_spanner(
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -1088,6 +1089,7 @@ def vc2(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1107,6 +1109,7 @@ def vc2(m):
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1139,6 +1142,7 @@ def vc2(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1262,6 +1266,7 @@ def cb2(m):
         baca.dynamic("p", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1274,6 +1279,7 @@ def cb2(m):
         ),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1308,6 +1314,7 @@ def cb2(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(

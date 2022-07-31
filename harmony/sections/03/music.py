@@ -368,6 +368,7 @@ def bfl(m):
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             argument=r"\baca-cov-markup =|",
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -384,6 +385,7 @@ def bfl(m):
         ),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -661,6 +663,7 @@ def vc1(m):
         baca.pitch("F#3"),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
@@ -795,6 +798,7 @@ def vc2(m):
         baca.pitch("F3"),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -873,6 +877,7 @@ def cb1(m):
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.markup(
             r"\baca-eleven-e",
@@ -959,6 +964,7 @@ def cb2(m):
         baca.note_head_style_harmonic(selector=lambda _: baca.select.pleaves(_)),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
         baca.markup(
             r"\baca-string-iv-markup",

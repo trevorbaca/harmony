@@ -411,6 +411,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             left_broken=True,
+            selector=lambda _: baca.select.rleaves(_),
         ),
     )
     accumulator(

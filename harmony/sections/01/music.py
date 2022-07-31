@@ -261,6 +261,7 @@ def bfl(m):
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             argument=r"\baca-cov-markup =|",
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 
@@ -442,6 +443,7 @@ def va(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.plts(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -485,6 +487,7 @@ def vc1(m):
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=lambda _: baca.select.plts(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -542,6 +545,7 @@ def vc2(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.plts(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -602,6 +606,7 @@ def cb1(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             final_piece_spanner=False,
             pieces=lambda _: baca.select.plts(_),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
     accumulator(
@@ -649,6 +654,7 @@ def cb2(m):
         baca.damp_spanner(
             abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
             map=lambda _: baca.select.plts(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(

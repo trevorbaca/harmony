@@ -1023,6 +1023,7 @@ def vc1(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1030,6 +1031,7 @@ def vc1(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
         baca.dynamic(
             "pp-ancora",
@@ -1138,6 +1140,7 @@ def vc2(m):
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: baca.select.runs(_),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
 
@@ -1270,6 +1273,7 @@ def cb2(m):
         baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1374,6 +1378,7 @@ def composites(cache):
         ),
         baca.half_clt_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 

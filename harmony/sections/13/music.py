@@ -716,6 +716,7 @@ def va(m):
         baca.scp_spanner(
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
 
