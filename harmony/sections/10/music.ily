@@ -3774,6 +3774,9 @@ number.10.Percussion.1.Music = {
     \>
     % COMMANDS:
       %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
+      %! baca.OverrideCommand._call(2)
       %! baca.stem_up()
     \revert Stem.direction
     % ABSOLUTE_BEFORE:
@@ -3834,10 +3837,6 @@ number.10.Percussion.1.Music = {
               %! NOTE
               %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
@@ -4902,6 +4901,10 @@ number.10.Harp.Music = {
       %! baca._set_status_tag()
       %! baca.hairpin()
     \>
+    % COMMANDS:
+      %! baca.OverrideCommand._call(2)
+      %! baca.dls_staff_padding()
+    \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
@@ -4960,10 +4963,6 @@ number.10.Harp.Music = {
               %! NOTE
               %! baca._label_duration_multipliers()
             %@% ^ \baca-duration-multiplier-markup #"6" #"4"
-            % COMMANDS:
-              %! baca.OverrideCommand._call(2)
-              %! baca.dls_staff_padding()
-            \revert DynamicLineSpanner.staff-padding
             % CLOSING:
             % COMMANDS:
 
