@@ -67,7 +67,7 @@ for index, item in (
     indicator = accumulator.metronome_marks.get(item, item)
     baca.metronome_mark_function(skip, indicator, manifests)
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[12 - 1],
     r"\harmony-text-one",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),

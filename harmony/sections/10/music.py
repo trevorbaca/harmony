@@ -84,12 +84,13 @@ for index, string in ((9 - 1, "fermata"),):
 
 # text
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[9 - 1],
     r"\harmony-text-eight",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    tags=[baca.tags.NOT_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
 
 def BFL(voice):

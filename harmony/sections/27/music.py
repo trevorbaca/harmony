@@ -70,21 +70,23 @@ for index, item in (
     indicator = accumulator.metronome_marks.get(item, item)
     baca.metronome_mark_function(skip, indicator, manifests)
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[4 - 1],
     r"\harmony-repeat-three-markup",
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
     abjad.Tweak(r"- \tweak font-size 10"),
-    tags=[baca.tags.NOT_PARTS],
-),
+)
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[4 - 1],
     r"\harmony-repeat-three-markup",
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
     abjad.Tweak(r"- \tweak font-size 4"),
-    tags=[baca.tags.ONLY_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.ONLY_PARTS)
 
 baca.text_script_extra_offset_function(skips[:-1], (1.5, 12))
 
@@ -100,19 +102,21 @@ for index, string in (
 
 # text
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[2 - 1],
     r"\harmony-text-twenty-five",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    tags=[baca.tags.NOT_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[8 - 1],
     r"\harmony-text-twenty-six",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    tags=[baca.tags.NOT_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
 
 def BFL(voice):
