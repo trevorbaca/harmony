@@ -68,19 +68,21 @@ for index, string in (
 
 # text
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[2 - 1],
     r"\harmony-text-twelve",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    tags=[baca.tags.NOT_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
-baca.markup_function(
+wrappers = baca.markup_function(
     skips[6 - 1],
     r"\harmony-text-thirteen",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
-    tags=[baca.tags.NOT_PARTS],
 )
+for wrapper in wrappers:
+    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
 
 
 def BFL(voice):
