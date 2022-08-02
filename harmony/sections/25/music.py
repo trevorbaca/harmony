@@ -643,7 +643,7 @@ def va(m):
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=lambda _: abjad.select.partition_by_counts(
-                baca.plts(_),
+                baca.select.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=lambda _: baca.select.rleaves(_),
@@ -696,7 +696,7 @@ def vc1(m):
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
             " mf < ff-scratch -- niente",
             pieces=lambda _: abjad.select.partition_by_counts(
-                baca.plts(_),
+                baca.select.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=lambda _: baca.select.rleaves(_),
@@ -745,7 +745,7 @@ def vc2(m):
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=lambda _: abjad.select.partition_by_counts(
-                baca.plts(_),
+                baca.select.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=lambda _: baca.select.rleaves(_),
@@ -801,7 +801,7 @@ def cb1(m):
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=lambda _: abjad.select.partition_by_counts(
-                baca.plts(_),
+                baca.select.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=lambda _: baca.select.rleaves(_),
@@ -854,7 +854,7 @@ def cb2(m):
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=lambda _: abjad.select.partition_by_counts(
-                baca.plts(_),
+                baca.select.plts(_),
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
             ),
             selector=lambda _: baca.select.rleaves(_),

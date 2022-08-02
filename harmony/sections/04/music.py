@@ -662,7 +662,7 @@ def vcs(cache):
         (["vc1", "vc2"], [(1, 6), 8, 11]),
         baca.damp_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleak(baca.ltleaves(_), grace=False),
+            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_), grace=False),
         ),
     )
 
@@ -712,7 +712,7 @@ def cb1(m):
         ),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleaves(_, grace=False),
+            selector=lambda _: baca.select.rleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-eleven-e",
@@ -741,7 +741,7 @@ def cb2(m):
         ),
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleaves(_, grace=False),
+            selector=lambda _: baca.select.rleaves(_, grace=False),
         ),
         baca.markup(
             r"\baca-string-iv-markup",

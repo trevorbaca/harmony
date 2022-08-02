@@ -779,7 +779,7 @@ def cb2(m):
         baca.hairpin(
             "o< ff >o",
             bookend=False,
-            pieces=lambda _: baca.mgroups(_, [3, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [3, 2]),
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.scp_spanner(
@@ -834,7 +834,7 @@ def cb2(m):
         ),
         baca.hairpin(
             "o< ff (ff) >o niente",
-            pieces=lambda _: baca.mgroups(_, [2, 1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [2, 1, 2]),
             right_broken=True,
             selector=lambda _: baca.select.rleaves(_),
         ),

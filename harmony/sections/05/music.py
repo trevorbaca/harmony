@@ -1024,7 +1024,7 @@ def strings(cache):
             full=True,
             selector=lambda _: [
                 x
-                for x in baca.pheads(_)
+                for x in baca.select.pheads(_)
                 if abjad.get.duration(x) >= abjad.Duration((1, 8))
             ],
         ),

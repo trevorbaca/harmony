@@ -257,7 +257,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 right_broken=True,
             ),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[1:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[1:]),
         ),
     )
 

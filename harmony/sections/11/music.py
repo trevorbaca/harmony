@@ -618,8 +618,8 @@ def bfl(m):
     )
 
     def selector(argument):
-        result = baca.cmgroups(argument, [1])
-        return [baca.pleaf(_, -1) for _ in result]
+        result = baca.select.cmgroups(argument, [1])
+        return [baca.select.pleaf(_, -1) for _ in result]
 
     accumulator(
         ("bfl", 8),
@@ -852,7 +852,7 @@ def perc2(m):
         ("perc2", (6, 7)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[2:]),
         ),
     )
     accumulator(
@@ -957,7 +957,7 @@ def hp(m):
         ("hp", (6, 7)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[5:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[5:]),
         ),
     )
     accumulator(
@@ -1066,7 +1066,7 @@ def vc1(m):
         baca.hairpin(
             "o<| mp |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.dynamic_text_x_offset(
             -1.5,
@@ -1074,7 +1074,7 @@ def vc1(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
         ),
     )
     accumulator(
@@ -1083,7 +1083,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak staff-padding 12.0"),
             autodetect_right_padding=False,
             # TODO: pitched trill suppresses start of text spanner
-            selector=lambda _: baca.rleak(baca.tleaves(_)),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1195,7 +1195,7 @@ def cb1(m):
         baca.hairpin(
             "o<| mp |>o niente",
             pieces=lambda _: baca.select.lparts(_, [1, 2]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.dynamic_text_x_offset(
             -1.5,
@@ -1203,7 +1203,7 @@ def cb1(m):
         ),
         baca.trill_spanner(
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
         ),
     )
     accumulator(
@@ -1213,7 +1213,7 @@ def cb1(m):
             autodetect_right_padding=False,
             # TODO: pitched trill suppresses start of text spanner
             # selector=lambda _: baca.select.tleaves(_, rleak=True),
-            selector=lambda _: baca.rleak(baca.tleaves(_)),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_)),
         ),
     )
     accumulator(
@@ -1413,7 +1413,7 @@ def composites(cache):
         (["vc1", "vc2", "cb1", "cb2"], (6, 7)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[4:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[4:]),
         ),
     )
 

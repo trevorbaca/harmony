@@ -665,7 +665,7 @@ def perc2(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             right_broken=True,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:]),
         ),
     )
 

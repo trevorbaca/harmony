@@ -1369,7 +1369,7 @@ def composites(cache):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),

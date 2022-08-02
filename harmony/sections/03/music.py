@@ -696,13 +696,13 @@ def vc1(m):
         baca.new(
             library.bridge_staff_position(),
             baca.dls_staff_padding(6),
-            selector=lambda _: baca.rleaves(_, count=3),
+            selector=lambda _: baca.select.rleaves(_, count=3),
         ),
         baca.accent(
-            selector=lambda _: baca.pheads(baca.rleaves(_, count=3)),
+            selector=lambda _: baca.select.pheads(baca.select.rleaves(_, count=3)),
         ),
         baca.stem_tremolo(
-            selector=lambda _: baca.pheads(baca.rleaves(_, count=3)),
+            selector=lambda _: baca.select.pheads(baca.select.rleaves(_, count=3)),
         ),
         baca.dynamic(
             '"ff"',
@@ -714,7 +714,7 @@ def vc1(m):
             '"f" mf mp p pp ppp ppp',
             bookend=False,
             pieces=lambda _: baca.select.plts(_),
-            selector=lambda _: baca.rleaves(_, count=3)[1:],
+            selector=lambda _: baca.select.rleaves(_, count=3)[1:],
         ),
     )
     accumulator(
@@ -751,7 +751,7 @@ def vc1(m):
             selector=lambda _: baca.select.leaves(_)[4:],
         ),
         baca.accent(
-            selector=lambda _: baca.pheads(abjad.select.leaves(_)[4:]),
+            selector=lambda _: baca.select.pheads(abjad.select.leaves(_)[4:]),
         ),
         baca.dynamic(
             "mf",

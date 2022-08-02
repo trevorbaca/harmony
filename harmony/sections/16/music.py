@@ -436,7 +436,7 @@ def va(m):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),
@@ -565,7 +565,7 @@ def cb1(m):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),
@@ -603,7 +603,7 @@ def cb1(m):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),
@@ -629,7 +629,7 @@ def cb2(m):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),
@@ -667,7 +667,7 @@ def cb2(m):
             full=True,
             selector=lambda x: [
                 _
-                for _ in baca.pheads(x)
+                for _ in baca.select.pheads(x)
                 if abjad.get.duration(_) >= abjad.Duration((1, 8))
             ],
         ),
