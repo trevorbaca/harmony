@@ -82,8 +82,7 @@ wrappers = baca.markup_function(
     r"\harmony-text-twenty-four",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
 )
-for wrapper in wrappers:
-    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
+baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice):

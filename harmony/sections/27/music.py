@@ -76,8 +76,7 @@ wrappers = baca.markup_function(
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 17)"),
     abjad.Tweak(r"- \tweak font-size 10"),
 )
-for wrapper in wrappers:
-    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
+baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 wrappers = baca.markup_function(
     skips[4 - 1],
@@ -85,8 +84,7 @@ wrappers = baca.markup_function(
     abjad.Tweak(r"- \tweak extra-offset #'(0 . 9)"),
     abjad.Tweak(r"- \tweak font-size 4"),
 )
-for wrapper in wrappers:
-    wrapper.tag = wrapper.tag.append(baca.tags.ONLY_PARTS)
+baca.tags.wrappers(wrappers, baca.tags.ONLY_PARTS)
 
 baca.text_script_extra_offset_function(skips[:-1], (1.5, 12))
 
@@ -107,16 +105,14 @@ wrappers = baca.markup_function(
     r"\harmony-text-twenty-five",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
 )
-for wrapper in wrappers:
-    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
+baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 wrappers = baca.markup_function(
     skips[8 - 1],
     r"\harmony-text-twenty-six",
     abjad.Tweak(r"- \tweak extra-offset #'(4 . -30)"),
 )
-for wrapper in wrappers:
-    wrapper.tag = wrapper.tag.append(baca.tags.NOT_PARTS)
+baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 
 def BFL(voice):
