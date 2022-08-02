@@ -24,7 +24,7 @@ number.9.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
       %! baca._attach_color_literal(2)
     \baca-time-signature-color #'blue
-      %! +SEGMENT
+      %! +SECTION
       %! EMPTY_START_BAR
       %! baca._attach_nonfirst_empty_start_bar()
     \bar ""
