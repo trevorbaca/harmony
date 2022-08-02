@@ -283,7 +283,7 @@ def composites(cache):
         (["bfl", "va", "vc1", "vc2", "cb1"], 1),
         baca.hairpin(
             "pp < p >o niente",
-            pieces=lambda _: baca.lparts(baca.rleaves(_), [1, 3]),
+            pieces=lambda _: baca.select.lparts(baca.select.rleaves(_), [1, 3]),
         ),
     )
     # va, vc1, vc2

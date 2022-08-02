@@ -223,7 +223,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 left_broken=True,
             ),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[:2]),
         ),
     )
     accumulator(
@@ -454,12 +454,12 @@ def composites(cache):
             baca.bow_speed_spanner(
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+                selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
             ),
             baca.metric_modulation_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 8"),
                 right_broken=True,
-                selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+                selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
             ),
             match=[0, 1, 2],
         ),
@@ -467,12 +467,12 @@ def composites(cache):
             baca.bow_speed_spanner(
                 "XFB =|",
                 abjad.Tweak(r"- \tweak staff-padding 8"),
-                selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+                selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
             ),
             baca.metric_modulation_spanner(
                 abjad.Tweak(r"- \tweak staff-padding 10.5"),
                 right_broken=True,
-                selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+                selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
             ),
             match=[3],
         ),

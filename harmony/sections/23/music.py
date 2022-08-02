@@ -548,7 +548,7 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.mgroups(_, [2, 1]),
+            pieces=lambda _: baca.select.mgroups(_, [2, 1]),
             selector=lambda _: baca.select.leaves(_),
         ),
     )
@@ -621,7 +621,7 @@ def vc1(m):
         baca.scp_spanner(
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=lambda _: baca.mgroups(_, [1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [1, 2]),
             selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )
@@ -723,7 +723,7 @@ def cb1(m):
         baca.scp_spanner(
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=lambda _: baca.mgroups(_, [1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [1, 2]),
             selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )

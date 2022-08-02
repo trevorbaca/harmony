@@ -500,7 +500,7 @@ def bfl(m):
         baca.hairpin(
             "o<| mf |>o niente",
             pieces=lambda _: baca.select.clparts(_, [1]),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-2:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-2:]),
         ),
         baca.dynamic_text_x_offset(
             -2,
@@ -763,7 +763,7 @@ def hp(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             left_broken=True,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[:2]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[:2]),
         ),
     )
     accumulator(
@@ -1071,7 +1071,7 @@ def vc1(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             right_broken=True,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-4:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-4:]),
         ),
     )
     accumulator(

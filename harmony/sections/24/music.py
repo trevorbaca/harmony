@@ -552,7 +552,7 @@ def vc1(m):
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: abjad.select.get(
-                abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
+                abjad.select.runs(baca.select.rleak(abjad.select.leaves(_))), [0, -1]
             ),
             selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
@@ -671,7 +671,7 @@ def cb1(m):
             "P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             map=lambda _: abjad.select.get(
-                abjad.select.runs(baca.rleak(abjad.select.leaves(_))), [0, -1]
+                abjad.select.runs(baca.select.rleak(abjad.select.leaves(_))), [0, -1]
             ),
             selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),

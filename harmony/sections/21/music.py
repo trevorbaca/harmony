@@ -603,7 +603,7 @@ def hp(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
             right_broken=True,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-3:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-3:]),
         ),
     )
     accumulator(
@@ -663,7 +663,7 @@ def va(m):
         baca.pizzicato_spanner(
             abjad.Tweak(r"- \tweak staff-padding 8"),
             autodetect_right_padding=False,
-            selector=lambda _: baca.rleak(baca.tleaves(_), count=2),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_), count=2),
         ),
     )
     accumulator(

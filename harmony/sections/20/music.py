@@ -516,7 +516,7 @@ def va(m):
         baca.new(
             baca.tuplet_bracket_staff_padding(2),
             library.bridge_staff_position(),
-            selector=lambda _: baca.rleaves(_, count=2),
+            selector=lambda _: baca.select.rleaves(_, count=2),
         ),
         baca.stem_tremolo(
             selector=lambda _: baca.select.pleaves(_),

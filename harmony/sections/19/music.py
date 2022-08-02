@@ -937,7 +937,7 @@ def perc2(m):
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             right_broken=True,
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:]),
         ),
     )
 
@@ -1051,7 +1051,7 @@ def va(m):
         ),
         baca.dynamic(
             "niente",
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[-1:])[-1],
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[-1:])[-1],
         ),
     )
     accumulator(
@@ -1232,7 +1232,7 @@ def cb2(m):
         ("cb2", (12, 13)),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[4:]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[4:]),
         ),
     )
 

@@ -1040,7 +1040,7 @@ def hp(m):
         ),
         baca.dls_staff_padding(
             6,
-            selector=lambda _: baca.lleaves(_, count=2),
+            selector=lambda _: baca.select.lleaves(_, count=2),
         ),
     )
     accumulator(
@@ -1093,7 +1093,7 @@ def hp(m):
         baca.dls_staff_padding(6),
         baca.metric_modulation_spanner(
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.rleak(baca.tleaves(_), count=2),
+            selector=lambda _: baca.select.rleak(baca.select.tleaves(_), count=2),
         ),
     )
     accumulator(
@@ -1210,7 +1210,9 @@ def va(m):
             autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
-            selector=lambda _: baca.rleak(baca.tleaves(_, grace=False), count=2),
+            selector=lambda _: baca.select.rleak(
+                baca.select.tleaves(_, grace=False), count=2
+            ),
         ),
     )
     accumulator(
@@ -1361,7 +1363,9 @@ def vc1(m):
             autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
-            selector=lambda _: baca.rleak(baca.tleaves(_, grace=False), count=2),
+            selector=lambda _: baca.select.rleak(
+                baca.select.tleaves(_, grace=False), count=2
+            ),
         ),
     )
     accumulator(
@@ -1713,7 +1717,7 @@ def cb1(m):
         ),
         baca.hairpin(
             "o< mf > p < f > p < ff >o niente",
-            pieces=lambda _: baca.mgroups(_, [1, 1, 1, 1, 1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [1, 1, 1, 1, 1, 2]),
             right_broken=True,
             selector=lambda _: baca.select.rleaves(_),
         ),
@@ -1750,7 +1754,7 @@ def cb2(m):
         baca.hairpin(
             "o< mp > p < f",
             bookend=False,
-            pieces=lambda _: baca.mgroups(_, [2, 1, 1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [2, 1, 1, 2]),
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
         baca.scp_spanner(
@@ -1790,7 +1794,7 @@ def cb2(m):
         baca.flat_glissando("E1", selector=lambda _: baca.select.pleaves(_)),
         baca.hairpin(
             "o< f > p < ff >o niente",
-            pieces=lambda _: baca.mgroups(_, [2, 1, 1, 3]),
+            pieces=lambda _: baca.select.mgroups(_, [2, 1, 1, 3]),
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.scp_spanner(
@@ -1798,7 +1802,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.mgroups(_, [2, 1, 1, 2]),
+            pieces=lambda _: baca.select.mgroups(_, [2, 1, 1, 2]),
             selector=lambda _: baca.select.leaves(_),
         ),
     )

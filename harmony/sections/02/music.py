@@ -553,7 +553,7 @@ def perc1(m):
         ),
         baca.hairpin(
             "o<| mf",
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[:1]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[:1]),
         ),
         baca.hairpin(
             "o<| f",
@@ -942,15 +942,15 @@ def vc1(m):
             selector=lambda _: baca.select.rleaves(_),
         ),
         baca.stem_tremolo(
-            selector=lambda _: baca.pleaves(baca.rleaves(_)),
+            selector=lambda _: baca.select.pleaves(baca.select.rleaves(_)),
         ),
         baca.accent(
-            selector=lambda _: baca.pheads(baca.rleaves(_)),
+            selector=lambda _: baca.select.pheads(baca.select.rleaves(_)),
         ),
         baca.hairpin(
             "o< f >o niente",
-            pieces=lambda _: baca.mgroups(_, [1, 2]),
-            selector=lambda _: baca.rleaves(_, count=2),
+            pieces=lambda _: baca.select.mgroups(_, [1, 2]),
+            selector=lambda _: baca.select.rleaves(_, count=2),
         ),
         baca.dls_staff_padding(6),
         baca.scp_spanner(

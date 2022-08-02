@@ -301,7 +301,7 @@ def perc1(m):
         ),
         baca.hairpin(
             "o<| mf",
-            selector=lambda _: baca.rleak(abjad.select.leaves(_)[:1]),
+            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[:1]),
         ),
         baca.hairpin(
             "o<| f",
@@ -481,7 +481,7 @@ def vc1(m):
         baca.hairpin(
             "o< f >o niente",
             pieces=lambda _: baca.select.lparts(_, [4, 5]),
-            selector=lambda _: baca.rleaves(_, count=2),
+            selector=lambda _: baca.select.rleaves(_, count=2),
         ),
         baca.scp_spanner(
             "P1 -> P3 -> P2 -> P4 ->",

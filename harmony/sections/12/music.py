@@ -641,8 +641,8 @@ def bfl(m):
     )
 
     def selector(argument):
-        result = baca.cmgroups(argument, [1])
-        return [baca.pleaf(_, -1) for _ in result]
+        result = baca.select.cmgroups(argument, [1])
+        return [baca.select.pleaf(_, -1) for _ in result]
 
     accumulator(
         ("bfl", (13, 14)),
