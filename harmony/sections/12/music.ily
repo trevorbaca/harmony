@@ -6681,13 +6681,11 @@ number.12.Viola.Music = {
     % TRILL_SPANNER_STARTS:
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 2
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -6763,8 +6761,7 @@ number.12.Viola.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -8125,13 +8122,11 @@ number.12.Cello.1.Music = {
     % TRILL_SPANNER_STARTS:
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 2
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -8204,8 +8199,7 @@ number.12.Cello.1.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -9676,13 +9670,11 @@ number.12.Cello.2.Music = {
     % TRILL_SPANNER_STARTS:
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 2
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -9752,8 +9744,7 @@ number.12.Cello.2.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -11201,13 +11192,11 @@ number.12.Contrabass.1.Music = {
     % TRILL_SPANNER_STARTS:
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 2
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -11280,8 +11269,7 @@ number.12.Contrabass.1.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -12858,13 +12846,11 @@ number.12.Contrabass.2.Music = {
     % TRILL_SPANNER_STARTS:
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 2
       %! LEFT_BROKEN
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(1)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -12934,8 +12920,7 @@ number.12.Contrabass.2.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:

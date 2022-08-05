@@ -1089,12 +1089,10 @@ number.23.BassFlute.Music = {
         \<
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         - \tweak bound-details.left.text \harmony-d-d-sharp-markup
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         \startTrillSpan
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1308,8 +1306,7 @@ number.23.BassFlute.Music = {
             %@% ^ \baca-duration-multiplier-markup #"1" #"4"
             % SPANNER_STOPS:
               %! SPANNER_STOP
-              %! baca.SpannerIndicatorCommand._call(4)
-              %! baca.trill_spanner()
+              %! baca._do_spanner_indicator_command(4)
             \stopTrillSpan
             % COMMANDS:
               %! FERMATA_MEASURE_EMPTY_BAR_EXTENT
