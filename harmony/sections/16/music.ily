@@ -1114,12 +1114,10 @@ number.16.BassFlute.Music = {
     \baca-p-ancora
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(2)
     - \tweak bound-details.right.padding 2
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(2)
     \startTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1131,8 +1129,7 @@ number.16.BassFlute.Music = {
     % AFTER:
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % SPANNER_STARTS:
       %! AUTODETECT

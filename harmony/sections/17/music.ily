@@ -918,16 +918,13 @@ number.17.BassFlute.Music = {
         \<
         % TRILL_SPANNER_STARTS:
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         - \tweak bound-details.left.text \harmony-d-d-sharp-markup
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         - \tweak staff-padding 8
           %! SPANNER_START
-          %! baca.SpannerIndicatorCommand._call(2)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(2)
         \startTrillSpan
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -1070,8 +1067,7 @@ number.17.BassFlute.Music = {
         \!
         % SPANNER_STOPS:
           %! SPANNER_STOP
-          %! baca.SpannerIndicatorCommand._call(4)
-          %! baca.trill_spanner()
+          %! baca._do_spanner_indicator_command(4)
         \stopTrillSpan
         % STOP_BEAM:
           %! harmony.make_warble_rhythm()
@@ -1194,12 +1190,10 @@ number.17.BassFlute.Music = {
     \bacaStartTextSpanMetricModulation
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(2)
     - \tweak bound-details.right.padding 2
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(2)
     \startTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1221,8 +1215,7 @@ number.17.BassFlute.Music = {
       %! baca.metric_modulation_spanner()
     \bacaStopTextSpanMetricModulation
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.trill_spanner()
+      %! baca._do_spanner_indicator_command(4)
     \stopTrillSpan
     % COMMANDS:
       %! baca.OverrideCommand._call(2)
@@ -2381,8 +2374,7 @@ number.17.Harp.Music = {
       %! baca.ottava_bracket_staff_padding()
     \once \override Staff.OttavaBracket.staff-padding = 8
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.ottava_bassa()
+      %! baca._do_spanner_indicator_command(2)
     \ottava -1
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -2459,8 +2451,7 @@ number.17.Harp.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Harp”)"
     % COMMANDS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.ottava_bassa()
+      %! baca._do_spanner_indicator_command(4)
     \ottava 0
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -2671,8 +2662,7 @@ number.17.Harp.Music = {
     % BEFORE:
     % COMMANDS:
       %! SPANNER_START
-      %! baca.SpannerIndicatorCommand._call(2)
-      %! baca.ottava_bassa()
+      %! baca._do_spanner_indicator_command(2)
     \ottava -1
       %! harmony.make_sixteenths()
     df,,!4
@@ -2695,8 +2685,7 @@ number.17.Harp.Music = {
     \laissezVibrer
     % COMMANDS:
       %! SPANNER_STOP
-      %! baca.SpannerIndicatorCommand._call(4)
-      %! baca.ottava_bassa()
+      %! baca._do_spanner_indicator_command(4)
     \ottava 0
       %! baca.OverrideCommand._call(2)
       %! baca.dls_staff_padding()
