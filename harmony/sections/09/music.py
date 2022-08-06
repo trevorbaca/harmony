@@ -226,7 +226,7 @@ def bfl(m):
             )
     with baca.scope(m[2]) as o:
         baca.pitch_function(o, "Gb3")
-        baca.color_fingerings_function(o, [0, 1, 2])
+        baca.color_fingerings_function(o.pheads(), [0, 1, 2])
         baca.dynamic_function(o.phead(0), "mp")
         baca.covered_spanner_function(
             baca.select.rleak(baca.select.ltleaves(o)),
