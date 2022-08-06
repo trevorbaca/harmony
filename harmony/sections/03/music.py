@@ -367,7 +367,7 @@ def bfl(m):
         baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            argument=r"\baca-cov-markup =|",
+            items=r"\baca-cov-markup =|",
             selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
         ),
     )

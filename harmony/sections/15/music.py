@@ -353,7 +353,7 @@ def bfl(m):
         ),
         baca.covered_spanner(
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            argument=r"\baca-cov-markup =|",
+            items=r"\baca-cov-markup =|",
             map=lambda _: baca.select.runs(_)[:1],
             selector=lambda _: baca.select.tleaves(_, rleak=True),
         ),
