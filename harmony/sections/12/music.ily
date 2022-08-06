@@ -6761,7 +6761,7 @@ number.12.Viola.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -8199,7 +8199,7 @@ number.12.Cello.1.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -9744,7 +9744,7 @@ number.12.Cello.2.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -11269,7 +11269,7 @@ number.12.Contrabass.1.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
@@ -12920,7 +12920,7 @@ number.12.Contrabass.2.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_AFTER:
     % COMMANDS:
