@@ -877,7 +877,7 @@ number.20.BassFlute.Music = {
     % OPENING:
     % PITCHED_TRILL:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \pitchedTrill
       %! harmony.make_sixteenths()
     e'''4 * 1/2
@@ -909,7 +909,7 @@ number.20.BassFlute.Music = {
     \<
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan f'''
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -994,7 +994,7 @@ number.20.BassFlute.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1002,7 +1002,7 @@ number.20.BassFlute.Music = {
     % OPENING:
     % PITCHED_TRILL:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \pitchedTrill
       %! harmony.make_sixteenths()
     e'''4 * 1/2
@@ -1034,10 +1034,10 @@ number.20.BassFlute.Music = {
     \<
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     - \tweak bound-details.right.padding 3
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan f'''
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1124,7 +1124,7 @@ number.20.BassFlute.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1132,7 +1132,7 @@ number.20.BassFlute.Music = {
     % OPENING:
     % PITCHED_TRILL:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \pitchedTrill
       %! harmony.make_sixteenths()
     gqs'''!4 * 1/2
@@ -1164,10 +1164,10 @@ number.20.BassFlute.Music = {
     \<
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     - \tweak staff-padding 3
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan a'''
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1252,7 +1252,7 @@ number.20.BassFlute.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4151,7 +4151,7 @@ number.20.Harp.Music = {
     % BEFORE:
     % COMMANDS:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \ottava -1
       %! harmony.make_sixteenths()
     d,,4
@@ -4174,7 +4174,7 @@ number.20.Harp.Music = {
     \laissezVibrer
     % COMMANDS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \ottava 0
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6010,10 +6010,10 @@ number.20.Cello.1.Music = {
     \<
     % TRILL_SPANNER_STARTS:
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     - \tweak staff-padding 3
       %! SPANNER_START
-      %! baca._do_spanner_indicator_command(2)
+      %! baca._do_spanner_indicator_command(1)
     \startTrillSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6102,7 +6102,7 @@ number.20.Cello.1.Music = {
     \!
     % SPANNER_STOPS:
       %! SPANNER_STOP
-      %! baca._do_spanner_indicator_command(4)
+      %! baca._do_spanner_indicator_command(2)
     \stopTrillSpan
     % COMMANDS:
       %! baca.OverrideCommand._call(2)
