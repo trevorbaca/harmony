@@ -211,35 +211,29 @@ def CB2(voice):
 
 
 def bfl(m):
-    accumulator(
-        ("bfl", 1),
-        baca.pitch("G3"),
-        baca.new(
-            baca.covered_spanner(
+    with baca.scope(m[1]) as o:
+        baca.pitch_function(o, "G3")
+        with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
+            baca.covered_spanner_function(
+                u,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 left_broken=True,
-            ),
-            baca.metric_modulation_spanner(
+            )
+            baca.metric_modulation_spanner_function(
+                u,
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 left_broken=True,
-            ),
-            selector=lambda _: baca.select.rleak(abjad.select.leaves(_)[:2]),
-        ),
-    )
-    accumulator(
-        ("bfl", 2),
-        baca.pitch("Gb3"),
-        baca.color_fingerings([0, 1, 2]),
-        baca.dynamic("mp", selector=lambda _: baca.select.phead(_, 0)),
-        baca.covered_spanner(
+            )
+    with baca.scope(m[2]) as o:
+        baca.pitch_function(o, "Gb3")
+        baca.color_fingerings_function(o, [0, 1, 2])
+        baca.dynamic_function(o.phead(0), "mp")
+        baca.covered_spanner_function(
+            baca.select.rleak(baca.select.ltleaves(o)),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
-        ),
-    )
-    accumulator(
-        ("bfl", (1, 2)),
-        baca.dls_staff_padding(4),
-    )
+        )
+    with baca.scope(m.get(1, 2)) as o:
+        baca.dls_staff_padding_function(o, 4)
 
 
 def perc1(m):
