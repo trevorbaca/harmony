@@ -794,7 +794,7 @@ def make_sixteenths(
         def selector(argument):
             return baca.select.leaf_in_each_run(argument, -1)
 
-        beam_and_slash = None
+        beam_and_slash = False
         if after_graces != [1]:
             beam_and_slash = True
         after_grace_ = rmakers.after_grace_container(
