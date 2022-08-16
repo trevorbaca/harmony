@@ -41,7 +41,7 @@ jobs:
 
     - name: Install LilyPond
       run: |
-        lilypond_version=2.23.10
+        lilypond_version=2.23.11
         lilypond_archive=lilypond-${lilypond_version}-linux-x86_64.tar.gz
         lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/
         lilypond_url=${lilypond_url}/v${lilypond_version}/downloads/${lilypond_archive}
@@ -95,13 +95,13 @@ jobs:
 
     - name: Test sections
       run: |
-        export PATH=/tmp/lilypond-2.23.10/bin:/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.11/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         /tmp/baca/scr/test-sections
 
     - name: Test score builds
       run: |
-        export PATH=/tmp/lilypond-2.23.10/bin:/tmp/baca/scr:/home/runner/bin:$PATH
+        export PATH=/tmp/lilypond-2.23.11/bin:/tmp/baca/scr:/home/runner/bin:$PATH
         export PYTHONUNBUFFERED=TRUE
         NAME=$(basename $GITHUB_WORKSPACE)
         BUILDS_DIRECTORY=$GITHUB_WORKSPACE/$NAME/builds
