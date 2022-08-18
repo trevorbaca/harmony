@@ -44,8 +44,7 @@ for index, item in (
     (1 - 1, "3:2(4)=4"),
 ):
     skip = skips[index]
-    indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark_function(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, item, manifests)
 
 baca.bar_line_function(skips[3 - 1], "|.")
 
