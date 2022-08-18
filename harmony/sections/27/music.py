@@ -67,8 +67,7 @@ for index, item in (
     (9 - 1, "3:2(8)=4"),
 ):
     skip = skips[index]
-    indicator = accumulator.metronome_marks.get(item, item)
-    baca.metronome_mark_function(skip, indicator, manifests)
+    baca.metronome_mark_function(skip, item, manifests)
 
 wrappers = baca.markup_function(
     skips[4 - 1],
