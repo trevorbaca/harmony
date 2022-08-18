@@ -29,7 +29,7 @@ accumulator = baca.CommandAccumulator(
         (3, 4),
         (1, 4),
     ],
-    voice_abbreviations=library.voice_abbreviations(),
+    voice_abbreviations=library.voice_abbreviations,
     voice_names=voice_names,
 )
 
@@ -1061,7 +1061,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-    metadata, persist, score, timing = baca.build.section(
+    metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
         accumulator.time_signatures,
