@@ -1082,31 +1082,6 @@ def triangle_staff_position():
     )
 
 
-def voice_abbreviations():
-    return {
-        "bfl": "BassFlute.Music",
-        "perc1": "Percussion.1.Music",
-        "perc2": "Percussion.2.Music",
-        "hp": "Harp.Music",
-        "va": "Viola.Music",
-        "vc1": "Cello.1.Music",
-        "vc2": "Cello.2.Music",
-        "cb1": "Contrabass.1.Music",
-        "cb2": "Contrabass.2.Music",
-        "tutti": [
-            "BassFlute.Music",
-            "Percussion.1.Music",
-            "Percussion.2.Music",
-            "Harp.Music",
-            "Viola.Music",
-            "Cello.1.Music",
-            "Cello.2.Music",
-            "Contrabass.1.Music",
-            "Contrabass.2.Music",
-        ],
-    }
-
-
 def warble_pitches():
     return "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
 
@@ -1287,4 +1262,28 @@ manifests = {
     "abjad.Instrument": instruments,
     "abjad.MetronomeMark": metronome_marks,
     "abjad.ShortInstrumentName": short_instrument_names,
+}
+
+
+voice_abbreviations = {
+    "bfl": "BassFlute.Music",
+    "perc1": "Percussion.1.Music",
+    "perc2": "Percussion.2.Music",
+    "hp": "Harp.Music",
+    "va": "Viola.Music",
+    "vc1": "Cello.1.Music",
+    "vc2": "Cello.2.Music",
+    "cb1": "Contrabass.1.Music",
+    "cb2": "Contrabass.2.Music",
+    "tutti": [
+        "BassFlute.Music",
+        "Percussion.1.Music",
+        "Percussion.2.Music",
+        "Harp.Music",
+        "Viola.Music",
+        "Cello.1.Music",
+        "Cello.2.Music",
+        "Contrabass.1.Music",
+        "Contrabass.2.Music",
+    ],
 }
