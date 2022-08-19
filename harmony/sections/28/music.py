@@ -922,7 +922,7 @@ if __name__ == "__main__":
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
-        fermata_measure_empty_overrides=[6],
+        empty_fermata_measures=True,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         transpose_score=True,
