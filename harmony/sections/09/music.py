@@ -24,7 +24,7 @@ accumulator = baca.CommandAccumulator(
     _voice_names=voice_names,
 )
 
-baca.interpret.set_up_score(
+first_measure_number = baca.interpret.set_up_score(
     score,
     accumulator,
     library.manifests,
@@ -45,9 +45,9 @@ for index, item in (
     skip = skips[index]
     baca.metronome_mark_function(skip, item, manifests)
 
-baca.open_volta_function(skips[1 - 1], accumulator.first_measure_number)
-baca.close_volta_function(skips[2 - 1], accumulator.first_measure_number, site="after")
-baca.double_volta_function(skips[2 - 1], accumulator.first_measure_number)
+baca.open_volta_function(skips[1 - 1], first_measure_number)
+baca.close_volta_function(skips[2 - 1], first_measure_number, site="after")
+baca.double_volta_function(skips[2 - 1], first_measure_number)
 
 
 def BFL(voice):

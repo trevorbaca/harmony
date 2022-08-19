@@ -35,7 +35,7 @@ accumulator = baca.CommandAccumulator(
     _voice_names=voice_names,
 )
 
-baca.interpret.set_up_score(
+first_measure_number = baca.interpret.set_up_score(
     score,
     accumulator,
     library.manifests,
@@ -84,8 +84,8 @@ baca.tags.wrappers(wrappers, baca.tags.ONLY_PARTS)
 
 baca.text_script_extra_offset_function(skips[:-1], (1.5, 12))
 
-baca.open_volta_function(skips[4 - 1], accumulator.first_measure_number)
-baca.close_volta_function(skips[6 - 1], accumulator.first_measure_number)
+baca.open_volta_function(skips[4 - 1], first_measure_number)
+baca.close_volta_function(skips[6 - 1], first_measure_number)
 
 rests = score["Rests"]
 for index, string in (
