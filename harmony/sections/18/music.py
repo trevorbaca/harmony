@@ -7,15 +7,6 @@ from harmony import library
 ######################################### 18 [R] ########################################
 #########################################################################################
 
-stage_markup = (
-    ("[R.1-2]", 1),
-    ("[>S.1]", 3, "#darkgreen"),
-    ("[<P.7-8]", 4, "#darkgreen"),
-    ("[<Q.1]", 6, "#darkgreen"),
-    ("[R.3]", 8),
-    ("[R.4-6]", 9),
-)
-
 score = music = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
@@ -45,11 +36,18 @@ baca.interpret.set_up_score(
     append_anchor_skip=True,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
-    stage_markup=stage_markup,
 )
 
 skips = score["Skips"]
-manifests = library.manifests
+stage_markup = (
+    ("[R.1-2]", 1),
+    ("[>S.1]", 3, "#darkgreen"),
+    ("[<P.7-8]", 4, "#darkgreen"),
+    ("[<Q.1]", 6, "#darkgreen"),
+    ("[R.3]", 8),
+    ("[R.4-6]", 9),
+)
+baca.label_stage_numbers(skips, stage_markup)
 
 for index, item in (
     (1 - 1, "72"),
@@ -62,7 +60,7 @@ for index, item in (
     (8 - 1, "3:2(4)=4"),
 ):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 rests = score["Rests"]
 for index, string in ((7 - 1, "fermata"),):
