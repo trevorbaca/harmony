@@ -7,11 +7,6 @@ from harmony import library
 ######################################### 09 [I] ########################################
 #########################################################################################
 
-stage_markup = (
-    ("[I.1]", 1),
-    ("[I.2]", 2),
-)
-
 score = music = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
@@ -32,18 +27,21 @@ first_measure_number = baca.interpret.set_up_score(
     append_anchor_skip=True,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
-    stage_markup=stage_markup,
 )
 
 skips = score["Skips"]
-manifests = library.manifests
+stage_markup = (
+    ("[I.1]", 1),
+    ("[I.2]", 2),
+)
+baca.label_stage_numbers(skips, stage_markup)
 
 for index, item in (
     (1 - 1, "144"),
     (1 - 1, "3:2(4)=4"),
 ):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 baca.open_volta_function(skips[1 - 1], first_measure_number)
 baca.close_volta_function(skips[2 - 1], first_measure_number, site="after")

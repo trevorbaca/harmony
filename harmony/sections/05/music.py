@@ -7,13 +7,6 @@ from harmony import library
 ######################################### 05 [E] ########################################
 #########################################################################################
 
-stage_markup = (
-    ("[>F.3]", 1, "#darkgreen"),
-    ("[<C.4]", 2, "#darkgreen"),
-    ("[<D.1]", 3, "#darkgreen"),
-    ("[E.1-2]", 4),
-)
-
 score = music = library.make_empty_score()
 voice_names = baca.accumulator.get_voice_names(score)
 
@@ -37,11 +30,16 @@ baca.interpret.set_up_score(
     append_anchor_skip=True,
     always_make_global_rests=True,
     attach_nonfirst_empty_start_bar=True,
-    stage_markup=stage_markup,
 )
 
 skips = score["Skips"]
-manifests = library.manifests
+stage_markup = (
+    ("[>F.3]", 1, "#darkgreen"),
+    ("[<C.4]", 2, "#darkgreen"),
+    ("[<D.1]", 3, "#darkgreen"),
+    ("[E.1-2]", 4),
+)
+baca.label_stage_numbers(skips, stage_markup)
 
 for index, item in (
     (1 - 1, "48"),
@@ -54,7 +52,7 @@ for index, item in (
     (4 - 1, "4:3(4)=4"),
 ):
     skip = skips[index]
-    baca.metronome_mark_function(skip, item, manifests)
+    baca.metronome_mark_function(skip, item, library.manifests)
 
 
 def BFL(voice):
