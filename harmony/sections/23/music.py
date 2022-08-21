@@ -65,7 +65,7 @@ for index, string in ((3 - 1, "fermata"),):
     baca.global_fermata_function(rests[index], string)
 
 
-def BFL(voice):
+def BFL(voice, accumulator):
     music = baca.make_mmrests(accumulator.get(1))
     voice.extend(music)
     music = library.make_warble_rhythm(
@@ -92,7 +92,7 @@ def BFL(voice):
     voice.extend(music)
 
 
-def PERC1(voice):
+def PERC1(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         [-16, 4],
@@ -116,7 +116,7 @@ def PERC1(voice):
     voice.extend(music)
 
 
-def PERC2(voice):
+def PERC2(voice, accumulator):
     music = baca.make_mmrests(accumulator.get(1, 5))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -137,7 +137,7 @@ def PERC2(voice):
     voice.extend(music)
 
 
-def HP(voice):
+def HP(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         [4, "-"],
@@ -154,7 +154,7 @@ def HP(voice):
     voice.extend(music)
 
 
-def VA(voice):
+def VA(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         [4, "-"],
@@ -184,7 +184,7 @@ def VA(voice):
     voice.extend(music)
 
 
-def VC1(voice):
+def VC1(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         [4, "-"],
@@ -221,7 +221,7 @@ def VC1(voice):
     voice.extend(music)
 
 
-def VC2(voice):
+def VC2(voice, accumulator):
     music = library.make_tuplet(
         accumulator.get(1),
         [(1,)],
@@ -254,7 +254,7 @@ def VC2(voice):
     voice.extend(music)
 
 
-def CB1(voice):
+def CB1(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         [4, "-"],
@@ -285,7 +285,7 @@ def CB1(voice):
     voice.extend(music)
 
 
-def CB2(voice):
+def CB2(voice, accumulator):
     music = baca.make_mmrests(accumulator.get(1))
     voice.extend(music)
     music = baca.make_notes(accumulator.get(2))
@@ -812,15 +812,15 @@ def composites(cache):
 
 
 def main():
-    BFL(accumulator.voice("bfl"))
-    PERC1(accumulator.voice("perc1"))
-    PERC2(accumulator.voice("perc2"))
-    HP(accumulator.voice("hp"))
-    VA(accumulator.voice("va"))
-    VC1(accumulator.voice("vc1"))
-    VC2(accumulator.voice("vc2"))
-    CB1(accumulator.voice("cb1"))
-    CB2(accumulator.voice("cb2"))
+    BFL(accumulator.voice("bfl"), accumulator)
+    PERC1(accumulator.voice("perc1"), accumulator)
+    PERC2(accumulator.voice("perc2"), accumulator)
+    HP(accumulator.voice("hp"), accumulator)
+    VA(accumulator.voice("va"), accumulator)
+    VC1(accumulator.voice("vc1"), accumulator)
+    VC2(accumulator.voice("vc2"), accumulator)
+    CB1(accumulator.voice("cb1"), accumulator)
+    CB2(accumulator.voice("cb2"), accumulator)
     previous_persist = baca.previous_persist(__file__)
     previous_persistent_indicators = previous_persist["persistent_indicators"]
     baca.reapply(
