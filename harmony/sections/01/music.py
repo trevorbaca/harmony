@@ -51,7 +51,7 @@ baca.open_volta_function(skips[2 - 1], first_measure_number)
 baca.close_volta_function(skips[3 - 1], first_measure_number, site="after")
 
 
-def BFL(voice):
+def BFL(voice, accumulator):
     music = library.make_appoggiato_rhythm(
         accumulator.get(1, 2),
         divisions=[16, 8, 12, 8],
@@ -68,7 +68,7 @@ def BFL(voice):
     baca.append_anchor_note_function(voice)
 
 
-def PERC1(voice):
+def PERC1(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1),
         ["-", 3, 1],
@@ -93,7 +93,7 @@ def PERC1(voice):
     voice.extend(music)
 
 
-def PERC2(voice):
+def PERC2(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1, 2),
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
@@ -110,7 +110,7 @@ def PERC2(voice):
     voice.extend(music)
 
 
-def HP(voice):
+def HP(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1, 2),
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
@@ -123,7 +123,7 @@ def HP(voice):
     voice.extend(music)
 
 
-def VA(voice):
+def VA(voice, accumulator):
     music = library.make_appoggiato_rhythm(
         accumulator.get(1, 2),
         divisions=[16, 8, 12, 8],
@@ -140,7 +140,7 @@ def VA(voice):
     voice.extend(music)
 
 
-def VC1(voice):
+def VC1(voice, accumulator):
     music = baca.make_skeleton(
         r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
     )
@@ -153,7 +153,7 @@ def VC1(voice):
     voice.extend(music)
 
 
-def VC2(voice):
+def VC2(voice, accumulator):
     music = library.make_appoggiato_rhythm(
         accumulator.get(1, 2),
         divisions=[16, 8, 12, 8],
@@ -170,7 +170,7 @@ def VC2(voice):
     voice.extend(music)
 
 
-def CB1(voice):
+def CB1(voice, accumulator):
     music = library.make_sixteenths(
         accumulator.get(1, 2),
         [18, 6, 10, 4, 6],
@@ -183,7 +183,7 @@ def CB1(voice):
     baca.append_anchor_note_function(voice)
 
 
-def CB2(voice):
+def CB2(voice, accumulator):
     music = library.make_appoggiato_rhythm(
         accumulator.get(1, 2),
         divisions=[16, 8, 12, 8],
@@ -679,15 +679,15 @@ def cb2(m):
 
 
 def main():
-    BFL(accumulator.voice("bfl"))
-    PERC1(accumulator.voice("perc1"))
-    PERC2(accumulator.voice("perc2"))
-    HP(accumulator.voice("hp"))
-    VA(accumulator.voice("va"))
-    VC1(accumulator.voice("vc1"))
-    VC2(accumulator.voice("vc2"))
-    CB1(accumulator.voice("cb1"))
-    CB2(accumulator.voice("cb2"))
+    BFL(accumulator.voice("bfl"), accumulator)
+    PERC1(accumulator.voice("perc1"), accumulator)
+    PERC2(accumulator.voice("perc2"), accumulator)
+    HP(accumulator.voice("hp"), accumulator)
+    VA(accumulator.voice("va"), accumulator)
+    VC1(accumulator.voice("vc1"), accumulator)
+    VC2(accumulator.voice("vc2"), accumulator)
+    CB1(accumulator.voice("cb1"), accumulator)
+    CB2(accumulator.voice("cb2"), accumulator)
     cache = baca.interpret.cache_leaves(
         score,
         len(accumulator.time_signatures),
