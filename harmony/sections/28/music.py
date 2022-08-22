@@ -864,7 +864,7 @@ def composites(cache):
     )
 
 
-def main():
+def make_score():
     BFL(accumulator.voice("bfl"), accumulator)
     PERC1(accumulator.voice("perc1"), accumulator)
     PERC2(accumulator.voice("perc2"), accumulator)
@@ -898,8 +898,8 @@ def main():
     composites(cache)
 
 
-if __name__ == "__main__":
-    main()
+def main():
+    make_score()
     metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
@@ -927,3 +927,7 @@ if __name__ == "__main__":
         includes=["../stylesheet.ily"],
     )
     baca.build.persist(lilypond_file, metadata, persist, timing)
+
+
+if __name__ == "__main__":
+    main()
