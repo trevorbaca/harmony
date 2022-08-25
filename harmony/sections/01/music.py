@@ -7,48 +7,38 @@ from harmony import library
 ######################################### 01 [A] ########################################
 #########################################################################################
 
-score = music = library.make_empty_score()
-voice_names = baca.accumulator.get_voice_names(score)
-instruments = library.instruments
 
-accumulator = baca.CommandAccumulator(
-    time_signatures=[
-        (6, 4),
-        (5, 4),
-        (3, 4),
-    ],
-    _voice_abbreviations=library.voice_abbreviations,
-    _voice_names=voice_names,
-)
+def make_empty_score():
+    score = library.make_empty_score()
+    voice_names = baca.accumulator.get_voice_names(score)
+    accumulator = baca.CommandAccumulator(
+        time_signatures=[
+            (6, 4),
+            (5, 4),
+            (3, 4),
+        ],
+        _voice_abbreviations=library.voice_abbreviations,
+        _voice_names=voice_names,
+    )
+    return score, accumulator
 
-first_measure_number = baca.interpret.set_up_score(
-    score,
-    accumulator.time_signatures,
-    accumulator,
-    library.manifests,
-    append_anchor_skip=True,
-    always_make_global_rests=True,
-    first_section=True,
-)
 
-skips = score["Skips"]
-stage_markup = (
-    ("[A.1]", 1),
-    ("[A.2]", 2),
-    ("[>C.1]", 3, "#darkgreen"),
-)
-baca.label_stage_numbers(skips, stage_markup)
-
-for index, item in (
-    (1 - 1, "96"),
-    (3 - 1, "57 3/5"),
-    (3 - 1, "3:5(4)=4"),
-):
-    skip = skips[index]
-    baca.metronome_mark_function(skip, item, library.manifests)
-
-baca.open_volta_function(skips[2 - 1], first_measure_number)
-baca.close_volta_function(skips[3 - 1], first_measure_number, site="after")
+def GLOBALS(skips, first_measure_number):
+    stage_markup = (
+        ("[A.1]", 1),
+        ("[A.2]", 2),
+        ("[>C.1]", 3, "#darkgreen"),
+    )
+    baca.label_stage_numbers(skips, stage_markup)
+    for index, item in (
+        (1 - 1, "96"),
+        (3 - 1, "57 3/5"),
+        (3 - 1, "3:5(4)=4"),
+    ):
+        skip = skips[index]
+        baca.metronome_mark_function(skip, item, library.manifests)
+    baca.open_volta_function(skips[2 - 1], first_measure_number)
+    baca.close_volta_function(skips[3 - 1], first_measure_number, site="after")
 
 
 def BFL(voice, accumulator):
@@ -200,11 +190,11 @@ def CB2(voice, accumulator):
     voice.extend(music)
 
 
-def bfl(m):
+def bfl(m, accumulator):
     accumulator(
         ("bfl", (1, 2)),
         baca.instrument(
-            instruments["BassFlute"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["BassFlute"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -260,11 +250,12 @@ def bfl(m):
     )
 
 
-def perc1(m):
+def perc1(m, accumulator):
     accumulator(
         "perc1",
         baca.instrument(
-            instruments["Percussion"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Percussion"],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.dls_staff_padding(6),
@@ -332,11 +323,12 @@ def perc1(m):
     )
 
 
-def perc2(m):
+def perc2(m, accumulator):
     accumulator(
         ("perc2", (1, 2)),
         baca.instrument(
-            instruments["Percussion"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Percussion"],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         library.short_instrument_name("Perc. II"),
@@ -375,11 +367,11 @@ def perc2(m):
     )
 
 
-def hp(m):
+def hp(m, accumulator):
     accumulator(
         ("hp", (1, 2)),
         baca.instrument(
-            instruments["Harp"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Harp"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("percussion", selector=lambda _: abjad.select.leaf(_, 0)),
         library.short_instrument_name("Hp."),
@@ -414,11 +406,11 @@ def hp(m):
     )
 
 
-def va(m):
+def va(m, accumulator):
     accumulator(
         ("va", (1, 2)),
         baca.instrument(
-            instruments["Viola"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Viola"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -456,11 +448,11 @@ def va(m):
     )
 
 
-def vc1(m):
+def vc1(m, accumulator):
     accumulator(
         ("vc1", (1, 2)),
         baca.instrument(
-            instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -522,11 +514,11 @@ def vc1(m):
     )
 
 
-def vc2(m):
+def vc2(m, accumulator):
     accumulator(
         ("vc2", (1, 2)),
         baca.instrument(
-            instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Cello"], selector=lambda _: abjad.select.leaf(_, 0)
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -569,11 +561,12 @@ def vc2(m):
     )
 
 
-def cb1(m):
+def cb1(m, accumulator):
     accumulator(
         ("cb1", (1, 2)),
         baca.instrument(
-            instruments["Contrabass"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Contrabass"],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -625,11 +618,12 @@ def cb1(m):
     )
 
 
-def cb2(m):
+def cb2(m, accumulator):
     accumulator(
         ("cb2", (1, 2)),
         baca.instrument(
-            instruments["Contrabass"], selector=lambda _: abjad.select.leaf(_, 0)
+            library.instruments["Contrabass"],
+            selector=lambda _: abjad.select.leaf(_, 0),
         ),
         baca.clef("bass", selector=lambda _: abjad.select.leaf(_, 0)),
         baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
@@ -679,6 +673,17 @@ def cb2(m):
 
 
 def make_score():
+    score, accumulator = make_empty_score()
+    first_measure_number = baca.interpret.set_up_score(
+        score,
+        accumulator.time_signatures,
+        accumulator,
+        library.manifests,
+        append_anchor_skip=True,
+        always_make_global_rests=True,
+        first_section=True,
+    )
+    GLOBALS(score["Skips"], first_measure_number)
     BFL(accumulator.voice("bfl"), accumulator)
     PERC1(accumulator.voice("perc1"), accumulator)
     PERC2(accumulator.voice("perc2"), accumulator)
@@ -693,19 +698,20 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    bfl(cache["bfl"])
-    perc1(cache["perc1"])
-    perc2(cache["perc2"])
-    hp(cache["hp"])
-    va(cache["va"])
-    vc1(cache["vc1"])
-    vc2(cache["vc2"])
-    cb1(cache["cb1"])
-    cb2(cache["cb2"])
+    bfl(cache["bfl"], accumulator)
+    perc1(cache["perc1"], accumulator)
+    perc2(cache["perc2"], accumulator)
+    hp(cache["hp"], accumulator)
+    va(cache["va"], accumulator)
+    vc1(cache["vc1"], accumulator)
+    vc2(cache["vc2"], accumulator)
+    cb1(cache["cb1"], accumulator)
+    cb2(cache["cb2"], accumulator)
+    return score, accumulator
 
 
 def main():
-    make_score()
+    score, accumulator = make_score()
     metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
