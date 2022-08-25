@@ -27,6 +27,8 @@ accumulator = baca.CommandAccumulator(
     _voice_names=voice_names,
 )
 
+previous_metadata = baca.previous_metadata(__file__)
+previous_persist = baca.previous_persist(__file__)
 baca.interpret.set_up_score(
     score,
     accumulator.time_signatures,
@@ -34,6 +36,8 @@ baca.interpret.set_up_score(
     library.manifests,
     append_anchor_skip=True,
     always_make_global_rests=True,
+    previous_metadata=previous_metadata,
+    previous_persist=previous_persist,
 )
 
 skips = score["Skips"]
