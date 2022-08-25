@@ -818,8 +818,10 @@ number.2.Skips = {
     s1 * 1/4
     % AFTER:
     % MARKUP:
+      %! -PARTS
       %! baca.markup_function()
     - \tweak extra-offset #'(4 . -30)
+      %! -PARTS
       %! baca.markup_function()
     ^ \harmony-text-one
     % SPANNER_STOPS:

@@ -7,57 +7,46 @@ from harmony import library
 ######################################### 24 [X] ########################################
 #########################################################################################
 
-score = library.make_empty_score()
-voice_names = baca.accumulator.get_voice_names(score)
 
-accumulator = baca.CommandAccumulator(
-    time_signatures=[
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (3, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (5, 4),
-    ],
-    _voice_abbreviations=library.voice_abbreviations,
-    _voice_names=voice_names,
-)
+def make_empty_score():
+    score = library.make_empty_score()
+    voice_names = baca.accumulator.get_voice_names(score)
+    accumulator = baca.CommandAccumulator(
+        time_signatures=[
+            (4, 4),
+            (4, 4),
+            (4, 4),
+            (3, 4),
+            (4, 4),
+            (4, 4),
+            (4, 4),
+            (4, 4),
+            (5, 4),
+        ],
+        _voice_abbreviations=library.voice_abbreviations,
+        _voice_names=voice_names,
+    )
+    return score, accumulator
 
-previous_metadata = baca.previous_metadata(__file__)
-previous_persist = baca.previous_persist(__file__)
-baca.interpret.set_up_score(
-    score,
-    accumulator.time_signatures,
-    accumulator,
-    library.manifests,
-    append_anchor_skip=True,
-    always_make_global_rests=True,
-    previous_metadata=previous_metadata,
-    previous_persist=previous_persist,
-)
 
-skips = score["Skips"]
-stage_markup = (
-    ("[X.1-3]", 1),
-    ("[<V.6]", 4, "#darkgreen"),
-    ("[X.4-5]", 5),
-    ("[X.6-8]", 7),
-)
-baca.label_stage_numbers(skips, stage_markup)
-
-for index, item in (
-    (1 - 1, "48"),
-    (1 - 1, "2.=4"),
-    (4 - 1, "72"),
-    (4 - 1, "3:2(4)=4"),
-    (5 - 1, "48"),
-    (5 - 1, "4.=4"),
-):
-    skip = skips[index]
-    baca.metronome_mark_function(skip, item, library.manifests)
+def GLOBALS(skips):
+    stage_markup = (
+        ("[X.1-3]", 1),
+        ("[<V.6]", 4, "#darkgreen"),
+        ("[X.4-5]", 5),
+        ("[X.6-8]", 7),
+    )
+    baca.label_stage_numbers(skips, stage_markup)
+    for index, item in (
+        (1 - 1, "48"),
+        (1 - 1, "2.=4"),
+        (4 - 1, "72"),
+        (4 - 1, "3:2(4)=4"),
+        (5 - 1, "48"),
+        (5 - 1, "4.=4"),
+    ):
+        skip = skips[index]
+        baca.metronome_mark_function(skip, item, library.manifests)
 
 
 def BFL(voice, accumulator):
@@ -261,7 +250,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
 
 
-def bfl(m):
+def bfl(m, accumulator):
     accumulator(
         ("bfl", (1, 3)),
         baca.pitch("F5"),
@@ -309,7 +298,7 @@ def bfl(m):
     )
 
 
-def perc1(m):
+def perc1(m, accumulator):
     accumulator(
         ("perc1", (1, 3)),
         library.slate_staff_position(),
@@ -357,7 +346,7 @@ def perc1(m):
     )
 
 
-def perc2(m):
+def perc2(m, accumulator):
     accumulator(
         ("perc2", (1, 3)),
         library.bass_drum_staff_position(),
@@ -432,7 +421,7 @@ def perc2(m):
     )
 
 
-def hp(m):
+def hp(m, accumulator):
     accumulator(
         ("hp", (1, 3)),
         baca.pitch("A4"),
@@ -473,7 +462,7 @@ def hp(m):
     )
 
 
-def va(m):
+def va(m, accumulator):
     accumulator(
         ("va", (1, 3)),
         baca.clef("alto", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -513,7 +502,7 @@ def va(m):
     )
 
 
-def vc1(m):
+def vc1(m, accumulator):
     accumulator(
         ("vc1", (1, 3)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -581,7 +570,7 @@ def vc1(m):
     )
 
 
-def vc2(m):
+def vc2(m, accumulator):
     accumulator(
         ("vc2", (1, 3)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -626,7 +615,7 @@ def vc2(m):
     )
 
 
-def cb1(m):
+def cb1(m, accumulator):
     accumulator(
         ("cb1", (1, 3)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -703,7 +692,7 @@ def cb1(m):
     )
 
 
-def cb2(m):
+def cb2(m, accumulator):
     accumulator(
         ("cb2", (1, 3)),
         baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
@@ -751,7 +740,7 @@ def cb2(m):
     )
 
 
-def composites(cache):
+def composites(cache, accumulator):
     # va, vc1, vc2, cb1, cb2
     accumulator(
         (["va", "vc2", "cb2"], (1, 3)),
@@ -812,7 +801,19 @@ def composites(cache):
     )
 
 
-def make_score():
+def make_score(first_measure_number, previous_persistent_indicators):
+    score, accumulator = make_empty_score()
+    baca.interpret.set_up_score(
+        score,
+        accumulator.time_signatures,
+        accumulator,
+        library.manifests,
+        append_anchor_skip=True,
+        always_make_global_rests=True,
+        first_measure_number=first_measure_number,
+        previous_persistent_indicators=previous_persistent_indicators,
+    )
+    GLOBALS(score["Skips"])
     BFL(accumulator.voice("bfl"), accumulator)
     PERC1(accumulator.voice("perc1"), accumulator)
     PERC2(accumulator.voice("perc2"), accumulator)
@@ -822,8 +823,6 @@ def make_score():
     VC2(accumulator.voice("vc2"), accumulator)
     CB1(accumulator.voice("cb1"), accumulator)
     CB2(accumulator.voice("cb2"), accumulator)
-    previous_persist = baca.previous_persist(__file__)
-    previous_persistent_indicators = previous_persist["persistent_indicators"]
     baca.reapply(
         accumulator.voices(),
         library.manifests,
@@ -834,20 +833,26 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    bfl(cache["bfl"])
-    perc1(cache["perc1"])
-    perc2(cache["perc2"])
-    hp(cache["hp"])
-    va(cache["va"])
-    vc1(cache["vc1"])
-    vc2(cache["vc2"])
-    cb1(cache["cb1"])
-    cb2(cache["cb2"])
-    composites(cache)
+    bfl(cache["bfl"], accumulator)
+    perc1(cache["perc1"], accumulator)
+    perc2(cache["perc2"], accumulator)
+    hp(cache["hp"], accumulator)
+    va(cache["va"], accumulator)
+    vc1(cache["vc1"], accumulator)
+    vc2(cache["vc2"], accumulator)
+    cb1(cache["cb1"], accumulator)
+    cb2(cache["cb2"], accumulator)
+    composites(cache, accumulator)
+    return score, accumulator
 
 
 def main():
-    make_score()
+    previous_metadata = baca.previous_metadata(__file__)
+    first_measure_number = previous_metadata["final_measure_number"] + 1
+    previous_persist = baca.previous_persist(__file__)
+    score, accumulator = make_score(
+        first_measure_number, previous_persist["persistent_indicators"]
+    )
     metadata, persist, timing = baca.build.section(
         score,
         library.manifests,
@@ -865,6 +870,7 @@ def main():
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ),
         empty_fermata_measures=True,
+        first_measure_number=first_measure_number,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         transpose_score=True,
