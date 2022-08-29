@@ -717,17 +717,17 @@ def main():
         library.manifests,
         accumulator.time_signatures,
         **baca.interpret.section_defaults(),
-        activate=(
+        activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
             baca.tags.STAGE_NUMBER,
-        ),
+        ],
         always_make_global_rests=True,
         commands=accumulator.commands,
-        deactivate=(
+        deactivate=[
             *baca.tags.instrument_color_tags(),
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
-        ),
+        ],
         empty_fermata_measures=True,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
