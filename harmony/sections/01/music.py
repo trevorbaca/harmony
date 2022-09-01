@@ -190,64 +190,52 @@ def CB2(voice, accumulator):
     voice.extend(music)
 
 
-def bfl(m, accumulator):
-    accumulator(
-        ("bfl", (1, 2)),
-        baca.instrument(
-            library.instruments["BassFlute"], selector=lambda _: abjad.select.leaf(_, 0)
-        ),
-        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.staff_lines(5, selector=lambda _: abjad.select.leaf(_, 0)),
-        library.short_instrument_name("Bfl."),
-        baca.instrument_name(
-            r"\harmony-bass-flute-markup",
-            selector=lambda _: abjad.select.leaf(_, 0),
-        ),
-        baca.pitch(
-            "A3",
-            selector=lambda _: baca.select.plts(_, grace=False),
-        ),
-        baca.pitches(
+def bfl(cache):
+    name = "bfl"
+    m = cache[name]
+    with baca.scope(m.get(1, 2)) as o:
+        baca.instrument_function(o.leaf(0), "BassFlute", library.manifests)
+        baca.clef_function(o.leaf(0), "treble")
+        baca.staff_lines_function(o.leaf(0), 5)
+        baca.short_instrument_name_function(o.leaf(0), "Bfl.", library.manifests)
+        baca.instrument_name_function(o.leaf(0), r"\harmony-bass-flute-markup")
+        mutated_score = baca.pitch_function(baca.select.plts(o, grace=False), "A3")
+        mutated_score = baca.pitches_function(
+            baca.select.plts(o, grace=True),
             library.appoggiato_pitches_a(),
-            selector=lambda _: baca.select.plts(_, grace=True),
-        ),
-        baca.dynamic(
+        )
+        assert mutated_score
+        cache.rebuild()
+        m = cache[name]
+    with baca.scope(m.get(1, 2)) as o:
+        baca.dynamic_function(
+            abjad.select.get(baca.select.pheads(o, grace=False), [0, 2]),
             "f-mp",
-            selector=lambda _: abjad.select.get(
-                baca.select.pheads(_, grace=False), [0, 2]
-            ),
-        ),
-        baca.dynamic(
+        )
+        baca.dynamic_function(
+            abjad.select.get(baca.select.pheads(o, grace=False), [1, 3]),
             "mf-mp",
-            selector=lambda _: abjad.select.get(
-                baca.select.pheads(_, grace=False), [1, 3]
-            ),
-        ),
-        baca.dls_staff_padding(5),
-        baca.text_spanner(
+        )
+        baca.dls_staff_padding_function(o, 5)
+        baca.text_spanner_function(
+            baca.select.tleaves(o, grace=False, rleak=True),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
-            selector=lambda _: baca.select.tleaves(_, grace=False, rleak=True),
-        ),
-        baca.dots_x_extent_false(
-            selector=lambda _: baca.select.leaves(_, grace=False),
-        ),
-    )
-    accumulator(
-        ("bfl", 3),
-        baca.pitch("F3"),
-        baca.dynamic("mf", selector=lambda _: baca.select.phead(_, 0)),
-        baca.dls_staff_padding(3),
-        baca.covered_spanner(
+        )
+        baca.dots_x_extent_false_function(baca.select.leaves(o, grace=False))
+    with baca.scope(m[3]) as o:
+        baca.pitch_function(o, "F3")
+        baca.dynamic_function(o.phead(0), "mf")
+        baca.dls_staff_padding_function(o, 3)
+        baca.covered_spanner_function(
+            baca.select.rleak(baca.select.ltleaves(o)),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             items=r"\baca-cov-markup =|",
-            selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
-        ),
-    )
+        )
 
 
 def perc1(m, accumulator):
@@ -698,7 +686,7 @@ def make_score():
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    bfl(cache["bfl"], accumulator)
+    bfl(cache)
     perc1(cache["perc1"], accumulator)
     perc2(cache["perc2"], accumulator)
     hp(cache["hp"], accumulator)
@@ -728,6 +716,7 @@ def main():
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
+        do_not_check_wellformedness=True,
         empty_fermata_measures=True,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
