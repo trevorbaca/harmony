@@ -42,9 +42,6 @@ def appoggiato_pitches_g():
 
 
 def bass_drum_staff_position(allow_hidden=False):
-    """
-    Sets bass drum staff position (-1), stem down, tuplet bracket up.
-    """
     return baca.chunk(
         baca.staff_position(-1, allow_hidden=allow_hidden),
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
@@ -52,10 +49,13 @@ def bass_drum_staff_position(allow_hidden=False):
     )
 
 
+def bass_drum_staff_position_function(o, *, allow_hidden=False):
+    baca.staff_position_function(o, -1, allow_hidden=allow_hidden)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
+
+
 def bridge_staff_position():
-    """
-    Sets bridge position (0), stem down and tuplet bracket up.
-    """
     return baca.chunk(
         baca.staff_position(0),
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
@@ -63,14 +63,22 @@ def bridge_staff_position():
     )
 
 
+def bridge_staff_position_function(o):
+    baca.staff_position_function(o, 0)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
+
+
 def brake_drum_staff_position():
-    """
-    Sets brake drum staff position and stem direction.
-    """
     return baca.chunk(
         baca.staff_position(0),
         baca.stem_up(selector=lambda _: baca.select.pleaves(_)),
     )
+
+
+def brake_drum_staff_position_function(o):
+    baca.staff_position_function(o, 0)
+    baca.stem_up_function(o.pleaves())
 
 
 def cerulean():
@@ -1004,23 +1012,6 @@ def make_warble_rhythm(
     return music
 
 
-def short_instrument_name(
-    key,
-    *,
-    alert=None,
-    context="Staff",
-    selector=lambda _: abjad.select.leaf(_, 0),
-):
-    short_instrument_name = short_instrument_names[key]
-    command = baca.short_instrument_name(
-        short_instrument_name,
-        alert=alert,
-        context=context,
-        selector=selector,
-    )
-    return baca.not_parts(command)
-
-
 def part_manifest():
     return (
         baca.Part("BassFlute"),
@@ -1035,25 +1026,27 @@ def part_manifest():
     )
 
 
-def purpleheart_staff_positions(argument):
-    """
-    Sets staff position, stem direction, tuplet bracket direction, tuplet bracket staff
-    padding.
-    """
-    assert isinstance(argument, list), repr(argument)
-    assert all(_ in (-2, 0, 2) for _ in argument), repr(argument)
+def purpleheart_staff_positions(positions):
+    assert isinstance(positions, list), repr(positions)
+    assert all(_ in (-2, 0, 2) for _ in positions), repr(positions)
     return baca.chunk(
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
         baca.tuplet_bracket_up(),
         baca.tuplet_bracket_staff_padding(0.5),
-        baca.staff_positions(argument),
+        baca.staff_positions(positions),
     )
 
 
+def purpleheart_staff_positions_function(o, positions):
+    assert isinstance(positions, list), repr(positions)
+    assert all(_ in (-2, 0, 2) for _ in positions), repr(positions)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
+    baca.tuplet_bracket_staff_padding_function(o, 0.5)
+    baca.staff_positions_function(o, positions)
+
+
 def slate_staff_position():
-    """
-    Sets slate staff position (1), stem down, tuplet bracket up.
-    """
     return baca.chunk(
         baca.staff_position(1),
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
@@ -1061,10 +1054,13 @@ def slate_staff_position():
     )
 
 
+def slate_staff_position_function(o):
+    baca.staff_position_function(o, 1)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
+
+
 def tam_tam_staff_position():
-    """
-    Sets tam-tam staff position (0), stem down, tuplet bracket up.
-    """
     return baca.chunk(
         baca.staff_position(0),
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
@@ -1072,14 +1068,22 @@ def tam_tam_staff_position():
     )
 
 
+def tam_tam_staff_position_function(o):
+    baca.staff_position_function(o, 0)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
+
+
 def triangle_staff_position():
-    """
-    Sets triangle position and stem direction.
-    """
     return baca.chunk(
         baca.staff_position(1),
         baca.stem_up(selector=lambda _: baca.select.pleaves(_)),
     )
+
+
+def triangle_staff_position_function(o):
+    baca.staff_position_function(o, 1)
+    baca.stem_up_function(o.pleaves())
 
 
 def warble_pitches():
@@ -1087,9 +1091,6 @@ def warble_pitches():
 
 
 def whisk_staff_position():
-    """
-    Sets whisk staff position (0), stem down and tuplet bracket up.
-    """
     return baca.chunk(
         baca.staff_position(0),
         baca.stem_down(selector=lambda _: baca.select.pleaves(_)),
@@ -1097,165 +1098,104 @@ def whisk_staff_position():
     )
 
 
-instruments = dict(
-    [
-        ("BassFlute", abjad.BassFlute(pitch_range=abjad.PitchRange("[C3, E6]"))),
-        (
-            "Percussion",
-            abjad.Percussion(clefs=("bass", "percussion", "treble")),
-        ),
-        (
-            "Percussion",
-            abjad.Percussion(clefs=("bass", "percussion", "treble")),
-        ),
-        ("Harp", abjad.Harp()),
-        ("Viola", abjad.Viola(pitch_range=abjad.PitchRange("[C3, +inf]"))),
-        ("Cello", abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]"))),
-        (
-            "Contrabass",
-            abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
-        ),
-    ]
-)
+def whisk_staff_position_function(o):
+    baca.staff_position_function(o, 0)
+    baca.stem_down_function(o.pleaves())
+    baca.tuplet_bracket_up_function(o)
 
 
-metronome_marks = dict(
-    [
-        ("48", abjad.MetronomeMark((1, 4), 48)),
-        (
-            "57 3/5",
-            abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
-        ),
-        ("72", abjad.MetronomeMark((1, 4), 72)),
-        ("96", abjad.MetronomeMark((1, 4), 96)),
-        ("144", abjad.MetronomeMark((1, 4), 144)),
-        # slower
-        (
-            "2.=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "4:5(2)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:5", "c2"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "2=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "5:6(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:6", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:4(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:4", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4.=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        # faster
-        (
-            "6:5(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("6:5", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:4(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:4", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:4(8)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:4", "c8"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "5:3(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("5:3", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "4:3(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("4:3", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "3:2(4)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:2", "c4"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-        (
-            "8=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
-            ),
-        ),
-        (
-            "3:2(8)=4",
-            abjad.MetricModulation(
-                left_rhythm=abjad.Tuplet("3:2", "c8"),
-                right_rhythm=abjad.Note("c4"),
-            ),
-        ),
-    ]
-)
+instruments = {
+    "BassFlute": abjad.BassFlute(pitch_range=abjad.PitchRange("[C3, E6]")),
+    "Percussion": abjad.Percussion(clefs=("bass", "percussion", "treble")),
+    "Harp": abjad.Harp(),
+    "Viola": abjad.Viola(pitch_range=abjad.PitchRange("[C3, +inf]")),
+    "Cello": abjad.Cello(pitch_range=abjad.PitchRange("[C2, +inf]")),
+    "Contrabass": abjad.Contrabass(pitch_range=abjad.PitchRange("[E1, +inf]")),
+}
 
 
-short_instrument_names = dict(
-    [
-        ("Bfl.", abjad.ShortInstrumentName(r"\harmony-bfl-markup")),
-        ("Perc. I", abjad.ShortInstrumentName(r"\harmony-perc-i-markup")),
-        ("Perc. II", abjad.ShortInstrumentName(r"\harmony-perc-ii-markup")),
-        ("Hp.", abjad.ShortInstrumentName(r"\harmony-hp-markup")),
-        ("Va.", abjad.ShortInstrumentName(r"\harmony-va-markup")),
-        ("Vc. I", abjad.ShortInstrumentName(r"\harmony-vc-i-markup")),
-        ("Vc. II", abjad.ShortInstrumentName(r"\harmony-vc-ii-markup")),
-        ("Cb. I", abjad.ShortInstrumentName(r"\harmony-cb-i-markup")),
-        ("Cb. II", abjad.ShortInstrumentName(r"\harmony-cb-ii-markup")),
-    ]
-)
+metronome_marks = {
+    "48": abjad.MetronomeMark((1, 4), 48),
+    "57 3/5": abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
+    "72": abjad.MetronomeMark((1, 4), 72),
+    "96": abjad.MetronomeMark((1, 4), 96),
+    "144": abjad.MetronomeMark((1, 4), 144),
+    # slower
+    "2.=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
+    ),
+    "4:5(2)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:5", "c2"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "2=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
+    ),
+    "5:6(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:6", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:4(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:4", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4.=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
+    ),
+    # faster
+    "6:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("6:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:4(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:4", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:4(8)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:4", "c8"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:3(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:3", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4:3(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:3", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:2(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:2", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "8=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
+    ),
+    "3:2(8)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:2", "c8"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+}
+
+
+short_instrument_names = {
+    "Bfl.": abjad.ShortInstrumentName(r"\harmony-bfl-markup"),
+    "Perc. I": abjad.ShortInstrumentName(r"\harmony-perc-i-markup"),
+    "Perc. II": abjad.ShortInstrumentName(r"\harmony-perc-ii-markup"),
+    "Hp.": abjad.ShortInstrumentName(r"\harmony-hp-markup"),
+    "Va.": abjad.ShortInstrumentName(r"\harmony-va-markup"),
+    "Vc. I": abjad.ShortInstrumentName(r"\harmony-vc-i-markup"),
+    "Vc. II": abjad.ShortInstrumentName(r"\harmony-vc-ii-markup"),
+    "Cb. I": abjad.ShortInstrumentName(r"\harmony-cb-i-markup"),
+    "Cb. II": abjad.ShortInstrumentName(r"\harmony-cb-ii-markup"),
+}
 
 
 manifests = {
