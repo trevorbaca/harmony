@@ -388,41 +388,41 @@ number.1.BassFlute.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     \baca-f-mp
     % SPANNER_STARTS:
       %! AUTODETECT
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     - \tweak direction #down
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     - \tweak staff-padding 8
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     - \abjad-dashed-line-with-up-hook
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     - \baca-text-spanner-left-markup \harmony-a-sounds-ottava-higher-markup
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     \startTextSpan
     % CLOSING:
     % COMMANDS:
@@ -450,12 +450,12 @@ number.1.BassFlute.Music.item.2 = {
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     \baca-mf-mp
     % CLOSING:
     % COMMANDS:
@@ -482,12 +482,12 @@ number.1.BassFlute.Music.item.3 = {
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     \baca-f-mp
     % SPANNER_STARTS:
       %! baca._attach_shadow_tie_indicators()
@@ -527,19 +527,17 @@ number.1.BassFlute.Music.item.4 = {
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     \baca-mf-mp
     % COMMANDS:
-      %! baca.OverrideCommand._call(2)
-      %! baca.dots_x_extent_false()
+      %! baca.dots_x_extent_false_function(2)
     \revert Dots.X-extent
-      %! baca.OverrideCommand._call(2)
-      %! baca.dls_staff_padding()
+      %! baca.dls_staff_padding_function(2)
     \revert DynamicLineSpanner.staff-padding
     % CLOSING:
     % COMMANDS:
@@ -566,49 +564,46 @@ number.1.BassFlute.Music = {
       %! SHIFTED_CLEF
       %! baca.clef_extra_offset_function(1)
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
-      %! baca.OverrideCommand._call(1)
-      %! baca.dots_x_extent_false()
+      %! baca.dots_x_extent_false_function(1)
     \override Dots.X-extent = ##f
-      %! baca.OverrideCommand._call(1)
-      %! baca.dls_staff_padding()
+      %! baca.dls_staff_padding_function(1)
     \override DynamicLineSpanner.staff-padding = 5
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.staff_lines(1)
+      %! baca.staff_lines_function(1)
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
       %! -PARTS
-      %! baca._attach_persistent_indicator()
-      %! baca.instrument_name()
+      %! baca.instrument_name_function()
     \set Staff.instrumentName = \harmony-bass-flute-markup
       %! -PARTS
       %! EXPLICIT_SHORT_INSTRUMENT_NAME
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.short_instrument_name()
+      %! baca.short_instrument_name_function()
     \set Staff.shortInstrumentName = \harmony-bfl-markup
       %! EXPLICIT_STAFF_LINES
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.staff_lines(2)
+      %! baca.staff_lines_function(2)
     \stopStaff
       %! EXPLICIT_STAFF_LINES
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.staff_lines(2)
+      %! baca.staff_lines_function(2)
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.staff_lines(2)
+      %! baca.staff_lines_function(2)
     \startStaff
     % OPENING:
     % COMMANDS:
       %! EXPLICIT_CLEF
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.clef()
+      %! baca.clef_function()
     \clef "treble"
       %! EXPLICIT_CLEF_COLOR
       %! baca._attach_color_literal(2)
@@ -625,7 +620,7 @@ number.1.BassFlute.Music = {
       %! EXPLICIT_CLEF
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.clef()
+      %! baca.clef_function()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
       %! harmony.make_appoggiato_rhythm()
@@ -647,7 +642,7 @@ number.1.BassFlute.Music = {
       %! REDRAWN_EXPLICIT_SHORT_INSTRUMENT_NAME
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.short_instrument_name()
+      %! baca.short_instrument_name_function()
       %! baca.treat_persistent_wrapper(3)
     \set Staff.shortInstrumentName = \harmony-bfl-markup %@%
     % ABSOLUTE_BEFORE:
@@ -1130,8 +1125,7 @@ number.1.BassFlute.Music = {
     \oneVoice
     % BEFORE:
     % COMMANDS:
-      %! baca.OverrideCommand._call(1)
-      %! baca.dls_staff_padding()
+      %! baca.dls_staff_padding_function(1)
     \override DynamicLineSpanner.staff-padding = 3
       %! harmony.make_sixteenths()
     r2
@@ -1139,7 +1133,7 @@ number.1.BassFlute.Music = {
     % SPANNER_STOPS:
       %! SPANNER_STOP
       %! baca.PiecewiseCommand._call(4)
-      %! baca.text_spanner()
+      %! baca.text_spanner_function()
     \stopTextSpan
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1158,48 +1152,53 @@ number.1.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! baca._attach_persistent_indicator()
       %! baca._set_status_tag()
-      %! baca.dynamic()
+      %! baca.dynamic_function()
     \mf
     % SPANNER_STARTS:
       %! AUTODETECT
+      %! SPANNER_START
+      %! baca.PiecewiseCommand._call(2)
+      %! baca.text_spanner_function()
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
-      %! COVERED_SPANNER
-      %! SPANNER_START
-      %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     - \tweak bound-details.right.padding 3.25
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     - \tweak staff-padding 3
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     - \abjad-dashed-line-with-hook
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     - \baca-text-spanner-left-markup \baca-cov-markup
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
       %! COVERED_SPANNER
       %! SPANNER_START
       %! baca.PiecewiseCommand._call(2)
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     \bacaStartTextSpanCovered
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1208,8 +1207,7 @@ number.1.BassFlute.Music = {
     r16
     % AFTER:
     % COMMANDS:
-      %! baca.OverrideCommand._call(2)
-      %! baca.dls_staff_padding()
+      %! baca.dls_staff_padding_function(2)
     \revert DynamicLineSpanner.staff-padding
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1277,7 +1275,8 @@ number.1.BassFlute.Music = {
       %! SPANNER_STOP
       %! baca.PiecewiseCommand._call(4)
       %! baca._style_anchor_notes()
-      %! baca.covered_spanner()
+      %! baca.covered_spanner_function()
+      %! baca.text_spanner_function()
     \bacaStopTextSpanCovered
     % CLOSING:
     % COMMANDS:
