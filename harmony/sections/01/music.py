@@ -203,6 +203,7 @@ def bfl(cache):
         mutated_score = baca.pitches_function(
             baca.select.plts(o, grace=True),
             library.appoggiato_pitches_a(),
+            allow_obgc_mutation=True,
         )
         assert mutated_score
         cache.rebuild()
@@ -571,7 +572,6 @@ def main():
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
-        do_not_check_wellformedness=True,
         empty_fermata_measures=True,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
