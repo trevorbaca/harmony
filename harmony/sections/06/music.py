@@ -1526,7 +1526,6 @@ def main():
             *baca.tags.short_instrument_name_color_tags(),
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
-        do_not_check_wellformedness=True,
         empty_fermata_measures=True,
         first_measure_number=first_measure_number,
         global_rests_in_topmost_staff=True,
