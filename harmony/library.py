@@ -1098,10 +1098,10 @@ def whisk_staff_position():
     )
 
 
-def whisk_staff_position_function(o):
-    baca.staff_position_function(o, 0)
-    baca.stem_down_function(o.pleaves())
-    baca.tuplet_bracket_up_function(o)
+def whisk_staff_position_function(argument):
+    baca.staff_position_function(argument, 0)
+    baca.stem_down_function(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up_function(argument)
 
 
 instruments = {
