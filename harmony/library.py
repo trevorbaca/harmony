@@ -49,10 +49,10 @@ def bass_drum_staff_position(allow_hidden=False):
     )
 
 
-def bass_drum_staff_position_function(o, *, allow_hidden=False):
-    baca.staff_position_function(o, -1, allow_hidden=allow_hidden)
-    baca.stem_down_function(o.pleaves())
-    baca.tuplet_bracket_up_function(o)
+def bass_drum_staff_position_function(argument, *, allow_hidden=False):
+    baca.staff_position_function(argument, -1, allow_hidden=allow_hidden)
+    baca.stem_down_function(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up_function(argument)
 
 
 def bridge_staff_position():
