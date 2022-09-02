@@ -1040,7 +1040,7 @@ def purpleheart_staff_positions(positions):
 def purpleheart_staff_positions_function(o, positions, *, allow_obgc_mutation=False):
     assert isinstance(positions, list), repr(positions)
     assert all(_ in (-2, 0, 2) for _ in positions), repr(positions)
-    baca.stem_down_function(o.pleaves())
+    baca.stem_down_function(baca.select.pleaves(o))
     baca.tuplet_bracket_up_function(o)
     baca.tuplet_bracket_staff_padding_function(o, 0.5)
     baca.staff_positions_function(o, positions, allow_obgc_mutation=allow_obgc_mutation)
