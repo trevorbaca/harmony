@@ -141,145 +141,110 @@ def CB2(voice, accumulator):
     voice.extend(music)
 
 
-def bfl(m, accumulator):
-    accumulator(
-        ("bfl", 1),
-        baca.pitch("Bb4"),
-        baca.trill_spanner(
+def bfl(m):
+    with baca.scope(m[1]) as o:
+        baca.pitch_function(o, "Bb4")
+        baca.trill_spanner_function(
+            baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-            selector=lambda _: baca.select.tleaves(_, rleak=True),
-        ),
-    )
-    accumulator(
-        ("bfl", (1, 2)),
-        baca.dls_staff_padding(4),
-    )
+        )
+    with baca.scope(m.get(1, 2)) as o:
+        baca.dls_staff_padding_function(o.leaves(), 4)
 
 
-def perc1(m, accumulator):
-    accumulator(
-        ("perc1", 1),
-        library.brake_drum_staff_position(),
-        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
-        baca.new(
-            baca.dynamic("mf"),
-            baca.damp(selector=lambda _: baca.select.phead(_, 0)),
-            selector=lambda _: baca.select.phead(_, -1),
-        ),
-        baca.markup(
+def perc1(m):
+    with baca.scope(m[1]) as o:
+        library.brake_drum_staff_position_function(o)
+        baca.dynamic_function(o.phead(0), "f")
+        with baca.scope(o.phead(-1)) as u:
+            baca.dynamic_function(u, "mf")
+            baca.damp_function(u)
+        baca.markup_function(
+            o.pleaf(0),
             r"\baca-brake-drum-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
-            selector=lambda _: baca.select.pleaf(_, 0),
-        ),
-    )
-    accumulator(
-        ("perc1", (1, 2)),
-        baca.dls_staff_padding(6),
-    )
+        )
+    with baca.scope(m.get(1, 2)) as o:
+        baca.dls_staff_padding_function(o.leaves(), 6)
 
 
-def perc2(m, accumulator):
-    accumulator(
-        ("perc2", 1),
-        baca.damp(
-            selector=lambda _: abjad.select.leaf(_, -1),
-        ),
-    )
+def perc2(m):
+    with baca.scope(m[1]) as o:
+        baca.damp_function(o.leaf(-1))
 
 
-def hp(m, accumulator):
-    accumulator(
-        ("hp", 1),
-        baca.clef("treble", selector=lambda _: abjad.select.leaf(_, 0)),
-        baca.pitch("Bb4"),
-        baca.snap_pizzicato(selector=lambda _: baca.select.phead(_, 0)),
-        baca.dynamic("f", selector=lambda _: baca.select.phead(_, 0)),
-    )
-    accumulator(
-        ("hp", (1, 2)),
-        baca.dls_staff_padding(4),
-    )
+def hp(m):
+    with baca.scope(m[1]) as o:
+        baca.clef_function(o.leaf(0), "treble")
+        baca.pitch_function(o, "Bb4")
+        baca.snap_pizzicato_function(o.phead(0))
+        baca.dynamic_function(o.phead(0), "f")
+    with baca.scope(m.get(1, 2)) as o:
+        baca.dls_staff_padding_function(o.leaves(), 4)
 
 
-def cb1(m, accumulator):
-    accumulator(
-        ("cb1", 1),
-        baca.pitch(
-            "Bb4",
-            do_not_transpose=True,
-        ),
-        baca.trill_spanner(
+def cb1(m):
+    with baca.scope(m[1]) as o:
+        baca.pitch_function(o, "Bb4", do_not_transpose=True)
+        baca.trill_spanner_function(
+            baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
             alteration="Cb5",
-            selector=lambda _: baca.select.tleaves(_, rleak=True),
-        ),
-    )
+        )
 
 
-def cb2(m, accumulator):
-    accumulator(
-        ("cb2", 1),
-        baca.pitch("A1"),
-        baca.flat_glissando(
-            left_broken=True,
-            selector=lambda _: baca.select.leaves(_)[:1],
-        ),
-        baca.hairpin(
+def cb2(m):
+    with baca.scope(m[1]) as o:
+        baca.pitch_function(o, "A1")
+        baca.flat_glissando_function(o.leaves()[:1], left_broken=True)
+        baca.hairpin_function(
+            o.rleaves(),
             "ff >o niente",
             left_broken=True,
-            selector=lambda _: baca.select.rleaves(_),
-        ),
-        baca.scp_spanner(
+        )
+        baca.scp_spanner_function(
+            o.leaves(),
             "T1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
             left_broken=True,
-            selector=lambda _: baca.select.leaves(_),
-        ),
-    )
-    accumulator(
-        ("cb2", -1),
-        baca.not_parts(
-            baca.chunk(
-                baca.mark(
-                    r"\harmony-colophon-markup",
-                    selector=lambda _: abjad.select.leaf(_, 0),
-                ),
-                baca.rehearsal_mark_down(),
-                baca.rehearsal_mark_extra_offset((92, 8)),
-                baca.rehearsal_mark_padding(12),
-                baca.rehearsal_mark_self_alignment_x(abjad.RIGHT),
-                selector=lambda _: baca.select.rleaf(_, -1),
-            ),
-        ),
-    )
+        )
+    with baca.scope(m[3]) as o:
+        with baca.scope(o.rleaf(-1)) as u:
+            wrappers = []
+            wrappers.extend(baca.mark_function(u, r"\harmony-colophon-markup"))
+            wrappers.extend(baca.rehearsal_mark_down_function(u))
+            wrappers.extend(baca.rehearsal_mark_extra_offset_function(u, (92, 8)))
+            wrappers.extend(baca.rehearsal_mark_padding_function(u, 12))
+            wrappers.extend(
+                baca.rehearsal_mark_self_alignment_x_function(u, abjad.RIGHT)
+            )
+            baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 
-def composites(cache, accumulator):
-    # bfl, va, vc1, vc2, cb1
-    accumulator(
-        (["bfl", "va", "vc1", "vc2", "cb1"], 1),
-        baca.hairpin(
-            "pp < p >o niente",
-            pieces=lambda _: baca.select.lparts(baca.select.rleaves(_), [1, 3]),
-        ),
-    )
-    # va, vc1, vc2
-    accumulator(
-        (["va", "vc1", "vc2"], 1),
-        baca.pitch("Bb4"),
-        baca.trill_spanner(
-            abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-            alteration="Cb5",
-            selector=lambda _: baca.select.tleaves(_, rleak=True),
-        ),
-    )
-    # va, vc1, vc2, cb1, cb2
-    accumulator(
-        (["va", "vc1", "vc2", "cb1", "cb2"], (1, 2)),
-        baca.dls_staff_padding(4),
-    )
+def composites(cache):
+    for name in ["bfl", "va", "vc1", "vc2", "cb1"]:
+        m = cache[name]
+        with baca.scope(m[1]) as o:
+            baca.hairpin_function(
+                o,
+                "pp < p >o niente",
+                pieces=lambda _: baca.select.lparts(baca.select.rleaves(_), [1, 3]),
+            )
+    for name in ["va", "vc1", "vc2"]:
+        m = cache[name]
+        with baca.scope(m[1]) as o:
+            baca.pitch_function(o, "Bb4")
+            baca.trill_spanner_function(
+                baca.select.tleaves(o, rleak=True),
+                abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
+                alteration="Cb5",
+            )
+    for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
+        m = cache[name]
+        with baca.scope(m.get(1, 2)) as o:
+            baca.dls_staff_padding_function(o.leaves(), 4)
 
 
 def make_score(first_measure_number, previous_persistent_indicators):
@@ -314,13 +279,13 @@ def make_score(first_measure_number, previous_persistent_indicators):
         len(accumulator.time_signatures),
         library.voice_abbreviations,
     )
-    bfl(cache["bfl"], accumulator)
-    perc1(cache["perc1"], accumulator)
-    perc2(cache["perc2"], accumulator)
-    hp(cache["hp"], accumulator)
-    cb1(cache["cb1"], accumulator)
-    cb2(cache["cb2"], accumulator)
-    composites(cache, accumulator)
+    bfl(cache["bfl"])
+    perc1(cache["perc1"])
+    perc2(cache["perc2"])
+    hp(cache["hp"])
+    cb1(cache["cb1"])
+    cb2(cache["cb2"])
+    composites(cache)
     return score, accumulator
 
 
@@ -341,7 +306,6 @@ def main():
             baca.tags.STAGE_NUMBER,
         ],
         always_make_global_rests=True,
-        commands=accumulator.commands,
         deactivate=[
             *baca.tags.instrument_color_tags(),
             *baca.tags.short_instrument_name_color_tags(),
