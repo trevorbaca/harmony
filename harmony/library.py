@@ -1054,10 +1054,10 @@ def slate_staff_position():
     )
 
 
-def slate_staff_position_function(o):
-    baca.staff_position_function(o, 1)
-    baca.stem_down_function(o.pleaves())
-    baca.tuplet_bracket_up_function(o)
+def slate_staff_position_function(argument):
+    baca.staff_position_function(argument, 1)
+    baca.stem_down_function(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up_function(argument)
 
 
 def tam_tam_staff_position():
