@@ -1000,11 +1000,10 @@ def cb1(m):
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.metric_modulation_spanner_function(
+            # TODO: pitched trill suppresses start of text spanner
             baca.select.rleak(o.tleaves()),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             autodetect_right_padding=False,
-            # TODO: pitched trill suppresses start of text spanner
-            # selector=lambda _: baca.select.tleaves(_, rleak=True),
         )
     for item in [(1, 2), (4, 5), 10]:
         with baca.scope(m.get(item)) as o:

@@ -489,7 +489,6 @@ def vc1(m):
                 baca.select.rleak(run),
                 "P =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                # selector=lambda _: baca.select.rleak(baca.select.ltleaves(_)),
             )
     with baca.scope(m[4]) as o:
         baca.pitch_function(o, "F4"),

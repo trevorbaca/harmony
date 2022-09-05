@@ -341,7 +341,6 @@ def bfl(m):
             baca.trill_spanner_function(
                 u,
                 abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
-                # selector=lambda _: baca.select.tleaves(_, rleak=True),
             )
             baca.metric_modulation_spanner_function(
                 u,

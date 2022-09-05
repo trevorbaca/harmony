@@ -813,9 +813,7 @@ def perc1_perc2(cache):
             ]
             baca.dots_extra_offset_function(rests, (1, 0))
             baca.dots_x_extent_false_function(rests)
-            baca.rest_x_extent_zero_function(
-                rests
-            )  # ??? selector=lambda _: abjad.select.rest(_, 0)),
+            baca.rest_x_extent_zero_function(rests)
 
 
 def hp(cache):
