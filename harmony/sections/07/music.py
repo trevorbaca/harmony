@@ -631,12 +631,6 @@ def hp(cache):
     m = cache[name]
     with baca.scope(m[1]) as o:
         library.whisk_staff_position_function(o)
-        #    baca.hairpin_function(o,
-        #        'o< "f" >o niente',
-        #        left_broken=True,
-        #        map=lambda _: baca.select.clparts(_, [3]),
-        #        pieces=lambda _: baca.select.clparts(_, [1]),
-        #    ),
         baca.dynamic_function(o.phead(0), '"f"')
         baca.dls_staff_padding_function(o, 6)
         baca.metric_modulation_spanner_function(
