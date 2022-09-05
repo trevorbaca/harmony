@@ -950,13 +950,6 @@ def hp(m):
             baca.clef_function(u, "percussion"),
             baca.staff_lines_function(u, 1),
         library.whisk_staff_position_function(o.pleaves()[-2:])
-        #    baca.hairpin_function(o,
-        #        'o< "f" >o niente',
-        #        forbid_al_niente_to_bar_line=True,
-        #        pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
-        #        right_broken=True,
-        #        selector=lambda _: baca.select.rleak(baca.select.pleaves(_)[-2:]),
-        #    ),
         baca.dynamic_function(o.phead(0), '"f"')
         baca.dls_staff_padding_function(o.leaves()[-3:], 6)
         baca.markup_function(

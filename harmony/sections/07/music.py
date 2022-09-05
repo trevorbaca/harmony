@@ -708,21 +708,10 @@ def hp(cache):
             baca.staff_lines_function(u, 1),
             library.whisk_staff_position_function(u)
             baca.markup_function(u, r"\baca-whisk-markup")
-            #    baca.hairpin_function(o,
-            #        'o< "f" >o',
-            #        forbid_al_niente_to_bar_line=True,
-            #        pieces=lambda _: baca.select.lparts(_, [1, 1]),
-            #        selector=lambda _: baca.select.leaves(_)[-2:],
-            #    ),
             baca.dynamic_function(u, '"f"')
             baca.dls_staff_padding_function(u, 6 + 2)
     with baca.scope(m[8]) as o:
         library.whisk_staff_position_function(o)
-        #    baca.hairpin_function(o,
-        #        'o< "f" >o niente',
-        #        pieces=lambda _: baca.select.lparts(_, [1, 2]),
-        #        selector=lambda _: baca.select.leaves(_)[:3],
-        #    ),
         baca.dynamic_function(o.phead(0), '"f"')
         baca.dls_staff_padding_function(o, 6 + 2)
     with baca.scope(m.get(7, 8)) as o:
