@@ -217,9 +217,7 @@ def cb2(m):
             wrappers.extend(baca.rehearsal_mark_down(u))
             wrappers.extend(baca.rehearsal_mark_extra_offset(u, (92, 8)))
             wrappers.extend(baca.rehearsal_mark_padding(u, 12))
-            wrappers.extend(
-                baca.rehearsal_mark_self_alignment_x(u, abjad.RIGHT)
-            )
+            wrappers.extend(baca.rehearsal_mark_self_alignment_x(u, abjad.RIGHT))
             baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 
