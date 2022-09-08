@@ -33,10 +33,10 @@ def GLOBALS(skips, first_measure_number):
         (1 - 1, "3:2(4)=4"),
     ):
         skip = skips[index]
-        baca.metronome_mark_function(skip, item, library.manifests)
-    baca.open_volta_function(skips[1 - 1], first_measure_number)
-    baca.close_volta_function(skips[2 - 1], first_measure_number, site="after")
-    baca.double_volta_function(skips[2 - 1], first_measure_number)
+        baca.metronome_mark(skip, item, library.manifests)
+    baca.open_volta(skips[1 - 1], first_measure_number)
+    baca.close_volta(skips[2 - 1], first_measure_number, site="after")
+    baca.double_volta(skips[2 - 1], first_measure_number)
 
 
 def BFL(voice, accumulator):
@@ -50,7 +50,7 @@ def BFL(voice, accumulator):
         [3, 6, 3, 3, 6, 3],
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def PERC1(voice, accumulator):
@@ -74,7 +74,7 @@ def PERC2(voice, accumulator):
         [3, -6, 3, 3, -6, 3],
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def HP(voice, accumulator):
@@ -109,7 +109,7 @@ def VA(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def VC1(voice, accumulator):
@@ -132,7 +132,7 @@ def VC1(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def VC2(voice, accumulator):
@@ -155,7 +155,7 @@ def VC2(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def CB1(voice, accumulator):
@@ -178,7 +178,7 @@ def CB1(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def CB2(voice, accumulator):
@@ -192,92 +192,92 @@ def CB2(voice, accumulator):
         [-9, 3, -9, 3],
     )
     voice.extend(music)
-    baca.append_anchor_note_function(voice)
+    baca.append_anchor_note(voice)
 
 
 def bfl(m):
     with baca.scope(m[1]) as o:
-        baca.pitch_function(o, "G3")
+        baca.pitch(o, "G3")
         with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
-            baca.covered_spanner_function(
+            baca.covered_spanner(
                 u,
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 left_broken=True,
             )
-            baca.metric_modulation_spanner_function(
+            baca.metric_modulation_spanner(
                 u,
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 left_broken=True,
             )
     with baca.scope(m[2]) as o:
-        baca.pitch_function(o, "Gb3")
-        baca.color_fingerings_function(o.pheads(), [0, 1, 2])
-        baca.dynamic_function(o.phead(0), "mp")
-        baca.covered_spanner_function(
+        baca.pitch(o, "Gb3")
+        baca.color_fingerings(o.pheads(), [0, 1, 2])
+        baca.dynamic(o.phead(0), "mp")
+        baca.covered_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding_function(o, 4)
+        baca.dls_staff_padding(o, 4)
 
 
 def perc1(m):
     with baca.scope(m[1]) as o:
-        baca.accent_function(o.pheads())
-        baca.stem_tremolo_function(o.pheads())
-        baca.dynamic_function(o.phead(0), '"f"')
-        baca.markup_function(
+        baca.accent(o.pheads())
+        baca.stem_tremolo(o.pheads())
+        baca.dynamic(o.phead(0), '"f"')
+        baca.markup(
             o.pleaf(0),
             r"\baca-slate-brush-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[2]) as o:
-        baca.accent_function(o.pheads())
-        baca.accent_function(o.pheads())
-        baca.stem_tremolo_function(o.pheads())
+        baca.accent(o.pheads())
+        baca.accent(o.pheads())
+        baca.stem_tremolo(o.pheads())
     with baca.scope(m.get(1, 2)) as o:
-        library.slate_staff_position_function(o)
-        baca.dls_staff_padding_function(o, 6)
+        library.slate_staff_position(o)
+        baca.dls_staff_padding(o, 6)
 
 
 def perc2(m):
     with baca.scope(m[2]) as o:
-        library.bass_drum_staff_position_function(o.rleaves(), allow_hidden=True)
-        baca.accent_function(o.pheads()[:-1])
-        baca.dynamic_function(o.phead(0), "mp")
-        baca.markup_function(
+        library.bass_drum_staff_position(o.rleaves(), allow_hidden=True)
+        baca.accent(o.pheads()[:-1])
+        baca.dynamic(o.phead(0), "mp")
+        baca.markup(
             o.pleaf(0),
             r"\baca-bd-sponge-markup",
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
-        baca.flat_glissando_function(
+        baca.flat_glissando(
             baca.select.rleak(o.pleaves()[-1:]),
             right_broken=True,
         )
-        baca.stem_tremolo_function(o.pleaf(-1))
-        baca.dynamic_function(o.pleaf(-1), "p")
-        baca.markup_function(
+        baca.stem_tremolo(o.pleaf(-1))
+        baca.dynamic(o.pleaf(-1), "p")
+        baca.markup(
             o.pleaf(-1),
             r"\baca-bd-fingertips-markup",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding_function(o, 6)
+        baca.dls_staff_padding(o, 6)
 
 
 def hp(cache):
     name = "hp"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.pitch_function(o, "<B5 C#6>")
+        baca.pitch(o, "<B5 C#6>")
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.double_flageolet_function(o.phead(0))
-        baca.dynamic_function(o.phead(0), "f")
-        baca.dls_staff_padding_function(o, 4 + 2)
-        baca.markup_function(
+        baca.double_flageolet(o.phead(0))
+        baca.dynamic(o.phead(0), "f")
+        baca.dls_staff_padding(o, 4 + 2)
+        baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
             abjad.Tweak(r"- \tweak padding 1.5"),
@@ -286,32 +286,32 @@ def hp(cache):
 
 def va(m):
     with baca.scope(m[1]) as o:
-        baca.pitch_function(o, "C#4")
-        baca.flat_glissando_function(o.pleaves())
-        baca.hairpin_function(baca.select.tleaves(o, rleak=True), "mf >o niente")
-        baca.markup_function(
+        baca.pitch(o, "C#4")
+        baca.flat_glissando(o.pleaves())
+        baca.hairpin(baca.select.tleaves(o, rleak=True), "mf >o niente")
+        baca.markup(
             o.pleaf(0),
             r"\harmony-match-harp-decay-markup",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
-        baca.bow_speed_spanner_function(
+        baca.bow_speed_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
             "XFB =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
     with baca.scope(m[2]) as o:
-        baca.pitch_function(o, "C4")
+        baca.pitch(o, "C4")
 
 
 def vc1(m):
     with baca.scope(m.get(1, 2)) as o:
-        baca.pitch_function(o, "B4")
+        baca.pitch(o, "B4")
 
 
 def vc2(m):
     with baca.scope(m.get(1, 2)) as o:
-        baca.pitch_function(o, "Dqs4")
-        baca.markup_function(
+        baca.pitch(o, "Dqs4")
+        baca.markup(
             o.pleaf(0),
             r"\baca-eleven-a",
             abjad.Tweak(r"- \tweak staff-padding 1.5"),
@@ -320,50 +320,50 @@ def vc2(m):
 
 def cb1(m):
     with baca.scope(m[1]) as o:
-        baca.clef_function(o.leaf(0), "bass")
-        baca.pitch_function(o, "E3")
-        baca.note_head_style_harmonic_function(o.pleaves())
-        baca.markup_function(
+        baca.clef(o.leaf(0), "bass")
+        baca.pitch(o, "E3")
+        baca.note_head_style_harmonic(o.pleaves())
+        baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
         )
     with baca.scope(m[2]) as o:
-        baca.pitch_function(o, "F3")
+        baca.pitch(o, "F3")
 
 
 def cb2(m):
     with baca.scope(m[1]) as o:
-        baca.clef_function(o.leaf(0), "bass")
-        baca.pitch_function(o, "A1")
-        baca.markup_function(
+        baca.clef(o.leaf(0), "bass")
+        baca.pitch(o, "A1")
+        baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
             abjad.Tweak(r"- \tweak padding 1"),
             direction=abjad.DOWN,
         )
     with baca.scope(m[2]) as o:
-        baca.clef_function(o.leaf(0), "treble")
-        baca.pitches_function(o, "Fqs5 Gqf5", do_not_transpose=True)
-        baca.note_head_style_harmonic_function(o.pleaves())
-        baca.laissez_vibrer_function(o.ptails())
-        baca.dynamic_function(o.phead(0), "ff")
-        baca.pizzicato_spanner_function(
+        baca.clef(o.leaf(0), "treble")
+        baca.pitches(o, "Fqs5 Gqf5", do_not_transpose=True)
+        baca.note_head_style_harmonic(o.pleaves())
+        baca.laissez_vibrer(o.ptails())
+        baca.dynamic(o.phead(0), "ff")
+        baca.pizzicato_spanner(
             baca.select.tleaves(o, rleak=True),
             abjad.Tweak(r"- \tweak staff-padding 6.5"),
         )
-        baca.markup_function(
+        baca.markup(
             o.pheads(),
             r"\baca-string-iii-markup",
             direction=abjad.DOWN,
         )
-        baca.markup_function(
+        baca.markup(
             o.pleaf(0),
             r"\baca-thirteen-a",
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
-        baca.markup_function(
+        baca.markup(
             o.phead(-1),
             r"\baca-fourteen-a",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -374,27 +374,27 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.tuplet_bracket_up_function(o)
-            baca.hairpin_function(baca.select.tleaves(o, rleak=True), "mp >o niente")
+            baca.tuplet_bracket_up(o)
+            baca.hairpin(baca.select.tleaves(o, rleak=True), "mp >o niente")
             with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
                 if name in ("va", "vc1", "vc2"):
-                    baca.bow_speed_spanner_function(
+                    baca.bow_speed_spanner(
                         u,
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
                     ),
-                    baca.metric_modulation_spanner_function(
+                    baca.metric_modulation_spanner(
                         u,
                         abjad.Tweak(r"- \tweak staff-padding 8"),
                         right_broken=True,
                     )
                 elif name == "cb1":
-                    baca.bow_speed_spanner_function(
+                    baca.bow_speed_spanner(
                         u,
                         "XFB =|",
                         abjad.Tweak(r"- \tweak staff-padding 8"),
                     )
-                    baca.metric_modulation_spanner_function(
+                    baca.metric_modulation_spanner(
                         u,
                         abjad.Tweak(r"- \tweak staff-padding 10.5"),
                         right_broken=True,
@@ -402,12 +402,12 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.stop_on_string_function(baca.select.leaf_in_each_rleak_run(o, -1))
-            baca.hairpin_function(baca.select.tleaves(o, rleak=True), "o<| ff")
+            baca.stop_on_string(baca.select.leaf_in_each_rleak_run(o, -1))
+            baca.hairpin(baca.select.tleaves(o, rleak=True), "o<| ff")
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 2)) as o:
-            baca.dls_staff_padding_function(o, 4)
+            baca.dls_staff_padding(o, 4)
 
 
 def make_score(first_measure_number, previous_persistent_indicators):
