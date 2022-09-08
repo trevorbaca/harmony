@@ -41,21 +41,21 @@ def appoggiato_pitches_g():
     return "B4 C5  G#4 A4 Aqs4 A#4 Atqs4 B4  A4 B4 Bqs4 C5 Cqs5".split()
 
 
-def bass_drum_staff_position_function(argument, *, allow_hidden=False):
-    baca.staff_position_function(argument, -1, allow_hidden=allow_hidden)
-    baca.stem_down_function(baca.select.pleaves(argument))
-    baca.tuplet_bracket_up_function(argument)
+def bass_drum_staff_position(argument, *, allow_hidden=False):
+    baca.staff_position(argument, -1, allow_hidden=allow_hidden)
+    baca.stem_down(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up(argument)
 
 
-def bridge_staff_position_function(o):
-    baca.staff_position_function(o, 0)
-    baca.stem_down_function(o.pleaves())
-    baca.tuplet_bracket_up_function(o)
+def bridge_staff_position(o):
+    baca.staff_position(o, 0)
+    baca.stem_down(o.pleaves())
+    baca.tuplet_bracket_up(o)
 
 
-def brake_drum_staff_position_function(o):
-    baca.staff_position_function(o, 0)
-    baca.stem_up_function(o.pleaves())
+def brake_drum_staff_position(o):
+    baca.staff_position(o, 0)
+    baca.stem_up(o.pleaves())
 
 
 def cerulean():
@@ -1003,40 +1003,40 @@ def part_manifest():
     )
 
 
-def purpleheart_staff_positions_function(o, positions, *, allow_obgc_mutation=False):
+def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     assert isinstance(positions, list), repr(positions)
     assert all(_ in (-2, 0, 2) for _ in positions), repr(positions)
-    baca.stem_down_function(baca.select.pleaves(o))
-    baca.tuplet_bracket_up_function(o)
-    baca.tuplet_bracket_staff_padding_function(o, 0.5)
-    baca.staff_positions_function(o, positions, allow_obgc_mutation=allow_obgc_mutation)
+    baca.stem_down(baca.select.pleaves(o))
+    baca.tuplet_bracket_up(o)
+    baca.tuplet_bracket_staff_padding(o, 0.5)
+    baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
 
 
-def slate_staff_position_function(argument):
-    baca.staff_position_function(argument, 1)
-    baca.stem_down_function(baca.select.pleaves(argument))
-    baca.tuplet_bracket_up_function(argument)
+def slate_staff_position(argument):
+    baca.staff_position(argument, 1)
+    baca.stem_down(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up(argument)
 
 
-def tam_tam_staff_position_function(o):
-    baca.staff_position_function(o, 0)
-    baca.stem_down_function(o.pleaves())
-    baca.tuplet_bracket_up_function(o)
+def tam_tam_staff_position(o):
+    baca.staff_position(o, 0)
+    baca.stem_down(o.pleaves())
+    baca.tuplet_bracket_up(o)
 
 
-def triangle_staff_position_function(o):
-    baca.staff_position_function(o, 1)
-    baca.stem_up_function(o.pleaves())
+def triangle_staff_position(o):
+    baca.staff_position(o, 1)
+    baca.stem_up(o.pleaves())
 
 
 def warble_pitches():
     return "G3 G#3 A3 A#3 B3 C4 C#4 C4 B3 Bb3 A3 Ab3".split()
 
 
-def whisk_staff_position_function(argument):
-    baca.staff_position_function(argument, 0)
-    baca.stem_down_function(baca.select.pleaves(argument))
-    baca.tuplet_bracket_up_function(argument)
+def whisk_staff_position(argument):
+    baca.staff_position(argument, 0)
+    baca.stem_down(baca.select.pleaves(argument))
+    baca.tuplet_bracket_up(argument)
 
 
 instruments = {
