@@ -138,7 +138,7 @@ def PERC1(voice, accumulator):
         [-2, 3, -3, 3, -3, 3, -3, 3, -3],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes(accumulator.get(4, 5))
+    music = baca.make_repeat_tied_notes_function(accumulator.get(4, 5))
     voice.extend(music)
 
     def preprocessor(divisions):
@@ -161,7 +161,7 @@ def PERC1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8))
     voice.extend(music)
-    music = baca.make_repeat_tied_notes(accumulator.get(9))
+    music = baca.make_repeat_tied_notes_function(accumulator.get(9))
     voice.extend(music)
 
 

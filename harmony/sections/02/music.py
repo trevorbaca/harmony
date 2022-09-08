@@ -142,7 +142,7 @@ def PERC1(voice, accumulator):
 
 
 def PERC2(voice, accumulator):
-    music = baca.make_repeat_tied_notes(accumulator.get(1, 3))
+    music = baca.make_repeat_tied_notes_function(accumulator.get(1, 3))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(4),

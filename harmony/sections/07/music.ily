@@ -6896,7 +6896,7 @@ number.7.Cello.2.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_repeat_tied_notes()
+      %! baca.make_repeat_tied_notes_function()
     b,1
     % AFTER:
     % ARTICULATIONS:
@@ -8572,7 +8572,7 @@ number.7.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 8]
-      %! baca.make_repeat_tied_notes()
+      %! baca.make_repeat_tied_notes_function()
     bf!1
     % AFTER:
     % ARTICULATIONS:

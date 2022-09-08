@@ -3056,7 +3056,7 @@ number.27.Percussion.1.Music = {
     % COMMANDS:
       %! baca.stem_up(1)
     \override Stem.direction = #up
-      %! baca.make_repeat_tied_notes()
+      %! baca.make_repeat_tied_notes_function()
     c'1..
     % AFTER:
     % ARTICULATIONS:
@@ -3112,7 +3112,7 @@ number.27.Percussion.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_repeat_tied_notes()
+      %! baca.make_repeat_tied_notes_function()
     c'1.
     % AFTER:
     % COMMANDS:
@@ -3311,7 +3311,7 @@ number.27.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_repeat_tied_notes()
+      %! baca.make_repeat_tied_notes_function()
     c'1..
     % AFTER:
     % ARTICULATIONS:

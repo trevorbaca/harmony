@@ -364,7 +364,7 @@ def VC2(voice, accumulator):
         [-4, 8, "-"],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes(accumulator.get(8))
+    music = baca.make_repeat_tied_notes_function(accumulator.get(8))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -429,7 +429,7 @@ def CB2(voice, accumulator):
         [-4, 8, "-"],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes(accumulator.get(8))
+    music = baca.make_repeat_tied_notes_function(accumulator.get(8))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
