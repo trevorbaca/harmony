@@ -379,7 +379,7 @@ def make_phjc_rhythm(
     divisions,
     counts,
     *,
-    extra_counts=None,
+    extra_counts=(),
     rest=None,
     rest_cyclic=None,
     rest_except=None,
@@ -462,7 +462,7 @@ def make_phjc_rhythm(
     return music
 
 
-def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=None, rest_except=None):
+def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
     commands = []
     if rest_except is not None:
 
@@ -939,7 +939,7 @@ def make_warble_rhythm(
     time_signatures,
     *,
     sixteenths=None,
-    extra_counts=None,
+    extra_counts=(),
     rest_tuplets=None,
     rest_tuplets_cyclic=None,
 ):
