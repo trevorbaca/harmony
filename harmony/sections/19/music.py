@@ -255,7 +255,7 @@ def HP(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -263,7 +263,7 @@ def HP(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -271,7 +271,7 @@ def HP(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)
@@ -324,7 +324,7 @@ def VA(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -332,7 +332,7 @@ def VA(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -340,7 +340,7 @@ def VA(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)
@@ -387,7 +387,7 @@ def VC1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -395,7 +395,7 @@ def VC1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -403,7 +403,7 @@ def VC1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)
@@ -448,7 +448,7 @@ def VC2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -456,7 +456,7 @@ def VC2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -464,7 +464,7 @@ def VC2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)
@@ -509,7 +509,7 @@ def CB1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -517,7 +517,7 @@ def CB1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -525,7 +525,7 @@ def CB1(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)
@@ -574,7 +574,7 @@ def CB2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(5))
+    music = baca.make_notes_function(accumulator.get(5))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(6),
@@ -582,7 +582,7 @@ def CB2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7))
+    music = baca.make_notes_function(accumulator.get(7))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(8),
@@ -590,7 +590,7 @@ def CB2(voice, accumulator):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10))
     voice.extend(music)

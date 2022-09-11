@@ -5272,7 +5272,7 @@ number.12.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     b1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -5325,7 +5325,7 @@ number.12.Percussion.2.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     b2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5352,7 +5352,7 @@ number.12.Percussion.2.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     b1
     % AFTER:
     % STEM_TREMOLOS:
@@ -7132,7 +7132,7 @@ number.12.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d1.
     % AFTER:
     % ARTICULATIONS:
@@ -8663,7 +8663,7 @@ number.12.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d,1.
     % AFTER:
     % ARTICULATIONS:
@@ -10120,7 +10120,7 @@ number.12.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d,1.
     % AFTER:
     % ARTICULATIONS:
@@ -11719,7 +11719,7 @@ number.12.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d1.
     % AFTER:
     % ARTICULATIONS:
@@ -13248,7 +13248,7 @@ number.12.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d1.
     % AFTER:
     % ARTICULATIONS:

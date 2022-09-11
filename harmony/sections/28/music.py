@@ -142,7 +142,7 @@ def HP(voice, accumulator):
 
 
 def VA(voice, accumulator):
-    music = baca.make_notes(accumulator.get(1, 4))
+    music = baca.make_notes_function(accumulator.get(1, 4))
     voice.extend(music)
     music = library.make_tessera_4(
         accumulator.get(5),
@@ -151,7 +151,7 @@ def VA(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(6))
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(7, 10))
+    music = baca.make_notes_function(accumulator.get(7, 10))
     voice.extend(music)
     baca.append_anchor_note(voice)
 

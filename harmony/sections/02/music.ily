@@ -10152,7 +10152,7 @@ number.2.Cello.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     a,1
     % AFTER:
     % STEM_TREMOLOS:

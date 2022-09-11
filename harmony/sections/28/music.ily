@@ -5728,7 +5728,7 @@ number.28.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gqf!2
     % AFTER:
     % ARTICULATIONS:
@@ -5811,14 +5811,14 @@ number.28.Viola.Music = {
       %! abjad.glissando(3)
       %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gqf!2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 3]
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gqf!2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5845,7 +5845,7 @@ number.28.Viola.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gqf!2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5924,7 +5924,7 @@ number.28.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     e1..
     % AFTER:
     % ARTICULATIONS:
@@ -6008,14 +6008,14 @@ number.28.Viola.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     e1..
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 9]
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     e1..
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6042,7 +6042,7 @@ number.28.Viola.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     e1..
     % AFTER:
     % COMMANDS:

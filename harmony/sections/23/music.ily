@@ -1957,7 +1957,7 @@ number.23.Percussion.1.Music = {
     % COMMANDS:
       %! baca.stem_up(1)
     \once \override Stem.direction = #up
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d'2.
     % AFTER:
     % STEM_TREMOLOS:
@@ -4937,7 +4937,7 @@ number.23.Cello.2.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     dqf!1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:

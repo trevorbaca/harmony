@@ -116,7 +116,7 @@ def PERC1(voice, accumulator):
         [21, "-"],
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(6))
+    music = baca.make_notes_function(accumulator.get(6))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
@@ -166,7 +166,7 @@ def PERC2(voice, accumulator):
         [21, "-"],
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(6))
+    music = baca.make_notes_function(accumulator.get(6))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
@@ -206,7 +206,7 @@ def HP(voice, accumulator):
         [21, "-"],
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(6))
+    music = baca.make_notes_function(accumulator.get(6))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
@@ -259,7 +259,7 @@ def VA(voice, accumulator):
         library.glissando_counts_curtailed(),
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(6))
+    music = baca.make_notes_function(accumulator.get(6))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)

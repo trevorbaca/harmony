@@ -2909,7 +2909,7 @@ number.7.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     c'1
     % AFTER:
     % STEM_TREMOLOS:
@@ -2962,7 +2962,7 @@ number.7.Percussion.2.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     c'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:

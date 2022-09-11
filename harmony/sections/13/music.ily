@@ -2139,7 +2139,7 @@ number.13.Percussion.1.Music = {
       %! EXPLICIT_STAFF_LINES_COLOR
       %! baca._attach_color_literal(2)
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     d'1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -4199,7 +4199,7 @@ number.13.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     df!1.
     % AFTER:
     % ARTICULATIONS:
@@ -4853,7 +4853,7 @@ number.13.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     c1.
     % AFTER:
     % ARTICULATIONS:
@@ -5568,7 +5568,7 @@ number.13.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     c1.
     % AFTER:
     % ARTICULATIONS:
@@ -6341,7 +6341,7 @@ number.13.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     b1.
     % AFTER:
     % ARTICULATIONS:
@@ -7068,7 +7068,7 @@ number.13.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     b1.
     % AFTER:
     % ARTICULATIONS:
