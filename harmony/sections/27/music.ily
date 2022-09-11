@@ -4685,7 +4685,7 @@ number.27.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     af'!1..
     % AFTER:
     % ARTICULATIONS:
@@ -5091,7 +5091,7 @@ number.27.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 4]
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     af'!1..
     % AFTER:
     % ARTICULATIONS:
@@ -5289,7 +5289,7 @@ number.27.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gqf!1..
     % AFTER:
     % ARTICULATIONS:
@@ -6640,7 +6640,7 @@ number.27.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     g1..
     % AFTER:
     % ARTICULATIONS:
@@ -7851,7 +7851,7 @@ number.27.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     g1..
     % AFTER:
     % ARTICULATIONS:
@@ -9092,7 +9092,7 @@ number.27.Contrabass.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gf!1..
     % AFTER:
     % ARTICULATIONS:
@@ -10195,7 +10195,7 @@ number.27.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     gf!1..
     % AFTER:
     % ARTICULATIONS:

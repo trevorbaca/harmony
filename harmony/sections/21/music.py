@@ -249,7 +249,7 @@ def VC1(voice, accumulator):
 
 
 def VC2(voice, accumulator):
-    music = baca.make_notes(accumulator.get(1))
+    music = baca.make_notes_function(accumulator.get(1))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(2),
@@ -258,7 +258,7 @@ def VC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(3))
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(4))
+    music = baca.make_notes_function(accumulator.get(4))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(5),

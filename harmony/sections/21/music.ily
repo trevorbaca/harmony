@@ -4711,7 +4711,7 @@ number.21.Cello.2.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     dqf!1.
     % AFTER:
     % ARTICULATIONS:
@@ -5006,7 +5006,7 @@ number.21.Cello.2.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     dqf!1.
     % AFTER:
     % ARTICULATIONS:

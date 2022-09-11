@@ -249,7 +249,7 @@ def HP(voice, accumulator):
 
 
 def VA(voice, accumulator):
-    music = baca.make_notes(accumulator.get(1))
+    music = baca.make_notes_function(accumulator.get(1))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2), head=voice.name)
     voice.extend(music)
@@ -258,7 +258,7 @@ def VA(voice, accumulator):
         [6, 3, 11],
     )
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(4))
+    music = baca.make_notes_function(accumulator.get(4))
     voice.extend(music)
     music = baca.make_skeleton(
         r"c2. c8 \times 5/4 { c2 }",
@@ -273,7 +273,7 @@ def VA(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7, 8))
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -313,7 +313,7 @@ def VC1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -350,7 +350,7 @@ def VC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -387,7 +387,7 @@ def CB1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -426,7 +426,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(9))
+    music = baca.make_notes_function(accumulator.get(9))
     voice.extend(music)
     baca.append_anchor_note(voice)
 

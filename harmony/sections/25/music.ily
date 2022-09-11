@@ -5845,7 +5845,7 @@ number.25.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     af'!1..
     % AFTER:
     % ARTICULATIONS:
@@ -5948,7 +5948,7 @@ number.25.Viola.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_notes()
+      %! baca.make_notes_function()
     af'!1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
