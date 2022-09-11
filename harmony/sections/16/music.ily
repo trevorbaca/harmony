@@ -2786,6 +2786,7 @@ number.16.Viola.Music = {
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -2853,6 +2854,7 @@ number.16.Viola.Music = {
     ef'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -2887,6 +2889,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -2900,6 +2903,7 @@ number.16.Viola.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -2943,6 +2947,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -2956,6 +2961,7 @@ number.16.Viola.Music = {
     ef'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -2975,6 +2981,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -2988,6 +2995,7 @@ number.16.Viola.Music = {
     ef'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -3021,6 +3029,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -3034,6 +3043,7 @@ number.16.Viola.Music = {
     ef'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -3070,6 +3080,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -3083,6 +3094,7 @@ number.16.Viola.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -3107,6 +3119,7 @@ number.16.Viola.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -3120,6 +3133,7 @@ number.16.Viola.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5394,6 +5408,7 @@ number.16.Contrabass.1.Music = {
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5461,6 +5476,7 @@ number.16.Contrabass.1.Music = {
     ds'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5495,6 +5511,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5508,6 +5525,7 @@ number.16.Contrabass.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5551,6 +5569,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5564,6 +5583,7 @@ number.16.Contrabass.1.Music = {
     ds'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5583,6 +5603,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5596,6 +5617,7 @@ number.16.Contrabass.1.Music = {
     ds'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5629,6 +5651,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5642,6 +5665,7 @@ number.16.Contrabass.1.Music = {
     ds'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5678,6 +5702,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5691,6 +5716,7 @@ number.16.Contrabass.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5715,6 +5741,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5728,6 +5755,7 @@ number.16.Contrabass.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5947,6 +5975,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6000,6 +6029,7 @@ number.16.Contrabass.1.Music = {
     ds'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6034,6 +6064,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6047,6 +6078,7 @@ number.16.Contrabass.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6073,6 +6105,7 @@ number.16.Contrabass.1.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6086,6 +6119,7 @@ number.16.Contrabass.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6278,6 +6312,7 @@ number.16.Contrabass.2.Music = {
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6345,6 +6380,7 @@ number.16.Contrabass.2.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6379,6 +6415,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6392,6 +6429,7 @@ number.16.Contrabass.2.Music = {
     cs'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6435,6 +6473,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6448,6 +6487,7 @@ number.16.Contrabass.2.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6467,6 +6507,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6480,6 +6521,7 @@ number.16.Contrabass.2.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6513,6 +6555,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6526,6 +6569,7 @@ number.16.Contrabass.2.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6562,6 +6606,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6575,6 +6620,7 @@ number.16.Contrabass.2.Music = {
     cs'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6599,6 +6645,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6612,6 +6659,7 @@ number.16.Contrabass.2.Music = {
     cs'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6838,6 +6886,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6891,6 +6940,7 @@ number.16.Contrabass.2.Music = {
     d'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6925,6 +6975,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-downbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6938,6 +6989,7 @@ number.16.Contrabass.2.Music = {
     cs'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6964,6 +7016,7 @@ number.16.Contrabass.2.Music = {
       %! baca.alternate_bow_strokes()
     - \baca-full-upbow
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6977,6 +7030,7 @@ number.16.Contrabass.2.Music = {
     cs'!16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:

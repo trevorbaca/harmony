@@ -4032,6 +4032,7 @@ number.3.Viola.Music = {
       %! baca.dynamic()
     \mp
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -4066,6 +4067,7 @@ number.3.Viola.Music = {
     ef16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5127,6 +5129,7 @@ number.3.Cello.1.Music = {
       %! baca.dynamic()
     \mp
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5161,6 +5164,7 @@ number.3.Cello.1.Music = {
     e'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6451,6 +6455,7 @@ number.3.Cello.2.Music = {
       %! baca.dynamic()
     \mp
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6485,6 +6490,7 @@ number.3.Cello.2.Music = {
     eqf'16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
