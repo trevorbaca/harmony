@@ -6076,6 +6076,7 @@ number.10.Viola.Music = {
     fs'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6111,6 +6112,7 @@ number.10.Viola.Music = {
     b16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7480,6 +7482,7 @@ number.10.Cello.1.Music = {
     fs16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -7515,6 +7518,7 @@ number.10.Cello.1.Music = {
     b,16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7550,6 +7554,7 @@ number.10.Cello.1.Music = {
     d16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -7583,6 +7588,7 @@ number.10.Cello.1.Music = {
     b,16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7606,6 +7612,7 @@ number.10.Cello.1.Music = {
     a,16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -7639,6 +7646,7 @@ number.10.Cello.1.Music = {
     d16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8872,6 +8880,7 @@ number.10.Cello.2.Music = {
     fs8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -8897,6 +8906,7 @@ number.10.Cello.2.Music = {
     e16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8910,6 +8920,7 @@ number.10.Cello.2.Music = {
     b,16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -8923,6 +8934,7 @@ number.10.Cello.2.Music = {
     d8.
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8958,6 +8970,7 @@ number.10.Cello.2.Music = {
     b,8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -8971,6 +8984,7 @@ number.10.Cello.2.Music = {
     d16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8984,6 +8998,7 @@ number.10.Cello.2.Music = {
     a,16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -9007,6 +9022,7 @@ number.10.Cello.2.Music = {
     g,8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9032,6 +9048,7 @@ number.10.Cello.2.Music = {
     b,16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -9065,6 +9082,7 @@ number.10.Cello.2.Music = {
     c16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9088,6 +9106,7 @@ number.10.Cello.2.Music = {
     c16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -9121,6 +9140,7 @@ number.10.Cello.2.Music = {
     g,16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11154,6 +11174,7 @@ number.10.Contrabass.2.Music = {
     fs'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11189,6 +11210,7 @@ number.10.Contrabass.2.Music = {
     g16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11225,6 +11247,7 @@ number.10.Contrabass.2.Music = {
     g8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11239,6 +11262,7 @@ number.10.Contrabass.2.Music = {
     b16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11252,6 +11276,7 @@ number.10.Contrabass.2.Music = {
     f16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11275,6 +11300,7 @@ number.10.Contrabass.2.Music = {
     g8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11315,6 +11341,7 @@ number.10.Contrabass.2.Music = {
     g8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11339,6 +11366,7 @@ number.10.Contrabass.2.Music = {
     f16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11352,6 +11380,7 @@ number.10.Contrabass.2.Music = {
     a16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11365,6 +11394,7 @@ number.10.Contrabass.2.Music = {
     e8.
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:

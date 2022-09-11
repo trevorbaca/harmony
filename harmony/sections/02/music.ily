@@ -5008,6 +5008,7 @@ number.2.Percussion.2.Music = {
     d'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -5019,6 +5020,7 @@ number.2.Percussion.2.Music = {
     d'8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6362,6 +6364,7 @@ number.2.Harp.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6373,6 +6376,7 @@ number.2.Harp.Music = {
     c'8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -14594,6 +14598,7 @@ number.2.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -14618,6 +14623,7 @@ number.2.Contrabass.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -14677,6 +14683,7 @@ number.2.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -14701,6 +14708,7 @@ number.2.Contrabass.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:

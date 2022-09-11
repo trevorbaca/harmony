@@ -6260,6 +6260,7 @@ number.28.Cello.1.Music = {
     e'''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6274,6 +6275,7 @@ number.28.Cello.1.Music = {
     cs'''!8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6355,6 +6357,7 @@ number.28.Cello.1.Music = {
     e'''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6369,6 +6372,7 @@ number.28.Cello.1.Music = {
     cs'''!8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9481,6 +9485,7 @@ number.28.Cello.2.Music = {
     a''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -9495,6 +9500,7 @@ number.28.Cello.2.Music = {
     cs'''!8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9576,6 +9582,7 @@ number.28.Cello.2.Music = {
     a''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -9590,6 +9597,7 @@ number.28.Cello.2.Music = {
     cs'''!8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:

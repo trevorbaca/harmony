@@ -9440,6 +9440,7 @@ number.19.Cello.1.Music = {
     d''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9478,6 +9479,7 @@ number.19.Cello.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10612,6 +10614,7 @@ number.19.Cello.2.Music = {
     btqf'!8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10650,6 +10653,7 @@ number.19.Cello.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11945,6 +11949,7 @@ number.19.Contrabass.1.Music = {
     g'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11983,6 +11988,7 @@ number.19.Contrabass.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_sixteenths()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
