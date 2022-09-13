@@ -1084,6 +1084,7 @@ number.2.BassFlute.Music.item.1 = {
     a'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -4961,6 +4962,7 @@ number.2.Percussion.2.Music = {
     d'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -5012,6 +5014,7 @@ number.2.Percussion.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5035,6 +5038,7 @@ number.2.Percussion.2.Music = {
     d'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -6368,6 +6372,7 @@ number.2.Harp.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6391,6 +6396,7 @@ number.2.Harp.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -6499,6 +6505,7 @@ number.2.Harp.Music = {
     g,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7212,6 +7219,7 @@ number.2.Viola.Music.item.3 = {
     af2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7258,6 +7266,7 @@ number.2.Viola.Music.item.4 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7421,6 +7430,7 @@ number.2.Viola.Music.item.7 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7454,6 +7464,7 @@ number.2.Viola.Music.item.8 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7487,6 +7498,7 @@ number.2.Viola.Music.item.9 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7535,6 +7547,7 @@ number.2.Viola.Music.item.10 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -8387,6 +8400,7 @@ number.2.Viola.Music = {
     gqf'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -9277,6 +9291,7 @@ number.2.Cello.1.Music.item.1 = {
     af2.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9323,6 +9338,7 @@ number.2.Cello.1.Music.item.2 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9369,6 +9385,7 @@ number.2.Cello.1.Music.item.3 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9499,6 +9516,7 @@ number.2.Cello.1.Music.item.5 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9532,6 +9550,7 @@ number.2.Cello.1.Music.item.6 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9565,6 +9584,7 @@ number.2.Cello.1.Music.item.7 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -9613,6 +9633,7 @@ number.2.Cello.1.Music.item.8 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -11323,6 +11344,7 @@ number.2.Cello.2.Music.item.1 = {
     af2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -11486,6 +11508,7 @@ number.2.Cello.2.Music.item.4 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -11519,6 +11542,7 @@ number.2.Cello.2.Music.item.5 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -11552,6 +11576,7 @@ number.2.Cello.2.Music.item.6 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -11600,6 +11625,7 @@ number.2.Cello.2.Music.item.7 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -12346,6 +12372,7 @@ number.2.Cello.2.Music = {
     b2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13337,6 +13364,7 @@ number.2.Contrabass.1.Music.item.2 = {
     af2.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13383,6 +13411,7 @@ number.2.Contrabass.1.Music.item.3 = {
     af2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13429,6 +13458,7 @@ number.2.Contrabass.1.Music.item.4 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13559,6 +13589,7 @@ number.2.Contrabass.1.Music.item.6 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13592,6 +13623,7 @@ number.2.Contrabass.1.Music.item.7 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13625,6 +13657,7 @@ number.2.Contrabass.1.Music.item.8 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -13673,6 +13706,7 @@ number.2.Contrabass.1.Music.item.9 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -14602,6 +14636,7 @@ number.2.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14687,6 +14722,7 @@ number.2.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14726,6 +14762,7 @@ number.2.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -15590,6 +15627,7 @@ number.2.Contrabass.2.Music.item.1 = {
     af2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -15753,6 +15791,7 @@ number.2.Contrabass.2.Music.item.4 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -15786,6 +15825,7 @@ number.2.Contrabass.2.Music.item.5 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -15819,6 +15859,7 @@ number.2.Contrabass.2.Music.item.6 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -15867,6 +15908,7 @@ number.2.Contrabass.2.Music.item.7 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -16656,6 +16698,7 @@ number.2.Contrabass.2.Music = {
     dqs'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

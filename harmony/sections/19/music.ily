@@ -2094,6 +2094,7 @@ number.19.BassFlute.Music = {
         ef'16
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2583,6 +2584,7 @@ number.19.BassFlute.Music = {
         ef'16
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4322,6 +4324,7 @@ number.19.Percussion.1.Music = {
         d'8
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4770,6 +4773,7 @@ number.19.Percussion.1.Music = {
         d'8
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -12399,6 +12403,7 @@ number.19.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -12637,6 +12642,7 @@ number.19.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)

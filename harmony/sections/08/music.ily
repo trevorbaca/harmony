@@ -3841,6 +3841,7 @@ number.8.Cello.2.Music = {
       %! baca._set_status_tag()
       %! baca.hairpin()
     \>
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4457,6 +4458,7 @@ number.8.Contrabass.1.Music = {
     bf'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4499,6 +4501,7 @@ number.8.Contrabass.1.Music = {
     bf'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

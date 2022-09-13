@@ -4093,6 +4093,7 @@ number.4.Viola.Music.item.1 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -5113,6 +5114,7 @@ number.4.Cello.1.Music.item.1 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -6369,6 +6371,7 @@ number.4.Cello.2.Music.item.1 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -7559,6 +7562,7 @@ number.4.Contrabass.1.Music.item.1 = {
     af4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)

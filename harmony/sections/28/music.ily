@@ -6267,6 +6267,7 @@ number.28.Cello.1.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6293,6 +6294,7 @@ number.28.Cello.1.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6364,6 +6366,7 @@ number.28.Cello.1.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6387,6 +6390,7 @@ number.28.Cello.1.Music = {
     cs'''4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.note_head_style_harmonic(2)
@@ -9492,6 +9496,7 @@ number.28.Cello.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9518,6 +9523,7 @@ number.28.Cello.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9589,6 +9595,7 @@ number.28.Cello.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9612,6 +9619,7 @@ number.28.Cello.2.Music = {
     cs'''4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.note_head_style_harmonic(2)

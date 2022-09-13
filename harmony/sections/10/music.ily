@@ -1373,6 +1373,7 @@ number.10.BassFlute.Music.item.1 = {
     g'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -1449,6 +1450,7 @@ number.10.BassFlute.Music.item.2 = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1456,6 +1458,7 @@ number.10.BassFlute.Music.item.2 = {
     a'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -1704,6 +1707,7 @@ number.10.BassFlute.Music = {
     e'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11239,6 +11243,7 @@ number.10.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11254,6 +11259,7 @@ number.10.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11319,6 +11325,7 @@ number.10.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11333,6 +11340,7 @@ number.10.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11348,6 +11356,7 @@ number.10.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11412,6 +11421,7 @@ number.10.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
