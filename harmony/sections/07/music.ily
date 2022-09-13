@@ -7604,7 +7604,7 @@ number.7.Contrabass.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % AFTER:
     % ARTICULATIONS:
@@ -7709,17 +7709,17 @@ number.7.Contrabass.1.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7738,7 +7738,7 @@ number.7.Contrabass.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % AFTER:
     % ARTICULATIONS:
@@ -8314,7 +8314,7 @@ number.7.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 6]
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % AFTER:
     % ARTICULATIONS:
@@ -8398,12 +8398,12 @@ number.7.Contrabass.2.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % AFTER:
     % SPANNER_STOPS:
@@ -8459,7 +8459,7 @@ number.7.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8478,7 +8478,7 @@ number.7.Contrabass.2.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_repeated_duration_notes()
+      %! baca.make_repeated_duration_notes_function()
     e,4
     % AFTER:
     % ARTICULATIONS:

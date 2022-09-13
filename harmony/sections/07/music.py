@@ -389,7 +389,7 @@ def CB1(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes(
+    music = baca.make_repeated_duration_notes_function(
         accumulator.get(6),
         [(1, 4)],
     )
@@ -419,7 +419,7 @@ def CB2(voice, accumulator):
         ["+"],
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes(
+    music = baca.make_repeated_duration_notes_function(
         accumulator.get(6),
         [(1, 4)],
     )
