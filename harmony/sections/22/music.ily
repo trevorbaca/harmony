@@ -1418,6 +1418,7 @@ number.22.BassFlute.Music = {
         ef'16
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3442,6 +3443,7 @@ number.22.BassFlute.Music = {
         ef'16
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3861,6 +3863,7 @@ number.22.Percussion.1.Music = {
         d'8
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4190,6 +4193,7 @@ number.22.Percussion.1.Music = {
         d'4
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % COMMANDS:
           %! baca.stem_down(2)
@@ -5674,6 +5678,7 @@ number.22.Viola.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5701,6 +5706,7 @@ number.22.Viola.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5735,6 +5741,7 @@ number.22.Viola.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % OPEN_BRACKETS:
     {
@@ -6115,6 +6122,7 @@ number.22.Viola.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6167,6 +6175,7 @@ number.22.Viola.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6195,6 +6204,7 @@ number.22.Viola.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6233,6 +6243,7 @@ number.22.Viola.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6535,6 +6546,7 @@ number.22.Viola.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6567,6 +6579,7 @@ number.22.Viola.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % OPEN_BRACKETS:
     {
@@ -9679,6 +9692,7 @@ number.22.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9693,6 +9707,7 @@ number.22.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9714,6 +9729,7 @@ number.22.Cello.2.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -10157,6 +10173,7 @@ number.22.Cello.2.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -10188,6 +10205,7 @@ number.22.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10209,6 +10227,7 @@ number.22.Cello.2.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -10247,6 +10266,7 @@ number.22.Cello.2.Music = {
           %! abjad.glissando(7)
           %! baca.glissando()
         \glissando
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -10493,6 +10513,7 @@ number.22.Cello.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % OPEN_BRACKETS:
     {
@@ -11051,6 +11072,7 @@ number.22.Contrabass.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11068,6 +11090,7 @@ number.22.Contrabass.1.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11259,6 +11282,7 @@ number.22.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -13850,6 +13874,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13878,6 +13903,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13904,6 +13930,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13936,6 +13963,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14158,6 +14186,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14185,6 +14214,7 @@ number.22.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14199,6 +14229,7 @@ number.22.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14214,6 +14245,7 @@ number.22.Contrabass.2.Music = {
       %! abjad.glissando(7)
       %! baca.glissando()
     \glissando
+      %! harmony.make_sixteenths()
     \repeatTie
     % OPEN_BRACKETS:
     {

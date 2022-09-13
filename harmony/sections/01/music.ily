@@ -500,6 +500,7 @@ number.1.BassFlute.Music.item.3 = {
     a'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -1979,6 +1980,7 @@ number.1.Percussion.2.Music = {
     d'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2024,6 +2026,7 @@ number.1.Percussion.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2047,6 +2050,7 @@ number.1.Percussion.2.Music = {
     d'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -2400,6 +2404,7 @@ number.1.Harp.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2445,6 +2450,7 @@ number.1.Harp.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2468,6 +2474,7 @@ number.1.Harp.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -2581,6 +2588,7 @@ number.1.Harp.Music = {
     g,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2915,6 +2923,7 @@ number.1.Viola.Music = {
     gqf'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4085,6 +4094,7 @@ number.1.Cello.2.Music = {
     b2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4504,6 +4514,7 @@ number.1.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4567,6 +4578,7 @@ number.1.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4672,6 +4684,7 @@ number.1.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4757,6 +4770,7 @@ number.1.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4796,6 +4810,7 @@ number.1.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -5393,6 +5408,7 @@ number.1.Contrabass.2.Music = {
     dqs'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

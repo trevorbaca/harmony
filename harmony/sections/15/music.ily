@@ -1227,6 +1227,7 @@ number.15.BassFlute.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1241,6 +1242,7 @@ number.15.BassFlute.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1251,6 +1253,7 @@ number.15.BassFlute.Music = {
     fs'''2.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3120,6 +3123,7 @@ number.15.Viola.Music = {
     f'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3206,6 +3210,7 @@ number.15.Viola.Music = {
     f'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3303,6 +3308,7 @@ number.15.Viola.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3317,6 +3323,7 @@ number.15.Viola.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3327,6 +3334,7 @@ number.15.Viola.Music = {
     f'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3552,6 +3560,7 @@ number.15.Cello.1.Music = {
     a,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3632,6 +3641,7 @@ number.15.Cello.1.Music = {
     a,16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3875,6 +3885,7 @@ number.15.Cello.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3889,6 +3900,7 @@ number.15.Cello.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3918,6 +3930,7 @@ number.15.Cello.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3926,6 +3939,7 @@ number.15.Cello.1.Music = {
     a,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4153,6 +4167,7 @@ number.15.Cello.2.Music = {
     g,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4233,6 +4248,7 @@ number.15.Cello.2.Music = {
     g,16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4569,6 +4585,7 @@ number.15.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4583,6 +4600,7 @@ number.15.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4612,6 +4630,7 @@ number.15.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4620,6 +4639,7 @@ number.15.Cello.2.Music = {
     g,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4847,6 +4867,7 @@ number.15.Contrabass.1.Music = {
     gs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4927,6 +4948,7 @@ number.15.Contrabass.1.Music = {
     gs,16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5273,6 +5295,7 @@ number.15.Contrabass.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5287,6 +5310,7 @@ number.15.Contrabass.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5316,6 +5340,7 @@ number.15.Contrabass.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5324,6 +5349,7 @@ number.15.Contrabass.1.Music = {
     gs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5556,6 +5582,7 @@ number.15.Contrabass.2.Music = {
     fs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5636,6 +5663,7 @@ number.15.Contrabass.2.Music = {
     fs,16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5977,6 +6005,7 @@ number.15.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5991,6 +6020,7 @@ number.15.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6020,6 +6050,7 @@ number.15.Contrabass.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6028,6 +6059,7 @@ number.15.Contrabass.2.Music = {
     fs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

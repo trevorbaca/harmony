@@ -3277,6 +3277,7 @@ number.3.Harp.Music = {
     g,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3597,6 +3598,7 @@ number.3.Harp.Music = {
     g,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3654,6 +3656,7 @@ number.3.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3668,6 +3671,7 @@ number.3.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3676,6 +3680,7 @@ number.3.Harp.Music = {
     g,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

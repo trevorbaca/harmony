@@ -4528,6 +4528,7 @@ number.14.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4536,6 +4537,7 @@ number.14.Harp.Music = {
     e,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4869,6 +4871,7 @@ number.14.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4883,6 +4886,7 @@ number.14.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4897,6 +4901,7 @@ number.14.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4905,6 +4910,7 @@ number.14.Harp.Music = {
     e,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6950,6 +6956,7 @@ number.14.Cello.1.Music = {
     a,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7910,6 +7917,7 @@ number.14.Cello.1.Music = {
     ds8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8375,6 +8383,7 @@ number.14.Cello.2.Music = {
     g,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9052,6 +9061,7 @@ number.14.Cello.2.Music = {
     cs8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9545,6 +9555,7 @@ number.14.Contrabass.1.Music = {
     gs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10985,6 +10996,7 @@ number.14.Contrabass.2.Music = {
     fs,8.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

@@ -2509,6 +2509,7 @@ number.21.Percussion.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2545,6 +2546,7 @@ number.21.Percussion.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -2577,6 +2579,7 @@ number.21.Percussion.2.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4497,6 +4500,7 @@ number.21.Cello.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4527,6 +4531,7 @@ number.21.Cello.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4553,6 +4558,7 @@ number.21.Cello.1.Music = {
     aqf'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -5186,6 +5192,7 @@ number.21.Cello.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5249,6 +5256,7 @@ number.21.Cello.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6020,6 +6028,7 @@ number.21.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6050,6 +6059,7 @@ number.21.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6076,6 +6086,7 @@ number.21.Contrabass.1.Music = {
     dtqf''4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -6823,6 +6834,7 @@ number.21.Contrabass.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6853,6 +6865,7 @@ number.21.Contrabass.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6879,6 +6892,7 @@ number.21.Contrabass.2.Music = {
     ef4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

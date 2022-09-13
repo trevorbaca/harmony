@@ -592,6 +592,7 @@ number.9.BassFlute.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -651,6 +652,7 @@ number.9.BassFlute.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

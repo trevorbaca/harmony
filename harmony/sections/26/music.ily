@@ -2971,6 +2971,7 @@ number.26.Percussion.1.Music = {
     d'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -3017,6 +3018,7 @@ number.26.Percussion.1.Music = {
     d'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3056,6 +3058,7 @@ number.26.Percussion.1.Music = {
     d'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -4420,6 +4423,7 @@ number.26.Harp.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4471,6 +4475,7 @@ number.26.Harp.Music = {
     c'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5062,6 +5067,7 @@ number.26.Viola.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5129,6 +5135,7 @@ number.26.Viola.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5232,6 +5239,7 @@ number.26.Viola.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6147,6 +6155,7 @@ number.26.Cello.1.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6162,6 +6171,7 @@ number.26.Cello.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6265,6 +6275,7 @@ number.26.Cello.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7388,6 +7399,7 @@ number.26.Cello.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7491,6 +7503,7 @@ number.26.Cello.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8685,6 +8698,7 @@ number.26.Contrabass.1.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8788,6 +8802,7 @@ number.26.Contrabass.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9933,6 +9948,7 @@ number.26.Contrabass.2.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10036,6 +10052,7 @@ number.26.Contrabass.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

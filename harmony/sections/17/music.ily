@@ -3985,6 +3985,7 @@ number.17.Cello.1.Music = {
       %! baca.hairpin()
     \baca-fff-scratch
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4952,6 +4953,7 @@ number.17.Cello.2.Music = {
       %! baca.hairpin()
     \baca-fff-scratch
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5903,6 +5905,7 @@ number.17.Contrabass.1.Music = {
       %! baca.hairpin()
     \baca-fff-scratch
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6848,6 +6851,7 @@ number.17.Contrabass.2.Music = {
       %! baca.hairpin()
     \baca-fff-scratch
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

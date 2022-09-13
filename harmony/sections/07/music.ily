@@ -5044,6 +5044,7 @@ number.7.Viola.Music = {
         bf8
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6127,6 +6128,7 @@ number.7.Cello.1.Music = {
         bf'4
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -6673,6 +6675,7 @@ number.7.Cello.2.Music = {
     b,1
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7141,6 +7144,7 @@ number.7.Contrabass.1.Music.item.1 = {
     bf1
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_appoggiato_rhythm()
     \repeatTie
     % CLOSING:
     % COMMANDS:
@@ -8114,6 +8118,7 @@ number.7.Contrabass.2.Music = {
     bf2.
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8308,6 +8313,7 @@ number.7.Contrabass.2.Music = {
     bf1
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:

@@ -1629,6 +1629,7 @@ number.23.BassFlute.Music = {
         ef'8
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2068,6 +2069,7 @@ number.23.Percussion.1.Music = {
         d'4
         % AFTER:
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % COMMANDS:
           %! baca.stem_down(2)

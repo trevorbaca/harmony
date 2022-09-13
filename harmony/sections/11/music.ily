@@ -1484,6 +1484,7 @@ number.11.BassFlute.Music = {
     af'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1736,6 +1737,7 @@ number.11.BassFlute.Music = {
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -1829,6 +1831,7 @@ number.11.BassFlute.Music = {
     dtqf'''4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.breathe()
@@ -3919,6 +3922,7 @@ number.11.Percussion.2.Music = {
     c'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -4005,6 +4009,7 @@ number.11.Percussion.2.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4044,6 +4049,7 @@ number.11.Percussion.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4052,6 +4058,7 @@ number.11.Percussion.2.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -4239,6 +4246,7 @@ number.11.Percussion.2.Music = {
     d'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -4327,6 +4335,7 @@ number.11.Percussion.2.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4360,6 +4369,7 @@ number.11.Percussion.2.Music = {
     c'8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -4595,6 +4605,7 @@ number.11.Harp.Music = {
     c,,2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! SPANNER_STOP
@@ -4687,6 +4698,7 @@ number.11.Harp.Music = {
     c,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4726,6 +4738,7 @@ number.11.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4734,6 +4747,7 @@ number.11.Harp.Music = {
     c,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! SPANNER_STOP
@@ -5328,6 +5342,7 @@ number.11.Harp.Music = {
     c,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5361,6 +5376,7 @@ number.11.Harp.Music = {
     c,,8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! SPANNER_STOP
@@ -7916,6 +7932,7 @@ number.11.Cello.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8005,6 +8022,7 @@ number.11.Cello.1.Music = {
           %! baca.stem_tremolo()
         :32
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -9406,6 +9424,7 @@ number.11.Cello.2.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9495,6 +9514,7 @@ number.11.Cello.2.Music = {
           %! baca.stem_tremolo()
         :32
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -9551,6 +9571,7 @@ number.11.Cello.2.Music = {
           %! baca.stem_tremolo()
         :32
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -11089,6 +11110,7 @@ number.11.Contrabass.1.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11182,6 +11204,7 @@ number.11.Contrabass.1.Music = {
           %! rmakers.RewriteMeterCommand.__call__
         [
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -12613,6 +12636,7 @@ number.11.Contrabass.2.Music = {
       %! baca.stem_tremolo()
     :32
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -12706,6 +12730,7 @@ number.11.Contrabass.2.Music = {
           %! rmakers.RewriteMeterCommand.__call__
         [
         % SPANNER_STARTS:
+          %! harmony.make_sixteenths()
         \repeatTie
         % ABSOLUTE_BEFORE:
         % COMMANDS:

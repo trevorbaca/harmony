@@ -3761,6 +3761,7 @@ number.25.Percussion.1.Music = {
     d'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3800,6 +3801,7 @@ number.25.Percussion.1.Music = {
     d'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -5482,6 +5484,7 @@ number.25.Harp.Music = {
     c'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5521,6 +5524,7 @@ number.25.Harp.Music = {
     c'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)

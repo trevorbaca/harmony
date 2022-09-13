@@ -3213,6 +3213,7 @@ number.18.Percussion.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3221,6 +3222,7 @@ number.18.Percussion.2.Music = {
     c'16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % COMMANDS:
       %! baca.stem_down(2)
@@ -3852,6 +3854,7 @@ number.18.Harp.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3860,6 +3863,7 @@ number.18.Harp.Music = {
     f,,16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8671,6 +8675,7 @@ number.18.Cello.1.Music = {
     d16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8920,6 +8925,7 @@ number.18.Cello.1.Music = {
     d16
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -12969,6 +12975,7 @@ number.18.Contrabass.1.Music = {
       %! baca._set_status_tag()
       %! baca.hairpin()
     \>
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13176,6 +13183,7 @@ number.18.Contrabass.1.Music = {
       %! baca._set_status_tag()
       %! baca.hairpin()
     \>
+      %! harmony.make_sixteenths()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
