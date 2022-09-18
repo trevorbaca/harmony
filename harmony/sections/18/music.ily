@@ -2582,8 +2582,11 @@ number.18.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 4/5
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -2596,6 +2599,7 @@ number.18.Percussion.1.Music = {
         \once \override Stem.direction = #down
           %! baca.tuplet_bracket_up(1)
         \override TupletBracket.direction = #up
+          %! harmony.make_tuplet()
         b8
         % AFTER:
         % ARTICULATIONS:
@@ -2625,6 +2629,7 @@ number.18.Percussion.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         r8
         % AFTER:
         % ARTICULATIONS:
@@ -2645,6 +2650,7 @@ number.18.Percussion.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         r1
         % AFTER:
         % COMMANDS:
@@ -2654,6 +2660,7 @@ number.18.Percussion.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6198,14 +6205,18 @@ number.18.Viola.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 4/5
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Viola.Music measure 10]
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6259,6 +6270,7 @@ number.18.Viola.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6304,6 +6316,7 @@ number.18.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6357,6 +6370,7 @@ number.18.Viola.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6402,6 +6416,7 @@ number.18.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6455,6 +6470,7 @@ number.18.Viola.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6500,6 +6516,7 @@ number.18.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6553,6 +6570,7 @@ number.18.Viola.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6598,6 +6616,7 @@ number.18.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6651,6 +6670,7 @@ number.18.Viola.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         g'4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -6697,6 +6717,7 @@ number.18.Viola.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8181,13 +8202,16 @@ number.18.Cello.1.Music = {
     e16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e8.
     % AFTER:
     % ARTICULATIONS:
@@ -8215,6 +8239,7 @@ number.18.Cello.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -10037,9 +10062,11 @@ number.18.Cello.2.Music = {
     d16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10050,6 +10077,7 @@ number.18.Cello.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10063,10 +10091,12 @@ number.18.Cello.2.Music = {
     d4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d2
     % AFTER:
     % ARTICULATIONS:
@@ -10638,14 +10668,18 @@ number.18.Cello.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 4/5
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.2.Music measure 10]
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10699,6 +10733,7 @@ number.18.Cello.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10744,6 +10779,7 @@ number.18.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10797,6 +10833,7 @@ number.18.Cello.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10842,6 +10879,7 @@ number.18.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10895,6 +10933,7 @@ number.18.Cello.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10940,6 +10979,7 @@ number.18.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -10993,6 +11033,7 @@ number.18.Cello.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -11038,6 +11079,7 @@ number.18.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -11091,6 +11133,7 @@ number.18.Cello.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         btqf'!4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -11137,6 +11180,7 @@ number.18.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -12482,6 +12526,7 @@ number.18.Contrabass.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'8
     % AFTER:
     % ARTICULATIONS:
@@ -12577,13 +12622,16 @@ number.18.Contrabass.1.Music = {
     e'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'8
     % AFTER:
     % ARTICULATIONS:
@@ -12611,6 +12659,7 @@ number.18.Contrabass.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -14530,6 +14579,7 @@ number.18.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 6]
+      %! harmony.make_tessera_2()
     d'8.
     % AFTER:
     % ARTICULATIONS:
@@ -14557,6 +14607,7 @@ number.18.Contrabass.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanHalfCLT
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -14625,6 +14676,7 @@ number.18.Contrabass.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -14635,6 +14687,7 @@ number.18.Contrabass.2.Music = {
     d'8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -14646,6 +14699,7 @@ number.18.Contrabass.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -14666,9 +14720,11 @@ number.18.Contrabass.2.Music = {
     d'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -14687,6 +14743,7 @@ number.18.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d'16
     % AFTER:
     % ARTICULATIONS:
@@ -14714,6 +14771,7 @@ number.18.Contrabass.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -15263,14 +15321,18 @@ number.18.Contrabass.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 4/5
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.2.Music measure 10]
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15324,6 +15386,7 @@ number.18.Contrabass.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15369,6 +15432,7 @@ number.18.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15422,6 +15486,7 @@ number.18.Contrabass.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15467,6 +15532,7 @@ number.18.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15520,6 +15586,7 @@ number.18.Contrabass.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15565,6 +15632,7 @@ number.18.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15618,6 +15686,7 @@ number.18.Contrabass.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15663,6 +15732,7 @@ number.18.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15716,6 +15786,7 @@ number.18.Contrabass.2.Music = {
           %! INVISIBLE_MUSIC_COLORING
           %! baca.invisible_music(2)
         \abjad-invisible-music-coloring
+          %! harmony.make_tuplet()
         e''4 * 1/2
         % AFTER:
         % ARTICULATIONS:
@@ -15762,6 +15833,7 @@ number.18.Contrabass.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

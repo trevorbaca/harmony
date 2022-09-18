@@ -4549,8 +4549,11 @@ number.23.Cello.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4616,6 +4619,7 @@ number.23.Cello.2.Music = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
+          %! harmony.make_tuplet()
         dqf!1
         % AFTER:
         % ARTICULATIONS:
@@ -4684,6 +4688,7 @@ number.23.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4778,8 +4783,11 @@ number.23.Cello.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4821,6 +4829,7 @@ number.23.Cello.2.Music = {
           %! baca.clef()
           %! baca.treat_persistent_wrapper(2)
         \set Staff.forceClef = ##t
+          %! harmony.make_tuplet()
         dqf!1
         % AFTER:
         % ARTICULATIONS:
@@ -4883,6 +4892,7 @@ number.23.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

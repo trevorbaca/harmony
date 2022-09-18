@@ -3485,13 +3485,16 @@ number.17.Cello.1.Music = {
     e16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e8.
     % AFTER:
     % ARTICULATIONS:
@@ -3519,6 +3522,7 @@ number.17.Cello.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -4001,6 +4005,7 @@ number.17.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 5]
+      %! harmony.make_tessera_2()
     e4
     % AFTER:
     % ARTICULATIONS:
@@ -4096,12 +4101,15 @@ number.17.Cello.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4112,6 +4120,7 @@ number.17.Cello.1.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -4125,9 +4134,11 @@ number.17.Cello.1.Music = {
     e8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4138,6 +4149,7 @@ number.17.Cello.1.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -4148,6 +4160,7 @@ number.17.Cello.1.Music = {
     e8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -4159,6 +4172,7 @@ number.17.Cello.1.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -4169,11 +4183,13 @@ number.17.Cello.1.Music = {
     e16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e8.
     % AFTER:
     % ARTICULATIONS:
@@ -4187,6 +4203,7 @@ number.17.Cello.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -4433,9 +4450,11 @@ number.17.Cello.2.Music = {
     d16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4446,6 +4465,7 @@ number.17.Cello.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -4459,10 +4479,12 @@ number.17.Cello.2.Music = {
     d4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d2
     % AFTER:
     % ARTICULATIONS:
@@ -5067,9 +5089,11 @@ number.17.Cello.2.Music = {
     d8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5080,6 +5104,7 @@ number.17.Cello.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -5097,6 +5122,7 @@ number.17.Cello.2.Music = {
     - \tweak stencil ##f
       %! baca._attach_shadow_tie_indicators()
     ~
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5104,9 +5130,11 @@ number.17.Cello.2.Music = {
     d8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5117,6 +5145,7 @@ number.17.Cello.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -5130,13 +5159,16 @@ number.17.Cello.2.Music = {
     d8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d8
     % AFTER:
     % ARTICULATIONS:
@@ -5150,6 +5182,7 @@ number.17.Cello.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -5310,6 +5343,7 @@ number.17.Contrabass.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'8
     % AFTER:
     % ARTICULATIONS:
@@ -5405,13 +5439,16 @@ number.17.Contrabass.1.Music = {
     e'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'8
     % AFTER:
     % ARTICULATIONS:
@@ -5439,6 +5476,7 @@ number.17.Contrabass.1.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -5921,6 +5959,7 @@ number.17.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 5]
+      %! harmony.make_tessera_2()
     e'16
     % AFTER:
     % ARTICULATIONS:
@@ -5941,6 +5980,7 @@ number.17.Contrabass.1.Music = {
       %! baca.hairpin()
     \f
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6021,6 +6061,7 @@ number.17.Contrabass.1.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6034,10 +6075,12 @@ number.17.Contrabass.1.Music = {
     e'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'2
     % AFTER:
     % ARTICULATIONS:
@@ -6046,6 +6089,7 @@ number.17.Contrabass.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     e'4
     % AFTER:
     % ARTICULATIONS:
@@ -6183,6 +6227,7 @@ number.17.Contrabass.2.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
+      %! harmony.make_tessera_2()
     d'8.
     % AFTER:
     % ARTICULATIONS:
@@ -6207,6 +6252,7 @@ number.17.Contrabass.2.Music = {
       %! baca._attach_latent_indicator_alert()
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6289,6 +6335,7 @@ number.17.Contrabass.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6299,6 +6346,7 @@ number.17.Contrabass.2.Music = {
     d'8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6310,6 +6358,7 @@ number.17.Contrabass.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6330,9 +6379,11 @@ number.17.Contrabass.2.Music = {
     d'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6351,6 +6402,7 @@ number.17.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d'16
     % AFTER:
     % ARTICULATIONS:
@@ -6378,6 +6430,7 @@ number.17.Contrabass.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanSCP
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6867,6 +6920,7 @@ number.17.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 5]
+      %! harmony.make_tessera_2()
     d'4
     % AFTER:
     % ARTICULATIONS:
@@ -6962,12 +7016,15 @@ number.17.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6978,6 +7035,7 @@ number.17.Contrabass.2.Music = {
       %! baca.triple_staccato()
     - \baca-staccati #3
     % STOP_BEAM:
+      %! harmony.make_tessera_2()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6991,10 +7049,12 @@ number.17.Contrabass.2.Music = {
     d'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_2()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_2()
     d'2
     % AFTER:
     % ARTICULATIONS:

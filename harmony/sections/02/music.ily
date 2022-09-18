@@ -4823,8 +4823,11 @@ number.2.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4855,6 +4858,7 @@ number.2.Percussion.2.Music = {
           %! abjad.glissando(6)
           %! baca.glissando()
         \revert Stem.transparent
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % STEM_TREMOLOS:
@@ -4869,6 +4873,7 @@ number.2.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5220,8 +5225,11 @@ number.2.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5258,6 +5266,7 @@ number.2.Percussion.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
           %! baca._attach_color_literal(2)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % STEM_TREMOLOS:
@@ -5305,6 +5314,7 @@ number.2.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5350,8 +5360,11 @@ number.2.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5378,6 +5391,7 @@ number.2.Percussion.2.Music = {
           %! abjad.glissando(6)
           %! baca.glissando()
         \revert Stem.transparent
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % STEM_TREMOLOS:
@@ -5411,6 +5425,7 @@ number.2.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

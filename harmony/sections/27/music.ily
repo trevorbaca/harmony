@@ -3550,8 +3550,11 @@ number.27.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -3584,6 +3587,7 @@ number.27.Percussion.2.Music = {
           %! EXPLICIT_STAFF_LINES_COLOR
           %! baca._attach_color_literal(2)
         \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % STEM_TREMOLOS:
@@ -3614,6 +3618,7 @@ number.27.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6186,6 +6191,7 @@ number.27.Cello.1.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6204,6 +6210,7 @@ number.27.Cello.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6247,6 +6254,7 @@ number.27.Cello.1.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % COMMANDS:
@@ -6276,6 +6284,7 @@ number.27.Cello.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7332,6 +7341,7 @@ number.27.Cello.2.Music = {
       %! baca.text_spanner()
     \bacaStopTextSpanDamp
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -7381,6 +7391,7 @@ number.27.Cello.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7410,6 +7421,7 @@ number.27.Cello.2.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7433,6 +7445,7 @@ number.27.Cello.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7472,6 +7485,7 @@ number.27.Cello.2.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7485,6 +7499,7 @@ number.27.Cello.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8622,6 +8637,7 @@ number.27.Contrabass.1.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8640,6 +8656,7 @@ number.27.Contrabass.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8683,6 +8700,7 @@ number.27.Contrabass.1.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8711,6 +8729,7 @@ number.27.Contrabass.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9899,6 +9918,7 @@ number.27.Contrabass.2.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9912,6 +9932,7 @@ number.27.Contrabass.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
