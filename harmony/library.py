@@ -106,22 +106,6 @@ def make_appoggiato_rhythm(
     after_graces=None,
     voice_name="",
 ):
-    preprocessor = None
-    if fuse is True:
-
-        def preprocessor(divisions):
-            return baca.sequence.fuse(divisions)
-
-    elif divisions is not None:
-        divisions_ = [(_, 16) for _ in divisions]
-
-        def preprocessor(divisions):
-            divisions = baca.sequence.fuse(divisions)
-            divisions = baca.sequence.split_divisions(
-                divisions, divisions_, cyclic=True
-            )
-            return divisions
-
     def make_plt_selector(rest_from, rest_to):
         def selector(argument):
             result = baca.select.plts(argument, grace=False)
@@ -144,98 +128,77 @@ def make_appoggiato_rhythm(
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
-    commands = []
+    divisions_ = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    if fuse is True:
+        divisions_ = baca.sequence.fuse(divisions_)
+    elif divisions is not None:
+        divisions = [(_, 16) for _ in divisions]
+        divisions_ = baca.sequence.fuse(divisions_)
+        divisions_ = baca.sequence.split_divisions(divisions_, divisions, cyclic=True)
+        divisions_ = abjad.sequence.flatten(divisions_)
+    tag = baca.tags.function_name(inspect.currentframe())
+    nested_music = rmakers.incised_function(
+        divisions_,
+        extra_counts=extra_counts,
+        prefix_talea=prefix_talea,
+        prefix_counts=prefix_counts,
+        suffix_talea=suffix_talea,
+        suffix_counts=suffix_counts,
+        talea_denominator=16,
+        tag=tag,
+    )
+    voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
+    rmakers.extract_trivial_function(voice)
+    rmakers.rewrite_meter_function(voice, reference_meters=_reference_meters(), tag=tag)
+    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
     if rest_to:
         selector = make_plt_selector(None, rest_to)
-        force_rest_ = rmakers.force_rest(selector)
-        commands.append(force_rest_)
+        plts = selector(voice)
+        rmakers.force_rest_function(plts, tag=tag)
     if rest_from is not None:
         selector = make_plt_selector(-rest_from, None)
-        force_rest_ = rmakers.force_rest(selector)
-        commands.append(force_rest_)
+        plts = selector(voice)
+        rmakers.force_rest_function(plts, tag=tag)
     if counts:
-        on_beat_ = rmakers.on_beat_grace_container(
+        rmakers.on_beat_grace_container_function(
+            voice,
+            voice_name,
+            baca.select.plts(voice),
             counts,
-            lambda _: baca.select.plts(_),
             leaf_duration=(1, 20),
-            voice_name=voice_name,
+            tag=tag,
         )
-        commands.append(on_beat_)
     if rest_after is True:
         selector = select_nongrace_plts
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
+        plts = selector(voice)
+        rmakers.force_rest_function(plts, tag=tag)
     elif rest_after is not None:
         selector = make_single_plt_selector(rest_after)
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
+        plts = selector(voice)
+        rmakers.force_rest_function(plts, tag=tag)
     if tie is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, tie)
-            return result
-
-        repeat_tie_ = rmakers.repeat_tie(selector)
-        commands.append(repeat_tie_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, tie)
+        rmakers.repeat_tie_function(pleaves, tag=tag)
     if written_quarters is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_quarters)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 4),
-            selector,
-        )
-        commands.append(written_)
-
-        def selector(argument):
-            return baca.select.leaves(argument, grace=False)
-
-        unbeam_ = rmakers.unbeam(selector)
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_quarters)
+        rmakers.written_duration_function(pleaves, (1, 4))
+        leaves = baca.select.leaves(voice, grace=False)
+        rmakers.unbeam_function(leaves)
     if invisible is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, invisible)
-            return result
-
-        invisible_ = rmakers.invisible_music(selector)
-        commands.append(invisible_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, invisible)
+        rmakers.invisible_music_function(pleaves, tag=tag)
     if after_graces is not None:
-
-        def selector(argument):
-            return baca.select.pleaf(argument, -1)
-
+        pleaf = baca.select.pleaf(voice, -1)
         beam_and_slash = None
         if after_graces != [1]:
             beam_and_slash = True
-        after_grace_ = rmakers.after_grace_container(
-            after_graces,
-            selector,
-            beam_and_slash=beam_and_slash,
+        rmakers.after_grace_container_function(
+            pleaf, after_graces, selector, beam_and_slash=beam_and_slash, tag=tag
         )
-        commands.append(after_grace_)
-    rhythm_maker = rmakers.stack(
-        rmakers.incised(
-            extra_counts=extra_counts,
-            prefix_talea=prefix_talea,
-            prefix_counts=prefix_counts,
-            suffix_talea=suffix_talea,
-            suffix_counts=suffix_counts,
-            talea_denominator=16,
-        ),
-        rmakers.extract_trivial(),
-        rmakers.rewrite_meter(reference_meters=_reference_meters()),
-        rmakers.force_repeat_tie((1, 8)),
-        *commands,
-        preprocessor=preprocessor,
-        tag=baca.tags.function_name(inspect.currentframe()),
-    )
-    music = rhythm_maker(time_signatures)
+    music = abjad.mutate.eject_contents(voice)
     return music
 
 
