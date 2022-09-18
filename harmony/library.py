@@ -462,29 +462,26 @@ def make_phjc_rhythm(
     return music
 
 
-def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
-    commands = []
-    if rest_except is not None:
-
-        def selector(argument):
-            leaves = abjad.select.leaves(argument)
-            leaves = abjad.select.exclude(leaves, rest_except)
-            return leaves
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    rhythm_maker = rmakers.stack(
-        rmakers.even_division([4], extra_counts=extra_counts),
-        rmakers.trivialize(),
-        rmakers.rewrite_dots(),
-        *commands,
-        rmakers.force_diminution(),
-        rmakers.force_fraction(),
-        rmakers.extract_trivial(),
-        preprocessor=lambda _: baca.sequence.fuse(_, [2], cyclic=True),
-        tag=baca.tags.function_name(inspect.currentframe()),
+def make_rimbalzandi_rhythm_function(
+    time_signatures, *, extra_counts=(), rest_except=None
+):
+    tag = baca.tags.function_name(inspect.currentframe())
+    divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions = baca.sequence.fuse(divisions, [2], cyclic=True)
+    nested_music = rmakers.even_division_function(
+        divisions, [4], extra_counts=extra_counts, tag=tag
     )
-    music = rhythm_maker(time_signatures)
+    voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
+    rmakers.trivialize_function(voice)
+    rmakers.rewrite_dots_function(voice, tag=tag)
+    if rest_except is not None:
+        leaves = abjad.select.leaves(voice)
+        leaves = abjad.select.exclude(leaves, rest_except)
+        rmakers.force_rest_function(leaves, tag=tag)
+    rmakers.force_diminution_function(voice)
+    rmakers.force_fraction_function(voice)
+    rmakers.extract_trivial_function(voice)
+    music = abjad.mutate.eject_contents(voice)
     return music
 
 

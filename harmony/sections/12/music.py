@@ -353,7 +353,7 @@ def VA(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_rimbalzandi_rhythm(
+    music = library.make_rimbalzandi_rhythm_function(
         accumulator.get(5, 8),
         rest_except=[1, 3, 6, 8, 11, 13, 14, 15],
     )
@@ -390,7 +390,7 @@ def VC1(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_rimbalzandi_rhythm(
+    music = library.make_rimbalzandi_rhythm_function(
         accumulator.get(3, 8),
         extra_counts=[1],
         rest_except=[6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26],
@@ -426,7 +426,7 @@ def VC2(voice, accumulator):
         [-8, 12],
     )
     voice.extend(music)
-    music = library.make_rimbalzandi_rhythm(
+    music = library.make_rimbalzandi_rhythm_function(
         accumulator.get(3, 8),
         extra_counts=[2],
         rest_except=[0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29],
@@ -466,7 +466,7 @@ def CB1(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_rimbalzandi_rhythm(
+    music = library.make_rimbalzandi_rhythm_function(
         accumulator.get(3, 8),
         rest_except=[1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
         extra_counts=[3],
@@ -501,7 +501,7 @@ def CB2(voice, accumulator):
         [-8, 12],
     )
     voice.extend(music)
-    music = library.make_rimbalzandi_rhythm(
+    music = library.make_rimbalzandi_rhythm_function(
         accumulator.get(3, 8),
         rest_except=[1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
         extra_counts=[4],
