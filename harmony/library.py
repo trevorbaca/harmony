@@ -103,31 +103,8 @@ def make_appoggiato_rhythm(
     tie=None,
     written_quarters=None,
     invisible=None,
-    after_graces=None,
     voice_name="",
 ):
-    def make_plt_selector(rest_from, rest_to):
-        def selector(argument):
-            result = baca.select.plts(argument, grace=False)
-            result = result[rest_from:rest_to]
-            return result
-
-        return selector
-
-    def make_single_plt_selector(rest_after):
-        def selector(argument):
-            result = baca.select.plts(argument, grace=False)
-            result = abjad.select.get(result, rest_after)
-            return result
-
-        return selector
-
-    def select_nongrace_plts(argument):
-        return baca.select.plts(argument, grace=False)
-
-    if incise is True:
-        prefix_talea = [-1]
-        prefix_counts = [1]
     divisions_ = [abjad.NonreducedFraction(_) for _ in time_signatures]
     if fuse is True:
         divisions_ = baca.sequence.fuse(divisions_)
@@ -136,6 +113,9 @@ def make_appoggiato_rhythm(
         divisions_ = baca.sequence.fuse(divisions_)
         divisions_ = baca.sequence.split_divisions(divisions_, divisions, cyclic=True)
         divisions_ = abjad.sequence.flatten(divisions_)
+    if incise is True:
+        prefix_talea = [-1]
+        prefix_counts = [1]
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.incised_function(
         divisions_,
@@ -152,12 +132,12 @@ def make_appoggiato_rhythm(
     rmakers.rewrite_meter_function(voice, reference_meters=_reference_meters(), tag=tag)
     rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
     if rest_to:
-        selector = make_plt_selector(None, rest_to)
-        plts = selector(voice)
+        plts = baca.select.plts(voice, grace=False)
+        plts = plts[:rest_to]
         rmakers.force_rest_function(plts, tag=tag)
     if rest_from is not None:
-        selector = make_plt_selector(-rest_from, None)
-        plts = selector(voice)
+        plts = baca.select.plts(voice, grace=False)
+        plts = plts[-rest_from:]
         rmakers.force_rest_function(plts, tag=tag)
     if counts:
         rmakers.on_beat_grace_container_function(
@@ -169,12 +149,11 @@ def make_appoggiato_rhythm(
             tag=tag,
         )
     if rest_after is True:
-        selector = select_nongrace_plts
-        plts = selector(voice)
+        plts = baca.select.plts(voice, grace=False)
         rmakers.force_rest_function(plts, tag=tag)
     elif rest_after is not None:
-        selector = make_single_plt_selector(rest_after)
-        plts = selector(voice)
+        plts = baca.select.plts(voice, grace=False)
+        plts = abjad.select.get(plts, rest_after)
         rmakers.force_rest_function(plts, tag=tag)
     if tie is not None:
         pleaves = baca.select.pleaves(voice)
@@ -190,23 +169,13 @@ def make_appoggiato_rhythm(
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, invisible)
         rmakers.invisible_music_function(pleaves, tag=tag)
-    if after_graces is not None:
-        pleaf = baca.select.pleaf(voice, -1)
-        beam_and_slash = None
-        if after_graces != [1]:
-            beam_and_slash = True
-        rmakers.after_grace_container_function(
-            pleaf, after_graces, selector, beam_and_slash=beam_and_slash, tag=tag
-        )
     music = abjad.mutate.eject_contents(voice)
     return music
 
 
 def make_empty_score():
     tag = baca.tags.function_name(inspect.currentframe())
-    # GLOBAL CONTEXT
     global_context = baca.score.make_global_context()
-    # BASS FLUTE
     bass_flute_music_voice = abjad.Voice(name="BassFlute.Music", tag=tag)
     bass_flute_music_staff = abjad.Staff(
         [bass_flute_music_voice],
@@ -215,7 +184,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("BassFlute", bass_flute_music_staff)
-    # PERCUSSION 1
     percussion_1_music_voice = abjad.Voice(name="Percussion.1.Music", tag=tag)
     percussion_1_music_staff = abjad.Staff(
         [percussion_1_music_voice],
@@ -224,7 +192,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Percussion.1", percussion_1_music_staff)
-    # PERCUSSION 2
     percussion_2_music_voice = abjad.Voice(name="Percussion.2.Music", tag=tag)
     percussion_2_music_staff = abjad.Staff(
         [percussion_2_music_voice],
@@ -233,7 +200,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Percussion.2", percussion_2_music_staff)
-    # HARP
     harp_music_voice = abjad.Voice(name="Harp.Music", tag=tag)
     harp_music_staff = abjad.Staff(
         [harp_music_voice],
@@ -242,7 +208,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Harp", harp_music_staff)
-    # VIOLA
     viola_music_voice = abjad.Voice(name="Viola.Music", tag=tag)
     viola_music_staff = abjad.Staff(
         [viola_music_voice],
@@ -251,7 +216,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Viola", viola_music_staff)
-    # CELLO 1
     cello_1_music_voice = abjad.Voice(name="Cello.1.Music", tag=tag)
     cello_1_music_staff = abjad.Staff(
         [cello_1_music_voice],
@@ -260,7 +224,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Cello.1", cello_1_music_staff)
-    # CELLO 2
     cello_2_music_voice = abjad.Voice(name="Cello.2.Music", tag=tag)
     cello_2_music_staff = abjad.Staff(
         [cello_2_music_voice],
@@ -269,7 +232,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Cello.2", cello_2_music_staff)
-    # CONTRABASS 1
     contrabass_1_music_voice = abjad.Voice(name="Contrabass.1.Music", tag=tag)
     contrabass_1_music_staff = abjad.Staff(
         [contrabass_1_music_voice],
@@ -278,7 +240,6 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Contrabass.1", contrabass_1_music_staff)
-    # CONTRABASS 2
     contrabass_2_music_voice = abjad.Voice(name="Contrabass.2.Music", tag=tag)
     contrabass_2_music_staff = abjad.Staff(
         [contrabass_2_music_voice],
@@ -287,14 +248,12 @@ def make_empty_score():
         tag=tag,
     )
     baca.score.attach_lilypond_tag("Contrabass.2", contrabass_2_music_staff)
-    # WIND SECTION STAFF GROUP
     wind_section_staff_group = abjad.StaffGroup(
         [bass_flute_music_staff],
         lilypond_type="WindSectionStaffGroup",
         name="WindSectionStaffGroup",
         tag=tag,
     )
-    # PERCUSSION SECTION STAFF GROUP
     percussion_section_staff_group = abjad.StaffGroup(
         [
             percussion_1_music_staff,
@@ -305,7 +264,6 @@ def make_empty_score():
         name="PercussionSectionStaffGroup",
         tag=tag,
     )
-    # STRING SECTION STAFF GROUP
     string_section_staff_group = abjad.StaffGroup(
         [
             viola_music_staff,
@@ -318,7 +276,6 @@ def make_empty_score():
         name="StringSectionStaffGroup",
         tag=tag,
     )
-    # MUSIC CONTEXT
     music_context = abjad.Context(
         [
             wind_section_staff_group,
@@ -330,7 +287,6 @@ def make_empty_score():
         name="MusicContext",
         tag=tag,
     )
-    # SCORE
     score = abjad.Score([global_context, music_context], name="Score", tag=tag)
     baca.score.assert_lilypond_identifiers(score)
     baca.score.assert_unique_context_names(score)
@@ -350,78 +306,45 @@ def make_phjc_rhythm(
     rest_most=None,
     rest_nonfirst=False,
 ):
-    def preprocessor(argument):
-        result = baca.sequence.fuse(argument)
-        result = baca.sequence.quarters(result)
-        result = baca.sequence.partition(result, divisions)
-        result = [abjad.sequence.flatten(_) for _ in result]
-        result = [baca.sequence.fuse(_) for _ in result]
-        return result
-
-    commands = []
-    if rest is not None:
-
-        def selector(argument):
-            return baca.select.tuplets(argument, rest)
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    if rest_cyclic is not None:
-
-        def selector(argument):
-            return baca.select.tuplets(argument, rest_cyclic)
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    if rest_except is not None:
-
-        def selector(argument):
-            return baca.select.tuplets(argument, ~abjad.Pattern(rest_except))
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    if rest_most is True:
-
-        def selector(argument):
-            return baca.select.tuplets(argument, (None, 1))
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    if rest_nonfirst is True:
-
-        def selector(argument):
-            return baca.select.tuplets(argument, (1, None))
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    if rest_pleaves is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, rest_pleaves)
-            return result
-
-        force_ = rmakers.force_rest(selector)
-        commands.append(force_)
-    rhythm_maker = rmakers.stack(
-        rmakers.talea(counts, 16, extra_counts=extra_counts),
-        *commands,
-        rmakers.rewrite_rest_filled(),
-        rmakers.denominator((1, 8)),
-        rmakers.force_fraction(),
-        rmakers.force_repeat_tie((1, 8)),
-        rmakers.force_rest(
-            lambda _: baca.select.leaves_in_each_plt(_, 1, None),
-        ),
-        rmakers.force_rest(
-            lambda _: baca.select.leaf_in_each_tuplet(_, 0),
-        ),
-        rmakers.beam(),
-        rmakers.extract_trivial(),
-        preprocessor=preprocessor,
-        tag=baca.tags.function_name(inspect.currentframe()),
+    divisions_ = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions_ = baca.sequence.fuse(divisions_)
+    divisions_ = baca.sequence.quarters(divisions_)
+    divisions_ = baca.sequence.partition(divisions_, divisions)
+    divisions_ = [abjad.sequence.flatten(_) for _ in divisions_]
+    divisions_ = [baca.sequence.fuse(_) for _ in divisions_]
+    tag = baca.tags.function_name(inspect.currentframe())
+    nested_music = rmakers.talea_function(
+        divisions_, counts, 16, extra_counts=extra_counts, tag=tag
     )
-    music = rhythm_maker(time_signatures)
+    voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
+    if rest is not None:
+        tuplets = baca.select.tuplets(voice, rest)
+        rmakers.force_rest_function(tuplets, tag=tag)
+    if rest_cyclic is not None:
+        tuplets = baca.select.tuplets(voice, rest_cyclic)
+        rmakers.force_rest_function(tuplets, tag=tag)
+    if rest_except is not None:
+        tuplets = baca.select.tuplets(voice, ~abjad.Pattern(rest_except))
+        rmakers.force_rest_function(tuplets, tag=tag)
+    if rest_most is True:
+        tuplets = baca.select.tuplets(voice, (None, 1))
+        rmakers.force_rest_function(tuplets, tag=tag)
+    if rest_nonfirst is True:
+        tuplets = baca.select.tuplets(voice, (1, None))
+        rmakers.force_rest_function(tuplets, tag=tag)
+    if rest_pleaves is not None:
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, rest_pleaves)
+        rmakers.force_rest_function(pleaves, tag=tag)
+    rmakers.rewrite_rest_filled_function(voice, tag=tag)
+    rmakers.denominator_function(voice, (1, 8))
+    rmakers.force_fraction_function(voice)
+    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_rest_function(baca.select.leaves_in_each_plt(voice, 1, None), tag=tag)
+    rmakers.force_rest_function(baca.select.leaf_in_each_tuplet(voice, 0), tag=tag)
+    rmakers.beam_function(voice, tag=tag)
+    rmakers.extract_trivial_function(voice)
+    music = abjad.mutate.eject_contents(voice)
     return music
 
 
