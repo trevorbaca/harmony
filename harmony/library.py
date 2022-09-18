@@ -400,267 +400,119 @@ def make_sixteenths(
     after_graces=None,
 ):
     talea_denominator = talea_denominator or 16
+    divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
     if fuse is True:
-
-        def preprocessor_(argument):
-            return list(argument)
-
+        divisions = divisions
     elif preprocessor is None:
-
-        def preprocessor_(argument):
-            result = baca.sequence.fuse(argument)
-            result = baca.sequence.quarters(result)
-            return result
-
+        divisions = baca.sequence.fuse(divisions)
+        divisions = baca.sequence.quarters(divisions)
     else:
-        preprocessor_ = preprocessor
-    beam_commands = []
+        divisions = preprocessor(divisions)
+    tag = baca.tags.function_name(inspect.currentframe())
+    nested_music = rmakers.talea_function(
+        divisions, counts, talea_denominator, extra_counts=extra_counts, tag=tag
+    )
+    voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
+    rmakers.rewrite_rest_filled_function(voice, tag=tag)
+    rmakers.rewrite_sustained_function(voice, tag=tag)
     if beam:
-        beam_ = rmakers.beam()
-        beam_commands.append(beam_)
-    commands = []
+        rmakers.beam_function(voice, tag=tag)
+    rmakers.extract_trivial_function(voice)
+    rmakers.force_fraction_function(voice)
     if denominator is not None:
-        denominator_ = rmakers.denominator(denominator)
-        commands.append(denominator_)
+        rmakers.denominator_function(voice, denominator)
     if not do_not_rewrite_meter:
-        rewrite_ = rmakers.rewrite_meter(
-            boundary_depth=1, reference_meters=_reference_meters()
+        rmakers.rewrite_meter_function(
+            voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
         )
-        commands.append(rewrite_)
     if written_eighths is True:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 8),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        rmakers.written_duration_function(pleaves, (1, 8))
+        rmakers.unbeam_function(voice)
     elif written_eighths is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_eighths)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 8),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_eighths)
+        rmakers.written_duration_function(pleaves, (1, 8))
+        rmakers.unbeam_function(voice)
     if written_quarters is True:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 4),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        rmakers.written_duration_function(pleaves, (1, 4))
+        rmakers.unbeam_function(voice)
     elif written_quarters is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_quarters)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 4),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_quarters)
+        rmakers.written_duration_function(pleaves, (1, 4))
+        rmakers.unbeam_function(voice)
     if written_dotted_quarters is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_dotted_quarters)
-            return result
-
-        written_ = rmakers.written_duration(
-            (3, 8),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_dotted_quarters)
+        rmakers.written_duration_function(pleaves, (3, 8))
+        rmakers.unbeam_function(voice)
     if written_halves is True:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 2),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        rmakers.written_duration_function(pleaves, (1, 2))
+        rmakers.unbeam_function(voice)
     elif written_halves is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_halves)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 2),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_halves)
+        rmakers.written_duration_function(pleaves, (1, 2))
+        rmakers.unbeam_function(voice)
     if written_dotted_halves is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_dotted_halves)
-            return result
-
-        written_ = rmakers.written_duration(
-            (3, 4),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_dotted_halves)
+        rmakers.written_duration_function(pleaves, (3, 4))
+        rmakers.unbeam_function(voice)
     if written_wholes is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_wholes)
-            return result
-
-        written_ = rmakers.written_duration(
-            (1, 1),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_wholes)
+        rmakers.written_duration_function(pleaves, (1, 1))
+        rmakers.unbeam_function(voice)
     if written_dotted_wholes is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_dotted_wholes)
-            return result
-
-        written_ = rmakers.written_duration(
-            (3, 2),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_dotted_wholes)
+        rmakers.written_duration_function(pleaves, (3, 2))
+        rmakers.unbeam_function(voice)
     if written_double_dotted_wholes is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, written_double_dotted_wholes)
-            return result
-
-        written_ = rmakers.written_duration(
-            (7, 4),
-            selector,
-        )
-        commands.append(written_)
-        unbeam_ = rmakers.unbeam()
-        commands.append(unbeam_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, written_double_dotted_wholes)
+        rmakers.written_duration_function(pleaves, (7, 4))
+        rmakers.unbeam_function(voice)
     if invisible_pairs is True:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, ([1], 2))
-            return result
-
-        invisible_ = rmakers.invisible_music(selector)
-        commands.append(invisible_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, ([1], 2))
+        rmakers.invisible_music_function(pleaves, tag=tag)
     if invisible is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, invisible)
-            return result
-
-        invisible_ = rmakers.invisible_music(selector)
-        commands.append(invisible_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, invisible)
+        rmakers.invisible_music_function(pleaves, tag=tag)
     if tie is not None:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)
-            result = abjad.select.get(result, tie)
-            return result
-
-        repeat_tie_ = rmakers.repeat_tie(selector)
-        commands.append(repeat_tie_)
+        pleaves = baca.select.pleaves(voice)
+        pleaves = abjad.select.get(pleaves, tie)
+        rmakers.repeat_tie_function(pleaves, tag=tag)
     if tie_all is True:
-
-        def selector(argument):
-            result = baca.select.pleaves(argument)[1:]
-            return result
-
-        repeat_tie_ = rmakers.repeat_tie(selector)
-        commands.append(repeat_tie_)
+        pleaves = baca.select.pleaves(voice)[1:]
+        rmakers.repeat_tie_function(pleaves, tag=tag)
     if tie_runs is True:
-
-        def selector(argument):
-            return baca.select.leaves_in_each_run(argument, 1, None)
-
-        repeat_tie_ = rmakers.repeat_tie(selector)
-        commands.append(repeat_tie_)
+        leaves = baca.select.leaves_in_each_run(voice, 1, None)
+        rmakers.repeat_tie_function(leaves, tag=tag)
     if untie is True:
-
-        def selector(argument):
-            return baca.select.leaves(argument)
-
-        untie_ = rmakers.untie(selector)
-        commands.append(untie_)
+        leaves = baca.select.leaves(voice)
+        rmakers.untie_function(leaves)
     if unbeam is True:
-
-        def selector(argument):
-            return baca.select.leaves(argument)
-
-        unbeam_ = rmakers.unbeam(selector)
-        commands.append(unbeam_)
+        leaves = baca.select.leaves(voice)
+        rmakers.unbeam_function(leaves)
     if after_graces:
-
-        def selector(argument):
-            return baca.select.leaf_in_each_run(argument, -1)
-
+        leaves = baca.select.leaf_in_each_run(voice, -1)
         beam_and_slash = False
         if after_graces != [1]:
             beam_and_slash = True
-        after_grace_ = rmakers.after_grace_container(
+        rmakers.after_grace_container_function(
+            leaves,
             after_graces,
-            selector,
             beam_and_slash=beam_and_slash,
         )
-        commands.append(after_grace_)
-    rhythm_maker = rmakers.stack(
-        rmakers.talea(counts, talea_denominator, extra_counts=extra_counts),
-        rmakers.rewrite_rest_filled(),
-        rmakers.rewrite_sustained(),
-        *beam_commands,
-        rmakers.extract_trivial(),
-        rmakers.force_fraction(),
-        *commands,
-        rmakers.force_repeat_tie((1, 8)),
-        preprocessor=preprocessor_,
-        tag=baca.tags.function_name(inspect.currentframe()),
-    )
-    music = rhythm_maker(time_signatures)
+    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    music = abjad.mutate.eject_contents(voice)
     return music
 
 
