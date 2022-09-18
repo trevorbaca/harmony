@@ -4384,8 +4384,11 @@ number.25.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -4406,6 +4409,7 @@ number.25.Percussion.2.Music = {
           %! abjad.glissando(6)
           %! baca.glissando()
         \undo \hide NoteHead
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % STEM_TREMOLOS:
@@ -4420,6 +4424,7 @@ number.25.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6303,6 +6308,7 @@ number.25.Viola.Music = {
     \baca-repeat-pitch-class-coloring
       %! baca.note_head_transparent(1)
     \override NoteHead.transparent = ##t
+      %! harmony.make_tessera_4()
     c'8.
     % AFTER:
     % ARTICULATIONS:
@@ -6311,6 +6317,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \!
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6354,6 +6361,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6397,6 +6405,7 @@ number.25.Viola.Music = {
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6415,6 +6424,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6452,6 +6462,7 @@ number.25.Viola.Music = {
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6480,6 +6491,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6508,6 +6520,7 @@ number.25.Viola.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6518,6 +6531,7 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -6536,6 +6550,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6581,6 +6596,7 @@ number.25.Viola.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6599,6 +6615,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6635,9 +6652,11 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6666,6 +6685,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6703,6 +6723,7 @@ number.25.Viola.Music = {
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6731,6 +6752,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \baca-f-scratch
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6773,6 +6795,7 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -6782,9 +6805,11 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6852,6 +6877,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6900,6 +6926,7 @@ number.25.Viola.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6913,6 +6940,7 @@ number.25.Viola.Music = {
     c'8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -6941,6 +6969,7 @@ number.25.Viola.Music = {
       %! baca.hairpin()
     \baca-ff-scratch
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -6954,6 +6983,7 @@ number.25.Viola.Music = {
     c'8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -7663,6 +7693,7 @@ number.25.Cello.1.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7681,6 +7712,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7718,6 +7750,7 @@ number.25.Cello.1.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7728,6 +7761,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -7746,6 +7780,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7812,6 +7847,7 @@ number.25.Cello.1.Music = {
     c'8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7840,6 +7876,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7877,6 +7914,7 @@ number.25.Cello.1.Music = {
     c'8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -7887,6 +7925,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -7905,6 +7944,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -7938,6 +7978,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7947,6 +7988,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'4
     % AFTER:
     % ARTICULATIONS:
@@ -8020,6 +8062,7 @@ number.25.Cello.1.Music = {
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8030,6 +8073,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8
     % AFTER:
     % ARTICULATIONS:
@@ -8048,6 +8092,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \baca-f-scratch
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8081,6 +8126,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8090,9 +8136,11 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8111,6 +8159,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8148,6 +8197,7 @@ number.25.Cello.1.Music = {
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8176,6 +8226,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8212,6 +8263,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8221,6 +8273,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8230,9 +8283,11 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8243,9 +8298,11 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'8.
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -8258,6 +8315,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8267,6 +8325,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8276,6 +8335,7 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c'16
     % AFTER:
     % ARTICULATIONS:
@@ -8294,6 +8354,7 @@ number.25.Cello.1.Music = {
       %! baca.hairpin()
     \baca-ff-scratch
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % COMMANDS:
@@ -8308,6 +8369,7 @@ number.25.Cello.1.Music = {
       %! baca.stem_tremolo()
     :32
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -8856,6 +8918,7 @@ number.25.Cello.2.Music = {
       %! baca.markup()
     ^ \baca-quasi-bisb-markup
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -8899,6 +8962,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8922,6 +8986,7 @@ number.25.Cello.2.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8945,6 +9010,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -8978,6 +9044,7 @@ number.25.Cello.2.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -8991,6 +9058,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9017,13 +9085,16 @@ number.25.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 6]
+      %! harmony.make_tessera_4()
     c''1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9047,6 +9118,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9073,13 +9145,16 @@ number.25.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 7]
+      %! harmony.make_tessera_4()
     c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9103,6 +9178,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9136,6 +9212,7 @@ number.25.Cello.2.Music = {
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9149,6 +9226,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9175,18 +9253,22 @@ number.25.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 8]
+      %! harmony.make_tessera_4()
     c''1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''8.
     % AFTER:
     % ARTICULATIONS:
@@ -9205,6 +9287,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9225,6 +9308,7 @@ number.25.Cello.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''4
     % AFTER:
     % ARTICULATIONS:
@@ -9296,6 +9380,7 @@ number.25.Cello.2.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9319,6 +9404,7 @@ number.25.Cello.2.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -9345,9 +9431,11 @@ number.25.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 10]
+      %! harmony.make_tessera_4()
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -9356,6 +9444,7 @@ number.25.Cello.2.Music = {
     c''8
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:
@@ -10020,6 +10109,7 @@ number.25.Contrabass.1.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10038,6 +10128,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10075,6 +10166,7 @@ number.25.Contrabass.1.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10103,6 +10195,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10145,6 +10238,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10154,9 +10248,11 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10175,6 +10271,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10212,6 +10309,7 @@ number.25.Contrabass.1.Music = {
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10240,6 +10338,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10276,6 +10375,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10285,6 +10385,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10294,9 +10395,11 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10307,6 +10410,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''8.
     % AFTER:
     % ARTICULATIONS:
@@ -10325,6 +10429,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10358,6 +10463,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10400,6 +10506,7 @@ number.25.Contrabass.1.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10428,6 +10535,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10464,6 +10572,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10473,9 +10582,11 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10504,6 +10615,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \baca-f-scratch
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10546,6 +10658,7 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10555,9 +10668,11 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
       %! baca.color_repeat_pitch_classes()
     \baca-repeat-pitch-class-coloring
+      %! harmony.make_tessera_4()
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10576,6 +10691,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10604,6 +10720,7 @@ number.25.Contrabass.1.Music = {
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10632,6 +10749,7 @@ number.25.Contrabass.1.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -10660,6 +10778,7 @@ number.25.Contrabass.1.Music = {
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -10707,6 +10826,7 @@ number.25.Contrabass.1.Music = {
     c''16
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -11313,6 +11433,7 @@ number.25.Contrabass.2.Music = {
     c''8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11326,6 +11447,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11352,18 +11474,22 @@ number.25.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 6]
+      %! harmony.make_tessera_4()
     c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''8.
     % AFTER:
     % ARTICULATIONS:
@@ -11382,6 +11508,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11408,6 +11535,7 @@ number.25.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''4
     % AFTER:
     % ARTICULATIONS:
@@ -11433,6 +11561,7 @@ number.25.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''2.
     % AFTER:
     % ARTICULATIONS:
@@ -11470,6 +11599,7 @@ number.25.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 7]
+      %! harmony.make_tessera_4()
     c''1.
     % AFTER:
     % ARTICULATIONS:
@@ -11513,10 +11643,12 @@ number.25.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 8]
+      %! harmony.make_tessera_4()
     c''4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''8
     % AFTER:
     % ARTICULATIONS:
@@ -11525,6 +11657,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \!
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -11563,6 +11696,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11586,6 +11720,7 @@ number.25.Contrabass.2.Music = {
     c''8.
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11609,6 +11744,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \baca-f-scratch
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11642,6 +11778,7 @@ number.25.Contrabass.2.Music = {
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11655,6 +11792,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \!
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11681,13 +11819,16 @@ number.25.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 9]
+      %! harmony.make_tessera_4()
     c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11711,6 +11852,7 @@ number.25.Contrabass.2.Music = {
       %! baca.hairpin()
     \mf
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -11737,13 +11879,16 @@ number.25.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 10]
+      %! harmony.make_tessera_4()
     c''2
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_4()
     c''16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % ABSOLUTE_BEFORE:
@@ -11752,6 +11897,7 @@ number.25.Contrabass.2.Music = {
     c''8.
     % AFTER:
     % STOP_BEAM:
+      %! harmony.make_tessera_4()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % ABSOLUTE_BEFORE:

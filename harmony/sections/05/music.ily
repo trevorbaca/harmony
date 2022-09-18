@@ -900,6 +900,7 @@ number.5.BassFlute.Music = {
 
       %! baca._comment_measure_numbers()
     % [BassFlute.Music measure 3]
+      %! harmony.make_tessera_1()
     fs'!16
     % AFTER:
     % ARTICULATIONS:
@@ -927,6 +928,7 @@ number.5.BassFlute.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_1()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -959,6 +961,7 @@ number.5.BassFlute.Music = {
     fs'2
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3081,9 +3084,11 @@ number.5.Harp.Music = {
     cs'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3108,6 +3113,7 @@ number.5.Harp.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -3121,6 +3127,7 @@ number.5.Harp.Music = {
     cs'4
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -4671,6 +4678,7 @@ number.5.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 3]
+      %! harmony.make_tessera_1()
     fs!8.
     % AFTER:
     % ARTICULATIONS:
@@ -4679,6 +4687,7 @@ number.5.Cello.1.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_1()
     r16
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4720,10 +4729,12 @@ number.5.Cello.1.Music = {
     fs8
     % AFTER:
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_1()
     r16
     % AFTER:
     % COMMANDS:
@@ -4736,6 +4747,7 @@ number.5.Cello.1.Music = {
     % COMMANDS:
       %! baca.dls_staff_padding(1)
     \override DynamicLineSpanner.staff-padding = 5.5
+      %! harmony.make_tessera_1()
     fs!16
     % AFTER:
     % ARTICULATIONS:
@@ -5645,6 +5657,7 @@ number.5.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 3]
+      %! harmony.make_tessera_1()
     f2.
     % AFTER:
     % ARTICULATIONS:
@@ -6655,6 +6668,7 @@ number.5.Contrabass.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
+      %! harmony.make_tessera_1()
     aqs'!8.
     % AFTER:
     % ARTICULATIONS:
@@ -6684,6 +6698,7 @@ number.5.Contrabass.1.Music = {
       %! baca.markup()
     ^ \baca-eleven-e
     % START_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
@@ -6755,6 +6770,7 @@ number.5.Contrabass.1.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % SPANNER_STARTS:
@@ -6775,9 +6791,11 @@ number.5.Contrabass.1.Music = {
     aqs'8
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % COMMANDS:
       %! baca.dls_staff_padding(2)
@@ -6789,6 +6807,7 @@ number.5.Contrabass.1.Music = {
     % COMMANDS:
       %! baca.dls_staff_padding(1)
     \override DynamicLineSpanner.staff-padding = 5.5
+      %! harmony.make_tessera_1()
     aqs'!8
     % AFTER:
     % ARTICULATIONS:
@@ -6809,6 +6828,7 @@ number.5.Contrabass.1.Music = {
       %! baca.hairpin()
     \mp
     % STOP_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:
@@ -7810,6 +7830,7 @@ number.5.Contrabass.2.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
+      %! harmony.make_tessera_1()
     fs'!2
     % AFTER:
     % ARTICULATIONS:
@@ -7887,16 +7908,20 @@ number.5.Contrabass.2.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_1()
     fs'16
     % AFTER:
     % START_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     [
     % SPANNER_STARTS:
+      %! harmony.make_tessera_1()
     \repeatTie
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
+      %! harmony.make_tessera_1()
     fs'!8.
     % AFTER:
     % ARTICULATIONS:
@@ -7917,6 +7942,7 @@ number.5.Contrabass.2.Music = {
       %! baca.hairpin()
     \p
     % STOP_BEAM:
+      %! harmony.make_tessera_1()
       %! rmakers.RewriteMeterCommand.__call__
     ]
     % COMMANDS:

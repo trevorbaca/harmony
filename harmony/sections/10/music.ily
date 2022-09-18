@@ -6137,14 +6137,18 @@ number.10.Viola.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/11
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Viola.Music measure 11]
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6154,6 +6158,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6163,6 +6168,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6172,6 +6178,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6181,6 +6188,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6190,6 +6198,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6199,6 +6208,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6208,6 +6218,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6217,6 +6228,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6226,6 +6238,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6235,6 +6248,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6245,19 +6259,24 @@ number.10.Viola.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/11
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Viola.Music measure 12]
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6267,6 +6286,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -6276,6 +6296,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6285,6 +6306,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6294,6 +6316,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6303,6 +6326,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6312,6 +6336,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6321,6 +6346,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -6330,6 +6356,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6339,6 +6366,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6348,6 +6376,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6358,19 +6387,24 @@ number.10.Viola.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/11
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Viola.Music measure 13]
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % ARTICULATIONS:
@@ -6476,6 +6510,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6485,6 +6520,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -6494,6 +6530,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6503,6 +6540,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6512,6 +6550,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c'4
         % AFTER:
         % SPANNER_STARTS:
@@ -6521,6 +6560,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -6530,6 +6570,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6539,6 +6580,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -6548,6 +6590,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6557,6 +6600,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -6567,19 +6611,24 @@ number.10.Viola.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/11
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Viola.Music measure 14]
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6589,6 +6638,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -6598,6 +6648,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6607,6 +6658,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e4
         % AFTER:
         % SPANNER_STARTS:
@@ -6616,6 +6668,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6625,6 +6678,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -6634,6 +6688,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -6643,6 +6698,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -6652,6 +6708,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6661,6 +6718,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e4
         % AFTER:
         % SPANNER_STARTS:
@@ -6670,6 +6728,7 @@ number.10.Viola.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -6680,6 +6739,7 @@ number.10.Viola.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -7661,14 +7721,18 @@ number.10.Cello.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/10
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.1.Music measure 12]
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7678,6 +7742,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7687,6 +7752,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7696,6 +7762,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7705,6 +7772,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7714,6 +7782,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d4
         % AFTER:
         % SPANNER_STARTS:
@@ -7723,6 +7792,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7732,6 +7802,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7741,6 +7812,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7750,6 +7822,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7760,19 +7833,24 @@ number.10.Cello.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/10
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.1.Music measure 13]
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % ARTICULATIONS:
@@ -7872,6 +7950,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7881,6 +7960,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7890,6 +7970,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7899,6 +7980,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7908,6 +7990,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7917,6 +8000,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7926,6 +8010,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -7935,6 +8020,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7944,6 +8030,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7954,19 +8041,24 @@ number.10.Cello.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/10
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.1.Music measure 14]
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7976,6 +8068,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7985,6 +8078,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -7994,6 +8088,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8003,6 +8098,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8012,6 +8108,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8021,6 +8118,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8030,6 +8128,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8039,6 +8138,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8048,6 +8148,7 @@ number.10.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -8058,6 +8159,7 @@ number.10.Cello.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -9165,14 +9267,18 @@ number.10.Cello.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/9
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.2.Music measure 13]
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % ARTICULATIONS:
@@ -9278,6 +9384,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9287,6 +9394,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9296,6 +9404,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         c4
         % AFTER:
         % SPANNER_STARTS:
@@ -9305,6 +9414,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9314,6 +9424,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9323,6 +9434,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9332,6 +9444,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9341,6 +9454,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9351,19 +9465,24 @@ number.10.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/9
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.2.Music measure 14]
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9373,6 +9492,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9382,6 +9502,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9391,6 +9512,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9400,6 +9522,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9409,6 +9532,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9418,6 +9542,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9427,6 +9552,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9436,6 +9562,7 @@ number.10.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a,4
         % AFTER:
         % SPANNER_STARTS:
@@ -9446,6 +9573,7 @@ number.10.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11427,14 +11555,18 @@ number.10.Contrabass.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/7
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.2.Music measure 13]
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % ARTICULATIONS:
@@ -11540,6 +11672,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -11549,6 +11682,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         b4
         % AFTER:
         % SPANNER_STARTS:
@@ -11558,6 +11692,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -11567,6 +11702,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -11576,6 +11712,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e4
         % AFTER:
         % SPANNER_STARTS:
@@ -11585,6 +11722,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -11595,19 +11733,24 @@ number.10.Contrabass.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 6/7
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.2.Music measure 14]
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -11617,6 +11760,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         a4
         % AFTER:
         % SPANNER_STARTS:
@@ -11626,6 +11770,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         e4
         % AFTER:
         % SPANNER_STARTS:
@@ -11635,6 +11780,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -11644,6 +11790,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         d4
         % AFTER:
         % SPANNER_STARTS:
@@ -11653,6 +11800,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         g4
         % AFTER:
         % SPANNER_STARTS:
@@ -11662,6 +11810,7 @@ number.10.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
+          %! harmony.make_tuplet()
         f4
         % AFTER:
         % SPANNER_STARTS:
@@ -11672,6 +11821,7 @@ number.10.Contrabass.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:

@@ -4144,14 +4144,18 @@ number.12.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Percussion.1.Music measure 4]
+          %! harmony.make_tuplet()
         ef'!1
         % AFTER:
         % ARTICULATIONS:
@@ -4173,6 +4177,7 @@ number.12.Percussion.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4201,14 +4206,18 @@ number.12.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Percussion.1.Music measure 6]
+          %! harmony.make_tuplet()
         ef'!1
         % AFTER:
         % ARTICULATIONS:
@@ -4230,6 +4239,7 @@ number.12.Percussion.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4258,14 +4268,18 @@ number.12.Percussion.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Percussion.1.Music measure 8]
+          %! harmony.make_tuplet()
         ef'!1
         % AFTER:
         % ARTICULATIONS:
@@ -4290,6 +4304,7 @@ number.12.Percussion.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5148,8 +5163,11 @@ number.12.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5159,6 +5177,7 @@ number.12.Percussion.2.Music = {
         % BEFORE:
         % GROB_OVERRIDES:
         \once \override LaissezVibrerTie.direction = #up
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % ARTICULATIONS:
@@ -5168,6 +5187,7 @@ number.12.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5184,8 +5204,11 @@ number.12.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5195,6 +5218,7 @@ number.12.Percussion.2.Music = {
         % BEFORE:
         % GROB_OVERRIDES:
         \once \override LaissezVibrerTie.direction = #up
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % ARTICULATIONS:
@@ -5204,6 +5228,7 @@ number.12.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5220,8 +5245,11 @@ number.12.Percussion.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5231,6 +5259,7 @@ number.12.Percussion.2.Music = {
         % BEFORE:
         % GROB_OVERRIDES:
         \once \override LaissezVibrerTie.direction = #up
+          %! harmony.make_tuplet()
         c'1
         % AFTER:
         % ARTICULATIONS:
@@ -5247,6 +5276,7 @@ number.12.Percussion.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5782,8 +5812,11 @@ number.12.Harp.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -5799,6 +5832,7 @@ number.12.Harp.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5866,14 +5900,18 @@ number.12.Harp.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Harp.Music measure 6]
+          %! harmony.make_tuplet()
         ef'!1
         % AFTER:
         % ARTICULATIONS:
@@ -5895,6 +5933,7 @@ number.12.Harp.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5923,14 +5962,18 @@ number.12.Harp.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
+      %! harmony.make_tuplet()
     \tweak text #tuplet-number::calc-fraction-text
+      %! harmony.make_tuplet()
     \times 5/4
+      %! harmony.make_tuplet()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Harp.Music measure 8]
+          %! harmony.make_tuplet()
         ef'!1
         % AFTER:
         % ARTICULATIONS:
@@ -5952,6 +5995,7 @@ number.12.Harp.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
+      %! harmony.make_tuplet()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
