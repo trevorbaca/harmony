@@ -3064,7 +3064,7 @@ number.27.Percussion.1.Music = {
     % COMMANDS:
       %! baca.stem_up(1)
     \override Stem.direction = #up
-      %! baca.make_repeat_tied_notes_function()
+      %! baca.make_repeat_tied_notes()
     c'1..
     % AFTER:
     % ARTICULATIONS:
@@ -3120,7 +3120,7 @@ number.27.Percussion.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_repeat_tied_notes_function()
+      %! baca.make_repeat_tied_notes()
     c'1.
     % AFTER:
     % COMMANDS:
@@ -3319,7 +3319,7 @@ number.27.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_repeat_tied_notes_function()
+      %! baca.make_repeat_tied_notes()
     c'1..
     % AFTER:
     % ARTICULATIONS:
@@ -4700,7 +4700,7 @@ number.27.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     af'!1..
     % AFTER:
     % ARTICULATIONS:
@@ -5113,7 +5113,7 @@ number.27.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 4]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     af'!1..
     % AFTER:
     % ARTICULATIONS:
@@ -5311,7 +5311,7 @@ number.27.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     gqf!1..
     % AFTER:
     % ARTICULATIONS:
@@ -6675,7 +6675,7 @@ number.27.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     g1..
     % AFTER:
     % ARTICULATIONS:
@@ -7901,7 +7901,7 @@ number.27.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     g1..
     % AFTER:
     % ARTICULATIONS:
@@ -9152,7 +9152,7 @@ number.27.Contrabass.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     gf!1..
     % AFTER:
     % ARTICULATIONS:
@@ -10263,7 +10263,7 @@ number.27.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     gf!1..
     % AFTER:
     % ARTICULATIONS:

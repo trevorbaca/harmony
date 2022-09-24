@@ -84,11 +84,11 @@ def PERC1(voice, accumulator):
 
 
 def PERC2(voice, accumulator):
-    music = baca.make_notes_function(accumulator.get(1, 6))
+    music = baca.make_notes(accumulator.get(1, 6))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -104,7 +104,7 @@ def HP(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -120,7 +120,7 @@ def VA(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -141,7 +141,7 @@ def VC1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -171,7 +171,7 @@ def VC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -192,7 +192,7 @@ def CB1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 
@@ -217,7 +217,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8, 9))
+    music = baca.make_notes(accumulator.get(8, 9))
     voice.extend(music)
 
 

@@ -215,7 +215,7 @@ def HP(voice, accumulator):
 
 
 def VA(voice, accumulator):
-    music = baca.make_notes_function(accumulator.get(1, 2))
+    music = baca.make_notes(accumulator.get(1, 2))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(3),
@@ -238,7 +238,7 @@ def VC1(voice, accumulator):
         r"r1 r8 \times 5/4 { c2 }",
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2))
+    music = baca.make_notes(accumulator.get(2))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(3),
@@ -261,7 +261,7 @@ def VC2(voice, accumulator):
         r"r1 r8 \times 5/4 { c2 }",
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2))
+    music = baca.make_notes(accumulator.get(2))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(3),
@@ -284,7 +284,7 @@ def CB1(voice, accumulator):
         r"r1 r8 \times 5/4 { c2 }",
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2))
+    music = baca.make_notes(accumulator.get(2))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(3),
@@ -307,7 +307,7 @@ def CB2(voice, accumulator):
         r"r1 r8 \times 5/4 { c2 }",
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2))
+    music = baca.make_notes(accumulator.get(2))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(3),

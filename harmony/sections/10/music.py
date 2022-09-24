@@ -170,18 +170,18 @@ def PERC1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(9), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(10, 14))
+    music = baca.make_notes(accumulator.get(10, 14))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(15), head=voice.name)
     voice.extend(music)
 
 
 def PERC2(voice, accumulator):
-    music = baca.make_notes_function(accumulator.get(1, 7))
+    music = baca.make_notes(accumulator.get(1, 7))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(8, 9))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(10, 15))
+    music = baca.make_notes(accumulator.get(10, 15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -189,11 +189,11 @@ def PERC2(voice, accumulator):
 def HP(voice, accumulator):
     music = baca.make_mmrests(accumulator.get(1))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2, 8))
+    music = baca.make_notes(accumulator.get(2, 8))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(9))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(10, 12))
+    music = baca.make_notes(accumulator.get(10, 12))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(13, 15), head=voice.name)
     voice.extend(music)
@@ -236,7 +236,7 @@ def VA(voice, accumulator):
         [11 * (1,)],
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(15))
+    music = baca.make_notes(accumulator.get(15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -279,7 +279,7 @@ def VC1(voice, accumulator):
         denominator=(1, 4),
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(15))
+    music = baca.make_notes(accumulator.get(15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -322,7 +322,7 @@ def VC2(voice, accumulator):
         denominator=(1, 4),
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(15))
+    music = baca.make_notes(accumulator.get(15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -333,11 +333,11 @@ def CB1(voice, accumulator):
         [3, "-"],
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(2, 8))
+    music = baca.make_notes(accumulator.get(2, 8))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(9))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(10, 15))
+    music = baca.make_notes(accumulator.get(10, 15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -377,7 +377,7 @@ def CB2(voice, accumulator):
         denominator=(1, 4),
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(15))
+    music = baca.make_notes(accumulator.get(15))
     voice.extend(music)
     baca.append_anchor_note(voice)
 

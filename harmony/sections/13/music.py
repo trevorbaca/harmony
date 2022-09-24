@@ -115,7 +115,7 @@ def PERC1(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(4))
+    music = baca.make_notes(accumulator.get(4))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(5),
@@ -196,9 +196,9 @@ def VA(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(3))
+    music = baca.make_notes(accumulator.get(3))
     voice.extend(music)
-    music = baca.make_repeat_tied_notes_function(accumulator.get(4, 5))
+    music = baca.make_repeat_tied_notes(accumulator.get(4, 5))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(6), head=voice.name)
     voice.extend(music)
@@ -217,7 +217,7 @@ def VC1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(3))
+    music = baca.make_notes(accumulator.get(3))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(4),
@@ -242,7 +242,7 @@ def VC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(3))
+    music = baca.make_notes(accumulator.get(3))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(4),
@@ -272,7 +272,7 @@ def CB1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(3))
+    music = baca.make_notes(accumulator.get(3))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(4),
@@ -297,7 +297,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(2), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(3))
+    music = baca.make_notes(accumulator.get(3))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(4),

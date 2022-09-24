@@ -3329,7 +3329,7 @@ number.16.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 9]
-      %! baca.make_repeat_tied_notes_function()
+      %! baca.make_repeat_tied_notes()
     d'2.
     % AFTER:
     % ARTICULATIONS:
@@ -3433,7 +3433,7 @@ number.16.Viola.Music = {
       %! abjad.glissando(0)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_repeat_tied_notes_function()
+      %! baca.make_repeat_tied_notes()
     d'2.
     % AFTER:
     % COMMANDS:

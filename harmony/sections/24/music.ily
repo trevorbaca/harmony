@@ -4816,7 +4816,7 @@ number.24.Percussion.1.Music = {
     % COMMANDS:
       %! baca.stem_up(1)
     \once \override Stem.direction = #up
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % AFTER:
     % STEM_TREMOLOS:

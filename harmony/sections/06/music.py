@@ -524,7 +524,7 @@ def VC2(voice, accumulator):
 
 
 def CB1(voice, accumulator):
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(1),
         [(1, 4)],
     )
@@ -542,7 +542,7 @@ def CB1(voice, accumulator):
         tie=[0],
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(5, 7),
         [(1, 4)],
     )
@@ -554,7 +554,7 @@ def CB1(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(9))
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(10, 15),
         [(1, 4)],
     )
@@ -563,7 +563,7 @@ def CB1(voice, accumulator):
 
 
 def CB2(voice, accumulator):
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(1),
         [(1, 4)],
     )
@@ -575,7 +575,7 @@ def CB2(voice, accumulator):
         ["-", 4, 4, 4],
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(4, 7),
         [(1, 4)],
     )
@@ -589,7 +589,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(9))
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(10, 15),
         [(1, 4)],
     )

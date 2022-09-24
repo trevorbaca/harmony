@@ -325,7 +325,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(8))
+    music = baca.make_notes(accumulator.get(8))
     voice.extend(music)
     music = library.make_tuplet(
         accumulator.get(9),
@@ -337,7 +337,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(10), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(11))
+    music = baca.make_notes(accumulator.get(11))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
