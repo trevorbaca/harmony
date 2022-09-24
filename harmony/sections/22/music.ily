@@ -3925,7 +3925,7 @@ number.22.Percussion.1.Music = {
     % COMMANDS:
       %! baca.stem_up(1)
     \override Stem.direction = #up
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % AFTER:
     % STEM_TREMOLOS:
@@ -3983,28 +3983,28 @@ number.22.Percussion.1.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 7]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 8]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 9]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4031,7 +4031,7 @@ number.22.Percussion.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % AFTER:
     % STEM_TREMOLOS:
@@ -4082,7 +4082,7 @@ number.22.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'2.
     % AFTER:
     % STEM_TREMOLOS:

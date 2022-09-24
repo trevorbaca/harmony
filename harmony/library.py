@@ -117,7 +117,7 @@ def make_appoggiato_rhythm(
         prefix_talea = [-1]
         prefix_counts = [1]
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.incised_function(
+    nested_music = rmakers.incised(
         divisions_,
         extra_counts=extra_counts,
         prefix_talea=prefix_talea,
@@ -128,19 +128,19 @@ def make_appoggiato_rhythm(
         tag=tag,
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.extract_trivial_function(voice)
-    rmakers.rewrite_meter_function(voice, reference_meters=_reference_meters(), tag=tag)
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.rewrite_meter(voice, reference_meters=_reference_meters(), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     if rest_to:
         plts = baca.select.plts(voice, grace=False)
         plts = plts[:rest_to]
-        rmakers.force_rest_function(plts, tag=tag)
+        rmakers.force_rest(plts, tag=tag)
     if rest_from is not None:
         plts = baca.select.plts(voice, grace=False)
         plts = plts[-rest_from:]
-        rmakers.force_rest_function(plts, tag=tag)
+        rmakers.force_rest(plts, tag=tag)
     if counts:
-        rmakers.on_beat_grace_container_function(
+        rmakers.on_beat_grace_container(
             voice,
             voice_name,
             baca.select.plts(voice),
@@ -150,25 +150,25 @@ def make_appoggiato_rhythm(
         )
     if rest_after is True:
         plts = baca.select.plts(voice, grace=False)
-        rmakers.force_rest_function(plts, tag=tag)
+        rmakers.force_rest(plts, tag=tag)
     elif rest_after is not None:
         plts = baca.select.plts(voice, grace=False)
         plts = abjad.select.get(plts, rest_after)
-        rmakers.force_rest_function(plts, tag=tag)
+        rmakers.force_rest(plts, tag=tag)
     if tie is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, tie)
-        rmakers.repeat_tie_function(pleaves, tag=tag)
+        rmakers.repeat_tie(pleaves, tag=tag)
     if written_quarters is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_quarters)
-        rmakers.written_duration_function(pleaves, (1, 4))
+        rmakers.written_duration(pleaves, (1, 4))
         leaves = baca.select.leaves(voice, grace=False)
-        rmakers.unbeam_function(leaves)
+        rmakers.unbeam(leaves)
     if invisible is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, invisible)
-        rmakers.invisible_music_function(pleaves, tag=tag)
+        rmakers.invisible_music(pleaves, tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -313,60 +313,58 @@ def make_phjc_rhythm(
     divisions_ = [abjad.sequence.flatten(_) for _ in divisions_]
     divisions_ = [baca.sequence.fuse(_) for _ in divisions_]
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
+    nested_music = rmakers.talea(
         divisions_, counts, 16, extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest is not None:
         tuplets = baca.select.tuplets(voice, rest)
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_cyclic is not None:
         tuplets = baca.select.tuplets(voice, rest_cyclic)
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_except is not None:
         tuplets = baca.select.tuplets(voice, ~abjad.Pattern(rest_except))
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_most is True:
         tuplets = baca.select.tuplets(voice, (None, 1))
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_nonfirst is True:
         tuplets = baca.select.tuplets(voice, (1, None))
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_pleaves is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, rest_pleaves)
-        rmakers.force_rest_function(pleaves, tag=tag)
-    rmakers.rewrite_rest_filled_function(voice, tag=tag)
-    rmakers.denominator_function(voice, (1, 8))
-    rmakers.force_fraction_function(voice)
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
-    rmakers.force_rest_function(baca.select.leaves_in_each_plt(voice, 1, None), tag=tag)
-    rmakers.force_rest_function(baca.select.leaf_in_each_tuplet(voice, 0), tag=tag)
-    rmakers.beam_function(voice, tag=tag)
-    rmakers.extract_trivial_function(voice)
+        rmakers.force_rest(pleaves, tag=tag)
+    rmakers.rewrite_rest_filled(voice, tag=tag)
+    rmakers.denominator(voice, (1, 8))
+    rmakers.force_fraction(voice)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_rest(baca.select.leaves_in_each_plt(voice, 1, None), tag=tag)
+    rmakers.force_rest(baca.select.leaf_in_each_tuplet(voice, 0), tag=tag)
+    rmakers.beam(voice, tag=tag)
+    rmakers.extract_trivial(voice)
     music = abjad.mutate.eject_contents(voice)
     return music
 
 
-def make_rimbalzandi_rhythm_function(
-    time_signatures, *, extra_counts=(), rest_except=None
-):
+def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
     tag = baca.tags.function_name(inspect.currentframe())
     divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
     divisions = baca.sequence.fuse(divisions, [2], cyclic=True)
-    nested_music = rmakers.even_division_function(
+    nested_music = rmakers.even_division(
         divisions, [4], extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.trivialize_function(voice)
-    rmakers.rewrite_dots_function(voice, tag=tag)
+    rmakers.trivialize(voice)
+    rmakers.rewrite_dots(voice, tag=tag)
     if rest_except is not None:
         leaves = abjad.select.leaves(voice)
         leaves = abjad.select.exclude(leaves, rest_except)
-        rmakers.force_rest_function(leaves, tag=tag)
-    rmakers.force_diminution_function(voice)
-    rmakers.force_fraction_function(voice)
-    rmakers.extract_trivial_function(voice)
+        rmakers.force_rest(leaves, tag=tag)
+    rmakers.force_diminution(voice)
+    rmakers.force_fraction(voice)
+    rmakers.extract_trivial(voice)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -409,109 +407,109 @@ def make_sixteenths(
     else:
         divisions = preprocessor(divisions)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
+    nested_music = rmakers.talea(
         divisions, counts, talea_denominator, extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.rewrite_rest_filled_function(voice, tag=tag)
-    rmakers.rewrite_sustained_function(voice, tag=tag)
+    rmakers.rewrite_rest_filled(voice, tag=tag)
+    rmakers.rewrite_sustained(voice, tag=tag)
     if beam:
-        rmakers.beam_function(voice, tag=tag)
-    rmakers.extract_trivial_function(voice)
-    rmakers.force_fraction_function(voice)
+        rmakers.beam(voice, tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.force_fraction(voice)
     if denominator is not None:
-        rmakers.denominator_function(voice, denominator)
+        rmakers.denominator(voice, denominator)
     if not do_not_rewrite_meter:
-        rmakers.rewrite_meter_function(
+        rmakers.rewrite_meter(
             voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
         )
     if written_eighths is True:
         pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration_function(pleaves, (1, 8))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 8))
+        rmakers.unbeam(voice)
     elif written_eighths is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_eighths)
-        rmakers.written_duration_function(pleaves, (1, 8))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 8))
+        rmakers.unbeam(voice)
     if written_quarters is True:
         pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration_function(pleaves, (1, 4))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 4))
+        rmakers.unbeam(voice)
     elif written_quarters is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_quarters)
-        rmakers.written_duration_function(pleaves, (1, 4))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 4))
+        rmakers.unbeam(voice)
     if written_dotted_quarters is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_quarters)
-        rmakers.written_duration_function(pleaves, (3, 8))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (3, 8))
+        rmakers.unbeam(voice)
     if written_halves is True:
         pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration_function(pleaves, (1, 2))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 2))
+        rmakers.unbeam(voice)
     elif written_halves is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_halves)
-        rmakers.written_duration_function(pleaves, (1, 2))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 2))
+        rmakers.unbeam(voice)
     if written_dotted_halves is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_halves)
-        rmakers.written_duration_function(pleaves, (3, 4))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (3, 4))
+        rmakers.unbeam(voice)
     if written_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_wholes)
-        rmakers.written_duration_function(pleaves, (1, 1))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (1, 1))
+        rmakers.unbeam(voice)
     if written_dotted_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_wholes)
-        rmakers.written_duration_function(pleaves, (3, 2))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (3, 2))
+        rmakers.unbeam(voice)
     if written_double_dotted_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_double_dotted_wholes)
-        rmakers.written_duration_function(pleaves, (7, 4))
-        rmakers.unbeam_function(voice)
+        rmakers.written_duration(pleaves, (7, 4))
+        rmakers.unbeam(voice)
     if invisible_pairs is True:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, ([1], 2))
-        rmakers.invisible_music_function(pleaves, tag=tag)
+        rmakers.invisible_music(pleaves, tag=tag)
     if invisible is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, invisible)
-        rmakers.invisible_music_function(pleaves, tag=tag)
+        rmakers.invisible_music(pleaves, tag=tag)
     if tie is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, tie)
-        rmakers.repeat_tie_function(pleaves, tag=tag)
+        rmakers.repeat_tie(pleaves, tag=tag)
     if tie_all is True:
         pleaves = baca.select.pleaves(voice)[1:]
-        rmakers.repeat_tie_function(pleaves, tag=tag)
+        rmakers.repeat_tie(pleaves, tag=tag)
     if tie_runs is True:
         leaves = baca.select.leaves_in_each_run(voice, 1, None)
-        rmakers.repeat_tie_function(leaves, tag=tag)
+        rmakers.repeat_tie(leaves, tag=tag)
     if untie is True:
         leaves = baca.select.leaves(voice)
-        rmakers.untie_function(leaves)
+        rmakers.untie(leaves)
     if unbeam is True:
         leaves = baca.select.leaves(voice)
-        rmakers.unbeam_function(leaves)
+        rmakers.unbeam(leaves)
     if after_graces:
         leaves = baca.select.leaf_in_each_run(voice, -1)
         beam_and_slash = False
         if after_graces != [1]:
             beam_and_slash = True
-        rmakers.after_grace_container_function(
+        rmakers.after_grace_container(
             leaves,
             after_graces,
             beam_and_slash=beam_and_slash,
         )
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -528,15 +526,13 @@ def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
-        time_signatures, counts, 16, advance=advance, tag=tag
-    )
+    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.extract_trivial_function(voice)
-    rmakers.rewrite_meter_function(
+    rmakers.extract_trivial(voice)
+    rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -553,20 +549,18 @@ def make_tessera_2(time_signatures, part, *, advance=0, gap=False, rest_plts=Non
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
-        time_signatures, counts, 16, advance=advance, tag=tag
-    )
+    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     # TODO: rest_plts -> force_rest_plts
     if rest_plts is not None:
         plts = baca.select.plts(voice)
         plts = abjad.select.get(plts, rest_plts)
-        rmakers.force_rest_function(plts, tag=tag)
-    rmakers.extract_trivial_function(voice)
-    rmakers.rewrite_meter_function(
+        rmakers.force_rest(plts, tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -583,15 +577,13 @@ def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
-        time_signatures, counts, 16, advance=advance, tag=tag
-    )
+    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.extract_trivial_function(voice)
-    rmakers.rewrite_meter_function(
+    rmakers.extract_trivial(voice)
+    rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -608,30 +600,28 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
-        time_signatures, counts, 16, advance=advance, tag=tag
-    )
+    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.extract_trivial_function(voice)
-    rmakers.rewrite_meter_function(
+    rmakers.extract_trivial(voice)
+    rmakers.rewrite_meter(
         voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
 
 def make_train_rhythm(time_signatures, counts, *, rest_leaves=None):
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(time_signatures, counts, 16, tag=tag)
+    nested_music = rmakers.talea(time_signatures, counts, 16, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest_leaves is not None:
         leaves = baca.select.leaves(voice)
         leaves = abjad.select.get(leaves, rest_leaves)
-        rmakers.force_rest_function(leaves, tag=tag)
-    rmakers.extract_trivial_function(voice)
-    rmakers.beam_function([abjad.select.leaves(voice)], tag=tag)
-    rmakers.force_repeat_tie_function(voice, threshold=(1, 8), tag=tag)
+        rmakers.force_rest(leaves, tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.beam([abjad.select.leaves(voice)], tag=tag)
+    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -645,20 +635,20 @@ def make_tuplet(
     written_quarters=False,
 ):
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.tuplet_function(time_signatures, ratios, tag=tag)
+    nested_music = rmakers.tuplet(time_signatures, ratios, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    rmakers.trivialize_function(voice)
-    rmakers.rewrite_dots_function(voice, tag=tag)
-    rmakers.force_diminution_function(voice)
+    rmakers.trivialize(voice)
+    rmakers.rewrite_dots(voice, tag=tag)
+    rmakers.force_diminution(voice)
     if denominator is not None:
-        rmakers.denominator_function(voice, denominator)
+        rmakers.denominator(voice, denominator)
     if written_quarters is True:
-        rmakers.written_duration_function(voice, (1, 4))
+        rmakers.written_duration(voice, (1, 4))
     if force_augmentation is True:
-        rmakers.force_augmentation_function(voice)
-    rmakers.force_fraction_function(voice)
-    rmakers.extract_trivial_function(voice)
-    rmakers.reduce_multiplier_function(voice)
+        rmakers.force_augmentation(voice)
+    rmakers.force_fraction(voice)
+    rmakers.extract_trivial(voice)
+    rmakers.reduce_multiplier(voice)
     music = abjad.mutate.eject_contents(voice)
     return music
 
@@ -677,26 +667,24 @@ def make_warble_rhythm(
         divisions = baca.sequence.fuse(divisions)
         divisions = baca.sequence.split_divisions(divisions, divisions_, cyclic=True)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea_function(
-        divisions, [1], 32, extra_counts=extra_counts, tag=tag
-    )
+    nested_music = rmakers.talea(divisions, [1], 32, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest_tuplets is not None:
         tuplets = baca.select.tuplets(voice)
         tuplets = abjad.select.get(tuplets, rest_tuplets)
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     if rest_tuplets_cyclic is not None:
         tuplets = baca.select.tuplets(voice)
         tuplets = abjad.select.get(tuplets, rest_tuplets_cyclic)
-        rmakers.force_rest_function(tuplets, tag=tag)
+        rmakers.force_rest(tuplets, tag=tag)
     leaves = baca.select.leaf_in_each_tuplet(voice, 0)
-    rmakers.force_rest_function(leaves, tag=tag)
-    rmakers.rewrite_rest_filled_function(voice, tag=tag)
-    rmakers.rewrite_sustained_function(voice, tag=tag)
-    rmakers.beam_function(voice, tag=tag)
-    rmakers.extract_trivial_function(voice)
-    rmakers.force_fraction_function(voice)
-    rmakers.denominator_function(voice, (1, 16))
+    rmakers.force_rest(leaves, tag=tag)
+    rmakers.rewrite_rest_filled(voice, tag=tag)
+    rmakers.rewrite_sustained(voice, tag=tag)
+    rmakers.beam(voice, tag=tag)
+    rmakers.extract_trivial(voice)
+    rmakers.force_fraction(voice)
+    rmakers.denominator(voice, (1, 16))
     music = abjad.mutate.eject_contents(voice)
     return music
 

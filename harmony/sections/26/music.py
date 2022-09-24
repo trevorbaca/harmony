@@ -238,7 +238,7 @@ def VA(voice, accumulator):
         tie_all=True,
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes_function(accumulator.get(5, 7))
+    music = baca.make_repeat_tied_notes(accumulator.get(5, 7))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(8),

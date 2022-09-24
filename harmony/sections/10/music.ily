@@ -3639,7 +3639,7 @@ number.10.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -3686,21 +3686,21 @@ number.10.Percussion.1.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 12]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.1.Music measure 13]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -3721,7 +3721,7 @@ number.10.Percussion.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -3973,7 +3973,7 @@ number.10.Percussion.2.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % AFTER:
     % ARTICULATIONS:
@@ -4021,35 +4021,35 @@ number.10.Percussion.2.Music = {
       %! abjad.glissando(3)
       %! baca.glissando()
     \override NoteColumn.glissando-skip = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 3]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 4]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 5]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 6]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4070,7 +4070,7 @@ number.10.Percussion.2.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -4130,7 +4130,7 @@ number.10.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -4185,35 +4185,35 @@ number.10.Percussion.2.Music = {
       %! abjad.glissando(0)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 12]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 13]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 14]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Percussion.2.Music measure 15]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4461,7 +4461,7 @@ number.10.Harp.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs!1
     % AFTER:
     % ARTICULATIONS:
@@ -4534,7 +4534,7 @@ number.10.Harp.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs!1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -4824,7 +4824,7 @@ number.10.Harp.Music = {
 
       %! baca._comment_measure_numbers()
     % [Harp.Music measure 12]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs!1.
     % AFTER:
     % ARTICULATIONS:
@@ -6746,7 +6746,7 @@ number.10.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 15]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % SPANNER_STOPS:
@@ -8166,7 +8166,7 @@ number.10.Cello.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.1.Music measure 15]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d,1.
     % AFTER:
     % SPANNER_STOPS:
@@ -9580,7 +9580,7 @@ number.10.Cello.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Cello.2.Music measure 15]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d,1.
     % AFTER:
     % SPANNER_STOPS:
@@ -9931,7 +9931,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 2]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1
     % AFTER:
     % ARTICULATIONS:
@@ -9994,14 +9994,14 @@ number.10.Contrabass.1.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 4]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10041,7 +10041,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 5]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10081,7 +10081,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 6]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10121,7 +10121,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 7]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10161,7 +10161,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 8]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10229,7 +10229,7 @@ number.10.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10269,7 +10269,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 11]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % SPANNER_STOPS:
@@ -10323,7 +10323,7 @@ number.10.Contrabass.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs,!1.
     % AFTER:
     % ARTICULATIONS:
@@ -10414,7 +10414,7 @@ number.10.Contrabass.1.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.1.Music measure 13]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     fs!1.
     % AFTER:
     % ARTICULATIONS:
@@ -10506,7 +10506,7 @@ number.10.Contrabass.1.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override NoteHead.no-ledgers = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     e1.
     % AFTER:
     % ARTICULATIONS:
@@ -10619,7 +10619,7 @@ number.10.Contrabass.1.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \undo \hide NoteHead
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % SPANNER_STOPS:
@@ -11828,7 +11828,7 @@ number.10.Contrabass.2.Music = {
 
       %! baca._comment_measure_numbers()
     % [Contrabass.2.Music measure 15]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % SPANNER_STOPS:

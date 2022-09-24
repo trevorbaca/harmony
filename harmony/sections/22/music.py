@@ -115,11 +115,11 @@ def PERC1(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(5, 10))
+    music = baca.make_notes(accumulator.get(5, 10))
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(11))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(12))
+    music = baca.make_notes(accumulator.get(12))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(13),

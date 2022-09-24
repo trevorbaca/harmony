@@ -2325,7 +2325,7 @@ number.18.Percussion.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     e'1.
     % AFTER:
     % ARTICULATIONS:
@@ -3259,7 +3259,7 @@ number.18.Percussion.2.Music = {
     \once \override TupletBracket.direction = #up
     % GROB_OVERRIDES:
     \once \override LaissezVibrerTie.direction = #up
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     c'1.
     % AFTER:
     % ARTICULATIONS:
@@ -3899,7 +3899,7 @@ number.18.Harp.Music = {
       %! baca._do_spanner_indicator_command(1)
       %! baca.ottava_bassa()
     \ottava -1
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     df,,!1.
     % AFTER:
     % ARTICULATIONS:
@@ -5501,7 +5501,7 @@ number.18.Viola.Music = {
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 6]
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % AFTER:
     % ARTICULATIONS:

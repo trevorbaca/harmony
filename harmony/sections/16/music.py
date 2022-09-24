@@ -132,7 +132,7 @@ def VA(voice, accumulator):
         ["+"],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes_function(accumulator.get(9, 10))
+    music = baca.make_repeat_tied_notes(accumulator.get(9, 10))
     voice.extend(music)
     baca.append_anchor_note(voice)
 

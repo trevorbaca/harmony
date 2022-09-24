@@ -9549,7 +9549,7 @@ number.4.Contrabass.2.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     af,!2.
     % AFTER:
     % SPANNER_STARTS:
@@ -9817,7 +9817,7 @@ number.4.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     e,2.
     % AFTER:
     % SPANNER_STARTS:

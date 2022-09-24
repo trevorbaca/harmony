@@ -1417,7 +1417,7 @@ number.17.Percussion.1.Music = {
       %! baca.clef()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     e'1.
     % AFTER:
     % ARTICULATIONS:
@@ -1988,7 +1988,7 @@ number.17.Percussion.2.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     c'1.
     % AFTER:
     % ARTICULATIONS:
@@ -2377,7 +2377,7 @@ number.17.Harp.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     df,,!1.
     % AFTER:
     % ARTICULATIONS:
@@ -2774,7 +2774,7 @@ number.17.Viola.Music = {
       %! baca._set_status_tag()
       %! baca.treat_persistent_wrapper(2)
     \set Staff.forceClef = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1.
     % AFTER:
     % ARTICULATIONS:
@@ -2880,7 +2880,7 @@ number.17.Viola.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d'1
     % ABSOLUTE_BEFORE:
     % COMMANDS:

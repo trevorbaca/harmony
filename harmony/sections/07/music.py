@@ -156,7 +156,7 @@ def PERC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_mmrests(accumulator.get(3))
     voice.extend(music)
-    music = baca.make_notes_function(accumulator.get(4, 5))
+    music = baca.make_notes(accumulator.get(4, 5))
     voice.extend(music)
     music = library.make_sixteenths(
         accumulator.get(6),
@@ -364,7 +364,7 @@ def VC2(voice, accumulator):
         [-4, 8, "-"],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes_function(accumulator.get(8))
+    music = baca.make_repeat_tied_notes(accumulator.get(8))
     voice.extend(music)
     baca.append_anchor_note(voice)
 
@@ -389,7 +389,7 @@ def CB1(voice, accumulator):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(6),
         [(1, 4)],
     )
@@ -419,7 +419,7 @@ def CB2(voice, accumulator):
         ["+"],
     )
     voice.extend(music)
-    music = baca.make_repeated_duration_notes_function(
+    music = baca.make_repeated_duration_notes(
         accumulator.get(6),
         [(1, 4)],
     )
@@ -429,7 +429,7 @@ def CB2(voice, accumulator):
         [-4, 8, "-"],
     )
     voice.extend(music)
-    music = baca.make_repeat_tied_notes_function(accumulator.get(8))
+    music = baca.make_repeat_tied_notes(accumulator.get(8))
     voice.extend(music)
     baca.append_anchor_note(voice)
 

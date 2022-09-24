@@ -5315,7 +5315,7 @@ number.12.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1.
     % AFTER:
     % STEM_TREMOLOS:
@@ -5368,7 +5368,7 @@ number.12.Percussion.2.Music = {
       %! abjad.glissando(1)
       %! baca.glissando()
     \override Stem.transparent = ##t
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b2.
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -5395,7 +5395,7 @@ number.12.Percussion.2.Music = {
       %! abjad.glissando(6)
       %! baca.glissando()
     \revert Stem.transparent
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     b1
     % AFTER:
     % STEM_TREMOLOS:
@@ -6851,7 +6851,7 @@ number.12.Viola.Music = {
     % COMMANDS:
       %! baca.dls_staff_padding(1)
     \override DynamicLineSpanner.staff-padding = 4
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % AFTER:
     % ARTICULATIONS:
@@ -6872,7 +6872,7 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -6964,14 +6964,14 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 6]
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -6980,17 +6980,17 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -6999,14 +6999,14 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 7]
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -7015,19 +7015,19 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
       %! baca._comment_measure_numbers()
     % [Viola.Music measure 8]
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -7036,12 +7036,12 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     r4
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -7050,7 +7050,7 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -7059,7 +7059,7 @@ number.12.Viola.Music = {
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     bf!4
     % AFTER:
     % ARTICULATIONS:
@@ -7198,7 +7198,7 @@ number.12.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % ARTICULATIONS:
@@ -8288,11 +8288,11 @@ number.12.Cello.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/9
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -8303,37 +8303,37 @@ number.12.Cello.1.Music = {
         % COMMANDS:
           %! baca.dls_staff_padding(1)
         \override DynamicLineSpanner.staff-padding = 6
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8432,7 +8432,7 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8441,40 +8441,40 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/9
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.1.Music measure 5]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8483,17 +8483,17 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8502,7 +8502,7 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8511,40 +8511,40 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/9
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.1.Music measure 7]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8553,12 +8553,12 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8567,7 +8567,7 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8576,12 +8576,12 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8590,7 +8590,7 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8599,7 +8599,7 @@ number.12.Cello.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         aqf!4
         % AFTER:
         % ARTICULATIONS:
@@ -8619,7 +8619,7 @@ number.12.Cello.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -8742,7 +8742,7 @@ number.12.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d,1.
     % AFTER:
     % ARTICULATIONS:
@@ -9723,11 +9723,11 @@ number.12.Cello.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/10
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -9738,7 +9738,7 @@ number.12.Cello.2.Music = {
         % COMMANDS:
           %! baca.dls_staff_padding(1)
         \override DynamicLineSpanner.staff-padding = 6
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9837,32 +9837,32 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9871,40 +9871,40 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/10
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.2.Music measure 5]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9913,7 +9913,7 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9922,17 +9922,17 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9941,12 +9941,12 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9955,17 +9955,17 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -9975,29 +9975,29 @@ number.12.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/10
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Cello.2.Music measure 7]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10006,7 +10006,7 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10015,7 +10015,7 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10024,12 +10024,12 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10038,12 +10038,12 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10052,7 +10052,7 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10061,7 +10061,7 @@ number.12.Cello.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         f4
         % AFTER:
         % ARTICULATIONS:
@@ -10081,7 +10081,7 @@ number.12.Cello.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -10204,7 +10204,7 @@ number.12.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d,1.
     % AFTER:
     % ARTICULATIONS:
@@ -11303,11 +11303,11 @@ number.12.Contrabass.1.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/11
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -11318,12 +11318,12 @@ number.12.Contrabass.1.Music = {
         % COMMANDS:
           %! baca.dls_staff_padding(1)
         \override DynamicLineSpanner.staff-padding = 6
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11422,27 +11422,27 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11451,17 +11451,17 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11470,30 +11470,30 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/11
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.1.Music measure 5]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11502,17 +11502,17 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11521,12 +11521,12 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11535,17 +11535,17 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11554,12 +11554,12 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11569,24 +11569,24 @@ number.12.Contrabass.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/11
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.1.Music measure 7]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11595,12 +11595,12 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11609,7 +11609,7 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11618,7 +11618,7 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11627,12 +11627,12 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11641,12 +11641,12 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11655,7 +11655,7 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11664,7 +11664,7 @@ number.12.Contrabass.1.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         dtqf'!4
         % AFTER:
         % ARTICULATIONS:
@@ -11684,7 +11684,7 @@ number.12.Contrabass.1.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -11807,7 +11807,7 @@ number.12.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % ARTICULATIONS:
@@ -12843,11 +12843,11 @@ number.12.Contrabass.2.Music = {
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/12
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
@@ -12858,7 +12858,7 @@ number.12.Contrabass.2.Music = {
         % COMMANDS:
           %! baca.dls_staff_padding(1)
         \override DynamicLineSpanner.staff-padding = 6
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % AFTER:
         % SPANNER_STOPS:
@@ -12871,7 +12871,7 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -12963,42 +12963,42 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13007,55 +13007,55 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/12
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.2.Music measure 5]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13064,32 +13064,32 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13098,45 +13098,45 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % CLOSING:
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
 
     % OPEN_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \tweak text #tuplet-number::calc-fraction-text
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     \times 8/12
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
           %! baca._comment_measure_numbers()
         % [Contrabass.2.Music measure 7]
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13145,12 +13145,12 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13159,12 +13159,12 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13173,12 +13173,12 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         r4
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13187,7 +13187,7 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13196,7 +13196,7 @@ number.12.Contrabass.2.Music = {
         % ABSOLUTE_BEFORE:
         % COMMANDS:
 
-          %! harmony.make_rimbalzandi_rhythm_function()
+          %! harmony.make_rimbalzandi_rhythm()
         ef!4
         % AFTER:
         % ARTICULATIONS:
@@ -13216,7 +13216,7 @@ number.12.Contrabass.2.Music = {
         % COMMANDS:
 
     % CLOSE_BRACKETS:
-      %! harmony.make_rimbalzandi_rhythm_function()
+      %! harmony.make_rimbalzandi_rhythm()
     }
     % ABSOLUTE_BEFORE:
     % COMMANDS:
@@ -13346,7 +13346,7 @@ number.12.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! baca._style_fermata_measures(3)
     \startStaff
-      %! baca.make_notes_function()
+      %! baca.make_notes()
     d1.
     % AFTER:
     % ARTICULATIONS:
