@@ -457,11 +457,9 @@ def make_score(first_measure_number, previous_persistent_indicators):
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    previous_metadata = baca.path.previous_metadata(__file__)
-    first_measure_number = previous_metadata["final_measure_number"] + 1
-    previous_persist = baca.path.previous_persist(__file__)
     score, accumulator = make_score(
-        first_measure_number, previous_persist["persistent_indicators"]
+        environment.first_measure_number,
+        environment.previous_persist["persistent_indicators"],
     )
     metadata, persist, timing = baca.build.section(
         score,
