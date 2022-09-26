@@ -736,6 +736,7 @@ def composites(cache):
                 baca.triple_staccato(o.pheads())
 
 
+@baca.build.timed
 def make_score(first_measure_number, previous_persistent_indicators):
     score, accumulator = make_empty_score()
     baca.section.set_up_score(
@@ -784,9 +785,11 @@ def make_score(first_measure_number, previous_persistent_indicators):
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
+    timing = baca.build.Timing()
     score, accumulator = make_score(
         environment.first_measure_number,
         environment.previous_persist["persistent_indicators"],
+        timing,
     )
     metadata, persist, timing = baca.build.postprocess_score(
         score,
