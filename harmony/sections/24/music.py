@@ -36,7 +36,7 @@ def GLOBALS(skips):
         ("[X.4-5]", 5),
         ("[X.6-8]", 7),
     )
-    baca.label_stage_numbers(skips, stage_markup)
+    baca.section.label_stage_numbers(skips, stage_markup)
     for index, item in (
         (1 - 1, "48"),
         (1 - 1, "2.=4"),
@@ -108,7 +108,7 @@ def PERC2(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def HP(voice, accumulator):
@@ -689,10 +689,10 @@ def make_score(first_measure_number, previous_persistent_indicators):
         score,
         accumulator.time_signatures,
         accumulator,
-        library.manifests,
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_measure_number=first_measure_number,
+        manifests=library.manifests,
         previous_persistent_indicators=previous_persistent_indicators,
     )
     GLOBALS(score["Skips"])
@@ -705,7 +705,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC2(accumulator.voice("vc2"), accumulator)
     CB1(accumulator.voice("cb1"), accumulator)
     CB2(accumulator.voice("cb2"), accumulator)
-    baca.reapply(
+    baca.section.reapply(
         accumulator.voices(),
         library.manifests,
         previous_persistent_indicators,
@@ -736,11 +736,9 @@ def main():
         environment.previous_persist["persistent_indicators"],
         timing,
     )
-    metadata, persist, timing = baca.build.postprocess_score(
+    metadata, persist = baca.section.postprocess_score(
         score,
-        library.manifests,
         accumulator.time_signatures,
-        environment,
         **baca.section.section_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
@@ -753,8 +751,11 @@ def main():
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
         empty_fermata_measures=True,
+        environment=environment,
         global_rests_in_topmost_staff=True,
+        manifests=library.manifests,
         parts_metric_modulation_multiplier=(0.525, 0.525),
+        timing=timing,
         transpose_score=True,
     )
     lilypond_file = baca.lilypond.file(

@@ -29,7 +29,7 @@ def GLOBALS(skips, first_measure_number):
         ("[A.2]", 2),
         ("[>C.1]", 3, "#darkgreen"),
     )
-    baca.label_stage_numbers(skips, stage_markup)
+    baca.section.label_stage_numbers(skips, stage_markup)
     for index, item in (
         (1 - 1, "96"),
         (3 - 1, "57 3/5"),
@@ -55,7 +55,7 @@ def BFL(voice, accumulator):
         library.cerulean()[1:],
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, accumulator):
@@ -170,7 +170,7 @@ def CB1(voice, accumulator):
         r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def CB2(voice, accumulator):
@@ -524,10 +524,10 @@ def make_score():
         score,
         accumulator.time_signatures,
         accumulator,
-        library.manifests,
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_section=True,
+        manifests=library.manifests,
     )
     GLOBALS(score["Skips"], first_measure_number)
     BFL(accumulator.voice("bfl"), accumulator)
@@ -560,11 +560,9 @@ def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     timing = baca.build.Timing()
     score, accumulator = make_score(timing)
-    metadata, persist, timing = baca.build.postprocess_score(
+    metadata, persist = baca.section.postprocess_score(
         score,
-        library.manifests,
         accumulator.time_signatures,
-        environment,
         **baca.section.section_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
@@ -577,8 +575,11 @@ def main():
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
         empty_fermata_measures=True,
+        environment=environment,
         global_rests_in_topmost_staff=True,
+        manifests=library.manifests,
         parts_metric_modulation_multiplier=(0.525, 0.525),
+        timing=timing,
         transpose_score=True,
     )
     lilypond_file = baca.lilypond.file(

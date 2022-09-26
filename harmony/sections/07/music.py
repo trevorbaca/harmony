@@ -37,7 +37,7 @@ def GLOBALS(skips, rests):
         ("[>I.1]", 7, "#darkgreen"),
         ("[G.4]", 8),
     )
-    baca.label_stage_numbers(skips, stage_markup)
+    baca.section.label_stage_numbers(skips, stage_markup)
     for index, item in (
         (1 - 1, "57 3/5"),
         (1 - 1, "6:5(4)=4"),
@@ -170,7 +170,7 @@ def PERC2(voice, accumulator):
         ["+"],
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def HP(voice, accumulator):
@@ -281,7 +281,7 @@ def VA(voice, accumulator):
         [-4, "+"],
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def VC1(voice, accumulator):
@@ -333,7 +333,7 @@ def VC1(voice, accumulator):
         denominator=None,
     )
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def VC2(voice, accumulator):
@@ -366,7 +366,7 @@ def VC2(voice, accumulator):
     voice.extend(music)
     music = baca.make_repeat_tied_notes(accumulator.get(8))
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def CB1(voice, accumulator):
@@ -431,7 +431,7 @@ def CB2(voice, accumulator):
     voice.extend(music)
     music = baca.make_repeat_tied_notes(accumulator.get(8))
     voice.extend(music)
-    baca.append_anchor_note(voice)
+    baca.section.append_anchor_note(voice)
 
 
 def bfl(m):
@@ -1094,10 +1094,10 @@ def make_score(first_measure_number, previous_persistent_indicators):
         score,
         accumulator.time_signatures,
         accumulator,
-        library.manifests,
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_measure_number=first_measure_number,
+        manifests=library.manifests,
         previous_persistent_indicators=previous_persistent_indicators,
     )
     GLOBALS(score["Skips"], score["Rests"])
@@ -1110,7 +1110,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC2(accumulator.voice("vc2"), accumulator)
     CB1(accumulator.voice("cb1"), accumulator)
     CB2(accumulator.voice("cb2"), accumulator)
-    baca.reapply(
+    baca.section.reapply(
         accumulator.voices(),
         library.manifests,
         previous_persistent_indicators,
@@ -1141,11 +1141,9 @@ def main():
         environment.previous_persist["persistent_indicators"],
         timing,
     )
-    metadata, persist, timing = baca.build.postprocess_score(
+    metadata, persist = baca.section.postprocess_score(
         score,
-        library.manifests,
         accumulator.time_signatures,
-        environment,
         **baca.section.section_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
@@ -1158,8 +1156,11 @@ def main():
             baca.tags.RHYTHM_ANNOTATION_SPANNER,
         ],
         empty_fermata_measures=True,
+        environment=environment,
         global_rests_in_topmost_staff=True,
+        manifests=library.manifests,
         parts_metric_modulation_multiplier=(0.525, 0.525),
+        timing=timing,
         transpose_score=True,
     )
     lilypond_file = baca.lilypond.file(
