@@ -28,7 +28,7 @@ def make_empty_score():
         (5, 4),
         (4, 4),
     ]
-    measures = baca.measures(time_signatures)
+    measures = baca.section.measures(time_signatures)
     return score, voices, measures
 
 
