@@ -10,25 +10,22 @@ from harmony import library
 
 def make_empty_score():
     score = library.make_empty_score()
-    voice_names = baca.accumulator.get_voice_names(score)
-    accumulator = baca.CommandAccumulator(
-        time_signatures=[
-            (3, 4),
-            (3, 4),
-            (3, 4),
-            (3, 4),
-            (3, 4),
-            (3, 4),
-            (1, 4),
-            (3, 4),
-            (5, 4),
-            (1, 4),
-            (3, 4),
-        ],
-        _voice_abbreviations=library.voice_abbreviations,
-        _voice_names=voice_names,
-    )
-    return score, accumulator
+    voices = baca.section.cache_voices(score, library.voice_abbreviations)
+    time_signatures = [
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (3, 4),
+        (1, 4),
+        (3, 4),
+        (5, 4),
+        (1, 4),
+        (3, 4),
+    ]
+    measures = baca.measures(time_signatures)
+    return score, voices, measures
 
 
 def GLOBALS(skips, rests):
@@ -56,34 +53,34 @@ def GLOBALS(skips, rests):
         baca.global_fermata(rests[index], string)
 
 
-def BFL(voice, accumulator):
+def BFL(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         6,
         gap=True,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7))
+    music = baca.make_mmrests(measures(7))
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         6,
         advance=72,
         gap=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
-        accumulator.get(9),
+        measures(9),
         [2, 2, 16],
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
         tie=([2], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10))
+    music = baca.make_mmrests(measures(10))
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         6,
         advance=72 + 12,
         gap=True,
@@ -91,61 +88,61 @@ def BFL(voice, accumulator):
     voice.extend(music)
 
 
-def PERC1(voice, accumulator):
+def PERC1(voice, measures):
     music = library.make_phjc_rhythm(
-        accumulator.get(1, 6),
+        measures(1, 6),
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7, 8))
+    music = baca.make_mmrests(measures(7, 8))
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
-        accumulator.get(9),
+        measures(9),
         counts=[7],
         rest_after=True,
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10, 11))
+    music = baca.make_mmrests(measures(10, 11))
     voice.extend(music)
 
 
-def PERC2(voice, accumulator):
+def PERC2(voice, measures):
     music = library.make_phjc_rhythm(
-        accumulator.get(1),
+        measures(1),
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(2, 4))
+    music = baca.make_mmrests(measures(2, 4))
     voice.extend(music)
     music = library.make_train_rhythm(
-        accumulator.get(5, 6),
+        measures(5, 6),
         [2],
         rest_leaves=[0],
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7))
+    music = baca.make_mmrests(measures(7))
     voice.extend(music)
     music = library.make_train_rhythm(
-        accumulator.get(8),
+        measures(8),
         [2],
         rest_leaves=[0, 1, 2],
     )
     voice.extend(music)
     music = library.make_sixteenths(
-        accumulator.get(9),
+        measures(9),
         [4, 4, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10))
+    music = baca.make_mmrests(measures(10))
     voice.extend(music)
     music = library.make_sixteenths(
-        accumulator.get(11),
+        measures(11),
         [-6, 6],
         fuse=True,
         do_not_rewrite_meter=True,
@@ -154,63 +151,63 @@ def PERC2(voice, accumulator):
     baca.section.append_anchor_note(voice)
 
 
-def HP(voice, accumulator):
+def HP(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         5,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7))
+    music = baca.make_mmrests(measures(7))
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         5,
         advance=72,
     )
     voice.extend(music)
     music = library.make_sixteenths(
-        accumulator.get(9),
+        measures(9),
         [2, 2, 16],
         invisible=([1], 3),
         written_quarters=([0, 1], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10))
+    music = baca.make_mmrests(measures(10))
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         5,
         advance=72 + 12,
     )
     voice.extend(music)
 
 
-def VA(voice, accumulator):
+def VA(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         4,
         gap=True,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7))
+    music = baca.make_mmrests(measures(7))
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         4,
         advance=72,
         gap=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
-        accumulator.get(9),
+        measures(9),
         counts=[7],
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10), head=voice.name)
+    music = baca.make_mmrests(measures(10), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         4,
         advance=72 + 12,
         gap=True,
@@ -218,32 +215,32 @@ def VA(voice, accumulator):
     voice.extend(music)
 
 
-def VC1(voice, accumulator):
+def VC1(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         3,
         gap=True,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7), head=voice.name)
+    music = baca.make_mmrests(measures(7), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         3,
         advance=72,
         gap=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
-        accumulator.get(9),
+        measures(9),
         counts=[7],
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10), head=voice.name)
+    music = baca.make_mmrests(measures(10), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         3,
         advance=72 + 12,
         gap=True,
@@ -252,32 +249,32 @@ def VC1(voice, accumulator):
     baca.section.append_anchor_note(voice)
 
 
-def VC2(voice, accumulator):
+def VC2(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         2,
         gap=True,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7), head=voice.name)
+    music = baca.make_mmrests(measures(7), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         2,
         advance=72,
         gap=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
-        accumulator.get(9),
+        measures(9),
         counts=[7],
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10), head=voice.name)
+    music = baca.make_mmrests(measures(10), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         2,
         advance=72 + 12,
         gap=True,
@@ -286,30 +283,30 @@ def VC2(voice, accumulator):
     baca.section.append_anchor_note(voice)
 
 
-def CB1(voice, accumulator):
+def CB1(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         1,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7), head=voice.name)
+    music = baca.make_mmrests(measures(7), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(8),
+        measures(8),
         1,
         advance=72,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
-        accumulator.get(9),
+        measures(9),
         counts=[7],
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10), head=voice.name)
+    music = baca.make_mmrests(measures(10), head=voice.name)
     voice.extend(music)
     music = library.make_tessera_1(
-        accumulator.get(11),
+        measures(11),
         1,
         advance=72 + 12,
     )
@@ -317,27 +314,27 @@ def CB1(voice, accumulator):
     baca.section.append_anchor_note(voice)
 
 
-def CB2(voice, accumulator):
+def CB2(voice, measures):
     music = library.make_tessera_1(
-        accumulator.get(1, 6),
+        measures(1, 6),
         0,
     )
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(7), head=voice.name)
+    music = baca.make_mmrests(measures(7), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(8))
+    music = baca.make_notes(measures(8))
     voice.extend(music)
     music = library.make_tuplet(
-        accumulator.get(9),
+        measures(9),
         [(1,)],
         force_augmentation=True,
     )
     pleaf = baca.select.pleaf(music, 0)
     baca.repeat_tie(pleaf)
     voice.extend(music)
-    music = baca.make_mmrests(accumulator.get(10), head=voice.name)
+    music = baca.make_mmrests(measures(10), head=voice.name)
     voice.extend(music)
-    music = baca.make_notes(accumulator.get(11))
+    music = baca.make_notes(measures(11))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
 
@@ -754,11 +751,10 @@ def harmonics(cache):
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number, previous_persistent_indicators):
-    score, accumulator = make_empty_score()
+    score, voices, measures = make_empty_score()
     baca.section.set_up_score(
         score,
-        accumulator.time_signatures,
-        accumulator,
+        measures(),
         append_anchor_skip=True,
         always_make_global_rests=True,
         first_measure_number=first_measure_number,
@@ -766,23 +762,23 @@ def make_score(first_measure_number, previous_persistent_indicators):
         previous_persistent_indicators=previous_persistent_indicators,
     )
     GLOBALS(score["Skips"], score["Rests"])
-    BFL(accumulator.voice("bfl"), accumulator)
-    PERC1(accumulator.voice("perc1"), accumulator)
-    PERC2(accumulator.voice("perc2"), accumulator)
-    HP(accumulator.voice("hp"), accumulator)
-    VA(accumulator.voice("va"), accumulator)
-    VC1(accumulator.voice("vc1"), accumulator)
-    VC2(accumulator.voice("vc2"), accumulator)
-    CB1(accumulator.voice("cb1"), accumulator)
-    CB2(accumulator.voice("cb2"), accumulator)
+    BFL(voices("bfl"), measures)
+    PERC1(voices("perc1"), measures)
+    PERC2(voices("perc2"), measures)
+    HP(voices("hp"), measures)
+    VA(voices("va"), measures)
+    VC1(voices("vc1"), measures)
+    VC2(voices("vc2"), measures)
+    CB1(voices("cb1"), measures)
+    CB2(voices("cb2"), measures)
     baca.section.reapply(
-        accumulator.voices(),
+        voices,
         library.manifests,
         previous_persistent_indicators,
     )
     cache = baca.section.cache_leaves(
         score,
-        len(accumulator.time_signatures),
+        len(measures()),
         library.voice_abbreviations,
     )
     bfl(cache["bfl"])
@@ -798,20 +794,20 @@ def make_score(first_measure_number, previous_persistent_indicators):
     cbs(cache)
     composites(cache)
     harmonics(cache)
-    return score, accumulator
+    return score, measures
 
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     timing = baca.build.Timing()
-    score, accumulator = make_score(
+    score, measures = make_score(
         environment.first_measure_number,
         environment.previous_persist["persistent_indicators"],
         timing,
     )
     metadata, persist = baca.section.postprocess_score(
         score,
-        accumulator.time_signatures,
+        measures(),
         **baca.section.section_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
