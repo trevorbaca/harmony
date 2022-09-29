@@ -16,7 +16,7 @@ def make_empty_score():
         (5, 4),
         (3, 4),
     ]
-    measures = baca.measures(time_signatures)
+    measures = baca.section.measures(time_signatures)
     return score, voices, measures
 
 
@@ -515,9 +515,9 @@ def cb2(m):
 
 
 @baca.build.timed("make_score")
-def make_score():
+def make_score(first_measure_number):
     score, voices, measures = make_empty_score()
-    first_measure_number = baca.section.set_up_score(
+    baca.section.set_up_score(
         score,
         measures(),
         append_anchor_skip=True,
@@ -555,7 +555,7 @@ def make_score():
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     timing = baca.build.Timing()
-    score, measures = make_score(timing)
+    score, measures = make_score(environment.first_measure_number, timing)
     metadata, persist = baca.section.postprocess_score(
         score,
         measures(),
