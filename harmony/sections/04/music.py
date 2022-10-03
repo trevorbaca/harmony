@@ -801,7 +801,7 @@ def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
     score, measures = make_score(
         environment.first_measure_number,
-        environment.previous_persist["persistent_indicators"],
+        environment.previous_metadata["persistent_indicators"],
         environment.timing,
     )
     metadata, persist = baca.section.postprocess_score(
