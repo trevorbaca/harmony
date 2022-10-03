@@ -1085,7 +1085,7 @@ def main():
         environment.previous_metadata["persistent_indicators"],
         environment.timing,
     )
-    metadata, persist = baca.section.postprocess_score(
+    metadata = baca.section.postprocess_score(
         score,
         measures(),
         **baca.section.section_defaults(),
@@ -1114,7 +1114,6 @@ def main():
     baca.build.persist_lilypond_file(
         lilypond_file,
         metadata,
-        persist,
         environment.timing,
         environment.arguments,
     )
