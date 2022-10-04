@@ -549,15 +549,14 @@ def make_score(first_measure_number):
     vc2(cache["vc2"])
     cb1(cache["cb1"])
     cb2(cache["cb2"])
-    return score, measures
+    return score
 
 
 def main():
     environment = baca.build.read_environment(__file__, baca.build.argv())
-    score, measures = make_score(environment.first_measure_number, environment.timing)
+    score = make_score(environment.first_measure_number, environment.timing)
     metadata = baca.section.postprocess_score(
         score,
-        measures(),
         **baca.section.section_defaults(),
         activate=[
             baca.tags.LOCAL_MEASURE_NUMBER,
