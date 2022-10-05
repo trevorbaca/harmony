@@ -752,22 +752,24 @@ def main():
     metadata = baca.section.postprocess_score(
         score,
         **baca.section.section_defaults(),
-        activate=[
-            baca.tags.LOCAL_MEASURE_NUMBER,
-            baca.tags.STAGE_NUMBER,
-        ],
         always_make_global_rests=True,
-        deactivate=[
-            *baca.tags.instrument_color_tags(),
-            *baca.tags.short_instrument_name_color_tags(),
-            baca.tags.RHYTHM_ANNOTATION_SPANNER,
-        ],
         empty_fermata_measures=True,
         environment=environment,
         global_rests_in_topmost_staff=True,
         manifests=library.manifests,
         parts_metric_modulation_multiplier=(0.525, 0.525),
         transpose_score=True,
+        tags=baca.tags.Tags(
+            activate=[
+                baca.tags.LOCAL_MEASURE_NUMBER,
+                baca.tags.STAGE_NUMBER,
+            ],
+            deactivate=[
+                *baca.tags.instrument_color_tags(),
+                *baca.tags.short_instrument_name_color_tags(),
+                baca.tags.RHYTHM_ANNOTATION_SPANNER,
+            ],
+        ),
     )
     lilypond_file = baca.lilypond.file(
         score,
