@@ -857,17 +857,17 @@ def main():
         parts_metric_modulation_multiplier=(0.525, 0.525),
         manifests=library.manifests,
         transpose_score=True,
-        tags=baca.tags.Tags(
-            activate=[
-                baca.tags.LOCAL_MEASURE_NUMBER,
-                baca.tags.STAGE_NUMBER,
-            ],
-            deactivate=[
-                *baca.tags.instrument_color_tags(),
-                *baca.tags.short_instrument_name_color_tags(),
-                baca.tags.RHYTHM_ANNOTATION_SPANNER,
-            ],
-        ),
+    )
+    baca.tags.deactivate(
+        score,
+        *baca.tags.instrument_color_tags(),
+        *baca.tags.short_instrument_name_color_tags(),
+        baca.tags.RHYTHM_ANNOTATION_SPANNER,
+    )
+    baca.tags.activate(
+        score,
+        baca.tags.LOCAL_MEASURE_NUMBER,
+        baca.tags.STAGE_NUMBER,
     )
     lilypond_file = baca.lilypond.file(
         score,
