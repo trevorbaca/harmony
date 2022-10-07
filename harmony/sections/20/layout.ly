@@ -229,20 +229,20 @@
 
               %! ANCHOR_SKIP
               %! baca._comment_measure_numbers()
-              %! baca._style_anchor_skip(1)
+              %! baca.style_anchor_skip(1)
             % [anchor skip]
               %! ANCHOR_SKIP
               %! SPACING_COMMAND
               %! baca.SpacingSpecifier.__call__(1)
-              %! baca._style_anchor_skip(1)
+              %! baca.style_anchor_skip(1)
             \baca-new-spacing-section #1 #4
               %! ANCHOR_SKIP
               %! BREAK
-              %! baca._style_anchor_skip(1)
               %! baca.apply_breaks(2)
+              %! baca.style_anchor_skip(1)
             \noBreak
               %! ANCHOR_SKIP
-              %! baca._style_anchor_skip(2)
+              %! baca.style_anchor_skip(2)
             \baca-time-signature-transparent
               %! ANCHOR_SKIP
               %! baca._make_global_skips(3)
@@ -250,13 +250,13 @@
               %! ANCHOR_SKIP
               %! SPACING
               %! baca.SpacingSpecifier.__call__(3)
-              %! baca._style_anchor_skip(1)
+              %! baca.style_anchor_skip(1)
             %@% \bacaStopTextSpanSPM
               %! ANCHOR_SKIP
-              %! baca._style_anchor_skip(3)
+              %! baca.style_anchor_skip(3)
             \once \override Score.BarLine.transparent = ##t
               %! ANCHOR_SKIP
-              %! baca._style_anchor_skip(3)
+              %! baca.style_anchor_skip(3)
             \once \override Score.SpanBar.transparent = ##t
 
           %! baca.make_global_context()
