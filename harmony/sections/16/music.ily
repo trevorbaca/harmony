@@ -23,28 +23,28 @@ number.16.Skips = {
     % AFTER:
     % SPANNER_STARTS:
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
-      %! baca._attach_metronome_marks(3)
+      %! baca.span_metronome_marks(3)
     - \abjad-invisible-line
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
-      %! baca._attach_metronome_marks(3)
+      %! baca.span_metronome_marks(3)
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "96" #'green4
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
-      %! baca._attach_metronome_marks(3)
+      %! baca.span_metronome_marks(3)
     \bacaStartTextSpanMM
       %! REAPPLIED_METRONOME_MARK
-      %! baca._attach_metronome_marks(2)
       %! baca._reapply_persistent_indicators(2)
       %! baca._set_status_tag()
+      %! baca.span_metronome_marks(2)
     %@% - \abjad-invisible-line
       %! REAPPLIED_METRONOME_MARK
-      %! baca._attach_metronome_marks(2)
       %! baca._reapply_persistent_indicators(2)
       %! baca._set_status_tag()
+      %! baca.span_metronome_marks(2)
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "96"
       %! REAPPLIED_METRONOME_MARK
-      %! baca._attach_metronome_marks(2)
       %! baca._reapply_persistent_indicators(2)
       %! baca._set_status_tag()
+      %! baca.span_metronome_marks(2)
     %@% \bacaStartTextSpanMM
       %! CLOCK_TIME
       %! baca._label_clock_time()
@@ -444,17 +444,17 @@ number.16.Skips = {
 
       %! ANCHOR_SKIP
       %! baca._comment_measure_numbers()
-      %! baca._style_anchor_skip(1)
+      %! baca.style_anchor_skip(1)
     % [anchor skip]
     % OPENING:
     % COMMANDS:
       %! ANCHOR_SKIP
-      %! baca._style_anchor_skip(2)
+      %! baca.style_anchor_skip(2)
     \baca-time-signature-transparent
       %! ANCHOR_SKIP
       %! EXPLICIT_TIME_SIGNATURE
       %! baca._set_status_tag()
-      %! baca._style_anchor_skip(1)
+      %! baca.style_anchor_skip(1)
     \time 1/4
       %! ANCHOR_SKIP
       %! baca._make_global_skips(3)
@@ -464,34 +464,34 @@ number.16.Skips = {
       %! ANCHOR_SKIP
       %! CLOCK_TIME
       %! baca._label_clock_time()
-      %! baca._style_anchor_skip(1)
+      %! baca.style_anchor_skip(1)
     %@% \bacaStopTextSpanCT
       %! ANCHOR_SKIP
       %! LOCAL_MEASURE_NUMBER
       %! baca._label_measure_numbers()
-      %! baca._style_anchor_skip(1)
+      %! baca.style_anchor_skip(1)
     \bacaStopTextSpanLMN
       %! ANCHOR_SKIP
       %! EOS_STOP_MM_SPANNER
-      %! baca._attach_metronome_marks(4)
-      %! baca._style_anchor_skip(1)
+      %! baca.span_metronome_marks(4)
+      %! baca.style_anchor_skip(1)
     \bacaStopTextSpanMM
       %! ANCHOR_SKIP
       %! MEASURE_NUMBER
       %! baca._label_measure_numbers()
-      %! baca._style_anchor_skip(1)
+      %! baca.style_anchor_skip(1)
     %@% \bacaStopTextSpanMN
       %! ANCHOR_SKIP
       %! STAGE_NUMBER
-      %! baca._style_anchor_skip(1)
       %! baca.label_stage_numbers()
+      %! baca.style_anchor_skip(1)
     \bacaStopTextSpanSNM
     % COMMANDS:
       %! ANCHOR_SKIP
-      %! baca._style_anchor_skip(3)
+      %! baca.style_anchor_skip(3)
     \once \override Score.BarLine.transparent = ##t
       %! ANCHOR_SKIP
-      %! baca._style_anchor_skip(3)
+      %! baca.style_anchor_skip(3)
     \once \override Score.SpanBar.transparent = ##t
     % CLOSING:
     % COMMANDS:
