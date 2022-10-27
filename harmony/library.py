@@ -1,8 +1,8 @@
+import fractions
 import inspect
 
 import abjad
 import baca
-import quicktions
 from abjadext import rmakers
 
 
@@ -751,7 +751,7 @@ instruments = {
 
 metronome_marks = {
     "48": abjad.MetronomeMark((1, 4), 48),
-    "57 3/5": abjad.MetronomeMark((1, 4), quicktions.Fraction(288, 5), decimal=True),
+    "57 3/5": abjad.MetronomeMark((1, 4), fractions.Fraction(288, 5), decimal=True),
     "72": abjad.MetronomeMark((1, 4), 72),
     "96": abjad.MetronomeMark((1, 4), 96),
     "144": abjad.MetronomeMark((1, 4), 144),
