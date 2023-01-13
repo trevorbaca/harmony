@@ -16,6 +16,6 @@ if __name__ == "__main__":
         name="harmony",
         packages=["harmony"],
         platforms="Any",
-        python_requires=">=3.10",
+        python_requires=">=3.11",
         url="https://github.com/trevorbaca/harmony",
     )
