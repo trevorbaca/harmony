@@ -5,7 +5,13 @@ if __name__ == "__main__":
     setuptools.setup(
         author="Trevor Bača",
         author_email="trevor.baca@gmail.com",
-        install_requires=["abjad>=3.15"],
+        install_requires=[
+            "abjad>=3.15",
+            "black",
+            "flake8",
+            "isort",
+            "pytest",
+        ],
         keywords="abjad, lilypond, music composition, music notation",
         name="harmony",
         packages=["harmony"],
