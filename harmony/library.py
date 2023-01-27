@@ -105,7 +105,7 @@ def make_appoggiato_rhythm(
     invisible=None,
     voice_name="",
 ):
-    divisions_ = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions_ = [_.duration for _ in time_signatures]
     if fuse is True:
         divisions_ = baca.sequence.fuse(divisions_)
     elif divisions is not None:
@@ -306,7 +306,7 @@ def make_phjc_rhythm(
     rest_most=None,
     rest_nonfirst=False,
 ):
-    divisions_ = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions_ = [_.duration for _ in time_signatures]
     divisions_ = baca.sequence.fuse(divisions_)
     divisions_ = baca.sequence.quarters(divisions_)
     divisions_ = baca.sequence.partition(divisions_, divisions)
@@ -350,7 +350,7 @@ def make_phjc_rhythm(
 
 def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
     tag = baca.tags.function_name(inspect.currentframe())
-    divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions = [_.duration for _ in time_signatures]
     divisions = baca.sequence.fuse(divisions, [2], cyclic=True)
     nested_music = rmakers.even_division(
         divisions, [4], extra_counts=extra_counts, tag=tag
@@ -398,7 +398,7 @@ def make_sixteenths(
     after_graces=None,
 ):
     talea_denominator = talea_denominator or 16
-    divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions = [_.duration for _ in time_signatures]
     if fuse is True:
         divisions = divisions
     elif preprocessor is None:
@@ -661,7 +661,7 @@ def make_warble_rhythm(
     rest_tuplets=None,
     rest_tuplets_cyclic=None,
 ):
-    divisions = [abjad.NonreducedFraction(_) for _ in time_signatures]
+    divisions = [_.duration for _ in time_signatures]
     if sixteenths is not None:
         divisions_ = [(_, 16) for _ in sixteenths]
         divisions = baca.sequence.fuse(divisions)
