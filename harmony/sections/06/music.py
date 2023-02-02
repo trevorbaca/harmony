@@ -86,7 +86,7 @@ def BFL(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
+        result = baca.sequence.split(result, [(1, 4), (3, 4)])
         return result
 
     music = library.make_sixteenths(
@@ -109,7 +109,7 @@ def BFL(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
+        result = baca.sequence.split(result, [(1, 4), (3, 4)])
         return result
 
     music = library.make_sixteenths(
@@ -132,7 +132,7 @@ def BFL(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(3, 8), (5, 8)])
+        result = baca.sequence.split(result, [(3, 8), (5, 8)])
         return result
 
     music = library.make_sixteenths(
@@ -289,7 +289,7 @@ def HP(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(11, 16), (5, 16)])
+        result = baca.sequence.split(result, [(11, 16), (5, 16)])
         return result
 
     music = library.make_sixteenths(
@@ -319,7 +319,7 @@ def HP(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(3, 8), (5, 8)])
+        result = baca.sequence.split(result, [(3, 8), (5, 8)])
         return result
 
     music = library.make_sixteenths(
@@ -370,7 +370,7 @@ def HP(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(11, 16), (5, 16)])
+        result = baca.sequence.split(result, [(11, 16), (5, 16)])
         return result
 
     music = library.make_sixteenths(
