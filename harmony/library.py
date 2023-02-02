@@ -111,7 +111,7 @@ def make_appoggiato_rhythm(
     elif weights is not None:
         weights = [(_, 16) for _ in weights]
         durations = baca.sequence.fuse(durations)
-        durations = baca.sequence.split_divisions(durations, weights, cyclic=True)
+        durations = baca.sequence.split(durations, weights, cyclic=True)
         durations = abjad.sequence.flatten(durations)
     if incise is True:
         prefix_talea = [-1]
@@ -671,7 +671,7 @@ def make_warble_rhythm(
     if sixteenths is not None:
         divisions_ = [(_, 16) for _ in sixteenths]
         durations = baca.sequence.fuse(durations)
-        durations = baca.sequence.split_divisions(durations, divisions_, cyclic=True)
+        durations = baca.sequence.split(durations, divisions_, cyclic=True)
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)

@@ -55,7 +55,7 @@ def BFL(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(2, 4), (2, 4), (2, 4)])
+        result = baca.sequence.split(result, [(2, 4), (2, 4), (2, 4)])
         return result
 
     music = library.make_sixteenths(
@@ -145,7 +145,7 @@ def VC1(voice, measures):
 def VC2(voice, measures):
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(3, 4), (4, 4)])
+        result = baca.sequence.split(result, [(3, 4), (4, 4)])
         return result
 
     music = library.make_sixteenths(

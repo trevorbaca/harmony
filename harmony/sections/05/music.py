@@ -200,7 +200,7 @@ def VC1(voice, measures):
 
     def preprocessor(durations):
         result = baca.sequence.fuse(durations)
-        result = baca.sequence.split_divisions(result, [(1, 4), (2, 4)])
+        result = baca.sequence.split(result, [(1, 4), (2, 4)])
         return result
 
     music = library.make_sixteenths(
