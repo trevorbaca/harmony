@@ -105,20 +105,20 @@ def make_appoggiato_rhythm(
     invisible=None,
     voice_name="",
 ):
-    divisions_ = [_.duration for _ in time_signatures]
+    durations = [_.duration for _ in time_signatures]
     if fuse is True:
-        divisions_ = baca.sequence.fuse(divisions_)
+        durations = baca.sequence.fuse(durations)
     elif divisions is not None:
         divisions = [(_, 16) for _ in divisions]
-        divisions_ = baca.sequence.fuse(divisions_)
-        divisions_ = baca.sequence.split_divisions(divisions_, divisions, cyclic=True)
-        divisions_ = abjad.sequence.flatten(divisions_)
+        durations = baca.sequence.fuse(durations)
+        durations = baca.sequence.split_divisions(durations, divisions, cyclic=True)
+        durations = abjad.sequence.flatten(durations)
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.incised(
-        divisions_,
+        durations,
         extra_counts=extra_counts,
         prefix_talea=prefix_talea,
         prefix_counts=prefix_counts,
@@ -306,15 +306,15 @@ def make_phjc_rhythm(
     rest_most=None,
     rest_nonfirst=False,
 ):
-    divisions_ = [_.duration for _ in time_signatures]
-    divisions_ = baca.sequence.fuse(divisions_)
-    divisions_ = baca.sequence.quarters(divisions_)
-    divisions_ = baca.sequence.partition(divisions_, divisions)
-    divisions_ = [abjad.sequence.flatten(_) for _ in divisions_]
-    divisions_ = [baca.sequence.fuse(_) for _ in divisions_]
+    durations = [_.duration for _ in time_signatures]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.quarters(durations)
+    durations = baca.sequence.partition(durations, divisions)
+    durations = [abjad.sequence.flatten(_) for _ in durations]
+    durations = [baca.sequence.fuse(_) for _ in durations]
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(
-        divisions_, counts, 16, extra_counts=extra_counts, tag=tag
+        durations, counts, 16, extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest is not None:
@@ -350,10 +350,10 @@ def make_phjc_rhythm(
 
 def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
     tag = baca.tags.function_name(inspect.currentframe())
-    divisions = [_.duration for _ in time_signatures]
-    divisions = baca.sequence.fuse(divisions, [2], cyclic=True)
+    durations = [_.duration for _ in time_signatures]
+    durations = baca.sequence.fuse(durations, [2], cyclic=True)
     nested_music = rmakers.even_division(
-        divisions, [4], extra_counts=extra_counts, tag=tag
+        durations, [4], extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.trivialize(voice)
@@ -398,17 +398,17 @@ def make_sixteenths(
     after_graces=None,
 ):
     talea_denominator = talea_denominator or 16
-    divisions = [_.duration for _ in time_signatures]
+    durations = [_.duration for _ in time_signatures]
     if fuse is True:
-        divisions = divisions
+        durations = durations
     elif preprocessor is None:
-        divisions = baca.sequence.fuse(divisions)
-        divisions = baca.sequence.quarters(divisions)
+        durations = baca.sequence.fuse(durations)
+        durations = baca.sequence.quarters(durations)
     else:
-        divisions = preprocessor(divisions)
+        durations = preprocessor(durations)
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(
-        divisions, counts, talea_denominator, extra_counts=extra_counts, tag=tag
+        durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
     )
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.rewrite_rest_filled(voice, tag=tag)
@@ -526,7 +526,8 @@ def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.extract_trivial(voice)
     rmakers.rewrite_meter(
@@ -549,7 +550,8 @@ def make_tessera_2(time_signatures, part, *, advance=0, gap=False, rest_plts=Non
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     # TODO: rest_plts -> force_rest_plts
     if rest_plts is not None:
@@ -577,7 +579,8 @@ def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.extract_trivial(voice)
     rmakers.rewrite_meter(
@@ -600,7 +603,8 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(time_signatures, counts, 16, advance=advance, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.extract_trivial(voice)
     rmakers.rewrite_meter(
@@ -613,7 +617,8 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
 
 def make_train_rhythm(time_signatures, counts, *, rest_leaves=None):
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(time_signatures, counts, 16, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.talea(durations, counts, 16, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest_leaves is not None:
         leaves = baca.select.leaves(voice)
@@ -635,7 +640,8 @@ def make_tuplet(
     written_quarters=False,
 ):
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.tuplet(time_signatures, ratios, tag=tag)
+    durations = [_.duration for _ in time_signatures]
+    nested_music = rmakers.tuplet(durations, ratios, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     rmakers.trivialize(voice)
     rmakers.rewrite_dots(voice, tag=tag)
@@ -661,13 +667,13 @@ def make_warble_rhythm(
     rest_tuplets=None,
     rest_tuplets_cyclic=None,
 ):
-    divisions = [_.duration for _ in time_signatures]
+    durations = [_.duration for _ in time_signatures]
     if sixteenths is not None:
         divisions_ = [(_, 16) for _ in sixteenths]
-        divisions = baca.sequence.fuse(divisions)
-        divisions = baca.sequence.split_divisions(divisions, divisions_, cyclic=True)
+        durations = baca.sequence.fuse(durations)
+        durations = baca.sequence.split_divisions(durations, divisions_, cyclic=True)
     tag = baca.tags.function_name(inspect.currentframe())
-    nested_music = rmakers.talea(divisions, [1], 32, extra_counts=extra_counts, tag=tag)
+    nested_music = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
     if rest_tuplets is not None:
         tuplets = baca.select.tuplets(voice)
