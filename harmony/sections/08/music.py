@@ -53,8 +53,8 @@ def BFL(voice, measures):
     music = baca.make_mmrests(measures(1, 7))
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (2, 4), (2, 4)])
         return result
 
@@ -143,8 +143,8 @@ def VC1(voice, measures):
 
 
 def VC2(voice, measures):
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(3, 4), (4, 4)])
         return result
 

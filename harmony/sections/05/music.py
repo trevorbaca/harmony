@@ -198,8 +198,8 @@ def VC1(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (2, 4)])
         return result
 

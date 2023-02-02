@@ -92,8 +92,8 @@ def PERC2(voice, measures):
     music = baca.make_mmrests(measures(6))
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(4, 4), (4, 4), (4, 4), (1, 4)])
         return result
 
@@ -146,8 +146,8 @@ def VA(voice, measures):
 
 
 def VC1(voice, measures):
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (8, 4), (2, 4)])
         return result
 
@@ -197,8 +197,8 @@ def VC2(voice, measures):
 
 
 def CB1(voice, measures):
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (8, 4), (2, 4)])
         return result
 

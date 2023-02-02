@@ -88,7 +88,7 @@ def PERC1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(2),
-        divisions=[5, 11],
+        weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
         voice_name=voice.name,
@@ -115,7 +115,7 @@ def PERC2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(2),
-        divisions=[5, 11],
+        weights=[5, 11],
         counts=[0, 4],
         rest_after=True,
         voice_name=voice.name,

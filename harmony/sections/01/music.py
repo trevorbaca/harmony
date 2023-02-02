@@ -41,7 +41,7 @@ def GLOBALS(skips, first_measure_number):
 def BFL(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 2),
-        divisions=[16, 8, 12, 8],
+        weights=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
         voice_name=voice.name,
@@ -113,7 +113,7 @@ def HP(voice, measures):
 def VA(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 2),
-        divisions=[16, 8, 12, 8],
+        weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
@@ -143,7 +143,7 @@ def VC1(voice, measures):
 def VC2(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 2),
-        divisions=[16, 8, 12, 8],
+        weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
@@ -173,7 +173,7 @@ def CB1(voice, measures):
 def CB2(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 2),
-        divisions=[16, 8, 12, 8],
+        weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )

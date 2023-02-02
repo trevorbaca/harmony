@@ -86,8 +86,8 @@ def BFL(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(7, 8), (5, 8)])
         return result
 
@@ -202,8 +202,8 @@ def HP(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (2, 4), (1, 8), (5, 8)])
         return result
 
@@ -231,7 +231,7 @@ def VA(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
         counts=[5, 0, 0, 0, 0],
-        divisions=[4, 12],
+        weights=[4, 12],
         extra_counts=[0, 8],
         prefix_counts=[0, 3],
         prefix_talea=[8, 4, 4],
@@ -254,8 +254,8 @@ def VA(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
         return result
 
@@ -301,7 +301,7 @@ def VC1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(4, 5),
-        divisions=[4, 4, 4, 4, 4, 4, 4, 4],
+        weights=[4, 4, 4, 4, 4, 4, 4, 4],
         counts=[4, 0, 0, 0, 0, 0, 0, 0],
         voice_name=voice.name,
     )
@@ -317,8 +317,8 @@ def VC1(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
         return result
 

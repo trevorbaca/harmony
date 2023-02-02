@@ -84,8 +84,8 @@ def BFL(voice, measures):
     music = baca.make_mmrests(measures(1, 2))
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
         return result
 
@@ -107,8 +107,8 @@ def BFL(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(1, 4), (3, 4)])
         return result
 
@@ -130,8 +130,8 @@ def BFL(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(3, 8), (5, 8)])
         return result
 
@@ -287,8 +287,8 @@ def HP(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(11, 16), (5, 16)])
         return result
 
@@ -317,8 +317,8 @@ def HP(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(3, 8), (5, 8)])
         return result
 
@@ -368,8 +368,8 @@ def HP(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(11, 16), (5, 16)])
         return result
 
