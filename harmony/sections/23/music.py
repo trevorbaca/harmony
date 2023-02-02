@@ -188,8 +188,8 @@ def VC1(voice, measures):
     )
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (4, 4), (3, 4)])
         return result
 
@@ -253,8 +253,8 @@ def CB1(voice, measures):
     music = baca.make_mmrests(measures(3, 5))
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (4, 4), (3, 4)])
         return result
 

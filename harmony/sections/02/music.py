@@ -59,8 +59,8 @@ def GLOBALS(skips, rests):
         baca.global_fermata(rests[index], string)
 
 
-divisions = [16, 20, 12, 12, 12, 16]
-sixteenths = [(2, 2, _ - 4) for _ in divisions]
+durations = [16, 20, 12, 12, 12, 16]
+sixteenths = [(2, 2, _ - 4) for _ in durations]
 sixteenths = abjad.sequence.flatten(sixteenths)
 
 
@@ -75,7 +75,7 @@ def BFL(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(6),
-        divisions=[12, 8],
+        weights=[12, 8],
         counts=[8, 4],
         incise=True,
         voice_name=voice.name,
@@ -102,7 +102,7 @@ def PERC1(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 5),
         counts=[4, 4, 4, 4, 4, 0, 0, 0],
-        divisions=[16, 20, 16, 20, 10, 6],
+        weights=[16, 20, 16, 20, 10, 6],
         prefix_talea=[2, 3],
         prefix_counts=[0, 0, 0, 0, 0, 2],
         rest_after=[0, 1, 2, 3, 4],
@@ -216,14 +216,14 @@ def HP(voice, measures):
 def VA(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 5),
-        divisions=[16, 12, 16, 12, 16, 16],
+        weights=[16, 12, 16, 12, 16, 16],
         counts=[2, 3, 4, 5, 6, 7],
         voice_name=voice.name,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(6),
-        divisions=[8, 12, 8],
+        weights=[8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
@@ -248,7 +248,7 @@ def VA(voice, measures):
 def VC1(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1, 4),
-        divisions=[12, 16, 12, 16, 16, 16],
+        weights=[12, 16, 12, 16, 16, 16],
         counts=[3, 4, 5, 6, 7],
         rest_to=1,
         voice_name=voice.name,
@@ -279,8 +279,8 @@ def VC1(voice, measures):
 
 
 def VC2(voice, measures):
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(15, 8), (3, 8)])
         return result
 
@@ -297,7 +297,7 @@ def VC2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(3, 5),
-        divisions=[8, 16, 12, 16],
+        weights=[8, 16, 12, 16],
         counts=[4, 5, 6, 7],
         rest_to=1,
         voice_name=voice.name,
@@ -305,7 +305,7 @@ def VC2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(6),
-        divisions=[12, 8],
+        weights=[12, 8],
         incise=True,
         voice_name=voice.name,
     )
@@ -335,7 +335,7 @@ def CB1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(2, 5),
-        divisions=[16, 16, 12, 16, 12],
+        weights=[16, 16, 12, 16, 12],
         counts=[5, 6, 7],
         voice_name=voice.name,
     )
@@ -361,8 +361,8 @@ def CB1(voice, measures):
 
 
 def CB2(voice, measures):
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(15, 8), (3, 8)])
         return result
 
@@ -379,7 +379,7 @@ def CB2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(3, 5),
-        divisions=[8, 16, 12, 16],
+        weights=[8, 16, 12, 16],
         counts=[6, 7],
         rest_to=1,
         voice_name=voice.name,
@@ -387,7 +387,7 @@ def CB2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(6),
-        divisions=[12, 8],
+        weights=[12, 8],
         incise=True,
         voice_name=voice.name,
     )

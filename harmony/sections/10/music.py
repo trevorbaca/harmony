@@ -106,7 +106,7 @@ def BFL(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(10),
         counts=[9, 0],
-        divisions=[12, 12],
+        weights=[12, 12],
         prefix_talea=[-1],
         prefix_counts=[1, 0],
         voice_name=voice.name,

@@ -88,7 +88,6 @@ def duration_color():
 def make_appoggiato_rhythm(
     time_signatures,
     *,
-    divisions=None,
     counts=(),
     extra_counts=(),
     fuse=False,
@@ -101,6 +100,7 @@ def make_appoggiato_rhythm(
     suffix_talea=(),
     suffix_counts=(),
     tie=None,
+    weights=None,
     written_quarters=None,
     invisible=None,
     voice_name="",
@@ -108,10 +108,10 @@ def make_appoggiato_rhythm(
     durations = [_.duration for _ in time_signatures]
     if fuse is True:
         durations = baca.sequence.fuse(durations)
-    elif divisions is not None:
-        divisions = [(_, 16) for _ in divisions]
+    elif weights is not None:
+        weights = [(_, 16) for _ in weights]
         durations = baca.sequence.fuse(durations)
-        durations = baca.sequence.split_divisions(durations, divisions, cyclic=True)
+        durations = baca.sequence.split_divisions(durations, weights, cyclic=True)
         durations = abjad.sequence.flatten(durations)
     if incise is True:
         prefix_talea = [-1]
@@ -295,7 +295,7 @@ def make_empty_score():
 
 def make_phjc_rhythm(
     time_signatures,
-    divisions,
+    weights,
     counts,
     *,
     extra_counts=(),
@@ -309,7 +309,7 @@ def make_phjc_rhythm(
     durations = [_.duration for _ in time_signatures]
     durations = baca.sequence.fuse(durations)
     durations = baca.sequence.quarters(durations)
-    durations = baca.sequence.partition(durations, divisions)
+    durations = baca.sequence.partition(durations, weights)
     durations = [abjad.sequence.flatten(_) for _ in durations]
     durations = [baca.sequence.fuse(_) for _ in durations]
     tag = baca.tags.function_name(inspect.currentframe())

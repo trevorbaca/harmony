@@ -96,7 +96,7 @@ def BFL(voice, measures):
 def PERC1(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
-        divisions=[6, 14],
+        weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
         voice_name=voice.name,
@@ -106,7 +106,7 @@ def PERC1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(3),
-        divisions=[20, 8],
+        weights=[20, 8],
         counts=[0, 3],
         rest_after=True,
         voice_name=voice.name,
@@ -128,7 +128,7 @@ def PERC1(voice, measures):
 def PERC2(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
-        divisions=[6, 14],
+        weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
         voice_name=voice.name,
@@ -138,7 +138,7 @@ def PERC2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(3),
-        divisions=[20, 8],
+        weights=[20, 8],
         counts=[0, 4],
         rest_after=True,
         voice_name=voice.name,
@@ -183,7 +183,7 @@ def HP(voice, measures):
 def VA(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[0, 7, 0],
         rest_from=1,
         suffix_talea=[-1],
@@ -204,7 +204,7 @@ def VA(voice, measures):
 def VC1(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[0, 6, 0],
         rest_from=1,
         suffix_talea=[-1],
@@ -259,7 +259,7 @@ def VC2(voice, measures):
 def CB1(voice, measures):
     music = library.make_appoggiato_rhythm(
         measures(1),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[0, 6, 0],
         rest_from=1,
         suffix_talea=[-1],

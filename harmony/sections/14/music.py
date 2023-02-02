@@ -138,7 +138,7 @@ def PERC1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(5),
-        divisions=[6, 14],
+        weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
         voice_name=voice.name,
@@ -177,7 +177,7 @@ def PERC2(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(5),
-        divisions=[6, 14],
+        weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
         voice_name=voice.name,
@@ -244,8 +244,8 @@ def VA(voice, measures):
     music = baca.make_mmrests(measures(3))
     voice.extend(music)
 
-    def preprocessor(divisions):
-        result = baca.sequence.fuse(divisions)
+    def preprocessor(durations):
+        result = baca.sequence.fuse(durations)
         result = baca.sequence.split_divisions(result, [(2, 4), (2, 4)])
         return result
 
@@ -259,7 +259,7 @@ def VA(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(5),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[0, 7],
         rest_from=1,
         voice_name=voice.name,
@@ -298,7 +298,7 @@ def VC1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(5),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[6],
         rest_to=1,
         rest_from=1,
@@ -378,7 +378,7 @@ def CB1(voice, measures):
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
         measures(5),
-        divisions=[4, 12, 4],
+        weights=[4, 12, 4],
         counts=[6],
         rest_to=1,
         rest_from=1,
