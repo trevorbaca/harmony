@@ -309,7 +309,9 @@ def make_phjc_rhythm(
     durations = [_.duration for _ in time_signatures]
     durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
-    durations = baca.sequence.partition(durations, weights)
+    durations = abjad.sequence.partition_by_counts(
+        durations, weights, cyclic=True, overhang=True
+    )
     durations = [abjad.sequence.flatten(_) for _ in durations]
     durations = [[sum(_)] for _ in durations]
     tag = baca.tags.function_name(inspect.currentframe())
