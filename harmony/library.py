@@ -351,7 +351,10 @@ def make_phjc_rhythm(
 def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
     tag = baca.tags.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
-    durations = baca.sequence.fuse(durations, [2], cyclic=True)
+    lists = abjad.sequence.partition_by_counts(
+        durations, [2], cyclic=True, overhang=True
+    )
+    durations = [sum(_) for _ in lists]
     nested_music = rmakers.even_division(
         durations, [4], extra_counts=extra_counts, tag=tag
     )
