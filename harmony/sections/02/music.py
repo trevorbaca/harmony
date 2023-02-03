@@ -280,7 +280,7 @@ def VC1(voice, signatures):
 
 def VC2(voice, signatures):
     durations = [_.duration for _ in signatures(1, 2)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(15, 8), (3, 8)])
     music = library.make_sixteenths(
         signatures(1, 2),
@@ -360,7 +360,7 @@ def CB1(voice, signatures):
 
 def CB2(voice, signatures):
     durations = [_.duration for _ in signatures(1, 2)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(15, 8), (3, 8)])
     music = library.make_sixteenths(
         signatures(1, 2),

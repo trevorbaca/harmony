@@ -138,7 +138,7 @@ def PERC1(voice, signatures):
     music = baca.make_repeat_tied_notes(signatures(4, 5))
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(6),
@@ -179,7 +179,7 @@ def PERC2(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(6),
@@ -217,7 +217,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(6),

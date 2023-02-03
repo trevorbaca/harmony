@@ -107,10 +107,10 @@ def make_appoggiato_rhythm(
 ):
     durations = [_.duration for _ in time_signatures]
     if fuse is True:
-        durations = baca.sequence.fuse(durations)
+        durations = [sum(durations)]
     elif weights is not None:
         weights = [(_, 16) for _ in weights]
-        durations = baca.sequence.fuse(durations)
+        durations = [sum(durations)]
         durations = baca.sequence.split(durations, weights, cyclic=True)
         durations = abjad.sequence.flatten(durations)
     if incise is True:
@@ -307,11 +307,11 @@ def make_phjc_rhythm(
     rest_nonfirst=False,
 ):
     durations = [_.duration for _ in time_signatures]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.quarters(durations)
     durations = baca.sequence.partition(durations, weights)
     durations = [abjad.sequence.flatten(_) for _ in durations]
-    durations = [baca.sequence.fuse(_) for _ in durations]
+    durations = [[sum(_)] for _ in durations]
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(
         durations, counts, 16, extra_counts=extra_counts, tag=tag
@@ -408,7 +408,7 @@ def make_sixteenths(
         durations = [_.duration for _ in time_signatures]
     else:
         durations = [_.duration for _ in time_signatures]
-        durations = baca.sequence.fuse(durations)
+        durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
     nested_music = rmakers.talea(
         durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
@@ -673,7 +673,7 @@ def make_warble_rhythm(
     durations = [_.duration for _ in time_signatures]
     if sixteenths is not None:
         divisions_ = [(_, 16) for _ in sixteenths]
-        durations = baca.sequence.fuse(durations)
+        durations = [sum(durations)]
         durations = baca.sequence.split(durations, divisions_, cyclic=True)
     tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
