@@ -374,8 +374,8 @@ def make_sixteenths(
     counts,
     *,
     beam=False,
+    durations=None,
     fuse=False,
-    preprocessor=None,
     denominator=(1, 16),
     do_not_rewrite_meter=False,
     extra_counts=(),
@@ -397,16 +397,16 @@ def make_sixteenths(
     unbeam=False,
     after_graces=None,
 ):
+    tag = baca.tags.function_name(inspect.currentframe())
     talea_denominator = talea_denominator or 16
-    durations = [_.duration for _ in time_signatures]
-    if fuse is True:
+    if durations is not None:
         durations = durations
-    elif preprocessor is None:
+    elif fuse is True:
+        durations = [_.duration for _ in time_signatures]
+    else:
+        durations = [_.duration for _ in time_signatures]
         durations = baca.sequence.fuse(durations)
         durations = baca.sequence.quarters(durations)
-    else:
-        durations = preprocessor(durations)
-    tag = baca.tags.function_name(inspect.currentframe())
     nested_music = rmakers.talea(
         durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
     )

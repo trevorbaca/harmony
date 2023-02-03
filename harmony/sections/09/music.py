@@ -92,18 +92,15 @@ def VA(voice, measures):
         [-4, "+"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(2),
         [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 4],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -115,18 +112,15 @@ def VC1(voice, measures):
         [-4, 8, "-"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(2),
         [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 4],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -138,18 +132,15 @@ def VC2(voice, measures):
         [-4, 8, "-"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(2),
         [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 4],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -161,18 +152,15 @@ def CB1(voice, measures):
         [-4, 8, "-"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(2),
         [-12, 12, -4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 4],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

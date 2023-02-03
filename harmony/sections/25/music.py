@@ -118,18 +118,15 @@ def PERC1(voice, measures):
         [1, -23, -1, 1, -22],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(10)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(10),
         [-1, 1, -2, -8, -12, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 8],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 8],
     )
     voice.extend(music)
     music = baca.make_mmrests(measures(11))
@@ -163,18 +160,15 @@ def PERC2(voice, measures):
         [2, -22, -1, 2, -21],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(10)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(10),
         [-1, 1, 1, -1, -8, -12, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 8],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 8],
     )
     voice.extend(music)
     music = baca.make_mmrests(measures(11))
