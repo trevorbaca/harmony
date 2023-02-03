@@ -137,16 +137,13 @@ def PERC1(voice, measures):
     voice.extend(music)
     music = baca.make_repeat_tied_notes(measures(4, 5))
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(6)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(6),
         [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
+        durations=durations,
         extra_counts=[0, -2],
         denominator=None,
     )
@@ -181,18 +178,15 @@ def PERC2(voice, measures):
         [2, "-"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(6)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(6),
         [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
-        extra_counts=[0, -2],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, -2],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -222,18 +216,15 @@ def HP(voice, measures):
         [4, "-"],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(6)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(6),
         [-12, -2, 1, "-"],
-        preprocessor=preprocessor,
-        extra_counts=[0, -2],
         denominator=None,
+        extra_counts=[0, -2],
+        durations=durations,
     )
     voice.extend(music)
     music = library.make_sixteenths(

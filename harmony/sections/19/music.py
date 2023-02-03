@@ -87,18 +87,15 @@ def BFL(voice, measures):
     voice.extend(music)
     music = baca.make_mmrests(measures(2, 8))
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(9)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(9),
         [4, 4, 4, -4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[4],
         denominator=None,
+        durations=durations,
+        extra_counts=[4],
     )
     voice.extend(music)
     music = baca.make_mmrests(measures(10), head=voice.name)
@@ -297,20 +294,17 @@ def VA(voice, measures):
         written_quarters=True,
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(1, 4), (3, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(1, 4), (3, 4)])
     music = library.make_sixteenths(
         measures(2),
         [-4, -4, 2, 2, 2, 2, 2, 2],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
-        written_quarters=True,
+        durations=durations,
+        extra_counts=[0, 4],
         invisible_pairs=True,
+        written_quarters=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(measures(3))
@@ -596,18 +590,15 @@ def CB2(voice, measures):
         [3, -5, 3, -5, 3, -5, 3, -23],
     )
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (1, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(12)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (1, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(12),
         [3, -1, -8, "-", 3, -1, -8],
-        preprocessor=preprocessor,
-        extra_counts=[4],
         denominator=None,
+        durations=durations,
+        extra_counts=[4],
     )
     voice.extend(music)
     music = library.make_sixteenths(

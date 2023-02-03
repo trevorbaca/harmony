@@ -52,19 +52,16 @@ def GLOBALS(skips, rests, first_measure_number):
 def BFL(voice, measures):
     music = baca.make_mmrests(measures(1, 7))
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (2, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(8, 9)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (2, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(8, 9),
         [-8, -4, 8, -4, 8],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4, 4],
         denominator=None,
         do_not_rewrite_meter=True,
+        durations=durations,
+        extra_counts=[0, 4, 4],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -143,16 +140,14 @@ def VC1(voice, measures):
 
 
 def VC2(voice, measures):
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(3, 4), (4, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(1, 2)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(3, 4), (4, 4)])
     music = library.make_sixteenths(
         measures(1, 2),
         ["+", 1],
-        preprocessor=preprocessor,
         do_not_rewrite_meter=True,
+        durations=durations,
         written_wholes=[1],
         invisible=[-1],
     )

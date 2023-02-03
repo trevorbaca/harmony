@@ -91,18 +91,15 @@ def PERC2(voice, measures):
     voice.extend(music)
     music = baca.make_mmrests(measures(6))
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(4, 4), (4, 4), (4, 4), (1, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(7, 9)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(4, 4), (4, 4), (4, 4), (1, 4)])
     music = library.make_sixteenths(
         measures(7, 9),
         [16, 16, 16, -4, 2],
-        preprocessor=preprocessor,
-        extra_counts=[0, 0, 0, 2],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 0, 0, 2],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -146,17 +143,15 @@ def VA(voice, measures):
 
 
 def VC1(voice, measures):
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (8, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(1, 3)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (8, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(1, 3),
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[4, 0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[4, 0, 4],
         written_quarters=[5],
         invisible=[6],
         tie=[6],
@@ -197,17 +192,15 @@ def VC2(voice, measures):
 
 
 def CB1(voice, measures):
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (8, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(1, 3)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (8, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(1, 3),
         [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[4, 0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[4, 0, 4],
         written_quarters=[5],
         invisible=[6],
         tie=[6],

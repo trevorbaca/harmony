@@ -243,18 +243,15 @@ def VA(voice, measures):
     voice.extend(music)
     music = baca.make_mmrests(measures(3))
     voice.extend(music)
-
-    def preprocessor(durations):
-        result = baca.sequence.fuse(durations)
-        result = baca.sequence.split(result, [(2, 4), (2, 4)])
-        return result
-
+    durations = [_.duration for _ in measures(4)]
+    durations = baca.sequence.fuse(durations)
+    durations = baca.sequence.split(durations, [(2, 4), (2, 4)])
     music = library.make_sixteenths(
         measures(4),
         ["-", 4, 4],
-        preprocessor=preprocessor,
-        extra_counts=[0, 4],
         denominator=None,
+        durations=durations,
+        extra_counts=[0, 4],
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
