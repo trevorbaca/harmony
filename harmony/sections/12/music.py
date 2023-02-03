@@ -602,13 +602,10 @@ def bfl(cache):
                 bookend=False,
                 pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
             )
-
-    def selector(argument):
-        result = baca.select.cmgroups(argument, [1])
-        return [baca.select.pleaf(_, -1) for _ in result]
-
     with baca.scope(m.get(13, 14)) as o:
-        baca.breathe(selector(o))
+        cmgroups = baca.select.cmgroups(o, [1])
+        pleaves = [baca.select.pleaf(_, -1) for _ in cmgroups]
+        baca.breathe(pleaves)
         for clpart in baca.select.clparts(o, [4]):
             clpart = baca.select.rleak(clpart)
             baca.text_spanner(
