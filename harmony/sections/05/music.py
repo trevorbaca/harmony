@@ -198,7 +198,7 @@ def VC1(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(2)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (2, 4)])
     music = library.make_sixteenths(
         signatures(2),

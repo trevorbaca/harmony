@@ -84,7 +84,7 @@ def BFL(voice, signatures):
     music = baca.make_mmrests(signatures(1, 2))
     voice.extend(music)
     durations = [_.duration for _ in signatures(3)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(3),
@@ -104,7 +104,7 @@ def BFL(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(5)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(5),
@@ -124,7 +124,7 @@ def BFL(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(7)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 8), (5, 8)])
     music = library.make_sixteenths(
         signatures(7),
@@ -278,7 +278,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(11, 16), (5, 16)])
     music = library.make_sixteenths(
         signatures(4),
@@ -305,7 +305,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(7)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 8), (5, 8)])
     music = library.make_sixteenths(
         signatures(7),
@@ -353,7 +353,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(15)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(11, 16), (5, 16)])
     music = library.make_sixteenths(
         signatures(15),

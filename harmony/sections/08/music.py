@@ -53,7 +53,7 @@ def BFL(voice, signatures):
     music = baca.make_mmrests(signatures(1, 7))
     voice.extend(music)
     durations = [_.duration for _ in signatures(8, 9)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(2, 4), (2, 4), (2, 4)])
     music = library.make_sixteenths(
         signatures(8, 9),
@@ -141,7 +141,7 @@ def VC1(voice, signatures):
 
 def VC2(voice, signatures):
     durations = [_.duration for _ in signatures(1, 2)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(3, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(1, 2),

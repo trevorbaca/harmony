@@ -99,7 +99,7 @@ def PERC1(voice, signatures):
     music = baca.make_mmrests(signatures(3))
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (5, 4)])
     music = library.make_sixteenths(
         signatures(4),
@@ -118,7 +118,7 @@ def PERC1(voice, signatures):
 
 def PERC2(voice, signatures):
     durations = [_.duration for _ in signatures(1)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (5, 4)])
     music = library.make_sixteenths(
         signatures(1),
@@ -161,7 +161,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(5)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(5),
@@ -202,7 +202,7 @@ def VA(voice, signatures):
 
 def VC1(voice, signatures):
     durations = [_.duration for _ in signatures(1)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(2, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(1),
@@ -220,7 +220,7 @@ def VC1(voice, signatures):
     music = baca.make_mmrests(signatures(3))
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(2, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(4),
@@ -260,7 +260,7 @@ def VC2(voice, signatures):
 
 def CB1(voice, signatures):
     durations = [_.duration for _ in signatures(1)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(2, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(1),
@@ -278,7 +278,7 @@ def CB1(voice, signatures):
     music = baca.make_mmrests(signatures(3))
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(2, 4), (4, 4)])
     music = library.make_sixteenths(
         signatures(4),

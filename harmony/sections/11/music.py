@@ -233,7 +233,7 @@ def HP(voice, signatures):
     )
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (1, 4), (1, 4), (3, 4)])
     music = library.make_sixteenths(
         signatures(6),
@@ -316,7 +316,7 @@ def VA(voice, signatures):
 
 def VC1(voice, signatures):
     durations = [_.duration for _ in signatures(1)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (2, 4)])
     music = library.make_sixteenths(
         signatures(1),
@@ -427,7 +427,7 @@ def VC2(voice, signatures):
 
 def CB1(voice, signatures):
     durations = [_.duration for _ in signatures(1)]
-    durations = baca.sequence.fuse(durations)
+    durations = [sum(durations)]
     durations = baca.sequence.split(durations, [(1, 4), (2, 4)])
     music = library.make_sixteenths(
         signatures(1),
