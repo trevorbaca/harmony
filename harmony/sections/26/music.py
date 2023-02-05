@@ -128,7 +128,8 @@ def PERC1(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(9)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(9),
         [1, -11, 4, -12, 4],

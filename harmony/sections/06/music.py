@@ -85,7 +85,8 @@ def BFL(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(3)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(1, 4), (3, 4)])
+    weights = abjad.durations([(1, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(3),
         [2, 2, -6, 2, 2],
@@ -105,7 +106,8 @@ def BFL(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(5)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(1, 4), (3, 4)])
+    weights = abjad.durations([(1, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(5),
         [2, 2, -6, 2, 2],
@@ -125,7 +127,8 @@ def BFL(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(7)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 8), (5, 8)])
+    weights = abjad.durations([(3, 8), (5, 8)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(7),
         [-6, -4, 1, -5, 1, -1],
@@ -279,7 +282,8 @@ def HP(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(11, 16), (5, 16)])
+    weights = abjad.durations([(11, 16), (5, 16)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(4),
         [9, "-", 2, 2],
@@ -306,7 +310,8 @@ def HP(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(7)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 8), (5, 8)])
+    weights = abjad.durations([(3, 8), (5, 8)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(7),
         ["-", 9, -2],
@@ -354,7 +359,8 @@ def HP(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(15)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(11, 16), (5, 16)])
+    weights = abjad.durations([(11, 16), (5, 16)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(15),
         ["-", 2, 2],
