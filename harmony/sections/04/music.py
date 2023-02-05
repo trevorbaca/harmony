@@ -351,7 +351,7 @@ def bfl(m):
             baca.hairpin(
                 clpart,
                 "o<| ff |> p",
-                the_pieces=baca.select.clparts(clpart, [1]),
+                pieces=baca.select.clparts(clpart, [1]),
             )
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
@@ -427,7 +427,7 @@ def hp(cache):
             baca.hairpin(
                 clpart,
                 "p < ff > p",
-                the_pieces=baca.select.clparts(clpart, [1]),
+                pieces=baca.select.clparts(clpart, [1]),
             )
         baca.markup(
             o.pleaf(0),
@@ -643,7 +643,7 @@ def cb2(m):
         baca.hairpin(
             o.rleaves(),
             'o< "mf" >o niente',
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.scp_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
@@ -697,7 +697,7 @@ def composites(cache):
                 o,
                 "pp p mp mf f",
                 bookend=False,
-                the_pieces=baca.select.plts(o),
+                pieces=baca.select.plts(o),
             )
     for name in ["bfl", "hp", "cb1", "cb2"]:
         m = cache[name]
@@ -706,7 +706,7 @@ def composites(cache):
                 o,
                 "mf mp p pp pp pp",
                 bookend=False,
-                the_pieces=baca.select.plts(o),
+                pieces=baca.select.plts(o),
             )
     for name in ["va", "vc2"]:
         m = cache[name]
@@ -715,7 +715,7 @@ def composites(cache):
                 o,
                 'pp p mp mf "f"',
                 bookend=False,
-                the_pieces=baca.select.plts(o),
+                pieces=baca.select.plts(o),
             )
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
@@ -723,7 +723,7 @@ def composites(cache):
             o,
             'p mp mf "f"',
             bookend=False,
-            the_pieces=baca.select.plts(o)[1:],
+            pieces=baca.select.plts(o)[1:],
         )
     for name in ["va", "vc1", "vc2"]:
         m = cache[name]
@@ -732,7 +732,7 @@ def composites(cache):
                 o,
                 "mf mp p pp pp pp",
                 bookend=False,
-                the_pieces=baca.select.plts(o),
+                pieces=baca.select.plts(o),
             )
     for name in ["bfl", "hp", "va", "vc1", "vc2", "cb1"]:
         m = cache[name]

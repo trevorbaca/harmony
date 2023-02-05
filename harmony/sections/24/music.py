@@ -251,7 +251,7 @@ def bfl(m):
             baca.hairpin(
                 run,
                 "niente o< mf >o",
-                the_pieces=baca.select.lparts(run, [1, 2 + 1]),
+                pieces=baca.select.lparts(run, [1, 2 + 1]),
             )
             baca.trill_spanner(
                 run,
@@ -261,7 +261,7 @@ def bfl(m):
                 run,
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 9"),
-                the_pieces=baca.select.lparts(run, [1, 2 + 1]),
+                pieces=baca.select.lparts(run, [1, 2 + 1]),
             )
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#5")
@@ -271,7 +271,7 @@ def bfl(m):
                 run,
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 run,
@@ -281,7 +281,7 @@ def bfl(m):
                 run,
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 9)) as o:
         baca.dls_staff_padding(o, 4)
@@ -442,7 +442,7 @@ def va(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.plts(o.leaves()),
+            pieces=baca.select.plts(o.leaves()),
         )
 
 
@@ -467,7 +467,7 @@ def vc1(m):
             baca.hairpin(
                 run,
                 "niente o<| mp |>o",
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 run,
@@ -500,7 +500,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.plts(o.leaves()),
+            pieces=baca.select.plts(o.leaves()),
         )
 
 
@@ -535,7 +535,7 @@ def vc2(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.plts(o.leaves()),
+            pieces=baca.select.plts(o.leaves()),
         )
 
 
@@ -560,7 +560,7 @@ def cb1(m):
             baca.hairpin(
                 run,
                 "niente o<| mp |>o",
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 run,
@@ -594,7 +594,7 @@ def cb1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.plts(o.leaves()),
+            pieces=baca.select.plts(o.leaves()),
         )
 
 
@@ -629,7 +629,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.plts(o.leaves()),
+            pieces=baca.select.plts(o.leaves()),
         )
 
 
@@ -646,7 +646,7 @@ def composites(cache):
                 baca.hairpin(
                     run,
                     "niente o<| mp |>o",
-                    the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                    pieces=baca.select.lparts(run, [1, 1 + 1]),
                 )
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]

@@ -504,7 +504,7 @@ def va(m):
             o,
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6),
 
@@ -521,7 +521,7 @@ def vc1(m):
             o,
             "p mp",
             bookend=False,
-            the_pieces=baca.select.plts(o)[1:],
+            pieces=baca.select.plts(o)[1:],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "F#3")
@@ -566,7 +566,7 @@ def vc1(m):
             # '"ff" "f" mf mp p pp ppp ppp',
             '"f" mf mp p pp ppp ppp',
             bookend=False,
-            the_pieces=baca.select.plts(leaves),
+            pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[8]) as o:
         baca.tuplet_number_text(o.leaves(), r"\markup 5:4")
@@ -711,7 +711,7 @@ def cb1(m):
             o,
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
 
@@ -758,7 +758,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
     with baca.scope(m.get(6, 8)) as o:
         for run in baca.select.runs(o):
@@ -792,7 +792,7 @@ def composites(cache):
                 o,
                 "pp p mp mf f",
                 bookend=False,
-                the_pieces=baca.select.plts(o),
+                pieces=baca.select.plts(o),
             )
 
 

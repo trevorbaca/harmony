@@ -289,7 +289,7 @@ def bfl(cache):
         baca.hairpin(
             o.rleaves(),
             "o< mp >o !",
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "Dtqf5")
@@ -301,7 +301,7 @@ def bfl(cache):
         baca.hairpin(
             o.rleaves(),
             'o< "f" >o niente',
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
@@ -311,7 +311,7 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 autodetect_right_padding=True,
                 bookend=False,
-                the_pieces=baca.select.lparts(clpart, [1, 1 + 1]),
+                pieces=baca.select.lparts(clpart, [1, 1 + 1]),
             )
         baca.breathe(o.pleaf(1))
     with baca.scope(m.get(5, 9)) as o:

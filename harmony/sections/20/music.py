@@ -253,7 +253,7 @@ def bfl(m):
             baca.hairpin(
                 run,
                 "o< f >o niente",
-                the_pieces=baca.select.lparts(run, [1, 2]),
+                pieces=baca.select.lparts(run, [1, 2]),
             )
             if i == 0:
                 baca.trill_spanner(
@@ -273,7 +273,7 @@ def bfl(m):
             baca.hairpin(
                 run,
                 "o< mp >o niente",
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 run,
@@ -311,7 +311,7 @@ def perc1(m):
             baca.hairpin(
                 run,
                 "o< pp >o niente",
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
         baca.markup(
             o.pleaf(0),
@@ -484,7 +484,7 @@ def vc1(m):
             baca.hairpin(
                 run,
                 "o< mp >o niente",
-                the_pieces=baca.select.lparts(run, [1, 1 + 1]),
+                pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 run,

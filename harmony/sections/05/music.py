@@ -314,7 +314,7 @@ def bfl(m):
             o,
             "pp p",
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
@@ -465,7 +465,7 @@ def hp(m):
             o,
             "pp p",
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 4)
     with baca.scope(m[4]) as o:
@@ -574,7 +574,7 @@ def vc1(m):
             o,
             "p mp",
             bookend=False,
-            the_pieces=baca.select.plts(o)[1:],
+            pieces=baca.select.plts(o)[1:],
         )
     with baca.scope(m.get(2, 3)) as o:
         with baca.scope(o.pheads()[2:]) as u:
@@ -676,7 +676,7 @@ def cb1(m):
             o,
             "pp ppp",
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
     with baca.scope(m[3]) as o:
@@ -689,7 +689,7 @@ def cb1(m):
             o,
             "pp p mp",
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o.plts()[:-1], 4)
         baca.pizzicato_spanner(
@@ -726,7 +726,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
     with baca.scope(m[2]) as o:
         for run in baca.select.runs(o):
@@ -754,7 +754,7 @@ def cb2(m):
             o,
             "pp p",
             bookend=False,
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.pizzicato_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),

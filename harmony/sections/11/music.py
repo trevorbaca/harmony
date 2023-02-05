@@ -548,7 +548,7 @@ def bfl(cache):
         baca.hairpin(
             o.rleaves(),
             "o< mf >o niente",
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.markup(o.pleaf(0), baca.levine_multiphonic(5))
     with baca.scope(m[5]) as o:
@@ -575,7 +575,7 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 autodetect_right_padding=True,
                 bookend=False,
-                the_pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
+                pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             )
     with baca.scope(m[8]) as o:
         cmgroups = baca.select.cmgroups(o, [1])
@@ -589,14 +589,14 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 autodetect_right_padding=True,
                 bookend=False,
-                the_pieces=baca.select.lparts(clpart, [2, 2 + 1]),
+                pieces=baca.select.lparts(clpart, [2, 2 + 1]),
             )
     with baca.scope(m.get(7, 8)) as o:
         baca.pitch(o, "Dtqf5")
         baca.hairpin(
             o.rleaves(),
             'o< "f" >o niente o< "f" >o niente',
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 1, 2, 3]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 1, 2, 3]),
         )
         baca.markup(
             o.pleaf(0),
@@ -612,7 +612,7 @@ def bfl(cache):
         baca.hairpin(
             leaves,
             "o< mf >o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.metric_modulation_spanner(
             baca.select.rleak(o.runs()[-1:]),
@@ -645,7 +645,7 @@ def perc1(m):
         baca.hairpin(
             leaves,
             "o< p >o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),
@@ -660,13 +660,13 @@ def perc1(m):
         baca.hairpin(
             leaves,
             "o< p > pp",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         ),
         leaves = o.leaves()[5:8]
         baca.hairpin(
             leaves,
             "pp < mp > pp",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         library.slate_staff_position(o)
@@ -704,7 +704,7 @@ def perc1(m):
             leaves,
             "o< p > pp pp < p > pp < p >o niente",
             abjad.Tweak(r"- \tweak staff-padding 10"),
-            the_pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),
@@ -841,7 +841,7 @@ def hp(cache):
         baca.hairpin(
             o.run(0),
             'o< "f" >o niente',
-            the_pieces=baca.select.lparts(o.run(0), [1, 3]),
+            pieces=baca.select.lparts(o.run(0), [1, 3]),
         )
         baca.dls_staff_padding(o, 6)
         baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
@@ -912,7 +912,7 @@ def vc1(m):
         baca.hairpin(
             leaves,
             "o<| mp |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.trill_spanner(
@@ -988,7 +988,7 @@ def cb1(m):
         baca.hairpin(
             leaves,
             "o<| mp |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 2]),
+            pieces=baca.select.lparts(leaves, [1, 2]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.trill_spanner(
@@ -1082,7 +1082,7 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o<| mp |>o niente",
-                the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
             baca.trill_spanner(baca.select.tleaves(o, rleak=True))
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
@@ -1094,13 +1094,13 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o<| p |> pp",
-                the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
             leaves = o.leaves()[5:8]
             baca.hairpin(
                 leaves,
                 "pp <| mp |> pp",
-                the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
             baca.trill_spanner(baca.select.tleaves(o, rleak=True))
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
@@ -1119,7 +1119,7 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o<| mp |> pp pp <| mp |> ! <| mp |>o niente",
-                the_pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 1 + 1]),
                 right_broken=True,
             )
             baca.trill_spanner(

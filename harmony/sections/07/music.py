@@ -431,7 +431,7 @@ def bfl(m):
             baca.hairpin(
                 o,
                 "o<| f |>o niente",
-                the_pieces=baca.select.clparts(o, [1]),
+                pieces=baca.select.clparts(o, [1]),
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
@@ -440,14 +440,14 @@ def bfl(m):
         baca.hairpin(
             leaves,
             "o<| f |>o niente",
-            the_pieces=baca.select.clparts(leaves, [1]),
+            pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -0.75)
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpin(
             leaves,
             "o<| mf |>o niente",
-            the_pieces=baca.select.clparts(leaves, [1]),
+            pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(3), -2)
     with baca.scope(m[6]) as o:
@@ -463,7 +463,7 @@ def bfl(m):
             leaves,
             "o< f >o",
             forbid_al_niente_to_bar_line=True,
-            the_pieces=baca.select.clparts(leaves, [1]),
+            pieces=baca.select.clparts(leaves, [1]),
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
@@ -482,7 +482,7 @@ def bfl(m):
         baca.hairpin(
             leaves,
             "o< f >o niente",
-            the_pieces=baca.select.clparts(leaves, [1]),
+            pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
@@ -642,7 +642,7 @@ def hp(cache):
         baca.hairpin(
             o.rleaves(),
             "o< mf >o niente",
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.dls_staff_padding(o, 4),
         baca.markup(
@@ -1041,7 +1041,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            the_pieces=baca.select.lparts(o.leaves(), [2, 3]),
+            pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "A1")
