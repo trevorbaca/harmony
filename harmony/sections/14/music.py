@@ -450,8 +450,8 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            pieces=lambda _: abjad.select.partition_by_ratio(
-                abjad.select.leaves(_), (3, 4)
+            the_pieces=abjad.select.partition_by_ratio(
+                abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
         baca.trill_spanner(
@@ -471,10 +471,11 @@ def bfl(cache):
         baca.repeat_tie(o.pleaf(-1))
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
+        leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            leaves,
             "o<| f |>o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
+            the_pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.pitches(
@@ -484,8 +485,8 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            pieces=lambda _: abjad.select.partition_by_ratio(
-                abjad.select.leaves(_), (3, 4)
+            the_pieces=abjad.select.partition_by_ratio(
+                abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
         baca.trill_spanner(
@@ -500,8 +501,8 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            pieces=lambda _: abjad.select.partition_by_ratio(
-                abjad.select.leaves(_), (3, 4)
+            the_pieces=abjad.select.partition_by_ratio(
+                abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
         baca.trill_spanner(
@@ -646,7 +647,7 @@ def perc2(cache):
             o,
             # '"ff" "ff" "ff" "f" "f" mf mp p pp',
             '"ff" "ff" "f" "f" mf mp p pp',
-            pieces=lambda _: baca.select.plts(_)[1:],
+            the_pieces=baca.select.plts(o)[1:],
         )
         baca.markup(
             o.pleaf(0),
@@ -711,10 +712,11 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.stem_tremolo(o.pleaves())
+        leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            leaves,
             "o< mf >o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),
@@ -847,7 +849,7 @@ def vc1(cache):
         baca.hairpin(
             o,
             '"ff" "ff" "f" "f" mf mp p',
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
     with baca.scope(m[9]) as o:
@@ -891,7 +893,7 @@ def vc2(cache):
         baca.hairpin(
             o,
             '"ff" "ff"',
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -919,7 +921,7 @@ def vc2(cache):
         baca.hairpin(
             o,
             '"ff" "ff" "f" mf mp p pp',
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.metric_modulation_spanner(

@@ -419,7 +419,7 @@ def bfl(m):
             o.rleaves(),
             "pp < p >o",
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 3]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 3]),
         )
         baca.trill_spanner(
             baca.select.tleaves(o, rleak=True),
@@ -429,26 +429,28 @@ def bfl(m):
             o,
             "(T) -> A -> (T)",
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+            the_pieces=baca.select.lparts(o, [1, 1 + 1]),
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
+            leaves = baca.select.rleak(run)
             baca.hairpin(
-                baca.select.rleak(run),
+                leaves,
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
-                pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+                the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
             baca.trill_spanner(
                 baca.select.tleaves(run, rleak=True),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
+            leaves = baca.select.rleak(run)
             baca.text_spanner(
-                baca.select.rleak(run),
+                leaves,
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
-                pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+                the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )
     with baca.scope(m[9]) as o:
         baca.pitches(
@@ -464,8 +466,8 @@ def bfl(m):
             baca.hairpin(
                 run,
                 "o< mp >o niente",
-                pieces=lambda _: abjad.select.partition_by_ratio(
-                    abjad.select.leaves(_), (4, 5)
+                the_pieces=abjad.select.partition_by_ratio(
+                    abjad.select.leaves(run), (4, 5)
                 ),
             )
             baca.trill_spanner(
@@ -666,7 +668,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "<G4 Ab4 Bb4>")
@@ -688,7 +690,7 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -696,7 +698,7 @@ def vc1(cache):
             o,
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o),
         )
         baca.untie(o.leaves())
         baca.pitch(abjad.select.get(o.pleaves(), [0, -1]), "<A4 B4 C5>")
@@ -721,7 +723,7 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -738,7 +740,7 @@ def vc2(cache):
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [1, 2, 3, 2]),
+            the_pieces=baca.select.lparts(o, [1, 2, 3, 2]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -756,7 +758,7 @@ def cb1(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -776,7 +778,7 @@ def cb1(cache):
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
-            pieces=lambda _: baca.select.lparts(_, [2, 3, 2]),
+            the_pieces=baca.select.lparts(o, [2, 3, 2]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -794,7 +796,7 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(o.leaves()),
         )
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -814,7 +816,7 @@ def cb2(cache):
             o,
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
-            pieces=lambda _: baca.select.lparts(_, [2, 1, 1]),
+            the_pieces=baca.select.lparts(o, [2, 1, 1]),
         )
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
@@ -828,7 +830,7 @@ def composites(cache):
             baca.hairpin(
                 o,
                 "pp < p > pp",
-                pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+                the_pieces=baca.select.lparts(o, [1, 1 + 1]),
             )
             if name != "va":
                 baca.clef(o.leaf(0), "treble")
