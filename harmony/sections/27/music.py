@@ -139,7 +139,8 @@ def PERC1(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(6),
         [-12, -2, 1, "-"],
@@ -180,7 +181,8 @@ def PERC2(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(6),
         [-12, -2, 1, "-"],
@@ -218,7 +220,8 @@ def HP(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(6)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(6),
         [-12, -2, 1, "-"],

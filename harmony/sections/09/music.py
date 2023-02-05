@@ -94,7 +94,8 @@ def VA(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(2),
         [-12, 12, -4],
@@ -114,7 +115,8 @@ def VC1(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(2),
         [-12, 12, -4],
@@ -134,7 +136,8 @@ def VC2(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(2),
         [-12, 12, -4],
@@ -154,7 +157,8 @@ def CB1(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(3, 4), (3, 4)])
+    weights = abjad.durations([(3, 4), (3, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(2),
         [-12, 12, -4],

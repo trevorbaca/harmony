@@ -245,7 +245,8 @@ def VA(voice, signatures):
     voice.extend(music)
     durations = [_.duration for _ in signatures(4)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(2, 4), (2, 4)])
+    weights = abjad.durations([(2, 4), (2, 4)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(4),
         ["-", 4, 4],

@@ -281,7 +281,8 @@ def VC1(voice, signatures):
 def VC2(voice, signatures):
     durations = [_.duration for _ in signatures(1, 2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(15, 8), (3, 8)])
+    weights = abjad.durations([(15, 8), (3, 8)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(1, 2),
         [20, "-"],
@@ -361,7 +362,8 @@ def CB1(voice, signatures):
 def CB2(voice, signatures):
     durations = [_.duration for _ in signatures(1, 2)]
     durations = [sum(durations)]
-    durations = baca.sequence.split(durations, [(15, 8), (3, 8)])
+    weights = abjad.durations([(15, 8), (3, 8)])
+    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
     music = library.make_sixteenths(
         signatures(1, 2),
         [20, "-"],
