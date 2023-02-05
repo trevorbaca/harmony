@@ -450,7 +450,7 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            the_pieces=abjad.select.partition_by_ratio(
+            pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
@@ -475,7 +475,7 @@ def bfl(cache):
         baca.hairpin(
             leaves,
             "o<| f |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 2 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.pitches(
@@ -485,7 +485,7 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            the_pieces=abjad.select.partition_by_ratio(
+            pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
@@ -501,7 +501,7 @@ def bfl(cache):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            the_pieces=abjad.select.partition_by_ratio(
+            pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
             ),
         )
@@ -647,7 +647,7 @@ def perc2(cache):
             o,
             # '"ff" "ff" "ff" "f" "f" mf mp p pp',
             '"ff" "ff" "f" "f" mf mp p pp',
-            the_pieces=baca.select.plts(o)[1:],
+            pieces=baca.select.plts(o)[1:],
         )
         baca.markup(
             o.pleaf(0),
@@ -716,7 +716,7 @@ def hp(cache):
         baca.hairpin(
             leaves,
             "o< mf >o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),
@@ -849,7 +849,7 @@ def vc1(cache):
         baca.hairpin(
             o,
             '"ff" "ff" "f" "f" mf mp p',
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
     with baca.scope(m[9]) as o:
@@ -893,7 +893,7 @@ def vc2(cache):
         baca.hairpin(
             o,
             '"ff" "ff"',
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
         baca.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
@@ -921,7 +921,7 @@ def vc2(cache):
         baca.hairpin(
             o,
             '"ff" "ff" "f" mf mp p pp',
-            the_pieces=baca.select.plts(o),
+            pieces=baca.select.plts(o),
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.metric_modulation_spanner(

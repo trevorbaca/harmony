@@ -323,7 +323,7 @@ def bfl(cache):
         baca.hairpin(
             leaves,
             "o<| f |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 2 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
         baca.metric_modulation_spanner(
             o.leaves()[:3],
@@ -337,7 +337,7 @@ def bfl(cache):
         baca.hairpin(
             leaves,
             "o<| f |>o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -370,7 +370,7 @@ def bfl(cache):
         baca.hairpin(
             o.rleaves(),
             'o< "f" >o niente',
-            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
+            pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
@@ -380,7 +380,7 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 autodetect_right_padding=True,
                 bookend=False,
-                the_pieces=baca.select.lparts(clpart, [1, 1 + 1]),
+                pieces=baca.select.lparts(clpart, [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.dls_staff_padding(o, 4)
@@ -526,7 +526,7 @@ def hp(cache):
         baca.hairpin(
             leaves,
             "o< mf >o niente",
-            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),

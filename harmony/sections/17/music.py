@@ -318,7 +318,7 @@ def bfl(m):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            the_pieces=abjad.select.partition_by_ratio(
+            pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()),
                 (3, 4),
             ),
@@ -716,7 +716,7 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o<| mp |> pp pp <| mp |>o niente",
-                the_pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
             baca.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.dynamic_text_x_offset(o.pleaf(-1), -0.25)

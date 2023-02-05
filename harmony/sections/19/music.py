@@ -626,7 +626,7 @@ def bfl(m):
             baca.hairpin(
                 u,
                 "o< mp >o niente",
-                the_pieces=abjad.select.partition_by_ratio(
+                pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(u),
                     (3, 4),
                 ),
@@ -658,7 +658,7 @@ def bfl(m):
             baca.hairpin(
                 u,
                 "o< mf >o niente",
-                the_pieces=abjad.select.partition_by_ratio(
+                pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(u),
                     (3, 4),
                 ),
@@ -939,7 +939,7 @@ def va(cache):
         baca.hairpin(
             o.tleaves(),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
-            the_pieces=baca.select.clparts(o.tleaves(), [1]),
+            pieces=baca.select.clparts(o.tleaves(), [1]),
         )
         baca.dynamic(baca.select.rleak(o.leaves()[-1:])[-1], "niente")
     for item in [(1, 2), (4, 9), 12]:
@@ -1061,7 +1061,7 @@ def cb2(cache):
             leaves,
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
             forbid_al_niente_to_bar_line=True,
-            the_pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
+            pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
         baca.metric_modulation_spanner(
@@ -1109,7 +1109,7 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o<| mp |> pp pp <| mp |>o niente",
-                the_pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
             baca.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.dynamic_text_x_offset(o.pleaf(-1), -0.25)
@@ -1122,7 +1122,7 @@ def composites(cache):
             baca.hairpin(
                 leaves,
                 "o< mp >o niente",
-                the_pieces=baca.select.lparts(leaves, [2, 1 + 1]),
+                pieces=baca.select.lparts(leaves, [2, 1 + 1]),
             )
     for name in ["vc1", "vc2"]:
         m = cache[name]
