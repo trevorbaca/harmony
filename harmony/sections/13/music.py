@@ -319,10 +319,11 @@ def bfl(cache):
         baca.repeat_tie(o.pleaf(-1))
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
+        leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            leaves,
             "o<| f |>o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 2 + 1]),
+            the_pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
         baca.metric_modulation_spanner(
             o.leaves()[:3],
@@ -332,10 +333,11 @@ def bfl(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
+        leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            leaves,
             "o<| f |>o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
@@ -368,7 +370,7 @@ def bfl(cache):
         baca.hairpin(
             o.rleaves(),
             'o< "f" >o niente',
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleaves(clpart)
@@ -378,7 +380,7 @@ def bfl(cache):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 autodetect_right_padding=True,
                 bookend=False,
-                pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+                the_pieces=baca.select.lparts(clpart, [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.dls_staff_padding(o, 4)
@@ -520,10 +522,11 @@ def hp(cache):
         m = cache[name]
     with baca.scope(m[1]) as o:
         baca.stem_tremolo(o.pleaves())
+        leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            baca.select.tleaves(o, rleak=True),
+            leaves,
             "o< mf >o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 1 + 1]),
+            the_pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
         baca.markup(
             o.pleaf(0),

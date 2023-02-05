@@ -340,7 +340,7 @@ def bfl(cache):
             baca.hairpin(
                 run,
                 "o< f >o niente",
-                pieces=lambda _: baca.select.lparts(_, [1, 2]),
+                the_pieces=baca.select.lparts(run, [1, 2]),
             )
             if i == 0:
                 baca.trill_spanner(

@@ -372,16 +372,18 @@ def vc1(m):
         baca.instrument_name(o.leaf(0), r"\harmony-cello-i-markup")
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
         baca.tuplet_bracket_down(o)
+        leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
-            baca.select.rleaves(o, count=2),
+            leaves,
             "o< f >o niente",
-            pieces=lambda _: baca.select.lparts(_, [4, 5]),
+            the_pieces=baca.select.lparts(leaves, [4, 5]),
         )
+        leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            leaves,
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(1), "percussion")
@@ -450,15 +452,16 @@ def cb1(m):
         baca.hairpin(
             o.rleaves(),
             "o< f >o niente",
-            pieces=lambda _: baca.select.lparts(_, [4, 7]),
+            the_pieces=baca.select.lparts(o.rleaves(), [4, 7]),
         )
         baca.dls_staff_padding(o, 4)
+        leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            leaves,
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             final_piece_spanner=False,
-            pieces=lambda _: baca.select.plts(_),
+            the_pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 1)

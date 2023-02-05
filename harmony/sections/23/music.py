@@ -309,8 +309,8 @@ def bfl(cache):
             baca.hairpin(
                 run,
                 "o< mp >o niente",
-                pieces=lambda _: abjad.select.partition_by_ratio(
-                    abjad.select.leaves(_), (4, 5)
+                the_pieces=abjad.select.partition_by_ratio(
+                    abjad.select.leaves(run), (4, 5)
                 ),
             )
             baca.trill_spanner(
@@ -474,7 +474,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.mgroups(_, [2, 1]),
+            the_pieces=baca.select.mgroups(o.leaves(), [2, 1]),
         )
     with baca.scope(m[7]) as o:
         baca.pitches(o, "D4 C#4")
@@ -530,11 +530,12 @@ def vc1(cache):
             baca.select.rleak(o.leaves()[1:]),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
+        leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            leaves,
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=lambda _: baca.select.mgroups(_, [1, 2]),
+            the_pieces=baca.select.mgroups(leaves, [1, 2]),
         )
 
 
@@ -615,11 +616,12 @@ def cb1(cache):
             baca.select.rleak(o.leaves()[1:]),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
+        leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            leaves,
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            pieces=lambda _: baca.select.mgroups(_, [1, 2]),
+            the_pieces=baca.select.mgroups(leaves, [1, 2]),
         )
 
 

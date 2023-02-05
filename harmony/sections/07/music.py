@@ -431,21 +431,23 @@ def bfl(m):
             baca.hairpin(
                 o,
                 "o<| f |>o niente",
-                pieces=lambda _: baca.select.clparts(_, [1]),
+                the_pieces=baca.select.clparts(o, [1]),
             )
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "Bb5")
         baca.stem_tremolo(o.pleaves())
+        leaves = o.leaves()[:3]
         baca.hairpin(
-            o.leaves()[:3],
+            leaves,
             "o<| f |>o niente",
-            pieces=lambda _: baca.select.clparts(_, [1]),
+            the_pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -0.75)
+        leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpin(
-            baca.select.rleak(o.leaves()[-2:]),
+            leaves,
             "o<| mf |>o niente",
-            pieces=lambda _: baca.select.clparts(_, [1]),
+            the_pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(3), -2)
     with baca.scope(m[6]) as o:
@@ -456,11 +458,12 @@ def bfl(m):
         baca.pitch(o.runs()[:1], "G3")
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
+        leaves = o.leaves()[-2:]
         baca.hairpin(
-            o.leaves()[-2:],
+            leaves,
             "o< f >o",
             forbid_al_niente_to_bar_line=True,
-            pieces=lambda _: baca.select.clparts(_, [1]),
+            the_pieces=baca.select.clparts(leaves, [1]),
         )
     with baca.scope(m.get(6, 7)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
@@ -475,10 +478,11 @@ def bfl(m):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "Bb5"),
         baca.stem_tremolo(o.pleaves())
+        leaves = o.leaves()[:3]
         baca.hairpin(
-            o.leaves()[:3],
+            leaves,
             "o< f >o niente",
-            pieces=lambda _: baca.select.clparts(_, [1]),
+            the_pieces=baca.select.clparts(leaves, [1]),
         )
         baca.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
@@ -638,7 +642,7 @@ def hp(cache):
         baca.hairpin(
             o.rleaves(),
             "o< mf >o niente",
-            pieces=lambda _: baca.select.lparts(_, [1, 2]),
+            the_pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.dls_staff_padding(o, 4),
         baca.markup(
@@ -1037,7 +1041,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 3"),
             autodetect_right_padding=False,
             bookend=-1,
-            pieces=lambda _: baca.select.lparts(_, [2, 3]),
+            the_pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "A1")

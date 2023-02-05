@@ -318,8 +318,8 @@ def bfl(m):
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
-            pieces=lambda _: abjad.select.partition_by_ratio(
-                abjad.select.leaves(_),
+            the_pieces=abjad.select.partition_by_ratio(
+                abjad.select.leaves(o.tleaves()),
                 (3, 4),
             ),
         )
@@ -712,10 +712,11 @@ def composites(cache):
             # TODO: promote to music = library.make_sixteenths()
             baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
             baca.stem_tremolo(o.pleaves())
+            leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                baca.select.tleaves(o, rleak=True),
+                leaves,
                 "o<| mp |> pp pp <| mp |>o niente",
-                pieces=lambda _: baca.select.lparts(_, [1, 1, 2, 1, 1 + 1]),
+                the_pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
             baca.dynamic_text_x_offset(o.pleaf(1), -3)
             baca.dynamic_text_x_offset(o.pleaf(-1), -0.25)
