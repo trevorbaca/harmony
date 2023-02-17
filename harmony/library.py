@@ -543,7 +543,9 @@ def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
     return music
 
 
-def make_tessera_2(time_signatures, part, *, advance=0, gap=False, rest_plts=None):
+def make_tessera_2(
+    time_signatures, part, *, advance=0, gap=False, force_rest_plts=None
+):
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
     assert sum(counts) == 44
@@ -558,10 +560,9 @@ def make_tessera_2(time_signatures, part, *, advance=0, gap=False, rest_plts=Non
     durations = [_.duration for _ in time_signatures]
     nested_music = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(nested_music, time_signatures)
-    # TODO: rest_plts -> force_rest_plts
-    if rest_plts is not None:
+    if force_rest_plts is not None:
         plts = baca.select.plts(voice)
-        plts = abjad.select.get(plts, rest_plts)
+        plts = abjad.select.get(plts, force_rest_plts)
         rmakers.force_rest(plts, tag=tag)
     rmakers.extract_trivial(voice)
     rmakers.rewrite_meter(

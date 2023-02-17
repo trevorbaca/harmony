@@ -313,7 +313,7 @@ def VC1(voice, signatures):
     music = library.make_tessera_2(
         signatures(6),
         3,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = baca.make_mmrests(signatures(7))
@@ -357,7 +357,7 @@ def VC2(voice, signatures):
     music = library.make_tessera_2(
         signatures(6),
         2,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = baca.make_mmrests(signatures(7))
@@ -415,7 +415,7 @@ def CB1(voice, signatures):
     music = library.make_tessera_2(
         signatures(6),
         1,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = baca.make_mmrests(signatures(7))
