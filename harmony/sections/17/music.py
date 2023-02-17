@@ -173,7 +173,7 @@ def VC1(voice, signatures):
     music = library.make_tessera_2(
         signatures(1),
         3,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -203,7 +203,7 @@ def VC2(voice, signatures):
     music = library.make_tessera_2(
         signatures(1),
         2,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -233,7 +233,7 @@ def CB1(voice, signatures):
     music = library.make_tessera_2(
         signatures(1),
         1,
-        rest_plts=[0],
+        force_rest_plts=[0],
     )
     voice.extend(music)
     music = library.make_sixteenths(
