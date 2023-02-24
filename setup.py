@@ -6,7 +6,7 @@ if __name__ == "__main__":
         author="Trevor Bača",
         author_email="trevor.baca@gmail.com",
         install_requires=[
-            "abjad>=3.15",
+            "abjad>=3.16",
             "black",
             "flake8",
             "isort",
