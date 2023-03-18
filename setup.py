@@ -18,5 +18,5 @@ if __name__ == "__main__":
         platforms="Any",
         python_requires=">=3.10",
         url="https://github.com/trevorbaca/harmony",
-        version="3.15",
+        version="3.16",
     )
