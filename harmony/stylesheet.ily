@@ -127,7 +127,9 @@
         \name GlobalContext
         \type Engraver_group
         \consists Axis_group_engraver
-        \consists Bar_number_engraver
+        % causes programming error: cyclic dependency: calculation-in-progress
+        % encountered for VerticalAxisGroup.adjacent-pure-heights:
+        % \consists Bar_number_engraver
         % prevents LilyPond cyclic chain in pure-Y-offset callbacks warning:
         \consists Staff_collecting_engraver
         \consists Time_signature_engraver
