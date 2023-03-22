@@ -215,7 +215,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
     )
     voice.extend(music)
@@ -240,7 +240,7 @@ def VC1(voice, time_signatures):
         extra_counts=[1],
     )
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
     )
     voice.extend(music)

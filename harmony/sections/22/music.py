@@ -333,7 +333,7 @@ def CB1(voice, time_signatures):
 def CB2(voice, time_signatures):
     music = baca.make_mmrests(time_signatures(1, 2))
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         "r4 c16. r32 r8 c16. r32 r8",
     )
     voice.extend(music)

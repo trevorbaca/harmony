@@ -251,7 +251,7 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(4))
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"c2. c8 \times 5/4 { c2 }",
     )
     for pleaf in baca.select.pleaves(music)[:2]:
