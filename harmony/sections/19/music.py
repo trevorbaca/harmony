@@ -227,7 +227,7 @@ def PERC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"r4. \times 5/4 { c2 }",
     )
     voice.extend(music)

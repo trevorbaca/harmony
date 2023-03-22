@@ -204,7 +204,7 @@ def VC2(voice, time_signatures):
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     )
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 8/10 { c4 r4 r4 r8. }",
     )
     voice.extend(music)
@@ -228,7 +228,7 @@ def CB1(voice, time_signatures):
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     )
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 8/11 { r4 c4 r4 r4 r32 }",
     )
     voice.extend(music)
@@ -252,7 +252,7 @@ def CB2(voice, time_signatures):
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
     )
     voice.extend(music)
-    music = baca.make_skeleton(
+    music = baca.parse(
         r"\times 8/12 { r4 c4 r4 r4 r8 }",
     )
     voice.extend(music)
