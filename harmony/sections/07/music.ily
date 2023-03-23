@@ -2675,7 +2675,6 @@ number.7.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -2692,7 +2691,6 @@ number.7.Cello.1.Music = {
     ~
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3028,7 +3026,6 @@ number.7.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -3045,7 +3042,6 @@ number.7.Cello.2.Music = {
     ~
 
     eqf'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16

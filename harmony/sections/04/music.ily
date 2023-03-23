@@ -770,12 +770,10 @@ number.4.BassFlute.Music = {
 
     fs'!16
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     [
     ~
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1524,7 +1522,6 @@ number.4.Harp.Music = {
     \set Staff.shortInstrumentName = \harmony-hp-markup %@%
 
     cs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1537,7 +1534,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1549,7 +1545,6 @@ number.4.Harp.Music = {
 
     % [Harp.Music measure 2]
     cs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1575,7 +1570,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -1584,7 +1578,6 @@ number.4.Harp.Music = {
     ~
 
     cs'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1597,7 +1590,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -1607,7 +1599,6 @@ number.4.Harp.Music = {
     ~
 
     cs'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1620,7 +1611,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -1631,7 +1621,6 @@ number.4.Harp.Music = {
 
     % [Harp.Music measure 5]
     cs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1644,7 +1633,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1661,7 +1649,6 @@ number.4.Harp.Music = {
     \repeatTie
 
     cs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1674,13 +1661,11 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     cs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1693,7 +1678,6 @@ number.4.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Harp.Music measure 7]
@@ -1719,12 +1703,10 @@ number.4.Harp.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     cs'!8.
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1810,12 +1792,10 @@ number.4.Harp.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     cs'!16
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -2615,7 +2595,6 @@ number.4.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2640,7 +2619,6 @@ number.4.Cello.1.Music = {
     ~
 
     fs16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3517,7 +3495,6 @@ number.4.Contrabass.1.Music = {
     ^ \baca-eleven-e
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -3556,7 +3533,6 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -3565,7 +3541,6 @@ number.4.Contrabass.1.Music = {
     ~
 
     aqs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3578,7 +3553,6 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3591,7 +3565,6 @@ number.4.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 3]
     aqs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3604,7 +3577,6 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3615,7 +3587,6 @@ number.4.Contrabass.1.Music = {
     \repeatTie
 
     aqs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3628,7 +3599,6 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3640,7 +3610,6 @@ number.4.Contrabass.1.Music = {
     \repeatTie
 
     aqs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3653,14 +3622,12 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     % [Contrabass.1.Music measure 5]
     aqs'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3673,7 +3640,6 @@ number.4.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -3775,12 +3741,10 @@ number.4.Contrabass.1.Music = {
 
     aqs'!8
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     aqs'!8
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4063,7 +4027,6 @@ number.4.Contrabass.2.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -4076,7 +4039,6 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4088,7 +4050,6 @@ number.4.Contrabass.2.Music = {
     \repeatTie
 
     fs'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -4101,13 +4062,11 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     % [Contrabass.2.Music measure 3]
     fs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs'!8
@@ -4119,7 +4078,6 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4130,7 +4088,6 @@ number.4.Contrabass.2.Music = {
     \repeatTie
 
     fs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -4143,7 +4100,6 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4155,7 +4111,6 @@ number.4.Contrabass.2.Music = {
     \repeatTie
 
     fs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -4168,7 +4123,6 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4181,7 +4135,6 @@ number.4.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 6]
     fs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -4194,7 +4147,6 @@ number.4.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     fs'!4

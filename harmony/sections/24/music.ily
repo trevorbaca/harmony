@@ -428,7 +428,6 @@ number.24.BassFlute.Music = {
     \!
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -470,7 +469,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -526,7 +524,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -561,7 +558,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -618,7 +614,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -653,7 +648,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -709,7 +703,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -744,7 +737,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -801,7 +793,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -836,7 +827,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -892,7 +882,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -927,7 +916,6 @@ number.24.BassFlute.Music = {
     \mf
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -989,7 +977,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1024,7 +1011,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1151,7 +1137,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1186,7 +1171,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1314,7 +1298,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1349,7 +1332,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1477,7 +1459,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1512,7 +1493,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1640,7 +1620,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1675,7 +1654,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1802,7 +1780,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1837,7 +1814,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -1965,7 +1941,6 @@ number.24.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2000,7 +1975,6 @@ number.24.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -2512,7 +2486,6 @@ number.24.Percussion.2.Music = {
     r16
 
     b16
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2530,7 +2503,6 @@ number.24.Percussion.2.Music = {
     ~
 
     b16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3509,7 +3481,6 @@ number.24.Viola.Music = {
     \override NoteHead.no-ledgers = ##t
     fs!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8
@@ -3518,7 +3489,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3538,7 +3508,6 @@ number.24.Viola.Music = {
 
     fs!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8.
@@ -3547,7 +3516,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3568,7 +3536,6 @@ number.24.Viola.Music = {
 
     fs!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8.
@@ -3577,7 +3544,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3605,7 +3571,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-pp-parenthesized
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3621,7 +3586,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3638,7 +3602,6 @@ number.24.Viola.Music = {
 
     fs!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!16
@@ -3647,7 +3610,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3668,7 +3630,6 @@ number.24.Viola.Music = {
     % [Viola.Music measure 8]
     fs!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!16
@@ -3677,7 +3638,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3727,7 +3687,6 @@ number.24.Viola.Music = {
 
     fs!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8
@@ -3736,7 +3695,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3753,7 +3711,6 @@ number.24.Viola.Music = {
 
     fs!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8.
@@ -3762,7 +3719,6 @@ number.24.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4184,7 +4140,6 @@ number.24.Cello.1.Music = {
 
     fs,!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!16
@@ -4193,7 +4148,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4213,7 +4167,6 @@ number.24.Cello.1.Music = {
 
     fs,!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!16
@@ -4222,7 +4175,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4277,7 +4229,6 @@ number.24.Cello.1.Music = {
     % [Cello.1.Music measure 8]
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4286,7 +4237,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4306,7 +4256,6 @@ number.24.Cello.1.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -4315,7 +4264,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4350,7 +4298,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4371,7 +4318,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4391,7 +4337,6 @@ number.24.Cello.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4400,7 +4345,6 @@ number.24.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4900,7 +4844,6 @@ number.24.Cello.2.Music = {
     \override NoteHead.no-ledgers = ##t
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4909,7 +4852,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4986,7 +4928,6 @@ number.24.Cello.2.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4995,7 +4936,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5012,7 +4952,6 @@ number.24.Cello.2.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -5021,7 +4960,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5049,7 +4987,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5070,7 +5007,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5090,7 +5026,6 @@ number.24.Cello.2.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -5099,7 +5034,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5127,7 +5061,6 @@ number.24.Cello.2.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -5136,7 +5069,6 @@ number.24.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5535,7 +5467,6 @@ number.24.Contrabass.1.Music = {
     \override NoteHead.no-ledgers = ##t
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -5544,7 +5475,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5568,7 +5498,6 @@ number.24.Contrabass.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -5577,7 +5506,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5597,7 +5525,6 @@ number.24.Contrabass.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -5606,7 +5533,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5641,7 +5567,6 @@ number.24.Contrabass.1.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -5650,7 +5575,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5667,7 +5591,6 @@ number.24.Contrabass.1.Music = {
 
     fs,!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!16
@@ -5676,7 +5599,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5694,7 +5616,6 @@ number.24.Contrabass.1.Music = {
     % [Contrabass.1.Music measure 8]
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -5703,7 +5624,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5772,7 +5692,6 @@ number.24.Contrabass.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -5781,7 +5700,6 @@ number.24.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6264,7 +6182,6 @@ number.24.Contrabass.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6290,7 +6207,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6310,7 +6226,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -6319,7 +6234,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6340,7 +6254,6 @@ number.24.Contrabass.2.Music = {
     % [Contrabass.2.Music measure 6]
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -6349,7 +6262,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6369,7 +6281,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!16
@@ -6378,7 +6289,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6432,7 +6342,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -6441,7 +6350,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6465,7 +6373,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8
@@ -6474,7 +6381,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6494,7 +6400,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!16
@@ -6503,7 +6408,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6531,7 +6435,6 @@ number.24.Contrabass.2.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -6540,7 +6443,6 @@ number.24.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START

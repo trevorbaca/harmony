@@ -4186,7 +4186,6 @@ number.19.Cello.1.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     d''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -4201,7 +4200,6 @@ number.19.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4693,7 +4691,6 @@ number.19.Cello.2.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     btqf'!8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -4708,7 +4705,6 @@ number.19.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5263,7 +5259,6 @@ number.19.Contrabass.1.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     g'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -5278,7 +5273,6 @@ number.19.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

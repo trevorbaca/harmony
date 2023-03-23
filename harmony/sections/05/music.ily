@@ -482,11 +482,9 @@ number.5.BassFlute.Music = {
     \ff
     - \tweak staff-padding 4
     ^ \baca-jet-whistle-markup
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     f'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.style
 
@@ -1386,7 +1384,6 @@ number.5.Harp.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     cs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1399,7 +1396,6 @@ number.5.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1545,7 +1541,6 @@ number.5.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -1562,7 +1557,6 @@ number.5.Viola.Music = {
     ~
 
     ef16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1926,7 +1920,6 @@ number.5.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -1943,7 +1936,6 @@ number.5.Cello.1.Music = {
     ~
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2176,7 +2168,6 @@ number.5.Cello.1.Music = {
     g8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -2184,19 +2175,16 @@ number.5.Cello.1.Music = {
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     a8.
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -2223,7 +2211,6 @@ number.5.Cello.1.Music = {
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2244,26 +2231,22 @@ number.5.Cello.1.Music = {
     \glissando
 
     b16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     c16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     f8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -2271,19 +2254,16 @@ number.5.Cello.1.Music = {
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     a16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     f8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -2403,7 +2383,6 @@ number.5.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -2420,7 +2399,6 @@ number.5.Cello.2.Music = {
     ~
 
     eqf'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2588,7 +2566,6 @@ number.5.Cello.2.Music = {
     a,8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -2596,19 +2573,16 @@ number.5.Cello.2.Music = {
     \glissando
 
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     a16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     b,8.
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -2635,7 +2609,6 @@ number.5.Cello.2.Music = {
     \baca-effort-f
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2656,26 +2629,22 @@ number.5.Cello.2.Music = {
     \glissando
 
     c16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     c'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -2683,19 +2652,16 @@ number.5.Cello.2.Music = {
     \glissando
 
     a16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     g8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -2964,7 +2930,6 @@ number.5.Contrabass.1.Music = {
     - \tweak padding 1
     _ \baca-string-iv-markup
     ^ \baca-eleven-e
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2998,7 +2963,6 @@ number.5.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -3007,7 +2971,6 @@ number.5.Contrabass.1.Music = {
     ~
 
     aqs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
     \revert DynamicLineSpanner.staff-padding
@@ -3022,7 +2985,6 @@ number.5.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.style
 
@@ -3086,17 +3048,14 @@ number.5.Contrabass.1.Music = {
     g8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3106,7 +3065,6 @@ number.5.Contrabass.1.Music = {
     e8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3131,7 +3089,6 @@ number.5.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3155,7 +3112,6 @@ number.5.Contrabass.1.Music = {
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3167,17 +3123,14 @@ number.5.Contrabass.1.Music = {
     b,8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     a,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3187,7 +3140,6 @@ number.5.Contrabass.1.Music = {
     g,8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3497,7 +3449,6 @@ number.5.Contrabass.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3510,7 +3461,6 @@ number.5.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.style
 
@@ -3574,17 +3524,14 @@ number.5.Contrabass.2.Music = {
     g8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3594,7 +3541,6 @@ number.5.Contrabass.2.Music = {
     e8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3619,7 +3565,6 @@ number.5.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3643,7 +3588,6 @@ number.5.Contrabass.2.Music = {
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3655,17 +3599,14 @@ number.5.Contrabass.2.Music = {
     b,8.
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     a,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3675,7 +3616,6 @@ number.5.Contrabass.2.Music = {
     g,8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 

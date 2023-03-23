@@ -1599,7 +1599,6 @@ number.17.Cello.1.Music = {
     ~
 
     e16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1615,7 +1614,6 @@ number.17.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Cello.1.Music measure 2]
@@ -1880,40 +1878,33 @@ number.17.Cello.1.Music = {
     ~
 
     e16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     e8.
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     e8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     e16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     e8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     e16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     e16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     e8.
@@ -1921,7 +1912,6 @@ number.17.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert DynamicLineSpanner.staff-padding
 
@@ -2036,13 +2026,11 @@ number.17.Cello.2.Music = {
     ~
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d8.
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2325,13 +2313,11 @@ number.17.Cello.2.Music = {
     ~
 
     d8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d8
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2342,19 +2328,16 @@ number.17.Cello.2.Music = {
     \repeatTie
 
     d8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d8
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     d8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -2363,7 +2346,6 @@ number.17.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert DynamicLineSpanner.staff-padding
 
@@ -2481,7 +2463,6 @@ number.17.Contrabass.1.Music = {
     ~
 
     e'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -2497,7 +2478,6 @@ number.17.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Contrabass.1.Music measure 2]
@@ -2724,7 +2704,6 @@ number.17.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2763,7 +2742,6 @@ number.17.Contrabass.1.Music = {
 
     e'8.
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2847,7 +2825,6 @@ number.17.Contrabass.2.Music = {
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2887,17 +2864,14 @@ number.17.Contrabass.2.Music = {
 
     d'16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     d'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     d'16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -2906,7 +2880,6 @@ number.17.Contrabass.2.Music = {
     ~
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -2928,7 +2901,6 @@ number.17.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Contrabass.2.Music measure 2]
@@ -3197,13 +3169,11 @@ number.17.Contrabass.2.Music = {
     ~
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d'8.
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~

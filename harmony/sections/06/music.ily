@@ -3247,7 +3247,6 @@ number.6.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -3264,7 +3263,6 @@ number.6.Viola.Music = {
     ~
 
     ef16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3383,7 +3381,6 @@ number.6.Viola.Music = {
     - \tweak self-alignment-X -0.75
       %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -3400,7 +3397,6 @@ number.6.Viola.Music = {
     ~
 
     ef16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3976,7 +3972,6 @@ number.6.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -3993,7 +3988,6 @@ number.6.Cello.1.Music = {
     ~
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -4131,7 +4125,6 @@ number.6.Cello.1.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -4148,7 +4141,6 @@ number.6.Cello.1.Music = {
     ~
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -4668,7 +4660,6 @@ number.6.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -4685,7 +4676,6 @@ number.6.Cello.2.Music = {
     ~
 
     eqf'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -4845,7 +4835,6 @@ number.6.Cello.2.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-f-sempre
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -4862,7 +4851,6 @@ number.6.Cello.2.Music = {
     ~
 
     eqf'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16

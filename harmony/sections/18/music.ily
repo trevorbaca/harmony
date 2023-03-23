@@ -914,12 +914,10 @@ number.18.Percussion.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     a'8
     \laissezVibrer
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1355,7 +1353,6 @@ number.18.Percussion.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c'8
@@ -1365,7 +1362,6 @@ number.18.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
     \f
     \laissezVibrer
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert Stem.direction
 
@@ -1834,7 +1830,6 @@ number.18.Harp.Music = {
     c'8.
     - \tweak staff-padding 6
     ^ \baca-whisk-markup
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1865,7 +1860,6 @@ number.18.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1904,7 +1898,6 @@ number.18.Harp.Music = {
     \override Stem.direction = #down
     \override TupletBracket.direction = #up
     c'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1930,7 +1923,6 @@ number.18.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1969,7 +1961,6 @@ number.18.Harp.Music = {
     \override Stem.direction = #down
     \override TupletBracket.direction = #up
     c'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1995,7 +1986,6 @@ number.18.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2104,7 +2094,6 @@ number.18.Viola.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     c8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -2119,7 +2108,6 @@ number.18.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2361,7 +2349,6 @@ number.18.Viola.Music = {
     \ppp
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2386,7 +2373,6 @@ number.18.Viola.Music = {
     \glissando
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2399,12 +2385,10 @@ number.18.Viola.Music = {
     ef'!8
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2415,12 +2399,10 @@ number.18.Viola.Music = {
     ef'!8
     - \tweak staff-padding 1.5
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3251,7 +3233,6 @@ number.18.Cello.1.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     d''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -3266,7 +3247,6 @@ number.18.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3644,7 +3624,6 @@ number.18.Cello.1.Music = {
     ~
 
     e16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3660,7 +3639,6 @@ number.18.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Cello.1.Music measure 7]
@@ -4080,7 +4058,6 @@ number.18.Cello.2.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     btqf'!8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -4095,7 +4072,6 @@ number.18.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4470,13 +4446,11 @@ number.18.Cello.2.Music = {
     ~
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d8.
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -5243,7 +5217,6 @@ number.18.Contrabass.1.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     e''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -5258,7 +5231,6 @@ number.18.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5496,7 +5468,6 @@ number.18.Contrabass.1.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -5523,7 +5494,6 @@ number.18.Contrabass.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -5536,12 +5506,10 @@ number.18.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -5552,12 +5520,10 @@ number.18.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -5614,7 +5580,6 @@ number.18.Contrabass.1.Music = {
     ~
 
     e'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -5630,7 +5595,6 @@ number.18.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Contrabass.1.Music measure 7]
@@ -5724,7 +5688,6 @@ number.18.Contrabass.1.Music = {
     e''16
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5761,7 +5724,6 @@ number.18.Contrabass.1.Music = {
     e''8.
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -5775,7 +5737,6 @@ number.18.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5798,7 +5759,6 @@ number.18.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r8
@@ -5816,7 +5776,6 @@ number.18.Contrabass.1.Music = {
     e''8
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5853,7 +5812,6 @@ number.18.Contrabass.1.Music = {
     e''8
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -5867,7 +5825,6 @@ number.18.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5890,7 +5847,6 @@ number.18.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r8
@@ -5908,7 +5864,6 @@ number.18.Contrabass.1.Music = {
     e''16
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5945,7 +5900,6 @@ number.18.Contrabass.1.Music = {
     e''8.
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     e''8
@@ -6063,7 +6017,6 @@ number.18.Contrabass.2.Music = {
     \override NoteColumn.glissando-skip = ##t
     \override NoteHead.no-ledgers = ##t
     g'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     \revert Accidental.stencil
@@ -6078,7 +6031,6 @@ number.18.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -6409,7 +6361,6 @@ number.18.Contrabass.2.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -6436,7 +6387,6 @@ number.18.Contrabass.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -6449,12 +6399,10 @@ number.18.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -6465,12 +6413,10 @@ number.18.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -6488,7 +6434,6 @@ number.18.Contrabass.2.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanHalfCLT
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6521,17 +6466,14 @@ number.18.Contrabass.2.Music = {
 
     d'16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     d'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     d'16
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -6540,7 +6482,6 @@ number.18.Contrabass.2.Music = {
     ~
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -6562,7 +6503,6 @@ number.18.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Contrabass.2.Music measure 7]

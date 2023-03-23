@@ -849,7 +849,6 @@ number.11.BassFlute.Music = {
     ~
 
     dtqf'''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -863,7 +862,6 @@ number.11.BassFlute.Music = {
     \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! AUTODETECT
       %! SPANNER_START
@@ -2876,7 +2874,6 @@ number.11.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \sfp
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     ef!16
@@ -2887,7 +2884,6 @@ number.11.Viola.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \sfp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert TupletBracket.direction
 
@@ -5028,7 +5024,6 @@ number.11.Contrabass.1.Music = {
 
         dtqf'8
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -5040,7 +5035,6 @@ number.11.Contrabass.1.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \sfp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         \revert TupletBracket.direction
 
@@ -5719,7 +5713,6 @@ number.11.Contrabass.2.Music = {
 
         ef8.
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -5731,7 +5724,6 @@ number.11.Contrabass.2.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \sfp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         ~
 

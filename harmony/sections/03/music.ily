@@ -1488,7 +1488,6 @@ number.3.Harp.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     cs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1501,7 +1500,6 @@ number.3.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1774,7 +1772,6 @@ number.3.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -1791,7 +1788,6 @@ number.3.Viola.Music = {
     ~
 
     ef16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2248,7 +2244,6 @@ number.3.Cello.1.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -2265,7 +2260,6 @@ number.3.Cello.1.Music = {
     ~
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2837,7 +2831,6 @@ number.3.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
@@ -2854,7 +2847,6 @@ number.3.Cello.2.Music = {
     ~
 
     eqf'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3161,7 +3153,6 @@ number.3.Contrabass.1.Music = {
     \pp
     ^ \baca-eleven-e
     _ \baca-string-iv-markup
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -3195,7 +3186,6 @@ number.3.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -3204,7 +3194,6 @@ number.3.Contrabass.1.Music = {
     ~
 
     aqs'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3217,7 +3206,6 @@ number.3.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.style
 
@@ -3672,7 +3660,6 @@ number.3.Contrabass.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3685,7 +3672,6 @@ number.3.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.style
 
