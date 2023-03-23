@@ -1987,7 +1987,6 @@ number.20.Viola.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanBowSpeed
-          %! rmakers.RewriteMeterCommand.__call__
         [
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
@@ -2002,7 +2001,6 @@ number.20.Viola.Music = {
         \glissando
 
         cs'!8.
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         - \tweak stencil ##f
         ~
@@ -2330,13 +2328,11 @@ number.20.Viola.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     e8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     e8
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2351,13 +2347,11 @@ number.20.Viola.Music = {
     ~
 
     e8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     e8
     - \baca-staccati #3
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3452,7 +3446,6 @@ number.20.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 2]
     d8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3467,7 +3460,6 @@ number.20.Contrabass.1.Music = {
     \glissando
 
     cs!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 

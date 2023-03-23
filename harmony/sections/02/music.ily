@@ -2270,12 +2270,10 @@ number.2.Percussion.2.Music = {
     ~
 
     d'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     d'8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2868,12 +2866,10 @@ number.2.Harp.Music = {
     ~
 
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -6510,7 +6506,6 @@ number.2.Contrabass.1.Music = {
 
     a,8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -6520,7 +6515,6 @@ number.2.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6548,7 +6542,6 @@ number.2.Contrabass.1.Music = {
 
     a,8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -6558,7 +6551,6 @@ number.2.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~

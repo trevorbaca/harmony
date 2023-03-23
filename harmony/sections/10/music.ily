@@ -2797,7 +2797,6 @@ number.10.Viola.Music = {
     ~
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -2809,7 +2808,6 @@ number.10.Viola.Music = {
     \glissando
 
     b16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3398,7 +3396,6 @@ number.10.Cello.1.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -3410,7 +3407,6 @@ number.10.Cello.1.Music = {
     \glissando
 
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3422,7 +3418,6 @@ number.10.Cello.1.Music = {
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3433,7 +3428,6 @@ number.10.Cello.1.Music = {
     \glissando
 
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3441,7 +3435,6 @@ number.10.Cello.1.Music = {
     \glissando
 
     a,16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -3452,7 +3445,6 @@ number.10.Cello.1.Music = {
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -3992,7 +3984,6 @@ number.10.Cello.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     fs8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -4001,17 +3992,14 @@ number.10.Cello.2.Music = {
     \glissando
 
     e16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -4023,17 +4011,14 @@ number.10.Cello.2.Music = {
     \glissando
 
     b,8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     a,16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -4041,7 +4026,6 @@ number.10.Cello.2.Music = {
     \glissando
 
     g,8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -4050,7 +4034,6 @@ number.10.Cello.2.Music = {
 
     % [Cello.2.Music measure 12]
     b,16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -4061,7 +4044,6 @@ number.10.Cello.2.Music = {
     \glissando
 
     c16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -4069,7 +4051,6 @@ number.10.Cello.2.Music = {
     \glissando
 
     c16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -4080,7 +4061,6 @@ number.10.Cello.2.Music = {
     \glissando
 
     g,16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -4995,7 +4975,6 @@ number.10.Contrabass.2.Music = {
     ~
 
     fs'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -5007,7 +4986,6 @@ number.10.Contrabass.2.Music = {
     \glissando
 
     g16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -5022,18 +5000,15 @@ number.10.Contrabass.2.Music = {
     \repeatTie
 
     g8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     b16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -5041,7 +5016,6 @@ number.10.Contrabass.2.Music = {
     \glissando
 
     g8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -5058,7 +5032,6 @@ number.10.Contrabass.2.Music = {
     \repeatTie
 
     g8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -5067,17 +5040,14 @@ number.10.Contrabass.2.Music = {
     \glissando
 
     f16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     a16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~

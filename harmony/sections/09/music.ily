@@ -259,7 +259,6 @@ number.9.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -284,7 +283,6 @@ number.9.BassFlute.Music = {
 
     gf'!16
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -293,22 +291,18 @@ number.9.BassFlute.Music = {
     ~
 
     gf'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     gf'!8.
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     gf'!8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     gf'!16
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 1 }
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -317,13 +311,11 @@ number.9.BassFlute.Music = {
     ~
 
     gf'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     gf'!8.
     ^ \markup { \override #'(circle-padding . 0.25) \circle \finger 2 }
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert DynamicLineSpanner.staff-padding
 

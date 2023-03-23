@@ -1263,7 +1263,6 @@ number.16.Viola.Music = {
     - \baca-full-downbow
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -1295,7 +1294,6 @@ number.16.Viola.Music = {
     \set Staff.shortInstrumentName = \harmony-va-markup %@%
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1308,12 +1306,10 @@ number.16.Viola.Music = {
     ef'!8
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1330,12 +1326,10 @@ number.16.Viola.Music = {
     d'8
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1343,12 +1337,10 @@ number.16.Viola.Music = {
     d'8
     - \tweak staff-padding 1.5
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1362,12 +1354,10 @@ number.16.Viola.Music = {
     d'8
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1381,12 +1371,10 @@ number.16.Viola.Music = {
     ef'!8
     - \tweak staff-padding 1.5
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -1396,12 +1384,10 @@ number.16.Viola.Music = {
     ef'!8
     - \tweak staff-padding 1.5
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2446,7 +2432,6 @@ number.16.Contrabass.1.Music = {
     - \baca-full-downbow
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2478,7 +2463,6 @@ number.16.Contrabass.1.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-i-markup %@%
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2491,12 +2475,10 @@ number.16.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2513,12 +2495,10 @@ number.16.Contrabass.1.Music = {
     e'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2526,12 +2506,10 @@ number.16.Contrabass.1.Music = {
     e'8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2545,12 +2523,10 @@ number.16.Contrabass.1.Music = {
     e'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2564,12 +2540,10 @@ number.16.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2579,12 +2553,10 @@ number.16.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2682,7 +2654,6 @@ number.16.Contrabass.1.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2707,7 +2678,6 @@ number.16.Contrabass.1.Music = {
     \glissando
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2720,12 +2690,10 @@ number.16.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2736,12 +2704,10 @@ number.16.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2834,7 +2800,6 @@ number.16.Contrabass.2.Music = {
     - \baca-full-downbow
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2866,7 +2831,6 @@ number.16.Contrabass.2.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2879,12 +2843,10 @@ number.16.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2901,12 +2863,10 @@ number.16.Contrabass.2.Music = {
     cs'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2914,12 +2874,10 @@ number.16.Contrabass.2.Music = {
     cs'!8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2933,12 +2891,10 @@ number.16.Contrabass.2.Music = {
     cs'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2952,12 +2908,10 @@ number.16.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2967,12 +2921,10 @@ number.16.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3074,7 +3026,6 @@ number.16.Contrabass.2.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -3099,7 +3050,6 @@ number.16.Contrabass.2.Music = {
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3112,12 +3062,10 @@ number.16.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -3128,12 +3076,10 @@ number.16.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-upbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16

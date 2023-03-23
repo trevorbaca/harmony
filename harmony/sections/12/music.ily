@@ -1394,7 +1394,6 @@ number.12.BassFlute.Music = {
     ~
 
     dtqf'''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1408,7 +1407,6 @@ number.12.BassFlute.Music = {
     \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! AUTODETECT
       %! SPANNER_START
@@ -1475,7 +1473,6 @@ number.12.BassFlute.Music = {
     ~
 
     dtqf'''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -1489,7 +1486,6 @@ number.12.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! AUTODETECT
       %! SPANNER_START
@@ -3382,7 +3378,6 @@ number.12.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-sffp
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     bf!16
@@ -3393,7 +3388,6 @@ number.12.Viola.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \baca-sffp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -3405,7 +3399,6 @@ number.12.Viola.Music = {
 
     bf16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3417,7 +3410,6 @@ number.12.Viola.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \baca-sffp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3431,7 +3423,6 @@ number.12.Viola.Music = {
     % [Viola.Music measure 15]
     bf16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3443,7 +3434,6 @@ number.12.Viola.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \baca-sffp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     bf!4
@@ -3459,7 +3449,6 @@ number.12.Viola.Music = {
 
     bf8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
@@ -3475,7 +3464,6 @@ number.12.Viola.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \baca-sffp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5375,7 +5363,6 @@ number.12.Contrabass.1.Music = {
 
         dtqf'8
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -5387,7 +5374,6 @@ number.12.Contrabass.1.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \baca-sffp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         - \tweak stencil ##f
         ~
@@ -5426,7 +5412,6 @@ number.12.Contrabass.1.Music = {
 
         dtqf'8
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -5438,7 +5423,6 @@ number.12.Contrabass.1.Music = {
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
         \baca-sffp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         - \tweak stencil ##f
         ~
@@ -6034,7 +6018,6 @@ number.12.Contrabass.2.Music = {
 
         ef8.
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -6046,7 +6029,6 @@ number.12.Contrabass.2.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \baca-sffp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         ~
 
@@ -6073,7 +6055,6 @@ number.12.Contrabass.2.Music = {
 
         ef8
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -6085,7 +6066,6 @@ number.12.Contrabass.2.Music = {
         - \tweak color #(x11-color 'DeepPink1)
           %! REDUNDANT_DYNAMIC
         \baca-sffp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         - \tweak stencil ##f
         ~
@@ -6114,7 +6094,6 @@ number.12.Contrabass.2.Music = {
 
         ef8
         :32
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \repeatTie
 
@@ -6130,7 +6109,6 @@ number.12.Contrabass.2.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_STOP
         \baca-sffp
-          %! rmakers.RewriteMeterCommand.__call__
         ]
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC

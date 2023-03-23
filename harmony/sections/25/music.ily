@@ -737,7 +737,6 @@ number.25.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -772,7 +771,6 @@ number.25.BassFlute.Music = {
     \p
       %! SPANNER_STOP
     \stopTextSpan
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SPANNER_START
     - \tweak bound-details.right.padding 0.5
@@ -2028,7 +2026,6 @@ number.25.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2047,7 +2044,6 @@ number.25.Percussion.2.Music = {
 
     d'16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2114,7 +2110,6 @@ number.25.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2133,7 +2128,6 @@ number.25.Percussion.2.Music = {
 
     d'16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2204,7 +2198,6 @@ number.25.Percussion.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2223,7 +2216,6 @@ number.25.Percussion.2.Music = {
     d'16
     :32
     - \accent
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2652,7 +2644,6 @@ number.25.Viola.Music = {
     \override NoteHead.no-ledgers = ##t
     fs!8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8
@@ -2661,7 +2652,6 @@ number.25.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2678,7 +2668,6 @@ number.25.Viola.Music = {
 
     fs!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs!8.
@@ -2687,7 +2676,6 @@ number.25.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -2766,7 +2754,6 @@ number.25.Viola.Music = {
     c'8.
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2786,7 +2773,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2806,7 +2792,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2814,7 +2799,6 @@ number.25.Viola.Music = {
     c'8.
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2831,7 +2815,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2844,7 +2827,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2857,7 +2839,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2870,7 +2851,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2891,7 +2871,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2899,7 +2878,6 @@ number.25.Viola.Music = {
     c'8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2917,7 +2895,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2930,7 +2907,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2947,7 +2923,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2960,7 +2935,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-f-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2985,7 +2959,6 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3015,7 +2988,6 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3037,13 +3009,11 @@ number.25.Viola.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3056,13 +3026,11 @@ number.25.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-ff-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.transparent
 
@@ -3231,7 +3199,6 @@ number.25.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3252,7 +3219,6 @@ number.25.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3272,7 +3238,6 @@ number.25.Cello.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -3281,7 +3246,6 @@ number.25.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3371,7 +3335,6 @@ number.25.Cello.1.Music = {
     \baca-repeat-pitch-class-coloring
     \override NoteHead.transparent = ##t
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3379,7 +3342,6 @@ number.25.Cello.1.Music = {
     c'8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3396,7 +3358,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3409,7 +3370,6 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3439,7 +3399,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3452,7 +3411,6 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3469,7 +3427,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3482,7 +3439,6 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3534,7 +3490,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3547,7 +3502,6 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-f-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3568,7 +3522,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3576,7 +3529,6 @@ number.25.Cello.1.Music = {
     c'8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3593,7 +3545,6 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -3606,7 +3557,6 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3632,13 +3582,11 @@ number.25.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     % [Cello.1.Music measure 10]
@@ -3660,13 +3608,11 @@ number.25.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-ff-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \revert NoteHead.transparent
 
     <a' b' c''>8.
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert DynamicLineSpanner.staff-padding
     \revert NoteHead.style
@@ -3825,7 +3771,6 @@ number.25.Cello.2.Music = {
     \override NoteHead.no-ledgers = ##t
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -3834,7 +3779,6 @@ number.25.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -3905,7 +3849,6 @@ number.25.Cello.2.Music = {
       %! SPANNER_STOP
     \pp
     ^ \baca-quasi-bisb-markup
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3924,7 +3867,6 @@ number.25.Cello.2.Music = {
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3935,7 +3877,6 @@ number.25.Cello.2.Music = {
     \<
 
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''16
@@ -3946,7 +3887,6 @@ number.25.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3962,13 +3902,11 @@ number.25.Cello.2.Music = {
     c''4
 
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3984,7 +3922,6 @@ number.25.Cello.2.Music = {
     c''1
 
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
@@ -3995,7 +3932,6 @@ number.25.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4011,7 +3947,6 @@ number.25.Cello.2.Music = {
     c''2
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
@@ -4022,7 +3957,6 @@ number.25.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4038,13 +3972,11 @@ number.25.Cello.2.Music = {
     c''4
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4060,7 +3992,6 @@ number.25.Cello.2.Music = {
     c''1
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
@@ -4071,7 +4002,6 @@ number.25.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4113,7 +4043,6 @@ number.25.Cello.2.Music = {
     \>
 
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
@@ -4124,7 +4053,6 @@ number.25.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4138,11 +4066,9 @@ number.25.Cello.2.Music = {
 
     % [Cello.2.Music measure 10]
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     c''4
@@ -4333,7 +4259,6 @@ number.25.Contrabass.1.Music = {
 
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4342,7 +4267,6 @@ number.25.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -4432,7 +4356,6 @@ number.25.Contrabass.1.Music = {
     \baca-repeat-pitch-class-coloring
     \override NoteHead.transparent = ##t
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4440,7 +4363,6 @@ number.25.Contrabass.1.Music = {
     c''16
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4457,7 +4379,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4470,7 +4391,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4495,7 +4415,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4503,7 +4422,6 @@ number.25.Contrabass.1.Music = {
     c''8.
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4520,7 +4438,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4533,7 +4450,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4559,7 +4475,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4572,7 +4487,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4606,7 +4520,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4619,7 +4532,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4641,7 +4553,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4654,7 +4565,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-f-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4679,7 +4589,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4687,7 +4596,6 @@ number.25.Contrabass.1.Music = {
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4700,7 +4608,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4713,7 +4620,6 @@ number.25.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4726,7 +4632,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -4747,7 +4652,6 @@ number.25.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert NoteHead.transparent
 
@@ -4913,7 +4817,6 @@ number.25.Contrabass.2.Music = {
     \override NoteHead.no-ledgers = ##t
     fs,!16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     fs,!8.
@@ -4922,7 +4825,6 @@ number.25.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -5012,13 +4914,11 @@ number.25.Contrabass.2.Music = {
 
     \override NoteHead.transparent = ##t
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5034,7 +4934,6 @@ number.25.Contrabass.2.Music = {
     c''4
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
@@ -5045,7 +4944,6 @@ number.25.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5111,7 +5009,6 @@ number.25.Contrabass.2.Music = {
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5129,7 +5026,6 @@ number.25.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5140,7 +5036,6 @@ number.25.Contrabass.2.Music = {
     \<
 
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''16
@@ -5151,7 +5046,6 @@ number.25.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-f-scratch
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5167,13 +5061,11 @@ number.25.Contrabass.2.Music = {
     c''4
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5189,7 +5081,6 @@ number.25.Contrabass.2.Music = {
     c''2
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
@@ -5200,7 +5091,6 @@ number.25.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5216,11 +5106,9 @@ number.25.Contrabass.2.Music = {
     c''2
 
     c''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     c''4

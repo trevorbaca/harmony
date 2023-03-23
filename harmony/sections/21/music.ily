@@ -1125,28 +1125,24 @@ number.21.Percussion.2.Music = {
 
     b8
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     b8
     :32
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     b16
     :32
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     b8.
     :32
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -1976,7 +1972,6 @@ number.21.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     ^ \baca-eleven-e-flat
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2000,7 +1995,6 @@ number.21.Cello.1.Music = {
 
     aqf'!16
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -2009,25 +2003,21 @@ number.21.Cello.1.Music = {
     ~
 
     aqf'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     aqf'!8
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     aqf'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     aqf'!8
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2323,23 +2313,19 @@ number.21.Cello.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     f'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     f'16
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
     f'8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     f'16
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -2348,13 +2334,11 @@ number.21.Cello.2.Music = {
     ~
 
     f'16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     f'8.
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \revert DynamicLineSpanner.staff-padding
 
@@ -2693,25 +2677,21 @@ number.21.Contrabass.1.Music = {
     ~
 
     dtqf''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     dtqf''!8
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     dtqf''16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     dtqf''!8.
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -3049,25 +3029,21 @@ number.21.Contrabass.2.Music = {
     ~
 
     ef8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     ef!8
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     ef16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \repeatTie
 
     ef!8.
     - \espressivo
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~

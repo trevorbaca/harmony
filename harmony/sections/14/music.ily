@@ -2759,7 +2759,6 @@ number.14.Viola.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -2784,7 +2783,6 @@ number.14.Viola.Music = {
     \glissando
 
     ef'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -2797,12 +2795,10 @@ number.14.Viola.Music = {
     ef'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -4533,7 +4529,6 @@ number.14.Contrabass.1.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -4558,7 +4553,6 @@ number.14.Contrabass.1.Music = {
     \glissando
 
     ds'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -4571,12 +4565,10 @@ number.14.Contrabass.1.Music = {
     ds'!8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     e'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -5129,7 +5121,6 @@ number.14.Contrabass.2.Music = {
     \ppp
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! AUTODETECT
       %! SPANNER_START
@@ -5154,7 +5145,6 @@ number.14.Contrabass.2.Music = {
     \glissando
 
     d'16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16
@@ -5167,12 +5157,10 @@ number.14.Contrabass.2.Music = {
     d'8
     - \tweak staff-padding 4
     - \baca-full-downbow
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     cs'!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
 
     r16

@@ -2597,13 +2597,11 @@ number.22.Viola.Music = {
 
         % [Viola.Music measure 3]
         d'8
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
         \repeatTie
 
         cs'!8.
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         - \tweak stencil ##f
         ~
@@ -2772,13 +2770,11 @@ number.22.Viola.Music = {
 
         % [Viola.Music measure 6]
         d'8.
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
         \repeatTie
 
         cs'!8
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         ~
 
@@ -2817,7 +2813,6 @@ number.22.Viola.Music = {
 
         % [Viola.Music measure 8]
         cs'16
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
         \repeatTie
@@ -2826,7 +2821,6 @@ number.22.Viola.Music = {
         \glissando
 
         cs'!16
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         ~
 
@@ -2837,7 +2831,6 @@ number.22.Viola.Music = {
     {
 
         cs'16
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
 
@@ -2845,7 +2838,6 @@ number.22.Viola.Music = {
         \glissando
 
         cs'!8
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         \glissando
 
@@ -2866,7 +2858,6 @@ number.22.Viola.Music = {
           %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
-          %! rmakers.RewriteMeterCommand.__call__
         [
           %! SCP_SPANNER
           %! SPANNER_START
@@ -2908,7 +2899,6 @@ number.22.Viola.Music = {
         \glissando
 
         d'16
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         ~
 
@@ -2920,12 +2910,10 @@ number.22.Viola.Music = {
 
         % [Viola.Music measure 9]
         d'8
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
 
         cs'!8.
-          %! rmakers.RewriteMeterCommand.__call__
         ]
         \glissando
 
@@ -4601,7 +4589,6 @@ number.22.Cello.2.Music = {
 
         % [Cello.2.Music measure 8]
         f'8
-          %! rmakers.RewriteMeterCommand.__call__
         [
         \glissando
 
@@ -4619,7 +4606,6 @@ number.22.Cello.2.Music = {
           %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
-          %! rmakers.RewriteMeterCommand.__call__
         ]
           %! SCP_SPANNER
           %! SPANNER_START
@@ -4939,13 +4925,11 @@ number.22.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 3]
     d8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     ~
 
@@ -6186,13 +6170,11 @@ number.22.Contrabass.2.Music = {
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs!8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -6207,20 +6189,17 @@ number.22.Contrabass.2.Music = {
     ~
 
     d8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs!8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
 
     % [Contrabass.2.Music measure 7]
     cs16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
@@ -6232,12 +6211,10 @@ number.22.Contrabass.2.Music = {
     \glissando
 
     cs!16
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
     d16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
@@ -6258,7 +6235,6 @@ number.22.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! SCP_SPANNER
       %! SPANNER_START
@@ -6297,12 +6273,10 @@ number.22.Contrabass.2.Music = {
     ~
 
     cs16
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
 
     d8.
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     \glissando
 
@@ -6312,13 +6286,11 @@ number.22.Contrabass.2.Music = {
     ~
 
     cs8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     d8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~

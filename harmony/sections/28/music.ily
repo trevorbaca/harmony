@@ -2824,13 +2824,11 @@ number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 2]
     e'''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs'''!8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2866,13 +2864,11 @@ number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 4]
     e'''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs'''!8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -2910,7 +2906,6 @@ number.28.Cello.1.Music = {
     \baca-repeat-pitch-class-coloring
     \override NoteHead.transparent = ##t
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -2918,7 +2913,6 @@ number.28.Cello.1.Music = {
     c'8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2935,7 +2929,6 @@ number.28.Cello.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c'8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \revert NoteHead.transparent
 
@@ -2948,7 +2941,6 @@ number.28.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4296,13 +4288,11 @@ number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 2]
     a''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs'''!8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4338,13 +4328,11 @@ number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 4]
     a''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
     \glissando
     \repeatTie
 
     cs'''!8
-      %! rmakers.RewriteMeterCommand.__call__
     ]
     - \tweak stencil ##f
     ~
@@ -4365,7 +4353,6 @@ number.28.Cello.2.Music = {
       %! SPANNER_STOP
     \pp
     ^ \baca-quasi-bisb-markup
-      %! rmakers.RewriteMeterCommand.__call__
     [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4382,7 +4369,6 @@ number.28.Cello.2.Music = {
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4393,7 +4379,6 @@ number.28.Cello.2.Music = {
     \<
 
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''16
@@ -4404,7 +4389,6 @@ number.28.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -4420,13 +4404,11 @@ number.28.Cello.2.Music = {
     c''4
 
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5913,7 +5895,6 @@ number.28.Contrabass.1.Music = {
     \baca-repeat-pitch-class-coloring
     \override NoteHead.transparent = ##t
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -5921,7 +5902,6 @@ number.28.Contrabass.1.Music = {
     c''16
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5938,7 +5918,6 @@ number.28.Contrabass.1.Music = {
       %! REPEAT_PITCH_CLASS_COLORING
     \baca-repeat-pitch-class-coloring
     c''8.
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
       %! REPEAT_PITCH_CLASS_COLORING
@@ -5951,7 +5930,6 @@ number.28.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -7429,13 +7407,11 @@ number.28.Contrabass.2.Music = {
 
     \override NoteHead.transparent = ##t
     c''8
-      %! rmakers.RewriteMeterCommand.__call__
     [
 
     c''8
       %! SPANNER_STOP
     \!
-      %! rmakers.RewriteMeterCommand.__call__
     ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
