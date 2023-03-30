@@ -133,7 +133,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_3(
@@ -183,7 +183,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_3(
@@ -233,7 +233,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_3(

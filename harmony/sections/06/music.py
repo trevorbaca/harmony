@@ -495,7 +495,7 @@ def VC2(voice, time_signatures):
         time_signatures(8),
         [10, -2],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(9))
@@ -569,7 +569,7 @@ def CB2(voice, time_signatures):
         time_signatures(8),
         [10, -2],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(9))

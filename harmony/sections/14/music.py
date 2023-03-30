@@ -238,7 +238,7 @@ def VA(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -267,7 +267,7 @@ def VA(voice, time_signatures):
         time_signatures(6, 9),
         [16, -12, 4, -16, 4, -8, 4],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))
@@ -364,7 +364,7 @@ def CB1(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -387,7 +387,7 @@ def CB1(voice, time_signatures):
         time_signatures(6, 9),
         [16, -8, 4, -16, 4, -12, 4],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))
@@ -405,7 +405,7 @@ def CB2(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -424,7 +424,7 @@ def CB2(voice, time_signatures):
         time_signatures(6, 9),
         [16, -12, 4, -8, 4, -16, 4],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))

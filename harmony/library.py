@@ -396,7 +396,7 @@ def make_sixteenths(
     tie_all=False,
     untie=False,
     unbeam=False,
-    after_graces=None,
+    after_grace=False,
 ):
     tag = baca.tags.function_name(inspect.currentframe())
     talea_denominator = talea_denominator or 16
@@ -500,16 +500,9 @@ def make_sixteenths(
     if unbeam is True:
         leaves = baca.select.leaves(voice)
         rmakers.unbeam(leaves)
-    if after_graces:
+    if after_grace is True:
         leaves = baca.select.leaf_in_each_run(voice, -1)
-        beam_and_slash = False
-        if after_graces != [1]:
-            beam_and_slash = True
-        rmakers.after_grace_container(
-            leaves,
-            after_graces,
-            beam_and_slash=beam_and_slash,
-        )
+        rmakers.after_grace_container(leaves, [1])
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     music = abjad.mutate.eject_contents(voice)
     return music

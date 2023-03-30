@@ -160,7 +160,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -230,7 +230,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -285,7 +285,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         ["+"],
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(8))

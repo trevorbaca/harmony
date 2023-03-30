@@ -152,7 +152,7 @@ def VC2(voice, time_signatures):
         time_signatures(3),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
 
@@ -182,7 +182,7 @@ def CB2(voice, time_signatures):
         time_signatures(3),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
 
