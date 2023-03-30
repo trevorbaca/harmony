@@ -252,7 +252,7 @@ def VC2(voice, time_signatures):
         time_signatures(1),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -274,7 +274,7 @@ def VC2(voice, time_signatures):
         time_signatures(6, 8),
         [18, -12, 16, -4],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
 
@@ -311,7 +311,7 @@ def CB2(voice, time_signatures):
         time_signatures(1),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -332,7 +332,7 @@ def CB2(voice, time_signatures):
         time_signatures(6, 8),
         [18, -12, 16, -4],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
 

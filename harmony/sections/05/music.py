@@ -152,7 +152,7 @@ def HP(voice, time_signatures):
         [4, 4, 8],
         fuse=True,
         do_not_rewrite_meter=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -233,7 +233,7 @@ def VC2(voice, time_signatures):
         time_signatures(2),
         [10, -2],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -284,7 +284,7 @@ def CB2(voice, time_signatures):
         time_signatures(2),
         [10, -2],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_tessera_1(

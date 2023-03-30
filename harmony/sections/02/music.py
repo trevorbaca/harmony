@@ -291,7 +291,7 @@ def VC2(voice, time_signatures):
         durations=durations,
         extra_counts=[-6],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -313,7 +313,7 @@ def VC2(voice, time_signatures):
         time_signatures(7),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -372,7 +372,7 @@ def CB2(voice, time_signatures):
         durations=durations,
         extra_counts=[-6],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -394,7 +394,7 @@ def CB2(voice, time_signatures):
         time_signatures(7),
         [10, "-"],
         untie=True,
-        after_graces=[1],
+        after_grace=True,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
