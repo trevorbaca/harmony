@@ -145,7 +145,7 @@ def make_appoggiato_rhythm(
             voice_name,
             baca.select.plts(voice),
             counts,
-            leaf_duration=(1, 20),
+            grace_leaf_duration=(1, 20),
             tag=tag,
         )
     if rest_after is True:
