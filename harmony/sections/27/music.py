@@ -22,7 +22,7 @@ def make_empty_score():
         (1, 4),
         (7, 4),
     ]
-    time_signatures = baca.section.time_signatures(time_signatures)
+    time_signatures = baca.section.wrap(time_signatures)
     return score, voices, time_signatures
 
 
