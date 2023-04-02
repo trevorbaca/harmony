@@ -818,7 +818,7 @@ def make_score(first_measure_number, previous_persistent_indicators):
     VC2(voices("vc2"), time_signatures)
     CB1(voices("cb1"), time_signatures)
     CB2(voices("cb2"), time_signatures)
-    baca.section.reapply(
+    baca.section.reapply_persistent_indicators(
         voices,
         previous_persistent_indicators,
         manifests=library.manifests,
