@@ -523,6 +523,7 @@ number.18.Rests = {
 number.18.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -833,6 +834,7 @@ number.18.Percussion.1.Music.item.1 = {
 number.18.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -980,11 +982,11 @@ number.18.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1289,6 +1291,7 @@ number.18.Percussion.2.Music.item.1 = {
 number.18.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
     \override Stem.direction = #up
     \set Staff.instrumentName = \harmony-perc-ii-markup
@@ -1388,11 +1391,11 @@ number.18.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2035,6 +2038,7 @@ number.18.Harp.Staff = <<
 number.18.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3171,6 +3175,7 @@ number.18.Cello.1.Music = {
       %! MEASURE_157
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -3995,6 +4000,7 @@ number.18.Cello.2.Music = {
       %! MEASURE_157
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -5155,6 +5161,7 @@ number.18.Contrabass.1.Music = {
       %! MEASURE_157
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -5955,6 +5962,7 @@ number.18.Contrabass.1.Staff = <<
 number.18.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)

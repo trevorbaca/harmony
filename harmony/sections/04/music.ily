@@ -466,6 +466,7 @@ number.4.Rests = {
 number.4.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -818,6 +819,7 @@ number.4.Percussion.1.Music = {
     {
 
         % [Percussion.1.Music measure 1]
+        \oneVoice
         \override DynamicLineSpanner.staff-padding = 5.5
           %! -PARTS
           %! EXPLICIT_BAR_EXTENT
@@ -1055,14 +1057,14 @@ number.4.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 9]
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1852,6 +1854,7 @@ number.4.Viola.Music.item.1 = {
 number.4.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -2072,7 +2075,6 @@ number.4.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 9]
               %! REPEAT_PITCH_CLASS_COLORING
@@ -2093,6 +2095,7 @@ number.4.Viola.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "alto"
               %! EXPLICIT_CLEF_COLOR
@@ -2103,8 +2106,8 @@ number.4.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2158,14 +2161,14 @@ number.4.Viola.Music = {
         {
 
             % [Viola.Music measure 10]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -2314,6 +2317,7 @@ number.4.Cello.1.Music.item.1 = {
 number.4.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -2630,7 +2634,6 @@ number.4.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 9]
               %! MEASURE_32
@@ -2640,6 +2643,7 @@ number.4.Cello.1.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
               %! EXPLICIT_CLEF_COLOR
@@ -2648,8 +2652,8 @@ number.4.Cello.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2703,14 +2707,14 @@ number.4.Cello.1.Music = {
         {
 
             % [Cello.1.Music measure 10]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -2898,6 +2902,7 @@ number.4.Cello.2.Music.item.1 = {
 number.4.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -3191,7 +3196,6 @@ number.4.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 9]
               %! MEASURE_32
@@ -3201,6 +3205,7 @@ number.4.Cello.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
               %! EXPLICIT_CLEF_COLOR
@@ -3209,8 +3214,8 @@ number.4.Cello.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3264,14 +3269,14 @@ number.4.Cello.2.Music = {
         {
 
             % [Cello.2.Music measure 10]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -3457,6 +3462,7 @@ number.4.Contrabass.1.Music = {
       %! MEASURE_24
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-cb-i-markup
@@ -3758,12 +3764,12 @@ number.4.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3815,14 +3821,14 @@ number.4.Contrabass.1.Music = {
         {
 
             % [Contrabass.1.Music measure 10]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -3955,6 +3961,7 @@ number.4.Contrabass.2.Music = {
       %! MEASURE_24
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_BAR_EXTENT

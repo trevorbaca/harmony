@@ -423,6 +423,7 @@ number.28.Rests = {
 number.28.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1285,6 +1286,7 @@ number.28.BassFlute.Staff = <<
 number.28.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -2134,6 +2136,7 @@ number.28.Percussion.2.Music = {
       %! MEASURE_256
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-perc-ii-markup
       %! -PARTS
@@ -2547,6 +2550,7 @@ number.28.Harp.Staff = <<
 number.28.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -2773,6 +2777,7 @@ number.28.Viola.Staff = <<
 number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-vc-i-markup
@@ -4237,6 +4242,7 @@ number.28.Cello.1.Staff = <<
 number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-vc-ii-markup
@@ -5715,6 +5721,7 @@ number.28.Contrabass.1.Music = {
       %! MEASURE_256
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-cb-i-markup
@@ -7226,6 +7233,7 @@ number.28.Contrabass.1.Staff = <<
 number.28.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

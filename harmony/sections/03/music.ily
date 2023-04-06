@@ -440,6 +440,7 @@ number.3.Rests = {
 number.3.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -707,6 +708,7 @@ number.3.BassFlute.Staff = <<
 number.3.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5.5
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 1)
@@ -1643,6 +1645,7 @@ number.3.Viola.Music = {
       %! MEASURE_16
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -2036,6 +2039,7 @@ number.3.Cello.1.Music = {
       %! MEASURE_16
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.direction = #up
     \set Staff.instrumentName = \harmony-vc-i-markup
@@ -2628,6 +2632,7 @@ number.3.Cello.2.Music = {
       %! MEASURE_16
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -3059,6 +3064,7 @@ number.3.Contrabass.1.Music = {
       %! MEASURE_16
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
     \override TupletBracket.direction = #up
     \set Staff.instrumentName = \harmony-cb-i-markup
@@ -3508,6 +3514,7 @@ number.3.Contrabass.2.Music = {
       %! MEASURE_16
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)

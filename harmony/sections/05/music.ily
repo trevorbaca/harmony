@@ -337,6 +337,7 @@ number.5.BassFlute.Music = {
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+            \oneVoice
               %! EXPLICIT_BAR_EXTENT
               %! REAPPLIED_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -534,6 +535,7 @@ number.5.BassFlute.Staff = <<
 number.5.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 7
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -1493,6 +1495,7 @@ number.5.Viola.Music = {
       %! MEASURE_35
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -1875,6 +1878,7 @@ number.5.Cello.1.Music = {
       %! MEASURE_35
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -2338,6 +2342,7 @@ number.5.Cello.2.Music = {
       %! MEASURE_35
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -2736,6 +2741,7 @@ number.5.Contrabass.1.Music = {
       %! MEASURE_35
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
@@ -3208,6 +3214,7 @@ number.5.Contrabass.1.Staff = <<
 number.5.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

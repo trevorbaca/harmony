@@ -507,6 +507,7 @@ number.7.Rests = {
 number.7.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -973,6 +974,7 @@ number.7.BassFlute.Staff = <<
 number.7.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -2026,7 +2028,6 @@ number.7.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 1]
             \override NoteHead.style = #'harmonic
@@ -2044,6 +2045,7 @@ number.7.Viola.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! REAPPLIED_STAFF_LINES
             \startStaff
+            \voiceOne
               %! REAPPLIED_CLEF
             \clef "alto"
               %! REAPPLIED_CLEF_COLOR
@@ -2056,8 +2058,8 @@ number.7.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2206,7 +2208,6 @@ number.7.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 4]
             \override NoteHead.style = #'harmonic
@@ -2215,8 +2216,9 @@ number.7.Viola.Music = {
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2477,6 +2479,7 @@ number.7.Cello.1.Music.item.1 = {
 number.7.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -2599,15 +2602,15 @@ number.7.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 4]
             \override NoteHead.style = #'harmonic
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2841,6 +2844,7 @@ number.7.Cello.2.Music = {
       %! MEASURE_55
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -3220,6 +3224,7 @@ number.7.Contrabass.1.Music.item.1 = {
 number.7.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -3373,15 +3378,15 @@ number.7.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 4]
             \override NoteHead.style = #'harmonic
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3416,14 +3421,14 @@ number.7.Contrabass.1.Music = {
     >>
 
     % [Contrabass.1.Music measure 6]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_60
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_60
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
       %! EXPLICIT_CLEF
     \clef "bass"
       %! EXPLICIT_CLEF_COLOR
@@ -3580,6 +3585,7 @@ number.7.Contrabass.1.Staff = <<
 number.7.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

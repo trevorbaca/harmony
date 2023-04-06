@@ -41,7 +41,15 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="mf",
-            )
+            ),
+            baca.Memento(
+                context="BassFlute.Music",
+                edition=None,
+                manifest=None,
+                prototype="abjad.VoiceNumber",
+                synthetic_offset=None,
+                value=None,
+            ),
         ],
         "BassFlute.Staff": [
             baca.Memento(
