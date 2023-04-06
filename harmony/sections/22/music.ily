@@ -549,6 +549,7 @@ number.22.Rests = {
 number.22.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1692,6 +1693,7 @@ number.22.BassFlute.Staff = <<
 number.22.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -1969,6 +1971,7 @@ number.22.Percussion.1.Staff = <<
 number.22.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
     \set Staff.instrumentName = \harmony-perc-ii-markup
       %! -PARTS
@@ -2514,6 +2517,7 @@ number.22.Harp.Staff = <<
 number.22.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -3106,6 +3110,7 @@ number.22.Viola.Staff = <<
 number.22.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -4272,6 +4277,7 @@ number.22.Cello.1.Staff = <<
 number.22.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.direction = #up
     \override TupletBracket.staff-padding = 1.5
@@ -4850,6 +4856,7 @@ number.22.Contrabass.1.Music = {
       %! MEASURE_196
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -5972,6 +5979,7 @@ number.22.Contrabass.1.Staff = <<
 number.22.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)

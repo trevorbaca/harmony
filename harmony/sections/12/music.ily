@@ -722,6 +722,7 @@ number.12.BassFlute.Music.item.1 = {
 number.12.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1174,10 +1175,10 @@ number.12.BassFlute.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1784,6 +1785,7 @@ number.12.Percussion.1.Music = {
       %! MEASURE_99
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -1832,7 +1834,6 @@ number.12.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 2]
               %! MEASURE_100
@@ -1847,6 +1848,7 @@ number.12.Percussion.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 3
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "percussion"
               %! EXPLICIT_CLEF_COLOR
@@ -1857,8 +1859,8 @@ number.12.Percussion.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1899,10 +1901,10 @@ number.12.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1931,14 +1933,14 @@ number.12.Percussion.1.Music = {
     >>
 
     % [Percussion.1.Music measure 3]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_101
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_101
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -2294,7 +2296,6 @@ number.12.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.2.Music measure 2]
               %! EXPLICIT_STAFF_LINES
@@ -2303,10 +2304,11 @@ number.12.Percussion.2.Music = {
             \once \override Staff.StaffSymbol.line-count = 3
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
+            \set fontSize = #-3
             \slash
-            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2338,10 +2340,10 @@ number.12.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2943,6 +2945,7 @@ number.12.Viola.Music = {
     % [Viola.Music measure 1]
     \once \override DynamicLineSpanner.staff-padding = 4
     \once \override NoteHead.style = #'harmonic
+    \oneVoice
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(-2 . 2)
@@ -3058,11 +3061,11 @@ number.12.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic-black
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3569,6 +3572,7 @@ number.12.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
     \once \override NoteHead.style = #'harmonic
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -3681,11 +3685,11 @@ number.12.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic-black
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4222,6 +4226,7 @@ number.12.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
     \once \override NoteHead.style = #'harmonic
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -4868,6 +4873,7 @@ number.12.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
     \once \override NoteHead.style = #'harmonic
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -4980,11 +4986,11 @@ number.12.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic-black
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5554,6 +5560,7 @@ number.12.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
     \once \override NoteHead.style = #'harmonic
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

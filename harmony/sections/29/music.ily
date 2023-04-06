@@ -157,6 +157,7 @@ number.29.Rests = {
 number.29.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -317,6 +318,7 @@ number.29.BassFlute.Staff = <<
 number.29.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -405,6 +407,7 @@ number.29.Percussion.1.Staff = <<
 number.29.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+    \oneVoice
     \set Staff.instrumentName = \harmony-perc-ii-markup
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
@@ -564,6 +567,7 @@ number.29.Harp.Staff = <<
 number.29.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -723,6 +727,7 @@ number.29.Viola.Staff = <<
 number.29.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -880,6 +885,7 @@ number.29.Cello.1.Staff = <<
 number.29.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -1037,6 +1043,7 @@ number.29.Cello.2.Staff = <<
 number.29.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -1194,6 +1201,7 @@ number.29.Contrabass.1.Staff = <<
 number.29.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

@@ -503,6 +503,7 @@ number.25.Rests = {
 number.25.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1582,6 +1583,7 @@ number.25.BassFlute.Staff = <<
 number.25.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1832,6 +1834,7 @@ number.25.Percussion.1.Staff = <<
 number.25.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+    \oneVoice
     \set Staff.instrumentName = \harmony-perc-ii-markup
       %! -PARTS
       %! REAPPLIED_SHORT_INSTRUMENT_NAME
@@ -2541,6 +2544,7 @@ number.25.Harp.Staff = <<
 number.25.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -3069,6 +3073,7 @@ number.25.Cello.1.Music = {
       %! MEASURE_226
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.direction = #up
     \set Staff.instrumentName = \harmony-vc-i-markup
@@ -3645,6 +3650,7 @@ number.25.Cello.2.Music = {
       %! MEASURE_226
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.direction = #up
     \set Staff.instrumentName = \harmony-vc-ii-markup
@@ -4114,6 +4120,7 @@ number.25.Contrabass.1.Music = {
       %! MEASURE_226
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override TupletBracket.direction = #up
     \set Staff.instrumentName = \harmony-cb-i-markup
@@ -4688,6 +4695,7 @@ number.25.Contrabass.2.Music = {
       %! MEASURE_226
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

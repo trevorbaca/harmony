@@ -752,6 +752,7 @@ number.6.Rests = {
 number.6.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -1376,6 +1377,7 @@ number.6.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
     \once \override Stem.direction = #up
+    \oneVoice
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT
@@ -2968,6 +2970,7 @@ number.6.Viola.Music.item.2 = {
 number.6.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -3070,7 +3073,6 @@ number.6.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 3]
             \override NoteHead.style = #'harmonic
@@ -3079,8 +3081,9 @@ number.6.Viola.Music = {
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3175,12 +3178,12 @@ number.6.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3743,6 +3746,7 @@ number.6.Cello.1.Music = {
       %! MEASURE_40
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-i-markup
       %! -PARTS
@@ -3813,15 +3817,15 @@ number.6.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 3]
             \override NoteHead.style = #'harmonic
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3908,12 +3912,12 @@ number.6.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4423,6 +4427,7 @@ number.6.Cello.2.Music = {
       %! MEASURE_40
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-vc-ii-markup
       %! -PARTS
@@ -5127,6 +5132,7 @@ number.6.Cello.2.Staff = <<
 number.6.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \set Staff.instrumentName = \harmony-cb-i-markup
       %! -PARTS
@@ -5908,6 +5914,7 @@ number.6.Contrabass.1.Staff = <<
 number.6.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_BAR_EXTENT
       %! REAPPLIED_BAR_EXTENT

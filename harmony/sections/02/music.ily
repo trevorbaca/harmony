@@ -572,6 +572,7 @@ number.2.BassFlute.Music.item.2 = {
 number.2.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -981,10 +982,10 @@ number.2.BassFlute.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1040,10 +1041,10 @@ number.2.BassFlute.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1506,7 +1507,6 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 1]
               %! -PARTS
@@ -1523,6 +1523,7 @@ number.2.Percussion.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 3
               %! REAPPLIED_STAFF_LINES
             \startStaff
+            \voiceOne
               %! REAPPLIED_CLEF
             \clef "percussion"
               %! REAPPLIED_CLEF_COLOR
@@ -1535,8 +1536,8 @@ number.2.Percussion.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             a8 * 2/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
@@ -1582,11 +1583,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 2]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1618,11 +1619,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 3]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1654,11 +1655,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 4]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1690,11 +1691,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 5]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1920,11 +1921,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 8]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1968,11 +1969,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 9]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2016,11 +2017,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 10]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2064,11 +2065,11 @@ number.2.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 11]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -3381,7 +3382,6 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 1]
               %! MEASURE_4
@@ -3404,6 +3404,7 @@ number.2.Viola.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "alto"
               %! EXPLICIT_CLEF_COLOR
@@ -3416,8 +3417,8 @@ number.2.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3461,12 +3462,12 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 2]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3500,11 +3501,11 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3542,11 +3543,11 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3588,11 +3589,11 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3638,12 +3639,12 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3822,7 +3823,6 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 8]
               %! MEASURE_11
@@ -3841,6 +3841,7 @@ number.2.Viola.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "alto"
               %! EXPLICIT_CLEF_COLOR
@@ -3851,8 +3852,8 @@ number.2.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3904,12 +3905,12 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3959,12 +3960,12 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4014,12 +4015,12 @@ number.2.Viola.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Viola.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4071,14 +4072,14 @@ number.2.Viola.Music = {
         {
 
             % [Viola.Music measure 12]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -4351,11 +4352,11 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4389,11 +4390,11 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4431,11 +4432,11 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4477,11 +4478,11 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4524,14 +4525,14 @@ number.2.Cello.1.Music = {
     >>
 
     % [Cello.1.Music measure 5]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_8
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_8
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 6
       %! EXPLICIT_CLEF
     \clef "bass"
@@ -4733,7 +4734,6 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 8]
               %! MEASURE_11
@@ -4749,6 +4749,7 @@ number.2.Cello.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
               %! EXPLICIT_CLEF_COLOR
@@ -4759,8 +4760,8 @@ number.2.Cello.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4812,12 +4813,12 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4867,12 +4868,12 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4922,12 +4923,12 @@ number.2.Cello.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.1.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4979,14 +4980,14 @@ number.2.Cello.1.Music = {
         {
 
             % [Cello.1.Music measure 12]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -5317,11 +5318,11 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5359,11 +5360,11 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5405,12 +5406,12 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5453,14 +5454,14 @@ number.2.Cello.2.Music = {
     >>
 
     % [Cello.2.Music measure 6]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF
     \clef "bass"
@@ -5612,7 +5613,6 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 8]
               %! MEASURE_11
@@ -5622,6 +5622,7 @@ number.2.Cello.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
               %! EXPLICIT_CLEF_COLOR
@@ -5630,8 +5631,8 @@ number.2.Cello.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5683,12 +5684,12 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5738,12 +5739,12 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5793,12 +5794,12 @@ number.2.Cello.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Cello.2.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5850,14 +5851,14 @@ number.2.Cello.2.Music = {
         {
 
             % [Cello.2.Music measure 12]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -6177,7 +6178,6 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 2]
               %! MEASURE_5
@@ -6193,6 +6193,7 @@ number.2.Contrabass.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "treble"
               %! EXPLICIT_CLEF_COLOR
@@ -6203,8 +6204,8 @@ number.2.Contrabass.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6248,11 +6249,11 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6298,11 +6299,11 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6352,11 +6353,11 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6398,11 +6399,11 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6445,14 +6446,14 @@ number.2.Contrabass.1.Music = {
     >>
 
     % [Contrabass.1.Music measure 6]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
       %! EXPLICIT_CLEF
     \clef "bass"
@@ -6617,7 +6618,6 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 8]
               %! MEASURE_11
@@ -6633,6 +6633,7 @@ number.2.Contrabass.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 5
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "treble"
               %! EXPLICIT_CLEF_COLOR
@@ -6643,8 +6644,8 @@ number.2.Contrabass.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6696,12 +6697,12 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6751,12 +6752,12 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6806,12 +6807,12 @@ number.2.Contrabass.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.1.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6863,14 +6864,14 @@ number.2.Contrabass.1.Music = {
         {
 
             % [Contrabass.1.Music measure 12]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff
@@ -7203,11 +7204,11 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7253,11 +7254,11 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7307,12 +7308,12 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.2.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7355,14 +7356,14 @@ number.2.Contrabass.2.Music = {
     >>
 
     % [Contrabass.2.Music measure 6]
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
       %! MEASURE_9
       %! SHIFTED_CLEF
     \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
+      %! ONE_VOICE_COMMAND
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 3
       %! EXPLICIT_CLEF
     \clef "bass"
@@ -7516,7 +7517,6 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.2.Music measure 8]
               %! MEASURE_11
@@ -7526,6 +7526,7 @@ number.2.Contrabass.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
             \override NoteHead.style = #'harmonic
+            \voiceOne
               %! EXPLICIT_CLEF
             \clef "treble"
               %! EXPLICIT_CLEF_COLOR
@@ -7534,8 +7535,8 @@ number.2.Contrabass.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
+            \set fontSize = #-3
             \slash
-            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7587,12 +7588,12 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.2.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7642,12 +7643,12 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.2.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7697,12 +7698,12 @@ number.2.Contrabass.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Contrabass.2.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7754,14 +7755,14 @@ number.2.Contrabass.2.Music = {
         {
 
             % [Contrabass.2.Music measure 12]
-              %! ONE_VOICE_COMMAND
-            \oneVoice
               %! INVISIBLE_MUSIC_COMMAND
               %! NOTE
             %@% \abjad-invisible-music
               %! INVISIBLE_MUSIC_COLORING
               %! NOTE
             \abjad-invisible-music-coloring
+              %! ONE_VOICE_COMMAND
+            \oneVoice
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 0
             \startStaff

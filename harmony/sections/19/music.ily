@@ -675,6 +675,7 @@ number.19.BassFlute.Music = {
     {
 
         % [BassFlute.Music measure 1]
+        \oneVoice
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_BAR_EXTENT
           %! REAPPLIED_BAR_EXTENT
@@ -1393,6 +1394,7 @@ number.19.Percussion.1.Music.item.8 = {
 number.19.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -1443,11 +1445,11 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1565,11 +1567,11 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1610,10 +1612,10 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1658,10 +1660,10 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1710,10 +1712,10 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1766,10 +1768,10 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1821,11 +1823,11 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 9]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1983,7 +1985,6 @@ number.19.Percussion.1.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.1.Music measure 12]
               %! -PARTS
@@ -1998,10 +1999,11 @@ number.19.Percussion.1.Music = {
             \once \override Staff.StaffSymbol.line-count = 3
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
+            \set fontSize = #-3
             \slash
-            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2305,6 +2307,7 @@ number.19.Percussion.2.Music = {
     \once \override Stem.direction = #down
     \once \override TupletBracket.direction = #up
     \once \override TupletBracket.staff-padding = 0.5
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5
     \set Staff.instrumentName = \harmony-perc-ii-markup
       %! -PARTS
@@ -2376,13 +2379,13 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2475,11 +2478,11 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             \override Stem.direction = #down
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2516,10 +2519,10 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2560,10 +2563,10 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2608,10 +2611,10 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2660,10 +2663,10 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2711,11 +2714,11 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.2.Music measure 9]
-            \slash
             \voiceOne
+            \set fontSize = #-3
+            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2864,7 +2867,6 @@ number.19.Percussion.2.Music = {
 
         \context Voice = "On_Beat_Grace_Container"
         {
-            \set fontSize = #-3
 
             % [Percussion.2.Music measure 12]
             \override Stem.direction = #down
@@ -2876,10 +2878,11 @@ number.19.Percussion.2.Music = {
             \once \override Staff.StaffSymbol.line-count = 3
               %! EXPLICIT_STAFF_LINES
             \startStaff
+            \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
+            \set fontSize = #-3
             \slash
-            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -3329,6 +3332,7 @@ number.19.Harp.Staff = <<
 number.19.Viola.Music = {
 
     % [Viola.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_BAR_EXTENT
@@ -3993,6 +3997,7 @@ number.19.Cello.1.Music = {
       %! MEASURE_168
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-vc-i-markup
@@ -4498,6 +4503,7 @@ number.19.Cello.1.Staff = <<
 number.19.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-vc-ii-markup
@@ -5052,6 +5058,7 @@ number.19.Cello.2.Staff = <<
 number.19.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
+    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
     \set Staff.instrumentName = \harmony-cb-i-markup
@@ -5577,6 +5584,7 @@ number.19.Contrabass.2.Music = {
     {
 
         % [Contrabass.2.Music measure 1]
+        \oneVoice
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_BAR_EXTENT
           %! REAPPLIED_BAR_EXTENT
