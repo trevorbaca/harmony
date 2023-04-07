@@ -1176,9 +1176,9 @@ number.12.BassFlute.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1842,6 +1842,8 @@ number.12.Percussion.1.Music = {
               %! MEASURE_100
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -1859,8 +1861,6 @@ number.12.Percussion.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1902,9 +1902,9 @@ number.12.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2298,6 +2298,8 @@ number.12.Percussion.2.Music = {
         {
 
             % [Percussion.2.Music measure 2]
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -2307,8 +2309,6 @@ number.12.Percussion.2.Music = {
             \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-            \set fontSize = #-3
-            \slash
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2341,9 +2341,9 @@ number.12.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -3063,9 +3063,9 @@ number.12.Viola.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3687,9 +3687,9 @@ number.12.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4988,9 +4988,9 @@ number.12.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t

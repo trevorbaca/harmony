@@ -1062,9 +1062,9 @@ number.4.Percussion.1.Music = {
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2089,6 +2089,8 @@ number.4.Viola.Music = {
               %! -PARTS
               %! EXPLICIT_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -2106,8 +2108,6 @@ number.4.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2643,6 +2643,8 @@ number.4.Cello.1.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
@@ -2652,8 +2654,6 @@ number.4.Cello.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3205,6 +3205,8 @@ number.4.Cello.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
@@ -3214,8 +3216,6 @@ number.4.Cello.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3767,9 +3767,9 @@ number.4.Contrabass.1.Music = {
 
             % [Contrabass.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t

@@ -1447,9 +1447,9 @@ number.19.Percussion.1.Music = {
         {
 
             \override Stem.direction = #down
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1569,9 +1569,9 @@ number.19.Percussion.1.Music = {
         {
 
             \override Stem.direction = #down
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1613,9 +1613,9 @@ number.19.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1661,9 +1661,9 @@ number.19.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1713,9 +1713,9 @@ number.19.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1769,9 +1769,9 @@ number.19.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1825,9 +1825,9 @@ number.19.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 9]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1993,6 +1993,8 @@ number.19.Percussion.1.Music = {
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -2002,8 +2004,6 @@ number.19.Percussion.1.Music = {
             \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-            \set fontSize = #-3
-            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2383,9 +2383,9 @@ number.19.Percussion.2.Music = {
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2480,9 +2480,9 @@ number.19.Percussion.2.Music = {
         {
 
             \override Stem.direction = #down
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2520,9 +2520,9 @@ number.19.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2564,9 +2564,9 @@ number.19.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2612,9 +2612,9 @@ number.19.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2664,9 +2664,9 @@ number.19.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2716,9 +2716,9 @@ number.19.Percussion.2.Music = {
         {
 
             % [Percussion.2.Music measure 9]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2872,6 +2872,8 @@ number.19.Percussion.2.Music = {
             \override Stem.direction = #down
             \override TupletBracket.direction = #up
             \override TupletBracket.staff-padding = 0.5
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -2881,8 +2883,6 @@ number.19.Percussion.2.Music = {
             \voiceOne
               %! EXPLICIT_STAFF_LINES_COLOR
             \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-            \set fontSize = #-3
-            \slash
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"

@@ -2039,6 +2039,8 @@ number.7.Viola.Music = {
               %! -PARTS
               %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \harmony-va-markup
+            \set fontSize = #-3
+            \slash
               %! REAPPLIED_STAFF_LINES
             \stopStaff
               %! REAPPLIED_STAFF_LINES
@@ -2058,8 +2060,6 @@ number.7.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2213,12 +2213,12 @@ number.7.Viola.Music = {
             \override NoteHead.style = #'harmonic
               %! FERMATA_MEASURE_NEXT_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            \set fontSize = #-3
+            \slash
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
             \voiceOne
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2605,12 +2605,12 @@ number.7.Cello.1.Music = {
 
             % [Cello.1.Music measure 4]
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
             \voiceOne
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3381,12 +3381,12 @@ number.7.Contrabass.1.Music = {
 
             % [Contrabass.1.Music measure 4]
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
             \voiceOne
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t

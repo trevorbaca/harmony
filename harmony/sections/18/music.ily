@@ -984,9 +984,9 @@ number.18.Percussion.1.Music = {
         {
 
             \override Stem.direction = #down
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1393,9 +1393,9 @@ number.18.Percussion.2.Music = {
         {
 
             \override Stem.direction = #down
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             e'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"

@@ -594,9 +594,9 @@ number.13.BassFlute.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -838,6 +838,8 @@ number.13.Percussion.1.Music = {
               %! -PARTS
               %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \harmony-perc-i-markup
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -857,8 +859,6 @@ number.13.Percussion.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             a8 * 2/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
@@ -909,9 +909,9 @@ number.13.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -966,9 +966,9 @@ number.13.Percussion.1.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1136,6 +1136,8 @@ number.13.Percussion.2.Music = {
               %! -PARTS
               %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \harmony-perc-ii-markup
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -1155,8 +1157,6 @@ number.13.Percussion.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             a8 * 2/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
@@ -1203,9 +1203,9 @@ number.13.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1260,9 +1260,9 @@ number.13.Percussion.2.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             c'8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1833,9 +1833,9 @@ number.13.Viola.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2140,9 +2140,9 @@ number.13.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -2813,9 +2813,9 @@ number.13.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic-black
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
