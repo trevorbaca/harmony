@@ -3078,12 +3078,12 @@ number.6.Viola.Music = {
             \override NoteHead.style = #'harmonic
               %! FERMATA_MEASURE_NEXT_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            \set fontSize = #-3
+            \slash
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
             \voiceOne
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3181,9 +3181,9 @@ number.6.Viola.Music = {
 
             % [Viola.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3820,12 +3820,12 @@ number.6.Cello.1.Music = {
 
             % [Cello.1.Music measure 3]
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \stopStaff
             \once \override Staff.StaffSymbol.line-count = 5
             \startStaff
             \voiceOne
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3915,9 +3915,9 @@ number.6.Cello.1.Music = {
 
             % [Cello.1.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t

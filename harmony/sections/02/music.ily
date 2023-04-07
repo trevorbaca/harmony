@@ -983,9 +983,9 @@ number.2.BassFlute.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1042,9 +1042,9 @@ number.2.BassFlute.Music = {
         \context Voice = "On_Beat_Grace_Container"
         {
 
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -1517,6 +1517,8 @@ number.2.Percussion.1.Music = {
               %! -PARTS
               %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \harmony-perc-i-markup
+            \set fontSize = #-3
+            \slash
               %! REAPPLIED_STAFF_LINES
             \stopStaff
               %! REAPPLIED_STAFF_LINES
@@ -1536,8 +1538,6 @@ number.2.Percussion.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! REAPPLIED_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             a8 * 2/5
               %! REAPPLIED_DYNAMIC_COLOR
               %! REAPPLIED_DYNAMIC
@@ -1585,9 +1585,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 2]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1621,9 +1621,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 3]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1657,9 +1657,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 4]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1693,9 +1693,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 5]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1923,9 +1923,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 8]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -1971,9 +1971,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 9]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2019,9 +2019,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 10]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -2067,9 +2067,9 @@ number.2.Percussion.1.Music = {
         {
 
             % [Percussion.1.Music measure 11]
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             a8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
@@ -3398,6 +3398,8 @@ number.2.Viola.Music = {
               %! -PARTS
               %! REAPPLIED_SHORT_INSTRUMENT_NAME
             \set Staff.shortInstrumentName = \harmony-va-markup
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -3417,8 +3419,6 @@ number.2.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3465,9 +3465,9 @@ number.2.Viola.Music = {
 
             % [Viola.Music measure 2]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3503,9 +3503,9 @@ number.2.Viola.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3545,9 +3545,9 @@ number.2.Viola.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3591,9 +3591,9 @@ number.2.Viola.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3642,9 +3642,9 @@ number.2.Viola.Music = {
 
             % [Viola.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3835,6 +3835,8 @@ number.2.Viola.Music = {
               %! -PARTS
               %! EXPLICIT_BAR_EXTENT
             \override Staff.BarLine.bar-extent = #'(-2 . 2)
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -3852,8 +3854,6 @@ number.2.Viola.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3908,9 +3908,9 @@ number.2.Viola.Music = {
 
             % [Viola.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -3963,9 +3963,9 @@ number.2.Viola.Music = {
 
             % [Viola.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4018,9 +4018,9 @@ number.2.Viola.Music = {
 
             % [Viola.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4354,9 +4354,9 @@ number.2.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4392,9 +4392,9 @@ number.2.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4434,9 +4434,9 @@ number.2.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4480,9 +4480,9 @@ number.2.Cello.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4743,6 +4743,8 @@ number.2.Cello.1.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -4760,8 +4762,6 @@ number.2.Cello.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4816,9 +4816,9 @@ number.2.Cello.1.Music = {
 
             % [Cello.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4871,9 +4871,9 @@ number.2.Cello.1.Music = {
 
             % [Cello.1.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -4926,9 +4926,9 @@ number.2.Cello.1.Music = {
 
             % [Cello.1.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5320,9 +5320,9 @@ number.2.Cello.2.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5362,9 +5362,9 @@ number.2.Cello.2.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5409,9 +5409,9 @@ number.2.Cello.2.Music = {
 
             % [Cello.2.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5622,6 +5622,8 @@ number.2.Cello.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \voiceOne
               %! EXPLICIT_CLEF
             \clef "tenor"
@@ -5631,8 +5633,6 @@ number.2.Cello.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5687,9 +5687,9 @@ number.2.Cello.2.Music = {
 
             % [Cello.2.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5742,9 +5742,9 @@ number.2.Cello.2.Music = {
 
             % [Cello.2.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -5797,9 +5797,9 @@ number.2.Cello.2.Music = {
 
             % [Cello.2.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6187,6 +6187,8 @@ number.2.Contrabass.1.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -6204,8 +6206,6 @@ number.2.Contrabass.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6251,9 +6251,9 @@ number.2.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6301,9 +6301,9 @@ number.2.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6355,9 +6355,9 @@ number.2.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6401,9 +6401,9 @@ number.2.Contrabass.1.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6627,6 +6627,8 @@ number.2.Contrabass.1.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
               %! EXPLICIT_STAFF_LINES
             \stopStaff
               %! EXPLICIT_STAFF_LINES
@@ -6644,8 +6646,6 @@ number.2.Contrabass.1.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6700,9 +6700,9 @@ number.2.Contrabass.1.Music = {
 
             % [Contrabass.1.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6755,9 +6755,9 @@ number.2.Contrabass.1.Music = {
 
             % [Contrabass.1.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -6810,9 +6810,9 @@ number.2.Contrabass.1.Music = {
 
             % [Contrabass.1.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7206,9 +7206,9 @@ number.2.Contrabass.2.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7256,9 +7256,9 @@ number.2.Contrabass.2.Music = {
         {
 
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7311,9 +7311,9 @@ number.2.Contrabass.2.Music = {
 
             % [Contrabass.2.Music measure 5]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7526,6 +7526,8 @@ number.2.Contrabass.2.Music = {
               %! SHIFTED_CLEF
             \once \override Staff.Clef.extra-offset = #'(-2.5 . 0)
             \override NoteHead.style = #'harmonic
+            \set fontSize = #-3
+            \slash
             \voiceOne
               %! EXPLICIT_CLEF
             \clef "treble"
@@ -7535,8 +7537,6 @@ number.2.Contrabass.2.Music = {
             %@% \override Staff.Clef.color = ##f
               %! EXPLICIT_CLEF
             \set Staff.forceClef = ##t
-            \set fontSize = #-3
-            \slash
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7591,9 +7591,9 @@ number.2.Contrabass.2.Music = {
 
             % [Contrabass.2.Music measure 9]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7646,9 +7646,9 @@ number.2.Contrabass.2.Music = {
 
             % [Contrabass.2.Music measure 10]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
@@ -7701,9 +7701,9 @@ number.2.Contrabass.2.Music = {
 
             % [Contrabass.2.Music measure 11]
             \override NoteHead.style = #'harmonic
-            \voiceOne
             \set fontSize = #-3
             \slash
+            \voiceOne
             <
                 \tweak font-size 0
                 \tweak transparent ##t
