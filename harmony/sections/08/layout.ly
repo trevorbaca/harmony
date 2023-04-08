@@ -23,8 +23,6 @@
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #40
               %! BREAK
-            \noBreak
-              %! BREAK
             \pageBreak
             s1 * 3/4
               %! SPACING
@@ -115,8 +113,6 @@
             \baca-lbsd #40 #'(18 32 26 26 32 26 26 26 26 32)
               %! SPACING_COMMAND
             \baca-new-spacing-section #1 #40
-              %! BREAK
-            \noBreak
               %! BREAK
             \pageBreak
             s1 * 3/4
