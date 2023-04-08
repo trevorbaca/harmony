@@ -1469,11 +1469,11 @@ number.10.Percussion.1.Music = {
       %! SPANNER_START
     \<
 
-    \once \override DynamicText.X-offset = -0.75
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
+    \once \override DynamicText.X-offset = -0.75
     d'4 * 1/2
     :32
       %! EXPLICIT_DYNAMIC_COLOR
