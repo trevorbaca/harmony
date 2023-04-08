@@ -641,11 +641,11 @@ number.7.BassFlute.Music = {
       %! SPANNER_START
     \<
 
-    \once \override DynamicText.X-offset = -0.75
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
+    \once \override DynamicText.X-offset = -0.75
     bf'''!8 * 1/2
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -708,11 +708,11 @@ number.7.BassFlute.Music = {
       %! SPANNER_START
     \<
 
-    \once \override DynamicText.X-offset = -2
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
+    \once \override DynamicText.X-offset = -2
     bf'''!8 * 1/2
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -911,11 +911,11 @@ number.7.BassFlute.Music = {
       %! SPANNER_START
     \<
 
-    \once \override DynamicText.X-offset = -0.75
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
+    \once \override DynamicText.X-offset = -0.75
     bf'''!8 * 1/2
     :32
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1905,12 +1905,12 @@ number.7.Harp.Music = {
           %! EXPLICIT_CLEF_REDRAW_COLOR
         \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
           %! INVISIBLE_MUSIC_COMMAND
         %@% \abjad-invisible-music
           %! INVISIBLE_MUSIC_COLORING
         \abjad-invisible-music-coloring
+          %! REPEAT_PITCH_CLASS_COLORING
+        \baca-repeat-pitch-class-coloring
         c'4 * 1/2
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1" #"2"
