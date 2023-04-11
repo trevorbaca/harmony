@@ -885,7 +885,6 @@ def vc2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.clef(o.leaf(0), "treble")
         baca.dynamic(
             o.phead(0),
             "p-ancora",

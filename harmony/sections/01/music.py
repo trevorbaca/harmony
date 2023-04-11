@@ -239,7 +239,6 @@ def bfl(cache):
 def perc1(m):
     with baca.scope(m.leaves()) as o:
         baca.instrument(o.leaf(0), "Percussion", library.manifests)
-        baca.clef(o.leaf(0), "percussion")
         baca.dls_staff_padding(o.leaves(), 6)
     with baca.scope(m[1]) as o:
         baca.short_instrument_name(o.leaf(0), "Perc. I", library.manifests)
@@ -281,7 +280,6 @@ def perc2(m):
         baca.clef(o.leaf(0), "percussion")
         baca.short_instrument_name(o.leaf(0), "Perc. II", library.manifests)
         baca.instrument_name(o.leaf(0), r"\harmony-percussion-ii-markup")
-        baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.slate_staff_position(o)
         baca.dynamic(o.phead(0), "mf")
@@ -310,7 +308,6 @@ def hp(m):
         baca.clef(o.leaf(0), "percussion")
         baca.short_instrument_name(o.leaf(0), "Hp.", library.manifests)
         baca.instrument_name(o.leaf(0), r"\harmony-harp-markup")
-        baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
         library.whisk_staff_position(o)
         baca.dynamic(o.phead(0), "mf")
