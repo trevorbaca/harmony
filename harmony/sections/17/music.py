@@ -369,7 +369,6 @@ def perc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.clef(o.leaf(0), "percussion")
         baca.dynamic(o.rest(2), "ff")
         baca.dls_staff_padding(o, 5)
         baca.markup(
