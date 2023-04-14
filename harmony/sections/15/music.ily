@@ -461,10 +461,10 @@ number.15.BassFlute.Music = {
 
     % [BassFlute.Music measure 4]
     dtqf'''!4
-      %! SPANNER_STOP
-    \!
     - \tweak staff-padding 8
     ^ \baca-seven-e-flat
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

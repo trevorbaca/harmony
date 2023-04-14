@@ -3074,10 +3074,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3115,10 +3115,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3156,10 +3156,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3197,10 +3197,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3238,10 +3238,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3279,10 +3279,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3321,10 +3321,10 @@ number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 8]
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3362,10 +3362,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3403,10 +3403,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3444,10 +3444,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3485,10 +3485,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3526,10 +3526,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3567,10 +3567,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3609,10 +3609,10 @@ number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 9]
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3650,10 +3650,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3691,10 +3691,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3732,10 +3732,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3773,10 +3773,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3814,10 +3814,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3855,10 +3855,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3897,10 +3897,10 @@ number.28.Cello.1.Music = {
 
     % [Cello.1.Music measure 10]
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3938,10 +3938,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3979,10 +3979,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4020,10 +4020,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4061,10 +4061,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4102,10 +4102,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4143,10 +4143,10 @@ number.28.Cello.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4547,10 +4547,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4588,10 +4588,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4629,10 +4629,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4670,10 +4670,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4711,10 +4711,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4752,10 +4752,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4794,10 +4794,10 @@ number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 8]
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4835,10 +4835,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4876,10 +4876,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4917,10 +4917,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4958,10 +4958,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4999,10 +4999,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5040,10 +5040,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5082,10 +5082,10 @@ number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 9]
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5123,10 +5123,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5164,10 +5164,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5205,10 +5205,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5246,10 +5246,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5287,10 +5287,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5328,10 +5328,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5370,10 +5370,10 @@ number.28.Cello.2.Music = {
 
     % [Cello.2.Music measure 10]
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5411,10 +5411,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5452,10 +5452,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5493,10 +5493,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5534,10 +5534,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5575,10 +5575,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5616,10 +5616,10 @@ number.28.Cello.2.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6065,10 +6065,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6106,10 +6106,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6147,10 +6147,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6188,10 +6188,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6229,10 +6229,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6270,10 +6270,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6312,10 +6312,10 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 8]
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6353,10 +6353,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6394,10 +6394,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6435,10 +6435,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6476,10 +6476,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6517,10 +6517,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6558,10 +6558,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6600,10 +6600,10 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 9]
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6641,10 +6641,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6682,10 +6682,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6723,10 +6723,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6764,10 +6764,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6805,10 +6805,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6846,10 +6846,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6888,10 +6888,10 @@ number.28.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 10]
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6929,10 +6929,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -6970,10 +6970,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -7011,10 +7011,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -7052,10 +7052,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -7093,10 +7093,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -7134,10 +7134,10 @@ number.28.Contrabass.1.Music = {
     \>
 
     cs'!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START

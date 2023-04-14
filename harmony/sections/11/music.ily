@@ -3038,10 +3038,10 @@ number.11.Viola.Music = {
     \>
 
     a''4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3765,10 +3765,10 @@ number.11.Cello.1.Music = {
     \>
 
     gqs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4457,10 +4457,10 @@ number.11.Cello.2.Music = {
     \>
 
     fs''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5192,10 +5192,10 @@ number.11.Contrabass.1.Music = {
     \>
 
     cs'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -5890,10 +5890,10 @@ number.11.Contrabass.2.Music = {
     \>
 
     cqf'''!4 * 1/2
-      %! SPANNER_STOP
-    \!
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! SPANNER_STOP
+    \!
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
