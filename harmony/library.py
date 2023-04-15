@@ -753,11 +753,13 @@ instruments = {
 
 
 metronome_marks = {
-    "48": abjad.MetronomeMark((1, 4), 48),
-    "57 3/5": abjad.MetronomeMark((1, 4), fractions.Fraction(288, 5), decimal=True),
-    "72": abjad.MetronomeMark((1, 4), 72),
-    "96": abjad.MetronomeMark((1, 4), 96),
-    "144": abjad.MetronomeMark((1, 4), 144),
+    "48": abjad.MetronomeMark(abjad.Duration(1, 4), 48),
+    "57 3/5": abjad.MetronomeMark(
+        abjad.Duration(1, 4), fractions.Fraction(288, 5), decimal=True
+    ),
+    "72": abjad.MetronomeMark(abjad.Duration(1, 4), 72),
+    "96": abjad.MetronomeMark(abjad.Duration(1, 4), 96),
+    "144": abjad.MetronomeMark(abjad.Duration(1, 4), 144),
     # slower
     "2.=4": abjad.MetricModulation(
         left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
