@@ -280,9 +280,9 @@
                 context="Contrabass.2.Music",
                 edition=None,
                 manifest=None,
-                prototype="abjad.Dynamic",
+                prototype="abjad.StartHairpin",
                 synthetic_offset=None,
-                value="niente",
+                value=">o",
             ),
             baca.Memento(
                 context="Contrabass.2.Music",
