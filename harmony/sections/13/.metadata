@@ -51,15 +51,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="niente",
-            ),
-            baca.Memento(
-                context="BassFlute.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "BassFlute.Staff": [
             baca.Memento(
@@ -111,15 +103,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="p",
-            ),
-            baca.Memento(
-                context="Cello.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Cello.1.Staff": [
             baca.Memento(
@@ -171,15 +155,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="p",
-            ),
-            baca.Memento(
-                context="Cello.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Cello.2.Staff": [
             baca.Memento(
@@ -231,15 +207,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="p",
-            ),
-            baca.Memento(
-                context="Contrabass.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Contrabass.1.Staff": [
             baca.Memento(
@@ -291,15 +259,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="p",
-            ),
-            baca.Memento(
-                context="Contrabass.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Contrabass.2.Staff": [
             baca.Memento(
@@ -395,15 +355,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="f",
-            ),
-            baca.Memento(
-                context="Percussion.1.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Percussion.1.Staff": [
             baca.Memento(
@@ -455,15 +407,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="f",
-            ),
-            baca.Memento(
-                context="Percussion.2.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Percussion.2.Staff": [
             baca.Memento(
@@ -543,15 +487,7 @@
                 prototype="abjad.Dynamic",
                 synthetic_offset=None,
                 value="niente",
-            ),
-            baca.Memento(
-                context="Viola.Music",
-                edition=None,
-                manifest=None,
-                prototype="abjad.VoiceNumber",
-                synthetic_offset=None,
-                value=None,
-            ),
+            )
         ],
         "Viola.Staff": [
             baca.Memento(
