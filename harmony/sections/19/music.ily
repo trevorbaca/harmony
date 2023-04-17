@@ -681,7 +681,6 @@ number.19.BassFlute.Music = {
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
           %! REAPPLIED_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-        \oneVoice
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_BAR_EXTENT
           %! REAPPLIED_BAR_EXTENT
@@ -1400,7 +1399,6 @@ number.19.Percussion.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! EXPLICIT_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'blue)
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
@@ -2313,7 +2311,6 @@ number.19.Percussion.2.Music = {
     \once \override Stem.direction = #down
     \once \override TupletBracket.direction = #up
     \once \override TupletBracket.staff-padding = 0.5
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 5
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
@@ -3338,7 +3335,6 @@ number.19.Viola.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_BAR_EXTENT
@@ -4003,7 +3999,6 @@ number.19.Cello.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
@@ -4509,7 +4504,6 @@ number.19.Cello.2.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
@@ -5064,7 +5058,6 @@ number.19.Contrabass.1.Music = {
     %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
       %! REAPPLIED_STAFF_LINES_COLOR
     \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-    \oneVoice
     \override DynamicLineSpanner.staff-padding = 4
     \override NoteHead.style = #'harmonic
       %! REAPPLIED_CLEF_COLOR_CANCELLATION
@@ -5590,7 +5583,6 @@ number.19.Contrabass.2.Music = {
         %@% \once \override Staff.InstrumentName.color = #(x11-color 'green4)
           %! REAPPLIED_STAFF_LINES_COLOR
         \once \override Staff.StaffSymbol.color = #(x11-color 'green4)
-        \oneVoice
         \override DynamicLineSpanner.staff-padding = 4
           %! EXPLICIT_BAR_EXTENT
           %! REAPPLIED_BAR_EXTENT
