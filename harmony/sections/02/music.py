@@ -259,9 +259,9 @@ def VC1(voice, time_signatures):
     music = baca.parse(
         r" \times 5/3 { c4 c4 c4 }",
     )
+    voice.extend(music)
     pleaf = baca.select.pleaf(music, 0)
     baca.repeat_tie(pleaf)
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(7),
         [5, -5, 1, "-"],

@@ -329,9 +329,9 @@ def CB2(voice, time_signatures):
         [(1,)],
         force_augmentation=True,
     )
+    voice.extend(music)
     pleaf = baca.select.pleaf(music, 0)
     baca.repeat_tie(pleaf)
-    voice.extend(music)
     music = baca.make_mmrests(time_signatures(10), head=voice.name)
     voice.extend(music)
     music = baca.make_notes(time_signatures(11))
