@@ -6,7 +6,7 @@ if __name__ == "__main__":
         author="Trevor Bača",
         author_email="trevor.baca@gmail.com",
         install_requires=[
-            "abjad>=3.17",
+            "abjad>=3.18",
             "black",
             "flake8",
             "isort",
@@ -18,5 +18,5 @@ if __name__ == "__main__":
         platforms="Any",
         python_requires=">=3.10",
         url="https://github.com/trevorbaca/harmony",
-        version="3.17",
+        version="3.18",
     )
