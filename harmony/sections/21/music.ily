@@ -853,11 +853,6 @@ number.21.Percussion.1.Music = {
         \baca-mp-ancora
         - \tweak staff-padding 6
         ^ \baca-brake-drum-paper-towel-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 10.5
@@ -991,11 +986,6 @@ number.21.Percussion.2.Music = {
         \laissezVibrer
         - \tweak staff-padding 6
         ^ \baca-bd-struck-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 10.5
@@ -1274,13 +1264,6 @@ number.21.Harp.Music = {
           %! EXPLICIT_DYNAMIC
         \f
         \laissezVibrer
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1426,13 +1409,6 @@ number.21.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START

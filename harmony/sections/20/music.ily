@@ -639,11 +639,6 @@ number.20.BassFlute.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \baca-pp-sempre
-          %! AUTODETECT
-          %! SPANNER_START
-          %! COVERED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -1339,13 +1334,6 @@ number.20.Percussion.2.Music = {
     \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -1712,11 +1700,6 @@ number.20.Harp.Music = {
           %! EXPLICIT_DYNAMIC
         \f
         \laissezVibrer
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -2289,13 +2272,6 @@ number.20.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanSCP
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -3802,11 +3778,6 @@ number.20.Contrabass.2.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-pp-sempre
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8

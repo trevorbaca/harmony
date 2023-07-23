@@ -614,13 +614,6 @@ number.16.BassFlute.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_START
     \startTextSpan
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -1264,11 +1257,6 @@ number.16.Viola.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -1622,11 +1610,6 @@ number.16.Cello.1.Music = {
     \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1656,11 +1639,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1684,11 +1662,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1717,11 +1690,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1748,11 +1716,6 @@ number.16.Cello.1.Music = {
 
     % [Cello.1.Music measure 5]
     ds!2.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1781,11 +1744,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1893,11 +1851,6 @@ number.16.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1920,11 +1873,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1948,11 +1896,6 @@ number.16.Cello.1.Music = {
     \bacaStopTextSpanDamp
 
     ds!8.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2020,11 +1963,6 @@ number.16.Cello.2.Music = {
     \pp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2054,11 +1992,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2082,11 +2015,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2115,11 +2043,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2146,11 +2069,6 @@ number.16.Cello.2.Music = {
 
     % [Cello.2.Music measure 5]
     cs!2.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2179,11 +2097,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2291,11 +2204,6 @@ number.16.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2318,11 +2226,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2346,11 +2249,6 @@ number.16.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     cs!8.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2421,11 +2319,6 @@ number.16.Contrabass.1.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8
@@ -2643,11 +2536,6 @@ number.16.Contrabass.1.Music = {
     - \tweak staff-padding 4
     - \baca-full-downbow
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8
@@ -2789,11 +2677,6 @@ number.16.Contrabass.2.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8
@@ -3015,11 +2898,6 @@ number.16.Contrabass.2.Music = {
     - \tweak staff-padding 4
     - \baca-full-downbow
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8

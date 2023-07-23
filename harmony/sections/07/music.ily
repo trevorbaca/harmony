@@ -755,11 +755,6 @@ number.7.BassFlute.Music = {
     {
 
         r8
-          %! AUTODETECT
-          %! SPANNER_START
-          %! COVERED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -775,11 +770,6 @@ number.7.BassFlute.Music = {
           %! COVERED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanCovered
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -837,11 +827,16 @@ number.7.BassFlute.Music = {
         :32
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-          %! AUTODETECT
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \<
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 11.5
@@ -854,16 +849,6 @@ number.7.BassFlute.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \<
 
           %! INVISIBLE_MUSIC_COMMAND
         %@% \abjad-invisible-music
@@ -1515,13 +1500,6 @@ number.7.Harp.Music = {
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Harp”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -1880,11 +1858,6 @@ number.7.Harp.Music = {
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1" #"2"
         ^ \baca-whisk-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -2119,11 +2092,6 @@ number.7.Viola.Music = {
 
         bf!4
         - \espressivo
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -2267,11 +2235,6 @@ number.7.Viola.Music = {
 
         bf!4
         - \espressivo
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -2742,13 +2705,6 @@ number.7.Cello.1.Music = {
 
         bf'!4
         - \espressivo
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -2964,11 +2920,6 @@ number.7.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -3097,13 +3048,6 @@ number.7.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -3623,11 +3567,6 @@ number.7.Contrabass.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -3712,11 +3651,6 @@ number.7.Contrabass.2.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-p-ancora
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -3859,13 +3793,6 @@ number.7.Contrabass.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START

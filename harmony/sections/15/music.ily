@@ -372,11 +372,6 @@ number.15.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -539,11 +534,6 @@ number.15.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1332,11 +1322,6 @@ number.15.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1625,11 +1610,6 @@ number.15.Cello.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -1890,11 +1870,6 @@ number.15.Cello.2.Music = {
         - \tweak self-alignment-X -0.9
           %! EXPLICIT_DYNAMIC
         \baca-f-ancora
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SCP_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -1928,11 +1903,6 @@ number.15.Cello.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2197,11 +2167,6 @@ number.15.Contrabass.1.Music = {
         \baca-f-ancora
         - \tweak X-offset 3
         ^ \baca-seven-e-flat
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SCP_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -2235,11 +2200,6 @@ number.15.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -2505,11 +2465,6 @@ number.15.Contrabass.2.Music = {
         - \tweak self-alignment-X -0.9
           %! EXPLICIT_DYNAMIC
         \baca-f-ancora
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SCP_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -2543,11 +2498,6 @@ number.15.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5

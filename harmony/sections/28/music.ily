@@ -7734,13 +7734,10 @@ number.28.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
       %! RIGHT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    - \tweak bound-details.right.padding 0.5
       %! RIGHT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_START

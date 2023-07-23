@@ -588,11 +588,6 @@ number.26.BassFlute.Music = {
     \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -623,11 +618,6 @@ number.26.BassFlute.Music = {
 
     % [BassFlute.Music measure 2]
     c'4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -758,11 +748,6 @@ number.26.BassFlute.Music = {
     \mp
       %! SPANNER_STOP
     \stopTrillSpan
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -786,11 +771,6 @@ number.26.BassFlute.Music = {
 
     % [BassFlute.Music measure 6]
     c'4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -814,11 +794,6 @@ number.26.BassFlute.Music = {
 
     % [BassFlute.Music measure 7]
     c'4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1207,11 +1182,6 @@ number.26.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1359,11 +1329,6 @@ number.26.Percussion.1.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -1449,11 +1414,6 @@ number.26.Percussion.1.Music = {
         \baca-effort-ff
         - \tweak staff-padding 6
         ^ \baca-slate-scrape-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 10.5
@@ -1702,13 +1662,6 @@ number.26.Percussion.2.Music = {
         - \tweak self-alignment-X 1
         - \tweak staff-padding 5
         ^ \baca-purpleheart-markup
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1960,11 +1913,6 @@ number.26.Harp.Music = {
     \p
     - \tweak staff-padding 3
     ^ \baca-whisk-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 8

@@ -440,13 +440,6 @@ number.8.BassFlute.Music = {
     {
 
         r4
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! COVERED_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! COVERED_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -467,13 +460,6 @@ number.8.BassFlute.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanCovered
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
