@@ -184,13 +184,6 @@ number.9.BassFlute.Music = {
     \mf
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
@@ -211,13 +204,6 @@ number.9.BassFlute.Music = {
       %! LEFT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanCovered
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -260,11 +246,6 @@ number.9.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -852,29 +833,6 @@ number.9.Viola.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -900,6 +858,22 @@ number.9.Viola.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1050,29 +1024,6 @@ number.9.Cello.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1098,6 +1049,22 @@ number.9.Cello.1.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1250,29 +1217,6 @@ number.9.Cello.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1298,6 +1242,22 @@ number.9.Cello.2.Music = {
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanBowSpeed
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1457,13 +1417,19 @@ number.9.Contrabass.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! AUTODETECT
-          %! RIGHT_BROKEN
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
           %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1480,19 +1446,6 @@ number.9.Contrabass.1.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -1682,11 +1635,6 @@ number.9.Contrabass.2.Music = {
     - \tweak staff-padding 3
     ^ \baca-thirteen-a
     _ \baca-string-iii-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! PIZZICATO_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 6.5

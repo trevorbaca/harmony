@@ -397,13 +397,6 @@ number.17.BassFlute.Music = {
       %! LEFT_BROKEN
       %! SPANNER_START
     \startTextSpan
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -561,11 +554,6 @@ number.17.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 9

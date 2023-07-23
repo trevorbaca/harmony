@@ -489,11 +489,6 @@ number.3.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -587,11 +582,6 @@ number.3.BassFlute.Music = {
     - \tweak self-alignment-X -0.75
       %! EXPLICIT_DYNAMIC
     \baca-mf-sempre
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2089,28 +2079,6 @@ number.3.Cello.1.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \mf
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
-          %! AUTODETECT
-          %! SPANNER_START
-          %! DAMP_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! DAMP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -2126,6 +2094,18 @@ number.3.Cello.1.Music = {
           %! DAMP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanDamp
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         r16
 
@@ -2502,13 +2482,6 @@ number.3.Cello.1.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \mf
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! DAMP_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! DAMP_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -2529,13 +2502,6 @@ number.3.Cello.1.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanDamp
-          %! AUTODETECT
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -2736,11 +2702,6 @@ number.3.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -2891,23 +2852,6 @@ number.3.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2921,6 +2865,18 @@ number.3.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     \glissando
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
@@ -2969,23 +2925,6 @@ number.3.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2999,6 +2938,18 @@ number.3.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     \glissando
 
     \hide NoteHead
@@ -3154,11 +3105,6 @@ number.3.Contrabass.1.Music = {
     ^ \baca-eleven-e
     _ \baca-string-iv-markup
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! PIZZICATO_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -3634,11 +3580,6 @@ number.3.Contrabass.2.Music = {
       %! SPANNER_STOP
     \pp
     _ \baca-string-iv-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! PIZZICATO_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -3849,23 +3790,6 @@ number.3.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3879,6 +3803,18 @@ number.3.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     \glissando
 
     \hide NoteHead
@@ -3925,23 +3861,6 @@ number.3.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "P1"
-      %! SCP_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanSCP
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3955,6 +3874,18 @@ number.3.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! SCP_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "P1"
+      %! SCP_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanSCP
     \glissando
 
     \hide NoteHead

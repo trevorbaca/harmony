@@ -1635,11 +1635,6 @@ number.25.Percussion.1.Music = {
         r2
 
         r8
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 10.5
@@ -1862,13 +1857,6 @@ number.25.Percussion.2.Music = {
     \ff
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Percussion”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -2341,11 +2329,6 @@ number.25.Harp.Music = {
         r2
 
         r8
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 10.5
@@ -3118,11 +3101,6 @@ number.25.Cello.1.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         ^ \baca-quasi-bisb-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -3694,11 +3672,6 @@ number.25.Cello.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         ^ \baca-quasi-bisb-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -4163,11 +4136,6 @@ number.25.Contrabass.1.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         ^ \baca-quasi-bisb-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8
@@ -4740,11 +4708,6 @@ number.25.Contrabass.2.Music = {
           %! EXPLICIT_DYNAMIC
         \pp
         ^ \baca-quasi-bisb-markup
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 8

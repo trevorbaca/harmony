@@ -737,11 +737,6 @@ number.23.BassFlute.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \pp
-          %! AUTODETECT
-          %! SPANNER_START
-          %! COVERED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! COVERED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 5.5
@@ -1216,13 +1211,6 @@ number.23.Harp.Music = {
     \laissezVibrer
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Harp”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -1362,11 +1350,6 @@ number.23.Viola.Music = {
     \ff
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1695,11 +1678,6 @@ number.23.Cello.1.Music = {
     \ff
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1850,23 +1828,6 @@ number.23.Cello.1.Music = {
 
         e,4
         - \baca-staccati #3
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -1879,6 +1840,18 @@ number.23.Cello.1.Music = {
           %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         e,4
         - \baca-staccati #3
@@ -1894,11 +1867,6 @@ number.23.Cello.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2354,11 +2322,6 @@ number.23.Contrabass.1.Music = {
     \ff
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2463,23 +2426,6 @@ number.23.Contrabass.1.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \p
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -2492,6 +2438,18 @@ number.23.Contrabass.1.Music = {
           %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         e,4
         - \baca-staccati #3
@@ -2507,11 +2465,6 @@ number.23.Contrabass.1.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SCP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SCP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3

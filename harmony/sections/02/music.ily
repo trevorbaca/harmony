@@ -1092,11 +1092,6 @@ number.2.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! COVERED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1729,23 +1724,6 @@ number.2.Percussion.1.Music = {
     b8
     - \tweak staff-padding 6
     ^ \baca-bd-superball-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 10.5
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "MM"
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanMetricModulation
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1759,6 +1737,18 @@ number.2.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 10.5
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "MM"
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanMetricModulation
     - \tweak stencil ##f
     ~
 
@@ -2231,11 +2221,6 @@ number.2.Percussion.2.Music = {
     \mf
     - \tweak staff-padding 6
     ^ \baca-slate-scrape-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 10.5
@@ -3705,11 +3690,6 @@ number.2.Viola.Music = {
     \mp
     - \tweak staff-padding 5.5
     ^ \baca-seven-a
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -3732,11 +3712,6 @@ number.2.Viola.Music = {
     \bacaStopTextSpanDamp
 
     gqf'!8.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -4609,23 +4584,6 @@ number.2.Cello.1.Music = {
           %! SCP_SPANNER
           %! SPANNER_STOP
         \bacaStopTextSpanSCP
-          %! AUTODETECT
-          %! SPANNER_START
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "MM"
-          %! METRIC_MODULATION_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
           %! SCP_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3
@@ -4638,6 +4596,18 @@ number.2.Cello.1.Music = {
           %! SCP_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanSCP
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanMetricModulation
 
         a,4
         :32
@@ -5482,11 +5452,6 @@ number.2.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -5514,11 +5479,6 @@ number.2.Cello.2.Music = {
     \bacaStopTextSpanDamp
 
     b4..
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -6127,13 +6087,6 @@ number.2.Contrabass.1.Music = {
     \sfp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Contrabass”)"
-      %! AUTODETECT
-      %! LEFT_BROKEN
-      %! SPANNER_START
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -7386,11 +7339,6 @@ number.2.Contrabass.2.Music = {
     \mp
     - \tweak staff-padding 6.5
     ^ \baca-eleven-a
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 4
@@ -7418,11 +7366,6 @@ number.2.Contrabass.2.Music = {
     \bacaStopTextSpanDamp
 
     dqs'!4..
-      %! AUTODETECT
-      %! SPANNER_START
-      %! DAMP_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 4
