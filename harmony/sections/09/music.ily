@@ -789,23 +789,6 @@ number.9.Viola.Music = {
     \mf
     - \tweak staff-padding 5.5
     ^ \harmony-match-harp-decay-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -819,6 +802,18 @@ number.9.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead
@@ -858,23 +853,6 @@ number.9.Viola.Music = {
           %! SPANNER_STOP
         \mp
           %! AUTODETECT
-          %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! AUTODETECT
           %! RIGHT_BROKEN
           %! SPANNER_START
           %! METRIC_MODULATION_SPANNER
@@ -910,6 +888,18 @@ number.9.Viola.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1061,23 +1051,6 @@ number.9.Cello.1.Music = {
           %! SPANNER_STOP
         \mp
           %! AUTODETECT
-          %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! AUTODETECT
           %! RIGHT_BROKEN
           %! SPANNER_START
           %! METRIC_MODULATION_SPANNER
@@ -1113,6 +1086,18 @@ number.9.Cello.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1266,23 +1251,6 @@ number.9.Cello.2.Music = {
           %! SPANNER_STOP
         \mp
           %! AUTODETECT
-          %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! AUTODETECT
           %! RIGHT_BROKEN
           %! SPANNER_START
           %! METRIC_MODULATION_SPANNER
@@ -1318,6 +1286,18 @@ number.9.Cello.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1500,23 +1480,6 @@ number.9.Contrabass.1.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
-          %! AUTODETECT
-          %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 3.25
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 8
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
           %! EXPLICIT_DYNAMIC_COLOR
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
@@ -1530,6 +1493,18 @@ number.9.Contrabass.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_START
         \>
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 8
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR

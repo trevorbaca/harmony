@@ -1675,23 +1675,6 @@ number.5.Viola.Music = {
         \mf
           %! AUTODETECT
           %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! AUTODETECT
-          %! SPANNER_START
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \tweak bound-details.right.padding 2.75
@@ -1707,6 +1690,18 @@ number.5.Viola.Music = {
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         \bacaStartTextSpanMetricModulation
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
 
         r16
 
@@ -1728,14 +1723,14 @@ number.5.Viola.Music = {
     f8.
 
     r16
-
-    r1
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
+
+    r1
 
     % [Viola.Music measure 5]
     ef!4

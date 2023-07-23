@@ -1368,11 +1368,6 @@ number.15.Viola.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1405,11 +1400,6 @@ number.15.Viola.Music = {
     - \tweak color #(x11-color 'DeepPink1)
       %! REDUNDANT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1444,11 +1434,6 @@ number.15.Viola.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-p-sempre
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3

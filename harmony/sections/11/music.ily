@@ -2752,23 +2752,6 @@ number.11.Viola.Music = {
     \mf
     - \tweak staff-padding 5.5
     ^ \harmony-match-harp-decay-markup
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2782,6 +2765,18 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead

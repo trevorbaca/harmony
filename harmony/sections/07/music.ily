@@ -2342,23 +2342,6 @@ number.7.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2372,6 +2355,18 @@ number.7.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead

@@ -2357,23 +2357,6 @@ number.10.Viola.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
       %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
-      %! AUTODETECT
       %! LEFT_BROKEN
       %! SPANNER_START
       %! LEFT_BROKEN
@@ -2409,6 +2392,18 @@ number.10.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2547,23 +2542,6 @@ number.10.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2577,6 +2555,18 @@ number.10.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead
@@ -2665,23 +2655,6 @@ number.10.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2695,6 +2668,18 @@ number.10.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead
@@ -3117,23 +3102,6 @@ number.10.Cello.1.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
-      %! AUTODETECT
       %! LEFT_BROKEN
       %! SPANNER_START
       %! LEFT_BROKEN
@@ -3169,6 +3137,18 @@ number.10.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -3701,23 +3681,6 @@ number.10.Cello.2.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
-      %! AUTODETECT
       %! LEFT_BROKEN
       %! SPANNER_START
       %! LEFT_BROKEN
@@ -3753,6 +3716,18 @@ number.10.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -4299,23 +4274,6 @@ number.10.Contrabass.1.Music = {
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanMetricModulation
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 8
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -4329,6 +4287,18 @@ number.10.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR

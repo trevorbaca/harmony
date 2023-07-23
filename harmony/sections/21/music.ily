@@ -1488,11 +1488,6 @@ number.21.Viola.Music = {
       %! EXPLICIT_DYNAMIC
     \mp
     \laissezVibrer
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1513,11 +1508,6 @@ number.21.Viola.Music = {
 
     bf!4
     \laissezVibrer
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1973,11 +1963,6 @@ number.21.Cello.1.Music = {
     \pp
     ^ \baca-eleven-e-flat
     [
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -2114,11 +2099,6 @@ number.21.Cello.2.Music = {
     \p
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2245,11 +2225,6 @@ number.21.Cello.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2290,11 +2265,6 @@ number.21.Cello.2.Music = {
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -2651,11 +2621,6 @@ number.21.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
     \pp
     ^ \baca-seven-e-flat
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -3008,11 +2973,6 @@ number.21.Contrabass.2.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3

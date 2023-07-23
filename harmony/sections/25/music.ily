@@ -2576,11 +2576,6 @@ number.25.Viola.Music = {
     \mp
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3

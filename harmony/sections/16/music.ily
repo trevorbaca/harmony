@@ -1452,11 +1452,6 @@ number.16.Viola.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
@@ -1480,13 +1475,6 @@ number.16.Viola.Music = {
       %! BOW_SPEED_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanBowSpeed
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START

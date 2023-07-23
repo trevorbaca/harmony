@@ -437,9 +437,7 @@ def va(cache):
         baca.bow_speed_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
             "poc. scr. =|",
-            abjad.Tweak(r"- \tweak bound-details.right.padding 6"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             left_broken=True,
         )
     with baca.scope(m[5]) as o:

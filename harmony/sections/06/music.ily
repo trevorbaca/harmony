@@ -3574,23 +3574,6 @@ number.6.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "scr."
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -3604,6 +3587,18 @@ number.6.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "scr."
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     - \tweak stencil ##f
     ~
 
@@ -4314,29 +4309,6 @@ number.6.Cello.1.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_STOP
     \f
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "scr."
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! RIGHT_BROKEN
@@ -4354,6 +4326,22 @@ number.6.Cello.1.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_START
     \>
+      %! BOW_SPEED_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "scr."
+      %! BOW_SPEED_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
     - \tweak stencil ##f
     ~
 
@@ -5019,13 +5007,19 @@ number.6.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
-      %! AUTODETECT
-      %! RIGHT_BROKEN
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    - \tweak to-barline ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    \>
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -5042,19 +5036,6 @@ number.6.Cello.2.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \>
     ~
 
     eqf'1
