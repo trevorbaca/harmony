@@ -492,7 +492,6 @@ def va(m):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -542,7 +541,6 @@ def vc1(m):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m.get(1, 4)) as o:
         baca.dls_staff_padding(o, 4)
@@ -616,7 +614,6 @@ def vc2(m):
                 u,
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
@@ -633,7 +630,6 @@ def vc2(m):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -696,7 +692,6 @@ def cb1(m):
             o.leaves(),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
         )
     with baca.scope(m.get(2, 4)) as o:
@@ -732,7 +727,6 @@ def cb2(m):
                 u,
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -756,7 +750,6 @@ def cb2(m):
             o.leaves(),
             "T1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )

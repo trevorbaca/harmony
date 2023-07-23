@@ -596,7 +596,6 @@ def va(m):
             o.leaves(),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -615,7 +614,6 @@ def va(m):
             o.leaves(),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
@@ -629,7 +627,6 @@ def va(m):
             o.leaves(),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
 
@@ -695,7 +692,6 @@ def vc2(m):
             o.leaves(),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m[4]) as o:
@@ -718,7 +714,6 @@ def vc2(m):
             o.leaves(),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 7.5"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
@@ -732,7 +727,6 @@ def vc2(m):
             o.leaves(),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m[13]) as o:
@@ -749,7 +743,6 @@ def cb1(m):
             o.leaves(),
             "T4 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m.get(5, 10)) as o:
@@ -811,7 +804,6 @@ def cb2(m):
             o.leaves(),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
@@ -827,7 +819,6 @@ def cb2(m):
             o.leaves(),
             "T2 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
 

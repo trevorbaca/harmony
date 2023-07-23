@@ -1074,7 +1074,6 @@ def composites(cache):
                 o.tleaves(),
                 "T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
                 bookend=True,
             )
         with baca.scope(m.get(6, 9)) as o:
@@ -1087,7 +1086,6 @@ def composites(cache):
                     run,
                     "T1 -> P1",
                     abjad.Tweak(r"- \tweak staff-padding 3"),
-                    autodetect_right_padding=False,
                     bookend=True,
                 )
         with baca.scope(m[11]) as o:

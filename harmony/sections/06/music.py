@@ -964,7 +964,6 @@ def va(cache):
             baca.select.rleak(o.tleaves()),
             "scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
         baca.metric_modulation_spanner(
             o.leaves()[:3],
@@ -1004,7 +1003,6 @@ def va(cache):
                 u,
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
         baca.dynamic(o.phead(-1), "f")
     with baca.scope(m[5]) as o:
@@ -1040,7 +1038,6 @@ def va(cache):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -1061,7 +1058,6 @@ def va(cache):
                 run,
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
         baca.bow_speed_spanner(
             baca.select.rleak(o.runs()[-1:]),
@@ -1085,7 +1081,6 @@ def vc1(cache):
             baca.select.rleak(o.tleaves()),
             "scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m[3]) as o:
         for run in abjad.select.runs(o, grace=True):
@@ -1120,7 +1115,6 @@ def vc1(cache):
             baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m[5]) as o:
         for run in abjad.select.runs(o, grace=True):
@@ -1155,7 +1149,6 @@ def vc1(cache):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m.get(1, 7)) as o:
         baca.dls_staff_padding(o, 4)
@@ -1176,7 +1169,6 @@ def vc1(cache):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
         baca.bow_speed_spanner(
             baca.select.rleak(o.runs()[-1:]),
@@ -1208,7 +1200,6 @@ def vc2(m):
             baca.select.rleak(o.tleaves()),
             "scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1221,7 +1212,6 @@ def vc2(m):
             baca.select.rleak(o.runs()[-1:]),
             "scr. =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
@@ -1246,7 +1236,6 @@ def vc2(m):
                 baca.select.rleak(run),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -1266,7 +1255,6 @@ def vc2(m):
             baca.select.rleak(o.tleaves()),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(10, 15)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1276,7 +1264,6 @@ def vc2(m):
                 run,
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
         baca.bow_speed_spanner(
             baca.select.rleak(o.runs()[-1:]),
@@ -1424,7 +1411,6 @@ def cb2(m):
                 u,
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
@@ -1437,7 +1423,6 @@ def cb2(m):
             o.leaves(),
             "T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=baca.select.mgroups(o.leaves(), [2, 1, 1, 2]),
         )

@@ -460,7 +460,6 @@ def va(m):
                 u,
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
                 bookend=True,
                 right_broken=True,
             )

@@ -923,7 +923,6 @@ def vc1(m):
         baca.metric_modulation_spanner(
             baca.select.rleak(o.tleaves()),
             abjad.Tweak(r"- \tweak staff-padding 12.0"),
-            autodetect_right_padding=False,
             # TODO: pitched trill suppresses start of text spanner
         )
     with baca.scope(m[6]) as o:
@@ -1000,7 +999,6 @@ def cb1(m):
             # TODO: pitched trill suppresses start of text spanner
             baca.select.rleak(o.tleaves()),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
-            autodetect_right_padding=False,
         )
     for item in [(1, 2), (4, 5), 10]:
         with baca.scope(m.get(item)) as o:
