@@ -891,7 +891,6 @@ def vc2(cache):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -939,7 +938,6 @@ def vc2(cache):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "tenor")
@@ -1076,7 +1074,6 @@ def cb2(cache):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1134,7 +1131,6 @@ def cb2(cache):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "treble")

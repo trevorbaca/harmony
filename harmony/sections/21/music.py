@@ -533,7 +533,6 @@ def va(m):
                 o.leaves(),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
                 bookend=-1,
                 left_broken=True,
             )
@@ -561,7 +560,6 @@ def va(m):
         baca.pizzicato_spanner(
             baca.select.rleak(o.tleaves(), count=2),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=False,
         )
     for n in [2, 5]:
         with baca.scope(m[n]) as o:
@@ -579,7 +577,6 @@ def vc1(m):
                 o.tleaves(),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=False,
                 bookend=-1,
             )
     with baca.scope(m[5]) as o:
@@ -633,7 +630,6 @@ def cb1(m):
                 o.tleaves(),
                 "T -> P",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=False,
                 bookend=-1,
             )
     with baca.scope(m[5]) as o:
@@ -662,7 +658,6 @@ def cb2(m):
                 o.leaves(),
                 "P1 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
                 bookend=-1,
             )
     with baca.scope(m[1]) as o:

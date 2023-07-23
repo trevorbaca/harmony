@@ -361,7 +361,6 @@ def vc1(cache):
             o.rleaves(),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             left_broken=True,
         )
     with baca.scope(m.get(2, 6)) as o:
@@ -413,7 +412,6 @@ def vc2(cache):
             o.rleaves(),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             left_broken=True,
         )
     with baca.scope(m.get(3, 6)) as o:
@@ -490,7 +488,6 @@ def cb2(cache):
             o.rleaves(),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             left_broken=True,
         )
     with baca.scope(m.get(5, 6)) as o:

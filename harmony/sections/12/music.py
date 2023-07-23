@@ -587,7 +587,6 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=False,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -913,7 +912,6 @@ def va(cache):
             o.tleaves(),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m[10]) as o:
@@ -965,7 +963,6 @@ def vc1(cache):
             o.tleaves(),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m[10]) as o:
@@ -1021,7 +1018,6 @@ def vc2(cache):
             o.tleaves(),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
         baca.dls_staff_padding(o, 6)
@@ -1073,7 +1069,6 @@ def cb1(cache):
             o.tleaves(),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
-            autodetect_right_padding=False,
             bookend=True,
         )
         baca.dls_staff_padding(o, 6)
@@ -1130,7 +1125,6 @@ def cb2(cache):
             o.tleaves(),
             "P4 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
         baca.dls_staff_padding(o, 6)
@@ -1180,7 +1174,6 @@ def composites(cache):
                     baca.select.rleak(baca.select.ltleaves(o)),
                     "T4 -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    autodetect_right_padding=False,
                     bookend=True,
                 )
             elif name in ("cb1", "cb2"):
@@ -1188,7 +1181,6 @@ def composites(cache):
                     baca.select.rleak(baca.select.ltleaves(o)),
                     "(T4) -> O",
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                    autodetect_right_padding=False,
                     bookend=True,
                 )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:

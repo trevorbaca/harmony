@@ -203,7 +203,6 @@ def cb2(m):
             o.leaves(),
             "T1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             left_broken=True,
         )

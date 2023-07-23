@@ -430,7 +430,6 @@ def vc2(m):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.dls_staff_padding(o, 4)
@@ -508,7 +507,6 @@ def cb2(m):
             baca.select.tleaves(o, rleak=True),
             "P1 =|",
             abjad.Tweak(rf"- \tweak staff-padding {3 + 1}"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m.get(1, 3)) as o:
         baca.dls_staff_padding(o, 4)

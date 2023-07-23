@@ -685,7 +685,6 @@ def cb2(cache):
             o.leaves(),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )

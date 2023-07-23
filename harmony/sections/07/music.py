@@ -766,7 +766,6 @@ def va(cache):
             r"\harmony-b-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=False,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -805,7 +804,6 @@ def vc1(cache):
             "scr. =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding -1.5"),
             abjad.Tweak(r"- \tweak staff-padding 3.5"),
-            autodetect_right_padding=False,
             left_broken=True,
         )
     with baca.scope(m[2]) as o:
@@ -849,7 +847,6 @@ def vc1(cache):
                 baca.select.tleaves(o, rleak=True),
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "B4")
@@ -877,7 +874,6 @@ def vc2(cache):
             baca.select.rleak(baca.select.tleaves(o)),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -908,7 +904,6 @@ def vc2(cache):
                 run,
                 "scr. =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=False,
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Dqs4")
@@ -945,7 +940,6 @@ def cb1(cache):
             o.leaves(),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
             left_broken=True,
         )
@@ -991,7 +985,6 @@ def cb1(cache):
             o.leaves(),
             "P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=True,
         )
     with baca.scope(m[7]) as o:
@@ -1038,7 +1031,6 @@ def cb2(m):
             o.leaves(),
             "T1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 3"),
-            autodetect_right_padding=False,
             bookend=-1,
             pieces=baca.select.lparts(o.leaves(), [2, 3]),
         )
