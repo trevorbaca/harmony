@@ -579,10 +579,6 @@ number.27.BassFlute.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-pp-ppp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -936,10 +932,6 @@ number.27.BassFlute.Music = {
 
     % [BassFlute.Music measure 4]
     r16
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 10
       %! SPANNER_START

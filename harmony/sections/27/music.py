@@ -461,7 +461,6 @@ def bfl(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
             lilypond_id=2,
@@ -470,7 +469,6 @@ def bfl(cache):
             o.rleaves(),
             "A =|",
             abjad.Tweak(r"- \tweak staff-padding 10"),
-            autodetect_right_padding=True,
             bookend=False,
         )
     with baca.scope(m[5]) as o:

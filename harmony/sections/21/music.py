@@ -372,7 +372,6 @@ def bfl(cache):
                 run,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
             )
     with baca.scope(m.get(1, 5)) as o:

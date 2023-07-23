@@ -1813,10 +1813,6 @@ number.4.Viola.Music.item.1 = {
     - \tweak self-alignment-X -0.5
       %! EXPLICIT_DYNAMIC
     \baca-ff-p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -2276,10 +2272,6 @@ number.4.Cello.1.Music.item.1 = {
       %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -2838,10 +2830,6 @@ number.4.Cello.2.Music.item.1 = {
       %! DAMP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanDamp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3375,10 +3363,6 @@ number.4.Contrabass.1.Music.item.1 = {
       %! PIZZICATO_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanPizzicato
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START

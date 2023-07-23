@@ -296,7 +296,6 @@ def bfl(m):
                 u,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
                 left_broken=True,
             )

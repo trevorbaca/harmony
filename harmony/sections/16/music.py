@@ -230,7 +230,6 @@ def bfl(m):
                 run,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
             )
     with baca.scope(m[8]) as o:
@@ -253,7 +252,6 @@ def bfl(m):
                 run,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
             )
     with baca.scope(m[10]) as o:
@@ -262,7 +260,6 @@ def bfl(m):
                 u,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
                 right_broken=True,
             )

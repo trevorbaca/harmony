@@ -542,7 +542,6 @@ def bfl(m):
                 run,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=True,
                 bookend=False,
             )
     with baca.scope(m.get(5, 6)) as o:
@@ -553,7 +552,6 @@ def bfl(m):
                 run,
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
-                autodetect_right_padding=True,
                 bookend=False,
             )
         baca.metric_modulation_spanner(

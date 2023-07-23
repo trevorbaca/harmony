@@ -1101,10 +1101,6 @@ number.14.BassFlute.Music = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -1119,10 +1115,6 @@ number.14.BassFlute.Music = {
     \stopTextSpan
 
     d'''2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
