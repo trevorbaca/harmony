@@ -672,20 +672,6 @@ number.10.BassFlute.Music.item.1 = {
 
     \voiceTwo
     g'8.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
-      %! SPANNER_START
-    - \tweak direction #down
-      %! SPANNER_START
-    - \tweak staff-padding 8
-      %! SPANNER_START
-    - \abjad-dashed-line-with-up-hook
-      %! SPANNER_START
-    - \baca-text-spanner-left-markup \harmony-g-sounds-ottava-higher-markup
-      %! SPANNER_START
-    \startTextSpan
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -696,6 +682,16 @@ number.10.BassFlute.Music.item.1 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+      %! SPANNER_START
+    - \tweak direction #down
+      %! SPANNER_START
+    - \tweak staff-padding 8
+      %! SPANNER_START
+    - \abjad-dashed-line-with-up-hook
+      %! SPANNER_START
+    - \baca-text-spanner-left-markup \harmony-g-sounds-ottava-higher-markup
+      %! SPANNER_START
+    \startTextSpan
     - \tweak stencil ##f
     ~
 
@@ -714,10 +710,6 @@ number.10.BassFlute.Music.item.2 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \p
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START

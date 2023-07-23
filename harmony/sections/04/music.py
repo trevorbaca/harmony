@@ -466,7 +466,6 @@ def va(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -514,7 +513,6 @@ def vc1(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -548,7 +546,6 @@ def vc2(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -599,7 +596,6 @@ def cb1(cache):
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 10"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )

@@ -680,10 +680,6 @@ number.18.BassFlute.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-p-sempre
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -698,10 +694,6 @@ number.18.BassFlute.Music = {
     \stopTextSpan
 
     d''2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -717,10 +709,6 @@ number.18.BassFlute.Music = {
     \stopTextSpan
 
     d''2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START

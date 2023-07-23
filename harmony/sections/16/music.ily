@@ -362,10 +362,6 @@ number.16.BassFlute.Music = {
     \baca-p-ancora
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -387,10 +383,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -406,10 +398,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -430,10 +418,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -452,10 +436,6 @@ number.16.BassFlute.Music = {
 
     % [BassFlute.Music measure 5]
     d'''2.
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -476,10 +456,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''4
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -559,10 +535,6 @@ number.16.BassFlute.Music = {
     d'''8.
       %! SPANNER_STOP
     \stopTrillSpan
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -577,10 +549,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''2
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak staff-padding 5.5
       %! SPANNER_START
@@ -596,12 +564,6 @@ number.16.BassFlute.Music = {
     \stopTextSpan
 
     d'''8.
-      %! AUTODETECT
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-      %! RIGHT_BROKEN
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! RIGHT_BROKEN
       %! SPANNER_START
     - \tweak staff-padding 5.5

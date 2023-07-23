@@ -532,10 +532,6 @@ number.2.BassFlute.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3175,10 +3171,6 @@ number.2.Viola.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3283,10 +3275,13 @@ number.2.Viola.Music.item.7 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! AUTODETECT
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    \<
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3297,13 +3292,6 @@ number.2.Viola.Music.item.7 = {
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
     - \tweak stencil ##f
     ~
 
@@ -4109,10 +4097,6 @@ number.2.Cello.1.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -4197,10 +4181,13 @@ number.2.Cello.1.Music.item.5 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! AUTODETECT
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    \<
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -4211,13 +4198,6 @@ number.2.Cello.1.Music.item.5 = {
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
     - \tweak stencil ##f
     ~
 
@@ -5010,10 +4990,6 @@ number.2.Cello.2.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -5073,10 +5049,13 @@ number.2.Cello.2.Music.item.4 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! AUTODETECT
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    \<
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -5087,13 +5066,6 @@ number.2.Cello.2.Music.item.4 = {
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
     - \tweak stencil ##f
     ~
 
@@ -5872,10 +5844,6 @@ number.2.Contrabass.1.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -5973,10 +5941,13 @@ number.2.Contrabass.1.Music.item.6 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! AUTODETECT
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    \<
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -5987,13 +5958,6 @@ number.2.Contrabass.1.Music.item.6 = {
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
     - \tweak stencil ##f
     ~
 
@@ -6877,10 +6841,6 @@ number.2.Contrabass.2.Music.item.1 = {
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
     \baca-f-mp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -6940,10 +6900,13 @@ number.2.Contrabass.2.Music.item.4 = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
-      %! AUTODETECT
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
+      %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
+    \<
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -6954,13 +6917,6 @@ number.2.Contrabass.2.Music.item.4 = {
     - \baca-text-spanner-left-markup \harmony-a-flat-sounds-ottava-higher-markup
       %! SPANNER_START
     \startTextSpan
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    \<
     - \tweak stencil ##f
     ~
 

@@ -573,7 +573,6 @@ def bfl(cache):
                 o.rleaves(),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
                 pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
             )
@@ -587,7 +586,6 @@ def bfl(cache):
                 clpart,
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
-                autodetect_right_padding=True,
                 bookend=False,
                 pieces=baca.select.lparts(clpart, [2, 2 + 1]),
             )

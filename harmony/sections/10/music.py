@@ -444,7 +444,6 @@ def bfl(cache):
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )
@@ -495,7 +494,6 @@ def bfl(cache):
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
-            autodetect_right_padding=True,
             bookend=False,
             direction=abjad.DOWN,
         )

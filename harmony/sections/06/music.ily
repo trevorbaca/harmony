@@ -2462,10 +2462,6 @@ number.6.Harp.Music = {
           %! EXPLICIT_CLEF
         \clef "treble"
         r8
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -2655,10 +2651,6 @@ number.6.Harp.Music = {
           %! SPANNER_STOP
         \mf
         \laissezVibrer
-          %! AUTODETECT
-          %! SPANNER_START
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! SPANNER_START
         - \tweak staff-padding 5.5
           %! SPANNER_START
@@ -2884,10 +2876,6 @@ number.6.Viola.Music.item.1 = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-mp-pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -2915,10 +2903,6 @@ number.6.Viola.Music.item.2 = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-mp-pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3641,10 +3625,6 @@ number.6.Cello.1.Music.item.1 = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-mp-pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
@@ -3672,10 +3652,6 @@ number.6.Cello.1.Music.item.2 = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-mp-pp
-      %! AUTODETECT
-      %! SPANNER_START
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 2.75
       %! SPANNER_START
     - \tweak direction #down
       %! SPANNER_START
