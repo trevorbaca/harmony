@@ -507,7 +507,7 @@ def va(m):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(3, 4)) as o:
         baca.pitch(o, "F3")
-        with baca.scope(o.leaves()[1:12]) as u:
+        with baca.scope(o.leaves()[1:11]) as u:
             baca.metric_modulation_spanner(
                 u,
                 abjad.Tweak(r"- \tweak staff-padding 8"),

@@ -2136,11 +2136,6 @@ number.23.Cello.2.Music = {
         - \tweak color #(x11-color 'blue)
           %! EXPLICIT_DYNAMIC
         \p
-          %! AUTODETECT
-          %! SPANNER_START
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak bound-details.right.padding 2.75
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \tweak staff-padding 3

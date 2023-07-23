@@ -2599,10 +2599,6 @@ number.28.Viola.Music = {
       %! BOW_SPEED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak bound-details.right.padding 6
-      %! BOW_SPEED_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
     - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
       %! LEFT_BROKEN
@@ -2681,11 +2677,6 @@ number.28.Viola.Music = {
     - \tweak self-alignment-X -0.9
       %! EXPLICIT_DYNAMIC
     \baca-p-sempre
-      %! AUTODETECT
-      %! SPANNER_START
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak bound-details.right.padding 3.25
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 3
