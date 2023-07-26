@@ -41,7 +41,7 @@ def GLOBALS(skips):
         (4 - 1, "4:3(4)=4"),
     ):
         skip = skips[index]
-        baca.metronome_mark(skip, item, library.manifests)
+        baca.metronome_mark(skip, item, manifests=library.manifests)
 
 
 def BFL(voice, time_signatures):
