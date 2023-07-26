@@ -363,11 +363,11 @@ number.16.BassFlute.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
       %! REAPPLIED_CLEF_REDRAW_COLOR
@@ -384,11 +384,11 @@ number.16.BassFlute.Music = {
 
     d'''2
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
 
@@ -399,11 +399,11 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
     - \tweak stencil ##f
@@ -419,11 +419,11 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
 
@@ -437,11 +437,11 @@ number.16.BassFlute.Music = {
     % [BassFlute.Music measure 5]
     d'''2.
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
     - \tweak stencil ##f
@@ -457,11 +457,11 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
 
@@ -536,11 +536,11 @@ number.16.BassFlute.Music = {
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
 
@@ -550,11 +550,11 @@ number.16.BassFlute.Music = {
 
     d'''2
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! SPANNER_START
     \startTextSpan
 
@@ -566,20 +566,16 @@ number.16.BassFlute.Music = {
     d'''8.
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! RIGHT_BROKEN
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! RIGHT_BROKEN
       %! SPANNER_START
-    \startTextSpan
-      %! METRIC_MODULATION_SPANNER
+    - \tweak staff-padding 5.5
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \tweak staff-padding 8
+    \startTextSpan
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -588,6 +584,10 @@ number.16.BassFlute.Music = {
       %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "MM"
+      %! METRIC_MODULATION_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    - \tweak staff-padding 8
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -1221,9 +1221,6 @@ number.16.Viola.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
@@ -1231,6 +1228,9 @@ number.16.Viola.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! HALF_CLT_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
@@ -1404,13 +1404,13 @@ number.16.Viola.Music = {
     \p
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanBowSpeed
@@ -1428,15 +1428,15 @@ number.16.Viola.Music = {
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! RIGHT_BROKEN
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "poco scr."
+      %! BOW_SPEED_SPANNER
+      %! RIGHT_BROKEN
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -1574,9 +1574,6 @@ number.16.Cello.1.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1584,6 +1581,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1603,9 +1603,6 @@ number.16.Cello.1.Music = {
     ds!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1613,6 +1610,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1626,9 +1626,6 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1636,6 +1633,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1654,9 +1654,6 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1664,6 +1661,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1680,9 +1680,6 @@ number.16.Cello.1.Music = {
     ds!2.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1690,6 +1687,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1708,9 +1708,6 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1718,6 +1715,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1780,18 +1780,18 @@ number.16.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+    - \tweak stencil ##f
+    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak stencil #abjad-flared-hairpin
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
 
     a,8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -1815,9 +1815,6 @@ number.16.Cello.1.Music = {
     \pp
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1825,6 +1822,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1837,9 +1837,6 @@ number.16.Cello.1.Music = {
     ds!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1847,6 +1844,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1860,9 +1860,6 @@ number.16.Cello.1.Music = {
     ds!8.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1870,6 +1867,9 @@ number.16.Cello.1.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1927,9 +1927,6 @@ number.16.Cello.2.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1937,6 +1934,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1956,9 +1956,6 @@ number.16.Cello.2.Music = {
     cs!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1966,6 +1963,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -1979,9 +1979,6 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -1989,6 +1986,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2007,9 +2007,6 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2017,6 +2014,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2033,9 +2033,6 @@ number.16.Cello.2.Music = {
     cs!2.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2043,6 +2040,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2061,9 +2061,6 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2071,6 +2068,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2133,18 +2133,18 @@ number.16.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+    - \tweak stencil ##f
+    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak stencil #abjad-flared-hairpin
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
 
     g,8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2168,9 +2168,6 @@ number.16.Cello.2.Music = {
     \pp
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2178,6 +2175,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2190,9 +2190,6 @@ number.16.Cello.2.Music = {
     cs!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2200,6 +2197,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2213,9 +2213,6 @@ number.16.Cello.2.Music = {
     cs!8.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
@@ -2223,6 +2220,9 @@ number.16.Cello.2.Music = {
       %! DAMP_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanDamp
@@ -2283,9 +2283,6 @@ number.16.Contrabass.1.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 8
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
@@ -2293,6 +2290,9 @@ number.16.Contrabass.1.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! HALF_CLT_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 8
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
@@ -2462,18 +2462,18 @@ number.16.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+    - \tweak stencil ##f
+    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak stencil #abjad-flared-hairpin
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
 
     gs,8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2500,9 +2500,6 @@ number.16.Contrabass.1.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 8
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
@@ -2510,6 +2507,9 @@ number.16.Contrabass.1.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! HALF_CLT_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 8
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
@@ -2641,9 +2641,6 @@ number.16.Contrabass.2.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 8
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
@@ -2651,6 +2648,9 @@ number.16.Contrabass.2.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! HALF_CLT_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 8
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT
@@ -2824,18 +2824,18 @@ number.16.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+    - \tweak stencil ##f
+    ~
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak stencil #abjad-flared-hairpin
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak stencil #abjad-flared-hairpin
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
 
     fs,8.
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2862,9 +2862,6 @@ number.16.Contrabass.2.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 8
-      %! HALF_CLT_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
@@ -2872,6 +2869,9 @@ number.16.Contrabass.2.Music = {
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-half-clt-markup
+      %! HALF_CLT_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 8
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanHalfCLT

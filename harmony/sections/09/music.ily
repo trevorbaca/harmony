@@ -187,10 +187,6 @@ number.9.BassFlute.Music = {
       %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak staff-padding 3
-      %! COVERED_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! COVERED_SPANNER
       %! LEFT_BROKEN
@@ -203,11 +199,11 @@ number.9.BassFlute.Music = {
       %! COVERED_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    \bacaStartTextSpanCovered
+    - \tweak staff-padding 3
+      %! COVERED_SPANNER
       %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 5.5
+    \bacaStartTextSpanCovered
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -216,6 +212,10 @@ number.9.BassFlute.Music = {
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "MM"
+      %! LEFT_BROKEN
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -248,9 +248,6 @@ number.9.BassFlute.Music = {
     [
       %! COVERED_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! COVERED_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! COVERED_SPANNER
       %! SPANNER_START
@@ -258,6 +255,9 @@ number.9.BassFlute.Music = {
       %! COVERED_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-covered-markup
+      %! COVERED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! COVERED_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanCovered
@@ -770,6 +770,21 @@ number.9.Viola.Music = {
     \mf
     - \tweak staff-padding 5.5
     ^ \harmony-match-harp-decay-markup
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \abjad-dashed-line-with-hook
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \baca-text-spanner-left-text "XFB"
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 3
+      %! BOW_SPEED_SPANNER
+      %! SPANNER_START
+    \bacaStartTextSpanBowSpeed
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -779,22 +794,7 @@ number.9.Viola.Music = {
     - \tweak to-barline ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
-    - \tweak circled-tip ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
     \>
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \abjad-dashed-line-with-hook
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    - \baca-text-spanner-left-text "XFB"
-      %! BOW_SPEED_SPANNER
-      %! SPANNER_START
-    \bacaStartTextSpanBowSpeed
     \glissando
 
     \hide NoteHead
@@ -833,35 +833,6 @@ number.9.Viola.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -873,7 +844,36 @@ number.9.Viola.Music = {
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
         \bacaStartTextSpanMetricModulation
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -984,16 +984,16 @@ number.9.Cello.1.Music = {
     \set Staff.shortInstrumentName = \harmony-vc-i-markup %@%
 
     b'2
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1024,35 +1024,6 @@ number.9.Cello.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1064,7 +1035,36 @@ number.9.Cello.1.Music = {
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
         \bacaStartTextSpanMetricModulation
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1177,16 +1177,16 @@ number.9.Cello.2.Music = {
     dqs'!2
     - \tweak staff-padding 1.5
     ^ \baca-eleven-a
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1217,35 +1217,6 @@ number.9.Cello.2.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \abjad-dashed-line-with-hook
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        - \baca-text-spanner-left-text "XFB"
-          %! BOW_SPEED_SPANNER
-          %! SPANNER_START
-        \bacaStartTextSpanBowSpeed
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1257,7 +1228,36 @@ number.9.Cello.2.Music = {
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
         \bacaStartTextSpanMetricModulation
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \abjad-dashed-line-with-hook
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \baca-text-spanner-left-text "XFB"
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        - \tweak staff-padding 5.5
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
+        \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1377,16 +1377,16 @@ number.9.Contrabass.1.Music = {
     e'2
     - \tweak padding 1
     _ \baca-string-iii-markup
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1417,23 +1417,6 @@ number.9.Contrabass.1.Music = {
           %! EXPLICIT_DYNAMIC
           %! SPANNER_STOP
         \mp
-          %! EXPLICIT_DYNAMIC_COLOR
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak color #(x11-color 'blue)
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak to-barline ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        - \tweak circled-tip ##t
-          %! EXPLICIT_DYNAMIC
-          %! SPANNER_START
-        \>
-          %! METRIC_MODULATION_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
-        - \tweak staff-padding 10.5
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1445,10 +1428,11 @@ number.9.Contrabass.1.Music = {
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
-        \bacaStartTextSpanMetricModulation
-          %! BOW_SPEED_SPANNER
+        - \tweak staff-padding 10.5
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
           %! SPANNER_START
-        - \tweak staff-padding 8
+        \bacaStartTextSpanMetricModulation
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
         - \abjad-dashed-line-with-hook
@@ -1457,7 +1441,23 @@ number.9.Contrabass.1.Music = {
         - \baca-text-spanner-left-text "XFB"
           %! BOW_SPEED_SPANNER
           %! SPANNER_START
+        - \tweak staff-padding 8
+          %! BOW_SPEED_SPANNER
+          %! SPANNER_START
         \bacaStartTextSpanBowSpeed
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak circled-tip ##t
+          %! EXPLICIT_DYNAMIC_COLOR
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak color #(x11-color 'blue)
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        - \tweak to-barline ##t
+          %! EXPLICIT_DYNAMIC
+          %! SPANNER_START
+        \>
 
         r4
           %! EXPLICIT_DYNAMIC_COLOR
@@ -1579,16 +1579,16 @@ number.9.Contrabass.2.Music = {
     a,2
     - \tweak padding 1
     _ \baca-string-iii-markup
-      %! EXPLICIT_DYNAMIC_COLOR
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
+      %! EXPLICIT_DYNAMIC_COLOR
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak color #(x11-color 'blue)
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
@@ -1637,9 +1637,6 @@ number.9.Contrabass.2.Music = {
     _ \baca-string-iii-markup
       %! PIZZICATO_SPANNER
       %! SPANNER_START
-    - \tweak staff-padding 6.5
-      %! PIZZICATO_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! PIZZICATO_SPANNER
       %! SPANNER_START
@@ -1647,6 +1644,9 @@ number.9.Contrabass.2.Music = {
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-pizz-markup
+      %! PIZZICATO_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 6.5
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     \bacaStartTextSpanPizzicato

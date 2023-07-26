@@ -443,10 +443,6 @@ number.8.BassFlute.Music = {
           %! COVERED_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
-        - \tweak staff-padding 5.5
-          %! COVERED_SPANNER
-          %! RIGHT_BROKEN
-          %! SPANNER_START
         - \abjad-dashed-line-with-hook
           %! COVERED_SPANNER
           %! RIGHT_BROKEN
@@ -459,11 +455,11 @@ number.8.BassFlute.Music = {
           %! COVERED_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
-        \bacaStartTextSpanCovered
-          %! METRIC_MODULATION_SPANNER
+        - \tweak staff-padding 5.5
+          %! COVERED_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
-        - \tweak staff-padding 8
+        \bacaStartTextSpanCovered
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -472,6 +468,10 @@ number.8.BassFlute.Music = {
           %! RIGHT_BROKEN
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
+          %! METRIC_MODULATION_SPANNER
+          %! RIGHT_BROKEN
+          %! SPANNER_START
+        - \tweak staff-padding 8
           %! METRIC_MODULATION_SPANNER
           %! RIGHT_BROKEN
           %! SPANNER_START
@@ -1267,6 +1267,9 @@ number.8.Viola.Music = {
     \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1274,9 +1277,6 @@ number.8.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1404,19 +1404,19 @@ number.8.Cello.1.Music = {
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
-    - \tweak bound-details.right.padding 4.5
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
-    - \tweak staff-padding 5.5
-      %! LEFT_BROKEN
-      %! METRIC_MODULATION_SPANNER
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "MM"
+      %! LEFT_BROKEN
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 4.5
+      %! LEFT_BROKEN
+      %! METRIC_MODULATION_SPANNER
+      %! SPANNER_START
+    - \tweak staff-padding 5.5
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -1584,6 +1584,9 @@ number.8.Cello.1.Music = {
     \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1591,9 +1594,6 @@ number.8.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1717,14 +1717,6 @@ number.8.Cello.2.Music = {
       %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak bound-details.right.padding 4.5
-      %! DAMP_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! LEFT_BROKEN
@@ -1734,6 +1726,14 @@ number.8.Cello.2.Music = {
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! LEFT_BROKEN
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 4.5
+      %! DAMP_SPANNER
+      %! LEFT_BROKEN
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
@@ -1760,6 +1760,9 @@ number.8.Cello.2.Music = {
     \baca-p-parenthesized
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"15" #"16"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1767,9 +1770,6 @@ number.8.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -1900,6 +1900,9 @@ number.8.Cello.2.Music = {
     \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1907,9 +1910,6 @@ number.8.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2163,6 +2163,9 @@ number.8.Contrabass.1.Music = {
     \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2170,9 +2173,6 @@ number.8.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2299,14 +2299,6 @@ number.8.Contrabass.2.Music = {
       %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
-    - \tweak bound-details.right.padding 4.5
-      %! DAMP_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
-    - \tweak staff-padding 3
-      %! DAMP_SPANNER
-      %! LEFT_BROKEN
-      %! SPANNER_START
     - \abjad-dashed-line-with-hook
       %! DAMP_SPANNER
       %! LEFT_BROKEN
@@ -2316,6 +2308,14 @@ number.8.Contrabass.2.Music = {
       %! LEFT_BROKEN
       %! SPANNER_START
     - \tweak bound-details.left-broken.text \baca-left-broken-damp-markup
+      %! DAMP_SPANNER
+      %! LEFT_BROKEN
+      %! SPANNER_START
+    - \tweak bound-details.right.padding 4.5
+      %! DAMP_SPANNER
+      %! LEFT_BROKEN
+      %! SPANNER_START
+    - \tweak staff-padding 3
       %! DAMP_SPANNER
       %! LEFT_BROKEN
       %! SPANNER_START
@@ -2345,6 +2345,9 @@ number.8.Contrabass.2.Music = {
     \baca-p-parenthesized
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"15" #"16"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2352,9 +2355,6 @@ number.8.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
@@ -2430,6 +2430,9 @@ number.8.Contrabass.2.Music = {
     \ff
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+      %! EXPLICIT_DYNAMIC
+      %! SPANNER_START
+    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -2437,9 +2440,6 @@ number.8.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak to-barline ##t
-      %! EXPLICIT_DYNAMIC
-      %! SPANNER_START
-    - \tweak circled-tip ##t
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
