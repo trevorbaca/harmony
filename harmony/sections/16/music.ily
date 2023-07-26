@@ -10,13 +10,13 @@ number.16.Skips = {
     \time 3/4
     s1 * 3/4
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "96" #'green4
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! REAPPLIED_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! REAPPLIED_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "96"
       %! REAPPLIED_METRONOME_MARK
@@ -363,7 +363,7 @@ number.16.BassFlute.Music = {
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -384,7 +384,7 @@ number.16.BassFlute.Music = {
 
     d'''2
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -399,7 +399,7 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -419,7 +419,7 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -437,7 +437,7 @@ number.16.BassFlute.Music = {
     % [BassFlute.Music measure 5]
     d'''2.
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -457,7 +457,7 @@ number.16.BassFlute.Music = {
 
     d'''4
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -536,7 +536,7 @@ number.16.BassFlute.Music = {
       %! SPANNER_STOP
     \stopTrillSpan
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -550,7 +550,7 @@ number.16.BassFlute.Music = {
 
     d'''2
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -566,7 +566,7 @@ number.16.BassFlute.Music = {
     d'''8.
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! RIGHT_BROKEN
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
@@ -579,7 +579,7 @@ number.16.BassFlute.Music = {
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! METRIC_MODULATION_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -1221,7 +1221,7 @@ number.16.Viola.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
@@ -1404,7 +1404,7 @@ number.16.Viola.Music = {
     \p
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
@@ -1428,7 +1428,7 @@ number.16.Viola.Music = {
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! RIGHT_BROKEN
       %! SPANNER_START
@@ -1574,7 +1574,7 @@ number.16.Cello.1.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1603,7 +1603,7 @@ number.16.Cello.1.Music = {
     ds!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1626,7 +1626,7 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1654,7 +1654,7 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1680,7 +1680,7 @@ number.16.Cello.1.Music = {
     ds!2.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1708,7 +1708,7 @@ number.16.Cello.1.Music = {
     ds!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1815,7 +1815,7 @@ number.16.Cello.1.Music = {
     \pp
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1837,7 +1837,7 @@ number.16.Cello.1.Music = {
     ds!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1860,7 +1860,7 @@ number.16.Cello.1.Music = {
     ds!8.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1927,7 +1927,7 @@ number.16.Cello.2.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Cello”)"
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1956,7 +1956,7 @@ number.16.Cello.2.Music = {
     cs!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -1979,7 +1979,7 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2007,7 +2007,7 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2033,7 +2033,7 @@ number.16.Cello.2.Music = {
     cs!2.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2061,7 +2061,7 @@ number.16.Cello.2.Music = {
     cs!4
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2168,7 +2168,7 @@ number.16.Cello.2.Music = {
     \pp
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2190,7 +2190,7 @@ number.16.Cello.2.Music = {
     cs!2
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2213,7 +2213,7 @@ number.16.Cello.2.Music = {
     cs!8.
       %! DAMP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! DAMP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-damp-markup
@@ -2283,7 +2283,7 @@ number.16.Contrabass.1.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
@@ -2500,7 +2500,7 @@ number.16.Contrabass.1.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
@@ -2641,7 +2641,7 @@ number.16.Contrabass.2.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
@@ -2862,7 +2862,7 @@ number.16.Contrabass.2.Music = {
     [
       %! HALF_CLT_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! HALF_CLT_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "½ clt"
