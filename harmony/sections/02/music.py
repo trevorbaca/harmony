@@ -48,7 +48,7 @@ def GLOBALS(skips, rests):
         (8 - 1, "5:4(8)=4"),
     ):
         skip = skips[index]
-        baca.metronome_mark(skip, item, library.manifests)
+        baca.metronome_mark(skip, item, manifests=library.manifests)
     wrappers = baca.markup(
         skips[12 - 1],
         r"\harmony-text-one",

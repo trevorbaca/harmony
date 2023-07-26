@@ -51,7 +51,7 @@ def GLOBALS(skips, rests, first_measure_number):
         (9 - 1, "3:2(8)=4"),
     ):
         skip = skips[index]
-        baca.metronome_mark(skip, item, library.manifests)
+        baca.metronome_mark(skip, item, manifests=library.manifests)
     wrappers = baca.markup(
         skips[4 - 1],
         r"\harmony-repeat-three-markup",

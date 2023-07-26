@@ -33,7 +33,7 @@ def GLOBALS(skips, first_measure_number):
         (3 - 1, "3:5(4)=4"),
     ):
         skip = skips[index]
-        baca.metronome_mark(skip, item, library.manifests)
+        baca.metronome_mark(skip, item, manifests=library.manifests)
     baca.open_volta(skips[2 - 1], first_measure_number)
     baca.close_volta(skips[3 - 1], first_measure_number, site="after")
 
