@@ -10,13 +10,13 @@ number.15.Skips = {
     \time 4/4
     s1 * 4/4
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
     - \baca-metronome-mark-spanner-colored-left-text 2 0 1 "96" #'green4
       %! REAPPLIED_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! REAPPLIED_METRONOME_MARK
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! REAPPLIED_METRONOME_MARK
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "96"
       %! REAPPLIED_METRONOME_MARK
@@ -374,7 +374,7 @@ number.15.BassFlute.Music = {
     \mf
       %! COVERED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! COVERED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-covered-markup
@@ -460,7 +460,7 @@ number.15.BassFlute.Music = {
       %! SPANNER_STOP
     \!
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
@@ -489,7 +489,7 @@ number.15.BassFlute.Music = {
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -532,7 +532,7 @@ number.15.BassFlute.Music = {
     \mf
       %! COVERED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! COVERED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-markup \baca-cov-markup
@@ -1320,7 +1320,7 @@ number.15.Viola.Music = {
     \p
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
@@ -1351,7 +1351,7 @@ number.15.Viola.Music = {
     \bacaStopTextSpanSCP
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
@@ -1383,7 +1383,7 @@ number.15.Viola.Music = {
     \p
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
@@ -1417,7 +1417,7 @@ number.15.Viola.Music = {
     \baca-p-sempre
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
@@ -1608,7 +1608,7 @@ number.15.Cello.1.Music = {
     \p
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
@@ -1868,7 +1868,7 @@ number.15.Cello.2.Music = {
         \baca-f-ancora
           %! SCP_SPANNER
           %! SPANNER_START
-        - \abjad-invisible-line
+        - \baca-invisible-line
           %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "P4"
@@ -1901,7 +1901,7 @@ number.15.Cello.2.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
@@ -2165,7 +2165,7 @@ number.15.Contrabass.1.Music = {
         ^ \baca-seven-e-flat
           %! SCP_SPANNER
           %! SPANNER_START
-        - \abjad-invisible-line
+        - \baca-invisible-line
           %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "P4"
@@ -2198,7 +2198,7 @@ number.15.Contrabass.1.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"
@@ -2463,7 +2463,7 @@ number.15.Contrabass.2.Music = {
         \baca-f-ancora
           %! SCP_SPANNER
           %! SPANNER_START
-        - \abjad-invisible-line
+        - \baca-invisible-line
           %! SCP_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "P4"
@@ -2496,7 +2496,7 @@ number.15.Contrabass.2.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "T4"

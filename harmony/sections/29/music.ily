@@ -11,7 +11,7 @@ number.29.Skips = {
     s1 * 6/4
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"72" #2 #0 #2 #3 #2 #0 #'(0.525 . 0.525)
@@ -20,7 +20,7 @@ number.29.Skips = {
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"72" #2 #0 #2 #3 #2 #0 #'(1 . 1)
@@ -28,14 +28,14 @@ number.29.Skips = {
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"72" #2 #0 #2 #3 #2 #0 #'(1 . 1) #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "72"
@@ -1250,7 +1250,7 @@ number.29.Contrabass.2.Music = {
       %! LEFT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! LEFT_BROKEN
       %! SCP_SPANNER
       %! SPANNER_START

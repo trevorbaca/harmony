@@ -11,7 +11,7 @@ number.25.Skips = {
     s1 * 7/4
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #3 #0 #2 #3 #2 #0 #'(0.525 . 0.525)
@@ -20,7 +20,7 @@ number.25.Skips = {
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #3 #0 #2 #3 #2 #0 #'(1 . 1)
@@ -28,14 +28,14 @@ number.25.Skips = {
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"144" #3 #0 #2 #3 #2 #0 #'(1 . 1) #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "144"
@@ -76,7 +76,7 @@ number.25.Skips = {
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
     %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #1 #0 #5 #4 #2 #0 #'(0.525 . 0.525)
@@ -85,7 +85,7 @@ number.25.Skips = {
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #1 #0 #5 #4 #2 #0 #'(1 . 1)
@@ -93,14 +93,14 @@ number.25.Skips = {
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-colored-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #1 #0 #5 #4 #2 #0 #'(1 . 1) #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
     %@% - \baca-metronome-mark-spanner-left-text-mixed-number 2 0 1 "57" "3" "5"
@@ -141,7 +141,7 @@ number.25.Skips = {
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"48" #2 #0 #6 #5 #2 #0 #'(0.525 . 0.525)
@@ -150,7 +150,7 @@ number.25.Skips = {
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% - \baca-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"48" #2 #0 #6 #5 #2 #0 #'(1 . 1)
@@ -158,14 +158,14 @@ number.25.Skips = {
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-colored-bracketed-metric-modulation-tuplet-lhs #2 #0 #1 #"48" #2 #0 #6 #5 #2 #0 #'(1 . 1) #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
     %@% - \baca-metronome-mark-spanner-left-text 2 0 1 "48"
@@ -235,7 +235,7 @@ number.25.Skips = {
     \bacaStopTextSpanSNM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
     %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #6 #2 #0 #'(0.525 . 0.525)
@@ -244,7 +244,7 @@ number.25.Skips = {
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% - \baca-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #6 #2 #0 #'(1 . 1)
@@ -252,14 +252,14 @@ number.25.Skips = {
       %! METRIC_MODULATION_IS_NOT_SCALED
     %@% \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
-    - \abjad-invisible-line
+    - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     - \baca-colored-bracketed-mixed-number-metric-modulation-tuplet-lhs #2 #0 #1 #"57" #"3" #"5" #2 #0 #5 #6 #2 #0 #'(1 . 1) #'blue
       %! EXPLICIT_METRONOME_MARK_WITH_COLOR
     \bacaStartTextSpanMM
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
-    %@% - \abjad-invisible-line
+    %@% - \baca-invisible-line
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_STRIPPED
     %@% - \baca-metronome-mark-spanner-left-text-mixed-number 2 0 1 "57" "3" "5"
@@ -659,7 +659,7 @@ number.25.BassFlute.Music = {
       %! SPANNER_STOP
     \!
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -692,7 +692,7 @@ number.25.BassFlute.Music = {
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
@@ -739,7 +739,7 @@ number.25.BassFlute.Music = {
     \!
     [
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -773,7 +773,7 @@ number.25.BassFlute.Music = {
     \stopTextSpan
     ]
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
@@ -819,7 +819,7 @@ number.25.BassFlute.Music = {
       %! SPANNER_STOP
     \!
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "A"
       %! SPANNER_START
@@ -852,7 +852,7 @@ number.25.BassFlute.Music = {
       %! SPANNER_STOP
     \stopTextSpan
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SPANNER_START
     - \baca-text-spanner-left-text "T"
       %! SPANNER_START
@@ -1637,7 +1637,7 @@ number.25.Percussion.1.Music = {
         r8
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -1860,7 +1860,7 @@ number.25.Percussion.2.Music = {
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! LEFT_BROKEN
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
@@ -2331,7 +2331,7 @@ number.25.Harp.Music = {
         r8
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -2561,7 +2561,7 @@ number.25.Viola.Music = {
     %@% ^ \baca-reapplied-instrument-markup "(“Viola”)"
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
-    - \abjad-dashed-line-with-hook
+    - \baca-dashed-line-with-hook
       %! BOW_SPEED_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "XFB"
@@ -2604,7 +2604,7 @@ number.25.Viola.Music = {
     \bacaStopTextSpanBowSpeed
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
@@ -2633,7 +2633,7 @@ number.25.Viola.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
@@ -2657,7 +2657,7 @@ number.25.Viola.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P3"
@@ -3103,7 +3103,7 @@ number.25.Cello.1.Music = {
         ^ \baca-quasi-bisb-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -3148,7 +3148,7 @@ number.25.Cello.1.Music = {
     \bacaStopTextSpanMetricModulation
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
@@ -3175,7 +3175,7 @@ number.25.Cello.1.Music = {
     [
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
@@ -3195,7 +3195,7 @@ number.25.Cello.1.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
@@ -3222,7 +3222,7 @@ number.25.Cello.1.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
@@ -3674,7 +3674,7 @@ number.25.Cello.2.Music = {
         ^ \baca-quasi-bisb-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -3719,7 +3719,7 @@ number.25.Cello.2.Music = {
     \bacaStopTextSpanMetricModulation
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
@@ -3750,7 +3750,7 @@ number.25.Cello.2.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
@@ -4138,7 +4138,7 @@ number.25.Contrabass.1.Music = {
         ^ \baca-quasi-bisb-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -4183,7 +4183,7 @@ number.25.Contrabass.1.Music = {
     \bacaStopTextSpanMetricModulation
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
@@ -4209,7 +4209,7 @@ number.25.Contrabass.1.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
@@ -4233,7 +4233,7 @@ number.25.Contrabass.1.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
@@ -4710,7 +4710,7 @@ number.25.Contrabass.2.Music = {
         ^ \baca-quasi-bisb-markup
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
-        - \abjad-dashed-line-with-hook
+        - \baca-dashed-line-with-hook
           %! METRIC_MODULATION_SPANNER
           %! SPANNER_START
         - \baca-text-spanner-left-text "MM"
@@ -4755,7 +4755,7 @@ number.25.Contrabass.2.Music = {
     \bacaStopTextSpanMetricModulation
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
@@ -4786,7 +4786,7 @@ number.25.Contrabass.2.Music = {
     ]
       %! SCP_SPANNER
       %! SPANNER_START
-    - \abjad-solid-line-with-arrow
+    - \baca-solid-line-with-arrow
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P2"
