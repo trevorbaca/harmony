@@ -1,4 +1,4 @@
-\version "2.25.6"
+\version "2.25.7"
 \include "../stylesheet.ily"
 \include "music.ily"
 
