@@ -116,7 +116,7 @@ def make_appoggiato_rhythm(
     if incise is True:
         prefix_talea = [-1]
         prefix_counts = [1]
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.incised(
         durations,
         extra_counts=extra_counts,
@@ -174,7 +174,7 @@ def make_appoggiato_rhythm(
 
 
 def make_empty_score():
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     global_context = baca.score.make_global_context()
     bass_flute_music_voice = abjad.Voice(name="BassFlute.Music", tag=tag)
     bass_flute_music_staff = abjad.Staff(
@@ -314,7 +314,7 @@ def make_phjc_rhythm(
     )
     durations = [abjad.sequence.flatten(_) for _ in durations]
     durations = [[sum(_)] for _ in durations]
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
@@ -349,7 +349,7 @@ def make_phjc_rhythm(
 
 
 def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=None):
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     lists = abjad.sequence.partition_by_counts(
         durations, [2], cyclic=True, overhang=True
@@ -398,7 +398,7 @@ def make_sixteenths(
     unbeam=False,
     after_grace=False,
 ):
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     talea_denominator = talea_denominator or 16
     if durations is not None:
         durations = durations
@@ -519,7 +519,7 @@ def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -545,7 +545,7 @@ def make_tessera_2(
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -573,7 +573,7 @@ def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -597,7 +597,7 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
         for count in counts:
             new_counts.extend([count - 1, -1])
         counts = list(new_counts)
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -611,7 +611,7 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
 
 
 def make_train_rhythm(time_signatures, counts, *, rest_leaves=None):
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -634,7 +634,7 @@ def make_tuplet(
     force_augmentation=False,
     written_quarters=False,
 ):
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.tuplet(durations, ratios, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
@@ -669,7 +669,7 @@ def make_warble_rhythm(
         durations = abjad.sequence.split(
             durations, divisions_, cyclic=True, overhang=True
         )
-    tag = baca.tags.function_name(inspect.currentframe())
+    tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest_tuplets is not None:
