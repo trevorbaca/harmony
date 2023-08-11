@@ -3,9 +3,6 @@ number.28.Skips = {
     % [Skips measure 1]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'blue
-      %! +SECTION
-      %! EMPTY_START_BAR
-    \bar ""
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4

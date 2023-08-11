@@ -3,9 +3,6 @@ number.10.Skips = {
     % [Skips measure 1]
       %! REAPPLIED_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'green4
-      %! +SECTION
-      %! EMPTY_START_BAR
-    \bar ""
       %! REAPPLIED_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
