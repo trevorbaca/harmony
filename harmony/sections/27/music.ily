@@ -1,6 +1,8 @@
 number.27.Skips = {
 
     % [Skips measure 1]
+      %! RED_START_BAR
+    %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #'blue
     \override TextScript.extra-offset = #'(1.5 . 12)
