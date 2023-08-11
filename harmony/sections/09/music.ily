@@ -4,7 +4,7 @@ number.9.Skips = {
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
     \bar ".|:"
       %! MEASURE_72
       %! NOT_MOL

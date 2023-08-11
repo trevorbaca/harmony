@@ -4,7 +4,7 @@ number.27.Skips = {
       %! RED_START_BAR
     %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
     \override TextScript.extra-offset = #'(1.5 . 12)
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/4
@@ -67,7 +67,7 @@ number.27.Skips = {
 
     % [Skips measure 2]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
@@ -96,7 +96,7 @@ number.27.Skips = {
 
     % [Skips measure 3]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 5/4
     s1 * 5/4
@@ -161,7 +161,7 @@ number.27.Skips = {
 
     % [Skips measure 4]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
     \bar ".|:"
       %! MEASURE_250
       %! NOT_MOL
@@ -245,7 +245,7 @@ number.27.Skips = {
 
     % [Skips measure 5]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 6/4
     s1 * 6/4
@@ -335,7 +335,7 @@ number.27.Skips = {
 
     % [Skips measure 7]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 2/4
     s1 * 2/4
@@ -400,7 +400,7 @@ number.27.Skips = {
 
     % [Skips measure 8]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 1/4
     s1 * 1/4
@@ -429,7 +429,7 @@ number.27.Skips = {
 
     % [Skips measure 9]
       %! EXPLICIT_TIME_SIGNATURE_COLOR
-    \baca-time-signature-color #'blue
+    \baca-time-signature-color #blue
       %! EXPLICIT_TIME_SIGNATURE
     \time 7/4
     s1 * 7/4
