@@ -5359,7 +5359,7 @@ number.6.Contrabass.1.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - invisible-line
+    - \baca-invisible-line
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "P1"
@@ -6129,7 +6129,7 @@ number.6.Contrabass.2.Music = {
     \bacaStopTextSpanSCP
       %! SCP_SPANNER
       %! SPANNER_START
-    - invisible-line
+    - \baca-invisible-line
       %! SCP_SPANNER
       %! SPANNER_START
     - \baca-text-spanner-left-text "O"
