@@ -1,30 +1,15 @@
 import baca
 
-distances = (10,)
-y_offset_1 = 5 + 1 * 9
-y_offset_2 = 27 + 2 * 9
-y_offset_3 = 49 + 3 * 9
-y_offset_4 = 71 + 4 * 9
-y_offset_5 = 93 + 5 * 9
-y_offset_6 = 115 + 6 * 9
-
-empty_measures = [
-    77,
-    78,
-    79,
-    80,
-    121,
-    188,
-    196,
-    197,
-    212,
-    216,
-    247,
-    267,
-]
-
 
 def main():
+    distances = (10,)
+    y_offset_1 = 5 + 1 * 9
+    y_offset_2 = 27 + 2 * 9
+    y_offset_3 = 49 + 3 * 9
+    y_offset_4 = 71 + 4 * 9
+    y_offset_5 = 93 + 5 * 9
+    y_offset_6 = 115 + 6 * 9
+    empty_measures = [77, 78, 79, 80, 121, 188, 196, 197, 212, 216, 247, 267]
     spacing = baca.make_layout(
         baca.page(
             1,
