@@ -1131,19 +1131,6 @@ def make_score(first_measure_number, previous_persistent_indicators):
     return score
 
 
-def main():
-    environment = baca.build.read_environment(__file__, baca.build.argv())
-    if environment.score():
-        score = make_score(
-            environment.first_measure_number,
-            environment.previous_metadata["persistent_indicators"],
-            environment.timing,
-        )
-        persist_score(score, environment)
-    if environment.arguments.layout:
-        make_layout()
-
-
 def persist_score(score, environment):
     metadata = baca.section.postprocess_score(
         score,
@@ -1198,6 +1185,19 @@ def make_layout():
         ),
     )
     baca.section.make_layout_ly(spacing)
+
+
+def main():
+    environment = baca.build.read_environment(__file__, baca.build.argv())
+    if environment.score():
+        score = make_score(
+            environment.first_measure_number,
+            environment.previous_metadata["persistent_indicators"],
+            environment.timing,
+        )
+        persist_score(score, environment)
+    if environment.arguments.layout:
+        make_layout()
 
 
 if __name__ == "__main__":

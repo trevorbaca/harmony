@@ -548,15 +548,6 @@ def make_score(first_measure_number):
     return score
 
 
-def main():
-    environment = baca.build.read_environment(__file__, baca.build.argv())
-    if environment.score():
-        score = make_score(environment.first_measure_number, environment.timing)
-        persist_score(score, environment)
-    if environment.arguments.layout:
-        make_layout()
-
-
 def persist_score(score, environment):
     metadata = baca.section.postprocess_score(
         score,
@@ -605,6 +596,15 @@ def make_layout():
         overrides=(baca.space(3, (1, 64)),),
     )
     baca.section.make_layout_ly(spacing)
+
+
+def main():
+    environment = baca.build.read_environment(__file__, baca.build.argv())
+    if environment.score():
+        score = make_score(environment.first_measure_number, environment.timing)
+        persist_score(score, environment)
+    if environment.arguments.layout:
+        make_layout()
 
 
 if __name__ == "__main__":
