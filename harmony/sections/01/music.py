@@ -4,20 +4,8 @@ import baca
 from harmony import library
 
 #########################################################################################
-######################################### 01 [A] ########################################
+########################################### 01 ##########################################
 #########################################################################################
-
-
-def make_empty_score():
-    score = library.make_empty_score()
-    voices = baca.section.cache_voices(score, library.voice_abbreviations)
-    time_signatures = [
-        (6, 4),
-        (5, 4),
-        (3, 4),
-    ]
-    time_signatures = baca.section.wrap(time_signatures)
-    return score, voices, time_signatures
 
 
 def GLOBALS(skips, first_measure_number):
@@ -513,7 +501,10 @@ def cb2(m):
 
 @baca.build.timed("make_score")
 def make_score(first_measure_number):
-    score, voices, time_signatures = make_empty_score()
+    score = library.make_empty_score()
+    voices = baca.section.cache_voices(score, library.voice_abbreviations)
+    pairs = [(6, 4), (5, 4), (3, 4)]
+    time_signatures = baca.section.wrap(pairs)
     baca.section.set_up_score(
         score,
         time_signatures(),
