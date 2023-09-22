@@ -509,7 +509,6 @@ def make_score(first_measure_number):
         score,
         time_signatures(),
         append_anchor_skip=True,
-        always_make_global_rests=True,
         manifests=library.manifests,
     )
     GLOBALS(score["Skips"], first_measure_number)
@@ -544,7 +543,6 @@ def persist_score(score, environment):
         score,
         environment,
         library.manifests,
-        always_make_global_rests=True,
         empty_fermata_measures=True,
         first_section=True,
         global_rests_in_topmost_staff=True,
