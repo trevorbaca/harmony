@@ -228,7 +228,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -248,7 +248,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(9),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_tuplet(
@@ -260,7 +260,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(11),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -282,7 +282,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -326,7 +326,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -350,7 +350,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(9),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_tuplet(
@@ -362,7 +362,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(11),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -384,7 +384,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -435,14 +435,14 @@ def CB2(voice, time_signatures):
         durations="measures",
         extra_counts=[4],
         tuplet_ratio_denominator=None,
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -465,7 +465,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(9),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_tuplet(
@@ -477,7 +477,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(11),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

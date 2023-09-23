@@ -164,7 +164,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -194,7 +194,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -224,7 +224,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -253,7 +253,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [2, 2, 2, 2, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))

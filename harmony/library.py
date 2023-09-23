@@ -390,7 +390,6 @@ def make_sixteenths(
     unbeam=False,
     untie=False,
     written=(),
-    written_quarters=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert isinstance(talea_denominator, int), repr(talea_denominator)
@@ -424,13 +423,6 @@ def make_sixteenths(
         if indices is not True:
             pleaves = abjad.select.get(pleaves, indices)
         rmakers.written_duration(pleaves, pair)
-    if written_quarters is True:
-        pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration(pleaves, (1, 4))
-    elif written_quarters is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_quarters)
-        rmakers.written_duration(pleaves, (1, 4))
     violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
     if violators:
         rmakers.unbeam(voice)

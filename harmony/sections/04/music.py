@@ -53,7 +53,7 @@ def BFL(voice, time_signatures):
         time_signatures(9),
         [2, 2, 16],
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
         tie=([2], 3),
     )
     voice.extend(music)
@@ -149,7 +149,7 @@ def HP(voice, time_signatures):
         time_signatures(9),
         [2, 2, 16],
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))

@@ -150,7 +150,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -173,7 +173,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -196,7 +196,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [2],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)

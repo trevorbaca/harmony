@@ -48,7 +48,7 @@ def BFL(voice, time_signatures):
         time_signatures(1, 5),
         sixteenths,
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
         tie=([2], 3),
     )
     voice.extend(music)
@@ -69,7 +69,7 @@ def BFL(voice, time_signatures):
         time_signatures(8, 11),
         [2, 2, 16],
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
         tie=([2], 3),
     )
     voice.extend(music)
@@ -94,7 +94,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(6),
         [3, 1, "-", 3, 1],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -168,7 +168,7 @@ def HP(voice, time_signatures):
         time_signatures(1, 5),
         sixteenths,
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -185,7 +185,7 @@ def HP(voice, time_signatures):
         time_signatures(8, 11),
         [2, 2, 16],
         invisible=([1], 3),
-        written_quarters=([0, 1], 3),
+        written=[((1, 4), ([0, 1], 3))],
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(12))
