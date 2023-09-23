@@ -161,7 +161,7 @@ def VA(voice, time_signatures):
         [-4, 3, -1, 3, -1, 3, -1],
         durations="measures",
         extra_counts=[4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -190,7 +190,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [1, -3, 1, -2, 3, -1, 3, -1],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[1, 2],
     )

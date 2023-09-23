@@ -68,7 +68,7 @@ def HP(voice, time_signatures):
         time_signatures(1),
         [-6, -2, 4, "-"],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(2))
@@ -88,7 +88,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-12, 12, -4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
     )
@@ -109,7 +109,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-12, 12, -4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
     )
@@ -130,7 +130,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-12, 12, -4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
     )
@@ -151,7 +151,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-12, 12, -4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
     )

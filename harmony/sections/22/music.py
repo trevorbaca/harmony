@@ -87,7 +87,7 @@ def PERC1(voice, time_signatures):
         time_signatures(4),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_notes(time_signatures(5, 10))
@@ -100,7 +100,7 @@ def PERC1(voice, time_signatures):
         time_signatures(13),
         [-8, 8, "-"],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -181,7 +181,7 @@ def VA(voice, time_signatures):
         time_signatures(4),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -203,7 +203,7 @@ def VA(voice, time_signatures):
         time_signatures(13),
         [-20, 2, "-"],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -246,7 +246,7 @@ def VC2(voice, time_signatures):
         time_signatures(1, 3),
         [46],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         after_grace=True,
     )
     voice.extend(music)
@@ -261,7 +261,7 @@ def VC2(voice, time_signatures):
         [18, 14, 12, 6, 4, 2, 2, 2, 2, 4, 6, 12, "+"],
         extra_counts=[2],
         after_grace=True,
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(11))

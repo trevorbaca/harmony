@@ -65,7 +65,7 @@ def BFL(voice, time_signatures):
         time_signatures(6),
         ["-", -2, 4, -2, 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     durations = [_.duration for _ in time_signatures(7)]
@@ -75,7 +75,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [-4, 8, "-", 2, 2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -2],
         invisible=[-1],
@@ -179,7 +179,7 @@ def HP(voice, time_signatures):
         time_signatures(6),
         [-2, 4, "-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     durations = [_.duration for _ in time_signatures(7)]
@@ -189,7 +189,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [-4, -4, 8, -2, -4, 2, 2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4, 0, -2],
         written_quarters=[-2, -1],
@@ -239,7 +239,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(5),
         [6, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -2],
         tie=[0],
@@ -300,7 +300,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 8],
     )

@@ -72,7 +72,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(9),
         [4, 4, 4, -4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[4],
     )
@@ -137,7 +137,7 @@ def PERC1(voice, time_signatures):
         time_signatures(11),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -152,7 +152,7 @@ def PERC1(voice, time_signatures):
         time_signatures(13),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -280,7 +280,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, -4, 2, 2, 2, 2, 2, 2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
         invisible_pairs=True,
@@ -319,7 +319,7 @@ def VA(voice, time_signatures):
         time_signatures(11),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_tuplet(
@@ -332,7 +332,7 @@ def VA(voice, time_signatures):
         time_signatures(13),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -524,7 +524,7 @@ def CB2(voice, time_signatures):
         [-4, 2, 2, 2, 2],
         durations="measures",
         extra_counts=[-4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         written_quarters=True,
         invisible_pairs=True,
     )
@@ -577,7 +577,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(12),
         [3, -1, -8, "-", 3, -1, -8],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[4],
     )
