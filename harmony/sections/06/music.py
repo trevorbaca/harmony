@@ -70,13 +70,13 @@ def BFL(voice, time_signatures):
         extra_counts=[0, -2],
         durations=durations,
         invisible_pairs=True,
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4),
         [2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -91,13 +91,13 @@ def BFL(voice, time_signatures):
         durations=durations,
         extra_counts=[0, -2],
         invisible_pairs=True,
-        written_quarters=True,
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6),
         [2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -252,7 +252,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -267,13 +267,13 @@ def HP(voice, time_signatures):
         durations=durations,
         extra_counts=[0, 1],
         invisible=[-1],
-        written_quarters=[-2, -1],
+        written=[((1, 4), [-2, -1])],
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(5),
         [2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -344,7 +344,7 @@ def HP(voice, time_signatures):
         durations=durations,
         extra_counts=[0, 1],
         invisible=[-1],
-        written_quarters=[-2, -1],
+        written=[((1, 4), [-2, -1])],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

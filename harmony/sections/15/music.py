@@ -61,7 +61,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [3, 1, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)

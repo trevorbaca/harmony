@@ -73,7 +73,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(5),
         [2, 2, 4, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)

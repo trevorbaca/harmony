@@ -91,7 +91,7 @@ def BFL(voice, time_signatures):
         ["-", 4, 4],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_quarters=([0], 1),
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -107,7 +107,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -116,7 +116,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -128,14 +128,14 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [3, 1, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(8),
         [3, 1, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -144,7 +144,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
@@ -258,7 +258,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -267,7 +267,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -288,7 +288,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
@@ -307,13 +307,13 @@ def VC1(voice, time_signatures):
         durations=durations,
         extra_counts=[0, -2],
         invisible=([1], 2),
-        written_quarters=([0], 1),
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -322,7 +322,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -348,7 +348,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
@@ -365,7 +365,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -374,7 +374,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -400,7 +400,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
@@ -419,13 +419,13 @@ def CB1(voice, time_signatures):
         durations=durations,
         extra_counts=[0, -2],
         invisible=([1], 2),
-        written_quarters=([0], 1),
+        written=[((1, 4), True)],
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -434,7 +434,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -459,7 +459,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
@@ -476,7 +476,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-8, 2, 2, "-"],
-        written_quarters=True,
+        written=[((1, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -485,7 +485,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [2, 2, 4, 4, 2, 2, 2, 2, 4, 4, 2, -2],
-        written_quarters=[0, 1],
+        written=[((1, 4), [0, 1])],
         invisible=[1],
     )
     voice.extend(music)
@@ -510,7 +510,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         [2, 2, 4, 2, 2, 2, 2],
-        written_quarters=[0, 1, 3, 4, 5, 6],
+        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
         invisible=[1, 4, 6],
     )
     voice.extend(music)
