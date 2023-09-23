@@ -375,7 +375,7 @@ def make_sixteenths(
     counts,
     *,
     beam=False,
-    durations=None,
+    durations="quarters",
     fuse=False,
     denominator=(1, 16),
     do_not_rewrite_meter=False,
@@ -390,7 +390,7 @@ def make_sixteenths(
     written_double_dotted_wholes=None,
     invisible=None,
     invisible_pairs=False,
-    talea_denominator=None,
+    talea_denominator=16,
     tie=None,
     tie_runs=False,
     tie_all=False,
@@ -399,15 +399,15 @@ def make_sixteenths(
     after_grace=False,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
-    talea_denominator = talea_denominator or 16
-    if durations is not None:
-        durations = durations
-    elif fuse is True:
-        durations = [_.duration for _ in time_signatures]
-    else:
+    assert isinstance(talea_denominator, int), repr(talea_denominator)
+    if durations == "quarters":
         durations = [_.duration for _ in time_signatures]
         durations = [sum(durations)]
         durations = baca.sequence.quarters(durations)
+    elif durations == "measures":
+        durations = [_.duration for _ in time_signatures]
+    else:
+        assert durations is not None, repr(durations)
     tuplets = rmakers.talea(
         durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
     )

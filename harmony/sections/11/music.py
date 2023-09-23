@@ -56,7 +56,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [6, 6],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
@@ -89,7 +89,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(10),
         ["-", 4, 4],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_quarters=([0], 1),
         invisible_pairs=True,
@@ -172,7 +172,7 @@ def PERC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(6),
         [-12, -6, 3, -3],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
     )
     voice.extend(music)

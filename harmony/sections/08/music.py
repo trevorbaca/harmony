@@ -74,7 +74,7 @@ def HP(voice, time_signatures):
         time_signatures(1, 6),
         [6, 6, 16],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_dotted_halves=([0, 1], 3),
         invisible=([1], 3),
     )
@@ -90,7 +90,7 @@ def VA(voice, time_signatures):
         time_signatures(1, 6),
         [12, 8, 8],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     )
@@ -111,7 +111,7 @@ def VC1(voice, time_signatures):
         time_signatures(2, 6),
         [8, 8, 12],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_wholes=([0, 1], 3),
         invisible=([1], 3),
     )
@@ -140,7 +140,7 @@ def VC2(voice, time_signatures):
         time_signatures(3, 6),
         [12, 8, 8],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     )
@@ -161,7 +161,7 @@ def CB1(voice, time_signatures):
         time_signatures(4, 6),
         [8, 8, 12],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_wholes=([0, 1], 3),
         invisible=([1], 3),
     )
@@ -176,7 +176,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 4),
         [12, 16, 12, 15, 1],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_wholes=[-2],
         invisible=[-1],
@@ -186,7 +186,7 @@ def CB2(voice, time_signatures):
         time_signatures(5, 6),
         [12, 8, 8],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_wholes=([1, 2], 3),
         invisible=([2], 3),
     )

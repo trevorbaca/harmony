@@ -136,7 +136,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 8],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         after_grace=True,
     )
@@ -159,7 +159,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [-4, 3, -1, 3, -1, 3, -1],
-        fuse=True,
+        durations="measures",
         extra_counts=[4],
         denominator=None,
     )

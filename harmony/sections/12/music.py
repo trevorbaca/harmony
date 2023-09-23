@@ -49,7 +49,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [6, 6],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
@@ -65,7 +65,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(3),
         [6, 6],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
@@ -76,7 +76,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(5),
         [6, 6],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,
@@ -87,7 +87,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [6, 6],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_dotted_quarters=([0], 1),
         invisible_pairs=True,

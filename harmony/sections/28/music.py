@@ -62,7 +62,7 @@ def PERC1(voice, time_signatures):
         time_signatures(1, 4),
         [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
-        fuse=True,
+        durations="measures",
         written_halves=[0],
     )
     voice.extend(music)
@@ -207,7 +207,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 4),
         [8, 8, 8, 6, 2],
-        fuse=True,
+        durations="measures",
         do_not_rewrite_meter=True,
         written_halves=[-2],
         invisible=[-1],

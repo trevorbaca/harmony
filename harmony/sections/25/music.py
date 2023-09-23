@@ -81,7 +81,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         ["-", 3, -3, 3, -1],
-        fuse=True,
+        durations="measures",
         extra_counts=[-4],
         denominator=None,
     )
@@ -123,7 +123,7 @@ def PERC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-10, "+"],
-        fuse=True,
+        durations="measures",
         extra_counts=[-4],
         denominator=None,
     )
@@ -166,7 +166,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         ["-", 3, -3, 3, -1],
-        fuse=True,
+        durations="measures",
         extra_counts=[-4],
         denominator=None,
     )
