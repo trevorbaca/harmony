@@ -99,7 +99,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         ["-", 4, 4, 4],
-        fuse=True,
+        durations="measures",
         extra_counts=[4],
         denominator=None,
     )

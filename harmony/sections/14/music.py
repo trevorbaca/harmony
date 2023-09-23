@@ -320,7 +320,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(5),
         [-8, 2, -6],
-        fuse=True,
+        durations="measures",
         extra_counts=[-4],
         denominator=None,
     )
