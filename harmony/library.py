@@ -427,54 +427,46 @@ def make_sixteenths(
     if written_eighths is True:
         pleaves = baca.select.pleaves(voice)
         rmakers.written_duration(pleaves, (1, 8))
-        rmakers.unbeam(voice)
     elif written_eighths is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_eighths)
         rmakers.written_duration(pleaves, (1, 8))
-        rmakers.unbeam(voice)
     if written_quarters is True:
         pleaves = baca.select.pleaves(voice)
         rmakers.written_duration(pleaves, (1, 4))
-        rmakers.unbeam(voice)
     elif written_quarters is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_quarters)
         rmakers.written_duration(pleaves, (1, 4))
-        rmakers.unbeam(voice)
     if written_dotted_quarters is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_quarters)
         rmakers.written_duration(pleaves, (3, 8))
-        rmakers.unbeam(voice)
     if written_halves is True:
         pleaves = baca.select.pleaves(voice)
         rmakers.written_duration(pleaves, (1, 2))
-        rmakers.unbeam(voice)
     elif written_halves is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_halves)
         rmakers.written_duration(pleaves, (1, 2))
-        rmakers.unbeam(voice)
     if written_dotted_halves is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_halves)
         rmakers.written_duration(pleaves, (3, 4))
-        rmakers.unbeam(voice)
     if written_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_wholes)
         rmakers.written_duration(pleaves, (1, 1))
-        rmakers.unbeam(voice)
     if written_dotted_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_dotted_wholes)
         rmakers.written_duration(pleaves, (3, 2))
-        rmakers.unbeam(voice)
     if written_double_dotted_wholes is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_double_dotted_wholes)
         rmakers.written_duration(pleaves, (7, 4))
+    violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
+    if violators:
         rmakers.unbeam(voice)
     if invisible_pairs is True:
         pleaves = baca.select.pleaves(voice)
@@ -498,14 +490,13 @@ def make_sixteenths(
         leaves = baca.select.leaves(voice)
         rmakers.untie(leaves)
     if unbeam is True:
-        leaves = baca.select.leaves(voice)
-        rmakers.unbeam(leaves)
+        rmakers.unbeam(voice)
     if after_grace is True:
         leaves = baca.select.leaf_in_each_run(voice, -1)
         rmakers.after_grace_container(leaves, [1])
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice)
-    return music
+    components = abjad.mutate.eject_contents(voice)
+    return components
 
 
 def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
