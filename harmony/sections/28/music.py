@@ -50,7 +50,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [4],
-        written_double_dotted_wholes=([0], 7),
+        written=[((7, 4), ([0], 7))],
         invisible=([1, 2, 3, 4, 5, 6], 7),
     )
     voice.extend(music)
@@ -63,7 +63,7 @@ def PERC1(voice, time_signatures):
         [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_halves=[0],
+        written=[((1, 2), [0])],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -76,7 +76,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [4],
-        written_double_dotted_wholes=([0], 7),
+        written=[((7, 4), ([0], 7))],
         invisible=([1, 2, 3, 4, 5, 6], 7),
     )
     voice.extend(music)
@@ -209,7 +209,7 @@ def CB2(voice, time_signatures):
         [8, 8, 8, 6, 2],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_halves=[-2],
+        written=[((1, 2), [-2])],
         invisible=[-1],
     )
     voice.extend(music)

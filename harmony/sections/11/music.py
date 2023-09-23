@@ -58,7 +58,7 @@ def BFL(voice, time_signatures):
         [6, 6],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_dotted_quarters=([0], 1),
+        written=[((3, 8), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -235,8 +235,7 @@ def HP(voice, time_signatures):
         time_signatures(8),
         [3, 1, 1, 1, -6],
         tie_all=True,
-        written_quarters=[0],
-        written_eighths=[2],
+        written=[((1, 4), [0]), ((1, 8), [2])],
         invisible=[1, 3],
     )
     voice.extend(music)

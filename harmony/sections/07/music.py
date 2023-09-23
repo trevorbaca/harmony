@@ -57,7 +57,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [1, 1, -28, 1, 1],
-        written_eighths=True,
+        written=[((1, 8), True)],
         invisible_pairs=True,
         unbeam=True,
     )
@@ -86,7 +86,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(8),
         [1, 1, "-"],
-        written_eighths=True,
+        written=[((1, 8), True)],
         invisible_pairs=True,
         unbeam=True,
     )
@@ -166,7 +166,7 @@ def HP(voice, time_signatures):
         [6, 6],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_dotted_halves=[0],
+        written=[((3, 4), [0])],
         invisible=[1],
     )
     voice.extend(music)
@@ -201,7 +201,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(8),
         [1, 1, "-"],
-        written_eighths=[0, 1],
+        written=[((1, 8), True)],
         invisible=[1],
         do_not_rewrite_meter=True,
     )
@@ -266,7 +266,7 @@ def VC1(voice, time_signatures):
         counts=[15, 1],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_wholes=[0],
+        written=[((1, 1), [0])],
         invisible_pairs=True,
         tie=[0],
     )

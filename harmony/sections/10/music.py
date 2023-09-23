@@ -91,14 +91,14 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(11, 13),
         [12],
-        written_dotted_wholes=([0], 2),
+        written=[((3, 2), ([0], 2))],
         invisible_pairs=True,
     )
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(14),
         [12, 8, 3, 1],
-        written_dotted_wholes=([0], 2),
+        written=[((3, 2), ([0], 2))],
         invisible=[1, 2, 3],
     )
     voice.extend(music)
