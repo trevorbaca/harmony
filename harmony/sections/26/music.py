@@ -55,7 +55,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1],
+        written=[((1, 2), [0, 1])],
         invisible_pairs=True,
         tie=[1, 2],
     )
@@ -209,7 +209,7 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1, 3, 4],
+        written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
         tie_all=True,
     )
@@ -241,7 +241,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1, 3, 4],
+        written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
         tie_all=True,
     )
@@ -279,7 +279,7 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1, 3, 4],
+        written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
         tie_all=True,
     )
@@ -317,7 +317,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1, 3, 4],
+        written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
         tie_all=True,
     )
@@ -355,7 +355,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 4, 16],
-        written_halves=[0, 1, 3, 4],
+        written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
         tie_all=True,
     )

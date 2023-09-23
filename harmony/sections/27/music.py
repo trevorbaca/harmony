@@ -96,7 +96,7 @@ def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [4],
-        written_halves=True,
+        written=[((1, 2), True)],
         invisible_pairs=True,
     )
     voice.extend(music)
@@ -393,7 +393,7 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(7),
         [4],
-        written_halves=True,
+        written=[((1, 2), True)],
         invisible_pairs=True,
     )
     voice.extend(music)

@@ -29,7 +29,7 @@ def BFL(voice, time_signatures):
         [6, 6],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_dotted_halves=([0], 1),
+        written=[((3, 4), True)],
         invisible_pairs=True,
     )
     voice.extend(music)

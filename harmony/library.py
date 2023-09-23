@@ -389,14 +389,8 @@ def make_sixteenths(
     tuplet_ratio_denominator=(1, 16),
     unbeam=False,
     untie=False,
-    written_dotted_halves=None,
-    written_dotted_quarters=None,
-    written_dotted_wholes=None,
-    written_double_dotted_wholes=None,
-    written_eighths=None,
-    written_halves=None,
+    written=(),
     written_quarters=None,
-    written_wholes=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert isinstance(talea_denominator, int), repr(talea_denominator)
@@ -424,13 +418,12 @@ def make_sixteenths(
         rmakers.rewrite_meter(
             voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
         )
-    if written_eighths is True:
+    for pair, indices in written:
+        assert isinstance(pair, tuple), repr(pair)
         pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration(pleaves, (1, 8))
-    elif written_eighths is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_eighths)
-        rmakers.written_duration(pleaves, (1, 8))
+        if indices is not True:
+            pleaves = abjad.select.get(pleaves, indices)
+        rmakers.written_duration(pleaves, pair)
     if written_quarters is True:
         pleaves = baca.select.pleaves(voice)
         rmakers.written_duration(pleaves, (1, 4))
@@ -438,33 +431,6 @@ def make_sixteenths(
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, written_quarters)
         rmakers.written_duration(pleaves, (1, 4))
-    if written_dotted_quarters is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_dotted_quarters)
-        rmakers.written_duration(pleaves, (3, 8))
-    if written_halves is True:
-        pleaves = baca.select.pleaves(voice)
-        rmakers.written_duration(pleaves, (1, 2))
-    elif written_halves is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_halves)
-        rmakers.written_duration(pleaves, (1, 2))
-    if written_dotted_halves is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_dotted_halves)
-        rmakers.written_duration(pleaves, (3, 4))
-    if written_wholes is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_wholes)
-        rmakers.written_duration(pleaves, (1, 1))
-    if written_dotted_wholes is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_dotted_wholes)
-        rmakers.written_duration(pleaves, (3, 2))
-    if written_double_dotted_wholes is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, written_double_dotted_wholes)
-        rmakers.written_duration(pleaves, (7, 4))
     violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
     if violators:
         rmakers.unbeam(voice)

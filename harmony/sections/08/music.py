@@ -75,7 +75,7 @@ def HP(voice, time_signatures):
         [6, 6, 16],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_dotted_halves=([0, 1], 3),
+        written=[((3, 4), ([0, 1], 3))],
         invisible=([1], 3),
     )
     voice.extend(music)
@@ -91,7 +91,7 @@ def VA(voice, time_signatures):
         [12, 8, 8],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_wholes=([1, 2], 3),
+        written=[((1, 1), ([1, 2], 3))],
         invisible=([2], 3),
     )
     voice.extend(music)
@@ -112,7 +112,7 @@ def VC1(voice, time_signatures):
         [8, 8, 12],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_wholes=([0, 1], 3),
+        written=[((1, 1), ([0, 1], 3))],
         invisible=([1], 3),
     )
     voice.extend(music)
@@ -132,7 +132,7 @@ def VC2(voice, time_signatures):
         ["+", 1],
         do_not_rewrite_meter=True,
         durations=durations,
-        written_wholes=[1],
+        written=[((1, 1), [1])],
         invisible=[-1],
     )
     voice.extend(music)
@@ -141,7 +141,7 @@ def VC2(voice, time_signatures):
         [12, 8, 8],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_wholes=([1, 2], 3),
+        written=[((1, 1), ([1, 2], 3))],
         invisible=([2], 3),
     )
     voice.extend(music)
@@ -162,7 +162,7 @@ def CB1(voice, time_signatures):
         [8, 8, 12],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_wholes=([0, 1], 3),
+        written=[((1, 1), ([0, 1], 3))],
         invisible=([1], 3),
     )
     voice.extend(music)
@@ -178,7 +178,7 @@ def CB2(voice, time_signatures):
         [12, 16, 12, 15, 1],
         durations="measures",
         do_not_rewrite_meter=True,
-        written_wholes=[-2],
+        written=[((1, 1), [-2])],
         invisible=[-1],
     )
     voice.extend(music)
@@ -187,7 +187,7 @@ def CB2(voice, time_signatures):
         [12, 8, 8],
         do_not_rewrite_meter=True,
         durations="measures",
-        written_wholes=([1, 2], 3),
+        written=[((1, 1), ([1, 2], 3))],
         invisible=([2], 3),
     )
     voice.extend(music)
