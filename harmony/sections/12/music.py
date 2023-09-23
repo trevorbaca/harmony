@@ -116,7 +116,7 @@ def BFL(voice, time_signatures):
         time_signatures(15),
         [6, 8, 2, 2],
         extra_counts=[0, 0, 0, 2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         written_quarters=[-2, -1],
         invisible=[-1],
     )
@@ -382,7 +382,7 @@ def VC1(voice, time_signatures):
         time_signatures(13, 15),
         [14, 8, 8],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -418,7 +418,7 @@ def VC2(voice, time_signatures):
         time_signatures(13, 15),
         [8, 8, 14],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

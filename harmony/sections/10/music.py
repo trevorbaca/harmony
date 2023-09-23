@@ -50,7 +50,7 @@ def BFL(voice, time_signatures):
         time_signatures(1),
         ["-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -69,7 +69,7 @@ def BFL(voice, time_signatures):
         time_signatures(7),
         ["-", 4, -2, 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -133,7 +133,7 @@ def PERC1(voice, time_signatures):
         time_signatures(7),
         ["-", 2, -2, 2, -2],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(

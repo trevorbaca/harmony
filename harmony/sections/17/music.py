@@ -126,7 +126,7 @@ def HP(voice, time_signatures):
         time_signatures(4),
         ["-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_sixteenths(

@@ -91,7 +91,7 @@ def PERC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [4, -4, 4, -4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -8],
     )
@@ -111,7 +111,7 @@ def PERC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [4, -8, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -8],
     )
@@ -155,7 +155,7 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(5),
         [-12, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, 4],
     )
@@ -197,7 +197,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-8, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -4],
     )
@@ -216,7 +216,7 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [-8, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -4],
     )
@@ -257,7 +257,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-8, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -4],
     )
@@ -276,7 +276,7 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(4),
         [-8, 4, 4, 4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -4],
     )

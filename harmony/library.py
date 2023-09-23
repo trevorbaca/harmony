@@ -374,29 +374,29 @@ def make_sixteenths(
     time_signatures,
     counts,
     *,
+    after_grace=False,
     beam=False,
-    durations="quarters",
-    fuse=False,
-    denominator=(1, 16),
     do_not_rewrite_meter=False,
+    durations="quarters",
     extra_counts=(),
-    written_eighths=None,
-    written_quarters=None,
-    written_dotted_quarters=None,
-    written_halves=None,
-    written_dotted_halves=None,
-    written_wholes=None,
-    written_dotted_wholes=None,
-    written_double_dotted_wholes=None,
+    fuse=False,
     invisible=None,
     invisible_pairs=False,
     talea_denominator=16,
     tie=None,
-    tie_runs=False,
     tie_all=False,
-    untie=False,
+    tie_runs=False,
+    tuplet_ratio_denominator=(1, 16),
     unbeam=False,
-    after_grace=False,
+    untie=False,
+    written_dotted_halves=None,
+    written_dotted_quarters=None,
+    written_dotted_wholes=None,
+    written_double_dotted_wholes=None,
+    written_eighths=None,
+    written_halves=None,
+    written_quarters=None,
+    written_wholes=None,
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert isinstance(talea_denominator, int), repr(talea_denominator)
@@ -418,8 +418,8 @@ def make_sixteenths(
         rmakers.beam(voice, tag=tag)
     rmakers.extract_trivial(voice)
     rmakers.force_fraction(voice)
-    if denominator is not None:
-        rmakers.denominator(voice, denominator)
+    if tuplet_ratio_denominator is not None:
+        rmakers.denominator(voice, tuplet_ratio_denominator)
     if not do_not_rewrite_meter:
         rmakers.rewrite_meter(
             voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag

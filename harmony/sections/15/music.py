@@ -107,7 +107,7 @@ def HP(voice, time_signatures):
         time_signatures(1),
         ["-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(2))
@@ -126,7 +126,7 @@ def HP(voice, time_signatures):
         time_signatures(5),
         ["-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(6, 8))
@@ -135,7 +135,7 @@ def HP(voice, time_signatures):
         time_signatures(9),
         ["-", 4],
         extra_counts=[2],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))

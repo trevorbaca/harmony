@@ -159,7 +159,7 @@ def PERC2(voice, time_signatures):
         ["-", 4, 4],
         durations="measures",
         extra_counts=[4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -434,7 +434,7 @@ def CB2(voice, time_signatures):
         ["-", 2, 2, 2, 2],
         durations="measures",
         extra_counts=[4],
-        denominator=None,
+        tuplet_ratio_denominator=None,
         written_quarters=True,
         invisible_pairs=True,
     )
