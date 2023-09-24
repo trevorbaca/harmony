@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -59,8 +60,8 @@ def BFL(voice, time_signatures):
         [1, 1, -28, 1, 1],
         written=[((1, 8), True)],
         invisible_pairs=True,
-        unbeam=True,
     )
+    rmakers.unbeam(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6),
@@ -88,8 +89,8 @@ def BFL(voice, time_signatures):
         [1, 1, "-"],
         written=[((1, 8), True)],
         invisible_pairs=True,
-        unbeam=True,
     )
+    rmakers.unbeam(music)
     voice.extend(music)
 
 

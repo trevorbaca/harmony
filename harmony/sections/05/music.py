@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -218,8 +219,8 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [10, -2],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = library.make_tessera_1(
@@ -269,8 +270,8 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [10, -2],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = library.make_tessera_1(

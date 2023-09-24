@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -195,20 +196,20 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(9),
         [3, 3, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(10),
         [3, 3, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(11),
         [3, 3, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
 
 
@@ -216,14 +217,14 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-2, "+", -1],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
@@ -270,14 +271,14 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-2, "+", -1],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
@@ -314,14 +315,14 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-2, "+", -1],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
@@ -372,14 +373,14 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-2, "+", -1],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
@@ -426,8 +427,8 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
