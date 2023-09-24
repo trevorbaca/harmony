@@ -471,9 +471,9 @@ def VC2(voice, time_signatures):
         time_signatures(8),
         [10, -2],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(9))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -545,9 +545,9 @@ def CB2(voice, time_signatures):
         time_signatures(8),
         [10, -2],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(9))
     voice.extend(music)
     music = baca.make_repeated_duration_notes(

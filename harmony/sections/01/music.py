@@ -140,9 +140,9 @@ def VC2(voice, time_signatures):
         time_signatures(3),
         [10, "-"],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
 
 
 def CB1(voice, time_signatures):
@@ -170,9 +170,9 @@ def CB2(voice, time_signatures):
         time_signatures(3),
         [10, "-"],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
 
 
 def bfl(cache):
