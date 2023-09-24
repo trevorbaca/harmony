@@ -701,7 +701,7 @@ def perc2(m):
         baca.hairpin(o.rleaves(), "(p) >o niente")
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
@@ -710,7 +710,7 @@ def perc2(m):
         )
     with baca.scope(m.get(4, 5)) as o:
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(
             o.phead(0),
             "mp-ancora",
@@ -741,7 +741,7 @@ def perc2(m):
         )
     with baca.scope(m[10]) as o:
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "mp")
         baca.markup(
             o.pleaf(0),
@@ -769,12 +769,12 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "C1")
         baca.ottava_bassa(o.tleaves())
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o, "C1")
         baca.ottava_bassa(o.tleaves())
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(
             o.phead(0),
             "f-ancora",
@@ -833,7 +833,7 @@ def hp(cache):
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "C1")
         baca.ottava_bassa(o.tleaves())
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.dls_staff_padding(o, 4)
     with baca.scope(m.get(1, 10)) as o:

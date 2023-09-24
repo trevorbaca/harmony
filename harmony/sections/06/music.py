@@ -666,7 +666,7 @@ def perc1(m):
     with baca.scope(m[4]) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.bass_drum_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "mp")
         baca.dls_staff_padding(o, 6)
         baca.markup(
@@ -741,7 +741,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
     with baca.scope(m[4]) as o:
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         library.tam_tam_staff_position(o)
         baca.dynamic(o.phead(0), "mp")
     with baca.scope(m[5]) as o:
@@ -802,7 +802,7 @@ def hp(m):
             "f-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)

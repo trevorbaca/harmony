@@ -836,7 +836,8 @@ def composites(cache):
                 for run in baca.select.runs(o):
                     run = baca.select.rleak(run)
                     baca.hairpin(run, "o<| ff")
-                for leaf in baca.select.leaf_in_each_rleak_run(o, -1):
+                for run in abjad.select.runs(o):
+                    leaf = baca.select.rleaf(run, -1)
                     baca.stop_on_string(leaf)
                 baca.scp_spanner(
                     baca.select.tleaves(o, rleak=True),

@@ -1045,9 +1045,9 @@ def composites(cache):
         m = cache[name]
         for n in [3, 8]:
             with baca.scope(m[n]) as o:
-                baca.stop_on_string(
-                    baca.select.leaf_in_each_rleak_run(o, -1),
-                )
+                for run in abjad.select.runs(o):
+                    leaf = baca.select.rleaf(run, -1)
+                    baca.stop_on_string(leaf)
                 baca.hairpin(
                     baca.select.tleaves(o, rleak=True),
                     "o<| ff",

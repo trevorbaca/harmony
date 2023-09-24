@@ -665,7 +665,7 @@ def perc2(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "pp")
         baca.markup(
             o.pleaf(0),
@@ -723,7 +723,7 @@ def hp(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F1")
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "p")
         baca.dls_staff_padding(o, 7)
     with baca.scope(m[6]) as o:

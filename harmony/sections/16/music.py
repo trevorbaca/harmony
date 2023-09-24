@@ -300,7 +300,7 @@ def perc2(m):
     with baca.scope(m.get(1, 6)) as o:
         baca.staff_lines(o.leaf(0), 1)
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.pheads(), "pp")
         baca.markup(
             o.pleaf(0),
@@ -309,7 +309,7 @@ def perc2(m):
         )
     with baca.scope(m.get(9, 10)) as o:
         library.tam_tam_staff_position(o)
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(1, 10)) as o:
         baca.dls_staff_padding(o, 6)
@@ -321,7 +321,7 @@ def hp(cache):
     with baca.scope(m.get(1, 6)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F1")
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.pheads(), "p")
         baca.dls_staff_padding(o, 4 + 3)
     with baca.scope(m[8]) as o:
@@ -341,7 +341,7 @@ def hp(cache):
     with baca.scope(m.get(9, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F1")
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "p")
         baca.dls_staff_padding(o, 4 + 3)
 

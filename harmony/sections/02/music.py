@@ -639,7 +639,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "G1"),
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.dls_staff_padding(o, 6),
     with baca.scope(m.get(8, 11)) as o:
