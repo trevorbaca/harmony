@@ -391,7 +391,6 @@ def make_sixteenths(
     time_signatures,
     counts,
     *,
-    beam=False,
     do_not_rewrite_meter=False,
     durations="quarters",
     extra_counts=(),
@@ -418,8 +417,6 @@ def make_sixteenths(
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     rmakers.rewrite_rest_filled(voice, tag=tag)
     rmakers.rewrite_sustained(voice, tag=tag)
-    if beam:
-        rmakers.beam(voice, tag=tag)
     rmakers.extract_trivial(voice)
     rmakers.force_fraction(voice)
     if tuplet_ratio_denominator is not None:
