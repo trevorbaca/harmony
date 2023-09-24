@@ -109,15 +109,15 @@ def VA(voice, time_signatures):
         [2, 2, -10],
         written=[((1, 4), [0, 1, 4, 5])],
         invisible=[1, 5],
-        tie_runs=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = library.make_tessera_3(
         time_signatures(5, 9),
         4,
@@ -159,15 +159,15 @@ def VC2(voice, time_signatures):
         [2, 2, -10],
         written=[((1, 4), [0, 1, 4, 5])],
         invisible=[1, 5],
-        tie_runs=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = library.make_tessera_3(
         time_signatures(5, 9),
         2,
@@ -209,15 +209,15 @@ def CB2(voice, time_signatures):
         [2, 2, -10],
         written=[((1, 4), [0, 1, 4, 5])],
         invisible=[1, 5],
-        tie_runs=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = library.make_tessera_3(
         time_signatures(5, 9),
         0,

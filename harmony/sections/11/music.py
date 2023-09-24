@@ -234,11 +234,11 @@ def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(8),
         [3, 1, 1, 1, -6],
-        tie_all=True,
         written=[((1, 4), [0]), ((1, 8), [2])],
         invisible=[1, 3],
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = baca.make_mmrests(time_signatures(9))
     voice.extend(music)
     music = library.make_sixteenths(

@@ -13,6 +13,13 @@ def _reference_meters():
     )
 
 
+def after_grace_each_run(components):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    for run in abjad.select.runs(components):
+        leaf = abjad.select.leaf(run, -1)
+        rmakers.after_grace_container(leaf, [1], tag=tag)
+
+
 def appoggiato_pitches_d_flat_3():
     return "F3 F#3  D3 D#3 Dtqs3 E3 Eqs3 F3  D#3 F3 Fqs3 F#3 Ftqs3".split()
 
@@ -379,13 +386,10 @@ def make_sixteenths(
     do_not_rewrite_meter=False,
     durations="quarters",
     extra_counts=(),
-    fuse=False,
     invisible=None,
     invisible_pairs=False,
     talea_denominator=16,
     tie=None,
-    tie_all=False,
-    tie_runs=False,
     tuplet_ratio_denominator=(1, 16),
     unbeam=False,
     untie=False,
@@ -438,12 +442,6 @@ def make_sixteenths(
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, tie)
         rmakers.repeat_tie(pleaves, tag=tag)
-    if tie_all is True:
-        pleaves = baca.select.pleaves(voice)[1:]
-        rmakers.repeat_tie(pleaves, tag=tag)
-    if tie_runs is True:
-        leaves = baca.select.leaves_in_each_run(voice, 1, None)
-        rmakers.repeat_tie(leaves, tag=tag)
     if untie is True:
         leaves = baca.select.leaves(voice)
         rmakers.untie(leaves)
@@ -662,6 +660,12 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     baca.tuplet_bracket_up(o)
     baca.tuplet_bracket_staff_padding(o, 0.5)
     baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
+
+
+def repeat_tie_runs(components):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    leaves = baca.select.leaves_in_each_run(components, 1, None)
+    rmakers.repeat_tie(leaves, tag=tag)
 
 
 def slate_staff_position(argument):
