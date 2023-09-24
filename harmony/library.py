@@ -381,7 +381,6 @@ def make_sixteenths(
     time_signatures,
     counts,
     *,
-    after_grace=False,
     beam=False,
     do_not_rewrite_meter=False,
     durations="quarters",
@@ -447,9 +446,6 @@ def make_sixteenths(
         rmakers.untie(leaves)
     if unbeam is True:
         rmakers.unbeam(voice)
-    if after_grace is True:
-        leaves = baca.select.leaf_in_each_run(voice, -1)
-        rmakers.after_grace_container(leaves, [1])
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice)
     return components

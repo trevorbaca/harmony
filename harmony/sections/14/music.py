@@ -218,9 +218,9 @@ def VA(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
     durations = [_.duration for _ in time_signatures(4)]
@@ -247,9 +247,9 @@ def VA(voice, time_signatures):
         time_signatures(6, 9),
         [16, -12, 4, -16, 4, -8, 4],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -344,9 +344,9 @@ def CB1(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -367,9 +367,9 @@ def CB1(voice, time_signatures):
         time_signatures(6, 9),
         [16, -8, 4, -16, 4, -12, 4],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -385,9 +385,9 @@ def CB2(voice, time_signatures):
         time_signatures(1, 2),
         [-8, 4, "-"],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -404,9 +404,9 @@ def CB2(voice, time_signatures):
         time_signatures(6, 9),
         [16, -12, 4, -8, 4, -16, 4],
         untie=True,
-        after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
     voice.extend(music)
     music = library.make_sixteenths(
