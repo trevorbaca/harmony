@@ -668,7 +668,7 @@ def hp(cache):
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E1")
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
         baca.dls_staff_padding(o, 7)
     with baca.scope(m[4]) as o:
@@ -706,7 +706,7 @@ def hp(cache):
         baca.dls_staff_padding(o, 4)
     with baca.scope(m.get(6, 9)) as o:
         baca.pitch(o, "E1")
-        baca.damp(baca.select.leaf_after_each_ptail(o))
+        library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F1")

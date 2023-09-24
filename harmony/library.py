@@ -77,6 +77,12 @@ def damp_counts_curtailed():
     return [3, -1, 8, -8, 3, -1]
 
 
+def damp_rest_after_each_ptail(components):
+    ptails = baca.select.ptails(components)
+    rests = [baca.select.rleaf(_, -1) for _ in ptails]
+    baca.damp(rests)
+
+
 def glissando_counts():
     return eval(
         """[2, 1, -1, 4, 2, 1, -1, -8, 4, 2, 1, -1, 2, 1, -1, -16, 2, 1, -1, 8,
@@ -347,8 +353,12 @@ def make_phjc_rhythm(
     rmakers.denominator(voice, (1, 8))
     rmakers.force_fraction(voice)
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    rmakers.force_rest(baca.select.leaves_in_each_plt(voice, 1, None), tag=tag)
-    rmakers.force_rest(baca.select.leaf_in_each_tuplet(voice, 0), tag=tag)
+    plts = baca.select.plts(voice)
+    lists = [_[1:] for _ in plts]
+    rmakers.force_rest(lists, tag=tag)
+    tuplets = abjad.select.tuplets(voice)
+    leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
+    rmakers.force_rest(leaves, tag=tag)
     rmakers.beam(voice, tag=tag)
     rmakers.extract_trivial(voice)
     music = abjad.mutate.eject_contents(voice)
@@ -623,7 +633,8 @@ def make_warble_rhythm(
         tuplets = baca.select.tuplets(voice)
         tuplets = abjad.select.get(tuplets, rest_tuplets_cyclic)
         rmakers.force_rest(tuplets, tag=tag)
-    leaves = baca.select.leaf_in_each_tuplet(voice, 0)
+    tuplets = abjad.select.tuplets(voice)
+    leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
     rmakers.rewrite_rest_filled(voice, tag=tag)
     rmakers.rewrite_sustained(voice, tag=tag)
@@ -660,8 +671,9 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
 
 def repeat_tie_runs(components):
     tag = baca.helpers.function_name(inspect.currentframe())
-    leaves = baca.select.leaves_in_each_run(components, 1, None)
-    rmakers.repeat_tie(leaves, tag=tag)
+    runs = abjad.select.runs(components)
+    lists = [_[1:] for _ in runs]
+    rmakers.repeat_tie(lists, tag=tag)
 
 
 def slate_staff_position(argument):
