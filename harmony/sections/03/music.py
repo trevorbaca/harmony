@@ -235,9 +235,10 @@ def VC2(voice, time_signatures):
         time_signatures(1),
         [10, "-"],
         untie=True,
-        after_grace=True,
+        # after_grace=True,
     )
     voice.extend(music)
+    library.after_grace_each_run(music)
     music = library.make_tessera_1(
         time_signatures(2),
         2,

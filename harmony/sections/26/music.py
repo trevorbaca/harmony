@@ -211,9 +211,9 @@ def VA(voice, time_signatures):
         [4, 4, 16],
         written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
-        tie_all=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = baca.make_repeat_tied_notes(time_signatures(5, 7))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -243,9 +243,9 @@ def VC1(voice, time_signatures):
         [4, 4, 16],
         written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
-        tie_all=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(5, 7),
         [4, -12],
@@ -281,9 +281,9 @@ def VC2(voice, time_signatures):
         [4, 4, 16],
         written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
-        tie_all=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(5, 7),
         [4, -12],
@@ -319,9 +319,9 @@ def CB1(voice, time_signatures):
         [4, 4, 16],
         written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
-        tie_all=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(5, 7),
         [4, -12],
@@ -357,9 +357,9 @@ def CB2(voice, time_signatures):
         [4, 4, 16],
         written=[((1, 2), [0, 1, 3, 4])],
         invisible=[1, 4],
-        tie_all=True,
     )
     voice.extend(music)
+    library.repeat_tie_runs(music)
     music = library.make_sixteenths(
         time_signatures(5, 7),
         [4, -12],
