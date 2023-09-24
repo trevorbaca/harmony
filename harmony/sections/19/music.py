@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -347,8 +348,8 @@ def VC1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
@@ -408,8 +409,8 @@ def VC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
@@ -469,8 +470,8 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)
@@ -532,10 +533,10 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(2),
         [2, 2, 6, 2, -4],
-        untie=True,
         written=[((1, 4), [0])],
         invisible=[1],
     )
+    rmakers.untie(music)
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(3))
     voice.extend(music)

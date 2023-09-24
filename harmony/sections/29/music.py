@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -120,8 +121,8 @@ def CB2(voice, time_signatures):
         [16, 4, 2, 2],
         written=[((3, 2), [0])],
         invisible=[1, 2, 3],
-        unbeam=True,
     )
+    rmakers.unbeam(music)
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(2, 3), head=voice.name)
     voice.extend(music)

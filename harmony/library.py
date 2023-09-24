@@ -400,8 +400,6 @@ def make_sixteenths(
     talea_denominator=16,
     tie=None,
     tuplet_ratio_denominator=(1, 16),
-    unbeam=False,
-    untie=False,
     written=(),
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
@@ -451,11 +449,6 @@ def make_sixteenths(
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, tie)
         rmakers.repeat_tie(pleaves, tag=tag)
-    if untie is True:
-        leaves = baca.select.leaves(voice)
-        rmakers.untie(leaves)
-    if unbeam is True:
-        rmakers.unbeam(voice)
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice)
     return components

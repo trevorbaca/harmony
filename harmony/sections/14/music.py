@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -217,8 +218,8 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 2),
         [-8, 4, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -246,8 +247,8 @@ def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(6, 9),
         [16, -12, 4, -16, 4, -8, 4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
@@ -343,8 +344,8 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 2),
         [-8, 4, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -366,8 +367,8 @@ def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(6, 9),
         [16, -8, 4, -16, 4, -12, 4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
@@ -384,8 +385,8 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 2),
         [-8, 4, "-"],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(3))
@@ -403,8 +404,8 @@ def CB2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(6, 9),
         [16, -12, 4, -8, 4, -16, 4],
-        untie=True,
     )
+    rmakers.untie(music)
     voice.extend(music)
     library.after_grace_each_run(music)
     music = baca.make_mmrests(time_signatures(10))
