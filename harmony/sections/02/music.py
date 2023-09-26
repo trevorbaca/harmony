@@ -9,6 +9,11 @@ from harmony import library
 #########################################################################################
 
 
+h = library.h
+r = library.r
+w = library.w
+
+
 def GLOBALS(skips, rests):
     stage_markup = (
         ("[B.1-5]", 1),
@@ -43,8 +48,8 @@ durations = [16, 20, 12, 12, 12, 16]
 sixteenths = [(2, 2, _ - 4) for _ in durations]
 sixteenths = abjad.sequence.flatten(sixteenths)
 
-# sixteenths = [(w(2, 4), i(w(2, 4)), k(_ - 4)) for _ in durations]
-# sixteenths = abjad.sequence.flatten(sixteenths)
+# ss = [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in durations]
+# ss = abjad.sequence.flatten(ss)
 
 
 def BFL(voice, time_signatures):
