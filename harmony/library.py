@@ -107,12 +107,12 @@ def make_appoggiato_rhythm(
     incise=False,
     prefix_talea=(),
     prefix_counts=(),
+    repeat_tie=None,
     rest_after=None,
     rest_to=None,
     rest_from=None,
     suffix_talea=(),
     suffix_counts=(),
-    tie=None,
     weights=None,
     written_quarters=None,
     invisible=None,
@@ -168,9 +168,9 @@ def make_appoggiato_rhythm(
         plts = baca.select.plts(voice, grace=False)
         plts = abjad.select.get(plts, rest_after)
         rmakers.force_rest(plts, tag=tag)
-    if tie is not None:
+    if repeat_tie is not None:
         pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, tie)
+        pleaves = abjad.select.get(pleaves, repeat_tie)
         rmakers.repeat_tie(pleaves, tag=tag)
     if written_quarters is not None:
         pleaves = baca.select.pleaves(voice)
@@ -397,7 +397,7 @@ def make_sixteenths(
     invisible=None,
     invisible_pairs=False,
     talea_denominator=16,
-    tie=None,
+    repeat_tie=None,
     tuplet_ratio_denominator=(1, 16),
     written=(),
 ):
@@ -442,9 +442,9 @@ def make_sixteenths(
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, invisible)
         rmakers.invisible_music(pleaves, tag=tag)
-    if tie is not None:
+    if repeat_tie is not None:
         pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, tie)
+        pleaves = abjad.select.get(pleaves, repeat_tie)
         rmakers.repeat_tie(pleaves, tag=tag)
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice)
