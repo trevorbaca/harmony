@@ -51,7 +51,7 @@ def GLOBALS(skips, rests):
 def BFL(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -64,7 +64,7 @@ def BFL(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 8),
-        library.cerulean()[2:],
+        library.cerulean_counts()[2:],
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -169,7 +169,7 @@ def HP(voice, time_signatures):
 def VA(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
@@ -191,7 +191,7 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 8),
-        library.cerulean()[2:],
+        library.cerulean_counts()[2:],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
@@ -217,7 +217,7 @@ def VC1(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 7),
-        library.cerulean()[2:],
+        library.cerulean_counts()[2:],
         extra_counts=[1],
     )
     voice.extend(music)
@@ -260,7 +260,7 @@ def VC2(voice, time_signatures):
 def CB1(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -279,7 +279,7 @@ def CB1(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 8),
-        library.cerulean()[2:],
+        library.cerulean_counts()[2:],
     )
     voice.extend(music)
 

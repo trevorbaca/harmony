@@ -51,7 +51,7 @@ def GLOBALS(skips, rests):
     baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 
-cerulean = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
+cerulean_counts = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1, "-"]
 
 
 def BFL(voice, time_signatures):
@@ -166,7 +166,7 @@ def PERC2(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 9),
-        cerulean,
+        cerulean_counts,
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
@@ -286,7 +286,7 @@ def VC1(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 8),
-        cerulean,
+        cerulean_counts,
         extra_counts=[1],
     )
     voice.extend(music)
@@ -328,7 +328,7 @@ def VC2(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6, 9),
-        cerulean,
+        cerulean_counts,
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))
