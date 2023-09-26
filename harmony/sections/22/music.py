@@ -311,10 +311,7 @@ def CB1(voice, time_signatures):
 def CB2(voice, time_signatures):
     music = baca.make_mmrests(time_signatures(1, 2))
     voice.extend(music)
-    music = baca.parse(
-        "r4 c16. r32 r8 c16. r32 r8",
-    )
-    voice.extend(music)
+    voice.extend("r4 c16. r32 r8 c16. r32 r8")
     music = library.make_sixteenths(
         time_signatures(4),
         [3, -5, 3, -5, 3, -5, 3, -23],
