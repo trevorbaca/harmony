@@ -98,6 +98,10 @@ def duration_color():
     return [21, -14, 18, "-"]
 
 
+def h(argument):
+    return baca.InvisibleMusic(argument)
+
+
 def make_appoggiato_rhythm(
     time_signatures,
     *,
@@ -403,50 +407,53 @@ def make_sixteenths(
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
     assert isinstance(talea_denominator, int), repr(talea_denominator)
-    if durations == "quarters":
-        durations = [_.duration for _ in time_signatures]
-        durations = [sum(durations)]
-        durations = baca.sequence.quarters(durations)
-    elif durations == "measures":
-        durations = [_.duration for _ in time_signatures]
-    else:
-        assert durations is not None, repr(durations)
-    tuplets = rmakers.talea(
-        durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
-    )
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.rewrite_rest_filled(voice, tag=tag)
-    rmakers.rewrite_sustained(voice, tag=tag)
-    rmakers.extract_trivial(voice)
-    rmakers.force_fraction(voice)
-    if tuplet_ratio_denominator is not None:
-        rmakers.denominator(voice, tuplet_ratio_denominator)
-    if not do_not_rewrite_meter:
-        rmakers.rewrite_meter(
-            voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+    if all(isinstance(_, int | str) for _ in counts):
+        if durations == "quarters":
+            durations = [_.duration for _ in time_signatures]
+            durations = [sum(durations)]
+            durations = baca.sequence.quarters(durations)
+        elif durations == "measures":
+            durations = [_.duration for _ in time_signatures]
+        else:
+            assert durations is not None, repr(durations)
+        tuplets = rmakers.talea(
+            durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
         )
-    for pair, indices in written:
-        assert isinstance(pair, tuple), repr(pair)
-        pleaves = baca.select.pleaves(voice)
-        if indices is not True:
-            pleaves = abjad.select.get(pleaves, indices)
-        rmakers.written_duration(pleaves, pair)
-    violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
-    if violators:
-        rmakers.unbeam(voice)
-    if invisible_pairs is True:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, ([1], 2))
-        rmakers.invisible_music(pleaves, tag=tag)
-    if invisible is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, invisible)
-        rmakers.invisible_music(pleaves, tag=tag)
-    if repeat_tie is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, repeat_tie)
-        rmakers.repeat_tie(pleaves, tag=tag)
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
+        voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+        rmakers.rewrite_rest_filled(voice, tag=tag)
+        rmakers.rewrite_sustained(voice, tag=tag)
+        rmakers.extract_trivial(voice)
+        rmakers.force_fraction(voice)
+        if tuplet_ratio_denominator is not None:
+            rmakers.denominator(voice, tuplet_ratio_denominator)
+        if not do_not_rewrite_meter:
+            rmakers.rewrite_meter(
+                voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+            )
+        for pair, indices in written:
+            assert isinstance(pair, tuple), repr(pair)
+            pleaves = baca.select.pleaves(voice)
+            if indices is not True:
+                pleaves = abjad.select.get(pleaves, indices)
+            rmakers.written_duration(pleaves, pair)
+        violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
+        if violators:
+            rmakers.unbeam(voice)
+        if invisible_pairs is True:
+            pleaves = baca.select.pleaves(voice)
+            pleaves = abjad.select.get(pleaves, ([1], 2))
+            rmakers.invisible_music(pleaves, tag=tag)
+        if invisible is not None:
+            pleaves = baca.select.pleaves(voice)
+            pleaves = abjad.select.get(pleaves, invisible)
+            rmakers.invisible_music(pleaves, tag=tag)
+        if repeat_tie is not None:
+            pleaves = baca.select.pleaves(voice)
+            pleaves = abjad.select.get(pleaves, repeat_tie)
+            rmakers.repeat_tie(pleaves, tag=tag)
+        rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
+    else:
+        voice = baca.make_rhythm(counts, 16, time_signatures, tag=tag)
     components = abjad.mutate.eject_contents(voice)
     return components
 
@@ -659,6 +666,10 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
 
 
+def r(argument):
+    return baca.RepeatTie(argument)
+
+
 def repeat_tie_runs(components):
     tag = baca.helpers.function_name(inspect.currentframe())
     runs = abjad.select.runs(components)
@@ -672,6 +683,10 @@ def slate_staff_position(argument):
     baca.tuplet_bracket_up(argument)
 
 
+def t(argument):
+    return baca.Tie(argument)
+
+
 def tam_tam_staff_position(o):
     baca.staff_position(o, 0)
     baca.stem_down(o.pleaves())
@@ -681,6 +696,10 @@ def tam_tam_staff_position(o):
 def triangle_staff_position(o):
     baca.staff_position(o, 1)
     baca.stem_up(o.pleaves())
+
+
+def w(real_n, written_n):
+    return baca.WrittenDuration(real_n, written_n)
 
 
 def warble_pitches():
