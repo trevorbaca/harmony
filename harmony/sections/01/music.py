@@ -117,10 +117,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = baca.parse(
-        r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }",
-    )
-    voice.extend(music)
+    voice.extend(r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }")
     music = library.make_sixteenths(
         time_signatures(3),
         [5, -5, 1, -4],
@@ -152,10 +149,7 @@ def CB1(voice, time_signatures):
         [18, 6, 10, 4, 6],
     )
     voice.extend(music)
-    music = baca.parse(
-        r"r4 \times 4/5 { r4. c16 r16 c16 r16 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r4 \times 4/5 { r4. c16 r16 c16 r16 }")
     baca.section.append_anchor_note(voice)
 
 

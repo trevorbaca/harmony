@@ -233,11 +233,8 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(4))
     voice.extend(music)
-    music = baca.parse(
-        r"c2. c8 \times 5/4 { c2 }",
-    )
-    voice.extend(music)
-    for pleaf in baca.select.pleaves(music)[:2]:
+    voice.extend(r"c2. c8 \times 5/4 { c2 }")
+    for pleaf in baca.select.pleaves(voice)[-3:-1]:
         baca.repeat_tie(pleaf)
     music = library.make_tessera_4(
         time_signatures(6),

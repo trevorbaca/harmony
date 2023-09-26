@@ -206,10 +206,7 @@ def PERC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.parse(
-        r"r4. \times 5/4 { c2 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r4. \times 5/4 { c2 }")
     baca.section.append_anchor_note(voice)
 
 

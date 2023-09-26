@@ -207,10 +207,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = baca.parse(
-        r"r1 r8 \times 5/4 { c2 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r1 r8 \times 5/4 { c2 }")
     music = baca.make_notes(time_signatures(2))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -230,10 +227,7 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = baca.parse(
-        r"r1 r8 \times 5/4 { c2 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r1 r8 \times 5/4 { c2 }")
     music = baca.make_notes(time_signatures(2))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -253,10 +247,7 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    music = baca.parse(
-        r"r1 r8 \times 5/4 { c2 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r1 r8 \times 5/4 { c2 }")
     music = baca.make_notes(time_signatures(2))
     voice.extend(music)
     music = library.make_sixteenths(
@@ -276,10 +267,7 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = baca.parse(
-        r"r1 r8 \times 5/4 { c2 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r1 r8 \times 5/4 { c2 }")
     music = baca.make_notes(time_signatures(2))
     voice.extend(music)
     music = library.make_sixteenths(

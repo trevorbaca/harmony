@@ -199,10 +199,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = baca.parse(
-        r"r4 \times 4/5 { r8 c8. r16 c8. r16 }",
-    )
-    voice.extend(music)
+    voice.extend(r"r4 \times 4/5 { r8 c8. r16 c8. r16 }")
     music = library.make_tessera_1(
         time_signatures(2),
         3,
@@ -224,10 +221,7 @@ def VC1(voice, time_signatures):
         extra_counts=[1],
     )
     voice.extend(music)
-    music = baca.parse(
-        r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }",
-    )
-    voice.extend(music)
+    voice.extend(r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }")
     baca.section.append_anchor_note(voice)
 
 
