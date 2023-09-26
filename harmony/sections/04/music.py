@@ -54,7 +54,7 @@ def BFL(voice, time_signatures):
         [2, 2, 16],
         invisible=([1], 3),
         written=[((1, 4), ([0, 1], 3))],
-        tie=([2], 3),
+        repeat_tie=([2], 3),
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(10))

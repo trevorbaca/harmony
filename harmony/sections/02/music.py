@@ -43,6 +43,9 @@ durations = [16, 20, 12, 12, 12, 16]
 sixteenths = [(2, 2, _ - 4) for _ in durations]
 sixteenths = abjad.sequence.flatten(sixteenths)
 
+# sixteenths = [(w(2, 4), i(w(2, 4)), k(_ - 4)) for _ in durations]
+# sixteenths = abjad.sequence.flatten(sixteenths)
+
 
 def BFL(voice, time_signatures):
     music = library.make_sixteenths(
@@ -50,7 +53,7 @@ def BFL(voice, time_signatures):
         sixteenths,
         invisible=([1], 3),
         written=[((1, 4), ([0, 1], 3))],
-        tie=([2], 3),
+        repeat_tie=([2], 3),
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -71,7 +74,7 @@ def BFL(voice, time_signatures):
         [2, 2, 16],
         invisible=([1], 3),
         written=[((1, 4), ([0, 1], 3))],
-        tie=([2], 3),
+        repeat_tie=([2], 3),
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(12))
@@ -86,7 +89,7 @@ def PERC1(voice, time_signatures):
         prefix_talea=[2, 3],
         prefix_counts=[0, 0, 0, 0, 0, 2],
         rest_after=[0, 1, 2, 3, 4],
-        tie=[-2],
+        repeat_tie=[-2],
         written_quarters=[-2],
         invisible=[-1],
         voice_name=voice.name,

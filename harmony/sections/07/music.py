@@ -217,7 +217,7 @@ def VA(voice, time_signatures):
         extra_counts=[0, 8],
         prefix_counts=[0, 3],
         prefix_talea=[8, 4, 4],
-        tie=[6],
+        repeat_tie=[6],
         voice_name=voice.name,
     )
     voice.extend(music)
@@ -245,7 +245,7 @@ def VA(voice, time_signatures):
         tuplet_ratio_denominator=None,
         durations=durations,
         extra_counts=[0, -2],
-        tie=[0],
+        repeat_tie=[0],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -269,7 +269,7 @@ def VC1(voice, time_signatures):
         do_not_rewrite_meter=True,
         written=[((1, 1), [0])],
         invisible_pairs=True,
-        tie=[0],
+        repeat_tie=[0],
     )
     voice.extend(music)
     music = library.make_sixteenths(

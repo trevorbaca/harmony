@@ -138,7 +138,7 @@ def VC1(voice, time_signatures):
         extra_counts=[4, 0, 4],
         written=[((1, 4), [5])],
         invisible=[6],
-        tie=[6],
+        repeat_tie=[6],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -188,7 +188,7 @@ def CB1(voice, time_signatures):
         extra_counts=[4, 0, 4],
         written=[((1, 4), [5])],
         invisible=[6],
-        tie=[6],
+        repeat_tie=[6],
     )
     voice.extend(music)
     music = library.make_sixteenths(
