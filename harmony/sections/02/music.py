@@ -8,7 +8,6 @@ from harmony import library
 ########################################### 02 ##########################################
 #########################################################################################
 
-
 h = library.h
 r = library.r
 w = library.w
@@ -49,14 +48,11 @@ def bfl_and_harp():
 
 
 def BFL(voice, time_signatures):
-    sixteenths = bfl_and_harp()
-    items = [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in sixteenths]
-    items = abjad.sequence.flatten(items)
-    music = library.make_sixteenths(
-        time_signatures(1, 5),
-        items,
+    library.make_rhythm(
+        voice,
+        [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in bfl_and_harp()],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(6),
         weights=[12, 8],
@@ -67,7 +63,7 @@ def BFL(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(7),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
     )
     voice.extend(music)
     music = library.make_sixteenths(
@@ -169,14 +165,7 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    sixteenths = bfl_and_harp()
-    items = [(w(2, 4), h(w(2, 4)), _ - 4) for _ in sixteenths]
-    items = abjad.sequence.flatten(items)
-    music = library.make_sixteenths(
-        time_signatures(1, 5),
-        items,
-    )
-    voice.extend(music)
+    library.make_rhythm(voice, [(w(2, 4), h(w(2, 4)), _ - 4) for _ in bfl_and_harp()])
     music = library.make_sixteenths(
         time_signatures(6),
         [4, -6, 4, 4, -2],
@@ -215,7 +204,7 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(7),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
@@ -327,7 +316,7 @@ def CB1(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(7),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(

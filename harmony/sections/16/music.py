@@ -60,17 +60,21 @@ def PERC1(voice, time_signatures):
     voice.extend(music)
 
 
+def duration_color_counts():
+    return [21, -14, 18, "-"]
+
+
 def PERC2(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 6),
-        library.duration_color(),
+        duration_color_counts(),
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(7, 8))
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(9, 10),
-        library.duration_color(),
+        duration_color_counts(),
     )
     voice.extend(music)
 
@@ -78,7 +82,7 @@ def PERC2(voice, time_signatures):
 def HP(voice, time_signatures):
     music = library.make_sixteenths(
         time_signatures(1, 6),
-        library.duration_color(),
+        duration_color_counts(),
     )
     voice.extend(music)
     music = baca.make_mmrests(time_signatures(7))
@@ -92,7 +96,7 @@ def HP(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(9, 10),
-        library.duration_color(),
+        duration_color_counts(),
     )
     voice.extend(music)
 

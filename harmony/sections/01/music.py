@@ -8,6 +8,11 @@ from harmony import library
 ########################################### 01 ##########################################
 #########################################################################################
 
+h = library.h
+r = library.r
+w = library.w
+T = library.T
+
 
 def GLOBALS(skips, first_measure_number):
     stage_markup = (
@@ -38,27 +43,28 @@ def BFL(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
     )
     voice.extend(music)
+    #    library.make_rhythm(
+    #        voice,
+    #        library.cerulean_counts()[1:],
+    #        time_signatures(3),
+    #    )
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    library.make_rhythm(
+        voice,
+        ["-", w(3, 4), h(w(1, 4))],
         time_signatures(1),
-        ["-", 3, 1],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    library.make_rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-", w(3, 4), h(w(1, 4))],
         time_signatures(2),
-        [3, 1, "-", 3, 1],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_phjc_rhythm(
         time_signatures(3),
         [2, 1, 1],
@@ -70,11 +76,11 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    library.make_rhythm(
+        voice,
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
     music = library.make_phjc_rhythm(
         time_signatures(3),
         [1, 2],
@@ -87,16 +93,16 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    library.make_rhythm(
+        voice,
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(3),
+    library.make_rhythm(
+        voice,
         [10, "-"],
+        time_signatures(3),
     )
-    voice.extend(music)
 
 
 def VA(voice, time_signatures):
@@ -109,21 +115,22 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
-        library.cerulean()[1:],
+        library.cerulean_counts()[1:],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
 
-def VC1(voice, time_signatures):
-    voice.extend(r"c4 \times 5/3 { c4 c4 c4 } \times 5/3 { c4 c4 c4 }")
-    music = library.make_sixteenths(
-        time_signatures(3),
-        [5, -5, 1, -4],
-        extra_counts=[1],
+def VC1(voice):
+    library.make_rhythm(
+        voice,
+        [4, T([4, 4, 4], 8), T([4, 4, 4], 8)],
     )
-    voice.extend(music)
+    library.make_rhythm(
+        voice,
+        [4, -4, T([1, -4], -1)],
+    )
 
 
 def VC2(voice, time_signatures):
@@ -512,7 +519,7 @@ def make_score(first_measure_number):
     PERC2(voices("perc2"), time_signatures)
     HP(voices("hp"), time_signatures)
     VA(voices("va"), time_signatures)
-    VC1(voices("vc1"), time_signatures)
+    VC1(voices("vc1"))
     VC2(voices("vc2"), time_signatures)
     CB1(voices("cb1"), time_signatures)
     CB2(voices("cb2"), time_signatures)
