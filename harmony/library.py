@@ -453,7 +453,13 @@ def make_sixteenths(
             rmakers.repeat_tie(pleaves, tag=tag)
         rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     else:
-        voice = baca.make_rhythm(counts, 16, time_signatures, tag=tag)
+        voice = baca.make_rhythm(
+            counts,
+            16,
+            time_signatures,
+            do_not_rewrite_meter=True,
+            tag=tag,
+        )
     components = abjad.mutate.eject_contents(voice)
     return components
 

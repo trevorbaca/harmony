@@ -44,21 +44,17 @@ def GLOBALS(skips, rests):
         baca.global_fermata(rests[index], string)
 
 
-durations = [16, 20, 12, 12, 12, 16]
-sixteenths = [(2, 2, _ - 4) for _ in durations]
-sixteenths = abjad.sequence.flatten(sixteenths)
-
-# ss = [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in durations]
-# ss = abjad.sequence.flatten(ss)
+def bfl_and_harp():
+    return [16, 20, 12, 12, 12, 16]
 
 
 def BFL(voice, time_signatures):
+    sixteenths = bfl_and_harp()
+    items = [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in sixteenths]
+    items = abjad.sequence.flatten(items)
     music = library.make_sixteenths(
         time_signatures(1, 5),
-        sixteenths,
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
-        repeat_tie=([2], 3),
+        items,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -173,11 +169,12 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
+    sixteenths = bfl_and_harp()
+    items = [(w(2, 4), h(w(2, 4)), _ - 4) for _ in sixteenths]
+    items = abjad.sequence.flatten(items)
     music = library.make_sixteenths(
         time_signatures(1, 5),
-        sixteenths,
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
+        items,
     )
     voice.extend(music)
     music = library.make_sixteenths(
