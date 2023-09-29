@@ -390,27 +390,6 @@ def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=Non
     return music
 
 
-def make_rhythm(voice, items, time_signatures=None, *, do_not_rewrite_meter=False):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    items = abjad.sequence.flatten(items)
-    if time_signatures is None:
-        do_not_rewrite_meter = True
-    voice_ = baca.make_rhythm(
-        items,
-        16,
-        time_signatures,
-        boundary_depth=1,
-        do_not_rewrite_meter=do_not_rewrite_meter,
-        reference_meters=_reference_meters(),
-        tag=tag,
-    )
-    rmakers.force_fraction(voice_)
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
-    components = abjad.mutate.eject_contents(voice_)
-    voice.extend(components)
-    return components
-
-
 def make_sixteenths(
     time_signatures,
     counts,
@@ -683,7 +662,7 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
 
 
-def r(argument):
+def rt(argument):
     return baca.RepeatTie(argument)
 
 
@@ -692,6 +671,30 @@ def repeat_tie_runs(components):
     runs = abjad.select.runs(components)
     lists = [_[1:] for _ in runs]
     rmakers.repeat_tie(lists, tag=tag)
+
+
+def rhythm(voice, items, time_signatures=None, *, do_not_rewrite_meter=False):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    if isinstance(items, list):
+        items = abjad.sequence.flatten(items)
+    else:
+        items = [items]
+    if time_signatures is None:
+        do_not_rewrite_meter = True
+    voice_ = baca.make_rhythm(
+        items,
+        16,
+        time_signatures,
+        boundary_depth=1,
+        do_not_rewrite_meter=do_not_rewrite_meter,
+        reference_meters=_reference_meters(),
+        tag=tag,
+    )
+    rmakers.force_fraction(voice_)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    components = abjad.mutate.eject_contents(voice_)
+    voice.extend(components)
+    return components
 
 
 def slate_staff_position(argument):

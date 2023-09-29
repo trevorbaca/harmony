@@ -9,7 +9,8 @@ from harmony import library
 #########################################################################################
 
 h = library.h
-r = library.r
+rt = library.rt
+rhythm = library.rhythm
 w = library.w
 
 
@@ -48,9 +49,9 @@ def bfl_and_harp():
 
 
 def BFL(voice, time_signatures):
-    library.make_rhythm(
+    rhythm(
         voice,
-        [(w(2, 4), h(w(2, 4)), r(_ - 4)) for _ in bfl_and_harp()],
+        [(w(2, 4), h(w(2, 4)), rt(_ - 4)) for _ in bfl_and_harp()],
         do_not_rewrite_meter=True,
     )
     music = library.make_appoggiato_rhythm(
@@ -165,7 +166,7 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    library.make_rhythm(voice, [(w(2, 4), h(w(2, 4)), _ - 4) for _ in bfl_and_harp()])
+    rhythm(voice, [(w(2, 4), h(w(2, 4)), _ - 4) for _ in bfl_and_harp()])
     music = library.make_sixteenths(
         time_signatures(6),
         [4, -6, 4, 4, -2],

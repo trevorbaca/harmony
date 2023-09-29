@@ -8,10 +8,11 @@ from harmony import library
 ########################################### 01 ##########################################
 #########################################################################################
 
-h = library.h
-r = library.r
-w = library.w
 T = library.T
+h = library.h
+rhythm = library.rhythm
+rt = library.rt
+w = library.w
 
 
 def GLOBALS(skips, first_measure_number):
@@ -41,26 +42,21 @@ def BFL(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(3),
+    rhythm(
+        voice,
         library.cerulean_counts()[1:],
+        time_signatures(3),
     )
-    voice.extend(music)
-    #    library.make_rhythm(
-    #        voice,
-    #        library.cerulean_counts()[1:],
-    #        time_signatures(3),
-    #    )
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    library.make_rhythm(
+    rhythm(
         voice,
         ["-", w(3, 4), h(w(1, 4))],
         time_signatures(1),
     )
-    library.make_rhythm(
+    rhythm(
         voice,
         [w(3, 4), h(w(1, 4)), "-", w(3, 4), h(w(1, 4))],
         time_signatures(2),
@@ -76,7 +72,7 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    library.make_rhythm(
+    rhythm(
         voice,
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
         time_signatures(1, 2),
@@ -93,12 +89,12 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    library.make_rhythm(
+    rhythm(
         voice,
         [4, -14, 4, -2, 4, -6, 4, 4, -2],
         time_signatures(1, 2),
     )
-    library.make_rhythm(
+    rhythm(
         voice,
         [10, "-"],
         time_signatures(3),
@@ -123,11 +119,11 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice):
-    library.make_rhythm(
+    rhythm(
         voice,
         [4, T([4, 4, 4], 8), T([4, 4, 4], 8)],
     )
-    library.make_rhythm(
+    rhythm(
         voice,
         [4, -4, T([1, -4], -1)],
     )
