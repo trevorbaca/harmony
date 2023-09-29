@@ -390,6 +390,7 @@ def make_rimbalzandi_rhythm(time_signatures, *, extra_counts=(), rest_except=Non
     return music
 
 
+# TODO: change remaining calls to make_talea_sixteenths
 def make_sixteenths(
     time_signatures,
     counts,
@@ -637,6 +638,14 @@ def make_warble_rhythm(
     rmakers.denominator(voice, (1, 16))
     music = abjad.mutate.eject_contents(voice)
     return music
+
+
+def mmrests(voice, time_signatures, *, head=False):
+    if head:
+        music = baca.make_mmrests(time_signatures, head=voice.name)
+    else:
+        music = baca.make_mmrests(time_signatures)
+    voice.extend(music)
 
 
 def part_manifest():

@@ -7,6 +7,11 @@ from harmony import library
 ########################################### 28 ##########################################
 #########################################################################################
 
+mmrests = library.mmrests
+rhythm = library.rhythm
+h = library.h
+w = library.w
+
 
 def GLOBALS(skips, rests):
     stage_markup = (
@@ -36,8 +41,7 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures(1, 4))
-    voice.extend(music)
+    mmrests(voice, time_signatures(1, 4))
     music = library.make_warble_rhythm(
         time_signatures(5),
         sixteenths=[12, 12, 1, 11, 12],
@@ -45,57 +49,48 @@ def BFL(voice, time_signatures):
         rest_tuplets_cyclic=([1, 2, 4], 5),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6))
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [4],
-        written=[((7, 4), ([0], 7))],
-        invisible=([1, 2, 3, 4, 5, 6], 7),
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6))
+    for time_signaure in time_signatures(7, 10):
+        rhythm(
+            voice,
+            [w(4, 28), h(4), h(4), h(4), h(4), h(4), h(4)],
+        )
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(4, 8), 4, 8, 4, 4, 7, -1],
         time_signatures(1, 4),
-        [4, 4, 8, 4, 4, 7, -1],
         do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 2), [0])],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [1, "-"],
         time_signatures(5),
-        [1, -23, -1, 1, -22],
     )
-    voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6))
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [4],
-        written=[((7, 4), ([0], 7))],
-        invisible=([1, 2, 3, 4, 5, 6], 7),
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6))
+    for time_signaure in time_signatures(7, 10):
+        rhythm(
+            voice,
+            [w(4, 28), h(4), h(4), h(4), h(4), h(4), h(4)],
+        )
     baca.section.append_anchor_note(voice)
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 4),
+    rhythm(
+        voice,
         [2, "-"],
+        time_signatures(1, 4),
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(5),
         [2, -22, -1, 2, -21],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6))
-    voice.extend(music)
+    mmrests(voice, time_signatures(6))
     music = library.make_sixteenths(
         time_signatures(7, 10),
         [-26, 2],
@@ -110,8 +105,7 @@ def HP(voice, time_signatures):
         [4, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(5, 6))
-    voice.extend(music)
+    mmrests(voice, time_signatures(5, 6))
     music = library.make_sixteenths(
         time_signatures(7, 10),
         ["+"],
@@ -127,8 +121,7 @@ def VA(voice, time_signatures):
         4,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6))
-    voice.extend(music)
+    mmrests(voice, time_signatures(6))
     music = baca.make_notes(time_signatures(7, 10))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -145,15 +138,9 @@ def VC1(voice, time_signatures):
         3,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6), head=voice.name)
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [2],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6), head=True)
+    for time_signature in time_signatures(7, 10):
+        rhythm(voice, 7 * [w(2, 4), h(w(2, 4))])
     baca.section.append_anchor_note(voice)
 
 
@@ -168,15 +155,9 @@ def VC2(voice, time_signatures):
         2,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6), head=voice.name)
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [2],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6), head=True)
+    for time_signature in time_signatures(7, 10):
+        rhythm(voice, 7 * [w(2, 4), h(w(2, 4))])
     baca.section.append_anchor_note(voice)
 
 
@@ -191,40 +172,19 @@ def CB1(voice, time_signatures):
         1,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6), head=voice.name)
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [2],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6), head=True)
+    for time_signature in time_signatures(7, 10):
+        rhythm(voice, 7 * [w(2, 4), h(w(2, 4))])
     baca.section.append_anchor_note(voice)
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 4),
-        [8, 8, 8, 6, 2],
-        durations="measures",
-        do_not_rewrite_meter=True,
-        written=[((1, 2), [-2])],
-        invisible=[-1],
-    )
+    rhythm(voice, [8, 8, 8, w(6, 8), h(2)])
+    music = library.make_tessera_4(time_signatures(5), 0)
     voice.extend(music)
-    music = library.make_tessera_4(
-        time_signatures(5),
-        0,
-    )
-    voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6), head=voice.name)
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7, 10),
-        [4],
-    )
-    voice.extend(music)
+    mmrests(voice, time_signatures(6), head=True)
+    for time_signature in time_signatures(7, 10):
+        rhythm(voice, 7 * [4])
     baca.section.append_anchor_note(voice)
 
 
