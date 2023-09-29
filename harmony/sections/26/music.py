@@ -7,9 +7,11 @@ from harmony import library
 ########################################### 26 ##########################################
 #########################################################################################
 
+T = library.T
+h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
-h = library.h
+rt = library.rt
 w = library.w
 
 
