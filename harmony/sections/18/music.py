@@ -49,8 +49,7 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures(1, 2))
-    voice.extend(music)
+    mmrests(voice, time_signatures(1, 2))
     music = library.make_warble_rhythm(
         time_signatures(3),
         sixteenths=[2 * 4],
@@ -73,8 +72,7 @@ def BFL(voice, time_signatures):
         [4, 4, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7, 11))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7, 11))
 
 
 def PERC1(voice, time_signatures):
@@ -103,8 +101,7 @@ def PERC1(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(6))
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [2, "-"],
@@ -153,15 +150,13 @@ def PERC2(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(6))
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [2, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(9, 10))
-    voice.extend(music)
+    mmrests(voice, time_signatures(9, 10))
     music = library.make_sixteenths(
         time_signatures(11),
         ["-", 4, 4],
@@ -184,8 +179,7 @@ def HP(voice, time_signatures):
         [-2, 2, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(3))
-    voice.extend(music)
+    mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4, 5),
         [21, "-"],
@@ -193,8 +187,7 @@ def HP(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(6))
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [2, "-"],
@@ -246,8 +239,7 @@ def VA(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(6))
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, -4],
@@ -304,8 +296,7 @@ def VC1(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, -4],
@@ -348,8 +339,7 @@ def VC2(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, -4],
@@ -406,8 +396,7 @@ def CB1(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, -4],
@@ -463,8 +452,7 @@ def CB2(voice, time_signatures):
         0,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         [8, 4, -4],

@@ -41,8 +41,7 @@ def BFL(voice, time_signatures):
         [2, 3, -3],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(4))
-    voice.extend(music)
+    mmrests(voice, time_signatures(4))
     music = library.make_sixteenths(
         time_signatures(5, 9),
         [2, 2, -2],
@@ -71,15 +70,13 @@ def PERC2(voice, time_signatures):
         [2, -8, 2, -3, 2, -8],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(4))
-    voice.extend(music)
+    mmrests(voice, time_signatures(4))
     music = library.make_sixteenths(
         time_signatures(5),
         [1, "-"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(6))
-    voice.extend(music)
+    mmrests(voice, time_signatures(6))
     durations = [_.duration for _ in time_signatures(7, 9)]
     durations = [sum(durations)]
     weights = abjad.durations([(4, 4), (4, 4), (4, 4), (1, 4)])
@@ -101,8 +98,7 @@ def HP(voice, time_signatures):
         [1, -9, 1, -4, 1, -9],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(4))
-    voice.extend(music)
+    mmrests(voice, time_signatures(4))
     music = library.make_sixteenths(
         time_signatures(5, 9),
         [3, -3],

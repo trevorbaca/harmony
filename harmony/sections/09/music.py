@@ -60,8 +60,7 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures(1))
-    voice.extend(music)
+    mmrests(voice, time_signatures(1))
     music = library.make_sixteenths(
         time_signatures(2),
         [3, -6, 3, 3, -6, 3],
@@ -78,8 +77,7 @@ def HP(voice, time_signatures):
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(2))
-    voice.extend(music)
+    mmrests(voice, time_signatures(2))
 
 
 def VA(voice, time_signatures):

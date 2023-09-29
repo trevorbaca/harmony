@@ -39,8 +39,7 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = baca.make_mmrests(time_signatures(1, 7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(1, 7))
     durations = [_.duration for _ in time_signatures(8, 9)]
     durations = [sum(durations)]
     weights = abjad.durations([(2, 4), (2, 4), (2, 4)])
@@ -63,15 +62,13 @@ def PERC1(voice, time_signatures):
         [1, -11, -1, 1, -14],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7, 9))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7, 9))
 
 
 def PERC2(voice, time_signatures):
     music = baca.make_notes(time_signatures(1, 6))
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -86,8 +83,7 @@ def HP(voice, time_signatures):
         invisible=([1], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -102,8 +98,7 @@ def VA(voice, time_signatures):
         invisible=([2], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -123,8 +118,7 @@ def VC1(voice, time_signatures):
         invisible=([1], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -152,8 +146,7 @@ def VC2(voice, time_signatures):
         invisible=([2], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -173,8 +166,7 @@ def CB1(voice, time_signatures):
         invisible=([1], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
@@ -198,8 +190,7 @@ def CB2(voice, time_signatures):
         invisible=([2], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
 
