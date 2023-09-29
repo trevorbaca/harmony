@@ -32,8 +32,7 @@ def BFL(voice, time_signatures):
         library.damp_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+"],
@@ -53,8 +52,7 @@ def PERC1(voice, time_signatures):
         [41, -7, "+"],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         ["+"],
@@ -77,8 +75,7 @@ def PERC2(voice, time_signatures):
         duration_color_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7, 8))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7, 8))
     music = library.make_sixteenths(
         time_signatures(9, 10),
         duration_color_counts(),
@@ -92,8 +89,7 @@ def HP(voice, time_signatures):
         duration_color_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7))
-    voice.extend(music)
+    mmrests(voice, time_signatures(7))
     music = library.make_sixteenths(
         time_signatures(8),
         ["-", 4],
@@ -114,8 +110,7 @@ def VA(voice, time_signatures):
         library.glissando_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+"],
@@ -132,8 +127,7 @@ def VC1(voice, time_signatures):
         library.damp_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+", -1],
@@ -152,8 +146,7 @@ def VC2(voice, time_signatures):
         library.damp_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+", -1],
@@ -172,8 +165,7 @@ def CB1(voice, time_signatures):
         library.glissando_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+", -1],
@@ -193,8 +185,7 @@ def CB2(voice, time_signatures):
         library.glissando_counts(),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(7), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(7), head=True)
     music = library.make_sixteenths(
         time_signatures(8),
         ["+", -1],

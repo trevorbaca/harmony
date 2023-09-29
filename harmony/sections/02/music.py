@@ -77,8 +77,7 @@ def BFL(voice, time_signatures):
         repeat_tie=([2], 3),
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12))
-    voice.extend(music)
+    mmrests(voice, time_signatures(12))
 
 
 def PERC1(voice, time_signatures):
@@ -117,8 +116,7 @@ def PERC1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12))
-    voice.extend(music)
+    mmrests(voice, time_signatures(12))
 
 
 def PERC2(voice, time_signatures):
@@ -163,8 +161,7 @@ def PERC2(voice, time_signatures):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12))
-    voice.extend(music)
+    mmrests(voice, time_signatures(12))
 
 
 def HP(voice, time_signatures):
@@ -186,8 +183,7 @@ def HP(voice, time_signatures):
         written=[((1, 4), ([0, 1], 3))],
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12))
-    voice.extend(music)
+    mmrests(voice, time_signatures(12))
 
 
 def VA(voice, time_signatures):
@@ -218,8 +214,7 @@ def VA(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(12), head=True)
 
 
 def VC1(voice, time_signatures):
@@ -247,8 +242,7 @@ def VC1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(12), head=True)
 
 
 def VC2(voice, time_signatures):
@@ -295,8 +289,7 @@ def VC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(12), head=True)
 
 
 def CB1(voice, time_signatures):
@@ -328,8 +321,7 @@ def CB1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(12), head=True)
 
 
 def CB2(voice, time_signatures):
@@ -376,8 +368,7 @@ def CB2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = baca.make_mmrests(time_signatures(12), head=voice.name)
-    voice.extend(music)
+    mmrests(voice, time_signatures(12), head=True)
 
 
 def bfl(cache):
