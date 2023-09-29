@@ -1316,6 +1316,7 @@ number.29.Contrabass.2.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     a,8
+    [
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
@@ -1325,6 +1326,7 @@ number.29.Contrabass.2.Music = {
       %! SCP_SPANNER
       %! SPANNER_STOP
     \bacaStopTextSpanSCP
+    ]
     \revert DynamicLineSpanner.staff-padding
 
     <<
