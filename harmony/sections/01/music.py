@@ -10,6 +10,7 @@ from harmony import library
 
 T = library.T
 h = library.h
+mmrests = library.mmrests
 rhythm = library.rhythm
 rt = library.rt
 w = library.w

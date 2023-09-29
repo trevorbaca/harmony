@@ -7,6 +7,13 @@ from harmony import library
 ########################################### 10 ##########################################
 #########################################################################################
 
+T = library.T
+h = library.h
+mmrests = library.mmrests
+rhythm = library.rhythm
+rt = library.rt
+w = library.w
+
 
 def GLOBALS(skips, rests, first_measure_number):
     stage_markup = (
