@@ -263,26 +263,16 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + [-4],
         time_signatures(1),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    durations = [_.duration for _ in time_signatures(2)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (3, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, T([-4] + 3 * [w(2, 4), h(w(2, 4))], -4)],
         time_signatures(2),
-        [-4, -4, 2, 2, 2, 2, 2, 2],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, 4],
-        invisible_pairs=True,
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_tuplet(
         time_signatures(4),
@@ -332,12 +322,11 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + [-4],
         time_signatures(1),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
@@ -391,12 +380,11 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + [-4],
         time_signatures(1),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
@@ -450,12 +438,11 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + [-4],
         time_signatures(1),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [-4, 6, 2, -4],
@@ -1066,8 +1053,9 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
+            # TODO: remove
             # TODO: promote to music = library.make_sixteenths()
-            baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
+            # baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
