@@ -53,13 +53,11 @@ def BFL(voice, time_signatures):
         [4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, w(2, 4), h(w(2, 4))],
         time_signatures(2),
-        [-4, 2, 2],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4),
