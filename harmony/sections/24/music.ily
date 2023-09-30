@@ -3106,8 +3106,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -3150,7 +3148,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3188,8 +3185,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -3220,7 +3215,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3260,8 +3254,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -3297,7 +3289,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     % [Viola.Music measure 3]
     r2
@@ -3336,8 +3327,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -3367,7 +3356,6 @@ number.24.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3873,6 +3861,8 @@ number.24.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    - \tweak stencil ##f
+    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -3903,6 +3893,7 @@ number.24.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4434,8 +4425,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4478,7 +4467,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4516,8 +4504,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4548,7 +4534,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4588,8 +4573,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4625,7 +4608,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     % [Cello.2.Music measure 3]
     r2
@@ -4664,8 +4646,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -4695,7 +4675,6 @@ number.24.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
@@ -5198,6 +5177,8 @@ number.24.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
+    - \tweak stencil ##f
+    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5228,6 +5209,7 @@ number.24.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5767,8 +5749,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5811,7 +5791,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r2
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5849,8 +5828,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5881,7 +5858,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     r8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5921,8 +5897,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -5958,7 +5932,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
     % [Contrabass.2.Music measure 3]
     r2
@@ -5997,8 +5970,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! SPANNER_START
     - \tweak staff-padding 3
       %! SPANNER_START
@@ -6028,7 +5999,6 @@ number.24.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
-    \repeatTie
 
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
