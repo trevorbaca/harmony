@@ -106,15 +106,19 @@ def HP(voice, time_signatures):
     voice.extend(music)
 
 
-def VA(voice, time_signatures):
+def va_vc2_cb2(voice, time_signatures):
     music = library.make_sixteenths(
-        time_signatures(1, 3),
+        time_signatures,
         [2, 2, -10],
-        written=[((1, 4), [0, 1, 4, 5])],
-        invisible=[1, 5],
     )
+    library.unbeam(music)
+    library.written(music, (1, 4), [0, 1, 4, 5])
+    library.invisible(music, [1, 5])
     voice.extend(music)
-    library.repeat_tie_runs(music)
+
+
+def VA(voice, time_signatures):
+    va_vc2_cb2(voice, time_signatures(1, 3))
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
@@ -128,22 +132,18 @@ def VA(voice, time_signatures):
     voice.extend(music)
 
 
-def VC1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1, 3)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (8, 4), (2, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
-        time_signatures(1, 3),
-        [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[4, 0, 4],
-        written=[((1, 4), [5])],
-        invisible=[6],
-        repeat_tie=[6],
+def vc1_cb1(voice, time_signatures):
+    rhythm(
+        voice,
+        [T([4, 4, 4], -4), -4, -2, 2, rt(2), -2, -8, w(2, 4), h(rt(2))]
+        + [-8, T([-4, 4, 4], -4)],
+        time_signatures,
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
+
+
+def VC1(voice, time_signatures):
+    vc1_cb1(voice, time_signatures(1, 3))
     music = library.make_sixteenths(
         time_signatures(4),
         [4, "-"],
@@ -157,14 +157,7 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 3),
-        [2, 2, -10],
-        written=[((1, 4), [0, 1, 4, 5])],
-        invisible=[1, 5],
-    )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
+    va_vc2_cb2(voice, time_signatures(1, 3))
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],
@@ -179,21 +172,7 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1, 3)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (8, 4), (2, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
-        time_signatures(1, 3),
-        [4, 4, 4, -4, -2, 2, 2, -2, -8, 2, 2, -8, -4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[4, 0, 4],
-        written=[((1, 4), [5])],
-        invisible=[6],
-        repeat_tie=[6],
-    )
-    voice.extend(music)
+    vc1_cb1(voice, time_signatures(1, 3))
     music = library.make_sixteenths(
         time_signatures(4),
         [4, "-"],
@@ -207,14 +186,7 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 3),
-        [2, 2, -10],
-        written=[((1, 4), [0, 1, 4, 5])],
-        invisible=[1, 5],
-    )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
+    va_vc2_cb2(voice, time_signatures(1, 3))
     music = library.make_sixteenths(
         time_signatures(4),
         ["+"],

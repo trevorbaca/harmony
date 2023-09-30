@@ -101,6 +101,13 @@ def h(argument):
     return baca.InvisibleMusic(argument)
 
 
+def invisible(music, pattern):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    pleaves = baca.select.pleaves(music)
+    pleaves = abjad.select.get(pleaves, pattern)
+    rmakers.invisible_music(pleaves, tag=tag)
+
+
 def make_appoggiato_rhythm(
     time_signatures,
     *,
@@ -727,6 +734,22 @@ def triangle_staff_position(o):
     baca.stem_up(o.pleaves())
 
 
+def unbeam(music, pattern=True):
+    leaves = abjad.select.leaves(music)
+    if pattern is not True:
+        leaves = abjad.select.get(leaves, pattern)
+    for leaf in leaves:
+        rmakers.unbeam(leaf)
+
+
+def untie(music, pattern=True):
+    pleaves = baca.select.pleaves(music)
+    if pattern is not True:
+        pleaves = abjad.select.get(pleaves, pattern)
+    for pleaf in pleaves:
+        rmakers.untie([pleaf])
+
+
 def w(real_n, written_n):
     return baca.WrittenDuration(real_n, written_n)
 
@@ -739,6 +762,14 @@ def whisk_staff_position(argument):
     baca.staff_position(argument, 0)
     baca.stem_down(baca.select.pleaves(argument))
     baca.tuplet_bracket_up(argument)
+
+
+def written(music, pair, pattern):
+    assert isinstance(pair, tuple), repr(pair)
+    pleaves = baca.select.pleaves(music)
+    if pattern is not True:
+        pleaves = abjad.select.get(pleaves, pattern)
+    rmakers.written_duration(pleaves, pair)
 
 
 instruments = {
