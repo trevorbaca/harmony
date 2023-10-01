@@ -88,15 +88,11 @@ def BFL(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        ["-", w(4, 8), h(w(4, 8))],
         time_signatures(10),
-        ["-", 4, 4],
-        durations="measures",
-        do_not_rewrite_meter=True,
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
