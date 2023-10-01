@@ -650,7 +650,7 @@ number.7.BassFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     \once \override DynamicText.X-offset = -0.75
-    bf'''!8 * 1/2
+    bf'''!4 * 1/4
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -660,7 +660,7 @@ number.7.BassFlute.Music = {
       %! SPANNER_STOP
     \f
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -717,7 +717,7 @@ number.7.BassFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     \once \override DynamicText.X-offset = -2
-    bf'''!8 * 1/2
+    bf'''!4 * 1/4
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -727,7 +727,7 @@ number.7.BassFlute.Music = {
       %! SPANNER_STOP
     \mf
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -905,7 +905,7 @@ number.7.BassFlute.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     \once \override DynamicText.X-offset = -0.75
-    bf'''!8 * 1/2
+    bf'''!4 * 1/4
     :32
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -915,7 +915,7 @@ number.7.BassFlute.Music = {
       %! SPANNER_STOP
     \f
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

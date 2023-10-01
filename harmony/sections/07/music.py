@@ -1,6 +1,5 @@
 import abjad
 import baca
-from abjadext import rmakers
 
 from harmony import library
 
@@ -53,22 +52,17 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), -12],
         time_signatures(1),
-        [2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(1, 2), h(w(1, 4)), "-", w(1, 2), h(w(1, 4))],
         time_signatures(4, 5),
-        [1, 1, -28, 1, 1],
-        written=[((1, 8), True)],
-        invisible_pairs=True,
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(6),
         ["-", -2, 4, -2, 4],
@@ -76,28 +70,16 @@ def BFL(voice, time_signatures):
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    durations = [_.duration for _ in time_signatures(7)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(7, 8), (5, 8)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, 8, -2, T([-4, w(2, 4), h(w(2, 4))], 2)],
         time_signatures(7),
-        [-4, 8, "-", 2, 2],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -2],
-        invisible=[-1],
-        written=[((1, 4), [-2, -1])],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(1, 2), h(w(1, 4)), "-"],
         time_signatures(8),
-        [1, 1, "-"],
-        written=[((1, 8), True)],
-        invisible_pairs=True,
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
 
 
 def PERC1(voice, time_signatures):
