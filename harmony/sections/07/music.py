@@ -164,28 +164,16 @@ def HP(voice, time_signatures):
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    durations = [_.duration for _ in time_signatures(7)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (2, 4), (1, 8), (5, 8)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, T([-4, 8], -4), -2, T([-4, w(2, 4), h(w(2, 4))], 2)],
         time_signatures(7),
-        [-4, -4, 8, -2, -4, 2, 2],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, 4, 0, -2],
-        written=[((1, 4), [-2, -1])],
-        invisible=[-1],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(1, 2), h(w(1, 4)), "-"],
         time_signatures(8),
-        [1, 1, "-"],
-        written=[((1, 8), True)],
-        invisible=[1],
-        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
 
 
 def VA(voice, time_signatures):

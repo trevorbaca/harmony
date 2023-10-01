@@ -1908,9 +1908,9 @@ number.7.Harp.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    c'8 * 1/2
+    c'4 * 1/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     \revert Stem.direction
 
     r8
@@ -1918,11 +1918,7 @@ number.7.Harp.Music = {
       %! SPANNER_STOP
     \bacaStopTextSpanMetricModulation
 
-    r4
-
-    r4
-
-    r4
+    r2.
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
