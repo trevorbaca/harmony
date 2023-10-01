@@ -1283,6 +1283,7 @@ number.11.Percussion.1.Music = {
 
     d'8
     :32
+    [
 
     d'8
     :32
@@ -1293,6 +1294,7 @@ number.11.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1311,6 +1313,7 @@ number.11.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
@@ -1328,6 +1331,7 @@ number.11.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     d'4
     :32
@@ -2651,6 +2655,7 @@ number.11.Viola.Music = {
     a''4
 
     a''8
+    [
 
     a''8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2660,6 +2665,7 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -2680,6 +2686,7 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -2699,6 +2706,7 @@ number.11.Viola.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     a''4
 
@@ -3404,6 +3412,7 @@ number.11.Cello.1.Music = {
     gqs'''!4
 
     gqs'''!8
+    [
 
     gqs'''!8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3413,6 +3422,7 @@ number.11.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -3433,6 +3443,7 @@ number.11.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -3452,6 +3463,7 @@ number.11.Cello.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     gqs'''!4
 
@@ -4073,6 +4085,7 @@ number.11.Cello.2.Music = {
     fs''!4
 
     fs''!8
+    [
 
     fs''!8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4082,6 +4095,7 @@ number.11.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -4102,6 +4116,7 @@ number.11.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -4121,6 +4136,7 @@ number.11.Cello.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     fs''!4
 
@@ -4811,6 +4827,7 @@ number.11.Contrabass.1.Music = {
     cs'''!4
 
     cs'''!8
+    [
 
     cs'''!8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4820,6 +4837,7 @@ number.11.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -4840,6 +4858,7 @@ number.11.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -4859,6 +4878,7 @@ number.11.Contrabass.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     cs'''!4
 
@@ -5497,6 +5517,7 @@ number.11.Contrabass.2.Music = {
     cqf'''!4
 
     cqf'''!8
+    [
 
     cqf'''!8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5506,6 +5527,7 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -5526,6 +5548,7 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    [
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak stencil #abjad-flared-hairpin
@@ -5545,6 +5568,7 @@ number.11.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+    ]
 
     cqf'''!4
 
