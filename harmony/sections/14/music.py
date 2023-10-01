@@ -76,13 +76,11 @@ def BFL(voice, time_signatures):
         [-1, 3, 4, -4, 4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), rt(4), -12],
         time_signatures(5),
-        [2, 2, 4, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_warble_rhythm(
         time_signatures(6),
         sixteenths=[2 * 4],
@@ -434,8 +432,6 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
     with baca.scope(m[5]) as o:
-        # TODO: promote to music = library.make_sixteenths():
-        baca.repeat_tie(o.pleaf(-1))
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)

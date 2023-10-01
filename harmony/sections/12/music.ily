@@ -753,7 +753,9 @@ number.12.BassFlute.Music = {
     \startStaff
       %! REAPPLIED_CLEF
     \clef "treble"
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
       %! LEFT_BROKEN
@@ -794,7 +796,7 @@ number.12.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -802,6 +804,8 @@ number.12.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mf
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -893,7 +897,9 @@ number.12.BassFlute.Music = {
     \!
 
     % [BassFlute.Music measure 3]
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -909,7 +915,7 @@ number.12.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -917,6 +923,8 @@ number.12.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -979,7 +987,9 @@ number.12.BassFlute.Music = {
     >>
 
     % [BassFlute.Music measure 5]
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -995,7 +1005,7 @@ number.12.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1003,6 +1013,8 @@ number.12.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \p
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1065,7 +1077,9 @@ number.12.BassFlute.Music = {
     >>
 
     % [BassFlute.Music measure 7]
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1081,7 +1095,7 @@ number.12.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1089,6 +1103,8 @@ number.12.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \pp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -1534,6 +1550,7 @@ number.12.BassFlute.Music = {
     ~
 
     dtqf'''8
+    [
     \repeatTie
 
     dtqf'''!8
@@ -1546,6 +1563,7 @@ number.12.BassFlute.Music = {
     \baca-effort-f
       %! SPANNER_STOP
     \stopTextSpan
+    ]
       %! SPANNER_START
     - \baca-dashed-line-with-hook
       %! SPANNER_START
