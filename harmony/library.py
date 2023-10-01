@@ -405,10 +405,6 @@ def make_sixteenths(
     do_not_rewrite_meter=False,
     durations="quarters",
     extra_counts=(),
-    # TODO: remove invisible
-    invisible=None,
-    # TODO: remove invisible_pairs
-    invisible_pairs=False,
     talea_denominator=16,
     # TODO: remove repeat_tie
     repeat_tie=None,
@@ -438,18 +434,6 @@ def make_sixteenths(
         rmakers.rewrite_meter(
             voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
         )
-    # TODO: remove check
-    violators, total_beamed_notes = abjad.wf.check_beamed_long_notes(voice)
-    if violators:
-        rmakers.unbeam(voice)
-    if invisible_pairs is True:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, ([1], 2))
-        rmakers.invisible_music(pleaves, tag=tag)
-    if invisible is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, invisible)
-        rmakers.invisible_music(pleaves, tag=tag)
     if repeat_tie is not None:
         pleaves = baca.select.pleaves(voice)
         pleaves = abjad.select.get(pleaves, repeat_tie)

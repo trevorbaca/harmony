@@ -452,11 +452,9 @@ number.29.Percussion.2.Music = {
 
     r8.
 
-      %! INVISIBLE_MUSIC_COMMAND
-    %@% \abjad-invisible-music
-      %! INVISIBLE_MUSIC_COLORING
-    \abjad-invisible-music-coloring
-    c'16
+    \once \override Script.direction = #down
+    \once \override Script.padding = 2
+    r16
     - \baca-damp
 
     % [Percussion.2.Music measure 2]
