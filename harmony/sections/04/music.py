@@ -112,19 +112,18 @@ def PERC2(voice, time_signatures):
         rest_leaves=[0, 1, 2],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9),
+    rhythm(
+        voice,
         [4, 4, "-"],
+        time_signatures(9),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
-    music = library.make_sixteenths(
-        time_signatures(11),
+    rhythm(
+        voice,
         [-6, 6],
-        durations="measures",
+        time_signatures(11),
         do_not_rewrite_meter=True,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
