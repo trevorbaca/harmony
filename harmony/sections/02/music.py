@@ -1,6 +1,5 @@
 import abjad
 import baca
-from abjadext import rmakers
 
 from harmony import library
 
@@ -262,13 +261,11 @@ def VC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [8, AG([2], 2), "-"],
         time_signatures(7),
-        [10, "-"],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(8, 11),
         counts=[7],
@@ -279,11 +276,11 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [2, -2, 2, -2, "-"],
+        time_signatures(1),
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(2, 5),
         weights=[16, 16, 12, 16, 12],
@@ -291,16 +288,16 @@ def CB1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(6),
+    rhythm(
+        voice,
         [10, 4, 6],
+        time_signatures(6),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        abjad.sequence.truncate(library.cerulean_counts()[1:], weight=12),
         time_signatures(7),
-        library.cerulean_counts()[1:],
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(8, 11),
         counts=[7],
@@ -331,13 +328,11 @@ def CB2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [8, AG([2], 2), "-"],
         time_signatures(7),
-        [10, "-"],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(8, 11),
         counts=[7],
