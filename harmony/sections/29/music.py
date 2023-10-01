@@ -55,12 +55,12 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-16, -4, -3, -1],
         time_signatures(1),
-        ["-", 1],
-        invisible=[-1],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
 
 
@@ -151,7 +151,10 @@ def perc1(m):
 
 def perc2(m):
     with baca.scope(m[1]) as o:
-        baca.damp(o.leaf(-1))
+        with baca.scope(o.leaf(-1)) as u:
+            baca.damp(u)
+            baca.script_down(u)
+            baca.script_padding(u, 2)
 
 
 def hp(m):
