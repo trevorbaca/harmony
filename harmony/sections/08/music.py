@@ -86,15 +86,11 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [12, w(8, 16), h(w(8, 4))],
         time_signatures(1, 6),
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 1), ([1, 2], 3))],
-        invisible=([2], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
@@ -106,15 +102,11 @@ def VC1(voice, time_signatures):
         [4, 4, 4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        (3 * [12, w(8, 16), h(w(8, 4))])[1:],
         time_signatures(2, 6),
-        [8, 8, 12],
-        do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 1), ([0, 1], 3))],
-        invisible=([1], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
@@ -134,15 +126,11 @@ def VC2(voice, time_signatures):
         invisible=[-1],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        (3 * [12, w(8, 16), h(w(8, 4))])[3:],
         time_signatures(3, 6),
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 1), ([1, 2], 3))],
-        invisible=([2], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
@@ -154,15 +142,11 @@ def CB1(voice, time_signatures):
         [4, 4, 8, 4, 4, 8, 4, 4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        (3 * [12, w(8, 16), h(w(8, 4))])[4:],
         time_signatures(4, 6),
-        [8, 8, 12],
-        do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 1), ([0, 1], 3))],
-        invisible=([1], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
@@ -178,15 +162,11 @@ def CB2(voice, time_signatures):
         invisible=[-1],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        (3 * [12, w(8, 16), h(w(8, 4))])[6:],
         time_signatures(5, 6),
-        [12, 8, 8],
-        do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((1, 1), ([1, 2], 3))],
-        invisible=([2], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8, 9))
     voice.extend(music)
