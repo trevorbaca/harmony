@@ -140,22 +140,17 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), "-"],
         time_signatures(1),
-        [2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 4))],
         time_signatures(2),
-        [6, 6],
         do_not_rewrite_meter=True,
-        durations="measures",
-        written=[((3, 4), [0])],
-        invisible=[1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3), head=True)
     music = library.make_sixteenths(
         time_signatures(4, 5),
