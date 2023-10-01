@@ -118,28 +118,17 @@ def PERC1(voice, time_signatures):
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
+    rhythm(
+        voice,
+        2 * [w(3, 4), h(w(1, 4)), -8],
+        time_signatures(7, 8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(8),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
-    )
-    voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -220,14 +209,11 @@ def HP(voice, time_signatures):
         [2, -2],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), rt(w(1, 2)), h(w(1, 4)), -6],
         time_signatures(8),
-        [3, 1, 1, 1, -6],
-        written=[((1, 4), [0]), ((1, 8), [2])],
-        invisible=[1, 3],
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(9))
     music = library.make_sixteenths(
         time_signatures(10),
