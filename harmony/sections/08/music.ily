@@ -1784,7 +1784,9 @@ number.8.Cello.2.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    b,16
+    b,4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Cello.2.Music measure 3]
       %! MEASURE_65
@@ -2325,6 +2327,9 @@ number.8.Contrabass.2.Music = {
       %! LEFT_BROKEN
       %! SPANNER_START
     \bacaStartTextSpanDamp
+    - \tweak stencil ##f
+    ~
+    \repeatTie
       %! REAPPLIED_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'OliveDrab)
       %! REDRAWN_REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2334,13 +2339,19 @@ number.8.Contrabass.2.Music = {
     \set Staff.shortInstrumentName = \harmony-cb-ii-markup %@%
 
     % [Contrabass.2.Music measure 2]
-    bf!1
+    bf1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Contrabass.2.Music measure 3]
-    bf!2.
+    bf2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
 
     % [Contrabass.2.Music measure 4]
-    bf!1 * 15/16
+    bf1 * 15/16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -2363,12 +2374,15 @@ number.8.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \>
+    \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    bf!16
+    bf!4 * 1/4
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Contrabass.2.Music measure 5]
       %! MEASURE_67
