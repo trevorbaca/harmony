@@ -55,14 +55,11 @@ def BFL(voice, time_signatures):
         gap=True,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), rt(16)],
         time_signatures(9),
-        [2, 2, 16],
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
-        repeat_tie=([2], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     music = library.make_tessera_1(
         time_signatures(11),
@@ -144,13 +141,11 @@ def HP(voice, time_signatures):
         advance=72,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 16],
         time_signatures(9),
-        [2, 2, 16],
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     music = library.make_tessera_1(
         time_signatures(11),

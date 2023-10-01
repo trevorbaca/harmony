@@ -575,8 +575,10 @@ number.11.BassFlute.Music = {
     \startStaff
       %! REAPPLIED_CLEF
     \clef "treble"
-    <ef'! ef''! bf''!>4.
+    <ef'! ef''! bf''!>2. * 1/2
     ^ \baca-boxed-markup "L.5"
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! REAPPLIED_INSTRUMENT_ALERT
     %@% ^ \baca-reapplied-instrument-markup "(“BassFlute”)"
       %! EXPLICIT_DYNAMIC
