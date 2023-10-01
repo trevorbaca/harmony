@@ -8,6 +8,7 @@ from harmony import library
 ########################################### 02 ##########################################
 #########################################################################################
 
+AG = library.AG
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -64,11 +65,11 @@ def BFL(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        abjad.sequence.truncate(library.cerulean_counts()[1:], weight=12),
         time_signatures(7),
-        library.cerulean_counts()[1:],
     )
-    voice.extend(music)
     rhythm(
         voice,
         4 * [w(2, 4), h(w(2, 4)), rt(16)],
@@ -123,16 +124,16 @@ def PERC2(voice, time_signatures):
         force_augmentation=True,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         ["-", 6],
+        time_signatures(5),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(6),
+    rhythm(
+        voice,
         [4, -6, 4, 4, -2],
+        time_signatures(6),
     )
-    voice.extend(music)
     music = library.make_phjc_rhythm(
         time_signatures(7),
         [1, 2],
@@ -161,16 +162,16 @@ def PERC2(voice, time_signatures):
 
 def HP(voice, time_signatures):
     rhythm(voice, [(w(2, 4), h(w(2, 4)), _ - 4) for _ in bfl_and_harp()])
-    music = library.make_sixteenths(
-        time_signatures(6),
+    rhythm(
+        voice,
         [4, -6, 4, 4, -2],
+        time_signatures(6),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(7),
+    rhythm(
+        voice,
         [10, "-"],
+        time_signatures(7),
     )
-    voice.extend(music)
     rhythm(
         voice,
         4 * [w(2, 4), h(w(2, 4)), 16],
@@ -194,7 +195,7 @@ def VA(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(7),
         library.cerulean_counts()[1:],
         extra_counts=[2],
@@ -221,14 +222,16 @@ def VC1(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    voice.append(r"\times 5/3 { c4 c4 c4 }")
-    baca.repeat_tie(voice[-1][0])
-    music = library.make_sixteenths(
-        time_signatures(7),
-        [5, -5, 1, "-"],
-        extra_counts=[1],
+    rhythm(
+        voice,
+        T([rt(4), 4, 4], 8),
+        time_signatures(6),
     )
-    voice.extend(music)
+    rhythm(
+        voice,
+        [4, -4, T([1, -4], -1)],
+        time_signatures(7),
+    )
     music = library.make_appoggiato_rhythm(
         time_signatures(8, 11),
         counts=[7],
@@ -239,21 +242,11 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1, 2)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(15, 8), (3, 8)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [T([16, AG([2], 4), -4], "4:5"), -6],
         time_signatures(1, 2),
-        [20, "-"],
-        tuplet_ratio_denominator=None,
-        do_not_rewrite_meter=True,
-        durations=durations,
-        extra_counts=[-6],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(3, 5),
         weights=[8, 16, 12, 16],
@@ -318,21 +311,11 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1, 2)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(15, 8), (3, 8)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [T([16, AG([2], 4), -4], "4:5"), -6],
         time_signatures(1, 2),
-        [20, "-"],
-        tuplet_ratio_denominator=None,
-        do_not_rewrite_meter=True,
-        durations=durations,
-        extra_counts=[-6],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(3, 5),
         weights=[8, 16, 12, 16],

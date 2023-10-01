@@ -5236,7 +5236,9 @@ number.2.Cello.2.Music = {
 
     }
 
-    r4.
+    r8
+
+    r4
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
 
@@ -7090,7 +7092,9 @@ number.2.Contrabass.2.Music = {
 
     }
 
-    r4.
+    r8
+
+    r4
     \revert DynamicLineSpanner.staff-padding
 
     % [Contrabass.2.Music measure 3]
