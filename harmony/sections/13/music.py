@@ -54,21 +54,17 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), rt(4), -12],
         time_signatures(1),
-        [2, 2, 4, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        ["-", w(2, 4), h(w(2, 4))],
         time_signatures(3),
-        ["-", 2, 2],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(4),
         counts=[9],
@@ -104,13 +100,11 @@ def PERC1(voice, time_signatures):
     voice.extend(music)
     music = baca.make_notes(time_signatures(4))
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-"],
         time_signatures(5),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
 
 
@@ -290,8 +284,6 @@ def bfl(cache):
     name = "bfl"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        # TODO: promote into music = library.make_sixteenths():
-        baca.repeat_tie(o.pleaf(-1))
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)

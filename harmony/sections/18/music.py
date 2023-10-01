@@ -226,12 +226,11 @@ def VA(voice, time_signatures):
     )
     rmakers.untie(music)
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(3),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4, 5),
         library.glissando_counts_curtailed(),
@@ -245,24 +244,21 @@ def VA(voice, time_signatures):
         [8, 4, -4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(9),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T(5 * [w(2, 4), h(w(2, 4))], -4),
         time_signatures(10),
-        [10 * (1,)],
-        written_quarters=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(11),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -279,12 +275,11 @@ def VC1(voice, time_signatures):
     )
     rmakers.untie(music)
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(3),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4, 5),
         library.damp_counts_curtailed(),
@@ -322,12 +317,11 @@ def VC2(voice, time_signatures):
     )
     rmakers.untie(music)
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(3),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4, 5),
         library.damp_counts_curtailed(),
@@ -345,24 +339,21 @@ def VC2(voice, time_signatures):
         [8, 4, -4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(9),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T(5 * [w(2, 4), h(w(2, 4))], -4),
         time_signatures(10),
-        [10 * (1,)],
-        written_quarters=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(11),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -379,12 +370,11 @@ def CB1(voice, time_signatures):
     )
     rmakers.untie(music)
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(3),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4, 5),
         library.glissando_counts_curtailed(),
@@ -426,22 +416,16 @@ def CB2(voice, time_signatures):
     )
     rmakers.untie(music)
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        T([-8] + 2 * [w(2, 4), h(w(2, 4))], -4),
         time_signatures(2),
-        ["-", 2, 2, 2, 2],
-        durations="measures",
-        extra_counts=[4],
-        tuplet_ratio_denominator=None,
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(3),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4, 5),
         library.glissando_counts_curtailed(),
@@ -458,24 +442,21 @@ def CB2(voice, time_signatures):
         [8, 4, -4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(9),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T(5 * [w(2, 4), h(w(2, 4))], -4),
         time_signatures(10),
-        [10 * (1,)],
-        written_quarters=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))],
         time_signatures(11),
-        [2],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -1196,8 +1177,6 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[3]) as o:
-            # TODO: promote to music = library.make_sixteenths()
-            baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
@@ -1238,8 +1217,6 @@ def composites(cache):
     for name in ["va", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(9, 11)) as o:
-            # TODO: move invisible command into rhythm-time_signatures
-            baca.invisible_music(abjad.select.get(o.leaves(), ([1], 2)))
             baca.hairpin(
                 o.tleaves(),
                 "niente o< p >o",

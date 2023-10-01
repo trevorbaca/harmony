@@ -31,15 +31,12 @@ def BFL(voice, time_signatures):
         [-1, 3, 4, -4, 4, -1, 3, 4, "-"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 12))],
         time_signatures(3),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(4),
         [4, 8],
@@ -64,13 +61,11 @@ def PERC1(voice, time_signatures):
         [12, 16, -4],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-"],
         time_signatures(4),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(5, 9),
         [-1, 3, -8, 4, -8, -1, "+"],

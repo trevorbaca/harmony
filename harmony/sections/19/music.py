@@ -1045,9 +1045,6 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            # TODO: remove
-            # TODO: promote to music = library.make_sixteenths()
-            # baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(

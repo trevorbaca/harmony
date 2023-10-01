@@ -158,12 +158,11 @@ def VC1(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(2),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4),
@@ -186,12 +185,11 @@ def VC2(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(2),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4),
@@ -214,12 +212,11 @@ def CB1(voice, time_signatures):
         force_rest_plts=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(2),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4),
@@ -241,12 +238,11 @@ def CB2(voice, time_signatures):
         0,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(2, 4), h(w(2, 4))] + ["-"],
         time_signatures(2),
-        [2, 2, 2, 2, 2, 2, "-"],
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_sixteenths(
         time_signatures(4),
@@ -673,8 +669,6 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            # TODO: promote to music = library.make_sixteenths()
-            baca.invisible_music(abjad.select.get(o.pleaves(), [1], 2))
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(

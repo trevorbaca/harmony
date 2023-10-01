@@ -53,51 +53,37 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 12))],
         time_signatures(1),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 8), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), rt(4), -12],
         time_signatures(2),
-        [2, 2, 4, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 12))],
         time_signatures(3),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 8), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(4), head=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 12))],
         time_signatures(5),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 8), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(w(6, 12))],
         time_signatures(7),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 8), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(8, 9), head=True)
     music = library.make_appoggiato_rhythm(
         time_signatures(10),
@@ -116,15 +102,11 @@ def BFL(voice, time_signatures):
         [6, 6, 6, 6, 6, 10],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(2), 2, rt(4), T([rt(2), w(2, 4), h(w(2, 4))], -2)],
         time_signatures(15),
-        [6, 8, 2, 2],
-        extra_counts=[0, 0, 0, 2],
-        tuplet_ratio_denominator=None,
-        written=[((1, 4), [-2, -1])],
-        invisible=[-1],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -181,21 +163,17 @@ def PERC1(voice, time_signatures):
         [2, -2],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-"],
         time_signatures(13),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(14))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-"],
         time_signatures(15),
-        [3, 1, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
 
 
 def PERC2(voice, time_signatures):
@@ -531,8 +509,6 @@ def bfl(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[2]) as o:
-        # TOOD: promote into music = library.make_sixteenths():
-        baca.repeat_tie(o.pleaf(-1))
         baca.pitch(o, "B4")
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
