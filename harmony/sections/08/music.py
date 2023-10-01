@@ -97,11 +97,11 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(4), 4, 4],
         time_signatures(1),
-        [4, 4, 4],
     )
-    voice.extend(music)
     rhythm(
         voice,
         (3 * [12, w(8, 16), h(w(8, 4))])[1:],
@@ -113,19 +113,12 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1, 2)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(3, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(12), rt(w(15, 16)), h(w(1, 4))],
         time_signatures(1, 2),
-        ["+", 1],
         do_not_rewrite_meter=True,
-        durations=durations,
-        written=[((1, 1), [1])],
-        invisible=[-1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         (3 * [12, w(8, 16), h(w(8, 4))])[3:],
@@ -153,15 +146,12 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(12), rt(16), rt(12), rt(w(15, 16)), h(w(1, 4))],
         time_signatures(1, 4),
-        [12, 16, 12, 15, 1],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((1, 1), [-2])],
-        invisible=[-1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         (3 * [12, w(8, 16), h(w(8, 4))])[6:],
@@ -310,8 +300,6 @@ def vc1(cache):
     name = "vc1"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        # TODO: promote into rhythm:
-        baca.repeat_tie(o.leaf(0))
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[1:])
         baca.metric_modulation_spanner(
@@ -357,8 +345,6 @@ def vc2(cache):
     name = "vc2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        # TODO: promote into rhythm:
-        baca.repeat_tie(o.leaf(0))
         baca.pitch(o, "B2")
         baca.hairpin(
             o.leaves()[-2:],
