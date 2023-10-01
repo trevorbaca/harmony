@@ -1233,15 +1233,15 @@ number.10.BassFlute.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    gs''!1. * 1/8
+    gs''!4 * 3/4
       %! DURATION_MULTIPLIER
-    %@% ^ \baca-duration-multiplier-markup #"1" #"8"
+    %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    gs''!16
+    gs''!4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1249,6 +1249,8 @@ number.10.BassFlute.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [BassFlute.Music measure 15]
     r16

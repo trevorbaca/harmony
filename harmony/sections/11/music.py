@@ -229,13 +229,11 @@ def VA(voice, time_signatures):
         repeat_tie=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -254,38 +252,25 @@ def VA(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def VC1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (2, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, T([-2, w(2, 4), h(w(2, 4))], 2)],
         time_signatures(1),
-        ["-", 2, 2],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -2],
-        invisible=([1], 2),
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -310,13 +295,11 @@ def VC1(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -327,13 +310,11 @@ def VC2(voice, time_signatures):
         repeat_tie=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -358,38 +339,25 @@ def VC2(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (2, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, T([-2, w(2, 4), h(w(2, 4))], 2)],
         time_signatures(1),
-        ["-", 2, 2],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -2],
-        invisible=([1], 2),
-        written=[((1, 4), True)],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -413,13 +381,11 @@ def CB1(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -430,13 +396,11 @@ def CB2(voice, time_signatures):
         repeat_tie=[0],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -460,13 +424,11 @@ def CB2(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(9))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))],
         time_signatures(10),
-        [2, 2, 4, 2, 2, 2, 2],
-        written=[((1, 4), [0, 1, 3, 4, 5, 6])],
-        invisible=[1, 4, 6],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 

@@ -93,20 +93,16 @@ def BFL(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [w(12, 24), h(12)],
         time_signatures(11, 13),
-        [12],
-        written=[((3, 2), ([0], 2))],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(12, 24), h(8), h(w(3, 4)), h(w(1, 4))],
         time_signatures(14),
-        [12, 8, 3, 1],
-        written=[((3, 2), ([0], 2))],
-        invisible=[1, 2, 3],
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(15),
         counts=[9],
