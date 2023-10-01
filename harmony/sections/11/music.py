@@ -60,15 +60,12 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(6, 12), h(6)],
         time_signatures(1),
-        [6, 6],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((3, 8), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 4), head=True)
     music = library.make_sixteenths(
         time_signatures(5),

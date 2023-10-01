@@ -69,14 +69,11 @@ def BFL(voice, time_signatures):
         library.cerulean_counts()[1:],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        4 * [w(2, 4), h(w(2, 4)), rt(16)],
         time_signatures(8, 11),
-        [2, 2, 16],
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
-        repeat_tie=([2], 3),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(12))
 
 
@@ -94,13 +91,11 @@ def PERC1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(3, 4), h(w(1, 4)), "-", w(3, 4), h(w(1, 4))],
         time_signatures(6),
-        [3, 1, "-", 3, 1],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_phjc_rhythm(
         time_signatures(7),
         [2, 1, 1],
@@ -176,13 +171,11 @@ def HP(voice, time_signatures):
         [10, "-"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        4 * [w(2, 4), h(w(2, 4)), 16],
         time_signatures(8, 11),
-        [2, 2, 16],
-        invisible=([1], 3),
-        written=[((1, 4), ([0, 1], 3))],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(12))
 
 
