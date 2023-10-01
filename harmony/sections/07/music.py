@@ -228,16 +228,12 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(w(15, 16)), h(w(1, 4))],
         time_signatures(1),
-        counts=[15, 1],
-        durations="measures",
         do_not_rewrite_meter=True,
-        written=[((1, 1), [0])],
-        invisible_pairs=True,
-        repeat_tie=[0],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(2),
         [12],
