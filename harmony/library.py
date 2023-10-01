@@ -406,8 +406,6 @@ def make_sixteenths(
     durations="quarters",
     extra_counts=(),
     talea_denominator=16,
-    # TODO: remove repeat_tie
-    repeat_tie=None,
     tuplet_ratio_denominator=(1, 16),
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
@@ -434,10 +432,6 @@ def make_sixteenths(
         rmakers.rewrite_meter(
             voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
         )
-    if repeat_tie is not None:
-        pleaves = baca.select.pleaves(voice)
-        pleaves = abjad.select.get(pleaves, repeat_tie)
-        rmakers.repeat_tie(pleaves, tag=tag)
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice)
     return components
@@ -659,8 +653,10 @@ def purpleheart_staff_positions(o, positions, *, allow_obgc_mutation=False):
     baca.staff_positions(o, positions, allow_obgc_mutation=allow_obgc_mutation)
 
 
-def rt(argument):
-    return baca.RepeatTie(argument)
+def repeat_tie(components):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    for leaf in abjad.select.leaves(components):
+        rmakers.repeat_tie([leaf], tag=tag)
 
 
 def repeat_tie_runs(components):
@@ -692,6 +688,10 @@ def rhythm(voice, items, time_signatures=None, *, do_not_rewrite_meter=False):
     components = abjad.mutate.eject_contents(voice_)
     voice.extend(components)
     return components
+
+
+def rt(argument):
+    return baca.RepeatTie(argument)
 
 
 def slate_staff_position(argument):

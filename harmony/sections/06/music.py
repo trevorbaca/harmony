@@ -309,12 +309,11 @@ def VA(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(8), "-", 2, -3],
         time_signatures(4),
-        [8, "-", 2, -3],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(5),
         counts=[9],
@@ -348,12 +347,11 @@ def VC1(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(8), "-", 2, -3],
         time_signatures(4),
-        [8, "-", 2, -3],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     music = library.make_appoggiato_rhythm(
         time_signatures(5),
         counts=[7],
@@ -392,12 +390,11 @@ def VC2(voice, time_signatures):
         [-4, "+"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(8), "-", 2, -3],
         time_signatures(4),
-        [8, "-", 2, -3],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(5),
         [-4, "+"],
@@ -436,12 +433,11 @@ def CB1(voice, time_signatures):
         [-4, "+"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(8), "-", 5],
         time_signatures(4),
-        [8, "-", 5],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     music = baca.make_repeated_duration_notes(
         time_signatures(5, 7),
         [(1, 4)],

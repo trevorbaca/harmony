@@ -223,12 +223,11 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(12)],
         time_signatures(1),
-        ["+"],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-8, w(2, 4), h(w(2, 4)), -4],
@@ -304,12 +303,11 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(12)],
         time_signatures(1),
-        ["+"],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-8, w(2, 4), h(w(2, 4)), -4],
@@ -390,12 +388,11 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [rt(12)],
         time_signatures(1),
-        ["+"],
-        repeat_tie=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-8, w(2, 4), h(w(2, 4)), -4],
