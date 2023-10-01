@@ -1,6 +1,5 @@
 import abjad
 import baca
-from abjadext import rmakers
 
 from harmony import library
 
@@ -8,6 +7,7 @@ from harmony import library
 ########################################### 01 ##########################################
 #########################################################################################
 
+AG = library.AG
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -45,7 +45,7 @@ def BFL(voice, time_signatures):
     voice.extend(music)
     rhythm(
         voice,
-        library.cerulean_counts()[1:],
+        abjad.sequence.truncate(library.cerulean_counts()[1:], weight=12),
         time_signatures(3),
     )
     baca.section.append_anchor_note(voice)
@@ -110,7 +110,7 @@ def VA(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(3),
         library.cerulean_counts()[1:],
         extra_counts=[2],
@@ -138,22 +138,24 @@ def VC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [8, AG([2], 2), "-"],
         time_signatures(3),
-        [10, "-"],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    rhythm(
+        voice,
         [18, 6, 10, 4, 6],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
-    voice.extend(r"r4 \times 4/5 { r4. c16 r16 c16 r16 }")
+    rhythm(
+        voice,
+        [-4, T([-6, 1, -1, 1, -1], -2)],
+        time_signatures(3),
+    )
     baca.section.append_anchor_note(voice)
 
 
@@ -165,13 +167,11 @@ def CB2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [8, AG([2], 2), "-"],
         time_signatures(3),
-        [10, "-"],
     )
-    rmakers.untie(music)
-    voice.extend(music)
-    library.after_grace_each_run(music)
 
 
 def bfl(cache):

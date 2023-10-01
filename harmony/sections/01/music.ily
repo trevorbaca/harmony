@@ -2114,6 +2114,7 @@ number.1.Contrabass.1.Music = {
       %! EXPLICIT_CLEF_REDRAW_COLOR
     \override Staff.Clef.color = #(x11-color 'DeepSkyBlue2)
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 4/5
     {
 
