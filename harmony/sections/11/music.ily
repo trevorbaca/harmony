@@ -2270,8 +2270,6 @@ number.11.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     \<
-    - \tweak stencil ##f
-    ~
       %! -PARTS
       %! EXPLICIT_BAR_EXTENT
     \override Staff.BarLine.bar-extent = #'(0 . 2)
@@ -2283,7 +2281,7 @@ number.11.Harp.Music = {
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
     \once \override DynamicText.X-offset = -1.5
-    c'16
+    c'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -2291,6 +2289,8 @@ number.11.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \baca-effort-f
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -2306,20 +2306,17 @@ number.11.Harp.Music = {
     \>
     - \tweak stencil ##f
     ~
-    \repeatTie
 
     c'8 * 1/2
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"2"
-    - \tweak stencil ##f
-    ~
     \repeatTie
 
       %! INVISIBLE_MUSIC_COMMAND
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    c'16
+    c'4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -2327,7 +2324,8 @@ number.11.Harp.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \!
-    \repeatTie
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
     \revert Stem.direction
 
     r8
