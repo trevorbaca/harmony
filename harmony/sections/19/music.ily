@@ -5741,7 +5741,7 @@ number.19.Contrabass.2.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    e''8
+    e''4 * 1/2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -5749,6 +5749,8 @@ number.19.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"2"
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t
@@ -5789,6 +5791,7 @@ number.19.Contrabass.2.Music = {
     \<
 
     e''8
+    [
 
     e''8
       %! EXPLICIT_DYNAMIC_COLOR
@@ -5798,6 +5801,7 @@ number.19.Contrabass.2.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \mp
+    ]
       %! EXPLICIT_DYNAMIC
       %! SPANNER_START
     - \tweak circled-tip ##t

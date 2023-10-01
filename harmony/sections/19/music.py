@@ -494,24 +494,16 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        T([-4, w(2, 4), h(w(2, 4)), w(2, 4), h(w(2, 4))], 4),
         time_signatures(1),
-        [-4, 2, 2, 2, 2],
-        durations="measures",
-        extra_counts=[-4],
-        tuplet_ratio_denominator=None,
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [w(2, 4), h(w(2, 4)), 4, 2, 2, -4],
         time_signatures(2),
-        [2, 2, 6, 2, -4],
-        written=[((1, 4), [0])],
-        invisible=[1],
     )
-    rmakers.untie(music)
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = library.make_tuplet(
         time_signatures(4),
