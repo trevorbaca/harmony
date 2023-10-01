@@ -115,13 +115,11 @@ def BFL(voice, time_signatures):
 
 def PERC1(voice, time_signatures):
     mmrests(voice, time_signatures(1))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],
@@ -171,13 +169,11 @@ def VA(voice, time_signatures):
         [3, "-"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [-4, "+"],
@@ -211,13 +207,11 @@ def VC1(voice, time_signatures):
         [3, "-"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [-4, 8, "-"],
@@ -252,13 +246,11 @@ def VC2(voice, time_signatures):
         [3, "-"],
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [-4, 8, "-"],
@@ -303,13 +295,11 @@ def CB1(voice, time_signatures):
 
 def CB2(voice, time_signatures):
     mmrests(voice, time_signatures(1))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
-        [-8, 2, 2, "-"],
-        written=[((1, 4), True)],
-        invisible_pairs=True,
     )
-    voice.extend(music)
     music = library.make_sixteenths(
         time_signatures(3),
         [-4, 8, "-"],
