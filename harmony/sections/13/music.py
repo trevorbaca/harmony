@@ -72,11 +72,11 @@ def BFL(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [4, 8],
+        time_signatures(5),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
@@ -126,36 +126,36 @@ def PERC2(voice, time_signatures):
         voice_name=voice.name,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(4),
+    rhythm(
+        voice,
         [20, "-", 1, -1],
+        time_signatures(4),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [2, -2],
         time_signatures(5),
-        [2, -2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [-4, 4, 8, -4],
+        time_signatures(1),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2))
-    music = library.make_sixteenths(
-        time_signatures(3, 4),
+    rhythm(
+        voice,
         [-12, 2, -10, 2, -2, 2, -2, "-", 1, -1],
+        time_signatures(3, 4),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [2, -2],
         time_signatures(5),
-        [2, -2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
@@ -192,40 +192,40 @@ def VC1(voice, time_signatures):
     mmrests(voice, time_signatures(2))
     music = baca.make_notes(time_signatures(3))
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(4),
+    components = rhythm(
+        voice,
         ["+", 2],
+        time_signatures(4),
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rmakers.unbeam(components)
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(5),
-        [4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [7, -1, 12],
+        time_signatures(1),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2), head=True)
     music = baca.make_notes(time_signatures(3))
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(4),
+    components = rhythm(
+        voice,
         ["+", 2],
+        time_signatures(4),
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rmakers.unbeam(components)
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(5),
-        [4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
@@ -243,40 +243,40 @@ def CB1(voice, time_signatures):
     mmrests(voice, time_signatures(2))
     music = baca.make_notes(time_signatures(3))
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(4),
+    components = rhythm(
+        voice,
         ["+", 2],
+        time_signatures(4),
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rmakers.unbeam(components)
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(5),
-        [4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [7, -1, 12],
+        time_signatures(1),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2), head=True)
     music = baca.make_notes(time_signatures(3))
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(4),
+    components = rhythm(
+        voice,
         ["+", 2],
+        time_signatures(4),
     )
-    rmakers.unbeam(music)
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rmakers.unbeam(components)
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(5),
-        [4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
 
 

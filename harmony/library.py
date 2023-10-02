@@ -62,6 +62,14 @@ def bass_drum_staff_position(argument, *, allow_hidden=False):
     baca.tuplet_bracket_up(argument)
 
 
+def bl(argument):
+    return baca.BeamLeft(argument)
+
+
+def br(argument):
+    return baca.BeamRight(argument)
+
+
 def bridge_staff_position(o):
     baca.staff_position(o, 0)
     baca.stem_down(o.pleaves())
