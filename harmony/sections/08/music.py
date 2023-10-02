@@ -40,28 +40,20 @@ def GLOBALS(skips, rests, first_measure_number):
 
 def BFL(voice, time_signatures):
     mmrests(voice, time_signatures(1, 7))
-    durations = [_.duration for _ in time_signatures(8, 9)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (2, 4), (2, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, T([-4, 8], -4), T([-4, 8], -4)],
         time_signatures(8, 9),
-        [-8, -4, 8, -4, 8],
-        tuplet_ratio_denominator=None,
-        do_not_rewrite_meter=True,
-        durations=durations,
-        extra_counts=[0, 4, 4],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [1, -11, -1, 1, -14],
         time_signatures(1, 6),
-        [1, -11, -1, 1, -14],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7, 9))
 
 
@@ -130,11 +122,11 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 3),
+    rhythm(
+        voice,
         [4, 4, 8, 4, 4, 8, 4, 4],
+        time_signatures(1, 3),
     )
-    voice.extend(music)
     rhythm(
         voice,
         (3 * [12, w(8, 16), h(w(8, 4))])[4:],
