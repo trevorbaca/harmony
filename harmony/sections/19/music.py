@@ -63,13 +63,13 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(1),
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 8))
     rhythm(
         voice,
@@ -83,11 +83,11 @@ def BFL(voice, time_signatures):
         [-8, 8, -16, 4],
         extra_counts=[1],
     )
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(12),
         extra_counts=[2],
     )
-    voice.extend(music)
     library.make_talea(
         voice,
         time_signatures(13),

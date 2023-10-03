@@ -99,19 +99,19 @@ def PERC2(voice, time_signatures):
         extra_counts=[0, 6],
     )
     mmrests(voice, time_signatures(2, 4))
-    music = library.make_train_rhythm(
+    library.make_train_rhythm(
+        voice,
         time_signatures(5, 6),
         [2],
         rest_leaves=[0],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_train_rhythm(
+    library.make_train_rhythm(
+        voice,
         time_signatures(8),
         [2],
         rest_leaves=[0, 1, 2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [4, 4, "-"],

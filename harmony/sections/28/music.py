@@ -44,13 +44,13 @@ def GLOBALS(skips, rests):
 
 def BFL(voice, time_signatures):
     mmrests(voice, time_signatures(1, 4))
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(5),
         sixteenths=[12, 12, 1, 11, 12],
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
     for time_signaure in time_signatures(7, 10):
         rhythm(
