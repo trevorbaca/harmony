@@ -52,13 +52,13 @@ def BFL(voice, time_signatures):
         [4, 4, "-"],
         time_signatures(1),
     )
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(2),
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,

@@ -64,13 +64,13 @@ cerulean_counts = [1, -3, 1, -5, 1, -7, 1, -9, 1, -11, 1, -13, 1, -15, 1, -17, 1
 
 def BFL(voice, time_signatures):
     mmrests(voice, time_signatures(1))
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(2),
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[0],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3), head=True)
     rhythm(
         voice,
@@ -82,21 +82,21 @@ def BFL(voice, time_signatures):
         [w(2, 4), h(w(2, 4)), rt(4), -12],
         time_signatures(5),
     )
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(6),
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7, 8))
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(9),
         sixteenths=[2 * 4],
         extra_counts=[2],
         rest_tuplets=[0],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10), head=True)
     rhythm(
         voice,

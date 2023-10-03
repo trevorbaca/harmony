@@ -92,13 +92,13 @@ def BFL(voice, time_signatures):
         incise=True,
         voice_name=voice.name,
     )
-    music = library.make_warble_rhythm(
+    library.make_warble_rhythm(
+        voice,
         time_signatures(6),
         sixteenths=[12, 12, 1, 11, 12],
         extra_counts=[4, 0, 0, 2, 0],
         rest_tuplets_cyclic=([1, 2, 4], 5),
     )
-    voice.extend(music)
     rhythm(voice, [w(4, 8), h(w(4, 8))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
     rhythm(
