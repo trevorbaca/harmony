@@ -195,7 +195,6 @@ def VA(voice, time_signatures):
         time_signatures(7),
         library.cerulean_counts()[1:],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(

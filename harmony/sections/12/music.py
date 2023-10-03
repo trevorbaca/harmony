@@ -349,7 +349,6 @@ def VC1(voice, time_signatures):
         time_signatures(13, 15),
         [14, 8, 8],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -384,7 +383,6 @@ def VC2(voice, time_signatures):
         time_signatures(13, 15),
         [8, 8, 14],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

@@ -172,7 +172,6 @@ def VA(voice, time_signatures):
         time_signatures(1),
         library.cerulean_counts()[1:],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_tessera_1(
@@ -192,7 +191,6 @@ def VA(voice, time_signatures):
         time_signatures(6, 8),
         library.cerulean_counts()[2:],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 

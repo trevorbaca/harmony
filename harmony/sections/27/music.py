@@ -315,7 +315,6 @@ def CB2(voice, time_signatures):
         time_signatures(3),
         [9, 7, 1, -1, 1, -1, 1, -1],
         extra_counts=[0, 0, 0, 0, 2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(

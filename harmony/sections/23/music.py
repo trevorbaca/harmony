@@ -86,7 +86,6 @@ def PERC1(voice, time_signatures):
         time_signatures(8),
         [-8, 8, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -149,7 +148,6 @@ def VA(voice, time_signatures):
         time_signatures(8),
         [-6, 2, -4, 2, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 

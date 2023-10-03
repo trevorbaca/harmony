@@ -114,7 +114,6 @@ def VA(voice, time_signatures):
         time_signatures(3),
         library.cerulean_counts()[1:],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
