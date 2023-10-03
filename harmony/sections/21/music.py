@@ -48,36 +48,36 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(1),
-        [4],
     )
-    voice.extend(music)
     rhythm(
         voice,
         2 * [-4, w(2, 4), h(w(2, 4))],
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [4, -4],
         time_signatures(5),
-        [4, -4],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [4, "-"],
+        time_signatures(1),
     )
-    voice.extend(music)
     music = library.make_phjc_rhythm(
         time_signatures(2),
         [1],
@@ -87,101 +87,80 @@ def PERC1(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(3))
-    durations = [_.duration for _ in time_signatures(4)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (5, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, T([-4, 4, -4], 8)],
         time_signatures(4),
-        [4, -4, 4, -4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -8],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [4, -4],
         time_signatures(5),
-        [4, -4],
     )
-    voice.extend(music)
 
 
 def PERC2(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (5, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, T([-8, 4], 8)],
         time_signatures(1),
-        [4, -8, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -8],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [-4, 4],
         time_signatures(2),
-        [-4, 4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
-    music = library.make_sixteenths(
-        time_signatures(4),
+    rhythm(
+        voice,
         [4, "-"],
+        time_signatures(4),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [6, 3, 7, 4],
+        time_signatures(5),
     )
-    voice.extend(music)
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, "-"],
         time_signatures(1),
-        [4, "-"],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
-    music = library.make_sixteenths(
-        time_signatures(4),
+    rhythm(
+        voice,
         [4, "-"],
+        time_signatures(4),
     )
-    voice.extend(music)
-    durations = [_.duration for _ in time_signatures(5)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(1, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-4, T([-8, 4, 4, 4], -4)],
         time_signatures(5),
-        [-12, 4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, 4],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(1),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [-4, 4],
         time_signatures(2),
-        [-4, 4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3), head=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(5),
         [-6, 1, -10, 1, "-"],
         extra_counts=[1],
@@ -190,124 +169,96 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, T([4, 4, 4], 4)],
         time_signatures(1),
-        [-8, 4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [-4, 3, -1],
         time_signatures(2),
-        [-4, 3, -1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
-    durations = [_.duration for _ in time_signatures(4)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
-        time_signatures(4),
-        [-8, 4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -4],
+    rhythm(
+        voice,
+        [-8, T([4, 4, 4], 4)],
+        time_signatures(1),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [3, 7, 4, 6],
+        time_signatures(5),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def VC2(voice, time_signatures):
     music = baca.make_notes(time_signatures(1))
     voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(2),
-        [-4, 3, -1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     music = baca.make_notes(time_signatures(4))
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [7, 4, 6, 3],
+        time_signatures(5),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB1(voice, time_signatures):
-    durations = [_.duration for _ in time_signatures(1)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, T([4, 4, 4], 4)],
         time_signatures(1),
-        [-8, 4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(2),
-        [-4, 3, -1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
-    durations = [_.duration for _ in time_signatures(4)]
-    durations = [sum(durations)]
-    weights = abjad.durations([(2, 4), (4, 4)])
-    durations = abjad.sequence.split(durations, weights, cyclic=True, overhang=True)
-    music = library.make_sixteenths(
-        time_signatures(4),
-        [-8, 4, 4, 4],
-        tuplet_ratio_denominator=None,
-        durations=durations,
-        extra_counts=[0, -4],
+    rhythm(
+        voice,
+        [-8, T([4, 4, 4], 4)],
+        time_signatures(1),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [4, 6, 3, 7],
+        time_signatures(5),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(1),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(2),
-        [-4, 3, -1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        6 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5),
+    rhythm(
+        voice,
         [6, 3, 7, 4],
+        time_signatures(5),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
