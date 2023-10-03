@@ -311,12 +311,12 @@ def CB1(voice, time_signatures):
 
 def CB2(voice, time_signatures):
     mmrests(voice, time_signatures(1, 2))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(3),
         [9, 7, 1, -1, 1, -1, 1, -1],
         extra_counts=[0, 0, 0, 0, 2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [2, -2, 6, "-"],

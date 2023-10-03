@@ -70,12 +70,12 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1),
         [-6, -2, 4, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2))
 
 

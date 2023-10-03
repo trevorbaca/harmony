@@ -122,12 +122,12 @@ def HP(voice, time_signatures):
     music = baca.make_notes(time_signatures(1))
     voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-16, 4],

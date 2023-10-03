@@ -54,24 +54,24 @@ def BFL(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         [-8, 8, -16, 4],
         extra_counts=[1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         18 * [w(2, 4), h(w(2, 4))],
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [-12, 4, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -82,23 +82,23 @@ def PERC1(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5, 10))
     voice.extend(music)
     mmrests(voice, time_signatures(11))
     music = baca.make_notes(time_signatures(12))
     voice.extend(music)
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [-8, 8, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
 
 
 def PERC2(voice, time_signatures):
@@ -108,24 +108,24 @@ def PERC2(voice, time_signatures):
         [-4, 4, -4],
         time_signatures(3),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         [2, -8, 2, -8, 2, -20],
         extra_counts=[1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         6 * [4, -8],
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [2, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def HP(voice, time_signatures):
@@ -161,38 +161,38 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_talea(
+    components = library.make_talea(
+        voice,
         time_signatures(1, 3),
         [32],
         extra_counts=[1],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
-    music = library.make_talea(
+    library.after_grace_each_run(components)
+    library.make_talea(
+        voice,
         time_signatures(4),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
     )
-    voice.extend(music)
-    music = library.make_talea(
+    components = library.make_talea(
+        voice,
         time_signatures(5, 10),
         [18, 13, 9, 6, 3, 2, 2, 2, 2, 2, 3, 3, 6, "+"],
         extra_counts=[1],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
+    library.after_grace_each_run(components)
     mmrests(voice, time_signatures(11))
     rhythm(
         voice,
         AG([2], 12),
         time_signatures(12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [-20, 2, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
 
 
 def VC1(voice, time_signatures):
@@ -202,73 +202,73 @@ def VC1(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         [3, -7, 3, -7, 3, -7, 3, -14],
         extra_counts=[1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         18 * [w(2, 4), h(w(2, 4))],
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [3, -7, 3, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def VC2(voice, time_signatures):
-    music = library.make_talea(
+    components = library.make_talea(
+        voice,
         time_signatures(1, 3),
         [46],
         extra_counts=[2],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
-    music = library.make_talea(
+    library.after_grace_each_run(components)
+    library.make_talea(
+        voice,
         time_signatures(4),
         [3, -5, 3, -5, 3, -5, 3, -23],
         extra_counts=[1],
     )
-    voice.extend(music)
-    music = library.make_talea(
+    components = library.make_talea(
+        voice,
         time_signatures(5, 10),
         [18, 14, 12, 6, 4, 2, 2, 2, 2, 4, 6, 12, "+"],
         extra_counts=[2],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
+    library.after_grace_each_run(components)
     mmrests(voice, time_signatures(11))
     rhythm(
         voice,
         AG([2], 12),
         time_signatures(12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13),
         [-4, 3, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def CB1(voice, time_signatures):
-    music = library.make_talea(
+    components = library.make_talea(
+        voice,
         time_signatures(1, 3),
         [27],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
-    music = library.make_talea(
+    library.after_grace_each_run(components)
+    library.make_talea(
+        voice,
         time_signatures(4),
         [3, -7, 3, -7, 3, -7, 3, -14],
     )
-    voice.extend(music)
     rhythm(
         voice,
         18 * [w(2, 4), h(w(2, 4))],

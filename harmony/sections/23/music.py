@@ -60,12 +60,12 @@ def BFL(voice, time_signatures):
         time_signatures(4, 6),
     )
     mmrests(voice, time_signatures(7))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-4, 8, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def PERC1(voice, time_signatures):
@@ -82,12 +82,12 @@ def PERC1(voice, time_signatures):
     )
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-8, 8, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
 
 
 def PERC2(voice, time_signatures):
@@ -102,12 +102,12 @@ def PERC2(voice, time_signatures):
         [4, "-"],
         time_signatures(7),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-2, 2, -8, 2, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def HP(voice, time_signatures):
@@ -144,12 +144,12 @@ def VA(voice, time_signatures):
         AG([2], 12),
         time_signatures(7),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-6, 2, -4, 2, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
 
 
 def VC1(voice, time_signatures):
@@ -171,12 +171,12 @@ def VC1(voice, time_signatures):
         [-8, T([4, 4, 4], 4), 4, 4, 4],
         time_signatures(6, 7),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-7, 3, -7, 3],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def VC2(voice, time_signatures):
@@ -200,12 +200,12 @@ def VC2(voice, time_signatures):
         AG([2], 12),
         time_signatures(7),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         [-10, 3, -5, 2],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def CB1(voice, time_signatures):

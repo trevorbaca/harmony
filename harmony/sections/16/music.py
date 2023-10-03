@@ -90,12 +90,12 @@ def HP(voice, time_signatures):
         time_signatures(1, 6),
     )
     mmrests(voice, time_signatures(7))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(8),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         duration_color_counts(),
