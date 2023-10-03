@@ -71,14 +71,14 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(1, 6),
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7, 8))
     library.make_appoggiato_rhythm(
         voice,
@@ -91,13 +91,13 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(1),
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 4))
     music = library.make_train_rhythm(
         time_signatures(5, 6),
