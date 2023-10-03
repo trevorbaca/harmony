@@ -101,12 +101,12 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2))
     rhythm(
         voice,
@@ -118,19 +118,19 @@ def HP(voice, time_signatures):
         3 * [2, -2],
         time_signatures(4),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(5),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6, 8))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(9),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
 
 

@@ -155,12 +155,12 @@ def HP(voice, time_signatures):
         [2, -28, 2],
         time_signatures(4, 5),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(6),
         [-2, 4, "-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-4, T([-4, 8], -4), -2, T([-4, w(2, 4), h(w(2, 4))], 2)],

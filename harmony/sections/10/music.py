@@ -53,12 +53,12 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-2, 4, -2, -4, 4],
@@ -70,12 +70,12 @@ def BFL(voice, time_signatures):
         time_signatures(3),
     )
     mmrests(voice, time_signatures(4, 6))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(7),
         ["-", 4, -2, 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-4, 8, "-"],
@@ -124,12 +124,12 @@ def PERC1(voice, time_signatures):
         time_signatures(3),
     )
     mmrests(voice, time_signatures(4, 6))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(7),
         ["-", 2, -2, 2, -2],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [2, -2, 2, -2, -4, 2, -2, 2, -2, 2, -2],

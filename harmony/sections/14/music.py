@@ -146,12 +146,12 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1, 2),
         [-22, 1, -3, 1, "-"],
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3, 4))
     library.make_appoggiato_rhythm(
         voice,
@@ -161,12 +161,12 @@ def PERC2(voice, time_signatures):
         rest_after=True,
         voice_name=voice.name,
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(6, 9),
         cerulean_counts,
         extra_counts=[2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     rhythm(
         voice,
@@ -182,12 +182,12 @@ def HP(voice, time_signatures):
         time_signatures(1, 2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(4),
         ["-", 4],
         extra_counts=[2],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-4, 4, 8, -4],
@@ -243,12 +243,12 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1, 2),
         [-16, 1, -16, 1, -6],
         extra_counts=[1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -264,18 +264,18 @@ def VC1(voice, time_signatures):
         rest_from=1,
         voice_name=voice.name,
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(6, 8),
         cerulean_counts,
         extra_counts=[1],
     )
-    voice.extend(music)
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(9),
         [-4, 3, -1, 3, -1, -8, 3, -1],
         extra_counts=[0, 8],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     rhythm(
         voice,

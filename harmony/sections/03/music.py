@@ -168,12 +168,12 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(1),
         library.cerulean_counts()[1:],
         extra_counts=[2],
     )
-    voice.extend(music)
     music = library.make_tessera_1(
         time_signatures(2),
         4,
@@ -187,12 +187,12 @@ def VA(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(6, 8),
         library.cerulean_counts()[2:],
         extra_counts=[2],
     )
-    voice.extend(music)
 
 
 def VC1(voice, time_signatures):
@@ -210,12 +210,12 @@ def VC1(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(6, 7),
         library.cerulean_counts()[2:],
         extra_counts=[1],
     )
-    voice.extend(music)
     voice.extend(r"\times 4/5 { c16 r8. c16 } \times 4/5 { r8 c8. r16 c8. r16 }")
     baca.section.append_anchor_note(voice)
 

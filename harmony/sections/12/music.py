@@ -295,11 +295,11 @@ def VA(voice, time_signatures):
         rest_to=1,
         voice_name=voice.name,
     )
-    music = library.make_rimbalzandi_rhythm(
+    library.make_rimbalzandi_rhythm(
+        voice,
         time_signatures(5, 8),
         rest_except=[1, 3, 6, 8, 11, 13, 14, 15],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
     voice.extend(music)
@@ -331,12 +331,12 @@ def VC1(voice, time_signatures):
         rest_from=1,
         voice_name=voice.name,
     )
-    music = library.make_rimbalzandi_rhythm(
+    library.make_rimbalzandi_rhythm(
+        voice,
         time_signatures(3, 8),
         extra_counts=[1],
         rest_except=[6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
     voice.extend(music)
@@ -345,12 +345,12 @@ def VC1(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13, 15),
         [14, 8, 8],
         extra_counts=[2],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -365,12 +365,12 @@ def VC2(voice, time_signatures):
         [-8, 12],
         time_signatures(2),
     )
-    music = library.make_rimbalzandi_rhythm(
+    library.make_rimbalzandi_rhythm(
+        voice,
         time_signatures(3, 8),
         extra_counts=[2],
         rest_except=[0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
     voice.extend(music)
@@ -379,12 +379,12 @@ def VC2(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13, 15),
         [8, 8, 14],
         extra_counts=[2],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -403,12 +403,12 @@ def CB1(voice, time_signatures):
         rest_from=1,
         voice_name=voice.name,
     )
-    music = library.make_rimbalzandi_rhythm(
+    library.make_rimbalzandi_rhythm(
+        voice,
         time_signatures(3, 8),
         rest_except=[1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
         extra_counts=[3],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
     voice.extend(music)
@@ -417,12 +417,12 @@ def CB1(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13, 15),
         [12, 7, 8],
         extra_counts=[1],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
@@ -437,12 +437,12 @@ def CB2(voice, time_signatures):
         [-8, 12],
         time_signatures(2),
     )
-    music = library.make_rimbalzandi_rhythm(
+    library.make_rimbalzandi_rhythm(
+        voice,
         time_signatures(3, 8),
         rest_except=[1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
         extra_counts=[4],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
     voice.extend(music)
@@ -451,12 +451,12 @@ def CB2(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(13, 15),
         [8, 7, 12],
         extra_counts=[1],
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 

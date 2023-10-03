@@ -160,12 +160,12 @@ def VA(voice, time_signatures):
         6 * [4],
         time_signatures(4),
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(5),
         [-6, 1, -10, 1, "-"],
         extra_counts=[1],
     )
-    voice.extend(music)
 
 
 def VC1(voice, time_signatures):

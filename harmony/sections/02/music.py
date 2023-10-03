@@ -191,12 +191,12 @@ def VA(voice, time_signatures):
         incise=True,
         voice_name=voice.name,
     )
-    music = library.make_talea(
+    library.make_talea(
+        voice,
         time_signatures(7),
         library.cerulean_counts()[1:],
         extra_counts=[2],
     )
-    voice.extend(music)
     library.make_appoggiato_rhythm(
         voice,
         time_signatures(8, 11),
