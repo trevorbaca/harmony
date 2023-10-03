@@ -11,8 +11,6 @@ T = library.T
 h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
-bl = library.bl
-br = library.br
 rt = library.rt
 t = library.t
 w = library.w
@@ -365,7 +363,7 @@ def CB1(voice, time_signatures):
     )
     rhythm(
         voice,
-        [8, T([bl(rt(2)), br(3)], -1)],
+        [8, T([rt(2), 3], -1)],
         time_signatures(8),
     )
     mmrests(voice, time_signatures(9))
@@ -406,7 +404,7 @@ def CB2(voice, time_signatures):
     )
     rhythm(
         voice,
-        [4, T([bl(rt(3)), br(t(2))], -1), 4],
+        [4, T([rt(3), t(2)], -1), 4],
         time_signatures(8),
         do_not_rewrite_meter=True,
     )

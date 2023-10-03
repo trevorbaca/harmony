@@ -736,6 +736,8 @@ def rhythm(
         reference_meters=_reference_meters(),
         tag=tag,
     )
+    for tuplet in abjad.select.tuplets(voice_):
+        rmakers.beam([tuplet])
     rmakers.force_fraction(voice_)
     rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice_)
