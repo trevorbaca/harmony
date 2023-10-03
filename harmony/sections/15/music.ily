@@ -1856,6 +1856,7 @@ number.15.Cello.2.Music = {
       %! SPANNER_STOP
     \f
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 8/10
     {
 
@@ -2149,6 +2150,7 @@ number.15.Contrabass.1.Music = {
       %! SPANNER_STOP
     \f
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 8/11
     {
 
@@ -2449,6 +2451,7 @@ number.15.Contrabass.2.Music = {
       %! SPANNER_STOP
     \f
 
+    \tweak text #tuplet-number::calc-fraction-text
     \times 8/12
     {
 

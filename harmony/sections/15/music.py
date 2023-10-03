@@ -158,76 +158,89 @@ def VC1(voice, time_signatures):
         time_signatures(1, 2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        3 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5, 9),
+    rhythm(
+        voice,
         [3, -1, -8, 47, -1],
+        time_signatures(5, 9),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    rhythm(
+        voice,
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
-    voice.append(r"\times 8/10 { c4 r4 r4 r8. }")
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        T([4, -4, -4, -3], "10:8"),
+        time_signatures(3),
+    )
+    rhythm(
+        voice,
+        3 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5, 9),
+    rhythm(
+        voice,
         [3, -1, -8, 47, -1],
+        time_signatures(5, 9),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    rhythm(
+        voice,
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
-    voice.append(r"\times 8/11 { r4 c4 r4 r4 r32 }")
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        T([-8, 8, -8, -8, -1], "11:8"),
+        time_signatures(3),
+        denominator=32,
+    )
+    rhythm(
+        voice,
+        3 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5, 9),
+    rhythm(
+        voice,
         [3, -1, -8, 47, -1],
+        time_signatures(5, 9),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 2),
+    rhythm(
+        voice,
         [3, -1, -4, 7, -1, -10, 3, -1, -2],
+        time_signatures(1, 2),
     )
-    voice.extend(music)
-    voice.append(r"\times 8/12 { r4 c4 r4 r4 r8 }")
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        T([-4, 4, -4, -4, -2], "12:8"),
+        time_signatures(3),
+    )
+    rhythm(
+        voice,
+        3 * [4],
         time_signatures(4),
-        [4],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(5, 9),
+    rhythm(
+        voice,
         [3, -1, -8, 47, -1],
+        time_signatures(5, 9),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
 
 
