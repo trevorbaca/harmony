@@ -80,13 +80,13 @@ def PERC1(voice, time_signatures):
     )
     voice.extend(music)
     mmrests(voice, time_signatures(7, 8))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         counts=[7],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10, 11))
 
 
@@ -169,12 +169,12 @@ def VA(voice, time_signatures):
         gap=True,
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10), head=True)
     music = library.make_tessera_1(
         time_signatures(11),
@@ -200,12 +200,12 @@ def VC1(voice, time_signatures):
         gap=True,
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10), head=True)
     music = library.make_tessera_1(
         time_signatures(11),
@@ -232,12 +232,12 @@ def VC2(voice, time_signatures):
         gap=True,
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10), head=True)
     music = library.make_tessera_1(
         time_signatures(11),
@@ -262,12 +262,12 @@ def CB1(voice, time_signatures):
         advance=72,
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10), head=True)
     music = library.make_tessera_1(
         time_signatures(11),

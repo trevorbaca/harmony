@@ -98,36 +98,36 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1),
         weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [4, 2, "-"],
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(4, 8),
         weights=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         weights=[16],
         counts=[19],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     music = library.make_talea(
         time_signatures(11),
@@ -135,14 +135,14 @@ def PERC1(voice, time_signatures):
         extra_counts=[2],
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(12),
         weights=[20],
         counts=[25],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_talea(
         time_signatures(13),
         [8, -8, 8, -8, 8, -16],
@@ -152,36 +152,36 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1),
         weights=[4, 1, 11],
         counts=[0, 0, 4],
         rest_after=[-2, -1],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [4, 2, "-"],
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(4, 8),
         weights=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(9),
         weights=[16],
         counts=[18],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(10))
     music = library.make_talea(
         time_signatures(11),
@@ -189,14 +189,14 @@ def PERC2(voice, time_signatures):
         extra_counts=[1],
     )
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(12),
         weights=[20],
         counts=[24],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     voice.extend(r"r4. \times 5/4 { c2 }")
     baca.section.append_anchor_note(voice)
 

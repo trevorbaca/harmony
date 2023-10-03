@@ -82,7 +82,8 @@ def BFL(voice, time_signatures):
         time_signatures(8),
     )
     mmrests(voice, time_signatures(9))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(10),
         counts=[9, 0],
         weights=[12, 12],
@@ -90,7 +91,6 @@ def BFL(voice, time_signatures):
         prefix_counts=[1, 0],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         3 * [w(12, 24), h(12)],
@@ -101,13 +101,13 @@ def BFL(voice, time_signatures):
         [w(12, 24), h(8), h(w(3, 4)), h(w(1, 4))],
         time_signatures(14),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(15),
         counts=[9],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 

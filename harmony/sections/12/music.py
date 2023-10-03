@@ -85,13 +85,13 @@ def BFL(voice, time_signatures):
         do_not_rewrite_meter=True,
     )
     mmrests(voice, time_signatures(8, 9), head=True)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(10),
         counts=[9],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [4, 8, 4, 12],
@@ -116,14 +116,14 @@ def PERC1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
@@ -179,14 +179,14 @@ def PERC2(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
@@ -287,14 +287,14 @@ def VA(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2, 4),
         weights=[4, 48],
         counts=[7],
         rest_to=1,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_rimbalzandi_rhythm(
         time_signatures(5, 8),
         rest_except=[1, 3, 6, 8, 11, 13, 14, 15],
@@ -322,7 +322,8 @@ def VC1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[4, 12, 4],
         counts=[6],
@@ -330,7 +331,6 @@ def VC1(voice, time_signatures):
         rest_from=1,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_rimbalzandi_rhythm(
         time_signatures(3, 8),
         extra_counts=[1],
@@ -394,7 +394,8 @@ def CB1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[4, 12, 4],
         counts=[6],
@@ -402,7 +403,6 @@ def CB1(voice, time_signatures):
         rest_from=1,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_rimbalzandi_rhythm(
         time_signatures(3, 8),
         rest_except=[1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
