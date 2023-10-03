@@ -36,21 +36,21 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(4), rt(16)],
         time_signatures(1),
-        [4, 4, 16],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(2, 3), head=True)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [1, -22, 1],
+        time_signatures(1),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
 
 
@@ -65,51 +65,51 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1),
+    rhythm(
+        voice,
         [1, "-"],
+        time_signatures(1),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(2, 3))
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(4), rt(16)],
         time_signatures(1),
-        [4, 4, 16],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(2, 3), head=True)
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(4), rt(16)],
         time_signatures(1),
-        [4, 4, 16],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(2, 3), head=True)
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(4), rt(16)],
         time_signatures(1),
-        [4, 4, 16],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(2, 3), head=True)
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, rt(4), rt(16)],
         time_signatures(1),
-        [4, 4, 16],
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.repeat_tie_runs(music)
     mmrests(voice, time_signatures(2, 3), head=True)
 
 
