@@ -27,42 +27,42 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.damp_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+"],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         library.damp_counts_curtailed(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         [41, -7, "+"],
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+"],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         [12, 4, 4, 1, "-"],
+        time_signatures(9, 10),
     )
-    voice.extend(music)
 
 
 def duration_color_counts():
@@ -70,132 +70,132 @@ def duration_color_counts():
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        duration_color_counts(),
         time_signatures(1, 6),
-        duration_color_counts(),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7, 8))
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         duration_color_counts(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
 
 
 def HP(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         duration_color_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(8),
         ["-", 4],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         duration_color_counts(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
 
 
 def VA(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.glissando_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+"],
+        time_signatures(8),
     )
-    voice.extend(music)
     music = baca.make_repeat_tied_notes(time_signatures(9, 10))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.damp_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+", -1],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         library.damp_counts_curtailed(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.damp_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+", -1],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         library.damp_counts_curtailed(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.glissando_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+", -1],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         library.glissando_counts_curtailed(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
-        time_signatures(1, 6),
+    rhythm(
+        voice,
         library.glissando_counts(),
+        time_signatures(1, 6),
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_sixteenths(
-        time_signatures(8),
+    rhythm(
+        voice,
         ["+", -1],
+        time_signatures(8),
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
-        time_signatures(9, 10),
+    rhythm(
+        voice,
         library.glissando_counts_curtailed(),
+        time_signatures(9, 10),
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
