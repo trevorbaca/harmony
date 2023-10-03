@@ -717,7 +717,9 @@ def repeat_tie_runs(components):
     rmakers.repeat_tie(lists, tag=tag)
 
 
-def rhythm(voice, items, time_signatures=None, *, do_not_rewrite_meter=False):
+def rhythm(
+    voice, items, time_signatures=None, *, denominator=16, do_not_rewrite_meter=False
+):
     tag = baca.helpers.function_name(inspect.currentframe())
     if isinstance(items, list):
         items = abjad.sequence.flatten(items)
@@ -727,7 +729,7 @@ def rhythm(voice, items, time_signatures=None, *, do_not_rewrite_meter=False):
         do_not_rewrite_meter = True
     voice_ = baca.make_rhythm(
         items,
-        16,
+        denominator,
         time_signatures,
         boundary_depth=1,
         do_not_rewrite_meter=do_not_rewrite_meter,
