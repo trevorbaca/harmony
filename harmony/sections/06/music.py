@@ -238,7 +238,6 @@ def HP(voice, time_signatures):
         time_signatures(6),
         [-2, 4, "-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
@@ -256,14 +255,12 @@ def HP(voice, time_signatures):
         time_signatures(10),
         [4, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_talea(
         time_signatures(11),
         ["-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     mmrests(voice, time_signatures(12))
@@ -271,14 +268,12 @@ def HP(voice, time_signatures):
         time_signatures(13),
         [4, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_talea(
         time_signatures(14),
         ["-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(

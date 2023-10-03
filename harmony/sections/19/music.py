@@ -133,7 +133,6 @@ def PERC1(voice, time_signatures):
         time_signatures(11),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_appoggiato_rhythm(
@@ -148,7 +147,6 @@ def PERC1(voice, time_signatures):
         time_signatures(13),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -288,7 +286,6 @@ def VA(voice, time_signatures):
         time_signatures(11),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
@@ -300,7 +297,6 @@ def VA(voice, time_signatures):
         time_signatures(13),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 

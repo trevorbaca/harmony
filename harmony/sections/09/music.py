@@ -74,7 +74,6 @@ def HP(voice, time_signatures):
         time_signatures(1),
         [-6, -2, 4, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     mmrests(voice, time_signatures(2))

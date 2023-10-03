@@ -150,7 +150,6 @@ def PERC2(voice, time_signatures):
         time_signatures(1, 2),
         [-22, 1, -3, 1, "-"],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     mmrests(voice, time_signatures(3, 4))
@@ -166,7 +165,6 @@ def PERC2(voice, time_signatures):
         time_signatures(6, 9),
         cerulean_counts,
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -188,7 +186,6 @@ def HP(voice, time_signatures):
         time_signatures(4),
         ["-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
@@ -299,14 +296,11 @@ def VC2(voice, time_signatures):
         [3, -1, -4, 7, -1],
         time_signatures(4),
     )
-    music = library.make_talea(
+    rhythm(
+        voice,
+        T([-8, 2, -6], 4),
         time_signatures(5),
-        [-8, 2, -6],
-        durations="measures",
-        extra_counts=[-4],
-        tuplet_ratio_denominator=None,
     )
-    voice.extend(music)
     rhythm(
         voice,
         abjad.sequence.truncate(cerulean_counts, weight=64),

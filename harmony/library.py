@@ -413,36 +413,21 @@ def make_talea(
     time_signatures,
     counts,
     *,
-    do_not_rewrite_meter=False,
-    durations="quarters",
     extra_counts=(),
-    talea_denominator=16,
-    tuplet_ratio_denominator=(1, 16),
 ):
     tag = baca.helpers.function_name(inspect.currentframe())
-    assert isinstance(talea_denominator, int), repr(talea_denominator)
-    if durations == "quarters":
-        durations = [_.duration for _ in time_signatures]
-        durations = [sum(durations)]
-        durations = baca.sequence.quarters(durations)
-    elif durations == "measures":
-        durations = [_.duration for _ in time_signatures]
-    else:
-        assert durations is not None, repr(durations)
-    tuplets = rmakers.talea(
-        durations, counts, talea_denominator, extra_counts=extra_counts, tag=tag
-    )
+    durations = [_.duration for _ in time_signatures]
+    durations = [sum(durations)]
+    durations = baca.sequence.quarters(durations)
+    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
     voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     rmakers.rewrite_rest_filled(voice, tag=tag)
     rmakers.rewrite_sustained(voice, tag=tag)
     rmakers.extract_trivial(voice)
     rmakers.force_fraction(voice)
-    if tuplet_ratio_denominator is not None:
-        rmakers.denominator(voice, tuplet_ratio_denominator)
-    if not do_not_rewrite_meter:
-        rmakers.rewrite_meter(
-            voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
-        )
+    rmakers.rewrite_meter(
+        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+    )
     rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
     components = abjad.mutate.eject_contents(voice)
     return components

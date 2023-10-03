@@ -57,7 +57,6 @@ def BFL(voice, time_signatures):
         time_signatures(1),
         ["-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
@@ -75,7 +74,6 @@ def BFL(voice, time_signatures):
         time_signatures(7),
         ["-", 4, -2, 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
@@ -130,7 +128,6 @@ def PERC1(voice, time_signatures):
         time_signatures(7),
         ["-", 2, -2, 2, -2],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(

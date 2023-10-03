@@ -74,7 +74,6 @@ def PERC1(voice, time_signatures):
         time_signatures(3, 10),
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
 
@@ -132,14 +131,12 @@ def VA(voice, time_signatures):
         time_signatures(3, 8),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     music = library.make_talea(
         time_signatures(9, 10),
         [-4, 2, -4, 6, 6, 6, 6],
         extra_counts=[2, 0, 0, 0, 0, 0, 0, 0],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     baca.section.append_anchor_note(voice)

@@ -94,7 +94,6 @@ def HP(voice, time_signatures):
         time_signatures(8),
         ["-", 4],
         extra_counts=[2],
-        tuplet_ratio_denominator=None,
     )
     voice.extend(music)
     rhythm(
