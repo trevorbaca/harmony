@@ -191,11 +191,11 @@ def VA(voice, time_signatures):
         [12, 1, 1, 1, "+"],
         time_signatures(10),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        4 * [T(11 * [4], "11:6")],
         time_signatures(11, 14),
-        [11 * (1,)],
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(15))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -229,12 +229,11 @@ def VC1(voice, time_signatures):
         abjad.sequence.repeat_to_weight([13, 1, 1, 1], 48),
         time_signatures(10, 11),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        3 * [T(10 * [4], "10:6")],
         time_signatures(12, 14),
-        [10 * (1,)],
-        denominator=(1, 4),
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(15))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -268,12 +267,11 @@ def VC2(voice, time_signatures):
         abjad.sequence.repeat_to_weight([14, 1, 1, 1], 72),
         time_signatures(10, 12),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        2 * [T(9 * [4], "9:6")],
         time_signatures(13, 14),
-        [9 * (1,)],
-        denominator=(1, 4),
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(15))
     voice.extend(music)
     baca.section.append_anchor_note(voice)
@@ -317,12 +315,11 @@ def CB2(voice, time_signatures):
         abjad.sequence.repeat_to_weight([16, 1, 1, 1], 72),
         time_signatures(10, 12),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        2 * [T(7 * [4], "7:6")],
         time_signatures(13, 14),
-        [7 * (1,)],
-        denominator=(1, 4),
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(15))
     voice.extend(music)
     baca.section.append_anchor_note(voice)

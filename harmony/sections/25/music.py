@@ -116,12 +116,11 @@ def PERC2(voice, time_signatures):
         T([-8, -2, 8, 2], 4),
         time_signatures(2),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(3),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(4))
     rhythm(
         voice,

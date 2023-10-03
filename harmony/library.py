@@ -566,34 +566,6 @@ def make_train_rhythm(time_signatures, counts, *, rest_leaves=None):
     return music
 
 
-def make_tuplet(
-    time_signatures,
-    ratios,
-    *,
-    denominator=None,
-    force_augmentation=False,
-    written_quarters=False,
-):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    durations = [_.duration for _ in time_signatures]
-    tuplets = rmakers.tuplet(durations, ratios, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.trivialize(voice)
-    rmakers.rewrite_dots(voice, tag=tag)
-    rmakers.force_diminution(voice)
-    if denominator is not None:
-        rmakers.denominator(voice, denominator)
-    if written_quarters is True:
-        rmakers.written_duration(voice, (1, 4))
-    if force_augmentation is True:
-        rmakers.force_augmentation(voice)
-    rmakers.force_fraction(voice)
-    rmakers.extract_trivial(voice)
-    rmakers.reduce_multiplier(voice)
-    music = abjad.mutate.eject_contents(voice)
-    return music
-
-
 def make_warble_rhythm(
     time_signatures,
     *,

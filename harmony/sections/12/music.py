@@ -129,34 +129,31 @@ def PERC1(voice, time_signatures):
         ["+"],
         time_signatures(3),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(5),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(7),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9, 10))
     rhythm(
         voice,
@@ -195,34 +192,31 @@ def PERC2(voice, time_signatures):
         ["+"],
         time_signatures(3),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(5),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(7),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9))
     music = baca.make_notes(time_signatures(10, 12))
     voice.extend(music)
@@ -249,34 +243,31 @@ def HP(voice, time_signatures):
         ["+"],
         time_signatures(3),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(5),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["+"],
         time_signatures(7),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(9, 10))
     rhythm(
         voice,

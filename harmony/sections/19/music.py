@@ -211,28 +211,25 @@ def HP(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -241,12 +238,11 @@ def HP(voice, time_signatures):
         [2, -20, 2, -24],
         time_signatures(11),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(12),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [2, -20, 2, -24],
@@ -266,28 +262,25 @@ def VA(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -298,12 +291,11 @@ def VA(voice, time_signatures):
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(12),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = library.make_talea(
         time_signatures(13),
         [2, -8, 2, -4, 2, -26],
@@ -325,28 +317,25 @@ def VC1(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -356,12 +345,12 @@ def VC1(voice, time_signatures):
         extra_counts=[1],
     )
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(12),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
+    music = baca.make_notes(time_signatures(9))
     music = library.make_talea(
         time_signatures(13),
         [3, -7, 3, -7, 3, -7, 3, -14],
@@ -382,28 +371,25 @@ def VC2(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -413,12 +399,11 @@ def VC2(voice, time_signatures):
         extra_counts=[1],
     )
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(12),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = library.make_talea(
         time_signatures(13),
         [3, -5, 3, -5, 3, -5, 3, -23],
@@ -439,28 +424,25 @@ def CB1(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))
@@ -469,12 +451,11 @@ def CB1(voice, time_signatures):
         [3, -7, 3, -7, 3, -7, 3, -14],
         time_signatures(11),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(12),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [3, -7, 3, -7, 3, -7, 3, -14],
@@ -494,28 +475,25 @@ def CB2(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(6),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
     mmrests(voice, time_signatures(10))

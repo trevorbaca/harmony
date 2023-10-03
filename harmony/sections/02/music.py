@@ -117,12 +117,11 @@ def PERC1(voice, time_signatures):
 def PERC2(voice, time_signatures):
     music = baca.make_repeat_tied_notes(time_signatures(1, 3))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         ["-", 6],
@@ -142,20 +141,18 @@ def PERC2(voice, time_signatures):
         rest_pleaves=[0, 1, 2, 3],
     )
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(9, 10))
     voice.extend(music)
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(11),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(12))
 
 
