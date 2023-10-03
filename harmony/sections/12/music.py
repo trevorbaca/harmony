@@ -428,7 +428,7 @@ def CB1(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(13, 15),
         [12, 7, 8],
         extra_counts=[1],
@@ -443,11 +443,11 @@ def CB2(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    music = library.make_sixteenths(
-        time_signatures(2),
+    rhythm(
+        voice,
         [-8, 12],
+        time_signatures(2),
     )
-    voice.extend(music)
     music = library.make_rimbalzandi_rhythm(
         time_signatures(3, 8),
         rest_except=[1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
