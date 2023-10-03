@@ -13,6 +13,7 @@ h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
 rt = library.rt
+t = library.t
 w = library.w
 
 
@@ -127,14 +128,14 @@ def VA(voice, time_signatures):
         time_signatures(2),
         do_not_rewrite_meter=True,
     )
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(3, 8),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
         tuplet_ratio_denominator=None,
     )
     voice.extend(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(9, 10),
         [-4, 2, -4, 6, 6, 6, 6],
         extra_counts=[2, 0, 0, 0, 0, 0, 0, 0],
@@ -145,17 +146,17 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(1),
-        [-4, 3, -1],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(2),
     )
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(3, 10),
         [3, -7, 3, -7, 3, -7, 3, -14],
         extra_counts=[1],
@@ -164,20 +165,18 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(1),
-        [-4, 3, -1],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [4, T([rt(4), t(2)], -2), AG([2], 4)],
         time_signatures(2),
-        [10, "+"],
-        extra_counts=[2],
-        tuplet_ratio_denominator=None,
+        do_not_rewrite_meter=True,
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(3, 10),
         [3, -5, 3, -5, 3, -5, 3, -23],
         extra_counts=[1],
@@ -186,18 +185,17 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(1),
-        [-4, 3, -1],
     )
-    voice.extend(music)
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [3, t(1), AG([2], 8)],
         time_signatures(2),
-        [3, "+"],
     )
-    voice.extend(music)
-    library.after_grace_each_run(music)
-    music = library.make_sixteenths(
+    music = library.make_talea(
         time_signatures(3, 10),
         [3, -7, 3, -7, 3, -7, 3, -14],
     )
@@ -205,13 +203,18 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        2 * [-4, 3, -1],
         time_signatures(1),
-        [-4, 3, -1],
     )
-    voice.extend(music)
-    voice.extend("r4 c16. r32 r8 c16. r32 r8")
-    music = library.make_sixteenths(
+    rhythm(
+        voice,
+        [-8, 3, -1, -4, 3, -1, -4],
+        time_signatures(2),
+        denominator=32,
+    )
+    music = library.make_talea(
         time_signatures(3, 10),
         [3, -5, 3, -5, 3, -5, 3, -23],
     )
