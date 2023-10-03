@@ -133,12 +133,11 @@ def PERC2(voice, time_signatures):
         [-8, "+"],
         time_signatures(7),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(8),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [2, -22, -1, 2, -21],

@@ -287,14 +287,11 @@ def CB2(voice, time_signatures):
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8))
     voice.extend(music)
-    music = library.make_tuplet(
-        time_signatures(9),
-        [(1,)],
-        force_augmentation=True,
+    rhythm(
+        voice,
+        T([rt(16)], 4),
+        time_signatures(10),
     )
-    voice.extend(music)
-    pleaf = baca.select.pleaf(music, 0)
-    baca.repeat_tie(pleaf)
     mmrests(voice, time_signatures(10), head=True)
     music = baca.make_notes(time_signatures(11))
     voice.extend(music)

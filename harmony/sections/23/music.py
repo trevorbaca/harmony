@@ -182,21 +182,19 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([16], 4),
         time_signatures(1),
-        [(1,)],
-        force_augmentation=True,
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(2))
     voice.extend(music)
     mmrests(voice, time_signatures(3))
-    music = library.make_tuplet(
-        time_signatures(4),
-        [(1,)],
-        force_augmentation=True,
+    rhythm(
+        voice,
+        T([16], 4),
+        time_signatures(1),
     )
-    voice.extend(music)
     music = baca.make_notes(time_signatures(5, 6))
     voice.extend(music)
     rhythm(

@@ -112,11 +112,11 @@ def PERC1(voice, time_signatures):
         [2, "-"],
         time_signatures(9),
     )
-    music = library.make_tuplet(
+    rhythm(
+        voice,
+        T([2, -2, -16], -4),
         time_signatures(10),
-        [(1, -1, -8)],
     )
-    voice.extend(music)
     rhythm(
         voice,
         [2, "-"],
