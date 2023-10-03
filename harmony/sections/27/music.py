@@ -84,14 +84,14 @@ def BFL(voice, time_signatures):
         4 * [-2, 2, 2],
         time_signatures(3),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(4, 5),
         weights=[28, 24],
         counts=[9, 6],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_warble_rhythm(
         time_signatures(6),
         sixteenths=[12, 12, 1, 11, 12],

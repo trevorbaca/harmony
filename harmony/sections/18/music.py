@@ -86,14 +86,14 @@ def PERC1(voice, time_signatures):
         [2, 2, "-"],
         time_signatures(2),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(3),
         weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [21, "-"],
@@ -135,14 +135,14 @@ def PERC2(voice, time_signatures):
         [2, 2, "-"],
         time_signatures(2),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(3),
         weights=[5, 11],
         counts=[0, 4],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [21, "-"],

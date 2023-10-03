@@ -76,14 +76,14 @@ def BFL(voice, time_signatures):
 def PERC1(voice, time_signatures):
     music = baca.make_notes(time_signatures(1))
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -101,14 +101,14 @@ def PERC1(voice, time_signatures):
 def PERC2(voice, time_signatures):
     music = baca.make_notes(time_signatures(1))
     voice.extend(music)
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(2),
         weights=[5, 11],
         counts=[0, 4],
         rest_after=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3, 4))
     rhythm(
         voice,

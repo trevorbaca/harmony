@@ -291,23 +291,23 @@ def VA(voice, time_signatures):
         time_signatures(1),
     )
     mmrests(voice, time_signatures(2))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(3),
         counts=[9],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [rt(8), "-", 2, -3],
         time_signatures(4),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(5),
         counts=[9],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-1, 2, "-", 3, -2],
@@ -329,23 +329,23 @@ def VC1(voice, time_signatures):
         time_signatures(1),
     )
     mmrests(voice, time_signatures(2))
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(3),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [rt(8), "-", 2, -3],
         time_signatures(4),
     )
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(5),
         counts=[7],
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-1, 2, "-", 3, -2],

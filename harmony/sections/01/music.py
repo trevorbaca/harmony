@@ -35,14 +35,14 @@ def GLOBALS(skips, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         abjad.sequence.truncate(library.cerulean_counts()[1:], weight=12),
@@ -103,13 +103,13 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     music = library.make_talea(
         time_signatures(3),
         library.cerulean_counts()[1:],
@@ -130,13 +130,13 @@ def VC1(voice):
 
 
 def VC2(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [8, AG([2], 2), "-"],
@@ -159,13 +159,13 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    music = library.make_appoggiato_rhythm(
+    library.make_appoggiato_rhythm(
+        voice,
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
         voice_name=voice.name,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [8, AG([2], 2), "-"],
