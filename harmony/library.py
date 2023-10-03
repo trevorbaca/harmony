@@ -331,6 +331,7 @@ def make_empty_score():
 
 
 def make_phjc_rhythm(
+    voice,
     time_signatures,
     weights,
     counts,
@@ -353,39 +354,40 @@ def make_phjc_rhythm(
     durations = [[sum(_)] for _ in durations]
     tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
-        tuplets = baca.select.tuplets(voice, rest)
+        tuplets = baca.select.tuplets(voice_, rest)
         rmakers.force_rest(tuplets, tag=tag)
     if rest_cyclic is not None:
-        tuplets = baca.select.tuplets(voice, rest_cyclic)
+        tuplets = baca.select.tuplets(voice_, rest_cyclic)
         rmakers.force_rest(tuplets, tag=tag)
     if rest_except is not None:
-        tuplets = baca.select.tuplets(voice, ~abjad.Pattern(rest_except))
+        tuplets = baca.select.tuplets(voice_, ~abjad.Pattern(rest_except))
         rmakers.force_rest(tuplets, tag=tag)
     if rest_most is True:
-        tuplets = baca.select.tuplets(voice, (None, 1))
+        tuplets = baca.select.tuplets(voice_, (None, 1))
         rmakers.force_rest(tuplets, tag=tag)
     if rest_nonfirst is True:
-        tuplets = baca.select.tuplets(voice, (1, None))
+        tuplets = baca.select.tuplets(voice_, (1, None))
         rmakers.force_rest(tuplets, tag=tag)
     if rest_pleaves is not None:
-        pleaves = baca.select.pleaves(voice)
+        pleaves = baca.select.pleaves(voice_)
         pleaves = abjad.select.get(pleaves, rest_pleaves)
         rmakers.force_rest(pleaves, tag=tag)
-    rmakers.rewrite_rest_filled(voice, tag=tag)
-    rmakers.denominator(voice, (1, 8))
-    rmakers.force_fraction(voice)
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    plts = baca.select.plts(voice)
+    rmakers.rewrite_rest_filled(voice_, tag=tag)
+    rmakers.denominator(voice_, (1, 8))
+    rmakers.force_fraction(voice_)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    plts = baca.select.plts(voice_)
     lists = [_[1:] for _ in plts]
     rmakers.force_rest(lists, tag=tag)
-    tuplets = abjad.select.tuplets(voice)
+    tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
     rmakers.force_rest(leaves, tag=tag)
-    rmakers.beam(voice, tag=tag)
-    rmakers.extract_trivial(voice)
-    music = abjad.mutate.eject_contents(voice)
+    rmakers.beam(voice_, tag=tag)
+    rmakers.extract_trivial(voice_)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
     return music
 
 

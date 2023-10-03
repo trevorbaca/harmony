@@ -57,14 +57,14 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(1),
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1, 1, 2, 2],
         rest_cyclic=([1], 2),
     )
-    voice.extend(music)
     rhythm(
         voice,
         [-4, w(2, 4), h(w(2, 4)), -4],

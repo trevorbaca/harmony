@@ -81,22 +81,22 @@ def PERC2(voice, time_signatures):
         3 * [2, -2],
         time_signatures(4),
     )
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(5),
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1],
         rest_nonfirst=True,
     )
-    voice.extend(music)
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(6, 7),
         [1],
         [1, 2, 1, 1, 1],
         extra_counts=[1, 0],
         rest=[0, 1, -1],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(8, 10))
 
 

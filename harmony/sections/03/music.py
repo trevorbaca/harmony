@@ -78,22 +78,22 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(1),
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_most=True,
     )
-    voice.extend(music)
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(2),
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_except=[0, 1, 2, -4, -3, -2],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -101,18 +101,19 @@ def PERC1(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(6, 8),
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
         rest_except=[0, 1, -2, -1],
     )
-    voice.extend(music)
 
 
 def PERC2(voice, time_signatures):
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(1),
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
@@ -120,14 +121,13 @@ def PERC2(voice, time_signatures):
         rest_most=True,
         rest_pleaves=[0, 1, 2, 3],
     )
-    voice.extend(music)
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(2),
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(3))
     rhythm(
         voice,
@@ -135,14 +135,14 @@ def PERC2(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    music = library.make_phjc_rhythm(
+    library.make_phjc_rhythm(
+        voice,
         time_signatures(6, 8),
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
         rest_except=[0, 1, 4, -2, -1],
     )
-    voice.extend(music)
 
 
 def HP(voice, time_signatures):
