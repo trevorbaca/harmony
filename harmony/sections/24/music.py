@@ -118,11 +118,11 @@ def VA(voice, time_signatures):
         AG([2], 12),
         time_signatures(4),
     )
-    music = library.make_tessera_3(
+    library.make_tessera_3(
+        voice,
         time_signatures(5, 9),
         4,
     )
-    voice.extend(music)
 
 
 def vc1_cb1(voice, time_signatures):
@@ -142,11 +142,11 @@ def VC1(voice, time_signatures):
         [4, "-"],
         time_signatures(4),
     )
-    music = library.make_tessera_3(
+    library.make_tessera_3(
+        voice,
         time_signatures(5, 9),
         3,
     )
-    voice.extend(music)
 
 
 def VC2(voice, time_signatures):
@@ -156,11 +156,11 @@ def VC2(voice, time_signatures):
         AG([2], 12),
         time_signatures(4),
     )
-    music = library.make_tessera_3(
+    library.make_tessera_3(
+        voice,
         time_signatures(5, 9),
         2,
     )
-    voice.extend(music)
 
 
 def CB1(voice, time_signatures):
@@ -170,11 +170,11 @@ def CB1(voice, time_signatures):
         [4, "-"],
         time_signatures(4),
     )
-    music = library.make_tessera_3(
+    library.make_tessera_3(
+        voice,
         time_signatures(5, 9),
         1,
     )
-    voice.extend(music)
 
 
 def CB2(voice, time_signatures):
@@ -184,11 +184,11 @@ def CB2(voice, time_signatures):
         AG([2], 12),
         time_signatures(4),
     )
-    music = library.make_tessera_3(
+    library.make_tessera_3(
+        voice,
         time_signatures(5, 9),
         0,
     )
-    voice.extend(music)
 
 
 def bfl(m):

@@ -41,33 +41,33 @@ def GLOBALS(skips, rests):
 
 
 def BFL(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         6,
         gap=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         6,
         advance=72,
         gap=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [w(2, 4), h(w(2, 4)), rt(16)],
         time_signatures(9),
     )
     mmrests(voice, time_signatures(10))
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         6,
         advance=72 + 12,
         gap=True,
     )
-    voice.extend(music)
 
 
 def PERC1(voice, time_signatures):
@@ -128,47 +128,47 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         5,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         5,
         advance=72,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [w(2, 4), h(w(2, 4)), 16],
         time_signatures(9),
     )
     mmrests(voice, time_signatures(10))
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         5,
         advance=72 + 12,
     )
-    voice.extend(music)
 
 
 def VA(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         4,
         gap=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7))
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         4,
         advance=72,
         gap=True,
     )
-    voice.extend(music)
     library.make_appoggiato_rhythm(
         voice,
         time_signatures(9),
@@ -176,30 +176,30 @@ def VA(voice, time_signatures):
         voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         4,
         advance=72 + 12,
         gap=True,
     )
-    voice.extend(music)
 
 
 def VC1(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         3,
         gap=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         3,
         advance=72,
         gap=True,
     )
-    voice.extend(music)
     library.make_appoggiato_rhythm(
         voice,
         time_signatures(9),
@@ -207,31 +207,31 @@ def VC1(voice, time_signatures):
         voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         3,
         advance=72 + 12,
         gap=True,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def VC2(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         2,
         gap=True,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         2,
         advance=72,
         gap=True,
     )
-    voice.extend(music)
     library.make_appoggiato_rhythm(
         voice,
         time_signatures(9),
@@ -239,29 +239,29 @@ def VC2(voice, time_signatures):
         voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         2,
         advance=72 + 12,
         gap=True,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB1(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         1,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(8),
         1,
         advance=72,
     )
-    voice.extend(music)
     library.make_appoggiato_rhythm(
         voice,
         time_signatures(9),
@@ -269,21 +269,21 @@ def CB1(voice, time_signatures):
         voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(11),
         1,
         advance=72 + 12,
     )
-    voice.extend(music)
     baca.section.append_anchor_note(voice)
 
 
 def CB2(voice, time_signatures):
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(1, 6),
         0,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7), head=True)
     music = baca.make_notes(time_signatures(8))
     voice.extend(music)

@@ -442,7 +442,7 @@ def make_talea(
     return components
 
 
-def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
+def make_tessera_1(voice, time_signatures, part, *, advance=0, gap=False):
     counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
     permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
     assert sum(counts) == 96
@@ -456,18 +456,19 @@ def make_tessera_1(time_signatures, part, *, advance=0, gap=False):
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.extract_trivial(voice)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.extract_trivial(voice_)
     rmakers.rewrite_meter(
-        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
     return music
 
 
 def make_tessera_2(
-    time_signatures, part, *, advance=0, gap=False, force_rest_plts=None
+    voice, time_signatures, part, *, advance=0, gap=False, force_rest_plts=None
 ):
     counts = [3, 4, 14, 2, 6, 7, 8]
     permutation = [2, 3, 4, 0, 5, 6, 1]
@@ -482,21 +483,22 @@ def make_tessera_2(
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if force_rest_plts is not None:
-        plts = baca.select.plts(voice)
+        plts = baca.select.plts(voice_)
         plts = abjad.select.get(plts, force_rest_plts)
         rmakers.force_rest(plts, tag=tag)
-    rmakers.extract_trivial(voice)
+    rmakers.extract_trivial(voice_)
     rmakers.rewrite_meter(
-        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
     return music
 
 
-def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
+def make_tessera_3(voice, time_signatures, part, *, advance=0, gap=False):
     counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
     permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
     assert sum(counts) == 84
@@ -510,17 +512,18 @@ def make_tessera_3(time_signatures, part, *, advance=0, gap=False):
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.extract_trivial(voice)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.extract_trivial(voice_)
     rmakers.rewrite_meter(
-        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
     return music
 
 
-def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
+def make_tessera_4(voice, time_signatures, part, *, advance=0, gap=False):
     counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
     permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
     assert sum(counts) == 144
@@ -534,13 +537,14 @@ def make_tessera_4(time_signatures, part, *, advance=0, gap=False):
     tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
-    voice = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.extract_trivial(voice)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.extract_trivial(voice_)
     rmakers.rewrite_meter(
-        voice, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
     )
-    rmakers.force_repeat_tie(voice, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice)
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
     return music
 
 

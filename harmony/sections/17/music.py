@@ -151,12 +151,12 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(1),
         3,
         force_rest_plts=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         3 * [w(2, 4), h(w(2, 4))] + ["-"],
@@ -168,22 +168,22 @@ def VC1(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(5),
         3,
         advance=24,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
 
 
 def VC2(voice, time_signatures):
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(1),
         2,
         force_rest_plts=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         3 * [w(2, 4), h(w(2, 4))] + ["-"],
@@ -195,22 +195,22 @@ def VC2(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(5),
         2,
         advance=24,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
 
 
 def CB1(voice, time_signatures):
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(1),
         1,
         force_rest_plts=[0],
     )
-    voice.extend(music)
     rhythm(
         voice,
         3 * [w(2, 4), h(w(2, 4))] + ["-"],
@@ -222,21 +222,21 @@ def CB1(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(5),
         1,
         advance=24,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
 
 
 def CB2(voice, time_signatures):
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(1),
         0,
     )
-    voice.extend(music)
     rhythm(
         voice,
         3 * [w(2, 4), h(w(2, 4))] + ["-"],
@@ -248,12 +248,12 @@ def CB2(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    music = library.make_tessera_2(
+    library.make_tessera_2(
+        voice,
         time_signatures(5),
         0,
         advance=24,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
 
 
