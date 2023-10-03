@@ -208,11 +208,11 @@ def VA(voice, time_signatures):
         [rt(14), T([8], 2)],
         time_signatures(5),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(6),
         4,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(7, 8))
     music = baca.make_notes(time_signatures(9))
     voice.extend(music)
@@ -239,11 +239,11 @@ def VC1(voice, time_signatures):
         _sixteenths,
         time_signatures(5),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(6),
         3,
     )
-    voice.extend(music)
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
     music = baca.make_notes(time_signatures(9))
@@ -268,11 +268,11 @@ def VC2(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -2),
         time_signatures(5),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(6),
         2,
     )
-    voice.extend(music)
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
     music = baca.make_notes(time_signatures(9))
@@ -297,11 +297,11 @@ def CB1(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -4),
         time_signatures(5),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(6),
         1,
     )
-    voice.extend(music)
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
     music = baca.make_notes(time_signatures(9))
@@ -327,11 +327,11 @@ def CB2(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -6),
         time_signatures(5),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(6),
         0,
     )
-    voice.extend(music)
     rhythm(voice, [w(4, 8), h(w(4, 8))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
     music = baca.make_notes(time_signatures(9))

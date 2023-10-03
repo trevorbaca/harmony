@@ -45,12 +45,12 @@ def BFL(voice, time_signatures):
         [-4, 1, -4, 1, "-"],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         6,
         gap=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [1, 1, "-"],
@@ -133,11 +133,11 @@ def HP(voice, time_signatures):
         [10, -2],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         5,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [4, 4, 8, 4, AG([2], 4)],
@@ -186,12 +186,12 @@ def VC1(voice, time_signatures):
         [T([1, -3, 1], -1), T([-2, 3, -1, 3, -1], -2)],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         3,
         gap=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
@@ -211,12 +211,12 @@ def VC2(voice, time_signatures):
         [8, AG([2], 2), -2],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         2,
         gap=True,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [14, 1, 1, 1, 9, 1, 1, 1, 5, 1, 1, 1, "+"],
@@ -236,11 +236,11 @@ def CB1(voice, time_signatures):
         [-4, 1, -4, 1, "-"],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         1,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [15, 1, 1, 1, 6, 1, 1, 1, 12, 1, 1, 1, "+"],
@@ -260,11 +260,11 @@ def CB2(voice, time_signatures):
         [8, AG([2], 2), -2],
         time_signatures(2),
     )
-    music = library.make_tessera_1(
+    library.make_tessera_1(
+        voice,
         time_signatures(3),
         0,
     )
-    voice.extend(music)
     rhythm(
         voice,
         [11, 1, 1, 1, 11, 1, 1, 1, 7, 1, 1, 1, "+"],

@@ -118,11 +118,11 @@ def HP(voice, time_signatures):
 def VA(voice, time_signatures):
     music = baca.make_notes(time_signatures(1, 4))
     voice.extend(music)
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(5),
         4,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6))
     music = baca.make_notes(time_signatures(7, 10))
     voice.extend(music)
@@ -135,11 +135,11 @@ def VC1(voice, time_signatures):
         2 * [10, 6],
         time_signatures(1, 4),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(5),
         3,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
     rhythm(
         voice,
@@ -155,11 +155,11 @@ def VC2(voice, time_signatures):
         2 * [10, 6],
         time_signatures(1, 4),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(5),
         2,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
     rhythm(
         voice,
@@ -175,11 +175,11 @@ def CB1(voice, time_signatures):
         2 * [4, 4, -8],
         time_signatures(1, 4),
     )
-    music = library.make_tessera_4(
+    library.make_tessera_4(
+        voice,
         time_signatures(5),
         1,
     )
-    voice.extend(music)
     mmrests(voice, time_signatures(6), head=True)
     rhythm(
         voice,
@@ -191,8 +191,7 @@ def CB1(voice, time_signatures):
 
 def CB2(voice, time_signatures):
     rhythm(voice, [8, 8, 8, w(6, 8), h(2)])
-    music = library.make_tessera_4(time_signatures(5), 0)
-    voice.extend(music)
+    library.make_tessera_4(voice, time_signatures(5), 0)
     mmrests(voice, time_signatures(6), head=True)
     rhythm(
         voice,
