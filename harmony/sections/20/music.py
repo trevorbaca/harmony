@@ -9,8 +9,6 @@ from harmony import library
 
 AG = library.AG
 T = library.T
-bl = library.bl
-br = library.br
 h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
@@ -81,20 +79,16 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    # music = library.make_sixteenths(
     rhythm(
         voice,
         2 * [-4, 4],
         time_signatures(1),
     )
-    # voice.extend(music)
-    # music = library.make_sixteenths(
     rhythm(
         voice,
         [-4, 4, -4],
         time_signatures(2),
     )
-    # voice.extend(music)
     music = library.make_talea(
         time_signatures(3, 10),
         [2, -8, 2, -8, 2, -20],
@@ -104,47 +98,32 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    # music = library.make_talea(
     rhythm(
         voice,
         T([-8, 4, 4, 4], -4),
         time_signatures(1),
     )
-    # voice.extend(music)
-    # music = library.make_sixteenths(
     rhythm(
         voice,
         [-4, 4, -4],
         time_signatures(2),
     )
-    # voice.extend(music)
-    # music = library.make_sixteenths(
     rhythm(
         voice,
         3 * [2, -20, 2, -24],
         time_signatures(3, 10),
     )
-    # voice.extend(music)
 
 
 def VA(voice, time_signatures):
-    # music = library.make_sixteenths(
     rhythm(
         voice,
         2 * [-4, 4],
         time_signatures(1),
     )
-    # voice.extend(music)
-#    music = library.make_sixteenths(
-#        time_signatures(2),
-#        [2, "+"],
-#        extra_counts=[1],
-#    )
-#    voice.extend(music)
-#    library.after_grace_each_run(music)
     rhythm(
         voice,
-        [T([bl(2), br(3)], -1), AG([2], rt(8))],
+        [T([2, 3], -1), AG([2], rt(8))],
         time_signatures(2),
         do_not_rewrite_meter=True,
     )

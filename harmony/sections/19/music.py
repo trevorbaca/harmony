@@ -537,7 +537,6 @@ def CB2(voice, time_signatures):
     baca.section.append_anchor_note(voice)
 
 
-
 def bfl(m):
     with baca.scope(m[1]) as o:
         baca.pitches(
