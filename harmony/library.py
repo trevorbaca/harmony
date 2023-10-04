@@ -17,6 +17,14 @@ def AG(*arguments):
     return baca.AfterGrace(*arguments)
 
 
+def OBGC(grace_note_numerators, nongrace_note_numerator, *, voice_name=""):
+    return baca.OBGC(
+        grace_note_numerators,
+        nongrace_note_numerator,
+        grace_leaf_duration=abjad.Duration(1, 20),
+    )
+
+
 def T(items, extra_counts):
     return baca.Tuplet(items, extra_counts)
 
@@ -113,10 +121,11 @@ def h(argument):
     return baca.InvisibleMusic(argument)
 
 
-def invisible(music, pattern):
+def invisible(music, pattern=True):
     tag = baca.helpers.function_name(inspect.currentframe())
     pleaves = baca.select.pleaves(music)
-    pleaves = abjad.select.get(pleaves, pattern)
+    if pattern is not True:
+        pleaves = abjad.select.get(pleaves, pattern)
     rmakers.invisible_music(pleaves, tag=tag)
 
 
@@ -138,7 +147,6 @@ def make_appoggiato_rhythm(
     suffix_counts=(),
     weights=None,
     written_quarters=None,
-    invisible=None,
     voice_name="",
 ):
     durations = [_.duration for _ in time_signatures]
@@ -201,10 +209,6 @@ def make_appoggiato_rhythm(
         rmakers.written_duration(pleaves, (1, 4))
         leaves = baca.select.leaves(voice_, grace=False)
         rmakers.unbeam(leaves)
-    if invisible is not None:
-        pleaves = baca.select.pleaves(voice_)
-        pleaves = abjad.select.get(pleaves, invisible)
-        rmakers.invisible_music(pleaves, tag=tag)
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
@@ -668,6 +672,7 @@ def rhythm(
         do_not_rewrite_meter=do_not_rewrite_meter,
         reference_meters=_reference_meters(),
         tag=tag,
+        voice_name=voice.name,
     )
     for tuplet in abjad.select.tuplets(voice_):
         rmakers.beam([tuplet])
