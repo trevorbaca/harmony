@@ -8,6 +8,7 @@ from harmony import library
 #########################################################################################
 
 AG = library.AG
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -78,7 +79,7 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    components = library.make_appoggiato_rhythm(
         voice,
         time_signatures(1, 5),
         counts=[4, 4, 4, 4, 4, 0, 0, 0],
@@ -88,9 +89,10 @@ def PERC1(voice, time_signatures):
         rest_after=[0, 1, 2, 3, 4],
         repeat_tie=[-2],
         written_quarters=[-2],
-        invisible=[-1],
         voice_name=voice.name,
     )
+    pleaf = baca.select.pleaf(components, -1)
+    library.invisible(pleaf)
     rhythm(
         voice,
         [w(3, 4), h(w(1, 4)), "-", w(3, 4), h(w(1, 4))],
@@ -111,6 +113,11 @@ def PERC1(voice, time_signatures):
         rest_after=True,
         voice_name=voice.name,
     )
+    # rhythm(
+    #     voice,
+    #     [OBGC(7 * [2], -20)],
+    #     time_signatures(11),
+    # )
     mmrests(voice, time_signatures(12))
 
 
