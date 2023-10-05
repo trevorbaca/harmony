@@ -365,6 +365,7 @@ number.1.BassFlute.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r16
 
@@ -417,6 +418,7 @@ number.1.BassFlute.Music = {
     >>
 
     % [BassFlute.Music measure 2]
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r16
 
@@ -476,6 +478,7 @@ number.1.BassFlute.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r16
 

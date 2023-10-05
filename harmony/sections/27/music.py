@@ -7,6 +7,7 @@ from harmony import library
 ########################################### 27 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -84,12 +85,10 @@ def BFL(voice, time_signatures):
         4 * [-2, 2, 2],
         time_signatures(3),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(9 * [2], [27]), -1, OBGC(6 * [2], [23])],
         time_signatures(4, 5),
-        weights=[28, 24],
-        counts=[9, 6],
-        incise=True,
     )
     library.make_warble_rhythm(
         voice,
