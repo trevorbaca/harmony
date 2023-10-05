@@ -106,7 +106,7 @@ def PERC1(voice, time_signatures):
     )
     rhythm(
         voice,
-        4 * [OBGC(7 * [2], -20)],
+        4 * [OBGC(7 * [2], [-20])],
         time_signatures(8, 11),
     )
     mmrests(voice, time_signatures(12))

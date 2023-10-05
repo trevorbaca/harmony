@@ -8,6 +8,7 @@ from harmony import library
 #########################################################################################
 
 AG = library.AG
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -35,12 +36,17 @@ def GLOBALS(skips, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
-        time_signatures(1, 2),
-        weights=[16, 8, 12, 8],
-        counts=[9, 6, 8, 4],
-        incise=True,
+        [-1, OBGC(9 * [2], [15]), -1, OBGC(6 * [2], [7])],
+        time_signatures(1),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(8 * [2], [3, rt(8)]), -1, OBGC(4 * [2], [7])],
+        time_signatures(2),
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,

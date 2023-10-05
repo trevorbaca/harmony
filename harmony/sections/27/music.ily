@@ -1007,6 +1007,7 @@ number.27.BassFlute.Music = {
     >>
 
     % [BassFlute.Music measure 5]
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r16
 
