@@ -467,23 +467,6 @@ def make_tessera_4(voice, time_signatures, part, *, advance=0, gap=False):
     return music
 
 
-def make_train_rhythm(voice, time_signatures, counts, *, rest_leaves=None):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    durations = [_.duration for _ in time_signatures]
-    tuplets = rmakers.talea(durations, counts, 16, tag=tag)
-    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    if rest_leaves is not None:
-        leaves = baca.select.leaves(voice_)
-        leaves = abjad.select.get(leaves, rest_leaves)
-        rmakers.force_rest(leaves, tag=tag)
-    rmakers.extract_trivial(voice_)
-    rmakers.beam([abjad.select.leaves(voice_)], tag=tag)
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
-    music = abjad.mutate.eject_contents(voice_)
-    voice.extend(music)
-    return music
-
-
 def make_warble_rhythm(
     voice,
     time_signatures,
