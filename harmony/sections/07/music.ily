@@ -2081,6 +2081,7 @@ number.7.Viola.Music = {
     \times 3/5
     {
 
+          %! ONE_VOICE_COMMAND
         \oneVoice
         bf2
         \repeatTie
@@ -2592,6 +2593,7 @@ number.7.Cello.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     bf!4
     - \espressivo
@@ -3138,10 +3140,6 @@ number.7.Contrabass.1.Music.item.1 = {
     - \tweak stencil ##f
     ~
 
-    % [Contrabass.1.Music measure 5]
-    bf1
-    \repeatTie
-
 }
 
 
@@ -3343,6 +3341,12 @@ number.7.Contrabass.1.Music = {
 
     >>
 
+    % [Contrabass.1.Music measure 5]
+      %! ONE_VOICE_COMMAND
+    \oneVoice
+    bf1
+    \repeatTie
+
     % [Contrabass.1.Music measure 6]
       %! MEASURE_60
       %! SHIFTED_CLEF
@@ -3352,8 +3356,6 @@ number.7.Contrabass.1.Music = {
       %! MEASURE_60
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.extra-offset = #'(-2.75 . 0)
-      %! ONE_VOICE_COMMAND
-    \oneVoice
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF

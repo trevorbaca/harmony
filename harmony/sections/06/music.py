@@ -8,6 +8,7 @@ from harmony import library
 #########################################################################################
 
 AG = library.AG
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -291,20 +292,20 @@ def VA(voice, time_signatures):
         time_signatures(1),
     )
     mmrests(voice, time_signatures(2))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(9 * [2], [16]),
         time_signatures(3),
-        counts=[9],
     )
     rhythm(
         voice,
         [rt(8), "-", 2, -3],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(9 * [2], [16]),
         time_signatures(5),
-        counts=[9],
     )
     rhythm(
         voice,
@@ -327,20 +328,20 @@ def VC1(voice, time_signatures):
         time_signatures(1),
     )
     mmrests(voice, time_signatures(2))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(7 * [2], [16]),
         time_signatures(3),
-        counts=[7],
     )
     rhythm(
         voice,
         [rt(8), "-", 2, -3],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(7 * [2], [16]),
         time_signatures(5),
-        counts=[7],
     )
     rhythm(
         voice,

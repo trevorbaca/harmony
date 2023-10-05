@@ -7,6 +7,7 @@ from harmony import library
 ########################################### 07 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -174,15 +175,10 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(5 * [2], [4]), T([rt(8), 4, 4, 4], -8)],
         time_signatures(1),
-        counts=[5, 0, 0, 0, 0],
-        weights=[4, 12],
-        extra_counts=[0, 8],
-        prefix_counts=[0, 3],
-        prefix_talea=[8, 4, 4],
-        repeat_tie=[6],
     )
     rhythm(
         voice,
@@ -190,11 +186,10 @@ def VA(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3), head=True)
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(4 * [2], [16]),
         time_signatures(4),
-        counts=[4],
-        fuse=True,
     )
     rhythm(
         voice,
@@ -227,11 +222,10 @@ def VC1(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(4 * [2], [4]), 4, 4, 4, 4, 4, 4, 4],
         time_signatures(4, 5),
-        weights=[4, 4, 4, 4, 4, 4, 4, 4],
-        counts=[4, 0, 0, 0, 0, 0, 0, 0],
     )
     rhythm(
         voice,
@@ -295,11 +289,10 @@ def CB1(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(4 * [2], [16]), rt(16)],
         time_signatures(4, 5),
-        counts=[4],
-        fuse=True,
     )
     music = baca.make_repeated_duration_notes(
         time_signatures(6),
