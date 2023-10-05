@@ -7,6 +7,7 @@ from harmony import library
 ########################################### 10 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -82,13 +83,11 @@ def BFL(voice, time_signatures):
         time_signatures(8),
     )
     mmrests(voice, time_signatures(9))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(9 * [2], [3, rt(8)]), 12],
         time_signatures(10),
-        counts=[9, 0],
-        weights=[12, 12],
-        prefix_talea=[-1],
-        prefix_counts=[1, 0],
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -100,11 +99,10 @@ def BFL(voice, time_signatures):
         [w(12, 24), h(8), h(w(3, 4)), h(w(1, 4))],
         time_signatures(14),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(9 * [2], [23])],
         time_signatures(15),
-        counts=[9],
-        incise=True,
     )
     baca.section.append_anchor_note(voice)
 

@@ -1259,6 +1259,7 @@ number.19.BassFlute.Staff = <<
 
 number.19.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1281,6 +1282,7 @@ number.19.Percussion.1.Music.item.1 = {
 
 number.19.Percussion.1.Music.item.2 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1305,6 +1307,7 @@ number.19.Percussion.1.Music.item.3 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2...
 
 }
@@ -1312,6 +1315,7 @@ number.19.Percussion.1.Music.item.3 = {
 
 number.19.Percussion.1.Music.item.4 = {
 
+    \voiceTwo
     r8.
 
     \once \override Dots.X-extent = ##f
@@ -1327,6 +1331,7 @@ number.19.Percussion.1.Music.item.5 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2...
 
 }
@@ -1334,6 +1339,7 @@ number.19.Percussion.1.Music.item.5 = {
 
 number.19.Percussion.1.Music.item.6 = {
 
+    \voiceTwo
     r8.
 
     \once \override Dots.X-extent = ##f
@@ -1350,6 +1356,7 @@ number.19.Percussion.1.Music.item.7 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r1
     \revert TupletBracket.direction
     \revert TupletBracket.staff-padding
@@ -1363,6 +1370,7 @@ number.19.Percussion.1.Music.item.8 = {
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
     \override DynamicLineSpanner.staff-padding = 5
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2172,6 +2180,7 @@ number.19.Percussion.1.Staff = <<
 
 number.19.Percussion.2.Music.item.1 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2190,6 +2199,7 @@ number.19.Percussion.2.Music.item.1 = {
 
 number.19.Percussion.2.Music.item.2 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2214,6 +2224,7 @@ number.19.Percussion.2.Music.item.3 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2...
 
 }
@@ -2221,6 +2232,7 @@ number.19.Percussion.2.Music.item.3 = {
 
 number.19.Percussion.2.Music.item.4 = {
 
+    \voiceTwo
     r8.
 
     \once \override Dots.X-extent = ##f
@@ -2236,6 +2248,7 @@ number.19.Percussion.2.Music.item.5 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2...
 
 }
@@ -2243,6 +2256,7 @@ number.19.Percussion.2.Music.item.5 = {
 
 number.19.Percussion.2.Music.item.6 = {
 
+    \voiceTwo
     r8.
 
     \once \override Dots.X-extent = ##f
@@ -2258,6 +2272,7 @@ number.19.Percussion.2.Music.item.7 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r1
     \revert DynamicLineSpanner.staff-padding
     \revert TupletBracket.direction
@@ -2272,6 +2287,7 @@ number.19.Percussion.2.Music.item.8 = {
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
     \override DynamicLineSpanner.staff-padding = 5
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2985,7 +3001,9 @@ number.19.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-    r4.
+    r4
+
+    r8
 
     \tweak text #tuplet-number::calc-fraction-text
     \times 5/4

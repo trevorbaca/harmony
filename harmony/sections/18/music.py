@@ -8,6 +8,7 @@ from harmony import library
 ########################################### 18 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -86,12 +87,11 @@ def PERC1(voice, time_signatures):
         [2, 2, "-"],
         time_signatures(2),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, -1, OBGC(5 * [2], [-3, -8])],
         time_signatures(3),
-        weights=[5, 11],
-        counts=[0, 5],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -134,12 +134,11 @@ def PERC2(voice, time_signatures):
         [2, 2, "-"],
         time_signatures(2),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, -1, OBGC(4 * [2], [-3, -8])],
         time_signatures(3),
-        weights=[5, 11],
-        counts=[0, 4],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
