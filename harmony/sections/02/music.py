@@ -57,12 +57,11 @@ def BFL(voice, time_signatures):
         [(w(2, 4), h(w(2, 4)), rt(_ - 4)) for _ in bfl_and_harp()],
         do_not_rewrite_meter=True,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(8 * [2], [3, rt(8)]), -1, OBGC(4 * [2], [7])],
         time_signatures(6),
-        weights=[12, 8],
-        counts=[8, 4],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -78,19 +77,16 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    components = library.make_appoggiato_rhythm(
+    rhythm(
         voice,
-        time_signatures(1, 5),
-        counts=[4, 4, 4, 4, 4, 0, 0, 0],
-        weights=[16, 20, 16, 20, 10, 6],
-        prefix_talea=[2, 3],
-        prefix_counts=[0, 0, 0, 0, 0, 2],
-        rest_after=[0, 1, 2, 3, 4],
-        repeat_tie=[-2],
-        written_quarters=[-2],
+        2 * [OBGC(4 * [2], [-16]), OBGC(4 * [2], [-20])],
+        time_signatures(1, 4),
     )
-    pleaf = baca.select.pleaf(components, -1)
-    library.invisible(pleaf)
+    rhythm(
+        voice,
+        [OBGC(4 * [2], [-8]), -2, 2, rt(w(3, 4)), h(w(1, 4))],
+        time_signatures(5),
+    )
     rhythm(
         voice,
         [w(3, 4), h(w(1, 4)), "-", w(3, 4), h(w(1, 4))],
@@ -175,17 +171,20 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    obgcs = []
+    pairs = abjad.sequence.zip([[2, 3, 4, 5, 6, 7], [16, 12, 16, 12, 16, 16]])
+    for graces, main in pairs:
+        obgcs.append(OBGC(graces * [2], [main]))
+    rhythm(
         voice,
+        obgcs,
         time_signatures(1, 5),
-        weights=[16, 12, 16, 12, 16, 16],
-        counts=[2, 3, 4, 5, 6, 7],
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 7, -1, 3, rt(8)],
         time_signatures(6),
-        weights=[8, 12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     library.make_talea(
         voice,
@@ -193,21 +192,23 @@ def VA(voice, time_signatures):
         library.cerulean_counts()[1:],
         extra_counts=[2],
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], [20])],
         time_signatures(8, 11),
-        counts=[7],
     )
     mmrests(voice, time_signatures(12), head=True)
 
 
 def VC1(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    items = [-12]
+    pairs = abjad.sequence.zip([[3, 4, 5, 6], [16, 12, 16, 16]])
+    for graces, main in pairs:
+        items.append(OBGC(graces * [2], [main]))
+    rhythm(
         voice,
+        items,
         time_signatures(1, 4),
-        weights=[12, 16, 12, 16, 16, 16],
-        counts=[3, 4, 5, 6, 7],
-        rest_to=1,
     )
     music = baca.make_notes(time_signatures(5))
     voice.extend(music)
@@ -221,10 +222,10 @@ def VC1(voice, time_signatures):
         [4, -4, T([1, -4], -1)],
         time_signatures(7),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], [20])],
         time_signatures(8, 11),
-        counts=[7],
     )
     mmrests(voice, time_signatures(12), head=True)
 
@@ -235,28 +236,30 @@ def VC2(voice, time_signatures):
         [T([16, AG([2], 4), -4], "4:5"), -6],
         time_signatures(1, 2),
     )
-    library.make_appoggiato_rhythm(
+    items = [-8]
+    pairs = abjad.sequence.zip([[4, 5, 6], [16, 12, 16]])
+    for graces, main in pairs:
+        items.append(OBGC(graces * [2], [main]))
+    rhythm(
         voice,
+        items,
         time_signatures(3, 5),
-        weights=[8, 16, 12, 16],
-        counts=[4, 5, 6, 7],
-        rest_to=1,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 3, rt(8), -1, 7],
         time_signatures(6),
-        weights=[12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
         [8, AG([2], 2), "-"],
         time_signatures(7),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], [20])],
         time_signatures(8, 11),
-        counts=[7],
     )
     mmrests(voice, time_signatures(12), head=True)
 
@@ -267,11 +270,14 @@ def CB1(voice, time_signatures):
         [2, -2, 2, -2, "-"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    items = []
+    pairs = abjad.sequence.zip([[5, 6, 7, 5, 6], [16, 16, 12, 16, 12]])
+    for graces, main in pairs:
+        items.append(OBGC(graces * [2], [main]))
+    rhythm(
         voice,
+        items,
         time_signatures(2, 5),
-        weights=[16, 16, 12, 16, 12],
-        counts=[5, 6, 7],
     )
     rhythm(
         voice,
@@ -283,10 +289,10 @@ def CB1(voice, time_signatures):
         abjad.sequence.truncate(library.cerulean_counts()[1:], weight=12),
         time_signatures(7),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], [20])],
         time_signatures(8, 11),
-        counts=[7],
     )
     mmrests(voice, time_signatures(12), head=True)
 
@@ -297,28 +303,30 @@ def CB2(voice, time_signatures):
         [T([16, AG([2], 4), -4], "4:5"), -6],
         time_signatures(1, 2),
     )
-    library.make_appoggiato_rhythm(
+    items = [-8]
+    pairs = abjad.sequence.zip([[6, 7, 6], [16, 12, 16]])
+    for graces, main in pairs:
+        items.append(OBGC(graces * [2], [main]))
+    rhythm(
         voice,
+        items,
         time_signatures(3, 5),
-        weights=[8, 16, 12, 16],
-        counts=[6, 7],
-        rest_to=1,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 3, rt(8), -1, 7],
         time_signatures(6),
-        weights=[12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
         [8, AG([2], 2), "-"],
         time_signatures(7),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], [20])],
         time_signatures(8, 11),
-        counts=[7],
     )
     mmrests(voice, time_signatures(12), head=True)
 

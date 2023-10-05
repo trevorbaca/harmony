@@ -1034,6 +1034,7 @@ number.2.BassFlute.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r16
 
@@ -1388,6 +1389,7 @@ number.2.BassFlute.Staff = <<
 
 number.2.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r1
 
 }
@@ -1395,6 +1397,7 @@ number.2.Percussion.1.Music.item.1 = {
 
 number.2.Percussion.1.Music.item.2 = {
 
+    \voiceTwo
     r1
 
     r4
@@ -1404,6 +1407,7 @@ number.2.Percussion.1.Music.item.2 = {
 
 number.2.Percussion.1.Music.item.3 = {
 
+    \voiceTwo
     r1
 
 }
@@ -1411,6 +1415,7 @@ number.2.Percussion.1.Music.item.3 = {
 
 number.2.Percussion.1.Music.item.4 = {
 
+    \voiceTwo
     r1
 
     r4
@@ -1420,20 +1425,8 @@ number.2.Percussion.1.Music.item.4 = {
 
 number.2.Percussion.1.Music.item.5 = {
 
+    \voiceTwo
     r2
-
-      %! EXPLICIT_STAFF_LINES_COLOR
-    \once \override Staff.StaffSymbol.color = #blue
-      %! EXPLICIT_STAFF_LINES
-    \stopStaff
-      %! EXPLICIT_STAFF_LINES
-    \once \override Staff.StaffSymbol.line-count = 1
-      %! EXPLICIT_STAFF_LINES
-    \startStaff
-    r8
-      %! -PARTS
-      %! EXPLICIT_BAR_EXTENT
-    \override Staff.BarLine.bar-extent = #'(-2 . 0)
 
 }
 
@@ -1722,7 +1715,21 @@ number.2.Percussion.1.Music = {
 
     >>
 
+      %! EXPLICIT_STAFF_LINES_COLOR
+    \once \override Staff.StaffSymbol.color = #blue
+      %! ONE_VOICE_COMMAND
     \oneVoice
+      %! EXPLICIT_STAFF_LINES
+    \stopStaff
+      %! EXPLICIT_STAFF_LINES
+    \once \override Staff.StaffSymbol.line-count = 1
+      %! EXPLICIT_STAFF_LINES
+    \startStaff
+    r8
+      %! -PARTS
+      %! EXPLICIT_BAR_EXTENT
+    \override Staff.BarLine.bar-extent = #'(-2 . 0)
+
     \override DynamicLineSpanner.staff-padding = 6
     \override Stem.direction = #down
     \override TupletBracket.direction = #up
@@ -1766,7 +1773,7 @@ number.2.Percussion.1.Music = {
     %@% \abjad-invisible-music
       %! INVISIBLE_MUSIC_COLORING
     \abjad-invisible-music-coloring
-    b16
+    b4 * 1/4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
@@ -1774,6 +1781,8 @@ number.2.Percussion.1.Music = {
       %! EXPLICIT_DYNAMIC
       %! SPANNER_STOP
     \f
+      %! DURATION_MULTIPLIER
+    %@% ^ \baca-duration-multiplier-markup #"1" #"4"
 
     % [Percussion.1.Music measure 6]
     b4 * 3/4

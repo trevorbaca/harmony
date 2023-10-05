@@ -800,6 +800,7 @@ number.4.BassFlute.Staff = <<
 
 number.4.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
