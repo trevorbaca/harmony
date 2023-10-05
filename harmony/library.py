@@ -310,31 +310,6 @@ def make_phjc_rhythm(
     return music
 
 
-def make_rimbalzandi_rhythm(
-    voice, time_signatures, *, extra_counts=(), rest_except=None
-):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    durations = [_.duration for _ in time_signatures]
-    lists = abjad.sequence.partition_by_counts(
-        durations, [2], cyclic=True, overhang=True
-    )
-    durations = [sum(_) for _ in lists]
-    tuplets = rmakers.even_division(durations, [4], extra_counts=extra_counts, tag=tag)
-    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.trivialize(voice_)
-    rmakers.rewrite_dots(voice_, tag=tag)
-    if rest_except is not None:
-        leaves = abjad.select.leaves(voice_)
-        leaves = abjad.select.exclude(leaves, rest_except)
-        rmakers.force_rest(leaves, tag=tag)
-    rmakers.force_diminution(voice_)
-    rmakers.force_fraction(voice_)
-    rmakers.extract_trivial(voice_)
-    music = abjad.mutate.eject_contents(voice_)
-    voice.extend(music)
-    return music
-
-
 def make_talea(
     voice,
     time_signatures,

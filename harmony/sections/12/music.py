@@ -1,5 +1,6 @@
 import abjad
 import baca
+from abjadext import rmakers
 
 from harmony import library
 
@@ -276,6 +277,29 @@ def HP(voice, time_signatures):
     )
 
 
+def rimbalzandi(voice, time_signatures, rest_except, *, extra_counts=()):
+    tag = abjad.Tag("rimbalzandi()")
+    durations = [_.duration for _ in time_signatures]
+    lists = abjad.sequence.partition_by_counts(
+        durations, [2], cyclic=True, overhang=True
+    )
+    durations = [sum(_) for _ in lists]
+    tuplets = rmakers.even_division(durations, [4], extra_counts=extra_counts, tag=tag)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.trivialize(voice_)
+    rmakers.rewrite_dots(voice_, tag=tag)
+    if rest_except is not None:
+        leaves = abjad.select.leaves(voice_)
+        leaves = abjad.select.exclude(leaves, rest_except)
+        rmakers.force_rest(leaves, tag=tag)
+    rmakers.force_diminution(voice_)
+    rmakers.force_fraction(voice_)
+    rmakers.extract_trivial(voice_)
+    music = abjad.mutate.eject_contents(voice_)
+    voice.extend(music)
+    return music
+
+
 def VA(voice, time_signatures):
     rhythm(
         voice,
@@ -287,10 +311,10 @@ def VA(voice, time_signatures):
         [-4, OBGC(7 * [2], [16]), rt(32)],
         time_signatures(2, 4),
     )
-    library.make_rimbalzandi_rhythm(
+    rimbalzandi(
         voice,
         time_signatures(5, 8),
-        rest_except=[1, 3, 6, 8, 11, 13, 14, 15],
+        [1, 3, 6, 8, 11, 13, 14, 15],
     )
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
@@ -319,11 +343,11 @@ def VC1(voice, time_signatures):
         [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(2),
     )
-    library.make_rimbalzandi_rhythm(
+    rimbalzandi(
         voice,
         time_signatures(3, 8),
+        [6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26],
         extra_counts=[1],
-        rest_except=[6, 7, 11, 14, 15, 19, 21, 22, 24, 25, 26],
     )
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
@@ -353,11 +377,11 @@ def VC2(voice, time_signatures):
         [-8, 12],
         time_signatures(2),
     )
-    library.make_rimbalzandi_rhythm(
+    rimbalzandi(
         voice,
         time_signatures(3, 8),
+        [0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29],
         extra_counts=[2],
-        rest_except=[0, 6, 10, 11, 14, 16, 19, 21, 22, 23, 25, 27, 28, 29],
     )
     mmrests(voice, time_signatures(9), head=True)
     music = baca.make_notes(time_signatures(10))
@@ -387,10 +411,10 @@ def CB1(voice, time_signatures):
         [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(2),
     )
-    library.make_rimbalzandi_rhythm(
+    rimbalzandi(
         voice,
         time_signatures(3, 8),
-        rest_except=[1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
+        [1, 6, 9, 11, 14, 16, 19, 21, 22, 24, 25, 26, 28, 30, 31, 32],
         extra_counts=[3],
     )
     mmrests(voice, time_signatures(9), head=True)
@@ -421,10 +445,10 @@ def CB2(voice, time_signatures):
         [-8, 12],
         time_signatures(2),
     )
-    library.make_rimbalzandi_rhythm(
+    rimbalzandi(
         voice,
         time_signatures(3, 8),
-        rest_except=[1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
+        [1, 9, 16, 22, 27, 29, 31, 33, 34, 35],
         extra_counts=[4],
     )
     mmrests(voice, time_signatures(9), head=True)
