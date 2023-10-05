@@ -1322,9 +1322,7 @@ number.4.Percussion.2.Music = {
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 3
     \startStaff
-    r8
-
-    r8
+    r4
 
     r8
 
@@ -1335,7 +1333,6 @@ number.4.Percussion.2.Music = {
     - \tweak color #blue
       %! EXPLICIT_DYNAMIC
     \baca-p-sub
-    [
       %! METRIC_MODULATION_SPANNER
       %! SPANNER_START
     - \baca-dashed-line-with-hook
@@ -1350,6 +1347,7 @@ number.4.Percussion.2.Music = {
     \bacaStartTextSpanMetricModulation
 
     e'8
+    [
 
     e'8
     ]

@@ -9,6 +9,8 @@ from harmony import library
 
 OBGC = library.OBGC
 T = library.T
+bl = library.bl
+br = library.br
 h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
@@ -98,18 +100,17 @@ def PERC2(voice, time_signatures):
         extra_counts=[0, 6],
     )
     mmrests(voice, time_signatures(2, 4))
-    library.make_train_rhythm(
+    rhythm(
         voice,
+        [-2, bl(2), 2, 2, 2, 2, 2, 2, 2, 2, 2, br(2)],
         time_signatures(5, 6),
-        [2],
-        rest_leaves=[0],
+        do_not_rewrite_meter=True,
     )
     mmrests(voice, time_signatures(7))
-    library.make_train_rhythm(
+    rhythm(
         voice,
+        [-6, 2, 2, 2],
         time_signatures(8),
-        [2],
-        rest_leaves=[0, 1, 2],
     )
     rhythm(
         voice,
