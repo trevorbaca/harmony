@@ -1441,6 +1441,7 @@ number.2.Percussion.1.Music.item.5 = {
 number.2.Percussion.1.Music.item.6 = {
 
     \override DynamicLineSpanner.staff-padding = 5.5
+    \voiceTwo
     r1
       %! REDUNDANT_DYNAMIC_COLOR
       %! REDUNDANT_DYNAMIC
@@ -1455,6 +1456,7 @@ number.2.Percussion.1.Music.item.6 = {
 
 number.2.Percussion.1.Music.item.7 = {
 
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1469,6 +1471,7 @@ number.2.Percussion.1.Music.item.7 = {
 
 number.2.Percussion.1.Music.item.8 = {
 
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1483,6 +1486,7 @@ number.2.Percussion.1.Music.item.8 = {
 
 number.2.Percussion.1.Music.item.9 = {
 
+    \voiceTwo
     r1
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

@@ -104,17 +104,11 @@ def PERC1(voice, time_signatures):
         extra_counts=[2],
         rest_most=True,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        4 * [OBGC(7 * [2], -20)],
         time_signatures(8, 11),
-        counts=[7],
-        rest_after=True,
     )
-    #    rhythm(
-    #        voice,
-    #        4 * [OBGC(7 * [2], -20)],
-    #        time_signatures(8, 10),
-    #    )
     mmrests(voice, time_signatures(12))
 
 
