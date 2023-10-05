@@ -104,7 +104,6 @@ def PERC1(voice, time_signatures):
         weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -118,7 +117,6 @@ def PERC1(voice, time_signatures):
         weights=[1, 19, 1, 15],
         counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
         rest_after=True,
-        voice_name=voice.name,
     )
     library.make_appoggiato_rhythm(
         voice,
@@ -126,7 +124,6 @@ def PERC1(voice, time_signatures):
         weights=[16],
         counts=[19],
         rest_after=True,
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10))
     library.make_talea(
@@ -141,7 +138,6 @@ def PERC1(voice, time_signatures):
         weights=[20],
         counts=[25],
         rest_after=True,
-        voice_name=voice.name,
     )
     library.make_talea(
         voice,
@@ -158,7 +154,6 @@ def PERC2(voice, time_signatures):
         weights=[4, 1, 11],
         counts=[0, 0, 4],
         rest_after=[-2, -1],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -172,7 +167,6 @@ def PERC2(voice, time_signatures):
         weights=[1, 19, 1, 15],
         counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
         rest_after=True,
-        voice_name=voice.name,
     )
     library.make_appoggiato_rhythm(
         voice,
@@ -180,7 +174,6 @@ def PERC2(voice, time_signatures):
         weights=[16],
         counts=[18],
         rest_after=True,
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10))
     library.make_talea(
@@ -195,7 +188,6 @@ def PERC2(voice, time_signatures):
         weights=[20],
         counts=[24],
         rest_after=True,
-        voice_name=voice.name,
     )
     voice.extend(r"r4. \times 5/4 { c2 }")
     baca.section.append_anchor_note(voice)

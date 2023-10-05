@@ -85,7 +85,6 @@ def PERC1(voice, time_signatures):
         time_signatures(9),
         counts=[7],
         rest_after=True,
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10, 11))
 
@@ -173,7 +172,6 @@ def VA(voice, time_signatures):
         voice,
         time_signatures(9),
         counts=[7],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
     library.make_tessera_1(
@@ -204,7 +202,6 @@ def VC1(voice, time_signatures):
         voice,
         time_signatures(9),
         counts=[7],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
     library.make_tessera_1(
@@ -236,7 +233,6 @@ def VC2(voice, time_signatures):
         voice,
         time_signatures(9),
         counts=[7],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
     library.make_tessera_1(
@@ -266,7 +262,6 @@ def CB1(voice, time_signatures):
         voice,
         time_signatures(9),
         counts=[7],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(10), head=True)
     library.make_tessera_1(

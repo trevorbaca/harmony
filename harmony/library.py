@@ -147,7 +147,7 @@ def make_appoggiato_rhythm(
     suffix_counts=(),
     weights=None,
     written_quarters=None,
-    voice_name="",
+    # voice_name="",
 ):
     durations = [_.duration for _ in time_signatures]
     if fuse is True:
@@ -186,7 +186,7 @@ def make_appoggiato_rhythm(
     if counts:
         rmakers.on_beat_grace_container(
             voice_,
-            voice_name,
+            voice.name,
             baca.select.plts(voice_),
             counts,
             grace_leaf_duration=(1, 20),

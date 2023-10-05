@@ -92,7 +92,6 @@ def PERC1(voice, time_signatures):
         weights=[5, 11],
         counts=[0, 5],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -141,7 +140,6 @@ def PERC2(voice, time_signatures):
         weights=[5, 11],
         counts=[0, 4],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,

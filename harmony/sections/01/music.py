@@ -41,7 +41,6 @@ def BFL(voice, time_signatures):
         weights=[16, 8, 12, 8],
         counts=[9, 6, 8, 4],
         incise=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -108,7 +107,6 @@ def VA(voice, time_signatures):
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
-        voice_name=voice.name,
     )
     library.make_talea(
         voice,
@@ -135,7 +133,6 @@ def VC2(voice, time_signatures):
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -164,7 +161,6 @@ def CB2(voice, time_signatures):
         time_signatures(1, 2),
         weights=[16, 8, 12, 8],
         incise=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,

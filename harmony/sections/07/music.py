@@ -183,7 +183,6 @@ def VA(voice, time_signatures):
         prefix_counts=[0, 3],
         prefix_talea=[8, 4, 4],
         repeat_tie=[6],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -196,7 +195,6 @@ def VA(voice, time_signatures):
         time_signatures(4),
         counts=[4],
         fuse=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -234,7 +232,6 @@ def VC1(voice, time_signatures):
         time_signatures(4, 5),
         weights=[4, 4, 4, 4, 4, 4, 4, 4],
         counts=[4, 0, 0, 0, 0, 0, 0, 0],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -303,7 +300,6 @@ def CB1(voice, time_signatures):
         time_signatures(4, 5),
         counts=[4],
         fuse=True,
-        voice_name=voice.name,
     )
     music = baca.make_repeated_duration_notes(
         time_signatures(6),

@@ -124,7 +124,6 @@ def PERC1(voice, time_signatures):
         weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -159,7 +158,6 @@ def PERC2(voice, time_signatures):
         weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
-        voice_name=voice.name,
     )
     library.make_talea(
         voice,
@@ -225,7 +223,6 @@ def VA(voice, time_signatures):
         weights=[4, 12, 4],
         counts=[0, 7],
         rest_from=1,
-        voice_name=voice.name,
     )
     components = rhythm(
         voice,
@@ -262,7 +259,6 @@ def VC1(voice, time_signatures):
         counts=[6],
         rest_to=1,
         rest_from=1,
-        voice_name=voice.name,
     )
     library.make_talea(
         voice,
@@ -333,7 +329,6 @@ def CB1(voice, time_signatures):
         counts=[6],
         rest_to=1,
         rest_from=1,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
