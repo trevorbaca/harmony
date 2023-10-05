@@ -90,7 +90,6 @@ def BFL(voice, time_signatures):
         weights=[28, 24],
         counts=[9, 6],
         incise=True,
-        voice_name=voice.name,
     )
     library.make_warble_rhythm(
         voice,

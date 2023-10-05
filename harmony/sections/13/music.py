@@ -70,7 +70,6 @@ def BFL(voice, time_signatures):
         time_signatures(4),
         counts=[9],
         incise=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -87,7 +86,6 @@ def PERC1(voice, time_signatures):
         weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(2))
     library.make_appoggiato_rhythm(
@@ -96,7 +94,6 @@ def PERC1(voice, time_signatures):
         weights=[20, 8],
         counts=[0, 3],
         rest_after=True,
-        voice_name=voice.name,
     )
     music = baca.make_notes(time_signatures(4))
     voice.extend(music)
@@ -115,7 +112,6 @@ def PERC2(voice, time_signatures):
         weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(2))
     library.make_appoggiato_rhythm(
@@ -124,7 +120,6 @@ def PERC2(voice, time_signatures):
         weights=[20, 8],
         counts=[0, 4],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -168,7 +163,6 @@ def VA(voice, time_signatures):
         rest_from=1,
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(2))
     music = baca.make_notes(time_signatures(3))
@@ -187,7 +181,6 @@ def VC1(voice, time_signatures):
         rest_from=1,
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(2))
     music = baca.make_notes(time_signatures(3))
@@ -238,7 +231,6 @@ def CB1(voice, time_signatures):
         rest_from=1,
         suffix_talea=[-1],
         suffix_counts=[1, 0, 0],
-        voice_name=voice.name,
     )
     mmrests(voice, time_signatures(2))
     music = baca.make_notes(time_signatures(3))

@@ -295,7 +295,6 @@ def VA(voice, time_signatures):
         voice,
         time_signatures(3),
         counts=[9],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -306,7 +305,6 @@ def VA(voice, time_signatures):
         voice,
         time_signatures(5),
         counts=[9],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -333,7 +331,6 @@ def VC1(voice, time_signatures):
         voice,
         time_signatures(3),
         counts=[7],
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -344,7 +341,6 @@ def VC1(voice, time_signatures):
         voice,
         time_signatures(5),
         counts=[7],
-        voice_name=voice.name,
     )
     rhythm(
         voice,

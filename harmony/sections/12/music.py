@@ -90,7 +90,6 @@ def BFL(voice, time_signatures):
         time_signatures(10),
         counts=[9],
         incise=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -122,7 +121,6 @@ def PERC1(voice, time_signatures):
         weights=[6, 14],
         counts=[5, 4],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -185,7 +183,6 @@ def PERC2(voice, time_signatures):
         weights=[6, 14],
         counts=[4, 5],
         rest_after=True,
-        voice_name=voice.name,
     )
     rhythm(
         voice,
@@ -293,7 +290,6 @@ def VA(voice, time_signatures):
         weights=[4, 48],
         counts=[7],
         rest_to=1,
-        voice_name=voice.name,
     )
     library.make_rimbalzandi_rhythm(
         voice,
@@ -329,7 +325,6 @@ def VC1(voice, time_signatures):
         counts=[6],
         rest_to=1,
         rest_from=1,
-        voice_name=voice.name,
     )
     library.make_rimbalzandi_rhythm(
         voice,
@@ -401,7 +396,6 @@ def CB1(voice, time_signatures):
         counts=[6],
         rest_to=1,
         rest_from=1,
-        voice_name=voice.name,
     )
     library.make_rimbalzandi_rhythm(
         voice,
