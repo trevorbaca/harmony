@@ -607,6 +607,7 @@ number.17.BassFlute.Staff = <<
 
 number.17.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -860,6 +861,7 @@ number.17.Percussion.1.Staff = <<
 
 number.17.Percussion.2.Music.item.1 = {
 
+    \voiceTwo
     r8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC

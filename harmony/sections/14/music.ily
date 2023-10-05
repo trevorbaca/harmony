@@ -1182,6 +1182,7 @@ number.14.BassFlute.Staff = <<
 
 number.14.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1197,8 +1198,9 @@ number.14.Percussion.1.Music.item.1 = {
 number.14.Percussion.1.Music.item.2 = {
 
     \once \override Dots.X-extent = ##f
-    \once \override Dots.extra-offset = #'(1 . 0)
+    \once \override Dots.extra-offset = #'(2 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1483,6 +1485,7 @@ number.14.Percussion.1.Staff = <<
 
 number.14.Percussion.2.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1498,8 +1501,9 @@ number.14.Percussion.2.Music.item.1 = {
 number.14.Percussion.2.Music.item.2 = {
 
     \once \override Dots.X-extent = ##f
-    \once \override Dots.extra-offset = #'(1 . 0)
+    \once \override Dots.extra-offset = #'(2 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2441,10 +2445,6 @@ number.14.Viola.Music = {
             e8 * 2/5
               %! DURATION_MULTIPLIER
             %@% ^ \baca-duration-multiplier-markup #"2" #"5"
-
-            eqs!8 * 2/5
-              %! DURATION_MULTIPLIER
-            %@% ^ \baca-duration-multiplier-markup #"2" #"5"
             )
             ]
             \revert NoteHead.style
@@ -2456,6 +2456,7 @@ number.14.Viola.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3107,6 +3108,7 @@ number.14.Cello.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4188,6 +4190,7 @@ number.14.Contrabass.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR

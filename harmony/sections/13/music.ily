@@ -773,6 +773,7 @@ number.13.BassFlute.Staff = <<
 
 number.13.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -788,8 +789,9 @@ number.13.Percussion.1.Music.item.1 = {
 number.13.Percussion.1.Music.item.2 = {
 
     \once \override Dots.X-extent = ##f
-    \once \override Dots.extra-offset = #'(1 . 0)
+    \once \override Dots.extra-offset = #'(2 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -802,6 +804,7 @@ number.13.Percussion.1.Music.item.2 = {
 
 number.13.Percussion.1.Music.item.3 = {
 
+    \voiceTwo
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1074,6 +1077,7 @@ number.13.Percussion.1.Staff = <<
 
 number.13.Percussion.2.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1089,8 +1093,9 @@ number.13.Percussion.2.Music.item.1 = {
 number.13.Percussion.2.Music.item.2 = {
 
     \once \override Dots.X-extent = ##f
-    \once \override Dots.extra-offset = #'(1 . 0)
+    \once \override Dots.extra-offset = #'(2 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1103,6 +1108,7 @@ number.13.Percussion.2.Music.item.2 = {
 
 number.13.Percussion.2.Music.item.3 = {
 
+    \voiceTwo
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1854,6 +1860,7 @@ number.13.Viola.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2151,6 +2158,7 @@ number.13.Cello.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -2797,6 +2805,7 @@ number.13.Contrabass.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR

@@ -1052,6 +1052,7 @@ number.10.BassFlute.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     g'2.
       %! EXPLICIT_DYNAMIC_COLOR

@@ -108,11 +108,11 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 15, -1, 7, -1, 3, rt(8), -1, 7],
         time_signatures(1, 2),
-        weights=[16, 8, 12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     library.make_talea(
         voice,
@@ -134,11 +134,11 @@ def VC1(voice):
 
 
 def VC2(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 15, -1, 7, -1, 3, rt(8), -1, 7],
         time_signatures(1, 2),
-        weights=[16, 8, 12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -162,11 +162,11 @@ def CB1(voice, time_signatures):
 
 
 def CB2(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, 15, -1, 7, -1, 3, rt(8), -1, 7],
         time_signatures(1, 2),
-        weights=[16, 8, 12, 8],
-        incise=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,

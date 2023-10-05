@@ -7,6 +7,7 @@ from harmony import library
 ########################################### 19 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -98,12 +99,11 @@ def BFL(voice, time_signatures):
 
 
 def PERC1(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, -1, OBGC(5 * [2], [-3, -8])],
         time_signatures(1),
-        weights=[5, 11],
-        counts=[0, 5],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -111,19 +111,40 @@ def PERC1(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
-        time_signatures(4, 8),
-        weights=[1, 19, 1, 15],
-        counts=[0, 5, 0, 6, 0, 7, 0, 8, 0, 9],
-        rest_after=True,
+        [-1, OBGC(5 * [2], [-3, -16])],
+        time_signatures(4),
+        do_not_rewrite_meter=True,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(6 * [2], [-15])],
+        time_signatures(5),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(7 * [2], [-3, -16])],
+        time_signatures(6),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(8 * [2], [-15])],
+        time_signatures(7),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(9 * [2], [-3, -16])],
+        time_signatures(8),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        OBGC(19 * [2], [-16]),
         time_signatures(9),
-        weights=[16],
-        counts=[19],
-        rest_after=True,
     )
     mmrests(voice, time_signatures(10))
     library.make_talea(
@@ -132,12 +153,10 @@ def PERC1(voice, time_signatures):
         [8, -8, 8, -8, 8, -16],
         extra_counts=[2],
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(25 * [2], [-16, -4]),
         time_signatures(12),
-        weights=[20],
-        counts=[25],
-        rest_after=True,
     )
     library.make_talea(
         voice,
@@ -148,12 +167,11 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [4, -1, OBGC(4 * [2], [-3, -8])],
         time_signatures(1),
-        weights=[4, 1, 11],
-        counts=[0, 0, 4],
-        rest_after=[-2, -1],
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -161,19 +179,40 @@ def PERC2(voice, time_signatures):
         time_signatures(2),
     )
     mmrests(voice, time_signatures(3))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
-        time_signatures(4, 8),
-        weights=[1, 19, 1, 15],
-        counts=[0, 4, 0, 5, 0, 6, 0, 7, 0, 8],
-        rest_after=True,
+        [-1, OBGC(4 * [2], [-3, -16])],
+        time_signatures(4),
+        do_not_rewrite_meter=True,
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(5 * [2], [-15])],
+        time_signatures(5),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(6 * [2], [-3, -16])],
+        time_signatures(6),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(7 * [2], [-15])],
+        time_signatures(7),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        [-1, OBGC(8 * [2], [-3, -16])],
+        time_signatures(8),
+        do_not_rewrite_meter=True,
+    )
+    rhythm(
+        voice,
+        OBGC(18 * [2], [-16]),
         time_signatures(9),
-        weights=[16],
-        counts=[18],
-        rest_after=True,
     )
     mmrests(voice, time_signatures(10))
     library.make_talea(
@@ -182,14 +221,16 @@ def PERC2(voice, time_signatures):
         [2, -8, 2, -8, 2, -20],
         extra_counts=[1],
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        OBGC(24 * [2], [-16, -4]),
         time_signatures(12),
-        weights=[20],
-        counts=[24],
-        rest_after=True,
     )
-    voice.extend(r"r4. \times 5/4 { c2 }")
+    rhythm(
+        voice,
+        [-6, T([8], 2)],
+        time_signatures(13),
+    )
     baca.section.append_anchor_note(voice)
 
 

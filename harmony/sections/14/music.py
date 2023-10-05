@@ -9,6 +9,7 @@ from harmony import library
 #########################################################################################
 
 AG = library.AG
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -118,12 +119,11 @@ def PERC1(voice, time_signatures):
         [-1, 3, 4, -4, 4],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(5 * [2], [-6]), OBGC(4 * [2], [-14])],
         time_signatures(5),
-        weights=[6, 14],
-        counts=[5, 4],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -152,12 +152,11 @@ def PERC2(voice, time_signatures):
         extra_counts=[2],
     )
     mmrests(voice, time_signatures(3, 4))
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(4 * [2], [-6]), OBGC(5 * [2], [-14])],
         time_signatures(5),
-        weights=[6, 14],
-        counts=[4, 5],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     library.make_talea(
         voice,
@@ -217,12 +216,11 @@ def VA(voice, time_signatures):
         [-8, T([-4, 4, 4], -4)],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [4, OBGC(6 * [2], [12]), -4],
         time_signatures(5),
-        weights=[4, 12, 4],
-        counts=[0, 7],
-        rest_from=1,
+        do_not_rewrite_meter=True,
     )
     components = rhythm(
         voice,
@@ -252,13 +250,11 @@ def VC1(voice, time_signatures):
         [3, -1, -4, 7, -1],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(5),
-        weights=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
-        rest_from=1,
+        do_not_rewrite_meter=True,
     )
     library.make_talea(
         voice,
@@ -322,13 +318,11 @@ def CB1(voice, time_signatures):
         [3, -1, -4, 7, -1],
         time_signatures(4),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(5),
-        weights=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
-        rest_from=1,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -613,7 +607,7 @@ def perc1_perc2(cache):
             rests = [
                 _ for _ in rests if abjad.get.duration(_) >= abjad.Duration((1, 2))
             ]
-            baca.dots_extra_offset(rests, (1, 0))
+            baca.dots_extra_offset(rests, (2, 0))
             baca.dots_x_extent_false(rests)
             baca.rest_x_extent_zero(rests)
 

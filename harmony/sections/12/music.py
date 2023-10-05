@@ -7,6 +7,7 @@ from harmony import library
 ########################################### 12 ##########################################
 #########################################################################################
 
+OBGC = library.OBGC
 T = library.T
 h = library.h
 mmrests = library.mmrests
@@ -85,11 +86,10 @@ def BFL(voice, time_signatures):
         do_not_rewrite_meter=True,
     )
     mmrests(voice, time_signatures(8, 9), head=True)
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-1, OBGC(9 * [2], [23])],
         time_signatures(10),
-        counts=[9],
-        incise=True,
     )
     rhythm(
         voice,
@@ -115,12 +115,11 @@ def PERC1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(5 * [2], [-6]), OBGC(4 * [2], [-14])],
         time_signatures(2),
-        weights=[6, 14],
-        counts=[5, 4],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -177,12 +176,11 @@ def PERC2(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [OBGC(4 * [2], [-6]), OBGC(5 * [2], [-14])],
         time_signatures(2),
-        weights=[6, 14],
-        counts=[4, 5],
-        rest_after=True,
+        do_not_rewrite_meter=True,
     )
     rhythm(
         voice,
@@ -284,12 +282,10 @@ def VA(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, OBGC(7 * [2], [16]), rt(32)],
         time_signatures(2, 4),
-        weights=[4, 48],
-        counts=[7],
-        rest_to=1,
     )
     library.make_rimbalzandi_rhythm(
         voice,
@@ -318,13 +314,10 @@ def VC1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(2),
-        weights=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
-        rest_from=1,
     )
     library.make_rimbalzandi_rhythm(
         voice,
@@ -389,13 +382,10 @@ def CB1(voice, time_signatures):
         ["+"],
         time_signatures(1),
     )
-    library.make_appoggiato_rhythm(
+    rhythm(
         voice,
+        [-4, OBGC(6 * [2], [12]), -4],
         time_signatures(2),
-        weights=[4, 12, 4],
-        counts=[6],
-        rest_to=1,
-        rest_from=1,
     )
     library.make_rimbalzandi_rhythm(
         voice,

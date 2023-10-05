@@ -1736,6 +1736,7 @@ number.12.BassFlute.Staff = <<
 
 number.12.Percussion.1.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1753,6 +1754,7 @@ number.12.Percussion.1.Music.item.2 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2205,6 +2207,7 @@ number.12.Percussion.1.Staff = <<
 
 number.12.Percussion.2.Music.item.1 = {
 
+    \voiceTwo
     r4.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2222,6 +2225,7 @@ number.12.Percussion.2.Music.item.2 = {
     \once \override Dots.X-extent = ##f
     \once \override Dots.extra-offset = #'(1 . 0)
     \once \override Rest.X-extent = #'(0 . 0)
+    \voiceTwo
     r2..
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2907,23 +2911,6 @@ number.12.Viola.Music.item.1 = {
     - \tweak stencil ##f
     ~
 
-    % [Viola.Music measure 3]
-    df2.
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    % [Viola.Music measure 4]
-    df1
-    - \tweak stencil ##f
-    ~
-    \repeatTie
-
-    df4
-    \repeatTie
-    \revert DynamicLineSpanner.staff-padding
-    \revert NoteHead.style
-
 }
 
 
@@ -3097,9 +3084,26 @@ number.12.Viola.Music = {
 
     >>
 
-    % [Viola.Music measure 5]
+    % [Viola.Music measure 3]
       %! ONE_VOICE_COMMAND
     \oneVoice
+    df2.
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    % [Viola.Music measure 4]
+    df1
+    - \tweak stencil ##f
+    ~
+    \repeatTie
+
+    df4
+    \repeatTie
+    \revert DynamicLineSpanner.staff-padding
+    \revert NoteHead.style
+
+    % [Viola.Music measure 5]
     \override DynamicLineSpanner.staff-padding = 4
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -3711,6 +3715,7 @@ number.12.Cello.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
@@ -4995,6 +5000,7 @@ number.12.Contrabass.1.Music = {
 
     >>
 
+      %! ONE_VOICE_COMMAND
     \oneVoice
     r4
       %! EXPLICIT_DYNAMIC_COLOR
