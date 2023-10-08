@@ -420,7 +420,7 @@ def bfl(cache):
     with baca.scope(m[15]) as o:
         baca.pitches(o.leaves(grace=False), "A3")
         baca.pitches(
-            baca.select.leaves(o, grace=True),
+            abjad.select.leaves(o, grace=True),
             abjad.sequence.rotate(library.appoggiato_pitches_a(), -9),
             allow_obgc_mutation=True,
         )

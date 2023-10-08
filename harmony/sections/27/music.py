@@ -849,7 +849,7 @@ def cb2(cache):
         )
     with baca.scope(m.get(3, 5)) as o:
         baca.damp_spanner(
-            baca.select.rleak(baca.select.leaves(o)[4:]),
+            baca.select.rleak(abjad.select.leaves(o)[4:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
