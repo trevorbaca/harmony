@@ -70,7 +70,7 @@ def BFL(voice, time_signatures):
         time_signatures(2),
         sixteenths=[2 * 4],
         extra_counts=[2],
-        rest_tuplets=[0],
+        rest=[0],
     )
     mmrests(voice, time_signatures(3), head=True)
     rhythm(
@@ -88,7 +88,7 @@ def BFL(voice, time_signatures):
         time_signatures(6),
         sixteenths=[2 * 4],
         extra_counts=[2],
-        rest_tuplets=[1],
+        rest=[1],
     )
     mmrests(voice, time_signatures(7, 8))
     library.make_warble_rhythm(
@@ -96,7 +96,7 @@ def BFL(voice, time_signatures):
         time_signatures(9),
         sixteenths=[2 * 4],
         extra_counts=[2],
-        rest_tuplets=[0],
+        rest=[0],
     )
     mmrests(voice, time_signatures(10), head=True)
     rhythm(

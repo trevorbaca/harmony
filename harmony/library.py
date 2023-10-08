@@ -370,9 +370,9 @@ def make_warble_rhythm(
     *,
     sixteenths=None,
     extra_counts=(),
-    rest_tuplets=None,
-    rest_tuplets_cyclic=None,
+    rest=None,
 ):
+    tag = baca.helpers.function_name(inspect.currentframe())
     durations = [_.duration for _ in time_signatures]
     if sixteenths is not None:
         divisions_ = [abjad.Duration(_, 16) for _ in sixteenths]
@@ -380,16 +380,11 @@ def make_warble_rhythm(
         durations = abjad.sequence.split(
             durations, divisions_, cyclic=True, overhang=True
         )
-    tag = baca.helpers.function_name(inspect.currentframe())
     tuplets = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    if rest_tuplets is not None:
+    if rest is not None:
         tuplets = baca.select.tuplets(voice_)
-        tuplets = abjad.select.get(tuplets, rest_tuplets)
-        rmakers.force_rest(tuplets, tag=tag)
-    if rest_tuplets_cyclic is not None:
-        tuplets = baca.select.tuplets(voice_)
-        tuplets = abjad.select.get(tuplets, rest_tuplets_cyclic)
+        tuplets = abjad.select.get(tuplets, rest)
         rmakers.force_rest(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
     leaves = [abjad.select.leaf(_, 0) for _ in tuplets]
