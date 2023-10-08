@@ -24,13 +24,9 @@ def GLOBALS(skips, first_measure_number):
         ("[>C.1]", 3, "#darkgreen"),
     )
     baca.section.label_stage_numbers(skips, stage_markup)
-    for index, item in (
-        (1 - 1, "96"),
-        (3 - 1, "57 3/5"),
-        (3 - 1, "3:5(4)=4"),
-    ):
-        skip = skips[index]
-        baca.metronome_mark(skip, item, manifests=library.manifests)
+    baca.metronome_mark(skips[1 - 1], "96", manifests=library.manifests)
+    baca.metronome_mark(skips[3 - 1], "57 3/5", manifests=library.manifests)
+    baca.metronome_mark(skips[3 - 1], "3:5(4)=4", manifests=library.manifests)
     baca.open_volta(skips[2 - 1], first_measure_number)
     baca.close_volta(skips[3 - 1], first_measure_number, site="after")
 
@@ -73,7 +69,7 @@ def PERC1(voice, time_signatures):
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
-        rest=(None, -1),
+        rest=slice(None, -1),
     )
 
 
@@ -89,7 +85,7 @@ def PERC2(voice, time_signatures):
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
-        rest=(None, -1),
+        rest=slice(None, -1),
         rest_pleaves=[0, 1, 2, 3],
     )
 

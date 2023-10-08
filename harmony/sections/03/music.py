@@ -84,7 +84,7 @@ def PERC1(voice, time_signatures):
         [2, 1, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
-        rest=(None, -1),
+        rest=slice(None, -1),
     )
     library.make_phjc_rhythm(
         voice,
@@ -118,7 +118,7 @@ def PERC2(voice, time_signatures):
         [1, 2],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[0, 6],
-        rest=(None, -1),
+        rest=slice(None, -1),
         rest_pleaves=[0, 1, 2, 3],
     )
     library.make_phjc_rhythm(
