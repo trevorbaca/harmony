@@ -277,16 +277,16 @@ def make_phjc_rhythm(
     if rest is not None:
         tuplets = baca.select.tuplets(voice_, rest)
         rmakers.force_rest(tuplets, tag=tag)
-    if rest_cyclic is not None:
+    elif rest_cyclic is not None:
         tuplets = baca.select.tuplets(voice_, rest_cyclic)
         rmakers.force_rest(tuplets, tag=tag)
-    if rest_except is not None:
+    elif rest_except is not None:
         tuplets = baca.select.tuplets(voice_, ~abjad.Pattern(rest_except))
         rmakers.force_rest(tuplets, tag=tag)
-    if rest_most is True:
+    elif rest_most is True:
         tuplets = baca.select.tuplets(voice_, (None, 1))
         rmakers.force_rest(tuplets, tag=tag)
-    if rest_nonfirst is True:
+    elif rest_nonfirst is True:
         tuplets = baca.select.tuplets(voice_, (1, None))
         rmakers.force_rest(tuplets, tag=tag)
     if rest_pleaves is not None:
