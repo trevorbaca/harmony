@@ -7,13 +7,17 @@ from harmony import library
 ########################################### 07 ##########################################
 #########################################################################################
 
+AG = baca.rhythm.AG
+T = baca.rhythm.T
+bl = baca.rhythm.bl
+br = baca.rhythm.br
+h = baca.rhythm.h
+rt = baca.rhythm.rt
+w = baca.rhythm.w
+
 OBGC = library.OBGC
-T = library.T
-h = library.h
 mmrests = library.mmrests
 rhythm = library.rhythm
-rt = library.rt
-w = library.w
 
 
 def GLOBALS(skips, rests):
