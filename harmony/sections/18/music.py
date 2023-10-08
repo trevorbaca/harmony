@@ -272,11 +272,11 @@ def VC1(voice, time_signatures):
         library.damp_counts_curtailed(),
         time_signatures(4, 5),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        3,
-        force_rest_plts=[0],
+        *(2, 3),
+        rest_plt=0,
     )
     mmrests(voice, time_signatures(7))
     rhythm(
@@ -312,11 +312,11 @@ def VC2(voice, time_signatures):
         library.damp_counts_curtailed(),
         time_signatures(4, 5),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        2,
-        force_rest_plts=[0],
+        *(2, 2),
+        rest_plt=0,
     )
     mmrests(voice, time_signatures(7))
     rhythm(
@@ -364,11 +364,11 @@ def CB1(voice, time_signatures):
         library.glissando_counts_curtailed(),
         time_signatures(4, 5),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        1,
-        force_rest_plts=[0],
+        *(2, 1),
+        rest_plt=0,
     )
     mmrests(voice, time_signatures(7))
     rhythm(
@@ -414,10 +414,10 @@ def CB2(voice, time_signatures):
         library.glissando_counts_curtailed(),
         time_signatures(4, 5),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        0,
+        *(2, 0),
     )
     mmrests(voice, time_signatures(7))
     rhythm(

@@ -320,9 +320,28 @@ def make_phjc_rhythm(
     return music
 
 
-def _make_tessera(
-    voice, time_signatures, counts, part, *, advance=0, gap=False, force_rest_plts=None
+def make_tessera(
+    voice, time_signatures, number, part, *, advance=0, gap=False, rest_plt=None
 ):
+    assert number in (1, 2, 3, 4), repr(number)
+    if number == 1:
+        counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
+        permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
+        assert sum(counts) == 96
+    elif number == 2:
+        counts = [3, 4, 14, 2, 6, 7, 8]
+        permutation = [2, 3, 4, 0, 5, 6, 1]
+        assert sum(counts) == 44
+    elif number == 3:
+        counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
+        permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
+        assert sum(counts) == 84
+    elif number == 4:
+        counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
+        permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
+        assert sum(counts) == 144
+    for i in range(part):
+        counts = abjad.sequence.permute(counts, permutation)
     if gap is True:
         new_counts = []
         for count in counts:
@@ -332,10 +351,9 @@ def _make_tessera(
     durations = [_.duration for _ in time_signatures]
     tuplets = rmakers.talea(durations, counts, 16, advance=advance, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    if force_rest_plts is not None:
-        plts = baca.select.plts(voice_)
-        plts = abjad.select.get(plts, force_rest_plts)
-        rmakers.force_rest(plts, tag=tag)
+    if rest_plt is not None:
+        plt = baca.select.plt(voice_, rest_plt)
+        rmakers.force_rest(plt, tag=tag)
     rmakers.extract_trivial(voice_)
     rmakers.rewrite_meter(
         voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
@@ -344,52 +362,6 @@ def _make_tessera(
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
-
-
-def make_tessera_1(voice, time_signatures, part, *, advance=0, gap=False):
-    counts = [9, 14, 3, 8, 12, 16, 2, 4, 6, 7, 15]
-    permutation = [2, 9, 10, 3, 4, 8, 0, 5, 6, 1, 7]
-    assert sum(counts) == 96
-    for i in range(part):
-        counts = abjad.sequence.permute(counts, permutation)
-    _make_tessera(voice, time_signatures, counts, part, advance=advance, gap=gap)
-
-
-def make_tessera_2(
-    voice, time_signatures, part, *, advance=0, gap=False, force_rest_plts=None
-):
-    counts = [3, 4, 14, 2, 6, 7, 8]
-    permutation = [2, 3, 4, 0, 5, 6, 1]
-    assert sum(counts) == 44
-    for i in range(part):
-        counts = abjad.sequence.permute(counts, permutation)
-    _make_tessera(
-        voice,
-        time_signatures,
-        counts,
-        part,
-        advance=advance,
-        gap=gap,
-        force_rest_plts=force_rest_plts,
-    )
-
-
-def make_tessera_3(voice, time_signatures, part, *, advance=0, gap=False):
-    counts = [3, 7, 8, 13, 5, 6, 12, 9, 10, 11]
-    permutation = [8, 9, 2, 3, 4, 0, 5, 6, 7, 1]
-    assert sum(counts) == 84
-    for i in range(part):
-        counts = abjad.sequence.permute(counts, permutation)
-    _make_tessera(voice, time_signatures, counts, part, advance=advance, gap=gap)
-
-
-def make_tessera_4(voice, time_signatures, part, *, advance=0, gap=False):
-    counts = [14, 15, 3, 4, 12, 28, 2, 5, 6, 16, 24, 7, 8]
-    permutation = [11, 12, 0, 4, 5, 1, 8, 9, 10, 2, 3, 6, 7]
-    assert sum(counts) == 144
-    for i in range(part):
-        counts = abjad.sequence.permute(counts, permutation)
-    _make_tessera(voice, time_signatures, counts, part, advance=advance, gap=gap)
 
 
 def make_warble_rhythm(

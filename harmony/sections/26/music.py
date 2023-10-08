@@ -197,10 +197,10 @@ def VA(voice, time_signatures):
         [6, 3, 11],
         time_signatures(8),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(9),
-        4,
+        *(4, 4),
     )
     mmrests(voice, time_signatures(10))
 
@@ -226,10 +226,10 @@ def VC1(voice, time_signatures):
         [4, 2, 7, 7],
         time_signatures(8),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(9),
-        3,
+        *(4, 3),
     )
     rhythm(
         voice,
@@ -259,10 +259,10 @@ def VC2(voice, time_signatures):
         [9, 11],
         time_signatures(8),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(9),
-        2,
+        *(4, 2),
     )
     rhythm(
         voice,
@@ -292,10 +292,10 @@ def CB1(voice, time_signatures):
         [4, 9, 7],
         time_signatures(8),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(9),
-        1,
+        *(4, 1),
     )
     rhythm(
         voice,
@@ -325,10 +325,10 @@ def CB2(voice, time_signatures):
         [9, 11],
         time_signatures(8),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(9),
-        0,
+        *(4, 0),
     )
     rhythm(
         voice,
