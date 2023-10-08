@@ -207,7 +207,7 @@ def bfl(cache):
             bookend=False,
             direction=abjad.DOWN,
         )
-        baca.dots_x_extent_false(baca.select.leaves(o, grace=False))
+        baca.dots_x_extent_false(abjad.select.leaves(o, grace=False))
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F3")
         baca.dynamic(o.phead(0), "mf")

@@ -499,7 +499,7 @@ def bfl(m):
         )
     with baca.scope(m.get(3, 4)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(baca.select.leaves(o)[3:7]),
+            baca.select.rleak(abjad.select.leaves(o)[3:7]),
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m[5]) as o:
@@ -512,7 +512,7 @@ def bfl(m):
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
-        leaves = baca.select.rleak(baca.select.leaves(o)[-2:])
+        leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
         baca.hairpin(
             leaves,
             "o<| f |>o niente",

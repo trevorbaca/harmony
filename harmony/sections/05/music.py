@@ -557,7 +557,7 @@ def vc1(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
         baca.damp_spanner(
-            baca.select.rleak(baca.select.leaves(o)[4:]),
+            baca.select.rleak(abjad.select.leaves(o)[4:]),
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.dls_staff_padding(o.leaves()[4:-1], 4)

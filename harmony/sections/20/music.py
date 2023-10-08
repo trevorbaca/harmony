@@ -544,7 +544,7 @@ def cb2(m):
         baca.dls_staff_padding(o.leaves()[1:], 6)
     with baca.scope(m.get(2, 4)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(baca.select.leaves(o)[1:]),
+            baca.select.rleak(abjad.select.leaves(o)[1:]),
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m[10]) as o:
