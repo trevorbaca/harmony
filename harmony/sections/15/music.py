@@ -87,7 +87,7 @@ def PERC2(voice, time_signatures):
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1],
-        rest_nonfirst=True,
+        rest=(1, None),
     )
     library.make_phjc_rhythm(
         voice,

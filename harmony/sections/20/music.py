@@ -63,7 +63,7 @@ def PERC1(voice, time_signatures):
         [1],
         [1, 2, 1, 1, -1],
         extra_counts=[1, 1, 2, 2],
-        rest_cyclic=([1], 2),
+        rest=([1], 2),
     )
     rhythm(
         voice,

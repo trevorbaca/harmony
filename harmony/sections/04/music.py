@@ -80,7 +80,7 @@ def PERC1(voice, time_signatures):
         [1, 2, 1],
         [2, 2, 2, 2, 2, 2, 2, 1],
         extra_counts=[2],
-        rest_except=[0, 1, 2, -4, -3, -2],
+        rest=~abjad.Pattern([0, 1, 2, -4, -3, -2]),
     )
     mmrests(voice, time_signatures(7, 8))
     rhythm(
