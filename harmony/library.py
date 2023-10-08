@@ -257,11 +257,7 @@ def make_phjc_rhythm(
     *,
     extra_counts=(),
     rest=None,
-    rest_cyclic=None,
-    rest_except=None,
     rest_pleaves=None,
-    rest_most=None,
-    rest_nonfirst=False,
 ):
     durations = [_.duration for _ in time_signatures]
     durations = [sum(durations)]
@@ -276,18 +272,6 @@ def make_phjc_rhythm(
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
         tuplets = baca.select.tuplets(voice_, rest)
-        rmakers.force_rest(tuplets, tag=tag)
-    elif rest_cyclic is not None:
-        tuplets = baca.select.tuplets(voice_, rest_cyclic)
-        rmakers.force_rest(tuplets, tag=tag)
-    elif rest_except is not None:
-        tuplets = baca.select.tuplets(voice_, ~abjad.Pattern(rest_except))
-        rmakers.force_rest(tuplets, tag=tag)
-    elif rest_most is True:
-        tuplets = baca.select.tuplets(voice_, (None, 1))
-        rmakers.force_rest(tuplets, tag=tag)
-    elif rest_nonfirst is True:
-        tuplets = baca.select.tuplets(voice_, (1, None))
         rmakers.force_rest(tuplets, tag=tag)
     if rest_pleaves is not None:
         pleaves = baca.select.pleaves(voice_)
