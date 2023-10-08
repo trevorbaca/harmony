@@ -297,7 +297,11 @@ def make_phjc_rhythm(
     tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
-        tuplets = baca.select.tuplets(voice_, rest)
+        tuplets = abjad.select.tuplets(voice_)
+        if isinstance(rest, slice):
+            tuplets = tuplets[rest]
+        else:
+            tuplets = abjad.select.get(tuplets, rest)
         rmakers.force_rest(tuplets, tag=tag)
     if rest_pleaves is not None:
         pleaves = baca.select.pleaves(voice_)
@@ -383,7 +387,6 @@ def make_warble_rhythm(
     tuplets = rmakers.talea(durations, [1], 32, extra_counts=extra_counts, tag=tag)
     voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
     if rest is not None:
-        tuplets = baca.select.tuplets(voice_)
         tuplets = abjad.select.get(tuplets, rest)
         rmakers.force_rest(tuplets, tag=tag)
     tuplets = abjad.select.tuplets(voice_)
