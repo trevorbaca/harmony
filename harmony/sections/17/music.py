@@ -148,11 +148,11 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(1),
-        3,
-        force_rest_plts=[0],
+        *(2, 3),
+        rest_plt=0,
     )
     rhythm(
         voice,
@@ -165,21 +165,21 @@ def VC1(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(5),
-        3,
+        *(2, 3),
         advance=24,
     )
     mmrests(voice, time_signatures(6))
 
 
 def VC2(voice, time_signatures):
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(1),
-        2,
-        force_rest_plts=[0],
+        *(2, 2),
+        rest_plt=0,
     )
     rhythm(
         voice,
@@ -192,21 +192,21 @@ def VC2(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(5),
-        2,
+        *(2, 2),
         advance=24,
     )
     mmrests(voice, time_signatures(6))
 
 
 def CB1(voice, time_signatures):
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(1),
-        1,
-        force_rest_plts=[0],
+        *(2, 1),
+        rest_plt=0,
     )
     rhythm(
         voice,
@@ -219,20 +219,20 @@ def CB1(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(5),
-        1,
+        *(2, 1),
         advance=24,
     )
     mmrests(voice, time_signatures(6))
 
 
 def CB2(voice, time_signatures):
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(1),
-        0,
+        *(2, 0),
     )
     rhythm(
         voice,
@@ -245,10 +245,10 @@ def CB2(voice, time_signatures):
         ["+", -1],
         time_signatures(4),
     )
-    library.make_tessera_2(
+    library.make_tessera(
         voice,
         time_signatures(5),
-        0,
+        *(2, 0),
         advance=24,
     )
     mmrests(voice, time_signatures(6))

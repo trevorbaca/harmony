@@ -45,10 +45,10 @@ def BFL(voice, time_signatures):
         [-4, 1, -4, 1, "-"],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        6,
+        *(1, 6),
         gap=True,
     )
     rhythm(
@@ -133,10 +133,10 @@ def HP(voice, time_signatures):
         [10, -2],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        5,
+        *(1, 5),
     )
     rhythm(
         voice,
@@ -186,10 +186,10 @@ def VC1(voice, time_signatures):
         [T([1, -3, 1], -1), T([-2, 3, -1, 3, -1], -2)],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        3,
+        *(1, 3),
         gap=True,
     )
     rhythm(
@@ -211,10 +211,10 @@ def VC2(voice, time_signatures):
         [8, AG([2], 2), -2],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        2,
+        *(1, 2),
         gap=True,
     )
     rhythm(
@@ -236,10 +236,10 @@ def CB1(voice, time_signatures):
         [-4, 1, -4, 1, "-"],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        1,
+        *(1, 1),
     )
     rhythm(
         voice,
@@ -260,10 +260,10 @@ def CB2(voice, time_signatures):
         [8, AG([2], 2), -2],
         time_signatures(2),
     )
-    library.make_tessera_1(
+    library.make_tessera(
         voice,
         time_signatures(3),
-        0,
+        *(1, 0),
     )
     rhythm(
         voice,

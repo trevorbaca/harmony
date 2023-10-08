@@ -206,10 +206,10 @@ def VA(voice, time_signatures):
         [rt(14), T([8], 2)],
         time_signatures(5),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        4,
+        *(4, 4),
     )
     mmrests(voice, time_signatures(7, 8))
     music = baca.make_notes(time_signatures(9))
@@ -237,10 +237,10 @@ def VC1(voice, time_signatures):
         _sixteenths,
         time_signatures(5),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        3,
+        *(4, 3),
     )
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
@@ -266,10 +266,10 @@ def VC2(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -2),
         time_signatures(5),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        2,
+        *(4, 2),
     )
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
@@ -295,10 +295,10 @@ def CB1(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -4),
         time_signatures(5),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        1,
+        *(4, 1),
     )
     rhythm(voice, 2 * [w(2, 4), h(w(2, 4))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
@@ -325,10 +325,10 @@ def CB2(voice, time_signatures):
         abjad.sequence.rotate(_sixteenths, -6),
         time_signatures(5),
     )
-    library.make_tessera_4(
+    library.make_tessera(
         voice,
         time_signatures(6),
-        0,
+        *(4, 0),
     )
     rhythm(voice, [w(4, 8), h(w(4, 8))], time_signatures(7))
     mmrests(voice, time_signatures(8), head=True)
