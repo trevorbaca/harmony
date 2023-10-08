@@ -152,14 +152,14 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 2),
         [-12, -2, 4, -6, -12, -2, 4],
         extra_counts=[2],
     )
     mmrests(voice, time_signatures(3, 4))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(5, 6),
         [-12, -2, 4, -6, -12, -2, 4],
@@ -176,7 +176,7 @@ def HP(voice, time_signatures):
         time_signatures(8),
     )
     mmrests(voice, time_signatures(9))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(10),
         [-2, 4, "-"],

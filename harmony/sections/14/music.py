@@ -145,7 +145,7 @@ def PERC1(voice, time_signatures):
 
 
 def PERC2(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 2),
         [-22, 1, -3, 1, "-"],
@@ -158,7 +158,7 @@ def PERC2(voice, time_signatures):
         time_signatures(5),
         do_not_rewrite_meter=True,
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6, 9),
         cerulean_counts,
@@ -179,7 +179,7 @@ def HP(voice, time_signatures):
         time_signatures(1, 2),
     )
     mmrests(voice, time_signatures(3))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         ["-", 4],
@@ -238,7 +238,7 @@ def VA(voice, time_signatures):
 
 
 def VC1(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 2),
         [-16, 1, -16, 1, -6],
@@ -256,13 +256,13 @@ def VC1(voice, time_signatures):
         time_signatures(5),
         do_not_rewrite_meter=True,
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6, 8),
         cerulean_counts,
         extra_counts=[1],
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(9),
         [-4, 3, -1, 3, -1, -8, 3, -1],

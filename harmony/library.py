@@ -249,6 +249,32 @@ def make_empty_score():
     return score
 
 
+def make_one_beat_tuplets(
+    voice,
+    time_signatures,
+    counts,
+    *,
+    extra_counts=(),
+):
+    tag = baca.helpers.function_name(inspect.currentframe())
+    durations = [_.duration for _ in time_signatures]
+    durations = [sum(durations)]
+    durations = baca.sequence.quarters(durations)
+    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
+    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
+    rmakers.rewrite_rest_filled(voice_, tag=tag)
+    rmakers.rewrite_sustained(voice_, tag=tag)
+    rmakers.extract_trivial(voice_)
+    rmakers.force_fraction(voice_)
+    rmakers.rewrite_meter(
+        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
+    )
+    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
+    components = abjad.mutate.eject_contents(voice_)
+    voice.extend(components)
+    return components
+
+
 def make_phjc_rhythm(
     voice,
     time_signatures,
@@ -292,32 +318,6 @@ def make_phjc_rhythm(
     music = abjad.mutate.eject_contents(voice_)
     voice.extend(music)
     return music
-
-
-def make_talea(
-    voice,
-    time_signatures,
-    counts,
-    *,
-    extra_counts=(),
-):
-    tag = baca.helpers.function_name(inspect.currentframe())
-    durations = [_.duration for _ in time_signatures]
-    durations = [sum(durations)]
-    durations = baca.sequence.quarters(durations)
-    tuplets = rmakers.talea(durations, counts, 16, extra_counts=extra_counts, tag=tag)
-    voice_ = rmakers.wrap_in_time_signature_staff(tuplets, time_signatures)
-    rmakers.rewrite_rest_filled(voice_, tag=tag)
-    rmakers.rewrite_sustained(voice_, tag=tag)
-    rmakers.extract_trivial(voice_)
-    rmakers.force_fraction(voice_)
-    rmakers.rewrite_meter(
-        voice_, boundary_depth=1, reference_meters=_reference_meters(), tag=tag
-    )
-    rmakers.force_repeat_tie(voice_, threshold=(1, 8), tag=tag)
-    components = abjad.mutate.eject_contents(voice_)
-    voice.extend(components)
-    return components
 
 
 def make_tessera_1(voice, time_signatures, part, *, advance=0, gap=False):

@@ -160,7 +160,7 @@ def VA(voice, time_signatures):
         6 * [4],
         time_signatures(4),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(5),
         [-6, 1, -10, 1, "-"],

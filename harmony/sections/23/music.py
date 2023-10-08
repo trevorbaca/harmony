@@ -60,7 +60,7 @@ def BFL(voice, time_signatures):
         time_signatures(4, 6),
     )
     mmrests(voice, time_signatures(7))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-4, 8, "-"],
@@ -82,7 +82,7 @@ def PERC1(voice, time_signatures):
     )
     music = baca.make_notes(time_signatures(7))
     voice.extend(music)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-8, 8, "-"],
@@ -102,7 +102,7 @@ def PERC2(voice, time_signatures):
         [4, "-"],
         time_signatures(7),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-2, 2, -8, 2, "-"],
@@ -144,7 +144,7 @@ def VA(voice, time_signatures):
         AG([2], 12),
         time_signatures(7),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-6, 2, -4, 2, "-"],
@@ -171,7 +171,7 @@ def VC1(voice, time_signatures):
         [-8, T([4, 4, 4], 4), 4, 4, 4],
         time_signatures(6, 7),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-7, 3, -7, 3],
@@ -200,7 +200,7 @@ def VC2(voice, time_signatures):
         AG([2], 12),
         time_signatures(7),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         [-10, 3, -5, 2],

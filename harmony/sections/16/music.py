@@ -90,7 +90,7 @@ def HP(voice, time_signatures):
         time_signatures(1, 6),
     )
     mmrests(voice, time_signatures(7))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(8),
         ["-", 4],

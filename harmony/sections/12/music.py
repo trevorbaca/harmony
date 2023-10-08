@@ -357,7 +357,7 @@ def VC1(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13, 15),
         [14, 8, 8],
@@ -391,7 +391,7 @@ def VC2(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13, 15),
         [8, 8, 14],
@@ -425,7 +425,7 @@ def CB1(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13, 15),
         [12, 7, 8],
@@ -459,7 +459,7 @@ def CB2(voice, time_signatures):
         7 * [4],
         time_signatures(11, 12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13, 15),
         [8, 7, 12],
