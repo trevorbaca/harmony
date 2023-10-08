@@ -54,7 +54,7 @@ def BFL(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [-8, 8, -16, 4],
@@ -66,7 +66,7 @@ def BFL(voice, time_signatures):
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [-12, 4, "-"],
@@ -82,7 +82,7 @@ def PERC1(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [8, -8, 8, -8, 8, -16],
@@ -93,7 +93,7 @@ def PERC1(voice, time_signatures):
     mmrests(voice, time_signatures(11))
     music = baca.make_notes(time_signatures(12))
     voice.extend(music)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [-8, 8, "-"],
@@ -108,7 +108,7 @@ def PERC2(voice, time_signatures):
         [-4, 4, -4],
         time_signatures(3),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [2, -8, 2, -8, 2, -20],
@@ -120,7 +120,7 @@ def PERC2(voice, time_signatures):
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [2, "-"],
@@ -161,20 +161,20 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    components = library.make_talea(
+    components = library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 3),
         [32],
         extra_counts=[1],
     )
     library.after_grace_each_run(components)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [2, -8, 2, -4, 2, -26],
         extra_counts=[2],
     )
-    components = library.make_talea(
+    components = library.make_one_beat_tuplets(
         voice,
         time_signatures(5, 10),
         [18, 13, 9, 6, 3, 2, 2, 2, 2, 2, 3, 3, 6, "+"],
@@ -187,7 +187,7 @@ def VA(voice, time_signatures):
         AG([2], 12),
         time_signatures(12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [-20, 2, "-"],
@@ -202,7 +202,7 @@ def VC1(voice, time_signatures):
         [-4, w(2, 4), h(w(2, 4)), -4],
         time_signatures(3),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [3, -7, 3, -7, 3, -7, 3, -14],
@@ -214,7 +214,7 @@ def VC1(voice, time_signatures):
         time_signatures(5, 10),
     )
     mmrests(voice, time_signatures(11, 12))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [3, -7, 3, "-"],
@@ -223,20 +223,20 @@ def VC1(voice, time_signatures):
 
 
 def VC2(voice, time_signatures):
-    components = library.make_talea(
+    components = library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 3),
         [46],
         extra_counts=[2],
     )
     library.after_grace_each_run(components)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [3, -5, 3, -5, 3, -5, 3, -23],
         extra_counts=[1],
     )
-    components = library.make_talea(
+    components = library.make_one_beat_tuplets(
         voice,
         time_signatures(5, 10),
         [18, 14, 12, 6, 4, 2, 2, 2, 2, 4, 6, 12, "+"],
@@ -249,7 +249,7 @@ def VC2(voice, time_signatures):
         AG([2], 12),
         time_signatures(12),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [-4, 3, "-"],
@@ -258,13 +258,13 @@ def VC2(voice, time_signatures):
 
 
 def CB1(voice, time_signatures):
-    components = library.make_talea(
+    components = library.make_one_beat_tuplets(
         voice,
         time_signatures(1, 3),
         [27],
     )
     library.after_grace_each_run(components)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(4),
         [3, -7, 3, -7, 3, -7, 3, -14],

@@ -70,7 +70,7 @@ def PERC2(voice, time_signatures):
 
 
 def HP(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1),
         [-6, -2, 4, "-"],

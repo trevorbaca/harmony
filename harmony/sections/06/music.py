@@ -235,7 +235,7 @@ def HP(voice, time_signatures):
         [w(2, 4), h(w(2, 4)), "-"],
         time_signatures(5),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6),
         [-2, 4, "-", 4],
@@ -252,26 +252,26 @@ def HP(voice, time_signatures):
         time_signatures(8),
     )
     mmrests(voice, time_signatures(9), head=True)
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(10),
         [4, "-"],
         extra_counts=[2],
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(11),
         ["-", 4],
         extra_counts=[2],
     )
     mmrests(voice, time_signatures(12))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(13),
         [4, "-"],
         extra_counts=[2],
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(14),
         ["-", 4],

@@ -114,7 +114,7 @@ def VA(voice, time_signatures):
         time_signatures(1, 2),
         do_not_rewrite_meter=True,
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(3),
         library.cerulean_counts()[1:],

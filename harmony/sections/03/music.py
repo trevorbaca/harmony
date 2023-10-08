@@ -167,7 +167,7 @@ def HP(voice, time_signatures):
 
 
 def VA(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1),
         library.cerulean_counts()[1:],
@@ -186,7 +186,7 @@ def VA(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6, 8),
         library.cerulean_counts()[2:],
@@ -209,7 +209,7 @@ def VC1(voice, time_signatures):
         time_signatures(4),
     )
     mmrests(voice, time_signatures(5))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6, 7),
         library.cerulean_counts()[2:],

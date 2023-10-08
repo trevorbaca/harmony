@@ -156,7 +156,7 @@ def HP(voice, time_signatures):
         [2, -28, 2],
         time_signatures(4, 5),
     )
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(6),
         [-2, 4, "-", 4],

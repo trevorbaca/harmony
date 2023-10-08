@@ -309,7 +309,7 @@ def CB1(voice, time_signatures):
 
 def CB2(voice, time_signatures):
     mmrests(voice, time_signatures(1, 2))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(3),
         [9, 7, 1, -1, 1, -1, 1, -1],

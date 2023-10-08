@@ -54,7 +54,7 @@ def GLOBALS(skips, rests, first_measure_number):
 
 
 def BFL(voice, time_signatures):
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(1),
         ["-", 4],
@@ -71,7 +71,7 @@ def BFL(voice, time_signatures):
         time_signatures(3),
     )
     mmrests(voice, time_signatures(4, 6))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(7),
         ["-", 4, -2, 4],
@@ -120,7 +120,7 @@ def PERC1(voice, time_signatures):
         time_signatures(3),
     )
     mmrests(voice, time_signatures(4, 6))
-    library.make_talea(
+    library.make_one_beat_tuplets(
         voice,
         time_signatures(7),
         ["-", 2, -2, 2, -2],
