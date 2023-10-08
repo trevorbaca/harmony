@@ -77,7 +77,7 @@ def BFL(voice, time_signatures):
         time_signatures(9),
         sixteenths=[12, 12, 1, 11, 12],
         extra_counts=[4, 0, 0, 2, 0],
-        rest_tuplets_cyclic=([1, 2, 4], 5),
+        rest=([1, 2, 4], 5),
     )
     rhythm(
         voice,

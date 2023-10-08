@@ -49,7 +49,7 @@ def BFL(voice, time_signatures):
         time_signatures(5),
         sixteenths=[12, 12, 1, 11, 12],
         extra_counts=[4, 0, 0, 2, 0],
-        rest_tuplets_cyclic=([1, 2, 4], 5),
+        rest=([1, 2, 4], 5),
     )
     mmrests(voice, time_signatures(6))
     for time_signaure in time_signatures(7, 10):
