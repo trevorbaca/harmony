@@ -121,6 +121,7 @@ def h(argument):
     return baca.InvisibleMusic(argument)
 
 
+# TODO: remove?
 def invisible(music, pattern=True):
     tag = baca.helpers.function_name(inspect.currentframe())
     pleaves = baca.select.pleaves(music)
