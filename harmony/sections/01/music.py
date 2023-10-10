@@ -546,7 +546,6 @@ def persist_score(score, environment):
         first_section=True,
         global_rests_in_topmost_staff=True,
         parts_metric_modulation_multiplier=(0.525, 0.525),
-        transpose_score=True,
     )
     baca.tags.deactivate(
         score,
