@@ -41,7 +41,7 @@ jobs:
 
     - name: Install LilyPond
       run: |
-        lilypond_version=2.25.8
+        lilypond_version=2.25.9
         lilypond_archive=lilypond-${lilypond_version}-linux-x86_64.tar.gz
         lilypond_url=https://gitlab.com/lilypond/lilypond/-/releases/
         lilypond_url=${lilypond_url}/v${lilypond_version}/downloads/${lilypond_archive}
