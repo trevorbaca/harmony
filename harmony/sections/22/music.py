@@ -510,7 +510,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m.get(3, 10)) as o:
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "D1")
@@ -543,7 +543,7 @@ def hp(m):
 
 def va(m):
     with baca.scope(m.get(1, 3)) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
         baca.hairpin(o, "o< f")
@@ -555,7 +555,7 @@ def va(m):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "alto")
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
         baca.hairpin(
@@ -588,7 +588,7 @@ def va(m):
 
 def vc1(m):
     with baca.scope(m[3]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "F#5")
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
@@ -610,7 +610,7 @@ def vc1(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#5")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.hairpin(
             o.leaves(),
             "niente o< mp >o",
@@ -638,8 +638,8 @@ def vc1(m):
 
 def vc2(m):
     with baca.scope(m.get(1, 3)) as o:
-        baca.tuplet_bracket_up(o)
-        baca.tuplet_bracket_staff_padding(o, 1.5)
+        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_staff_padding(o, 1.5)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
         baca.hairpin(o, "o< f")
@@ -650,12 +650,12 @@ def vc2(m):
             bookend=True,
         )
     with baca.scope(m[4]) as o:
-        baca.tuplet_bracket_staff_padding(o, 3)
-        baca.rest_extra_offset(o.rest(-1), (-2, 0))
+        baca.override.tuplet_bracket_staff_padding(o, 3)
+        baca.override.rest_extra_offset(o.rest(-1), (-2, 0))
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "tenor")
-        baca.tuplet_bracket_up(o)
-        baca.tuplet_bracket_staff_padding(o, 3)
+        baca.override.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_staff_padding(o, 3)
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
         baca.hairpin(
@@ -685,7 +685,7 @@ def vc2(m):
             bookend=True,
         )
     with baca.scope(m[13]) as o:
-        baca.tuplet_bracket_staff_padding(o, 3)
+        baca.override.tuplet_bracket_staff_padding(o, 3)
 
 
 def cb1(m):
@@ -702,7 +702,7 @@ def cb1(m):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "Cqf5")
         baca.hairpin(
             o.leaves(),

@@ -281,7 +281,7 @@ def cb1(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "E3")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
@@ -305,7 +305,7 @@ def cb2(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitches(o, "Fqs5 Gqf5", do_not_transpose=True)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "ff")
         baca.pizzicato_spanner(
@@ -333,7 +333,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.tuplet_bracket_up(o)
+            baca.override.tuplet_bracket_up(o)
             baca.hairpin(baca.select.tleaves(o, rleak=True), "mp >o niente")
             with baca.scope(baca.select.rleak(o.leaves()[-2:])) as u:
                 if name in ("va", "vc1", "vc2"):

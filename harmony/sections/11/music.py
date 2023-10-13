@@ -742,7 +742,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(1, 10)) as o:
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
 
 
 def va(m):
@@ -789,8 +789,8 @@ def va(m):
 
 def vc1(m):
     with baca.scope(m[1]) as o:
-        baca.tuplet_bracket_up(o)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.tuplet_bracket_up(o)
+        baca.override.note_head_style_harmonic(o.pleaves())
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpin(
             leaves,
@@ -864,8 +864,8 @@ def vc2(m):
 
 def cb1(m):
     with baca.scope(m[1]) as o:
-        baca.tuplet_bracket_up(o)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.tuplet_bracket_up(o)
+        baca.override.note_head_style_harmonic(o.pleaves())
         leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
         baca.hairpin(
             leaves,
@@ -908,7 +908,7 @@ def cb1(m):
             )
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.note_head_style_harmonic(o.run(0))
+        baca.override.note_head_style_harmonic(o.run(0))
         baca.pitch(o.run(0), "E3")
         baca.pitch(o.run(1), "Dtqf3")
         baca.markup(
@@ -958,7 +958,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
                 leaves,
@@ -970,7 +970,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
             baca.flat_glissando(o.pleaves())
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             leaves = o.leaves()[:3]
             baca.hairpin(
                 leaves,
@@ -987,14 +987,14 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[8]) as o:
-            baca.tuplet_bracket_up(o)
+            baca.override.tuplet_bracket_up(o)
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
             baca.dynamic(o.pheads()[1:], "sfp")
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[10]) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             baca.flat_glissando(o.rleaves(), right_broken=True)
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(

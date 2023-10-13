@@ -603,7 +603,7 @@ def va(m):
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.untie(o.pleaves())
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.repeat_tie(o.leaf(1))
         baca.pitches(abjad.select.get(o.plts(), [0, -1]), "F#4 D3")
         baca.staff_positions(
@@ -905,7 +905,7 @@ def cb2(m):
             )
     with baca.scope(m.get(10, 15)) as o:
         baca.repeat_tie(o.leaf(1))
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitches(abjad.select.get(o.plts(), [0, -1]), "F#3 D2")
         baca.staff_positions(
             o.plts()[1:-1],
@@ -1001,7 +1001,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m[2]) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
                 leaves,
@@ -1026,7 +1026,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(10, 15)) as o:
-            baca.tuplet_bracket_staff_padding(o, 2)
+            baca.override.tuplet_bracket_staff_padding(o, 2)
 
 
 @baca.build.timed("make_score")

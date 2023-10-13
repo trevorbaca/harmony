@@ -378,7 +378,7 @@ def bfl(cache):
     with baca.scope(m[2]) as o:
         baca.pitches(o, library.warble_pitches())
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3),
+            baca.override.note_head_font_size(u, -3),
             baca.override.accidental_font_size(u, -3),
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
@@ -444,7 +444,7 @@ def bfl(cache):
         )
     with baca.scope(m.get(6, 9)) as o:
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -612,7 +612,7 @@ def perc1_perc2(cache):
             ]
             baca.override.dots_extra_offset(rests, (2, 0))
             baca.override.dots_x_extent_false(rests)
-            baca.rest_x_extent_zero(rests)
+            baca.override.rest_x_extent_zero(rests)
 
 
 def hp(cache):
@@ -672,7 +672,7 @@ def va(cache):
     name = "va"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "D#3", "E3")
         baca.glissando(
             o.tleaves(),
@@ -687,11 +687,11 @@ def va(cache):
         )
     with baca.scope(m.get(4, 5)) as o:
         with baca.scope(o.leaves(grace=False)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "Db3")
         baca.accent(o.pheads()[:3])
         with baca.scope(o.leaves(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_d_flat_3(),
@@ -709,7 +709,7 @@ def va(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(6, 9)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "D#3", "E3")
         for run in baca.select.runs(o):
@@ -753,10 +753,10 @@ def vc1(cache):
             baca.hairpin(run, "o<| f")
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "C3")
         with baca.scope(o.leaves(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_c_3(),
@@ -774,7 +774,7 @@ def vc1(cache):
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
-        baca.tuplet_bracket_staff_padding(o, 3)
+        baca.override.tuplet_bracket_staff_padding(o, 3)
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
@@ -838,7 +838,7 @@ def vc2(cache):
             baca.hairpin(run, "o<| f")
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         with baca.scope(o.leaf(1)) as u:
             baca.clef(u, "percussion")
             baca.staff_lines(u, 1)
@@ -884,7 +884,7 @@ def cb1(cache):
     name = "cb1"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "F2", "E2")
         baca.glissando(
             o.tleaves(),
@@ -905,10 +905,10 @@ def cb1(cache):
             baca.hairpin(run, "o<| f")
     with baca.scope(m[5]) as o:
         with baca.scope(o.leaves(grace=False)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "B2")
         with baca.scope(o.leaves(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_b_2(),
@@ -922,7 +922,7 @@ def cb1(cache):
             "mf >o niente",
         )
     with baca.scope(m.get(6, 9)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "F2", "E2")
             baca.glissando(
@@ -948,7 +948,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.interpolate_pitches(o, "D#2", "E2")
         baca.glissando(
             o.tleaves(),
@@ -975,7 +975,7 @@ def cb2(cache):
             abjad.Tweak(r"- \tweak staff-padding 3"),
         )
     with baca.scope(m.get(6, 9)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         for run in baca.select.runs(o):
             baca.interpolate_pitches(run, "D#2", "E2")
             baca.glissando(

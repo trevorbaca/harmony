@@ -60,7 +60,7 @@ def GLOBALS(skips, rests, first_measure_number):
         abjad.Tweak(r"- \tweak font-size 4"),
     )
     baca.tags.wrappers(wrappers, baca.tags.ONLY_PARTS)
-    baca.text_script_extra_offset(skips[:-1], (1.5, 12))
+    baca.override.text_script_extra_offset(skips[:-1], (1.5, 12))
     baca.open_volta(skips[4 - 1], first_measure_number)
     baca.close_volta(skips[6 - 1], first_measure_number)
     for index, string in (
@@ -398,7 +398,7 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -10),
         )
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -429,7 +429,7 @@ def bfl(cache):
         )
     with baca.scope(m[9]) as o:
         baca.pitch(o, "G3")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "ff")
         baca.markup(o.pleaf(0), r"\baca-jet-whistle-markup")
     with baca.scope(m.get(1, 9)) as o:
@@ -455,7 +455,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[6]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         library.brake_drum_staff_position(o)
         baca.dynamic(o.phead(0), "f")
         baca.markup(
@@ -517,7 +517,7 @@ def perc2(m):
         )
     with baca.scope(m[6]) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         library.slate_staff_position(o.pleaf(0))
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaf(0))
@@ -582,7 +582,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m[6]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.dynamic(o.phead(0), "f-ancora")
     with baca.scope(m[7]) as o:
         baca.dynamic(o.phead(0), "mf")
@@ -618,7 +618,7 @@ def va(cache):
             pieces=baca.select.plts(o),
         )
     with baca.scope(m[5]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.markup(o.phead(-1), r"\baca-quasi-bisb-markup")
     with baca.scope(m.get(4, 5)) as o:
         baca.pitch(o.plts()[:-1], "Ab4")
@@ -635,7 +635,7 @@ def va(cache):
         m = cache[name]
     with baca.scope(m.get(5, 6)) as o:
         with baca.scope(o.plts()) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.stem_tremolo(u)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m[9]) as o:
@@ -679,8 +679,8 @@ def vc1(cache):
             pieces=baca.select.plts(o),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<A4 B4 C5>",
@@ -688,7 +688,7 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[7]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#6")
         baca.markup(
             o.pleaf(0),
@@ -735,7 +735,7 @@ def vc2(cache):
             pieces=baca.select.lparts(o, [1, 2, 3, 2]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<G4 Ab4 Bb4>",
@@ -744,9 +744,9 @@ def vc2(cache):
         m = cache[name]
     with baca.scope(m[6]) as o:
         baca.pitch(o.pleaves()[1:-1], "C5")
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m[7]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "A5")
         baca.markup(
             o.pleaf(0),
@@ -793,7 +793,7 @@ def cb1(cache):
             pieces=baca.select.lparts(o, [2, 3, 2]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<A4 B4 C5>",
@@ -802,9 +802,9 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[6]) as o:
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m[7]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
         baca.markup(
             o.pleaf(0),
@@ -833,7 +833,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         baca.pitch(o.leaves()[:4], "F#1")
         baca.pitch(o.plts()[-3:], "Gb2")
         baca.scp_spanner(
@@ -866,7 +866,7 @@ def cb2(cache):
             pieces=baca.select.lparts(o, [2, 1, 1]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<G4 Ab4 Bb4>",
@@ -876,7 +876,7 @@ def cb2(cache):
         m = cache[name]
     with baca.scope(m[6]) as o:
         baca.pitch(o.pleaves()[1:-1], "C5", do_not_transpose=True)
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m[7]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "A1")

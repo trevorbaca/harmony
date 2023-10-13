@@ -481,8 +481,8 @@ def va(m):
 def vc1(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.tuplet_number_text(o.leaf(1), r"\markup 5:4")
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_number_text(o.leaf(1), r"\markup 5:4")
+        baca.override.tuplet_bracket_up(o)
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
@@ -537,20 +537,20 @@ def vc1(m):
             pieces=baca.select.plts(leaves),
         )
     with baca.scope(m[8]) as o:
-        baca.tuplet_number_text(o.leaves(), r"\markup 5:4")
+        baca.override.tuplet_number_text(o.leaves(), r"\markup 5:4")
         with baca.scope(o.leaf(3)) as u:
             baca.clef(u, "bass")
             baca.override.clef_extra_offset(u, (-2, 0)),
             baca.override.clef_x_extent_false(u)
         baca.staff_lines(o.leaf(3), 5)
         with baca.scope(o.leaf(2)) as u:
-            baca.flag_extra_offset(u, (-2, 0))
-            baca.note_head_extra_offset(u, (-2, 0))
-            baca.script_extra_offset(u, (-2, 0))
-            baca.stem_extra_offset(u, (-2, 0))
-            baca.stem_tremolo_extra_offset(u, (-2, 0))
+            baca.override.flag_extra_offset(u, (-2, 0))
+            baca.override.note_head_extra_offset(u, (-2, 0))
+            baca.override.script_extra_offset(u, (-2, 0))
+            baca.override.stem_extra_offset(u, (-2, 0))
+            baca.override.stem_tremolo_extra_offset(u, (-2, 0))
         with baca.scope(o.leaves()[-5:]) as u:
-            baca.tuplet_bracket_up(u)
+            baca.override.tuplet_bracket_up(u)
             baca.override.dls_staff_padding(u, 4.5)
         baca.pitch(o.leaves()[4:], "F#3")
         baca.accent(baca.select.pheads(o.leaves()[4:]))
@@ -637,12 +637,12 @@ def cb1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.override.dls_staff_padding(o, 6),
-        baca.rest_extra_offset(o.rest(-1), (-0.75, 0))
+        baca.override.rest_extra_offset(o.rest(-1), (-0.75, 0))
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Aqs4", do_not_transpose=True)
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pizzicato_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -701,7 +701,7 @@ def cb2(m):
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pizzicato_spanner(
             baca.select.rleak(baca.select.ltleaves(o)),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),

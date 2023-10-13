@@ -399,7 +399,7 @@ def bfl(m):
             abjad.sequence.rotate(library.warble_pitches(), -9),
         )
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -615,7 +615,7 @@ def va(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
 
 
@@ -644,8 +644,8 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:
-        baca.note_head_transparent(o.pleaves()[1:-1])
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_style_harmonic_black(o.pleaves())
     for item in [(1, 2), (5, 7), 10]:
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "D2")
@@ -671,8 +671,8 @@ def vc2(cache):
         m = cache[name]
     with baca.scope(m[9]) as o:
         baca.pitch(o.pleaves()[1:-1], "C5")
-        baca.note_head_transparent(o.pleaves()[1:-1])
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.hairpin(
             o,
             "pp -- ! < mp -- ! >",
@@ -708,8 +708,8 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[9]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
         baca.hairpin(
             o,
             "pp -- ! < mp >",
@@ -746,8 +746,8 @@ def cb2(cache):
         m = cache[name]
     with baca.scope(m[9]) as o:
         baca.pitch(o.pleaves()[1:-1], "C5", do_not_transpose=True)
-        baca.note_head_transparent(o.pleaves()[1:-1])
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.hairpin(
             o,
             "pp -- ! < mp >",
