@@ -256,7 +256,7 @@ def bfl(m):
                 right_broken=True,
             )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -299,7 +299,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -318,7 +318,7 @@ def perc2(m):
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(cache):
@@ -329,7 +329,7 @@ def hp(cache):
         baca.pitch(o, "F1")
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.pheads(), "p")
-        baca.dls_staff_padding(o, 4 + 3)
+        baca.override.dls_staff_padding(o, 4 + 3)
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "<B4 C5>")
@@ -338,7 +338,7 @@ def hp(cache):
     with baca.scope(m[8]) as o:
         baca.double_flageolet(o.phead(0))
         baca.dynamic(o.phead(0), "f")
-        baca.dls_staff_padding(o, 4 + 2)
+        baca.override.dls_staff_padding(o, 4 + 2)
         baca.markup(
             o.pleaf(0),
             r"\baca-lv-markup",
@@ -349,7 +349,7 @@ def hp(cache):
         baca.pitch(o, "F1")
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "p")
-        baca.dls_staff_padding(o, 4 + 3)
+        baca.override.dls_staff_padding(o, 4 + 3)
 
 
 def va(m):
@@ -547,7 +547,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 10)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

@@ -135,7 +135,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
         )
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding(o.leaves(), 4)
+        baca.override.dls_staff_padding(o.leaves(), 4)
 
 
 def perc1(m):
@@ -151,7 +151,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding(o.leaves(), 6)
+        baca.override.dls_staff_padding(o.leaves(), 6)
 
 
 def perc2(m):
@@ -169,7 +169,7 @@ def hp(m):
         baca.snap_pizzicato(o.phead(0))
         baca.dynamic(o.phead(0), "f")
     with baca.scope(m.get(1, 2)) as o:
-        baca.dls_staff_padding(o.leaves(), 4)
+        baca.override.dls_staff_padding(o.leaves(), 4)
 
 
 def cb1(m):
@@ -230,7 +230,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 2)) as o:
-            baca.dls_staff_padding(o.leaves(), 4)
+            baca.override.dls_staff_padding(o.leaves(), 4)
 
 
 @baca.build.timed("make_score")

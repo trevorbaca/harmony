@@ -379,9 +379,9 @@ def bfl(cache):
         baca.pitches(o, library.warble_pitches())
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3),
-            baca.accidental_font_size(u, -3),
-            baca.accidental_x_offset(u, 0),
-            baca.accidental_y_offset(u, -2),
+            baca.override.accidental_font_size(u, -3),
+            baca.override.accidental_x_offset(u, 0),
+            baca.override.accidental_y_offset(u, -2),
         baca.hairpin(
             o.tleaves(),
             "o< mp >o niente",
@@ -445,9 +445,9 @@ def bfl(cache):
     with baca.scope(m.get(6, 9)) as o:
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3)
-            baca.accidental_font_size(u, -3)
-            baca.accidental_x_offset(u, 0)
-            baca.accidental_y_offset(u, -2)
+            baca.override.accidental_font_size(u, -3)
+            baca.override.accidental_x_offset(u, 0)
+            baca.override.accidental_y_offset(u, -2)
     with baca.scope(m[11]) as o:
         baca.pitch(o, "D5")
         baca.dynamic(o.phead(0), "p")
@@ -460,7 +460,7 @@ def bfl(cache):
                 bookend=False,
             )
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(cache):
@@ -487,7 +487,7 @@ def perc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 4)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[5]) as o:
         baca.staff_lines(o.leaf(0), 3)
         baca.staff_position(o.runs()[:1], -2, allow_obgc_mutation=True)
@@ -529,7 +529,7 @@ def perc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 11)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(cache):
@@ -547,7 +547,7 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 4)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[5]) as o:
         baca.staff_lines(o.leaf(0), 3)
         baca.staff_position(o.runs()[:1], -2, allow_obgc_mutation=True)
@@ -599,7 +599,7 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(6, 11)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc1_perc2(cache):
@@ -610,8 +610,8 @@ def perc1_perc2(cache):
             rests = [
                 _ for _ in rests if abjad.get.duration(_) >= abjad.Duration((1, 2))
             ]
-            baca.dots_extra_offset(rests, (2, 0))
-            baca.dots_x_extent_false(rests)
+            baca.override.dots_extra_offset(rests, (2, 0))
+            baca.override.dots_x_extent_false(rests)
             baca.rest_x_extent_zero(rests)
 
 
@@ -623,7 +623,7 @@ def hp(cache):
         baca.pitch(o, "E1")
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "<B4 C5>")
@@ -656,7 +656,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(6, 9)) as o:
         baca.pitch(o, "E1")
         library.damp_rest_after_each_ptail(o)
@@ -665,7 +665,7 @@ def hp(cache):
         baca.pitch(o, "F1")
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(6, 11)) as o:
-        baca.dls_staff_padding(o, 7)
+        baca.override.dls_staff_padding(o, 7)
 
 
 def va(cache):
@@ -729,7 +729,7 @@ def va(cache):
         for run in baca.select.runs(o):
             baca.glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def vc1(cache):
@@ -742,7 +742,7 @@ def vc1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(o.plts(), '"ff" "ff"')
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
@@ -770,7 +770,7 @@ def vc1(cache):
             "mf >o niente",
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.dls_staff_padding(o, 4),
+        baca.override.dls_staff_padding(o, 4),
     with baca.scope(m.get(6, 8)) as o:
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
@@ -783,7 +783,7 @@ def vc1(cache):
             '"ff" "ff" "f" "f" mf mp p',
             pieces=baca.select.plts(o),
         )
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[9]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
@@ -810,7 +810,7 @@ def vc1(cache):
         with baca.scope(m[n]) as o:
             baca.pitch(o, "D#3")
     with baca.scope(m.get(9, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def vc2(cache):
@@ -827,7 +827,7 @@ def vc2(cache):
             '"ff" "ff"',
             pieces=baca.select.plts(o),
         )
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
@@ -836,7 +836,7 @@ def vc2(cache):
             run = baca.select.rleak(run)
             baca.stop_on_string(run[-1])
             baca.hairpin(run, "o<| f")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[5]) as o:
         baca.tuplet_bracket_up(o)
         with baca.scope(o.leaf(1)) as u:
@@ -861,7 +861,7 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(5, 9)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.staff_lines(o.leaf(0), 5)
@@ -871,7 +871,7 @@ def vc2(cache):
             "pp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
@@ -941,7 +941,7 @@ def cb1(cache):
         for run in baca.select.runs(o):
             baca.glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def cb2(cache):
@@ -994,7 +994,7 @@ def cb2(cache):
         for run in baca.select.runs(o):
             baca.glissando(run, allow_repeats=True)
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def composites(cache):

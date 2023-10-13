@@ -441,7 +441,7 @@ def bfl(cache):
             direction=abjad.DOWN,
         )
     with baca.scope(m.get(1, 15)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -454,7 +454,7 @@ def perc1(m):
             "o< p >o niente",
             pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
-        baca.dynamic_text_x_offset(o.pleaf(1), -0.75)
+        baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         baca.markup(
             o.pleaf(0),
             r"\baca-triangle-markup",
@@ -499,7 +499,7 @@ def perc1(m):
     with baca.scope(m.get(14)) as o:
         baca.hairpin(o.rleaves(), "(p) >o niente")
     with baca.scope(m.get(1, 15)) as o:
-        baca.dls_staff_padding(o.leaves(), 6)
+        baca.override.dls_staff_padding(o.leaves(), 6)
 
 
 def perc2(m):
@@ -573,7 +573,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 13)) as o:
-        baca.dls_staff_padding(o.leaves(), 4)
+        baca.override.dls_staff_padding(o.leaves(), 4)
 
 
 def va(m):
@@ -1022,7 +1022,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 15)) as o:
-            baca.dls_staff_padding(o.leaves(), 4)
+            baca.override.dls_staff_padding(o.leaves(), 4)
     for name in ["va", "vc1", "vc2", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(10, 15)) as o:

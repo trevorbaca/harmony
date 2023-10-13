@@ -317,14 +317,14 @@ def bfl(cache):
                     abjad.Tweak(r"- \tweak bound-details.right.padding 2"),
                 )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
     with baca.scope(m.get(1, 2)) as o:
         library.slate_staff_position(o)
         baca.dynamic(o.phead(0), '"f"')
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-slate-scrape-markup",
@@ -336,7 +336,7 @@ def perc1(m):
         baca.pitch(o, "Eb4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-glockenspiel-markup",
@@ -373,7 +373,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(4, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -386,7 +386,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 4)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[5]) as o:
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [2, -2, 0])
@@ -399,7 +399,7 @@ def perc2(m):
     with baca.scope(m.get(6, 7)) as o:
         library.purpleheart_staff_positions(o, [-2, 0, 2, 0, 2, -2])
     with baca.scope(m.get(5, 10)) as o:
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
 
 
 def hp(cache):
@@ -442,7 +442,7 @@ def hp(cache):
                 abjad.Tweak(r"- \tweak padding 1.5"),
             )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4 + 2)
+        baca.override.dls_staff_padding(o, 4 + 2)
 
 
 def va(m):
@@ -655,7 +655,7 @@ def composites(cache):
             baca.accent(o.pheads())
             baca.dynamic(o.phead(0), "p")
         with baca.scope(m.get(1, 10)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

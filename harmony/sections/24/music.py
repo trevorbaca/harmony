@@ -236,7 +236,7 @@ def bfl(m):
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -274,7 +274,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -283,7 +283,7 @@ def perc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(run, "o<| mf")
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-superball-markup",
@@ -293,7 +293,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [2])
         baca.dynamic(o.phead(0), "ff")
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
             r"\baca-purpleheart-markup",
@@ -307,7 +307,7 @@ def perc2(m):
         library.purpleheart_staff_positions(o.leaves()[-2:], [2])
         baca.stem_tremolo(abjad.select.get(o.pheads(), [0, 2])),
         baca.dynamic(o.phead(0), "p")
-        baca.dls_staff_padding(o.leaves()[:-2], 6)
+        baca.override.dls_staff_padding(o.leaves()[:-2], 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-tam-tam-markup",
@@ -315,7 +315,7 @@ def perc2(m):
         )
         with baca.scope(o.pleaf(-1)) as u:
             baca.dynamic(u, "ff")
-            baca.dls_staff_padding(u, 5)
+            baca.override.dls_staff_padding(u, 5)
         baca.staff_lines(o.leaf(-2), 3)
         baca.markup(
             o.leaf(-1),
@@ -342,7 +342,7 @@ def hp(m):
             abjad.select.get(o.pheads(), [1], 3),
             "mp",
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-pdlt-markup",
@@ -357,7 +357,7 @@ def hp(m):
             "p-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-whisk-markup",
@@ -618,7 +618,7 @@ def composites(cache):
         with baca.scope(m.get(7, 8)) as o:
             baca.hairpin(o.rleaves(), "(pp) < f")
         with baca.scope(m.get(1, 9)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

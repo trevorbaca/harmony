@@ -218,9 +218,9 @@ def bfl(m):
         ),
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3)
-            baca.accidental_font_size(u, -3)
-            baca.accidental_x_offset(u, 0)
-            baca.accidental_y_offset(u, -2)
+            baca.override.accidental_font_size(u, -3)
+            baca.override.accidental_x_offset(u, 0)
+            baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
                 run,
@@ -253,7 +253,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -302,7 +302,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -311,7 +311,7 @@ def perc2(m):
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "C#5")
         baca.dynamic(o.phead(0), "p")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.laissez_vibrer(o.ptails())
         baca.markup(
             o.pleaf(0),
@@ -327,7 +327,7 @@ def perc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(run, "f >o niente")
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
             r"\baca-slate-brush-markup",
@@ -343,7 +343,7 @@ def perc2(m):
             "mp-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X 0.25"),
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-glockenspiel-markup",
@@ -359,7 +359,7 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "A1")
         baca.dynamic(o.phead(0), "f")
-        baca.dls_staff_padding(o, 4 + 2)
+        baca.override.dls_staff_padding(o, 4 + 2)
         baca.laissez_vibrer(o.ptails())
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "<E3 Fb3>")
@@ -372,7 +372,7 @@ def hp(cache):
             "mp-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.text_spanner(
             o.rleaves(),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
@@ -717,7 +717,7 @@ def composites(cache):
             baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
         with baca.scope(m.get(1, 10)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

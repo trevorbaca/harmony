@@ -328,7 +328,7 @@ def bfl(cache):
                 pieces=baca.select.lparts(clpart, [1, 1 + 1]),
             )
     with baca.scope(m.get(1, 5)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(cache):
@@ -380,7 +380,7 @@ def perc1(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(4, 5)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(cache):
@@ -436,7 +436,7 @@ def perc2(cache):
     with baca.scope(m[5]) as o:
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.metric_modulation_spanner(
             baca.select.rleak(abjad.select.leaves(o)[3:]),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
@@ -451,8 +451,8 @@ def perc1_perc2(cache):
             rests = [
                 _ for _ in rests if abjad.get.duration(_) >= abjad.Duration((1, 2))
             ]
-            baca.dots_extra_offset(rests, (2, 0))
-            baca.dots_x_extent_false(rests)
+            baca.override.dots_extra_offset(rests, (2, 0))
+            baca.override.dots_x_extent_false(rests)
             baca.rest_x_extent_zero(rests)
 
 
@@ -502,7 +502,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 5)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def va(cache):
@@ -746,7 +746,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 5)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

@@ -261,9 +261,9 @@ def bfl(cache):
         )
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3)
-            baca.accidental_font_size(u, -3)
-            baca.accidental_x_offset(u, 0)
-            baca.accidental_y_offset(u, -2)
+            baca.override.accidental_font_size(u, -3)
+            baca.override.accidental_x_offset(u, 0)
+            baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
                 run,
@@ -295,7 +295,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 8)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -338,7 +338,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m.get(1, 8)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -352,7 +352,7 @@ def perc2(m):
             "pp-ancora",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-glockenspiel-markup",
@@ -380,7 +380,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(7, 8)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(m):
@@ -628,7 +628,7 @@ def composites(cache):
         with baca.scope(m[1]) as o:
             baca.staff_lines(o.leaf(0), 5)
         with baca.scope(m.get(1, 7)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
         with baca.scope(m[2]) as o:
             baca.stem_tremolo(o.pleaves())
             baca.markup(o.pleaf(0), r"\baca-quasi-bisb-markup")
@@ -641,7 +641,7 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
             baca.dynamic(o.phead(0), "pp")
-            baca.dls_staff_padding(o, 6)
+            baca.override.dls_staff_padding(o, 6)
 
 
 @baca.build.timed("make_score")
