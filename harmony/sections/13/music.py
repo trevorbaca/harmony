@@ -453,7 +453,7 @@ def perc1_perc2(cache):
             ]
             baca.override.dots_extra_offset(rests, (2, 0))
             baca.override.dots_x_extent_false(rests)
-            baca.rest_x_extent_zero(rests)
+            baca.override.rest_x_extent_zero(rests)
 
 
 def hp(cache):
@@ -529,10 +529,10 @@ def va(cache):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o.plts()[:1], "Bb3")
         with baca.scope(o.plts(grace=False)[1:]) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "Db3")
         with baca.scope(o.plts(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_d_flat_3(),
@@ -567,10 +567,10 @@ def vc1(cache):
     with baca.scope(m.get(1, 3)) as o:
         baca.pitch(o.plts()[:1], "Aqf3")
         with baca.scope(o.plts(grace=False)[1:]) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "C3")
         with baca.scope(o.plts(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_c_3(),
@@ -655,10 +655,10 @@ def cb1(cache):
         m = cache[name]
     with baca.scope(m.get(1, 3)) as o:
         with baca.scope(o.plts(grace=False)[1:]) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitch(u, "B2")
         with baca.scope(o.plts(grace=True)) as u:
-            baca.note_head_style_harmonic_black(u)
+            baca.override.note_head_style_harmonic_black(u)
             baca.pitches(
                 u,
                 library.appoggiato_pitches_b_2(),

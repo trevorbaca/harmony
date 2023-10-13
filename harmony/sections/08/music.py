@@ -458,7 +458,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(8, 9)) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             baca.stem_tremolo(o.pleaves())
             baca.dynamic(o.phead(0), "pp")
             baca.markup(

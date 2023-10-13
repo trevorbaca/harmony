@@ -295,7 +295,7 @@ def bfl(m):
         )
     with baca.scope(m[4]) as o:
         baca.pitch(o, "F3")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "ff")
         baca.markup(
             o.pleaf(0),
@@ -304,7 +304,7 @@ def bfl(m):
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E3"),
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(
             o.phead(0),
             "ff-ancora",
@@ -533,11 +533,11 @@ def vc1(m):
         baca.dynamic(o.phead(0), "ppp")
         baca.override.dls_staff_padding(o.leaves()[:3], 6)
         with baca.scope(o.leaf(2)) as u:
-            baca.flag_extra_offset(u, (-2, 0))
-            baca.note_head_extra_offset(u, (-2, 0))
-            baca.script_extra_offset(u, (-2, 0))
-            baca.stem_extra_offset(u, (-2, 0))
-            baca.stem_tremolo_extra_offset(u, (-2, 0))
+            baca.override.flag_extra_offset(u, (-2, 0))
+            baca.override.note_head_extra_offset(u, (-2, 0))
+            baca.override.script_extra_offset(u, (-2, 0))
+            baca.override.stem_extra_offset(u, (-2, 0))
+            baca.override.stem_tremolo_extra_offset(u, (-2, 0))
         with baca.scope(o.leaf(3)) as u:
             baca.clef(u, "bass")
             baca.override.clef_extra_offset(u, (-2, 0))
@@ -555,7 +555,7 @@ def vc1(m):
             baca.pitch(u, "F#3")
             baca.accent(u)
         baca.dynamic(o.pleaf(2), "mf")
-        baca.tuplet_bracket_up(o.leaves()[3:])
+        baca.override.tuplet_bracket_up(o.leaves()[3:])
         baca.metric_modulation_spanner(
             o.leaves()[4:11],
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -654,7 +654,7 @@ def cb1(m):
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
         baca.pitch(o, "Aqs4", do_not_transpose=True)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
             o,
@@ -717,7 +717,7 @@ def cb2(m):
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.pitch(o, "F#4", do_not_transpose=True)
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
             o,

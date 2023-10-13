@@ -628,10 +628,10 @@ def cbs(cache):
     m = cache["cb1"]
     for item in [(1, 6), 8, 11]:
         with baca.scope(m.get(item)) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
     m = cache["cb2"]
     with baca.scope(m.get(1, 6)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
 
 
 def composites(cache):
@@ -699,7 +699,7 @@ def harmonics(cache):
         m = cache[name]
         with baca.scope(m[9]) as o:
             for run in abjad.select.runs(o, grace=True):
-                baca.note_head_style_harmonic(run)
+                baca.override.note_head_style_harmonic(run)
 
 
 @baca.build.timed("make_score")

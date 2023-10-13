@@ -497,7 +497,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m[4]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 4)) as o:
         library.tam_tam_staff_position(o)
         baca.flat_glissando(o, hide_middle_stems=True)
@@ -529,7 +529,7 @@ def perc2(m):
         )
     with baca.scope(m.get(8, 11)) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         library.tam_tam_staff_position(o)
         baca.flat_glissando(o, hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
@@ -733,7 +733,7 @@ def vc1(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m[6]) as o:
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
     with baca.scope(m.get(5, 6)) as o:
         baca.pitch(o.rleaves(), "A2")
         baca.stem_tremolo(baca.select.pleaves(baca.select.rleaves(o)))
@@ -796,7 +796,7 @@ def vc2(cache):
     name = "vc2"
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         baca.interpolate_pitches(o, "G2", "F2")
         baca.glissando(
             o.tleaves(),
@@ -945,7 +945,7 @@ def cb1(cache):
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), '"ff"')
         baca.override.dls_staff_padding(o, 6),
-        baca.rest_extra_offset(o.rest(-1), (-1, 0))
+        baca.override.rest_extra_offset(o.rest(-1), (-1, 0))
     with baca.scope(m.get(8, 11)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
@@ -1082,17 +1082,17 @@ def strings(cache):
         for item in [(1, 5), (8, 11)]:
             with baca.scope(cache[name].get(item)) as o:
                 for run in abjad.select.runs(o, grace=True):
-                    baca.note_head_style_harmonic(run)
+                    baca.override.note_head_style_harmonic(run)
     m = cache["vc2"]
     for item in [(3, 5), (8, 11)]:
         with baca.scope(m.get(item)) as o:
             for run in abjad.select.runs(o, grace=True):
-                baca.note_head_style_harmonic(run)
+                baca.override.note_head_style_harmonic(run)
     m = cache["cb2"]
     for item in [(3, 5), (8, 11)]:
         with baca.scope(m.get(item)) as o:
             for run in abjad.select.runs(o, grace=True):
-                baca.note_head_style_harmonic(run)
+                baca.override.note_head_style_harmonic(run)
 
 
 @baca.build.timed("make_score")

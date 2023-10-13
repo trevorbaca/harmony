@@ -260,7 +260,7 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -6),
         )
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -421,7 +421,7 @@ def va(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(4, 6)) as o:
         baca.pitch(o, "E3")
@@ -465,7 +465,7 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(4, 5)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -479,7 +479,7 @@ def vc1(cache):
             bookend=-1,
         )
     with baca.scope(m.get(6, 7)) as o:
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         baca.pitch(o, "E2")
         baca.triple_staccato(o.pheads())
         baca.metric_modulation_spanner(
@@ -514,7 +514,7 @@ def vc2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(4, 6)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -557,12 +557,12 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m.get(6, 7)) as o:
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         baca.pitch(o, "E1")
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
@@ -589,7 +589,7 @@ def cb2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(
             o.phead(0),
             "pp-ancora",

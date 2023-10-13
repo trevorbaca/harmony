@@ -373,7 +373,7 @@ def bfl(m):
         baca.pitch(o, "Ab3")
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[7]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitch(o.runs()[:1], "G3")
         baca.pitch(o.runs()[1:], "Bb5")
         baca.stem_tremolo(o.pleaves()[-2:])
@@ -405,7 +405,7 @@ def bfl(m):
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
     with baca.scope(m.get(7, 8)) as o:
-        baca.tuplet_bracket_staff_padding(o, 6.5)
+        baca.override.tuplet_bracket_staff_padding(o, 6.5)
         baca.metric_modulation_spanner(
             o.leaves()[4:9],
             abjad.Tweak(r"- \tweak staff-padding 11.5"),
@@ -654,7 +654,7 @@ def va(cache):
             direction=abjad.DOWN,
         )
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.espressivo(baca.select.pheads(o, grace=False)[1:])
         baca.metric_modulation_spanner(
             o.leaves()[7:12],
@@ -687,7 +687,7 @@ def va(cache):
             direction=abjad.DOWN,
         )
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.espressivo(o.pheads(grace=False)[1:])
     with baca.scope(m.get(5, 6)) as o:
         baca.metric_modulation_spanner(
@@ -753,7 +753,7 @@ def vc1(cache):
             direction=abjad.DOWN,
         ),
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.espressivo(baca.select.pheads(o, grace=False)[1:])
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E4")
@@ -891,7 +891,7 @@ def cb1(cache):
             direction=abjad.DOWN,
         )
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.flat_glissando(o, "E1")
@@ -903,7 +903,7 @@ def cb1(cache):
             bookend=True,
         )
     with baca.scope(m[7]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "E3"),
         baca.markup(
             o.pleaf(0),

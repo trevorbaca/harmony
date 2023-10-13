@@ -217,7 +217,7 @@ def bfl(m):
             abjad.sequence.rotate(library.warble_pitches(), -11),
         ),
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -408,7 +408,7 @@ def va(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "E3")
@@ -430,7 +430,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.pitches(o, "E6 C#6")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
         baca.hairpin(
             o.rleaves(),
@@ -451,7 +451,7 @@ def vc1(cache):
             pieces=baca.select.lparts(o.rleaves(), [2, 3, 1 + 1]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<A4 B4 C5>",
@@ -459,9 +459,9 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m.get(7, 10)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#6")
         baca.hairpin(
             o,
@@ -495,7 +495,7 @@ def vc2(cache):
     name = "vc2"
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitches(o, "A5 C#6")
         baca.glissando(o.tleaves())
         baca.hairpin(
@@ -517,7 +517,7 @@ def vc2(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 2, 3, 2 + 1]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<G4 Ab4 Bb4>",
@@ -526,10 +526,10 @@ def vc2(cache):
         m = cache[name]
     with baca.scope(m[5]) as o:
         baca.pitch(o.pleaves()[1:-1], "C5")
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m.get(7, 10)) as o:
         baca.pitch(o, "A5")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.hairpin(
             o,
             "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
@@ -563,7 +563,7 @@ def cb1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 4)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
         for run in baca.select.runs(o):
             rrun = baca.select.rleak(run)
@@ -589,7 +589,7 @@ def cb1(cache):
             pieces=baca.select.lparts(o.rleaves(), [2, 3, 2 + 1]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<A4 B4 C5>",
@@ -598,9 +598,9 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[5]) as o:
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m.get(7, 10)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
         baca.hairpin(
             o,
@@ -665,7 +665,7 @@ def cb2(cache):
             pieces=baca.select.lparts(o.rleaves(), [2, 1, 1 + 1]),
         )
         baca.untie(o.leaves())
-        baca.note_head_style_harmonic_black(o.pleaves())
+        baca.override.note_head_style_harmonic_black(o.pleaves())
         baca.pitch(
             abjad.select.get(o.pleaves(), [0, -1]),
             "<G4 Ab4 Bb4>",
@@ -679,7 +679,7 @@ def cb2(cache):
             "C5",
             do_not_transpose=True,
         )
-        baca.note_head_transparent(o.pleaves()[1:-1])
+        baca.override.note_head_transparent(o.pleaves()[1:-1])
     with baca.scope(m.get(7, 10)) as o:
         baca.clef(o.leaf(0), "bass")
         baca.flat_glissando(

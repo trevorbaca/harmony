@@ -158,8 +158,8 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         with baca.scope(o.leaf(-1)) as u:
             baca.damp(u)
-            baca.script_down(u)
-            baca.script_padding(u, 2)
+            baca.override.script_down(u)
+            baca.override.script_padding(u, 2)
 
 
 def hp(m):
@@ -202,10 +202,12 @@ def cb2(m):
         with baca.scope(o.rleaf(-1)) as u:
             wrappers = []
             wrappers.extend(baca.mark(u, r"\harmony-colophon-markup"))
-            wrappers.extend(baca.rehearsal_mark_down(u))
-            wrappers.extend(baca.rehearsal_mark_extra_offset(u, (92, 8)))
-            wrappers.extend(baca.rehearsal_mark_padding(u, 12))
-            wrappers.extend(baca.rehearsal_mark_self_alignment_x(u, abjad.RIGHT))
+            wrappers.extend(baca.override.rehearsal_mark_down(u))
+            wrappers.extend(baca.override.rehearsal_mark_extra_offset(u, (92, 8)))
+            wrappers.extend(baca.override.rehearsal_mark_padding(u, 12))
+            wrappers.extend(
+                baca.override.rehearsal_mark_self_alignment_x(u, abjad.RIGHT)
+            )
             baca.tags.wrappers(wrappers, baca.tags.NOT_PARTS)
 
 

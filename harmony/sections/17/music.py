@@ -280,7 +280,7 @@ def bfl(m):
             abjad.sequence.rotate(library.warble_pitches(), -3),
         )
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -426,7 +426,7 @@ def perc1_perc2(cache):
             with baca.scope(rests) as u:
                 baca.override.dots_extra_offset(u, (2, 0))
                 baca.override.dots_x_extent_false(u)
-                baca.rest_x_extent_zero(u)
+                baca.override.rest_x_extent_zero(u)
 
 
 def hp(cache):
@@ -435,7 +435,7 @@ def hp(cache):
     with baca.scope(m[1]) as o:
         baca.pitch(o, "Db1")
         baca.ottava_bassa(o.tleaves())
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 5)
@@ -457,12 +457,12 @@ def hp(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Db1")
         baca.ottava_bassa(o.tleaves())
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f-ancora")
         baca.override.dls_staff_padding(o, 5)
     with baca.scope(m.get(1, 5)) as o:
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
 
 
 def va(cache):
@@ -510,7 +510,7 @@ def vc1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<G#5 A5 Bb5>")
         cache.rebuild()
         m = cache[name]
@@ -551,7 +551,7 @@ def vc2(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<A5 Bb5 Cb6>")
         cache.rebuild()
         m = cache[name]
@@ -592,7 +592,7 @@ def cb1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<B5 C6 Db6>", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]
@@ -633,7 +633,7 @@ def cb2(cache):
         )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<A#5 B5 C6>", do_not_transpose=True)
         cache.rebuild()
         m = cache[name]

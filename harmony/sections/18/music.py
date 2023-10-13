@@ -454,7 +454,7 @@ def bfl(m):
             abjad.sequence.rotate(library.warble_pitches(), -4),
         ),
         with baca.scope(o.tleaves()) as u:
-            baca.note_head_font_size(u, -3)
+            baca.override.note_head_font_size(u, -3)
             baca.override.accidental_font_size(u, -3)
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
@@ -587,7 +587,7 @@ def perc1(cache):
         baca.laissez_vibrer(o.ptails())
         baca.hairpin(baca.select.rleak(o.pleaves()), "o< mp")
     with baca.scope(m.get(8, 11)) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.override.dls_staff_padding(o, 6)
 
 
@@ -653,7 +653,7 @@ def perc2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m[11]) as o:
         baca.staff_lines(o.leaf(0), 3)
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         library.purpleheart_staff_positions(o, [0])
         baca.dynamic(o.phead(0), "ff")
         baca.override.dls_staff_padding(o, 5)
@@ -680,7 +680,7 @@ def perc1_perc2(cache):
             ]
             baca.override.dots_extra_offset(rests, (2, 0))
             baca.override.dots_x_extent_false(rests)
-            baca.rest_x_extent_zero(rests)
+            baca.override.rest_x_extent_zero(rests)
 
 
 def hp(m):
@@ -694,7 +694,7 @@ def hp(m):
         baca.pitch(o, "Db1")
         baca.ottava_bassa(o.tleaves())
         baca.laissez_vibrer(o.ptails())
-        baca.ottava_bracket_staff_padding(o, 8)
+        baca.override.ottava_bracket_staff_padding(o, 8)
         baca.dynamic(o.phead(0), "f")
         baca.override.dls_staff_padding(o, 5)
     for item in [(1, 2), 8]:
@@ -737,10 +737,10 @@ def va(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.pitch(o, "C3")
-        baca.rest_extra_offset(o.rest(-1), (-1.5, 0))
+        baca.override.rest_extra_offset(o.rest(-1), (-1.5, 0))
     with baca.scope(m[3]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "<G#5 A5 Bb5>")
         cache.rebuild()
         m = cache[name]
@@ -776,7 +776,7 @@ def va(cache):
         baca.pitch(o, "C3")
     with baca.scope(m.get(9, 11)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "G4")
         baca.flat_glissando(o.leaves()[:-1])
         baca.markup(
@@ -792,7 +792,7 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "D5")
         baca.markup(
             o.pleaf(0),
@@ -805,7 +805,7 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",
@@ -832,7 +832,7 @@ def vc1(cache):
         )
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "D5")
         baca.markup(
             o.pleaf(0),
@@ -857,7 +857,7 @@ def vc2(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         baca.clef(o.leaf(0), "treble")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "Btqf4")
         baca.markup(o.pleaf(0), r"\baca-seven-c")
         baca.markup(
@@ -871,7 +871,7 @@ def vc2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",
@@ -909,7 +909,7 @@ def vc2(cache):
     for item in [8, (9, 11)]:
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "Btqf4")
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
 
 
 def cb1(cache):
@@ -931,7 +931,7 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[2]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
@@ -943,7 +943,7 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m[3]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
@@ -1038,7 +1038,7 @@ def cb2(cache):
     name = "cb2"
     m = cache[name]
     with baca.scope(m[1]) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "G3")
         baca.markup(
             o.pleaf(0),
@@ -1061,7 +1061,7 @@ def cb2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(2, 3)) as o:
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-iii-markup",
@@ -1102,7 +1102,7 @@ def cb2(cache):
         )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G3")
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.markup(
             o.pleaf(0),
             r"\baca-string-i-markup",

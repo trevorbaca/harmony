@@ -537,7 +537,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(3, 6)) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(7, 8)) as o:
@@ -767,7 +767,7 @@ def hp(m):
             )
         baca.override.dls_staff_padding(o.lleaves(count=2), 6)
     with baca.scope(m.get(4, 5)) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.metric_modulation_spanner(
             baca.select.rleak(o.leaves()[4:8]),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -826,7 +826,7 @@ def hp(m):
         )
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[15]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         with baca.scope(o.rest(-1)) as u:
             baca.clef(u, "percussion"),
             baca.staff_lines(u, 1),
@@ -861,7 +861,7 @@ def va(cache):
         )
     with baca.scope(m[3]) as o:
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.pitch(o.plts(grace=False), "Bb3")
         baca.pitches(
             o.plts(grace=True),
@@ -917,7 +917,7 @@ def va(cache):
             direction=abjad.DOWN,
         )
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
     with baca.scope(m.get(6, 7)) as o:
         baca.dynamic(o.phead(0), "f")
         for run in baca.select.runs(o):
@@ -971,7 +971,7 @@ def vc1(cache):
         )
     with baca.scope(m[3]) as o:
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.pitch(o.plts(grace=False), "Bb3")
         baca.pitches(
             o.plts(grace=True),
@@ -1004,7 +1004,7 @@ def vc1(cache):
         )
     with baca.scope(m[5]) as o:
         for run in abjad.select.runs(o, grace=True):
-            baca.note_head_style_harmonic(run)
+            baca.override.note_head_style_harmonic(run)
         baca.pitch(o.plts(grace=False), "Bb3")
         baca.pitches(
             baca.select.plts(o, grace=True),
@@ -1189,7 +1189,7 @@ def cb1(m):
     with baca.scope(m[3]) as o:
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
-        baca.note_head_style_harmonic(o.pleaf(0))
+        baca.override.note_head_style_harmonic(o.pleaf(0))
     with baca.scope(m.get(3, 4)) as o:
         with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
             baca.pitch(u, "Bb2")

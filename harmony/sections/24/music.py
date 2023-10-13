@@ -401,7 +401,7 @@ def vc1(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         pheads = abjad.select.get(baca.select.pheads(o), [0, 1, 2, -2, -1])
         with baca.scope(pheads) as u:
             baca.pitch(u, "F4")
@@ -492,7 +492,7 @@ def cb1(m):
     with baca.scope(m.get(1, 3)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         pheads = abjad.select.get(baca.select.pheads(o), [0, 1, 2, -2, -1])
         with baca.scope(pheads) as u:
             baca.pitch(u, "E4", do_not_transpose=True)

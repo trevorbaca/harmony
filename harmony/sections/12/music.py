@@ -708,7 +708,7 @@ def perc2(cache):
         )
     with baca.scope(m.get(3, 8)) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         library.tam_tam_staff_position(o)
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(
@@ -753,7 +753,7 @@ def perc1_perc2(cache):
             ]
             baca.override.dots_extra_offset(rests, (1, 0))
             baca.override.dots_x_extent_false(rests)
-            baca.rest_x_extent_zero(rests)
+            baca.override.rest_x_extent_zero(rests)
 
 
 def hp(cache):
@@ -832,9 +832,9 @@ def va(cache):
         baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(2, 4)) as o:
         baca.clef(o.leaf(0), "alto")
-        baca.note_head_style_harmonic_black(o.leaves(grace=False))
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=False))
         baca.pitch(o.leaves(grace=False), "Db3")
-        baca.note_head_style_harmonic_black(o.leaves(grace=True))
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=True))
         baca.pitches(
             o.leaves(grace=True),
             library.appoggiato_pitches_d_flat_3(),
@@ -881,9 +881,9 @@ def vc1(cache):
         baca.pitch(o, "Gqs6")
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.note_head_style_harmonic_black(o.leaves(grace=False))
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=False))
         baca.pitch(o.leaves(grace=False), "C3")
-        baca.note_head_style_harmonic_black(o.leaves(grace=True))
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=True))
         baca.pitches(
             o.leaves(grace=True),
             library.appoggiato_pitches_c_3(),
@@ -988,9 +988,9 @@ def cb1(cache):
         baca.pitch(o, "C#6", do_not_transpose=True)
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "bass")
-        baca.note_head_style_harmonic_black(o.leaves(grace=False))
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=False))
         baca.pitch(o.leaves(grace=False), "B2")
-        baca.note_head_style_harmonic_black(o.leaves(grace=True)),
+        baca.override.note_head_style_harmonic_black(o.leaves(grace=True)),
         baca.pitches(
             o.leaves(grace=True),
             library.appoggiato_pitches_b_2(),
@@ -1092,7 +1092,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[1]) as o:
-            baca.note_head_style_harmonic(o.pleaves())
+            baca.override.note_head_style_harmonic(o.pleaves())
             baca.flat_glissando(o, left_broken=True)
             baca.hairpin(
                 o.rleaves(),
@@ -1142,7 +1142,7 @@ def composites(cache):
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(13, 15)) as o:
-            baca.tuplet_bracket_up(o)
+            baca.override.tuplet_bracket_up(o)
 
 
 @baca.build.timed("make_score")

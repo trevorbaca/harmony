@@ -354,7 +354,7 @@ def vc1(m):
         baca.short_instrument_name(o.leaf(0), "Vc. I", library.manifests)
         baca.instrument_name(o.leaf(0), r"\harmony-cello-i-markup")
         baca.repeat_tie(abjad.select.get(o.leaves(), [1, 4]))
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
             leaves,
@@ -448,7 +448,7 @@ def cb1(m):
     with baca.scope(m[3]) as o:
         baca.staff_lines(o.leaf(0), 1)
         baca.clef(o.leaf(0), "percussion")
-        baca.tuplet_number_text(o, r"\markup 5:4")
+        baca.override.tuplet_number_text(o, r"\markup 5:4")
         library.bridge_staff_position(o)
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())

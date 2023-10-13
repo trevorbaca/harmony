@@ -339,7 +339,7 @@ def perc1(m):
         )
     with baca.scope(m[4]) as o:
         baca.staff_lines(o.leaf(0), 1)
-        baca.tuplet_bracket_down(o)
+        baca.override.tuplet_bracket_down(o)
         library.bass_drum_staff_position(o.pleaf(0))
         baca.laissez_vibrer(o.ptail(0))
         baca.dynamic(o.phead(0), "mp")
@@ -370,7 +370,7 @@ def perc2(m):
     with baca.scope(m[1]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.staff_lines(o.leaf(0), 5)
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitch(o.plt(0), "E4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "pp")
@@ -446,7 +446,7 @@ def hp(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
     with baca.scope(m[5]) as o:
-        baca.tuplet_bracket_up(o)
+        baca.override.tuplet_bracket_up(o)
         baca.pitches(o, "F5 E5 Eb5")
         baca.flageolet(o.pheads())
         baca.laissez_vibrer(o.ptails())
@@ -492,7 +492,7 @@ def va(m):
     with baca.scope(m[5]) as o:
         baca.accent(o.pheads())
         baca.laissez_vibrer(o.ptails())
-        baca.note_head_style_harmonic(o.pleaves())
+        baca.override.note_head_style_harmonic(o.pleaves())
         baca.dynamic(o.phead(0), "mf")
         baca.pizzicato_spanner(
             baca.select.rleak(o.tleaves(), count=2),
