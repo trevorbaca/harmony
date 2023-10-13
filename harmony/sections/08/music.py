@@ -163,7 +163,7 @@ def bfl(m):
     with baca.scope(m.get(8, 9)) as o:
         baca.pitch(o, "Ab3")
         baca.dynamic(o.phead(0), "mf")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
             baca.covered_spanner(
                 u,
@@ -187,7 +187,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
             abjad.Tweak(r"- \tweak X-extent #'(0 . 0)"),
         )
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-brake-drum-markup",
@@ -209,7 +209,7 @@ def perc2(m):
         baca.flat_glissando(o, hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.dynamic(o.phead(0), "pp")
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(cache):
@@ -254,7 +254,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         baca.dynamic(o.phead(0), "pp")
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def va(cache):
@@ -287,7 +287,7 @@ def va(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.pitch(o, "<B4 C5 D5>")
         cache.rebuild()
         m = cache[name]
@@ -335,7 +335,7 @@ def vc1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def vc2(cache):
@@ -381,7 +381,7 @@ def vc2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def cb1(cache):
@@ -415,7 +415,7 @@ def cb1(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def cb2(cache):
@@ -451,7 +451,7 @@ def cb2(cache):
         cache.rebuild()
         m = cache[name]
     with baca.scope(m.get(1, 9)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def composites(cache):

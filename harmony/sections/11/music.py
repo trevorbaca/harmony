@@ -503,7 +503,7 @@ def bfl(cache):
             right_broken=True,
         )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -513,7 +513,7 @@ def perc1(m):
         baca.pitch(o, "Eb4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mf")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-glockenspiel-markup",
@@ -595,7 +595,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(2, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -654,7 +654,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(cache):
@@ -716,7 +716,7 @@ def hp(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(1, 7)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[8]) as o:
         baca.clef(o.leaf(0), "percussion")
         baca.staff_lines(o.leaf(0), 1)
@@ -726,8 +726,8 @@ def hp(cache):
             'o< "f" >o niente',
             pieces=baca.select.lparts(o.run(0), [1, 3]),
         )
-        baca.dls_staff_padding(o, 6)
-        baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
+        baca.override.dls_staff_padding(o, 6)
+        baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.markup(
             o.pleaf(0),
             r"\baca-whisk-markup",
@@ -740,7 +740,7 @@ def hp(cache):
         baca.ottava_bassa(o.tleaves())
         library.damp_rest_after_each_ptail(o)
         baca.dynamic(o.phead(0), "f")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
     with baca.scope(m.get(1, 10)) as o:
         baca.ottava_bracket_staff_padding(o, 8)
 
@@ -797,7 +797,7 @@ def vc1(m):
             "o<| mp |>o niente",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
-        baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
+        baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.trill_spanner(
             baca.select.rleak(o.leaves()[-2:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
@@ -872,7 +872,7 @@ def cb1(m):
             "o<| mp |>o niente",
             pieces=baca.select.lparts(leaves, [1, 2]),
         )
-        baca.dynamic_text_x_offset(o.pleaf(1), -1.5)
+        baca.override.dynamic_text_x_offset(o.pleaf(1), -1.5)
         baca.trill_spanner(
             baca.select.rleak(abjad.select.leaves(o)[-2:]),
             abjad.Tweak(r"- \tweak bound-details.right.padding 2.75"),
@@ -1010,7 +1010,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 10)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
     for name in ["vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[6]) as o:

@@ -313,7 +313,7 @@ def bfl(cache):
                 bookend=False,
             )
     with baca.scope(m.get(1, 5)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -321,7 +321,7 @@ def perc1(m):
         library.bass_drum_staff_position(o)
         baca.laissez_vibrer(o.ptail(0))
         baca.dynamic(o.phead(0), "mp")
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-struck-markup",
@@ -331,7 +331,7 @@ def perc1(m):
         baca.staff_lines(o.leaf(0), 3)
         library.purpleheart_staff_positions(o, [2, -2, 0])
         baca.dynamic(o.phead(0), "p")
-        baca.dls_staff_padding(o, 5)
+        baca.override.dls_staff_padding(o, 5)
         baca.markup(
             o.pleaf(0),
             r"\baca-purpleheart-markup",
@@ -359,7 +359,7 @@ def perc1(m):
     with baca.scope(m[5]) as o:
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(4, 5)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.metric_modulation_spanner(
             o.leaves()[2:],
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
@@ -379,7 +379,7 @@ def perc2(m):
             r"\baca-glockenspiel-markup",
             abjad.Tweak(r"- \tweak staff-padding 4"),
         )
-        baca.dls_staff_padding(o.leaves()[:2], 4)
+        baca.override.dls_staff_padding(o.leaves()[:2], 4)
         with baca.scope(o.pleaf(-1)) as u:
             baca.clef(u, "percussion")
             baca.staff_lines(u, 1)
@@ -395,7 +395,7 @@ def perc2(m):
         baca.laissez_vibrer(o.ptails())
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:]) as u:
-            baca.dls_staff_padding(u, 6),
+            baca.override.dls_staff_padding(u, 6),
             baca.metric_modulation_spanner(
                 u,
                 abjad.Tweak(r"- \tweak staff-padding 10.5"),
@@ -406,7 +406,7 @@ def perc2(m):
         baca.pitch(o, "E4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "pp")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-glockenspiel-markup",
@@ -419,7 +419,7 @@ def perc2(m):
         baca.stem_tremolo(o.pleaves())
         baca.espressivo(o.pheads())
         baca.dynamic(o.phead(0), "p")
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.markup(
             o.pleaf(0),
             r"\baca-bd-fingertips-markup",
@@ -457,7 +457,7 @@ def hp(m):
             right_broken=True,
         ),
     with baca.scope(m.get(1, 5)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def va(m):
@@ -627,7 +627,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 5)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")

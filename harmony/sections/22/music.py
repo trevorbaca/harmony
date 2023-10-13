@@ -367,7 +367,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
             )
     with baca.scope(m.get(1, 13)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -429,7 +429,7 @@ def perc1(m):
             abjad.Tweak(r"- \tweak staff-padding 7"),
         )
     with baca.scope(m.get(1, 13)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -476,7 +476,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
     with baca.scope(m.get(1, 13)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(m):
@@ -538,7 +538,7 @@ def hp(m):
             right_broken=True,
         )
     with baca.scope(m.get(1, 13)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def va(m):
@@ -739,7 +739,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
     with baca.scope(m.get(3, 4)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
         baca.metric_modulation_spanner(
             baca.select.rleak(o.leaves()[1:]),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
@@ -764,12 +764,12 @@ def cb2(m):
                 abjad.select.leaves(o.leaves()), (4, 3)
             ),
         )
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
     with baca.scope(m[12]) as o:
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
         baca.hairpin(o, "pp >o niente")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.scp_spanner(
             o.leaves(),
             "T2 -> T4",
@@ -783,12 +783,12 @@ def composites(cache):
         m = cache[name]
         for item in [(1, 3), (5, 12)]:
             with baca.scope(m.get(item)) as o:
-                baca.dls_staff_padding(o, 4)
+                baca.override.dls_staff_padding(o, 4)
         with baca.scope(m[4]) as o:
             baca.clef(o.leaf(0), "percussion")
             baca.staff_lines(o.leaf(0), 1)
             baca.dynamic(o.phead(0), "pp")
-            baca.dls_staff_padding(o, 6)
+            baca.override.dls_staff_padding(o, 6)
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m[4]) as o:
@@ -804,7 +804,7 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             baca.accent(o.pheads())
             baca.dynamic(o.phead(0), "pp")
-            baca.dls_staff_padding(o, 6)
+            baca.override.dls_staff_padding(o, 6)
 
 
 @baca.build.timed("make_score")

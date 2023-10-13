@@ -313,7 +313,7 @@ def bfl(m):
     with baca.scope(m[11]) as o:
         baca.pitch(o, "F#3")
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(cache):
@@ -336,7 +336,7 @@ def perc1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 5.5)
+        baca.override.dls_staff_padding(o, 5.5)
 
 
 def perc2(m):
@@ -363,7 +363,7 @@ def perc2(m):
             right_broken=True,
         )
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 5.5)
+        baca.override.dls_staff_padding(o, 5.5)
 
 
 def hp(cache):
@@ -394,7 +394,7 @@ def hp(cache):
     with baca.scope(m[11]) as o:
         baca.pitch(o, "C#4")
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def va(cache):
@@ -417,7 +417,7 @@ def va(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.dls_staff_padding(o.leaves(grace=False), 4)
+        baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.text_spanner(
             baca.select.tleaves(o, grace=False, rleak=True),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -434,7 +434,7 @@ def va(cache):
             library.bridge_staff_position(o)
     for item in [(1, 8), 11]:
         with baca.scope(m.get(item)) as o:
-            baca.dls_staff_padding(o, 6)
+            baca.override.dls_staff_padding(o, 6)
 
 
 def vc1(cache):
@@ -476,7 +476,7 @@ def vc1(cache):
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def vc2(cache):
@@ -512,7 +512,7 @@ def vc2(cache):
         with baca.scope(m.get(item)) as o:
             baca.pitch(o, "F3")
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def vcs(cache):
@@ -547,7 +547,7 @@ def cb1(cache):
             "ff-p",
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
-        baca.dls_staff_padding(o.leaves(grace=False), 6)
+        baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.text_spanner(
             baca.select.tleaves(o, grace=False, rleak=True),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
@@ -572,7 +572,7 @@ def cb1(cache):
             )
     for item in [(1, 8), 11]:
         with baca.scope(m.get(item)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 def cb2(m):
@@ -621,7 +621,7 @@ def cb2(m):
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
         )
     with baca.scope(m.get(1, 11)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def cbs(cache):

@@ -262,9 +262,9 @@ def bfl(m):
         )
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3)
-            baca.accidental_font_size(u, -3)
-            baca.accidental_x_offset(u, 0)
-            baca.accidental_y_offset(u, -2)
+            baca.override.accidental_font_size(u, -3)
+            baca.override.accidental_x_offset(u, 0)
+            baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
                 run,
@@ -306,9 +306,9 @@ def bfl(m):
         )
         with baca.scope(o.tleaves()) as u:
             baca.note_head_font_size(u, -3)
-            baca.accidental_font_size(u, -3)
-            baca.accidental_x_offset(u, 0)
-            baca.accidental_y_offset(u, -2)
+            baca.override.accidental_font_size(u, -3)
+            baca.override.accidental_x_offset(u, 0)
+            baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
                 run,
@@ -324,7 +324,7 @@ def bfl(m):
                 ),
             )
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
 
 
 def perc1(m):
@@ -362,7 +362,7 @@ def perc1(m):
     with baca.scope(m[10]) as o:
         library.brake_drum_staff_position(o)
     with baca.scope(m.get(1, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def perc2(m):
@@ -411,7 +411,7 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
     with baca.scope(m.get(2, 10)) as o:
-        baca.dls_staff_padding(o, 6)
+        baca.override.dls_staff_padding(o, 6)
 
 
 def hp(m):
@@ -421,7 +421,7 @@ def hp(m):
         baca.pitch(o, "Ab4")
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "mp")
-        baca.dls_staff_padding(o, 4)
+        baca.override.dls_staff_padding(o, 4)
         baca.markup(
             o.pleaf(0),
             r"\baca-pince-markup",
@@ -432,7 +432,7 @@ def hp(m):
             baca.clef(u, "percussion")
             baca.staff_lines(u, 1)
             baca.dynamic(u, "p")
-            baca.dls_staff_padding(u, 6)
+            baca.override.dls_staff_padding(u, 6)
             baca.markup(
                 u,
                 r"\baca-whisk-markup",
@@ -454,7 +454,7 @@ def hp(m):
             "f-sempre",
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
-        baca.dls_staff_padding(o, 4 + 3)
+        baca.override.dls_staff_padding(o, 4 + 3)
         baca.markup(
             o.phead(-1),
             r"\baca-lv-into-fermata-markup",
@@ -709,7 +709,7 @@ def composites(cache):
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]
         with baca.scope(m.get(1, 10)) as o:
-            baca.dls_staff_padding(o, 4)
+            baca.override.dls_staff_padding(o, 4)
 
 
 @baca.build.timed("make_score")
