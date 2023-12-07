@@ -397,6 +397,8 @@ number.24.Rests = {
 number.24.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "treble"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -421,8 +423,6 @@ number.24.BassFlute.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
-      %! REAPPLIED_CLEF
-    \clef "treble"
     f'''8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2116,6 +2116,8 @@ number.24.BassFlute.Staff = <<
 number.24.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "percussion"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2142,8 +2144,6 @@ number.24.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! REAPPLIED_STAFF_LINES
     \startStaff
-      %! REAPPLIED_CLEF
-    \clef "percussion"
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2370,6 +2370,8 @@ number.24.Percussion.1.Staff = <<
 number.24.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "percussion"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2393,8 +2395,6 @@ number.24.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! REAPPLIED_STAFF_LINES
     \startStaff
-      %! REAPPLIED_CLEF
-    \clef "percussion"
     b8
     - \tweak staff-padding 6
     ^ \baca-bd-superball-markup
@@ -2760,6 +2760,8 @@ number.24.Percussion.2.Staff = <<
 number.24.Harp.Music = {
 
     % [Harp.Music measure 1]
+      %! REAPPLIED_CLEF
+    \clef "treble"
       %! REAPPLIED_CLEF_COLOR
     \once \override Staff.Clef.color = #(x11-color 'green4)
       %! REAPPLIED_SHORT_INSTRUMENT_NAME_COLOR
@@ -2784,8 +2786,6 @@ number.24.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
-      %! REAPPLIED_CLEF
-    \clef "treble"
     a'16
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2870,6 +2870,8 @@ number.24.Harp.Music = {
     %@% ^ \baca-duration-multiplier-markup #"3" #"4"
 
     % [Harp.Music measure 5]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_221
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -2893,8 +2895,6 @@ number.24.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     c'8.
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -3035,6 +3035,8 @@ number.24.Harp.Staff = <<
 number.24.Viola.Music = {
 
     % [Viola.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "alto"
       %! MEASURE_217
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -3065,8 +3067,6 @@ number.24.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "alto"
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
@@ -3752,6 +3752,8 @@ number.24.Cello.1.Music = {
     {
 
         % [Cello.1.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
           %! MEASURE_217
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -3780,8 +3782,6 @@ number.24.Cello.1.Music = {
         \once \override Staff.StaffSymbol.line-count = 5
           %! EXPLICIT_STAFF_LINES
         \startStaff
-          %! EXPLICIT_CLEF
-        \clef "treble"
         f'4
         - \baca-staccati #3
           %! REAPPLIED_DYNAMIC_COLOR
@@ -4037,6 +4037,8 @@ number.24.Cello.1.Music = {
     \bacaStopTextSpanSCP
 
     % [Cello.1.Music measure 5]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_221
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -4049,8 +4051,6 @@ number.24.Cello.1.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "bass"
     fs,!2.
     :32
     - \accent
@@ -4357,6 +4357,8 @@ number.24.Cello.1.Staff = <<
 number.24.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_217
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -4384,8 +4386,6 @@ number.24.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "treble"
       %! SPANNER_START
     \pitchedTrill
     f'4 * 1/2
@@ -4676,14 +4676,14 @@ number.24.Cello.2.Music = {
       %! SPANNER_START
     \>
 
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "bass"
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -5068,6 +5068,8 @@ number.24.Contrabass.1.Music = {
     {
 
         % [Contrabass.1.Music measure 1]
+          %! EXPLICIT_CLEF
+        \clef "treble"
           %! MEASURE_217
           %! SHIFTED_CLEF
     %%% \once \override Staff.Clef.X-extent = ##f
@@ -5096,8 +5098,6 @@ number.24.Contrabass.1.Music = {
         \once \override Staff.StaffSymbol.line-count = 5
           %! EXPLICIT_STAFF_LINES
         \startStaff
-          %! EXPLICIT_CLEF
-        \clef "treble"
         e'4
         - \baca-staccati #3
           %! REAPPLIED_DYNAMIC_COLOR
@@ -5353,6 +5353,8 @@ number.24.Contrabass.1.Music = {
     \bacaStopTextSpanSCP
 
     % [Contrabass.1.Music measure 5]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_221
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -5365,8 +5367,6 @@ number.24.Contrabass.1.Music = {
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "bass"
     fs,!2
     :32
     - \accent
@@ -5678,6 +5678,8 @@ number.24.Contrabass.1.Staff = <<
 number.24.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_217
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -5708,8 +5710,6 @@ number.24.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! REAPPLIED_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "treble"
       %! SPANNER_START
     \pitchedTrill
     e'4 * 1/2
@@ -6000,14 +6000,14 @@ number.24.Contrabass.2.Music = {
       %! SPANNER_START
     \>
 
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! EXPLICIT_CLEF_COLOR_CANCELLATION
     %@% \override Staff.Clef.color = ##f
       %! EXPLICIT_CLEF
     \set Staff.forceClef = ##t
-      %! EXPLICIT_CLEF
-    \clef "bass"
     r8
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
