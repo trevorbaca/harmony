@@ -5,14 +5,14 @@ number.29.Skips = {
     %@% \baca-thick-red-bar-line
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 6/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
     %@% \tweak color #red
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "29"
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 6/4
     s1 * 6/4
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
@@ -1376,6 +1376,8 @@ number.29.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 3]
       %! -PARTS
+    \mark \harmony-colophon-markup
+      %! -PARTS
     \once \override Score.RehearsalMark.direction = #down
       %! -PARTS
     \once \override Score.RehearsalMark.extra-offset = #'(92 . 8)
@@ -1386,8 +1388,6 @@ number.29.Contrabass.2.Music = {
     \stopStaff
     \once \override Staff.StaffSymbol.line-count = 0
     \startStaff
-      %! -PARTS
-    \mark \harmony-colophon-markup
     R1 * 1/4
       %! DURATION_MULTIPLIER
     %@% ^ \baca-duration-multiplier-markup #"1" #"4"

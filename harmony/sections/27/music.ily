@@ -6,14 +6,14 @@ number.27.Skips = {
       %! EXPLICIT_TIME_SIGNATURE_COLOR
     \baca-time-signature-color #blue
     \override TextScript.extra-offset = #'(1.5 . 12)
-      %! EXPLICIT_TIME_SIGNATURE
-    \time 7/4
       %! RED_START_BAR
     %@% \tweak break-visibility ##(#t #t #f)
       %! RED_START_BAR
     %@% \tweak color #red
       %! RED_START_BAR
     %@% \mark \markup \with-dimensions-from \null "27"
+      %! EXPLICIT_TIME_SIGNATURE
+    \time 7/4
     s1 * 7/4
       %! EXPLICIT_METRONOME_MARK
       %! METRIC_MODULATION_IS_SCALED
