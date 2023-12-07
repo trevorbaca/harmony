@@ -260,6 +260,8 @@ number.1.BassFlute.Music.item.4 = {
 number.1.BassFlute.Music = {
 
     % [BassFlute.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "treble"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -292,8 +294,6 @@ number.1.BassFlute.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "treble"
     r16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“BassFlute”)"
@@ -611,6 +611,8 @@ number.1.BassFlute.Staff = <<
 number.1.Percussion.1.Music = {
 
     % [Percussion.1.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -643,8 +645,6 @@ number.1.Percussion.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     r1
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Percussion”)"
@@ -843,6 +843,8 @@ number.1.Percussion.1.Staff = <<
 number.1.Percussion.2.Music = {
 
     % [Percussion.2.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -873,8 +875,6 @@ number.1.Percussion.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     d'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1015,6 +1015,8 @@ number.1.Percussion.2.Staff = <<
 number.1.Harp.Music = {
 
     % [Harp.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1048,8 +1050,6 @@ number.1.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     c'4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1110,6 +1110,8 @@ number.1.Harp.Music = {
     \revert TupletBracket.direction
 
     % [Harp.Music measure 3]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_3
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -1134,8 +1136,6 @@ number.1.Harp.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "bass"
     g,,2
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1170,6 +1170,8 @@ number.1.Harp.Staff = <<
 number.1.Viola.Music = {
 
     % [Viola.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "alto"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1201,8 +1203,6 @@ number.1.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "alto"
     r16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Viola”)"
@@ -1312,6 +1312,8 @@ number.1.Viola.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Viola.Music measure 3]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_3
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -1334,8 +1336,6 @@ number.1.Viola.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     r4
       %! DAMP_SPANNER
       %! SPANNER_STOP
@@ -1384,6 +1384,8 @@ number.1.Viola.Staff = <<
 number.1.Cello.1.Music = {
 
     % [Cello.1.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1413,8 +1415,6 @@ number.1.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "bass"
     a,4
     :32
     - \accent
@@ -1600,6 +1600,8 @@ number.1.Cello.1.Music = {
     \bacaStopTextSpanSCP
     \revert DynamicLineSpanner.staff-padding
 
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! EXPLICIT_CLEF_COLOR
     \once \override Staff.Clef.color = #blue
       %! EXPLICIT_STAFF_LINES_COLOR
@@ -1614,8 +1616,6 @@ number.1.Cello.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -1664,6 +1664,8 @@ number.1.Cello.1.Staff = <<
 number.1.Cello.2.Music = {
 
     % [Cello.2.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1692,8 +1694,6 @@ number.1.Cello.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "bass"
     r16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Cello”)"
@@ -1884,6 +1884,8 @@ number.1.Cello.2.Staff = <<
 number.1.Contrabass.1.Music = {
 
     % [Contrabass.1.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -1912,8 +1914,6 @@ number.1.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "bass"
     a,1
     :32
     - \accent
@@ -2081,6 +2081,8 @@ number.1.Contrabass.1.Music = {
     \revert DynamicLineSpanner.staff-padding
 
     % [Contrabass.1.Music measure 3]
+      %! EXPLICIT_CLEF
+    \clef "percussion"
       %! MEASURE_3
       %! SHIFTED_CLEF
     \once \override Staff.Clef.X-extent = ##f
@@ -2104,8 +2106,6 @@ number.1.Contrabass.1.Music = {
     \once \override Staff.StaffSymbol.line-count = 1
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "percussion"
     r4
       %! EXPLICIT_DYNAMIC_COLOR
       %! EXPLICIT_DYNAMIC
@@ -2215,6 +2215,8 @@ number.1.Contrabass.1.Staff = <<
 number.1.Contrabass.2.Music = {
 
     % [Contrabass.2.Music measure 1]
+      %! EXPLICIT_CLEF
+    \clef "bass"
       %! MEASURE_1
       %! SHIFTED_CLEF
 %%% \once \override Staff.Clef.X-extent = ##f
@@ -2246,8 +2248,6 @@ number.1.Contrabass.2.Music = {
     \once \override Staff.StaffSymbol.line-count = 5
       %! EXPLICIT_STAFF_LINES
     \startStaff
-      %! EXPLICIT_CLEF
-    \clef "bass"
     r16
       %! EXPLICIT_INSTRUMENT_ALERT
     %@% ^ \baca-explicit-instrument-markup "(“Contrabass”)"
