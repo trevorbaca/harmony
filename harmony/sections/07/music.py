@@ -615,6 +615,7 @@ def hp(cache):
             baca.markup(u, r"\baca-whisk-markup")
             baca.dynamic(u, '"f"')
             baca.override.dls_staff_padding(u, 6 + 2)
+        library.whisk_staff_position(o.pleaf(-1))
     with baca.scope(m[8]) as o:
         library.whisk_staff_position(o)
         baca.dynamic(o.phead(0), '"f"')
