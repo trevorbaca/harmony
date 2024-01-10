@@ -1831,8 +1831,6 @@ number.7.Harp.Music = {
 
         r4
 
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
           %! EXPLICIT_CLEF
         \clef "percussion"
         \once \override DynamicLineSpanner.staff-padding = 8
@@ -1883,8 +1881,8 @@ number.7.Harp.Music = {
         %@% \abjad-invisible-music
           %! INVISIBLE_MUSIC_COLORING
         \abjad-invisible-music-coloring
-          %! REPEAT_PITCH_CLASS_COLORING
-        \baca-repeat-pitch-class-coloring
+        \once \override Stem.direction = #down
+        \once \override TupletBracket.direction = #up
         c'4 * 1/2
           %! DURATION_MULTIPLIER
         %@% ^ \baca-duration-multiplier-markup #"1" #"2"
