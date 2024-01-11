@@ -3118,7 +3118,7 @@ number.3.Contrabass.1.Music = {
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! PIZZICATO_SPANNER
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
@@ -3593,7 +3593,7 @@ number.3.Contrabass.2.Music = {
     - \baca-text-spanner-left-markup \baca-pizz-markup
       %! PIZZICATO_SPANNER
       %! SPANNER_START
-    - \tweak bound-details.left-broken.text \baca-pizz-markup
+    - \tweak bound-details.left-broken.text \baca-left-broken-pizz-markup
       %! PIZZICATO_SPANNER
       %! SPANNER_START
     - \tweak staff-padding 5.5
