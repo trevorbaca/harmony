@@ -267,7 +267,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(run), (4, 5)
@@ -284,7 +284,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
@@ -311,7 +311,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(run), (4, 5)
@@ -484,7 +484,7 @@ def va(cache):
         )
     with baca.scope(m.get(5, 10)) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=abjad.select.partition_by_counts(
@@ -528,7 +528,7 @@ def vc1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! >"
             " mf < ff-scratch -- niente",
             pieces=abjad.select.partition_by_counts(
@@ -570,7 +570,7 @@ def vc2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=abjad.select.partition_by_counts(
@@ -614,7 +614,7 @@ def cb1(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=abjad.select.partition_by_counts(
@@ -657,7 +657,7 @@ def cb2(cache):
     with baca.scope(m.get(5, 10)) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! > p < mf -- ! > mp < f-scratch -- ! > mf"
             " < ff-scratch -- niente",
             pieces=abjad.select.partition_by_counts(

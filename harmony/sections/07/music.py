@@ -348,7 +348,7 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                o,
+                (),
                 "o<| f |>o niente",
                 pieces=baca.select.clparts(o, [1]),
             )
@@ -357,14 +357,14 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
         baca.override.dynamic_text_x_offset(o.pleaf(1), -0.75)
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpin(
-            leaves,
+            (),
             "o<| mf |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
@@ -379,7 +379,7 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves()[-2:])
         leaves = o.leaves()[-2:]
         baca.hairpin(
-            leaves,
+            (),
             "o< f >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
@@ -399,7 +399,7 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o< f >o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
@@ -559,7 +559,7 @@ def hp(cache):
     with baca.scope(m[2]) as o:
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mf >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )

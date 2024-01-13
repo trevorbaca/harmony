@@ -470,7 +470,7 @@ def va(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
             pieces=baca.select.plts(o),
@@ -487,7 +487,7 @@ def vc1(m):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            o,
+            (),
             "p mp",
             bookend=False,
             pieces=baca.select.plts(o)[1:],
@@ -530,7 +530,7 @@ def vc1(m):
         )
         leaves = o.rleaves(count=3)[1:]
         baca.hairpin(
-            leaves,
+            (),
             # '"ff" "f" mf mp p pp ppp ppp',
             '"f" mf mp p pp ppp ppp',
             bookend=False,
@@ -673,7 +673,7 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             '"ff" "f" mf mp p pp ppp ppp',
             bookend=False,
             pieces=baca.select.plts(o),
@@ -752,7 +752,7 @@ def composites(cache):
         with baca.scope(m[2]) as o:
             baca.accent(o.pheads())
             baca.hairpin(
-                o,
+                (),
                 "pp p mp mf f",
                 bookend=False,
                 pieces=baca.select.plts(o),

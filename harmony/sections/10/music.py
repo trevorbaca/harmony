@@ -375,7 +375,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[10]) as o:
         baca.hairpin(
-            o,
+            (),
             "o< mp >o",
             forbid_al_niente_to_bar_line=True,
             pieces=abjad.select.partition_by_counts(
@@ -392,21 +392,21 @@ def bfl(cache):
         )
     with baca.scope(m.get(11)) as o:
         baca.hairpin(
-            o,
+            (),
             "o< mf >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.lparts(o, [1, 1]),
         )
     with baca.scope(m.get(12)) as o:
         baca.hairpin(
-            o,
+            (),
             "o< f >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.lparts(o, [1, 1]),
         )
     with baca.scope(m.get(13)) as o:
         baca.hairpin(
-            o,
+            (),
             "o< mf >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.lparts(o, [1, 1]),
@@ -415,7 +415,7 @@ def bfl(cache):
         baca.pitch(o.leaves(grace=False), "G4")
     with baca.scope(m[14]) as o:
         baca.hairpin(
-            o,
+            (),
             "o< mp >o niente",
             pieces=baca.select.lparts(o, [1, 3]),
         )
@@ -450,7 +450,7 @@ def perc1(m):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o< p >o niente",
             pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
@@ -661,7 +661,7 @@ def va(m):
         ),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
@@ -750,7 +750,7 @@ def vc1(m):
         ),
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
         )
@@ -837,7 +837,7 @@ def vc2(m):
         )
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
@@ -866,7 +866,7 @@ def cb1(m):
         )
     with baca.scope(m.get(12, 15)) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(pp) >o niente o< mf >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [1, 1, 3]),
         )
@@ -956,7 +956,7 @@ def cb2(m):
         )
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
             right_broken=True,
@@ -1004,7 +1004,7 @@ def composites(cache):
             baca.override.note_head_style_harmonic(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                leaves,
+                (),
                 "o<| mp |>o niente",
                 pieces=baca.select.lparts(leaves, [1, 1 + 1]),
             )

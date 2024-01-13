@@ -357,7 +357,7 @@ def vc1(m):
         baca.override.tuplet_bracket_down(o)
         leaves = baca.select.rleaves(o, count=2)
         baca.hairpin(
-            leaves,
+            (),
             "o< f >o niente",
             pieces=baca.select.lparts(leaves, [4, 5]),
         )
@@ -432,7 +432,7 @@ def cb1(m):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< f >o niente",
             pieces=baca.select.lparts(o.rleaves(), [4, 7]),
         )

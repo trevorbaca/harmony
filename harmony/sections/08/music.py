@@ -230,19 +230,19 @@ def hp(cache):
         )
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "p < mf > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < f > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -270,19 +270,19 @@ def va(cache):
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < mf > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < f > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -314,19 +314,19 @@ def vc1(cache):
         )
     with baca.scope(m[2]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "p < mf > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < f > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -365,13 +365,13 @@ def vc2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < f > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -400,13 +400,13 @@ def cb1(cache):
         )
     with baca.scope(m[4]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "p < f > p",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -441,7 +441,7 @@ def cb2(cache):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m[6]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "(p) < ff >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )

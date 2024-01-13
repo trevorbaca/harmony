@@ -201,7 +201,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "niente o< mf >o",
                 pieces=baca.select.lparts(run, [1, 2 + 1]),
             )
@@ -220,7 +220,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
@@ -416,7 +416,7 @@ def vc1(m):
             run = baca.select.rleak(run)
             baca.pitch(run, "F4")
             baca.hairpin(
-                run,
+                (),
                 "niente o<| mp |>o",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -507,7 +507,7 @@ def cb1(m):
             run = baca.select.rleak(run)
             baca.pitch(run, "E4", do_not_transpose=True)
             baca.hairpin(
-                run,
+                (),
                 "niente o<| mp |>o",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -591,7 +591,7 @@ def composites(cache):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(run)
                 baca.hairpin(
-                    run,
+                    (),
                     "niente o<| mp |>o",
                     pieces=baca.select.lparts(run, [1, 1 + 1]),
                 )

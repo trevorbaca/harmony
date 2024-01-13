@@ -383,7 +383,7 @@ def bfl(cache):
             baca.override.accidental_x_offset(u, 0),
             baca.override.accidental_y_offset(u, -2),
         baca.hairpin(
-            o.tleaves(),
+            (),
             "o< mp >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
@@ -406,7 +406,7 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
@@ -416,7 +416,7 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -1),
         )
         baca.hairpin(
-            o.tleaves(),
+            (),
             "o< mp >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
@@ -432,7 +432,7 @@ def bfl(cache):
             abjad.sequence.rotate(library.warble_pitches(), -2),
         )
         baca.hairpin(
-            o.tleaves(),
+            (),
             "o< mp >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.tleaves()), (3, 4)
@@ -576,7 +576,7 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.9"),
         )
         baca.hairpin(
-            o,
+            (),
             # '"ff" "ff" "ff" "f" "f" mf mp p pp',
             '"ff" "ff" "f" "f" mf mp p pp',
             pieces=baca.select.plts(o)[1:],
@@ -646,7 +646,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o< mf >o niente",
             pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
@@ -779,7 +779,7 @@ def vc1(cache):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             '"ff" "ff" "f" "f" mf mp p',
             pieces=baca.select.plts(o),
         )
@@ -823,7 +823,7 @@ def vc2(cache):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             '"ff" "ff"',
             pieces=baca.select.plts(o),
         )
@@ -851,7 +851,7 @@ def vc2(cache):
         baca.stem_tremolo(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            o,
+            (),
             '"ff" "ff" "f" mf mp p pp',
             pieces=baca.select.plts(o),
         )
