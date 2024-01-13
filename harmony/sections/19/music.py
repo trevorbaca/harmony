@@ -560,7 +560,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
             baca.hairpin(
-                u,
+                (),
                 "o< mp >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(u),
@@ -592,7 +592,7 @@ def bfl(m):
             baca.override.accidental_x_offset(u, 0)
             baca.override.accidental_y_offset(u, -2)
             baca.hairpin(
-                u,
+                (),
                 "o< mf >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(u),
@@ -873,7 +873,7 @@ def va(cache):
         baca.override.tuplet_bracket_up(o)
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o.tleaves(),
+            (),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o",
             pieces=baca.select.clparts(o.tleaves(), [1]),
         )
@@ -994,7 +994,7 @@ def cb2(cache):
         baca.pitch(o, "E5", do_not_transpose=True)
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente o<| mp |>o niente",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.lparts(leaves, [1, 1, 1, 1, 1, 1, 2, 1 + 1]),
@@ -1041,7 +1041,7 @@ def composites(cache):
             baca.stem_tremolo(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                leaves,
+                (),
                 "o<| mp |> pp pp <| mp |>o niente",
                 pieces=baca.select.lparts(leaves, [1, 1, 2, 1, 1 + 1]),
             )
@@ -1054,7 +1054,7 @@ def composites(cache):
             baca.flat_glissando(o.pleaves())
             leaves = baca.select.tleaves(o, rleak=True)
             baca.hairpin(
-                leaves,
+                (),
                 "o< mp >o niente",
                 pieces=baca.select.lparts(leaves, [2, 1 + 1]),
             )

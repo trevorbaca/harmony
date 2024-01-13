@@ -324,7 +324,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -345,7 +345,7 @@ def bfl(m):
     with baca.scope(m.get(5, 10)) as o:
         baca.pitch(o, "Gqs5")
         baca.hairpin(
-            o.leaves(),
+            (),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(o.leaves(), [1]),
@@ -377,7 +377,7 @@ def perc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< pp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -559,7 +559,7 @@ def va(m):
         baca.pitches(o, "D4 C#4")
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.leaves(),
+            (),
             "o< ff >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
@@ -593,7 +593,7 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -612,7 +612,7 @@ def vc1(m):
         baca.pitch(o, "F#5")
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.hairpin(
-            o.leaves(),
+            (),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(o.leaves(), [1]),
@@ -659,7 +659,7 @@ def vc2(m):
         baca.pitches(o, "Gb4 F4")
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.leaves(),
+            (),
             "o< ff >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)
@@ -705,7 +705,7 @@ def cb1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "Cqf5")
         baca.hairpin(
-            o.leaves(),
+            (),
             "niente o< mp >o",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(o.leaves(), [1]),
@@ -749,7 +749,7 @@ def cb2(m):
         baca.pitches(o, "D2 C#2")
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.leaves(),
+            (),
             "o< ff >o niente",
             pieces=abjad.select.partition_by_ratio(
                 abjad.select.leaves(o.leaves()), (4, 3)

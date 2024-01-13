@@ -223,7 +223,7 @@ def bfl(m):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(run), (4, 5)
@@ -243,7 +243,7 @@ def bfl(m):
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-1],
         )
         baca.hairpin(
-            o,
+            (),
             "p < mp >",
             pieces=baca.select.clparts(o, [1]),
         )
@@ -262,7 +262,7 @@ def perc1(m):
         baca.flat_glissando(o.pleaves(), hide_middle_stems=True)
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -1]))
         baca.hairpin(
-            o.tleaves(),
+            (),
             "p < mp > p p < mp > p",
             pieces=baca.select.clparts(o.tleaves(), [1]),
         )
@@ -291,7 +291,7 @@ def perc1(m):
         )
         baca.stem_tremolo(abjad.select.get(o.pleaves(), [0, -7]))
         baca.hairpin(
-            o,
+            (),
             "p < mp >",
             pieces=baca.select.clparts(o, [1]),
         )
@@ -433,7 +433,7 @@ def vc1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mp >o",
             bookend=False,
             pieces=baca.select.cmgroups(o.rleaves(), [2, 3]),
@@ -446,7 +446,7 @@ def vc1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [2, 3, 1 + 1]),
         )
@@ -464,7 +464,7 @@ def vc1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#6")
         baca.hairpin(
-            o,
+            (),
             "niente o< pp >o ! o< pp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< pp >o ! o< p >o !"
             " o< p >o ! o< mp >o ! o< mf >o ! o< mp >o !"
@@ -499,7 +499,7 @@ def vc2(cache):
         baca.pitches(o, "A5 C#6")
         baca.glissando(o.tleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mp >o",
             bookend=False,
             pieces=baca.select.cmgroups(o.rleaves(), [2, 3]),
@@ -512,7 +512,7 @@ def vc2(cache):
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp -- ! >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2, 3, 2 + 1]),
         )
@@ -531,7 +531,7 @@ def vc2(cache):
         baca.pitch(o, "A5")
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             "niente o< pp >o ! o< p >o ! o< p >o ! o< pp >o !"
             " o< pp >o ! o< p >o ! o< pp >o !"
             " o< p >o ! o< mp >o ! o< mp >o ! o< mf >o !"
@@ -568,7 +568,7 @@ def cb1(cache):
         for run in baca.select.runs(o):
             rrun = baca.select.rleak(run)
             baca.hairpin(
-                rrun,
+                (),
                 "niente o< mp >o niente",
                 pieces=baca.select.lparts(rrun, [1, 1 + 1]),
             )
@@ -584,7 +584,7 @@ def cb1(cache):
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [2, 3, 2 + 1]),
         )
@@ -603,7 +603,7 @@ def cb1(cache):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.pitch(o, "C#4", do_not_transpose=True)
         baca.hairpin(
-            o,
+            (),
             "niente o< pp >o ! o< pp >o ! o< p >o ! o< p >o !"
             " o< pp >o ! o< pp >o ! o< p >o !"
             " o< mp >o ! o< mp >o ! o< p >o ! o< mp >o !"
@@ -639,7 +639,7 @@ def cb2(cache):
             hide_stem_selector=lambda _: baca.select.pleaves(_)[1:-2],
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff >o",
             bookend=False,
             pieces=baca.select.mgroups(o.rleaves(), [3, 2]),
@@ -660,7 +660,7 @@ def cb2(cache):
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp -- ! < mp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [2, 1, 1 + 1]),
         )
@@ -689,7 +689,7 @@ def cb2(cache):
             right_broken=True,
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< ff (ff) >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [2, 1, 2]),
             right_broken=True,

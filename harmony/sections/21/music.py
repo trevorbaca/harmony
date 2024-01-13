@@ -276,7 +276,7 @@ def bfl(cache):
         for i, run in enumerate(runs):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< f >o niente",
                 pieces=baca.select.lparts(run, [1, 2]),
             )

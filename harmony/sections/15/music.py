@@ -263,7 +263,7 @@ def bfl(cache):
         m = cache[name]
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mp >o !",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -275,7 +275,7 @@ def bfl(cache):
             abjad.Tweak(r"- \tweak staff-padding 8"),
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             'o< "f" >o niente',
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )

@@ -482,7 +482,7 @@ def bfl(cache):
             m = cache[name]
     with baca.scope(m[1]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mf >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -493,19 +493,19 @@ def bfl(cache):
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[5]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< p >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
     with baca.scope(m[7]) as o:
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< pp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -514,7 +514,7 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
@@ -588,7 +588,7 @@ def bfl(cache):
         )
         baca.pitch(o.leaves()[-2:], "B4")
         baca.hairpin(
-            o.rleaves(),
+            (),
             'o< "f" >o niente o< p >o niente'
             ' o< "f" >o niente o< p >o niente'
             ' o< "f" >o niente o< f >o niente',
@@ -778,7 +778,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o< mf >o",
             bookend=False,
             pieces=baca.select.lparts(leaves, [1, 4]),

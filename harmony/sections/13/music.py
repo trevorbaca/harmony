@@ -268,7 +268,7 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
@@ -282,7 +282,7 @@ def bfl(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )
@@ -314,7 +314,7 @@ def bfl(cache):
         )
         baca.breathe(o.pleaf(1))
         baca.hairpin(
-            o.rleaves(),
+            (),
             'o< "f" >o niente',
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -469,7 +469,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         leaves = baca.select.tleaves(o, rleak=True)
         baca.hairpin(
-            leaves,
+            (),
             "o< mf >o niente",
             pieces=baca.select.lparts(leaves, [1, 1 + 1]),
         )

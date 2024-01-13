@@ -288,7 +288,7 @@ def bfl(m):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3"),
         baca.hairpin(
-            o,
+            (),
             "pp p",
             bookend=False,
             pieces=baca.select.plts(o),
@@ -439,7 +439,7 @@ def hp(m):
         baca.pitch(o, "C#4")
         baca.accent(o.pheads())
         baca.hairpin(
-            o,
+            (),
             "pp p",
             bookend=False,
             pieces=baca.select.plts(o),
@@ -545,7 +545,7 @@ def vc1(m):
             baca.staff_lines(u, 5)
     with baca.scope(m[3]) as o:
         baca.hairpin(
-            o,
+            (),
             "p mp",
             bookend=False,
             pieces=baca.select.plts(o)[1:],
@@ -644,7 +644,7 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             "pp ppp",
             bookend=False,
             pieces=baca.select.plts(o),
@@ -657,7 +657,7 @@ def cb1(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            o,
+            (),
             "pp p mp",
             bookend=False,
             pieces=baca.select.plts(o),
@@ -720,7 +720,7 @@ def cb2(m):
         baca.override.note_head_style_harmonic(o.pleaves())
         baca.accent(o.pheads())
         baca.hairpin(
-            o,
+            (),
             "pp p",
             bookend=False,
             pieces=baca.select.plts(o),

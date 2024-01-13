@@ -306,7 +306,7 @@ def bfl(m):
         baca.stem_tremolo(abjad.select.get(o.plts(), [0, 1], 3))
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                clpart,
+                (),
                 "o<| ff |> p",
                 pieces=baca.select.clparts(clpart, [1]),
             )
@@ -382,7 +382,7 @@ def hp(cache):
         baca.stem_tremolo(o.pleaves())
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                clpart,
+                (),
                 "p < ff > p",
                 pieces=baca.select.clparts(clpart, [1]),
             )
@@ -594,7 +594,7 @@ def cb2(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "Ab1")
         baca.hairpin(
-            o.rleaves(),
+            (),
             'o< "mf" >o niente',
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -647,7 +647,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             baca.hairpin(
-                o,
+                (),
                 "pp p mp mf f",
                 bookend=False,
                 pieces=baca.select.plts(o),
@@ -656,7 +656,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
             baca.hairpin(
-                o,
+                (),
                 "mf mp p pp pp pp",
                 bookend=False,
                 pieces=baca.select.plts(o),
@@ -665,7 +665,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(1, 3)) as o:
             baca.hairpin(
-                o,
+                (),
                 'pp p mp mf "f"',
                 bookend=False,
                 pieces=baca.select.plts(o),
@@ -673,7 +673,7 @@ def composites(cache):
     m = cache["vc1"]
     with baca.scope(m.get(1, 3)) as o:
         baca.hairpin(
-            o,
+            (),
             'p mp mf "f"',
             bookend=False,
             pieces=baca.select.plts(o)[1:],
@@ -682,7 +682,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(4, 6)) as o:
             baca.hairpin(
-                o,
+                (),
                 "mf mp p pp pp pp",
                 bookend=False,
                 pieces=baca.select.plts(o),

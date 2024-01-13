@@ -480,13 +480,13 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
         leaves = baca.select.rleak(o.leaves()[-2:])
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
@@ -496,7 +496,7 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
@@ -511,13 +511,13 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
         leaves = baca.select.rleak(abjad.select.leaves(o)[-2:])
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
@@ -527,7 +527,7 @@ def bfl(m):
         baca.stem_tremolo(o.pleaves())
         leaves = o.leaves()[:3]
         baca.hairpin(
-            leaves,
+            (),
             "o<| f |>o niente",
             pieces=baca.select.clparts(leaves, [1]),
         )
@@ -724,7 +724,7 @@ def hp(m):
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                clpart,
+                (),
                 'o< "f" >o niente',
                 pieces=baca.select.clparts(clpart, [1]),
             )
@@ -747,7 +747,7 @@ def hp(m):
         library.whisk_staff_position(o.pleaves()[-2:])
         leaves = o.pleaves()[-2:]
         baca.hairpin(
-            leaves,
+            (),
             'o< "f" >o',
             forbid_al_niente_to_bar_line=True,
             pieces=baca.select.clparts(leaves, [1]),
@@ -761,7 +761,7 @@ def hp(m):
         library.whisk_staff_position(o)
         for clpart in baca.select.clparts(o, [3]):
             baca.hairpin(
-                clpart,
+                (),
                 'o< "f" >o niente',
                 pieces=baca.select.clparts(clpart, [1]),
             )
@@ -819,7 +819,7 @@ def hp(m):
         baca.pitches(o, "F#4 G#4")
     with baca.scope(m.get(10, 14)) as o:
         baca.hairpin(
-            o,
+            (),
             "mf f ff fff",
             bookend=False,
             pieces=baca.select.plts(o, exclude=baca.enums.HIDDEN),
@@ -1177,7 +1177,7 @@ def cb1(m):
         baca.pitch(o, "E1")
         baca.flat_glissando(o)
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< p >o niente",
             pieces=baca.select.lparts(o.rleaves(), [2, 4]),
         )
@@ -1201,7 +1201,7 @@ def cb1(m):
         baca.flat_glissando(o.run(-1), "E1")
         with baca.scope(baca.select.rleak(o.runs()[-1:])) as u:
             baca.hairpin(
-                u,
+                (),
                 "o< mf > p < f",
                 pieces=baca.select.lparts(u, [6, 5, 3, 2]),
             )
@@ -1220,7 +1220,7 @@ def cb1(m):
         baca.accent(o.pheads())
         baca.stem_tremolo(o.pleaves())
         baca.hairpin(
-            o,
+            (),
             "pp ppp",
             bookend=False,
             pieces=baca.select.plts(o),
@@ -1237,7 +1237,7 @@ def cb1(m):
             right_broken=True,
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mf > p < f > p < ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [1, 1, 1, 1, 1, 2]),
             right_broken=True,
@@ -1257,7 +1257,7 @@ def cb2(m):
         baca.pitch(o, "E1")
         baca.flat_glissando(o.pleaves())
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< p >o niente",
             pieces=baca.select.lparts(o.rleaves(), [3, 3]),
         )
@@ -1270,7 +1270,7 @@ def cb2(m):
         baca.flat_glissando(o.pleaves(), "E1")
         with baca.scope(baca.select.rleak(o.tleaves())) as u:
             baca.hairpin(
-                u,
+                (),
                 "o< mp > p < f",
                 bookend=False,
                 pieces=baca.select.mgroups(u, [2, 1, 1, 2]),
@@ -1300,7 +1300,7 @@ def cb2(m):
     with baca.scope(m.get(10, 15)) as o:
         baca.flat_glissando(o.pleaves(), "E1")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< f > p < ff >o niente",
             pieces=baca.select.mgroups(o.rleaves(), [2, 1, 1, 3]),
         )

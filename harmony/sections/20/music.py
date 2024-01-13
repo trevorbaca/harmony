@@ -229,7 +229,7 @@ def bfl(m):
         for i, run in enumerate(runs):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< f >o niente",
                 pieces=baca.select.lparts(run, [1, 2]),
             )
@@ -249,7 +249,7 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -287,7 +287,7 @@ def perc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< pp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )
@@ -459,7 +459,7 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
             )

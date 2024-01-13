@@ -349,7 +349,7 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.hairpin(
-                run,
+                (),
                 "niente o< p >o",
                 forbid_al_niente_to_bar_line=True,
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
@@ -404,7 +404,7 @@ def bfl(cache):
             baca.override.accidental_y_offset(u, -2)
         for run in baca.select.runs(o):
             baca.hairpin(
-                run,
+                (),
                 "o< mp >o niente",
                 pieces=abjad.select.partition_by_ratio(
                     abjad.select.leaves(run), (4, 5)
@@ -419,7 +419,7 @@ def bfl(cache):
     with baca.scope(m[7]) as o:
         baca.pitch(o, "Bb4")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "pp < p >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 1 + 1]),
         )
@@ -673,7 +673,7 @@ def vc1(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o,
+            (),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             pieces=baca.select.plts(o),
@@ -728,7 +728,7 @@ def vc2(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o,
+            (),
             "pp -- ! < mp -- ! >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
@@ -786,7 +786,7 @@ def cb1(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o,
+            (),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             bookend=False,
@@ -860,7 +860,7 @@ def cb2(cache):
     with baca.scope(m[6]) as o:
         baca.clef(o.leaf(0), "treble")
         baca.hairpin(
-            o,
+            (),
             "pp -- ! < mp >",
             abjad.Tweak(r"- \tweak to-barline ##t"),
             pieces=baca.select.lparts(o, [2, 1, 1]),
@@ -881,7 +881,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "A1")
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< mp >o niente",
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
@@ -918,7 +918,7 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m[7]) as o:
             baca.hairpin(
-                o.rleaves(),
+                (),
                 "niente o< mp >o niente o< mp >o niente",
                 pieces=baca.select.lparts(o.rleaves(), [1, 1, 1, 2]),
             )
