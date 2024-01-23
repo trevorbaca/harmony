@@ -312,9 +312,10 @@ def bfl(m):
         baca.pitch(o, "F3"),
         baca.dynamic(o.phead(0), "mf")
         baca.covered_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             items=r"\baca-cov-markup =|",
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F#3"),
@@ -326,8 +327,9 @@ def bfl(m):
             abjad.Tweak(r"- \tweak self-alignment-X -0.75"),
         )
         baca.covered_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(1, 8)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -532,8 +534,9 @@ def vc1(m):
             pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
         baca.metric_modulation_spanner(
-            o.leaves()[2:9],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[o.leaves()[2:9]],
         )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -596,8 +599,9 @@ def vc1(m):
                 right_broken=True,
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
                 right_broken=True,
             )
 
@@ -619,9 +623,10 @@ def vc2(m):
                 pieces=[u],
             )
             baca.scp_spanner(
-                u,
+                (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[u],
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "F3"),
@@ -655,10 +660,11 @@ def vc2(m):
                 pieces=[baca.select.rleak(run)],
             )
             baca.scp_spanner(
-                baca.select.rleak(run),
+                (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=False,
+                pieces=[baca.select.rleak(run)],
             )
         baca.stem_tremolo(o.pleaves(grace=False))
     with baca.scope(m.get(1, 8)) as o:
@@ -739,9 +745,10 @@ def cb2(m):
                 pieces=[u],
             )
             baca.scp_spanner(
-                u,
+                (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[u],
             )
     with baca.scope(m[2]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -786,10 +793,11 @@ def cb2(m):
                 pieces=[baca.select.rleak(run)],
             )
             baca.scp_spanner(
-                baca.select.rleak(run),
+                (),
                 "P1 =|",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=False,
+                pieces=[baca.select.rleak(run)],
             )
         baca.stem_tremolo(o.pleaves(grace=False))
     with baca.scope(m.get(1, 8)) as o:

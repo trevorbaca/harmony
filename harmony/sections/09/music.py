@@ -159,22 +159,25 @@ def bfl(m):
         baca.pitch(o, "G3")
         with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
             baca.covered_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 left_broken=True,
+                pieces=[u],
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 left_broken=True,
+                pieces=[u],
             )
     with baca.scope(m[2]) as o:
         baca.pitch(o, "Gb3")
         baca.color_fingerings(o.pheads(), [0, 1, 2])
         baca.dynamic(o.phead(0), "mp")
         baca.covered_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(1, 2)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -343,8 +346,9 @@ def composites(cache):
                         abjad.Tweak(r"- \tweak staff-padding 5.5"),
                     ),
                     baca.metric_modulation_spanner(
-                        u,
+                        (),
                         abjad.Tweak(r"- \tweak staff-padding 8"),
+                        pieces=[u],
                         right_broken=True,
                     )
                 elif name == "cb1":
@@ -354,8 +358,9 @@ def composites(cache):
                         abjad.Tweak(r"- \tweak staff-padding 8"),
                     )
                     baca.metric_modulation_spanner(
-                        u,
+                        (),
                         abjad.Tweak(r"- \tweak staff-padding 10.5"),
+                        pieces=[u],
                         right_broken=True,
                     )
     for name in ["vc1", "vc2", "cb1", "cb2"]:

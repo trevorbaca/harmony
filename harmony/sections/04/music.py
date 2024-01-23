@@ -367,16 +367,18 @@ def perc2(m):
     with baca.scope(m.get(8, 9)) as o:
         library.purpleheart_staff_positions(o, [2])
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.pleaves()),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m[11]) as o:
         library.purpleheart_staff_positions(o, [0])
         baca.dynamic(o.phead(0), "f-sub")
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.pleaves()),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             right_broken=True,
+            pieces=[baca.select.rleak(o.pleaves())],
         )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 5.5)
@@ -435,12 +437,13 @@ def va(cache):
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 4)
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "percussion")
@@ -458,9 +461,10 @@ def vc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 6)) as o:
         baca.metric_modulation_spanner(
-            o.leaves()[:3],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            pieces=[o.leaves()[:3]],
         )
     for item in [(1, 8), 11]:
         with baca.scope(m.get(item)) as o:
@@ -482,12 +486,13 @@ def vc1(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -515,12 +520,13 @@ def vc2(cache):
             abjad.Tweak(r"- \tweak self-alignment-X -0.5"),
         )
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m[11]) as o:
         baca.clef(o.leaf(0), "bass")
@@ -566,12 +572,13 @@ def cb1(cache):
         )
         baca.override.dls_staff_padding(o.leaves(grace=False), 6)
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-flat-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 10"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     for item in [(1, 6), 8, 11]:
         with baca.scope(m.get(item)) as o:
@@ -616,9 +623,10 @@ def cb2(m):
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.scp_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m[11]) as o:
         baca.flat_glissando(
@@ -634,9 +642,10 @@ def cb2(m):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.rleaves(),
+            (),
             "T1 =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.rleaves()],
         )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)

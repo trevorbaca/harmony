@@ -324,8 +324,9 @@ def perc2(m):
             abjad.Tweak(r"- \tweak staff-padding 5"),
         )
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[-1:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
+            pieces=[baca.select.rleak(o.leaves()[-1:])],
             right_broken=True,
         )
 
@@ -439,8 +440,9 @@ def vc1(m):
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
         baca.metric_modulation_spanner(
-            o.leaves()[2:],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.leaves()[2:]],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "bass")
@@ -531,8 +533,9 @@ def cb1(m):
         baca.triple_staccato(o.phead(0))
     with baca.scope(m.get(3, 4)) as o:
         baca.metric_modulation_spanner(
-            o.leaves()[2:],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.leaves()[2:]],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.clef(o.leaf(0), "bass")

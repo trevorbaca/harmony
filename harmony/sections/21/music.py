@@ -307,10 +307,11 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.text_spanner(
-                run,
+                (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[run],
             )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -361,8 +362,9 @@ def perc1(m):
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
         baca.metric_modulation_spanner(
-            o.leaves()[2:],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
+            pieces=[o.leaves()[2:]],
         )
 
 
@@ -397,8 +399,9 @@ def perc2(m):
         with baca.scope(o.leaves()[2:]) as u:
             baca.override.dls_staff_padding(u, 6),
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 10.5"),
+                pieces=[u],
             )
     with baca.scope(m[4]) as o:
         baca.clef(o.leaf(0), "treble")
@@ -452,8 +455,9 @@ def hp(m):
         baca.laissez_vibrer(o.ptails())
         baca.dynamic(o.phead(0), "f")
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[-3:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(o.leaves()[-3:])],
             right_broken=True,
         ),
     with baca.scope(m.get(1, 5)) as o:
@@ -475,9 +479,10 @@ def va(m):
             )
     with baca.scope(m[1]) as o:
         baca.metric_modulation_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m[2]) as o:
         baca.laissez_vibrer(o.ptails())

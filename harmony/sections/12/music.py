@@ -487,9 +487,10 @@ def bfl(cache):
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
         )
         baca.metric_modulation_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m[3]) as o:
         baca.hairpin(
@@ -530,13 +531,14 @@ def bfl(cache):
     with baca.scope(m[10]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak bound-details.right.padding 5"),
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(11, 12)) as o:
         baca.breathe(abjad.select.get(o.pleaves(), [1, 3]))
@@ -574,8 +576,9 @@ def bfl(cache):
             pieces=baca.select.lparts(leaves, [2, 4]),
         )
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[-2:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(o.leaves()[-2:])],
             right_broken=True,
         )
     with baca.scope(m.get(11, 15)) as o:
