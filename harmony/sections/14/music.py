@@ -791,15 +791,17 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[11]) as o:
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
         baca.dynamic(
             o.phead(0),
@@ -875,8 +877,9 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
 
 
@@ -971,8 +974,9 @@ def cb2(cache):
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "mp")
         baca.damp_spanner(
-            baca.select.rleak(baca.select.tleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(baca.select.tleaves(o))],
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())

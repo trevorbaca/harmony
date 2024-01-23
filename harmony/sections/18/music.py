@@ -819,8 +819,9 @@ def vc1(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "E3")
@@ -847,8 +848,9 @@ def vc1(cache):
             run = baca.select.rleak(run)
             baca.hairpin(run, "mp -- niente")
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
 
 
@@ -885,8 +887,9 @@ def vc2(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[6]) as o:
         baca.pitch(o, "D3")

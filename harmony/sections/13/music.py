@@ -607,8 +607,9 @@ def vc2(cache):
         )
         baca.dynamic(o.pleaf(-1), "mp")
         baca.damp_spanner(
-            baca.select.rleak(o.plts()[1:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.plts()[1:])],
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(
@@ -626,8 +627,9 @@ def vc2(cache):
         baca.pitch(o.plts()[:1], "C3")
         baca.pitch(o.plts()[1:], "F3")
         baca.damp_spanner(
-            baca.select.rleak(o.plts()[:1]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.plts()[:1])],
         )
 
 
@@ -699,8 +701,9 @@ def cb2(cache):
         )
         baca.dynamic(o.pleaf(-1), "mp")
         baca.damp_spanner(
-            baca.select.rleak(o.plts()[1:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.plts()[1:])],
         )
     with baca.scope(m[3]) as o:
         baca.dynamic(
@@ -718,8 +721,9 @@ def cb2(cache):
         baca.pitch(o.plts()[:1], "B2")
         baca.pitch(o.plts()[1:], "Eb2")
         baca.damp_spanner(
-            baca.select.rleak(o.plts()[:1]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.plts()[:1])],
         )
 
 

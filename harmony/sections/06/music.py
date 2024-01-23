@@ -1102,16 +1102,18 @@ def vc2(m):
         with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
             baca.pitch(u, "B2"),
             baca.damp_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[u],
             )
     with baca.scope(m[5]) as o:
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "B2")
         baca.dynamic(o.phead(0), "p")
         baca.damp_spanner(
-            baca.select.rleak(o.tleaves()),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.rleak(o.tleaves())],
         )
     with baca.scope(m.get(6, 7)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -1194,8 +1196,9 @@ def cb1(m):
         with baca.scope(baca.select.rleak(o.runs()[:1])) as u:
             baca.pitch(u, "Bb2")
             baca.damp_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[u],
             )
     with baca.scope(m.get(4, 7)) as o:
         baca.flat_glissando(o.run(-1), "E1")
