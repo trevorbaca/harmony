@@ -367,7 +367,7 @@ def bfl(m):
             abjad.Tweak(r"- \tweak bound-details.right.padding 3"),
         )
         baca.text_spanner(
-            o,
+            (),
             "(T) -> A -> (T)",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             pieces=baca.select.lparts(o, [1, 1 + 1]),
@@ -388,7 +388,7 @@ def bfl(m):
             )
             leaves = baca.select.rleak(run)
             baca.text_spanner(
-                leaves,
+                (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
                 pieces=baca.select.lparts(leaves, [1, 1 + 1]),
@@ -604,7 +604,7 @@ def va(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#3")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -625,7 +625,7 @@ def vc1(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -657,7 +657,7 @@ def vc2(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -691,7 +691,7 @@ def cb1(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -728,7 +728,7 @@ def cb2(cache):
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,

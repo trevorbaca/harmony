@@ -374,7 +374,7 @@ def hp(cache):
         )
         baca.override.dls_staff_padding(o, 4)
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -645,7 +645,7 @@ def cb2(cache):
             pieces=baca.select.mgroups(o.rleaves(), [3, 2]),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,
@@ -695,7 +695,7 @@ def cb2(cache):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.rleaves(),
+            (),
             "T4+ -> O -> T2 -> P1 -> T1 -> P3 -> O -> P1 -> O -> P1 -> T4+",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,

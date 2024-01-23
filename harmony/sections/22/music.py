@@ -566,7 +566,7 @@ def va(m):
             ),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -666,7 +666,7 @@ def vc2(m):
             ),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 7.5"),
             bookend=-1,
@@ -756,7 +756,7 @@ def cb2(m):
             ),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,

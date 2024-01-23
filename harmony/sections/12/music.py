@@ -543,7 +543,7 @@ def bfl(cache):
         for clpart in baca.select.clparts(o, [2]):
             clpart = baca.select.rleak(clpart)
             baca.text_spanner(
-                clpart,
+                (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
@@ -556,7 +556,7 @@ def bfl(cache):
         for clpart in baca.select.clparts(o, [4]):
             clpart = baca.select.rleak(clpart)
             baca.text_spanner(
-                clpart,
+                (),
                 "T -> A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
@@ -567,7 +567,7 @@ def bfl(cache):
         baca.override.dynamic_text_x_offset(o.pleaf(-1), -0.75)
         leaves = o.leaves()[:-1]
         baca.text_spanner(
-            leaves,
+            (),
             "T -> A =|",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=False,
