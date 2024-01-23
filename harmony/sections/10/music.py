@@ -331,23 +331,27 @@ def bfl(cache):
     with baca.scope(m.get(1, 2)) as o:
         with baca.scope(o.leaves()[2:8]) as u:
             baca.covered_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[u],
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
             )
     with baca.scope(m.get(2, 3)) as o:
         baca.pitch(o, "E3")
         with baca.scope(o.leaves()[4:9]) as u:
             baca.covered_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[u],
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
             )
     with baca.scope(m[7]) as o:
         baca.pitch(o, "F3")
@@ -357,12 +361,14 @@ def bfl(cache):
     with baca.scope(m.get(7, 8)) as o:
         with baca.scope(o.leaves()[1:8]) as u:
             baca.covered_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[u],
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
             )
     with baca.scope(m[10]) as o:
         baca.pitch(o.leaves(grace=False), "G3")
@@ -383,12 +389,13 @@ def bfl(cache):
             ),
         )
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-g-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(11)) as o:
         baca.hairpin(
@@ -433,12 +440,13 @@ def bfl(cache):
     with baca.scope(m[15]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m.get(1, 15)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -483,8 +491,9 @@ def perc1(m):
         library.slate_staff_position(o)
     with baca.scope(m.get(7, 8)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[2:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(o.leaves()[2:])],
         )
     with baca.scope(m.get(10, 14)) as o:
         library.triangle_staff_position(o)
@@ -977,9 +986,10 @@ def composites(cache):
             with baca.scope(baca.select.rleak(o.leaves()[:2])) as u:
                 if name in ("va", "vc1", "vc2"):
                     baca.metric_modulation_spanner(
-                        u,
+                        (),
                         abjad.Tweak(r"- \tweak staff-padding 8"),
                         left_broken=True,
+                        pieces=[u],
                     )
                     baca.bow_speed_spanner(
                         u,
@@ -988,9 +998,10 @@ def composites(cache):
                     )
                 elif name == "cb1":
                     baca.metric_modulation_spanner(
-                        u,
+                        (),
                         abjad.Tweak(r"- \tweak staff-padding 10.5"),
                         left_broken=True,
+                        pieces=[u],
                     )
                     baca.bow_speed_spanner(
                         u,

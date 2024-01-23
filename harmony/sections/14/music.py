@@ -398,8 +398,9 @@ def bfl(cache):
         baca.accent(o.pheads())
         baca.dynamic(o.phead(0), "mf")
         baca.covered_spanner(
-            baca.select.tleaves(o, rleak=True),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 3"),
+            pieces=[baca.select.tleaves(o, rleak=True)],
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "B4")
@@ -454,10 +455,11 @@ def bfl(cache):
         for run in baca.select.runs(o):
             run = baca.select.rleaves(run)
             baca.text_spanner(
-                run,
+                (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[run],
             )
     with baca.scope(m.get(1, 11)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -705,8 +707,9 @@ def va(cache):
             "f >o niente",
         )
         baca.metric_modulation_spanner(
-            baca.select.pleaves(o, grace=False)[:4],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.pleaves(o, grace=False)[:4]],
         )
     with baca.scope(m.get(6, 9)) as o:
         baca.override.note_head_style_harmonic(o.pleaves())
@@ -859,8 +862,9 @@ def vc2(cache):
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.metric_modulation_spanner(
-            o.leaves()[1:-3],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[o.leaves()[1:-3]],
         )
     with baca.scope(m.get(5, 9)) as o:
         baca.override.dls_staff_padding(o, 6)

@@ -214,10 +214,11 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.text_spanner(
-                run,
+                (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[run],
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "F#5")
@@ -236,23 +237,26 @@ def bfl(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(run)
             baca.text_spanner(
-                run,
+                (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[run],
             )
     with baca.scope(m[10]) as o:
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
             baca.text_spanner(
-                u,
+                (),
                 "A =|",
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
                 bookend=False,
+                pieces=[u],
                 right_broken=True,
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
                 right_broken=True,
             )
     with baca.scope(m.get(1, 10)) as o:

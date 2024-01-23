@@ -273,9 +273,10 @@ def bfl(cache):
             pieces=baca.select.lparts(leaves, [1, 2 + 1]),
         )
         baca.metric_modulation_spanner(
-            o.leaves()[:3],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            pieces=[o.leaves()[:3]],
         )
     with baca.scope(m[3]) as o:
         baca.pitch(o, "B4")
@@ -298,12 +299,13 @@ def bfl(cache):
     with baca.scope(m[4]) as o:
         baca.dynamic(o.pleaf(0, grace=False), "p")
         baca.text_spanner(
-            baca.select.tleaves(o, grace=False, rleak=True),
+            (),
             r"\harmony-a-sounds-ottava-higher-markup =|",
             abjad.Tweak(r"- \tweak direction #down"),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=False,
             direction=abjad.DOWN,
+            pieces=[baca.select.tleaves(o, grace=False, rleak=True)],
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "Dtqf5")
@@ -438,8 +440,9 @@ def perc2(cache):
     with baca.scope(m.get(4, 5)) as o:
         baca.override.dls_staff_padding(o, 6)
         baca.metric_modulation_spanner(
-            baca.select.rleak(abjad.select.leaves(o)[3:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
+            pieces=[baca.select.rleak(abjad.select.leaves(o)[3:])],
         )
 
 
@@ -490,16 +493,18 @@ def hp(cache):
             baca.snap_pizzicato(u)
     with baca.scope(m.get(3, 4)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(abjad.select.leaves(o)[1:8]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(abjad.select.leaves(o)[1:8])],
         )
     with baca.scope(m[5]) as o:
         baca.pitch(o, "E4")
         baca.snap_pizzicato(o.pheads())
     with baca.scope(m.get(4, 5)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(abjad.select.leaves(o)[6:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(abjad.select.leaves(o)[6:])],
         )
     with baca.scope(m.get(1, 5)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -744,8 +749,9 @@ def composites(cache):
         m = cache[name]
         with baca.scope(m.get(4, 5)) as o:
             baca.metric_modulation_spanner(
-                baca.select.rleak(o.leaves()[-4:]),
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[baca.select.rleak(o.leaves()[-4:])],
             )
     for name in ["va", "vc1", "vc2", "cb1", "cb2"]:
         m = cache[name]

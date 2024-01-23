@@ -262,8 +262,9 @@ def bfl(m):
         baca.pitch(o, "Eb3")
         baca.dynamic(o.phead(0), "pp-sempre")
         baca.covered_spanner(
-            baca.select.rleak(baca.select.ltleaves(o)),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(baca.select.ltleaves(o))],
         )
     with baca.scope(m.get(1, 10)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -318,9 +319,10 @@ def perc2(m):
         baca.accent(o.pheads())
         baca.laissez_vibrer(o.ptails())
         baca.metric_modulation_spanner(
-            o.leaves()[:3],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
             left_broken=True,
+            pieces=[o.leaves()[:3]],
         )
     with baca.scope(m[2]) as o:
         library.tam_tam_staff_position(o)
@@ -367,8 +369,9 @@ def hp(m):
         baca.dynamic(o.phead(0), "p")
     with baca.scope(m.get(1, 2)) as o:
         baca.metric_modulation_spanner(
-            o.leaves()[1:],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[o.leaves()[1:]],
         )
     with baca.scope(m.get(3, 10)) as o:
         baca.clef(o.leaf(0), "treble")
@@ -435,15 +438,17 @@ def va(m):
         baca.dynamic(o.phead(1), "p")
         with baca.scope(baca.select.rleak(o.leaves()[3:])) as u:
             baca.scp_spanner(
-                u,
+                (),
                 "P4 -> T1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 bookend=True,
+                pieces=[u],
                 right_broken=True,
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
                 right_broken=True,
             )
 
@@ -548,8 +553,9 @@ def cb2(m):
         baca.override.dls_staff_padding(o.leaves()[1:], 6)
     with baca.scope(m.get(2, 4)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(abjad.select.leaves(o)[1:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[baca.select.rleak(abjad.select.leaves(o)[1:])],
         )
     with baca.scope(m[10]) as o:
         baca.override.rest_extra_offset(o.rest(-1), (-1.5, 0))

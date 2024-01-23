@@ -578,8 +578,9 @@ def bfl(m):
         baca.pitch(o, "F3")
         baca.dynamic(o.phead(0), "mf")
         baca.covered_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[o.rleaves()],
         )
     with baca.scope(m[12]) as o:
         baca.pitches(
@@ -613,8 +614,9 @@ def bfl(m):
             for run in baca.select.runs(o):
                 run = baca.select.rleak(baca.select.ltleaves(run), count=2)
                 baca.covered_spanner(
-                    run,
+                    (),
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                    pieces=[run],
                 )
     with baca.scope(m.get(1, 13)) as o:
         baca.override.dls_staff_padding(o, 4)
@@ -706,9 +708,10 @@ def perc2(cache):
         baca.dynamic(o.rest(1), "ff-ancora")
         baca.override.dls_staff_padding(o, 5)
         baca.metric_modulation_spanner(
-            o.leaves()[:2],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
             left_broken=True,
+            pieces=[o.leaves()[:2]],
         )
     with baca.scope(m[2]) as o:
         baca.staff_lines(o.leaf(0), 1)
@@ -779,8 +782,9 @@ def perc2(cache):
             abjad.Tweak(r"- \tweak staff-padding 6"),
         )
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[-1:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 10.5"),
+            pieces=[baca.select.rleak(o.leaves()[-1:])],
             right_broken=True,
         )
 
@@ -1001,8 +1005,9 @@ def cb2(cache):
         )
         # TODO: text spanner currently must precede pitched trill spanner; fix
         baca.metric_modulation_spanner(
-            o.leaves()[1:8],
+            (),
             abjad.Tweak(r"- \tweak staff-padding 8"),
+            pieces=[o.leaves()[1:8]],
         )
         baca.trill_spanner(
             baca.select.tleaves(o, rleak=True),
@@ -1029,8 +1034,9 @@ def cb2(cache):
         baca.override.dls_staff_padding(o, 6)
     with baca.scope(m.get(12, 13)) as o:
         baca.metric_modulation_spanner(
-            baca.select.rleak(o.leaves()[4:]),
+            (),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
+            pieces=[baca.select.rleak(o.leaves()[4:])],
         )
 
 

@@ -166,13 +166,15 @@ def bfl(m):
         baca.override.dls_staff_padding(o, 4)
         with baca.scope(baca.select.rleak(o.leaves()[1:])) as u:
             baca.covered_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                pieces=[u],
                 right_broken=True,
             )
             baca.metric_modulation_spanner(
-                u,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 8"),
+                pieces=[u],
                 right_broken=True,
             )
 
@@ -300,10 +302,11 @@ def vc1(cache):
         baca.pitch(o, "Bb4")
         baca.espressivo(o.pheads()[1:])
         baca.metric_modulation_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m.get(2, 6)) as o:
         baca.stem_tremolo(o.pleaves())
