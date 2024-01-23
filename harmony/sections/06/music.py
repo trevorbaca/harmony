@@ -1206,7 +1206,7 @@ def cb1(m):
                 pieces=baca.select.lparts(u, [6, 5, 3, 2]),
             )
             baca.scp_spanner(
-                u,
+                (),
                 "T1 -> P1 -> T1 -> P1",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=baca.select.lparts(u, [6, 5, 3, 2]),
@@ -1243,7 +1243,7 @@ def cb1(m):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.rleaves(),
+            (),
             "T1 -> O -> T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.cmgroups(o.rleaves(), [1]),
@@ -1276,7 +1276,7 @@ def cb2(m):
                 pieces=baca.select.mgroups(u, [2, 1, 1, 2]),
             )
             baca.scp_spanner(
-                u,
+                (),
                 "T1 -> P1 -> O -> T1 -> P2 -> O",
                 abjad.Tweak(r"- \tweak staff-padding 3"),
                 pieces=baca.select.lparts(u, [3, 4, 4, 2, 3, 5]),
@@ -1305,7 +1305,7 @@ def cb2(m):
             pieces=baca.select.mgroups(o.rleaves(), [2, 1, 1, 3]),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T1 -> P2 -> T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,

@@ -363,7 +363,7 @@ def vc1(m):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            leaves,
+            (),
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.plts(leaves),
@@ -439,7 +439,7 @@ def cb1(m):
         baca.override.dls_staff_padding(o, 4)
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            leaves,
+            (),
             "P1 -> P3 -> P2 -> P4 ->",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             final_piece_spanner=False,

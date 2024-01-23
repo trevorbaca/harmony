@@ -428,7 +428,7 @@ def va(cache):
         baca.triple_staccato(o.pheads())
         baca.dynamic(o.phead(0), "p")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T -> P -> T",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,
@@ -488,7 +488,7 @@ def vc1(cache):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            leaves,
+            (),
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.mgroups(leaves, [1, 2]),
@@ -572,7 +572,7 @@ def cb1(cache):
         )
         leaves = baca.select.rleak(baca.select.ltleaves(o))
         baca.scp_spanner(
-            leaves,
+            (),
             "T -> P =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.mgroups(leaves, [1, 2]),

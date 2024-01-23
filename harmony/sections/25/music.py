@@ -294,7 +294,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             baca.text_spanner(
-                run,
+                (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
@@ -476,7 +476,7 @@ def va(cache):
     with baca.scope(m[3]) as o:
         baca.pitch(o, "F#3")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> P1 -> P3 -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -519,7 +519,7 @@ def vc1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> O -> P2 -> P1 -> P3",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -561,7 +561,7 @@ def vc2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "O -> P2 -> P1",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -605,7 +605,7 @@ def cb1(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P1 -> P2 -> O -> P2",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -648,7 +648,7 @@ def cb2(cache):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P1 -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,

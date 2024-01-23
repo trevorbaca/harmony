@@ -210,7 +210,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             baca.text_spanner(
-                run,
+                (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 9"),
                 pieces=baca.select.lparts(run, [1, 2 + 1]),
@@ -230,7 +230,7 @@ def bfl(m):
                 abjad.Tweak(r"- \tweak staff-padding 3"),
             )
             baca.text_spanner(
-                run,
+                (),
                 "A -> T -> A",
                 abjad.Tweak(r"- \tweak staff-padding 10"),
                 pieces=baca.select.lparts(run, [1, 1 + 1]),
@@ -389,7 +389,7 @@ def va(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#3")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 -> P3 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -446,7 +446,7 @@ def vc1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 -> P1 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -480,7 +480,7 @@ def vc2(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#2")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -538,7 +538,7 @@ def cb1(m):
         baca.clef(o.leaf(0), "bass")
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 -> O ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
@@ -572,7 +572,7 @@ def cb2(m):
     with baca.scope(m.get(5, 9)) as o:
         baca.pitch(o, "F#1")
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "O -> P2 -> P1 -> P3 -> P2 -> P4 -> P2 -> P3 -> P1 -> P2 ->",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,

@@ -539,7 +539,7 @@ def hp(cache):
         baca.dynamic(o.phead(0), "mf")
     with baca.scope(m.get(4, 7)) as o:
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "0 pul. / beat -> 6 pul. / beat -> 0 pul. / beat -> 8 pul. / beat"
             " -> 0 pul. / beat",
             abjad.Tweak(r"- \tweak staff-padding 3"),
@@ -547,7 +547,7 @@ def hp(cache):
         )
     with baca.scope(m.get(10, 11)) as o:
         baca.text_spanner(
-            o.rleaves(),
+            (),
             "0 pul. / beat -> 8 pul. / beat -> 0 pul. / beat",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.lparts(o.rleaves(), [1, 2]),
@@ -667,7 +667,7 @@ def va(m):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=-1,
@@ -755,7 +755,7 @@ def vc1(m):
             pieces=baca.select.mgroups(o.rleaves(), [3, 4]),
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=-1,
@@ -843,7 +843,7 @@ def vc2(m):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T1 -> P1 -> T1",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=-1,
@@ -859,7 +859,7 @@ def cb1(m):
         baca.flat_glissando(o)
         baca.dynamic(o.phead(0), "pp")
         baca.scp_spanner(
-            o.rleaves(),
+            (),
             "T1 =| (T1) -> T2 -> T1 -> T3 -> T1 =| (T1) -> P2 -> T3 =|",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             pieces=baca.select.mgroups(o.rleaves(), [2, 1, 1, 1, 1, 2, 1, 1, 2]),
@@ -874,7 +874,7 @@ def cb1(m):
         baca.interpolate_pitches(o, "F#2", "D2")
         baca.glissando(o.tleaves(), hide_middle_note_heads=True)
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> O -> T4",
             abjad.Tweak(r"- \tweak staff-padding 3"),
             bookend=-1,
@@ -962,7 +962,7 @@ def cb2(m):
             right_broken=True,
         )
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "T4 -> P1 -> T4",
             abjad.Tweak(r"- \tweak staff-padding 8"),
             bookend=-1,

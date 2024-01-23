@@ -692,7 +692,7 @@ def cb2(m):
         baca.flat_glissando(o, "E1", left_broken=True)
         baca.hairpin(o, "o< f", left_broken=True)
         baca.scp_spanner(
-            o.leaves(),
+            (),
             "(T1) -> P2 -> O",
             abjad.Tweak(r"- \tweak staff-padding 5.5"),
             bookend=-1,
