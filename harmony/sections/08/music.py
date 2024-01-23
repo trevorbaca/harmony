@@ -349,10 +349,11 @@ def vc2(cache):
             bookend=False,
         )
         baca.damp_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m.get(3, 6)) as o:
         baca.stem_tremolo(o.pleaves())
@@ -425,10 +426,11 @@ def cb2(cache):
         baca.pitch(o, "Bb2")
         baca.hairpin(o.leaves()[-2:], "(p) >o", bookend=False)
         baca.damp_spanner(
-            o.rleaves(),
+            (),
             abjad.Tweak(r"- \tweak bound-details.right.padding 4.5"),
             abjad.Tweak(r"- \tweak staff-padding 3"),
             left_broken=True,
+            pieces=[o.rleaves()],
         )
     with baca.scope(m.get(5, 6)) as o:
         baca.stem_tremolo(o.pleaves())

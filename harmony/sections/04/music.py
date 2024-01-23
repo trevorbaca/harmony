@@ -321,10 +321,18 @@ def perc1(cache):
     m = cache[name]
     with baca.scope(m.get(1, 2)) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.hairpin(o.tleaves(), "f > p")
+        baca.hairpin(
+            (),
+            "f > p",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [0, 2, 0, 2, 2])
-        baca.hairpin(o.tleaves(), "p < f")
+        baca.hairpin(
+            (),
+            "p < f",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[9]) as o:
         library.purpleheart_staff_positions(o, [-2], allow_obgc_mutation=True)
         cache.rebuild()
@@ -342,10 +350,18 @@ def perc1(cache):
 def perc2(m):
     with baca.scope(m[1]) as o:
         library.purpleheart_staff_positions(o, [0, -2, 0, -2, 0])
-        baca.hairpin(o.tleaves(), "f > p")
+        baca.hairpin(
+            (),
+            "f > p",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m.get(5, 6)) as o:
         library.purpleheart_staff_positions(o, [2])
-        baca.hairpin(o.tleaves(), "p < f")
+        baca.hairpin(
+            (),
+            "p < f",
+            pieces=[o.tleaves()],
+        )
     with baca.scope(m[8]) as o:
         baca.dynamic(o.phead(0), "p-sub")
     with baca.scope(m.get(8, 9)) as o:
@@ -520,8 +536,9 @@ def vcs(cache):
         for item in [(1, 6), 8, 11]:
             with baca.scope(cache[name].get(item)) as o:
                 baca.damp_spanner(
-                    baca.select.rleak(baca.select.ltleaves(o), grace=False),
+                    (),
                     abjad.Tweak(r"- \tweak staff-padding 5.5"),
+                    pieces=[baca.select.rleak(baca.select.ltleaves(o), grace=False)],
                 )
 
 
@@ -611,8 +628,9 @@ def cb2(m):
             right_broken=True,
         )
         baca.hairpin(
-            o.rleaves(),
+            (),
             "o< f",
+            pieces=[o.rleaves()],
             right_broken=True,
         )
         baca.scp_spanner(

@@ -402,8 +402,9 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "A2")
@@ -417,8 +418,9 @@ def vc1(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
 
 
@@ -429,8 +431,9 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
     with baca.scope(m[8]) as o:
         baca.pitch(o, "G2")
@@ -444,8 +447,9 @@ def vc2(m):
         for run in baca.select.runs(o):
             run = baca.select.rleak(baca.select.tleaves(run))
             baca.damp_spanner(
-                run,
+                (),
                 abjad.Tweak(r"- \tweak staff-padding 3"),
+                pieces=[run],
             )
 
 
